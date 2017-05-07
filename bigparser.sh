@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo rm -r /etc/piholeparser/lists/*.txt
+sudo rm -r /etc/piholeparser/parsed/*.txt
 FILES=/etc/piholeparser/lists/*
 
 for f in $FILES
@@ -22,6 +24,6 @@ sort -u "$f"ads_parsed.txt > "$f"ads_unique.txt
 sudo rm "$f"ads_parsed.txt
 echo -e "\t`wc -l "$f"ads_unique.txt | cut -d " " -f 1` lines after deduping"
 
-sudo cat "$f"ads_unique.txt >> "$f"filtered.txt
+sudo cat "$f"ads_unique.txt >> /etc/piholeparser/parsed/"$f".txt
 sudo rm "$f"ads_unique.txt
 done
