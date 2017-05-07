@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm -r /etc/piholeparser/parsed/*.txt
-FILES=/etc/piholeparser/lists/*
+FILES=/etc/piholeparser/lists/*.lst
 
 for f in $FILES
 do
