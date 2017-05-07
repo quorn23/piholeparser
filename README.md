@@ -2,7 +2,7 @@
 
 ### Instructions
 
-sudo git clone https://github.com/deathbybandaid/piholeparser.git
+sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
 
 cd piholeparser
 
