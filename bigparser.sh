@@ -2,6 +2,8 @@
 FILES=/etc/piholeparser/lists/*
 
 for f in $FILES
+do
+
 for source in `cat $f`; 
 do
     echo $source;
