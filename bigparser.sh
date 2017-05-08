@@ -27,3 +27,4 @@ sudo rm "$f"ads_unique.txt
 done
 mv /etc/piholeparser/lists/*.txt /etc/piholeparser/parsed/
 sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo find /etc/piholeparser/parsed/ -size 0 -delete
