@@ -1,12 +1,12 @@
 #!/bin/bash
 sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm -r /etc/piholeparser/parsed/*.txt
-FILES=/*.lst
+FILES=/etc/piholeparser/lists/*.lst
 
 for f in $FILES
 do
 
-for source in `cat /etc/piholeparser/lists/$f`; 
+for source in `cat $f`; 
 do
     echo $f;
     sudo curl --silent $source >> /etc/piholeparser/lists/"$f"ads.txt
