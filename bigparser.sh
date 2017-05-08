@@ -9,7 +9,8 @@ do
 #for source in `cat /etc/piholeparser/lists/$f`; 
 #do
     echo $f;
-    sudo curl --silent $source >> /etc/piholeparser/lists/"$f"ads.txt
+    #sudo curl --silent $source >> /etc/piholeparser/lists/"$f"ads.txt
+    sudo curl --silent $f >> /etc/piholeparser/lists/"$f"ads.txt
     echo -e "\t`wc -l /etc/piholeparser/lists/"$f"ads.txt | cut -d " " -f 1` lines downloaded"
 done
 done
