@@ -4,13 +4,14 @@ sudo rm -r /etc/piholeparser/parsed/*.txt
 FILES=/etc/piholeparser/lists/*.lst
 
 for f in $FILES
-#for source in `cat $f`;
+do
+for source in `cat $f`;
 do
     echo $f;
     sudo curl --silent $f >> "$f"ads.txt
     sudo curl --silent $f >> "$f"ads.txt
     echo -e "\t`wc -l "$f"ads.txt | cut -d " " -f 1` lines downloaded"
-
+done
 
 #echo -e "\nFiltering non-url content..."
 #sudo perl /etc/piholeparser/parser.pl "$f"ads.txt > "$f"ads_parsed.txt
