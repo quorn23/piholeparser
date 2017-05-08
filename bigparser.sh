@@ -13,7 +13,7 @@ do
     sudo curl --silent $f >> /etc/piholeparser/lists/"$f"ads.txt
     echo -e "\t`wc -l /etc/piholeparser/lists/"$f"ads.txt | cut -d " " -f 1` lines downloaded"
 done
-done
+#done
 
 #echo -e "\nFiltering non-url content..."
 #sudo perl /etc/piholeparser/parser.pl /etc/piholeparser/lists/"$f"ads.txt > /etc/piholeparser/lists/"$f"ads_parsed.txt
