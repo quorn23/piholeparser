@@ -3,7 +3,7 @@ sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm -r /etc/piholeparser/parsed/*.txt
 FILES=/etc/piholeparser/lists/*.lst
 
-for f in $FILES
+#for f in $FILES
 for source in `cat $f`
 do
     echo $f;
