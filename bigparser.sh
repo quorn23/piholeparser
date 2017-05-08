@@ -4,9 +4,9 @@ sudo rm -r /etc/piholeparser/parsed/*.txt
 FILES=/etc/piholeparser/lists/*.lst
 
 #for f in $FILES
-for source in `cat $f`
+for source in `cat $f`;
 do
-    echo $f;
+    echo $source;
     sudo curl --silent $source >> /etc/piholeparser/lists/"$f"ads.txt
     sudo curl --silent $f >> "$f"ads.txt
     echo -e "\t`wc -l "$f"ads.txt | cut -d " " -f 1` lines downloaded"
