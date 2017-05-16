@@ -32,6 +32,15 @@ sudo bash /etc/piholeparser/compressedconvert.sh
 ## Parse Lists
 sudo bash /etc/piholeparser/bigparser.sh
 
+## Move Files
+mv /etc/piholeparser/lists/*.txt /etc/piholeparser/parsed/
+
+## Fix File Extensions
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+
+## Delete Empty Files
+sudo find /etc/piholeparser/parsed/ -size 0 -delete
+
 ## Push Changes up to Github
 sudo git config --global user.name "Your Name"
 sudo git config --global user.email you@example.com
