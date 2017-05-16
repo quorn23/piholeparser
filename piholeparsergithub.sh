@@ -1,4 +1,14 @@
 #!/bin/bash
+## This will parse lists and upload to Github
+
+## Dependency check
+{ if
+which p7zip >/dev/null;
+then
+:
+else
+sudo apt-get install -y p7zip-full
+fi }
 
 ## Clean directories to avoid collisions
 sudo rm -r /etc/piholeparser/lists/*.txt
@@ -16,7 +26,7 @@ cd /etc/piholeparser
 sudo git pull
 
 ## Process lists that have to be extracted
-#sudo bash /etc/piholeparser/compressedconvert.sh
+sudo bash /etc/piholeparser/compressedconvert.sh
 
 ## Parse Lists
 sudo bash /etc/piholeparser/bigparser.sh
@@ -31,7 +41,6 @@ sudo git push -u origin master
 
 ## Final Cleanup
 sudo rm /etc/piholeparser/compressedconvert/*.7z
-
 
 ## Notes
 ## copy this file out of the main directory and edit credentials
