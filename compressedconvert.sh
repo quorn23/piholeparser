@@ -65,12 +65,12 @@ sudo cat "$f"ads_unique.txt >> "$f".txt
 done
 
 ## Move Files
-mkdir /etc/piholeparser/compressedconvert/test
-mv /etc/piholeparser/compressedconvert/*.txt /etc/piholeparser/compressedconvert/test
-sudo rename "s/.text.txt/.txt/" /etc/piholeparser/compressedconvert/test/*.txt
+#mkdir /etc/piholeparser/compressedconvert/test
+#mv /etc/piholeparser/compressedconvert/*.txt /etc/piholeparser/compressedconvert/test
+#sudo rename "s/.text.txt/.txt/" /etc/piholeparser/compressedconvert/test/*.txt
 
 ## Delete Empty Files
-sudo find /etc/piholeparser/compressedconvert/test/ -size 0 -delete
+#sudo find /etc/piholeparser/compressedconvert/test/ -size 0 -delete
 
 ## Unset FILES variable
 unset FILES
