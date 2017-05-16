@@ -35,42 +35,4 @@ sudo wget http://rlwpx.free.fr/WPFF/hblc.7z -P /etc/piholeparser/compressedconve
 sudo 7za e /etc/piholeparser/compressedconvert/hblc.7z -o/etc/piholeparser/compressedconvert/
 sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /etc/piholeparser/compressedconvert/AirellesPhishingHosts.txt
 
-##########################################################################
-
-## Set File Directory
-FILES=/etc/piholeparser/compressedconvert/*.txt
-
-## Start File Loop
-for f in $FILES
-do
-
-## Begin
-sudo cp $f "$f"ads.txt
-
-## Filter
-echo -e "\nFiltering non-url content..."
-sudo perl /etc/piholeparser/parser.pl "$f"ads.txt > "$f"ads_parsed.txt
-#sudo rm "$f"ads.txt
-echo -e "\t`wc -l "$f"ads_parsed.txt | cut -d " " -f 1` lines after parsing"
-
-## Duplicate Removal
-echo -e "\nRemoving duplicates..."
-sort -u "$f"ads_parsed.txt > "$f"ads_unique.txt
-#sudo rm "$f"ads_parsed.txt
-echo -e "\t`wc -l "$f"ads_unique.txt | cut -d " " -f 1` lines after deduping"
-sudo cat "$f"ads_unique.txt >> "$f".txt
-#sudo rm "$f"ads_unique.txt
-
-## End File Loop
-done
-
-## Move Files
-#mkdir /etc/piholeparser/compressedconvert/test
-#mv /etc/piholeparser/compressedconvert/*.txt /etc/piholeparser/compressedconvert/test
-#sudo rename "s/.text.txt/.txt/" /etc/piholeparser/compressedconvert/test/*.txt
-
-## Delete Empty Files
-#sudo find /etc/piholeparser/compressedconvert/test/ -size 0 -delete
-
-## Unset FILES variable
-unset FILES
+## Make sure the file path is added as a list.lst
