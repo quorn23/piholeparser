@@ -40,7 +40,7 @@ sudo find /etc/piholeparser/parsed/ -size 0 -delete
 
 ## Fix File Extensions
 sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
-sudo rename "s/.ads.lst.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 
 ## Cleanup
 sudo rm -r /etc/piholeparser/lists/*.txt
