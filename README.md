@@ -9,4 +9,4 @@ cd piholeparser
 sudo nano lists.lst 
 ###### all the lists you put here will be processed.
 
-sudo bash runparser.sh
+sudo bash basicparser.sh
