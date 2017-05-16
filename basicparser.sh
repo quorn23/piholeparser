@@ -1,5 +1,5 @@
 #!/bin/bash
-for source in `cat lists.lst`; do
+for source in `cat basic.lst`; do
     echo $source;
     sudo curl --silent $source >> ads.txt
     echo -e "\t`wc -l ads.txt | cut -d " " -f 1` lines downloaded"
