@@ -76,6 +76,3 @@ sudo find /etc/piholeparser/compressedconvert/test/ -size 0 -delete
 
 ## Unset FILES variable
 unset FILES
-
-
-# sudo rm /etc/piholeparser/compressedconvert/*.txt
