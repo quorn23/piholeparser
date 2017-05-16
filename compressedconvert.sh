@@ -38,7 +38,7 @@ sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /etc/piholeparser/compress
 ##########################################################################
 
 ## Set File Directory
-FILES=/etc/piholeparser/compressedconvert/*.text
+FILES=/etc/piholeparser/compressedconvert/*.txt
 
 ## Start File Loop
 for f in $FILES
