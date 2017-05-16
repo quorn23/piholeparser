@@ -1,5 +1,15 @@
 #!/bin/bash
+
+## Clean directories to avoid collisions
+sudo rm -r /etc/piholeparser/lists/*.txt
+sudo rm -r /etc/piholeparser/parsed/*.txt
+sudo rm /etc/piholeparser/compressedconvert/*.7z
+sudo rm /etc/piholeparser/compressedconvert/*.txt
+
+## Timestamp
 timestamp=`date --rfc-3339=seconds`
+
+## Make sure we are in the correct directory
 cd /etc/piholeparser
 
 ## Pull new lists on github
@@ -18,6 +28,9 @@ sudo git remote set-url origin https://USERNAME:PASSWORD@github.com/deathbybanda
 sudo git add .
 sudo git commit -m "Update lists $timestamp"
 sudo git push -u origin master
+
+## Final Cleanup
+sudo rm /etc/piholeparser/compressedconvert/*.7z
 
 
 ## Notes
