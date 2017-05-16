@@ -72,7 +72,7 @@ mv /etc/piholeparser/compressedconvert/*.txt /etc/piholeparser/compressedconvert
 sudo rename "s/.text.txt/.txt/" /etc/piholeparser/compressedconvert/test/*.txt
 
 ## Delete Empty Files
-sudo find /etc/piholeparser/parsed/ -size 0 -delete
+sudo find /etc/piholeparser/compressedconvert/test/ -size 0 -delete
 
 ## Unset FILES variable
 unset FILES
