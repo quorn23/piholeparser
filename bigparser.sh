@@ -1,7 +1,5 @@
 #!/bin/bash
 timestamp=`date --rfc-3339=seconds`
-sudo rm -r /etc/piholeparser/lists/*.txt
-sudo rm -r /etc/piholeparser/parsed/*.txt
 FILES=/etc/piholeparser/lists/*.lst
 
 for f in $FILES
