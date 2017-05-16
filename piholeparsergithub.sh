@@ -29,7 +29,7 @@ sudo git pull
 sudo bash /etc/piholeparser/compressedconvert.sh
 
 ## Parse Lists
-sudo bash /etc/piholeparser/bigparser.sh
+sudo bash /etc/piholeparser/advancedparser.sh
 
 ## Move Files
 mv /etc/piholeparser/lists/*.txt /etc/piholeparser/parsed/
