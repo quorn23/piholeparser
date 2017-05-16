@@ -10,6 +10,10 @@ It is probably best to copy the link in it's raw format.
 
 ### If you want all of the lists
 
+Just add
+ 
+https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsed/1111ALLPARSEDLISTS1111.txt
+
 The big list was close to 200MB, and Github said it was too big. Probably better this way.
 
 ## Basic Usage Instructions
