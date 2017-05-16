@@ -14,8 +14,6 @@ Just add
  
 https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsed/1111ALLPARSEDLISTS1111.txt
 
-The big list was close to 200MB, and Github said it was too big. Probably better this way.
-
 ## Basic Usage Instructions
 
 sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
