@@ -12,6 +12,7 @@ fi }
 
 ## Clean directories to avoid collisions
 sudo rm /etc/piholeparser/lists/*.txt
+sudo rm /etc/piholeparser/mirroredlists/*.txt
 sudo rm /etc/piholeparser/parsed/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.txt
@@ -34,15 +35,15 @@ sudo bash /etc/piholeparser/advancedparser.sh
 ## Move Files
 mv /etc/piholeparser/lists/*.txt /etc/piholeparser/parsed/
 
-## Fix File Extensions
-sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
-
 ## Delete Empty Files
 sudo find /etc/piholeparser/parsed/ -size 0 -delete
 
+## Fix File Extensions
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo rename "s/lst.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+
 ## Cleanup
 sudo rm -r /etc/piholeparser/lists/*.txt
-#sudo rm -r /etc/piholeparser/parsed/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.txt
 
