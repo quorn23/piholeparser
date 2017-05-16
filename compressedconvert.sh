@@ -1,7 +1,8 @@
 #!/bin/bash
 ## This will convert non-subscribable lists
 
-sudo rm -r /etc/piholeparser/compressedconvert/*.txt
+sudo rm /etc/piholeparser/compressedconvert/*.7z
+sudo rm /etc/piholeparser/compressedconvert/*.txt
 
 ## Dependency check
 { if
@@ -47,4 +48,4 @@ sudo rm /etc/piholeparser/compressedconvert/*.7z
 
 ## Process txt files
 # /etc/piholeparser/compressedconvert/
-# sudo rm -r /etc/piholeparser/compressedconvert/*.txt
+# sudo rm /etc/piholeparser/compressedconvert/*.txt
