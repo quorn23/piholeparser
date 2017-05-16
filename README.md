@@ -10,6 +10,9 @@ It is probably best to copy the link in it's raw format.
 
 ### If you want all of the lists
 
+Just add
+
+https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsed/1111ALLPARSEDLISTS1111.txt
 
 
 ## Basic Usage Instructions
