@@ -1,6 +1,8 @@
 #!/bin/bash
 timestamp=`date --rfc-3339=seconds`
 cd /etc/piholeparser
+sudo git config --global user.name "Your Name"
+sudo git config --global user.email you@example.com
 sudo git pull
 sudo bash /etc/piholeparser/bigparser.sh
 sudo git remote set-url origin https://USERNAME:PASSWORD@github.com/deathbybandaid/piholeparser.git
