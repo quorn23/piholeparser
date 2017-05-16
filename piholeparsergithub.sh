@@ -40,6 +40,12 @@ sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
 ## Delete Empty Files
 sudo find /etc/piholeparser/parsed/ -size 0 -delete
 
+## Cleanup
+sudo rm -r /etc/piholeparser/lists/*.txt
+#sudo rm -r /etc/piholeparser/parsed/*.txt
+sudo rm /etc/piholeparser/compressedconvert/*.7z
+sudo rm /etc/piholeparser/compressedconvert/*.txt
+
 ## Push Changes up to Github
 sudo git config --global user.name "Your Name"
 sudo git config --global user.email you@example.com
@@ -48,11 +54,7 @@ sudo git add .
 sudo git commit -m "Update lists $timestamp"
 sudo git push -u origin master
 
-## Final Cleanup
-sudo rm -r /etc/piholeparser/lists/*.txt
-sudo rm -r /etc/piholeparser/parsed/*.txt
-sudo rm /etc/piholeparser/compressedconvert/*.7z
-sudo rm /etc/piholeparser/compressedconvert/*.txt
+
 
 ## Notes
 ## copy this file out of the main directory and edit credentials
