@@ -45,7 +45,7 @@ for f in $FILES
 do
 
 ## Begin
-sudo mv /etc/piholeparser/compressedconvert/$f /etc/piholeparser/compressedconvert/"$f"ads.txt
+sudo mv $f "$f"ads.txt
 
 ## Filter
 echo -e "\nFiltering non-url content..."
