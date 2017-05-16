@@ -1,9 +1,6 @@
 #!/bin/bash
 ## This will convert non-subscribable lists
 
-sudo rm /etc/piholeparser/compressedconvert/*.7z
-sudo rm /etc/piholeparser/compressedconvert/*.txt
-
 ## Dependency check
 { if
 which p7zip >/dev/null;
@@ -43,8 +40,6 @@ sudo wget http://rlwpx.free.fr/WPFF/hblc.7z -P /etc/piholeparser/compressedconve
 sudo 7za e /etc/piholeparser/compressedconvert/hblc.7z -o/etc/piholeparser/compressedconvert/
 sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /etc/piholeparser/compressedconvert/AirellesPhishingHosts.txt
 
-## Cleanup
-sudo rm /etc/piholeparser/compressedconvert/*.7z
 
 ## Process txt files
 # /etc/piholeparser/compressedconvert/
