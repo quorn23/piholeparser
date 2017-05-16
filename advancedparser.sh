@@ -20,7 +20,7 @@ done
 ## Filter
 echo -e "\nFiltering non-url content..."
 sudo perl /etc/piholeparser/parser.pl "$f"ads.txt > "$f"ads_parsed.txt
-sudo mv "$f"ads.txt /etc/piholeparser/mirroredlists/"$f".txt
+sudo mv "$f"ads.txt /etc/piholeparser/mirroredlists/
 #sudo rm "$f"ads.txt
 echo -e "\t`wc -l "$f"ads_parsed.txt | cut -d " " -f 1` lines after parsing"
 
