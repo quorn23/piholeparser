@@ -11,11 +11,10 @@ sudo apt-get install -y p7zip-full
 fi }
 
 ## Clean directories to avoid collisions
-sudo rm -r /etc/piholeparser/lists/*.txt
-sudo rm -r /etc/piholeparser/parsed/*.txt
+sudo rm /etc/piholeparser/lists/*.txt
+sudo rm /etc/piholeparser/parsed/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.txt
-sudo rm /etc/piholeparser/compressedconvert/*.text
 
 ## Timestamp
 timestamp=`date --rfc-3339=seconds`
@@ -54,7 +53,6 @@ sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm -r /etc/piholeparser/parsed/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.txt
-sudo rm /etc/piholeparser/compressedconvert/*.text
 
 ## Notes
 ## copy this file out of the main directory and edit credentials
