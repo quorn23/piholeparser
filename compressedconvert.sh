@@ -50,16 +50,16 @@ sudo mv $f "$f"ads.txt
 ## Filter
 echo -e "\nFiltering non-url content..."
 sudo perl /etc/piholeparser/parser.pl "$f"ads.txt > "$f"ads_parsed.txt
-sudo rm "$f"ads.txt
+#sudo rm "$f"ads.txt
 echo -e "\t`wc -l "$f"ads_parsed.txt | cut -d " " -f 1` lines after parsing"
 
 ## Duplicate Removal
 echo -e "\nRemoving duplicates..."
 sort -u "$f"ads_parsed.txt > "$f"ads_unique.txt
-sudo rm "$f"ads_parsed.txt
+#sudo rm "$f"ads_parsed.txt
 echo -e "\t`wc -l "$f"ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f"ads_unique.txt >> "$f".txt
-sudo rm "$f"ads_unique.txt
+#sudo rm "$f"ads_unique.txt
 
 ## End File Loop
 done
