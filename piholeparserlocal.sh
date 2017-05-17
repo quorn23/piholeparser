@@ -64,7 +64,7 @@ echo ""
 ## Parse Lists
 echo ""
 echo "Parsing Lists."
-sudo bash /etc/piholeparser/advancedparser.sh
+sudo bash /etc/piholeparser/advancedparserlocal.sh
 printf "$magenta" "___________________________________________________________"
 echo ""
 
