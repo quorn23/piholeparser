@@ -2,7 +2,8 @@
 ## This will parse lists and upload to Github
 
 ## Timestamp
-timestamp=`date --rfc-3339=seconds`
+#timestamp=`date --rfc-3339=seconds`
+timestamp=`date`
 
 ## Colors
 red='\e[1;31m%s\e[0m\n'
