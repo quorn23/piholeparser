@@ -20,8 +20,6 @@ done
 ## Filter
 echo -e "\nFiltering non-url content..."
 sudo perl /etc/piholeparser/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
-#sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
-#sudo rm "$f".ads.txt
 echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
 
 ## Duplicate Removal
@@ -55,7 +53,7 @@ echo "File Too Large For Github. Deleting."
 sudo rm "$f".ads.txt
 else
 echo ""
-echo "Moving File to Mirror Directory."
+echo "Creating Mirror of Unparsed File."
 sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
