@@ -48,5 +48,19 @@ echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+## Remove Empty Files
+if 
+[ -s "$f".txt ]
+then
+echo ""
+printf "$yellow"  "File will be moved to the parsed directory."
+sudo mv "$f".txt /etc/piholeparser/parsed/
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+else
+echo ""
+printf "$red"     "File Empty. It will be deleted."
+rm -rf "$f".txt
+fi
+
 ## End File Loop
 done
