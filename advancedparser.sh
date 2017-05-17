@@ -56,11 +56,12 @@ sudo rm "$f".ads.txt
 else
 echo ""
 echo "Moving File to Mirror Directory."
-sudo mv /etc/piholeparser/lists/"$f".ads.txt /etc/piholeparser/mirroredlists/
+sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 sudo rm /etc/piholeparser/mirroredlists/1111ALLPARSEDLISTS1111.txt
 fi
 
+echo "___________________________________________________________"
 
 ## End File Loop
 done
