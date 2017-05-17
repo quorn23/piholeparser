@@ -32,6 +32,10 @@ sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholepar
 
 sudo cp /etc/piholeparser/piholeparsergithub.sh /etc/piholeparsergithub.sh
 
+##### OR
+
+sudo cp /etc/piholeparser/piholeparserlocal.sh /etc/piholeparserlocal.sh
+
 #### Adjust credentials in that file.
 
 sudo bash /etc/piholeparser/piholeparsergithub.sh
