@@ -47,15 +47,20 @@ rm -rf "$f".txt
 fi
 
 ## Create Mirrors
-#if 
-#[ -s "$f".ads.txt ]
-#then
-#echo ""
-#echo ""
-#else
-#echo ""
-#echo ""
-#fi
+if 
+test $(stat -c%s "$f".ads.txt) -ge 100000000
+then
+echo ""
+echo "File Too Large For Github. Deleting."
+sudo rm "$f".ads.txt
+else
+echo ""
+echo "Moving File to Mirror Directory."
+sudo mv /etc/piholeparser/lists/"$f".ads.txt /etc/piholeparser/mirroredlists/
+sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo rm /etc/piholeparser/mirroredlists/1111ALLPARSEDLISTS1111.txt
+fi
+
 
 ## End File Loop
 done
