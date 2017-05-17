@@ -53,9 +53,9 @@ if
 [ -s "$f".txt ]
 then
 echo ""
-printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv "$f".txt /etc/piholeparser/parsed/
-sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+printf "$yellow"  "File will be moved to the parsedlocal directory."
+sudo mv "$f".txt /etc/piholeparser/parsedlocal/
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsedlocal/*.txt
 else
 echo ""
 printf "$red"     "File Empty. It will be deleted."
