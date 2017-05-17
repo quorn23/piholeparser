@@ -2,7 +2,6 @@
 ## This will parse lists and upload to Github
 
 ## Timestamp
-#timestamp=`date --rfc-3339=seconds`
 timestamp=`date`
 
 ## Colors
@@ -54,6 +53,10 @@ printf "$green"   "Updating Repository."
 sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+## Re-Build 1111ALLPARSEDLISTS1111.lst
+sudo rm /etc/piholeparser/1111ALLPARSEDLISTS1111.lst
+sudo cat /etc/piholeparser/lists/*.lst | sort > /etc/piholeparser/1111ALLPARSEDLISTS1111.lst
 
 ## Process lists that have to be extracted
 printf "$blue"    "___________________________________________________________"
