@@ -10,7 +10,7 @@ magenta='\e[1;35m%s\e[0m\n'
 cyan='\e[1;36m%s\e[0m\n'
 
 ## Set File Directory
-FILES=/etc/piholeparser/ALLPARSEDLISTS.lst
+FILES=/etc/piholeparser/1111ALLPARSEDLISTS1111.lst
 
 ## Start File Loop
 for f in $FILES
