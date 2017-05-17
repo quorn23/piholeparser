@@ -87,6 +87,6 @@ echo ""
 printf "$green"   "Push Changes up to Pihole Web Server"
 sudo mkdir /var/www/html/lists/
 sudo rm /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
-sudo cp -p /etc/piholeparser/parsed/1111ALLPARSEDLISTS1111.txt /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
+sudo cp -p /etc/piholeparser/parsedlocal/1111ALLPARSEDLISTS1111.txt /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 printf "$magenta" "___________________________________________________________"
 echo ""
