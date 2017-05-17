@@ -61,7 +61,7 @@ if
 test $(stat -c%s "$f".ads.txt) -ge 100000000
 then
 echo ""
-printf "$red"     "File Too Large For Github. Deleting."
+printf "$red"     "Mirror File Too Large For Github. Deleting."
 sudo rm "$f".ads.txt
 else
 echo ""
