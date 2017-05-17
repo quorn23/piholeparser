@@ -75,7 +75,7 @@ echo "Parsing All Lists."
 sudo bash /etc/piholeparser/advancedparserlocal.sh
 printf "$magenta" "___________________________________________________________"
 echo ""
-sudo mv /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
+sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
 
 ## Cleanup
 printf "$blue"    "___________________________________________________________"
