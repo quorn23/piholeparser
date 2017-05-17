@@ -47,8 +47,8 @@ sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.txt
 
-## Rmove Big List From Mirrors folder before Pushing
-sudo rm /etc/piholeparser/mirroredlists/1111ALLPARSEDLISTS1111.txt
+## Remove Big List From Mirrors folder before Pushing
+#sudo rm /etc/piholeparser/mirroredlists/1111ALLPARSEDLISTS1111.txt
 
 ## Push Changes up to Github
 sudo git config --global user.name "Your Name"
