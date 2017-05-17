@@ -5,6 +5,8 @@
 ## Download, Extract, and Name List Files.                              ##
 ##########################################################################
 
+sudo mkdir /var/www/html/compressedconvert
+
 ## Colors
 red='\e[1;31m%s\e[0m\n'
 green='\e[1;32m%s\e[0m\n'
@@ -24,7 +26,7 @@ echo ""
 sudo 7za e /etc/piholeparser/compressedconvert/hsex.7z -o/etc/piholeparser/compressedconvert/
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/Hosts.sex /etc/piholeparser/compressedconvert/AirellesAntiSexHosts.txt
+sudo mv /etc/piholeparser/compressedconvert/Hosts.sex /var/www/html/compressedconvert/AirellesAntiSexHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
@@ -39,7 +41,7 @@ echo ""
 sudo 7za e /etc/piholeparser/compressedconvert/hrsk.7z -o/etc/piholeparser/compressedconvert/
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/Hosts.rsk /etc/piholeparser/compressedconvert/AirellesMalwareHosts.txt
+sudo mv /etc/piholeparser/compressedconvert/Hosts.rsk /var/www/html/compressedconvert/AirellesMalwareHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
@@ -54,7 +56,7 @@ echo ""
 sudo 7za e /etc/piholeparser/compressedconvert/htrc.7z -o/etc/piholeparser/compressedconvert/
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/Hosts.trc /etc/piholeparser/compressedconvert/AirellesAntiTrackersHosts.txt
+sudo mv /etc/piholeparser/compressedconvert/Hosts.trc /var/www/html/compressedconvert/AirellesAntiTrackersHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
@@ -69,7 +71,7 @@ echo ""
 sudo 7za e /etc/piholeparser/compressedconvert/hpub.7z -o/etc/piholeparser/compressedconvert/
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/Hosts.pub /etc/piholeparser/compressedconvert/AirellesAntiAdvertisementsHosts.txt
+sudo mv /etc/piholeparser/compressedconvert/Hosts.pub /var/www/html/compressedconvert/AirellesAntiAdvertisementsHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
@@ -84,7 +86,7 @@ echo ""
 sudo 7za e /etc/piholeparser/compressedconvert/hmis.7z -o/etc/piholeparser/compressedconvert/
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/Hosts.mis /etc/piholeparser/compressedconvert/AirellesAntiMiscellaneousHosts.txt
+sudo mv /etc/piholeparser/compressedconvert/Hosts.mis /var/www/html/compressedconvert/AirellesAntiMiscellaneousHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
@@ -98,7 +100,7 @@ echo ""
 sudo 7za e /etc/piholeparser/compressedconvert/hblc.7z -o/etc/piholeparser/compressedconvert/
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /etc/piholeparser/compressedconvert/AirellesPhishingHosts.txt
+sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /var/www/html/compressedconvert/AirellesPhishingHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
@@ -113,7 +115,7 @@ echo ""
 sudo tar -xvf /etc/piholeparser/compressedconvert/blackweb.tar.gz -C /etc/piholeparser/compressedconvert
 printf "$yellow"  "Renaming"
 echo ""
-sudo mv /etc/piholeparser/compressedconvert/blackweb.txt /etc/piholeparser/compressedconvert/Blackweb.txt
+sudo mv /etc/piholeparser/compressedconvert/blackweb.txt /var/www/html/compressedconvert/Blackweb.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 
