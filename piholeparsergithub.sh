@@ -69,6 +69,14 @@ sudo bash /etc/piholeparser/advancedparser.sh
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+## Parse Big List
+echo ""
+echo "Parsing All Lists."
+sudo bash /etc/piholeparser/advancedparserlocal.sh
+printf "$magenta" "___________________________________________________________"
+echo ""
+sudo mv /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
+
 ## Cleanup
 printf "$blue"    "___________________________________________________________"
 echo ""
