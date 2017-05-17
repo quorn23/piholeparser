@@ -10,7 +10,7 @@ magenta='\e[1;35m%s\e[0m\n'
 cyan='\e[1;36m%s\e[0m\n'
 
 ## Set File Directory
-FILES=/etc/piholeparser/lists/1111ALLPARSEDLISTS1111.lst
+FILES=/etc/piholeparser/ALLPARSEDLISTS.lst
 
 ## Start File Loop
 for f in $FILES
@@ -53,9 +53,9 @@ if
 [ -s "$f".txt ]
 then
 echo ""
-printf "$yellow"  "File will be moved to the parsedlocal directory."
-sudo mv "$f".txt /etc/piholeparser/parsedlocal/
-sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsedlocal/*.txt
+printf "$yellow"  "File will be moved to the parsedall directory."
+sudo mv "$f".txt /etc/piholeparser/parsedall/
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsedall/*.txt
 else
 echo ""
 printf "$red"     "File Empty. It will be deleted."
