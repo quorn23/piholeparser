@@ -8,11 +8,15 @@ FILES=/etc/piholeparser/lists/*.lst
 for f in $FILES
 do
 
+echo ""
+echo "___________________________________________________________"
+echo ""
+echo "$f"
+
 for source in `cat $f`;
 do
 echo ""
-echo $f;
-echo $source;
+echo "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
@@ -58,7 +62,9 @@ sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
+echo ""
 echo "___________________________________________________________"
+echo ""
 
 ## End File Loop
 done
