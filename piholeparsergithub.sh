@@ -2,7 +2,8 @@
 ## This will parse lists and upload to Github
 
 ## Timestamp
-timestamp=`date --rfc-3339=seconds`
+#timestamp=`date --rfc-3339=seconds`
+timestamp=`date`
 
 ## Colors
 red='\e[1;31m%s\e[0m\n'
@@ -94,8 +95,8 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Pushing Lists to Github"
 sudo git config --global user.name "deathbybandaid"
-sudo git config --global user.email deathbybandaid@deathbybandaid.net
-sudo git remote set-url origin https://deathbybandaid:Bandaid1701@github.com/deathbybandaid/piholeparser.git
+sudo git config --global user.email sam@deathbybandaid.net
+sudo git remote set-url origin https://Deathbybandaid:Bandaid1701@github.com/deathbybandaid/piholeparser.git
 sudo git add .
 sudo git commit -m "Update lists $timestamp"
 sudo git push -u origin master
