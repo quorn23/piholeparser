@@ -39,15 +39,23 @@ then
 echo ""
 echo "File will be moved to the parsed directory."
 sudo mv "$f".txt /etc/piholeparser/parsed/
-echo ""
-echo "File will be renamed."
 sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
-continue
 else
 echo ""
 echo "File Empty. It will be deleted."
 rm -rf "$f".txt
 fi
+
+## Create Mirrors
+#if 
+#[ -s "$f".ads.txt ]
+#then
+#echo ""
+#echo ""
+#else
+#echo ""
+#echo ""
+#fi
 
 ## End File Loop
 done
