@@ -37,7 +37,7 @@ sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /etc/piholeparser/compress
 
 ## Blackweb
 sudo wget https://github.com/maravento/blackweb/raw/master/blackweb.tar.gz -P /etc/piholeparser/compressedconvert/
-sudo tar -xvf /etc/piholeparser/compressedconvert/blackweb.tar.gz
+sudo tar -xvf /etc/piholeparser/compressedconvert/blackweb.tar.gz -C /etc/piholeparser/compressedconvert
 sudo mv /etc/piholeparser/compressedconvert/blackweb.txt /etc/piholeparser/compressedconvert/Blackweb.txt
 
 ## Make sure the file path is added as a list.lst
