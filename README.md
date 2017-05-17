@@ -26,15 +26,23 @@ sudo nano basic.lst
 
 sudo bash /etc/piholeparser/basicparser.sh
 
-## Advanced Usage
+## Advanced Usage Local
+
+sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
+
+sudo cp /etc/piholeparser/piholeparserlocal.sh /etc/piholeparserlocal.sh
+
+sudo bash /etc/piholeparser/piholeparserlocal.sh
+
+#### Add a cronjob
+
+20 0 * * * sudo bash /etc/piholeparserlocal.sh
+
+## Advanced Usage Push to github
 
 sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
 
 sudo cp /etc/piholeparser/piholeparsergithub.sh /etc/piholeparsergithub.sh
-
-##### OR
-
-sudo cp /etc/piholeparser/piholeparserlocal.sh /etc/piholeparserlocal.sh
 
 #### Adjust credentials in that file.
 
