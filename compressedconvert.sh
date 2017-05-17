@@ -5,8 +5,6 @@
 ## Download, Extract, and Name List Files.                              ##
 ##########################################################################
 
-sudo mkdir /var/www/html/compressedconvert
-
 ## Colors
 red='\e[1;31m%s\e[0m\n'
 green='\e[1;32m%s\e[0m\n'
@@ -135,6 +133,15 @@ printf "$magenta" "___________________________________________________________"
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$yellow"  "Moving Extracted Lists to localhost."
+
+if 
+[ -d "/var/www/html/compressedconvert" ] 
+then
+echo "" 
+else
+sudo mkdir /var/www/html/compressedconvert
+fi
+
 sudo cp /etc/piholeparser/compressedconvert/*.txt /var/www/html/compressedconvert/
 echo ""
 printf "$magenta" "___________________________________________________________"
