@@ -131,3 +131,10 @@ sudo mv /etc/piholeparser/compressedconvert/blackweb.txt /etc/piholeparser/compr
 echo ""
 printf "$magenta" "___________________________________________________________"
 
+## Moving Extracted Files
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$yellow"  "Moving Extracted Lists to localhost."
+sudo cp /etc/piholeparser/compressedconvert/*.txt /var/www/html/compressedconvert/
+echo ""
+printf "$magenta" "___________________________________________________________"
