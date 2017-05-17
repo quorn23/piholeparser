@@ -38,6 +38,7 @@ sudo rm /etc/piholeparser/parsed/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
 sudo rm /etc/piholeparser/compressedconvert/*.txt
+sudo rm /var/www/html/compressedconvert/*.txt
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -75,6 +76,7 @@ sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
 sudo rm /etc/piholeparser/compressedconvert/*.txt
+sudo rm /var/www/html/compressedconvert/*.txt
 printf "$magenta" "___________________________________________________________"
 echo ""
 
