@@ -32,14 +32,71 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Clearing the Path."
+
+if 
+ls /etc/piholeparser/lists/*.txt &> /dev/null; 
+then
 sudo rm /etc/piholeparser/lists/*.txt
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/mirroredlists/*.txt &> /dev/null; 
+then
 sudo rm /etc/piholeparser/mirroredlists/*.txt
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/parsed/*.txt &> /dev/null; 
+then
 sudo rm /etc/piholeparser/parsed/*.txt
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/parsedall/*.txt &> /dev/null; 
+then
 sudo rm /etc/piholeparser/parsedall/*.txt
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
+then
 sudo rm /etc/piholeparser/compressedconvert/*.7z
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.tar.gz &> /dev/null; 
+then
 sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.txt &> /dev/null; 
+then
 sudo rm /etc/piholeparser/compressedconvert/*.txt
+else
+echo ""
+fi
+
+if 
+ls /var/www/html/compressedconvert/*.txt &> /dev/null; 
+then
 sudo rm /var/www/html/compressedconvert/*.txt
+else
+echo ""
+fi
+
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -90,11 +147,47 @@ sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Cleaning Up."
-sudo rm -r /etc/piholeparser/lists/*.txt
+
+if 
+ls /etc/piholeparser/lists/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/*.txt
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
+then
 sudo rm /etc/piholeparser/compressedconvert/*.7z
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.tar.gz &> /dev/null; 
+then
 sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
+else
+echo ""
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.txt &> /dev/null; 
+then
 sudo rm /etc/piholeparser/compressedconvert/*.txt
+else
+echo ""
+fi
+
+if 
+ls /var/www/html/compressedconvert/*.txt &> /dev/null; 
+then
 sudo rm /var/www/html/compressedconvert/*.txt
+else
+echo ""
+fi
+
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -115,7 +208,15 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Push Changes up to Pihole Web Server"
+
+if 
+[ -d "/var/www/html/lists/" ] 
+then
+echo "" 
+else
 sudo mkdir /var/www/html/lists/
+fi
+
 sudo rm /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 sudo cp -p /etc/piholeparser/parsed/1111ALLPARSEDLISTS1111.txt /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 printf "$magenta" "___________________________________________________________"
