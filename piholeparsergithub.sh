@@ -35,15 +35,6 @@ sudo bash /etc/piholeparser/advancedparser.sh
 ## Mirror Lists
 #sudo bash /etc/piholeparser/mirrorlists.sh
 
-## Move Files
-#sudo mv /etc/piholeparser/lists/*.txt /etc/piholeparser/parsed/
-
-## Delete Empty Files
-#sudo find /etc/piholeparser/parsed/ -size 0 -delete
-
-## Fix File Extensions
-#sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
-
 ## Cleanup
 sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
