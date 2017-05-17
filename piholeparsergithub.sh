@@ -32,6 +32,9 @@ sudo bash /etc/piholeparser/compressedconvert.sh
 ## Parse Lists
 sudo bash /etc/piholeparser/advancedparser.sh
 
+## Mirror Lists
+sudo bash /etc/piholeparser/mirrorlists.sh
+
 ## Move Files
 mv /etc/piholeparser/lists/*.txt /etc/piholeparser/parsed/
 
@@ -40,15 +43,11 @@ sudo find /etc/piholeparser/parsed/ -size 0 -delete
 
 ## Fix File Extensions
 sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
-sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 
 ## Cleanup
 sudo rm -r /etc/piholeparser/lists/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.txt
-
-## Remove Big List From Mirrors folder before Pushing
-#sudo rm /etc/piholeparser/mirroredlists/1111ALLPARSEDLISTS1111.txt
 
 ## Push Changes up to Github
 sudo git config --global user.name "Your Name"
