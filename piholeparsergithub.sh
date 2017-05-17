@@ -93,9 +93,9 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Pushing Lists to Github"
-sudo git config --global user.name "Your Name"
-sudo git config --global user.email you@example.com
-sudo git remote set-url origin https://USERNAME:PASSWORD@github.com/deathbybandaid/piholeparser.git
+sudo git config --global user.name "deathbybandaid"
+sudo git config --global user.email deathbybandaid@deathbybandaid.net
+sudo git remote set-url origin https://deathbybandaid:Bandaid1701@github.com/deathbybandaid/piholeparser.git
 sudo git add .
 sudo git commit -m "Update lists $timestamp"
 sudo git push -u origin master
