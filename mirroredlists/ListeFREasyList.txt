@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: ilvl9RESZdE3Ju57ViWJQA
-! Version: 201705170211
+! Checksum: lnpJByOcitgmLTZskzuqvQ
+! Version: 201705170431
 ! Title: Liste FR+EasyList
 ! Abonnements combinés à la Liste FR et EasyList
-! Dernière modification le 17 May 2017 02:11 UTC
+! Dernière modification le 17 May 2017 04:31 UTC
 ! Expires: 4 days (fréquence des mises a jour automatiques)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=91
 !
@@ -274,6 +274,7 @@
 /ad-related.
 /ad-rotator.
 /ad-script.
+/ad-scroll.js
 /ad.ashx/*
 /ad.bon-plan-
 /ad.js?_=
@@ -712,6 +713,7 @@
 /get.cgi?*=banner
 /get_banniere.php?$subdocument
 /getadsor.
+/getDlAd?
 /getPromotedClassifiedAd.
 /getPub.php
 /gfx/bannieres/*
@@ -1248,6 +1250,7 @@ _bannerad2-
 _bannerad2_
 _barre_pub/
 _bnrrotator_
+_board_ad.
 _code/*/goclick|
 _domain=ads.
 _emplacements.*=300x125
@@ -2164,6 +2167,7 @@ debugger:$popup
 ||download-pic.com^$third-party
 ||dreamstore.ch^$third-party
 ||ds1.nl^$third-party
+||duapps.com^$third-party
 ||duporno.biz^$third-party
 ||dustin5043.fr^$third-party
 ||dvd-explorer.com^$third-party
@@ -5692,6 +5696,10 @@ filmstreamingvf.ws
 ! shorte.st
 |http://$subdocument,domain=clkme.me|cllkme.com|jigbig.tk|newsfortrump.ga|skiip.me|skipp.io|wiid.me
 |https://$subdocument,domain=clkme.me|cllkme.com|jigbig.tk|newsfortrump.ga|skiip.me|skipp.io|wiid.me
+! coshurl.co
+@@||ads.hyperdebrid.net^$image,script,stylesheet,xmlhttprequest,domain=ads.hyperdebrid.net
+|http://$popup,script,third-party,xmlhttprequest,domain=ads.hyperdebrid.net|coshurl.co
+|https://$popup,script,third-party,xmlhttprequest,domain=ads.hyperdebrid.net|coshurl.co
 ! Auto short link scripts
 ||adhit.me^$script,third-party
 ||al.ly^$script,third-party
@@ -5712,7 +5720,7 @@ filmstreamingvf.ws
 &utm_*=linkbucks$popup,subdocument
 /?utm_source=linkbucks.com&utm_medium=cpc&utm_term=rank+mee&utm_campaign=linkbucks.com
 ?utm_*=linkbucks$popup,subdocument
-|http://$subdocument,domain=abnouneuuxbozmt.net|aptclkzmoelfm.net|bhclvaqgxbpcd.net|bohjrmvzefy.net|brnopvwa.net|cedrofltell.net|cquixlgothzm.net|cvwgklzfu.net|esywoeuo.net|ezfbngpqcxnu.net|ffhogexfyplgm.net|fnzolgxloxsrpf.net|frmrfhvwpi.net|gheemuiwkrbof.net|gppezttuctpq.net|gpxibvwmjbo.net|ikqksgum.net|inesajjovx.net|iurmxkchajoxppg.net|kcmzydgk.net|kkssrjkyduydc.net|linkbucks.com|lnzpbkeijlkmfdr.net|lrlvmaeris.net|lskjpnkavksj.net|lzbsrxvkz.net|mcuzfdumqro.net|mkjuobtzd.net|mnjsowaj.net|neayknle.net|nsdxoecjx.net|nuzvlmynt.net|pipkdrzb.net|pqmwvnfyitjawsu.net|pzkopsvseileu.net|qdifkhrghxhbyw.net|rdzxxzabj.net|sa.ae|sipmnteinohts.net|sugjtdizgo.net|tbyauqjvluik.net|tditbdczodoowf.net|tiunleoecoolii.net|tmccbzsxu.net|ubqgcbmrqjdcqn.net|vdmduttihyxsx.net|vfbsjcwl.net|vvujlrldhpbou.net|wuhknlrnhcli.net|wxwqbpkr.net|xtcatdozwiesxvx.net|yqvzrpxxwyk.net|zjslornrlnvbmom.net|ztevysowdzkkjw.net|zuemosjimenxnmy.net|zvpelwevlav.net|zypdvbupo.net
+|http://$subdocument,domain=abnouneuuxbozmt.net|aptclkzmoelfm.net|bhclvaqgxbpcd.net|bohjrmvzefy.net|brnopvwa.net|cedrofltell.net|cquixlgothzm.net|cvwgklzfu.net|esywoeuo.net|ezfbngpqcxnu.net|ffhogexfyplgm.net|fnzolgxloxsrpf.net|frmrfhvwpi.net|gheemuiwkrbof.net|gppezttuctpq.net|gpxibvwmjbo.net|ikqksgum.net|inesajjovx.net|iurmxkchajoxppg.net|kcmzydgk.net|kkssrjkyduydc.net|linkbucks.com|lnzpbkeijlkmfdr.net|lrlvmaeris.net|lskjpnkavksj.net|lzbsrxvkz.net|mcuzfdumqro.net|mkjuobtzd.net|mnjsowaj.net|neayknle.net|nistujwppzczgso.net|nsdxoecjx.net|nuzvlmynt.net|pipkdrzb.net|pqmwvnfyitjawsu.net|pzkopsvseileu.net|qdifkhrghxhbyw.net|rdzxxzabj.net|sa.ae|sipmnteinohts.net|sugjtdizgo.net|tbyauqjvluik.net|tditbdczodoowf.net|tiunleoecoolii.net|tmccbzsxu.net|ubqgcbmrqjdcqn.net|vdmduttihyxsx.net|vfbsjcwl.net|vvujlrldhpbou.net|wuhknlrnhcli.net|wxwqbpkr.net|xtcatdozwiesxvx.net|yqvzrpxxwyk.net|zjslornrlnvbmom.net|ztevysowdzkkjw.net|zuemosjimenxnmy.net|zvpelwevlav.net|zypdvbupo.net
 ||arabtise.com^$subdocument,third-party
 ||excoin.info^$subdocument,third-party
 ||fidelityhouse.eu^$subdocument,third-party
@@ -8531,6 +8539,7 @@ toutcash.com/images/bandeau-
 ##.adunitfirst
 ##.adunitrd
 ##.aduns
+##.aduns1
 ##.aduns2
 ##.adv--float
 ##.adv-header
@@ -9164,6 +9173,7 @@ toutcash.com/images/bandeau-
 ##[id^="block-xiti_oas-"]
 ##[id^="codeneric_ad_widget-"]
 ##[id^="criteoDivPave"]
+##[id^="div-gpt-"] + [id^="ctr-"]
 ##[id^="ligatus-"]
 ##[id^="ligatus_"]
 ##[id^="pub_dart_"]
@@ -9239,6 +9249,7 @@ toutcash.com/images/bandeau-
 ##a[href^=".php/annonce/ads/"]
 ##a[href^="/rdh?"]
 ##a[href^="ads.php?id="]
+##a[href^="annonceur.php?id_banniere="]
 ##a[href^="http://3dxchat.com/?"]
 ##a[href^="http://aclick.adhoc1.net/"]
 ##a[href^="http://aclick.adhoc2.com/"]
@@ -10054,6 +10065,8 @@ madmoizelle.com##.article_banner
 madmoizelle.com##.article_pub
 buzzly.fr##.article_pubtop
 msn.com##.aside-ad
+paruvendu.fr##.auto2010_inter_CONT
+paruvendu.fr##.auto2010_noprint
 lindependant.fr##.auto300X250
 totonova.com##.avi
 buzzly.fr##.ayl-ad-article
@@ -11640,6 +11653,7 @@ trackmusik.fr#@#.afs_ads
 @@|http://bc.vc^$generichide
 @@||4downfiles.org^$generichide
 @@||actu-zap.com^$generichide
+@@||ads.hyperdebrid.net^$generichide
 @@||al.ly^$generichide
 @@||alligatographe.blogspot.fr^$generichide
 @@||ally.sh^$generichide
@@ -11654,6 +11668,7 @@ trackmusik.fr#@#.afs_ads
 @@||comptoir.co^$generichide
 @@||conserves.blogspot.ca^$generichide
 @@||coolgames.com^$generichide
+@@||coshurl.co^$generichide
 @@||dpfilms.net^$generichide
 @@||dpseries.net^$generichide
 @@||e-sushi.fr^$generichide
@@ -44221,6 +44236,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||jnercechoqjb.com^$third-party
 ||jnxqlltlnezn.com^$third-party
 ||jnylpjlnjfsp.com^$third-party
+||jobveibsozms.com^$third-party
 ||jogpsoiyngua.com^$third-party
 ||joqpatxugyug.com^$third-party
 ||jorndvyzchaq.com^$third-party
@@ -44649,6 +44665,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||plmuxaeyapbqxszavtsljaqvmlsuuvifznvttuuqfcxcbgqdnn.com^$third-party
 ||plquutxxewil.com^$third-party
 ||plwvwvhudkuv.com^$third-party
+||plyftjxmrxrk.com^$third-party
 ||pmgmbpuiblak.com^$third-party
 ||pmlcuxqbngrl.com^$third-party
 ||pnjeolgxsimj.com^$third-party
@@ -45347,6 +45364,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||zmytwgfd.com^$third-party
 ||znmrgzozlohe.com^$third-party
 ||znvctmolksaj.com^$third-party
+||zohaqnxwkvyt.com^$third-party
 ||zoileyozfexv.com^$third-party
 ||zoowknbw.com^$third-party
 ||zpctncydojjh.com^$third-party
