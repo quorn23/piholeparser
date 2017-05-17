@@ -45,3 +45,7 @@ sudo bash /etc/piholeparser/piholeparsergithub.sh
 Simply put the list you want parsed into a file in the lists folder like "NameOfListToParse.lst"
 
 The script will pull the new lists, parse them, and then it will push the parsings up to the parsed directory.
+
+### utilized the big list locally
+
+http://localhost/lists/1111ALLPARSEDLISTS1111.txt
