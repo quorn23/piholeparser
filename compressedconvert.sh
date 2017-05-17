@@ -15,6 +15,11 @@ blue='\e[1;34m%s\e[0m\n'
 magenta='\e[1;35m%s\e[0m\n'
 cyan='\e[1;36m%s\e[0m\n'
 
+## Airelle's lists gave me issues, so I built in a pingtest
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
+echo "Dowloading Airelle's Lists"
+
 ## Airelle's Anti-Sex Hosts
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -103,6 +108,9 @@ echo ""
 sudo mv /etc/piholeparser/compressedconvert/Hosts.blc /var/www/html/compressedconvert/AirellesPhishingHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
+else
+echo "Airelle's lists are unavailable right now"
+fi
 
 ## Blackweb
 printf "$blue"    "___________________________________________________________"
