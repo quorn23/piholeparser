@@ -35,6 +35,7 @@ printf "$green"   "Clearing the Path."
 sudo rm /etc/piholeparser/lists/*.txt
 sudo rm /etc/piholeparser/mirroredlists/*.txt
 sudo rm /etc/piholeparser/parsed/*.txt
+sudo rm /etc/piholeparser/parsedlocal/*.txt
 sudo rm /etc/piholeparser/compressedconvert/*.7z
 sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
 sudo rm /etc/piholeparser/compressedconvert/*.txt
