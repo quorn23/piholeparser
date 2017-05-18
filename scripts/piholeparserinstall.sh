@@ -1,4 +1,8 @@
 #!/bin/sh
+
+## Colors
+source /etc/piholeparser/scripts/colors.var
+
 { if
 which whiptail >/dev/null;
 then
