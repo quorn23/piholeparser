@@ -1,6 +1,9 @@
 #!/bin/bash
 ## This is the Parsing Process
 
+## Colors
+source /etc/piholeparser/scripts/colors.var
+
 echo ""
 echo "Parsing Individual Lists."
 
