@@ -124,14 +124,14 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading and Extracting Compressed Lists."
-sudo bash /etc/piholeparser/compressedconvert.sh
+sudo bash /etc/piholeparser/scripts/compressedconvert.sh
 printf "$magenta" "___________________________________________________________"
 echo ""
 
 ## Parse Lists
 echo ""
 echo "Parsing Lists."
-sudo bash /etc/piholeparser/advancedparserlocal.sh
+sudo bash /etc/piholeparser/scripts/advancedparserlocal.sh
 printf "$magenta" "___________________________________________________________"
 echo ""
 
