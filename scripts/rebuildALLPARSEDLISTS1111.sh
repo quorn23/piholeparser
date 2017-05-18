@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## Colors
+source /etc/piholeparser/scripts/colors.var
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Rebuilding the complete list file."
