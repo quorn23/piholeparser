@@ -14,10 +14,10 @@ printf "$green"   "Downloading and Extracting Compressed Lists."
 
 
 ## Airelle's lists gave me issues, so I built in a pingtest
-if ping -c 1 rlwpx.free.fr &> /dev/null
-then
 
 ## Airelle's Anti-Sex Hosts
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Sex Hosts"
@@ -31,8 +31,15 @@ echo ""
 sudo mv /etc/piholeparser/compressedconvert/Hosts.sex /etc/piholeparser/compressedconvert/AirellesAntiSexHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
+else
+echo ""
+printf "$red"     "Airelle's lists are unavailable right now"
+echo ""
+fi
 
 ## Airelle's Malware Hosts
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Malware Hosts"
@@ -46,8 +53,15 @@ echo ""
 sudo mv /etc/piholeparser/compressedconvert/Hosts.rsk /etc/piholeparser/compressedconvert/AirellesMalwareHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
+else
+echo ""
+printf "$red"     "Airelle's lists are unavailable right now"
+echo ""
+fi
 
 ## Airelle's Anti-Trackers Hosts
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Trackers Hosts"
@@ -61,8 +75,15 @@ echo ""
 sudo mv /etc/piholeparser/compressedconvert/Hosts.trc /etc/piholeparser/compressedconvert/AirellesAntiTrackersHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
+else
+echo ""
+printf "$red"     "Airelle's lists are unavailable right now"
+echo ""
+fi
 
 ## Airelle's Anti-Advertisements Hosts
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Advertisements Hosts"
@@ -76,8 +97,15 @@ echo ""
 sudo mv /etc/piholeparser/compressedconvert/Hosts.pub /etc/piholeparser/compressedconvert/AirellesAntiAdvertisementsHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
+else
+echo ""
+printf "$red"     "Airelle's lists are unavailable right now"
+echo ""
+fi
 
 ## Airelle's Anti-Miscellaneous Hosts
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Miscellaneous Hosts"
@@ -91,8 +119,15 @@ echo ""
 sudo mv /etc/piholeparser/compressedconvert/Hosts.mis /etc/piholeparser/compressedconvert/AirellesAntiMiscellaneousHosts.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
+else
+echo ""
+printf "$red"     "Airelle's lists are unavailable right now"
+echo ""
+fi
 
 ## Airelle's Phishing Hosts
+if ping -c 1 rlwpx.free.fr &> /dev/null
+then
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Airelle's Phishing Hosts"
@@ -107,7 +142,6 @@ echo ""
 printf "$magenta" "___________________________________________________________"
 else
 echo ""
-printf "$green"   "Downloading Airelle's List"
 printf "$red"     "Airelle's lists are unavailable right now"
 echo ""
 fi
