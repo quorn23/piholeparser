@@ -5,13 +5,10 @@
 ## Download, Extract, and Name List Files.                              ##
 ##########################################################################
 
-## Colors
-red='\e[1;31m%s\e[0m\n'
-green='\e[1;32m%s\e[0m\n'
-yellow='\e[1;33m%s\e[0m\n'
-blue='\e[1;34m%s\e[0m\n'
-magenta='\e[1;35m%s\e[0m\n'
-cyan='\e[1;36m%s\e[0m\n'
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Downloading and Extracting Compressed Lists."
+
 
 ## Airelle's lists gave me issues, so I built in a pingtest
 if ping -c 1 rlwpx.free.fr &> /dev/null
@@ -143,3 +140,6 @@ fi
 sudo cp /etc/piholeparser/compressedconvert/*.txt /var/www/html/compressedconvert/
 echo ""
 printf "$magenta" "___________________________________________________________"
+
+printf "$magenta" "___________________________________________________________"
+echo ""
