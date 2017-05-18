@@ -36,17 +36,26 @@ and towards the bottom of the file, adjust the repository and credentials to sui
 
 If you selected the local version,
 
-    sudo bash /etc/piholeparsergithub.sh
+    sudo bash /etc/piholeparserlocal.sh
 
 If you selected the github upload version,
 
-    sudo bash /etc/piholeparserlocal.sh
+    sudo bash /etc/piholeparsergithub.sh
 
 
 ### Adding Lists
 
 When this is run, it will fetch new lists that I have added to the lists directory. If you feel there is a list that you would like added, create an "issue" with the name of the list and the URL that it can be retrieved from.
 
-## A local copy of the big list is available to be used.
+#### A local copy of the big list is available to be used.
 
 http://pi.hole/lists/1111ALLPARSEDLISTS1111.txt
+
+
+## Disclaimer
+
+All "Original Unaltered Lists" are located within the mirroredlists directory.
+
+After going through the parser, many lists contain zero lines and are deleted.
+
+The filtered copies are located in the parsed directory, with filenames to reflect the Original Creators work/effort.
