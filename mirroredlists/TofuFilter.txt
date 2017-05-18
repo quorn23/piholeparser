@@ -142,12 +142,17 @@ _ads.php
 .swf?clickTAG=
 /www/delivery/*
 
+
 /://(js|\d{6})\.[-_.a-zA-Z0-9]+/t/\d{3}/\d{3}/a\d{7}\.js$/
 
 !||advision-adnw.jp^$third-party
 !||click-plus.net^$third-party
 !||medi-8.net^$third-party
 !||sprout-ad.com^$third-party
+
+!mobile
+||adnico.jp^$third-party
+
 
 .biz/ad/
 .biz/ads/
@@ -673,7 +678,7 @@ heavy-r.com##.hd-ban
 ||relart.fresheye.com^
 ||sanspo.com^*/adsence_
 ||sea-saw.com^$domain=2dbook.com
-||seesaa.jp/frame/*$domain=seesaawiki.jp
+||seesaa.jp/frame/*$domain=seesaawiki.jp|jbbs.shitaraba.net
 ||sourceforge.jp/js/sfjp-adsense.js?
 ||sponichi.co.jp/js/shopping/
 ||syosetu.com/ad$image
@@ -2011,6 +2016,7 @@ $domain=warotanikki.com,third-party
 @@||fwmrm.net^*/AdManager.swf?
 @@||fwmrm.net/crossdomain.xml$object_subrequest
 @@||image.www.rakuten.co.jp/com/js/d/
+!画像とか
 @@||images-na.ssl-images-amazon.com^$domain=imdb.com
 @@||jsgoal.jp/_parts/googlead.html?
 !skip ad ボタン
@@ -2046,7 +2052,6 @@ $domain=warotanikki.com,third-party
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party
 ||adfurikun.jp^$third-party
-||adnico.jp^$third-party
 ||adsee.jp^$third-party
 ||alistcloud.com^$third-party
 ||amoad.com^$third-party
