@@ -7,12 +7,6 @@ timestamp=`date`
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
-## Dependency check
-sudo bash /etc/piholeparser/scripts/dependencycheck.sh
-
-## Clean directories to avoid collisions
-sudo bash /etc/piholeparser/scripts/collisionavoid.sh
-
 ## Make sure we are in the correct directory
 cd /etc/piholeparser
 
@@ -23,6 +17,12 @@ printf "$green"   "Updating Repository."
 sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+## Dependency check
+sudo bash /etc/piholeparser/scripts/dependencycheck.sh
+
+## Clean directories to avoid collisions
+sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 
 ## Re-Build 1111ALLPARSEDLISTS1111.lst
 sudo bash /etc/piholeparser/scripts/rebuildALLPARSEDLISTS1111.sh
