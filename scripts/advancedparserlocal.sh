@@ -5,7 +5,7 @@ echo ""
 echo "Parsing Lists."
 
 ## Set File Directory
-FILES=/etc/piholeparser/1111ALLPARSEDLISTS1111.lst
+FILES=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
 
 ## Start File Loop
 for f in $FILES
