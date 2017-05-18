@@ -27,7 +27,7 @@ done
 ## Filter
 echo ""
 printf "$yellow"  "Filtering non-url content..."
-sudo perl /etc/piholeparser/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
+sudo perl /etc/piholeparser/parser/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
 
 ## Duplicate Removal
