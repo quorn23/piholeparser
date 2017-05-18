@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsedall/1
 
 I'm parsing all of the lists daily and uploading them to the parsed directory in this repository. If you prefer to use this project yourself locally, then run.
 
-    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/piholeparserinstall.sh
+    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/piholeparserinstall.sh
 
     sudo bash piholeparserinstall.sh
     
