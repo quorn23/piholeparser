@@ -58,4 +58,6 @@ http://pi.hole/lists/1111ALLPARSEDLISTS1111.txt
 
     After going through the parser, many lists contain zero lines and are deleted.
 
-    The filtered copies are located in the parsed directory, with filenames to reflect the Original Creators work/effort.
+    The filtered lists are in the parsed directory;
+    
+    with filenames to reflect the Original Creators work/effort.
