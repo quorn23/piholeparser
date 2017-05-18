@@ -5,6 +5,9 @@
 ## Download, Extract, and Name List Files.                              ##
 ##########################################################################
 
+## Colors
+source /etc/piholeparser/scripts/colors.var
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading and Extracting Compressed Lists."
