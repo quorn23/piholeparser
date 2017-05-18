@@ -13,12 +13,12 @@ sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholepar
 { if 
 (whiptail --title "piholeparser" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What version do you plan on using" 10 80) 
 then
-sudo cp /etc/piholeparser/piholeparserlocal.sh /etc/piholeparserlocal.sh
+sudo cp /etc/piholeparser/scripts/piholeparserlocal.sh /etc/piholeparserlocal.sh
 (crontab -l ; echo "## piholeparser") | crontab -
 (crontab -l ; echo "20 0 * * * sudo bash /etc/piholeparserlocal.sh") | crontab -
 (crontab -l ; echo "") | crontab -
 else
-sudo cp /etc/piholeparser/piholeparsergithub.sh /etc/piholeparsergithub.sh
+sudo cp /etc/piholeparser/scripts/piholeparsergithub.sh /etc/piholeparsergithub.sh
 (crontab -l ; echo "## piholeparser") | crontab -
 (crontab -l ; echo "20 0 * * * sudo bash /etc/piholeparsergithub.sh") | crontab -
 (crontab -l ; echo "") | crontab -
