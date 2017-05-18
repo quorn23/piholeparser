@@ -16,9 +16,6 @@ cyan='\e[1;36m%s\e[0m\n'
 ## Airelle's lists gave me issues, so I built in a pingtest
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-echo ""
-echo "Dowloading Airelle's Lists"
-echo ""
 
 ## Airelle's Anti-Sex Hosts
 printf "$blue"    "___________________________________________________________"
@@ -110,7 +107,8 @@ echo ""
 printf "$magenta" "___________________________________________________________"
 else
 echo ""
-echo "Airelle's lists are unavailable right now"
+printf "$green"   "Downloading Airelle's List"
+printf "$red"     "Airelle's lists are unavailable right now"
 echo ""
 fi
 
