@@ -54,8 +54,8 @@ http://pi.hole/lists/1111ALLPARSEDLISTS1111.txt
 
 ## Disclaimer
 
-All "Original Unaltered Lists" are located within the mirroredlists directory.
+    All "Original Unaltered Lists" are located within the mirroredlists directory.
 
-After going through the parser, many lists contain zero lines and are deleted.
+    After going through the parser, many lists contain zero lines and are deleted.
 
-The filtered copies are located in the parsed directory, with filenames to reflect the Original Creators work/effort.
+    The filtered copies are located in the parsed directory, with filenames to reflect the Original Creators work/effort.
