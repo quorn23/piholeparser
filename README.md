@@ -36,11 +36,11 @@ and towards the bottom of the file, adjust the repository and credentials to sui
 
 If you selected the local version,
 
-    sudo bash /etc/piholeparser/piholeparsergithub.sh
+    sudo bash /etc/piholeparsergithub.sh
 
 If you selected the github upload version,
 
-    sudo bash /etc/piholeparser/piholeparserlocal.sh
+    sudo bash /etc/piholeparserlocal.sh
 
 
 ### Adding Lists
