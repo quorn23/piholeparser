@@ -2,13 +2,7 @@
 ## This will run the parser
 
 ## Select Version to run here
-## Options are local or github
-version="github"
-
-## Credentials if using Github
-GITHUBUSERNAME=""
-GITHUBPASSWORD=""
-GITHUBEMAIL=""
+source /etc/piholeparser.var
 
 ## Colors
 source /etc/piholeparser/scripts/colors.var
