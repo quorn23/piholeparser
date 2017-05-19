@@ -10,14 +10,6 @@ source /etc/piholeparser/scripts/colors.var
 ## Make sure we are in the correct directory
 cd /etc/piholeparser
 
-## Pull new lists on github
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Updating Repository."
-sudo git pull
-printf "$magenta" "___________________________________________________________"
-echo ""
-
 ## Dependency check
 sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 
@@ -55,8 +47,10 @@ sudo bash /etc/piholeparser/scripts/cleanup.sh
 ## Push 1111ALLPARSEDLISTS1111 to localhost
 sudo bash /etc/piholeparser/scripts/1111ALLPARSEDLISTS1111local.sh
 
+## Make sure we are in the correct directory
+cd /etc/piholeparser
+
 ## Push Changes up to Github
-timestamp=`date`
 printf "$blue"    "___________________________________________________________"
 echo ""
 { if 
@@ -67,6 +61,7 @@ sudo git config --global user.name ""$GITHUBUSERNAME""
 sudo git config --global user.email $GITHUBEMAIL
 sudo git remote set-url origin https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@github.com/deathbybandaid/piholeparser.git
 sudo git add .
+timestamp=`date`
 sudo git commit -m "Update lists $timestamp"
 sudo git push -u origin master
 else
