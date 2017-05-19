@@ -25,16 +25,16 @@ sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 
 ## Re-Build 1111ALLPARSEDLISTS1111.lst
-sudo bash /etc/piholeparser/scripts/rebuildALLPARSEDLISTS1111.sh
+sudo bash /etc/piholeparser/scripts/rebuild1111ALLPARSEDLISTS1111.sh
 
 ## Process lists that have to be extracted
-sudo bash /etc/piholeparser/scripts/compressedconvert.sh
+sudo bash /etc/piholeparser/scripts/compressedconvertgithub.sh
 
 ## Parse Lists
 sudo bash /etc/piholeparser/scripts/advancedparser.sh
 
 ## Parse Big List
-sudo bash /etc/piholeparser/scripts/advancedparserlocal.sh
+sudo bash /etc/piholeparser/scripts/advancedparserall.sh
 sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
 
 ## Cleanup
