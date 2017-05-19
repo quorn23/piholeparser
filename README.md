@@ -25,22 +25,10 @@ I'm parsing all of the lists daily and uploading them to the parsed directory in
 
     sudo bash piholeparserinstall.sh
     
-If you plan on using the github upload version,
-
-    sudo nano /etc/piholeparser/piholeparsergithub.sh
-    
-and towards the bottom of the file, adjust the repository and credentials to suit your needs.
-
 
 #### Manual Run
 
-If you selected the local version,
-
-    sudo bash /etc/piholeparserlocal.sh
-
-If you selected the github upload version,
-
-    sudo bash /etc/piholeparsergithub.sh
+    sudo bash /etc/runpiholeparser.sh
 
 
 ### Adding Lists
