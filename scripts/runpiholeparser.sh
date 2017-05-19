@@ -40,7 +40,7 @@ fi }
 sudo bash /etc/piholeparser/scripts/cleanup.sh
 
 ## Push 1111ALLPARSEDLISTS1111 to localhost
-sudo bash /etc/piholeparser/scripts/1111ALLPARSEDLISTS1111local.sh
+sudo bash /etc/piholeparser/scripts/listlocal.sh
 
 ## Make sure we are in the correct directory
 cd /etc/piholeparser
