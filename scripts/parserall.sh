@@ -80,7 +80,6 @@ fi
 
 ## End File Loop
 done
-done
 
 printf "$magenta" "___________________________________________________________"
 echo ""
