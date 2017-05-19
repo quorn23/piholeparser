@@ -20,27 +20,26 @@ echo ""
 printf "$green"   "Processing list from $f"
 echo ""
 
-for source in `cat $f`;
-do
-printf "$cyan"    "$source"
-echo ""
-
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
-## Ping domain before continuing
-{ if ping -c 1 $UPCHECK &> /dev/null
-then
-
-##Fetch IP of source
+#Fetch IP of source
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 
+## Ping domain before continuing
+{ if ping -c 1 $UPCHECK &> /dev/null
+then
+
+for source in `cat $f`;
+do
+echo ""
+printf "$cyan"    "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
-
+done
 
 ## Filter
 echo ""
@@ -91,7 +90,6 @@ echo "Skipping "$source" because pingtest failed"
 fi }
 
 ## End File Loop
-done
 done
 
 printf "$magenta" "___________________________________________________________"
