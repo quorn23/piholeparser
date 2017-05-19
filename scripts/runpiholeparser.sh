@@ -17,7 +17,6 @@ printf "$green"   "Updating Repository."
 sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
-echo ""
 
 ## Dependency check
 sudo bash /etc/piholeparser/scripts/dependencycheck.sh
