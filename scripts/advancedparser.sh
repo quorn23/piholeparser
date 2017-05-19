@@ -37,10 +37,8 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 
-#printf "$yellow"    "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
-#done
 
 ## Filter
 echo ""
@@ -84,10 +82,6 @@ printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
-
-echo ""
-printf "$magenta" "___________________________________________________________"
-echo ""
 
 ## Skip Source if domain down
 else
