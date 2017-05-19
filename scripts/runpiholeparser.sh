@@ -17,11 +17,10 @@ printf "$green"   "Updating Repository."
 sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
-echo ""
 
 ## Check if runpiholeparser is outdated
 #if 
-#cmp -s /etc/piholeparser/scripts/runpiholeparser.sh /etc/piholeparser/scripts/runpiholeparser.sh
+#cmp -s /etc/piholeparser/scripts/runpiholeparser.sh /etc/runpiholeparser.sh
 #then
 #echo "The files match"
 #else
