@@ -24,12 +24,20 @@ do
 printf "$cyan"    "$source"
 echo ""
 
+## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
+
+## Ping domain before continuing
 if ping -c 1 $UPCHECK &> /dev/null
 then
 
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
 
-printf "$yellow"    "$source"
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
+
+#printf "$yellow"    "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 #done
@@ -81,7 +89,7 @@ echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-echo "site up"
+## Skip Source if domain down
 else
 echo "Skipping "$source" because pingtest failed"
 fi
