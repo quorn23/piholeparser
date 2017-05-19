@@ -36,10 +36,10 @@ fi }
 (whiptail --title "piholeparser" --yes-button "yes" --no-button "no" --yesno "Do You want to install piholeparser?" 10 80) 
 then
 sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
-sudo cp /etc/piholeparser/scripts/runpiholeparser.sh /etc/runpiholeparser.sh
+#sudo cp /etc/piholeparser/scripts/runpiholeparser.sh /etc/runpiholeparser.sh
 sudo cp /etc/piholeparser/scripts/updaterunpiholeparser.sh /etc/updaterunpiholeparser.sh
 sudo cp /etc/piholeparser/scripts/piholeparser.var /etc/piholeparser.var
-(crontab -l ; echo "20 0 * * * sudo bash /etc/updaterunpiholeparser.sh") | crontab -
+(crontab -l ; echo "20 0 * * * sudo bash /etc/piholeparser/scripts/runpiholeparser.sh") | crontab -
 else
 exit
 fi }
