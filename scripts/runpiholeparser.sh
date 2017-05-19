@@ -20,13 +20,8 @@ sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 sudo bash /etc/piholeparser/scripts/rebuild1111ALLPARSEDLISTS1111.sh
 
 ## Process lists that have to be extracted
-{ if [ "$version" = "github" ]
-then
-sudo bash /etc/piholeparser/scripts/compressedconvertgithub.sh
-elif [ "$version" = "local" ]
-then
-sudo bash /etc/piholeparser/scripts/compressedconvertlocal.sh
-fi }
+sudo bash /etc/piholeparser/scripts/compressedlistsdownload.sh
+sudo bash /etc/piholeparser/scripts/parsercompressed.sh
 
 ## Parse Individual Lists
 { if [ "$version" = "github" ]
