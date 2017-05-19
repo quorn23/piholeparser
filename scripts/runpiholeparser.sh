@@ -18,15 +18,6 @@ sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-## Check if runpiholeparser is outdated
-#if 
-#cmp -s /etc/piholeparser/scripts/runpiholeparser.sh /etc/runpiholeparser.sh
-#then
-#echo "The files match"
-#else
-#echo "The files are different"
-#fi
-
 ## Dependency check
 sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 
