@@ -1,7 +1,7 @@
 #!/bin/bash
 ## This will run the parser
 
-## Select Version to run here
+## Version
 source /etc/piholeparser.var
 
 ## Colors
@@ -17,6 +17,15 @@ printf "$green"   "Updating Repository."
 sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+## Check if runpiholeparser is outdated
+#if 
+#cmp -s /etc/piholeparser/scripts/runpiholeparser.sh /etc/piholeparser/scripts/runpiholeparser.sh
+#then
+#echo "The files match"
+#else
+#echo "The files are different"
+#fi
 
 ## Dependency check
 sudo bash /etc/piholeparser/scripts/dependencycheck.sh
