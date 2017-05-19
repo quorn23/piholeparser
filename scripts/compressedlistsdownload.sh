@@ -10,14 +10,6 @@ printf "$green"   "Downloading and Extracting Compressed Lists."
 ## Airelle's Anti-Sex Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Sex Hosts"
@@ -42,14 +34,6 @@ fi
 ## Airelle's Malware Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Malware Hosts"
@@ -74,14 +58,6 @@ fi
 ## Airelle's Anti-Trackers Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Trackers Hosts"
@@ -106,14 +82,6 @@ fi
 ## Airelle's Anti-Advertisements Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Advertisements Hosts"
@@ -138,18 +106,6 @@ fi
 ## Airelle's Anti-Miscellaneous Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Miscellaneous Hosts"
@@ -174,14 +130,6 @@ fi
 ## Airelle's Phishing Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Airelle's Phishing Hosts"
@@ -205,14 +153,6 @@ fi
 ## Blackweb
 if ping -c 1 github.com &> /dev/null
 then
-
-## Filter domain name
-UPCHECK=`echo github.com | awk -F/ '{print $3}'`
-
-##Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Blackweb List"
