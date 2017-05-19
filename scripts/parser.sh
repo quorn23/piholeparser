@@ -21,8 +21,8 @@ printf "$green"   "Processing list from $f"
 echo ""
 
 ## Ping domain before continuing
-{ if ping -c 1 $UPCHECK &> /dev/null
-then
+#{ if ping -c 1 $UPCHECK &> /dev/null
+#then
 
 for source in `cat $f`;
 do
@@ -58,9 +58,9 @@ sudo cat "$f".ads_unique.txt >> "$f".txt
 sudo rm "$f".ads_unique.txt
 
 ## Skip Source if domain down
-else
-echo "Skipping "$source" because pingtest failed"
-fi }
+#else
+#echo "Skipping "$source" because pingtest failed"
+#fi }
 
 ## Remove Empty Files
 if 
