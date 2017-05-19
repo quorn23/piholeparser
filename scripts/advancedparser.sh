@@ -21,11 +21,18 @@ printf "$green"   "Processing list from $f"
 
 for source in `cat $f`;
 do
-echo ""
 printf "$cyan"    "$source"
+echo ""
+
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
+if ping -c 1 $UPCHECK &> /dev/null
+then
+
+
+printf "$yellow"    "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
-done
+#done
 
 ## Filter
 echo ""
@@ -74,7 +81,13 @@ echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+echo "site up"
+else
+echo "Skipping "$source" because pingtest failed"
+fi
+
 ## End File Loop
+done
 done
 
 printf "$magenta" "___________________________________________________________"
