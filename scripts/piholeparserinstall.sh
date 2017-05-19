@@ -50,7 +50,7 @@ sudo echo "version=github" | sudo tee --append /etc/piholeparser.var
 GITHUBUSERNAME=$(whiptail --inputbox "Github Username" 10 80 "" 3>&1 1>&2 2>&3)
 GITHUBPASSWORD=$(whiptail --inputbox "Github Password" 10 80 "" 3>&1 1>&2 2>&3)
 GITHUBEMAIL=$(whiptail --inputbox "Github Email Address" 10 80 "" 3>&1 1>&2 2>&3)
-sudo echo "GITHUBUSERNAME="GITHUBUSERNAME"" | sudo tee --append /etc/piholeparser.var
-sudo echo "GITHUBPASSWORD="GITHUBPASSWORD"" | sudo tee --append /etc/piholeparser.var
-sudo echo "GITHUBEMAIL="GITHUBEMAIL"" | sudo tee --append /etc/piholeparser.var
+sudo echo "GITHUBUSERNAME="$GITHUBUSERNAME"" | sudo tee --append /etc/piholeparser.var
+sudo echo "GITHUBPASSWORD="$GITHUBPASSWORD"" | sudo tee --append /etc/piholeparser.var
+sudo echo "GITHUBEMAIL="$GITHUBEMAIL"" | sudo tee --append /etc/piholeparser.var
 fi }
