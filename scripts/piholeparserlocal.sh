@@ -7,6 +7,9 @@ timestamp=`date`
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
+## Make sure we are in the correct directory
+cd /etc/piholeparser
+
 ## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -20,9 +23,6 @@ sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 
 ## Clean directories to avoid collisions
 sudo bash /etc/piholeparser/scripts/collisionavoid.sh
-
-## Make sure we are in the correct directory
-cd /etc/piholeparser
 
 ## Re-Build 1111ALLPARSEDLISTS1111.lst
 sudo bash /etc/piholeparser/scripts/rebuildALLPARSEDLISTS1111.sh
