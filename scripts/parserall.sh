@@ -11,8 +11,8 @@ echo "Parsing Lists."
 FILES=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
 
 ## Start File Loop
-for f in $FILES
-do
+#for f in $FILES
+#do
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -24,6 +24,15 @@ do
 printf "$cyan"    "$source"
 echo ""
 
+## Ping domain before continuing
+if ping -c 1 $UPCHECK &> /dev/null
+then
+
+for source in `cat $f`;
+do
+echo ""
+printf "$cyan"    "$source"
+
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
@@ -33,14 +42,6 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 
-## Ping domain before continuing
-if ping -c 1 $UPCHECK &> /dev/null
-then
-
-for source in `cat $f`;
-do
-echo ""
-printf "$cyan"    "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
@@ -65,9 +66,9 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ## Skip Source if domain down
-else
-echo "Skipping "$source" because pingtest failed"
-fi
+#else
+#echo "Skipping "$source" because pingtest failed"
+#fi
 
 ## Remove Empty Files
 if 
