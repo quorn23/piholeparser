@@ -17,6 +17,7 @@ printf "$green"   "Updating Repository."
 sudo git pull
 printf "$magenta" "___________________________________________________________"
 echo ""
+echo ""
 
 ## Check if runpiholeparser is outdated
 #if 
