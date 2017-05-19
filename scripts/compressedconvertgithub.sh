@@ -214,6 +214,20 @@ printf "$red"     "File Empty. It will be deleted."
 rm -rf "$f".txt
 fi
 
+## Create Mirrors
+if 
+test $(stat -c%s "$f".ads.txt) -ge 100000000
+then
+echo ""
+printf "$red"     "Mirror File Too Large For Github. Deleting."
+sudo rm "$f".ads.txt
+else
+echo ""
+printf "$yellow"  "Creating Mirror of Unparsed File."
+sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
+sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+fi
+
 ## End File Loop
 done
 
