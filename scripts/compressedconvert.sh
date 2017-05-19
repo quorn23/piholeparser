@@ -176,7 +176,7 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Processing $f"
 
-sudo cp $f "$f".ads.txt
+sudo mv $f "$f".ads.txt
 #sudo curl --silent $f >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 
