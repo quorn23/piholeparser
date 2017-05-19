@@ -17,7 +17,7 @@ sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 
 ## Re-Build 1111ALLPARSEDLISTS1111.lst
-sudo bash /etc/piholeparser/scripts/rebuild1111ALLPARSEDLISTS1111.sh
+sudo bash /etc/piholeparser/scripts/rebuildall.sh
 
 ## Process lists that have to be extracted
 sudo bash /etc/piholeparser/scripts/compressedlistsdownload.sh
