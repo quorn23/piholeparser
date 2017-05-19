@@ -56,6 +56,11 @@ echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f".ads_unique.txt >> "$f".txt
 sudo rm "$f".ads_unique.txt
 
+## Skip Source if domain down
+else
+echo "Skipping "$source" because pingtest failed"
+fi }
+
 ## Remove Empty Files
 if 
 [ -s "$f".txt ]
@@ -83,11 +88,6 @@ printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
-
-## Skip Source if domain down
-else
-echo "Skipping "$source" because pingtest failed"
-fi }
 
 ## End File Loop
 done
