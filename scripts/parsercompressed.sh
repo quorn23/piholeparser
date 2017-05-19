@@ -56,6 +56,9 @@ rm -rf "$f".txt
 fi
 
 ## Create Mirrors
+{ if 
+[ "$version" = "github" ]
+then
 if 
 test $(stat -c%s "$f".ads.txt) -ge 100000000
 then
@@ -68,6 +71,7 @@ printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
+fi }
 
 ## End File Loop
 done
