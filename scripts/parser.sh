@@ -18,6 +18,7 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Processing list from $f"
+echo ""
 
 for source in `cat $f`;
 do
