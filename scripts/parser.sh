@@ -40,7 +40,6 @@ printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
-done
 
 ## Filter
 echo ""
@@ -91,6 +90,7 @@ echo "Skipping "$source" because pingtest failed"
 fi }
 
 ## End File Loop
+done
 done
 
 printf "$magenta" "___________________________________________________________"
