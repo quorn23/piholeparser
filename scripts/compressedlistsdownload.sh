@@ -10,9 +10,19 @@ printf "$green"   "Downloading and Extracting Compressed Lists."
 ## Airelle's Anti-Sex Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Sex Hosts"
+echo ""
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 echo ""
 sudo wget http://rlwpx.free.fr/WPFF/hsex.7z -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
@@ -32,9 +42,19 @@ fi
 ## Airelle's Malware Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Malware Hosts"
+echo ""
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 echo ""
 sudo wget http://rlwpx.free.fr/WPFF/hrsk.7z -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
@@ -54,9 +74,19 @@ fi
 ## Airelle's Anti-Trackers Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Trackers Hosts"
+echo ""
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 echo ""
 sudo wget http://rlwpx.free.fr/WPFF/htrc.7z -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
@@ -76,9 +106,19 @@ fi
 ## Airelle's Anti-Advertisements Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Advertisements Hosts"
+echo ""
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 echo ""
 sudo wget http://rlwpx.free.fr/WPFF/hpub.7z -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
@@ -98,9 +138,23 @@ fi
 ## Airelle's Anti-Miscellaneous Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Airelle's Anti-Miscellaneous Hosts"
+echo ""
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 echo ""
 sudo wget http://rlwpx.free.fr/WPFF/hmis.7z -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
@@ -120,9 +174,19 @@ fi
 ## Airelle's Phishing Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo rlwpx.free.fr | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Airelle's Phishing Hosts"
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
+echo ""
 sudo wget http://rlwpx.free.fr/WPFF/hblc.7z -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
 echo ""
@@ -141,9 +205,19 @@ fi
 ## Blackweb
 if ping -c 1 github.com &> /dev/null
 then
+
+## Filter domain name
+UPCHECK=`echo github.com | awk -F/ '{print $3}'`
+
+##Fetch IP of source
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading Blackweb List"
+echo ""
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 echo ""
 sudo wget https://github.com/maravento/blackweb/raw/master/blackweb.tar.gz -P /etc/piholeparser/compressedconvert/
 printf "$yellow"  "Extracting"
