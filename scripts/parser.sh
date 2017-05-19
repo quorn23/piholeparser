@@ -20,6 +20,15 @@ echo ""
 printf "$green"   "Processing list from $f"
 echo ""
 
+## Ping domain before continuing
+{ if ping -c 1 $UPCHECK &> /dev/null
+then
+
+for source in `cat $f`;
+do
+echo ""
+printf "$cyan"    "$source"
+
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
@@ -29,14 +38,6 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 
-## Ping domain before continuing
-{ if ping -c 1 $UPCHECK &> /dev/null
-then
-
-for source in `cat $f`;
-do
-echo ""
-printf "$cyan"    "$source"
 sudo curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
