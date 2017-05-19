@@ -29,7 +29,7 @@ echo ""
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## Ping domain before continuing
-if ping -c 1 $UPCHECK &> /dev/null
+{ if ping -c 1 $UPCHECK &> /dev/null
 then
 
 ##Fetch IP of source
@@ -87,7 +87,7 @@ fi
 ## Skip Source if domain down
 else
 echo "Skipping "$source" because pingtest failed"
-fi
+fi }
 
 ## End File Loop
 done
