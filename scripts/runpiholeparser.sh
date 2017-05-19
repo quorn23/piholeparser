@@ -31,11 +31,11 @@ fi }
 ## Parse Individual Lists
 { if [ "$version" = "github" ]
 then
-sudo bash /etc/piholeparser/scripts/advancedparser.sh
+sudo bash /etc/piholeparser/scripts/parser.sh
 fi }
 
 ## Parse Big List
-sudo bash /etc/piholeparser/scripts/advancedparserall.sh
+sudo bash /etc/piholeparser/scripts/parserall.sh
 { if [ "$version" = "github" ]
 then
 sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
