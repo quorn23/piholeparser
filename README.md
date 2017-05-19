@@ -28,7 +28,7 @@ I'm parsing all of the lists daily and uploading them to the parsed directory in
 
 #### Manual Run
 
-    sudo bash /etc/runpiholeparser.sh
+    sudo bash /etc/updaterunpiholeparser.sh
 
 
 ### Adding Lists
