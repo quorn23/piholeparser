@@ -1,7 +1,13 @@
 #!/bin/sh
+## This script helps install the parser
+##
+## It checks if it's already installed
+## and removes "old version" files
+## It may spit out errors such as
+## File does not exist
+##
+## It also sets the variable for the installation
 
-## Colors
-source /etc/piholeparser/scripts/colors.var
 
 ## Check for whiptail
 { if
