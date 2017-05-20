@@ -78,7 +78,7 @@ fi
 
 ## Create Mirrors
 if 
-test $(stat -c%s "$f".ads.txt) -ge 100000000
+test $(stat -c%s "$f".ads.txt) -ge 104857600
 then
 echo ""
 printf "$red"     "Mirror File Too Large For Github. Deleting."
