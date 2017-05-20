@@ -1,6 +1,9 @@
 #!/bin/bash
 ## This is the Parsing Process
 
+## Version
+source /etc/piholeparser.var
+
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
@@ -86,3 +89,32 @@ done
 
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+## Merge Individual Lists
+echo ""
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Creating Single Big List."
+echo ""
+sudo cat /etc/piholeparser/parsed/*.txt | sort > /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
+
+## Duplicate Removal
+echo ""
+printf "$yellow"  "Removing duplicates..."
+
+echo -e "\t`wc -l /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt | cut -d " " -f 1` lines after deduping"
+sudo cat /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt >> /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
+sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
+
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+## Tidying up
+{ if [ "$version" = "github" ]
+then
+sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
+elif
+[ "$version" = "local" ]
+then
+sudo rm /etc/piholeparser/parsed/*.txt
+fi }
