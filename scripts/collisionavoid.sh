@@ -71,5 +71,14 @@ else
 echo ""
 fi
 
+if 
+ls /etc/piholeparser/mirroredlists/*.ads.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/mirroredlists/*.ads.txt
+
+
+echo ""
+fi
+
 printf "$magenta" "___________________________________________________________"
 echo ""
