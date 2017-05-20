@@ -23,19 +23,8 @@ sudo bash /etc/piholeparser/scripts/rebuildall.sh
 sudo bash /etc/piholeparser/scripts/compressedlistsdownload.sh
 sudo bash /etc/piholeparser/scripts/parsercompressed.sh
 
-## Parse Individual Lists
+## Parse Individual Lists and Build 1111ALLPARSEDLISTS1111.txt
 sudo bash /etc/piholeparser/scripts/parser.sh
-
-## Parse Big List
-sudo bash /etc/piholeparser/scripts/parseralltest.sh
-{ if [ "$version" = "github" ]
-then
-sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
-elif
-[ "$version" = "local" ]
-then
-sudo rm /etc/piholeparser/parsed/*.txt
-fi }
 
 ## Cleanup
 sudo bash /etc/piholeparser/scripts/cleanup.sh
