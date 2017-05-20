@@ -1,4 +1,12 @@
 #!/bin/bash
+## Some lists are not "subscribable" and
+## must be downloaded and extracted before parsing.
+##
+## Airelle gave me troubles, so I added ping tests.
+## if a site is down, it will skip to the next list
+
+## Version
+source /etc/piholeparser.var
 
 ## Colors
 source /etc/piholeparser/scripts/colors.var
