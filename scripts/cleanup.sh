@@ -24,6 +24,14 @@ echo ""
 fi
 
 if 
+ls /etc/piholeparser/mirroredlists/*.ads.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/mirroredlists/*.ads.txt
+else
+echo ""
+fi
+
+if 
 ls /etc/piholeparser/compressedconvert/*.tar.gz &> /dev/null; 
 then
 sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
