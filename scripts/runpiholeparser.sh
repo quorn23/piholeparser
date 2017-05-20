@@ -21,7 +21,7 @@ sudo bash /etc/piholeparser/scripts/rebuildall.sh
 
 ## Process lists that have to be extracted
 sudo bash /etc/piholeparser/scripts/compressedlistsdownload.sh
-sudo bash /etc/piholeparser/scripts/parsercompressed.sh
+#sudo bash /etc/piholeparser/scripts/parsercompressed.sh
 
 ## Parse Individual Lists and Build 1111ALLPARSEDLISTS1111.txt
 sudo bash /etc/piholeparser/scripts/parser.sh
