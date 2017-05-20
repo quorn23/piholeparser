@@ -1,7 +1,12 @@
 #!/bin/bash
+## This script pushes lists to localhost,
+## and Github, if that's the version in the var file
 
 ## Version
 source /etc/piholeparser.var
+
+## Colors
+source /etc/piholeparser/scripts/colors.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
