@@ -24,16 +24,17 @@ sudo bash /etc/piholeparser/scripts/compressedlistsdownload.sh
 sudo bash /etc/piholeparser/scripts/parsercompressed.sh
 
 ## Parse Individual Lists
-{ if [ "$version" = "github" ]
-then
 sudo bash /etc/piholeparser/scripts/parser.sh
-fi }
 
 ## Parse Big List
-sudo bash /etc/piholeparser/scripts/parserall.sh
+sudo bash /etc/piholeparser/scripts/parseralltest.sh
 { if [ "$version" = "github" ]
 then
 sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
+elif
+{ if [ "$version" = "local" ]
+then
+sudo rm /etc/piholeparser/parsed/*.txt
 fi }
 
 ## Cleanup
