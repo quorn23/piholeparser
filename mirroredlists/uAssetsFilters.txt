@@ -1430,8 +1430,7 @@ beliefnet.com,businessinsider.com,comicbook.com,patheos.com,popculture.com,twitc
 ||mn0e.com^$script,important,domain=wwg.com
 
 ! https://github.com/gorhill/uBlock/issues/2609
-segodnya.ua##iframe:not([src]):style(height: 1px !important;)
-segodnya.ua##script:inject(csp.js, script-src https: http: 'unsafe-inline')
+segodnya.ua##iframe:not([src]):style(max-height: 1px !important;)
 
 ! https://twitter.com/zhuk67/status/863707745320566784
 @@||picfont.com^$generichide
@@ -1465,3 +1464,6 @@ bostonglobe.com##.gip__modal
 bostonglobe.com##html:style(overflow: auto !important;)
 bostonglobe.com##body:style(overflow: auto !important;)
 bostonglobe.com##.mfp-ready
+
+! https://github.com/uBlockOrigin/uAssets/issues/416
+full-film.me,full-serie.co##script:inject(abort-on-property-write.js, h9c0)
