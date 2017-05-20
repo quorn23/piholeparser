@@ -75,8 +75,7 @@ if
 ls /etc/piholeparser/mirroredlists/*.ads.txt &> /dev/null; 
 then
 sudo rm /etc/piholeparser/mirroredlists/*.ads.txt
-
-
+else
 echo ""
 fi
 
