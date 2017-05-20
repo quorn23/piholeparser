@@ -69,7 +69,7 @@ else
 echo ""
 printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
-sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo rename "s/.txt.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 fi }
 
