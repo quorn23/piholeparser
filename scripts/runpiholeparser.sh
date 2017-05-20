@@ -1,5 +1,5 @@
 #!/bin/bash
-## This will run the parser
+## This is the central script that ties the others together
 
 ## Version
 source /etc/piholeparser.var
