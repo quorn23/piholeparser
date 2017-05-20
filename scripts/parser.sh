@@ -1,5 +1,17 @@
 #!/bin/bash
 ## This is the Parsing Process
+## It Parses all of the lists individually for
+## the sake of decent filenames.
+##
+## It creates a mirror of each original unparsed file, 
+## unless it is over the 100MB limit of Github.
+##
+## Files with zero content are deleted, as they 
+## aren't worth anybody's time.
+##
+## It also creates a "master" file
+## with all parsed lists combined
+## as well as a longer list of all the lists used.
 
 ## Version
 source /etc/piholeparser.var
