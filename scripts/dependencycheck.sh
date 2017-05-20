@@ -1,4 +1,10 @@
 #!/bin/bash
+## This is where any script dependencies will go.
+## It checks if it is installed, and if not,
+## it installs the program
+
+## Version
+source /etc/piholeparser.var
 
 ## Colors
 source /etc/piholeparser/scripts/colors.var
