@@ -1,4 +1,8 @@
 #!/bin/bash
+## This runs towards the beginning of the script to avoid
+## file collisions that might cause errors.
+##
+## I added file checks to reduce on-screen errors
 
 ## Colors
 source /etc/piholeparser/scripts/colors.var
