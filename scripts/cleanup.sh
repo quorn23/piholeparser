@@ -1,4 +1,9 @@
 #!/bin/bash
+## This script Cleans up directories 
+## mainly to avoid pushing excess files to Github
+
+## Version
+source /etc/piholeparser.var
 
 ## Colors
 source /etc/piholeparser/scripts/colors.var
