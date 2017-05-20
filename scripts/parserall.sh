@@ -11,8 +11,8 @@ echo "Parsing Lists."
 FILES=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
 
 ## Start File Loop
-#for f in $FILES
-#do
+for f in $FILES
+do
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -23,10 +23,6 @@ for source in `cat $f`;
 do
 printf "$cyan"    "$source"
 echo ""
-
-## Ping domain before continuing
-if ping -c 1 $UPCHECK &> /dev/null
-then
 
 for source in `cat $f`;
 do
@@ -64,11 +60,6 @@ sudo rm "$f".ads_unique.txt
 echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
-
-## Skip Source if domain down
-#else
-#echo "Skipping "$source" because pingtest failed"
-#fi
 
 ## Remove Empty Files
 if 
