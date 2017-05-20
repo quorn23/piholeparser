@@ -32,7 +32,7 @@ sudo bash /etc/piholeparser/scripts/parseralltest.sh
 then
 sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
 elif
-{ if [ "$version" = "local" ]
+[ "$version" = "local" ]
 then
 sudo rm /etc/piholeparser/parsed/*.txt
 fi }
