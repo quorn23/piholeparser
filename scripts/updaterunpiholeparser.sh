@@ -1,4 +1,8 @@
 #!/bin/bash
+## This script resides outside of the main directory 
+## for the purpose of updating without worrying about being overwritten
+##
+## This File will not be updated.
 
 ## Version
 source /etc/piholeparser.var
