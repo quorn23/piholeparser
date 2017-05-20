@@ -28,7 +28,7 @@ else
 echo ""
 fi
 
-sudo cp -p /etc/piholeparser/parsed/1111ALLPARSEDLISTS1111.txt /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
+sudo cp -p /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 printf "$magenta" "___________________________________________________________"
 echo ""
 
