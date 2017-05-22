@@ -20,14 +20,6 @@ else
 fi
 
 if 
-ls /etc/piholeparser/lists/*.lst &> /dev/null; 
-then
-sudo rm /etc/piholeparser/lists/*.lst
-else
-:
-fi
-
-if 
 ls /etc/piholeparser/mirroredlists/*.txt &> /dev/null; 
 then
 sudo rm /etc/piholeparser/mirroredlists/*.txt
