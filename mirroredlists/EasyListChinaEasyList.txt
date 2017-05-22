@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: EOdKl8D2XFUG97Yh+648PQ
-! Version: 201705212300
+! Checksum: PRvXsMIWuXoLiJ0XxTp3Rg
+! Version: 201705220420
 ! Title: EasyList China+EasyList
 ! EasyList China and EasyList combination subscription
-! Last modified: 21 May 2017 23:00 UTC
+! Last modified: 22 May 2017 04:20 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 !
@@ -18,6 +18,7 @@
 !-----------------------General advert blocking filters-----------------------!
 .cc/js/ads/
 .cn/ads/
+/frm_adv.aspx
 .cn/js/ads/
 .co/js/ads/
 .com/?ss=$script
@@ -253,6 +254,7 @@
 /W3Cfuns_Adv/*
 /wap_advpic/*
 /wapifengas?
+/wapifengbs?
 /web8/ad/*
 /wp-content/themes/iMovies/js/tc_
 /wy96ad/*
@@ -543,6 +545,7 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .cn/show?id=$script,third-party
+||bdpuaw.com^
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
 .com/code.php?z=$script,third-party
@@ -3826,6 +3829,7 @@ mg*.6park.com/img/$image
 ||eprice.com.tw/img/tw_m/ad/
 ||eprice.com.tw/js/swfobject-2.3.js
 ||erebor.douban.com^
+||es3984.review/02_cn_ad/
 ||etest8.com/js/158/infojs/
 ||etf88.com/jjb/*_ad$script
 ||etf88.com/swf/
@@ -4290,7 +4294,8 @@ mg*.6park.com/img/$image
 ||ibtibt.com/js/
 ||iciba.com/web/co/ci/
 ||iciba.com/www/img/activity/common/active-11-11.js
-||iclient.ifeng.com^
+||ifengimg.com/a/*/openclient.js
+||ifeng.com/client_share_bottom_
 ||icnkr.com/cnkradv/
 ||icnkr.com/data/attachment/portal/
 ||idcot.com^
@@ -4310,7 +4315,6 @@ mg*.6park.com/img/$image
 ||ifeng.com/ssi-incs/
 ||ifeng.com/statics/comment_baidu.html
 ||ifeng.com/wapAdversApi?
-||ifeng.com/wapifengas?
 ||ifeng.com^*&ADUNITID=
 ||ifengimg.com/*/taobaopudi/
 ||ifengimg.com/29daa33abbbc4bbc/2015/7/aogute.gif
@@ -4420,7 +4424,6 @@ mg*.6park.com/img/$image
 ||imgmega.com/i/*.gif$domain=18avhub.com|18avtube.com|mm-cg.com
 ||imgroom.net/images/*.gif
 ||imgs.cc/images/ad_
-||es3984.review/02_cn_ad/
 ||imgsrc.baidu.com/tieba/pic/item/$image
 ||imgur.com/4SbDoav.jpg
 ||imgur.com/df53F09.jpg
@@ -5763,7 +5766,6 @@ mg*.6park.com/img/$image
 ||u9yy.com/cmp/ad_u9yy.jpg
 ||u9yy.com/data/upload/image/*.gif
 ||uc.cn/s/uae/g/0s/ua.js
-||uc8.cc/_style/2013/js/all.js
 ||ucbug.com/gaibian/js/tlys.js
 ||ucbug.com/js/
 ||udn.com.tw/upf/*_banners/BD/
@@ -6304,10 +6306,11 @@ mg*.6park.com/img/$image
 ||zzzyk.com/js/
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
-hexun.com###newsPopWin
-ydt.com.cn###box_footer
-ydt.com.cn##.yfb_article_footer
-ydt.com.cn##A[href^="http://static.ydt.com.cn/my/u.php?"]
+huizhi123.com##.ad
+huizhi123.com##.ad-hongbao
+ifeng.com##.pullClient
+ifeng.com###redbox
+uc.cn##A[href^="http://huichuan.sm.cn"]
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -6671,6 +6674,7 @@ mcdulll.com,mcdulll.pixnet.net###box1290930
 mcdulll.com,mcdulll.pixnet.net###box1989082
 cwyuni.tw###box34614 > [class^="box-"]
 lohas.pixnet.net###box785805
+ydt.com.cn###box_footer
 finance.ifeng.com###box_img
 zhan.com###box_tips
 hefei.cc###bp_ad
@@ -7221,6 +7225,7 @@ yaolan.com###newfix-dsp
 pigai.org###newnotice
 chinaqking.com###newsAD
 news.shangdu.com###newsBanner
+hexun.com###newsPopWin
 chinanews.com.cn###news_top_advert
 live.win007.com###notify > a[target="_blank"]
 qq.com###nqsnqsad02
@@ -9932,6 +9937,7 @@ moviesunusaaa.org##.yahooinner
 acg18.us##.yamiadie
 acg18.us##.yamiadie-below
 1kkk.com,dm5.com##.yddiv
+ydt.com.cn##.yfb_article_footer
 techweb.com.cn##.yipin
 ifeng.com##.yiyuan
 fx168.com##.yjl_fx168_head_navAd
@@ -10110,6 +10116,7 @@ wenxuecity.com##a[href^="http://oascentral.wenxuecity.com/"]
 pctowap.com##a[href^="http://ptw.la/"]
 sina.cn##a[href^="http://sax.sina."]
 finance.sina.com.cn##a[href^="http://sax.sina.com.cn/click?"]
+ydt.com.cn##a[href^="http://static.ydt.com.cn/my/u.php?"]
 hacg.fi,hacg.red,hacg.wiki##a[href^="http://t.cn/"]
 mop.com##a[href^="http://trackx.mop.com/"]
 9tour.cn##a[href^="http://union.zhuna.cn/"]
@@ -10836,7 +10843,6 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@.adserver.$domain=litv.tv
-@@/adview_pic_$domain=aewb.cn
 @@.com/adv/$domain=my.ctrip.com
 @@.gif#$domain=tgfcer.com|wgun.net
 @@.png#$domain=9zvip.net|club.tgfcer.com
@@ -10871,7 +10877,7 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 @@/advertisement/*$domain=cits.cn|ininin.com|midea.com|muyingzhijia.com|yxjc.13322.com
 @@/advertising/*$domain=houdask.com
 @@/adverts/*$domain=onlychild.cn
-@@/adview_pic_$domain=123564.com|btbt.tv|jkpan.com|liangzijievip.com|mahua.com|meijukankan.net|mfgun.com|qqzhibo.tk
+@@/adview_pic_$domain=123564.com|aewb.cn|btbt.tv|jkpan.com|liangzijievip.com|mahua.com|meijukankan.net|mfgun.com|qqzhibo.tk
 @@/advs/*$domain=ciros.com.cn|dianxinos.com|gotobuy.com.tw|re-vat.com|sj-touch.com
 @@/adx.$domain=tanx.com
 @@/assets/adv/*$domain=4008927927.cn
@@ -11364,7 +11370,6 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 /^https?:\/\/(?!www[0-9]?\.)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/[0-9a-z]{40,}\.js/$script,domain=~bittiger.io
 /cpro.$popup,third-party
 |http://*&uc=
-||wda.ydt.com.cn^
 ||1.1010pic.com^
 ||1.feihua.com^
 ||1.mgff.com^
@@ -11411,6 +11416,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||star-media.cn^$third-party
 ||sundxs.com^$third-party
 ||uniondm.cz88.net^
+||wda.ydt.com.cn^
 ||xuehi.cn^$domain=wenkuxiazai.com
 ||yhzm.cc^
 ||youbian.com^$third-party
@@ -43130,6 +43136,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||dacqmkmsjajm.com^$third-party
 ||daxzupqivdoj.com^$third-party
 ||dbjcbnlwchgu.com^$third-party
+||dbojgaxhxalh.com^$third-party
 ||dbtaclpoahri.com^$third-party
 ||dbwawnzkjniz.com^$third-party
 ||dcdalkgtbmip.com^$third-party
@@ -43917,6 +43924,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||nushflxucofk.com^$third-party
 ||nvajxoahenwe.com^$third-party
 ||nvmjtxnlcdqo.com^$third-party
+||nwdufyamroaf.com^$third-party
 ||nwfdrxktftep.com^$third-party
 ||nwirvhxxcsft.com^$third-party
 ||nxcxithvcoeh.com^$third-party
@@ -44082,6 +44090,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||qbfvwovkuewm.com^$third-party
 ||qclxheddcepf.com^$third-party
 ||qdlhprdtwhvgxuzklovisrdbkhptpfarrbcmtrxbzlvhygqisv.com^$third-party
+||qekmxaimxkok.com^$third-party
 ||qenafbvgmoci.com^$third-party
 ||qerlbvqwsqtb.com^$third-party
 ||qevivcixnngf.com^$third-party
