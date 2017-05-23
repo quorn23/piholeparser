@@ -61,10 +61,10 @@ sudo rm /etc/piholeparser/whitelisted/whitelist4.domains
 #sed -i ':a;N;$!ba;s/\n/\t/g' whitelisted.domains
 
 ## Whitelist the domains
-for source in `cat /etc/piholeparser/whitelisted/whitelisted.domains`;
-do
-pihole -w $source
-done
+#for source in `cat /etc/piholeparser/whitelisted/whitelisted.domains`;
+#do
+#pihole -w $source &>/dev/null
+#done
 
 
 printf "$magenta" "___________________________________________________________"
