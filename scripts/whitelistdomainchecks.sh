@@ -46,11 +46,16 @@ sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelist.d
 sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
 
 ## undupe and sort
-sudo cat /etc/piholeparser/temp/whitelist.domains | sort > /etc/piholeparser/temp/whitelist2.domains
+sort -u /etc/piholeparser/temp/whitelist.domains > /etc/piholeparser/temp/whitelist2.domains
 echo -e "\t`wc -l /etc/piholeparser/temp/whitelist2.domains | cut -d " " -f 1` lines after deduping"
-sudo cat /etc/piholeparser/temp/whitelist2.domains >> /etc/piholeparser/temp/whitelisted.domains
+sudo cat /etc/piholeparser/temp/whitelist2.domains >> /etc/piholeparser/temp/whitelist3.domains
+sudo cat /etc/piholeparser/temp/whitelist3.domains | sort > /etc/piholeparser/temp/whitelist2.domains
 sudo rm /etc/piholeparser/temp/whitelist.domains
 sudo rm /etc/piholeparser/temp/whitelist2.domains
+sudo rm /etc/piholeparser/temp/whitelist3.domains
 
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+
+sort -u /etc/piadvanced/piholetweaks/ublockpihole/ads_parsed.txt > /etc/piadvanced/piholetweaks/ublockpihole/ads_unique.txt
