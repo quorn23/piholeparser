@@ -35,3 +35,11 @@ pihole -w $UPCHECK
 echo ""
 
 done
+
+## pihole -w
+printf "$yellow"    "Whitelisting Airelle's in pihole"
+pihole -w rlwpx.free.fr
+echo ""
+printf "$yellow"    "Whitelisting Blackweb in pihole"
+pihole -w github.com
+echo ""
