@@ -37,7 +37,7 @@ echo ""
 done
 done
 
-## pihole -w
+## sources that are compressed
 printf "$yellow"    "Whitelisting Airelle's in pihole"
 pihole -w rlwpx.free.fr
 echo ""
