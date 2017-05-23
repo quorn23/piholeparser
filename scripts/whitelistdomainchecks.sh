@@ -22,8 +22,6 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Whitelisting Domains that will be parsed."
-printf "$green"   "Note: this is a work in progress and doesn't actually do it yet."
-printf "$green"   "      right now, it just creates a whitelist file"
 echo ""
 
 ## Start File Loop
@@ -57,14 +55,11 @@ sudo rm /etc/piholeparser/whitelisted/whitelist2.domains
 sudo rm /etc/piholeparser/whitelisted/whitelist3.domains
 sudo rm /etc/piholeparser/whitelisted/whitelist4.domains
 
-## spaces instead of new lines
-#sed -i ':a;N;$!ba;s/\n/\t/g' whitelisted.domains
-
 ## Whitelist the domains
-#for source in `cat /etc/piholeparser/whitelisted/whitelisted.domains`;
-#do
-#pihole -w $source &>/dev/null
-#done
+for source in `cat /etc/piholeparser/whitelisted/whitelisted.domains`;
+do
+pihole -w $source &>/dev/null
+done
 
 
 printf "$magenta" "___________________________________________________________"
