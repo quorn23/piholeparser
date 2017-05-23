@@ -18,15 +18,15 @@ fi
 ## Set File Directory
 FILES=/etc/piholeparser/lists/*.lst
 
-## Start File Loop
-for f in $FILES
-do
-
 echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "Whitelisting list from $f"
+printf "$green"   "Whitelisting Domains that will be parsed."
 echo ""
+
+## Start File Loop
+for f in $FILES
+do
 
 for source in `cat $f`;
 do
@@ -37,8 +37,7 @@ echo ""
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
-## pihole -w
-printf "$yellow"    "Adding $UPCHECK to Pi-Hole Whitelist"
+## add to temporary whitelist file
 sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
 echo ""
 
@@ -48,3 +47,7 @@ done
 ## sources that are compressed
 sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
 sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
+
+
+printf "$magenta" "___________________________________________________________"
+echo ""
