@@ -35,6 +35,7 @@ pihole -w $UPCHECK
 echo ""
 
 done
+done
 
 ## pihole -w
 printf "$yellow"    "Whitelisting Airelle's in pihole"
