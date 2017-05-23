@@ -7,6 +7,14 @@ source /etc/piholeparser.var
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
+if 
+ls /etc/piholeparser/temp/whitelisted.domains &> /dev/null; 
+then
+sudo rm /etc/piholeparser/temp/whitelisted.domains
+else
+:
+fi
+
 ## Set File Directory
 FILES=/etc/piholeparser/lists/*.lst
 
@@ -30,17 +38,13 @@ echo ""
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## pihole -w
-printf "$yellow"    "Whitelisting $UPCHECK in pihole"
-pihole -w $UPCHECK
+printf "$yellow"    "Adding $UPCHECK to Pi-Hole Whitelist"
+sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
 echo ""
 
 done
 done
 
 ## sources that are compressed
-printf "$yellow"    "Whitelisting Airelle's in pihole"
-pihole -w rlwpx.free.fr
-echo ""
-printf "$yellow"    "Whitelisting Blackweb in pihole"
-pihole -w github.com
-echo ""
+sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
+sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
