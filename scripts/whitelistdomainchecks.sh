@@ -22,6 +22,7 @@ echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Whitelisting Domains that will be parsed."
+printf "$green"   "Not: this is a work in progress and doesn't actually do it yet."
 echo ""
 
 ## Start File Loop
@@ -30,22 +31,20 @@ do
 
 for source in `cat $f`;
 do
-echo "" 
 
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## add to temporary whitelist file
 sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
-echo ""
 
+## end of loops
 done
 done
 
 ## sources that are compressed
-sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
-sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
-
+sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
+sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
 
 printf "$magenta" "___________________________________________________________"
 echo ""
