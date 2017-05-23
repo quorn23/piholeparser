@@ -23,6 +23,7 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Whitelisting Domains that will be parsed."
 printf "$green"   "Note: this is a work in progress and doesn't actually do it yet."
+printf "$green"   "      right now, it just creates a whitelist file"
 echo ""
 
 ## Start File Loop
