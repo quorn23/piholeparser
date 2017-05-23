@@ -8,9 +8,9 @@ source /etc/piholeparser.var
 source /etc/piholeparser/scripts/colors.var
 
 if 
-ls /etc/piholeparser/temp/whitelisted.domains &> /dev/null; 
+ls /etc/piholeparser/whitelisted/*.domains &> /dev/null; 
 then
-sudo rm /etc/piholeparser/temp/whitelisted.domains
+sudo rm /etc/piholeparser/whitelisted/*.domains
 else
 :
 fi
@@ -34,27 +34,33 @@ do
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
-## add to temporary whitelist file
-sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
+## add to whitelist file
+sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/whitelisted/whitelist.domains &>/dev/null
 
 ## end of loops
 done
 done
 
 ## sources that are compressed
-sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
-sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
+sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/whitelisted/whitelist.domains &>/dev/null
+sudo echo "github.com" | sudo tee --append /etc/piholeparser/whitelisted/whitelist.domains &>/dev/null
 
 ## undupe and sort
-sort -u /etc/piholeparser/temp/whitelist.domains > /etc/piholeparser/temp/whitelist2.domains
-sudo cat /etc/piholeparser/temp/whitelist2.domains >> /etc/piholeparser/temp/whitelist3.domains
-sudo cat /etc/piholeparser/temp/whitelist3.domains | sort > /etc/piholeparser/temp/whitelist4.domains
-sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' /etc/piholeparser/temp/whitelist4.domains > /etc/piholeparser/temp/whitelisted.domains
-echo -e "\t`wc -l /etc/piholeparser/temp/whitelisted.domains | cut -d " " -f 1` domains to whitelist"
-sudo rm /etc/piholeparser/temp/whitelist.domains
-sudo rm /etc/piholeparser/temp/whitelist2.domains
-sudo rm /etc/piholeparser/temp/whitelist3.domains
+sort -u /etc/piholeparser/whitelisted/whitelist.domains > /etc/piholeparser/whitelisted/whitelist2.domains
+sudo cat /etc/piholeparser/whitelisted/whitelist2.domains >> /etc/piholeparser/whitelisted/whitelist3.domains
+sudo cat /etc/piholeparser/whitelisted/whitelist3.domains | sort > /etc/piholeparser/whitelisted/whitelist4.domains
+sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' /etc/piholeparser/whitelisted/whitelist4.domains > /etc/piholeparser/whitelisted/whitelisted.domains
+echo -e "\t`wc -l /etc/piholeparser/whitelisted/whitelisted.domains | cut -d " " -f 1` domains to whitelist"
+sudo rm /etc/piholeparser/whitelisted/whitelist.domains
+sudo rm /etc/piholeparser/whitelisted/whitelist2.domains
+sudo rm /etc/piholeparser/whitelisted/whitelist3.domains
+sudo rm /etc/piholeparser/whitelisted/whitelist4.domains
 
+## spaces instead of new lines
+#sed -i ':a;N;$!ba;s/\n/\t/g' whitelisted.domains
+
+## Whitelist the domains
+#pihole -w /etc/piholeparser/whitelisted/whitelisted.domains
 
 printf "$magenta" "___________________________________________________________"
 echo ""
