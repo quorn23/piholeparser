@@ -20,7 +20,8 @@ source /etc/piholeparser.var
 source /etc/piholeparser/scripts/colors.var
 
 echo ""
-echo "Parsing Individual Lists."
+printf "$green"   "Parsing Individual Lists."
+echo ""
 
 ## Set File Directory
 FILES=/etc/piholeparser/lists/*.lst
@@ -39,14 +40,10 @@ for source in `cat $f`;
 do
 echo ""
 printf "$cyan"    "$source"
+echo "" 
 
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
-
-## pihole -w
-printf "$yellow"    "Whitelisting $UPCHECK in pihole"
-pihole -w $UPCHECK
-echo ""
 
 #Fetch IP of source
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
