@@ -47,12 +47,14 @@ sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelist.doma
 
 ## undupe and sort
 sort -u /etc/piholeparser/temp/whitelist.domains > /etc/piholeparser/temp/whitelist2.domains
-echo -e "\t`wc -l /etc/piholeparser/temp/whitelist2.domains | cut -d " " -f 1` domains to whitelist"
 sudo cat /etc/piholeparser/temp/whitelist2.domains >> /etc/piholeparser/temp/whitelist3.domains
-sudo cat /etc/piholeparser/temp/whitelist3.domains | sort > /etc/piholeparser/temp/whitelisted.domains
+sudo cat /etc/piholeparser/temp/whitelist3.domains | sort > /etc/piholeparser/temp/whitelist4.domains
+sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' /etc/piholeparser/temp/whitelist4.domains > /etc/piholeparser/temp/whitelisted.domains
+echo -e "\t`wc -l /etc/piholeparser/temp/whitelisted.domains | cut -d " " -f 1` domains to whitelist"
 sudo rm /etc/piholeparser/temp/whitelist.domains
 sudo rm /etc/piholeparser/temp/whitelist2.domains
 sudo rm /etc/piholeparser/temp/whitelist3.domains
+
 
 printf "$magenta" "___________________________________________________________"
 echo ""
