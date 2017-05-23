@@ -16,6 +16,14 @@ echo ""
 printf "$green"   "Downloading and Extracting Compressed Lists."
 echo ""
 
+## pihole -w
+printf "$yellow"    "Whitelisting Airelle's in pihole"
+pihole -w rlwpx.free.fr
+echo ""
+printf "$yellow"    "Whitelisting Blackweb in pihole"
+pihole -w github.com
+echo ""
+
 ## Airelle's Anti-Sex Hosts
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
