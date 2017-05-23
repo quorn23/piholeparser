@@ -43,6 +43,10 @@ printf "$cyan"    "$source"
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
+## pihole -w
+printf "$yellow"    "Whitelisting $UPCHECK in pihole"
+pihole -w $UPCHECK
+
 #Fetch IP of source
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
