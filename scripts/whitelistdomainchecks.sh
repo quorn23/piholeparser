@@ -35,15 +35,22 @@ do
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## add to temporary whitelist file
-sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
+sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
 
 ## end of loops
 done
 done
 
 ## sources that are compressed
-sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
-sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
+sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
+sudo echo "github.com" | sudo tee --append /etc/piholeparser/temp/whitelist.domains &>/dev/null
+
+## undupe and sort
+sudo cat /etc/piholeparser/temp/whitelist.domains | sort > /etc/piholeparser/temp/whitelist2.domains
+echo -e "\t`wc -l /etc/piholeparser/temp/whitelist2.domains | cut -d " " -f 1` lines after deduping"
+sudo cat /etc/piholeparser/temp/whitelist2.domains >> /etc/piholeparser/temp/whitelisted.domains
+sudo rm /etc/piholeparser/temp/whitelist.domains
+sudo rm /etc/piholeparser/temp/whitelist2.domains
 
 printf "$magenta" "___________________________________________________________"
 echo ""
