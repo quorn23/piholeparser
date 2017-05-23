@@ -182,3 +182,22 @@ echo ""
 printf "$red"     "BlackWeb list are unavailable right now"
 echo ""
 fi
+
+## cleanup
+## added this, since when I test, I sometimes stop the script before cleanup, 
+## and end up with a directory full of garbage that has to be manually deleted
+if 
+ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
+then
+sudo rm /etc/piholeparser/compressedconvert/*.7z
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/compressedconvert/*.tar.gz &> /dev/null; 
+then
+sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
+else
+:
+fi
