@@ -30,15 +30,13 @@ do
 
 for source in `cat $f`;
 do
-echo ""
-printf "$cyan"    "$source"
 echo "" 
 
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## add to temporary whitelist file
-sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains
+sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/temp/whitelisted.domains &>/dev/null
 echo ""
 
 done
