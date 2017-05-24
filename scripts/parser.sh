@@ -51,7 +51,10 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 
-sudo curl --silent $source >> "$f".ads.txt
+sudo curl --silent -L $source >> "$f".ads.txt
+
+
+#silent curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
 
