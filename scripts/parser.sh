@@ -116,8 +116,8 @@ sudo cat /etc/piholeparser/parsed/*.txt | sort > /etc/piholeparser/parsedall/ALL
 echo ""
 printf "$yellow"  "Removing duplicates..."
 
-echo -e "\t`wc -l /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt | cut -d " " -f 1` lines after deduping"
-sudo cat /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt >> /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
+sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
+echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt | cut -d " " -f 1` lines after deduping"
 sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
 
 printf "$magenta" "___________________________________________________________"
