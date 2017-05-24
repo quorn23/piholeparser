@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 3+Ha/5oke/uM0h/9MsSPjQ
-! Version: 201705240420
+! Checksum: cjQF2+KnsmfPN1bOIQOQyw
+! Version: 201705241810
 ! Title: EasyList China+EasyList
 ! EasyList China and EasyList combination subscription
-! Last modified: 24 May 2017 04:20 UTC
+! Last modified: 24 May 2017 18:10 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 !
@@ -5485,7 +5485,6 @@ mg*.6park.com/img/$image
 ||sinaimg.cn/large/$domain=360zhibo.com|ballive.com|chakd.com|qqlubo.net|zhainanfulishe.net
 ||sinaimg.cn/large/*.gif$domain=henbt.com|mp4ba.la|seehd.co
 ||sinaimg.cn/large/005EuLLtgw1eji5kzbgvlg30r801ogpy.gif
-||sinaimg.cn/large/005SEx68jw1eu85tbdd2rg30d001oaa0.jpg
 ||sinaimg.cn/large/0060AzaUgw1f7ay8mig7dg30vo02s0wo.gif
 ||sinaimg.cn/large/0060lm7Tgw1f8acu5ly62g308c03i0t0.gif
 ||sinaimg.cn/large/006CZIQPgy1fbziwpw0b8g306y06yq7w.gif
@@ -5770,7 +5769,6 @@ mg*.6park.com/img/$image
 ||u148.net/images/sponsor-
 ||u9yy.com/cmp/ad_u9yy.jpg
 ||u9yy.com/data/upload/image/*.gif
-||uc.cn/s/uae/g/0s/ua.js
 ||ucbug.com/gaibian/js/tlys.js
 ||ucbug.com/js/
 ||udn.com.tw/upf/*_banners/BD/
@@ -5811,9 +5809,7 @@ mg*.6park.com/img/$image
 ||uuu9.tieba.com^$subdocument
 ||uwants.com/dfp_forum.php?au=Uwants_Web_
 ||uwants.com/yna*_prod.html
-||uzzf.com/js/all.js
-||uzzf.com/js/down_
-||uzzf.com/js/top_970.js
+||uzzf.com/skin/know/
 ||v-56.com^
 ||v.beta.yinyuetai.com/swf/plugins_new.xml?
 ||v.huanqiu.com/tres/xml/vda.xml
@@ -6310,6 +6306,12 @@ mg*.6park.com/img/$image
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
 ||xzking.com/static/images/detail/soft_1168x90.gif
+||sohu.com/api/labs/hotnews/c/load?
+||sohu.com/api/labs/mp/load?
+||a.xywy.com^
+||xywy.com/gk?a=
+||xywy.com/zhixing/
+||ads-union.jd.com^
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
 hacg.fi,hacg.red,hacg.wiki###text-26
@@ -10847,6 +10849,7 @@ gamer.com.tw#@#a[href^="http://bs.serving-sys.com/"]
 gamer.com.tw#@#a[href^="https://ad.doubleclick.net/"]
 brandsales.58.com#@#div[id^="ad_"]
 gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
+union.58.com#@##advertise
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@.adserver.$domain=litv.tv
@@ -11374,9 +11377,12 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ad
 ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Baidu Union
 ###cpro_container
+/=(?:2560|1920|1776|1680|1600|1440|1366|1360|1280|1184|1182|1152|1080|1024|960|854|800|720|640|540|480|320|240)[a-z][0-9]{3,4}&/$subdocument
 /^https?:\/\/(?!www[0-9]?\.)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/[0-9a-z]{40,}\.js/$script,domain=~bittiger.io
 /cpro.$popup,third-party
 |http://*&uc=
+||mn586.com^$third-party
+||gunmi.cn^$third-party
 ||1.1010pic.com^
 ||1.feihua.com^
 ||1.mgff.com^
@@ -11443,6 +11449,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 |https:$script,third-party,xmlhttprequest,domain=m.00ksw.net|m.33yq.com|m.50zw.la|m.55xs.com|m.81zw.com|m.88dushu.com|m.biqudu.com|m.biquge.com|m.biquge.com.tw|m.biquge.tw|m.biqugezw.com|m.biquwu.cc|m.bqg5200.com|m.dhzw.org|m.kewaishu.net|m.lewenxiaoshuo.com|m.liewen.cc|m.qu.la|m.shenmabook.com|m.shumilou.co|m.snwx8.com|m.vodtw.com|m.xs222.com|wap.xxbiquge.com
 ||23txt.com^$third-party
 ||axkxy.com^
+||xacqp.com^
 ||feifish66.com^
 ||gyrtg.com^
 ||jundazulin.com^
@@ -22709,7 +22716,12 @@ _popunder+$popup
 ###advertise_top
 ###advertisediv
 ###advertiseheretop
+###advertisement-10
+###advertisement-13
+###advertisement-16
 ###advertisement-300x250
+###advertisement-4
+###advertisement-7
 ###advertisement-728x90
 ###advertisement-content
 ###advertisement-detail1
@@ -29755,6 +29767,7 @@ _popunder+$popup
 ##.adfix-300x250
 ##.adflag
 ##.adflexi
+##.adfliction
 ##.adfloatleft
 ##.adfloatright
 ##.adfoot
@@ -43436,6 +43449,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||gxdyluyqciac.com^$third-party
 ||gxgnvickedxpuiavkgpisnlsphrcyyvkgtordatszlrspkgppe.com^$third-party
 ||gxvbogvbcivs.com^$third-party
+||gxxsqeqlepva.com^$third-party
 ||gydlzimosfnz.com^$third-party
 ||gyinmxpztbgf.com^$third-party
 ||gypxbcrmxsmikqbmnlwtezmjotrrdxpqtafumympsdtsfvkkza.com^$third-party
@@ -43572,6 +43586,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||isdlyvhegxxz.com^$third-party
 ||isggimkjabpa.com^$third-party
 ||isqgobsgtqsh.com^$third-party
+||itbiwlsxtigx.com^$third-party
 ||itevcsjvtcmb.com^$third-party
 ||iupqelechcmj.com^$third-party
 ||iuymaolvzery.com^$third-party
@@ -43876,6 +43891,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||mpoboqvqhjqv.com^$third-party
 ||mpytdykvcdsg.com^$third-party
 ||mpzuzvqyuvbh.com^$third-party
+||mqcnrhxdsbwr.com^$third-party
 ||mqphkzwlartq.com^$third-party
 ||mqwkqapsrgnt.com^$third-party
 ||mrfveznetjtp.com^$third-party
@@ -44486,6 +44502,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||vblunqrovanf.com^$third-party
 ||vbupfouyymse.com^$third-party
 ||vbuqjdyrsrvi.com^$third-party
+||vbyefnnrswpn.com^$third-party
 ||vcwdjbbughuy.com^$third-party
 ||vdhmatjdoyqt.com^$third-party
 ||vdlvaqsbaiok.com^$third-party
@@ -44591,6 +44608,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||wiorcewmylbe.com^$third-party
 ||wipjyzwavojq.com^$third-party
 ||wjdjovjrxsqx.com^$third-party
+||wjnkvhlgvixx.com^$third-party
 ||wkexsfmw.com^$third-party
 ||wkgaqvvwvqjg.com^$third-party
 ||wkggjmkrkvot.com^$third-party
@@ -61752,6 +61770,7 @@ blinkbox.com##.companion
 proactiveinvestors.co.uk,proactiveinvestors.com.au##.company-banner
 bbyellow.com,bsyellow.com,businessdirectory.mu,businesslist.ae,businesslist.co.cm,businesslist.co.ke,businesslist.co.ug,businesslist.com.bd,businesslist.com.ng,businesslist.hk,businesslist.my,businesslist.net.nz,businesslist.ph,businesslist.pk,businesslist.sg,businesslist.tw,businesslist.vn,cambodiayp.com,caymanyellow.com,chileindex.com,colombiayp.com,dominicanyp.com,egypyp.com,ethiopiadirectory.com,georgiayp.com,ghanayp.com,indonesiayp.com,jmyellow.com,jpyellow.com,lebyp.com,lesothoyp.com,localbotswana.com,malawiyp.com,moroccoyp.com,myanmaryp.com,namibiayp.com,nepalyp.com,onlinebusinesslist.co.za,puertoricoindex.com,qataryp.com,rwandayp.com,saudianyp.com,senegalyp.com,sudanyp.com,tanzaniayp.com,thaigreenpages.com,tntyellow.com,tunisiayp.com,turkishyp.com,venezuelayp.com,yemenyp.com,zambiayp.com,zimbabweyp.com,zipinfo.in##.company_banner
 versusio.com##.compare_leaderboard
+circa.com##.component-ddb-728x90-v1
 delish.com,msn.com##.conban1
 msn.com##.condbanner2
 theglobeandmail.com##.conductor-links
