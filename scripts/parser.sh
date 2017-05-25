@@ -46,8 +46,8 @@ echo ""
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 #Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'` &>/dev/null
+SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
 
 if [[ $SOURCEIP ]]
 then
