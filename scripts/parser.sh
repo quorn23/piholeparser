@@ -49,7 +49,7 @@ UPCHECK=`echo $source | awk -F/ '{print $3}'`
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'` &>/dev/null
 SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
 
-if [[ -z $SOURCEIP ]]
+if [[ -z $UPCHECK ]]
 then
 printf "$yellow"    "Fetching List From Local File"
 else 
