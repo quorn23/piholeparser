@@ -49,7 +49,7 @@ UPCHECK=`echo $source | awk -F/ '{print $3}'`
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 
-if [ -d "$1" ]
+if [ -d "$SOURCEIP" ]
 then
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 else 
