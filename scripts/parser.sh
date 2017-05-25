@@ -51,9 +51,9 @@ SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
 
 if [[ -z $SOURCEIP ]]
 then
-printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
-else 
 :
+else 
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 fi
 
 sudo curl --silent -L $source >> "$f".ads.txt
