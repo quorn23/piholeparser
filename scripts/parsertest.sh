@@ -57,7 +57,6 @@ fi
 
 ## Download lists
 sudo curl --silent -L $source >> "$f".ads.txt
-#silent curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
 
@@ -74,10 +73,8 @@ sed 's/[\|^]//g' < "$f".ads_parsed1.txt > "$f".ads_parsed2.txt
 echo ""
 printf "$yellow"  "Removing duplicates..."
 sort -u "$f".ads_parsed2.txt > "$f".ads_unique.txt
-sudo rm "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f".ads_unique.txt >> "$f".txt
-sudo rm "$f".ads_unique.txt
 
 ## Remove Empty Files
 if 
