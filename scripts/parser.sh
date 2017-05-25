@@ -51,7 +51,7 @@ SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
 
 if [[ -z $SOURCEIP ]]
 then
-:
+printf "$yellow"    "Fetching List From Local File"
 else 
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 fi
