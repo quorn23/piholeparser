@@ -46,13 +46,12 @@ echo ""
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 #Fetch IP of source
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'` &>/dev/null
-SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
-
 if [[ -z $UPCHECK ]]
 then
 printf "$yellow"    "Fetching List From Local File"
 else 
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'` &>/dev/null
+SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 fi
 
