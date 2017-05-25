@@ -49,11 +49,14 @@ UPCHECK=`echo $source | awk -F/ '{print $3}'`
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 
+if [ -d "$1" ]
+then
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
+else 
+:
+fi
 
 sudo curl --silent -L $source >> "$f".ads.txt
-
-
 #silent curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
