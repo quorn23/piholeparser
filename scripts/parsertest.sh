@@ -55,21 +55,25 @@ SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 fi
 
+## Download lists
 sudo curl --silent -L $source >> "$f".ads.txt
 #silent curl --silent $source >> "$f".ads.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
 done
 
-## Filter
+# look for:  ||domain.tld^
 echo ""
 printf "$yellow"  "Filtering non-url content..."
-sudo perl /etc/piholeparser/parser/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
-echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
+sort -u "$f".ads.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".ads_parsed1.txt
+echo -e "\t`wc -l "$f".ads_parsed1.txt | cut -d " " -f 1` lines after parsing"
+
+# remove extra chars
+sed 's/[\|^]//g' < "$f".ads_parsed1.txt > "$f".ads_parsed2.txt
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
+sort -u "$f".ads_parsed2.txt > "$f".ads_unique.txt
 sudo rm "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f".ads_unique.txt >> "$f".txt
@@ -81,8 +85,8 @@ if
 then
 echo ""
 printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv "$f".txt /etc/piholeparser/parsed/
-sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo mv "$f".txt /etc/piholeparser/parsetest/
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsetest/*.txt
 else
 echo ""
 printf "$red"     "File Empty. It will be deleted."
@@ -115,28 +119,18 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Creating Single Big List."
 echo ""
-sudo cat /etc/piholeparser/parsed/*.txt | sort > /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
+sudo cat /etc/piholeparser/parsetest/*.txt | sort > /etc/piholeparser/parsedall/ALLPARSEDLISTStest.txt
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
 
-sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
-echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt | cut -d " " -f 1` lines after deduping"
-sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
+sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTStest.txt > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111test.txt
+echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111test.txt | cut -d " " -f 1` lines after deduping"
+sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTStest.txt
 
 printf "$magenta" "___________________________________________________________"
 echo ""
-
-## Tidying up
-{ if [ "$version" = "github" ]
-then
-sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
-elif
-[ "$version" = "local" ]
-then
-sudo rm /etc/piholeparser/parsed/*.txt
-fi }
 
 printf "$blue"    "___________________________________________________________"
 echo ""
