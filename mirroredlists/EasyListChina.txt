@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: ASFT8eUS3qW+oEBcFOWAww
-! Version: 201705242152
+! Checksum: J6o2+TzcKhVZdnYFFzoijQ
+! Version: 201705250412
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 24 May 2017 21:52 UTC
+! Last Modified: 25 May 2017 04:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -2893,6 +2893,7 @@ mg*.6park.com/img/$image
 ||a.ksbbs.com/Mon_*.swf
 ||a.v.duowan.com/crossdomain.xml
 ||a.xizi.com^
+||a.xywy.com^
 ||a1bpchina.*/*/*.$script,third-party
 ||a1bpchina.*/*/*.gif
 ||a2.b310.com^
@@ -2967,6 +2968,7 @@ mg*.6park.com/img/$image
 ||adp.cnool.net^
 ||adpub.yaolan.com^
 ||adpubs.yaolan.com^
+||ads-union.jd.com^
 ||adsclick.yx.js.cn^
 ||adserve2.tom.com^
 ||adshows.21cn.com^
@@ -5552,6 +5554,8 @@ mg*.6park.com/img/$image
 ||sogoucdn.com/wap/js/
 ||sohu.com.cn/ppp/bms/bms.popup.
 ||sohu.com/adgtr/
+||sohu.com/api/labs/hotnews/c/load?
+||sohu.com/api/labs/mp/load?
 ||sohu.com/interaction/get/
 ||sohucs.com^*_gif$domain=12580sky.com
 ||sooopu.com/asphtml/plnew.
@@ -5794,7 +5798,7 @@ mg*.6park.com/img/$image
 ||upantool.com/playing/
 ||upload.jjxw.cn^*.swf
 ||uploadhouse.com^*.gif$domain=wishct.com
-||uploads.duapp.com/images/$domain=52vip.net
+||uploads.duapp.com^$domain=52vip.net
 ||url.cn^$domain=shuajizhijia.com
 ||urlpic.club/2016/upload/image/20170422/4220643630
 ||uschinapress.com/2014/0922/1411428929105.png
@@ -5813,7 +5817,6 @@ mg*.6park.com/img/$image
 ||v1.cn/cms/*/js/ad_new.js
 ||v2ex.co/Kc9G5j9Y.gif
 ||v4.cc/m/common.js
-||v5bjq.com/Images/other/Coupon.gif
 ||v8gay.com/apps/misc.php?action=advert&
 ||van698.com/api.php?mod=js&bid=369
 ||vanpeople.com/ad$subdocument
@@ -6066,6 +6069,8 @@ mg*.6park.com/img/$image
 ||xxsy.net/js/xxsypop
 ||xxx169.org^$third-party
 ||xyfdcw.com.cn/userfiles/flash/
+||xywy.com/gk?a=
+||xywy.com/zhixing/
 ||xz7.com/js/3000.js
 ||xz7.com/js/bann
 ||xz7.com/js/gg_
@@ -6077,6 +6082,7 @@ mg*.6park.com/img/$image
 ||xzbu.com/img/xueshu
 ||xzbu.com/xueshu/btxm.jpg
 ||xzbu.com/xueshu/zwyc.gif
+||xzking.com/static/images/detail/soft_1168x90.gif
 ||y2.ifengimg.com/1d124ac5e89463af/2013/0125/rdn_51023a5071d32.jpg
 ||y3600.com/17
 ||yaerwen.com/5200js/59.js
@@ -6302,16 +6308,15 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
-||xzking.com/static/images/detail/soft_1168x90.gif
-||sohu.com/api/labs/hotnews/c/load?
-||sohu.com/api/labs/mp/load?
-||a.xywy.com^
-||xywy.com/gk?a=
-||xywy.com/zhixing/
-||ads-union.jd.com^
+||v5bjq.com/Images/ggImg/$~collapse
+||vansky.com/agdg/homegg/
+||mydrivers.com/news/2017/pc_dangbei.gif
 !------------------------Specific element hiding rules------------------------!
+mydrivers.com###thread_subject + DIV
+mydrivers.com##.btnNext + DIV:last-child
+vansky.com##.top-ad-link
 gpcxw.com###AA2
-hacg.fi,hacg.red,hacg.wiki###text-26
+vjmedia.com.hk###author-spotlight + .clear + DIV
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -7484,6 +7489,7 @@ aijava.cn###text-15
 wuleba.com###text-2
 hacg.fi,hacg.red,hacg.wiki###text-22
 hacg.fi,hacg.red,hacg.wiki###text-25
+hacg.fi,hacg.red,hacg.wiki###text-26
 moe-acg.cc,tumutanzi.com###text-3
 vjmedia.com.hk###text-33
 zreading.cn###text-5
@@ -7781,7 +7787,6 @@ eprice.com.tw##.ad-970x90-g
 19lou.com##.ad-980x40
 ihome99.com##.ad-980x60
 19lou.com,ihome99.com##.ad-980x90
-v5bjq.com##.ad-Shrink
 tech2ipo.com##.ad-article-text
 baofeng.com##.ad-bar-l
 baofeng.com##.ad-bar-r
@@ -10505,7 +10510,6 @@ liaoxuefeng.com##div[style="width:336px;height:280px;float:left;"]
 auto-online.com.tw##div[style="width:336px;height:280px;margin:0;background:#000000"]
 isanxia.com##div[style="width:340px;height:284px;float:left;"]
 niwota.com##div[style="width:365px;height:310px;border:0px solid #ccc;float:left; margin: 0px 10px 5px 0px;"]
-mydrivers.com##div[style="width:468px; height:60px;margin:auto; padding:5px 0 0 0"]
 818today.com##div[style="width:610px;height:255px;margin:0px auto;"]
 iplaysoft.com##div[style="width:680px;height:166px;margin:50px auto 40px auto;overflow:hidden;"]
 vipyl.com##div[style="width:692px;height:282px;margin:0px 10px 0px 10px; padding:0px;float:right; overflow:hidden"]
@@ -10739,6 +10743,7 @@ abbao.cn#@##adcontent
 mrmad.com.tw,pbhz.com#@##adsense
 182.18.61.50#@##adslist
 leduwo.com,wenku8.com,yaerwen.com#@##adtop
+union.58.com#@##advertise
 2d-gate.org#@##banner_ad
 wenjian.cn#@##contentAd
 knowlet3389.blogspot.com,knowlet3389.blogspot.hk,knowlet3389.blogspot.jp,knowlet3389.blogspot.tw#@##gAds
@@ -10846,7 +10851,6 @@ gamer.com.tw#@#a[href^="http://bs.serving-sys.com/"]
 gamer.com.tw#@#a[href^="https://ad.doubleclick.net/"]
 brandsales.58.com#@#div[id^="ad_"]
 gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
-union.58.com#@##advertise
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@.adserver.$domain=litv.tv
@@ -11181,7 +11185,6 @@ union.58.com#@##advertise
 @@||mail.wo.cn/ad/
 @@||manhua.weibo.com/adv/
 @@||masterkong.com.cn/adimages/
-@@||mediav.com/js/mvf_g2.js$domain=v5bjq.com
 @@||mediav.com^$domain=dev.360.cn
 @@||meizu.com/fileserver/ad/img/
 @@||miaozhen.com^*/m.suning.
@@ -11378,8 +11381,6 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 /^https?:\/\/(?!www[0-9]?\.)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/[0-9a-z]{40,}\.js/$script,domain=~bittiger.io
 /cpro.$popup,third-party
 |http://*&uc=
-||mn586.com^$third-party
-||gunmi.cn^$third-party
 ||1.1010pic.com^
 ||1.feihua.com^
 ||1.mgff.com^
@@ -11416,6 +11417,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||fotao9.com^
 ||fuz.cc^$third-party
 ||guang.sdsgwy.com^
+||gunmi.cn^$third-party
 ||gzlykj.cn^
 ||jsm.9939.com^
 ||kuku99.com^$third-party
@@ -11423,6 +11425,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||lixiangmo.com^
 ||milk.yesky.com.cn^
 ||mipujia.com^$third-party
+||mn586.com^$third-party
 ||s1.hiapk.com^
 ||star-media.cn^$third-party
 ||sundxs.com^$third-party
@@ -11446,12 +11449,12 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 |https:$script,third-party,xmlhttprequest,domain=m.00ksw.net|m.33yq.com|m.50zw.la|m.55xs.com|m.81zw.com|m.88dushu.com|m.biqudu.com|m.biquge.com|m.biquge.com.tw|m.biquge.tw|m.biqugezw.com|m.biquwu.cc|m.bqg5200.com|m.dhzw.org|m.kewaishu.net|m.lewenxiaoshuo.com|m.liewen.cc|m.qu.la|m.shenmabook.com|m.shumilou.co|m.snwx8.com|m.vodtw.com|m.xs222.com|wap.xxbiquge.com
 ||23txt.com^$third-party
 ||axkxy.com^
-||xacqp.com^
 ||feifish66.com^
 ||gyrtg.com^
 ||jundazulin.com^
 ||sonomoyo.com^
 ||tuadong.com^
+||xacqp.com^
 ! Sex8.cc
 ###j-new-ad
 ##.a_sxfl
