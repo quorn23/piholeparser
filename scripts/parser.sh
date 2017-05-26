@@ -119,7 +119,7 @@ printf "$green"   "Processing lists With Method 3"
 echo ""
 
 sudo curl -s file://"$f".orig.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".ads_unique3.txt
-
+echo -e "\t`wc -l "$f".ads_unique3.txt | cut -d " " -f 1` lines after dusing method 3"
 
 ## merge lists
 echo ""
