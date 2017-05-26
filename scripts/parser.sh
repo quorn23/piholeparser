@@ -92,7 +92,8 @@ echo ""
 printf "$yellow"  "Sorting and Removing duplicates..."
 #sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
 sort -u "$f".ads3.txt > "$f".ads_unique.txt
-sudo rm "$f".ads_parsed.txt
+#sudo rm "$f".ads_parsed.txt
+sudo rm "$f".ads3.txt
 echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f".ads_unique.txt >> "$f".txt
 sudo rm "$f".ads_unique.txt
