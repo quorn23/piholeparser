@@ -64,18 +64,20 @@ done
 echo ""
 printf "$yellow"  "Removing Comments..."
 sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads1.txt
-echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines after removing comments"
+echo -e "\t`wc -l "$f".ads1.txt | cut -d " " -f 1` lines after removing comments"
 
 # look for:  ||domain.tld^
 echo ""
 printf "$yellow"  "Looking for ||domain.tld^..."
 sort -u "$f".ads1.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".ads2.txt
+echo -e "\t`wc -l "$f".ads2.txt | cut -d " " -f 1` lines Removing Pipes"
 sudo rm "$f".ads1.txt
  
 # remove extra chars
 echo ""
 printf "$yellow"  "Removing extra characters..."
 sed 's/[\|^]//g' < "$f".ads2.txt > "$f".ads3.txt
+echo -e "\t`wc -l "$f".ads3.txt | cut -d " " -f 1` lines after removing extra characters"
 sudo rm "$f".ads2.txt
 
 ## Filter
