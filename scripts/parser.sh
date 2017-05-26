@@ -114,11 +114,18 @@ sort -u "$f".ads_parsed.txt > "$f".ads_unique2.txt
 sudo rm "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_unique2.txt | cut -d " " -f 1` lines after deduping"
 
+echo ""
+printf "$green"   "Processing lists With Method 3"
+echo ""
+
+sudo curl -s file://"$f".orig.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".ads_unique3.txt
+
+
 ## merge lists
 echo ""
 printf "$green"   "Merging lists from both Parsing Methods"
 echo ""
-sudo cat "$f".ads_unique1.txt "$f".ads_unique2.txt >> "$f".merged.txt
+sudo cat "$f".ads_unique1.txt "$f".ads_unique2.txt "$f".ads_unique3.txt >> "$f".merged.txt
 sudo rm "$f".ads_unique1.txt
 sudo rm "$f".ads_unique2.txt
 
