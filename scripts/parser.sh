@@ -60,43 +60,74 @@ sudo curl --silent -L $source >> "$f".orig.txt
 echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
 done
 
+echo ""
+printf "$green"   "Processing lists With Method 1"
+echo ""
+
 ## Remove comments
 echo ""
 printf "$yellow"  "Removing Comments..."
-sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads1.txt
-echo -e "\t`wc -l "$f".ads1.txt | cut -d " " -f 1` lines after removing comments"
+sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
+echo -e "\t`wc -l "$f".nocomment.txt | cut -d " " -f 1` lines after removing comments"
 
 # look for:  ||domain.tld^
 echo ""
 printf "$yellow"  "Looking for ||domain.tld^..."
-sort -u "$f".ads1.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".ads2.txt
-echo -e "\t`wc -l "$f".ads2.txt | cut -d " " -f 1` lines after removing pipes"
-sudo rm "$f".ads1.txt
+sort -u "$f".nocomment.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".nopipes.txt
+echo -e "\t`wc -l "$f".nopipes.txt | cut -d " " -f 1` lines after removing pipes"
+sudo rm "$f".nocomment.txt
  
 # remove extra chars
 echo ""
 printf "$yellow"  "Removing extra characters..."
-sed 's/[\|^]//g' < "$f".ads2.txt > "$f".ads3.txt
-echo -e "\t`wc -l "$f".ads3.txt | cut -d " " -f 1` lines after removing extra characters"
-sudo rm "$f".ads2.txt
-
-## Filter
-#echo ""
-#printf "$yellow"  "Filtering non-url content..."
-#sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads3.txt > "$f".ads_parsed.txt
-#echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
-#sudo rm "$f".ads3.txt
+sed 's/[\|^]//g' < "$f".nopipes.txt > "$f".noextrachar.txt
+echo -e "\t`wc -l "$f".noextrachar.txt | cut -d " " -f 1` lines after removing extra characters"
+sudo rm "$f".nopipes.txt
 
 ## Sorting and Duplicate Removal
 echo ""
 printf "$yellow"  "Sorting and Removing duplicates..."
-#sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
-sort -u "$f".ads3.txt > "$f".ads_unique.txt
-#sudo rm "$f".ads_parsed.txt
-sudo rm "$f".ads3.txt
-echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
-sudo cat "$f".ads_unique.txt >> "$f".txt
-sudo rm "$f".ads_unique.txt
+sort -u "$f".noextrachar.txt > "$f".ads_unique1.txt
+sudo rm "$f".noextrachar.txt
+echo -e "\t`wc -l "$f".ads_unique1.txt | cut -d " " -f 1` lines after deduping"
+
+echo ""
+printf "$green"   "Processing lists With Method 2"
+echo ""
+
+## Remove comments
+echo ""
+printf "$yellow"  "Removing Comments..."
+sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads.txt
+echo -e "\t`wc -l "$f".ads1.txt | cut -d " " -f 1` lines after removing comments"
+
+## Filter
+echo ""
+printf "$yellow"  "Filtering non-url content..."
+sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
+echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
+
+## Duplicate Removal
+echo ""
+printf "$yellow"  "Removing duplicates..."
+sort -u "$f".ads_parsed.txt > "$f".ads_unique2.txt
+sudo rm "$f".ads_parsed.txt
+echo -e "\t`wc -l "$f".ads_unique2.txt | cut -d " " -f 1` lines after deduping"
+
+## merge lists
+echo ""
+printf "$green"   "Merging lists from both Parsing Methods"
+echo ""
+sudo cat "$f".ads_unique1.txt "$f".ads_unique2.txt >> "$f".merged.txt
+sudo rm "$f".ads_unique1.txt
+sudo rm "$f".ads_unique2.txt
+
+## Duplicate Removal
+echo ""
+printf "$yellow"  "Removing duplicates..."
+sort -u "$f".merged.txt > "$f".txt
+sudo rm "$f".merged.txt
+echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping"
 
 ## Remove Empty Files
 if 
