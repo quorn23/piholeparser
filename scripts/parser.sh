@@ -106,11 +106,11 @@ test $(stat -c%s "$f".orig.txt) -ge 104857600
 then
 echo ""
 printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo rm "$f".ads.txt
+sudo rm "$f".orig.txt
 else
 echo ""
 printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv "$f".ads.txt /etc/piholeparser/mirroredlists/
+sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
