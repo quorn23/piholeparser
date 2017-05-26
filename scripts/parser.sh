@@ -63,15 +63,27 @@ done
 ## Remove comments
 echo ""
 printf "$yellow"  "Removing Comments..."
-sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads.txt
+sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads1.txt
 echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines after removing comments"
+
+# look for:  ||domain.tld^
+echo ""
+printf "$yellow"  "Looking for ||domain.tld^..."
+sort -u "$f".ads1.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".ads2.txt
+sudo rm "$f".ads1.txt
+ 
+# remove extra chars
+echo ""
+printf "$yellow"  "Removing extra characters..."
+sed 's/[\|^]//g' < "$f".ads2.txt > "$f".ads3.txt
+sudo rm "$f".ads2.txt
 
 ## Filter
 echo ""
 printf "$yellow"  "Filtering non-url content..."
-sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
+sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads3.txt > "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
-sudo rm "$f".ads.txt
+sudo rm "$f".ads3.txt
 
 ## Sorting
 echo ""
