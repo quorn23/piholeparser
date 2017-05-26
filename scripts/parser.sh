@@ -70,7 +70,7 @@ echo -e "\t`wc -l "$f".ads1.txt | cut -d " " -f 1` lines after removing comments
 echo ""
 printf "$yellow"  "Looking for ||domain.tld^..."
 sort -u "$f".ads1.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".ads2.txt
-echo -e "\t`wc -l "$f".ads2.txt | cut -d " " -f 1` lines Removing Pipes"
+echo -e "\t`wc -l "$f".ads2.txt | cut -d " " -f 1` lines after removing pipes"
 sudo rm "$f".ads1.txt
  
 # remove extra chars
@@ -81,21 +81,18 @@ echo -e "\t`wc -l "$f".ads3.txt | cut -d " " -f 1` lines after removing extra ch
 sudo rm "$f".ads2.txt
 
 ## Filter
-echo ""
-printf "$yellow"  "Filtering non-url content..."
-sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads3.txt > "$f".ads_parsed.txt
-echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
-sudo rm "$f".ads3.txt
+#echo ""
+#printf "$yellow"  "Filtering non-url content..."
+#sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads3.txt > "$f".ads_parsed.txt
+#echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
+#sudo rm "$f".ads3.txt
 
-## Sorting
+## Sorting and Duplicate Removal
 echo ""
-printf "$yellow"  "Sorting..."
-sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
+printf "$yellow"  "Sorting and Removing duplicates..."
+#sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
+sort -u "$f".ads3.txt > "$f".ads_unique.txt
 sudo rm "$f".ads_parsed.txt
-
-## Duplicate Removal
-echo ""
-printf "$yellow"  "Removing duplicates..."
 echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f".ads_unique.txt >> "$f".txt
 sudo rm "$f".ads_unique.txt
