@@ -99,7 +99,7 @@ echo ""
 echo ""
 printf "$yellow"  "Removing Comments..."
 sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads.txt
-echo -e "\t`wc -l "$f".ads1.txt | cut -d " " -f 1` lines after removing comments"
+echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines after removing comments"
 
 ## Filter
 echo ""
