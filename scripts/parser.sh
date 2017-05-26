@@ -56,21 +56,32 @@ printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 fi
 
 ## Download Lists
-sudo curl --silent -L $source >> "$f".ads.txt
-echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines downloaded"
+sudo curl --silent -L $source >> "$f".orig.txt
+echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
 done
+
+## Remove comments
+echo ""
+printf "$yellow"  "Removing Comments..."
+sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads.txt
+echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines after removing comments"
 
 ## Filter
 echo ""
 printf "$yellow"  "Filtering non-url content..."
 sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
+sudo rm "$f".ads.txt
+
+## Sorting
+echo ""
+printf "$yellow"  "Sorting..."
+sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
+sudo rm "$f".ads_parsed.txt
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u "$f".ads_parsed.txt > "$f".ads_unique.txt
-sudo rm "$f".ads_parsed.txt
 echo -e "\t`wc -l "$f".ads_unique.txt | cut -d " " -f 1` lines after deduping"
 sudo cat "$f".ads_unique.txt >> "$f".txt
 sudo rm "$f".ads_unique.txt
@@ -91,7 +102,7 @@ fi
 
 ## Create Mirrors
 if 
-test $(stat -c%s "$f".ads.txt) -ge 104857600
+test $(stat -c%s "$f".orig.txt) -ge 104857600
 then
 echo ""
 printf "$red"     "Mirror File Too Large For Github. Deleting."
