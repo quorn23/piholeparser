@@ -81,6 +81,7 @@ echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after removing blank
 sudo rm "$f".nocomment.txt
 
 ## remove asterisk lines
+echo ""
 printf "$yellow"  "Removing asterisk lines..."
 sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".preproc.txt
 echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing asterisk lines"
@@ -152,6 +153,9 @@ printf "$yellow"  "Removing duplicates..."
 sort -u "$f".merged.txt > "$f".txt
 echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping merged lists"
 sudo rm "$f".merged.txt
+
+## Remove Pre-processed list
+sudo rm "$f".preproc.txt
 
 ####################
 ## Move files     ##
