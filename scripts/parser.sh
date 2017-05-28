@@ -161,7 +161,7 @@ else
 echo ""
 printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
-sudo rename "s/.lst.ads.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
 ## End File Loop
