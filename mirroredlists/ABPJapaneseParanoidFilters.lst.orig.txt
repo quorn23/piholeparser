@@ -1500,104 +1500,7 @@ browser,navigator,messenger,songbird,midbrowser,emusic,webrunner##.abp-recommend
 .popup0_$script,object-subrequest,subdocument
 .popup1-$script,object-subrequest,subdocument
 .popup1.$script,object-subrequest,subdocument
-.popup1^$scri[Adblock Plus 2.8.2]
-! Checksum: C2zlPbLUUtPY3MhyzWuXKg
-! Homepage: https://github.com/k2jp/abp-japanese-filters/
-! Title: ABP Japanese Paranoid filters (ONLY FOR Japanese and experienced users: READ Support Policy)
-! Expires: 6 hours
-! Version: 201705252339
-!
-! Last modified: 2017-05-25 23:39 JST(UTC+0900)
-! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
-! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
-! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
-! Support policy:  https://github.com/k2jp/abp-japanese-filters/wiki/Support_Policy
-! Project owners: k2japan
-! Project committers: looter, lostincarnation, tanahata
-! Project contributors: 
-!
-!
-! ########## Temporary white list START ##########
-! anime.biglobe.ne.jp uses "log" as history, which produce plenty of false positives 2011-09-22
-@@||anime.biglobe.ne.jp^*log.$object
-@@||anime.biglobe.ne.jp^*log_$image
-! False positives with images, reported via Issue Report, Jan 6, 2012
-@@||goal.com/files/images/stats/goal/$image
-! False positives with XHRs including ,log, in the parameter at Google Map, with ^log^ filter in the Paranoid subscription, Sep 28, 2014
-! False positives with scripts including ,log, in the parameter at Google Map, with ^log^ filter in the Paranoid subscription, Nov 05, 2016
-@@||google.*/maps/_/js/k=maps.*,log,$script,xmlhttprequest
-! Too many false FALSE POSITIVE reports, Mar 25, 2012
-@@||maps.google.*/maps/gen_204?
-! False positives with Gadgets at iGoogle with _track_ filter. Moved from domain exception 2011-12-07
-@@||www.google.*/igoogle-module?*&exp_track_js=
-@@||ig.gmodules.com/gadgets/*&exp_track_js=$domain=encrypted.google.com|www.google.com|www.google.is|www.google.ie|www.google.az|www.google.com.af|www.google.co.vi|www.google.as|www.google.ae|www.google.dz|www.google.com.ar|www.google.am|www.google.com.ai|www.google.it.ao|www.google.com.ag|www.google.ad|www.google.co.uk|www.google.vg|www.google.co.il|www.google.it|www.google.co.in|www.google.co.id|www.google.co.ug|www.google.com.ua|www.google.co.uz|www.google.com.uy|www.google.com.ec|www.google.com.eg|www.google.ee|www.google.com.et|www.google.com.sv|www.google.com.au|www.google.at|www.google.com.om|www.google.nl|www.google.com.gh|www.google.gg|www.google.gy|www.google.kz|www.google.com.qa|www.google.ca|www.google.gm|www.google.com.kh|www.google.com.cu|www.google.gr|www.google.ki|www.google.kg|www.google.com.gt|www.google.gp|www.google.com.kw|www.google.co.ck|www.google.gl|www.google.ge|www.google.hr|www.google.co.ke|www.google.ci|www.google.co.cr|www.google.com.co|www.google.cg|www.google.cd|www.google.com.sa|www.google.ws|www.google.st|www.google.co.zm|www.google.sm|www.google.com.sl|www.google.dj|www.google.com.gi|www.google.je|www.google.com.jm|www.google.com.sg|www.google.co.zw|www.google.ch|www.google.se|www.google.es|www.google.lk|www.google.sk|www.google.si|www.google.sc|www.google.sn|www.google.rs|www.google.com.vc|www.google.sh|www.google.com.sb|www.google.co.th|www.google.co.kr|www.google.com.tw|www.google.com.tj|www.google.co.tz|www.google.cz|www.google.cf|www.google.cn|www.google.cl|www.google.dk|www.google.de|www.google.tk|www.google.com.do|www.google.dm|www.google.tt|www.google.tm|www.google.com.tr|www.google.to|www.google.com.ng|www.google.nr|www.google.com.na|www.google.nu|www.google.com.ni|www.google.co.jp|www.google.co.nz|www.google.com.np|www.google.com.nf|www.google.no|www.google.com.bh|www.google.ht|www.google.com.pk|www.google.com.pa|www.google.vu|www.google.bs|www.google.com.py|www.google.hu|www.google.com.bd|www.google.tl|www.google.pn|www.google.com.fj|www.google.com.ph|www.google.fi|www.google.com.pr|www.google.com.br|www.google.fr|www.google.bg|www.google.com.bn|www.google.bi|www.google.com.vn|www.google.bj|www.google.co.ve|www.google.com.by|www.google.com.bz|www.google.com.pe|www.google.be|www.google.pl|www.google.ba|www.google.co.bw|www.google.com.bo|www.google.pt|www.google.com.hk|www.google.hn|www.google.mg|www.google.mw|www.google.com.mt|www.google.com.my|www.google.im|www.google.fm|www.google.co.za|www.google.com.mx|www.google.mu|www.google.co.mz|www.google.mv|www.google.md|www.google.co.ma|www.google.mn|www.google.me|www.google.ms|www.google.jo|www.google.la|www.google.lv|www.google.lt|www.google.com.ly|www.google.li|www.google.ro|www.google.lu|www.google.rw|www.google.co.ls|www.google.com.lb|www.google.ru
-! jp-bank-card.jp names "jc_log_xx.gif" as login related images... orz 2011-09-15
-@@||jp-bank-card.jp/common/jpb_imgs/jc_log_$image
-! False positives with movie player and chat with &referer=$image,object,script, Dec 24, 2012 and Jan 26, 2013
-@@||jtvnw.net/widgets/*&referer=
-! New false positives at ustream.tv/recorded/ with ?tracking=$third-party 2011-11-23
-@@||llnwd.net^*.flv?tracking=
-! False positives with recorded streamings at block.fm, Oct 22th, 2012
-@@||soundcloud.com/player.*&referer=
-! Flase positive with ^tracking^ preventing the player from loading recorded streams, May 30, 2012
-@@||ustream.tv^*.flv?tracking=
-! Flase positive with ^tracking^ preventing the player from loading recorded streams, Aug 17, 2014
-@@||ustream.tv^*.flv?*&tracking=
-! ---------- Temporary white list END ----------
-
-
-! ########## Default white list START ##########
-! False positives with ^count^ filters blocking &sort=count from b.hatena.ne.jp, Feb 26, 2013
-@@&sort=count^
-@@/jquery.form.track.changes.$script
-@@/log-$domain=comodo.com
-@@/tracker.$domain=dominos.com
-@@/tracker/*$domain=dominos.com
-@@||reports.adblockplus.org^$elemhide
-! False positives with twitter user images caused with _banners^$third-party, Jan 8, 2013
-@@||twimg*.akamaihd.net/profile_banners/
-@@||amazon.*/shiptrack/
-@@||ameba.jp/blog/ucs/js/editor/popups/
-! False positives with _count^ filters blocking XHR for WHO SHARED A BITLINK TO THIS CONTENT, Sep 14, 2015
-@@||bitly.com/proxy/*/link/*_count$domain=bitly.com
-! False positives with with ^stats.$domain=~beta.babelzilla.org at player score pages, Sep 4, 2013
-@@||bombermine.com/tmpl/profile/
-@@||bootstrapcdn.com/bootstrap/
-@@||bootstrapcdn.com/font-awesome/
-! False positives with ||cachefly.net^$third-party loading Ext JS, Dec 6, 2013
-@@||extjs.cachefly.net^
-! False positives with script and stylesheet to display a screenshot, using ^tag_$third-party, Jul 23, 2014
-@@||d1ztvzf22lmr1j.cloudfront.net^*^tag_$domain=crowdin.com|crowdin.net
-@@||clustrmaps.com/stats/$~third-party
-@@||sci.la.coocan.jp^*/log/
-! False positive with a XHR parameter on the Activity pages of Crowdin, using ^count^ filter, Oct 6, 2014
-@@||crowdin.com/project_actions/activity_stream?$xmlhttprequest
-@@||crowdin.net/project_actions/activity_stream?$xmlhttprequest
-! False positive at crowdin.com or crowdin.net with a user-role configuration script, using a ^tracker^ filter
-@@||crowdin.com/tracker/member_status
-@@||crowdin.net/tracker/member_status
-@@||evernote.com^*/Logger.
-! False positive blocking detailed access data on SEO pages
-@@||partsall.geotg.jp/data/*.log
-@@||code.google.com^$elemhide
-@@||indeep76.com^$elemhide
-@@||data.jma.go.jp^*/stats
-@@||mixi.jp^*/popup
-! False positive with -stats. paranoid filter at crash-stats.mozilla.com, Dec 21, 2014
-@@||crash-stats.mozilla.com^
-! False positive with ^stats- paranoid filter at statistics page of each addon, Nov 29, 2013
-! False positive again with ^stats- paranoid filter at statistics page of each addon, Apr 10, 2015
-@@||mozilla.net^*/stats-min.$script,stylesheet,domain=mozilla.org
-@@||nimg.jp/images/1x1.$image
-! False positive with /index.js^$third-party filter makting thumbnail images blank at [www.nicovideo.jp/video_top], Jun 14, 2015
-@@||nimg.jp/scripts/pages/index.js?$domain=www.nicovideo.jp
-@@||netdna-cdn.com/jquery-
-! False positives with the existing ^stats^ filter on the [RaiGit Usage Statistics page](http://rawgit.com/stats), Jul 05, 2016
-@@||rawgit.com/api/stats?$domain=rawgit.com
-! False positives with the existing ^stats.$domain=~beta.babelzilla.org and ^stats- filters on the [RaiGit Usage Statistics page](http://rawgit.com/stats), Jul 05, 2016
-@@||cdn.rawgit.com/rgrove/rawgit/*/stats$domain=rawgit.com
-! @@||robtex.com^$elemhide
-@@||siteadvisor.copt,object-subrequest,subdocument
+.popup1^$script,object-subrequest,subdocument
 .popup1_$script,object-subrequest,subdocument
 .popup2-$script,object-subrequest,subdocument
 .popup2.$script,object-subrequest,subdocument
@@ -3683,7 +3586,104 @@ _tracking9_
 ! ##[class^="pr_"]:not(:root):not(body):not(input)
 ! ##[class*="-PR-"]:not(:root):not(body):not(input)
 ! ##[class*="-pr-"]:not(:root):not(body):not(input)
-! ##[class*="_PR_"]:not(:root):not(body):not(input)
+! ##[class*="_PR_"]:[Adblock Plus 2.8.2]
+! Checksum: C2zlPbLUUtPY3MhyzWuXKg
+! Homepage: https://github.com/k2jp/abp-japanese-filters/
+! Title: ABP Japanese Paranoid filters (ONLY FOR Japanese and experienced users: READ Support Policy)
+! Expires: 6 hours
+! Version: 201705252339
+!
+! Last modified: 2017-05-25 23:39 JST(UTC+0900)
+! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
+! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
+! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
+! Support policy:  https://github.com/k2jp/abp-japanese-filters/wiki/Support_Policy
+! Project owners: k2japan
+! Project committers: looter, lostincarnation, tanahata
+! Project contributors: 
+!
+!
+! ########## Temporary white list START ##########
+! anime.biglobe.ne.jp uses "log" as history, which produce plenty of false positives 2011-09-22
+@@||anime.biglobe.ne.jp^*log.$object
+@@||anime.biglobe.ne.jp^*log_$image
+! False positives with images, reported via Issue Report, Jan 6, 2012
+@@||goal.com/files/images/stats/goal/$image
+! False positives with XHRs including ,log, in the parameter at Google Map, with ^log^ filter in the Paranoid subscription, Sep 28, 2014
+! False positives with scripts including ,log, in the parameter at Google Map, with ^log^ filter in the Paranoid subscription, Nov 05, 2016
+@@||google.*/maps/_/js/k=maps.*,log,$script,xmlhttprequest
+! Too many false FALSE POSITIVE reports, Mar 25, 2012
+@@||maps.google.*/maps/gen_204?
+! False positives with Gadgets at iGoogle with _track_ filter. Moved from domain exception 2011-12-07
+@@||www.google.*/igoogle-module?*&exp_track_js=
+@@||ig.gmodules.com/gadgets/*&exp_track_js=$domain=encrypted.google.com|www.google.com|www.google.is|www.google.ie|www.google.az|www.google.com.af|www.google.co.vi|www.google.as|www.google.ae|www.google.dz|www.google.com.ar|www.google.am|www.google.com.ai|www.google.it.ao|www.google.com.ag|www.google.ad|www.google.co.uk|www.google.vg|www.google.co.il|www.google.it|www.google.co.in|www.google.co.id|www.google.co.ug|www.google.com.ua|www.google.co.uz|www.google.com.uy|www.google.com.ec|www.google.com.eg|www.google.ee|www.google.com.et|www.google.com.sv|www.google.com.au|www.google.at|www.google.com.om|www.google.nl|www.google.com.gh|www.google.gg|www.google.gy|www.google.kz|www.google.com.qa|www.google.ca|www.google.gm|www.google.com.kh|www.google.com.cu|www.google.gr|www.google.ki|www.google.kg|www.google.com.gt|www.google.gp|www.google.com.kw|www.google.co.ck|www.google.gl|www.google.ge|www.google.hr|www.google.co.ke|www.google.ci|www.google.co.cr|www.google.com.co|www.google.cg|www.google.cd|www.google.com.sa|www.google.ws|www.google.st|www.google.co.zm|www.google.sm|www.google.com.sl|www.google.dj|www.google.com.gi|www.google.je|www.google.com.jm|www.google.com.sg|www.google.co.zw|www.google.ch|www.google.se|www.google.es|www.google.lk|www.google.sk|www.google.si|www.google.sc|www.google.sn|www.google.rs|www.google.com.vc|www.google.sh|www.google.com.sb|www.google.co.th|www.google.co.kr|www.google.com.tw|www.google.com.tj|www.google.co.tz|www.google.cz|www.google.cf|www.google.cn|www.google.cl|www.google.dk|www.google.de|www.google.tk|www.google.com.do|www.google.dm|www.google.tt|www.google.tm|www.google.com.tr|www.google.to|www.google.com.ng|www.google.nr|www.google.com.na|www.google.nu|www.google.com.ni|www.google.co.jp|www.google.co.nz|www.google.com.np|www.google.com.nf|www.google.no|www.google.com.bh|www.google.ht|www.google.com.pk|www.google.com.pa|www.google.vu|www.google.bs|www.google.com.py|www.google.hu|www.google.com.bd|www.google.tl|www.google.pn|www.google.com.fj|www.google.com.ph|www.google.fi|www.google.com.pr|www.google.com.br|www.google.fr|www.google.bg|www.google.com.bn|www.google.bi|www.google.com.vn|www.google.bj|www.google.co.ve|www.google.com.by|www.google.com.bz|www.google.com.pe|www.google.be|www.google.pl|www.google.ba|www.google.co.bw|www.google.com.bo|www.google.pt|www.google.com.hk|www.google.hn|www.google.mg|www.google.mw|www.google.com.mt|www.google.com.my|www.google.im|www.google.fm|www.google.co.za|www.google.com.mx|www.google.mu|www.google.co.mz|www.google.mv|www.google.md|www.google.co.ma|www.google.mn|www.google.me|www.google.ms|www.google.jo|www.google.la|www.google.lv|www.google.lt|www.google.com.ly|www.google.li|www.google.ro|www.google.lu|www.google.rw|www.google.co.ls|www.google.com.lb|www.google.ru
+! jp-bank-card.jp names "jc_log_xx.gif" as login related images... orz 2011-09-15
+@@||jp-bank-card.jp/common/jpb_imgs/jc_log_$image
+! False positives with movie player and chat with &referer=$image,object,script, Dec 24, 2012 and Jan 26, 2013
+@@||jtvnw.net/widgets/*&referer=
+! New false positives at ustream.tv/recorded/ with ?tracking=$third-party 2011-11-23
+@@||llnwd.net^*.flv?tracking=
+! False positives with recorded streamings at block.fm, Oct 22th, 2012
+@@||soundcloud.com/player.*&referer=
+! Flase positive with ^tracking^ preventing the player from loading recorded streams, May 30, 2012
+@@||ustream.tv^*.flv?tracking=
+! Flase positive with ^tracking^ preventing the player from loading recorded streams, Aug 17, 2014
+@@||ustream.tv^*.flv?*&tracking=
+! ---------- Temporary white list END ----------
+
+
+! ########## Default white list START ##########
+! False positives with ^count^ filters blocking &sort=count from b.hatena.ne.jp, Feb 26, 2013
+@@&sort=count^
+@@/jquery.form.track.changes.$script
+@@/log-$domain=comodo.com
+@@/tracker.$domain=dominos.com
+@@/tracker/*$domain=dominos.com
+@@||reports.adblockplus.org^$elemhide
+! False positives with twitter user images caused with _banners^$third-party, Jan 8, 2013
+@@||twimg*.akamaihd.net/profile_banners/
+@@||amazon.*/shiptrack/
+@@||ameba.jp/blog/ucs/js/editor/popups/
+! False positives with _count^ filters blocking XHR for WHO SHARED A BITLINK TO THIS CONTENT, Sep 14, 2015
+@@||bitly.com/proxy/*/link/*_count$domain=bitly.com
+! False positives with with ^stats.$domain=~beta.babelzilla.org at player score pages, Sep 4, 2013
+@@||bombermine.com/tmpl/profile/
+@@||bootstrapcdn.com/bootstrap/
+@@||bootstrapcdn.com/font-awesome/
+! False positives with ||cachefly.net^$third-party loading Ext JS, Dec 6, 2013
+@@||extjs.cachefly.net^
+! False positives with script and stylesheet to display a screenshot, using ^tag_$third-party, Jul 23, 2014
+@@||d1ztvzf22lmr1j.cloudfront.net^*^tag_$domain=crowdin.com|crowdin.net
+@@||clustrmaps.com/stats/$~third-party
+@@||sci.la.coocan.jp^*/log/
+! False positive with a XHR parameter on the Activity pages of Crowdin, using ^count^ filter, Oct 6, 2014
+@@||crowdin.com/project_actions/activity_stream?$xmlhttprequest
+@@||crowdin.net/project_actions/activity_stream?$xmlhttprequest
+! False positive at crowdin.com or crowdin.net with a user-role configuration script, using a ^tracker^ filter
+@@||crowdin.com/tracker/member_status
+@@||crowdin.net/tracker/member_status
+@@||evernote.com^*/Logger.
+! False positive blocking detailed access data on SEO pages
+@@||partsall.geotg.jp/data/*.log
+@@||code.google.com^$elemhide
+@@||indeep76.com^$elemhide
+@@||data.jma.go.jp^*/stats
+@@||mixi.jp^*/popup
+! False positive with -stats. paranoid filter at crash-stats.mozilla.com, Dec 21, 2014
+@@||crash-stats.mozilla.com^
+! False positive with ^stats- paranoid filter at statistics page of each addon, Nov 29, 2013
+! False positive again with ^stats- paranoid filter at statistics page of each addon, Apr 10, 2015
+@@||mozilla.net^*/stats-min.$script,stylesheet,domain=mozilla.org
+@@||nimg.jp/images/1x1.$image
+! False positive with /index.js^$third-party filter makting thumbnail images blank at [www.nicovideo.jp/video_top], Jun 14, 2015
+@@||nimg.jp/scripts/pages/index.js?$domain=www.nicovideo.jp
+@@||netdna-cdn.com/jquery-
+! False positives with the existing ^stats^ filter on the [RaiGit Usage Statistics page](http://rawgit.com/stats), Jul 05, 2016
+@@||rawgit.com/api/stats?$domain=rawgit.com
+! False positives with the existing ^stats.$domain=~beta.babelzilla.org and ^stats- filters on the [RaiGit Usage Statistics page](http://rawgit.com/stats), Jul 05, 2016
+@@||cdn.rawgit.com/rgrove/rawgit/*/stats$domain=rawgit.com
+! @@||robtex.com^$elemhide
+@@||siteadvisor.conot(:root):not(body):not(input)
 ! ##[class*="_pr_"]:not(:root):not(body):not(input)
 ! Negative condition is added to avoid false positives with default class name of Drupal 7 reported aaron@madlon-kay.com via https://code.google.com/p/adblock-plus-japanese-filter/issues/detail?id=25 , Feb 14, 2012
 ! ##[class*="prtext"]:not(:root):not(body):not(input)
@@ -4165,7 +4165,569 @@ www.yahoo.co.jp###local
 ||com/Supplier?$third-party
 ||com/termasloda.cgi?$third-party
 ||com/tgewogjqog9.cgi?$third-party
-||com/thusacademicm^$elemhide
+||com/thusacademic.cgi?$third-party
+||com/tranmlikegaozo1931.cgi?$third-party
+||com/uigfyudrtd65.cgi?$third-party
+||com/valcunatrop.cgi?$third-party
+||com/weranisz.cgi?$third-party
+||com/yrehwegweg.cgi?$third-party
+||3utilities.com^$third-party
+||4mydomain.com^$third-party
+||dfdsfadfsd.com^$third-party
+||dns-stuff.com^$third-party
+||dnsrd.com^$third-party
+||dsmtp.com^$third-party
+||fenwaywest.com^$third-party
+||freeddns.com^$third-party
+||ikwb.com^$third-party
+||itemdb.com^$third-party
+||kreotceonite.com^
+||longmusic.com^$third-party
+||madsciencesacto.com^$third-party
+||mefound.com^$third-party
+||mobuna.com^
+||mrslove.com^$third-party
+||myddns.com^$third-party
+||myvnc.com^$third-party
+||ocry.com^$third-party
+||organiccrap.com^$third-party
+||otzo.com^$third-party
+||proxydns.com^$third-party
+||qhigh.com^$third-party
+||servebeer.com^$third-party
+||servecounterstrike.com^$third-party
+||serveftp.com^$third-party
+||servegame.com^$third-party
+||servehalflife.com^$third-party
+||servehttp.com^$third-party
+||servepics.com^$third-party
+||servequake.com^$third-party
+||serveusers.com^$third-party
+||sweepstakesandcontestsnow.com^$third-party
+||wikaba.com^$third-party
+||xxuz.com^$third-party
+||youdontcare.com^$third-party
+||environmental-art.de^$third-party
+||milbrandt.de^$third-party
+||xlsoccer.fr^$third-party
+||ondio.in^$third-party
+||info/balance.cgi?$third-party
+||info/brandz.cgi?$third-party
+||info/destinationroll.cgi?$third-party
+||info/dsfghj.cgi?$third-party
+||info/eblasterrecognitiontagging.cgi?$third-party
+||info/facebook.cgi?$third-party
+||info/falanger.cgi?$third-party
+||info/fewhreh.cgi?$third-party
+||info/fgesarhdtfjy.cgi?$third-party
+||info/gaewrsijhf.cgi?$third-party
+||info/gerhdtfj.cgi?$third-party
+||info/gewvvamnkgal.cfg?$third-party
+||info/graeijhesg.cgi?$third-party
+||info/gusto.cgi?$third-party
+||info/homodot.cgi?$third-party
+||info/jocker.cgi?$third-party
+||info/klaus.cgi?$third-party
+||info/kuskus.cgi?$third-party
+||info/lakzi.cgi?$third-party
+||info/neiakz.cgi?$third-party
+||info/nertad.cgi?$third-party
+||info/nighttrend.cgi?$third-party
+||info/nonmicrosofthats.cgi?$third-party
+||info/nowpublicsessions.cgi?$third-party
+||info/ohopzviv.cgi?$third-party
+||info/oplaxmrqwtfa.cgi?$third-party
+||info/personscpus.cgi?$third-party
+||info/piramide.cgi?$third-party
+||info/pixelationsources.cgi?$third-party
+||info/RECORDINGS?$third-party
+||info/rejtriutrghse.cgi?$third-party
+||info/resellsfruits.cgi?$third-party
+||info/Songs?$third-party
+||info/statementsgifts.cgi?$third-party
+||info/teacherwelldesigned.cgi?$third-party
+||info/terafegwqegwg.cgi?$third-party
+||info/termasloda.cgi?$third-party
+||info/tgewogjqog9.cgi?$third-party
+||info/tgivvo.cgi?$third-party
+||info/timeofdaydeactivating.cgi?$third-party
+||info/tranmlikegaozo1931.cgi?$third-party
+||info/uigfyudrtd65.cgi?$third-party
+||info/valcunatrop.cgi?$third-party
+||info/wensday.cgi?$third-party
+||info/yrehwegweg.cgi?$third-party
+||cellulitecenter.info^$third-party
+||freewww.info^$third-party
+||ns01.info^$third-party
+||name/facebook.cgi?$third-party
+||name/nighttrend.cgi?$third-party
+||name/termasloda.cgi?$third-party
+||name/trendmade.cgi?$third-party
+||name/valcunatrop.cgi?$third-party
+||changeip.name^$third-party
+||ns1.name^$third-party
+||ns2.name^$third-party
+||ns3.name^$third-party
+||net/nighttrend.cgi?$third-party
+||net/Softgoods?$third-party
+||net/valcunatrop.cgi?$third-party
+||dynamic-dns.net^$third-party
+||gets-it.net^$third-party
+||lemmel.net^$third-party
+||lflinkup.net^$third-party
+||pcanywhere.net^$third-party
+||redirectme.net^$third-party
+||serveblog.net^$third-party
+||sytes.net^$third-party
+||trickip.net^$third-party
+||ontheweb.nu^
+! ||rr.nu/?go=
+! Merged into one filter, Dec 22, 2013
+! ||rr.nu/mm.php^
+! ||rr.nu/nl.php^
+! ||rr.nu/pmg.php^
+! ||rr.nu/sl.php^
+||rr.nu/*.php^$third-party
+||org/bcxbsdb.cgi?$third-party
+||org/bdsbfhjtrm.cgi?$third-party
+||org/berntrj.cgi?$third-party
+||org/breber.cgi?$third-party
+||org/bsecuresbigpicture.cgi?$third-party
+||org/bsndgbf.cgi?$third-party
+||org/Cruises?$third-party
+||org/facebook.cgi?$third-party
+||org/fcasvab.cgi?$third-party
+||org/flastringa.cgi?$third-party
+||org/fmhg8klikl.cgi?$third-party
+||org/geographicallyconquering.cgi?$third-party
+||org/geranmalin.cgi?$third-party
+||org/grehernern.cgi?$third-party
+||org/gvwqjvnjawvn.cgi?$third-party
+||org/hnermtrykl.cgi?$third-party
+||org/hrekitrm.cgi?$third-party
+||org/Lexmark?$third-party
+||org/magneticstripculture.cgi?$third-party
+||org/mustmoneyback.cgi?$third-party
+||org/sgewnhermk.cgi?$third-party
+||org/termasloda.cgi?$third-party
+||org/trjrtntrn.cgi?$third-party
+||org/usisec?$third-party
+||org/valcunatrop.cgi?$third-party
+||org/vgdsviabi.cgi?$third-party
+||org/weranisz.cgi?$third-party
+||org/wvahvuiw.cgi?$third-party
+||org/xcntrzkim.cgi?$third-party
+||dnsalias.org^$third-party
+||doesntexist.org^$third-party
+||hopto.org^$third-party
+||intelextraction.org^$third-party
+||mynumber.org^$third-party
+||podzone.org^$third-party
+||sweetvine.org^$third-party
+||zapto.org^$third-party
+||ru:8080/forum/$third-party
+||ru^*?default^$third-party
+||ru/acceptpandora.cgi?$third-party
+||ru/accountabilityfanhattan.cgi?$third-party
+||ru/acu?$third-party
+||ru/aecconsolebased.cgi?$third-party
+||ru/appsumostrust.cgi?$third-party
+||ru/armedoverallstatus.cgi?$third-party
+||ru/arsenalwinmark.cgi?$third-party
+||ru/artgallery?$third-party
+||ru/asjfbaskjbvz.cgi?$third-party
+||ru/attendeesremarkably.cgi?$third-party
+||ru/awgjznbjk.cgi?$third-party
+||ru/bannerappbrain.cgi?$third-party
+||ru/Bermuda?$third-party
+||ru/bdjksncjaksvn.cgi?$third-party
+||ru/blacklistingbogus.cgi?$third-party
+||ru/blackmuscats?$third-party
+||ru/blimpturning.cgi?$third-party
+||ru/blognaturallanguage.cgi?$third-party
+||ru/boseupwards.cgi?$third-party
+||ru/brapplicationsreally.cgi?$third-party
+||ru/browniessignup.cgi?$third-party
+||ru/bsdnjdsh.cgi?$third-party
+||ru/callswithtrump.cgi?$third-party
+||ru/cannotaftermagnification.cgi?$third-party
+||ru/castfilter.cgi?$third-party
+||ru/cdrcdrwrelocation.cgi?$third-party
+||ru/classificationstransporting.cgi?$third-party
+||ru/comesunfound.cgi?$third-party
+||ru/commissionedbasics.cgi?$third-party
+||ru/confirmingunhelpful.cgi?$third-party
+||ru/constitute?$third-party
+||ru/constraintdilemmas.cgi?$third-party
+||ru/Costs?$third-party
+||ru/count*.php^$third-party
+||ru/Cruises?$third-party
+||ru/Cuisine?$third-party
+||ru/cyberlinksleaderboards.cgi?$third-party
+||ru/deltaingscrubbing.cgi?$third-party
+||ru/deployinggrinding.cgi?$third-party
+||ru/desktopthrow.cgi?$third-party
+||ru/dieslee.cgi?$third-party
+||ru/digitalaudiowwwxaracomwebdesigner.cgi?$third-party
+||ru/digitalvideoroad.cgi?$third-party
+||ru/disinfectionservice.cgi?$third-party
+||ru/disksuitevirusspyware.cgi?$third-party
+||ru/distributesereaders.cgi?$third-party
+||ru/Documentation?$third-party
+||ru/doforgetsheet.cgi?$third-party
+||ru/dropboxsveggieconnectioncom.cgi?$third-party
+||ru/edintef?$third-party
+||ru/emblemdeveloper.cgi?$third-party
+||ru/encodingcrushing.cgi?$third-party
+||ru/enementlan.cgi?$third-party
+||ru/ensuringafoul.cgi?$third-party
+||ru/entertainmentseekersrecently.cgi?$third-party
+||ru/epeachtreedetail.cgi?$third-party
+||ru/epiphanymultidevice.cgi?$third-party
+||ru/epsdangers.cgi?$third-party
+||ru/etassexually.cgi?$third-party
+||ru/exampleandjuggle.cgi?$third-party
+||ru/explorerlikeimpacted.cgi?$third-party
+||ru/extended?$third-party
+||ru/facewiseid.cgi?$third-party
+||ru/faresearchrecording.cgi?$third-party
+||ru/feedback?$third-party
+||ru/fendshare.cgi?$third-party
+||ru/fernad?$third-party
+||ru/filetypebotnets.cgi?$third-party
+||ru/finjanrefractions.cgi?$third-party
+||ru/flayer?$third-party
+||ru/flipboardcuratedpinterests.cgi?$third-party
+||ru/flowlikeautosaves.cgi?$third-party
+||ru/foxvirtual.cgi?$third-party
+||ru/fruitsbrowser.cgi?$third-party
+||ru/Furniture?$third-party
+||ru/gatessafe.cgi?$third-party
+||ru/gegjaivja.cgi?$third-party
+||ru/generalandglobal.cgi?$third-party
+||ru/generatorsinister.cgi?$third-party
+||ru/gpssimultaneously.cgi?$third-party
+||ru/gptcreateasim.cgi?$third-party
+||ru/grandmotherreceipts.cgi?$third-party
+||ru/grantis?$third-party
+||ru/Graphs?$third-party
+||ru/guitarfocus.cgi?$third-party
+||ru/gzuzu?$third-party
+||ru/hackedreplacing.cgi?$third-party
+||ru/handledpandora.cgi?$third-party
+||ru/hasper?$third-party
+||ru/headlinesdisconnecting.cgi?$third-party
+||ru/heroinesoundgarden.cgi?$third-party
+||ru/hijinkstwitterverse.cgi?$third-party
+||ru/homepageinvitations.cgi?$third-party
+||ru/hoverplugin.cgi?$third-party
+||ru/hsffdjfgdtygd.cgi?$third-party
+||ru/htrejejqerj.cgi?$third-party
+||ru/ibmaccuvaults.cgi?$third-party
+||ru/immediatevalueweb.cgi?$third-party
+||ru/implementationdepository.cgi?$third-party
+||ru/impressionscostofownership.cgi?$third-party
+||ru/indigo?$document
+||ru/indigo?$third-party
+||ru/inferencefailing.cgi?$third-party
+||ru/infinity?$third-party
+||ru/ingredientspete.cgi?$third-party
+||ru/instructedsmoother.cgi?$third-party
+||ru/Intellectual?$third-party
+||ru/interlacedchrome.cgi?$third-party
+||ru/intimatefilterable.cgi?$third-party
+||ru/irisnondisclosure.cgi?$third-party
+||ru/israel?$third-party
+||ru/italicsstyles.cgi?$third-party
+||ru/itfirefight.cgi?$third-party
+||ru/joomlastar?$third-party
+||ru/jreqjrehreh.cgi?$third-party
+||ru/kcbnksdjnvkjds.cgi?$third-party
+||ru/kome?$third-party
+||ru/lamka?$third-party
+||ru/laptopstandby.cgi?$third-party
+||ru/lefthandasiancyrillic.cgi?$third-party
+||ru/lifecyclepvr.cgi?$third-party
+||ru/liwemoly?$third-party
+||ru/lookbook?$third-party
+||ru/magicactionable.cgi?$third-party
+||ru/makingonlinebackup.cgi?$third-party
+||ru/manrenovated.cgi?$third-party
+||ru/mariott?$third-party
+||ru/martinez?$third-party
+||ru/massmedia?$third-party
+||ru/mathematicaldialog.cgi?$third-party
+||ru/mathsosystembackupsdrftshotjobscom.cgi?$third-party
+||ru/maxstacksizedetracted.cgi?$third-party
+||ru/meteos?$third-party
+||ru/minutehiccup.cgi?$third-party
+||ru/mishor?$third-party
+||ru/mommassong.cgi?$third-party
+||ru/moneyoptinto.cgi?$third-party
+||ru/More?$third-party
+||ru/morroco?$third-party
+||ru/multilensdeposit.cgi?$third-party
+||ru/mvgjfcxxbnx.cgi?$third-party
+||ru/mypalmcomtarts.cgi?$third-party
+||ru/naturalaccessmostly.cgi?$third-party
+||ru/newsroom?$third-party
+||ru/Nixon?$third-party
+||ru/nonalco?$third-party
+||ru/nonsharedtaskbased.cgi?$third-party
+||ru/nvox?$third-party
+||ru/opensourcetwominute.cgi?$third-party
+||ru/operaoccupies.cgi?$third-party
+||ru/overwritescombining.cgi?$third-party
+||ru/overwrittencalculated.cgi?$third-party
+||ru/palerm?$third-party
+||ru/passwordchangeantialiasing.cgi?$third-party
+||ru/pausingsentreceived.cgi?$third-party
+||ru/pavilion?$third-party
+||ru/peertopeerentrepreneurial.cgi?$third-party
+||ru/photoplussjavacompliant.cgi?$third-party
+||ru/photossped.cgi?$third-party
+||ru/phreih?$third-party
+||ru/pinsbymail.cgi?$third-party
+||ru/pittancebrass.cgi?$third-party
+||ru/plastic?$third-party
+||ru/pocketicelandic.cgi?$third-party
+||ru/Politics?$third-party
+||ru/powerhousezvalues.cgi?$third-party
+||ru/Priority?$third-party
+||ru/privacyxscontribute.cgi?$third-party
+||ru/problemcompaq.cgi?$third-party
+||ru/properties?$third-party
+||ru/protectedonlines.cgi?$third-party
+||ru/provinciale?$third-party
+||ru/punctuationcorrelating.cgi?$third-party
+||ru/quiterecurrence.cgi?$third-party
+||ru/qwgfew?$third-party
+||ru/reconsiderrolodex.cgi?$third-party
+||ru/relationshipswonder.cgi?$third-party
+||ru/relegatetrek.cgi?$third-party
+||ru/remnantreplying.cgi?$third-party
+||ru/restyle?$third-party
+||ru/reviewsarigid.cgi?$third-party
+||ru/rfndsegv.cgi?$third-party
+||ru/riderspam.cgi?$third-party
+||ru/robotspipe.cgi?$third-party
+||ru/sbird.cgi?$third-party
+||ru/scentsendfax.cgi?$third-party
+||ru/sdjgfkfg.cgi?$third-party
+||ru/selectionmileage.cgi?$third-party
+||ru/sengi?$third-party
+||ru/sensorika?$third-party
+||ru/Services?$third-party
+||ru/setupexesolaris.cgi?$third-party
+||ru/shakesduplicates.cgi?$third-party
+||ru/shakesoundtracks.cgi?$third-party
+||ru/sher?$third-party
+||ru/showbizsfivedevice.cgi?$third-party
+||ru/sideweathers.cgi?$third-party
+||ru/siga?$third-party
+||ru/signaturevon.cgi?$third-party
+||ru/signupdiving.cgi?$third-party
+||ru/sketchyknocked.cgi?$third-party
+||ru/someespeciallyoxide.cgi?$third-party
+||ru/space?$third-party
+||ru/spainminutes.cgi?$third-party
+||ru/statencurious.cgi?$third-party
+||ru/stlattice.cgi?$third-party
+||ru/storageworkspreviouslyvisited.cgi?$third-party
+||ru/subjectblackbackground.cgi?$third-party
+||ru/sufficientlyallegiances.cgi?$third-party
+||ru/sunreal?$third-party
+||ru/surmisedsemiprofessionally.cgi?$third-party
+||ru/systembackupsdr.cgi?$third-party
+||ru/sytrim?$third-party
+||ru/tabletfocusedmilliseconds.cgi?$third-party
+||ru/tabsickweather.cgi?$third-party
+||ru/Tech?$third-party
+||ru/theftdisappears.cgi?$third-party
+||ru/Themes?$third-party
+||ru/thenautoreplies.cgi?$third-party
+||ru/thievesconundrums.cgi?$third-party
+||ru/timetose?$third-party
+||ru/touchscreenhotelsom.cgi?$third-party
+||ru/Translator?$third-party
+||ru/trena?$third-party
+||ru/triedandtruepadlock.cgi?$third-party
+||ru/tujur?$third-party
+||ru/tvprogramm?$third-party
+||ru/twelfthgenitor.cgi?$third-party
+||ru/twoweektrafficbased.cgi?$third-party
+||ru/tyingwishing.cgi?$third-party
+||ru/uedaf?$third-party
+||ru/ultrabravo?$third-party
+||ru/underwentfsb.cgi?$third-party
+||ru/unhidesecurity.cgi?$third-party
+||ru/upwherehandpainted.cgi?$third-party
+||ru/vawsjbnsjbk.cgi?$third-party
+||ru/VEREIN?$third-party
+||ru/viola?$third-party
+||ru/warmincoming.cgi?$third-party
+||ru/wifiabusinessfriendly.cgi?$third-party
+||ru/workedhinders.cgi?$third-party
+||ru/wpconsiderably.cgi?$third-party
+||ru/wwwgunsandammocomimpacting.cgi?$third-party
+||ru/wwwpaypalcomfinish.cgi?$third-party
+||ru/wwwxaracomwebdesignercamerabag.cgi?$third-party
+||ru/xgejerm.cgi?$third-party
+||ru/ycoordinatesmad.cgi?$third-party
+||ru/yewpp?$third-party
+||ru/zbsajkbvjzkb.cgi?$third-party
+||ru/zoomsgbwhich.cgi?$third-party
+||odnaknopka.ru^$third-party
+||osnova-telecom.ru^$third-party
+||podluzhnyi.ru^$third-party
+||sex-obzor.ru^$third-party
+||traf-extractor.ru^
+||web-redirect.ru^
+||epac.to^$third-party
+||1gb.ua^$third-party
+||us/ggoaivi.cgi?$third-party
+||us/gugauv.cgi?$third-party
+||us/Multifunction?$third-party
+||us/trqifai.cgi?$third-party
+||us/wireless?$third-party
+||myfw.us^$third-party
+||googlanalytics.ws^$third-party
+||mypets.ws^$third-party
+! ----- Malicious objects like hidden iframes, conditional redirections or encoded javascripts, reported at http://labs.sucuri.net/ ----- END -----
+
+! ===== Notorious TLDs ===== START =====
+! [Magnitude Exploit Kit Activity Increases Via Malvertising Attacks | Malwarebytes Unpacked](https://blog.malwarebytes.org/exploits-2/2015/11/magnitude-exploit-kit-activity-increases-via-malvertising-attacks/)
+|http:*.pw^$third-party
+|https:*.pw^$third-party
+! [A Look At A Neutrino EK Distributor | Malwarebytes Labs](https://blog.malwarebytes.org/threat-analysis/exploits-threat-analysis/2016/04/a-look-at-a-neutrino-ek-distributor/)
+! Not to trust TLD "top" any more, Sep 27, 2016
+||top^
+||top^$document
+||top^$popup
+! [Malware-Traffic-Analysis.net - 2015-09-18 - Nuclear EK from EK 178.62.72.26 - oaacderesftu.tk](http://malware-traffic-analysis.net/2015/09/18/index.html)
+|http:*.tk^$third-party
+|https:*.tk^$third-party
+! [Unconventional Malvertising Attack Uses New Tricks | Malwarebytes Unpacked](https://blog.malwarebytes.org/malvertising-2/2015/09/unconventional-malvertising-attack-uses-new-tricks/)
+||xyz^$third-party
+! ----- Notorious TLDs ----- END -----
+
+! ===== Notorious CDN ===== START =====
+||bootstrapcdn.com^$third-party
+! http://google.com/safebrowsing/diagnostic?site=cachefly.net
+! http://www.siteadvisor.com/sites/cachefly.net/msgpage
+! http://www.robtex.com/dns/cachefly.net.html#blacklists
+||cachefly.net^$third-party
+! http://www.google.com/safebrowsing/diagnostic?hl=ja&site=netdna-cdn.com
+||netdna-cdn.com^$third-party
+! ----- Notorious CDN ----- END -----
+
+! ===== Banner AD images with obfuscated short URL links to avoid adblocking ===== START =====
+##a[href*="//bit.ly/"] > img
+##a[href*="//goo.gl/"] > img
+##a[href*="//j.gs/"] > img
+##a[href*="//j.mp/"] > img
+! ----- Banner AD images with obfuscated short URL links to avoid adblocking ----- END -----
+
+! ===== Obfuscated short URL links frequently used to hide malicious links on SNS ===== START =====
+##a[href*="//jump.cx/"]
+! ----- Obfuscated short URL links frequently used to hide malicious links on SNS ----- END -----
+
+! ===== Questionnaire, survey or poll ===== START =====
+||amazonaws.com/*.kissinsights.com/
+||amazonaws.com/ki.js/
+||civicscience.com^$third-party
+||ecustomeropinions.com^$third-party
+||google.com/insights/consumersurveys/
+||researchintel.com^
+||qualtrics.com^$third-party
+! ----- Questionnaire, survey or poll ----- END -----
+
+! ===== Ransomware via iframes ===== START =====
+! |http:*/?*&br_fl=$subdocument,third-party
+! |https:*/?*&br_fl=$subdocument,third-party
+! |http:*/?br_fl=$subdocument,third-party
+! |https:*/?br_fl=$subdocument,third-party
+|http:*/?*&q=*QMvXcJ$subdocument,third-party
+|https:*/?*&q=*QMvXcJ$subdocument,third-party
+|http:*/?q=*QMvXcJ$subdocument,third-party
+|https:*/?q=*QMvXcJ$subdocument,third-party
+|http:*.cf/?*=*-*-$subdocument,third-party
+|https:*.cf/?*=*-*-$subdocument,third-party
+|http:*.co/?*=*-*-$subdocument,third-party
+|https:*.co/?*=*-*-$subdocument,third-party
+||com/?*&biw=*.*.$subdocument,third-party
+||com/?biw=*.*.$subdocument,third-party
+! ||com/?*&es_sm=$subdocument,third-party
+! ||com/?es_sm=$subdocument,third-party
+||com/?*=*-*-$subdocument,third-party
+|http:*.gq/?*=*-*-$subdocument,third-party
+|https:*.gq/?*=*-*-$subdocument,third-party
+! ||info/?*&es_sm=$subdocument,third-party
+! ||info/?es_sm=$subdocument,third-party
+! ||live/?*&es_sm=$subdocument,third-party
+! ||live/?es_sm=$subdocument,third-party
+|http:*.ml/?*=*-*-$subdocument,third-party
+|https:*.ml/?*=*-*-$subdocument,third-party
+! ||net/?*&es_sm=$subdocument,third-party
+! ||net/?es_sm=$subdocument,third-party
+||net/?*=*-*-$subdocument,third-party
+! ||org/?*&es_sm=$subdocument,third-party
+! ||org/?es_sm=$subdocument,third-party
+! ||support/?*&es_sm=$subdocument,third-party
+! ||support/?es_sm=$subdocument,third-party
+||top/?*=*-*-$subdocument,third-party
+! ||toys/?*&es_sm=$subdocument,third-party
+! ||toys/?es_sm=$subdocument,third-party
+||xyz/?*=*-*-$subdocument,third-party
+! ----- Ransomware via iframes ----- END -----
+
+! ===== Replace contents or ADs dynamically ===== START =====
+||toprelatedtopics.com^$third-party
+! ----- Replace contents or ADs dynamically ----- END -----
+
+! ===== Search keyword tapping, including re-search overlay ===== START =====
+/search_frame.$script
+||excite.co.jp/jp/succession/front/scroll.$script
+||biglobe.ne.jp/searchbox.$script
+||biglobe.ne.jp/searchengine.$script
+||search.livedoor.com/research/
+||livedoor.jp/js*/research_$script
+||livedoor.jp/js/*search_frame.$script
+||seesaa.jp/js/trace_searcher.$script
+||so-net.ne.jp/search/javascripts/research/
+! ----- Search keyword tapping, including re-search overlay ----- END -----
+
+! ===== Selected text event hijacking ===== START =====
+/apture.$script
+||apture.com^$third-party
+||so-net.ne.jp/_common/js/select_search.$script
+! ----- Selected text event hijacking ----- END -----
+
+! ===== Third-party manager of user feedback like comments ===== START =====
+||disqus.com^$third-party
+||disquscdn.com^
+||fyre.co^$third-party
+||livefyre.com^$third-party
+||quelon.com^$third-party
+||spot.im^$third-party
+||uservoice.com^$third-party
+! ----- Third-party manager of user feedback like comments ----- END -----
+
+! ===== Toolbar ===== START =====
+||conduit.com^$third-party
+||wibiya.com^$third-party
+! ----- Toolbar ----- END -----
+
+! ===== URL shortener ===== START =====
+##a[href*=".9-1.jp"]
+||adf.ly^$popup
+||adf.ly^$third-party
+##a[href*="://adf.ly/"]
+! ----- URL shortener ----- END -----
+
+
+! ---------- Annoyance type END ----------
+m^$elemhide
 @@||tbs.co.jp^*_stats.$stylesheet
 ! False positives with ^count^ filters blocking predictive input updates, Jan 7, 2013
 @@||twitter.com^*^count=
@@ -4957,569 +5519,7 @@ browser,navigator,messenger,songbird,midbrowser,emusic,webrunner##.abp-recommend
 -tracker5_
 -tracker6-
 -tracker6.
--tra.cgi?$third-party
-||com/tranmlikegaozo1931.cgi?$third-party
-||com/uigfyudrtd65.cgi?$third-party
-||com/valcunatrop.cgi?$third-party
-||com/weranisz.cgi?$third-party
-||com/yrehwegweg.cgi?$third-party
-||3utilities.com^$third-party
-||4mydomain.com^$third-party
-||dfdsfadfsd.com^$third-party
-||dns-stuff.com^$third-party
-||dnsrd.com^$third-party
-||dsmtp.com^$third-party
-||fenwaywest.com^$third-party
-||freeddns.com^$third-party
-||ikwb.com^$third-party
-||itemdb.com^$third-party
-||kreotceonite.com^
-||longmusic.com^$third-party
-||madsciencesacto.com^$third-party
-||mefound.com^$third-party
-||mobuna.com^
-||mrslove.com^$third-party
-||myddns.com^$third-party
-||myvnc.com^$third-party
-||ocry.com^$third-party
-||organiccrap.com^$third-party
-||otzo.com^$third-party
-||proxydns.com^$third-party
-||qhigh.com^$third-party
-||servebeer.com^$third-party
-||servecounterstrike.com^$third-party
-||serveftp.com^$third-party
-||servegame.com^$third-party
-||servehalflife.com^$third-party
-||servehttp.com^$third-party
-||servepics.com^$third-party
-||servequake.com^$third-party
-||serveusers.com^$third-party
-||sweepstakesandcontestsnow.com^$third-party
-||wikaba.com^$third-party
-||xxuz.com^$third-party
-||youdontcare.com^$third-party
-||environmental-art.de^$third-party
-||milbrandt.de^$third-party
-||xlsoccer.fr^$third-party
-||ondio.in^$third-party
-||info/balance.cgi?$third-party
-||info/brandz.cgi?$third-party
-||info/destinationroll.cgi?$third-party
-||info/dsfghj.cgi?$third-party
-||info/eblasterrecognitiontagging.cgi?$third-party
-||info/facebook.cgi?$third-party
-||info/falanger.cgi?$third-party
-||info/fewhreh.cgi?$third-party
-||info/fgesarhdtfjy.cgi?$third-party
-||info/gaewrsijhf.cgi?$third-party
-||info/gerhdtfj.cgi?$third-party
-||info/gewvvamnkgal.cfg?$third-party
-||info/graeijhesg.cgi?$third-party
-||info/gusto.cgi?$third-party
-||info/homodot.cgi?$third-party
-||info/jocker.cgi?$third-party
-||info/klaus.cgi?$third-party
-||info/kuskus.cgi?$third-party
-||info/lakzi.cgi?$third-party
-||info/neiakz.cgi?$third-party
-||info/nertad.cgi?$third-party
-||info/nighttrend.cgi?$third-party
-||info/nonmicrosofthats.cgi?$third-party
-||info/nowpublicsessions.cgi?$third-party
-||info/ohopzviv.cgi?$third-party
-||info/oplaxmrqwtfa.cgi?$third-party
-||info/personscpus.cgi?$third-party
-||info/piramide.cgi?$third-party
-||info/pixelationsources.cgi?$third-party
-||info/RECORDINGS?$third-party
-||info/rejtriutrghse.cgi?$third-party
-||info/resellsfruits.cgi?$third-party
-||info/Songs?$third-party
-||info/statementsgifts.cgi?$third-party
-||info/teacherwelldesigned.cgi?$third-party
-||info/terafegwqegwg.cgi?$third-party
-||info/termasloda.cgi?$third-party
-||info/tgewogjqog9.cgi?$third-party
-||info/tgivvo.cgi?$third-party
-||info/timeofdaydeactivating.cgi?$third-party
-||info/tranmlikegaozo1931.cgi?$third-party
-||info/uigfyudrtd65.cgi?$third-party
-||info/valcunatrop.cgi?$third-party
-||info/wensday.cgi?$third-party
-||info/yrehwegweg.cgi?$third-party
-||cellulitecenter.info^$third-party
-||freewww.info^$third-party
-||ns01.info^$third-party
-||name/facebook.cgi?$third-party
-||name/nighttrend.cgi?$third-party
-||name/termasloda.cgi?$third-party
-||name/trendmade.cgi?$third-party
-||name/valcunatrop.cgi?$third-party
-||changeip.name^$third-party
-||ns1.name^$third-party
-||ns2.name^$third-party
-||ns3.name^$third-party
-||net/nighttrend.cgi?$third-party
-||net/Softgoods?$third-party
-||net/valcunatrop.cgi?$third-party
-||dynamic-dns.net^$third-party
-||gets-it.net^$third-party
-||lemmel.net^$third-party
-||lflinkup.net^$third-party
-||pcanywhere.net^$third-party
-||redirectme.net^$third-party
-||serveblog.net^$third-party
-||sytes.net^$third-party
-||trickip.net^$third-party
-||ontheweb.nu^
-! ||rr.nu/?go=
-! Merged into one filter, Dec 22, 2013
-! ||rr.nu/mm.php^
-! ||rr.nu/nl.php^
-! ||rr.nu/pmg.php^
-! ||rr.nu/sl.php^
-||rr.nu/*.php^$third-party
-||org/bcxbsdb.cgi?$third-party
-||org/bdsbfhjtrm.cgi?$third-party
-||org/berntrj.cgi?$third-party
-||org/breber.cgi?$third-party
-||org/bsecuresbigpicture.cgi?$third-party
-||org/bsndgbf.cgi?$third-party
-||org/Cruises?$third-party
-||org/facebook.cgi?$third-party
-||org/fcasvab.cgi?$third-party
-||org/flastringa.cgi?$third-party
-||org/fmhg8klikl.cgi?$third-party
-||org/geographicallyconquering.cgi?$third-party
-||org/geranmalin.cgi?$third-party
-||org/grehernern.cgi?$third-party
-||org/gvwqjvnjawvn.cgi?$third-party
-||org/hnermtrykl.cgi?$third-party
-||org/hrekitrm.cgi?$third-party
-||org/Lexmark?$third-party
-||org/magneticstripculture.cgi?$third-party
-||org/mustmoneyback.cgi?$third-party
-||org/sgewnhermk.cgi?$third-party
-||org/termasloda.cgi?$third-party
-||org/trjrtntrn.cgi?$third-party
-||org/usisec?$third-party
-||org/valcunatrop.cgi?$third-party
-||org/vgdsviabi.cgi?$third-party
-||org/weranisz.cgi?$third-party
-||org/wvahvuiw.cgi?$third-party
-||org/xcntrzkim.cgi?$third-party
-||dnsalias.org^$third-party
-||doesntexist.org^$third-party
-||hopto.org^$third-party
-||intelextraction.org^$third-party
-||mynumber.org^$third-party
-||podzone.org^$third-party
-||sweetvine.org^$third-party
-||zapto.org^$third-party
-||ru:8080/forum/$third-party
-||ru^*?default^$third-party
-||ru/acceptpandora.cgi?$third-party
-||ru/accountabilityfanhattan.cgi?$third-party
-||ru/acu?$third-party
-||ru/aecconsolebased.cgi?$third-party
-||ru/appsumostrust.cgi?$third-party
-||ru/armedoverallstatus.cgi?$third-party
-||ru/arsenalwinmark.cgi?$third-party
-||ru/artgallery?$third-party
-||ru/asjfbaskjbvz.cgi?$third-party
-||ru/attendeesremarkably.cgi?$third-party
-||ru/awgjznbjk.cgi?$third-party
-||ru/bannerappbrain.cgi?$third-party
-||ru/Bermuda?$third-party
-||ru/bdjksncjaksvn.cgi?$third-party
-||ru/blacklistingbogus.cgi?$third-party
-||ru/blackmuscats?$third-party
-||ru/blimpturning.cgi?$third-party
-||ru/blognaturallanguage.cgi?$third-party
-||ru/boseupwards.cgi?$third-party
-||ru/brapplicationsreally.cgi?$third-party
-||ru/browniessignup.cgi?$third-party
-||ru/bsdnjdsh.cgi?$third-party
-||ru/callswithtrump.cgi?$third-party
-||ru/cannotaftermagnification.cgi?$third-party
-||ru/castfilter.cgi?$third-party
-||ru/cdrcdrwrelocation.cgi?$third-party
-||ru/classificationstransporting.cgi?$third-party
-||ru/comesunfound.cgi?$third-party
-||ru/commissionedbasics.cgi?$third-party
-||ru/confirmingunhelpful.cgi?$third-party
-||ru/constitute?$third-party
-||ru/constraintdilemmas.cgi?$third-party
-||ru/Costs?$third-party
-||ru/count*.php^$third-party
-||ru/Cruises?$third-party
-||ru/Cuisine?$third-party
-||ru/cyberlinksleaderboards.cgi?$third-party
-||ru/deltaingscrubbing.cgi?$third-party
-||ru/deployinggrinding.cgi?$third-party
-||ru/desktopthrow.cgi?$third-party
-||ru/dieslee.cgi?$third-party
-||ru/digitalaudiowwwxaracomwebdesigner.cgi?$third-party
-||ru/digitalvideoroad.cgi?$third-party
-||ru/disinfectionservice.cgi?$third-party
-||ru/disksuitevirusspyware.cgi?$third-party
-||ru/distributesereaders.cgi?$third-party
-||ru/Documentation?$third-party
-||ru/doforgetsheet.cgi?$third-party
-||ru/dropboxsveggieconnectioncom.cgi?$third-party
-||ru/edintef?$third-party
-||ru/emblemdeveloper.cgi?$third-party
-||ru/encodingcrushing.cgi?$third-party
-||ru/enementlan.cgi?$third-party
-||ru/ensuringafoul.cgi?$third-party
-||ru/entertainmentseekersrecently.cgi?$third-party
-||ru/epeachtreedetail.cgi?$third-party
-||ru/epiphanymultidevice.cgi?$third-party
-||ru/epsdangers.cgi?$third-party
-||ru/etassexually.cgi?$third-party
-||ru/exampleandjuggle.cgi?$third-party
-||ru/explorerlikeimpacted.cgi?$third-party
-||ru/extended?$third-party
-||ru/facewiseid.cgi?$third-party
-||ru/faresearchrecording.cgi?$third-party
-||ru/feedback?$third-party
-||ru/fendshare.cgi?$third-party
-||ru/fernad?$third-party
-||ru/filetypebotnets.cgi?$third-party
-||ru/finjanrefractions.cgi?$third-party
-||ru/flayer?$third-party
-||ru/flipboardcuratedpinterests.cgi?$third-party
-||ru/flowlikeautosaves.cgi?$third-party
-||ru/foxvirtual.cgi?$third-party
-||ru/fruitsbrowser.cgi?$third-party
-||ru/Furniture?$third-party
-||ru/gatessafe.cgi?$third-party
-||ru/gegjaivja.cgi?$third-party
-||ru/generalandglobal.cgi?$third-party
-||ru/generatorsinister.cgi?$third-party
-||ru/gpssimultaneously.cgi?$third-party
-||ru/gptcreateasim.cgi?$third-party
-||ru/grandmotherreceipts.cgi?$third-party
-||ru/grantis?$third-party
-||ru/Graphs?$third-party
-||ru/guitarfocus.cgi?$third-party
-||ru/gzuzu?$third-party
-||ru/hackedreplacing.cgi?$third-party
-||ru/handledpandora.cgi?$third-party
-||ru/hasper?$third-party
-||ru/headlinesdisconnecting.cgi?$third-party
-||ru/heroinesoundgarden.cgi?$third-party
-||ru/hijinkstwitterverse.cgi?$third-party
-||ru/homepageinvitations.cgi?$third-party
-||ru/hoverplugin.cgi?$third-party
-||ru/hsffdjfgdtygd.cgi?$third-party
-||ru/htrejejqerj.cgi?$third-party
-||ru/ibmaccuvaults.cgi?$third-party
-||ru/immediatevalueweb.cgi?$third-party
-||ru/implementationdepository.cgi?$third-party
-||ru/impressionscostofownership.cgi?$third-party
-||ru/indigo?$document
-||ru/indigo?$third-party
-||ru/inferencefailing.cgi?$third-party
-||ru/infinity?$third-party
-||ru/ingredientspete.cgi?$third-party
-||ru/instructedsmoother.cgi?$third-party
-||ru/Intellectual?$third-party
-||ru/interlacedchrome.cgi?$third-party
-||ru/intimatefilterable.cgi?$third-party
-||ru/irisnondisclosure.cgi?$third-party
-||ru/israel?$third-party
-||ru/italicsstyles.cgi?$third-party
-||ru/itfirefight.cgi?$third-party
-||ru/joomlastar?$third-party
-||ru/jreqjrehreh.cgi?$third-party
-||ru/kcbnksdjnvkjds.cgi?$third-party
-||ru/kome?$third-party
-||ru/lamka?$third-party
-||ru/laptopstandby.cgi?$third-party
-||ru/lefthandasiancyrillic.cgi?$third-party
-||ru/lifecyclepvr.cgi?$third-party
-||ru/liwemoly?$third-party
-||ru/lookbook?$third-party
-||ru/magicactionable.cgi?$third-party
-||ru/makingonlinebackup.cgi?$third-party
-||ru/manrenovated.cgi?$third-party
-||ru/mariott?$third-party
-||ru/martinez?$third-party
-||ru/massmedia?$third-party
-||ru/mathematicaldialog.cgi?$third-party
-||ru/mathsosystembackupsdrftshotjobscom.cgi?$third-party
-||ru/maxstacksizedetracted.cgi?$third-party
-||ru/meteos?$third-party
-||ru/minutehiccup.cgi?$third-party
-||ru/mishor?$third-party
-||ru/mommassong.cgi?$third-party
-||ru/moneyoptinto.cgi?$third-party
-||ru/More?$third-party
-||ru/morroco?$third-party
-||ru/multilensdeposit.cgi?$third-party
-||ru/mvgjfcxxbnx.cgi?$third-party
-||ru/mypalmcomtarts.cgi?$third-party
-||ru/naturalaccessmostly.cgi?$third-party
-||ru/newsroom?$third-party
-||ru/Nixon?$third-party
-||ru/nonalco?$third-party
-||ru/nonsharedtaskbased.cgi?$third-party
-||ru/nvox?$third-party
-||ru/opensourcetwominute.cgi?$third-party
-||ru/operaoccupies.cgi?$third-party
-||ru/overwritescombining.cgi?$third-party
-||ru/overwrittencalculated.cgi?$third-party
-||ru/palerm?$third-party
-||ru/passwordchangeantialiasing.cgi?$third-party
-||ru/pausingsentreceived.cgi?$third-party
-||ru/pavilion?$third-party
-||ru/peertopeerentrepreneurial.cgi?$third-party
-||ru/photoplussjavacompliant.cgi?$third-party
-||ru/photossped.cgi?$third-party
-||ru/phreih?$third-party
-||ru/pinsbymail.cgi?$third-party
-||ru/pittancebrass.cgi?$third-party
-||ru/plastic?$third-party
-||ru/pocketicelandic.cgi?$third-party
-||ru/Politics?$third-party
-||ru/powerhousezvalues.cgi?$third-party
-||ru/Priority?$third-party
-||ru/privacyxscontribute.cgi?$third-party
-||ru/problemcompaq.cgi?$third-party
-||ru/properties?$third-party
-||ru/protectedonlines.cgi?$third-party
-||ru/provinciale?$third-party
-||ru/punctuationcorrelating.cgi?$third-party
-||ru/quiterecurrence.cgi?$third-party
-||ru/qwgfew?$third-party
-||ru/reconsiderrolodex.cgi?$third-party
-||ru/relationshipswonder.cgi?$third-party
-||ru/relegatetrek.cgi?$third-party
-||ru/remnantreplying.cgi?$third-party
-||ru/restyle?$third-party
-||ru/reviewsarigid.cgi?$third-party
-||ru/rfndsegv.cgi?$third-party
-||ru/riderspam.cgi?$third-party
-||ru/robotspipe.cgi?$third-party
-||ru/sbird.cgi?$third-party
-||ru/scentsendfax.cgi?$third-party
-||ru/sdjgfkfg.cgi?$third-party
-||ru/selectionmileage.cgi?$third-party
-||ru/sengi?$third-party
-||ru/sensorika?$third-party
-||ru/Services?$third-party
-||ru/setupexesolaris.cgi?$third-party
-||ru/shakesduplicates.cgi?$third-party
-||ru/shakesoundtracks.cgi?$third-party
-||ru/sher?$third-party
-||ru/showbizsfivedevice.cgi?$third-party
-||ru/sideweathers.cgi?$third-party
-||ru/siga?$third-party
-||ru/signaturevon.cgi?$third-party
-||ru/signupdiving.cgi?$third-party
-||ru/sketchyknocked.cgi?$third-party
-||ru/someespeciallyoxide.cgi?$third-party
-||ru/space?$third-party
-||ru/spainminutes.cgi?$third-party
-||ru/statencurious.cgi?$third-party
-||ru/stlattice.cgi?$third-party
-||ru/storageworkspreviouslyvisited.cgi?$third-party
-||ru/subjectblackbackground.cgi?$third-party
-||ru/sufficientlyallegiances.cgi?$third-party
-||ru/sunreal?$third-party
-||ru/surmisedsemiprofessionally.cgi?$third-party
-||ru/systembackupsdr.cgi?$third-party
-||ru/sytrim?$third-party
-||ru/tabletfocusedmilliseconds.cgi?$third-party
-||ru/tabsickweather.cgi?$third-party
-||ru/Tech?$third-party
-||ru/theftdisappears.cgi?$third-party
-||ru/Themes?$third-party
-||ru/thenautoreplies.cgi?$third-party
-||ru/thievesconundrums.cgi?$third-party
-||ru/timetose?$third-party
-||ru/touchscreenhotelsom.cgi?$third-party
-||ru/Translator?$third-party
-||ru/trena?$third-party
-||ru/triedandtruepadlock.cgi?$third-party
-||ru/tujur?$third-party
-||ru/tvprogramm?$third-party
-||ru/twelfthgenitor.cgi?$third-party
-||ru/twoweektrafficbased.cgi?$third-party
-||ru/tyingwishing.cgi?$third-party
-||ru/uedaf?$third-party
-||ru/ultrabravo?$third-party
-||ru/underwentfsb.cgi?$third-party
-||ru/unhidesecurity.cgi?$third-party
-||ru/upwherehandpainted.cgi?$third-party
-||ru/vawsjbnsjbk.cgi?$third-party
-||ru/VEREIN?$third-party
-||ru/viola?$third-party
-||ru/warmincoming.cgi?$third-party
-||ru/wifiabusinessfriendly.cgi?$third-party
-||ru/workedhinders.cgi?$third-party
-||ru/wpconsiderably.cgi?$third-party
-||ru/wwwgunsandammocomimpacting.cgi?$third-party
-||ru/wwwpaypalcomfinish.cgi?$third-party
-||ru/wwwxaracomwebdesignercamerabag.cgi?$third-party
-||ru/xgejerm.cgi?$third-party
-||ru/ycoordinatesmad.cgi?$third-party
-||ru/yewpp?$third-party
-||ru/zbsajkbvjzkb.cgi?$third-party
-||ru/zoomsgbwhich.cgi?$third-party
-||odnaknopka.ru^$third-party
-||osnova-telecom.ru^$third-party
-||podluzhnyi.ru^$third-party
-||sex-obzor.ru^$third-party
-||traf-extractor.ru^
-||web-redirect.ru^
-||epac.to^$third-party
-||1gb.ua^$third-party
-||us/ggoaivi.cgi?$third-party
-||us/gugauv.cgi?$third-party
-||us/Multifunction?$third-party
-||us/trqifai.cgi?$third-party
-||us/wireless?$third-party
-||myfw.us^$third-party
-||googlanalytics.ws^$third-party
-||mypets.ws^$third-party
-! ----- Malicious objects like hidden iframes, conditional redirections or encoded javascripts, reported at http://labs.sucuri.net/ ----- END -----
-
-! ===== Notorious TLDs ===== START =====
-! [Magnitude Exploit Kit Activity Increases Via Malvertising Attacks | Malwarebytes Unpacked](https://blog.malwarebytes.org/exploits-2/2015/11/magnitude-exploit-kit-activity-increases-via-malvertising-attacks/)
-|http:*.pw^$third-party
-|https:*.pw^$third-party
-! [A Look At A Neutrino EK Distributor | Malwarebytes Labs](https://blog.malwarebytes.org/threat-analysis/exploits-threat-analysis/2016/04/a-look-at-a-neutrino-ek-distributor/)
-! Not to trust TLD "top" any more, Sep 27, 2016
-||top^
-||top^$document
-||top^$popup
-! [Malware-Traffic-Analysis.net - 2015-09-18 - Nuclear EK from EK 178.62.72.26 - oaacderesftu.tk](http://malware-traffic-analysis.net/2015/09/18/index.html)
-|http:*.tk^$third-party
-|https:*.tk^$third-party
-! [Unconventional Malvertising Attack Uses New Tricks | Malwarebytes Unpacked](https://blog.malwarebytes.org/malvertising-2/2015/09/unconventional-malvertising-attack-uses-new-tricks/)
-||xyz^$third-party
-! ----- Notorious TLDs ----- END -----
-
-! ===== Notorious CDN ===== START =====
-||bootstrapcdn.com^$third-party
-! http://google.com/safebrowsing/diagnostic?site=cachefly.net
-! http://www.siteadvisor.com/sites/cachefly.net/msgpage
-! http://www.robtex.com/dns/cachefly.net.html#blacklists
-||cachefly.net^$third-party
-! http://www.google.com/safebrowsing/diagnostic?hl=ja&site=netdna-cdn.com
-||netdna-cdn.com^$third-party
-! ----- Notorious CDN ----- END -----
-
-! ===== Banner AD images with obfuscated short URL links to avoid adblocking ===== START =====
-##a[href*="//bit.ly/"] > img
-##a[href*="//goo.gl/"] > img
-##a[href*="//j.gs/"] > img
-##a[href*="//j.mp/"] > img
-! ----- Banner AD images with obfuscated short URL links to avoid adblocking ----- END -----
-
-! ===== Obfuscated short URL links frequently used to hide malicious links on SNS ===== START =====
-##a[href*="//jump.cx/"]
-! ----- Obfuscated short URL links frequently used to hide malicious links on SNS ----- END -----
-
-! ===== Questionnaire, survey or poll ===== START =====
-||amazonaws.com/*.kissinsights.com/
-||amazonaws.com/ki.js/
-||civicscience.com^$third-party
-||ecustomeropinions.com^$third-party
-||google.com/insights/consumersurveys/
-||researchintel.com^
-||qualtrics.com^$third-party
-! ----- Questionnaire, survey or poll ----- END -----
-
-! ===== Ransomware via iframes ===== START =====
-! |http:*/?*&br_fl=$subdocument,third-party
-! |https:*/?*&br_fl=$subdocument,third-party
-! |http:*/?br_fl=$subdocument,third-party
-! |https:*/?br_fl=$subdocument,third-party
-|http:*/?*&q=*QMvXcJ$subdocument,third-party
-|https:*/?*&q=*QMvXcJ$subdocument,third-party
-|http:*/?q=*QMvXcJ$subdocument,third-party
-|https:*/?q=*QMvXcJ$subdocument,third-party
-|http:*.cf/?*=*-*-$subdocument,third-party
-|https:*.cf/?*=*-*-$subdocument,third-party
-|http:*.co/?*=*-*-$subdocument,third-party
-|https:*.co/?*=*-*-$subdocument,third-party
-||com/?*&biw=*.*.$subdocument,third-party
-||com/?biw=*.*.$subdocument,third-party
-! ||com/?*&es_sm=$subdocument,third-party
-! ||com/?es_sm=$subdocument,third-party
-||com/?*=*-*-$subdocument,third-party
-|http:*.gq/?*=*-*-$subdocument,third-party
-|https:*.gq/?*=*-*-$subdocument,third-party
-! ||info/?*&es_sm=$subdocument,third-party
-! ||info/?es_sm=$subdocument,third-party
-! ||live/?*&es_sm=$subdocument,third-party
-! ||live/?es_sm=$subdocument,third-party
-|http:*.ml/?*=*-*-$subdocument,third-party
-|https:*.ml/?*=*-*-$subdocument,third-party
-! ||net/?*&es_sm=$subdocument,third-party
-! ||net/?es_sm=$subdocument,third-party
-||net/?*=*-*-$subdocument,third-party
-! ||org/?*&es_sm=$subdocument,third-party
-! ||org/?es_sm=$subdocument,third-party
-! ||support/?*&es_sm=$subdocument,third-party
-! ||support/?es_sm=$subdocument,third-party
-||top/?*=*-*-$subdocument,third-party
-! ||toys/?*&es_sm=$subdocument,third-party
-! ||toys/?es_sm=$subdocument,third-party
-||xyz/?*=*-*-$subdocument,third-party
-! ----- Ransomware via iframes ----- END -----
-
-! ===== Replace contents or ADs dynamically ===== START =====
-||toprelatedtopics.com^$third-party
-! ----- Replace contents or ADs dynamically ----- END -----
-
-! ===== Search keyword tapping, including re-search overlay ===== START =====
-/search_frame.$script
-||excite.co.jp/jp/succession/front/scroll.$script
-||biglobe.ne.jp/searchbox.$script
-||biglobe.ne.jp/searchengine.$script
-||search.livedoor.com/research/
-||livedoor.jp/js*/research_$script
-||livedoor.jp/js/*search_frame.$script
-||seesaa.jp/js/trace_searcher.$script
-||so-net.ne.jp/search/javascripts/research/
-! ----- Search keyword tapping, including re-search overlay ----- END -----
-
-! ===== Selected text event hijacking ===== START =====
-/apture.$script
-||apture.com^$third-party
-||so-net.ne.jp/_common/js/select_search.$script
-! ----- Selected text event hijacking ----- END -----
-
-! ===== Third-party manager of user feedback like comments ===== START =====
-||disqus.com^$third-party
-||disquscdn.com^
-||fyre.co^$third-party
-||livefyre.com^$third-party
-||quelon.com^$third-party
-||spot.im^$third-party
-||uservoice.com^$third-party
-! ----- Third-party manager of user feedback like comments ----- END -----
-
-! ===== Toolbar ===== START =====
-||conduit.com^$third-party
-||wibiya.com^$third-party
-! ----- Toolbar ----- END -----
-
-! ===== URL shortener ===== START =====
-##a[href*=".9-1.jp"]
-||adf.ly^$popup
-||adf.ly^$third-party
-##a[href*="://adf.ly/"]
-! ----- URL shortener ----- END -----
-
-
-! ---------- Annoyance type END ----------
-cker6^
+-tracker6^
 -tracker6_
 -tracker7-
 -tracker7.
