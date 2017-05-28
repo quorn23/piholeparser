@@ -118,23 +118,51 @@ echo ""
 printf "$green"   "Processing lists With Method 3"
 echo ""
 
-sudo curl -s file://"$f".orig.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".ads_unique3.txt
-echo -e "\t`wc -l "$f".ads_unique3.txt | cut -d " " -f 1` lines after dusing method 3"
+sudo curl -s file://"$f".orig.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines downloaded using method 3"
 
-## merge lists
+## Remove comments
 echo ""
-printf "$green"   "Merging lists from both Parsing Methods"
-echo ""
-sudo cat "$f".ads_unique1.txt "$f".ads_unique2.txt "$f".ads_unique3.txt >> "$f".merged.txt
-sudo rm "$f".ads_unique1.txt
-sudo rm "$f".ads_unique2.txt
+printf "$yellow"  "Removing Comments..."
+sudo cat "$f".method3.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".m3nocom.txt
+echo -e "\t`wc -l "$f".m3nocom.txt | cut -d " " -f 1` lines after removing comments"
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u "$f".merged.txt > "$f".txt
+sort -u "$f".m3nocom.txt > "$f".ads_unique3.txt
+sudo rm "$f".m3nocom.txt
+echo -e "\t`wc -l "$f".ads_unique3.txt | cut -d " " -f 1` lines after deduping"
+
+## merge lists
+echo ""
+printf "$green"   "Merging lists from all Parsing Methods"
+echo ""
+sudo cat "$f".ads_unique1.txt "$f".ads_unique2.txt "$f".ads_unique3.txt >> "$f".merged.txt
+echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
+sudo rm "$f".ads_unique1.txt
+sudo rm "$f".ads_unique2.txt
+sudo rm "$f".ads_unique3.txt
+
+## Duplicate Removal
+echo ""
+printf "$yellow"  "Removing duplicates..."
+sort -u "$f".merged.txt > "$f".mergedupes.txt
 sudo rm "$f".merged.txt
-echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping"
+echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping merged lists"
+
+## Remove Empty Lines
+echo ""
+printf "$yellow"  "Removing empty lines..."
+sudo sed '/^$/d' "$f".mergedupes.txt > "$f".empties.txt
+echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after remove blank space"
+sudo rm "$f".mergedupes.txt
+
+## remove asterisk lines
+printf "$yellow"  "Removing asterisk lines..."
+sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".txt
+echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after full parsing"
+sudo rm "$f".txt
 
 ## Remove Empty Files
 if 
@@ -181,7 +209,6 @@ sudo cat /etc/piholeparser/parsed/*.txt | sort > /etc/piholeparser/parsedall/ALL
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-
 sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
 echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt | cut -d " " -f 1` lines after deduping"
 sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
