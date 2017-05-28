@@ -83,7 +83,8 @@ sudo rm "$f".nocomment.txt
 ## remove asterisk lines
 echo ""
 printf "$yellow"  "Removing asterisk lines..."
-sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".preproc.txt
+sudo sed '/\*\*/d' "$f".empties.txt > "$f".preproc.txt
+#sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".preproc.txt
 echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing asterisk lines"
 sudo rm "$f".empties.txt
 
