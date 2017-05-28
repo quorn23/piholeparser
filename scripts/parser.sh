@@ -152,7 +152,7 @@ sudo rm "$f".method3.txt
 echo ""
 printf "$yellow"  "Removing duplicates..."
 sort -u "$f".merged.txt > "$f".deduped.txt
-echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping merged lists"
+echo -e "\t`wc -l "$f".deduped.txt | cut -d " " -f 1` lines after deduping merged lists"
 sudo rm "$f".merged.txt
 
 ## Remove IP addresses
