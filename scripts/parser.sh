@@ -50,119 +50,112 @@ if [[ -z $UPCHECK ]]
 then
 printf "$yellow"    "Fetching List From Local File"
 else 
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'` &>/dev/null
-SOURCEIP=`echo $SOURCEIPFETCH` &>/dev/null
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 fi
 
-## Download Lists
+####################
+## Download Lists ##
+## and            ##
+## Pre-Processing ##
+####################
 sudo curl --silent -L $source >> "$f".orig.txt
 echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
 done
 
 echo ""
-printf "$green"   "Processing lists With Method 1"
+printf "$green"   "Pre-Processing"
 echo ""
 
 ## Remove comments
-echo ""
 printf "$yellow"  "Removing Comments..."
 sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
 echo -e "\t`wc -l "$f".nocomment.txt | cut -d " " -f 1` lines after removing comments"
-
-# look for:  ||domain.tld^
-echo ""
-printf "$yellow"  "Looking for ||domain.tld^..."
-sort -u "$f".nocomment.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".nopipes.txt
-echo -e "\t`wc -l "$f".nopipes.txt | cut -d " " -f 1` lines after removing pipes"
-sudo rm "$f".nocomment.txt
- 
-# remove extra chars
-echo ""
-printf "$yellow"  "Removing extra characters..."
-sed 's/[\|^]//g' < "$f".nopipes.txt > "$f".noextrachar.txt
-echo -e "\t`wc -l "$f".noextrachar.txt | cut -d " " -f 1` lines after removing extra characters"
-sudo rm "$f".nopipes.txt
-
-## Sorting and Duplicate Removal
-echo ""
-printf "$yellow"  "Sorting and Removing duplicates..."
-sort -u "$f".noextrachar.txt > "$f".ads_unique1.txt
-sudo rm "$f".noextrachar.txt
-echo -e "\t`wc -l "$f".ads_unique1.txt | cut -d " " -f 1` lines after deduping"
-
-echo ""
-printf "$green"   "Processing lists With Method 2"
-echo ""
-
-## Remove comments
-echo ""
-printf "$yellow"  "Removing Comments..."
-sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".ads.txt
-echo -e "\t`wc -l "$f".ads.txt | cut -d " " -f 1` lines after removing comments"
-
-## Filter
-echo ""
-printf "$yellow"  "Filtering non-url content..."
-sudo perl /etc/piholeparser/scripts/parser.pl "$f".ads.txt > "$f".ads_parsed.txt
-echo -e "\t`wc -l "$f".ads_parsed.txt | cut -d " " -f 1` lines after parsing"
-
-## Duplicate Removal
-echo ""
-printf "$yellow"  "Removing duplicates..."
-sort -u "$f".ads_parsed.txt > "$f".ads_unique2.txt
-sudo rm "$f".ads_parsed.txt
-echo -e "\t`wc -l "$f".ads_unique2.txt | cut -d " " -f 1` lines after deduping"
-
-echo ""
-printf "$green"   "Processing lists With Method 3"
-echo ""
-
-sudo curl -s file://"$f".orig.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
-echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines downloaded using method 3"
-
-## Remove comments
-echo ""
-printf "$yellow"  "Removing Comments..."
-sudo cat "$f".method3.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".m3nocom.txt
-echo -e "\t`wc -l "$f".m3nocom.txt | cut -d " " -f 1` lines after removing comments"
-
-## Duplicate Removal
-echo ""
-printf "$yellow"  "Removing duplicates..."
-sort -u "$f".m3nocom.txt > "$f".ads_unique3.txt
-sudo rm "$f".m3nocom.txt
-echo -e "\t`wc -l "$f".ads_unique3.txt | cut -d " " -f 1` lines after deduping"
-
-## merge lists
-echo ""
-printf "$green"   "Merging lists from all Parsing Methods"
-echo ""
-sudo cat "$f".ads_unique1.txt "$f".ads_unique2.txt "$f".ads_unique3.txt >> "$f".merged.txt
-echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
-sudo rm "$f".ads_unique1.txt
-sudo rm "$f".ads_unique2.txt
-sudo rm "$f".ads_unique3.txt
-
-## Duplicate Removal
-echo ""
-printf "$yellow"  "Removing duplicates..."
-sort -u "$f".merged.txt > "$f".mergedupes.txt
-sudo rm "$f".merged.txt
-echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping merged lists"
 
 ## Remove Empty Lines
 echo ""
 printf "$yellow"  "Removing empty lines..."
 sudo sed '/^$/d' "$f".mergedupes.txt > "$f".empties.txt
-echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after remove blank space"
-sudo rm "$f".mergedupes.txt
+echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after removing blank space"
+sudo rm "$f".nocomment.txt
 
 ## remove asterisk lines
 printf "$yellow"  "Removing asterisk lines..."
-sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".txt
-echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after full parsing"
-sudo rm "$f".txt
+sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".preproc.txt
+echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing asterisk lines"
+sudo rm "$f".empties.txt
+
+####################
+## Method 1       ##
+####################
+echo ""
+printf "$green"   "Processing lists With Method 1"
+echo ""
+
+# look for:  ||domain.tld^
+echo ""
+printf "$yellow"  "Looking for ||domain.tld^..."
+sort -u "$f".preproc.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".nopipes.txt
+echo -e "\t`wc -l "$f".nopipes.txt | cut -d " " -f 1` lines after removing pipes"
+ 
+# remove extra chars
+echo ""
+printf "$yellow"  "Removing extra characters..."
+sed 's/[\|^]//g' < "$f".nopipes.txt > "$f".method1.txt
+echo -e "\t`wc -l "$f".method1.txt | cut -d " " -f 1` lines after removing extra characters"
+sudo rm "$f".nopipes.txt
+
+####################
+## Method 2       ##
+####################
+
+echo ""
+printf "$green"   "Processing lists With Method 2"
+echo ""
+
+## Filter
+echo ""
+printf "$yellow"  "Filtering non-url content..."
+sudo perl /etc/piholeparser/scripts/parser.pl "$f".preproc.txt > "$f".method2.txt
+echo -e "\t`wc -l "$f".method2.txt | cut -d " " -f 1` lines after parsing"
+
+####################
+## Method 3       ##
+####################
+
+echo ""
+printf "$green"   "Processing lists With Method 3"
+echo ""
+
+## Removing extra content
+sudo curl -s file://"$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3"
+
+####################
+## Merge lists    ##
+####################
+
+## merge lists
+echo ""
+printf "$green"   "Merging lists from all Parsing Methods"
+echo ""
+sudo cat "$f".method1.txt "$f".method2.txt "$f".method3.txt >> "$f".merged.txt
+echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
+sudo rm "$f".method1.txt
+sudo rm "$f".method2.txt
+sudo rm "$f".method3.txt
+
+## Duplicate Removal
+echo ""
+printf "$yellow"  "Removing duplicates..."
+sort -u "$f".merged.txt > "$f".txt
+echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping merged lists"
+sudo rm "$f".merged.txt
+
+####################
+## Move files     ##
+####################
 
 ## Remove Empty Files
 if 
