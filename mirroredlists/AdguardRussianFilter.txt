@@ -8241,6 +8241,7 @@ rustorka.com$$script[tag-content="postWindowPop"][max-length="25000"]
 /(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+carrollcountytimes.com##section[data-adloader-position]
 ||forum.watch.ru/promo/
 ||vgtimes.ru/podl/$image
 vgtimes.ru##div.podl > a.click
@@ -15162,6 +15163,9 @@ zvukoff.ru##.adv-list-top
 !
 ! The content replacement rules
 !
+! Yandex Radio ads
+||radio.yandex.ru/api/$domain=radio.yandex.by|radio.yandex.kz|radio.yandex.ru|radio.yandex.ua|music.yandex.ru|music.yandex.ua|music.yandex.by|music.yandex.kz,important,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
+||awaps.yandex.ru/*.xml$domain=radio.yandex.by|radio.yandex.kz|radio.yandex.ru|radio.yandex.ua|music.yandex.ru|music.yandex.ua|music.yandex.by|music.yandex.kz,important,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ! For example, radiovanya.ru
 ||bs-meta.yandex.ru/meta/*?rnd=$important,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ! e.mail.ru - ads
