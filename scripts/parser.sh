@@ -76,7 +76,7 @@ echo -e "\t`wc -l "$f".nocomment.txt | cut -d " " -f 1` lines after removing com
 ## Remove Empty Lines
 echo ""
 printf "$yellow"  "Removing empty lines..."
-sudo sed '/^$/d' "$f".mergedupes.txt > "$f".empties.txt
+sudo sed '/^$/d' "$f".nocomment.txt > "$f".empties.txt
 echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after removing blank space"
 sudo rm "$f".nocomment.txt
 
