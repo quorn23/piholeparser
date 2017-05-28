@@ -104,7 +104,7 @@ echo -e "\t`wc -l "$f".nopipes.txt | cut -d " " -f 1` lines after removing pipes
 # remove extra chars
 echo ""
 printf "$yellow"  "Removing extra characters..."
-sed 's/[\|^]//g' < "$f".nopipes.txt > "$f".method1.txt
+sudo sed 's/[\|^]//g' < "$f".nopipes.txt > "$f".method1.txt
 echo -e "\t`wc -l "$f".method1.txt | cut -d " " -f 1` lines after removing extra characters"
 sudo rm "$f".nopipes.txt
 
@@ -151,9 +151,16 @@ sudo rm "$f".method3.txt
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u "$f".merged.txt > "$f".txt
+sort -u "$f".merged.txt > "$f".deduped.txt
 echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after deduping merged lists"
 sudo rm "$f".merged.txt
+
+## Remove IP addresses
+echo ""
+printf "$yellow"  "Removing IP addresses..."
+sudo sed '/[a-z]/!d' < "$f".deduped.txt > "$f".txt
+echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after removing IP addresses"
+sudo rm "$f".deduped.txt
 
 ## Remove Pre-processed list
 sudo rm "$f".preproc.txt
