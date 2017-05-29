@@ -160,28 +160,28 @@ echo ""
 fi
 
 ## Blackweb
-#if ping -c 1 github.com &> /dev/null
-#then
-#printf "$blue"    "___________________________________________________________"
-#echo ""
-#printf "$green"   "Downloading Blackweb List"
-#echo ""
-#sudo wget https://github.com/maravento/blackweb/raw/master/blackweb.tar.gz -P /etc/piholeparser/compressedconvert/
-#echo ""
-#printf "$yellow"  "Extracting"
-#echo ""
-#sudo tar -xvf /etc/piholeparser/compressedconvert/blackweb.tar.gz -C /etc/piholeparser/compressedconvert/
-#echo ""
-#printf "$yellow"  "Renaming"
-#echo ""
-#sudo mv /etc/piholeparser/compressedconvert/blackweb.txt /etc/piholeparser/compressedconvert/Blackweb.txt
-#echo ""
-#printf "$magenta" "___________________________________________________________"
-#else
-#echo ""
-#printf "$red"     "BlackWeb list are unavailable right now"
-#echo ""
-#fi
+if ping -c 1 github.com &> /dev/null
+then
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Downloading Blackweb List"
+echo ""
+sudo wget https://github.com/maravento/blackweb/raw/master/blackweb.tar.gz -P /etc/piholeparser/compressedconvert/
+echo ""
+printf "$yellow"  "Extracting"
+echo ""
+sudo tar -xvf /etc/piholeparser/compressedconvert/blackweb.tar.gz -C /etc/piholeparser/compressedconvert/
+echo ""
+printf "$yellow"  "Renaming"
+echo ""
+sudo mv /etc/piholeparser/compressedconvert/blackweb.txt /etc/piholeparser/compressedconvert/Blackweb.txt
+echo ""
+printf "$magenta" "___________________________________________________________"
+else
+echo ""
+printf "$red"     "BlackWeb list are unavailable right now"
+echo ""
+fi
 
 ## cleanup
 ## added this, since when I test, I sometimes stop the script before cleanup, 
