@@ -224,26 +224,30 @@ sudo rm "$f".preproc.txt
 
 echo ""
 printf "$green"   "If Parsed File is empty it will be deleted."
-printf "$green"   "If Parsed File is too large it will be deleted."
+printf "$green"   "If Parsed File is too large for github it will be deleted."
 echo ""
 
-if 
-[ -s "$f".txt ]
-then
-echo ""
-printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv "$f".txt /etc/piholeparser/parsed/
-sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
-else
-echo ""
-printf "$red"     "File Empty. It will be deleted."
-rm -rf "$f".txt
-elif
+PFILENAME="$f".txt
+PFILESIZE=$(stat -c%s "$PFILENAME")
+echo "Size of $PFILENAME = $PFILESIZE bytes."
+
+if
 test $(stat -c%s "$f".txt) -ge 104857600
 then
 echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 sudo rm "$f".txt
+elif
+test $(stat -c%s "$f".txt) -eq 0
+then
+echo ""
+printf "$red"     "File Empty. It will be deleted."
+rm -rf "$f".txt
+else
+echo ""
+printf "$yellow"  "File will be moved to the parsed directory."
+sudo mv "$f".txt /etc/piholeparser/parsed/
+sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
 ## End File Loop
