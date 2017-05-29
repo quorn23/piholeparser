@@ -1,9 +1,9 @@
 [Adblock Plus 1.1]
-! Checksum: n0YSNgwtvwDMauBc3Ij63Q
-! Version: 201705290431
+! Checksum: n6ZNDSBpKQpfsqR7Qy2R7w
+! Version: 201705291321
 ! Title: EasyList Italy
 ! EasyList Italy - Complemento italiano per EasyList
-! Ultima modifica: 29 May 2017 04:31 UTC
+! Ultima modifica: 29 May 2017 13:21 UTC
 ! Expires: 4 days (frequenza di aggiornamento)
 ! Homepage: https://easylist.to/
 ! Licenza: https://easylist.to/pages/licence.html
@@ -61,9 +61,6 @@ _pubblicita.
 _pubblicita/
 _pubblicita_
 _sito/adv/
-! Anti-Adblock
-/antipubblicita.js
-/noadblock.jpg
 ! *** easylistitaly:easylistitaly/easylistitaly_general_block_popup.txt ***
 !---------------Regole generali per le pubblicità da nascondere---------------!
 ! *** easylistitaly:easylistitaly/easylistitaly_general_hide.txt ***
@@ -241,7 +238,6 @@ huffingtonpost.it#@#.ad_spot
 newscrawler.it#@#.ad_wrapper
 filmeter.net#@#.adbanner
 subito.it#@#.adcont
-faqmozilla.org#@#.adsbygoogle
 bakeca-incontri.net#@#.adtitle
 altervista.org,pianetadonna.it,studenti.it#@#.adv_esterno
 deejay.it#@#.advertorial
@@ -255,11 +251,6 @@ latinomagazine.it#@#.moduletable-advert
 camperonline.it,italiasw.com#@#.pubblicita
 meteo.it#@#.section-sponsor
 brocardi.it#@#.with-background-ads
-d1khqztmu4w2hg.cloudfront.net,lafucina.it,mmorpgitalia.it,tzetze.it#@#div[id^="div-gpt-ad"]
-! Anti-Adblock
-dbplanet.net#@##ad_block
-sportube.tv#@#.afs_ads
-calciomercato.com#@#.text_ads
 !---------------------Server pubblicitari di terze parti----------------------!
 ! *** easylistitaly:easylistitaly/easylistitaly_adservers.txt ***
 ||178.32.140.64^$third-party,domain=~pirchio.ip
@@ -1925,31 +1916,6 @@ calciomercato.com#@#.text_ads
 ||zapster.it/images/skin/
 ||zerodelta.net/immagini/immagini2.0/
 ||zipnews.it/sai.jpg
-! City-news
-/astalegale.net/*$subdocument
-/immobiliare.it/*$subdocument
-/traffico/banner/*
-/vzzbovyvner.vg/*$subdocument
-/~vda/_/*.php/*
-/~vda/__/*.php/*
-||citynews.ovh^
-||j7sz3ccbyfc.ovh^
-||n6trhtnxnzi.ovh^
-||stgy.it^*/niks/
-||stgy.it^*/skin/
-||stgy.ovh^*/da/
-||stgy.ovh^*/niks/
-||stgy.ovh^*/skin/
-||tp7vgzeh7kq.ovh^
-||xdhjzedghvi.ovh^
-! Anti-Adblock
-||3bmeteo.com^*/adblock.png
-||badcomics.it^*/default.include-footer.$script
-||badgames.it^*/default.include-footer.$script
-||badtaste.it^*/default.include-footer.$script
-||badtv.it^*/default.include-footer.$script
-||calciomercato.com^*/cm.adb.js
-||swzz.xyz/noadblock.png
 ! *** easylistitaly:easylistitaly/easylistitaly_specific_block_popup.txt ***
 ||adf.ly^$popup,domain=vstau.info
 ||adv2.spaziogames.it^$popup
@@ -3365,38 +3331,19 @@ gommeblog.it##td[style="width: 335px; height: 251px; text-align: center;"]
 juzaphoto.com##td[style="width:170px; vertical-align:top; text-align:center"]
 clubalfa.it##td[width="305"][height="205"]
 clubalfa.it##td[width="310"][height="255"]
-! Anti-Adblock
-3bmeteo.com###adblock_warning
-tomshw.it###notifica_adcont
-termometropolitico.it##[id^="bsa"]
-! Site Specific filters (used with $generichide)
-f1sport.it,forexinfo.it,worldcomputing.it,zeusnews.it##.adsbygoogle
-codeclan.altervista.org##.banner_altervista_300X250
-zeusnews.it##.pagefair-acceptable
-ivg.it##.wrb4_x1_adv
-ivg.it##a[href^="//edintorni.net/related/service/sponsor/redirect/?"]
-calcionapoli24.it,forexinfo.it,ivg.it##div[id^="div-gpt-ad"]
 !----------------Regole di esclusione per risolvere i problemi----------------!
 ! *** easylistitaly:easylistitaly/easylistitaly_whitelist.txt ***
-@@||ad.doubleclick.net/adj/mtv.ita/$script,domain=mtv.it
 @@||ad.smartclip.net/crossdomain.xml$object-subrequest,domain=serviziopubblico.it
 @@||ad.smartclip.net/delivery/tag?$object-subrequest,domain=serviziopubblico.it
-@@||ad.smartclip.net/delivery/tag?$xmlhttprequest,domain=vvvvid.it
-@@||ad.sxp.smartclip.net/select?$xmlhttprequest,domain=vvvvid.it
 @@||ad2.neodatagroup.com/uploads/js/sid49jq.js$domain=rai.it|rai.tv|rainews.it
 @@||adnkronos.com/ign/mediacenter/fotogallery/data_01/img/ad_
-@@||ads.spinblog.it/www/delivery/ajs.php?zoneid=$script,domain=ipaditalia.com|iphoneitalia.com
 @@||adser.localport.it/ads/logo-localport-it/logo.gif
 @@||adser.localport.it/banman.asp?zoneid=71$subdocument
 @@||adserver.adtech.de/addyn/3.0/1183/3769607/0/170/ADTECH;$script,domain=gioco.it
 @@||adultsadv.com/etero/random730_90.php$domain=mrjizz.com|pornotubo.it
-@@||adv.alice.it/crossdomain.xml$object-subrequest,domain=webtv.cubovision.it
-@@||adv.alice.it/html.ng/site=cubow$object-subrequest,domain=webtv.cubovision.it
 @@||adv.ilsole24ore.it/crossdomain.xml$object-subrequest,domain=sky.it
 @@||adv.rtl.it/crossdomain.xml$object-subrequest
 @@||adv.rtl.it/www/delivery/fc.php?*&zones=pre-roll$object-subrequest
-@@||adx.adform.net/adx/$xmlhttprequest,domain=vvvvid.it
-@@||adx.adform.net/videoad/$object-subrequest,xmlhttprequest,domain=vvvvid.it
 @@||alessandriaoggi.info/images/banners/ALESSANDRIA-OGGI-testata.png
 @@||ansa.it/web/video/videoad.swf$object-subrequest
 @@||ansa.it^*/ad-gallery/$image
@@ -3412,14 +3359,12 @@ calcionapoli24.it,forexinfo.it,ivg.it##div[id^="div-gpt-ad"]
 @@||centrosangiorgio.com^*_pubblicita.
 @@||centrosangiorgio.com^*_pubblicita/
 @@||cheapnet.it/adv/$~third-party
-@@||corrieredellosport.it/res/advertising/ad.js
 @@||deejay.it^*download.deejay.it/adv/podcast/$subdocument
-@@||des.smartclip.net/ads?$xmlhttprequest,domain=vvvvid.it
 @@||dincontri.com/ads/galleries/crops/$image,~third-party
 @@||dotandad.com/crossdomain.xml$object-subrequest,domain=r101.it|radioitalia.it
 @@||dotandad.com/mediamond.jsp?$object-subrequest,domain=r101.it|radioitalia.it
 @@||dotandad.com/mediamond?mpo=$script,domain=grazia.it|panorama-auto.it|panorama.it|radioitalia.it|sportube.tv
-@@||dotandad.com/MediamondAds.js$script,domain=panorama-auto.it|sportube.tv
+@@||dotandad.com/MediamondAds.js$script,domain=panorama-auto.it
 @@||dotandad.com/TiscaliAds.js$domain=ansa.it
 @@||dotandad.com^*.flv$object-subrequest,domain=donnamoderna.com|radioitalia.it
 @@||dotandad.com^*.mp3$object-subrequest,domain=r101.it
@@ -3461,10 +3406,6 @@ calcionapoli24.it,forexinfo.it,ivg.it##div[id^="div-gpt-ad"]
 @@||pad.mymovies.it/v9/adv/media/preroll/*.flv$object-subrequest
 @@||paesesera.it/design/paesesera/stylesheets/advertising.css
 @@||pagead2.googlesyndication.com/pagead/googlevideoadslibrary.swf$object-subrequest,domain=giochidicalcio.com
-@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=comprovendolibri.it|economia-italia.com|faqmozilla.org|ilcaffe.tv|quelchenonsapevi.it|unmondodibaci.it|windowsblogitalia.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dasolo.co|economia-italia.com|faqmozilla.org|ilcaffe.tv|quelchenonsapevi.it|unmondodibaci.it|windowsblogitalia.com
-@@||pagead2.googlesyndication.com/pagead/scache/googlevideoads.swf$object-subrequest,domain=giochidicalcio.com
-@@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=comprovendolibri.it|dbplanet.net|ipaditalia.com|iphoneitalia.com
 @@||panorama.it/adv/$image
 @@||partner.googleadservices.com/gpt/pubads_impl_$script,domain=sky.it
 @@||portalecomuni.net^*/ShowBanner.aspx$image
@@ -3474,20 +3415,13 @@ calcionapoli24.it,forexinfo.it,ivg.it##div[id^="div-gpt-ad"]
 @@||repubblica.it/adimages/
 @@||servizi-media-js.tiscali.it/cp/javascript/default/it/main/revsci.js$domain=mail.tiscali.it
 @@||serviziopubblico.it/media/js/init_f4m_doubleclick.js
-@@||smartadserver.com/a/diff/*/show42.asp?$object-subrequest,domain=popcorntv.it
-@@||smartadserver.com/call/pubx/$object-subrequest,domain=popcorntv.it
-@@||smartadserver.com/crossdomain.xml$object-subrequest,domain=popcorntv.it
-@@||sportube.tv/*/www/delivery/ajs.php?$script,domain=fc-suedtirol.com|lega-pro.com|sportube.tv
 @@||srv-wx.rainbowtgx.com/rtgxsrv/css/def.css$domain=quotidiano.net
 @@||srv-wx.rainbowtgx.com/rtgxsrv/targettingServlet$script,domain=quotidiano.net
 @@||static.fanpage.it^*/adsense.swf?$object-subrequest
 @@||static.youreporter.it/adv/jwplayer.js
 @@||static.youreporter.it/adv/player.swf$object
-@@||tag.reachadv.it/player|$script,domain=tzetze.it
 @@||terradidelizie.s3.amazonaws.com/banners/$image,domain=terradidelizie.it
 @@||tiscali.ad.dotandad.com/crossdomain.xml$object-subrequest,domain=ansa.it|tiscali.it
-@@||tiscali.ad.dotandad.com/tiscali.jsp?mpo=vast2&mpt=$object-subrequest,domain=ansa.it|tiscali.it
-@@||v.fwmrm.net/ad/p/1?$object-subrequest,domain=mtv.it
 @@||video1.italiaoggi.it/movie/movie/adserver_$object,object-subrequest
 @@||video1.milanofinanza.it/movie/movie/adserver_$object,object-subrequest
 @@||videosynd.kataweb.it/advertising/$xmlhttprequest,domain=videosynd.kataweb.it
@@ -3495,135 +3429,7 @@ calcionapoli24.it,forexinfo.it,ivg.it##div[id^="div-gpt-ad"]
 @@||vobis.it/ZeusInc/AdFarm/Image/$image,~third-party
 @@||webcenter.tiscali.it/distribuzione/_script/TiscaliADV_315.js$domain=mail.tiscali.it
 @@||zincontri.com/ads/galleries/crops/$image,~third-party
-! City-news
-@@||agrigentonotizie.it^$generichide
-@@||anconatoday.it^$generichide
-@@||avellinotoday.it^$generichide
-@@||baritoday.it^$generichide
-@@||bolognatoday.it^$generichide
-@@||bresciatoday.it^$generichide
-@@||brindisireport.it^$generichide
-@@||cataniatoday.it^$generichide
-@@||cesenatoday.it^$generichide
-@@||chietitoday.it^$generichide
-@@||city-news.it/do/hacks/$script
-@@||firenzetoday.it^$generichide
-@@||foggiatoday.it^$generichide
-@@||forlitoday.it^$generichide
-@@||genovatoday.it^$generichide
-@@||ilpescara.it^$generichide
-@@||ilpiacenza.it^$generichide
-@@||latinatoday.it^$generichide
-@@||lecceprima.it^$generichide
-@@||leccotoday.it^$generichide
-@@||milanotoday.it^$generichide
-@@||modenatoday.it^$generichide
-@@||monzatoday.it^$generichide
-@@||napolitoday.it^$generichide
-@@||novaratoday.it^$generichide
-@@||padovaoggi.it^$generichide
-@@||palermotoday.it^$generichide
-@@||parmatoday.it^$generichide
-@@||perugiatoday.it^$generichide
-@@||pisatoday.it^$generichide
-@@||ravennatoday.it^$generichide
-@@||riminitoday.it^$generichide
-@@||romatoday.it^$generichide
-@@||salernotoday.it^$generichide
-@@||today.it^$generichide
-@@||torinotoday.it^$generichide
-@@||trentotoday.it^$generichide
-@@||trevisotoday.it^$generichide
-@@||triesteprima.it^$generichide
-@@||udinetoday.it^$generichide
-@@||veneziatoday.it^$generichide
-@@||veronasera.it^$generichide
-@@||vicenzatoday.it^$generichide
-! Anti-Adblock
-@@.jpg#$domain=economia-italia.com|italia-tv.org
-@@.png#$domain=codeclan.altervista.org|dasolo.co|italia-tv.org|phica.net|webserver.one|webtvhd.com|worldcomputing.it
-@@||3bmeteo.com/js/ads.js
-@@||3bmeteo.com/js/advert.js
-@@||ad.doubleclick.net/ddm/pfadx/$xmlhttprequest,domain=vvvvid.it
-@@||ads.viralize.tv/display/$script,domain=italia-tv.org
-@@||agi.it^$generichide
-@@||androidiani.com^$generichide
-@@||aranzulla.it/_adv/*ad$image,script,domain=aranzulla.it
-@@||aranzulla.it/_adv/dartcall.$image,script,domain=aranzulla.it
-@@||aranzulla.it^$generichide
-@@||aranzulla.it^*?ads=true$image,script,domain=aranzulla.it
-@@||archivio.corriere.it^$generichide
-@@||badcomics.it^*/bad-analytics/$script
-@@||badgames.it^*/bad-analytics/$script
-@@||badtaste.it^*/bad-analytics/$script
-@@||badtv.it^*/bad-analytics/$script
-@@||beppegrillo.it^$generichide
-@@||bresciaoggi.it/*ad$image
-@@||calciomercato.com^$generichide
-@@||calciomercato.com^$script,xmlhttprequest
-@@||calcionapoli24.it^$generichide
-@@||canonclubitalia.com^$generichide
-@@||chimica-online.it^$generichide
-@@||codeclan.altervista.org^$generichide
-@@||compitoinclasse.org/script/advertisement.js
-@@||comprovendolibri.it^$generichide
-@@||dasolo.co/*ad$script
-@@||dasolo.co^$generichide
-@@||dasolo.org/advertisement.js
-@@||dasolo.org^$generichide
-@@||davidpuente.it^$generichide
-@@||economia-italia.com^$generichide
-@@||f1sport.it^$generichide
-@@||fiatti.com/adframe.js
-@@||fkadb.bid^$script,xmlhttprequest,domain=calciomercato.com
-@@||fkadb.info^$script,xmlhttprequest,domain=calciomercato.com
-@@||forexinfo.it^$generichide
-@@||genova24.it^*/ads.js
-@@||giornale.it^$generichide
-@@||guideitech.com^$generichide
-@@||hostingtv.org^$elemhide
-@@||ilgiornaledivicenza.it/*ad$image
-@@||ilsitodellozoo.com^$generichide
-@@||ilwebmaster21.com^$generichide
-@@||ilwebmaster21.com^$xmlhttprequest
-@@||ispazio.net^$generichide
-@@||it.videogamer.com/wp-content/themes/videogamer/js/ads.js
-@@||italiatv.ga^$generichide
-@@||ivg.it/*ad$script
-@@||ivg.it/pubblicita.js
-@@||ivg.it^$generichide
-@@||kxcdn.com^$script,domain=aranzulla.it
-@@||la-cosa.it^$generichide
-@@||ladige.it^$generichide
-@@||larena.it/*ad$image
-@@||mobileuniverse.it/advertisement.js
-@@||mtv.it/advertisement.js
-@@||ntv.movieplayer.it^$generichide
-@@||ntv.multiplayer.it^$generichide
-@@||pagead2.googlesyndication.com/pagead/|$image,domain=aranzulla.it|dasolo.co|dasolo.org
-@@||pagead2.googlesyndication.com/|$image,domain=aranzulla.it
-@@||phica.net^$generichide
-@@||pokmon-forever.forumfree.it^$image
-@@||popcorntv.it^$generichide
-@@||repstatic.it/adagiojs/repubblicaad.js|$domain=video.repubblica.it
-@@||repstatic.it/cless/channel/video/js/utils/$domain=video.repubblica.it
-@@||scambiofile.info/js/ads.$script
-@@||static.criteo.com/images|$image,domain=aranzulla.it
-@@||static.criteo.net/images|$image,domain=aranzulla.it
-@@||static.vvvvid.it^$image,xmlhttprequest
-@@||thegamesmachine.it^*/ad-block-defender/$script
-@@||tt4.info^$script,xmlhttprequest,domain=calciomercato.com
-@@||utils.cedsdigital.it/js/$xmlhttprequest
-@@||utils.cedsdigital.it^$image
-@@||vanityfair.it^*/cn-adv.js
-@@||video.netaddiction.it^$generichide
-@@||webserver.one/advertisement.js
-@@||worldcomputing.it^$generichide
-@@||yourlifeupdated.net^$generichide
-@@||zeb89.altervista.org^$elemhide
-@@||zeb89.altervista.org^*#$image
-@@||zeusnews.com^$generichide
-@@||zeusnews.it^$generichide
+@||pagead2.googlesyndication.com/pagead/scache/googlevideoads.swf$object-subrequest,domain=giochidicalcio.com
 ! Ammadv.it
 @@||admin.ammadv.it/pop-under.it/$~third-party
 ! *** easylistitaly:easylistitaly/easylistitaly_whitelist_dimensions.txt ***

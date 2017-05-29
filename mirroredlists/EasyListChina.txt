@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: sPJaHTOFD3qM+SRwrjyN3g
-! Version: 201705290422
+! Checksum: 1u5jyjvNQeNafKHAH2EZzw
+! Version: 201705291312
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 29 May 2017 04:22 UTC
+! Last Modified: 29 May 2017 13:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -6322,6 +6322,8 @@ mg*.6park.com/img/$image
 ||zzzyk.com/js/
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
+eepw.com.cn###coverDiv
+eepw.com.cn###popBox
 acg18.us##A[href^="/jump/"]
 acg18.us##SCRIPT + A
 hc360.com,yaolan.com###AD
@@ -11394,11 +11396,12 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ###cpro_container
 ##iframe[id][vspace="0"][marginwidth="0"][style="border:0; vertical-align:bottom;margin:0;"][align="center,center"][height]
 /=(?:2560|1920|1776|1680|1600|1440|1366|1360|1280|1184|1182|1152|1080|1024|960|854|800|720|640|540|480|320|240)[a-z][0-9]{3,4}&/$subdocument
-/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/[0-9a-z]{40,}\.js/$script,domain=~bittiger.io
+/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?=[0-9a-z]*[a-z])(?=[0-9a-z]*[0-9])[0-9a-z]{40,62}\.js/$script,domain=~bittiger.io
 /cpro.$popup,third-party
 |http://*&uc=
 ||1.1010pic.com^
 ||1.feihua.com^
+||ikuailian.com^$third-party
 ||1.mgff.com^
 ||1.panduoduo.net^
 ||1.rengshu.com^
@@ -11422,7 +11425,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||daima.dsxdn.com^
 ||daima.huoche.net^
 ||dm.92to.com^
-||dm.gzpinda.com^
+||gzpinda.com^$third-party
 ||dm.jb51.net^
 ||dm.sanwen.net^
 ||dm.ws8.org^
