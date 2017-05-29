@@ -19,6 +19,10 @@ source /etc/piholeparser.var
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
+####################
+## File Lists     ##
+####################
+
 echo ""
 printf "$green"   "Parsing Individual Lists."
 echo ""
@@ -57,12 +61,15 @@ fi
 
 ####################
 ## Download Lists ##
-## and            ##
-## Pre-Processing ##
 ####################
+
 sudo curl --silent -L $source >> "$f".orig.txt
 echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
 done
+
+####################
+## Pre-Processing ##
+####################
 
 echo ""
 printf "$green"   "Pre-Processing"
@@ -99,19 +106,35 @@ sudo rm "$f".aster.txt
 echo ""
 printf "$yellow"  "Removing lines containing a forward slash..."
 sudo sed '/[/]/d' "$f".https.txt > "$f".forward.txt
-echo -e "\t`wc -l "$f".forward.txt | cut -d " " -f 1` lines after removing full-length urls"
+echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing full-length urls"
 sudo rm "$f".https.txt
 sudo rm "$f".http.txt
 
-## localhost
+####################
+## Create Mirrors ##
+####################
+
 echo ""
-printf "$yellow"  "Removing lines containing localhost..."
-sudo sed '/localhost/d' "$f".forward.txt > "$f".preproc.txt
-sudo rm "$f".forward.txt
+printf "$green"   "Attempting creation of mirror file"
+echo ""
+
+if 
+test $(stat -c%s "$f".orig.txt) -ge 104857600
+then
+echo ""
+printf "$red"     "Mirror File Too Large For Github. Deleting."
+sudo rm "$f".orig.txt
+else
+echo ""
+printf "$yellow"  "Creating Mirror of Unparsed File."
+sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
+sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+fi
 
 ####################
 ## Method 1       ##
 ####################
+
 echo ""
 printf "$green"   "Processing lists With Method 1"
 echo ""
@@ -170,10 +193,10 @@ echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3
 ## Merge lists    ##
 ####################
 
-## merge lists
 echo ""
 printf "$green"   "Merging lists from all Parsing Methods"
 echo ""
+
 sudo cat "$f".method*.txt >> "$f".merged.txt
 echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
 sudo rm "$f".method*.txt
@@ -196,10 +219,14 @@ sudo rm "$f".deduped.txt
 sudo rm "$f".preproc.txt
 
 ####################
-## Move files     ##
-####################
+## Remove Empties ##
+#################### 
 
-## Remove Empty Files
+echo ""
+printf "$green"   "If Parsed File is empty it will be deleted."
+printf "$green"   "If Parsed File is too large it will be deleted."
+echo ""
+
 if 
 [ -s "$f".txt ]
 then
@@ -211,20 +238,12 @@ else
 echo ""
 printf "$red"     "File Empty. It will be deleted."
 rm -rf "$f".txt
-fi
-
-## Create Mirrors
-if 
-test $(stat -c%s "$f".orig.txt) -ge 104857600
+elif
+test $(stat -c%s "$f".txt) -ge 104857600
 then
 echo ""
-printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo rm "$f".orig.txt
-else
-echo ""
-printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
-sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+sudo rm "$f".txt
 fi
 
 ## End File Loop
@@ -264,14 +283,7 @@ fi }
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Rebuilding the complete list file."
-
-if 
-ls /etc/piholeparser/1111ALLPARSEDLISTS1111.lst &> /dev/null; 
-then
-sudo rm /etc/piholeparser/1111ALLPARSEDLISTS1111.lst
-else
 echo ""
-fi
 
 if 
 ls /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst &> /dev/null; 
@@ -282,5 +294,7 @@ echo ""
 fi
 
 sudo cat /etc/piholeparser/lists/*.lst | sort > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
+echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst | cut -d " " -f 1` lists processed by the script."
+
 printf "$magenta" "___________________________________________________________"
 echo ""
