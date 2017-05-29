@@ -155,6 +155,17 @@ sudo curl -s file://"$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^
 echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3"
 
 ####################
+## Method 4       ##
+####################
+
+echo ""
+printf "$green"   "Processing lists With Method 4"
+echo ""
+
+sudo sed 's/^||//' "$f".preproc.txt | cut -d'^' -f-1 > "$f".method4.txt
+echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after using method 4"
+
+####################
 ## Merge lists    ##
 ####################
 
@@ -162,11 +173,12 @@ echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3
 echo ""
 printf "$green"   "Merging lists from all Parsing Methods"
 echo ""
-sudo cat "$f".method1.txt "$f".method2.txt "$f".method3.txt >> "$f".merged.txt
+sudo cat "$f".method1.txt "$f".method2.txt "$f".method3.txt "$f".method4.txt >> "$f".merged.txt
 echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
 sudo rm "$f".method1.txt
 sudo rm "$f".method2.txt
 sudo rm "$f".method3.txt
+sudo rm "$f".method4.txt
 
 ## Duplicate Removal
 echo ""
