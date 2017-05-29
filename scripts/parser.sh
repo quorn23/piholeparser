@@ -182,12 +182,12 @@ echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3
 ## Method 4       ##
 ####################
 
-echo ""
-printf "$green"   "Processing lists With Method 4"
-echo ""
+#echo ""
+#printf "$green"   "Processing lists With Method 4"
+#echo ""
 
-sudo sed 's/^||//' "$f".preproc.txt | cut -d'^' -f-1 > "$f".method4.txt
-echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after using method 4"
+#sudo sed 's/^||//' "$f".preproc.txt | cut -d'^' -f-1 > "$f".method4.txt
+#echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after using method 4"
 
 ####################
 ## Merge lists    ##
