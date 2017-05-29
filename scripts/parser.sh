@@ -83,10 +83,30 @@ sudo rm "$f".nocomment.txt
 ## remove asterisk lines
 echo ""
 printf "$yellow"  "Removing asterisk lines..."
-sudo sed '/\*\*/d' "$f".empties.txt > "$f".preproc.txt
-#sudo sed '/^[*]\+$/d' "$f".empties.txt > "$f".preproc.txt
-echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing asterisk lines"
+sudo sed '/\*\*/d' "$f".empties.txt > "$f".aster.txt
+echo -e "\t`wc -l "$f".aster.txt | cut -d " " -f 1` lines after removing asterisk lines"
 sudo rm "$f".empties.txt
+
+## stip http and https
+echo ""
+printf "$yellow"  "Removing http and https..."
+sudo sed 's/[http://]//g' "$f".aster.txt > "$f".http.txt
+sudo sed 's/[https://]//g' "$f".http.txt > "$f".https.txt
+sudo rm "$f".aster.txt
+
+## delete lines with forward slash
+echo ""
+printf "$yellow"  "Removing lines containing a forward slash..."
+sudo sed '/[/]/d' "$f".https.txt > "$f".forward.txt
+echo -e "\t`wc -l "$f".forward.txt | cut -d " " -f 1` lines after removing full-length urls"
+sudo rm "$f".https.txt
+sudo rm "$f".http.txt
+
+## localhost
+echo ""
+printf "$yellow"  "Removing lines containing localhost..."
+sudo sed '/localhost/d' "$f".forward.txt > "$f".preproc.txt
+sudo rm "$f".forward.txt
 
 ####################
 ## Method 1       ##
