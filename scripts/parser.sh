@@ -173,12 +173,9 @@ echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after using method 4
 echo ""
 printf "$green"   "Merging lists from all Parsing Methods"
 echo ""
-sudo cat "$f".method1.txt "$f".method2.txt "$f".method3.txt "$f".method4.txt >> "$f".merged.txt
+sudo cat "$f".method*.txt >> "$f".merged.txt
 echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
-sudo rm "$f".method1.txt
-sudo rm "$f".method2.txt
-sudo rm "$f".method3.txt
-sudo rm "$f".method4.txt
+sudo rm "$f".method*.txt
 
 ## Duplicate Removal
 echo ""
