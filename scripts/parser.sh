@@ -72,12 +72,13 @@ echo ""
 printf "$yellow"  "Removing Comments..."
 sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
 sudo sed '/^!/d' "$f".nocomment.txt > "$f".nocomments.txt
-echo -e "\t`wc -l "$f".nocomments.txt | cut -d " " -f 1` lines after removing comments"
+sudo sed '/[/]/d' "$f".nocomments.txt > "$f".noncomm.txt
+echo -e "\t`wc -l "$f".noncomm.txt | cut -d " " -f 1` lines after removing comments"
 
 ## Remove Empty Lines
 echo ""
 printf "$yellow"  "Removing empty lines..."
-sudo sed '/^$/d' "$f".nocomments.txt > "$f".empties.txt
+sudo sed '/^$/d' "$f".noncomm.txt > "$f".empties.txt
 echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after removing blank space"
 sudo rm "$f".nocomment.txt
 
