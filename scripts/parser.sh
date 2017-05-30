@@ -77,8 +77,10 @@ echo ""
 
 ## Remove comments
 printf "$yellow"  "Removing Comments..."
-sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
-sudo cat "$f".nocomment.txt | egrep -v -e '^[[:blank:]]*!|^$' > "$f".nocomments.txt
+sudo cat "$f".orig.txt | egrep -v -e '^#' > "$f".nocomment.txt
+sudo cat "$f".nocomment.txt | egrep -v -e '^!' > "$f".nocomments.txt
+#sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
+#sudo cat "$f".nocomment.txt | egrep -v -e '^[[:blank:]]*!|^$' > "$f".nocomments.txt
 echo -e "\t`wc -l "$f".nocomments.txt | cut -d " " -f 1` lines after removing comments"
 
 ## Remove Empty Lines
