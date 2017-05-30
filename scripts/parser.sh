@@ -247,7 +247,7 @@ else
 echo ""
 printf "$yellow"  "File will be moved to the parsed directory."
 sudo mv "$f".txt /etc/piholeparser/parsed/
-sudo rename "s/.lst.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
 ## End File Loop
