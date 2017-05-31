@@ -39,6 +39,7 @@ sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt > $BIGLIST
 echo -e "\t`wc -l $BIGLIST | cut -d " " -f 1` lines after deduping"
 sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
 
+## Github has a 100mb limit and empty files are useless
 if
 test $(stat -c%s $BIGLIST) -ge 104857600
 then
