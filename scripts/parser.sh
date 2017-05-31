@@ -98,6 +98,30 @@ fi
 ## Pre-Processing ##
 ####################
 
+## test
+printf "$green"  "Testing Future module scripting... ignore this..."
+PRE="$f".pre.txt
+POST="$f".post.txt
+
+## Remove comments
+PARSECOMMENT="testing comment system"
+printf "$yellow"  "$PARSECOMMENT..."
+sudo cat $PRE | egrep -v -e '^[[:blank:]]*#|^$' > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## test 
+if 
+ls $PRE &> /dev/null; 
+then
+echo "test worked"
+sudo rm $PRE
+else
+echo "test failed"
+sudo rm $PRE
+fi
+
 echo ""
 printf "$green"   "Pre-Processing"
 echo ""
@@ -113,7 +137,7 @@ echo ""
 printf "$yellow"  "Removing empty lines..."
 sudo sed '/^$/d' "$f".nocomments.txt > "$f".empties.txt
 echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after removing blank space"
-sudo rm "$f".nocomment.txt
+sudo rm "$f".nocomments.txt
 
 ## remove asterisk lines
 echo ""
