@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D10 
+! Version D13 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -240,7 +240,6 @@ images/ads/
 ||ads1.
 ||adsbyisocket.com^
 ||adserver.
-||adsjudo.
 ||adskeeper.co.uk^
 ||adsnative.com^
 ||adsonflags.com^
@@ -644,11 +643,14 @@ images/ads/
 ||cloudfront.net/*/sp.js
 ||cloudfront.net/?a=
 ||cloudfront.net/esf.js
+||d3ezl4ajpp2zy8.cloudfront.net^
+||d3tglifpd8whs6.cloudfront.net^
 ||d8rk54i4mohrb.cloudfront.net^
 ||dnn506yrbagrg.cloudfront.net^
 !
 ! $third-party >>>>>
 !
+-analytics.$image,third-party
 .amazonaws.com/*/buzzing/$third-party
 /c.gif?$third-party
 /e.gif?$third-party
@@ -693,11 +695,11 @@ images/ads/
 ||adnetworkperformance.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||adplxmd.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||adsafeprotected.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
+||adsjudo.$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||adsmarket.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||alibaba.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest,third-party
 ||billaruze.net^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||clicksgear.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
-||columnpop.com^$popup
 ||coupontime.co^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||directrev.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||doubleclick.net^$popup,image,media,object,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
@@ -709,6 +711,7 @@ images/ads/
 ||onclickads.net^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||onwardclick.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||perfecttoolmedia.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
+||pop.$popup
 ||popcash.net^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||predictivadnetwork.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||recompenses.win^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
@@ -729,6 +732,7 @@ images/ads/
 /banners/*$domain=thedailysheeple.com
 /collect?$domain=calameo.com|wikihow.com
 /img2/*$domain=jobs.ge
+/tag.$domain=slashdot.org
 _banner.$domain=youtube.com
 |blob:$domain=laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com
 |http:$xmlhttprequest,third-party,domain=clipconverter.cc
