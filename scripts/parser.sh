@@ -73,15 +73,20 @@ echo ""
 
 sudo cp "$f".orig.txt "$f".mirror.txt
 
+MFILENAME="$f".txt
+MFILESIZE=$(stat -c%s "$MFILENAME")
+
 ## Github has a 100mb limit
 if 
 test $(stat -c%s "$f".orig.txt) -ge 104857600
 then
 echo ""
+printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 sudo rm "$f".orig.txt
 else
 echo ""
+printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
@@ -263,7 +268,7 @@ elif
 test $(stat -c%s "$f".txt) -eq 0
 then
 echo ""
-printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
+printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
 sudo rm "$f".txt
 else
 echo ""
