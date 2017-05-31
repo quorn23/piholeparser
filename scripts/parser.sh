@@ -119,8 +119,12 @@ POST="$f".post.txt
 echo ""
 PARSECOMMENT="removing comments"
 printf "$yellow"  "$PARSECOMMENT..."
-sudo cat -s $PRE | egrep -v -e '^[[:blank:]]*#|^$' | egrep -v -e '^[[:blank:]]*!|^$' > $POST
+sudo sed '/[#]/d' $PRE > $POST
 sudo rm $PRE
+sudo mv $POST $PRE
+sudo sed '/[!]/d' $PRE > $POST
+sudo rm $PRE
+#sudo cat -s $PRE | egrep -v -e '^[[:blank:]]*#|^$' | egrep -v -e '^[[:blank:]]*!|^$' > $POST
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
 sudo mv $POST $PRE
 
@@ -137,7 +141,8 @@ sudo mv $POST $PRE
 echo ""
 PARSECOMMENT="removing asterisk lines"
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/\*\*/d' $PRE > $POST
+sudo sed '/[*]/d' $PRE > $POST
+#sudo sed '/\*\*/d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
