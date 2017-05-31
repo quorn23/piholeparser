@@ -133,7 +133,7 @@ sudo rm "$f".aster.txt
 echo ""
 printf "$yellow"  "Removing lines containing a forward slash..."
 sudo sed '/[/]/d' "$f".https.txt > "$f".forward.txt
-echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing full-length urls"
+echo -e "\t`wc -l "$f".forward.txt | cut -d " " -f 1` lines after removing full-length urls"
 sudo rm "$f".https.txt
 sudo rm "$f".http.txt
 
