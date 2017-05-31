@@ -99,7 +99,10 @@ fi
 ####################
 
 ## test
+echo ""
 printf "$green"  "Testing Future module scripting... ignore this..."
+echo ""
+sudo cp "$f".mirror.txt "$f".pre.txt
 PRE="$f".pre.txt
 POST="$f".post.txt
 
