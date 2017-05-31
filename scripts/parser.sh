@@ -237,6 +237,9 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
+## Done with merge
+sudo mv $PRE "$f".txt
+
 ####################
 ## Remove Empties ##
 #################### 
