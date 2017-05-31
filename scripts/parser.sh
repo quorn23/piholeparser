@@ -1,17 +1,8 @@
 #!/bin/bash
 ## This is the Parsing Process
-## It Parses all of the lists individually for
-## the sake of decent filenames.
 ##
-## It creates a mirror of each original unparsed file, 
-## unless it is over the 100MB limit of Github.
-##
-## Files with zero content are deleted, as they 
-## aren't worth anybody's time.
-##
-## It also creates a "master" file
-## with all parsed lists combined
-## as well as a longer list of all the lists used.
+## It Parses all of the lists individually
+## for the sake of decent filenames.
 
 ## Version
 source /etc/piholeparser.var
@@ -27,7 +18,7 @@ echo ""
 printf "$green"   "Parsing Individual Lists."
 echo ""
 
-## Set File Directory
+## Set File .lst
 FILES=/etc/piholeparser/lists/*.lst
 
 ## Start File Loop
@@ -65,6 +56,7 @@ fi
 ## Download Lists ##
 ####################
 
+## download and merge sources for each file.lst
 sudo curl --silent -L $source >> "$f".orig.txt
 echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
 
@@ -81,6 +73,7 @@ echo ""
 
 sudo cp "$f".orig.txt "$f".mirror.txt
 
+## Github has a 100mb limit
 if 
 test $(stat -c%s "$f".orig.txt) -ge 104857600
 then
@@ -102,18 +95,10 @@ echo ""
 printf "$green"   "Pre-Processing"
 echo ""
 
-sudo cp "$f".mirror.txt "$f".pre.txt
 PRE="$f".pre.txt
 POST="$f".post.txt
 
-## example parse module
-#echo ""
-#PARSECOMMENT="testing comment system"
-#printf "$yellow"  "$PARSECOMMENT..."
-#sudo cat $PRE > $POST
-#sudo rm $PRE
-#echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
-#sudo mv $POST $PRE
+sudo cp "$f".mirror.txt $PRE
 
 ## Remove comments
 echo ""
@@ -124,7 +109,6 @@ sudo rm $PRE
 sudo mv $POST $PRE
 sudo sed '/[!]/d' $PRE > $POST
 sudo rm $PRE
-#sudo cat -s $PRE | egrep -v -e '^[[:blank:]]*#|^$' | egrep -v -e '^[[:blank:]]*!|^$' > $POST
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
 sudo mv $POST $PRE
 
@@ -142,7 +126,6 @@ echo ""
 PARSECOMMENT="removing asterisk lines"
 printf "$yellow"  "$PARSECOMMENT ..."
 sudo sed '/[*]/d' $PRE > $POST
-#sudo sed '/\*\*/d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
@@ -221,44 +204,52 @@ echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3
 ## Merge lists    ##
 ####################
 
+## Remove Pre-processed list
+sudo rm "$f".preproc.txt
+
 echo ""
 printf "$green"   "Merging lists from all Parsing Methods"
 echo ""
 
+## merge
 sudo cat "$f".method*.txt >> "$f".merged.txt
 echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
 sudo rm "$f".method*.txt
 
+## Prepare to sift merged lists
+sudo mv "$f".merged.txt $PRE
+
 ## Duplicate Removal
 echo ""
-printf "$yellow"  "Removing duplicates..."
-sort -u "$f".merged.txt > "$f".deduped.txt
-echo -e "\t`wc -l "$f".deduped.txt | cut -d " " -f 1` lines after deduping merged lists"
-sudo rm "$f".merged.txt
+PARSECOMMENT="removing duplicates"
+printf "$yellow"  "$PARSECOMMENT ..."
+sort -u $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
 
 ## Remove IP addresses
 echo ""
-printf "$yellow"  "Removing IP addresses..."
-sudo sed '/[a-z]/!d' < "$f".deduped.txt > "$f".txt
-echo -e "\t`wc -l "$f".txt | cut -d " " -f 1` lines after removing IP addresses"
-sudo rm "$f".deduped.txt
-
-## Remove Pre-processed list
-sudo rm "$f".preproc.txt
+PARSECOMMENT="removing IP addresses"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[a-z]/!d' < $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
 
 ####################
 ## Remove Empties ##
 #################### 
 
 echo ""
-printf "$green"   "If Parsed File is empty it will be deleted."
-printf "$green"   "If Parsed File is too large for github it will be deleted."
+printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
 PFILENAME="$f".txt
 PFILESIZE=$(stat -c%s "$PFILENAME")
 echo "Size of $PFILENAME = $PFILESIZE bytes."
 
+## Github has a 100mb limit, and empty files are useless
 if
 test $(stat -c%s "$f".txt) -ge 104857600
 then
@@ -270,7 +261,7 @@ test $(stat -c%s "$f".txt) -eq 0
 then
 echo ""
 printf "$red"     "File Empty. It will be deleted."
-rm -rf "$f".txt
+sudo rm "$f".txt
 else
 echo ""
 printf "$yellow"  "File will be moved to the parsed directory."
@@ -278,55 +269,8 @@ sudo mv "$f".txt /etc/piholeparser/parsed/
 sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
+printf "$magenta" "___________________________________________________________"
+echo ""
+
 ## End File Loop
 done
-
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-## Merge Individual Lists
-echo ""
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Creating Single Big List."
-echo ""
-sudo cat /etc/piholeparser/parsed/*.txt | sort > /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
-
-## Duplicate Removal
-echo ""
-printf "$yellow"  "Removing duplicates..."
-sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
-echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt | cut -d " " -f 1` lines after deduping"
-sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
-
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-## Tidying up
-{ if [ "$version" = "github" ]
-then
-sudo cp /etc/piholeparser/parsedall/*.txt /etc/piholeparser/parsed/
-elif
-[ "$version" = "local" ]
-then
-sudo rm /etc/piholeparser/parsed/*.txt
-fi }
-
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Rebuilding the complete list file."
-echo ""
-
-if 
-ls /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst &> /dev/null; 
-then
-sudo rm /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
-else
-echo ""
-fi
-
-sudo cat /etc/piholeparser/lists/*.lst | sort > /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
-echo -e "\t`wc -l /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst | cut -d " " -f 1` lists processed by the script."
-
-printf "$magenta" "___________________________________________________________"
-echo ""
