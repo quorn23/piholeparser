@@ -22,8 +22,11 @@ sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 ## Process lists that have to be extracted
 sudo bash /etc/piholeparser/scripts/compressedlists.sh
 
-## Parse Individual Lists and Build 1111ALLPARSEDLISTS1111.txt
+## Parse Individual Lists
 sudo bash /etc/piholeparser/scripts/parser.sh
+
+## Build 1111ALLPARSEDLISTS1111.txt
+sudo bash /etc/piholeparser/scripts/createbiglist.sh
 
 ## Cleanup
 sudo bash /etc/piholeparser/scripts/cleanup.sh
