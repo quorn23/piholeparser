@@ -36,14 +36,15 @@ for source in `cat $f`;
 do
 
 ## Set variables
+FNAME=`echo "${"$f"%%.*}"` ## Used for better filenaming
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain
-MFILENAME="$f".orig.txt ## mirror file
-PFILENAME="$f".txt ## parsed file
-PRE="$f".pre.txt ## File in
-POST="$f".post.txt ## File Out
-PREPROC="$f".preproc.txt ## file after pre-processing
-MERGED="$f".merged.txt
-MERGEMETHODS="$f".method*.txt
+MFILENAME="$FNAME".orig.txt ## mirror file
+PFILENAME="$FNAME".txt ## parsed file
+PRE="$FNAME".pre.txt ## File in
+POST="$FNAME".post.txt ## File Out
+PREPROC="$FNAME".preproc.txt ## file after pre-processing
+MERGED="$FNAME".merged.txt
+MERGEMETHODS="$FNAME".method*.txt
 
 
 echo ""
@@ -101,8 +102,9 @@ else
 echo ""
 printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
-sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo mv $MFILENAME /etc/piholeparser/mirroredlists/"$FNAME".txt
+#sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
+#sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
 ####################
@@ -166,9 +168,9 @@ printf "$green"   "$METHOD"
 echo ""
 
 sort -u $PREPROC | grep ^\|\|.*\^$ | grep -v \/ > $POST
-sudo sed 's/[\|^]//g' < $POST > "$f".method1.txt
+sudo sed 's/[\|^]//g' < $POST > "$FNAME".method1.txt
 sudo rm $POST
-echo -e "\t`wc -l "$f".method1.txt | cut -d " " -f 1` lines after $METHOD"
+echo -e "\t`wc -l "$FNAME".method1.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 2       ##
@@ -180,8 +182,8 @@ echo ""
 printf "$green"   "$METHOD"
 echo ""
 
-sudo perl /etc/piholeparser/scripts/parser.pl $PREPROC > "$f".method2.txt
-echo -e "\t`wc -l "$f".method2.txt | cut -d " " -f 1` lines after $METHOD"
+sudo perl /etc/piholeparser/scripts/parser.pl $PREPROC > "$FNAME".method2.txt
+echo -e "\t`wc -l "$FNAME".method2.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 3       ##
@@ -193,9 +195,8 @@ echo ""
 printf "$green"   "$METHOD"
 echo ""
 
-## Removing extra content
-sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
-echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after $METHOD"
+sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
+echo -e "\t`wc -l "$FNAME".method3.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 4       ##
@@ -207,8 +208,8 @@ echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after $METHOD"
 #printf "$green"   "$METHOD"
 #echo ""
 
-#sudo sed 's/^||//' $PREPROC | cut -d'^' -f-1 > "$f".method4.txt
-#echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after $METHOD"
+#sudo sed 's/^||//' $PREPROC | cut -d'^' -f-1 > "$FNAME".method4.txt
+#echo -e "\t`wc -l "$FNAME".method4.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Merge lists    ##
@@ -277,8 +278,9 @@ else
 echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv $PFILENAME /etc/piholeparser/parsed/
-sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo mv $PFILENAME /etc/piholeparser/parsed/"$FNAME".txt
+#sudo mv $PFILENAME /etc/piholeparser/parsed/
+#sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
 printf "$magenta" "___________________________________________________________"
