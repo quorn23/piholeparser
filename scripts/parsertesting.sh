@@ -98,61 +98,75 @@ fi
 ## Pre-Processing ##
 ####################
 
+## test
 echo ""
-printf "$green"   "Pre-Processing"
+printf "$green"  "Testing Future module scripting... ignore this..."
 echo ""
-
 sudo cp "$f".mirror.txt "$f".pre.txt
 PRE="$f".pre.txt
 POST="$f".post.txt
 
-## example parse module
-#echo ""
-#PARSECOMMENT="testing comment system"
-#printf "$yellow"  "$PARSECOMMENT..."
-#sudo cat $PRE > $POST
-#sudo rm $PRE
-#echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
-#sudo mv $POST $PRE
 
 ## Remove comments
-echo ""
-PARSECOMMENT="removing comments"
+PARSECOMMENT="testing comment system"
 printf "$yellow"  "$PARSECOMMENT..."
-sudo cat -s $PRE | egrep -v -e '^[[:blank:]]*#|^$' | egrep -v -e '^[[:blank:]]*!|^$' > $POST
+sudo cat $PRE | egrep -v -e '^[[:blank:]]*#|^$' > $POST
 sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
+
+## test 
+if 
+ls $PRE &> /dev/null; 
+then
+echo "test worked"
+sudo rm $PRE
+else
+echo "test failed"
+sudo rm $PRE
+fi
+
+echo ""
+printf "$green"   "Pre-Processing"
+echo ""
+
+## Remove comments
+printf "$yellow"  "Removing Comments..."
+sudo cat "$f".mirror.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
+sudo cat "$f".nocomment.txt | egrep -v -e '^[[:blank:]]*!|^$' > "$f".nocomments.txt
+echo -e "\t`wc -l "$f".nocomments.txt | cut -d " " -f 1` lines after removing comments"
 
 ## Remove Empty Lines
 echo ""
-PARSECOMMENT="removing empty lines"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/^$/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+printf "$yellow"  "Removing empty lines..."
+sudo sed '/^$/d' "$f".nocomments.txt > "$f".empties.txt
+echo -e "\t`wc -l "$f".empties.txt | cut -d " " -f 1` lines after removing blank space"
+sudo rm "$f".nocomments.txt
 
 ## remove asterisk lines
 echo ""
-PARSECOMMENT="removing asterisk lines"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/\*\*/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+printf "$yellow"  "Removing asterisk lines..."
+sudo sed '/\*\*/d' "$f".empties.txt > "$f".aster.txt
+echo -e "\t`wc -l "$f".aster.txt | cut -d " " -f 1` lines after removing asterisk lines"
+sudo rm "$f".empties.txt
+
+## stip http and https
+echo ""
+printf "$yellow"  "Removing http and https..."
+sudo sed 's/[http://]//g' "$f".aster.txt > "$f".http.txt
+sudo sed 's/[https://]//g' "$f".http.txt > "$f".https.txt
+sudo rm "$f".aster.txt
 
 ## delete lines with forward slash
 echo ""
-PARSECOMMENT="removing lines containing a forward slash"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[/]/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+printf "$yellow"  "Removing lines containing a forward slash..."
+sudo sed '/[/]/d' "$f".https.txt > "$f".forward.txt
+echo -e "\t`wc -l "$f".forward.txt | cut -d " " -f 1` lines after removing full-length urls"
+sudo rm "$f".https.txt
+sudo rm "$f".http.txt
 
 ## Pre-Processing done
-sudo mv "$f".pre.txt "$f".preproc.txt
+sudo mv "$f".forward.txt "$f".preproc.txt
 
 ####################
 ## Method 1       ##
@@ -198,7 +212,9 @@ printf "$green"   "Processing lists With Method 3"
 echo ""
 
 ## Removing extra content
-sudo cat -s "$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+sudo cat -s "$f".preproc.txt | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+#sudo cat -s "$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+#sudo curl -s file://"$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
 echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3"
 
 ####################
