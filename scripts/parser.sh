@@ -99,16 +99,21 @@ fi
 ####################
 
 ## test
+echo ""
 printf "$green"  "Testing Future module scripting... ignore this..."
+echo ""
+sudo cp "$f".mirror.txt "$f".pre.txt
 PRE="$f".pre.txt
 POST="$f".post.txt
+LINESLEFT=`echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"`
 
 ## Remove comments
 PARSECOMMENT="testing comment system"
 printf "$yellow"  "$PARSECOMMENT..."
 sudo cat $PRE | egrep -v -e '^[[:blank:]]*#|^$' > $POST
 sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+printf "$yellow"  "$LINESLEFT..."
+#echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
 ## test 
