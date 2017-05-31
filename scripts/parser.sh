@@ -103,7 +103,8 @@ else
 echo ""
 printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv $MFILENAME /etc/piholeparser/mirroredlists/"$FNAME".txt
+sudo mv $MFILENAME "$FNAME".txt
+sudo mv "$FNAME".txt /etc/piholeparser/mirroredlists/
 #sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
 #sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
@@ -279,7 +280,8 @@ else
 echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv $PFILENAME /etc/piholeparser/parsed/"$FNAME".txt
+sudo mv $PFILENAME "$FNAME".txt
+sudo mv "$FNAME".txt /etc/piholeparser/mirroredlists/
 #sudo mv $PFILENAME /etc/piholeparser/parsed/
 #sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
