@@ -73,7 +73,7 @@ echo ""
 
 sudo cp "$f".orig.txt "$f".mirror.txt
 
-MFILENAME="$f".txt
+MFILENAME="$f".orig.txt
 MFILESIZE=$(stat -c%s "$MFILENAME")
 
 ## Github has a 100mb limit
