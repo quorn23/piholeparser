@@ -40,8 +40,10 @@ echo ""
 printf "$green"   "Processing list from $f"
 echo ""
 
+## Process sources within file.lst
 for source in `cat $f`;
 do
+
 echo ""
 printf "$cyan"    "$source"
 echo "" 
@@ -65,7 +67,32 @@ fi
 
 sudo curl --silent -L $source >> "$f".orig.txt
 echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
+
+## Source completion
 done
+
+####################
+## Create Mirrors ##
+####################
+
+echo ""
+printf "$green"   "Attempting creation of mirror file"
+echo ""
+
+sudo cp "$f".orig.txt "$f".mirror.txt
+
+if 
+test $(stat -c%s "$f".orig.txt) -ge 104857600
+then
+echo ""
+printf "$red"     "Mirror File Too Large For Github. Deleting."
+sudo rm "$f".orig.txt
+else
+echo ""
+printf "$yellow"  "Creating Mirror of Unparsed File."
+sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
+sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+fi
 
 ####################
 ## Pre-Processing ##
@@ -77,7 +104,7 @@ echo ""
 
 ## Remove comments
 printf "$yellow"  "Removing Comments..."
-sudo cat "$f".orig.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
+sudo cat "$f".mirror.txt | egrep -v -e '^[[:blank:]]*#|^$' > "$f".nocomment.txt
 sudo cat "$f".nocomment.txt | egrep -v -e '^[[:blank:]]*!|^$' > "$f".nocomments.txt
 echo -e "\t`wc -l "$f".nocomments.txt | cut -d " " -f 1` lines after removing comments"
 
@@ -110,26 +137,6 @@ echo -e "\t`wc -l "$f".preproc.txt | cut -d " " -f 1` lines after removing full-
 sudo rm "$f".https.txt
 sudo rm "$f".http.txt
 
-####################
-## Create Mirrors ##
-####################
-
-echo ""
-printf "$green"   "Attempting creation of mirror file"
-echo ""
-
-if 
-test $(stat -c%s "$f".orig.txt) -ge 104857600
-then
-echo ""
-printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo rm "$f".orig.txt
-else
-echo ""
-printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
-sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
-fi
 
 ####################
 ## Method 1       ##
@@ -175,7 +182,9 @@ printf "$green"   "Processing lists With Method 3"
 echo ""
 
 ## Removing extra content
-sudo curl -s file://"$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+sudo cat -s "$f".preproc.txt | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+#sudo cat -s "$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+#sudo curl -s file://"$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
 echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3"
 
 ####################
