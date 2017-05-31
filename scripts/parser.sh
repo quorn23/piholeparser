@@ -35,14 +35,22 @@ echo ""
 for source in `cat $f`;
 do
 
+## Set variables
+UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain
+MFILENAME="$f".orig.txt ## mirror file
+PFILENAME="$f".txt ## parsed file
+PRE="$f".pre.txt ## File in
+POST="$f".post.txt ## File Out
+PREPROC="$f".preproc.txt ## file after pre-processing
+MERGED="$f".merged.txt
+MERGEMETHODS="$f".method*.txt
+
+
 echo ""
 printf "$cyan"    "$source"
 echo "" 
 
-## Filter domain name
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
-
-#Fetch IP of source
+## Fetch IP of source, doesn't display for local files
 if [[ -z $UPCHECK ]]
 then
 printf "$yellow"    "Fetching List From Local File"
@@ -57,8 +65,8 @@ fi
 ####################
 
 ## download and merge sources for each file.lst
-sudo curl --silent -L $source >> "$f".orig.txt
-echo -e "\t`wc -l "$f".orig.txt | cut -d " " -f 1` lines downloaded"
+sudo curl --silent -L $source >> $MFILENAME
+echo -e "\t`wc -l $MFILENAME | cut -d " " -f 1` lines downloaded"
 
 ## Source completion
 done
@@ -71,24 +79,29 @@ echo ""
 printf "$green"   "Attempting creation of mirror file"
 echo ""
 
-sudo cp "$f".orig.txt "$f".mirror.txt
+## Copy original, one for mirror, one for next step
+sudo cp $MFILENAME $PRE
 
-MFILENAME="$f".orig.txt
+## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
-
-## Github has a 100mb limit
 if 
-test $(stat -c%s "$f".orig.txt) -ge 104857600
+test $(stat -c%s $MFILENAME) -ge 104857600
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo rm "$f".orig.txt
+sudo rm $MFILENAME
+elif
+test $(stat -c%s $MFILENAME) -eq 0
+then
+echo ""
+printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
+sudo rm $MFILENAME
 else
 echo ""
 printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv "$f".orig.txt /etc/piholeparser/mirroredlists/
+sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
 sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
@@ -99,11 +112,6 @@ fi
 echo ""
 printf "$green"   "Pre-Processing"
 echo ""
-
-PRE="$f".pre.txt
-POST="$f".post.txt
-
-sudo cp "$f".mirror.txt $PRE
 
 ## Remove comments
 echo ""
@@ -145,84 +153,81 @@ echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
 ## Pre-Processing done
-sudo mv "$f".pre.txt "$f".preproc.txt
+sudo mv $PRE $PREPROC
 
 ####################
 ## Method 1       ##
 ####################
 
+METHOD="processing lists With Method 1"
+
 echo ""
-printf "$green"   "Processing lists With Method 1"
+printf "$green"   "$METHOD"
 echo ""
 
-# look for:  ||domain.tld^
-echo ""
-printf "$yellow"  "Looking for ||domain.tld^..."
-sort -u "$f".preproc.txt | grep ^\|\|.*\^$ | grep -v \/ > "$f".nopipes.txt
-echo -e "\t`wc -l "$f".nopipes.txt | cut -d " " -f 1` lines after removing pipes"
- 
-# remove extra chars
-echo ""
-printf "$yellow"  "Removing extra characters..."
-sudo sed 's/[\|^]//g' < "$f".nopipes.txt > "$f".method1.txt
-echo -e "\t`wc -l "$f".method1.txt | cut -d " " -f 1` lines after removing extra characters"
-sudo rm "$f".nopipes.txt
+sort -u $PREPROC | grep ^\|\|.*\^$ | grep -v \/ > $POST
+sudo sed 's/[\|^]//g' < $POST > "$f".method1.txt
+sudo rm $POST
+echo -e "\t`wc -l "$f".method1.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 2       ##
 ####################
 
+METHOD="processing lists With Method 2"
+
 echo ""
-printf "$green"   "Processing lists With Method 2"
+printf "$green"   "$METHOD"
 echo ""
 
-## Filter
-echo ""
-printf "$yellow"  "Filtering non-url content..."
-sudo perl /etc/piholeparser/scripts/parser.pl "$f".preproc.txt > "$f".method2.txt
-echo -e "\t`wc -l "$f".method2.txt | cut -d " " -f 1` lines after parsing"
+sudo perl /etc/piholeparser/scripts/parser.pl $PREPROC > "$f".method2.txt
+echo -e "\t`wc -l "$f".method2.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 3       ##
 ####################
 
+METHOD="processing lists With Method 3"
+
 echo ""
-printf "$green"   "Processing lists With Method 3"
+printf "$green"   "$METHOD"
 echo ""
 
 ## Removing extra content
-sudo cat -s "$f".preproc.txt | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
-echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after using method 3"
+sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$f".method3.txt
+echo -e "\t`wc -l "$f".method3.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 4       ##
 ####################
 
+#METHOD="processing lists With Method 4"
+
 #echo ""
-#printf "$green"   "Processing lists With Method 4"
+#printf "$green"   "$METHOD"
 #echo ""
 
-#sudo sed 's/^||//' "$f".preproc.txt | cut -d'^' -f-1 > "$f".method4.txt
-#echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after using method 4"
+#sudo sed 's/^||//' $PREPROC | cut -d'^' -f-1 > "$f".method4.txt
+#echo -e "\t`wc -l "$f".method4.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Merge lists    ##
 ####################
 
 ## Remove Pre-processed list
-sudo rm "$f".preproc.txt
+sudo rm $PREPROC
 
 echo ""
 printf "$green"   "Merging lists from all Parsing Methods"
 echo ""
 
 ## merge
-sudo cat "$f".method*.txt >> "$f".merged.txt
-echo -e "\t`wc -l "$f".merged.txt | cut -d " " -f 1` lines after merging"
-sudo rm "$f".method*.txt
+sudo cat $MERGEMETHODS >> $MERGED
+echo -e "\t`wc -l $MERGED | cut -d " " -f 1` lines after merging"
+sudo rm $MERGEMETHODS
 
 ## Prepare to sift merged lists
-sudo mv "$f".merged.txt $PRE
+sudo mv $MERGED $PRE
 
 ## Duplicate Removal
 echo ""
@@ -243,7 +248,7 @@ echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
 ## Done with merge
-sudo mv $PRE "$f".txt
+sudo mv $PRE $PFILENAME
 
 ####################
 ## Complete Lists ##
@@ -253,28 +258,26 @@ echo ""
 printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
-PFILENAME="$f".txt
-PFILESIZE=$(stat -c%s "$PFILENAME")
-
 ## Github has a 100mb limit, and empty files are useless
+PFILESIZE=$(stat -c%s "$PFILENAME")
 if
-test $(stat -c%s "$f".txt) -ge 104857600
+test $(stat -c%s $PFILENAME) -ge 104857600
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo rm "$f".txt
+sudo rm $PFILENAME
 elif
-test $(stat -c%s "$f".txt) -eq 0
+test $(stat -c%s $PFILENAME) -eq 0
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
-sudo rm "$f".txt
+sudo rm $PFILENAME
 else
 echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv "$f".txt /etc/piholeparser/parsed/
+sudo mv $PFILENAME /etc/piholeparser/parsed/
 sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
