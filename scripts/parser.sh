@@ -241,7 +241,7 @@ sudo mv $POST $PRE
 sudo mv $PRE "$f".txt
 
 ####################
-## Remove Empties ##
+## Complete Lists ##
 #################### 
 
 echo ""
@@ -250,23 +250,24 @@ echo ""
 
 PFILENAME="$f".txt
 PFILESIZE=$(stat -c%s "$PFILENAME")
-echo "Size of $PFILENAME = $PFILESIZE bytes."
 
 ## Github has a 100mb limit, and empty files are useless
 if
 test $(stat -c%s "$f".txt) -ge 104857600
 then
 echo ""
+printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 sudo rm "$f".txt
 elif
 test $(stat -c%s "$f".txt) -eq 0
 then
 echo ""
-printf "$red"     "File Empty. It will be deleted."
+printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 sudo rm "$f".txt
 else
 echo ""
+printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
 sudo mv "$f".txt /etc/piholeparser/parsed/
 sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
