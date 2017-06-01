@@ -19,6 +19,7 @@ echo ""
 printf "$green"   "Attempting Creation of Big List."
 echo ""
 
+TEMPLIST=/etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
 BIGLIST=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
 
 if 
@@ -30,14 +31,14 @@ else
 fi
 
 ## Combine Small lists
-sudo cat /etc/piholeparser/parsed/*.txt | sort > /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
+sudo cat /etc/piholeparser/parsed/*.txt | sort > $TEMPLIST
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt > $BIGLIST
+sort -u $TEMPLIST > $BIGLIST
 echo -e "\t`wc -l $BIGLIST | cut -d " " -f 1` lines after deduping"
-sudo rm /etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
+sudo rm $TEMPLIST
 
 ## Github has a 100mb limit and empty files are useless
 if
