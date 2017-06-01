@@ -36,8 +36,8 @@ for source in `cat $f`;
 do
 
 ## Set variables
-FNAME=$f
-#FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+#FNAME=$f
+FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain
 MFILENAME="$FNAME".orig.txt ## mirror file
 PFILENAME="$FNAME".txt ## parsed file
@@ -279,7 +279,7 @@ else
 echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv $PFILENAME /etc/piholeparser/mirroredlists/
+sudo mv $PFILENAME /etc/piholeparser/parsed/
 sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
