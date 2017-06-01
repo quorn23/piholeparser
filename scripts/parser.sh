@@ -108,7 +108,7 @@ sudo rename "s/.mirror.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
 ####################
-## Pre-Processing ##
+## Processing     ##
 ####################
 
 ## Copy for Pre-Processing
@@ -157,82 +157,23 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
-## Pre-Processing done
-sudo mv $PRE $PREPROC
-
-####################
-## Method 1       ##
-####################
-
-METHOD="processing lists With Method 1"
-
+## Pipes and carots
 echo ""
-printf "$green"   "$METHOD"
+PARSECOMMENT="removing pipes and carots"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed 's/^||//' $PRE | cut -d'^' -f-1 > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## Pipes and carots
 echo ""
-
-sort -u $PREPROC | grep ^\|\|.*\^$ | grep -v \/ > $POST
-sudo sed 's/[\|^]//g' < $POST > "$FNAME".method1.txt
-sudo rm $POST
-echo -e "\t`wc -l "$FNAME".method1.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Method 2       ##
-####################
-
-METHOD="processing lists With Method 2"
-
-echo ""
-printf "$green"   "$METHOD"
-echo ""
-
-sudo perl /etc/piholeparser/scripts/parser.pl $PREPROC > "$FNAME".method2.txt
-echo -e "\t`wc -l "$FNAME".method2.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Method 3       ##
-####################
-
-METHOD="processing lists With Method 3"
-
-echo ""
-printf "$green"   "$METHOD"
-echo ""
-
-sudo cat -s $PREPROC | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
-#sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
-echo -e "\t`wc -l "$FNAME".method3.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Method 4       ##
-####################
-
-#METHOD="processing lists With Method 4"
-
-#echo ""
-#printf "$green"   "$METHOD"
-#echo ""
-
-#sudo sed 's/^||//' $PREPROC | cut -d'^' -f-1 > "$FNAME".method4.txt
-#echo -e "\t`wc -l "$FNAME".method4.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Merge lists    ##
-####################
-
-## Remove Pre-processed list
-sudo rm $PREPROC
-
-echo ""
-printf "$green"   "Merging lists from all Parsing Methods"
-echo ""
-
-## merge
-sudo cat $MERGEMETHODS >> $MERGED
-echo -e "\t`wc -l $MERGED | cut -d " " -f 1` lines after merging"
-sudo rm $MERGEMETHODS
-
-## Prepare to sift merged lists
-sudo mv $MERGED $PRE
+PARSECOMMENT="removing some other symbols"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo cat -s $PRE | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
 
 ## Duplicate Removal
 echo ""
