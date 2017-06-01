@@ -36,20 +36,20 @@ for source in `cat $f`;
 do
 
 ## Set variables
-#FNAME=$f
 FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
-UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain
-MFILENAME="$FNAME".orig.txt ## mirror file
-PFILENAME="$FNAME".txt ## parsed file
+UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+ORIGFILE=="$FNAME".orig.txt ## Original File
+MFILENAME="$FNAME".mirror.txt ## Mirror file
+PFILENAME="$FNAME".parsed.txt ## parsed file
 PRE="$FNAME".pre.txt ## File in
 POST="$FNAME".post.txt ## File Out
 PREPROC="$FNAME".preproc.txt ## file after pre-processing
-MERGED="$FNAME".merged.txt
-MERGEMETHODS="$FNAME".method*.txt
-
+MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
+MERGED="$FNAME".merged.txt ## Merged Name
 
 echo ""
 printf "$cyan"    "$source"
+printf "$magenta"    "Filename set to $FNAME"
 echo "" 
 
 ## Fetch IP of source, doesn't display for local files
@@ -67,8 +67,8 @@ fi
 ####################
 
 ## download and merge sources for each file.lst
-sudo curl --silent -L $source >> $MFILENAME
-echo -e "\t`wc -l $MFILENAME | cut -d " " -f 1` lines downloaded"
+sudo curl --silent -L $source >> $ORIGFILE
+echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
 
 ## Source completion
 done
@@ -82,7 +82,7 @@ printf "$green"   "Attempting creation of mirror file"
 echo ""
 
 ## Copy original, one for mirror, one for next step
-sudo cp $MFILENAME $PRE
+sudo cp $ORIGFILE $MFILENAME
 
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
@@ -103,14 +103,16 @@ else
 echo ""
 printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv $MFILENAME "$FNAME".txt
-sudo mv "$FNAME".txt /etc/piholeparser/mirroredlists/
-sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
+sudo rename "s/.mirror.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
 fi
 
 ####################
 ## Pre-Processing ##
 ####################
+
+## Copy for Pre-Processing
+sudo cp $ORIGFILE $PRE
 
 echo ""
 printf "$green"   "Pre-Processing"
@@ -280,7 +282,7 @@ echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
 sudo mv $PFILENAME /etc/piholeparser/parsed/
-sudo rename "s/.lst.orig.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo rename "s/.parsed.txt/.txt/" /etc/piholeparser/parsed/*.txt
 fi
 
 printf "$magenta" "___________________________________________________________"
