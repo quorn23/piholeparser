@@ -38,7 +38,7 @@ do
 ## Set variables
 FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
-ORIGFILE=="$FNAME".orig.txt ## Original File
+ORIGFILE="$FNAME".orig.txt ## Original File
 MFILENAME="$FNAME".mirror.txt ## Mirror file
 PFILENAME="$FNAME".parsed.txt ## parsed file
 PRE="$FNAME".pre.txt ## File in
