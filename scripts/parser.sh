@@ -198,8 +198,7 @@ echo ""
 printf "$green"   "$METHOD"
 echo ""
 
-sudo cat -s $PREPROC | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
-#sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
+sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
 echo -e "\t`wc -l "$FNAME".method3.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
