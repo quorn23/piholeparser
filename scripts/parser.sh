@@ -115,7 +115,29 @@ fi
 sudo cp $ORIGFILE $PRE
 
 echo ""
-printf "$green"   "Pre-Processing"
+printf "$green"   "Checking for domain requirements"
+echo ""
+
+## Remove lines without letters
+echo ""
+PARSECOMMENT="removing lines without letters"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[a-z]/!d' < $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## delete lines without a period
+echo ""
+PARSECOMMENT="removing lines without a period"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[.]/!d' $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+echo ""
+printf "$green"   "Checking for definately not domain name stuff"
 echo ""
 
 ## Remove comments
@@ -130,11 +152,11 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
 sudo mv $POST $PRE
 
-## Remove Empty Lines
+## delete lines with forward slash
 echo ""
-PARSECOMMENT="removing empty lines"
+PARSECOMMENT="removing lines containing a forward slash"
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/^$/d' $PRE > $POST
+sudo sed '/[/]/d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
@@ -148,23 +170,18 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
-## delete lines with forward slash
+## Remove Empty Lines
 echo ""
-PARSECOMMENT="removing lines containing a forward slash"
+PARSECOMMENT="removing empty lines"
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[/]/d' $PRE > $POST
+sudo sed '/^$/d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
-## delete lines without a period
 echo ""
-PARSECOMMENT="removing lines without a period"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[.]/!d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+printf "$green"   "Checking for periods where they shouldn't be for a real domain"
+echo ""
 
 ## delete lines that start with a period
 echo ""
@@ -180,15 +197,6 @@ echo ""
 PARSECOMMENT="removing lines that end with a period"
 printf "$yellow"  "$PARSECOMMENT ..."
 sed '/[.]$/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-
-## Remove lines without letters
-echo ""
-PARSECOMMENT="removing lines without letters"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[a-z]/!d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
