@@ -247,6 +247,7 @@ echo ""
 PARSECOMMENT="removing IP addresses"
 printf "$yellow"  "$PARSECOMMENT ..."
 sudo sed '/[a-z]/!d' < $PRE > $POST
+#sudo sed 's/^0.0.0.0[ \t]*//' > something.txt
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
