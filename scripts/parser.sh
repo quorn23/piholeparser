@@ -166,6 +166,33 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
+## delete lines that start with a period
+echo ""
+PARSECOMMENT="removing lines that start with a period"
+printf "$yellow"  "$PARSECOMMENT ..."
+sed '/^[.],/d' filename
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## delete lines that end with a period
+echo ""
+PARSECOMMENT="removing lines that end with a period"
+printf "$yellow"  "$PARSECOMMENT ..."
+sed '/[.]$/d' filename
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## Remove lines without letters
+echo ""
+PARSECOMMENT="removing lines without letters"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[a-z]/!d' < $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
 ## Pre-Processing done
 sudo mv $PRE $PREPROC
 
@@ -252,14 +279,14 @@ echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
 ## Remove IP addresses
-echo ""
-PARSECOMMENT="removing IP addresses"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[a-z]/!d' < $PRE > $POST
+#echo ""
+#PARSECOMMENT="removing IP addresses"
+#printf "$yellow"  "$PARSECOMMENT ..."
+#sudo sed '/[a-z]/!d' < $PRE > $POST
 #sudo sed 's/^0.0.0.0[ \t]*//' > something.txt
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+#sudo rm $PRE
+#echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+#sudo mv $POST $PRE
 
 ## Done with merge
 sudo mv $PRE $PFILENAME
