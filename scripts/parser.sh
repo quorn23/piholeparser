@@ -170,7 +170,7 @@ sudo mv $POST $PRE
 echo ""
 PARSECOMMENT="removing lines that start with a period"
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^[.],/d' filename
+sed '/^[.],/d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
@@ -179,7 +179,7 @@ sudo mv $POST $PRE
 echo ""
 PARSECOMMENT="removing lines that end with a period"
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[.]$/d' filename
+sed '/[.]$/d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
