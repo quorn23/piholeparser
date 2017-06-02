@@ -25,6 +25,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3877
 myscore.com.ua###lsid-window-mask
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5132
+snipz.de##.wpb_wrapper > div.sidebar > div.widget_text[id^="text-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5110
 techtarget.com###download-offer
 ! https://forum.adguard.com/index.php?threads/22065/
@@ -277,8 +279,13 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !
 !
 !***
-!* Subscriptions (not popups)
+!* Subscriptions/newsletters (not popups)
 !*
+stuttgarter-zeitung.de##a[href^="http://www.stuttgarter-zeitung.de/inhalt.stz-newsletter-"]
+makeuseof.com##.subscribe-form
+scmagazine.com###newsLetterAsset
+schnaeppchenfuchs.com##.sidebar-newsletter
+dealdoktor.de##.widget_tmx-dd-newsletter-widget
 pravda.ru##.subscribe-block
 mobil.stern.de##.h-teaser-newsletter
 techradar.com##body section.newsletter-signup
@@ -2439,6 +2446,13 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+it-administrator.de##.cookie_advice
+toolslib.net##.cc-floating
+diebayerische.de###cookielayer
+speedtest.net##.privacy-update
+pcmag.com###cookie-policy
+schnaeppchenfuchs.com##.cookie-agreement
+duden.de###sliding-popup
 itv.com##.cookie-policy
 channel4.com###all4gn-cookie-policy-notification
 bmw-motorrad.co.uk##.cookielayer
@@ -3203,6 +3217,9 @@ ukr-today.com##.soc_vidgets
 !
 ||2app.lk^$third-party
 !
+fragfinn.de##.smartbanner
+schnaeppchenfuchs.com##.header-promo-apps
+schnaeppchenfuchs.com##.mobile-promo-apps__vertical-spacer
 m.evensi.de##.down-app
 anistar.me##.appfown
 mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr##.smartBanner-content

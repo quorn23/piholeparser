@@ -1199,6 +1199,8 @@ m.auto.ru##.listing__page > div[class^="_"]:not([class$="listing__item_view_old"
 ! https://forum.adguard.com/index.php?threads/10464/
 ||images-*.ssl-images-amazon.com/images/*/ape/sf/MAsf-*_.js
 !
+m.waz-online.de##.pdma-adaside
+techradar.com###content > div.slotify-slot[style]
 tube8.com##body top-adblock
 autoexperience.de##body > div.ui-page > br:first-child
 autoexperience.de##body > div.ui-page > br:first-child + div#AdMobileAdxTop + br
@@ -1534,6 +1536,11 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ||graph.facebook.com^$app=com.cmplay.cellconnect
 ||graph.facebook.com^$app=com.apxsoft.dodonpachi_gg
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/3346
+||api.ebay-kleinanzeigen.de/api/ads.json*^q=$app=com.ebay.kleinanzeigen,replace=/"(adsense|ecn|native-ad)"/"x\$1"/
+! https://forum.adguard.com/index.php?threads/le-bon-coin-apk-from-googleplay.18840/
+! fix ?ad_id= in Liste FR
+@@||mobile.leboncoin.fr/templates/api/view.json?ad_id=$app=fr.leboncoin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5191
 ||104.199.8.250^*/webservices/getDialogAdDetails.php
 ! https://forum.adguard.com/index.php?threads/21611/
