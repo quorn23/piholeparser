@@ -7512,7 +7512,217 @@ filmiizle.gen.tr###yazioncesireklam
 teknomobil.org###yenidosya_indir
 bahisanaliz.com,macozetizle.com,macyayinlarim.com,macyayinlaritv.org,taraftarium24tv.net###zzadfooter
 -banner-*.$domain=gundembursa.com
-enerjigunlugu.net##.Banner618x60
+ener! Title: Adguard Turkish Filter.
+!
+! Filter that enables removing of the ads from websites with Turkish content.
+! This filter is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported license.
+!
+! Homepage: http://adguard.com/filters.html#turkish
+! License: http://creativecommons.org/licenses/by-sa/3.0/
+!
+!---------------------------------------------------------------------------!
+!-------------- General JS API ---------------------------------------------!
+!---------------------------------------------------------------------------!
+! JS API START
+#%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
+#%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
+#%#var AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+#%#var AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+#%#var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
+! JS API FINISH
+!---------------------------------------------------------------------------!
+!-------------- Advertising networks ---------------------------------------!
+!---------------------------------------------------------------------------!
+!
+||50tlyearabakazan.com^$third-party
+||sunucu9.com/redirect/$popup
+||sunucu9.com/js/$third-party
+||genelajans.com^$third-party
+||d1d8vn0fpluuz7.cloudfront.net^
+||ad.setrowid.com^
+||savoybettingcustomer.com^$third-party
+||adserver.tutkusunucu.com^
+||ad.eglenced.com^
+||cdn.klasseo.com^$third-party
+||ad.reyazilim.com^
+||advancenative.com^$third-party
+||b6roqgi.com^$third-party
+||partners.betbooaffiliates.com^
+||partner.superbahisaffiliates248.com^
+||ad.bilgin.pro^
+||noxaffiliates.com^$third-party
+||betzeplinreklam.com^$third-party
+||piaads.com^$third-party
+||refbanners.website^$third-party
+||refpa.top^$third-party
+||usa-media.net^$third-party
+||paykasasitesi.com^$third-party
+://r.reklam*.com^$third-party
+://say.ac^$third-party
+||0638.info^$third-party
+||88.150.149.92/~cosiker/$third-party
+||aadserving.com^$third-party
+||ad*.tmgrup.com.tr^$third-party
+||ad.arklm.com^$third-party
+||ad.bestsportstream.com^$third-party
+||ad.donanimhaber.com^
+||ad.emlakeki.com^
+||ad.reklam.xyz^$third-party
+||adasist.com^$third-party
+||adbuzz.com.tr^$third-party
+||adcater.com^$third-party
+||add.f5haber.com^$third-party
+||adfox.ru^$third-party
+||adhood.com^$third-party
+||admatic.com.tr^$third-party
+||adnexio.com^$third-party
+||adnimo.com^$third-party
+||adpozitif.com^$third-party
+||adrazzi.com^$third-party
+||adroll.com^$third-party
+||adrttt.com^$third-party
+||adsbetkoy.com^$third-party
+||advoly.com^$third-party
+||adwods.com^$third-party
+||affiliateserver.hangikredi.com^$third-party
+||afyonturkreklam.com^$third-party
+||albet400.com^$popup
+||amazonaws.com/ad-maven-public-cdn/$third-party
+||api.adintext.net^$third-party
+||artemisaffiliates.com^$third-party
+||axbet20.com^$third-party
+||axbetb.com^$third-party
+||axbetb2.com^$third-party
+||bambar.net^$third-party
+||bcvc.mobi^$third-party
+||betburdaaffiliates.com^$third-party
+||betendads.com^$third-party
+||block.s2block.com^$third-party
+||bo.facesbet.com^$third-party
+||buzzreklam.com^$third-party
+||cdn.marjmedya.com^
+||cdn.smartclick.io^$third-party
+||citireklam.com^$third-party
+||clickmerkez.com^$third-party
+||clinicsofturkey.com/attachment/$third-party
+||cmsbetconstruct.com^$third-party
+||cntadvertising.com^$third-party
+||contema.ru^$third-party
+||content.acc-hd.de^$third-party
+||cpatrendreklam.com^$third-party
+||ctru.net/adv_hash
+||danmeneldur.com^$third-party
+||derya.com^$script,third-party
+||diziay.com/reklam
+||dosya.host/banners/
+||downads.com^$third-party
+||engageya.com^$third-party
+||fcdn.webme.com/selfpromotion.php
+||fvbaffiliate.com^$third-party
+||go.spaceshipads.com/afu.php?zoneid
+||gorselcdn.com^$third-party
+||gorselpanel.com^$third-party
+||hizlipop.com^$third-party
+||htpanel.com^$third-party
+||hyprshr.com^$third-party
+||ifddigital.com^$third-party
+||imwarwi.ru^$third-party
+||indirads.org^$third-party
+||indirads.work^$third-party
+||indirdirek.org^$third-party
+||indisancal.com^$third-party
+||inrool.com^$third-party
+||installads.net^$third-party
+||installads2.com^$popup
+||installads2.com^$third-party
+||iyisayfa.net^$third-party
+||kurulum.xyz^$third-party
+||load.sumome.com^$third-party
+||makroads.net^$third-party
+||metrics34.com^$third-party
+||minireklam.com^$third-party
+||mkazanc.com^$third-party
+||mobilpop.com^$third-party
+||mobilup.com^$third-party
+||mobilure.com^$third-party
+||mobon.com^$third-party
+||mynativeads.com^$third-party
+||networkad.net^$third-party
+||numarapaneli.com^$third-party
+||oddsring555.com$popup
+||parasino7.com^$popup,third-party
+||perabetads.com^$third-party
+||pixenka.com^$third-party
+||pmelon.com^$third-party
+||pornoizle-hd.com^$third-party
+||pradma.com^$third-party
+||promoviral.com^$third-party
+||redsurf.ru/bn/$third-party
+||rek.mobi^$third-party
+||reklam7.com^$third-party
+||reklamaction.com^$third-party
+||reklamagaci.com^$third-party
+||reklambanner.net^$third-party
+||reklamfit.com^$third-party
+||reklamnative.com^$third-party
+||reklamooz.com^$third-party
+||reklampazar.com^$third-party
+||reklampiksel.com^$third-party
+||reklamstore.com^$third-party
+||reklamstore.cubecdn.net^
+||reklamtrk.com^$third-party
+||reviveservers.com^$third-party
+||revotas.com^$third-party
+||sadecereklam.net^$third-party
+||savoy.storage.cubecdn.net^
+||scarabresearch.com^$third-party
+||segmentify.com^$third-party
+||sohbetpaneli.xyz^$third-party
+||sunucu7.com^$third-party
+||sw1block.com^$third-party
+||tagon.co^$third-party
+||tempobanners.com^$third-party
+||tracking.redirect.pub^$third-party
+||trackocean.com^$third-party
+||truvacdn.com^$third-party
+||ukbet99.com^$popup
+||uzmanreklam.com^$third-party
+||vicepra.org/banner/$third-party
+||videoustu.com^$third-party
+||visilabs.com^$third-party
+||visilabs.net^$third-party
+||winaffiliates.com^$third-party
+||xpornoizlex.net^$third-party
+||xyztanitim.com^$third-party
+!
+! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
+!
+||ad.sacitaslan.com^
+||cdn.hiperadverts.com^
+||cstkk.720pizle.com^
+||savoy.cubecdn.net^
+!---------------------------------------------------------------------------!
+!-------------- Anti-adblock rules -----------------------------------------!
+!---------------------------------------------------------------------------!
+!
+! https://forum.adguard.com/index.php?threads/22117/
+cokomik.net#$#.adsmd { height: 1px !important; }
+! https://forum.adguard.com/index.php?threads/ofpof-com-antiadblock-alert.20655/
+ofpof.com#@#.adsbox
+! http://forum.adguard.com/showthread.php?7046
+mackolik.com$$script[tag-content="if (typeof (AdmostClient)"][max-length="250"]
+mackolik.com,sahadan.com#%#var _amw1 = 1;
+mackolik.com,sahadan.com#%#var AdmostClient = 1;
+mackolik.com,sahadan.com#%#var advertisement_not_blocked = 1;
+mackolik.com,sahadan.com#%#var criteo_medyanet_loaded = 1;
+! https://github.com/AdguardTeam/AdguardFilters/issues/4146
+turkanime.tv##.modal-backdrop.fade.in
+turkanime.tv##.modal.fade.in
+! https://forum.adguard.com/index.php?threads/fox-com-tr-adblock-detection.19654/
+@@||fox.com.tr/js/adblockDetectorWithGA.js^
+! https://forum.adguard.com/index.php?threads/http-www-rong-chang-com-adblock.19361/
+rong-chang.com#@#.adsBox
+rong-chajigunlugu.net##.Banner618x60
 larende.com##.CM_pageskin_1
 enerjigunlugu.net##.GABanner
 kacakbahis32.net##.KODDOSTU-FIX
@@ -7603,7 +7813,92 @@ filmcuk.org,filmcuks.com##.bahisalan
 mahmure.com##.ban300x250
 ajans32.com##.band_news_banner
 mackolik.com##.baner300x250
-airporthaber.com,avrupayakasi.com.tr,canlihaber.com,dizilab.com,dizilab.org,dizipas.com,dunya.com,flvto.biz,ihlassondakika.com,izetaj.org,izlemeyedeger.com,karnaval.com,kilispostasi.com,magazinkolik.com,medyatrendleri.com,netgazete.com,oyungemisi.com,pudra.com,sabah.com.tr,sadecehaber.com,televole.com,tgrthaber.com.tr,yeniakit.com.tr##.banner
+airporthaber.com,avrupayakasi.com.tr,canlihaber.com,dizilab.com,dizilab.org,dizipas.com,dunya.com,flvto.biz,ihlassondakika.com,izetaj.org,izlemeyedeger.com,karnaval.com,kilispostasi.com,magazinkolik.com,medyatrendleri.com,netgazete.com,oyungemisi.com,pudra.com,sabah.com.tr,sadecehaber.com,televole.com,tgrthaber.com.tr,yeng.com###content > div > table:nth-child(3)
+! https://forum.adguard.com/index.php?threads/19127/
+@@||muzikindir.xyz^$generichide
+! https://forum.adguard.com/index.php?threads/18630/
+@@||beinsports.com^$generichide
+! https://forum.adguard.com/index.php?threads/18541/
+hdtvler1.net##.kill-adblock-container
+! https://forum.adguard.com/index.php?threads/http-www-ozbeceriksizler-com.18329/
+@@||ozbeceriksizler.com^$generichide
+! https://forum.adguard.com/index.php?threads/17911/
+@@||m.softgames.de/advertisement.js
+! https://forum.adguard.com/index.php?threads/18211/
+@@||videomatik.co/vm/showads.js
+! https://forum.adguard.com/index.php?threads/17912/
+@@||trplay.us^$generichide
+! https://forum.adguard.com/index.php?threads/17585/
+||top90da.com/forum/js/rellect/AdblockDetector^$important
+! https://forum.adguard.com/index.php?threads/6313/
+@@||play.dizibox.net^$generichide
+! https://forum.adguard.com/index.php?threads/16725/
+animusprojesi.com#@##adsense
+! https://forum.adguard.com/index.php?threads/15377/
+@@||vidyomani.com/*/showads.js
+! https://forum.adguard.com/index.php?threads/15107/
+@@||filmiseyret.tk/*ad$script
+! https://forum.adguard.com/index.php?threads/karikaturname-com-antiadblock.15104/
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^$domain=karikaturname.com
+! https://forum.adguard.com/index.php?threads/formatatmak-com-antiadblock.15103/
+@@||formatatmak.com^$generichide
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=formatatmak.com
+@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=formatatmak.com
+@@.png#$domain=formatatmak.com
+! https://forum.adguard.com/index.php?threads/15110/
+mahluklar.org##body > div.modal-bg
+! https://forum.adguard.com/index.php?threads/13662/
+@@||ifsabox.com^$generichide
+! https://forum.adguard.com/index.php?threads/13811/
+@@||e-mete.com/js/ads-*.js
+! https://forum.adguard.com/index.php?threads/13728/
+@@||use.vu/js/ads.js
+! https://forum.adguard.com/index.php?threads/13113/
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=turkanime.tv
+! https://forum.adguard.com/index.php?threads/12964/
+@@||teknobolge.com/ads.js
+! https://forum.adguard.com/index.php?threads/12965/
+@@||teknolojipaylasim.com^$generichide
+! https://forum.adguard.com/index.php?threads/12998/
+metin2force.com##body > div#modal
+! https://forum.adguard.com/index.php?threads/12772/
+@@||turkcetarih.com^$generichide
+! https://forum.adguard.com/index.php?threads/12226/
+@@||ligtv.com.tr^$generichide
+! https://forum.adguard.com/index.php?threads/11825/
+@@||hubturkey.net/js/ads.js
+! https://forum.adguard.com/index.php?threads/12086/
+web.tv#%#var canRunAds = true;
+@@||static.origins.web.tv/scripts/ads.js
+! https://forum.adguard.com/index.php?threads/12087/
+@@||e-mete.com/js/ads.js
+! https://forum.adguard.com/index.php?threads/11960/
+fox.com.tr###lbads
+@@||fox.com.tr^$generichide
+! https://forum.adguard.com/index.php?threads/11922/
+@@||limitsizoyun.com^$generichide
+! https://forum.adguard.com/index.php?threads/10181/
+@@||yeknot.com^$generichide
+! http://forum.adguard.com/showthread.php?10436
+@@||sozcu.com.tr/*/assets/js/ads.js
+! http://forum.adguard.com/showthread.php?9225
+@@||merlininkazani.com/js/ads.js
+! http://forum.adguard.com/showthread.php?9185
+@@||cdn.oyungezer.com.tr/templates/oyungezer/js/adv.js
+! http://forum.adguard.com/showthread.php?7456
+@@||kizlarsoruyor.com/content/js/ads.min.js
+kizlarsoruyor.com#%#window.canRunAds=!0;
+! http://forum.adguard.com/showthread.php?7237
+@@||www.tahminkolik.com/advertisement.js
+!---------------------------------------------------------------------------!
+!-------------- Extended CSS rules -----------------------------------------!
+!---------------------------------------------------------------------------!
+!
+! Extended CSS rules
+!
+limitsizamca.org###left-sidebar > div.side-block[-ext-has='div[class="block-title poll-title"]:contains(Sponsor)']
+otohaber.com.tr##.itemFrame > .row > .col-lg-4.sm-center[-ext-has=">.advert"]
+filmkorku.org##.acikk > .arka2:coniakit.com.tr##.banner
 anneysen.com##.banner-bottom
 onlinedizi.co,onlinedizi1.co##.banner-container
 cnnturk.com##.banner-section
@@ -8636,7 +8931,105 @@ taraftarium24tv.link##video[preload="none"][autoplay]
 ||filmarenasi.net/*jq_splashreklam
 ||filmarenasi.org/*/js_pop
 ||filmarenasi.org/wp-content/themes/keremiyav4/js/jq_splashreklam/
-||filmcuk.org/wp-content/uploads/2015/04/oranara.gif
+||filmcuk.org/wp-content/uploads/2ntains(Reklam)
+hdsonbolumizleyin.com##.sidebarWidget.box[-ext-has='>.textwidget:empty']
+hdsonbolumizleyin.com##.sidebarWidget.box[-ext-has='a[href*="adsrv.eacdn.com"],iframe[src^="http://ad.serve-sys.com"]']
+seyirlikfilm.net##.sidebarborder[-ext-has=">.sidebar-right>h2:contains(REKLAM)"]
+hdfilmarenasi.com###sidebar > .sidebarborder[-ext-has='img[height="250"][width="220"]']
+filmarenasi.org##.sidebarborder[-ext-has='img[height="250"][width="220"]']
+ediziizleyin.com###body div.video-right-menu[-ext-has='div.white-text:contains(Reklamlar)']
+ediziizleyin.com###body-video div.video-box[-ext-has='center > p']
+bodrumgundem.com###panels > section.sidebarWidget[-ext-has='div[class^="huge_it_slideshow"]']
+limitsizamca.org###right-sidebar .side-block[-ext-has='*>h3:contains(SPONSOR)']
+telefononerileri.com###sag > .bilesen:contains(REKLAM)
+filmexpresi.com,hdfilmtekpart.net###sidebar > .sidebarborder[-ext-has=">.sidebar-right>.textwidget:empty"]
+filmexpresi.com###sidebar > .sidebarborder[-ext-has=">.sidebar-right>.textwidget>iframe[src^='http://wlperabet.adsrv.']"]
+filmarenasi.org###sidebar > .sidebarborder[-ext-has='a > img[src^="http://i.hizliresim.com"]']
+eneger.com###sidebar > .widget > h3[-ext-contains="Sponsor"]
+eksisozluk.com###topic > ul#entry-list[-ext-has='a[class="entry-author"][href="/biri/reklam"]']
+oyungezginler.org##.bilesen[-ext-has="a[title='agariov.com']"]
+mp3indirdim.com##.col-right2 div.right-block[-ext-has='a[href*="turbobit"][href*="premium"]']
+f3torrent.net##.f3wrapper-right > div[style][-ext-has='div.f3baslik.ust-oval:contains(Sponsors)']
+hesaplama.net##.hesaplama_sonuclari > ol li[-ext-has='a[href^="http://ad."]']
+tasit.com##.hp-showcase-item[-ext-contains="GA_googleFillSlot"]
+milliyet.com.tr##.ligatusWidget > div.recommendation > ul > li[-ext-has="div.imageContainer:contains(REKLAM)"]
+sozlerisarki.org##.post_inside center[-ext-has='>ins.adsbygoogle']
+direkizle1.com##.sidebar > .sidebaslik[-ext-has='h2:contains(Reklam)']
+androidtr.org##.td-ss-main-sidebar aside.widget.widget_text[-ext-has="span:contains(Reklam)"]
+dagyeligazetesi.com##.tm-sidebar-a div.uk-panel.uk-panel-header[-ext-has="h3:contains(REKLAM)"]
+haber.sol.org.tr##.view-content > .videogallery-thumbnail-fix-height[-ext-has='div.ad-adsense']
+videoseyredin.net##.widget_text[-ext-contains="Reklamları"]
+direkizlehd.tv##.widget_text[-ext-has=".fix:contains(Reklam)"]
+direkizlehd.tv##.widget_text[-ext-has=".fix:contains(Sponsor)"]
+turkanime.tv##td[valign="top"][style="padding-left:10px; padding-top:10px; padding-right:5px;"] div[-ext-has='span.ui-blok-title:contains(REKLAM)']
+turkanime.tv##td[valign="top"][style="padding-top:10px; padding-left:5px; width:665px;"] div.ui-widget-content[-ext-has="script:contains(cpmstar)"]
+!---------------------------------------------------------------------------!
+!-------------- General element hiding rules -------------------------------!
+!---------------------------------------------------------------------------!
+!
+! https://forum.adguard.com/index.php?threads/14597/
+##.rek-ivr
+##.rek-ivr ~ p[style^="background-color:"]
+!
+##.reklam-alt-sabit
+##.reklam-645x90
+##.reklam-300x250
+###PopWin
+###UstReklam
+###alt_kayan_reklam
+###alt_reklam
+###arkaplanreklam
+###backgroundPopup
+###bannerbuyuk
+###betreklam
+###kayan_reklam
+###kayan_reklam_sol
+###kayan_reklamsag
+###kayan_reklamsol
+###leftreklam1div
+###leftreklam2div
+###reklam
+###reklam300x250
+###reklam300x600
+###reklam_sol
+###reklami
+###reklamikapat
+###reklamlar
+###reklamm
+###sagreklam
+###sol_kayan_reklam
+###solreklam
+###sreklam
+###toolbar[style*="opacity: 1"][style*="99999"]
+###top-banner
+###ustReklam
+###ust_ara_reklam
+###ustreklam
+###ustreklamlar
+##.ad-container
+##.adnet
+##.adsVideo
+##.adsindirim
+##.adsortalaindirim
+##.arkaplanreklam
+##.banner300x250
+##.banner_logo_top
+##.banneralan
+##.bannerkucuk
+##.detayreklam
+##.dikeyreklam
+##.intbetads-FIX
+##.kanalustureklam
+##.ortaReklam
+##.pmt-ad
+##.reklam
+##.reklam1
+##.reklam2
+##.reklam300
+##.reklam728x90
+##.reklamSag
+##.reklamUst
+##.reklam_015/04/oranara.gif
 ||filmcuk.org/wp-content/uploads/axbetbanner.gif
 ||filmgoo.com/bs2popreklam.js
 ||filmifullizle.org/reklam
@@ -8908,400 +9301,7 @@ hdfilmgecesi.org#@#body > #pageskin
 @@||46haber.com/images/banner/46haber
 ! temedya.com
 @@||temedya.com/player/web/$domain=habertempo.net
-! Title: Adguard Turkish Filter.
-!
-! Filter that enables removing of the ads from websites with Turkish content.
-! This filter is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported license.
-!
-! Homepage: http://adguard.com/filters.html#turkish
-! License: http://creativecommons.org/licenses/by-sa/3.0/
-!
-!---------------------------------------------------------------------------!
-!-------------- General JS API ---------------------------------------------!
-!---------------------------------------------------------------------------!
-! JS API START
-#%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
-#%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
-#%#var AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
-#%#var AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
-#%#var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
-! JS API FINISH
-!---------------------------------------------------------------------------!
-!-------------- Advertising networks ---------------------------------------!
-!---------------------------------------------------------------------------!
-!
-||50tlyearabakazan.com^$third-party
-||sunucu9.com/redirect/$popup
-||sunucu9.com/js/$third-party
-||genelajans.com^$third-party
-||d1d8vn0fpluuz7.cloudfront.net^
-||ad.setrowid.com^
-||savoybettingcustomer.com^$third-party
-||adserver.tutkusunucu.com^
-||ad.eglenced.com^
-||cdn.klasseo.com^$third-party
-||ad.reyazilim.com^
-||advancenative.com^$third-party
-||b6roqgi.com^$third-party
-||partners.betbooaffiliates.com^
-||partner.superbahisaffiliates248.com^
-||ad.bilgin.pro^
-||noxaffiliates.com^$third-party
-||betzeplinreklam.com^$third-party
-||piaads.com^$third-party
-||refbanners.website^$third-party
-||refpa.top^$third-party
-||usa-media.net^$third-party
-||paykasasitesi.com^$third-party
-://r.reklam*.com^$third-party
-://say.ac^$third-party
-||0638.info^$third-party
-||88.150.149.92/~cosiker/$third-party
-||aadserving.com^$third-party
-||ad*.tmgrup.com.tr^$third-party
-||ad.arklm.com^$third-party
-||ad.bestsportstream.com^$third-party
-||ad.donanimhaber.com^
-||ad.emlakeki.com^
-||ad.reklam.xyz^$third-party
-||adasist.com^$third-party
-||adbuzz.com.tr^$third-party
-||adcater.com^$third-party
-||add.f5haber.com^$third-party
-||adfox.ru^$third-party
-||adhood.com^$third-party
-||admatic.com.tr^$third-party
-||adnexio.com^$third-party
-||adnimo.com^$third-party
-||adpozitif.com^$third-party
-||adrazzi.com^$third-party
-||adroll.com^$third-party
-||adrttt.com^$third-party
-||adsbetkoy.com^$third-party
-||advoly.com^$third-party
-||adwods.com^$third-party
-||affiliateserver.hangikredi.com^$third-party
-||afyonturkreklam.com^$third-party
-||albet400.com^$popup
-||amazonaws.com/ad-maven-public-cdn/$third-party
-||api.adintext.net^$third-party
-||artemisaffiliates.com^$third-party
-||axbet20.com^$third-party
-||axbetb.com^$third-party
-||axbetb2.com^$third-party
-||bambar.net^$third-party
-||bcvc.mobi^$third-party
-||betburdaaffiliates.com^$third-party
-||betendads.com^$third-party
-||block.s2block.com^$third-party
-||bo.facesbet.com^$third-party
-||buzzreklam.com^$third-party
-||cdn.marjmedya.com^
-||cdn.smartclick.io^$third-party
-||citireklam.com^$third-party
-||clickmerkez.com^$third-party
-||clinicsofturkey.com/attachment/$third-party
-||cmsbetconstruct.com^$third-party
-||cntadvertising.com^$third-party
-||contema.ru^$third-party
-||content.acc-hd.de^$third-party
-||cpatrendreklam.com^$third-party
-||ctru.net/adv_hash
-||danmeneldur.com^$third-party
-||derya.com^$script,third-party
-||diziay.com/reklam
-||dosya.host/banners/
-||downads.com^$third-party
-||engageya.com^$third-party
-||fcdn.webme.com/selfpromotion.php
-||fvbaffiliate.com^$third-party
-||go.spaceshipads.com/afu.php?zoneid
-||gorselcdn.com^$third-party
-||gorselpanel.com^$third-party
-||hizlipop.com^$third-party
-||htpanel.com^$third-party
-||hyprshr.com^$third-party
-||ifddigital.com^$third-party
-||imwarwi.ru^$third-party
-||indirads.org^$third-party
-||indirads.work^$third-party
-||indirdirek.org^$third-party
-||indisancal.com^$third-party
-||inrool.com^$third-party
-||installads.net^$third-party
-||installads2.com^$popup
-||installads2.com^$third-party
-||iyisayfa.net^$third-party
-||kurulum.xyz^$third-party
-||load.sumome.com^$third-party
-||makroads.net^$third-party
-||metrics34.com^$third-party
-||minireklam.com^$third-party
-||mkazanc.com^$third-party
-||mobilpop.com^$third-party
-||mobilup.com^$third-party
-||mobilure.com^$third-party
-||mobon.com^$third-party
-||mynativeads.com^$third-party
-||networkad.net^$third-party
-||numarapaneli.com^$third-party
-||oddsring555.com$popup
-||parasino7.com^$popup,third-party
-||perabetads.com^$third-party
-||pixenka.com^$third-party
-||pmelon.com^$third-party
-||pornoizle-hd.com^$third-party
-||pradma.com^$third-party
-||promoviral.com^$third-party
-||redsurf.ru/bn/$third-party
-||rek.mobi^$third-party
-||reklam7.com^$third-party
-||reklamaction.com^$third-party
-||reklamagaci.com^$third-party
-||reklambanner.net^$third-party
-||reklamfit.com^$third-party
-||reklamnative.com^$third-party
-||reklamooz.com^$third-party
-||reklampazar.com^$third-party
-||reklampiksel.com^$third-party
-||reklamstore.com^$third-party
-||reklamstore.cubecdn.net^
-||reklamtrk.com^$third-party
-||reviveservers.com^$third-party
-||revotas.com^$third-party
-||sadecereklam.net^$third-party
-||savoy.storage.cubecdn.net^
-||scarabresearch.com^$third-party
-||segmentify.com^$third-party
-||sohbetpaneli.xyz^$third-party
-||sunucu7.com^$third-party
-||sw1block.com^$third-party
-||tagon.co^$third-party
-||tempobanners.com^$third-party
-||tracking.redirect.pub^$third-party
-||trackocean.com^$third-party
-||truvacdn.com^$third-party
-||ukbet99.com^$popup
-||uzmanreklam.com^$third-party
-||vicepra.org/banner/$third-party
-||videoustu.com^$third-party
-||visilabs.com^$third-party
-||visilabs.net^$third-party
-||winaffiliates.com^$third-party
-||xpornoizlex.net^$third-party
-||xyztanitim.com^$third-party
-!
-! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
-!
-||ad.sacitaslan.com^
-||cdn.hiperadverts.com^
-||cstkk.720pizle.com^
-||savoy.cubecdn.net^
-!---------------------------------------------------------------------------!
-!-------------- Anti-adblock rules -----------------------------------------!
-!---------------------------------------------------------------------------!
-!
-! https://forum.adguard.com/index.php?threads/22117/
-cokomik.net#$#.adsmd { height: 1px !important; }
-! https://forum.adguard.com/index.php?threads/ofpof-com-antiadblock-alert.20655/
-ofpof.com#@#.adsbox
-! http://forum.adguard.com/showthread.php?7046
-mackolik.com$$script[tag-content="if (typeof (AdmostClient)"][max-length="250"]
-mackolik.com,sahadan.com#%#var _amw1 = 1;
-mackolik.com,sahadan.com#%#var AdmostClient = 1;
-mackolik.com,sahadan.com#%#var advertisement_not_blocked = 1;
-mackolik.com,sahadan.com#%#var criteo_medyanet_loaded = 1;
-! https://github.com/AdguardTeam/AdguardFilters/issues/4146
-turkanime.tv##.modal-backdrop.fade.in
-turkanime.tv##.modal.fade.in
-! https://forum.adguard.com/index.php?threads/fox-com-tr-adblock-detection.19654/
-@@||fox.com.tr/js/adblockDetectorWithGA.js^
-! https://forum.adguard.com/index.php?threads/http-www-rong-chang-com-adblock.19361/
-rong-chang.com#@#.adsBox
-rong-chang.com###content > div > table:nth-child(3)
-! https://forum.adguard.com/index.php?threads/19127/
-@@||muzikindir.xyz^$generichide
-! https://forum.adguard.com/index.php?threads/18630/
-@@||beinsports.com^$generichide
-! https://forum.adguard.com/index.php?threads/18541/
-hdtvler1.net##.kill-adblock-container
-! https://forum.adguard.com/index.php?threads/http-www-ozbeceriksizler-com.18329/
-@@||ozbeceriksizler.com^$generichide
-! https://forum.adguard.com/index.php?threads/17911/
-@@||m.softgames.de/advertisement.js
-! https://forum.adguard.com/index.php?threads/18211/
-@@||videomatik.co/vm/showads.js
-! https://forum.adguard.com/index.php?threads/17912/
-@@||trplay.us^$generichide
-! https://forum.adguard.com/index.php?threads/17585/
-||top90da.com/forum/js/rellect/AdblockDetector^$important
-! https://forum.adguard.com/index.php?threads/6313/
-@@||play.dizibox.net^$generichide
-! https://forum.adguard.com/index.php?threads/16725/
-animusprojesi.com#@##adsense
-! https://forum.adguard.com/index.php?threads/15377/
-@@||vidyomani.com/*/showads.js
-! https://forum.adguard.com/index.php?threads/15107/
-@@||filmiseyret.tk/*ad$script
-! https://forum.adguard.com/index.php?threads/karikaturname-com-antiadblock.15104/
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^$domain=karikaturname.com
-! https://forum.adguard.com/index.php?threads/formatatmak-com-antiadblock.15103/
-@@||formatatmak.com^$generichide
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=formatatmak.com
-@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=formatatmak.com
-@@.png#$domain=formatatmak.com
-! https://forum.adguard.com/index.php?threads/15110/
-mahluklar.org##body > div.modal-bg
-! https://forum.adguard.com/index.php?threads/13662/
-@@||ifsabox.com^$generichide
-! https://forum.adguard.com/index.php?threads/13811/
-@@||e-mete.com/js/ads-*.js
-! https://forum.adguard.com/index.php?threads/13728/
-@@||use.vu/js/ads.js
-! https://forum.adguard.com/index.php?threads/13113/
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=turkanime.tv
-! https://forum.adguard.com/index.php?threads/12964/
-@@||teknobolge.com/ads.js
-! https://forum.adguard.com/index.php?threads/12965/
-@@||teknolojipaylasim.com^$generichide
-! https://forum.adguard.com/index.php?threads/12998/
-metin2force.com##body > div#modal
-! https://forum.adguard.com/index.php?threads/12772/
-@@||turkcetarih.com^$generichide
-! https://forum.adguard.com/index.php?threads/12226/
-@@||ligtv.com.tr^$generichide
-! https://forum.adguard.com/index.php?threads/11825/
-@@||hubturkey.net/js/ads.js
-! https://forum.adguard.com/index.php?threads/12086/
-web.tv#%#var canRunAds = true;
-@@||static.origins.web.tv/scripts/ads.js
-! https://forum.adguard.com/index.php?threads/12087/
-@@||e-mete.com/js/ads.js
-! https://forum.adguard.com/index.php?threads/11960/
-fox.com.tr###lbads
-@@||fox.com.tr^$generichide
-! https://forum.adguard.com/index.php?threads/11922/
-@@||limitsizoyun.com^$generichide
-! https://forum.adguard.com/index.php?threads/10181/
-@@||yeknot.com^$generichide
-! http://forum.adguard.com/showthread.php?10436
-@@||sozcu.com.tr/*/assets/js/ads.js
-! http://forum.adguard.com/showthread.php?9225
-@@||merlininkazani.com/js/ads.js
-! http://forum.adguard.com/showthread.php?9185
-@@||cdn.oyungezer.com.tr/templates/oyungezer/js/adv.js
-! http://forum.adguard.com/showthread.php?7456
-@@||kizlarsoruyor.com/content/js/ads.min.js
-kizlarsoruyor.com#%#window.canRunAds=!0;
-! http://forum.adguard.com/showthread.php?7237
-@@||www.tahminkolik.com/advertisement.js
-!---------------------------------------------------------------------------!
-!-------------- Extended CSS rules -----------------------------------------!
-!---------------------------------------------------------------------------!
-!
-! Extended CSS rules
-!
-limitsizamca.org###left-sidebar > div.side-block[-ext-has='div[class="block-title poll-title"]:contains(Sponsor)']
-otohaber.com.tr##.itemFrame > .row > .col-lg-4.sm-center[-ext-has=">.advert"]
-filmkorku.org##.acikk > .arka2:contains(Reklam)
-hdsonbolumizleyin.com##.sidebarWidget.box[-ext-has='>.textwidget:empty']
-hdsonbolumizleyin.com##.sidebarWidget.box[-ext-has='a[href*="adsrv.eacdn.com"],iframe[src^="http://ad.serve-sys.com"]']
-seyirlikfilm.net##.sidebarborder[-ext-has=">.sidebar-right>h2:contains(REKLAM)"]
-hdfilmarenasi.com###sidebar > .sidebarborder[-ext-has='img[height="250"][width="220"]']
-filmarenasi.org##.sidebarborder[-ext-has='img[height="250"][width="220"]']
-ediziizleyin.com###body div.video-right-menu[-ext-has='div.white-text:contains(Reklamlar)']
-ediziizleyin.com###body-video div.video-box[-ext-has='center > p']
-bodrumgundem.com###panels > section.sidebarWidget[-ext-has='div[class^="huge_it_slideshow"]']
-limitsizamca.org###right-sidebar .side-block[-ext-has='*>h3:contains(SPONSOR)']
-telefononerileri.com###sag > .bilesen:contains(REKLAM)
-filmexpresi.com,hdfilmtekpart.net###sidebar > .sidebarborder[-ext-has=">.sidebar-right>.textwidget:empty"]
-filmexpresi.com###sidebar > .sidebarborder[-ext-has=">.sidebar-right>.textwidget>iframe[src^='http://wlperabet.adsrv.']"]
-filmarenasi.org###sidebar > .sidebarborder[-ext-has='a > img[src^="http://i.hizliresim.com"]']
-eneger.com###sidebar > .widget > h3[-ext-contains="Sponsor"]
-eksisozluk.com###topic > ul#entry-list[-ext-has='a[class="entry-author"][href="/biri/reklam"]']
-oyungezginler.org##.bilesen[-ext-has="a[title='agariov.com']"]
-mp3indirdim.com##.col-right2 div.right-block[-ext-has='a[href*="turbobit"][href*="premium"]']
-f3torrent.net##.f3wrapper-right > div[style][-ext-has='div.f3baslik.ust-oval:contains(Sponsors)']
-hesaplama.net##.hesaplama_sonuclari > ol li[-ext-has='a[href^="http://ad."]']
-tasit.com##.hp-showcase-item[-ext-contains="GA_googleFillSlot"]
-milliyet.com.tr##.ligatusWidget > div.recommendation > ul > li[-ext-has="div.imageContainer:contains(REKLAM)"]
-sozlerisarki.org##.post_inside center[-ext-has='>ins.adsbygoogle']
-direkizle1.com##.sidebar > .sidebaslik[-ext-has='h2:contains(Reklam)']
-androidtr.org##.td-ss-main-sidebar aside.widget.widget_text[-ext-has="span:contains(Reklam)"]
-dagyeligazetesi.com##.tm-sidebar-a div.uk-panel.uk-panel-header[-ext-has="h3:contains(REKLAM)"]
-haber.sol.org.tr##.view-content > .videogallery-thumbnail-fix-height[-ext-has='div.ad-adsense']
-videoseyredin.net##.widget_text[-ext-contains="Reklamları"]
-direkizlehd.tv##.widget_text[-ext-has=".fix:contains(Reklam)"]
-direkizlehd.tv##.widget_text[-ext-has=".fix:contains(Sponsor)"]
-turkanime.tv##td[valign="top"][style="padding-left:10px; padding-top:10px; padding-right:5px;"] div[-ext-has='span.ui-blok-title:contains(REKLAM)']
-turkanime.tv##td[valign="top"][style="padding-top:10px; padding-left:5px; width:665px;"] div.ui-widget-content[-ext-has="script:contains(cpmstar)"]
-!---------------------------------------------------------------------------!
-!-------------- General element hiding rules -------------------------------!
-!---------------------------------------------------------------------------!
-!
-! https://forum.adguard.com/index.php?threads/14597/
-##.rek-ivr
-##.rek-ivr ~ p[style^="background-color:"]
-!
-##.reklam-alt-sabit
-##.reklam-645x90
-##.reklam-300x250
-###PopWin
-###UstReklam
-###alt_kayan_reklam
-###alt_reklam
-###arkaplanreklam
-###backgroundPopup
-###bannerbuyuk
-###betreklam
-###kayan_reklam
-###kayan_reklam_sol
-###kayan_reklamsag
-###kayan_reklamsol
-###leftreklam1div
-###leftreklam2div
-###reklam
-###reklam300x250
-###reklam300x600
-###reklam_sol
-###reklami
-###reklamikapat
-###reklamlar
-###reklamm
-###sagreklam
-###sol_kayan_reklam
-###solreklam
-###sreklam
-###toolbar[style*="opacity: 1"][style*="99999"]
-###top-banner
-###ustReklam
-###ust_ara_reklam
-###ustreklam
-###ustreklamlar
-##.ad-container
-##.adnet
-##.adsVideo
-##.adsindirim
-##.adsortalaindirim
-##.arkaplanreklam
-##.banner300x250
-##.banner_logo_top
-##.banneralan
-##.bannerkucuk
-##.detayreklam
-##.dikeyreklam
-##.intbetads-FIX
-##.kanalustureklam
-##.ortaReklam
-##.pmt-ad
-##.reklam
-##.reklam1
-##.reklam2
-##.reklam300
-##.reklam728x90
-##.reklamSag
-##.reklamUst
-##.reklam_300_250
+300_250
 ##.reklam_300x250
 ##.reklam_728_90
 ##.reklamlar
