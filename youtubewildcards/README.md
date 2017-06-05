@@ -1,4 +1,4 @@
-you CAN wildcard block with pihole, and this will just generate an actual list from dnsdumpster
+# you CAN wildcard block with pihole, and this will just generate an actual list from dnsdumpster
 
 This is the list below:
 
@@ -8,16 +8,16 @@ This is the list below:
 
 * 7.googlevideo.com
 
-* googlevideo.com
+* s.googlevideo.com
 
-* googlevideo.com
+* e.googlevideo.com
 
-* googlevideo.com
+* r.googlevideo.com
 
-* googlevideo.com
+* d.googlevideo.com
 
-* googlevideo.com
+* y.googlevideo.com
 
-* googlevideo.com
+* 6.googlevideo.com
 
-* googlevideo.com
+* l.googlevideo.com
