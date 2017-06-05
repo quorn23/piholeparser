@@ -1,21 +1,23 @@
 you CAN wildcard block with pihole, and this will just generate an actual list from dnsdumpster
 
-k.googlevideo.com
+This is the list below:
 
-z.googlevideo.com
+* k.googlevideo.com
 
-7.googlevideo.com
+* z.googlevideo.com
 
-s.googlevideo.com
+* 7.googlevideo.com
 
-e.googlevideo.com
+* googlevideo.com
 
-r.googlevideo.com
+* googlevideo.com
 
-d.googlevideo.com
+* googlevideo.com
 
-y.googlevideo.com
+* googlevideo.com
 
-6.googlevideo.com
+* googlevideo.com
 
-l.googlevideo.com
+* googlevideo.com
+
+* googlevideo.com
