@@ -53,3 +53,5 @@ sudo cp $YTADS $YTSIFT
 
 #removes duplicate lines from /var/www/html/lists/youtube.txt
 #sudo perl -i -ne 'print if ! $x{$_}++' /var/www/html/lists/youtube.txt
+
+sudo rm /etc/piholeparser/youtubewildcards/*.txt
