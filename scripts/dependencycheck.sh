@@ -44,7 +44,7 @@ sudo apt-get install -y python-pip
 fi
 
 if
-pip list | grep -F requests >/dev/null;
+pip list --format=legacy | grep -F requests >/dev/null;
 then
 echo ""
 printf "$yellow"  "pip module requests is installed"
@@ -54,7 +54,7 @@ sudo pip install requests
 fi
 
 if
-pip list | grep -F beautifulsoup4 >/dev/null;
+pip list --format=legacy | grep -F beautifulsoup4 >/dev/null;
 then
 echo ""
 printf "$yellow"  "pip module requests is installed"
