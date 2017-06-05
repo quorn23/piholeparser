@@ -27,6 +27,9 @@
 ||banners-slb.mobile.yandex.net^
 ||banners.mobile.yandex.net^
 !
+||cpactions.com^
+||native.cli.bz^
+||adplatform.vrtcal.com^
 ||appodealx.com^
 ||go.vrvm.com^
 ||c.vrvm.com^
@@ -860,11 +863,6 @@ westseattleblog.com#@#.header-ad
 !
 ! Context ads in Yandex search results
 yandex.ru,yandex.com,yandex.ua,yandex.kz,yandex.by,yandex.com.tr##.main > div.serp-list > div.serp-item[-ext-has='> div.organic > h2 > a[href^="http://yabs.yandex.ru/count/"]']
-! https://github.com/AdguardTeam/AdguardFilters/issues/4836
-spaces.ru###index_page > div[class][id][-ext-has='div[class][id] > a[href^="http://spaces.ru/index/reklama/?"]']
-spaces.ru###index_page > div[class][id][-ext-has='> div[class][id] > div > script[src^="http://mtdata"]']
-spaces.ru###main_content_block > div.content_wrap > div[class]:not([id])[-ext-has='> div[id][class] > img[src^="//counter"]']
-spaces.ru###main_content div.cont_usr[-ext-has='a.ico_close_btn[href^="http://spaces.ru/app/close_notify/?link_id="]']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3218
 lenfilm.tv##body > div.rek[-ext-has="div"]
 ! https://forum.adguard.com/index.php?threads/20680/
@@ -1199,6 +1197,7 @@ m.auto.ru##.listing__page > div[class^="_"]:not([class$="listing__item_view_old"
 ! https://forum.adguard.com/index.php?threads/10464/
 ||images-*.ssl-images-amazon.com/images/*/ape/sf/MAsf-*_.js
 !
+m.bild.de##.promotion_collection
 m.waz-online.de##.pdma-adaside
 techradar.com###content > div.slotify-slot[style]
 tube8.com##body top-adblock
@@ -1536,6 +1535,8 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ||graph.facebook.com^$app=com.cmplay.cellconnect
 ||graph.facebook.com^$app=com.apxsoft.dodonpachi_gg
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5248
+||global.appnext.com/offerWallApi.aspx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3346
 ||api.ebay-kleinanzeigen.de/api/ads.json*^q=$app=com.ebay.kleinanzeigen,replace=/"(adsense|ecn|native-ad)"/"x\$1"/
 ! https://forum.adguard.com/index.php?threads/le-bon-coin-apk-from-googleplay.18840/
@@ -1763,6 +1764,8 @@ _*sec.mp4$mp4,domain=ivi.ru
 !
 ! Section contains rules for mobile analytics and spyware
 !
+||analytics-tracker.thescore.com^
+||app.roximity.com^
 ||dc.webtrends.com^
 ||report.appmetrica.webvisor.com^
 ||api.oneaudience.com^
