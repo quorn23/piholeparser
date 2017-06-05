@@ -31,7 +31,8 @@ else
 fi
 
 ## Combine Small lists
-sudo cat /etc/piholeparser/parsed/*.txt | sort > $TEMPLIST
+sudo cat /etc/piholeparser/parsed/*.txt > $TEMPLIST
+#sudo cat /etc/piholeparser/parsed/*.txt | sort > $TEMPLIST
 
 ## Duplicate Removal
 echo ""
