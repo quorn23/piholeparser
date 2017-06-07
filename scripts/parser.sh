@@ -87,8 +87,8 @@ sudo cp $ORIGFILE $MFILENAME
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
 if 
-#test $(stat -c%s $MFILENAME) -ge 104857600
-test $(stat -c%s $MFILENAME) -ge 100m
+test $(stat -c%s $MFILENAME) -ge 104857600
+#test $(stat -c%s $MFILENAME) -ge 100m
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
@@ -337,8 +337,8 @@ echo ""
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
 if
-#test $(stat -c%s $PFILENAME) -ge 104857600
-test $(stat -c%s $PFILENAME) -ge 100m
+test $(stat -c%s $PFILENAME) -ge 104857600
+#test $(stat -c%s $PFILENAME) -ge 100m
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
