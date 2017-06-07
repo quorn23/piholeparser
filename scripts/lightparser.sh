@@ -234,7 +234,6 @@ sudo rm $PRE
 sudo mv $POST $PRE
 sudo sed 's/^::1[ \t]*//' $PRE > $POST
 sudo rm $PRE
-sudo mv $POST $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
