@@ -337,7 +337,8 @@ echo ""
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
 if
-test $(stat -c%s $PFILENAME) -ge 104857600
+#test $(stat -c%s $PFILENAME) -ge 104857600
+test $(stat -c%s $PFILENAME) -ge 100m
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
