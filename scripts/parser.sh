@@ -10,6 +10,9 @@ source /etc/piholeparser.var
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
+## Github file limit
+GITHUBLIMIT=104857600
+
 ####################
 ## File Lists     ##
 ####################
@@ -89,14 +92,14 @@ sudo cp $ORIGFILE $MFILENAME
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
 if 
-test $MFILESIZE -ge 104857600
+[ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 sudo rm $MFILENAME
 elif
-test $MFILESIZE -eq 0
+[ "$MFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
@@ -340,14 +343,14 @@ echo ""
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
 if
-test $PFILESIZE -ge 104857600
+[ "$PFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 sudo rm $PFILENAME
 elif
-test $PFILESIZE -eq 0
+[ "$PFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
