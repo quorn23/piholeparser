@@ -296,6 +296,12 @@ sudo mv $MERGED $PRE
 echo ""
 PARSECOMMENT="removing IP addresses"
 printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed 's/^PRIMARY[ \t]*//' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PR 
+sudo sed 's/blockeddomain.hosts[ \t]*//' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PRE
 sudo sed 's/^0.0.0.0[ \t]*//' $PRE > $POST
 sudo rm $PRE
 sudo mv $POST $PRE
