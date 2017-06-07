@@ -23,6 +23,7 @@ sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 sudo bash /etc/piholeparser/scripts/compressedlists.sh
 
 ## Parse Individual Lists
+sudo bash /etc/piholeparser/scripts/lightparser.sh
 sudo bash /etc/piholeparser/scripts/parser.sh
 
 ## Build 1111ALLPARSEDLISTS1111.txt
