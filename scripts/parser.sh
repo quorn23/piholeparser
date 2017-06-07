@@ -144,6 +144,12 @@ echo ""
 echo ""
 PARSECOMMENT="removing comments"
 printf "$yellow"  "$PARSECOMMENT..."
+sudo sed '/^\s*#/d' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PRE
+sudo sed 's/[#]/\'$'\n/g' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PRE
 sudo sed '/[#]/d' $PRE > $POST
 sudo rm $PRE
 sudo mv $POST $PRE
