@@ -8,6 +8,9 @@ source /etc/piholeparser.var
 ## Colors
 source /etc/piholeparser/scripts/colors.var
 
+## Github file limit
+GITHUBLIMIT=104857600
+
 ####################
 ## Big List       ##
 #################### 
@@ -46,7 +49,7 @@ sudo rm $TEMPLIST
 ## Github has a 100mb limit and empty files are useless
 BFILESIZE=$(stat -c%s "$MFILENAME")
 if
-test $BFILESIZE -ge 104857600
+[ "$BFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
@@ -55,7 +58,7 @@ sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGLIST
 #printf "$red"     "Parsed File Too Large For Github. Splitting."
 #split -b 100m $BIGLIST
 elif
-test $BFILESIZE -eq 0
+[ "$BFILESIZE" -ge 0 ]
 then
 echo ""
 printf "$red"     "File Empty"
