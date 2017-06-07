@@ -45,7 +45,7 @@ sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholepar
 #sudo cp /etc/piholeparser/scripts/runpiholeparser.sh /etc/runpiholeparser.sh
 sudo cp /etc/piholeparser/scripts/updaterunpiholeparser.sh /etc/updaterunpiholeparser.sh
 sudo cp /etc/piholeparser/scripts/piholeparser.var /etc/piholeparser.var
-(crontab -l ; echo "20 0 * * * sudo bash /etc/piholeparser/scripts/runpiholeparser.sh") | crontab -
+(crontab -l ; echo "20 0 * * * sudo bash /etc/updaterunpiholeparser.sh") | crontab -
 else
 exit
 fi }
