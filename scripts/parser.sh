@@ -70,8 +70,11 @@ fi
 ####################
 
 ## download and merge sources for each file.lst
-sudo curl --silent -L $source >> $ORIGFILE
+sudo wget -q -O $ORIGFILE $source
+#sudo curl --silent -L $source >> $ORIGFILE
 echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
+printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
 
 ## Source completion
 done
