@@ -15,7 +15,7 @@ source /etc/piholeparser/scripts/colors.var
 ####################
 
 echo ""
-printf "$green"   "Parsing Individual Lists."
+printf "$green"   "Filtering Lists that are already in the correct format."
 echo ""
 
 ## Set File .lst
