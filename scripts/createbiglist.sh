@@ -32,7 +32,6 @@ fi
 
 ## Combine Small lists
 sudo cat /etc/piholeparser/parsed/*.txt > $TEMPLIST
-#sudo cat /etc/piholeparser/parsed/*.txt | sort > $TEMPLIST
 echo -e "\t`wc -l $TEMPLIST | cut -d " " -f 1` lines after merging individual lists"
 
 ## Duplicate Removal
@@ -86,7 +85,7 @@ else
 :
 fi
 
-sudo cat /etc/piholeparser/lists/*.lst | sort > $BIGSOURCE
+sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGSOURCE
 echo -e "\t`wc -l $BIGSOURCE | cut -d " " -f 1` lists processed by the script."
 
 printf "$magenta" "___________________________________________________________"
