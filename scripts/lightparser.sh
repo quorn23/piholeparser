@@ -11,7 +11,8 @@ source /etc/piholeparser.var
 source /etc/piholeparser/scripts/colors.var
 
 ## Github file limit
-GITHUBLIMIT=104857600
+#GITHUBLIMIT=104857600
+GITHUBLIMIT=100
 
 ####################
 ## File Lists     ##
@@ -43,8 +44,9 @@ FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
 ORIGFILE="$FNAME".orig.txt ## Original File
 MFILENAME="$FNAME".mirror.txt ## Mirror file
-MGFILENAME="$FNAME" ## Mirror file github split
+MFILESIZE=$(($(stat -c %s $MFILENAME)/1024/1024))
 PFILENAME="$FNAME".parsed.txt ## parsed file
+PFILESIZE=$(($(stat -c %s $PFILENAME)/1024/1024))
 PRE="$FNAME".pre.txt ## File in
 POST="$FNAME".post.txt ## File Out
 PREPROC="$FNAME".preproc.txt ## file after pre-processing
@@ -73,6 +75,8 @@ fi
 ## download and merge sources for each file.lst
 sudo curl --silent -L $source >> $ORIGFILE
 echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+ORIGFILESIZE=$(($(stat -c %s $ORIGFILE)/1024/1024))
+printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE MB."
 
 ## Source completion
 done
@@ -89,29 +93,24 @@ echo ""
 sudo cp $ORIGFILE $MFILENAME
 
 ## Github has a 100mb limit, and empty files are useless
-MFILESIZE=$(stat -c%s "$MFILENAME")
-#MFILESIZE=$(stat -c %s $filename)/1024/1024))
 if 
 [ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
-printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
-printf "$red"     "Mirror File Too Large For Github. deleting."
+#printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
+printf "$red"     "Size of $MFILENAME = $MFILESIZE MB."
+printf "$red"     "Mirror File Too Large For Github. Deleting."
 sudo rm $MFILENAME
-#printf "$red"     "Mirror File Too Large For Github. Spliting."
-#sudo mv $MFILENAME $MGFILENAME
-#sudo split -b 100m $MGFILENAME $MGFILENAME
-#sudo mv "$MGFILENAME"* /etc/piholeparser/mirroredlists/
-#sudo rm $MGFILENAME
 elif
 [ "$MFILESIZE" -eq 0 ]
 then
 echo ""
-printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
+#printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
+printf "$red"     "Size of $MFILENAME = $MFILESIZE MB. Deleting."
 sudo rm $MFILENAME
 else
 echo ""
-printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
+printf "$yellow"     "Size of $MFILENAME = $MFILESIZE MB."
 printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
 sudo rename "s/.mirror.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
@@ -268,23 +267,22 @@ printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
 ## Github has a 100mb limit, and empty files are useless
-PFILESIZE=$(stat -c%s "$PFILENAME")
 if
 [ "$PFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
-printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
+printf "$red"     "Size of $PFILENAME = $PFILESIZE MB."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 sudo rm $PFILENAME
 elif
 [ "$PFILESIZE" -eq 0 ]
 then
 echo ""
-printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
+printf "$red"     "Size of $PFILENAME = $PFILESIZE MB. Deleting."
 sudo rm $PFILENAME
 else
 echo ""
-printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
+printf "$yellow"  "Size of $PFILENAME = $PFILESIZE MB."
 printf "$yellow"  "File will be moved to the parsed directory."
 sudo mv $PFILENAME /etc/piholeparser/parsed/
 sudo rename "s/.parsed.txt/.txt/" /etc/piholeparser/parsed/*.txt
