@@ -46,9 +46,11 @@ if
 test $(stat -c%s $BIGLIST) -ge 104857600
 then
 echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo rm $BIGLIST
-sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGLIST
+#printf "$red"     "Parsed File Too Large For Github. Deleting."
+#sudo rm $BIGLIST
+#sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGLIST
+printf "$red"     "Parsed File Too Large For Github. Splitting."
+split -b 100m $BIGLIST
 elif
 test $(stat -c%s $BIGLIST) -eq 0
 then
