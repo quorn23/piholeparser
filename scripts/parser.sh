@@ -87,8 +87,6 @@ echo ""
 ## Copy original, one for mirror, one for next step
 sudo cp $ORIGFILE $MFILENAME
 
-#test $(stat -c%s $MFILENAME) -ge 104857600
-#test $(stat -c%s $MFILENAME) -eq 0
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
 if 
@@ -338,8 +336,6 @@ echo ""
 printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
-#test $(stat -c%s $PFILENAME) -ge 104857600
-#test $(stat -c%s $PFILENAME) -eq 0
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
 if
