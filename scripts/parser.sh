@@ -201,6 +201,15 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
+## delete lines with localhost
+echo ""
+PARSECOMMENT="removing lines containing localhost"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/localhost/d' $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
 ## Pre-Processing done
 sudo mv $PRE $PREPROC
 
@@ -277,6 +286,22 @@ sudo rm $MERGEMETHODS
 ## Prepare to sift merged lists
 sudo mv $MERGED $PRE
 
+## Remove IP addresses
+echo ""
+PARSECOMMENT="removing IP addresses"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed 's/^0.0.0.0[ \t]*//' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PRE
+sudo sed 's/^127.0.0.1[ \t]*//' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PRE
+sudo sed 's/^::1[ \t]*//' $PRE > $POST
+sudo rm $PRE
+sudo mv $POST $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
 ## Duplicate Removal
 echo ""
 PARSECOMMENT="removing duplicates"
@@ -285,16 +310,6 @@ sort -u $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## Remove IP addresses
-#echo ""
-#PARSECOMMENT="removing IP addresses"
-#printf "$yellow"  "$PARSECOMMENT ..."
-#sudo sed '/[a-z]/!d' < $PRE > $POST
-#sudo sed 's/^0.0.0.0[ \t]*//' > something.txt
-#sudo rm $PRE
-#echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-#sudo mv $POST $PRE
 
 ## Done with merge
 sudo mv $PRE $PFILENAME
