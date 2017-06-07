@@ -41,20 +41,20 @@ sort -u $TEMPLIST > $BIGLIST
 echo -e "\t`wc -l $BIGLIST | cut -d " " -f 1` lines after deduping"
 sudo rm $TEMPLIST
 
+#test $(stat -c%s $BIGLIST) -eq 0
+#test $(stat -c%s $BIGLIST) -ge 104857600
 ## Github has a 100mb limit and empty files are useless
 if
 test $(stat $BIGLIST) -ge 104857600
-#test $(stat -c%s $BIGLIST) -ge 104857600
 then
 echo ""
-#printf "$red"     "Parsed File Too Large For Github. Deleting."
-#sudo rm $BIGLIST
-#sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGLIST
-printf "$red"     "Parsed File Too Large For Github. Splitting."
-split -b 100m $BIGLIST
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+sudo rm $BIGLIST
+sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGLIST
+#printf "$red"     "Parsed File Too Large For Github. Splitting."
+#split -b 100m $BIGLIST
 elif
 test $(stat $BIGLIST) -eq 0
-#test $(stat -c%s $BIGLIST) -eq 0
 then
 echo ""
 printf "$red"     "File Empty"
