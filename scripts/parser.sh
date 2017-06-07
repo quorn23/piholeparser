@@ -55,22 +55,22 @@ printf "$cyan"    "$source"
 printf "$magenta"    "Filename set to $FNAME"
 echo "" 
 
-## Fetch IP of source, doesn't display for local files
-if [[ -z $UPCHECK ]]
-then
-printf "$yellow"    "Fetching List From Local File"
-else 
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
-fi
-
 ####################
 ## Download Lists ##
 ####################
 
-## download and merge sources for each file.lst
+if [[ -z $UPCHECK ]]
+then
+printf "$yellow"    "Fetching List From Local File"
+sudo curl --silent -L $source >> $ORIGFILE
+else 
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
 sudo wget -q -O $ORIGFILE $source
+fi
+
+#sudo wget -q -O $ORIGFILE $source
 #sudo curl --silent -L $source >> $ORIGFILE
 echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
