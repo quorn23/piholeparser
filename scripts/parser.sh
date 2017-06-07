@@ -19,7 +19,7 @@ printf "$green"   "Parsing Individual Lists."
 echo ""
 
 ## Set File .lst
-FILES=/etc/piholeparser/lists/*.lst
+FILES=/etc/piholeparser/lists/heavyparsing/*.lst
 
 ## Start File Loop
 for f in $FILES
