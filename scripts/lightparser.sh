@@ -11,8 +11,7 @@ source /etc/piholeparser.var
 source /etc/piholeparser/scripts/colors.var
 
 ## Github file limit
-#GITHUBLIMIT=104857600
-GITHUBLIMIT=100
+GITHUBLIMIT=104857600
 
 ####################
 ## File Lists     ##
