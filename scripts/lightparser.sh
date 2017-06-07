@@ -90,6 +90,7 @@ sudo cp $ORIGFILE $MFILENAME
 
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
+#MFILESIZE=$(stat -c %s $filename)/1024/1024))
 if 
 [ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
