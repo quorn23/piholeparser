@@ -17,7 +17,7 @@ sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 
 ## Whitelist domains that will be downloaded from
-sudo bash /etc/piholeparser/scripts/whitelistdomainchecks.sh
+#sudo bash /etc/piholeparser/scripts/whitelistdomainchecks.sh
 
 ## Process lists that have to be extracted
 sudo bash /etc/piholeparser/scripts/compressedlists.sh
@@ -30,7 +30,7 @@ sudo bash /etc/piholeparser/scripts/parser.sh
 sudo bash /etc/piholeparser/scripts/createbiglist.sh
 
 ## remove domains from 1111ALLPARSEDLISTS1111 that cause issues
-sudo bash /etc/piholeparser/scripts/domainflags.sh
+#sudo bash /etc/piholeparser/scripts/domainflags.sh
 
 ## Cleanup
 sudo bash /etc/piholeparser/scripts/cleanup.sh
