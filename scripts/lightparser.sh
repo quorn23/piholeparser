@@ -87,15 +87,16 @@ sudo cp $ORIGFILE $MFILENAME
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
 if 
-test $(stat -c%s $MFILENAME) -ge 104857600
-#test $(stat -c%s $MFILENAME) -ge 100m
+#test $(stat -c%s $MFILENAME) -ge 104857600
+test $(stat $MFILENAME) -ge 104857600
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 sudo rm $MFILENAME
 elif
-test $(stat -c%s $MFILENAME) -eq 0
+test $(stat $MFILENAME) -eq 0
+#test $(stat -c%s $MFILENAME) -eq 0
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
@@ -261,15 +262,16 @@ echo ""
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
 if
-test $(stat -c%s $PFILENAME) -ge 104857600
-#test $(stat -c%s $PFILENAME) -ge 100m
+#test $(stat -c%s $PFILENAME) -ge 104857600
+test $(stat $PFILENAME) -ge 104857600
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 sudo rm $PFILENAME
 elif
-test $(stat -c%s $PFILENAME) -eq 0
+test $(stat $PFILENAME) -eq 0
+#test $(stat -c%s $PFILENAME) -eq 0
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
