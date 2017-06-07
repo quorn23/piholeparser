@@ -43,6 +43,7 @@ FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
 ORIGFILE="$FNAME".orig.txt ## Original File
 MFILENAME="$FNAME".mirror.txt ## Mirror file
+MGFILENAME="$FNAME" ## Mirror file github split
 PFILENAME="$FNAME".parsed.txt ## parsed file
 PRE="$FNAME".pre.txt ## File in
 POST="$FNAME".post.txt ## File Out
@@ -87,8 +88,6 @@ echo ""
 ## Copy original, one for mirror, one for next step
 sudo cp $ORIGFILE $MFILENAME
 
-##test $(stat -c%s $MFILENAME) -eq 0
-#test $(stat -c%s $MFILENAME) -ge 104857600
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
 if 
@@ -96,8 +95,13 @@ if
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
-printf "$red"     "Mirror File Too Large For Github. Deleting."
+printf "$red"     "Mirror File Too Large For Github. deleting."
 sudo rm $MFILENAME
+#printf "$red"     "Mirror File Too Large For Github. Spliting."
+#sudo mv $MFILENAME $MGFILENAME
+#sudo split -b 100m $MGFILENAME $MGFILENAME
+#sudo mv "$MGFILENAME"* /etc/piholeparser/mirroredlists/
+#sudo rm $MGFILENAME
 elif
 [ "$MFILESIZE" -eq 0 ]
 then
@@ -262,8 +266,6 @@ echo ""
 printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
-#test $(stat -c%s $PFILENAME) -ge 104857600
-#test $(stat -c%s $PFILENAME) -eq 0
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
 if
