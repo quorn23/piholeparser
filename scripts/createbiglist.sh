@@ -44,8 +44,6 @@ sort -u $TEMPLIST > $BIGLIST
 echo -e "\t`wc -l $BIGLIST | cut -d " " -f 1` lines after deduping"
 sudo rm $TEMPLIST
 
-#test $(stat -c%s $BIGLIST) -eq 0
-#test $(stat -c%s $BIGLIST) -ge 104857600
 ## Github has a 100mb limit and empty files are useless
 BFILESIZE=$(stat -c%s "$MFILENAME")
 if
