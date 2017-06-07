@@ -16,12 +16,13 @@ else
 fi
 
 ## Set File Directory
-FILES=/etc/piholeparser/lists/*.lst
+FILES=/etc/piholeparser/lists/*/*.lst
 
 echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Whitelisting Domains that will be parsed."
+printf "$red"   "Note: this does not actually work,, but it's a future planned addition."
 echo ""
 
 ## Start File Loop
