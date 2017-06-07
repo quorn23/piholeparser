@@ -43,8 +43,8 @@ sudo rm $TEMPLIST
 
 ## Github has a 100mb limit and empty files are useless
 if
-#test $(stat -c%s $BIGLIST) -ge 104857600
-test $(stat -c%s $BIGLIST) -ge 100m
+test $(stat -c%s $BIGLIST) -ge 104857600
+#test $(stat -c%s $BIGLIST) -ge 100m
 then
 echo ""
 #printf "$red"     "Parsed File Too Large For Github. Deleting."
