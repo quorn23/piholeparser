@@ -25,6 +25,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3877
 myscore.com.ua###lsid-window-mask
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5099
+mobil.berliner-zeitung.de##.whatsapp-widget-blz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5132
 snipz.de##.wpb_wrapper > div.sidebar > div.widget_text[id^="text-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5110
@@ -281,6 +283,8 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+liberation.fr##.flow-bloc-subscription
+liberation.fr##.subscription-bloc
 wunderground.com##.alert-forecast
 stuttgarter-zeitung.de##a[href^="http://www.stuttgarter-zeitung.de/inhalt.stz-newsletter-"]
 makeuseof.com##.subscribe-form
@@ -418,6 +422,7 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
+bronydom.net###AltBlocked
 wochenanzeiger-muenchen.de##.alert-danger.alert
 hardware.info#@#.advertorial
 bestradio.fm##.adb
@@ -2450,6 +2455,10 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+eindelijkglasvezel.nl##.notice-bar
+ft.com##.o-cookie-message
+mirror.co.uk##.mod-cookiepolicy
+marktjagd.de##.mj-js-container-cookie-alert
 bird-sounds.net,british-birdsongs.uk,canti-uccelli.it,canto-pajaros.es,chant-oiseaux.fr,deutsche-vogelstimmen.de,fuglelyder.net,fuglestemmer.dk,fågelsång.se,glosy-ptakow.pl,lintujen-äänet.net,vogelgeluid.nl###CookiePopup
 dkms.de##body > #sliding-popup.sliding-popup-bottom
 microsoft.com###uhfCookieAlert
@@ -3419,6 +3428,13 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+ternopillive.com.ua##.spu-bg
+ternopillive.com.ua##.spu-box
+ogo.ua###aPopup
+dyvys.info##.spu-box
+dyvys.info##.spu-bg
+tv5.zp.ua###social-community-popup
+kl-ruppert.de##.kl-start__sticky-newsletter
 seattletimes.com##.facebook-modal
 theonion.ru##.fbpopup
 theonion.ru###bodypopup
@@ -4489,6 +4505,7 @@ habrahabr.ru##.company_widget > .announce
 cnews.ru##.video.img-block
 ||filearchive.cnews.ru/*promo$media,domain=cnews.ru
 !
+auto.ru##.promo-listing-parts_js_inited
 bitmakler.com##div[onmouseover^="view_babco"]
 thinkster.io###carbonhold
 spy-soft.net##.e3lan-top > a[rel="nofollow"] > img
@@ -4626,16 +4643,14 @@ imslp.org#%#AG_onLoad(function(){var b=document.getElementById("sm_dl_wait");if(
 ||cdn.web.tv/asset/javascripts/smothScroll.min.js
 ||serialuk.net/js/copyright.js
 !--- CSS ---
-lavka-invaitov.ru#$#body * { -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; }
-kino-zal.net#$#body * { -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; }
-kinogo-online.online#$#body * { -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; }
+kinogo-net-2017.ru,kinogo-online.online,kino-zal.net,lavka-invaitov.ru#$#body * { -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; }
 !--- JS ----
 7lafa.com#%#AG_onLoad(function() {setTimeout(function(){document.getElementsByTagName('body')[0].removeAttribute("oncopy"); document.getElementsByTagName('body')[0].removeAttribute("onselectstart");}, 300);});
 antenasport.eu,bilenlerkabilesi.com,half-musiq.blogspot.com#%#Object.defineProperty(document, 'onmousedown', { get: function() { return; } });
-bigcinema-online.net,bigcinema-tv.club,gidonline-kino.club,kinogo-2017.com,kinogo-720.club,kinogo.club,kinogoonline.club,kinoprofi.su,season-var.net,topcinema.tv,kinogo2.net#%#Object.defineProperty(window, 'getSelection', { get: function() { return; } });
+bigcinema-online.net,bigcinema-tv.club,gidonline-kino.club,kinogo-2017.com,kinogo-720.club,kinogo.club,kinogoonline.club,kinoprofi.su,season-var.net,topcinema.tv,kinogo2.net,kino-kingdom.com#%#Object.defineProperty(window, 'getSelection', { get: function() { return; } });
 bobfilm.online#%#AG_onLoad(function() { document.body.removeAttribute('oncopy'); });
 bodrumgundem.com,ceplik.com,dijitalx.com,ilife97.com,teknokasif.com,z-news.link,stupdroid.com#%#Object.defineProperty(document, 'oncontextmenu', { get: function() { return; } });
-cheater-top.ru,discussio.ru,kino-zal.net,tvfru.ru,kinogoonline.club#%#AG_onLoad(function() { document.onselectstart=function(){return true}; document.oncontextmenu=function(){return true}; });
+kinogo-net-2017.ru,cheater-top.ru,discussio.ru,kino-zal.net,tvfru.ru,kinogoonline.club#%#AG_onLoad(function() { document.onselectstart=function(){return true}; document.oncontextmenu=function(){return true}; });
 dijitalx.com#%#Object.defineProperty(window, 'disableEnterKey', { get: function() { return; } });
 f4freesoftware.com#%#Object.defineProperties(document,{oncontextmenu:{set:function(){}},ondragstart:{set:function(){}}});
 half-musiq.blogspot.com,bilenlerkabilesi.com#%#Object.defineProperty(document, 'onselectstart', { get: function() { return; } });

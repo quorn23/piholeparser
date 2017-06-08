@@ -5,7 +5,7 @@
 ! Expires: 2 days
 ! Homepage: https://zoso.ro/rolist/
 ! Email: mail@zoso.ro
-! Last modified: 28 Mai 2017 18:00 UTC
+! Last modified: 7 Iunie 2017 08:00 UTC
 
 !hosts
 ||01.creativecdn.com^
@@ -181,7 +181,6 @@ revista22.ro##IMG[src*="banner"]
 ||vocea.biz/wp-admin/admin-ajax.php
 ||web3.protv.ro/assets/protv/widgets/newsletter.swf?
 ||ziuaconstanta.ro/images/banners/*
-||cdn.biziday.ro/wp-content/uploads/2016/12/stiri-verificate.jpg
 ||media.hotnews.ro/media_server1/image-2010-03-18-7044595-0-comunicat-presa.jpg
 
 !div rules
@@ -210,7 +209,10 @@ antena3.ro##DIV.spliter.listing-stiri *
 antena3.ro##STYLE + * + * + * > .elements
 automarket.ro###box_alert_container *
 avocatnet.ro###parteneri
-biziday.ro##.wraper > .left.leftCol > .header_small_pic
+biziday.ro##DIV#tdv-sidebar > *
+biziday.ro##IMG\[src="http://cdn.biziday.ro/wp-content/themes/biziday/images/app-desktop.jpg"]
+biziday.ro##IMG\[src="http://cdn.biziday.ro/wp-content/uploads/2017/02/bt-mic-sidebar.jpg"]
+biziday.ro##IMG\[src="http://cdn.biziday.ro/wp-content/uploads/2017/04/EMBA_bucharest380x220_0603.gif"]
 blackfridayromania.net##a[href^="http://bit.ly/"]
 blackfridayromania.net##a[href^="https://goo.gl/"]
 cancan.ro###column_3
@@ -298,3 +300,4 @@ wall-street.ro##DIV#qra_popup_wrapper *
 yoda.ro##a[href^="http://bit.ly/"]
 yoda.ro##a[href^="https://goo.gl/"]
 zf.ro###bula-ultima-ora
+biziday.ro##.img-responsive

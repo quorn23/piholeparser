@@ -1,11 +1,11 @@
 [Adblock Plus 2.8.2]
-! Checksum: RcVNbavH9ZrysLEJgw9r7A
+! Checksum: 8GeW7bm7NFAS2gtLFjs35g
 ! Homepage: https://github.com/k2jp/abp-japanese-filters/
 ! Title: ABP Japanese filters (ONLY FOR Japanese and experienced users: READ Support Policy)
 ! Expires: 6 hours
-! Version: 201706011040
+! Version: 201706081020
 !
-! Last modified: 2017-06-01 10:40 JST(UTC+0900)
+! Last modified: 2017-06-08 10:20 JST(UTC+0900)
 ! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
 ! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
 ! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -2498,6 +2498,7 @@
 ! Commented out duplicated filters, Feb 26, 2012
 ! /js_in_text_ads?
 ! /js_overlay_ad?
+/jsredir?$document
 /jstag^
 /jwd-$script
 /jwd.$script
@@ -2656,6 +2657,7 @@
 /publisher/*$third-party
 /Publishers/*$third-party
 /Publishers/*?random=
+/PVCountCmd?
 /rainman.$script,domain=livedoor.jp
 /rajic.$subdocument
 /rakulog.$script
@@ -6971,6 +6973,7 @@ _yahooads_
 ||aebn.net^$third-party
 ||aeriagames.com^$popup
 ||aerontre.com^
+||af-110.com^$third-party
 ||af-board.com^$third-party
 ||af-market.com^$third-party
 ||af-system.net^$third-party
@@ -7585,6 +7588,7 @@ _yahooads_
 ||cettenu.com^
 ||cettenus.com^
 ||cha-f.com^$third-party
+||challenging.jp^$third-party
 ||champions-quiz.$popup
 ||chango.com^$third-party
 ||channelintelligence.com^$third-party
@@ -8528,6 +8532,7 @@ _yahooads_
 ||globosearcher.ru^
 ||globoverter.ru^
 ||glubopa.ru^
+||gmo-media.jp^$third-party
 ||gmodmp.jp^
 ||gmossp-sp.jp^$third-party
 ||gnavi.co.jp/analysis/
@@ -9882,6 +9887,7 @@ _yahooads_
 ||pvcnt.okwave.
 ||tracking.okwave.
 ||olizyr.com^
+||omni7.jp^$third-party
 ||omnitagjs.com^
 ||omtrdc.net^
 ||on-se-mate.com^
@@ -10951,6 +10957,7 @@ _yahooads_
 ||thewheelof.com^
 ||thinkscore.com^$popup
 ||thisadsfor.us^
+||threewave.jp^$third-party
 ||thumbcropper.com^
 ||thumpac.com^
 ||ticketchic.com^
@@ -11299,6 +11306,10 @@ _yahooads_
 ||vkontakte.ru^$domain=~vk.com|~vkontakte.ru
 ||vmi.it^$popup
 ||voicefive.com^$third-party
+||*voluum.com^
+||*voluum.com^$document
+||voluum*.com^
+||voluum*.com^$document
 ||votre-aide-pret.com^
 ||votre-devis-credit.com^
 ||voyeurparadize.com^

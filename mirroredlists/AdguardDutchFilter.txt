@@ -1368,6 +1368,9 @@ omroepbrabant.nl#$#.ad-banner-container { position: absolute!important; left: -3
 !
 ! The content replacement rules
 !
+! https://forum.adguard.com/index.php?threads/tv2-no.22252/
+||tv2.no/*/homadConfig*.json$replace=/"enabled": true\,/"enabled":false\,/i,important
+||svonm.com/*config.json$replace=/"enabled": true\,/"enabled":false\,/i,important
 !---------------------------------------------------------------------------!
 !-------------- Rules for specific websites --------------------------------!
 !---------------------------------------------------------------------------!

@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D17 
+! Version D22 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -37,6 +37,7 @@
 .advertising.com/
 .com/_/tr.ashx?r=*&loc=
 .com/ad/
+.com/adlink/
 .com/ads-
 .com/ads/
 .com/advert/
@@ -189,6 +190,7 @@
 /www-search-ads.
 ?[AQB]&ndh=
 ?action=log_
+?adW=300&adH=250&
 ?instream_ad=
 AQB=1&ndh=
 _204?*_ad$image
@@ -249,6 +251,7 @@ images/ads/
 ||adunit.
 ||advarkads.com^
 ||advertising.
+||advertserve.com^$image
 ||adzerk.net^
 ||affinity.com^
 ||agilone.com^
@@ -944,7 +947,9 @@ eventcinemas.com.au,eventcinemas.co.nz,thedailysheeple.com##.ads
 horrornews.net##DIV[id*="cedato"]
 mirror.co.uk##.top-slot
 movieweb.com,nerdist.com##DIV[class^="banner"]
+nzherald.co.nz##.ad-container
 pixabay.com##DIV[class*="sponsored"]
+theyeshivaworld.com##DIV[class*="_ad_"]
 tomshardware.com##DIV[id$="leaderboard"]
 twitter.com,wnd.com,youtube.com##DIV[class*="prom"]
 washingtonpost.com##DIV[class$="leaderboard"]
@@ -980,7 +985,7 @@ youtube.com##DIV[class*="-ads-"]
 @@||gigya.com^$~third-party,domain=cdns.au1.gigya.com
 @@||googletagservices.com^$script,domain=foxnews.com|threenow.co.nz|zdnet.com
 @@||ifmnwi.club^$xmlhttprequest,domain=cbsnews.com
-@@||imrworldwide.com/v60.js$domain=nzherald.co.nz|threenow.co.nz
+@@||imrworldwide.com/v60.js$domain=threenow.co.nz
 @@||logentries.com^$domain=player.hearstdigitalstudios.com
 @@||parsely.com^$script,domain=dailystar.co.uk|express.co.uk
 @@||s.youtube.com/api/stats/playback?
