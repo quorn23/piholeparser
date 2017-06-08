@@ -21,6 +21,22 @@ else
 fi
 
 if 
+ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/*.txt
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/*.txt
+else
+:
+fi
+
+if 
 ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
 then
 sudo rm /etc/piholeparser/compressedconvert/*.7z
