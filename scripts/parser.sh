@@ -118,7 +118,7 @@ fi
 ####################
 
 ## Copy for Pre-Processing
-sudo cp $ORIGFILE $PRE
+sudo mv $ORIGFILE $PRE
 
 echo ""
 printf "$green"   "Checking for domain requirements"
