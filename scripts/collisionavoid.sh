@@ -12,6 +12,22 @@ echo ""
 printf "$green"   "Clearing the Path."
 
 if 
+ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/*.txt
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/*.txt
+else
+:
+fi
+
+if 
 ls /etc/piholeparser/lists/*.txt &> /dev/null; 
 then
 sudo rm /etc/piholeparser/lists/*.txt
