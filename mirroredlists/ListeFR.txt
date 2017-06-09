@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: OSpsIqJBbo6DjtMqhzkYuQ
-! Version: 201706080532
+! Checksum: MviJovW+/T8ONcoovdvLiQ
+! Version: 201706090452
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -2241,8 +2241,6 @@ debugger:$popup
 ||downanddirty.xyz^$third-party
 ||download-pic.com^$third-party
 ||dreamstore.ch^$third-party
-||ds1.nl^$third-party
-||dt51.net^$third-party
 ||duapps.com^$third-party
 ||duporno.biz^$third-party
 ||dustin5043.fr^$third-party
@@ -3683,8 +3681,14 @@ debugger:$popup
 ||vasoelv.xyz^$third-party
 ||wpognfds.xyz^$third-party
 ||zrefmeee.xyz^$third-party
-! yavli.com
-!
+! daisycon.com
+/*/*/*/index.php?wi=*&ws=$image,third-party
+||ds1.nl^$third-party
+||dt51.net^$third-party
+||l1b.nl^$third-party
+||lt45.net^$third-party
+||newstat.net^$third-party
+||static-dscn.net^$third-party
 !
 !-------------------- Annonceurs popup --------------------!
 !
@@ -9553,6 +9557,11 @@ toutcash.com/images/bandeau-
 ##[id^="ligatus-"]
 ##[id^="ligatus_"]
 ##[id^="pub_dart_"]
+##[onclick*="/rel/index.cfm?RST="]
+##[onclick*="/rel/index.cfm?TAD="]
+##[onclick*="FriendlyDuck.com/AF_"]
+##[onclick*="duckcash.eu/AF_"]
+##[onclick*="friendlyduck.com/AF_"]
 ##[onclick*="http://www.affbuzzads.com/affiliate/"]
 ##[slot-id^="div-gpt-ad-"]
 ##a[href*="%2Fapi%2Fmpup%2F"]
@@ -9720,7 +9729,6 @@ toutcash.com/images/bandeau-
 ##a[href^="https://store.mspy.com/affiliate.php"] > img
 ##a[href^="https://www.g2a.com/r/"] > img
 ##a[onclick*="FriendlyDuck.com"]
-##a[onclick*="duckcash.eu/AF_"]
 ##a[onclick^="CustomWLAdServer."]
 ##a[target="_blank"][href*="/buy-vpn?"] > img
 ##div[id^="adsatlas-"]
@@ -12780,6 +12788,3 @@ satelliweb.com,telesatellite.com##a[target="_new"] > img
 ||underlaymentgallstone.net^$third-party
 ||xn--economya-g1a.com^$third-party
 !
-/\/[a-z0-9_]+\.[a-z0-9-]+\.[a-z]{2,}\/.*?\w{30,}/$domain=exclusivomen.com|gentside.com|gentside.com.br|gentside.de|maxisciences.com|ohmirevista.com|ohmymag.com|ohmymag.com.br|ohmymag.de|simplyvoyage.com
-/\/[a-z0-9_]+\.[a-z0-9-]+\.[a-z]{2,}\/.*[a-zA-Z0-9]{40,}/$object-subrequest,domain=wat.tv
-!@@/\.palmshapednontransferable\.com/[a-zA-Z0-9]{50,150}$/$image,xmlhttprequest,domain=exclusivomen.com|gentside.com|gentside.com.br|gentside.de|maxisciences.com|ohmirevista.com|ohmymag.com|ohmymag.com.br|ohmymag.de|simplyvoyage.com

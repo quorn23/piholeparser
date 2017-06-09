@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: /ns3pTxVcY5ypDpdY+ujdQ
+! Checksum: Uczjhk4RwsGNB7wPHfoA0Q
 ! Title: EasyList Hebrew
-! Last modified: 01 Jun 2017 08:31 UTC
+! Last modified: 08 Jun 2017 17:51 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/EasyListHebrew
 ! Licence: https://easylist.to/pages/licence.html
@@ -301,7 +301,7 @@
 ||ad.doubleclick.net/favicon.ico?ad=$image,important,redirect=2x2-transparent.png,domain=ynet.co.il
 ||pagead2.googlesyndication.com/pagead/js$script,important,redirect=noopjs,domain=ynet.co.il
 !
-BannerScripts.js$script,domain=mynetbatyam.co.il|mynethadera.co.il|mynetherzliya.co.il|mynethodhasharon.co.il|mynetholon.co.il|mynetjerusalem.co.il|mynetkfarsaba.co.il|mynetkibbutz.co.il|mynetnetanya.co.il|mynetpetahtikva.co.il|mynetraanana.co.il|mynetrehovot.co.il|mynetrishon.co.il|mynetroshhaayin.co.il
+/BannerScripts.js?$script,domain=mynetbatyam.co.il|mynethadera.co.il|mynetherzliya.co.il|mynethodhasharon.co.il|mynetholon.co.il|mynetjerusalem.co.il|mynetkfarsaba.co.il|mynetkibbutz.co.il|mynetnetanya.co.il|mynetpetahtikva.co.il|mynetraanana.co.il|mynetrehovot.co.il|mynetrishon.co.il|mynetroshhaayin.co.il
 !
 /CdaMarketTextlinks_
 /CdaMarketingLink/*
@@ -1013,11 +1013,13 @@ mako.co.il###ZA_CAMP_SLIDEIN_CONTAINER
 mako.co.il###hp_bottom_strip
 mako.co.il###mysupermarketcontainer
 mako.co.il###neoTopStrip
+mako.co.il##.bannerClose
 mako.co.il##.pzm_banners
 mako.co.il##.sidebar_pic
 mako.co.il##div[class*="mainRoot"] > div:nth-child(4) > div[class*="ordering"] > div:nth-child(6)
 mako.co.il##div[class*="teaserSmall"]:nth-child(3)
 mako.co.il##iframe[src*="javascript:document.write('"]
+mako.co.il##script:inject(abort-on-property-read.js, window.btoa)
 mapa.co.il###adSenseOnMap
 mapa.co.il###headerContenetBanner
 mapa.co.il##.bannerPlace
@@ -1270,6 +1272,7 @@ yad2.co.il##th[style="background: #505D6A; font-size: 13px; font-family: arial; 
 yeshanews.com###sideban
 ynet.co.il###ads\.newspaper
 ynet.co.il###ads\.top\.2
+ynet.co.il##.CAATVcompAdvertiseTv
 ynet.co.il##.art_tkb_talkback_advert
 ynet.co.il##.pplus_hdr_ad
 ynet.co.il##[class*="MarketingCarousel"]

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: gOl7pR8GpYgCu7NsAoNJcg
+! Checksum: NkiEzxcZtZKFWP4vNyzXlA
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 7 Jun 2017
+! Updated: 8 Jun 2017
 ! This list expires after 2 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -711,6 +711,7 @@ youporn.com###adblock_1
 @@/js/advert.js$script,~third-party
 @@/js/advertisement.js$script,~third-party
 @@/plugins/ad-blocking-detector/*$script,~third-party
+@@/wp-content/*/adframe.js$script,~third-party
 @@/wp-content/*/ads.js$script
 @@/wp-content/*/advert.js$script
 @@/wp-content/*/advertisement*.js$script
@@ -719,6 +720,7 @@ youporn.com###adblock_1
 @@||abcnews.com/assets/js/adblocker.js
 @@||ads.mic.com/host.js
 @@||adxprts.com^*/ads.js$script
+@@||akamaihd.net^*/ads.js
 @@||akamaized.net^*/ads.js
 @@||anandabazar.com^*/gads.js
 @@||animeid.io/static/ads.js
@@ -821,11 +823,12 @@ youporn.com###adblock_1
 @@||newsmax.com/js/ads.adblock.js
 @@||nexusmods.com^*/advert.js
 @@||ngenix.net^*/ads.js
-@@||nzherald.co.nz^*/ads.js
+@@||nzherald.co.nz^*/ad/$script
 @@||oddee.com/js/advertising.js
 @@||onionstatic.com^*/ad-block-check.jpg
 @@||ookla.com/www/test.js
 @@||ora.tv^*/adframe.js
+@@||over-blog-kiwi.com^*/ads.js
 @@||pcgameshardware.de/common/deliverad/$script
 @@||photobucket.com^*/ads.js
 @@||player.h-cdn.com/ads.js
@@ -890,6 +893,7 @@ youporn.com###adblock_1
 @@||weather.com^*/pubads.js
 @@||websking.com/static/js/advertisement.js
 @@||wired.co.uk/static/js/ads.js
+@@||wmp.media/ads/$script
 @@||womenshealthmag.com^*ad$script
 @@||wtop.com/advertisement.js
 @@||xmovies8.tv/themes/_js/adsbygoogle.js
@@ -936,6 +940,8 @@ squidboards.com##.top_block
 @@||bludv.com^$generichide
 ! theatlantic.com
 ||theatlantic.com/assets/static/b/theatlantic/js/vendors.min.*.js
+! hardware.info
+hardware.info#@#.advertorial
 ! flashback.org
 @@||flashback.org/ads/
 ! adage.com
@@ -944,6 +950,9 @@ adage.com###shareme
 adage.com##.article-ad
 adage.com##.nav-social
 adage.com##.vjs-icon-share
+! vortez.net 
+@@||vortez.net/ads.js
+@@||vortez.net^$generichide
 ! picload.org
 @@||picload.org/image/$image
 ! coderexample.com
@@ -1437,9 +1446,17 @@ thefreedictionary.com,freethesaurus.com###w1 > .w2 > div:first-child
 @@||zarabiajnaokazjach.pl^$generichide
 @@||zive.cz^*/advertisment.js
 ! Italian
+@@||androidiani.com^$generichide
 @@||archivio.corriere.it^$generichide
+@@||calciomercato.com^$generichide
+@@||dasolo.co^$generichide
+@@||fkadb.bid/*ad$script,domain=calciomercato.com
+@@||italyshare.club/ad*$script,domain=dasolo.co
 @@||ivg.it/sponsorbanners/spcjs.js
 @@||ivg.it^$generichide
+@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=zeusnews.it|faqmozilla.org
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zeusnews.it|faqmozilla.org
+@@||zeusnews.it^$generichide
 !
 ! Intl Specific elements hiding by a generichide
 business.dk##.article-social
@@ -1459,7 +1476,7 @@ vaughnlive.tv##.abvsDynamic
 ! ---------- Whitelisting rules ----------
 !
 ! test filter for google/gpt
-@@||googletagservices.com/tag/js/gpt.js$domain=techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
+@@||googletagservices.com/tag/js/gpt.js$domain=hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
 ||googletagmanager.com/ns.html$third-party
 ||googletagservices.com/tag/js/gpt.js$third-party
 !
