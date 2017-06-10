@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: VDohFKkRarCj0QuPbqFbxw
-! Version: 201706090442
+! Checksum: EPsqprdF2tiYrwSMB8+ODQ
+! Version: 201706100442
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 09 Jun 2017 04:42 UTC
+! Last Modified: 10 Jun 2017 04:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -13,8 +13,8 @@
 ! or via e-mail (easylist.china@gmail.com).
 !
 !-----------------------General advert blocking filters-----------------------!
-.cc/js/ads/
 -880-80-4.jpg
+.cc/js/ads/
 .cn/ads/
 .cn/js/ads/
 .co/js/ads/
@@ -548,17 +548,15 @@ _popAds.
 ##a[href*="/?Intr="]
 ~ac.uk##a[href*="/?aff="]
 ##a[href*="/?intr="]
-##img[src$="/2016-0114-700X70.gif"] ~ A[onmouseover="this.style.background='#DEF5CD';"]:nth-child(-n+226)
-##img[src$="/2016-0114-700X70.gif"] ~ SPAN[class^="f"] > span > A[onmouseover="this.style.background='#DEF5CD';"]:first-child:last-child
 ##body[onload*="u()"] > #x
 ##div#ad_id
 ##div[id^="ad_thread"]
+##img[src$="/2016-0114-700X70.gif"] ~ a[onmouseover="this.style.background='#DEF5CD';"]:nth-child(-n+226)
+##img[src$="/2016-0114-700X70.gif"] ~ span[class^="f"] > span > a[onmouseover="this.style.background='#DEF5CD';"]:first-child:last-child
 ##script + #rbbox
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .cn/show?id=$script,third-party
-||acasys88.cn^
-||qytyf.com^
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
 .com/code.php?z=$script,third-party
@@ -898,6 +896,7 @@ ubmcmm.baidustatic.com
 ||a7shun.com^$third-party
 ||a907907.com^
 ||a9377j.com^
+||acasys88.cn^
 ||acgbase.com^$third-party
 ||acs86.com^$third-party
 ||acwgf.com^
@@ -1219,6 +1218,7 @@ ubmcmm.baidustatic.com
 ||founseezb.cn^
 ||fqtra.com^
 ||fst360.com^
+||fsyzcs.com^
 ||fthcz.com^
 ||fu68.com^
 ||fujianryt.com^
@@ -1650,6 +1650,7 @@ ubmcmm.baidustatic.com
 ||qxjdlf.com^
 ||qxxys.com^
 ||qyctj.com^
+||qytyf.com^
 ||qzdfc.com^
 ||qzkxt.com^
 ||rayli.com.cn^$third-party
@@ -3358,7 +3359,7 @@ mg*.6park.com/img/$image
 ||btbtt.*/upload/400x75_
 ||btbtt.*/upload/lilaixy.gif
 ||btbtt.*/view/image/backimg.jpg
-||btbtt.*/view/image/QT_9198.jpg
+||btbtt.*/view/image/QT_
 ||btcherry.org/adm.js
 ||btexe.cc/static/js/
 ||btks.me/ac/
@@ -4592,6 +4593,7 @@ mg*.6park.com/img/$image
 ||javazhijia.com/skin/bysj.jpg
 ||javjunkies.com/FL$subdocument
 ||javlibrary.com/js/bnr_
+||jb51.net/good/soft.js
 ||jb51.net/js/beitou.js
 ||jb51.net/js/ggtop.js
 ||jb51.net/skin/office/js/botad.js
@@ -5230,6 +5232,7 @@ mg*.6park.com/img/$image
 ||property.hk/js/adside.js
 ||ps123.net/MyFile/
 ||pstatp.com/site/reads-sdk/*.js
+||pstatp.com/toutiao/pic_putting/dist/pic.
 ||pt80.net/source/plugin/fysq_ad/
 ||ptbus.com/s.js
 ||ptfish.com/*/ad$image,object
@@ -5554,6 +5557,7 @@ mg*.6park.com/img/$image
 ||sinaimg.cn/large/e6b79078ly1fdwzlienvfg20uk01odg0.gif
 ||sinaimg.cn/large/ed5e6a1dly1fdl3orv4u9j20r808cq6o.jpg
 ||sinaimg.cn/mw1024/006NYgrsgy1ffahk0lf8og30i204677m.gif
+||sinaimg.cn/mw1024/006rogFpgy1ffpm4yksl5g30qo02igyn.gif
 ||sinaimg.cn/mw1024/c00f4a08gw1eu67cnu8xqg20l4028gr1.gif
 ||sinaimg.cn/mw690/7d1c8e96gw1ehjblxlj39j206y06ydgi.jpg
 ||sinaimg.cn/mw690/a1916e89gw1dye4d6qvyaj.jpg
@@ -6345,7 +6349,6 @@ mg*.6park.com/img/$image
 ||zzzyk.com/js/
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
-map.baidu.com##.search-item[data-stat-code="poisearch.damoce.item"]
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -7639,7 +7642,7 @@ chcj.net,yixingjia.com###wp > table[width="960"]
 taoguba.com.cn###wrap_footer > div[style*="960"]
 ganpapa.com###wrapper + div
 gdzjdaily.com.cn###wrapper > div[style^="margin-top:6px;"]
-btbtt.co###wrapper2 > .width
+btbtt.co,btbtt.me,btbtt.net###wrapper2 > .width
 wuleba.com###wulebashowcpc
 k.sogou.com###wx_m
 huanqiu.com###wxhz1
@@ -9518,6 +9521,7 @@ yeeyi.com##.sd.pph > .mbm.hm
 xianzhenyuan.cn##.sd_ad
 pediy.com##.search
 baidu.com##.search-aside-adWrap
+map.baidu.com##.search-item[data-stat-code="poisearch.damoce.item"]
 hao.rising.cn##.search-right
 dict.cn##.search-right-ad5
 dict.cn##.search-right-ad7
@@ -9954,7 +9958,7 @@ we.poppur.com##.wrap > div[style="height:112px"]
 start.firefoxchina.cn##.wrap > div[style]:last-child
 bbs.feng.com##.wrap.fl_row
 paipai.fm,paipaitxt.com##.wrapbg
-btbtt.co##.wrapper_bg_c
+btbtt.co,btbtt.me,btbtt.net##.wrapper_bg_c
 image.baidu.com##.wrapper_dot_box.dot_black
 wallstreetcn.com##.wscn-page-ad
 taoguba.com.cn##.wz_ad
@@ -10243,7 +10247,6 @@ pixnet.net##div[class*="-ad-"]
 ganji.com##div[class*="-recommend"]
 ganpapa.com##div[class*="_9cb0d"]
 makepolo.com##div[class*="_ad"]
-steamcn.com##DIV[class*="_excited_"]
 hupu.com##div[class*="ad200-200"]
 hupu.com##div[class*="ad240-200"]
 hupu.com##div[class*="ad728-90"]
@@ -10252,6 +10255,7 @@ zhibo8.cc##div[class*="advert"]
 efu.com.cn##div[class*="banner-"]
 qinbing.cn##div[class*="gg"]
 chinatimes.com##div[class*="googlead_"]
+steamcn.com##div[class*="gou_"]
 wenku.baidu.com##div[class*="tiger-"][class*="-dialog"]
 sspai.com##div[class*="widget-color-bns"] > .colors:first-child:last-child
 iciba.com##div[class="ad_list"]
@@ -10887,6 +10891,7 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@.adserver.$domain=litv.tv
+@@||media.jd.com/static/*/ad
 @@.com/adv/$domain=my.ctrip.com
 @@.gif#$domain=tgfcer.com|wgun.net
 @@.png#$domain=9zvip.net|club.tgfcer.com

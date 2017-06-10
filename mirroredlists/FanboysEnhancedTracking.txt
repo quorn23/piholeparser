@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: NkiEzxcZtZKFWP4vNyzXlA
+! Checksum: CiYCLfhYhzIBWs3NhUwjdw
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 8 Jun 2017
+! Updated: 10 Jun 2017
 ! This list expires after 2 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -404,7 +404,7 @@ nautil.us###adpayload
 ! ---------- Personal Filters ------
 !
 ###topstuff > #wmxmsg
-##IFRAME[src^="https://isupportjournalism.com/"][style]
+##iframe[src^="https://isupportjournalism.com/"][style]
 @@||thepiratebay.org^*/details.js|
 @@||thepiratebay.org^*/effects.js|
 @@||thepiratebay.org^*/jquery.min.js|
@@ -550,6 +550,7 @@ youporn.com###adblock_1
 ||5min.com/flashcookie/
 ||5min.com/Handlers/FiveminCookieCache.ashx
 ||algorithmia.com^$third-party
+||areyouahuman.com^$third-party
 ||avgthreatlabs.com^$third-party
 ||badge.clevergirlscollective.com^$third-party
 ||bbb.org/logo/$third-party
@@ -713,6 +714,7 @@ youporn.com###adblock_1
 @@/plugins/ad-blocking-detector/*$script,~third-party
 @@/wp-content/*/adframe.js$script,~third-party
 @@/wp-content/*/ads.js$script
+@@/wp-content/*/adsbygoogle.js$script
 @@/wp-content/*/advert.js$script
 @@/wp-content/*/advertisement*.js$script
 @@/wp-content/*/show-ads.js$script
@@ -790,13 +792,14 @@ youporn.com###adblock_1
 @@||hardwareheaven.com^*/advertisement.js
 @@||hardwarezone.com.sg/js/ads.js
 @@||healthline.com^*/advertising.js
-@@||ibtimes.co.uk/js/ads.js
+@@||ibtimes.co.uk^*/ads.js
 @@||idg.com.au/adsmin/show_ads.js
 @@||imgur.com/min/advertising.js
 @@||inc.com/js/ads.js
 @@||infojobs.com.br^*/adframe.js
 @@||integritystat.com^*/ads.js
 @@||intoday.in^*/advert$script
+@@||koditalk.org/uploads/*adframe.js
 @@||ladbible.com^*/ads.js
 @@||lamcdn.net^*/advert-$script
 @@||latin.it/banner.php
@@ -868,6 +871,7 @@ youporn.com###adblock_1
 @@||themarker.com/dclk/dfp/$script
 @@||theoutline.com/ads.js
 @@||therse.info/popunder.gif$image
+@@||thestranger.com^*/ads.js
 @@||tnwcdn.com/assets/js/advertising.js$domain=thenextweb.com
 @@||townnews.com^*advertisements.js$script
 @@||tradera.com/fusion/check?$xmlhttprequest
@@ -940,6 +944,15 @@ squidboards.com##.top_block
 @@||bludv.com^$generichide
 ! theatlantic.com
 ||theatlantic.com/assets/static/b/theatlantic/js/vendors.min.*.js
+! smitedatamining.com
+@@||smitedatamining.com^$generichide
+smitedatamining.com###cookie-law-info-again
+smitedatamining.com###cookie-law-info-bar
+smitedatamining.com###odyssey-banner
+smitedatamining.com##.author-social
+smitedatamining.com##.et_social_sidebar_networks
+smitedatamining.com##.share-post
+smitedatamining.com##.social-icons
 ! hardware.info
 hardware.info#@#.advertorial
 ! flashback.org
@@ -953,6 +966,10 @@ adage.com##.vjs-icon-share
 ! vortez.net 
 @@||vortez.net/ads.js
 @@||vortez.net^$generichide
+! spaste.com
+@@||spaste.com/ads/ads.html
+@@||spaste.com/ads/ads.jpg
+@@||spaste.com^$generichide
 ! picload.org
 @@||picload.org/image/$image
 ! coderexample.com
@@ -988,6 +1005,13 @@ clubic.com##.OUTBRAIN
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=new-skys.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=new-skys.net
 @@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=new-skys.net
+! hax
+@@||haxcolors.com/js/advertisement.js
+@@||haxcolors.com^$generichide
+@@||haxmaps.com/js/advertisement.js
+@@||haxmaps.com^$generichide
+@@||haxrec.com/js/advertisement.js
+@@||haxrec.com^$generichide
 ! hqporner.com
 @@/ads.js$script,domain=mydaddy.cc
 ! shqiperiatv.com
@@ -1014,6 +1038,7 @@ hackinformer.com##[data-ad-client]
 techsini.com##.san_sticky_notice
 ! u2s.io
 @@||u2s.io^$generichide
+u2s.io##.banner-inner
 ! gamecopyworld.eu
 @@||filetarget.net/*ads.js?$script
 @@||gamecopyworld.com/*ads.js$script
@@ -1094,14 +1119,14 @@ wordsense.eu##[data-ad-client]
 ! eurogamer.net,rockpapershotgun.com,vg247.com
 @@||amazon-adsystem.com^*/getads.js$domain=eurogamer.net|rockpapershotgun.com|vg247.com
 ! pocketnow
-pocketnow.com##A DIV > IMG[src*="/wp-content/uploads/"]
-pocketnow.com##DIV + A > IMG[src*="/wp-content/uploads/"]
-pocketnow.com##IFRAME + STYLE + DIV[class]
-pocketnow.com##IFRAME[class]
-pocketnow.com##SCRIPT + A[href*="/wp-content/"]
-pocketnow.com##SCRIPT + DIV + STYLE + DIV[class]
-pocketnow.com##SCRIPT + STYLE + DIV[class]
-pocketnow.com##STYLE + STYLE + DIV[class]
+pocketnow.com##a div > img[src*="/wp-content/uploads/"]
+pocketnow.com##div + a > img[src*="/wp-content/uploads/"]
+pocketnow.com##iframe + style + div[class]
+pocketnow.com##iframe[class]
+pocketnow.com##script + a[href*="/wp-content/"]
+pocketnow.com##script + div + style + div[class]
+pocketnow.com##script + style + div[class]
+pocketnow.com##style + style + div[class]
 ! ps4news.com
 @@||ps4news.com^$script,~third-party
 ! purepc.pl
@@ -1415,7 +1440,7 @@ last.fm##div[style*="visibility:"]
 /\.techpowerup\.com/.*[a-zA-Z0-9]{13}/$image
 @@||techpowerup.com/forums/$image
 techpowerup.com##A[href][rel$="external"][target="_blank"]
-techpowerup.com##ASIDE > ARTICLE + SECTION
+techpowerup.com##aside > article + section
 ! flightradar24.com
 flightradar24.com###responsiveBottomPanel
 flightradar24.com##.noads
@@ -1442,13 +1467,17 @@ thefreedictionary.com,freethesaurus.com###w1 > .w2 > div:first-child
 @@||satcesc.com^$generichide
 @@||tvinfo.net^*/adblocker.js
 @@||webnews.bg/assets/js/ads.js
-@@||wetteronline.de^*/showAds.js
 @@||zarabiajnaokazjach.pl^$generichide
 @@||zive.cz^*/advertisment.js
+! German
+@@||lustich.de^$generichide
+@@||wetteronline.de^*/showAds.js
 ! Italian
 @@||androidiani.com^$generichide
 @@||archivio.corriere.it^$generichide
 @@||calciomercato.com^$generichide
+@@||dasolo.club*/adframe.js$script
+@@||dasolo.co/advertisement.js
 @@||dasolo.co^$generichide
 @@||fkadb.bid/*ad$script,domain=calciomercato.com
 @@||italyshare.club/ad*$script,domain=dasolo.co

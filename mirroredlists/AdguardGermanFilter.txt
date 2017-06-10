@@ -303,6 +303,8 @@ teleboy.ch#@#.adWrapper
 !
 ! Extended CSS rules
 !
+! https://forum.adguard.com/index.php?threads/4kfilme-de.22389/
+4kfilme.de##.buble-link[-ext-has='.publication-date:contains(Anzeige)']
 ! https://forum.adguard.com/index.php?threads/lvz-de.22240/
 lvz.de##ul[class^="pd"][class*="-mostviewed-ul"] > li[class^="pd"][class*="-list-accordion"][-ext-has='span:contains(Anzeige)']
 lvz.de##ul.pda-related-list > li[-ext-has='span:contains(Anzeige)']
@@ -576,6 +578,19 @@ chip.de$$article[tag-content="Anzeige |"]
 ! http://forum.adguard.com/showthread.php?8979 (#17)
 ||static.p7s1.com/vendor/webtrekk
 !
+openthesaurus.de###content > div[style="margin-top:60px; text-align: center"]
+openthesaurus.de##.resultColumn > div[style="margin-top:20px; text-align: center"]
+wissen.de##.blockbox.ad
+wissen.de##.ad_contentad
+wissen.de###block-wissen-google-ads-google-ad-block
+wissen.de##div[class]:not(.content-row-1) > * .rounded.shadow.whitebgbox.blockbox.node-teaser.node-promoted
+||twiago.com^$domain=wissen.de
+||ipw.getsurance.de^$domain=wissen.de
+deutschegrammatik20.de##.columns > [class="widget widget_text"][id^="text-2"]
+deutschegrammatik20.de###comments > [class="widget widget_text"][id^="text-2"]
+4kfilme.de##div[class*="proadszone-"]
+4kfilme.de##a[href^="http://www.4kfilme.de/amazon-angebote-"]
+4kfilme.de##.asa_product_box
 schreibweise.org###left > .box.loading
 netdoktor.de##.ad-container-desktop
 netdoktor.de##.floating-ad-content
