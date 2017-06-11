@@ -1,11 +1,11 @@
 [Adblock Plus 2.8.2]
-! Checksum: 8GeW7bm7NFAS2gtLFjs35g
+! Checksum: L3Qp6AsjaBxMw9Vbkj0z9g
 ! Homepage: https://github.com/k2jp/abp-japanese-filters/
 ! Title: ABP Japanese filters (ONLY FOR Japanese and experienced users: READ Support Policy)
 ! Expires: 6 hours
-! Version: 201706081020
+! Version: 201706102230
 !
-! Last modified: 2017-06-08 10:20 JST(UTC+0900)
+! Last modified: 2017-06-10 22:30 JST(UTC+0900)
 ! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
 ! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
 ! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -256,7 +256,7 @@
 @@||s-msft.com/Combined.*?resources=*,$script,stylesheet,domain=microsoft.com
 ! False positive with combined stylesheet with the ^ads. filter, reported via Issue Report, Sep 16, 2014
 @@||salon.com/combo/css?*&$stylesheet
-! False positive with combined JavaScript with the -ads.$domain=~retweet-ads.net filter, reported via Issue Report, Sep 16, 2014
+! False positive with combined JavaScript with the -ads. filter, reported via Issue Report, Sep 16, 2014
 @@||salon.com/combo/js?*&$script
 ! False positives with product images starting at AD- using |https:*^ad- filter, reported via issue report, Feb 2, 2014
 @@||sanwa.co.jp/product/*/AD-$image
@@ -641,12 +641,16 @@
 -adriver^
 -adriver_
 -ads-
+-ads-$document
 -ads-$popup
--ads.$domain=~retweet-ads.net
+-ads.
+-ads.$document
 -ads.$popup
 -ads^
+-ads^$document
 -ads^$popup
 -ads_
+-ads_$document
 -ads_$popup
 -adsdata-
 -adsdata.
@@ -1371,12 +1375,16 @@
 .adriver^
 .adriver_
 .ads-
+.ads-$document
 .ads-$popup
 .ads.
+.ads.$document
 .ads.$popup
 .ads^
+.ads^$document
 .ads^$popup
 .ads_
+.ads_$document
 .ads_$popup
 .adsdata-
 .adsdata.
@@ -3531,12 +3539,16 @@
 ^adrotator_
 ^adrotator_$popup
 ^ads-
+^ads-$document
 ^ads-$popup
 ^ads.
+^ads.$document
 ^ads.$popup
 ^ads^
+^ads^$document
 ^ads^$popup
 ^ads_
+^ads_$document
 ^ads_$popup
 ^ads2-
 ^ads2.
@@ -5470,12 +5482,16 @@ _adriver.
 _adriver^
 _adriver_
 _ads-
+_ads-$document
 _ads-$popup
 _ads.
+_ads.$document
 _ads.$popup
 _ads^
+_ads^$document
 _ads^$popup
 _ads_
+_ads_$document
 _ads_$popup
 _adsdata-
 _adsdata.
@@ -6309,6 +6325,10 @@ _yahooads_
 ://tizer8.
 ://tizer9.
 ://utm.
+://xml.*/click?
+://xml.*/click?$document
+://xml.*/redirect?
+://xml.*/redirect?$document
 
 ||iad.$domain=~iad.co.jp
 ! ---------- URL Fragments END ----------

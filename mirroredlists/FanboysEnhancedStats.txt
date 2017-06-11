@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: CiYCLfhYhzIBWs3NhUwjdw
+! Checksum: +92cjNpbM3my2JNnQDjR8g
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 10 Jun 2017
+! Updated: 11 Jun 2017
 ! This list expires after 2 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -727,6 +727,7 @@ youporn.com###adblock_1
 @@||anandabazar.com^*/gads.js
 @@||animeid.io/static/ads.js
 @@||aol.com/advertisers/advertisers.txt?$script,xmlhttprequest
+@@||as-cdn.tk/js/ads.js
 @@||autoworldnews.com/common/js/common/ads.js
 @@||babycenter.com^*/ads.js
 @@||benczmark.pl^*/b.ads.js
@@ -738,7 +739,7 @@ youporn.com###adblock_1
 @@||buzzfed.com^*/ads.js
 @@||buzzfeed.com^*/ads.js
 @@||canada.com^*/advertisement.js
-@@||cbsistatic.com^*/advertisement.js
+@@||cbsistatic.com^*/advertisement*.js
 @@||cdn77.org^*/ads.js
 @@||cdnslate.com/wp-srv/ad/*/loader.min.js
 @@||cdscdn.com/Js/advertise.js
@@ -906,16 +907,16 @@ youporn.com###adblock_1
 ||sqweb.com^$third-party
 ||techweb.com/adblocktrack
 ! blockadblock domains
-@@||adclixx.net^$script,domain=rule34hentai.net|finalservers.net|yalujailbreak.net|animmex.com|animmex.org|animmex.trade|animmex.club|animmex.co|animmex.info
-@@||adnetasia.com^$script,domain=rule34hentai.net|finalservers.net|yalujailbreak.net
-@@||adtrackers.net^$script,domain=rule34hentai.net|finalservers.net|yalujailbreak.net
-@@||bannertrack.net^$script,domain=rule34hentai.net|finalservers.net|yalujailbreak.net|animmex.org|animmex.com|animmex.trade|animmex.club|animmex.co|animmex.info
-@@||doubleclickbygoogle.com^$image,domain=rule34hentai.net|yalujailbreak.net
-@@||foxnetworks.com^$image,domain=finalservers.net|yalujailbreak.net
-@@||google.com/adsense/$image,domain=finalservers.net|yalujailbreak.net
+@@||adclixx.net^$script,domain=linkneverdie.com|rule34hentai.net|finalservers.net|yalujailbreak.net|animmex.com|animmex.org|animmex.trade|animmex.club|animmex.co|animmex.info
+@@||adnetasia.com^$script,domain=rule34hentai.net|linkneverdie.com|finalservers.net|yalujailbreak.net
+@@||adtrackers.net^$script,domain=rule34hentai.net|finalservers.net|yalujailbreak.net|linkneverdie.com
+@@||bannertrack.net^$script,domain=rule34hentai.net|finalservers.net|yalujailbreak.net|animmex.org|linkneverdie.com|animmex.com|animmex.trade|animmex.club|animmex.co|animmex.info
+@@||doubleclickbygoogle.com^$image,domain=rule34hentai.net|yalujailbreak.net|linkneverdie.com
+@@||foxnetworks.com^$image,domain=finalservers.net|yalujailbreak.net|linkneverdie.com
+@@||google.com/adsense/$image,domain=finalservers.net|yalujailbreak.net|linkneverdie.com
 @@||gstatic.com/adx/doubleclick.ico$image,third-party
-@@||twitter.com^$domain=rule34hentai.net|finalservers.net|yalujailbreak.net
-@@||yahoo.com^$image,domain=finalservers.net|rule34hentai.net|yalujailbreak.net
+@@||twitter.com^$domain=rule34hentai.net|finalservers.net|yalujailbreak.net|linkneverdie.com
+@@||yahoo.com^$image,domain=finalservers.net|rule34hentai.net|yalujailbreak.net|linkneverdie.com
 !
 !---------- Anti Adblock Warnings ------
 !
@@ -998,6 +999,9 @@ clubic.com###cookieu_header
 clubic.com##.button-social
 clubic.com##.footer-social
 clubic.com##.OUTBRAIN
+! filechoco.net
+@@||78cc571ae97.net/googlead.js$domain=filechoco.net
+@@||filechoco.net^$generichide
 ! jav911.com
 @@||jav911.com^$generichide
 ! new-skys.net
@@ -1021,6 +1025,9 @@ clubic.com##.OUTBRAIN
 @@||loudloss.com^$xmlhttprequest,domain=windowscentral.com
 @@||similarsabine.com^$xmlhttprequest,domain=imore.com
 @@||sneakystamp.com^$xmlhttprequest,domain=androidcentral.com
+! sopsport.org
+@@||sopsport.org^$generichide
+sopsport.org##.ya-share2__container
 ! tg007.nett
 @@||tg007.net^$generichide
 g007.net###socialbuttons
@@ -1070,7 +1077,9 @@ distrowatch.com##A[href] > IMG[src][alt]
 @@||themeslide.com^$generichide
 themeslide.com##[id^="bsac-"]
 ! demonoid.pw
+demonoid.pw##[id*="ScriptRoot"]
 demonoid.pw##img[src]:first-child + table[width="100%"][cellspacing="0"]
+demonoid.pw##TD[class] > #bbb:last-child
 ! wintips.org
 @@||wintips.org/wp-content/plugins/ad-$script,xmlhttprequest
 ! spoiler.net
@@ -1153,6 +1162,7 @@ proclockers.com##a[href="http://twitter.com/share"]
 ! linkneverdie.com
 @@||linkneverdie.com/Assets/Js/ads.js
 @@||linkneverdie.com^$generichide
+@@||popclck.net/js/adv_out.js$domain=linkneverdie.com
 ! mundokodi.com
 @@||mundokodi.com^$generichide
 ! geo.de
@@ -1172,6 +1182,8 @@ geo.de##.social-bar
 @@||smartadserver.com/diff/$script,domain=bild.de
 ! libelletv.nl
 @@||libelletv.nl^$generichide
+libelletv.nl##.social-share-buttons
+libelletv.nl##.widget_sm-newsletter-widget
 ! thebatavian.com
 @@||broadstreetads.com/init.js
 ! albtvhd.com
@@ -1230,6 +1242,7 @@ standard.co.uk##a[title="Twitter"]
 @@||indiatimes.in^*/ads.js
 @@||timesofindia.indiatimes.com/ad-$image
 @@||timesofindia.indiatimes.com/ads_$subdocument
+@@||timesofindia.indiatimes.com^$xmlhttprequest
 timesofindia.indiatimes.com##.atfAdsLoading
 ! mlive.com
 @@||mlive.com^$generichide
@@ -1263,6 +1276,7 @@ sofeminine.co.uk##.icon-pinterest
 sofeminine.co.uk##.social-icon
 ! marmiton.org
 @@||marmiton.org^$generichide
+marmiton.org###m_bandeau_hipush
 marmiton.org###m_cookie_popup
 ! moviefone.com
 @@||moviefone.com^$generichide
@@ -1277,14 +1291,17 @@ dallasnews.com##.art-footer-band
 dallasnews.com##.art-footer-newsletter-signup
 dallasnews.com##.art-pre-body-facebook
 dallasnews.com##.art-share
+dallasnews.com##.crd-subscribe-cta
 dallasnews.com##.fb-like
 dallasnews.com##.feedback-button
 dallasnews.com##.ftr-social
 dallasnews.com##.hdr-ad
 dallasnews.com##.hdr-social
+dallasnews.com##.hm-rundown__ad
 dallasnews.com##.OUTBRAIN
 ! autobytel.com
 @@||autobytel.com^$generichide
+autobytel.com##.bottom-docked
 autobytel.com##.header-bar__social
 autobytel.com##.i-social
 ! alphr.com
@@ -1324,11 +1341,14 @@ independent.co.uk##a[title="Twitter"]
 @@||cloudfront.net^$script,domain=codeproject.com
 @@||codeproject.com^$generichide
 codeproject.com##.share-list
+codeproject.com##a[href^="https://googleads.g.doubleclick.net/"]
 ! aufeminin.com
 @@||aufeminin.com^$generichide
 aufeminin.com###af-cookie-policy
 aufeminin.com##.af-btn
+aufeminin.com##.af-social-btns
 aufeminin.com##.af-social-share
+aufeminin.com##.af-social-share-v2
 aufeminin.com##.social-icon
 ! enfemenino.com
 @@||enfemenino.com^$generichide
@@ -1342,6 +1362,7 @@ enfemenino.com##.social-icon
 @@||familyhandyman.com^$generichide
 familyhandyman.com##.followusblock
 familyhandyman.com##.footersocialicons
+familyhandyman.com##.mainContent
 familyhandyman.com##.rd_basic_block
 familyhandyman.com##.socialshare
 ! goldderby.com
@@ -1355,17 +1376,27 @@ itpro.co.uk##.sharerich-wrapper
 ! mymotherlode.com
 @@||budgetedbauer.com^$script,domain=mymotherlode.com
 @@||mymotherlode.com^$generichide
+mymotherlode.com##.mrect
 ! realgm.com
 @@||realgm.com^$generichide
+realgm.com##.rrssb-buttons
 ||realgm.com/ads/sp.js
 ! wewomen.com
 @@||wewomen.com^$generichide
 wewomen.com###af-cookie-policy
 wewomen.com##.af-btn
+wewomen.com##.af-pin-it-wrapper
+wewomen.com##.af-social-btns
 wewomen.com##.af-social-share
+wewomen.com##.af-social-share-v2
 wewomen.com##.social-icon
 ! wwd.com
 @@||wwd.com^$generichide
+wwd.com###in-focus-am-ad-unit-dfp
+wwd.com##.hp-panel__newsletter-signup
+wwd.com##.share-buttons
+wwd.com##.subscriber-ad
+wwd.com##.wwd-in-article-ad
 ! venturebeat.com
 venturebeat.com#@#.adsbox
 ! geektime.co.il
@@ -1421,6 +1452,7 @@ forbes.com##[id][data-google-query-id]
 @@||pagead2.googlesyndication.com/pagead/*/show_ads_impl.js$domain=playonlinux.com
 @@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=playonlinux.com
 playonlinux.com###ads
+playonlinux.com##div[style*="text-align:center;"]
 ! theinquirer.net/v3.co.uk
 @@||g.doubleclick.net/gpt/pubads_impl*.js$domain=v3.co.uk
 v3.co.uk,theinquirer.net##div[id^="google_ads_iframe_"][style]
@@ -1462,6 +1494,7 @@ thefreedictionary.com,freethesaurus.com###w1 > .w2 > div:first-child
 @@||blesk.cz^*/advertisment.js
 @@||business.dk^$generichide
 @@||comunio.de/scripts/advertising/adInit.
+@@||ff14angler.com^$generichide
 @@||ouest-france.fr^*/adblock.js
 @@||politiken.dk/ad-server.js
 @@||satcesc.com^$generichide
@@ -1469,6 +1502,9 @@ thefreedictionary.com,freethesaurus.com###w1 > .w2 > div:first-child
 @@||webnews.bg/assets/js/ads.js
 @@||zarabiajnaokazjach.pl^$generichide
 @@||zive.cz^*/advertisment.js
+! French
+@@||expansion.com^$generichide
+@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=expansion.com
 ! German
 @@||lustich.de^$generichide
 @@||wetteronline.de^*/showAds.js
@@ -1490,6 +1526,10 @@ thefreedictionary.com,freethesaurus.com###w1 > .w2 > div:first-child
 ! Intl Specific elements hiding by a generichide
 business.dk##.article-social
 business.dk##.cookiewarning
+expansion.com##.newsletter
+expansion.com##.OUTBRAIN
+expansion.com##.social-media
+expansion.com##.suscripcion
 ! 
 ! Warnings
 8muses.com##.top-warning
@@ -1505,7 +1545,7 @@ vaughnlive.tv##.abvsDynamic
 ! ---------- Whitelisting rules ----------
 !
 ! test filter for google/gpt
-@@||googletagservices.com/tag/js/gpt.js$domain=hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
+@@||googletagservices.com/tag/js/gpt.js$domain=expansion.com|hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
 ||googletagmanager.com/ns.html$third-party
 ||googletagservices.com/tag/js/gpt.js$third-party
 !
