@@ -37,8 +37,8 @@ sudo echo "github.com" | sudo tee --append $WHITELIST &>/dev/null
 ## undupe and sort
 sort -u $WHITELIST > $WHITELISTPOST
 sudo rm $WHITELIST
-sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' $WHITELISTPOST > $WHITELIST
-echo -e "\t`wc -l /etc/piholeparser/whitelisted/whitelisted.domains | cut -d " " -f 1` domains to whitelist"
+sudo sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' $WHITELISTPOST > $WHITELIST
+echo -e "\t`wc -l $WHITELIST | cut -d " " -f 1` domains to whitelist"
 sudo rm $WHITELISTPOST
 
 ## Whitelist the domains
