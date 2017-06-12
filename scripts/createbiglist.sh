@@ -62,8 +62,6 @@ echo ""
 printf "$green"   "Rebuilding the Sources file."
 echo ""
 
-
-
 sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
 echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script."
 
