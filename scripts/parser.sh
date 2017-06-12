@@ -1,17 +1,8 @@
 #!/bin/bash
-## This is the Parsing Process
-##
-## It Parses all of the lists individually
-## for the sake of decent filenames.
-
-## Version
-source /etc/piholeparser.var
+## This is the Heavy Parsing Process
 
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
-
-## Github file limit
-GITHUBLIMIT=104857600
 
 ####################
 ## File Lists     ##
@@ -21,12 +12,21 @@ echo ""
 printf "$green"   "Parsing Individual Lists."
 echo ""
 
-## Set File .lst
-FILES=/etc/piholeparser/lists/heavyparsing/*.lst
-
 ## Start File Loop
-for f in $FILES
+for f in $HEAVYPARSE
 do
+
+## Set variables
+FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+ORIGFILE="$FNAME".orig.txt ## Original File
+TEMPFILE="$FNAME".temp.txt ## Temp File
+MFILENAME="$FNAME".mirror.txt ## Mirror file
+PFILENAME="$FNAME".parsed.txt ## parsed file
+PRE="$FNAME".pre.txt ## File in
+POST="$FNAME".post.txt ## File Out
+PREPROC="$FNAME".preproc.txt ## file after pre-processing
+MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
+MERGED="$FNAME".merged.txt ## Merged Name
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -39,17 +39,7 @@ for source in `cat $f`;
 do
 
 ## Set variables
-FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
-ORIGFILE="$FNAME".orig.txt ## Original File
-TEMPFILE="$FNAME".temp.txt ## Original File
-MFILENAME="$FNAME".mirror.txt ## Mirror file
-PFILENAME="$FNAME".parsed.txt ## parsed file
-PRE="$FNAME".pre.txt ## File in
-POST="$FNAME".post.txt ## File Out
-PREPROC="$FNAME".preproc.txt ## file after pre-processing
-MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
-MERGED="$FNAME".merged.txt ## Merged Name
 
 echo ""
 printf "$cyan"    "$source"
