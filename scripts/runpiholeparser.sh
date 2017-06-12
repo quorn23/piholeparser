@@ -27,7 +27,7 @@ sudo bash /etc/piholeparser/scripts/tarlists.sh
 
 ## Parse Individual Lists
 sudo bash /etc/piholeparser/scripts/lightparser.sh
-sudo bash /etc/piholeparser/scripts/parser.sh
+sudo bash /etc/piholeparser/scripts/heavyparser.sh
 
 ## Build 1111ALLPARSEDLISTS1111.txt
 sudo bash /etc/piholeparser/scripts/createbiglist.sh
