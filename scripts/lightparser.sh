@@ -13,9 +13,6 @@ echo ""
 printf "$green"   "Filtering Lists that are already in the correct format."
 echo ""
 
-## Set File .lst
-LIGHTPARSE=/etc/piholeparser/lists/lightparsing/*.lst
-
 ## Start File Loop
 for f in $LIGHTPARSE
 do
@@ -87,7 +84,6 @@ if
 [ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
-#printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 sudo rm $MFILENAME
