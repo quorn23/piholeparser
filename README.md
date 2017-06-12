@@ -30,7 +30,7 @@ https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsedall/1
 
 I'm parsing all of the lists daily and uploading them to the parsed directory in this repository. If you prefer to use this project yourself locally, Keep Reading.
 
-### IF YOU HAVE USED THIS SCRIPT BEFORE 5/20/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
+### IF YOU HAVE USED THIS SCRIPT BEFORE 6/12/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
 
 #### Sorry for the major changes. I wanted to give the script the ability to be updated easier.
 
