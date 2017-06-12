@@ -2,27 +2,10 @@
 ## This should whitelist domains that people complain are getting blocked
 ## within reason
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
-if 
-ls /etc/piholeparser/whitelisted/*.domains &> /dev/null; 
-then
-sudo rm /etc/piholeparser/whitelisted/*.domains
-else
-:
-fi
-
-## Set File Directory
-FILES=/etc/piholeparser/scriptvars/blockeddomaincomplaints.txt
-TEMPLIST=/etc/piholeparser/parsedall/ALLPARSEDLISTSedited.txt
-BIGLIST=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111edited.txt
-ORIGBIGLIST=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
-
-sudo cp $ORIGBIGLIST $BIGLIST
+sudo cp $BIGAPL $BIGAPLE
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -31,18 +14,15 @@ printf "$green"   ""
 echo ""
 
 ## Start File Loop
-for f in $FILES
-do
-for source in `cat $f`;
+for source in `cat $BDC`;
 do
 
-## stuff
-sudo sed '/$source/d' $BIGLIST > $TEMPLIST
-sudo rm $BIGLIST
-sudo mv $TEMPLIST $BIGLIST
+## cut domains out
+sudo sed '/$source/d' $BIGAPLE > $TEMPAPLE
+sudo rm $BIGAPLE
+sudo mv $TEMPAPLE $BIGAPLE
 
 ## end of loops
-done
 done
 
 printf "$magenta" "___________________________________________________________"
