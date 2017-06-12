@@ -16,18 +16,6 @@ echo ""
 ## Set File .lst
 FILES=/etc/piholeparser/lists/lightparsing/*.lst
 
-## Set variables
-FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
-UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
-ORIGFILE="$FNAME".orig.txt ## Original File
-MFILENAME="$FNAME".mirror.txt ## Mirror file
-PFILENAME="$FNAME".parsed.txt ## parsed file
-PRE="$FNAME".pre.txt ## File in
-POST="$FNAME".post.txt ## File Out
-PREPROC="$FNAME".preproc.txt ## file after pre-processing
-MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
-MERGED="$FNAME".merged.txt ## Merged Name
-
 ## Start File Loop
 for f in $FILES
 do
@@ -43,16 +31,16 @@ for source in `cat $f`;
 do
 
 ## Set variables
-#FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
-#UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
-#ORIGFILE="$FNAME".orig.txt ## Original File
-#MFILENAME="$FNAME".mirror.txt ## Mirror file
-#PFILENAME="$FNAME".parsed.txt ## parsed file
-#PRE="$FNAME".pre.txt ## File in
-#POST="$FNAME".post.txt ## File Out
-#PREPROC="$FNAME".preproc.txt ## file after pre-processing
-#MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
-#MERGED="$FNAME".merged.txt ## Merged Name
+FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+ORIGFILE="$FNAME".orig.txt ## Original File
+MFILENAME="$FNAME".mirror.txt ## Mirror file
+PFILENAME="$FNAME".parsed.txt ## parsed file
+PRE="$FNAME".pre.txt ## File in
+POST="$FNAME".post.txt ## File Out
+PREPROC="$FNAME".preproc.txt ## file after pre-processing
+MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
+MERGED="$FNAME".merged.txt ## Merged Name
 
 echo ""
 printf "$cyan"    "$source"
