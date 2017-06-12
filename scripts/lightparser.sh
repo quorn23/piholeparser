@@ -41,20 +41,24 @@ echo ""
 if [[ -z $UPCHECK ]]
 then
 printf "$yellow"    "Fetching List From Local File"
-sudo curl --silent -L $source >> $ORIGFILE
+sudo curl --silent -L $source >> $TEMPFILE
+sudo cat $TEMPFILE >> $ORIGFILE
+sudo rm $TEMPFILE
 else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
-sudo wget -q -O $ORIGFILE $source
+sudo wget -q -O $TEMPFILE $source
+sudo cat $TEMPFILE >> $ORIGFILE
+sudo rm $TEMPFILE
 fi
+
+## Source completion
+done
 
 echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
 printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
-
-## Source completion
-done
 
 ####################
 ## Create Mirrors ##
