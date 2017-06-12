@@ -16,15 +16,52 @@ echo ""
 printf "$green"   "Downloading and Extracting Compressed Lists."
 echo ""
 
+##  7zip lists
+
+## Set File .lst
+FILES=/etc/piholeparser/lists/7zip/*.lst
+
+## Start 7zip File Loop
+for f in $FILES
+do
+
+## Process sources within file.lst
+for source in `cat $f`;
+do
+
+## Variables
+FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+TEMPFILE="$FNAME".temp.txt ## Original File
+UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+
+echo ""
+printf "$cyan"    "$source"
+printf "$magenta"    "Filename set to $FNAME"
+echo "" 
+
+printf "$blue"    "___________________________________________________________"
+echo ""
+
+if [[ -z $SOURCEIP ]]
+then
+:
+else 
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
+sudo wget -q -O $TEMPFILE $source
+sudo rm $TEMPFILE
+fi 
+
+printf "$green"   "Downloading $"
+echo ""
+
 ## Airelle UpCheck Start
 if ping -c 1 rlwpx.free.fr &> /dev/null
 then
 
 ## Airelle's Anti-Sex Hosts
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Downloading Airelle's Anti-Sex Hosts"
-echo ""
+
 sudo wget http://rlwpx.free.fr/WPFF/hsex.7z -P $COMPRESSEDDIR
 echo ""
 printf "$yellow"  "Extracting"
