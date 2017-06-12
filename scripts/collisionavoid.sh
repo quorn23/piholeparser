@@ -14,9 +14,43 @@ printf "$green"   "Clearing the Path."
 ## Clean list directories
 
 if 
-ls /etc/piholeparser/lists/*/*.txt &> /dev/null; 
+ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/lists/*/*.txt
+sudo rm /etc/piholeparser/lists/heavyparsing/*.txt
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/lightparsing/*.txt
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/lists/7zip/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/7zip/*.txt
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/lists/tar/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/tar/*.txt
+else
+:
+fi
+
+## Remove old parsed files
+
+if 
+ls /etc/piholeparser/parsed/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/parsed/*.txt
 else
 :
 fi
