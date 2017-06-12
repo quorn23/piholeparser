@@ -1,22 +1,8 @@
 #!/bin/bash
 ## This should whitelist all domains that will be parsed
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
-
-if 
-ls /etc/piholeparser/whitelisted/*.domains &> /dev/null; 
-then
-sudo rm /etc/piholeparser/whitelisted/*.domains
-else
-:
-fi
-
-## Set File Directory
-FILES=/etc/piholeparser/lists/*/*.lst
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -26,7 +12,7 @@ printf "$red"   "Note: this does not actually work,, but it's a future planned a
 echo ""
 
 ## Start File Loop
-for f in $FILES
+for f in $ALLOFTHEDOMAINS
 do
 for source in `cat $f`;
 do
@@ -35,29 +21,25 @@ do
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## add to whitelist file
-sudo echo "$UPCHECK" | sudo tee --append /etc/piholeparser/whitelisted/whitelist.domains &>/dev/null
+sudo echo "$UPCHECK" | sudo tee --append $WHITELIST &>/dev/null
 
 ## end of loops
 done
 done
 
 ## sources that are compressed
-sudo echo "rlwpx.free.fr" | sudo tee --append /etc/piholeparser/whitelisted/whitelist.domains &>/dev/null
-sudo echo "github.com" | sudo tee --append /etc/piholeparser/whitelisted/whitelist.domains &>/dev/null
+sudo echo "rlwpx.free.fr" | sudo tee --append $WHITELIST &>/dev/null
+sudo echo "github.com" | sudo tee --append $WHITELIST &>/dev/null
 
 ## undupe and sort
-sort -u /etc/piholeparser/whitelisted/whitelist.domains > /etc/piholeparser/whitelisted/whitelist2.domains
-sudo cat /etc/piholeparser/whitelisted/whitelist2.domains >> /etc/piholeparser/whitelisted/whitelist3.domains
-sudo cat /etc/piholeparser/whitelisted/whitelist3.domains | sort > /etc/piholeparser/whitelisted/whitelist4.domains
-sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' /etc/piholeparser/whitelisted/whitelist4.domains > /etc/piholeparser/whitelisted/whitelisted.domains
+sort -u $WHITELIST > $WHITELISTPOST
+sudo rm $WHITELIST
+sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' $WHITELISTPOST > $WHITELIST
 echo -e "\t`wc -l /etc/piholeparser/whitelisted/whitelisted.domains | cut -d " " -f 1` domains to whitelist"
-sudo rm /etc/piholeparser/whitelisted/whitelist.domains
-sudo rm /etc/piholeparser/whitelisted/whitelist2.domains
-sudo rm /etc/piholeparser/whitelisted/whitelist3.domains
-sudo rm /etc/piholeparser/whitelisted/whitelist4.domains
+sudo rm $WHITELISTPOST
 
 ## Whitelist the domains
-#for source in `cat /etc/piholeparser/whitelisted/whitelisted.domains`;
+#for source in `cat $WHITELIST`;
 #do
 #pihole -w $source &>/dev/null
 #done
