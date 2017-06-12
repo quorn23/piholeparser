@@ -65,22 +65,36 @@ else
 :
 fi
 
+if 
+ls $BIGLIST &> /dev/null; 
+then
+sudo rm $BIGLIST
+else
+:
+fi
+
+if 
+ls /etc/piholeparser/parsedall/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/parsedall/*.txt
+else
+:
+fi
+
+if 
+ls $BIGAPLSOURCE &> /dev/null; 
+then
+sudo rm $BIGAPLSOURCE
+else
+:
+fi
+
 ## Remove old mirror files
 
 if 
 ls /etc/piholeparser/mirroredlists/*.txt &> /dev/null; 
 then
 sudo rm /etc/piholeparser/mirroredlists/*.txt
-else
-:
-fi
-
-## Cleanup big lists
-
-if 
-ls /etc/piholeparser/parsedall/*.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/parsedall/*.txt
 else
 :
 fi
