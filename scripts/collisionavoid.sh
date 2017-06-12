@@ -14,7 +14,7 @@ printf "$green"   "Clearing the Path."
 if 
 ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/lists/*.txt
+sudo rm /etc/piholeparser/heavyparsing/lists/*.txt
 else
 :
 fi
@@ -22,7 +22,7 @@ fi
 if 
 ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/lists/*.txt
+sudo rm /etc/piholeparser/lists/lightparsing/*.txt
 else
 :
 fi
