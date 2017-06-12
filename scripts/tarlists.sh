@@ -37,8 +37,8 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TEMPFILE $source
-sudo tar -xvf $TEMPFILE -C $COMPRESSEDDIR > "$FNAMEDONE"
-#sudo 7z e -so $TEMPFILE > "$FNAMEDONE"
+sudo tar -xvf $TEMPFILE -C $COMPRESSEDDIR
+#sudo tar -xvf $TEMPFILE -C $COMPRESSEDDIR > "$FNAMEDONE"
 sudo rm $TEMPFILE
 echo ""
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
