@@ -1,9 +1,6 @@
 #!/bin/bash
 ## Some lists are compressed in 7z format, this should extract them
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
