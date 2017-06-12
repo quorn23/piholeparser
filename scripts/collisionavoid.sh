@@ -4,8 +4,8 @@
 ##
 ## I added file checks to reduce on-screen errors
 
-## Colors
-source /etc/piholeparser/scripts/variables.var
+## Variables
+source /etc/piholeparser/scriptvars/variables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
