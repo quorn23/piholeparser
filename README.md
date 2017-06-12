@@ -34,7 +34,7 @@ I'm parsing all of the lists daily and uploading them to the parsed directory in
 
 #### Sorry for the major changes. I wanted to give the script the ability to be updated easier.
 
-    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/piholeparserinstall.sh
+    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/piholeparserinstall.sh
 
     sudo bash piholeparserinstall.sh
     
