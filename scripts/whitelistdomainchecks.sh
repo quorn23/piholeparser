@@ -4,8 +4,8 @@
 ## Version
 source /etc/piholeparser.var
 
-## Colors
-source /etc/piholeparser/scripts/colors.var
+## Variables
+source /etc/piholeparser/scriptvars/variables.var
 
 if 
 ls /etc/piholeparser/whitelisted/*.domains &> /dev/null; 
