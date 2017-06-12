@@ -165,5 +165,13 @@ else
 sudo mkdir /var/www/html/lists/
 fi
 
+if 
+[ -d "/etc/piholeparser/whitelisted/" ] 
+then
+echo "" 
+else
+sudo mkdir /etc/piholeparser/whitelisted/
+fi
+
 printf "$magenta" "___________________________________________________________"
 echo ""
