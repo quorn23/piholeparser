@@ -15,10 +15,10 @@ echo ""
 ##  7zip lists
 
 ## Set File .lst
-7zipLISTS=/etc/piholeparser/lists/7zip/*.lst
+FILES=/etc/piholeparser/lists/7zip/*.lst
 
 ## Start 7zip File Loop
-for f in $7zipLISTS
+for f in $FILES
 do
 
 ## Process sources within file.lst
