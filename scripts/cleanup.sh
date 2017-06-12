@@ -5,7 +5,7 @@
 ## Version
 source /etc/piholeparser.var
 
-## Colors
+## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
 printf "$blue"    "___________________________________________________________"
