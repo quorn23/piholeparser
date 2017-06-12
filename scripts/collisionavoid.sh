@@ -5,7 +5,7 @@
 ## I added file checks to reduce on-screen errors
 
 ## Colors
-source /etc/piholeparser/scripts/colors.var
+source /etc/piholeparser/scripts/variables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
