@@ -7,8 +7,8 @@
 ## Version
 source /etc/piholeparser.var
 
-## Colors
-source /etc/piholeparser/scripts/colors.var
+## Variables
+source /etc/piholeparser/scriptvars/variables.var
 
 ## Make sure we are in the correct directory
 cd /etc/piholeparser
