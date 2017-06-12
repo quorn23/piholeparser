@@ -7,34 +7,58 @@ source /etc/piholeparser.var
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
+## Set File .lst
+FILES=/etc/piholeparser/lists/tar/*.lst
+
+## Start 7zip File Loop
+for f in $FILES
+do
+
+## Process sources within file.lst
+for source in `cat $f`;
+do
+
+## Variables
+FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+FNAMEDONE="$FNAME".txt
+TEMPFILE="$FNAME".temp.7z ## Temp File
+UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+
 printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Downloading and Extracting Compressed Tar Lists."
 echo ""
 
-## Blackweb
-if ping -c 1 github.com &> /dev/null
+echo ""
+printf "$cyan"    "$source"
+echo "" 
+
+if ping -c 1 $UPCHECK &> /dev/null
 then
-printf "$blue"    "___________________________________________________________"
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
+sudo wget -q -O $TEMPFILE $source
+sudo tar -xvf $TEMPFILE -C $COMPRESSEDDIR > "$FNAMEDONE"
+#sudo 7z e -so $TEMPFILE > "$FNAMEDONE"
+sudo rm $TEMPFILE
 echo ""
-printf "$green"   "Downloading Blackweb List"
-echo ""
-sudo wget https://github.com/maravento/blackweb/raw/master/blackweb.tar.gz -P $COMPRESSEDDIR
-echo ""
-printf "$yellow"  "Extracting"
-echo ""
-sudo tar -xvf "$COMPRESSEDDIR"blackweb.tar.gz -C $COMPRESSEDDIR
-echo ""
-printf "$yellow"  "Renaming"
-echo ""
-sudo mv "$COMPRESSEDDIR"blackweb.txt "$COMPRESSEDDIR"Blackweb.txt
+echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
+ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
+printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
+else 
+printf "$red"    "$FNAME list unavailable right now"
+fi 
+
 echo ""
 printf "$magenta" "___________________________________________________________"
-else
-echo ""
-printf "$red"     "BlackWeb list are unavailable right now"
-echo ""
-fi
+
+## End looping
+done
+done
+
+
+
+
+sudo mv "$COMPRESSEDDIR"blackweb.txt "$COMPRESSEDDIR"Blackweb.txt
 
 ## cleanup
 
