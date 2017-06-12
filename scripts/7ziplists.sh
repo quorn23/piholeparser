@@ -9,11 +9,8 @@ echo ""
 printf "$green"   "Downloading and Extracting 7zip Compressed Lists."
 echo ""
 
-## Set File .lst
-FILES=/etc/piholeparser/lists/7zip/*.lst
-
 ## Start 7zip File Loop
-for f in $FILES
+for f in $SEVENSLIST
 do
 
 ## Process sources within file.lst
