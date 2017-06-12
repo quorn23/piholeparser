@@ -11,6 +11,15 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Clearing the Path."
 
+## Whitelist file
+if 
+ls /etc/piholeparser/whitelisted/*.domains &> /dev/null; 
+then
+sudo rm /etc/piholeparser/whitelisted/*.domains
+else
+:
+fi
+
 ## Clean list directories
 
 if 
