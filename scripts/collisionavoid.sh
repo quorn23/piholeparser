@@ -55,16 +55,6 @@ else
 :
 fi
 
-## Remove old parsed files
-
-if 
-ls /etc/piholeparser/parsed/*.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/parsed/*.txt
-else
-:
-fi
-
 if 
 ls /var/www/html/lists/1111ALLPARSEDLISTS1111.txt &> /dev/null; 
 then
@@ -74,9 +64,17 @@ echo ""
 fi
 
 if 
-ls $BIGLIST &> /dev/null; 
+ls $BIGAPL &> /dev/null; 
 then
-sudo rm $BIGLIST
+sudo rm $BIGAPL
+else
+:
+fi
+
+if 
+ls $BIGAPLE &> /dev/null; 
+then
+sudo rm $BIGAPLE
 else
 :
 fi
