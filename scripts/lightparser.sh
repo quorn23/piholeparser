@@ -27,21 +27,8 @@ echo ""
 for source in `cat $f`;
 do
 
-## Parsing filenames
-FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
-ORIGFILE="$FNAME".orig.txt ## Original File
-ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
-TEMPFILE="$FNAME".temp.txt ## Temp File
-MFILENAME="$FNAME".mirror.txt ## Mirror file
-MFILESIZE=$(stat -c%s "$MFILENAME")
-PFILENAME="$FNAME".parsed.txt ## parsed file
-PFILESIZE=$(stat -c%s "$PFILENAME")
-PRE="$FNAME".pre.txt ## File in
-POST="$FNAME".post.txt ## File Out
-PREPROC="$FNAME".preproc.txt ## file after pre-processing
-MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
-MERGED="$FNAME".merged.txt ## Merged Name
-UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+## Set Variables (again, I guess)
+source /etc/piholeparser/scriptvars/variables.var
 
 echo ""
 printf "$cyan"    "$source"
@@ -63,6 +50,7 @@ sudo wget -q -O $ORIGFILE $source
 fi
 
 echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
 printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
 
 ## Source completion
@@ -80,6 +68,7 @@ echo ""
 sudo cp $ORIGFILE $MFILENAME
 
 ## Github has a 100mb limit, and empty files are useless
+MFILESIZE=$(stat -c%s "$MFILENAME")
 if 
 [ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
@@ -252,6 +241,7 @@ printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
 ## Github has a 100mb limit, and empty files are useless
+PFILESIZE=$(stat -c%s "$PFILENAME")
 if
 [ "$PFILESIZE" -ge "$GITHUBLIMIT" ]
 then
