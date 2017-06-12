@@ -15,17 +15,9 @@ printf "$green"   "Cleaning Up."
 ## Clean list directories
 
 if 
-ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
+ls /etc/piholeparser/lists/*/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/lists/heavyparsing/*.txt
-else
-:
-fi
-
-if 
-ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/lists/lightparsing/*.txt
+sudo rm /etc/piholeparser/lists/*/*.txt
 else
 :
 fi
