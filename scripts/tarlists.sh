@@ -37,13 +37,13 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TEMPFILE $source
-sudo tar -xvf $TEMPFILE --wildcards "*.txt" > "$FNAMEDONE"
+sudo tar -xvf $TEMPFILE
 #sudo tar -xvf $TEMPFILE -C $COMPRESSEDDIR > "$FNAMEDONE"
 sudo rm $TEMPFILE
-echo ""
-echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
-ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
-printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
+#echo ""
+#echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
+#ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
+#printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
 else 
 printf "$red"    "$FNAME list unavailable right now"
 fi 
