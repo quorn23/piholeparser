@@ -40,8 +40,6 @@ echo ""
 
 if ping -c 1 $UPCHECK &> /dev/null
 then
-printf "$red"    "$FNAME list unavailable right now"
-else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
@@ -51,6 +49,8 @@ sudo rm $TEMPFILE
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
 printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
+else 
+printf "$red"    "$FNAME list unavailable right now"
 fi 
 
 echo ""
