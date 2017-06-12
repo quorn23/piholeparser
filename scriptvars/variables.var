@@ -21,6 +21,7 @@ WHITELISTPOST=/etc/piholeparser/whitelisted/whitelist.domainspost
 
 ## Set 7zip .lst directory
 SEVENSLIST=/etc/piholeparser/lists/7zip/*.lst
+SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
 
 ## Set tar .lst directory
 TARLISTS=/etc/piholeparser/lists/tar/*.lst
@@ -32,6 +33,7 @@ LIGHTPARSE=/etc/piholeparser/lists/lightparsing/*.lst
 HEAVYPARSE=/etc/piholeparser/lists/heavyparsing/*.lst
 
 ## Parsing filenames
+FNAMEDONE="$FNAME".txt
 FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 ORIGFILE="$FNAME".orig.txt ## Original File
 TEMPFILE="$FNAME".temp.txt ## Temp File
