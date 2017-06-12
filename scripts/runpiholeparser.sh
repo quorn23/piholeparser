@@ -1,9 +1,6 @@
 #!/bin/bash
 ## This is the central script that ties the others together
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
