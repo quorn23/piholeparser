@@ -12,23 +12,8 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Push Changes up to Pihole Web Server"
 
-if 
-[ -d "/var/www/html/lists/" ] 
-then
-echo "" 
-else
-sudo mkdir /var/www/html/lists/
-fi
+sudo cp -p $BIGAPL $BIGAPLLOCALHOST
 
-if 
-ls /var/www/html/lists/1111ALLPARSEDLISTS1111.txt &> /dev/null; 
-then
-sudo rm /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
-else
-echo ""
-fi
-
-sudo cp -p /etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -49,7 +34,9 @@ sudo git add .
 timestamp=`date`
 sudo git commit -m "Update lists $timestamp"
 sudo git push -u origin master
-else
+elif
+[ "$version" = "local" ]
+then
 printf "$red"   "Not Pushing Lists to Github"
 fi }
 printf "$magenta" "___________________________________________________________"
