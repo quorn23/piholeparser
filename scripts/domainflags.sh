@@ -17,7 +17,7 @@ else
 fi
 
 ## Set File Directory
-FILES=/etc/piholeparser/scripts/blockeddomaincomplaints.txt
+FILES=/etc/piholeparser/scriptvars/blockeddomaincomplaints.txt
 TEMPLIST=/etc/piholeparser/parsedall/ALLPARSEDLISTSedited.txt
 BIGLIST=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111edited.txt
 ORIGBIGLIST=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
