@@ -11,10 +11,12 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Clearing the Path."
 
+## Clean list directories
+
 if 
 ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/heavyparsing/lists/*.txt
+sudo rm /etc/piholeparser/lists/heavyparsing/*.txt
 else
 :
 fi
@@ -27,21 +29,7 @@ else
 :
 fi
 
-if 
-ls /etc/piholeparser/lists/*.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/lists/*.txt
-else
-:
-fi
-
-if 
-ls /etc/piholeparser/mirroredlists/*.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/mirroredlists/*.txt
-else
-:
-fi
+## Remove old parsed files
 
 if 
 ls /etc/piholeparser/parsed/*.txt &> /dev/null; 
@@ -51,13 +39,17 @@ else
 :
 fi
 
+## Remove old mirror files
+
 if 
-ls /etc/piholeparser/parsedall/*.txt &> /dev/null; 
+ls /etc/piholeparser/mirroredlists/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/parsedall/*.txt
+sudo rm /etc/piholeparser/mirroredlists/*.txt
 else
 :
 fi
+
+## Cleanup compressedlists directory
 
 if 
 ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
@@ -83,18 +75,29 @@ else
 :
 fi
 
+## Cleanup big lists
+
 if 
-ls /var/www/html/compressedconvert/*.txt &> /dev/null; 
+ls /etc/piholeparser/parsedall/*.txt &> /dev/null; 
 then
-sudo rm /var/www/html/compressedconvert/*.txt
+sudo rm /etc/piholeparser/parsedall/*.txt
+else
+:
+fi
+
+## Cleanup from old versions
+if 
+ls /etc/piholeparser/lists/*.txt &> /dev/null; 
+then
+sudo rm /etc/piholeparser/lists/*.txt
 else
 :
 fi
 
 if 
-ls /etc/piholeparser/mirroredlists/*.ads.txt &> /dev/null; 
+ls /var/www/html/compressedconvert/*.txt &> /dev/null; 
 then
-sudo rm /etc/piholeparser/mirroredlists/*.ads.txt
+sudo rm /var/www/html/compressedconvert/*.txt
 else
 :
 fi
