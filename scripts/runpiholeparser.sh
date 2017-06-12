@@ -25,8 +25,10 @@ sudo bash /etc/piholeparser/scripts/7ziplists.sh
 ## Lists compressed in tar
 sudo bash /etc/piholeparser/scripts/tarlists.sh
 
-## Parse Individual Lists
+## Parse Individual Lists taht barely need it
 sudo bash /etc/piholeparser/scripts/lightparser.sh
+
+## Parse Lists that really need it
 sudo bash /etc/piholeparser/scripts/heavyparser.sh
 
 ## Build 1111ALLPARSEDLISTS1111.txt
