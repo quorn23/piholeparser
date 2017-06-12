@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: s947VMY8q+QD5eBYqIKmKw
-! Version: 201706110452
+! Checksum: s+Jm8ns0Ma9fkR6yfuFUdg
+! Version: 201706120452
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -423,7 +423,9 @@
 /adsatlas_
 /adsbyadsn.
 /adsc.js
+/adsCL.
 /adscores/*
+/adsCR.
 /adsdino.
 /adsen.php
 /adsenseLoader.
@@ -984,6 +986,7 @@
 /pubde2.
 /pubdirecte-pub.
 /pubdirecte_
+/pubfig.min.js
 /pubiframe/*
 /publ1c1te.
 /publi728.
@@ -1342,6 +1345,8 @@ _Social-Advert-
 _waframedia_
 _werbebanner_
 ||com/bannieres/$image,object,subdocument,domain=~dse-ecologie.com|~visuels.l214.com
+! regex
+/license.\d{1,5}.js$/$script,~third-party
 ! CDN filters
 /cdn-cgi/pe/bag2?*%2Fad_slideout.
 /cdn-cgi/pe/bag2?*%2Fads1.
@@ -4948,7 +4953,7 @@ $webrtc,domain=9divx.org|bypassed.gold|cocostreaming.com|cpabien.cm|cpabien.xyz|
 ||lightonline.fr/public/images/bans/
 ||likebaguette.com/data/img/likebaguette-
 ||liligo.*/servlet/ads?
-||liligo.*/wpartner/
+||liligo.*/wpartner/$~stylesheet
 ||links-protection.com/*.htm$subdocument
 ||linuxsat-support.com^*_banners/
 ||live.prismamediadigital.com^
@@ -5877,6 +5882,13 @@ $webrtc,domain=9divx.org|bypassed.gold|cocostreaming.com|cpabien.cm|cpabien.xyz|
 ! thevid.net
 |http://$script,third-party,domain=thevid.net
 |https://$script,third-party,domain=thevid.net
+! vidoza.net
+@@||ajax.googleapis.com/ajax/libs/$script,domain=vidoza.net
+@@||cdnjs.cloudflare.com/ajax/libs/$script,domain=vidoza.net
+@@||vidoza.net/js/ads.js$script,domain=vidoza.net
+@@||vidoza.net/js/pop.js$script,domain=vidoza.net
+|http://$script,third-party,domain=vidoza.net
+|https://$script,third-party,domain=vidoza.net
 ! openload
 /assets/js/license.$domain=oload.tv|openload.co|protect-iframe.com|protect-video.com|streamango.com
 /assets/js/script.$domain=oload.tv|openload.co|protect-iframe.com|protect-video.com|streamango.com
@@ -5896,6 +5908,7 @@ oload.tv,streamango.com###videooverlay
 @@||netdna.bootstrapcdn.com/bootstrap/*/js/bootstrap.min.js$script,domain=direct-torrents.com
 |http://$script,third-party,xmlhttprequest,domain=direct-torrents.com
 |https://$script,third-party,xmlhttprequest,domain=direct-torrents.com
+||derperd.com^$domain=direct-torrents.com
 ! webchoc.com
 |http://$script,domain=sexefelin.com|tubixe.com|vidsexe.com|webchoc.com
 |https://$script,domain=sexefelin.com|tubixe.com|vidsexe.com|webchoc.com
@@ -5908,6 +5921,7 @@ oload.tv,streamango.com###videooverlay
 |http://$script,third-party,xmlhttprequest,domain=divxme.com
 |https://$script,third-party,xmlhttprequest,domain=divxme.com
 ! kvid.org
+@@||ajax.googleapis.com/ajax/libs/$script,domain=kvid.org
 |http://$script,subdocument,third-party,xmlhttprequest,domain=kvid.org
 |https://$script,subdocument,third-party,xmlhttprequest,domain=kvid.org
 ! free-telechargement.org
@@ -6121,8 +6135,6 @@ $popup,domain=adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|cash4files.com|cl
 !
 /nexp/dok3v=*/cloudflare/rocket.js$script,domain=onhax.me|serie-vostfr.com
 !
-egora.fr/sites/all/themes/*/pub.png
-toutcash.com/images/bandeau-
 |http://$third-party,domain=bigvoy.com
 ||0zz0.com/e/$image
 ||100pour100sexe.com/pop.
@@ -7638,6 +7650,7 @@ toutcash.com/images/bandeau-
 ||torrentfrançais.fr/wp-content/uploads/HMA
 ||toucharger.com/media/files/data/habillage/
 ||touslesprix.com/img_*/background/
+||toutcash.com/images/bandeau-
 ||touteladomotique.com/pub/
 ||toutmontpellier.fr/bannieres/
 ||toutporno.com/boost_niche/
@@ -9182,6 +9195,7 @@ toutcash.com/images/bandeau-
 ##.mod-advertisement
 ##.modAd
 ##.modalPub
+##.module-pub
 ##.moduleAds728
 ##.module_epg_publicite
 ##.mom-ads-wrap
@@ -9854,7 +9868,6 @@ euro-2016-france.net###background-promo
 meilleurmobile.com###backgrounddiv
 deavita.fr###badHabbitsPopup
 argentmania.com,e-jeune.net###ban
-egora.fr###ban-gp
 manga-news.com###ban970250
 grandecran.fr###ban_big
 cdmail.fr###bandeau
@@ -9970,6 +9983,7 @@ spi0n.com###content_top
 abcbourse.com###ctl00_btmmaster_xforex
 flyordie.com###dasb
 edcom.fr###decouvrirActu
+direct-torrents.com###derperd-ad
 lareclame.fr###dfp-top
 118218.fr###dfp_left
 datpiff.com###disqus_thread > div
@@ -10561,6 +10575,7 @@ public.fr##.bloc_rightcol_shopping
 lesechos.fr##.block-ailleursweb
 jeuxvideopc.com##.block-concours_en_cours
 jeuxvideo.fr##.block-divers-widget_shopping
+egora.fr##.block-egora-pub
 francetvsport.fr##.block-ftv-loading-of-mad
 laprovence.com##.block-gestion_block_gelp
 jeuxvideo.fr##.block-jeux-micromania_offre
@@ -11192,7 +11207,6 @@ booska-p.com##[href^="http://www.booska-p.com/re/"]
 onhax.me##[id*="-prom"]
 speedvid.net##[id][style*="z-index:"]
 turbo.fr##[id^="ABbypass"]
-egora.fr##[id^="block-gmsante_pub-"]
 comarketing-news.fr##[id^="comar-"]
 ecranlarge.com##[id^="criteo"]
 crichd.info##[id^="floatLayer"]
@@ -11429,6 +11443,7 @@ ca-anjou-maine.fr,ca-centrest.fr,ca-sudrhonealpes.fr##a[onclick^="xiti_clic('N',
 telechargementz.tv##a[rel="nofollow"]
 achat-bitcoins.com##a[rel="nofollow"] > img
 zetorrente.fr,zetorrents.com##a[rel]
+extreme-down.one##a[style]
 media1fire.com,shrink-service.it##a[style][onclick]
 4downfiles.org,buzzporn.net,footnamurois.com,jeddl.org,journaldu4x4.com,planet-streaming.com,seriezone.org,streaminghd.fr##a[target="_blank"] > img
 israelmagazine.co.il##a[target="_blank"] > img[src$=".gif"]

@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: TBIxOl5bNOgDj2yXfc1H1g
-! Version: 201706110442
+! Checksum: XmKcdpLwXFSP4o+KOo3Rgg
+! Version: 201706120442
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 11 Jun 2017 04:42 UTC
+! Last Modified: 12 Jun 2017 04:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -14,6 +14,7 @@
 !
 !-----------------------General advert blocking filters-----------------------!
 -880-80-4.jpg
+-HollandOne_GIF2.gif
 .cc/js/ads/
 .cn/ads/
 .cn/js/ads/
@@ -186,6 +187,7 @@
 /kan/js/dian.js
 /keke_winad/template/*layerModel.
 /kisssub/ads/*
+/kuaiyuncn/ad/*
 /lanye2015/images/kuan.jpg
 /lanye2015/images/lanyeht.jpg
 /lanye2015/images/qiniu.jpg
@@ -3425,6 +3427,7 @@ mg*.6park.com/img/$image
 ||caikuu.com/ckimages/*_zg
 ||camster.com/promos/
 ||candou.com/i/2000/
+||cao0002.com/vip/js/
 ||cao688.net/images//uploads/ad/
 ||cao688.net/images//uploads/index_banner/
 ||caoimg.com/images/
@@ -4102,7 +4105,7 @@ mg*.6park.com/img/$image
 ||gtimg.com/ent/final2009/dp_tebu_logo.png
 ||gtimg.com/news/news/2014ad/
 ||gtimg.com/newsapp_ls/0/27161189/0
-||gtimg.com/pingjs/ext2020/dc/module/GJ/GJtips.js
+||gtimg.com/pingjs/ext2020/dc/module/GJ/
 ||gtimg.com/qqlive/
 ||gtimg.com/sports/000_AD/
 ||gtimg.com/sports/images/30090.jpg
@@ -5102,7 +5105,6 @@ mg*.6park.com/img/$image
 ||oschina.net/uploads/cooperation/
 ||oupeng.com/ezine/res/js/advcontrol.js
 ||ousns.net/daohang/
-||ouyaoxiazai.com^$script,subdocument
 ||overseaschinesemedia.com/img/*.gif
 ||oyksoft.com/show/b.
 ||p.37youyou.com/*.jpg
@@ -5976,6 +5978,7 @@ mg*.6park.com/img/$image
 ||wmzhe.com/contents/37/86/3786322c8c0b7e32151d0dd63c1496d6.gif
 ||wmzhe.com/contents/8d/94/8d94744f4da06d2d58371f9623499e9d.gif
 ||wo256.com/256_gg/*.gif
+||wobuka2.com/js/
 ||woxiu.com/xapi/get_pre_config.php
 ||woxiu.com/xapi/offsite_swf_more.php?
 ||wpdaxue.com/2015/03/wx0329.jpg
@@ -6342,12 +6345,16 @@ mg*.6park.com/img/$image
 ||zxip.com/2013_ad/
 ||zzc.cn/b1/live_b_
 ||zzidc.com/img/
+||zzidc.com/uploads/tuoguan
 ||zzidc.com^*0.gif
 ||zzimg.51.la^
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||cnbetacdn.com/frontend/vipics/yijian
 !------------------------Specific element hiding rules------------------------!
+m.cnbeta.com##.article-hd + DIV[style="text-align:center"]
+t66y.com##img[src$="/2016-0114-700X70.gif"] ~ br:nth-child(-n+226)
 gpcxw.com###AA2
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
@@ -8003,7 +8010,7 @@ cngba.com##.ad_ri
 bitauto.com,cnblogs.com,hc360.com##.ad_right
 1yiren.com##.ad_right_1
 1yiren.com##.ad_right_2
-orsoon.com##.ad_show
+orsoon.com,ouyaoxiazai.com##.ad_show
 orsoon.com##.ad_show_1
 orsoon.com##.ad_show_2
 163.com##.ad_sx_1
@@ -9413,6 +9420,7 @@ mop.com##.quickReply-ad
 qixingquan.com##.qxq_cb
 qixingquan.com##.qxq_h
 im286.net##.qybj
+ouyaoxiazai.com##.qzhengfu
 mop.com##.r-adv
 dnvod.tv##.r-gg
 ahtv.cn,bzfl1.cc,sexbarss.net##.r1
@@ -10891,7 +10899,6 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@.adserver.$domain=litv.tv
-@@||media.jd.com/static/*/ad
 @@.com/adv/$domain=my.ctrip.com
 @@.gif#$domain=tgfcer.com|wgun.net
 @@.png#$domain=9zvip.net|club.tgfcer.com
@@ -11224,6 +11231,7 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 @@||mail.wo.cn/ad/
 @@||manhua.weibo.com/adv/
 @@||masterkong.com.cn/adimages/
+@@||media.jd.com/static/*/ad
 @@||mediav.com^$domain=dev.360.cn
 @@||meizu.com/fileserver/ad/img/
 @@||miaozhen.com^*/m.suning.
@@ -11417,9 +11425,8 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ad
 ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Baidu Union
 ###cpro_container
-/=(?:2560|1920|1776|1680|1600|1440|1366|1360|1280|1184|1182|1152|1080|1024|960|854|800|720|640|540|480|320|240)[a-z][0-9]{3,4}&/$subdocument
 /^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?=[0-9a-z]*[a-z])(?=[0-9a-z]*[0-9])[0-9a-z]{40,62}\.js/$script,domain=~bittiger.io
-/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/[asw]\?.*?%[0-9A-Z]{2}%/$subdocument
+/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?:[asw]|ns)\?.*?%[0-9A-Z]{2}%/$subdocument
 /cpro.$popup,third-party
 ##iframe[id][style="border: 0px none; margin: 0px; vertical-align: bottom;"][width][height]
 ##iframe[id][style="border:0;margin:0;vertical-align:bottom;"][width][height]
@@ -11488,8 +11495,11 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ##a[href^="http://yunbofangbt."]
 |http:$script,third-party,xmlhttprequest,domain=alicili.org|btdigg.co|btkitty.kim|btlibrary.co|cilidaquan.me|diggbt.ws|savebt.com|storebt.com|torrentkitty.ws|zhongzifuli.org
 ! Caoporn.com
+##a[href^="http://ganimgs.com/"]
 /images/*.gif$domain=adultcao.com|cao.pe|caofoo.top|caohot.club|caoporn.club|caoporn.com|caoporn.wales|caosee.club|gaohot.pro|k88.club|me88.pw|p5p.space|qq88.space|se88.space|tb001.xyz|te88.pw|vgao.xyz|vwan.xyz|wan1024.com|wan41.com
+||aaaimg.com/images*.gif
 ||caoimgs.com/images/*.gif
+||ganimgs.com/images/*.gif
 ||sinaimg.cn^$domain=2c2.website|2p8.space|adultcao.com|adultgao.com|cao.pe|caofoo.top|caohot.club|caopee.com|caoporn.club|caoporn.com|caoporn.wales|caosee.club|gaohot.pro|h3e.pw|h3y.pw|k88.club|me88.pw|p5p.space|qq88.space|se88.space|t2p.space|tb001.xyz|te88.pw|vgao.xyz|vlang.xyz|vwan.xyz|wan1024.com|wan41.com
 ! Caoporn.com
 2c2.website,2p8.space,adultcao.com,adultgao.com,cao.pe,caofoo.top,caohot.club,caopee.com,caoporn.club,caoporn.com,caoporn.wales,caosee.club,gaohot.pro,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,qq88.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz,wan1024.com,wan41.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child

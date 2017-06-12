@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Checksum: +92cjNpbM3my2JNnQDjR8g
+! Checksum: oRXQSUuk1+28adHLDZHhAg
 ! Title: Fanboy's Enhanced Tracking List
 ! Updated: 11 Jun 2017
 ! This list expires after 2 days
@@ -439,6 +439,7 @@ pornhub.com###abAlert
 redtube.com###slidePanelContainerAB
 thenewcivilrightsmovement.com##.block-alert
 unlimited-recipes.com#@##adsense
+wowhead.com##[data-was-parent="true"]
 youporn.com###adblock_1
 !
 ! ---------- 1st party blocking rules ----------
@@ -555,6 +556,7 @@ youporn.com###adblock_1
 ||badge.clevergirlscollective.com^$third-party
 ||bbb.org/logo/$third-party
 ||bbb.org/seals/$third-party
+||blockertools.net^$third-party
 ||browser-update.org^$third-party
 ||bunsen.wapolabs.com^
 ||buzzbytes.net^$third-party
@@ -735,6 +737,7 @@ youporn.com###adblock_1
 @@||bicycling.com^*/ads.
 @@||bitsngo.net/widget-scripts/extra_content/ads.js$domain=ynet.co.il
 @@||blbrd.co/advertisement.js
+@@||bolor-toli.com^$generichide
 @@||burning-feeds.com/resources/js/advertising.js
 @@||buzzfed.com^*/ads.js
 @@||buzzfeed.com^*/ads.js
@@ -800,6 +803,7 @@ youporn.com###adblock_1
 @@||infojobs.com.br^*/adframe.js
 @@||integritystat.com^*/ads.js
 @@||intoday.in^*/advert$script
+@@||kiplinger.com/js/adblock.js
 @@||koditalk.org/uploads/*adframe.js
 @@||ladbible.com^*/ads.js
 @@||lamcdn.net^*/advert-$script
@@ -954,6 +958,12 @@ smitedatamining.com##.author-social
 smitedatamining.com##.et_social_sidebar_networks
 smitedatamining.com##.share-post
 smitedatamining.com##.social-icons
+! kingofdown.com
+@@.jpg#$image,domain=kingofshrink.com
+@@.png#$image,domain=kingofdown.com
+@@||kingofdown.com^$generichide
+@@||kingofshrink.com^$generichide
+@@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=kingofdown.com|kingofshrink.com
 ! hardware.info
 hardware.info#@#.advertorial
 ! flashback.org
@@ -976,6 +986,9 @@ adage.com##.vjs-icon-share
 ! coderexample.com
 @@||coderexample.com^$generichide
 coderexample.com##[data-ad-client]
+! shrink-service.it
+@@||shrink-service.it^$generichide
+||shrink-service.it/js/jsRHadBlock.js
 ! wwwshooter.com
 @@||wwwshooter.com/includes/js/adblockdetect/
 wwwshooter.com###skyScraper
@@ -986,6 +999,9 @@ gamereactor.dk###ads_top2
 gamereactor.dk###cookielawwarning
 gamereactor.dk###facebooknotification
 gamereactor.dk###likebuttons
+! uvnc.com
+@@.gif#$image,domain=uvnc.com
+@@||uvnc.com^$generichide
 ! pipocas.tv
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pipocas.tv
 @@||pipocas.tv^$generichide
@@ -1503,8 +1519,11 @@ thefreedictionary.com,freethesaurus.com###w1 > .w2 > div:first-child
 @@||zarabiajnaokazjach.pl^$generichide
 @@||zive.cz^*/advertisment.js
 ! French
+@@||advertising.leboncoin.fr/|$script,~third-party
 @@||expansion.com^$generichide
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=expansion.com
+@@||skyyart.fr^$generichide
+@@||tf1.fr^*/adframe.js
 ! German
 @@||lustich.de^$generichide
 @@||wetteronline.de^*/showAds.js
@@ -1736,6 +1755,7 @@ vaughnlive.tv##.abvsDynamic
 @@||skypeassets.com/i/js/wanalytics/$domain=skype.com
 @@||slkimg.com^*/slacker/util/adobe/s-code.js$domain=slacker.com
 @@||space.ca/jsHandler.aspx?src=*.omniture.js
+@@||standard.co.uk/sites/all/libraries/sitecatalyst/
 @@||startribune.com/includes/Omniture.H.24.js
 @@||storage.ie6countdown.com/assets/*/ie6ct_s_code.js
 @@||subscription-assets.ew.com/prod/assets/*/omniture/
