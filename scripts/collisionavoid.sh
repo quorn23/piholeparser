@@ -171,6 +171,7 @@ then
 echo "" 
 else
 sudo mkdir /etc/piholeparser/whitelisted/
+sudo touch $WHITELIST
 fi
 
 printf "$magenta" "___________________________________________________________"
