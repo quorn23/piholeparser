@@ -55,11 +55,6 @@ printf "$magenta" "___________________________________________________________"
 done
 done
 
-
-
-
-sudo mv "$COMPRESSEDDIR"blackweb.txt "$COMPRESSEDDIR"Blackweb.txt
-
 ## cleanup
 
 if 
