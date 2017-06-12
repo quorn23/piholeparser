@@ -23,6 +23,15 @@ printf "$yellow"  "Installing p7zip"
 sudo apt-get install -y p7zip-full
 fi
 
+if
+which gawk >/dev/null;
+then
+echo ""
+printf "$yellow"  "gawk is installed"
+else
+printf "$yellow"  "Installing gawk"
+sudo apt-get install -y gawk
+fi
 
 #if
 #which python >/dev/null;
