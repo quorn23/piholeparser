@@ -2,9 +2,6 @@
 ## This script pushes lists to localhost,
 ## and Github, if that's the version in the var file
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
