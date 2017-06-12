@@ -18,15 +18,15 @@ for f in $LIGHTPARSE
 do
 
 ## Set variables
-FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
-ORIGFILE="$FNAME".orig.txt ## Original File
-MFILENAME="$FNAME".mirror.txt ## Mirror file
-PFILENAME="$FNAME".parsed.txt ## parsed file
-PRE="$FNAME".pre.txt ## File in
-POST="$FNAME".post.txt ## File Out
-PREPROC="$FNAME".preproc.txt ## file after pre-processing
-MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
-MERGED="$FNAME".merged.txt ## Merged Name
+#FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+#ORIGFILE="$FNAME".orig.txt ## Original File
+#MFILENAME="$FNAME".mirror.txt ## Mirror file
+#PFILENAME="$FNAME".parsed.txt ## parsed file
+#PRE="$FNAME".pre.txt ## File in
+#POST="$FNAME".post.txt ## File Out
+#PREPROC="$FNAME".preproc.txt ## file after pre-processing
+#MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
+#MERGED="$FNAME".merged.txt ## Merged Name
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -39,7 +39,8 @@ for source in `cat $f`;
 do
 
 ## Set variables
-UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+#UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+source /etc/piholeparser/scriptvars/variables.var
 
 echo ""
 printf "$cyan"    "$source"
