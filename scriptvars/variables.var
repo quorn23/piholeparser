@@ -34,8 +34,12 @@ HEAVYPARSE=/etc/piholeparser/lists/heavyparsing/*.lst
 ## Parsing filenames
 FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
 ORIGFILE="$FNAME".orig.txt ## Original File
+ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
+TEMPFILE="$FNAME".temp.txt ## Temp File
 MFILENAME="$FNAME".mirror.txt ## Mirror file
+MFILESIZE=$(stat -c%s "$MFILENAME")
 PFILENAME="$FNAME".parsed.txt ## parsed file
+PFILESIZE=$(stat -c%s "$PFILENAME")
 PRE="$FNAME".pre.txt ## File in
 POST="$FNAME".post.txt ## File Out
 PREPROC="$FNAME".preproc.txt ## file after pre-processing
