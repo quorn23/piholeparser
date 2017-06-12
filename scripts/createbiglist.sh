@@ -67,3 +67,30 @@ echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script
 
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+####################
+## Big Source edit##
+####################
+
+sudo cp $BIGAPL $BIGAPLE
+
+echo ""
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   ""
+echo ""
+
+## Start File Loop
+for source in `cat $BDC`;
+do
+
+## cut domains out
+sudo sed '/$source/d' $BIGAPLE > $TEMPAPLE
+sudo rm $BIGAPLE
+sudo mv $TEMPAPLE $BIGAPLE
+
+## end of loops
+done
+
+printf "$magenta" "___________________________________________________________"
+echo ""
