@@ -17,6 +17,9 @@ do
 for source in `cat $f`;
 do
 
+## Set Variables (again, I guess)
+source /etc/piholeparser/scriptvars/variables.var
+
 ## Filter domain name
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
