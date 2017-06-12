@@ -2,9 +2,6 @@
 ## This script Cleans up directories 
 ## mainly to avoid pushing excess files to Github
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
