@@ -4,9 +4,6 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
-## Make sure we are in the correct directory
-cd /etc/piholeparser
-
 ## Dependency check
 sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 
