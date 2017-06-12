@@ -6,7 +6,7 @@
 source /etc/piholeparser.var
 
 ## Colors
-source /etc/piholeparser/scripts/colors.var
+source /etc/piholeparser/scripts/variables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
