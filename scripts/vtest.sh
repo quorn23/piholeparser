@@ -4,9 +4,11 @@
 source /etc/piholeparser/scriptvars/variables.var
 
 { if 
-[ "$version" = "local" ]
+[ "$version" = "github" ]
 then
 printf "$green"   "Pushing Lists to Github"
-else
+elif
+[ "$version" = "local" ]
+then
 printf "$red"   "Not Pushing Lists to Github"
 fi }
