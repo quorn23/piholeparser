@@ -66,6 +66,14 @@ else
 fi
 
 if 
+ls /var/www/html/lists/1111ALLPARSEDLISTS1111.txt &> /dev/null; 
+then
+sudo rm /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
+else
+echo ""
+fi
+
+if 
 ls $BIGLIST &> /dev/null; 
 then
 sudo rm $BIGLIST
