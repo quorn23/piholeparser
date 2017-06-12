@@ -19,8 +19,11 @@ sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 ## Whitelist domains that will be downloaded from
 sudo bash /etc/piholeparser/scripts/whitelistdomainchecks.sh
 
-## Process lists that have to be extracted
-sudo bash /etc/piholeparser/scripts/compressedlists.sh
+## Lists compressed in 7zip
+sudo bash /etc/piholeparser/scripts/7ziplists.sh
+
+## Lists compressed in tar
+sudo bash /etc/piholeparser/scripts/tarlists.sh
 
 ## Parse Individual Lists
 sudo bash /etc/piholeparser/scripts/lightparser.sh
