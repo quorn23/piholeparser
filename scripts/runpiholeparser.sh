@@ -32,9 +32,6 @@ sudo bash /etc/piholeparser/scripts/parser.sh
 ## Build 1111ALLPARSEDLISTS1111.txt
 sudo bash /etc/piholeparser/scripts/createbiglist.sh
 
-## remove domains from 1111ALLPARSEDLISTS1111 that cause issues
-sudo bash /etc/piholeparser/scripts/domainflags.sh
-
 ## Cleanup
 sudo bash /etc/piholeparser/scripts/cleanup.sh
 
