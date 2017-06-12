@@ -148,5 +148,15 @@ else
 :
 fi
 
+## make sure directories are there
+
+if 
+[ -d "/var/www/html/lists/" ] 
+then
+echo "" 
+else
+sudo mkdir /var/www/html/lists/
+fi
+
 printf "$magenta" "___________________________________________________________"
 echo ""
