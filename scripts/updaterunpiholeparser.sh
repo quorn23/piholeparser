@@ -2,10 +2,7 @@
 ## This script resides outside of the main directory 
 ## for the purpose of updating without worrying about being overwritten
 ##
-## This File will not be updated.
-
-## Version
-source /etc/piholeparser.var
+## This File will not be updated often.
 
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
