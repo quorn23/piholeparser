@@ -2,14 +2,8 @@
 ## This takes the work done in parser.sh
 ## and merges it all into one
 
-## Version
-source /etc/piholeparser.var
-
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
-
-## Github file limit
-GITHUBLIMIT=104857600
 
 ####################
 ## Big List       ##
@@ -22,27 +16,16 @@ echo ""
 printf "$green"   "Attempting Creation of Big List."
 echo ""
 
-TEMPLIST=/etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
-BIGLIST=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
-
-if 
-ls $BIGLIST &> /dev/null; 
-then
-sudo rm $BIGLIST
-else
-:
-fi
-
 ## Combine Small lists
-sudo cat /etc/piholeparser/parsed/*.txt > $TEMPLIST
-echo -e "\t`wc -l $TEMPLIST | cut -d " " -f 1` lines after merging individual lists"
+sudo cat /etc/piholeparser/parsed/*.txt > $TEMPAPL
+echo -e "\t`wc -l $TEMPAPL | cut -d " " -f 1` lines after merging individual lists"
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u $TEMPLIST > $BIGLIST
-echo -e "\t`wc -l $BIGLIST | cut -d " " -f 1` lines after deduping"
-sudo rm $TEMPLIST
+sort -u $TEMPAPL > $BIGAPL
+echo -e "\t`wc -l $BIGAPL | cut -d " " -f 1` lines after deduping"
+sudo rm $TEMPAPL
 
 ## Github has a 100mb limit and empty files are useless
 BFILESIZE=$(stat -c%s "$MFILENAME")
@@ -51,23 +34,21 @@ if
 then
 echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo rm $BIGLIST
-sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGLIST
-#printf "$red"     "Parsed File Too Large For Github. Splitting."
-#split -b 100m $BIGLIST
+sudo rm $BIGAPL
+sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGAPL
 elif
 [ "$BFILESIZE" -ge 0 ]
 then
 echo ""
 printf "$red"     "File Empty"
-sudo echo "File Size equaled zero." | sudo tee --append $BIGLIST
+sudo echo "File Size equaled zero." | sudo tee --append $BIGAPL
 else
 echo ""
 printf "$yellow"  "Big List Created Successfully."
 fi
 
 ## duplicate Big List file
-sudo cp $BIGLIST /etc/piholeparser/parsed/
+sudo cp $BIGAPL /etc/piholeparser/parsed/
 
 printf "$magenta" "___________________________________________________________"
 echo ""
@@ -81,18 +62,10 @@ echo ""
 printf "$green"   "Rebuilding the Sources file."
 echo ""
 
-BIGSOURCE=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
 
-if 
-ls $BIGSOURCE &> /dev/null; 
-then
-sudo rm $BIGSOURCE
-else
-:
-fi
 
-sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGSOURCE
-echo -e "\t`wc -l $BIGSOURCE | cut -d " " -f 1` lists processed by the script."
+sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
+echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script."
 
 printf "$magenta" "___________________________________________________________"
 echo ""
