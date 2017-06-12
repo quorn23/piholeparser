@@ -257,14 +257,14 @@ echo -e "\t`wc -l "$FNAME".method2.txt | cut -d " " -f 1` lines after $METHOD"
 ## Method 3       ##
 ####################
 
-METHOD="processing lists With Method 3"
+#METHOD="processing lists With Method 3"
 
-echo ""
-printf "$green"   "$METHOD"
-echo ""
+#echo ""
+#printf "$green"   "$METHOD"
+#echo ""
 
-sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
-echo -e "\t`wc -l "$FNAME".method3.txt | cut -d " " -f 1` lines after $METHOD"
+#sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
+#echo -e "\t`wc -l "$FNAME".method3.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 4       ##
