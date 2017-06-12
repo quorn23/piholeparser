@@ -41,13 +41,15 @@ echo ""
 if [[ -z $UPCHECK ]]
 then
 printf "$yellow"    "Fetching List From Local File"
-sudo curl --silent -L $source >> $TEMPFILE | sudo cat $TEMPFILE >> $ORIGFILE
+sudo curl --silent -L $source >> $TEMPFILE
+sudo cat $TEMPFILE >> $ORIGFILE
 sudo rm $TEMPFILE
 else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
-sudo wget -q -O $TEMPFILE $source | sudo cat $TEMPFILE >> $ORIGFILE
+sudo wget -q -O $TEMPFILE $source
+sudo cat $TEMPFILE >> $ORIGFILE
 sudo rm $TEMPFILE
 fi 
 
