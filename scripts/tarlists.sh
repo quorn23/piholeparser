@@ -41,6 +41,7 @@ printf "$magenta" "___________________________________________________________"
 ## End Source loop
 done
 
+echo "$TARFILEX"
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
 printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
