@@ -14,9 +14,6 @@ sudo cp -p $BIGAPL $BIGAPLLOCALHOST
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-## Make sure we are in the correct directory
-cd /etc/piholeparser
-
 ## Push Changes up to Github
 printf "$blue"    "___________________________________________________________"
 echo ""
