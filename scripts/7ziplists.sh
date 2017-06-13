@@ -39,7 +39,7 @@ sudo wget -q -O $SEVENTEMPFILE $source
 sudo 7z e -so $SEVENTEMPFILE > "$FNAMEDONE"
 sudo rm $SEVENTEMPFILE
 else 
-sudo echo "$FNAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $FNAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$FNAME list unavailable right now"
 fi 
 
