@@ -20,9 +20,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Light Parsing Folder txt files"
@@ -32,9 +32,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="7zip Parsing Folder txt files"
@@ -44,9 +44,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Tar Parsing Folder txt files"
@@ -56,9 +56,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="7z Files"
@@ -68,9 +68,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Tar Files"
@@ -80,9 +80,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="txt Files in the lists directory"
@@ -92,17 +92,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-fi
-
-if 
-ls /etc/piholeparser/mirroredlists/*.ads.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/mirroredlists/*.ads.txt
-else
-:
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="garbage txt Files in the mirrored directory"
@@ -112,9 +104,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Clean parsed directory if using locally
