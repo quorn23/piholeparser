@@ -11,167 +11,207 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Clearing the Path."
 
-## Whitelist file
+## Recent Run Log
+timestamp=`date`
 if 
-ls /etc/piholeparser/whitelisted/*.domains &> /dev/null; 
+ls $RECENTRUN &> /dev/null; 
 then
-sudo rm /etc/piholeparser/whitelisted/*.domains
+sudo rm $RECENTRUN
+sudo echo "## Recent Run Log. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "RecentRunLog Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## Clean list directories
+## Stuff to remove if there
 
-if 
-ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
+WHATITIS="Whitelist File"
+CHECKME=/etc/piholeparser/whitelisted/whitelist.domains
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/heavyparsing/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
+WHATITIS="Heavy Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/lightparsing/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/lists/7zip/*.txt &> /dev/null; 
+WHATITIS="Light Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/lightparsing/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/7zip/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/lists/tar/*.txt &> /dev/null; 
+WHATITIS="7zip Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/7zip/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/tar/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## Remove old parsed files
-
-if 
-ls /etc/piholeparser/parsed/*.txt &> /dev/null; 
+WHATITIS="Tar Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/tar/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/parsed/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /var/www/html/lists/1111ALLPARSEDLISTS1111.txt &> /dev/null; 
+WHATITIS="Old Parsed Folder txt files"
+CHECKME=/etc/piholeparser/parsed/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /var/www/html/lists/1111ALLPARSEDLISTS1111.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-echo ""
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls $BIGAPL &> /dev/null; 
+WHATITIS="Locally Hosted Biglist"
+CHECKME=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm $BIGAPL
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls $BIGAPLE &> /dev/null; 
+WHATITIS="All Parsed List"
+CHECKME=$BIGAPL
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm $BIGAPLE
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/parsedall/*.txt &> /dev/null; 
+WHATITIS="All Parsed List (edited)"
+CHECKME=$BIGAPLE
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/parsedall/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls $BIGAPLSOURCE &> /dev/null; 
+WHATITIS="parsedall Directory txt"
+CHECKME=/etc/piholeparser/parsedall/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm $BIGAPLSOURCE
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## Remove old mirror files
-
-if 
-ls /etc/piholeparser/mirroredlists/*.txt &> /dev/null; 
+WHATITIS="The Source List"
+CHECKME=$BIGAPLSOURCE
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/mirroredlists/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## Cleanup from old versions
-if 
-ls /etc/piholeparser/lists/*.txt &> /dev/null; 
+WHATITIS="Old Mirrored Lists"
+CHECKME=/etc/piholeparser/mirroredlists/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /var/www/html/compressedconvert/*.txt &> /dev/null; 
+WHATITIS="txt Files in the lists directory"
+CHECKME=/etc/piholeparser/lists/*.txt
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /var/www/html/compressedconvert/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
+WHATITIS="7z Files"
+CHECKME=/etc/piholeparser/lists/7zip/*.7z
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/compressedconvert/*.7z
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/compressedconvert/*.tar.gz &> /dev/null; 
+WHATITIS="Tar Files"
+CHECKME=/etc/piholeparser/lists/tar/*.tar.gz
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/compressedconvert/*.txt &> /dev/null; 
+## MAKE THESE DIRECTORIES
+
+WHATITIS="whitelisted directory"
+CHECKME=/etc/piholeparser/whitelisted/
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/compressedconvert/*.txt
+sudo echo "$WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo mkdir $CHECKME
+sudo echo "$WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## make sure directories are there
-
-if 
-[ -d "/var/www/html/lists/" ] 
+WHATITIS="web host lists directory"
+CHECKME=/var/www/html/lists/
+timestamp=`date`
+ls $CHECKME &> /dev/null;
 then
-echo "" 
+sudo echo "$WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo mkdir /var/www/html/lists/
-fi
-
-if 
-[ -d "/etc/piholeparser/whitelisted/" ] 
-then
-echo "" 
-else
-sudo mkdir /etc/piholeparser/whitelisted/
-sudo touch $WHITELIST
+sudo mkdir $CHECKME
+sudo echo "$WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 printf "$magenta" "___________________________________________________________"
