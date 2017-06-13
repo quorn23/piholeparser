@@ -28,7 +28,8 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TARTEMPFILE $source
-TARFILEX=$("$TARDIR"$(tar -xavf $TARTEMPFILE -C $TARDIR))
+TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
+TARDONE="$TARDIR""$TARFILEX"
 sudo rm $TARTEMPFILE
 else 
 printf "$red"    "$FNAME list unavailable right now"
@@ -37,7 +38,7 @@ fi
 ## End Source loop
 done
 
-sudo mv $TARFILEX $FNAMEDONE
+sudo cat $TARDONE > $FNAMEDONE
 
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
