@@ -39,9 +39,6 @@ else
 printf "$red"    "$FNAME list unavailable right now"
 fi 
 
-echo ""
-printf "$magenta" "___________________________________________________________"
-
 ## End source looping
 done
 
@@ -51,3 +48,6 @@ printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
 
 ## End File loop
 done
+
+echo ""
+printf "$magenta" "___________________________________________________________"
