@@ -32,12 +32,12 @@ LIGHTPARSE=/etc/piholeparser/lists/lightparsing/*.lst
 HEAVYPARSE=/etc/piholeparser/lists/heavyparsing/*.lst
 
 ## Parsing filenames
-FNAMEDONE="$FNAME".txt
-FNAME=`echo $f | cut -f 1 -d '.'` ## Used for better filenaming
+FNAME=`echo $f | cut -f 1 -d '.'` ## Cuts .lst off filename
+FNAMEDONE="$FNAME".txt ## Finalized name
 ORIGFILE="$FNAME".orig.txt ## Original File
 TEMPFILE="$FNAME".temp.txt ## Temp File
 MFILENAME="$FNAME".mirror.txt ## Mirror file
-PFILENAME="$FNAME".parsed.txt ## parsed file
+PFILENAME="$FNAME".parsed.txt ## Parsed file
 PRE="$FNAME".pre.txt ## File in
 POST="$FNAME".post.txt ## File Out
 PREPROC="$FNAME".preproc.txt ## file after pre-processing
@@ -45,7 +45,7 @@ MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
 MERGED="$FNAME".merged.txt ## Merged Name
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
 SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
-TARTEMPFILE="$FNAME".temp.tar.gz ## Temp File
+TARTEMPFILE="$FNAME".temp.tar ## Temp File
 
 ## ALLPARSEDLIST
 TEMPAPL=/etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
