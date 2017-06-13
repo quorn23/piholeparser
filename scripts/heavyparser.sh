@@ -60,6 +60,15 @@ echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
 printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
 
+timestamp=`date`
+if 
+[ "$ORIGFILESIZE" -eq 0 ]
+then
+sudo echo "$FNAME list was an empty file upon download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+echo ""
+fi
+
 ####################
 ## Create Mirrors ##
 ####################
@@ -73,18 +82,21 @@ sudo cp $ORIGFILE $MFILENAME
 
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
+timestamp=`date`
 if 
 [ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
+sudo echo "$FNAME list was too large to mirror on github. $MFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 elif
 [ "$MFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
+sudo echo "$FNAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 else
 echo ""
@@ -322,18 +334,21 @@ echo ""
 
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
+timestamp=`date`
 if
 [ "$PFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
+sudo echo "Parsed $FNAME list too large for github. $PFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 elif
 [ "$PFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
+sudo echo "Parsed $FNAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 else
 echo ""
