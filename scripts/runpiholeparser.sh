@@ -38,7 +38,7 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Script Complete"
 timestamp=$(echo `date`)
-sudo echo "Script completed at $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Script completed at $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
