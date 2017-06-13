@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: AY3D0iG6aQQO3H9je8M59g
-! Version: 201706130020
+! Checksum: GQEF691+wm89Ek1Z4xKKdg
+! Version: 201706130440
 ! Title: EasyList China+EasyList
 ! EasyList China and EasyList combination subscription
-! Last modified: 13 Jun 2017 00:20 UTC
+! Last modified: 13 Jun 2017 04:40 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 !
@@ -6355,8 +6355,13 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||cao0001.com/vip/js/
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
+ieforex.com##.advert
+ieforex.com##.header > .left
+jrj.com.cn###comment > A:first-child
+jrj.com.cn##.piboxtwo
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -10265,7 +10270,7 @@ zhibo8.cc##div[class*="advert"]
 efu.com.cn##div[class*="banner-"]
 qinbing.cn##div[class*="gg"]
 chinatimes.com##div[class*="googlead_"]
-steamcn.com##div[class*="gou_"]
+steamcn.com##DIV[class*="_еee_"]
 wenku.baidu.com##div[class*="tiger-"][class*="-dialog"]
 sspai.com##div[class*="widget-color-bns"] > .colors:first-child:last-child
 iciba.com##div[class="ad_list"]
@@ -11498,6 +11503,13 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ##a[href^="http://yunbofangbt."]
 |http:$script,third-party,xmlhttprequest,domain=alicili.org|btdigg.co|btkitty.kim|btlibrary.co|cilidaquan.me|diggbt.ws|savebt.com|storebt.com|torrentkitty.ws|zhongzifuli.org
 ! Caoporn.com
+/moneymaker/js/player/zanting.js
+/media/player/xmlroll.php$domain=caoaee.com|caodee.com|caopee.com|caouoo.com
+/images/*.gif$domain=caoaee.com|caodee.com|caopee.com|caouoo.com
+||sinaimg.cn^$domain=caoaee.com|caodee.com|caopee.com|caouoo.com
+||ganimg.com/images/*.gif
+##A[href^="http://ganimg.com/"]
+##A[href^="https://aaaimg.com/"]
 ##a[href^="http://ganimgs.com/"]
 /images/*.gif$domain=adultcao.com|cao.pe|caofoo.top|caohot.club|caoporn.club|caoporn.com|caoporn.wales|caosee.club|gaohot.pro|k88.club|me88.pw|p5p.space|qq88.space|se88.space|tb001.xyz|te88.pw|vgao.xyz|vwan.xyz|wan1024.com|wan41.com
 ||aaaimg.com/images*.gif
@@ -11505,8 +11517,10 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||ganimgs.com/images/*.gif
 ||sinaimg.cn^$domain=2c2.website|2p8.space|adultcao.com|adultgao.com|cao.pe|caofoo.top|caohot.club|caopee.com|caoporn.club|caoporn.com|caoporn.wales|caosee.club|gaohot.pro|h3e.pw|h3y.pw|k88.club|me88.pw|p5p.space|qq88.space|se88.space|t2p.space|tb001.xyz|te88.pw|vgao.xyz|vlang.xyz|vwan.xyz|wan1024.com|wan41.com
 ! Caoporn.com
+caoaee.com,caodee.com,caopee.com,caouoo.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 2c2.website,2p8.space,adultcao.com,adultgao.com,cao.pe,caofoo.top,caohot.club,caopee.com,caoporn.club,caoporn.com,caoporn.wales,caosee.club,gaohot.pro,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,qq88.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz,wan1024.com,wan41.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
+||qzdag.com^
 .m.bookben.com^
 .m.liewen.cc^
 .m.muyuge.com^
