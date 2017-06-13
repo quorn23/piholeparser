@@ -33,8 +33,12 @@ done
 sort -u $WHITELIST > $WHITELISTPOST
 sudo rm $WHITELIST
 sudo sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' $WHITELISTPOST > $WHITELIST
-echo -e "\t`wc -l $WHITELIST | cut -d " " -f 1` domains to whitelist"
 sudo rm $WHITELISTPOST
+
+timestamp=$(echo `date`)
+HOWMANYLISTS=$(echo -e "\t`wc -l $WHITELIST | cut -d " " -f 1` domains whitelisted")
+sudo echo "$HOWMANYLISTS"
+sudo echo "$HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Whitelist the domains
 #for source in `cat $WHITELIST`;
