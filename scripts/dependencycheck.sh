@@ -10,24 +10,34 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Checking Dependencies"
 
+WHATITIS=p7zip
+WHATPACKAGE=p7zip-full
+timestamp=`date`
 if
-which p7zip >/dev/null;
+which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "p7zip is installed"
+printf "$yellow"  "$WHATITIS is installed"
+sudo echo "$WHATITIS already installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-printf "$yellow"  "Installing p7zip"
-sudo apt-get install -y p7zip-full
+printf "$yellow"  "Installing $WHATITIS"
+sudo apt-get install -y $WHATPACKAGE
+sudo echo "$WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+WHATITIS=gawk
+WHATPACKAGE=gawk
+timestamp=`date`
 if
-which gawk >/dev/null;
+which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "gawk is installed"
+printf "$yellow"  "$WHATITIS is installed"
+sudo echo "$WHATITIS already installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-printf "$yellow"  "Installing gawk"
-sudo apt-get install -y gawk
+printf "$yellow"  "Installing $WHATITIS"
+sudo apt-get install -y $WHATPACKAGE
+sudo echo "$WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 printf "$magenta" "___________________________________________________________"
