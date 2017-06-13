@@ -18,9 +18,9 @@ ls $RECENTRUN &> /dev/null;
 then
 sudo rm $RECENTRUN
 sudo echo "## Recent Run Log. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "RecentRunLog Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* RecentRunLog Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
@@ -42,9 +42,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Heavy Parsing Folder txt files"
@@ -54,9 +54,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Light Parsing Folder txt files"
@@ -66,9 +66,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="7zip Parsing Folder txt files"
@@ -78,9 +78,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Tar Parsing Folder txt files"
@@ -90,9 +90,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Old Parsed Folder txt files"
@@ -102,9 +102,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Cleanup from old versions
@@ -115,9 +115,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Locally Hosted Biglist"
@@ -127,9 +127,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="All Parsed List"
@@ -139,7 +139,7 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
@@ -153,7 +153,7 @@ then
 sudo rm $CHECKME
 sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="parsedall Directory txt"
@@ -163,9 +163,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="The Source List"
@@ -175,9 +175,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Old Mirrored Lists"
@@ -187,9 +187,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="txt Files in the lists directory"
@@ -199,9 +199,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="7z Files"
@@ -211,9 +211,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Tar Files"
@@ -223,9 +223,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 ## MAKE THESE DIRECTORIES
@@ -236,10 +236,10 @@ timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
-sudo echo "$WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 sudo mkdir $CHECKME
-sudo echo "$WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="web host lists directory"
@@ -248,10 +248,10 @@ timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
-sudo echo "$WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 sudo mkdir $CHECKME
-sudo echo "$WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
