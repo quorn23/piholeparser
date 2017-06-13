@@ -4,6 +4,13 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Downloading and Extracting Tar Compressed Lists."
+timestamp=$(echo `date`)
+sudo echo "## Tar $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+
 ## Start 7zip File Loop
 for f in $TARLISTS
 do
@@ -22,7 +29,7 @@ echo ""
 printf "$cyan"    "$source"
 echo "" 
 
-timestamp=`date`
+timestamp=$(echo `date`)
 if ping -c 1 $UPCHECK &> /dev/null
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
@@ -49,5 +56,6 @@ printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
 ## End File Loop
 done
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 printf "$magenta" "___________________________________________________________"
