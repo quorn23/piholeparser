@@ -41,7 +41,7 @@ printf "$magenta" "___________________________________________________________"
 ## End Source loop
 done
 
-sudo cat $TARFILEX > 
+#sudo cat $TARFILEX > 
 
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
