@@ -9,7 +9,7 @@ source /etc/piholeparser/scriptvars/variables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "Clearing the Path."
+printf "$green"   "Creating RecentRunLog."
 
 ## Recent Run Log
 timestamp=`date`
@@ -22,6 +22,10 @@ sudo echo "RecentRunLog Removed and Recreated. $timestamp" | sudo tee --append $
 else
 sudo echo "RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
+
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Clearing the Path."
 
 ## Stuff to remove if there
 
