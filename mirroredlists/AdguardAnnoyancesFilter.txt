@@ -25,6 +25,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3877
 myscore.com.ua###lsid-window-mask
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5312
+morgenweb.de##.nfy-mobile-sticky-buttons
 ! avinfo.co - browser extension banner
 ||avinfo.co/i/chromavinfo.jpg
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5099
@@ -285,6 +287,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+zdnet.de##[class="box keepUp"]
 foodspring.de##.newsletter-subscription-form
 netdoktor.de##.footer-subscribe-list
 stackexchange.com###newsletter-ad
@@ -817,6 +820,7 @@ howwindows.ru#%#window.canRunAds = true;
 !#######################################################
 !######### General element hiding rules ################
 !#######################################################
+###cookies-alert
 ###cookieChoiceInfo
 ##.c-cookiebar
 ##.ds2-cookie-disclaimer
@@ -2464,6 +2468,7 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+son-video.com##body > div#SVDv3_cookie
 investing.com###consentWrapper
 investing.com##.consentBarWrapper
 foodspring.de##.cookie-advice
@@ -3250,6 +3255,7 @@ ukr-today.com##.soc_vidgets
 ||2app.lk^$third-party
 !
 m.investing.com###smartbanner
+auto.ru##.promo-max
 schlaukopf.de###smartbanner
 oncoforum.ru##.ad-app
 oncoforum.ru##.footer-app
@@ -3434,6 +3440,8 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Generic rules
 !
+/wp-content/plugins/popup-maker/*
+||a.mailmunch.co/app/$script,third-party
 /wp-content/plugins/icegram/*
 ###wbounce-modal
 ||7pisem.com^$third-party
@@ -3451,6 +3459,10 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+tvfru.org##.fancybox-wrap
+tvfru.org###fancybox-overlay
+kolokolrussia.ru##.subscribeBox
+son-video.com##.k-widget-dynamic-open
 wissen.de##.reveal-modal.open
 wissen.de##.reveal-modal-bg
 4kfilme.de##.stb-container
@@ -3918,6 +3930,7 @@ livelib.ru,lenta.ru,mychrome,rambler.ru,sports.ru#%#(function() { if (typeof Not
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: 2 }; localStorage.setItem("sports:view:notifications-subscribe-popup:closed:count", JSON.stringify(a)) } } catch (ex) {} })();
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: true }; localStorage.setItem("sports:view:notifications-subscribe-popup:view", JSON.stringify(a)) } } catch (ex) {} })();
 !
+||istiklal.com.tr/assets/site/js/pushControl.js^
 m.timesofindia.com###js-gcm-notif
 m.gadgetsnow.com##.ntfc_popup.notify_alert
 championat.com##.push-popup

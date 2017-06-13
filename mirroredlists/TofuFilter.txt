@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 19:36 2017/06/01
+! 最終更新 14:40 2017/06/13
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -13,7 +13,7 @@ amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.c
 ||dgpot.com^$third-party,domain=~dgpot.com
 ||digiket.com^$third-party
 ||digiket.net^$third-party,domain=~digiket.com
-||dmm.co.jp^$third-party,domain=~dmm.com
+||dmm.co.jp^$third-party,domain=~dmm.com|~thatav.net
 ||dmm.com^$third-party,domain=~dmm.co.jp
 ||dl-market.com^$third-party
 ||dlmarket.jp^$third-party
@@ -30,6 +30,7 @@ amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.c
 ||japanet.co.jp^$third-party
 ||melonbooks.com^$third-party,domain=~pixiv.net
 ||play-asia.com^$third-party
+||r18.com^$third-party,domain=~japanhub.net
 ||zero-animation.net^$third-party
 !-------ここまで-------!
 
@@ -148,9 +149,10 @@ _ads.php
 !||advision-adnw.jp^$third-party
 !||click-plus.net^$third-party
 !下にも
-!||gsspcln.jp^
+!他||gsspcln.jp^
 !||medi-8.net^$third-party
 !||smac-ssp.com^$third-party
+!||spacenine.biz^$third-party
 !||sprout-ad.com^$third-party
 
 !mobile
@@ -611,6 +613,7 @@ heavy-r.com##.hd-ban
 ||chaberi.com/html/br/
 ||chem-station.com^*/adrotate-pro/
 ||chem-station.com^*/amazonjs/
+||chem-station.com^*/amazonjs.
 ||chixi.jp/img.php?filename=b
 ||cinematoday.jp^*affiliate
 ||clipconverter.cc/www/d/
@@ -621,35 +624,28 @@ heavy-r.com##.hd-ban
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
 ||exploader.net/images/nls/
-||fujitv.co.jp/recommend/
 ||getchu.com/mbanner/$~image
 ||google.com/pagead/
 ||google.com/uds/?file=ads&
 ||google.com/uds/api/ads/
 ||grupo.jp/ad_loader/$domain=pitamo.jp
 ||himado.in/player_ad.php
-||himekuri.net/cgi/cm.cgi
 ||hitomi.la/hitomi.js
 ||hitomi.la/pop.js
 ||horne.red/banner/
 ||i-bbs.sijex.net/js/jquery.scrollfollow.js
 ||imagebam.com/files/index2.php
 ||imagebam.com/JS/js-cookie.js
-||imagevenue.com/banner
-||imagevenue.com/wind.html?
 ||imgj.xrea.com^
 ||itmedia.co.jp/css/sa.js
 ||itmedia.co.jp/js/adRequest.js
 ||itmedia.jp/adsv/
 ||jalan.net/jalan/doc/top/js/randombanner.js
-||jalan.net/jalan/doc/top/js/sp_tieup.js
 ||japan.cnet.com/parts/frame/
-||javfor.me/ads-
-||jizzhut.com/be$script
-||jizzhut.com/exoa/
+||javfor.me/iframe-as1.html
+||javfor.me/images/r18$image
 ||jugem.jp/ad/
 ||kakaku.com^*/kakakuad/
-||kakaku.com^*/RdmFtrs.js
 ||kakaku.com^*/RdmReviewAd.js
 ||kakaku.k-img.com^*/ad/
 ||kidslink.jp/cgi-bin/esb/main.cgi?
@@ -660,11 +656,9 @@ heavy-r.com##.hd-ban
 ||komachi.yomiuri.co.jp/scripts/g_connect.js
 ||kooss.com/*.htm$subdocument
 ||labaq.com/user/json/lq_amarray.js?
-||mainichi.jp/js/article.js
 ||majo.co.jp/jwd.js
 ||mangaz.com/virgo/adv/
 ||match.seesaa.jp^
-||mediagene.jp/bc.gif?
 ||mgstage.com/js/mgs_Widget.js?
 ||mixi.jp^*/adnetwork/
 ||mmmzy.jp^$domain=adbkm.com
@@ -673,7 +667,6 @@ heavy-r.com##.hd-ban
 ||new-akiba.com/images/banner/
 ||new-akiba.com/images/dlsite/
 ||new-akiba.com/special/
-||nuvid.com/b4.php
 ||nuvidp.com^$domain=nuvid.com
 ||ura-akiba.jp^$subdocument
 ||nijie.info/banner/
@@ -689,34 +682,22 @@ heavy-r.com##.hd-ban
 ||sanspo.com^*/adsence_
 ||sea-saw.com^$domain=2dbook.com
 ||seesaa.jp/frame/*$domain=seesaawiki.jp|jbbs.shitaraba.net
-||sourceforge.jp/js/sfjp-adsense.js?
-||sponichi.co.jp/js/shopping/
-||syosetu.com/ad$image
+||shopping.sponichi.co.jp/scripts/sannex_banner_auction.js
 ||tatituteto.net/images/banner/
-||thisav.com/images/banner/
 ||thisav.com/index.js
 ||thisav.com/js/pu.js
-||tokyo-cdn.com/urasunday/images/id_ms_banner$domain=urasunday.com
-||tokyo-tube.com/media/player/ads_
 ||tokyo-porn-tube.com/media/player/ads_
 ||tsumanne.net/amz/
 ||tsumanne.net/rakutensearch.php?
-||tvbok.com/f/bd/mona-ad300-20.png
 ||undernavi.com^$domain=adbkm.com
-||ustream.tv/rgw/Viewer/getAdverts?
 ||uta-net.com/user/phplib/js/view_jquery.js
 ||utamap.com/banner/
-||vipbox.tv/js/vip.js
 ||wav.tv/support/adFrame?
 ||westatic.com/jsad/$domain=weblio.jp
 ||wikiwiki.jp^*/ads_cus.js
-||with2.net/js/google/ads_
 ||woopie.jp^*/banner/
-||y-bbs.net/k/
 ||yaplog.jp^*/pr.js
 ||yaplog.jp/static/js/pc_blog_ad_
-||yourupload.com/mushroom/*
-||yourupload.com/jwplayer/*
 ||zdnet.com/parts/frame/ad_
 
 !------------------------解析------------------------!
@@ -1477,6 +1458,7 @@ nijie.info##[class*="tieup_"]
 nikkansports.com##.adBECOME
 northwood.blog60.fc2.com###menu1Block > .menuBlockBase:first-child
 npn.co.jp###arata5
+nuvid.com##.puFloatLine
 oekaki1.basso.to,oekaki2.basso.to##form[action="./oekaki.cgi"] + div[align="center"]
 oekakies.com##body > p:first-child + center
 oekakies.com##center + center > a
@@ -1511,6 +1493,7 @@ streamin.to##[style^="z-index: 2000;"]
 syosetu.com##.koukoku_728
 tinami.com###banner_view
 togetter.com###amazon_reco_box
+tokyo-tube.com##.banner-base
 tsumanne.net###amazon
 tsumanne.net###inputurl + p
 twitter.com##.modal-overlay
@@ -1518,6 +1501,7 @@ twitter.com##.promoted-tweet
 twitter.com##.ProfileTweet--promoted
 uta-net.com###banner_original
 uta-net.com###recommend
+uta-net.com###view_amazon
 vector.co.jp###adBox
 n.shop.vector.co.jp###vsSubTableContent
 veoh.com###CM8ShowAd_Rectangle_300x250
@@ -1986,7 +1970,6 @@ neetetsu.com##.head_rss + br + center > table
 ||blog.livedoor.jp/hamusoku*/amazon
 
 !はちまき
-||spacenine.biz^$domain=blog.esuteru.com
 esuteru.com##a[href^="http://www.amazon.co.jp"]
 
 !働くモノ http://workingnews.blog117.fc2.com/

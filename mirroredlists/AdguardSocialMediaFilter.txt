@@ -260,6 +260,8 @@ lj_bookmarklet
 otohaber.com.tr##body > .fancybox-container[-ext-has=".lightbox"]
 schwaebische.de##aside > .grey[-ext-has='>div.fb-page']
 filmlobisi.com###sidebar > .sidebarborder[-ext-has='div.g-page']
+habrahabr.ru##.sidebar_right > div.default-block_sidebar[-ext-has="> div.default-block__header > span.default-block__header-title:contains(ВКонтакте)"]
+habrahabr.ru##.sidebar_right > div.default-block_sidebar[-ext-has="> div.default-block__header > span.default-block__header-title:contains(Facebook)"]
 geektimes.ru##.sidebar_right > div.default-block_sidebar[-ext-has="div.default-block__content > div#facebook_like_box"]
 geektimes.ru##.sidebar_right > div.default-block_sidebar[-ext-has="div.default-block__content > div#vk_groups"]
 solidshare.net###dle-content div.cerceve[-ext-has='center > img[src$="/paylas.png"]']
@@ -393,6 +395,13 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+||syndication.twimg.com/widgets/$third-party,domain=gazetadaily.ru
+gazetadaily.ru##.socialbox
+morgenweb.de##li[title][onclick^="javascript:mmShare"]
+morgenweb.de##.nfy-sticky-icon-more
+||www.azadliq.az/wp-content/themes/azadliqv1/images/sosyal/
+internethaber.com##.wrt > .si
+ulke.com.tr##.news-sidebar-item.share
 comicbook.com##.social_blk
 narcity.com##body > [class$="-sharer"][id$="-sharer"]
 ucarliyiq.biz##.ui-widget
@@ -3046,6 +3055,8 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ||cdn-library.su/plusonet/lib/$domain=~pluso.net
 ||mailget.net^$third-party
 !
+tvfru.org##.fancybox-wrap
+tvfru.org###fancybox-overlay
 ternopillive.com.ua##.spu-bg
 ternopillive.com.ua##.spu-box
 ogo.ua###aPopup
@@ -3215,6 +3226,16 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 !
 ! Section fixing issues caused by social filter
 !
+!!! https://github.com/AdguardTeam/AdguardFilters/issues/5303
+@@||apis.google.com/js/api.js$domain=9anime.to
+@@||googlevideo.com/videoplayback?$domain=9anime.to
+@@||blogspot.com^$~image,domain=9anime.to
+!
+@@||mycloud.to/resources/css/
+@@||ajax.googleapis.com/ajax/libs/jquery/*/jquery.min.js$domain=fmovies.is|mycloud.to
+@@//mycloud.to/resources/js/player.js
+@@//mycloud.to/resources/player/jwplayer-*/jwplayer.js
+!!!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5093
 bie-dro.de#@#.header-social
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5080
