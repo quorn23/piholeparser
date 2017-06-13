@@ -37,7 +37,7 @@ sudo bash /etc/piholeparser/scripts/pushlists.sh
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Script Complete"
-timestamp=`date`
+timestamp=$(echo `date`)
 sudo echo "Script completed at $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 printf "$magenta" "___________________________________________________________"
