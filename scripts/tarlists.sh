@@ -24,12 +24,12 @@ echo ""
 
 if ping -c 1 $UPCHECK &> /dev/null
 then
+printf "$red"    "$FNAME list unavailable right now"
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TARTEMPFILE $source
 TARFILEX=$(tar -xavf $TARTEMPFILE)
-sudo mv $TARFILEX $FNAMEDONE
 sudo rm $TARTEMPFILE
 else 
 printf "$red"    "$FNAME list unavailable right now"
@@ -41,8 +41,8 @@ printf "$magenta" "___________________________________________________________"
 ## End Source loop
 done
 
-echo "$TARFILEX"
-echo "$FNAMEDONE"
+sudo cat $TARFILEX > 
+
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
 printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
