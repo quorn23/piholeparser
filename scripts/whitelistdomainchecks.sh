@@ -10,6 +10,8 @@ echo ""
 printf "$green"   "Whitelisting Domains that will be parsed."
 printf "$red"   "Note: this does not actually work,, but it's a future planned addition."
 echo ""
+timestamp=$(echo `date`)
+sudo echo "## Whitelisting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 for f in $ALLOFTHEDOMAINS
@@ -40,8 +42,8 @@ sudo rm $WHITELISTPOST
 #pihole -w $source &>/dev/null
 #done
 
-timestamp=`date`
-sudo echo "Whitelist script ran $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+timestamp=$(echo `date`)
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 
 printf "$magenta" "___________________________________________________________"
 echo ""
