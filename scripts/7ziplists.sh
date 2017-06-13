@@ -35,19 +35,19 @@ printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP 
 sudo wget -q -O $SEVENTEMPFILE $source
 sudo 7z e -so $SEVENTEMPFILE > "$FNAMEDONE"
 sudo rm $SEVENTEMPFILE
-echo ""
 else 
 printf "$red"    "$FNAME list unavailable right now"
 fi 
 
+echo ""
+printf "$magenta" "___________________________________________________________"
+
+## End source looping
+done
 
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
 printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
 
-echo ""
-printf "$magenta" "___________________________________________________________"
-
-## End looping
-done
+## End File loop
 done
