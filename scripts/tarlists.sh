@@ -26,6 +26,7 @@ if ping -c 1 $UPCHECK &> /dev/null
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
+cd $TARDIR
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TARTEMPFILE $source
 TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
@@ -48,3 +49,5 @@ done
 
 echo ""
 printf "$magenta" "___________________________________________________________"
+
+cd /etc/piholeparser/
