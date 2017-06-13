@@ -11,6 +11,8 @@ source /etc/piholeparser/scriptvars/variables.var
 echo ""
 printf "$green"   "Parsing Individual Lists."
 echo ""
+timestamp=$(echo `date`)
+sudo echo "## Heavy Parsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 for f in $HEAVYPARSE
@@ -64,6 +66,7 @@ timestamp=`date`
 if 
 [ "$ORIGFILESIZE" -eq 0 ]
 then
+timestamp=$(echo `date`)
 sudo echo "$FNAME list was an empty file upon download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 echo ""
@@ -82,7 +85,7 @@ sudo cp $ORIGFILE $MFILENAME
 
 ## Github has a 100mb limit, and empty files are useless
 MFILESIZE=$(stat -c%s "$MFILENAME")
-timestamp=`date`
+timestamp=$(echo `date`)
 if 
 [ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
 then
@@ -334,7 +337,7 @@ echo ""
 
 ## Github has a 100mb limit, and empty files are useless
 PFILESIZE=$(stat -c%s "$PFILENAME")
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 [ "$PFILESIZE" -ge "$GITHUBLIMIT" ]
 then
@@ -363,3 +366,4 @@ echo ""
 
 ## End File Loop
 done
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
