@@ -31,14 +31,14 @@ sudo wget -q -O $TARTEMPFILE $source
 TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
 sudo tar -xavf $TARTEMPFILE -C $TARDIR
 sudo rm $TARTEMPFILE
-sudo cat $TARFILEX > $FNAMEDONE
-sudo rm $TARFILEX
 else 
 printf "$red"    "$FNAME list unavailable right now"
 fi 
 
 ## End Source loop
 done
+
+sudo mv $TARFILEX $FNAMEDONE
 
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
 ORIGFILESIZE=$(stat -c%s "$FNAMEDONE")
