@@ -4,11 +4,11 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
-## Dependency check
-sudo bash /etc/piholeparser/scripts/dependencycheck.sh
-
 ## Clean directories to avoid collisions
 sudo bash /etc/piholeparser/scripts/collisionavoid.sh
+
+## Dependency check
+sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 
 ## Whitelist domains that will be downloaded from
 sudo bash /etc/piholeparser/scripts/whitelistdomainchecks.sh
