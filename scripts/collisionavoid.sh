@@ -23,6 +23,9 @@ else
 sudo echo "RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+printf "$magenta" "___________________________________________________________"
+echo ""
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Clearing the Path."
