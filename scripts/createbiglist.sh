@@ -15,6 +15,8 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Attempting Creation of Big List."
 echo ""
+timestamp=$(echo `date`)
+sudo echo "## Big List" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Combine Small lists
 sudo cat /etc/piholeparser/parsed/*.txt > $TEMPAPL
@@ -53,6 +55,7 @@ fi
 ## duplicate Big List file
 sudo cp $BIGAPL /etc/piholeparser/parsed/
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -66,6 +69,8 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Attempting Creation of Big List Edited."
 echo ""
+timestamp=$(echo `date`)
+sudo echo "## Edited Big List $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 sudo cp $BIGAPL $BIGAPLE
 
@@ -104,6 +109,10 @@ echo ""
 printf "$yellow"  "Big List (edited) Created Successfully."
 fi
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
 ####################
 ## Big Source     ##
 ####################
@@ -112,6 +121,9 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Rebuilding the Sources file."
 echo ""
+
+timestamp=$(echo `date`)
+sudo echo "## Rebuilding Source List $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## add all sources
 sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
@@ -126,5 +138,6 @@ HOWMANYLISTS=$(echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processe
 sudo echo "$HOWMANYLISTS"
 sudo echo "$HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
