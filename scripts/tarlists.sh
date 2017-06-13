@@ -26,10 +26,9 @@ if ping -c 1 $UPCHECK &> /dev/null
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
-cd $TARDIR
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TARTEMPFILE $source
-TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
+TARFILEX=$("$TARDIR"$(tar -xavf $TARTEMPFILE -C $TARDIR))
 sudo rm $TARTEMPFILE
 else 
 printf "$red"    "$FNAME list unavailable right now"
@@ -49,5 +48,3 @@ done
 
 echo ""
 printf "$magenta" "___________________________________________________________"
-
-cd /etc/piholeparser/
