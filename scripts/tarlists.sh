@@ -30,7 +30,7 @@ printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP 
 sudo wget -q -O $TARTEMPFILE $source
 TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
 sudo rm $TARTEMPFILE
-sudo cat $TARFILEX > $FNAMEDONE
+sudo mv $TARFILEX $FNAMEDONE
 sudo rm $TARFILEX
 else 
 printf "$red"    "$FNAME list unavailable right now"
