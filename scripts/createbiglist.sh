@@ -62,7 +62,14 @@ echo ""
 printf "$green"   "Rebuilding the Sources file."
 echo ""
 
+## add all sources
 sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
+
+## Remove Empty Lines
+sudo sed '/^$/d' $BIGAPLSOURCE > $BIGAPLSOURCE2
+sudo rm $BIGAPLSOURCE
+sudo mv $BIGAPLSOURCE2 $BIGAPLSOURCE
+
 echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script."
 
 printf "$magenta" "___________________________________________________________"
