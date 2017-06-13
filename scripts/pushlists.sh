@@ -10,7 +10,6 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Push Changes up to Pihole Web Server"
 
-
 sudo cp -p $BIGAPL $BIGAPLLOCALHOST
 
 printf "$magenta" "___________________________________________________________"
