@@ -107,6 +107,19 @@ else
 sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+## Cleanup from old versions
+WHATITIS="garbage txt Files in the mirrored directory"
+CHECKME=/etc/piholeparser/mirroredlists/*.orig.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 WHATITIS="Locally Hosted Biglist"
 CHECKME=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 timestamp=$(echo `date`)
