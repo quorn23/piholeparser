@@ -4,7 +4,7 @@
 source /etc/piholeparser.var
 
 ## Timestamp
-timestamp=`date`
+timestamp=$(echo `date`)
 
 ## Recent Run
 RECENTRUN=/etc/piholeparser/RecentRunLog.txt
