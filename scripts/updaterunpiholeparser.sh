@@ -7,9 +7,6 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
-timestamp=$(echo `date`)
-sudo echo "## Starting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-
 ## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
 echo ""
