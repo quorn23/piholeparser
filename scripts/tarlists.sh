@@ -22,6 +22,7 @@ echo ""
 printf "$cyan"    "$source"
 echo "" 
 
+timestamp=`date`
 if ping -c 1 $UPCHECK &> /dev/null
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
@@ -32,6 +33,7 @@ TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
 TARDONE="$TARDIR""$TARFILEX"
 sudo rm $TARTEMPFILE
 else 
+sudo echo "$FNAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$FNAME list unavailable right now"
 fi 
 
