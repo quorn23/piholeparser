@@ -8,6 +8,8 @@ source /etc/piholeparser/scriptvars/variables.var
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Cleaning Up."
+timestamp=$(echo `date`)
+sudo echo "## Cleanup $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Clean list directories
 
@@ -104,5 +106,6 @@ else
 :
 fi
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
