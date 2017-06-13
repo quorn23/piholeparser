@@ -27,6 +27,7 @@ echo ""
 printf "$cyan"    "$source"
 echo "" 
 
+timestamp=`date`
 if ping -c 1 $UPCHECK &> /dev/null
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
@@ -36,6 +37,7 @@ sudo wget -q -O $SEVENTEMPFILE $source
 sudo 7z e -so $SEVENTEMPFILE > "$FNAMEDONE"
 sudo rm $SEVENTEMPFILE
 else 
+sudo echo "$FNAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$FNAME list unavailable right now"
 fi 
 
