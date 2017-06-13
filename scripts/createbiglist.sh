@@ -28,7 +28,7 @@ echo -e "\t`wc -l $BIGAPL | cut -d " " -f 1` lines after deduping"
 sudo rm $TEMPAPL
 
 ## Github has a 100mb limit and empty files are useless
-BFILESIZE=$(stat -c%s "$BIGAPL")
+BFILESIZE=$(stat -c%s $BIGAPL)
 if
 [ "$BFILESIZE" -ge "$GITHUBLIMIT" ]
 then
@@ -49,28 +49,6 @@ fi
 
 ## duplicate Big List file
 sudo cp $BIGAPL /etc/piholeparser/parsed/
-
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Big Source     ##
-####################
-
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Rebuilding the Sources file."
-echo ""
-
-## add all sources
-sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
-
-## Remove Empty Lines
-sudo sed '/^$/d' $BIGAPLSOURCE > $BIGAPLSOURCE2
-sudo rm $BIGAPLSOURCE
-sudo mv $BIGAPLSOURCE2 $BIGAPLSOURCE
-
-echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script."
 
 printf "$magenta" "___________________________________________________________"
 echo ""
@@ -98,6 +76,28 @@ sudo mv $TEMPAPLE $BIGAPLE
 
 ## end of loops
 done
+
+####################
+## Big Source     ##
+####################
+
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Rebuilding the Sources file."
+echo ""
+
+## add all sources
+sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
+
+## Remove Empty Lines
+sudo sed '/^$/d' $BIGAPLSOURCE > $BIGAPLSOURCE2
+sudo rm $BIGAPLSOURCE
+sudo mv $BIGAPLSOURCE2 $BIGAPLSOURCE
+
+echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script."
+
+printf "$magenta" "___________________________________________________________"
+echo ""
 
 printf "$magenta" "___________________________________________________________"
 echo ""
