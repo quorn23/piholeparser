@@ -7,6 +7,7 @@ source /etc/piholeparser/scriptvars/variables.var
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Downloading and Extracting 7zip Compressed Lists."
+sudo echo "## 7zip $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ## Start 7zip File Loop
@@ -51,5 +52,6 @@ printf "$yellow"  "Size of $FNAMEDONE = $ORIGFILESIZE bytes."
 ## End File loop
 done
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 printf "$magenta" "___________________________________________________________"
