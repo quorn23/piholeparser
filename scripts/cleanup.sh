@@ -13,81 +13,88 @@ sudo echo "## Cleanup $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Clean list directories
 
-if 
-ls /etc/piholeparser/lists/heavyparsing/*.txt &> /dev/null; 
+WHATITIS="Heavy Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/heavyparsing/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/lists/lightparsing/*.txt &> /dev/null; 
+WHATITIS="Light Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/lightparsing/*.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/lightparsing/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/lists/7zip/*.txt &> /dev/null; 
+WHATITIS="7zip Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/7zip/*.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/7zip/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/lists/tar/*.txt &> /dev/null; 
+WHATITIS="Tar Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/tar/*.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/lists/tar/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## Clean compressedlist directory
-
-if 
-ls /etc/piholeparser/compressedconvert/*.7z &> /dev/null; 
+WHATITIS="7z Files"
+CHECKME=/etc/piholeparser/lists/7zip/*.7z
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/compressedconvert/*.7z
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/compressedconvert/*.tar.gz &> /dev/null; 
+WHATITIS="Tar Files"
+CHECKME=/etc/piholeparser/lists/tar/*.tar.gz
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/compressedconvert/*.tar.gz
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-if 
-ls /etc/piholeparser/compressedconvert/*.txt &> /dev/null; 
+WHATITIS="txt Files in the lists directory"
+CHECKME=/etc/piholeparser/lists/*.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /etc/piholeparser/compressedconvert/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
-fi
-
-## Clean parsed directory if using locally
-
-if 
-[ "$version" = "local" ]
-then
-sudo rm /etc/piholeparser/parsed/*.txt
-else
-:
-fi
-
-## Cleanup from old versions
-if 
-ls /etc/piholeparser/lists/*.txt &> /dev/null; 
-then
-sudo rm /etc/piholeparser/lists/*.txt
-else
-:
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 if 
@@ -98,13 +105,40 @@ else
 :
 fi
 
-if 
-ls /var/www/html/compressedconvert/*.txt &> /dev/null; 
+WHATITIS="garbage txt Files in the mirrored directory"
+CHECKME=/etc/piholeparser/mirroredlists/*.orig.txt
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
 then
-sudo rm /var/www/html/compressedconvert/*.txt
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "$WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+## Clean parsed directory if using locally
+if 
+[ "$version" = "local" ]
+then
+sudo rm /etc/piholeparser/parsed/*.txt
 else
 :
 fi
+
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "Updating Readme file."
+
+timestamp=$(echo `date`)
+sudo echo "## Updating README.md $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+
+sudo rm $READMEVAR
+sudo sed 's/LASTRUNVARIABLEGOESHERE/$timestamp/' $READMEVARD > $READMEVAR
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
