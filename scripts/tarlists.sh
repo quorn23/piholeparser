@@ -29,8 +29,9 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TARTEMPFILE $source
 TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
+sudo tar -xavf $TARTEMPFILE -C $TARDIR
 sudo rm $TARTEMPFILE
-sudo mv $TARFILEX $FNAMEDONE
+sudo cat $TARFILEX > $FNAMEDONE
 sudo rm $TARFILEX
 else 
 printf "$red"    "$FNAME list unavailable right now"
