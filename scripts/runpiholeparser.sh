@@ -17,9 +17,9 @@ sudo bash /etc/piholeparser/scripts/whitelistdomainchecks.sh
 sudo bash /etc/piholeparser/scripts/7ziplists.sh
 
 ## Lists compressed in tar
-sudo bash /etc/piholeparser/scripts/tarlists.sh
+#sudo bash /etc/piholeparser/scripts/tarlists.sh
 
-## Parse Individual Lists taht barely need it
+## Parse Individual Lists that barely need it
 sudo bash /etc/piholeparser/scripts/lightparser.sh
 
 ## Parse Lists that really need it
