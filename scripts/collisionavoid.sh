@@ -12,7 +12,7 @@ echo ""
 printf "$green"   "Creating RecentRunLog."
 
 ## Recent Run Log
-timestamp=`date`
+timestamp=$(echo `date`)
 if 
 ls $RECENTRUN &> /dev/null; 
 then
@@ -23,18 +23,21 @@ else
 sudo echo "RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Clearing the Path."
+timestamp=$(echo `date`)
+sudo echo "## Clearing The Path $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Stuff to remove if there
 
 WHATITIS="Whitelist File"
 CHECKME=/etc/piholeparser/whitelisted/whitelist.domains
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -46,7 +49,7 @@ fi
 
 WHATITIS="Heavy Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -58,7 +61,7 @@ fi
 
 WHATITIS="Light Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/lightparsing/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -70,7 +73,7 @@ fi
 
 WHATITIS="7zip Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/7zip/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -82,7 +85,7 @@ fi
 
 WHATITIS="Tar Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/tar/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -94,7 +97,7 @@ fi
 
 WHATITIS="Old Parsed Folder txt files"
 CHECKME=/etc/piholeparser/parsed/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -106,7 +109,7 @@ fi
 
 WHATITIS="Locally Hosted Biglist"
 CHECKME=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -118,7 +121,7 @@ fi
 
 WHATITIS="All Parsed List"
 CHECKME=$BIGAPL
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -130,7 +133,7 @@ fi
 
 WHATITIS="All Parsed List (edited)"
 CHECKME=$BIGAPLE
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -142,7 +145,7 @@ fi
 
 WHATITIS="parsedall Directory txt"
 CHECKME=/etc/piholeparser/parsedall/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -154,7 +157,7 @@ fi
 
 WHATITIS="The Source List"
 CHECKME=$BIGAPLSOURCE
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -166,7 +169,7 @@ fi
 
 WHATITIS="Old Mirrored Lists"
 CHECKME=/etc/piholeparser/mirroredlists/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -178,7 +181,7 @@ fi
 
 WHATITIS="txt Files in the lists directory"
 CHECKME=/etc/piholeparser/lists/*.txt
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -190,7 +193,7 @@ fi
 
 WHATITIS="7z Files"
 CHECKME=/etc/piholeparser/lists/7zip/*.7z
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -202,7 +205,7 @@ fi
 
 WHATITIS="Tar Files"
 CHECKME=/etc/piholeparser/lists/tar/*.tar.gz
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -216,7 +219,7 @@ fi
 
 WHATITIS="whitelisted directory"
 CHECKME=/etc/piholeparser/whitelisted/
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -228,7 +231,7 @@ fi
 
 WHATITIS="web host lists directory"
 CHECKME=/var/www/html/lists/
-timestamp=`date`
+timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
@@ -238,5 +241,6 @@ sudo mkdir $CHECKME
 sudo echo "$WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
