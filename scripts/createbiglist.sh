@@ -28,7 +28,7 @@ echo -e "\t`wc -l $BIGAPL | cut -d " " -f 1` lines after deduping"
 sudo rm $TEMPAPL
 
 ## Github has a 100mb limit and empty files are useless
-BFILESIZE=$(stat -c%s "$MFILENAME")
+BFILESIZE=$(stat -c%s "$BIGAPL")
 if
 [ "$BFILESIZE" -ge "$GITHUBLIMIT" ]
 then
