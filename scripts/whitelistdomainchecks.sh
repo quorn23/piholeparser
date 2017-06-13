@@ -20,19 +20,12 @@ do
 ## Set Variables (again, I guess)
 source /etc/piholeparser/scriptvars/variables.var
 
-## Filter domain name
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
-
 ## add to whitelist file
 sudo echo "$UPCHECK" | sudo tee --append $WHITELIST &>/dev/null
 
 ## end of loops
 done
 done
-
-## sources that are compressed
-sudo echo "rlwpx.free.fr" | sudo tee --append $WHITELIST &>/dev/null
-sudo echo "github.com" | sudo tee --append $WHITELIST &>/dev/null
 
 ## undupe and sort
 sort -u $WHITELIST > $WHITELISTPOST
@@ -47,6 +40,8 @@ sudo rm $WHITELISTPOST
 #pihole -w $source &>/dev/null
 #done
 
+timestamp=`date`
+sudo echo "Whitelist script ran $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 printf "$magenta" "___________________________________________________________"
 echo ""
