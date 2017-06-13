@@ -54,6 +54,16 @@ http://pi.hole/lists/1111ALLPARSEDLISTS1111.txt
 
 If you think you know the best and most efficient way to parse the lists, please submit a pull request.
 
+## Log
+
+As of 6/13/2017, there is a "log" available at:
+
+https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog
+
+This should provide some insights as to what lists are dead, empty, or too large for github.
+
+The log feature is a work in progress.
+
 ## Disclaimer
 
     All "Original Unaltered Lists" are located within the mirroredlists directory.
