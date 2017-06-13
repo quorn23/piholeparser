@@ -28,6 +28,7 @@ fi
 WHATITIS="Whitelist File"
 CHECKME=/etc/piholeparser/whitelisted/whitelist.domains
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -39,6 +40,7 @@ fi
 WHATITIS="Heavy Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -50,6 +52,7 @@ fi
 WHATITIS="Light Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/lightparsing/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -61,6 +64,7 @@ fi
 WHATITIS="7zip Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/7zip/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -72,6 +76,7 @@ fi
 WHATITIS="Tar Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/tar/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -83,6 +88,7 @@ fi
 WHATITIS="Old Parsed Folder txt files"
 CHECKME=/etc/piholeparser/parsed/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -94,6 +100,7 @@ fi
 WHATITIS="Locally Hosted Biglist"
 CHECKME=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -105,6 +112,7 @@ fi
 WHATITIS="All Parsed List"
 CHECKME=$BIGAPL
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -116,6 +124,7 @@ fi
 WHATITIS="All Parsed List (edited)"
 CHECKME=$BIGAPLE
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -127,6 +136,7 @@ fi
 WHATITIS="parsedall Directory txt"
 CHECKME=/etc/piholeparser/parsedall/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -138,6 +148,7 @@ fi
 WHATITIS="The Source List"
 CHECKME=$BIGAPLSOURCE
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -149,6 +160,7 @@ fi
 WHATITIS="Old Mirrored Lists"
 CHECKME=/etc/piholeparser/mirroredlists/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -160,6 +172,7 @@ fi
 WHATITIS="txt Files in the lists directory"
 CHECKME=/etc/piholeparser/lists/*.txt
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -171,6 +184,7 @@ fi
 WHATITIS="7z Files"
 CHECKME=/etc/piholeparser/lists/7zip/*.7z
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -182,6 +196,7 @@ fi
 WHATITIS="Tar Files"
 CHECKME=/etc/piholeparser/lists/tar/*.tar.gz
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
@@ -195,6 +210,7 @@ fi
 WHATITIS="whitelisted directory"
 CHECKME=/etc/piholeparser/whitelisted/
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo echo "$WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
@@ -206,6 +222,7 @@ fi
 WHATITIS="web host lists directory"
 CHECKME=/var/www/html/lists/
 timestamp=`date`
+if
 ls $CHECKME &> /dev/null;
 then
 sudo echo "$WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
