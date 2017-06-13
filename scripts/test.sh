@@ -23,6 +23,7 @@ sudo sed '/^$/d' $BIGAPLSOURCE > $BIGAPLSOURCE2
 sudo rm $BIGAPLSOURCE
 sudo mv $BIGAPLSOURCE2 $BIGAPLSOURCE
 
+timestamp=$(echo `date`)
 HOWMANYLISTS=$(echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script.")
 sudo echo "$HOWMANYLISTS"
 sudo echo "$HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
