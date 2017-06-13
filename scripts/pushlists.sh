@@ -4,10 +4,12 @@
 
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
-
+timestamp=$(echo `date`)
+sudo echo "## Pushing Lists $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Push Changes up to Pihole Web Server"
+
 
 sudo cp -p $BIGAPL $BIGAPLLOCALHOST
 
@@ -25,7 +27,7 @@ sudo git config --global user.name ""$GITHUBUSERNAME""
 sudo git config --global user.email $GITHUBEMAIL
 sudo git remote set-url origin https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@github.com/deathbybandaid/piholeparser.git
 sudo git -C /etc/piholeparser/ add .
-timestamp=`date`
+timestamp=$(echo `date`)
 sudo git -C /etc/piholeparser/ commit -m "Update lists $timestamp"
 sudo git -C /etc/piholeparser/ push -u origin master
 elif
@@ -33,5 +35,7 @@ elif
 then
 printf "$red"   "Not Pushing Lists to Github"
 fi }
+
 printf "$magenta" "___________________________________________________________"
 echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
