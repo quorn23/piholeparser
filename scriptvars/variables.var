@@ -21,11 +21,9 @@ WHITELISTPOST=/etc/piholeparser/whitelisted/whitelist.domainspost
 
 ## Set 7zip .lst directory
 SEVENSLIST=/etc/piholeparser/lists/7zip/*.lst
-SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
 
 ## Set tar .lst directory
 TARLISTS=/etc/piholeparser/lists/tar/*.lst
-TARTEMPFILE="$FNAME".temp.tar.gz ## Temp File
 
 ## Light Parser .lst directory
 LIGHTPARSE=/etc/piholeparser/lists/lightparsing/*.lst
@@ -46,6 +44,8 @@ PREPROC="$FNAME".preproc.txt ## file after pre-processing
 MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
 MERGED="$FNAME".merged.txt ## Merged Name
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
+SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
+TARTEMPFILE="$FNAME".temp.tar.gz ## Temp File
 
 ## ALLPARSEDLIST
 TEMPAPL=/etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
