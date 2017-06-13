@@ -7,14 +7,11 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
-## Make sure we are in the correct directory
-cd /etc/piholeparser
-
 ## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Updating Repository."
-sudo git pull
+sudo git -C /etc/piholeparser/ pull
 printf "$magenta" "___________________________________________________________"
 echo ""
 
