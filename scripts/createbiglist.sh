@@ -81,7 +81,7 @@ printf "$green"   ""
 echo ""
 
 ## Start File Loop
-for source in `cat $BDC $WHITELIST`;
+for source in `cat $BDC $DBBW $WHITELIST`;
 do
 
 ## cut domains out
