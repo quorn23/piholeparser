@@ -5,6 +5,11 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
+timestamp=$(echo `date`)
+echo "$timestamp"
+sleep 12
+timestamp=$(echo `date`)
+echo "$timestamp"
 
 ####################
 ## Big Source     ##
