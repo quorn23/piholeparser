@@ -257,6 +257,24 @@ sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
+## Remove lines without letters
+echo ""
+PARSECOMMENT="removing lines without letters"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[a-z]/!d' < $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## delete lines without a period
+echo ""
+PARSECOMMENT="removing lines without a period"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[.]/!d' $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
 ## Duplicate Removal
 echo ""
 PARSECOMMENT="removing duplicates"
