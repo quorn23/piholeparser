@@ -16,7 +16,7 @@ echo ""
 printf "$green"   "Attempting Creation of Big List."
 echo ""
 timestamp=$(echo `date`)
-sudo echo "## Big List" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "## Big List $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Combine Small lists
 sudo cat /etc/piholeparser/parsed/*.txt > $TEMPAPL
