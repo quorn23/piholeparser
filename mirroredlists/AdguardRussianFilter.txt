@@ -5583,6 +5583,8 @@ s4galaxy.ru,3dnews.ru,lenovo-smart.ru#%#Object.defineProperty(window, 'SocialMar
 ! Block web-sockets in old versions of Chrome (older then 47)
 rustorka.com,pise4ka.net,nnm-club.me,nnm-club.ws,nnmclub.to,onlainfilm.ucoz.ua,rutor.is,baskino.club,rutor.info,nnm.me,korzik.net,seasonvar.ru,rsload.net,nnm-club.me,nnmclub.to,rustorka.com,auto.mail.ru,horo.mail.ru,realty.mail.ru,health.mail.ru,afisha.mail.ru,cloud.mail.ru,otvet.mail.ru,pogoda.mail.ru,sport.mail.ru,tv.mail.ru,torg.mail.ru,cars.mail.ru,hi-tech.mail.ru,free-torrent.org,free-torrents.org,ukrinform.ru,radikal.ru,trackeroc.ru,trackerock.ru#%#window.WebSocket = undefined;
 !
+! https://forum.adguard.com/index.php?threads/22443/
+api.dizimania.ru#%#Object.defineProperty(window, 'flashLayerAdShowed', { get: function() { return true; } });
 ! https://forum.adguard.com/index.php?threads/22416/
 fayloobmennik.cloud#%#AG_onLoad(function() { window.redirect = function() {}; });
 ! comments.ua - clicable background
@@ -5608,7 +5610,7 @@ kakprosto.ru#%#AG_onLoad(function() { window.getDirectBlock = function() {}; });
 ! geektimes.ru,habrahabr.ru - a lot of errors in console
 geektimes.ru,habrahabr.ru#%#AG_onLoad(function() { window.loadAdriverBanner = function() {}; });
 ! Ads replacement script (trafmag.com)
-allboxing.ru,obozrevatel.com,avtovod.org.ua,kurs.com.ua,nnm.me,censor.net.ua,ukrlit.vn.ua,24tv.ua,autoua.net,azov-sea.info,beztabu.net,boxnews.com.ua,buhgalter911.com,buhgalter.com.ua,buhgalter.com.ua,depo.ua,dovidka.biz.ua,dsnews.ua,dynamo.kiev.ua,expres.ua,lvivexpres.com,facenews.ua,finance.ua,football24.ua,gagadget.com,gazeta.ua,guru.ua,headinsider.net,hvylya.net,hyser.com.ua,kaktus.site,korupciya.com,love.ua,luxlux.net,mabila.ua,mama.ua,minfin.com.ua,nashasvadba.ua,newsyou.info,novostivmire.com,okino.ua,ostrnum.com,qp.ua,radio24.ua,maximum.fm,rbc.ua,real-vin.com,ringside24.com,segodnya.ua,sinoptik.ua,sinoptik.com.ru,strana.ua,subject.com.ua,toneto.net,tv.ua,ubr.ua,udoktora.net,ukrinform.ua,ukrlib.com.ua,u-news.com.ua,unian.net,vchaspik.ua,vesti.ua,vesti-ukr.com,vmirechudes.com,vsetv.com,woman.ua,zaxid.net#%#var dce = document.createElement.bind(document); document.createElement = function(a) { var el = dce(a); if(a.toLowerCase() == "script") { Object.defineProperty(el, 'textContent', { set: function(i) { /*console.log(i);*/ if(!/function\(mz_str\).*?"[a-z0-9]{100,}"/.test(i)) { Object.getOwnPropertyDescriptor(Node.prototype, 'textContent').set.call(el, i); } }, get: function () { return el.textContent; } }) } return el; };
+24tv.ua,allboxing.ru,altapress.ru,autoua.net,avtodispetcher.ru,avtovod.org.ua,azov-sea.info,beztabu.net,boxnews.com.ua,buhgalter.com.ua,buhgalter911.com,censor.net.ua,depo.ua,dovidka.biz.ua,dsnews.ua,dynamo.kiev.ua,expres.ua,facenews.ua,fightsday.com,finance.ua,fontanka.fm,football24.ua,gagadget.com,gazeta.ua,glavcom.ua,guru.ua,headinsider.net,hronika.info,hvylya.net,hyser.com.ua,inforesist.org,kaktus.site,korupciya.com,kriminal.tv,kurs.com.ua,love.ua,luxlux.net,lvivexpres.com,mabila.ua,mama.ua,maximum.fm,minfin.com.ua,nashasvadba.ua,newsyou.info,nnm.me,nnovosti.info,novostivmire.com,obozrevatel.com,obsuzhday.com,okino.ua,ostrnum.com,qp.ua,radio24.ua,rbc.ua,real-vin.com,ria-m.tv,ringside24.com,scribble.su,segodnya.ua,sinoptik.com.ru,sinoptik.ua,socportal.info,sprashivalka.com,strana.ua,subject.com.ua,toneto.net,tv.ua,u-news.com.ua,ubr.ua,udoktora.net,ukrinform.ua,ukrlib.com.ua,ukrlit.vn.ua,unian.net,vchaspik.ua,vesti-ukr.com,vesti.ua,vmirechudes.com,vsetv.com,webpark.ru,woman.ua,zarlit.com,zaxid.net#%#var dce = document.createElement.bind(document); document.createElement = function(a) { var el = dce(a); if(a.toLowerCase() == "script") { Object.defineProperty(el, 'textContent', { set: function(i) { /*console.log(i);*/ if(!/function\(mz_str\).*?"[a-z0-9]{100,}"/.test(i)) { Object.getOwnPropertyDescriptor(Node.prototype, 'textContent').set.call(el, i); } }, get: function () { return el.textContent; } }) } return el; };
 ! https://forum.adguard.com/index.php?threads/19366/
 porno-go.com#%#Object.defineProperty(window, 'slo', { get: function(){ return false; } });
 ! PanamaClient WebRTC circumvention
@@ -5814,6 +5816,8 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !-----------------------
 !------- CSS -----------
 !-----------------------
+! https://forum.adguard.com/index.php?threads/22127/
+freerutor.org#$#div[id^="epom-pushdown-"] { position: absolute!important; left: -3000px!important; }
 ! topserial.online - удаление отступа сверху
 topserial.online#$#.wrapper { padding-top:0px!important; }
 ! https://forum.adguard.com/index.php?threads/22127/
@@ -6462,8 +6466,8 @@ seasonvar.ru$$style[tag-content="body { padding: 300px"][max-length="200"]
 ! MarketGid ads(for app)
 unn.com.ua$$script[tag-content="mg_ws"][max-length="1600"]
 ! Ads replacement script (trafmag.com)
-allboxing.ru,obozrevatel.com,avtovod.org.ua,kurs.com.ua,nnm.me,censor.net.ua,ukrlit.vn.ua,24tv.ua,autoua.net,azov-sea.info,beztabu.net,boxnews.com.ua,buhgalter911.com,buhgalter.com.ua,buhgalter.com.ua,depo.ua,dovidka.biz.ua,dsnews.ua,dynamo.kiev.ua,expres.ua,lvivexpres.com,facenews.ua,finance.ua,football24.ua,gagadget.com,gazeta.ua,guru.ua,headinsider.net,hvylya.net,hyser.com.ua,kaktus.site,korupciya.com,love.ua,luxlux.net,mabila.ua,mama.ua,minfin.com.ua,nashasvadba.ua,newsyou.info,novostivmire.com,okino.ua,ostrnum.com,qp.ua,radio24.ua,maximum.fm,rbc.ua,real-vin.com,ringside24.com,segodnya.ua,sinoptik.ua,sinoptik.com.ru,strana.ua,subject.com.ua,toneto.net,tv.ua,ubr.ua,udoktora.net,ukrinform.ua,ukrlib.com.ua,u-news.com.ua,unian.net,vchaspik.ua,vesti.ua,vesti-ukr.com,vmirechudes.com,vsetv.com,woman.ua,zaxid.net$$script[wildcard="*(function(){var _a*String.fromCharCode(parseInt*function*"][max-length="7200"]
-allboxing.ru,obozrevatel.com,avtovod.org.ua,kurs.com.ua,nnm.me,censor.net.ua,ukrlit.vn.ua,24tv.ua,autoua.net,azov-sea.info,beztabu.net,boxnews.com.ua,buhgalter911.com,buhgalter.com.ua,buhgalter.com.ua,depo.ua,dovidka.biz.ua,dsnews.ua,dynamo.kiev.ua,expres.ua,lvivexpres.com,facenews.ua,finance.ua,football24.ua,gagadget.com,gazeta.ua,guru.ua,headinsider.net,hvylya.net,hyser.com.ua,kaktus.site,korupciya.com,love.ua,luxlux.net,mabila.ua,mama.ua,minfin.com.ua,nashasvadba.ua,newsyou.info,novostivmire.com,okino.ua,ostrnum.com,qp.ua,radio24.ua,maximum.fm,rbc.ua,real-vin.com,ringside24.com,segodnya.ua,sinoptik.ua,sinoptik.com.ru,strana.ua,subject.com.ua,toneto.net,tv.ua,ubr.ua,udoktora.net,ukrinform.ua,ukrlib.com.ua,u-news.com.ua,unian.net,vchaspik.ua,vesti.ua,vesti-ukr.com,vmirechudes.com,vsetv.com,woman.ua,zaxid.net$$script[wildcard="*(function*String.fromCharCode(parseInt*.substr*"][max-length="7200"]
+24tv.ua,allboxing.ru,altapress.ru,autoua.net,avtodispetcher.ru,avtovod.org.ua,azov-sea.info,beztabu.net,boxnews.com.ua,buhgalter.com.ua,buhgalter911.com,censor.net.ua,depo.ua,dovidka.biz.ua,dsnews.ua,dynamo.kiev.ua,expres.ua,facenews.ua,fightsday.com,finance.ua,fontanka.fm,football24.ua,gagadget.com,gazeta.ua,glavcom.ua,guru.ua,headinsider.net,hronika.info,hvylya.net,hyser.com.ua,inforesist.org,kaktus.site,korupciya.com,kriminal.tv,kurs.com.ua,love.ua,luxlux.net,lvivexpres.com,mabila.ua,mama.ua,maximum.fm,minfin.com.ua,nashasvadba.ua,newsyou.info,nnm.me,nnovosti.info,novostivmire.com,obozrevatel.com,obsuzhday.com,okino.ua,ostrnum.com,qp.ua,radio24.ua,rbc.ua,real-vin.com,ria-m.tv,ringside24.com,scribble.su,segodnya.ua,sinoptik.com.ru,sinoptik.ua,socportal.info,sprashivalka.com,strana.ua,subject.com.ua,toneto.net,tv.ua,u-news.com.ua,ubr.ua,udoktora.net,ukrinform.ua,ukrlib.com.ua,ukrlit.vn.ua,unian.net,vchaspik.ua,vesti-ukr.com,vesti.ua,vmirechudes.com,vsetv.com,webpark.ru,woman.ua,zarlit.com,zaxid.net$$script[wildcard="*(function(){var _a*String.fromCharCode(parseInt*function*"][max-length="7200"]
+24tv.ua,allboxing.ru,altapress.ru,autoua.net,avtodispetcher.ru,avtovod.org.ua,azov-sea.info,beztabu.net,boxnews.com.ua,buhgalter.com.ua,buhgalter911.com,censor.net.ua,depo.ua,dovidka.biz.ua,dsnews.ua,dynamo.kiev.ua,expres.ua,facenews.ua,fightsday.com,finance.ua,fontanka.fm,football24.ua,gagadget.com,gazeta.ua,glavcom.ua,guru.ua,headinsider.net,hronika.info,hvylya.net,hyser.com.ua,inforesist.org,kaktus.site,korupciya.com,kriminal.tv,kurs.com.ua,love.ua,luxlux.net,lvivexpres.com,mabila.ua,mama.ua,maximum.fm,minfin.com.ua,nashasvadba.ua,newsyou.info,nnm.me,nnovosti.info,novostivmire.com,obozrevatel.com,obsuzhday.com,okino.ua,ostrnum.com,qp.ua,radio24.ua,rbc.ua,real-vin.com,ria-m.tv,ringside24.com,scribble.su,segodnya.ua,sinoptik.com.ru,sinoptik.ua,socportal.info,sprashivalka.com,strana.ua,subject.com.ua,toneto.net,tv.ua,u-news.com.ua,ubr.ua,udoktora.net,ukrinform.ua,ukrlib.com.ua,ukrlit.vn.ua,unian.net,vchaspik.ua,vesti-ukr.com,vesti.ua,vmirechudes.com,vsetv.com,webpark.ru,woman.ua,zarlit.com,zaxid.net$$script[wildcard="*(function*String.fromCharCode(parseInt*.substr*"][max-length="7200"]
 ! https://forum.adguard.com/index.php?threads/19582/
 fastpic.ru$$script[tag-content="{(function(){eval(a)})(b)}function"][max-length="1550"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4012
@@ -8151,6 +8155,7 @@ tizblock.ru/news.js
 ||videosafe.tv/video/embed/*?autoplay=1$third-party
 ||megogo.net/e/*?autoplay=1$third-party
 /show/out.php?t=*&async=1&v=$third-party
+.cf/get-image?image=$third-party
 !-------------------------------------------------------------------------------!
 !------------------ News exchange ----------------------------------------------!
 !-------------------------------------------------------------------------------!
@@ -8349,6 +8354,7 @@ rustorka.com$$script[tag-content="postWindowPop"][max-length="25000"]
 /(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+dizimania.ru##.side-box.vote-box
 online.cd##div[id^="b_bn_"]
 ||tvfru.org/img/binomo/bin.gif
 tvfru.org##.banner

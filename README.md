@@ -2,7 +2,7 @@
 
 ### Last Run On
 
-$timestamp
+Wed 14 Jun 11:28:26 EDT 2017
 
 ## Less than basic usage
 
