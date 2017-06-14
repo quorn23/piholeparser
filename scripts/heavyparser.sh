@@ -294,6 +294,24 @@ sudo rm $MERGEMETHODS
 ## Prepare to sift merged lists
 sudo mv $MERGED $PRE
 
+## turn spaces into lines
+echo ""
+PARSECOMMENT="replacing spaces with lines"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed 's/\s\+/\n/g' $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## Remove Empty Lines
+echo ""
+PARSECOMMENT="removing empty lines"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/^$/d' $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
 ## Remove IP addresses
 echo ""
 PARSECOMMENT="removing IP addresses"
