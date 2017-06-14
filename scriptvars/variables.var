@@ -44,6 +44,7 @@ HEAVYPARSE=/etc/piholeparser/lists/heavyparsing/*.lst
 
 ## Parsing filenames
 FNAME=`echo $f | cut -f 1 -d '.'` ## Cuts .lst off filename
+BASEFILENAME=$(echo `basename $FNAME`)
 FNAMEDONE="$FNAME".txt ## Finalized name
 ORIGFILE="$FNAME".orig.txt ## Original File
 TEMPFILE="$FNAME".temp.txt ## Temp File
