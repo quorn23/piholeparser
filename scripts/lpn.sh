@@ -10,7 +10,7 @@ source /etc/piholeparser/scriptvars/variables.var
 ####################
 
 echo ""
-printf "$green"   "Filtering Lists that barely need parsing."
+printf "$green"   "Filtering Lists that only need light parsing."
 echo ""
 timestamp=$(echo `date`)
 sudo echo "## LightParsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
@@ -31,9 +31,9 @@ do
 source /etc/piholeparser/scriptvars/variables.var
 BASEFILENAME=$(echo `basename $FNAME`)
 
-printf "$green"    "Processing $BASEFILENAME list"
+printf "$green"    "Processing $BASEFILENAME list."
 echo "" 
-printf "$cyan"    "Downloading from"
+printf "$cyan"    "Downloading from:"
 printf "$cyan"    "$source"
 echo "" 
 
@@ -43,7 +43,7 @@ echo ""
 
 if [[ -z $UPCHECK ]]
 then
-printf "$yellow"    "Fetching List From Local File"
+printf "$yellow"    "Fetching List From Local File."
 echo ""
 sudo curl --silent -L $source >> $TEMPFILE
 sudo cat $TEMPFILE >> $ORIGFILE
@@ -51,7 +51,7 @@ sudo rm $TEMPFILE
 else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
-printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP ."
 echo ""
 sudo wget -q -O $TEMPFILE $source
 sudo cat $TEMPFILE >> $ORIGFILE
@@ -61,18 +61,17 @@ fi
 ## Source completion
 done
 
-echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+## Original File Size
 ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
-printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
-echo ""
-
 if 
 [ "$ORIGFILESIZE" -eq 0 ]
 then
 timestamp=$(echo `date`)
-sudo echo "* $FNAME list was an empty file upon download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $FNAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-:
+echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
+echo ""
 fi
 
 ####################
@@ -80,7 +79,7 @@ fi
 ####################
 
 echo ""
-printf "$green"   "Attempting creation of mirror file"
+printf "$green"   "Attempting Creation of Mirror File."
 echo ""
 
 ## Copy original, one for mirror, one for next step
@@ -96,7 +95,7 @@ echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 echo ""
-sudo echo "* $BASEFILENAME list was too large to mirror on github. $MFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $BASEFILENAME list was $MFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 elif
 [ "$MFILESIZE" -eq 0 ]
@@ -104,15 +103,14 @@ then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
 echo ""
-sudo echo "* $BASEFILENAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 else
 echo ""
 printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
 echo ""
-sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
-sudo rename "s/.mirror.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+sudo mv $MFILENAME /etc/piholeparser/mirroredlists/"$BASEFILENAME".txt
 fi
 
 ####################
@@ -224,7 +222,7 @@ echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo ""
-sudo echo "* Parsed $BASEFILENAME list too large for github. $PFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Parsed $BASEFILENAME list was $PFILESIZE bytes, and too large for github.  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 elif
 [ "$PFILESIZE" -eq 0 ]
@@ -232,15 +230,14 @@ then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
 echo ""
-sudo echo "* Parsed $BASEFILENAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Parsed $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 else
 echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
 echo ""
-sudo mv $PFILENAME /etc/piholeparser/parsed/
-sudo rename "s/.parsed.txt/.txt/" /etc/piholeparser/parsed/*.txt
+sudo mv $PFILENAME /etc/piholeparser/parsed/"$BASEFILENAME".txt
 fi
 
 printf "$magenta" "___________________________________________________________"
