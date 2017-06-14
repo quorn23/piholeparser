@@ -26,6 +26,9 @@ echo -e "\t`wc -l $TEMPAPL | cut -d " " -f 1` lines after merging individual lis
 echo ""
 printf "$yellow"  "Removing duplicates..."
 sort -u $TEMPAPL > $BIGAPL
+sudo rm $TEMPAPL
+sudo mv $BIGAPL $TEMPAPL
+sudo gawk '{if (++dup[$0] == 1) print $0;}' $TEMPAPL > $BIGAPL
 echo -e "\t`wc -l $BIGAPL | cut -d " " -f 1` lines after deduping"
 sudo rm $TEMPAPL
 
