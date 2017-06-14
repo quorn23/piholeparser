@@ -30,7 +30,7 @@ do
 
 ## Set Variables (again, I guess)
 source /etc/piholeparser/scriptvars/variables.var
-BASEFILENAME=`basename $f`
+BASEFILENAME=`basename $FNAME`
 
 echo ""
 printf "$cyan"    "$source"
