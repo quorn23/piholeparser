@@ -92,14 +92,14 @@ then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo echo "* $FNAME list was too large to mirror on github. $MFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $BASEFILENAME list was too large to mirror on github. $MFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 elif
 [ "$MFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
-sudo echo "* $FNAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $BASEFILENAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 else
 echo ""
@@ -403,14 +403,14 @@ then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo echo "* Parsed $FNAME list too large for github. $PFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Parsed $BASEFILENAME list too large for github. $PFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 elif
 [ "$PFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
-sudo echo "* Parsed $FNAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Parsed $BASEFILENAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 else
 echo ""
