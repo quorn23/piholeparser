@@ -168,73 +168,40 @@ sudo mv $POST $PRE
 echo ""
 
 ## Remove IP addresses
-PARSECOMMENT="Removing IP Addresses"
+PARSECOMMENT="Removing IP Addresses."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//;' < $PRE > $POST
+sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 echo ""
 
-sudo sed 's/^0.0.0.0[ \t]*//' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/^127.0.0.1[ \t]*//' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/^::1[ \t]*//' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-
-## Remove lines without letters
-echo ""
-PARSECOMMENT="removing lines without letters"
+## Domain Requirements,, a period and a letter
+PARSECOMMENT="Checking for FQDN Requirements."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[a-z]/!d' < $PRE > $POST
+sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## delete lines without a period
 echo ""
-PARSECOMMENT="removing lines without a period"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[.]/!d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
 
-## delete lines that start with a period
-echo ""
-PARSECOMMENT="removing lines that start with a period"
+## Periods at begining and end of lines
+PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-#sed '/^[.],/d' $PRE > $POST
-sed '/^[.]/d' $PRE > $POST
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## delete lines that end with a period
 echo ""
-PARSECOMMENT="removing lines that end with a period"
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[.]$/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
 
 ## Duplicate Removal
-echo ""
-PARSECOMMENT="removing duplicates"
+PARSECOMMENT="Removing Duplicate Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sort -u $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo gawk '{if (++dup[$0] == 1) print $0;}' $PRE > $POST
+sudo cat -s $PRE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
+echo ""
 
 ## Done with sifting
 sudo mv $PRE $PFILENAME
