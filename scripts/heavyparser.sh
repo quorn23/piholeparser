@@ -225,16 +225,16 @@ sudo mv $PRE $PREPROC
 ## Method 1       ##
 ####################
 
-METHOD="processing lists With Method 1"
+#METHOD="processing lists With Method 1"
 
-echo ""
-printf "$green"   "$METHOD"
-echo ""
+#echo ""
+#printf "$green"   "$METHOD"
+#echo ""
 
-sort -u $PREPROC | grep ^\|\|.*\^$ | grep -v \/ > $POST
-sudo sed 's/[\|^]//g' < $POST > "$FNAME".method1.txt
-sudo rm $POST
-echo -e "\t`wc -l "$FNAME".method1.txt | cut -d " " -f 1` lines after $METHOD"
+#sort -u $PREPROC | grep ^\|\|.*\^$ | grep -v \/ > $POST
+#sudo sed 's/[\|^]//g' < $POST > "$FNAME".method1.txt
+#sudo rm $POST
+#echo -e "\t`wc -l "$FNAME".method1.txt | cut -d " " -f 1` lines after $METHOD"
 
 ####################
 ## Method 2       ##
@@ -329,6 +329,24 @@ sudo sed 's/^127.0.0.1[ \t]*//' $PRE > $POST
 sudo rm $PRE
 sudo mv $POST $PRE
 sudo sed 's/^::1[ \t]*//' $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## Remove lines without letters
+echo ""
+PARSECOMMENT="removing lines without letters"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[a-z]/!d' < $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+
+## delete lines without a period
+echo ""
+PARSECOMMENT="removing lines without a period"
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo sed '/[.]/!d' $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
