@@ -77,6 +77,10 @@ sudo echo "## Edited Big List $timestamp" | sudo tee --append $RECENTRUN &>/dev/
 
 ## should remove faster than a sed loop
 sudo cat $BDC $DBBW $WHITELIST > $BDCDBBWHITE
+sort -u $BDCDBBWHITE > $BIGAPLE
+sudo rm $BDCDBBWHITE
+sudo gawk '{if (++dup[$0] == 1) print $0;}' $BIGAPLE > $BDCDBBWHITE
+sudo rm $BIGAPLE
 sudo awk 'NR==FNR{a[$0];next} !($0 in a)' $BDCDBBWHITE $BIGAPL > $BIGAPLE
 sudo rm $BDCDBBWHITE
 
