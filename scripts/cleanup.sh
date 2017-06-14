@@ -130,7 +130,7 @@ timestamp=$(echo `date`)
 sudo echo "## Updating README.md $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 sudo rm $READMEVAR
-sudo sed 's/LASTRUNVARIABLEGOESHERE/$timestamp/' $READMEVARD > $READMEVAR
+sudo sed 's/LASTRUNVARIABLEGOESHERE/"$timestamp"/' $READMEVARD > $READMEVAR
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
