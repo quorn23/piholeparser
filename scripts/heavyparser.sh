@@ -34,7 +34,7 @@ BASEFILENAME=`basename $f`
 
 echo ""
 printf "$cyan"    "$source"
-printf "$magenta"    "Filename set to $FNAME"
+printf "$magenta"    "Filename set to $BASEFILENAME"
 echo "" 
 
 ####################
