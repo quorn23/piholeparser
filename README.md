@@ -1,5 +1,9 @@
 # piholeparser
 
+### Last Run On
+
+$timestamp
+
 ## Less than basic usage
 
 In the directory "parsed" are individual lists that I parse daily.
