@@ -281,6 +281,9 @@ PARSECOMMENT="removing duplicates"
 printf "$yellow"  "$PARSECOMMENT ..."
 sort -u $PRE > $POST
 sudo rm $PRE
+sudo mv $POST $PRE
+gawk '{if (++dup[$0] == 1) print $0;}' $PRE > $POST
+sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 
