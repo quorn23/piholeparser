@@ -20,11 +20,11 @@ which $WHATITIS >/dev/null;
 then
 echo ""
 printf "$yellow"  "$WHATITIS is installed"
-sudo echo "$WHATITIS already installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS already installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 printf "$yellow"  "Installing $WHATITIS"
 sudo apt-get install -y $WHATPACKAGE
-sudo echo "$WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS=gawk
@@ -35,11 +35,11 @@ which $WHATITIS >/dev/null;
 then
 echo ""
 printf "$yellow"  "$WHATITIS is installed"
-sudo echo "$WHATITIS already installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS already installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 printf "$yellow"  "Installing $WHATITIS"
 sudo apt-get install -y $WHATPACKAGE
-sudo echo "$WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
