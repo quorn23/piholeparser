@@ -32,7 +32,8 @@ done
 ## undupe and sort
 sort -u $WHITELIST > $WHITELISTPOST
 sudo rm $WHITELIST
-sudo sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' $WHITELISTPOST > $WHITELIST
+sudo gawk '{if (++dup[$0] == 1) print $0;}' $WHITELISTPOST > $WHITELIST
+#sudo sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' $WHITELISTPOST > $WHITELIST
 sudo rm $WHITELISTPOST
 
 timestamp=$(echo `date`)
@@ -45,6 +46,27 @@ sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/nul
 #do
 #pihole -w $source &>/dev/null
 #done
+
+###########################
+## Whitelist sort dedupe ##
+###########################
+
+## dbb whites
+sort -u $DBBW > $DBBW2
+sudo rm $DBBW
+sudo mv $DBBW2 $DBBW
+sudo gawk '{if (++dup[$0] == 1) print $0;}' $DBBW > $DBBW2
+sudo rm $DBBW
+sudo mv $DBBW2 $DBBW
+
+## user complaints
+sort -u $BDC > $BDC2
+sudo rm $BDC
+sudo mv $BDC2 $BDC
+sudo gawk '{if (++dup[$0] == 1) print $0;}' $BDC > $BDC2
+sudo rm $BDC
+sudo mv $BDC2 $BDC
+
 
 timestamp=$(echo `date`)
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
