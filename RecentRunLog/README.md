@@ -141,3 +141,6 @@ gawk already installed Tue 13 Jun 19:36:16 EDT 2017
 ## Updating README.md Tue 13 Jun 22:10:04 EDT 2017
 
 ## Pushing Lists Tue 13 Jun 22:10:04 EDT 2017
+
+* Script completed at Tue 13 Jun 22:36:41 EDT 2017
+## Pushing Lists Tue 13 Jun 22:39:57 EDT 2017
