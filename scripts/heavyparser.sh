@@ -10,7 +10,7 @@ source /etc/piholeparser/scriptvars/variables.var
 ####################
 
 echo ""
-printf "$green"   "Filtering Lists that only need light parsing."
+printf "$green"   "Filtering Lists that need heavy parsing."
 echo ""
 timestamp=$(echo `date`)
 sudo echo "## LightParsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
