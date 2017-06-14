@@ -1,5 +1,6 @@
 #!/bin/bash
-## This is the Heavy Parsing Process
+## This is the Parsing Process
+## For Lists that barely need it
 
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
@@ -9,10 +10,10 @@ source /etc/piholeparser/scriptvars/variables.var
 ####################
 
 echo ""
-printf "$green"   "Parsing Individual Lists."
+printf "$green"   "Filtering Lists that only need light parsing."
 echo ""
 timestamp=$(echo `date`)
-sudo echo "## Heavy Parsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "## LightParsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 for f in $HEAVYPARSE
@@ -20,8 +21,6 @@ do
 
 echo ""
 printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Processing list from $f"
 echo ""
 
 ## Process sources within file.lst
@@ -32,9 +31,10 @@ do
 source /etc/piholeparser/scriptvars/variables.var
 BASEFILENAME=$(echo `basename $FNAME`)
 
-echo ""
+printf "$green"    "Processing $BASEFILENAME list."
+echo "" 
+printf "$cyan"    "Downloading from:"
 printf "$cyan"    "$source"
-printf "$magenta"    "Filename set to $BASEFILENAME"
 echo "" 
 
 ####################
@@ -43,33 +43,34 @@ echo ""
 
 if [[ -z $UPCHECK ]]
 then
-printf "$yellow"    "Fetching List From Local File"
+printf "$yellow"    "Fetching List From Local File."
+echo ""
 sudo curl --silent -L $source >> $TEMPFILE
 sudo cat $TEMPFILE >> $ORIGFILE
 sudo rm $TEMPFILE
 else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
-printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP"
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP ."
+echo ""
 sudo wget -q -O $TEMPFILE $source
 sudo cat $TEMPFILE >> $ORIGFILE
 sudo rm $TEMPFILE
-fi 
+fi
 
 ## Source completion
 done
 
-echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+## Original File Size
 ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
-printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
-
-timestamp=`date`
 if 
 [ "$ORIGFILESIZE" -eq 0 ]
 then
 timestamp=$(echo `date`)
-sudo echo "* $FNAME list was an empty file upon download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $FNAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
+echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
+printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
 echo ""
 fi
 
@@ -78,7 +79,7 @@ fi
 ####################
 
 echo ""
-printf "$green"   "Attempting creation of mirror file"
+printf "$green"   "Attempting Creation of Mirror File."
 echo ""
 
 ## Copy original, one for mirror, one for next step
@@ -93,21 +94,23 @@ then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo echo "* $BASEFILENAME list was too large to mirror on github. $MFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+sudo echo "* $BASEFILENAME list was $MFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 elif
 [ "$MFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
-sudo echo "* $BASEFILENAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+sudo echo "* $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $MFILENAME
 else
 echo ""
 printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
-sudo mv $MFILENAME /etc/piholeparser/mirroredlists/
-sudo rename "s/.mirror.txt/.txt/" /etc/piholeparser/mirroredlists/*.txt
+echo ""
+sudo mv $MFILENAME /etc/piholeparser/mirroredlists/"$BASEFILENAME".txt
 fi
 
 ####################
@@ -117,274 +120,99 @@ fi
 ## Copy for Pre-Processing
 sudo mv $ORIGFILE $PRE
 
-echo ""
-printf "$green"   "Checking for domain requirements"
-echo ""
-
-## Remove lines without letters
-echo ""
-PARSECOMMENT="removing lines without letters"
+## Domain Requirements,, a period and a letter
+PARSECOMMENT="Checking for FQDN Requirements."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[a-z]/!d' < $PRE > $POST
+sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## delete lines without a period
 echo ""
-PARSECOMMENT="removing lines without a period"
+
+## Comments #'s and !'s, also empty lines
+PARSECOMMENT="Removing Commented Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[.]/!d' $PRE > $POST
+sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-echo ""
-printf "$green"   "Checking for definately not domain name stuff"
 echo ""
 
-## Remove comments
-echo ""
-PARSECOMMENT="removing comments"
-printf "$yellow"  "$PARSECOMMENT..."
-sudo sed '/^\s*#/d' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/[#]/\'$'\n/g' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed '/[#]/d' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed '/[!]/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT ."
-sudo mv $POST $PRE
-
-## delete lines with forward slash
-echo ""
-PARSECOMMENT="removing lines containing a forward slash"
+## Invalid Characters
+PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[/]/d' $PRE > $POST
+sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## remove asterisk lines
 echo ""
-PARSECOMMENT="removing asterisk lines"
+
+## Periods at begining and end of lines
+PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[*]/d' $PRE > $POST
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## Remove Empty Lines
 echo ""
-PARSECOMMENT="removing empty lines"
+
+#####################################################################
+## Perl Parser
+PARSECOMMENT="Cutting Lists with the Perl Parser."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/^$/d' $PRE > $POST
+sudo perl /etc/piholeparser/scripts/parser.pl $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
+echo ""
+#####################################################################
 
-echo ""
-printf "$green"   "Checking for periods where they shouldn't be for a real domain"
-echo ""
-
-## delete lines that start with a period
-echo ""
-PARSECOMMENT="removing lines that start with a period"
+## Add and remove Spaces
+PARSECOMMENT="Replacing Spaces with NewLines, then Removing Empty Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-#sed '/^[.],/d' $PRE > $POST
-sed '/^[.]/d' $PRE > $POST
+sed 's/\s\+/\n/g; /^$/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## delete lines that end with a period
 echo ""
-PARSECOMMENT="removing lines that end with a period"
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[.]$/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-
-## delete lines with localhost
-echo ""
-PARSECOMMENT="removing lines containing localhost"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/localhost/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-
-## Pre-Processing done
-sudo mv $PRE $PREPROC
-
-####################
-## Method 1       ##
-####################
-
-#METHOD="processing lists With Method 1"
-
-#echo ""
-#printf "$green"   "$METHOD"
-#echo ""
-
-#sort -u $PREPROC | grep ^\|\|.*\^$ | grep -v \/ > $POST
-#sudo sed 's/[\|^]//g' < $POST > "$FNAME".method1.txt
-#sudo rm $POST
-#echo -e "\t`wc -l "$FNAME".method1.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Method 2       ##
-####################
-
-METHOD="processing lists With Method 2"
-
-echo ""
-printf "$green"   "$METHOD"
-echo ""
-
-sudo perl /etc/piholeparser/scripts/parser.pl $PREPROC > "$FNAME".method2.txt
-echo -e "\t`wc -l "$FNAME".method2.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Method 3       ##
-####################
-
-#METHOD="processing lists With Method 3"
-
-#echo ""
-#printf "$green"   "$METHOD"
-#echo ""
-
-#sudo cat -s $PREPROC | egrep '^\|\|' | cut -d'/' -f1 | cut -d '^' -f1 | cut -d '$' -f1 | tr -d '|' > "$FNAME".method3.txt
-#echo -e "\t`wc -l "$FNAME".method3.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Method 4       ##
-####################
-
-#METHOD="processing lists With Method 4"
-
-#echo ""
-#printf "$green"   "$METHOD"
-#echo ""
-
-#sudo sed 's/^||//' $PREPROC | cut -d'^' -f-1 > "$FNAME".method4.txt
-#echo -e "\t`wc -l "$FNAME".method4.txt | cut -d " " -f 1` lines after $METHOD"
-
-####################
-## Merge lists    ##
-####################
-
-## Remove Pre-processed list
-sudo rm $PREPROC
-
-echo ""
-printf "$green"   "Merging lists from all Parsing Methods"
-echo ""
-
-## merge
-sudo cat $MERGEMETHODS >> $MERGED
-echo -e "\t`wc -l $MERGED | cut -d " " -f 1` lines after merging"
-sudo rm $MERGEMETHODS
-
-## Prepare to sift merged lists
-sudo mv $MERGED $PRE
-
-## turn spaces into lines
-echo ""
-PARSECOMMENT="replacing spaces with lines"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed 's/\s\+/\n/g' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-
-## Remove Empty Lines
-echo ""
-PARSECOMMENT="removing empty lines"
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/^$/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
 
 ## Remove IP addresses
-echo ""
-PARSECOMMENT="removing IP addresses"
+PARSECOMMENT="Removing IP Addresses."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed 's/^PRIMARY[ \t]*//' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/blockeddomain.hosts[ \t]*//' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/^0.0.0.0[ \t]*//' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/^127.0.0.1[ \t]*//' $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo sed 's/^::1[ \t]*//' $PRE > $POST
+sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
+echo ""
 
-## Remove lines without letters
-echo ""
-PARSECOMMENT="removing lines without letters"
+## Domain Requirements,, a period and a letter
+PARSECOMMENT="Checking for FQDN Requirements."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[a-z]/!d' < $PRE > $POST
+sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
+echo ""
 
-## delete lines without a period
-echo ""
-PARSECOMMENT="removing lines without a period"
+## Periods at begining and end of lines
+PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/[.]/!d' $PRE > $POST
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
-
-## delete lines that start with a period
 echo ""
-PARSECOMMENT="removing lines that start with a period"
-printf "$yellow"  "$PARSECOMMENT ..."
-#sed '/^[.],/d' $PRE > $POST
-sed '/^[.]/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-
-## delete lines that end with a period
-echo ""
-PARSECOMMENT="removing lines that end with a period"
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[.]$/d' $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
 
 ## Duplicate Removal
-echo ""
-PARSECOMMENT="removing duplicates"
+PARSECOMMENT="Removing Duplicate Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sort -u $PRE > $POST
-sudo rm $PRE
-sudo mv $POST $PRE
-sudo gawk '{if (++dup[$0] == 1) print $0;}' $PRE > $POST
+sudo cat -s $PRE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
+echo ""
 
-## Done with merge
+## Done with sifting
 sudo mv $PRE $PFILENAME
 
 ####################
@@ -404,21 +232,23 @@ then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo echo "* Parsed $BASEFILENAME list too large for github. $PFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+sudo echo "* Parsed $BASEFILENAME list was $PFILESIZE bytes, and too large for github.  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 elif
 [ "$PFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
-sudo echo "* Parsed $BASEFILENAME list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+sudo echo "* Parsed $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $PFILENAME
 else
 echo ""
 printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
 printf "$yellow"  "File will be moved to the parsed directory."
-sudo mv $PFILENAME /etc/piholeparser/parsed/
-sudo rename "s/.parsed.txt/.txt/" /etc/piholeparser/parsed/*.txt
+echo ""
+sudo mv $PFILENAME /etc/piholeparser/parsed/"$BASEFILENAME".txt
 fi
 
 printf "$magenta" "___________________________________________________________"
