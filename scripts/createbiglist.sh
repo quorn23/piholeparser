@@ -75,19 +75,21 @@ echo ""
 timestamp=$(echo `date`)
 sudo echo "## Edited Big List $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
-sudo cp $BIGAPL $BIGAPLE
+## should remove faster than a sed loop
+sudo cat $BDC $DBBW $WHITELIST > $BDCDBBWHITE
+sudo awk 'NR==FNR{a[$0];next} !($0 in a)' $BDCDBBWHITE $BIGAPL > $BIGAPLE
+sudo rm $BDCDBBWHITE
 
+#sudo cp $BIGAPL $BIGAPLE
 ## Start File Loop
-for source in `cat $BDC $DBBW $WHITELIST`;
-do
-
-## cut domains out
-sudo sed '/$source/d' $BIGAPLE > $TEMPAPLE
-sudo rm $BIGAPLE
-sudo mv $TEMPAPLE $BIGAPLE
-
+#for source in `cat $BDC $DBBW $WHITELIST`;
+#do
+### cut domains out
+#sudo sed '/$source/d' $BIGAPLE > $TEMPAPLE
+#sudo rm $BIGAPLE
+#sudo mv $TEMPAPLE $BIGAPLE
 ## end of loops
-done
+#done
 
 ## Github has a 100mb limit and empty files are useless
 BEFILESIZE=$(stat -c%s $BIGAPLE)
