@@ -139,9 +139,10 @@ sudo mv $POST $PRE
 echo ""
 
 ## Invalid Characters
+## This includes / * # ! @ ~ ` = [ ] | ^ $
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\|//; s/\^//; s/\$//; s/\,//' < $PRE > $POST
+sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\|//; s/\^//; s/\$//' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
