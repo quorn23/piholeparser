@@ -30,7 +30,7 @@ sudo rm /etc/piholeparser.var
 sudo rm /etc/runpiholeparser.sh
 sudo rm /etc/piholeparserlocal.sh
 sudo rm /etc/piholeparsergithub.sh
-sudo rm /etc/updaterunparser.sh
+sudo rm /etc/updaterunpiholeparser.sh
 crontab -l | grep -v 'sudo bash /etc/updaterunpiholeparser.sh'  | crontab -
 else
 exit
