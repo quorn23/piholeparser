@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: QuOIezaLCnPMr+XGtWS1Hg
-! Version: 201706150442
+! Checksum: YmNj10UgIA0u1IRcHEhn7g
+! Version: 201706151622
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 15 Jun 2017 04:42 UTC
+! Last Modified: 15 Jun 2017 16:22 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -559,6 +559,8 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .cn/show?id=$script,third-party
+||mwlucuvbyrff.com^
+||rnfrfxqztlno.com^
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
 .com/code.php?z=$script,third-party
@@ -857,7 +859,7 @@ ubmcmm.baidustatic.com
 ||8hykthze.cricket^
 ||8le8le.com^$third-party
 ||8mfty.com^
-||8ox.cn^$third-party
+.8ox.cn^
 ||911.cc^$third-party
 ||913h6.cn^$third-party
 ||9158918.com^$third-party
@@ -2070,6 +2072,7 @@ ubmcmm.baidustatic.com
 ||zzbaowen.com^
 ||zzrcz.com^
 !------------------------------------Popups-----------------------------------!
+||u26u.com^$popup,third-party
 .189.gd^*.html?p=$popup,third-party
 .com/?aff=$popup,third-party
 .com/?Intr=$popup,third-party
@@ -6356,8 +6359,15 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||dilidili.wang/shouye/
+||139file.com/jsa/
+||etadult.com*/images/20
+||happyhongkong.com/images/client/
 !------------------------Specific element hiding rules------------------------!
+btime.com##.business-item
 acgnx.se##A[target="_blank"] > IMG[src^="/images/"]
+dilidili.wang###bkm
+dilidili.wang##.overflow-box > UL > LI > A[href^="http"]:not([href*=".dilidili."])
 gpcxw.com###AA2
 acg12.com##.da-container
 acg12.com##.xobda
@@ -11518,14 +11528,17 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Caoporn.com
 2c2.website,2p8.space,adultcao.com,adultgao.com,cao.pe,caoaee.com,caodee.com,caofoo.top,caohot.club,caopee.com,caoporn.club,caoporn.com,caoporn.wales,caosee.club,caouoo.com,gaohot.pro,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,qq88.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz,wan1024.com,wan41.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
+||ztxbd.com^
 .m.bookben.com^
 .m.liewen.cc^
 .m.muyuge.com^
 .m.xs222.com^
 .m.zwdu.com^
+||tsrc8.com^
+||shumilou.co/style/html5.js
 |http:$script,third-party,domain=xtzgjx.com|zzdxs.org
-|http:$script,third-party,xmlhttprequest,domain=m.00ksw.net|m.33yq.com|m.50zw.la|m.55xs.com|m.88dushu.com|m.biqudu.com|m.biquge.com|m.biquge.com.tw|m.biquge.tw|m.biqugego.com|m.biqugezw.com|m.biquwu.cc|m.bqg5200.com|m.dhzw.org|m.kewaishu.net|m.lewenxiaoshuo.com|m.liewen.cc|m.qu.la|m.shenmabook.com|m.shumilou.co|m.snwx8.com|m.vodtw.com|m.xs222.com|m.zwdu.com|wap.xxbiquge.com
-|https:$script,third-party,xmlhttprequest,domain=m.00ksw.net|m.33yq.com|m.50zw.la|m.55xs.com|m.88dushu.com|m.biqudu.com|m.biquge.com|m.biquge.com.tw|m.biquge.tw|m.biqugego.com|m.biqugezw.com|m.biquwu.cc|m.bqg5200.com|m.dhzw.org|m.kewaishu.net|m.lewenxiaoshuo.com|m.liewen.cc|m.qu.la|m.shenmabook.com|m.shumilou.co|m.snwx8.com|m.vodtw.com|m.xs222.com|m.zwdu.com|wap.xxbiquge.com
+|http:$script,third-party,xmlhttprequest,domain=lwxiaoshuo.com|m.00ksw.net|m.33yq.com|m.50zw.la|m.55xs.com|m.88dushu.com|m.biqudu.com|m.biquge.com|m.biquge.com.tw|m.biquge.tw|m.biqugego.com|m.biqugezw.com|m.biquwu.cc|m.bqg5200.com|m.dhzw.org|m.kewaishu.net|m.lewenxiaoshuo.com|m.liewen.cc|m.qu.la|m.shenmabook.com|m.shumilou.co|m.snwx8.com|m.vodtw.com|m.xs222.com|m.zwdu.com|wap.xxbiquge.com
+|https:$script,third-party,xmlhttprequest,domain=lwxiaoshuo.com|m.00ksw.net|m.33yq.com|m.50zw.la|m.55xs.com|m.88dushu.com|m.biqudu.com|m.biquge.com|m.biquge.com.tw|m.biquge.tw|m.biqugego.com|m.biqugezw.com|m.biquwu.cc|m.bqg5200.com|m.dhzw.org|m.kewaishu.net|m.lewenxiaoshuo.com|m.liewen.cc|m.qu.la|m.shenmabook.com|m.shumilou.co|m.snwx8.com|m.vodtw.com|m.xs222.com|m.zwdu.com|wap.xxbiquge.com
 ||23txt.com^$third-party
 ||24haitao.net^
 ||axkxy.com^
@@ -11533,6 +11546,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||dezfu.com^
 ||feifish66.com^
 ||gyrtg.com^
+||huayi65.com^
 ||hk9600.com^
 ||inccnd.com^
 ||jundazulin.com^

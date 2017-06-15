@@ -287,6 +287,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+delfi.lt###newsletter-container
 zdnet.de##[class="box keepUp"]
 foodspring.de##.newsletter-subscription-form
 netdoktor.de##.footer-subscribe-list
@@ -434,6 +435,8 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
+receive-sms-online.info##.alert-box
+delfi.ee###ab--notification-ribbon
 rbc.ru##.js-checkad-warning
 wortwuchs.net##.gridlove-ad
 bronydom.net###AltBlocked
@@ -2469,6 +2472,8 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+chat.lycos.fr##body > div#nomnom
+tennisaddict.fr###infoCookies
 analog-forum.de##.cookiePolicyNotice
 son-video.com##body > div#SVDv3_cookie
 investing.com###consentWrapper
@@ -3089,6 +3094,13 @@ buzzhand.com#$#body[-ext-has="div"] { overflow: visible!important; }
 !---------- Push notifications ----!
 mail.ru##.tooltip div.tooltip__box[-ext-has="div"]
 !----------------------------------!
+!
+!---------- Widgets ---------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/5328
+pz-news.de##.nfy-content+aside.nfy-service > aside > section.nfy-sebox-multibox.nfy-merge-marked[-ext-has=">article > h3 > span:contains(Tages per WhatsApp)"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/5171
+morgenpost.de##.article--type-news > aside.article__aside[-ext-has="> div.sidebar__column > div.cross-heading > h3:contains(News per WhatsApp)"]
+!----------------------------------!
 !#######################################################
 !######### Low-attendance sites ########################
 !######### less then 30k visits/month ##################
@@ -3443,6 +3455,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Generic rules
 !
+||messenger.ngageics.com^$third-party
 /wp-content/plugins/popup-maker/*
 ||a.mailmunch.co/app/$script,third-party
 /wp-content/plugins/icegram/*
@@ -3462,6 +3475,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+onpress.info##.modalParent
 eadaily.com###like_box
 chernozem.info###social-community-popup
 m.albamon.com###LayerPop_185
@@ -4698,7 +4712,7 @@ kinogo-net-2017.ru,kinogo-online.online,kino-zal.net,lavka-invaitov.ru#$#body * 
 bvb09fans.ru#%#AG_onLoad(function() { document.ondragstart = document.onselectstart = document.oncontextmenu = null; });
 7lafa.com#%#AG_onLoad(function() {setTimeout(function(){document.getElementsByTagName('body')[0].removeAttribute("oncopy"); document.getElementsByTagName('body')[0].removeAttribute("onselectstart");}, 300);});
 antenasport.eu,bilenlerkabilesi.com,half-musiq.blogspot.com#%#Object.defineProperty(document, 'onmousedown', { get: function() { return; } });
-bigcinema-online.net,bigcinema-tv.club,gidonline-kino.club,kinogo-2017.com,kinogo-720.club,kinogo.club,kinogoonline.club,kinoprofi.su,season-var.net,topcinema.tv,kinogo2.net,kino-kingdom.com#%#Object.defineProperty(window, 'getSelection', { get: function() { return; } });
+bigcinema-online.net,bigcinema-tv.club,gidonline-kino.club,kinogo-2017.com,kinogo-720.club,kinogo.club,kinogoonline.club,kinoprofi.su,season-var.net,topcinema.tv,kinogo2.net,kino-kingdom.com,hd-kinogo.co#%#Object.defineProperty(window, 'getSelection', { get: function() { return; } });
 bobfilm.online#%#AG_onLoad(function() { document.body.removeAttribute('oncopy'); });
 bodrumgundem.com,ceplik.com,dijitalx.com,ilife97.com,teknokasif.com,z-news.link,stupdroid.com#%#Object.defineProperty(document, 'oncontextmenu', { get: function() { return; } });
 kinogo-net-2017.ru,cheater-top.ru,discussio.ru,kino-zal.net,tvfru.ru,kinogoonline.club#%#AG_onLoad(function() { document.onselectstart=function(){return true}; document.oncontextmenu=function(){return true}; });
