@@ -124,13 +124,13 @@ echo ""
 
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "Updating Readme file."
+printf "$green"   "Updating Main Readme file."
 
 timestamp=$(echo `date`)
-sudo echo "## Updating README.md $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "## Updated Main README.md $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
-sudo rm $READMEVAR
-sudo sed "s/LASTRUNVARIABLEGOESHERE/$timestamp/" $READMEVARD > $READMEVAR
+sudo rm $MAINREADME
+sudo sed "s/LASTRUNVARIABLEGOESHERE/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
