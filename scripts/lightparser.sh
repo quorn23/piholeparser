@@ -195,14 +195,14 @@ sudo mv $POST $PRE
 echo ""
 
 ## Pipes and Carrots
-#PARSECOMMENT="Removing Pipes and Carrots."
-#printf "$yellow"  "$PARSECOMMENT ..."
-##sed 's/^||//' | cut -d'^' -f-1 < $PRE > $POST
-#sudo cat -s $PRE | sed s/^||//' | cut -d'^' -f-1 > $POST
-#sudo rm $PRE
-#echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-#sudo mv $POST $PRE
-#echo ""
+PARSECOMMENT="Removing Pipes and Carrots."
+printf "$yellow"  "$PARSECOMMENT ..."
+#sudo sed 's/^||//' | cut -d'^' -f-1 < $PRE > $POST
+sudo cat -s $PRE | sed 's/^||//' | cut -d'^' -f-1 > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+echo ""
 
 ## Duplicate Removal
 PARSECOMMENT="Removing Duplicate Lines."
