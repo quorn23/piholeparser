@@ -141,7 +141,7 @@ echo ""
 ## Invalid Characters
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /|//d' < $PRE > $POST
+sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/|//d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
