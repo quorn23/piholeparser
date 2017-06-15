@@ -231,7 +231,7 @@ fi
 ## MAKE THESE DIRECTORIES
 
 WHATITIS="whitelisted directory"
-CHECKME=/etc/piholeparser/whitelisted/
+CHECKME=$WHITELISTEDDIR
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
