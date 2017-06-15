@@ -39,6 +39,7 @@ sudo wget -q -O $TARTEMPFILE $source
 TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
 TARDONE="$TARDIR""$TARFILEX"
 sudo rm $TARTEMPFILE
+sudo cat $TARDONE > $FNAMEDONE
 else 
 sudo echo "* $FNAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$FNAME list unavailable right now"
@@ -46,8 +47,6 @@ fi
 
 ## End Source loop
 done
-
-sudo cat $TARDONE > $FNAMEDONE
 
 echo ""
 echo -e "\t`wc -l $FNAMEDONE | cut -d " " -f 1` lines downloaded"
