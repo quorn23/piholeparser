@@ -139,9 +139,11 @@ sudo mv $POST $PRE
 echo ""
 
 ## Invalid Characters
+## This includes / * # ! @ ~ ` = [ ] | ^ $
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\|//; s/\^//; s/\$//' < $PRE > $POST
+sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\$//' < $PRE > $POST
+#sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\|//; s/\^//; s/\$//' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
@@ -198,6 +200,15 @@ echo ""
 PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
 sed '/^[.],/d; /^[.]/d; /[.]$/d' < $PRE > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+echo ""
+
+## Pipes and Carrots
+PARSECOMMENT="Removing Pipes and Carrots."
+printf "$yellow"  "$PARSECOMMENT ..."
+sudo cat -s $PRE | sed 's/^||//' | cut -d'^' -f-1 > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
