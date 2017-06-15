@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: 5Wl8nl4IkeYPNt6jrxsOAA
-! Version: 201706142312
+! Checksum: QuOIezaLCnPMr+XGtWS1Hg
+! Version: 201706150442
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 14 Jun 2017 23:12 UTC
+! Last Modified: 15 Jun 2017 04:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -559,8 +559,6 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .cn/show?id=$script,third-party
-||jbyy010.com^
-||awifi.cn^$third-party
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
 .com/code.php?z=$script,third-party
@@ -974,6 +972,7 @@ ubmcmm.baidustatic.com
 ||at918.com^$third-party
 ||at98.com^
 ||av8d.net^$third-party
+||awifi.cn^$third-party
 ||awkjs.com^
 ||axhxa.com^
 ||axiba66.com^
@@ -1368,6 +1367,7 @@ ubmcmm.baidustatic.com
 ||j8j9.com^$third-party
 ||ja9377.com^
 ||jackaow.com^
+||jbyy010.com^
 ||jczzjx.com^
 ||jdlcg.cn^
 ||jdlhg.com^
@@ -4386,6 +4386,7 @@ mg*.6park.com/img/$image
 ||ifengimg.com/md/*/v_responsive
 ||ifengimg.com/neiqian/*/embed.js
 ||ifengimg.com/p/ax_
+||ifengimg.com/static/js/*Adv.
 ||ifengimg.com/static/news/js/advtrack
 ||ifengimg.com/tres/js/*/idemin_noif.js
 ||ifengimg.com/w702_h371/
@@ -6355,9 +6356,11 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
-||ifengimg.com/static/js/*Adv.
 !------------------------Specific element hiding rules------------------------!
+acgnx.se##A[target="_blank"] > IMG[src^="/images/"]
 gpcxw.com###AA2
+acg12.com##.da-container
+acg12.com##.xobda
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -11515,7 +11518,6 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Caoporn.com
 2c2.website,2p8.space,adultcao.com,adultgao.com,cao.pe,caoaee.com,caodee.com,caofoo.top,caohot.club,caopee.com,caoporn.club,caoporn.com,caoporn.wales,caosee.club,caouoo.com,gaohot.pro,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,qq88.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz,wan1024.com,wan41.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
-||inccnd.com^
 .m.bookben.com^
 .m.liewen.cc^
 .m.muyuge.com^
@@ -11532,6 +11534,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||feifish66.com^
 ||gyrtg.com^
 ||hk9600.com^
+||inccnd.com^
 ||jundazulin.com^
 ||mobiorg8.com^
 ||pomhz.com^

@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 14:40 2017/06/13
+! 最終更新 11:07 2017/06/15
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -169,7 +169,7 @@ _ads.php
 .gs/ads/
 .jp/ad/$domain=~gakushuin.ac.jp
 .jp/ads/
-.net/ad/
+.net/ad/$domain=~big-up.style
 .net/ads/$domain=~itest.2ch.net
 .org/ad/
 .org/ads/
@@ -376,6 +376,7 @@ _ads.php
 ||valuecommerce.com^$third-party
 ||ventivmedia.com^$third-party
 ||visiblemeasures.com^$third-party
+||webantenna.info^$third-party
 ||weborama.fr^$third-party
 ||whaleads.com^$third-party
 ||wyunion.com^$third-party
@@ -497,9 +498,6 @@ _ads.php
 ||partner*.become.co.jp^
 !http://latexcapacity.com/
 ||latexbizarramb.info^
-!ribbon
-||vinhoverde.sakura.ne.jp^
-||webantenna.info^
 
 
 !-----pornhubnetwork
@@ -656,7 +654,8 @@ heavy-r.com##.hd-ban
 ||komachi.yomiuri.co.jp/scripts/g_connect.js
 ||kooss.com/*.htm$subdocument
 ||labaq.com/user/json/lq_amarray.js?
-||majo.co.jp/jwd.js
+||majo.co.jp/jwd.js$domain=ribbon.to
+||majo.co.jp/alpc.js$domain=ribbon.to
 ||mangaz.com/virgo/adv/
 ||match.seesaa.jp^
 ||mgstage.com/js/mgs_Widget.js?
@@ -679,6 +678,7 @@ heavy-r.com##.hd-ban
 ||phileweb.com/count/
 ||photozou.jp/script/ad_sticky.js?
 ||relart.fresheye.com^
+||ribbon.to/alpc.js
 ||sanspo.com^*/adsence_
 ||sea-saw.com^$domain=2dbook.com
 ||seesaa.jp/frame/*$domain=seesaawiki.jp|jbbs.shitaraba.net
