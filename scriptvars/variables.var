@@ -6,8 +6,20 @@ source /etc/piholeparser.var
 ## Timestamp
 timestamp=$(echo `date`)
 
-## Recent Run
-RECENTRUN=/etc/piholeparser/RecentRunLog/README.md
+## Directories and their Files
+REPODIR=/etc/piholeparser/
+  LOGDIR="REPODIR"RecentRunLog/
+    RECENTRUN="LOGDIR"README.md
+  LISTSDIR="REPODIR"lists/
+  MIRRORDIR="REPODIR"mirroredlists/
+  PARSEDDIR="REPODIR"parsed/
+  PARSEDALLDIR="REPODIR"parsedall/
+  SCRIPTSDIR="REPODIR"scripts/
+  SCRIPTVARSDIR="REPODIR"scriptvars/
+    MAINREADMEDEFAULT="SCRIPTVARSDIR"README.md.default
+  TEMPDIR="REPODIR"temp
+  WHITELISTEDDIR="REPODIR"whitelisted/
+  MAINREADME="REPODIR"README.md
 
 ## Readme Update
 READMEVAR=/etc/piholeparser/README.md
