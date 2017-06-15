@@ -3,6 +3,14 @@
 ## Version
 source /etc/piholeparser.var
 
+## These are the colors used throughout the script.
+red='\e[1;31m%s\e[0m\n'
+green='\e[1;32m%s\e[0m\n'
+yellow='\e[1;33m%s\e[0m\n'
+blue='\e[1;34m%s\e[0m\n'
+magenta='\e[1;35m%s\e[0m\n'
+cyan='\e[1;36m%s\e[0m\n'
+
 ## Timestamp
 timestamp=$(echo `date`)
 
@@ -20,18 +28,6 @@ REPODIR=/etc/piholeparser/
   TEMPDIR="REPODIR"temp
   WHITELISTEDDIR="REPODIR"whitelisted/
   MAINREADME="REPODIR"README.md
-
-## Readme Update
-READMEVAR=/etc/piholeparser/README.md
-READMEVARD=/etc/piholeparser/scriptvars/README.md.default
-
-## These are the colors used throughout the script.
-red='\e[1;31m%s\e[0m\n'
-green='\e[1;32m%s\e[0m\n'
-yellow='\e[1;33m%s\e[0m\n'
-blue='\e[1;34m%s\e[0m\n'
-magenta='\e[1;35m%s\e[0m\n'
-cyan='\e[1;36m%s\e[0m\n'
 
 ## Github file limit
 GITHUBLIMIT=104857600
