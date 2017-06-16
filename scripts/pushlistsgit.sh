@@ -5,8 +5,6 @@
 source /etc/piholeparser/scriptvars/staticvariables.var
 
 ## Push Changes up to Github
-printf "$blue"    "___________________________________________________________"
-echo ""
 { if 
 [ "$version" = "github" ]
 then
@@ -21,7 +19,3 @@ elif
 then
 printf "$red"   "Not Pushing Lists to Github"
 fi }
-
-printf "$magenta" "___________________________________________________________"
-echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
