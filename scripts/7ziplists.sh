@@ -33,7 +33,7 @@ sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
 sudo 7z e -so $COMPRESSEDTEMPSEVEN > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
-printf "$yellow"  "Size of $SEVENSLISTDONE = $FETCHFILESIZE bytes."
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 sudo mv $TEMPFILE $SEVENSLISTDONE
 sudo rm $COMPRESSEDTEMPSEVEN
 else 
@@ -44,5 +44,7 @@ fi
 
 ## End source looping
 done
+printf "$magenta" "___________________________________________________________"
+echo ""
 ## End File loop
 done
