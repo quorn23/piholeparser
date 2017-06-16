@@ -33,8 +33,8 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TEMPFILE $source
-TARFILEX=$(tar -xavf $TEMPFILE -C $TARLISTSDIR)
-sudo mv $TARFILEX $TARLISTDONE
+TARFILEX=$(tar -xavf $TEMPFILE -C $TEMPDIR)
+sudo cat $TARFILEX > $TARLISTDONE
 echo -e "\t`wc -l $TARLISTDONE | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TARLISTDONE")
 printf "$yellow"  "Size of $TARLISTDONE = $FECTHFILESIZE bytes."
