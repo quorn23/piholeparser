@@ -25,6 +25,8 @@ else
 sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+sudo cat 
+
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
 do
@@ -40,6 +42,7 @@ done
 
 ## undupe and sort
 sudo cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $LISTWHITELISTDOMAINS
+sudo rm $TEMPFILE
 timestamp=$(echo `date`)
 sudo echo "$HOWMANYLISTS"
 sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
