@@ -34,7 +34,7 @@ sudo 7z e -so $COMPRESSEDTEMP > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-sudo mv $COMPRESSEDTEMP $SEVENSLISTDONE
+sudo mv $TEMPFILE $SEVENSLISTDONE
 else 
 timestamp=$(echo `date`)
 sudo echo "* $BASEFILENAME list was unavailable for download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
