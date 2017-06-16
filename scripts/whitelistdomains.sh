@@ -28,13 +28,14 @@ sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append 
 fi
 
 ## Start File Loop
-for f in $EVERYLISTFILEWILDCARD
+#for f in $EVERYLISTFILEWILDCARD
+for f in /etc/piholeparser/lists/*/*.lst
 do
 for source in `cat $f`;
 do
 
 ## add to whitelist file
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
+#UPCHECK=`echo $source | awk -F/ '{print $3}'`
 sudo echo "$UPCHECK" | sudo tee --append $TEMPFILE &>/dev/null
 
 ## end of loops
