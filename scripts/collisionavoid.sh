@@ -35,18 +35,6 @@ sudo echo "## Clearing The Path $timestamp" | sudo tee --append $RECENTRUN &>/de
 
 ## Stuff to remove if there
 
-WHATITIS="Whitelist File"
-CHECKME=$LISTWHITELISTDOMAINS
-timestamp=$(echo `date`)
-if
-ls $CHECKME &> /dev/null;
-then
-sudo rm $CHECKME
-sudo echo "* $WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-else
-sudo echo "* $WHATITIS  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-fi
-
 WHATITIS="Heavy Parsing Folder txt files"
 CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
 timestamp=$(echo `date`)
