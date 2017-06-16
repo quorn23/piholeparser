@@ -77,8 +77,7 @@ source=https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/READ
 FNAME=`echo $f | cut -f 1 -d '.'`
 #BASEFILENAME=$(echo `basename $FNAME`)
 BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.')
-#UPCHECK=`echo $source | awk -F/ '{print $3}'`
-UPCHECK=$(echo $source | awk -F/ '{print $3}')
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## Parsing filenames
 FNAMEDONE="$FNAME".txt ## Finalized name
