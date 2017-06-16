@@ -2,9 +2,8 @@
 ## This should whitelist all domains that will be parsed
 
 ## Variables
-sudo touch $TEMPFILE
 source /etc/piholeparser/scriptvars/staticvariables.var
-sudo rm $TEMPFILE
+
 
 ####################
 ## File checks    ##
@@ -40,9 +39,7 @@ for source in `cat $f`;
 do
 
 ## Variables
-sudo touch $TEMPFILE
 source /etc/piholeparser/scriptvars/dynamicvariables.var
-sudo rm $TEMPFILE
 
 ## add to whitelist file
 sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
