@@ -16,7 +16,7 @@ timestamp=$(echo `date`)
 sudo echo "## LightParsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
-for f in $LIGHTPARSE
+for f in $LIGHTPARSELISTS
 do
 
 echo ""
