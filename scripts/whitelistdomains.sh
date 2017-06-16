@@ -4,7 +4,6 @@
 ## Variables
 source /etc/piholeparser/scriptvars/staticvariables.var
 
-
 ####################
 ## File checks    ##
 ####################
@@ -57,6 +56,7 @@ WHATLISTTOSORT=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $WHITESORTDEDUPE."
 sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
 sudo echo "$HOWMANYLINES $timestamp"
 sudo rm $WHATLISTTOSORT
 sudo mv $TEMPFILE $WHATLISTTOSORT
@@ -69,6 +69,7 @@ WHATLISTTOSORT=$DBBWHITES
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $WHITESORTDEDUPE."
 sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
 sudo echo "$HOWMANYLINES $timestamp"
 sudo rm $WHATLISTTOSORT
 sudo mv $TEMPFILE $WHATLISTTOSORT
@@ -81,6 +82,7 @@ WHATLISTTOSORT=$BLOCKEDCOMPLAINTS
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $WHITESORTDEDUPE."
 sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
 sudo echo "$HOWMANYLINES $timestamp"
 sudo rm $WHATLISTTOSORT
 sudo mv $TEMPFILE $WHATLISTTOSORT
@@ -93,6 +95,7 @@ WHATLISTTOSORT="$BLOCKEDCOMPLAINTS $DBBWHITES $LISTWHITELISTDOMAINS"
 timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
 sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
 sudo echo "$HOWMANYLINES $timestamp"
 sudo mv $TEMPFILE $WHITELISTTEMP
 sudo echo "* "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
