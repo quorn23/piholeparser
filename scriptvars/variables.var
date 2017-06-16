@@ -19,10 +19,9 @@ GITHUBLIMIT=104857600
 GITREPOSITORYURL=github.com/deathbybandaid/piholeparser.git
 
 ## Extract Filenames and FQDN from lists
-#f=$REPODIR
+f=$REPODIR
 FNAME=`echo $f | cut -f 1 -d '.'`
-BASEFILENAME=`echo `basename $f` | cut -f 1 -d '.'`
-#BASEFILENAME=$(echo `basename $FNAME`)
+BASEFILENAME=$(echo `basename $FNAME`)
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## Directories and their Files
