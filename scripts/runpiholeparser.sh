@@ -11,7 +11,7 @@ sudo bash /etc/piholeparser/scripts/collisionavoid.sh
 sudo bash /etc/piholeparser/scripts/dependencycheck.sh
 
 ## Whitelist domains that will be downloaded from
-sudo bash /etc/piholeparser/scripts/whitelistdomainchecks.sh
+sudo bash /etc/piholeparser/scripts/whitelistdomains.sh
 
 ## Lists compressed in 7zip
 sudo bash /etc/piholeparser/scripts/7ziplists.sh
