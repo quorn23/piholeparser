@@ -32,7 +32,6 @@ for source in `cat $f`;
 do
 
 ## add to whitelist file
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
 sudo echo "$UPCHECK" | sudo tee --append $TEMPFILE &>/dev/null
 
 ## end of loops
