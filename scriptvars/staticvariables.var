@@ -7,9 +7,6 @@ source /etc/piholeparser/scriptvars/variables.var
 GITHUBLIMIT=104857600
 GITREPOSITORYURL=github.com/deathbybandaid/piholeparser.git
 
-## How Many Lines
-HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
-
 ## Directories and their Files
 REPODIR=/etc/piholeparser/
   MAINREADME="$REPODIR"README.md
