@@ -29,7 +29,7 @@ do
 
 ## Set Variables (again, I guess)
 source /etc/piholeparser/scriptvars/variables.var
-BASEFILENAME=$(echo `basename $FNAME`)
+#BASEFILENAME=$(echo `basename $FNAME`)
 
 printf "$green"    "Processing $BASEFILENAME list."
 echo "" 
