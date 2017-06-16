@@ -2,7 +2,9 @@
 ## This should whitelist all domains that will be parsed
 
 ## Variables
+sudo touch $TEMPFILE
 source /etc/piholeparser/scriptvars/staticvariables.var
+sudo rm $TEMPFILE
 
 ####################
 ## File checks    ##
@@ -30,7 +32,6 @@ fi
 
 printf "$yellow"  "Extracting Domains from all .lst files"
 echo ""
-sudo touch $TEMPFILE
 
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
@@ -39,7 +40,9 @@ for source in `cat $f`;
 do
 
 ## Variables
+sudo touch $TEMPFILE
 source /etc/piholeparser/scriptvars/dynamicvariables.var
+sudo rm $TEMPFILE
 
 ## add to whitelist file
 sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
@@ -47,8 +50,6 @@ sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
 ## end of loops
 done
 done
-
-sudo rm $TEMPFILE
 
 ###########################
 ## Whitelist sort dedupe ##
