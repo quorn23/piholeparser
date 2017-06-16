@@ -14,7 +14,7 @@ timestamp=$(echo `date`)
 sudo echo "## Whitelisting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
-for f in $ALLOFTHEDOMAINS
+for f in $EVERYLISTFILEWILDCARD
 do
 for source in `cat $f`;
 do
@@ -23,7 +23,7 @@ do
 source /etc/piholeparser/scriptvars/variables.var
 
 ## add to whitelist file
-sudo echo "$UPCHECK" | sudo tee --append $WHITELIST &>/dev/null
+sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
 
 ## end of loops
 done
@@ -36,7 +36,7 @@ sudo gawk '{if (++dup[$0] == 1) print $0;}' $TEMPFILE > $LISTWHITELISTDOMAINS
 sudo rm $TEMPFILE
 
 timestamp=$(echo `date`)
-HOWMANYLISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1` unique domains.")
+#HOWMANYLISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1` unique domains.")
 sudo echo "$HOWMANYLISTS"
 sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
