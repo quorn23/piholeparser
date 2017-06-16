@@ -5,7 +5,7 @@
 ## I added file checks to reduce on-screen errors
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -49,8 +49,8 @@ sudo touch $CHECKME
 sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Heavy Parsing Folder txt files"
-CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
+WHATITIS="Temporary File"
+CHECKME=$TEMPFILE
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
@@ -61,8 +61,10 @@ else
 sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Temporary File"
-CHECKME=$TEMPFILE
+## deprecateing below
+
+WHATITIS="Heavy Parsing Folder txt files"
+CHECKME=/etc/piholeparser/lists/heavyparsing/*.txt
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
