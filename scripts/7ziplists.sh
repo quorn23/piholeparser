@@ -29,12 +29,13 @@ then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
-sudo wget -q -O $COMPRESSEDTEMP $source
-sudo 7z e -so $COMPRESSEDTEMP > $TEMPFILE
+sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
+sudo 7z e -so $COMPRESSEDTEMPSEVEN > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 sudo mv $TEMPFILE $SEVENSLISTDONE
+sudo rm $COMPRESSEDTEMPSEVEN
 else 
 timestamp=$(echo `date`)
 sudo echo "* $BASEFILENAME list was unavailable for download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
