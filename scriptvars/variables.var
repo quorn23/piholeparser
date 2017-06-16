@@ -66,6 +66,7 @@ REPODIR=/etc/piholeparser/
     WHITELISTTEMP="$WHITELISTEDDIR"whitelist.temp
     DBBWHITES="$WHITELISTEDDIR"deathbybandaidwhites.txt
     BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
+    HOWMANYLISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1` unique domains.")
   MAINREADME="$REPODIR"README.md
 
 ## Extract Filenames and FQDN from lists
