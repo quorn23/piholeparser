@@ -35,9 +35,9 @@ then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
-sudo wget -q -O $SEVENTEMPFILE $source
-sudo 7z e -so $SEVENTEMPFILE > "$FNAMEDONE"
-sudo rm $SEVENTEMPFILE
+sudo wget -q -O $TEMPFILE $source
+sudo 7z e -so $TEMPFILE > "$FNAMEDONE"
+sudo rm $TEMPFILE
 else 
 sudo echo "* $FNAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$FNAME list unavailable right now"
