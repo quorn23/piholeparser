@@ -46,20 +46,29 @@ done
 ## Whitelist sort dedupe ##
 ###########################
 
-## domains from .lst files
-sudo cat -s $LISTWHITELISTDOMAINS | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-sudo rm $LISTWHITELISTDOMAINS
-sudo mv $TEMPFILE $LISTWHITELISTDOMAINS
+WHITESORTDEDUPE=".lst Domains."
+WHATLISTTOSORT=$LISTWHITELISTDOMAINS
+printf "$yellow"  "Processing $WHITESORTDEDUPE."
+sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+sudo rm $WHATLISTTOSORT
+sudo mv $TEMPFILE $WHATLISTTOSORT
+sudo echo "* Processing "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
-## dbb whites
-sudo cat -s $DBBWHITES | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-sudo rm $DBBWHITES
-sudo mv $TEMPFILE $DBBWHITES
+WHITESORTDEDUPE="Deathbybandaid Whitelisted Domains"
+WHATLISTTOSORT=$DBBWHITES
+printf "$yellow"  "Processing $WHITESORTDEDUPE"
+sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+sudo rm $WHATLISTTOSORT
+sudo mv $TEMPFILE $WHATLISTTOSORT
+sudo echo "* Processing "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
-## user complaints
-sudo cat -s $BLOCKEDCOMPLAINTS | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-sudo rm $BLOCKEDCOMPLAINTS
-sudo mv $TEMPFILE $BLOCKEDCOMPLAINTS
+WHITESORTDEDUPE="Domains that Cause Issues for People."
+WHATLISTTOSORT=$BLOCKEDCOMPLAINTS
+printf "$yellow"  "Processing $WHITESORTDEDUPE"
+sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+sudo rm $WHATLISTTOSORT
+sudo mv $TEMPFILE $WHATLISTTOSORT
+sudo echo "* Processing "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Merge for removal later
 sudo cat $BLOCKEDCOMPLAINTS $DBBWHITES $LISTWHITELISTDOMAINS > $TEMPFILE
