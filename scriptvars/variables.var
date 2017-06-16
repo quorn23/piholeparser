@@ -68,6 +68,7 @@ REPODIR=/etc/piholeparser/
 BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 
 ## Extract Filenames
+f=$REPODIR
 FNAME=`echo $f | cut -f 1 -d '.'`
 BASEFILENAME=$(echo `basename $FNAME`)
 
