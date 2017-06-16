@@ -17,7 +17,43 @@ sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &
 fi
 
 WHATITIS="Temporary File"
-CHECKME=$FLIETEMP
+CHECKME=$FILETEMP
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS="Temporary File"
+CHECKME=$ORIGINALFILETEMP
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS="Temporary File"
+CHECKME=$COMPRESSEDTEMPSEVEN
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS="Temporary File"
+CHECKME=$COMPRESSEDTEMPTAR
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
