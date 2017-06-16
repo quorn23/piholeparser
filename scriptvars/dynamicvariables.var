@@ -10,14 +10,3 @@ timestamp=$(echo `date`)
 FNAME=`echo $f | cut -f 1 -d '.'`
 BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.' | awk -F/ '{print $3}')
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
-
-## Parsing filenames
-FNAMEDONE="$FNAME".txt ## Finalized name
-ORIGFILE="$FNAME".orig.txt ## Original File
-MFILENAME="$FNAME".mirror.txt ## Mirror file
-PFILENAME="$FNAME".parsed.txt ## Parsed file
-PRE="$FNAME".pre.txt ## File in
-POST="$FNAME".post.txt ## File Out
-PREPROC="$FNAME".preproc.txt ## file after pre-processing
-MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
-MERGED="$FNAME".merged.txt ## Merged Name
