@@ -14,6 +14,9 @@ cyan='\e[1;36m%s\e[0m\n'
 ## Timestamp
 timestamp=$(echo `date`)
 
+## Github file limit
+GITHUBLIMIT=104857600
+
 ## Directories and their Files
 REPODIR=/etc/piholeparser/
   LOGDIR="REPODIR"RecentRunLog/
@@ -23,14 +26,27 @@ REPODIR=/etc/piholeparser/
   PARSEDDIR="REPODIR"parsed/
   PARSEDALLDIR="REPODIR"parsedall/
   SCRIPTSDIR="REPODIR"scripts/
+    SEVENZIPLISTSSCRIPT="SCRIPTSDIR"7ziplists.sh
+    CLEANUPSCRIPT="SCRIPTSDIR"cleanup.sh
+    COLLISIONAVOIDSCRIPT="SCRIPTSDIR"collisionavoid.sh
+    CREATEBIGLISTSCRIPT="SCRIPTSDIR"createbiglist.sh
+    DEPENDENCYCHECKSCRIPT="SCRIPTSDIR"dependencycheck.sh
+    HEAVYPARSERSCRIPT="SCRIPTSDIR"heavyparser.sh
+    LIGHTPARSERSCRIPT="SCRIPTSDIR"lightparser.sh
+    PERLPARSERSCRIPT="SCRIPTSDIR"parser.pl
+    PUSHLISTSSCRIPT="SCRIPTSDIR"pushlists.sh
+    RUNPIHOLEPARSERSCRIPT="SCRIPTSDIR"runpiholeparser.sh
+    TARLISTSSCRIPT="SCRIPTSDIR"tarlists.sh
+    UPADETESCRIPT="SCRIPTSDIR"updaterunpiholeparser.sh
+    WHITELISTSCRIPT="SCRIPTSDIR"whitelistdomainchecks.sh
   SCRIPTVARSDIR="REPODIR"scriptvars/
     MAINREADMEDEFAULT="SCRIPTVARSDIR"README.md.default
   TEMPDIR="REPODIR"temp
   WHITELISTEDDIR="REPODIR"whitelisted/
+    LISTWHITELISTDOMAINS="WHITELISTEDDIR"whitelist.domains
   MAINREADME="REPODIR"README.md
 
-## Github file limit
-GITHUBLIMIT=104857600
+
 
 ## Whitelist function
 ALLOFTHEDOMAINS=/etc/piholeparser/lists/*/*.lst
