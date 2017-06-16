@@ -9,28 +9,31 @@ source /etc/piholeparser/scriptvars/variables.var
 ####################
 
 ## should remove faster than a sed loop
-sudo gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $BIGAPL > $BIGAPLE
+sudo gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $BIGAPL > $TEMPFILE
 sudo rm $WHITELISTTEMP
 
 ## Github has a 100mb limit and empty files are useless
-BEFILESIZE=$(stat -c%s $BIGAPLE)
+FETCHFILESIZE=$(stat -c%s $TEMPFILE)
 timestamp=$(echo `date`)
 if
-[ "$BEFILESIZE" -ge "$GITHUBLIMIT" ]
+[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo echo "* Allparsedlistedited list was too large to host on github. $BEFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $BIGAPLE
-sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $BIGAPLE
+sudo echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo rm $FILETEMP
+sudo echo "File exceeded Githubs 100mb limitation" | sudo tee --append $TEMPFILE
+sudo mv $TEMPFILE $BIGAPLE
 elif
-[ "$BEFILESIZE" -eq 0 ]
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "File Empty"
-sudo echo "File Size equaled zero." | sudo tee --append $BIGAPLE
-sudo echo "* Allparsedlistedited list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "File Size equaled zero." | sudo tee --append $TEMPFILE
+sudo echo "* Allparsedlist list was an empty file $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo mv $TEMPFILE $BIGAPLE
 else
 echo ""
-printf "$yellow"  "Big List (edited) Created Successfully."
+sudo mv $TEMPFILE $BIGAPLE
+printf "$yellow"  "Big List Created Successfully."
 fi
