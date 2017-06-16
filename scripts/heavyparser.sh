@@ -237,7 +237,7 @@ sudo rm $TEMPFILE
 else
 echo ""
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-printf "$yellow"  "Creating Mirror of Unparsed File."
+printf "$yellow"  "Copying to the parsed Directory."
 echo ""
 sudo mv $TEMPFILE $PARSEDFILE
 fi
