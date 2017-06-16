@@ -32,20 +32,15 @@ for source in `cat $f`;
 do
 
 ## add to whitelist file
-sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
+sudo echo "$UPCHECK" | sudo tee --append $TEMPFILE &>/dev/null
 
 ## end of loops
 done
 done
 
 ## undupe and sort
-sort -u $LISTWHITELISTDOMAINS > $TEMPFILE
-sudo rm $LISTWHITELISTDOMAINS
-sudo gawk '{if (++dup[$0] == 1) print $0;}' $TEMPFILE > $LISTWHITELISTDOMAINS
-sudo rm $TEMPFILE
-
+sudo cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
-#HOWMANYLISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1` unique domains.")
 sudo echo "$HOWMANYLISTS"
 sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
