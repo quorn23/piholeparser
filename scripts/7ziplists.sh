@@ -2,14 +2,7 @@
 ## Some lists are compressed in 7z format, this should extract them
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
-
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Downloading and Extracting 7zip Compressed Lists."
-timestamp=$(echo `date`)
-sudo echo "## 7zip $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 ## Start 7zip File Loop
 for f in $SEVENSLIST
@@ -20,28 +13,30 @@ for source in `cat $f`;
 do
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/dynamicvariables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
 
-echo ""
+printf "$green"    "Processing $BASEFILENAME list."
+echo "" 
+printf "$cyan"    "Downloading from:"
 printf "$cyan"    "$source"
 echo "" 
 
-timestamp=$(echo `date`)
 if ping -c 1 $UPCHECK &> /dev/null
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
-sudo wget -q -O $TEMPFILE $source
-sudo 7z e -so $TEMPFILE > $SEVENSLISTDONE
-sudo rm $TEMPFILE
-echo -e "\t`wc -l $SEVENSLISTDONE | cut -d " " -f 1` lines downloaded"
-FETCHFILESIZE=$(stat -c%s "$SEVENSLISTDONE")
-printf "$yellow"  "Size of $SEVENSLISTDONE = $FETCHFILESIZE bytes."
+sudo wget -q -O $COMPRESSEDTEMP $source
+sudo 7z e -so $COMPRESSEDTEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines downloaded"
+FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+sudo mv $COMPRESSEDTEMP $SEVENSLISTDONE
 else 
+timestamp=$(echo `date`)
 sudo echo "* $BASEFILENAME list was unavailable for download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$BASEFILENAME list unavailable right now"
 fi 
@@ -50,7 +45,3 @@ fi
 done
 ## End File loop
 done
-
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
-printf "$magenta" "___________________________________________________________"
