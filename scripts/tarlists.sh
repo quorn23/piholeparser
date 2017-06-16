@@ -36,7 +36,7 @@ TARFILEX=$(tar -xavf $COMPRESSEDTEMPTAR -C $TEMPDIR)
 sudo cat $TARFILEX > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE  | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
-printf "$yellow"  "Size of $TEMPFILE = $FECTHFILESIZE bytes."
+printf "$yellow"  "Size of $TARLISTDONE = $FECTHFILESIZE bytes."
 sudo mv $TEMPFILE $TARLISTDONE
 sudo rm $COMPRESSEDTEMPTAR
 else 
