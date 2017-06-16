@@ -27,10 +27,6 @@ echo ""
 for source in `cat $f`;
 do
 
-## Set Variables (again, I guess)
-source /etc/piholeparser/scriptvars/variables.var
-BASEFILENAME=$(echo `basename $FNAME`)
-
 printf "$green"    "Processing $BASEFILENAME list."
 echo "" 
 printf "$cyan"    "Downloading from:"
