@@ -17,11 +17,13 @@ if
 ls $CHECKME &> /dev/null;
 then
 printf "$red"  "Removing $WHATITIS"
+echo ""
 sudo rm $CHECKME
 sudo touch $CHECKME
 sudo echo "* $WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 printf "$cyan"  "$WHATITIS not there. Not Removing."
+echo ""
 sudo touch $CHECKME
 sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
