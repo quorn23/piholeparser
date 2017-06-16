@@ -11,8 +11,8 @@ FNAME=`echo $f | cut -f 1 -d '.'`
 BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.' | awk -F/ '{print $3}')
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
-## Whitelist Var
-HOWMANYWHITELISTS=$(echo -e "\t`wc -l $WHITELISTTEMP | cut -d " " -f 1` unique domains.")
+## How Many Lines
+HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
 
 ## Parsing filenames
 FNAMEDONE="$FNAME".txt ## Finalized name
