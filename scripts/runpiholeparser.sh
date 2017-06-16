@@ -2,37 +2,172 @@
 ## This is the central script that ties the others together
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/staticvariables.var
 
-## Clean directories to avoid collisions
-sudo bash /etc/piholeparser/scripts/collisionavoid.sh
+####################
+## Recent Run Log ##
+####################
 
-## Dependency check
-sudo bash /etc/piholeparser/scripts/dependencycheck.sh
+timestamp=$(echo `date`)
+if 
+ls $RECENTRUN &> /dev/null; 
+then
+sudo rm $RECENTRUN
+sudo echo "## $RECENTRUN $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* RecentRunLog Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
 
-## Whitelist domains that will be downloaded from
-sudo bash /etc/piholeparser/scripts/whitelistdomains.sh
+####################
+## Run Scripts    ##
+####################
 
-## Lists compressed in 7zip
-sudo bash /etc/piholeparser/scripts/7ziplists.sh
+#WHATSCRIPTORUN=$COLLISIONAVOIDSCRIPT
+#timestamp=$(echo `date`)
+#printf "$blue"    "___________________________________________________________"
+#echo ""
+#printf "$green"   "$WHATSCRIPTORUN - $timestamp"
+#echo ""
+#sudo bash $DELETETEMPFILE
+#sudo bash $WHATSCRIPTORUN
+#sudo bash $DELETETEMPFILE
+#sudo echo ""
+#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+#printf "$magenta" "___________________________________________________________"
+#echo ""
+
+WHATSCRIPTORUN=$DEPENDENCYCHECKSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+WHATSCRIPTORUN=$WHITELISTSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+WHATSCRIPTORUN=$SEVENZIPLISTSSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 
 ## Lists compressed in tar
-sudo bash /etc/piholeparser/scripts/tarlists.sh
+WHATSCRIPTORUN=$TARLISTSSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 
-## Parse Individual Lists that barely need it
-sudo bash /etc/piholeparser/scripts/lightparser.sh
+WHATSCRIPTORUN=$LIGHTPARSERSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 
-## Parse Lists that really need it
-sudo bash /etc/piholeparser/scripts/heavyparser.sh
+WHATSCRIPTORUN=$HEAVYPARSERSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 
-## Build 1111ALLPARSEDLISTS1111.txt
-sudo bash /etc/piholeparser/scripts/createbiglist.sh
+WHATSCRIPTORUN=$CREATEBIGLISTSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 
-## Cleanup
+WHATSCRIPTORUN=$CLEANUPSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 sudo bash /etc/piholeparser/scripts/cleanup.sh
 
-## Push lists
-sudo bash /etc/piholeparser/scripts/pushlists.sh
+WHATSCRIPTORUN=$PUSHLISTSSCRIPT
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$WHATSCRIPTORUN $timestamp"
+echo ""
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+####################
+## Script Complete##
+####################
 
 printf "$blue"    "___________________________________________________________"
 echo ""
