@@ -19,9 +19,6 @@ do
 for source in `cat $f`;
 do
 
-## Set Variables (again, I guess)
-source /etc/piholeparser/scriptvars/variables.var
-
 printf "$blue"    "___________________________________________________________"
 echo ""
 
