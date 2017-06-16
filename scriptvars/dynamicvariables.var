@@ -11,6 +11,9 @@ FNAME=`echo $f | cut -f 1 -d '.'`
 BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.' | awk -F/ '{print $3}')
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
+## Whitelist Var
+HOWMANYWHITELISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS $DBBWHITES $BLOCKEDCOMPLAINTS | cut -d " " -f 1` unique domains.")
+
 ## Parsing filenames
 FNAMEDONE="$FNAME".txt ## Finalized name
 ORIGFILE="$FNAME".orig.txt ## Original File
