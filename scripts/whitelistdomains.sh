@@ -13,6 +13,20 @@ echo ""
 timestamp=$(echo `date`)
 sudo echo "## Whitelisting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
+WHATITIS="Whitelist File"
+CHECKME=$LISTWHITELISTDOMAINS
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo touch $CHECKME
+sudo echo "* $WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo touch $CHECKME
+sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
 do
