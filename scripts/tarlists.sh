@@ -36,8 +36,8 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TARTEMPFILE $source
-TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARDIR)
-TARDONE="$TARDIR""$TARFILEX"
+TARFILEX=$(tar -xavf $TARTEMPFILE -C $TARLISTSDIR)
+TARDONE="$TARLISTSDIR""$TARFILEX"
 sudo rm $TARTEMPFILE
 sudo cat $TARDONE > $FNAMEDONE
 else 
