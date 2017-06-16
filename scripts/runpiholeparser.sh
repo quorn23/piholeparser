@@ -44,7 +44,7 @@ SCRIPTTEXT="Compiling Whitelists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -60,7 +60,7 @@ SCRIPTTEXT="Downloading and Extracing 7zip Files."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -76,7 +76,7 @@ SCRIPTTEXT="Downloading and Extracing Tar Files."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -92,7 +92,7 @@ SCRIPTTEXT="Running Light Parser."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -108,7 +108,7 @@ SCRIPTTEXT="Running Heavy Parser."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -124,7 +124,7 @@ SCRIPTTEXT="Combining All Parsed Lists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -140,7 +140,7 @@ SCRIPTTEXT="Cleaning Up Extra Files."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -156,7 +156,7 @@ SCRIPTTEXT="Pusing Lists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$WHATSCRIPTORUN $timestamp"
+printf "$green"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
