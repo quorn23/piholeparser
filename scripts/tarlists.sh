@@ -37,6 +37,7 @@ sudo mv "$TEMPDIR""$TARFILEX" $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE  | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 sudo cat $TEMPFILE > $TARLISTDONE
+sudo rm $TEMPFILE
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 sudo rm $COMPRESSEDTEMPTAR
 else 
