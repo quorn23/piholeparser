@@ -34,7 +34,7 @@ sudo 7z e -so $COMPRESSEDTEMPSEVEN > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 sudo mv $TEMPFILE $SEVENSLISTDONE
-printf "$yellow"  "Size of $SEVENSLISTDONE = $FETCHFILESIZE bytes."
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 sudo rm $COMPRESSEDTEMPSEVEN
 else 
 timestamp=$(echo `date`)
