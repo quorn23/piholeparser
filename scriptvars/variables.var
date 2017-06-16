@@ -22,7 +22,11 @@ REPODIR=/etc/piholeparser/
   LOGDIR="$REPODIR"RecentRunLog/
     RECENTRUN="$LOGDIR"README.md
   LISTSDIR="$REPODIR"lists/
-    EVERYLISTFILEWILDCARD="$LISTSDIR"*/*.lst
+    SEVENSLISTDIR="$LISTSDIR"7zip/
+      SEVENSLIST="$SEVENSLISTDIR"*.lst
+    TARLISTSDIR="$LISTSDIR"tar/
+      TARLISTS="TARLISTSDIR"*.lst
+   EVERYLISTFILEWILDCARD="$LISTSDIR"*/*.lst
   MIRRORDIR="$REPODIR"mirroredlists/
   PARSEDDIR="$REPODIR"parsed/
   PARSEDALLDIR="$REPODIR"parsedall/
@@ -50,15 +54,6 @@ REPODIR=/etc/piholeparser/
     DBBWHITES="$WHITELISTEDDIR"deathbybandaidwhites.txt
     BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
   MAINREADME="$REPODIR"README.md
-
-
-
-## Set 7zip .lst directory
-SEVENSLIST=/etc/piholeparser/lists/7zip/*.lst
-
-## Set tar .lst directory
-TARLISTS=/etc/piholeparser/lists/tar/*.lst
-TARDIR=/etc/piholeparser/lists/tar/
 
 ## Light Parser .lst directory
 LIGHTPARSE=/etc/piholeparser/lists/lightparsing/*.lst
