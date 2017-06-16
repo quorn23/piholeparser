@@ -28,8 +28,7 @@ sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append 
 fi
 
 ## Start File Loop
-#for f in $EVERYLISTFILEWILDCARD
-for f in $ALLOFTHEDOMAINS
+for f in $EVERYLISTFILEWILDCARD
 do
 for source in `cat $f`;
 do
