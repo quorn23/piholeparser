@@ -2,7 +2,7 @@
 ## This should whitelist all domains that will be parsed
 
 ## Variables
-#source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/variables.var
 
 echo ""
 printf "$blue"    "___________________________________________________________"
