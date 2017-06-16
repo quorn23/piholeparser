@@ -22,13 +22,9 @@ sudo touch $CHECKME
 sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-echo ""
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Compiling Whitelists."
-echo ""
-timestamp=$(echo `date`)
-sudo echo "## Whitelisting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+####################
+## Whitelist .lst ##
+####################
 
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
@@ -40,28 +36,20 @@ do
 source /etc/piholeparser/scriptvars/dynamicvariables.var
 
 ## add to whitelist file
-sudo echo "$UPCHECK" | sudo tee --append $TEMPFILE &>/dev/null
+sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
 
 ## end of loops
 done
 done
 
-## undupe and sort
-sudo cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $LISTWHITELISTDOMAINS
-sudo rm $TEMPFILE
-timestamp=$(echo `date`)
-sudo echo "$HOWMANYLISTS"
-sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-
-## Whitelist the domains
-#for source in `cat $LISTWHITELISTDOMAINS`;
-#do
-#pihole -w $source &>/dev/null
-#done
-
 ###########################
 ## Whitelist sort dedupe ##
 ###########################
+
+## domains from .lst files
+sudo cat -s $LISTWHITELISTDOMAINS | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+sudo rm $LISTWHITELISTDOMAINS
+sudo mv $TEMPFILE $LISTWHITELISTDOMAINS
 
 ## dbb whites
 sudo cat -s $DBBWHITES | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
@@ -79,7 +67,15 @@ sudo cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHIT
 sudo rm $TEMPFILE
 
 timestamp=$(echo `date`)
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "$HOWMANYWHITELISTS"
+sudo echo "* $HOWMANYWHITELISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
-printf "$magenta" "___________________________________________________________"
-echo ""
+####################
+## pihole -w      ##
+####################
+
+## Whitelist the domains
+#for source in `cat $LISTWHITELISTDOMAINS`;
+#do
+#pihole -w $source &>/dev/null
+#done
