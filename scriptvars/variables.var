@@ -67,8 +67,11 @@ REPODIR=/etc/piholeparser/
 ## Host the file locally
 BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 
+## Extract Filenames
+FNAME=`echo $f | cut -f 1 -d '.'`
+BASEFILENAME=`echo $FNAME | `basename``
+
 ## Parsing filenames
-FNAME=`echo $f | cut -f 1 -d '.'` ## Cuts .lst off filename
 FNAMEDONE="$FNAME".txt ## Finalized name
 ORIGFILE="$FNAME".orig.txt ## Original File
 TEMPFILE="$FNAME".temp.txt ## Temp File
@@ -80,5 +83,4 @@ PREPROC="$FNAME".preproc.txt ## file after pre-processing
 MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
 MERGED="$FNAME".merged.txt ## Merged Name
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
-SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
 TARTEMPFILE="$FNAME".temp.tar ## Temp File
