@@ -63,7 +63,7 @@ timestamp=$(echo `date`)
 sudo echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 echo -e "\t`wc -l $ORIGINALFILETEMP | cut -d " " -f 1` lines downloaded"
-printf "$yellow"  "Size of $BASEFILENAME = $ORIGFILESIZE bytes."
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 echo ""
 fi
 
