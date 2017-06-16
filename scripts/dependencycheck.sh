@@ -6,11 +6,9 @@
 ## Variables
 source /etc/piholeparser/scriptvars/variables.var
 
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Checking Dependencies"
-timestamp=$(echo `date`)
-sudo echo "## Dependencies $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+#######################
+## Check Dependencies##
+#######################
 
 WHATITIS=p7zip
 WHATPACKAGE=p7zip-full
@@ -41,7 +39,3 @@ printf "$yellow"  "Installing $WHATITIS"
 sudo apt-get install -y $WHATPACKAGE
 sudo echo "* $WHATITIS was installed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
-
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
