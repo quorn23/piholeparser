@@ -34,7 +34,6 @@ REPODIR=/etc/piholeparser/
       TARLISTS="$TARLISTSDIR"*.lst
       TARLISTDONE="$TARLISTSDIR""$BASEFILENAME"
    EVERYLISTFILEWILDCARD=$LISTSDIR'*/*.lst'
-   ALLOFTHEDOMAINS=/etc/piholeparser/lists/*/*.lst
   MIRRORDIR="$REPODIR"mirroredlists/
   PARSEDDIR="$REPODIR"parsed/
     PARSEDLISTSALL="$PARSEDDIR"*.txt
@@ -76,14 +75,13 @@ REPODIR=/etc/piholeparser/
 
 ## Extract Filenames and FQDN from lists
 FNAME=`echo $f | cut -f 1 -d '.'`
-#BASEFILENAME=$(echo `basename $FNAME`)
-BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.')
-#UPCHECK=`echo $source | awk -F/ '{print $3}'`
+BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.' | awk -F/ '{print $3}')
+#BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.')
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
 
 ## Parsing filenames
 FNAMEDONE="$FNAME".txt ## Finalized name
 ORIGFILE="$FNAME".orig.txt ## Original File
-#TEMPFILE="$FNAME".temp.txt ## Temp File
 MFILENAME="$FNAME".mirror.txt ## Mirror file
 PFILENAME="$FNAME".parsed.txt ## Parsed file
 PRE="$FNAME".pre.txt ## File in
