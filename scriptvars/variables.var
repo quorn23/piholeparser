@@ -69,7 +69,7 @@ BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
 
 ## Extract Filenames
 FNAME=`echo $f | cut -f 1 -d '.'`
-BASEFILENAME=`echo $FNAME | `basename``
+BASEFILENAME=`echo $FNAME | `basename`
 
 ## Parsing filenames
 FNAMEDONE="$FNAME".txt ## Finalized name
