@@ -37,7 +37,7 @@ sudo cat $TARFILEX > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE  | cut -d " " -f 1` lines downloaded"
 FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 sudo mv $TEMPFILE $TARLISTDONE
-printf "$yellow"  "Size of $TARLISTDONE = $FECTHFILESIZE bytes."
+printf "$yellow"  "Size of $BASEFILENAME = $FECTHFILESIZE bytes."
 sudo rm $COMPRESSEDTEMPTAR
 else 
 sudo echo "* $BASEFILENAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
