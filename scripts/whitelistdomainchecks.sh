@@ -13,14 +13,23 @@ echo ""
 timestamp=$(echo `date`)
 sudo echo "## Whitelisting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
+WHATITIS="Whitelist File"
+CHECKME=$LISTWHITELISTDOMAINS
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
 do
 for source in `cat $f`;
 do
-
-## Set Variables (again, I guess)
-source /etc/piholeparser/scriptvars/variables.var
 
 ## add to whitelist file
 sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
