@@ -3,20 +3,14 @@
 ## For Lists that barely need it
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 ####################
 ## File Lists     ##
 ####################
 
-echo ""
-printf "$green"   "Filtering Lists that need heavy parsing."
-echo ""
-timestamp=$(echo `date`)
-sudo echo "## LightParsing $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-
 ## Start File Loop
-for f in $HEAVYPARSELISTS
+for f in $LIGHTPARSELISTS
 do
 
 echo ""
@@ -26,6 +20,9 @@ echo ""
 ## Process sources within file.lst
 for source in `cat $f`;
 do
+
+## Variables
+source /etc/piholeparser/scriptvars/dynamicvariables.var
 
 printf "$green"    "Processing $BASEFILENAME list."
 echo "" 
@@ -42,7 +39,7 @@ then
 printf "$yellow"    "Fetching List From Local File."
 echo ""
 sudo curl --silent -L $source >> $TEMPFILE
-sudo cat $TEMPFILE >> $ORIGFILE
+sudo cat $TEMPFILE >> $ORIGINALFILETEMP
 sudo rm $TEMPFILE
 else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
@@ -50,7 +47,7 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP ."
 echo ""
 sudo wget -q -O $TEMPFILE $source
-sudo cat $TEMPFILE >> $ORIGFILE
+sudo cat $TEMPFILE >> $ORIGINALFILETEMP
 sudo rm $TEMPFILE
 fi
 
@@ -58,15 +55,15 @@ fi
 done
 
 ## Original File Size
-ORIGFILESIZE=$(stat -c%s "$ORIGFILE")
+FETCHFILESIZE=$(stat -c%s "$ORIGINALFILETEMP")
 if 
-[ "$ORIGFILESIZE" -eq 0 ]
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 timestamp=$(echo `date`)
-sudo echo "* $FNAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-echo -e "\t`wc -l $ORIGFILE | cut -d " " -f 1` lines downloaded"
-printf "$yellow"  "Size of $ORIGFILE = $ORIGFILESIZE bytes."
+echo -e "\t`wc -l $ORIGINALFILETEMP | cut -d " " -f 1` lines downloaded"
+printf "$yellow"  "Size of $BASEFILENAME = $ORIGFILESIZE bytes."
 echo ""
 fi
 
@@ -79,148 +76,135 @@ printf "$green"   "Attempting Creation of Mirror File."
 echo ""
 
 ## Copy original, one for mirror, one for next step
-sudo cp $ORIGFILE $MFILENAME
+sudo cp $ORIGINALFILETEMP $FILETEMP
+sudo cp $ORIGINALFILETEMP $TEMPFILE
 
 ## Github has a 100mb limit, and empty files are useless
-MFILESIZE=$(stat -c%s "$MFILENAME")
+FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 timestamp=$(echo `date`)
 if 
-[ "$MFILESIZE" -ge "$GITHUBLIMIT" ]
+[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
-printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes."
+printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 echo ""
-sudo echo "* $BASEFILENAME list was $MFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $MFILENAME
+sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo rm $TEMPFILE
 elif
-[ "$MFILESIZE" -eq 0 ]
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 echo ""
-printf "$red"     "Size of $MFILENAME = $MFILESIZE bytes. Deleting."
+printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes. Deleting."
 echo ""
 sudo echo "* $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $MFILENAME
+sudo rm $TEMPFILE
 else
 echo ""
-printf "$yellow"     "Size of $MFILENAME = $MFILESIZE bytes."
+printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
 echo ""
-sudo mv $MFILENAME /etc/piholeparser/mirroredlists/"$BASEFILENAME".txt
+sudo mv $TEMPFILE $MIRROREDFILE
 fi
 
 ####################
 ## Pre-Processing ##
 ####################
 
-## Copy for Pre-Processing
-sudo mv $ORIGFILE $PRE
-
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking for FQDN Requirements."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed '/[a-z]/!d; /[.]/!d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Comments #'s and !'s, also empty lines
 PARSECOMMENT="Removing Commented Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Invalid Characters
-## This includes / * # ! @ ~ ` = [ ] | ^ $
+## FQDN's  can only have . _ and -
+## apparently you can have an emoji domain name?
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\$//' < $PRE > $POST
-#sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\|//; s/\^//; s/\$//' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Periods at begining and end of lines
 PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^[.],/d; /^[.]/d; /[.]$/d' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 #####################################################################
 ## Perl Parser
 PARSECOMMENT="Cutting Lists with the Perl Parser."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo perl /etc/piholeparser/scripts/parser.pl $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sudo perl /etc/piholeparser/scripts/parser.pl $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 #####################################################################
 
-## Add and remove Spaces
+## Replace Spaces and, then Remove Empty Lines
 PARSECOMMENT="Replacing Spaces with NewLines, then Removing Empty Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed 's/\s\+/\n/g; /^$/d' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed 's/\s\+/\n/g; /^$/d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Remove IP addresses
 PARSECOMMENT="Removing IP Addresses."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-echo ""
-
-## Domain Requirements,, a period and a letter
-PARSECOMMENT="Checking for FQDN Requirements."
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Periods at begining and end of lines
 PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^[.],/d; /^[.]/d; /[.]$/d' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Pipes and Carrots
 PARSECOMMENT="Removing Pipes and Carrots."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo cat -s $PRE | sed 's/^||//' | cut -d'^' -f-1 > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sudo cat -s $FILETEMP | sed 's/^||//' | cut -d'^' -f-1 > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
+echo ""
+
+## Domain Requirements,, a period and a letter
+PARSECOMMENT="Checking for FQDN Requirements."
+printf "$yellow"  "$PARSECOMMENT ..."
+sed '/[a-z]/!d; /[.]/!d' < $FILETEMP > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
 ## Duplicate Removal
 PARSECOMMENT="Removing Duplicate Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sudo cat -s $PRE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
+sudo cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $TEMPFILE $FILETEMP
 echo ""
 
-## Done with sifting
-sudo mv $PRE $PFILENAME
+## Prepare for next step
+sudo mv $FILETEMP $TEMPFILE
 
 ####################
 ## Complete Lists ##
@@ -231,31 +215,31 @@ printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
 ## Github has a 100mb limit, and empty files are useless
-PFILESIZE=$(stat -c%s "$PFILENAME")
+FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
 timestamp=$(echo `date`)
-if
-[ "$PFILESIZE" -ge "$GITHUBLIMIT" ]
+if 
+[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
 then
 echo ""
-printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes."
-printf "$red"     "Parsed File Too Large For Github. Deleting."
+printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+printf "$red"     "Mirror File Too Large For Github. Deleting."
 echo ""
-sudo echo "* Parsed $BASEFILENAME list was $PFILESIZE bytes, and too large for github.  $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $PFILENAME
+sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo rm $TEMPFILE
 elif
-[ "$PFILESIZE" -eq 0 ]
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 echo ""
-printf "$red"     "Size of $PFILENAME = $PFILESIZE bytes. Deleting."
+printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes. Deleting."
 echo ""
-sudo echo "* Parsed $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $PFILENAME
+sudo echo "* $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo rm $TEMPFILE
 else
 echo ""
-printf "$yellow"  "Size of $PFILENAME = $PFILESIZE bytes."
-printf "$yellow"  "File will be moved to the parsed directory."
+printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+printf "$yellow"  "Creating Mirror of Unparsed File."
 echo ""
-sudo mv $PFILENAME /etc/piholeparser/parsed/"$BASEFILENAME".txt
+sudo mv $TEMPFILE $PARSEDFILE
 fi
 
 printf "$magenta" "___________________________________________________________"
@@ -263,4 +247,3 @@ echo ""
 
 ## End File Loop
 done
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
