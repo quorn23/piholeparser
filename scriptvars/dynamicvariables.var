@@ -7,7 +7,7 @@ source /etc/piholeparser/scriptvars/variables.var
 timestamp=$(echo `date`)
 
 ## Extract Filenames and FQDN from lists
-FNAME=`echo $f | cut -f 1 -d '.'`
-#BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.' | awk -F/ '{print $3}')
-BASEFILENAME=$(echo `basename $FNAME`)
+#FNAME=`echo $f | cut -f 1 -d '.'`
+BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.' | awk -F/ '{print $3}')
+#BASEFILENAME=$(echo `basename $FNAME`)
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
