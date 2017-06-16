@@ -135,6 +135,38 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+WHATSCRIPTORUN=$CREATEBIGLISTSCRIPTEDITED
+SCRIPTTEXT="Creating Custom Big List."
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+WHATSCRIPTORUN=$CREATEBIGSOURCE
+SCRIPTTEXT="Creating Source List."
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
 WHATSCRIPTORUN=$CLEANUPSCRIPT
 SCRIPTTEXT="Cleaning Up Extra Files."
 timestamp=$(echo `date`)
