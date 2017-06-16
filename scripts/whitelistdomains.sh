@@ -30,6 +30,7 @@ fi
 
 printf "$yellow"  "Extracting Domains from all .lst files"
 echo ""
+sudo touch $TEMPFILE
 
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
@@ -46,6 +47,8 @@ sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
 ## end of loops
 done
 done
+
+sudo rm $TEMPFILE
 
 ###########################
 ## Whitelist sort dedupe ##
