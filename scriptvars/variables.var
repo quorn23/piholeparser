@@ -18,6 +18,13 @@ timestamp=$(echo `date`)
 GITHUBLIMIT=104857600
 GITREPOSITORYURL=github.com/deathbybandaid/piholeparser.git
 
+## Extract Filenames and FQDN from lists
+#f=$REPODIR
+FNAME=`echo $f | cut -f 1 -d '.'`
+BASEFILENAME=`echo `basename $f` | cut -f 1 -d '.'`
+#BASEFILENAME=$(echo `basename $FNAME`)
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
+
 ## Directories and their Files
 REPODIR=/etc/piholeparser/
   LOGDIR="$REPODIR"RecentRunLog/
@@ -29,6 +36,7 @@ REPODIR=/etc/piholeparser/
       HEAVYPARSELISTS="$HEAVYPARSELISTDIR"*.lst
     SEVENSLISTDIR="$LISTSDIR"7zip/
       SEVENSLIST="$SEVENSLISTDIR"*.lst
+      SEVENSLISTDONE="SEVENSLISTDIR"$BASEFILENAME".txt
     TARLISTSDIR="$LISTSDIR"tar/
       TARLISTS="TARLISTSDIR"*.lst
    EVERYLISTFILEWILDCARD="$LISTSDIR"*/*.lst
@@ -39,6 +47,7 @@ REPODIR=/etc/piholeparser/
     BIGAPL="$PARSEDALLDIR"1111ALLPARSEDLISTS1111.txt
     BIGAPLE="$PARSEDALLDIR"1111ALLPARSEDLISTS1111edited.txt
     BIGAPLSOURCE="PARSEDALLDIR"1111ALLPARSEDLISTS1111.lst
+    BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
   SCRIPTSDIR="$REPODIR"scripts/
     SEVENZIPLISTSSCRIPT="$SCRIPTSDIR"7ziplists.sh
     CLEANUPSCRIPT="$SCRIPTSDIR"cleanup.sh
@@ -64,14 +73,6 @@ REPODIR=/etc/piholeparser/
     BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
   MAINREADME="$REPODIR"README.md
 
-## Host the file locally
-BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
-
-## Extract Filenames
-f=$REPODIR
-FNAME=`echo $f | cut -f 1 -d '.'`
-BASEFILENAME=$(echo `basename $FNAME`)
-
 ## Parsing filenames
 FNAMEDONE="$FNAME".txt ## Finalized name
 ORIGFILE="$FNAME".orig.txt ## Original File
@@ -83,5 +84,4 @@ POST="$FNAME".post.txt ## File Out
 PREPROC="$FNAME".preproc.txt ## file after pre-processing
 MERGEMETHODS="$FNAME".method*.txt ## used to merge Methods
 MERGED="$FNAME".merged.txt ## Merged Name
-UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
 TARTEMPFILE="$FNAME".temp.tar ## Temp File
