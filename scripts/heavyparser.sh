@@ -132,7 +132,8 @@ echo ""
 ## apparently you can have an emoji domain name?
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
+#sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
+sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $TEMPFILE $FILETEMP
 echo ""
