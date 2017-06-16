@@ -2,9 +2,7 @@
 ## This is the central script that ties the others together
 
 ## Variables
-sudo touch /etc/piholeparser/temp/temporaryfile
 source /etc/piholeparser/scriptvars/staticvariables.var
-sudo rm $TEMPFILE
 
 ####################
 ## Recent Run Log ##
