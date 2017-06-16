@@ -19,39 +19,39 @@ GITHUBLIMIT=104857600
 
 ## Directories and their Files
 REPODIR=/etc/piholeparser/
-  LOGDIR="REPODIR"RecentRunLog/
-    RECENTRUN="LOGDIR"README.md
-  LISTSDIR="REPODIR"lists/
-  MIRRORDIR="REPODIR"mirroredlists/
-  PARSEDDIR="REPODIR"parsed/
-  PARSEDALLDIR="REPODIR"parsedall/
-  SCRIPTSDIR="REPODIR"scripts/
-    SEVENZIPLISTSSCRIPT="SCRIPTSDIR"7ziplists.sh
-    CLEANUPSCRIPT="SCRIPTSDIR"cleanup.sh
-    COLLISIONAVOIDSCRIPT="SCRIPTSDIR"collisionavoid.sh
-    CREATEBIGLISTSCRIPT="SCRIPTSDIR"createbiglist.sh
-    DEPENDENCYCHECKSCRIPT="SCRIPTSDIR"dependencycheck.sh
-    HEAVYPARSERSCRIPT="SCRIPTSDIR"heavyparser.sh
-    LIGHTPARSERSCRIPT="SCRIPTSDIR"lightparser.sh
-    PERLPARSERSCRIPT="SCRIPTSDIR"parser.pl
-    PUSHLISTSSCRIPT="SCRIPTSDIR"pushlists.sh
-    RUNPIHOLEPARSERSCRIPT="SCRIPTSDIR"runpiholeparser.sh
-    TARLISTSSCRIPT="SCRIPTSDIR"tarlists.sh
-    UPADETESCRIPT="SCRIPTSDIR"updaterunpiholeparser.sh
-    WHITELISTSCRIPT="SCRIPTSDIR"whitelistdomainchecks.sh
-  SCRIPTVARSDIR="REPODIR"scriptvars/
-    MAINREADMEDEFAULT="SCRIPTVARSDIR"README.md.default
-  TEMPDIR="REPODIR"temp
-  WHITELISTEDDIR="REPODIR"whitelisted/
-    LISTWHITELISTDOMAINS="WHITELISTEDDIR"whitelist.domains
-  MAINREADME="REPODIR"README.md
+  LOGDIR="$REPODIR"RecentRunLog/
+    RECENTRUN="$LOGDIR"README.md
+  LISTSDIR="$REPODIR"lists/
+    EVERYLISTFILEWILDCARD="$LISTSDIR"*/*.lst
+  MIRRORDIR="$REPODIR"mirroredlists/
+  PARSEDDIR="$REPODIR"parsed/
+  PARSEDALLDIR="$REPODIR"parsedall/
+  SCRIPTSDIR="$REPODIR"scripts/
+    SEVENZIPLISTSSCRIPT="$SCRIPTSDIR"7ziplists.sh
+    CLEANUPSCRIPT="$SCRIPTSDIR"cleanup.sh
+    COLLISIONAVOIDSCRIPT="$SCRIPTSDIR"collisionavoid.sh
+    CREATEBIGLISTSCRIPT="$SCRIPTSDIR"createbiglist.sh
+    DEPENDENCYCHECKSCRIPT="$SCRIPTSDIR"dependencycheck.sh
+    HEAVYPARSERSCRIPT="$SCRIPTSDIR"heavyparser.sh
+    LIGHTPARSERSCRIPT="$SCRIPTSDIR"lightparser.sh
+    PERLPARSERSCRIPT="$SCRIPTSDIR"parser.pl
+    PUSHLISTSSCRIPT="$SCRIPTSDIR"pushlists.sh
+    RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
+    TARLISTSSCRIPT="$SCRIPTSDIR"tarlists.sh
+    UPADETESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
+    WHITELISTSCRIPT="$SCRIPTSDIR"whitelistdomainchecks.sh
+  SCRIPTVARSDIR="$REPODIR"scriptvars/
+    MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
+  TEMPDIR="$REPODIR"temp
+    TEMPFILE="$TEMPDIR"temporaryfile
+  WHITELISTEDDIR="$REPODIR"whitelisted/
+    LISTWHITELISTDOMAINS="$WHITELISTEDDIR"whitelist.domains
+    WHITELISTTEMP="$WHITELISTEDDIR"whitelist.temp
+    DBBWHITES="$WHITELISTEDDIR"deathbybandaidwhites.txt
+    BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
+  MAINREADME="$REPODIR"README.md
 
 
-
-## Whitelist function
-ALLOFTHEDOMAINS=/etc/piholeparser/lists/*/*.lst
-WHITELIST=/etc/piholeparser/whitelisted/whitelist.domains
-WHITELISTPOST=/etc/piholeparser/whitelisted/whitelist.domainspost
 
 ## Set 7zip .lst directory
 SEVENSLIST=/etc/piholeparser/lists/7zip/*.lst
