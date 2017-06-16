@@ -5,15 +5,15 @@
 ## This File will not be updated often.
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 ## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Updating Repository."
-sudo git -C /etc/piholeparser/ pull
+sudo git -C $REPODIR pull
 printf "$magenta" "___________________________________________________________"
 echo ""
 
 ## RunParser
-sudo bash /etc/piholeparser/scripts/runpiholeparser.sh
+sudo bash $RUNPIHOLEPARSERSCRIPT
