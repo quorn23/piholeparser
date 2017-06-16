@@ -139,11 +139,11 @@ sudo mv $POST $PRE
 echo ""
 
 ## Invalid Characters
-## This includes / * # ! @ ~ ` = [ ] | ^ $
+## FQDN's  can only have . _ and -
+## apparently you can have an emoji domain name?
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\$//' < $PRE > $POST
-#sed '/[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; s/\[//; s/\]//; s/\|//; s/\^//; s/\$//' < $PRE > $POST
+sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[/]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
@@ -158,7 +158,7 @@ echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
 echo ""
 
-## Add and remove Spaces
+## Replace Spaces and, then Remove Empty Lines
 PARSECOMMENT="Replacing Spaces with NewLines, then Removing Empty Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
 sed 's/\s\+/\n/g; /^$/d' < $PRE > $POST
@@ -171,15 +171,6 @@ echo ""
 PARSECOMMENT="Removing IP Addresses."
 printf "$yellow"  "$PARSECOMMENT ..."
 sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $PRE > $POST
-sudo rm $PRE
-echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $POST $PRE
-echo ""
-
-## Domain Requirements,, a period and a letter
-PARSECOMMENT="Checking for FQDN Requirements."
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
@@ -198,6 +189,15 @@ echo ""
 PARSECOMMENT="Removing Pipes and Carrots."
 printf "$yellow"  "$PARSECOMMENT ..."
 sudo cat -s $PRE | sed 's/^||//' | cut -d'^' -f-1 > $POST
+sudo rm $PRE
+echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $POST $PRE
+echo ""
+
+## Domain Requirements,, a period and a letter
+PARSECOMMENT="Checking for FQDN Requirements."
+printf "$yellow"  "$PARSECOMMENT ..."
+sed '/[a-z]/!d; /[.]/!d' < $PRE > $POST
 sudo rm $PRE
 echo -e "\t`wc -l $POST | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $POST $PRE
