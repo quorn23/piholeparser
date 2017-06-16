@@ -1,0 +1,63 @@
+## These Variables are file and foldernames
+
+## Base Variables
+source /etc/piholeparser/scriptvars/variables.var
+
+## Github
+GITHUBLIMIT=104857600
+GITREPOSITORYURL=github.com/deathbybandaid/piholeparser.git
+
+## Directories and their Files
+REPODIR=/etc/piholeparser/
+  LOGDIR="$REPODIR"RecentRunLog/
+    RECENTRUN="$LOGDIR"README.md
+  LISTSDIR="$REPODIR"lists/
+    LIGHTPARSELISTDIR="$LISTSDIR"lightparsing/
+      LIGHTPARSELISTS="$LIGHTPARSELISTDIR"*.lst
+    HEAVYPARSELISTDIR="$LISTSDIR"heavyparsing/
+      HEAVYPARSELISTS="$HEAVYPARSELISTDIR"*.lst
+    SEVENSLISTDIR="$LISTSDIR"7zip/
+      SEVENSLIST="$SEVENSLISTDIR"*.lst
+      SEVENSLISTDONE="$SEVENSLISTDIR""$BASEFILENAME".txt
+    TARLISTSDIR="$LISTSDIR"tar/
+      TARLISTS="$TARLISTSDIR"*.lst
+      TARLISTDONE="$TARLISTSDIR""$BASEFILENAME"
+   EVERYLISTFILEWILDCARD=$LISTSDIR'*/*.lst'
+  MIRRORDIR="$REPODIR"mirroredlists/
+  PARSEDDIR="$REPODIR"parsed/
+    PARSEDLISTSALL="$PARSEDDIR"*.txt
+  PARSEDALLDIR="$REPODIR"parsedall/
+    BIGAPLNAME=1111ALLPARSEDLISTS1111
+    BIGAPL="$PARSEDALLDIR""$BIGAPLNAME".txt
+    BIGAPLE="$PARSEDALLDIR""$BIGAPLNAME"edited.txt
+    BIGAPLSOURCE="$PARSEDALLDIR""$BIGAPLNAME".lst
+    BIGAPLLOCALHOST=/var/www/html/lists/"$BIGAPLNAME".txt
+  SCRIPTSDIR="$REPODIR"scripts/
+    SEVENZIPLISTSSCRIPT="$SCRIPTSDIR"7ziplists.sh
+    CLEANUPSCRIPT="$SCRIPTSDIR"cleanup.sh
+    COLLISIONAVOIDSCRIPT="$SCRIPTSDIR"collisionavoid.sh
+    CREATEBIGLISTSCRIPT="$SCRIPTSDIR"createbiglist.sh
+    DEPENDENCYCHECKSCRIPT="$SCRIPTSDIR"dependencycheck.sh
+    HEAVYPARSERSCRIPT="$SCRIPTSDIR"heavyparser.sh
+    LIGHTPARSERSCRIPT="$SCRIPTSDIR"lightparser.sh
+    PERLPARSERSCRIPT="$SCRIPTSDIR"parser.pl
+    PUSHLISTSSCRIPT="$SCRIPTSDIR"pushlists.sh
+    RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
+    TARLISTSSCRIPT="$SCRIPTSDIR"tarlists.sh
+    UPADETESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
+    WHITELISTSCRIPT="$SCRIPTSDIR"whitelistdomains.sh
+  SCRIPTVARSDIR="$REPODIR"scriptvars/
+    MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
+  TEMPDIR="$REPODIR"temp/
+    TEMPFILE="$TEMPDIR"temporaryfile
+  WHITELISTEDDIR="$REPODIR"whitelisted/
+    LISTWHITELISTDOMAINS="$WHITELISTEDDIR"whitelist.domains
+    WHITELISTTEMP="$WHITELISTEDDIR"whitelist.temp
+    DBBWHITES="$WHITELISTEDDIR"deathbybandaidwhites.txt
+    BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
+    HOWMANYLISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1` unique domains.")
+  MAINREADME="$REPODIR"README.md
+  
+## Dummy Variables
+f=$REPODIR
+source=https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/README.md
