@@ -200,6 +200,19 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ####################
+## Tidy Up        ##
+####################
+
+if 
+ls $TEMPCLEANUP &> /dev/null; 
+then
+echo "txt files removed from temp folder"
+sudo rm $TEMPCLEANUP
+else
+echo ""
+fi
+
+####################
 ## Readme.md      ##
 ####################
 
