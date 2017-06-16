@@ -19,18 +19,15 @@ timestamp=$(echo `date`)
 sudo echo "## Big List $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Combine Small lists
-sudo cat /etc/piholeparser/parsed/*.txt > $TEMPAPL
-echo -e "\t`wc -l $TEMPAPL | cut -d " " -f 1` lines after merging individual lists"
+sudo cat $PARSEDLISTSALL > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
 
 ## Duplicate Removal
 echo ""
 printf "$yellow"  "Removing duplicates..."
-sort -u $TEMPAPL > $BIGAPL
-sudo rm $TEMPAPL
-sudo mv $BIGAPL $TEMPAPL
-sudo gawk '{if (++dup[$0] == 1) print $0;}' $TEMPAPL > $BIGAPL
+sudo cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BIGAPL
 echo -e "\t`wc -l $BIGAPL | cut -d " " -f 1` lines after deduping"
-sudo rm $TEMPAPL
+sudo rm $TEMPFILE
 
 ## Github has a 100mb limit and empty files are useless
 BFILESIZE=$(stat -c%s $BIGAPL)
@@ -54,9 +51,6 @@ else
 echo ""
 printf "$yellow"  "Big List Created Successfully."
 fi
-
-## duplicate Big List file
-sudo cp $BIGAPL /etc/piholeparser/parsed/
 
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
@@ -119,12 +113,12 @@ timestamp=$(echo `date`)
 sudo echo "## Rebuilding Source List $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## add all sources
-sudo cat /etc/piholeparser/lists/*/*.lst | sort > $BIGAPLSOURCE
+sudo cat $EVERYLISTFILEWILDCARD | sort > $BIGAPLSOURCE
 
 ## Remove Empty Lines
-sudo sed '/^$/d' $BIGAPLSOURCE > $BIGAPLSOURCE2
+sudo sed '/^$/d' $BIGAPLSOURCE > $TEMPFILE
 sudo rm $BIGAPLSOURCE
-sudo mv $BIGAPLSOURCE2 $BIGAPLSOURCE
+sudo mv $TEMPFILE $BIGAPLSOURCE
 
 timestamp=$(echo `date`)
 HOWMANYLISTS=$(echo -e "\t`wc -l $BIGAPLSOURCE | cut -d " " -f 1` lists processed by the script.")
