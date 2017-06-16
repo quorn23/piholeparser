@@ -56,7 +56,7 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 WHATSCRIPTORUN=$SEVENZIPLISTSSCRIPT
-SCRIPTTEXT="Downloading and Extracing 7zip Files."
+SCRIPTTEXT="Downloading and Extracting 7zip Files."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -72,7 +72,7 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 WHATSCRIPTORUN=$TARLISTSSCRIPT
-SCRIPTTEXT="Downloading and Extracing Tar Files."
+SCRIPTTEXT="Downloading and Extracting Tar Files."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
