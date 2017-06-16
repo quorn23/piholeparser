@@ -52,11 +52,18 @@ sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/nul
 
 ## dbb whites
 sudo cat -s $DBBWHITES | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+sudo rm $DBBWHITES
 sudo mv $TEMPFILE $DBBWHITES
 
 ## user complaints
 sudo cat -s $BLOCKEDCOMPLAINTS | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+sudo rm $BLOCKEDCOMPLAINTS
 sudo mv $TEMPFILE $BLOCKEDCOMPLAINTS
+
+## Merge for removal later
+sudo cat $BLOCKEDCOMPLAINTS $DBBWHITES $LISTWHITELISTDOMAINS > $TEMPFILE
+sudo cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
+sudo rm $TEMPFILE
 
 timestamp=$(echo `date`)
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
