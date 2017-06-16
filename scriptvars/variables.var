@@ -69,8 +69,11 @@ REPODIR=/etc/piholeparser/
     HOWMANYLISTS=$(echo -e "\t`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1` unique domains.")
   MAINREADME="$REPODIR"README.md
 
-## Extract Filenames and FQDN from lists
+## Dummy Variables
 f=$REPODIR
+source=dummysource
+
+## Extract Filenames and FQDN from lists
 FNAME=`echo $f | cut -f 1 -d '.'`
 #BASEFILENAME=$(echo `basename $FNAME`)
 BASEFILENAME=$(echo `basename $f` | cut -f 1 -d '.')
