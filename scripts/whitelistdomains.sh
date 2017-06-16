@@ -11,6 +11,7 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 WHATITIS="Whitelist File"
 CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
+printf "$yellow"  "Checking For $WHATITIS"
 if
 ls $CHECKME &> /dev/null;
 then
