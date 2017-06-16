@@ -167,8 +167,8 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$CLEANUPSCRIPT
-SCRIPTTEXT="Cleaning Up Extra Files."
+WHATSCRIPTORUN=$PUSHLISTSLOCALSCRIPT
+SCRIPTTEXT="Pushing Lists to local webserver."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -183,8 +183,8 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$PUSHLISTSSCRIPT
-SCRIPTTEXT="Pusing Lists."
+WHATSCRIPTORUN=$PUSHLISTSGITSCRIPT
+SCRIPTTEXT="Pushing Lists to github."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -198,6 +198,16 @@ sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+####################
+## Readme.md      ##
+####################
+
+timestamp=$(echo `date`)
+sudo echo "## Updated Main README.md $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+
+sudo rm $MAINREADME
+sudo sed "s/LASTRUNVARIABLEGOESHERE/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
 
 ####################
 ## Script Complete##
