@@ -8,18 +8,6 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 ## File checks    ##
 ####################
 
-WHATITIS="Temporary File"
-CHECKME=$TEMPFILE
-timestamp=$(echo `date`)
-if
-ls $CHECKME &> /dev/null;
-then
-sudo rm $CHECKME
-sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-else
-sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-fi
-
 WHATITIS="Whitelist File"
 CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
@@ -37,8 +25,7 @@ fi
 echo ""
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "Whitelisting Domains that will be parsed."
-printf "$red"   "Note: this does not actually work,, but it's a future planned addition."
+printf "$green"   "Compiling Whitelists."
 echo ""
 timestamp=$(echo `date`)
 sudo echo "## Whitelisting Script $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
@@ -50,7 +37,7 @@ for source in `cat $f`;
 do
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/dynamicvariables.var
 
 ## add to whitelist file
 sudo echo "$UPCHECK" | sudo tee --append $TEMPFILE &>/dev/null
