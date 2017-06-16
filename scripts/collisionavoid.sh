@@ -36,7 +36,7 @@ sudo echo "## Clearing The Path $timestamp" | sudo tee --append $RECENTRUN &>/de
 ## Stuff to remove if there
 
 WHATITIS="Whitelist File"
-CHECKME="LISTWHITELISTDOMAINS
+CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
