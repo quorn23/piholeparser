@@ -14,8 +14,9 @@ cyan='\e[1;36m%s\e[0m\n'
 ## Timestamp
 timestamp=$(echo `date`)
 
-## Github file limit
+## Github
 GITHUBLIMIT=104857600
+GITREPOSITORYURL=github.com/deathbybandaid/piholeparser.git
 
 ## Directories and their Files
 REPODIR=/etc/piholeparser/
@@ -63,6 +64,9 @@ REPODIR=/etc/piholeparser/
     BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
   MAINREADME="$REPODIR"README.md
 
+## Host the file locally
+BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
+
 ## Parsing filenames
 FNAME=`echo $f | cut -f 1 -d '.'` ## Cuts .lst off filename
 FNAMEDONE="$FNAME".txt ## Finalized name
@@ -78,10 +82,3 @@ MERGED="$FNAME".merged.txt ## Merged Name
 UPCHECK=`echo $source | awk -F/ '{print $3}'` ## used to filter domain name
 SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
 TARTEMPFILE="$FNAME".temp.tar ## Temp File
-
-## ALLPARSEDLIST
-BIGAPLSOURCE=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
-BIGAPLSOURCE2=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111temp.lst
-BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
-TEMPAPLE=/etc/piholeparser/parsedall/ALLPARSEDLISTSedited.txt
-
