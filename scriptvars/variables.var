@@ -59,12 +59,6 @@ REPODIR=/etc/piholeparser/
     BLOCKEDCOMPLAINTS="$WHITELISTEDDIR"blockeddomaincomplaints.txt
   MAINREADME="$REPODIR"README.md
 
-## Light Parser .lst directory
-LIGHTPARSELISTS=/etc/piholeparser/lists/lightparsing/*.lst
-
-## Heavy Parser .lst directory
-HEAVYPARSE=/etc/piholeparser/lists/heavyparsing/*.lst
-
 ## Parsing filenames
 FNAME=`echo $f | cut -f 1 -d '.'` ## Cuts .lst off filename
 FNAMEDONE="$FNAME".txt ## Finalized name
