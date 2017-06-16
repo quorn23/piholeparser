@@ -2,7 +2,7 @@
 ## This should whitelist all domains that will be parsed
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+#source /etc/piholeparser/scriptvars/variables.var
 
 echo ""
 printf "$blue"    "___________________________________________________________"
@@ -33,6 +33,9 @@ for f in $ALLOFTHEDOMAINS
 do
 for source in `cat $f`;
 do
+
+## Variables
+source /etc/piholeparser/scriptvars/variables.var
 
 ## add to whitelist file
 sudo echo "$UPCHECK" | sudo tee --append $TEMPFILE &>/dev/null
