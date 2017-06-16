@@ -22,6 +22,10 @@ REPODIR=/etc/piholeparser/
   LOGDIR="$REPODIR"RecentRunLog/
     RECENTRUN="$LOGDIR"README.md
   LISTSDIR="$REPODIR"lists/
+    LIGHTPARSELISTDIR="$LISTSDIR"lightparsing/
+      LIGHTPARSELISTS="$LIGHTPARSELISTDIR"*.lst
+    HEAVYPARSELISTDIR="$LISTSDIR"heavyparsing/
+      HEAVYPARSELISTS="$HEAVYPARSELISTDIR"*.lst
     SEVENSLISTDIR="$LISTSDIR"7zip/
       SEVENSLIST="$SEVENSLISTDIR"*.lst
     TARLISTSDIR="$LISTSDIR"tar/
@@ -56,7 +60,7 @@ REPODIR=/etc/piholeparser/
   MAINREADME="$REPODIR"README.md
 
 ## Light Parser .lst directory
-LIGHTPARSE=/etc/piholeparser/lists/lightparsing/*.lst
+LIGHTPARSELISTS=/etc/piholeparser/lists/lightparsing/*.lst
 
 ## Heavy Parser .lst directory
 HEAVYPARSE=/etc/piholeparser/lists/heavyparsing/*.lst
