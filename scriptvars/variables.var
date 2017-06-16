@@ -33,7 +33,11 @@ REPODIR=/etc/piholeparser/
    EVERYLISTFILEWILDCARD="$LISTSDIR"*/*.lst
   MIRRORDIR="$REPODIR"mirroredlists/
   PARSEDDIR="$REPODIR"parsed/
+    PARSEDLISTSALL="PARSEDDIR"*.txt
   PARSEDALLDIR="$REPODIR"parsedall/
+    BIGAPL="$PARSEDALLDIR"1111ALLPARSEDLISTS1111.txt
+    BIGAPLE="$PARSEDALLDIR"1111ALLPARSEDLISTS1111edited.txt
+    BIGAPLSOURCE="PARSEDALLDIR"1111ALLPARSEDLISTS1111.lst
   SCRIPTSDIR="$REPODIR"scripts/
     SEVENZIPLISTSSCRIPT="$SCRIPTSDIR"7ziplists.sh
     CLEANUPSCRIPT="$SCRIPTSDIR"cleanup.sh
@@ -76,17 +80,8 @@ SEVENTEMPFILE="$FNAME".temp.7z ## Temp File
 TARTEMPFILE="$FNAME".temp.tar ## Temp File
 
 ## ALLPARSEDLIST
-TEMPAPL=/etc/piholeparser/parsedall/ALLPARSEDLISTS.txt
-BIGAPL=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.txt
 BIGAPLSOURCE=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111.lst
 BIGAPLSOURCE2=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111temp.lst
 BIGAPLLOCALHOST=/var/www/html/lists/1111ALLPARSEDLISTS1111.txt
-
-## Allparsed edited
-BDC=/etc/piholeparser/whitelisted/blockeddomaincomplaints.txt
-BDC2=/etc/piholeparser/whitelisted/blockeddomaincomplaints.temp1.txt
-DBBW=/etc/piholeparser/whitelisted/deathbybandaidwhites.txt
-DBBW2=/etc/piholeparser/whitelisted/deathbybandaidwhites.temp2.txt
-BDCDBBWHITE=/etc/piholeparser/whitelisted/deathbybandaidwhites.temp3.txt
 TEMPAPLE=/etc/piholeparser/parsedall/ALLPARSEDLISTSedited.txt
-BIGAPLE=/etc/piholeparser/parsedall/1111ALLPARSEDLISTS1111edited.txt
+
