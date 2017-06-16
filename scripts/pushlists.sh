@@ -23,12 +23,10 @@ echo ""
 then
 printf "$green"   "Pushing Lists to Github"
 timestamp=$(echo `date`)
-#sudo git config --global user.name ""$GITHUBUSERNAME""
-#sudo git config --global user.email $GITHUBEMAIL
-sudo git -C /etc/piholeparser/ remote set-url origin https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@github.com/deathbybandaid/piholeparser.git
-sudo git -C /etc/piholeparser/ add .
-sudo git -C /etc/piholeparser/ commit -m "Update lists $timestamp"
-sudo git -C /etc/piholeparser/ push -u origin master
+sudo git -C $REPODIR remote set-url origin https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@"GITREPOSITORYURL"
+sudo git -C $REPODIR add .
+sudo git -C $REPODIR commit -m "Update lists $timestamp"
+sudo git -C $REPODIR push -u origin master
 elif
 [ "$version" = "local" ]
 then
