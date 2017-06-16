@@ -25,8 +25,6 @@ else
 sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-sudo cat 
-
 ## Start File Loop
 for f in $EVERYLISTFILEWILDCARD
 do
