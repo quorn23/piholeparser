@@ -2,14 +2,7 @@
 ## This will download and extract tar lists
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
-
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "Downloading and Extracting Tar Compressed Lists."
-timestamp=$(echo `date`)
-sudo echo "## Tar $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 ## Start 7zip File Loop
 for f in $TARLISTS
@@ -20,14 +13,17 @@ for source in `cat $f`;
 do
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/dynamicvariables.var
 
 printf "$blue"    "___________________________________________________________"
 echo ""
 
-echo ""
+printf "$green"    "Processing $BASEFILENAME list."
+echo "" 
+printf "$cyan"    "Downloading from:"
 printf "$cyan"    "$source"
 echo "" 
+
 
 timestamp=$(echo `date`)
 if ping -c 1 $UPCHECK &> /dev/null
@@ -36,11 +32,12 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP and extracting."
 sudo wget -q -O $TEMPFILE $source
-TARFILEX=$(tar -xavf $TEMPFILE -C $TEMPDIR)
-sudo cat $TARFILEX > $TARLISTDONE
-echo -e "\t`wc -l $TARLISTDONE | cut -d " " -f 1` lines downloaded"
-FETCHFILESIZE=$(stat -c%s "$TARLISTDONE")
-printf "$yellow"  "Size of $TARLISTDONE = $FECTHFILESIZE bytes."
+TARFILEX=$(tar -xavf $COMPRESSEDTEMP -C $TEMPDIR)
+sudo cat $TARFILEX > $TEMPFILE
+echo -e "\t`wc -l $TEMPFILE  | cut -d " " -f 1` lines downloaded"
+FETCHFILESIZE=$(stat -c%s "$TEMPFILE")
+printf "$yellow"  "Size of $BASEFILENAME = $FECTHFILESIZE bytes."
+sudo mv $TEMPFILE $TARLISTDONE
 else 
 sudo echo "* $BASEFILENAME list was unavailable for download $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$red"    "$BASEFILENAME list unavailable right now"
@@ -51,7 +48,3 @@ done
 
 ## End File Loop
 done
-
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
-printf "$magenta" "___________________________________________________________"
