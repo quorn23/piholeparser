@@ -23,6 +23,22 @@ fi
 ## Run Scripts    ##
 ####################
 
+WHATSCRIPTORUN=$COLLISIONAVOIDSCRIPT
+SCRIPTTEXT="Clearing The Path."
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
 WHATSCRIPTORUN=$DEPENDENCYCHECKSCRIPT
 SCRIPTTEXT="Checking For Script Dependencies."
 timestamp=$(echo `date`)
@@ -153,6 +169,22 @@ echo ""
 
 WHATSCRIPTORUN=$CREATEBIGSOURCE
 SCRIPTTEXT="Creating Source List."
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
+sudo bash $WHATSCRIPTORUN
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+WHATSCRIPTORUN=$CLEANUPSCRIPT
+SCRIPTTEXT="Cleanining Up Before Pushing."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
