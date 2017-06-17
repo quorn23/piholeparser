@@ -36,9 +36,14 @@ echo ""
 
 if
 [[ -n $UPCHECK ]]
-then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
+then
+fi
+
+if
+[[ -n $SOURCEIP ]]
+then
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of "$SOURCEIP"."
 echo ""
 sudo wget -q -O $TEMPFILE $source
