@@ -16,7 +16,7 @@ else
 sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Temporary File"
+WHATITIS="Temporary File #2 "
 CHECKME=$FILETEMP
 timestamp=$(echo `date`)
 if
@@ -28,7 +28,7 @@ else
 sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Temporary File"
+WHATITIS="Temporary Original File"
 CHECKME=$ORIGINALFILETEMP
 timestamp=$(echo `date`)
 if
@@ -40,7 +40,7 @@ else
 sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Temporary File"
+WHATITIS="Temporary 7zip File"
 CHECKME=$COMPRESSEDTEMPSEVEN
 timestamp=$(echo `date`)
 if
@@ -52,7 +52,7 @@ else
 sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Temporary File"
+WHATITIS="Temporary Tar File"
 CHECKME=$COMPRESSEDTEMPTAR
 timestamp=$(echo `date`)
 if
