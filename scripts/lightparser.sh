@@ -34,14 +34,9 @@ echo ""
 ## Download Lists ##
 ####################
 
-if [[ -z $UPCHECK ]]
+if
+[[ -n $UPCHECK ]]
 then
-printf "$yellow"    "Fetching List From Local File."
-echo ""
-sudo curl --silent -L $source >> $TEMPFILE
-sudo cat $TEMPFILE >> $ORIGINALFILETEMP
-sudo rm $TEMPFILE
-else 
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP ."
@@ -49,7 +44,38 @@ echo ""
 sudo wget -q -O $TEMPFILE $source
 sudo cat $TEMPFILE >> $ORIGINALFILETEMP
 sudo rm $TEMPFILE
+elif
+[[ $source == file* ]]
+then
+printf "$yellow"    "Fetching List From Local File."
+echo ""
+sudo curl --silent -L $source >> $TEMPFILE
+sudo cat $TEMPFILE >> $ORIGINALFILETEMP
+sudo rm $TEMPFILE
+else
+printf "$yellow"    "Fetching List From Git Repo Mirror."
+echo ""
+sudo wget -q -O $TEMPFILE $MIRROREDFILEDL
+sudo cat $TEMPFILE >> $ORIGINALFILETEMP
+sudo rm $TEMPFILE
 fi
+
+#if [[ -z $UPCHECK ]]
+#then
+#printf "$yellow"    "Fetching List From Local File."
+#echo ""
+#sudo curl --silent -L $source >> $TEMPFILE
+#sudo cat $TEMPFILE >> $ORIGINALFILETEMP
+#sudo rm $TEMPFILE
+#else 
+#SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+#SOURCEIP=`echo $SOURCEIPFETCH`
+#printf "$yellow"    "Fetching List from $UPCHECK located at the IP of $SOURCEIP ."
+#echo ""
+#sudo wget -q -O $TEMPFILE $source
+#sudo cat $TEMPFILE >> $ORIGINALFILETEMP
+#sudo rm $TEMPFILE
+#fi
 
 ## Source completion
 done
