@@ -48,7 +48,7 @@ printf "$yellow"    "Fetching List from $UPCHECK located at the IP of "$SOURCEIP
 echo ""
 sudo wget -q -O $BTEMPFILE $source
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm $TEMPFILE
+sudo rm $BTEMPFILE
 elif
 [[ $source == file* ]]
 then
@@ -119,7 +119,7 @@ echo ""
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 printf "$yellow"  "Creating Mirror of Unparsed File."
 echo ""
-sudo mv $TEMPFILE $MIRROREDFILE
+sudo mv $BTEMPFILE $MIRROREDFILE
 fi
 
 ####################
@@ -163,25 +163,25 @@ echo ""
 ## Replace Spaces and, then Remove Empty Lines
 PARSECOMMENT="Replacing Spaces with NewLines, then Removing Empty Lines."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed 's/\s\+/\n/g; /^$/d' < $FILETEMP > $TEMPFILE
-echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $TEMPFILE $FILETEMP
+sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
+echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
 ## Remove IP addresses
 PARSECOMMENT="Removing IP Addresses."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $FILETEMP > $TEMPFILE
-echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $TEMPFILE $FILETEMP
+sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $BFILETEMP > $BTEMPFILE
+echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
 ## Periods at begining and end of lines
 PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^[.],/d; /^[.]/d; /[.]$/d' < $FILETEMP > $TEMPFILE
-echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $TEMPFILE $FILETEMP
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
+echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
 ## Pipes and Carrots
