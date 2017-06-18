@@ -3,7 +3,7 @@
 ## and merges it all into one
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 ####################
 ## Big List       ##
