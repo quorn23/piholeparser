@@ -29,6 +29,18 @@ else
 sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+WHATITIS="Temporary Text File"
+CHECKME=$CLEANUPTEMP
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Clean parsed directory if using locally
 if 
 [ "$version" = "local" ]
