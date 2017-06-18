@@ -41,7 +41,7 @@ sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &
 fi
 
 WHATITIS="Temporary txt Files"
-CHECKME=/etc/piholeparser/temp/*.txt
+CHECKME="$TEMPCLEANUP"
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
