@@ -147,7 +147,8 @@ echo ""
 ## apparently you can have an emoji domain name?
 PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
+sudo sed '/[,]/d' | sed 's/"/'\''/g' | sed '/\"\//d' | sed '/[+]/d' | sed '/[\]/d' | sed '/[/]/d' | sed '/[<]/d' | sed '/[>]/d' | sed '/[?]/d' | sed '/[*]/d' | sed '/[#]/d' | sed '/[!]/d' | sed '/[@]/d' | sed '/[~]/d' | sed '/[`]/d' | sed '/[=]/d' | sed '/[:]/d' | sed '/[;]/d' | sed '/[%]/d' | sed '/[&]/d' | sed '/[(]/d' | sed '/[)]/d' | sed '/[$]/d' | sed '/\[\//d' | sed '/\]\//d' | sed '/[{]/d' | sed '/[}]/d' < $FILETEMP > $TEMPFILE
+#sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
 #sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $FILETEMP > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $TEMPFILE $FILETEMP
@@ -156,7 +157,7 @@ echo ""
 ## Periods at begining and end of lines
 PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^[.],/d; /^[.]/d; /[.]$/d' < $FILETEMP > $TEMPFILE
+sudo sed '/^[.],/d; /^[.]/d; /[.]$/d' < $FILETEMP > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $TEMPFILE $FILETEMP
 echo ""
