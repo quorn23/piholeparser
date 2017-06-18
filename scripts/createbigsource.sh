@@ -2,7 +2,7 @@
 ## This trims off the "white" domains
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scriptvars/staticvariables.var
 
 ####################
 ## Big Source     ##
