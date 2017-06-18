@@ -66,6 +66,9 @@ sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 fi
 
+## This was giving me issues
+unset SOURCEIP
+
 ## Source completion
 done
 
