@@ -5,7 +5,8 @@ source /etc/piholeparser/scriptvars/variables.var
 
 ## Github
 GITHUBLIMIT=104857600
-GITREPOSITORYURL=github.com/deathbybandaid/piholeparser.git
+GITREPOSITORYURL="deathbybandaid/piholeparser.git"
+GITWHERETOPUSH=https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@github.com/"$GITREPOSITORYURL"
 
 ## Directories and their Files
 REPODIR=/etc/piholeparser/
