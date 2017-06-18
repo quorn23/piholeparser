@@ -67,7 +67,11 @@ sudo rm $BTEMPFILE
 fi
 
 ## This was giving me issues
+if
+[[ -n $UPCHECK ]]
+then
 unset SOURCEIP
+fi
 
 ## Source completion
 done
