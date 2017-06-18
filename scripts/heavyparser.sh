@@ -126,17 +126,9 @@ fi
 ## Pre-Processing ##
 ####################
 
-## Domain Requirements,, a period and a letter
-PARSECOMMENT="Checking for FQDN Requirements."
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/[a-z]/!d; /[.]/!d' < $BFILETEMP > $BTEMPFILE
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
-echo ""
-
 ## Comments #'s and !'s, also empty lines
-PARSECOMMENT="Removing Commented Lines."
-printf "$yellow"  "$PARSECOMMENT ..."
+PARSECOMMENT="Removing Lines with Comments or Empty."
+printf "$yellow"  "$PARSECOMMENT"
 sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
@@ -146,16 +138,8 @@ echo ""
 ## FQDN's  can only have . _ and -
 ## apparently you can have an emoji domain name?
 PARSECOMMENT="Removing Invalid FQDN characters."
-printf "$yellow"  "$PARSECOMMENT ..."
+printf "$yellow"  "$PARSECOMMENT"
 sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $BFILETEMP > $BTEMPFILE
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
-echo ""
-
-## Periods at begining and end of lines
-PARSECOMMENT="Removing Lines With a Period at the Start or End."
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -163,60 +147,65 @@ echo ""
 #####################################################################
 ## Perl Parser
 PARSECOMMENT="Cutting Lists with the Perl Parser."
-printf "$yellow"  "$PARSECOMMENT ..."
+printf "$yellow"  "$PARSECOMMENT"
 sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 #####################################################################
 
-## Replace Spaces and, then Remove Empty Lines
-PARSECOMMENT="Replacing Spaces with NewLines, then Removing Empty Lines."
-printf "$yellow"  "$PARSECOMMENT ..."
-sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
+## Pipes and Carrots
+PARSECOMMENT="Removing Pipes and Carrots."
+printf "$yellow"  "$PARSECOMMENT"
+sudo cat -s $BFILETEMP | sed 's/^||//' | cut -d'^' -f-1 > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
 ## Remove IP addresses
 PARSECOMMENT="Removing IP Addresses."
-printf "$yellow"  "$PARSECOMMENT ..."
+printf "$yellow"  "$PARSECOMMENT"
 sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $BFILETEMP > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
-## Periods at begining and end of lines
-PARSECOMMENT="Removing Lines With a Period at the Start or End."
-printf "$yellow"  "$PARSECOMMENT ..."
-sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
-echo ""
-
-## Pipes and Carrots
-PARSECOMMENT="Removing Pipes and Carrots."
-printf "$yellow"  "$PARSECOMMENT ..."
-sudo cat -s $BFILETEMP | sed 's/^||//' | cut -d'^' -f-1 > $BTEMPFILE
+## Replace Spaces then Remove Empty Lines
+PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
+printf "$yellow"  "$PARSECOMMENT"
+sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking for FQDN Requirements."
-printf "$yellow"  "$PARSECOMMENT ..."
+printf "$yellow"  "$PARSECOMMENT"
 sed '/[a-z]/!d; /[.]/!d' < $BFILETEMP > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 
+## Periods at begining and end of lines
+## This should fix Wildcarding
+PARSECOMMENT="Removing Lines With a Period at the Start or End."
+printf "$yellow"  "$PARSECOMMENT"
+sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
+echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
+sudo mv $BTEMPFILE $BFILETEMP
+echo ""
+
 ## Duplicate Removal
+## if there are fewer lines after this, is something wrong?
 PARSECOMMENT="Removing Duplicate Lines."
-printf "$yellow"  "$PARSECOMMENT ..."
+printf "$yellow"  "$PARSECOMMENT"
 sudo cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
+
+## This will remove lines with spaces
+# sed ' / /d;'
 
 ## Prepare for next step
 sudo mv $BFILETEMP $BTEMPFILE
