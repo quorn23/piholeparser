@@ -50,11 +50,11 @@ sudo wget -q -O $BTEMPFILE $source
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 elif
-[[ $source == file* ]]
+[[ $source == BTEMPLOCAL ]]
 then
 printf "$yellow"    "Fetching List From Local File."
 echo ""
-sudo curl --silent -L $source >> $BTEMPFILE
+sudo curl --silent -L $BTEMPLOCALSOURCE >> $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 else
