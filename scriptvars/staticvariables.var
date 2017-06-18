@@ -63,11 +63,11 @@ REPODIR=/etc/piholeparser/
     MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
   
   TEMPDIR="$REPODIR"temp/
-    TEMPFILE="$TEMPDIR"temporaryfile
+    BTEMPFILE="$TEMPDIR""$BASEFILENAME"tempfile
+    BFILETEMP="$TEMPDIR""$BASEFILENAME"filetemp
     COMPRESSEDTEMPTAR="$TEMPDIR"compressedseventemporaryfile.tar.gz
     COMPRESSEDTEMPSEVEN="$TEMPDIR"compressedseventemporaryfile.7z
     ORIGINALFILETEMP="$TEMPDIR"original
-    FILETEMP="$TEMPDIR"filetemporary
     WHITELISTTEMP="$TEMPDIR"whitelist.temp
     SEVENSLISTDONE="$TEMPDIR""$BASEFILENAME".txt
     TARLISTDONE="$TEMPDIR""$BASEFILENAME".txt
