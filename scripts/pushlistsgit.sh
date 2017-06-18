@@ -10,7 +10,7 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 then
 printf "$green"   "Pushing Lists to Github"
 timestamp=$(echo `date`)
-sudo git -C $REPODIR remote set-url origin https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@"GITREPOSITORYURL"
+sudo git -C $REPODIR remote set-url origin $GITWHERETOPUSH
 sudo git -C $REPODIR add .
 sudo git -C $REPODIR commit -m "Update lists $timestamp"
 sudo git -C $REPODIR push -u origin master
