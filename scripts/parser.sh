@@ -186,12 +186,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Invalid Characters
@@ -212,12 +218,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 #####################################################################
@@ -237,12 +249,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 #####################################################################
@@ -263,12 +281,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Remove IP addresses
@@ -287,12 +311,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Replace Spaces then Remove Empty Lines
@@ -311,12 +341,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Domain Requirements,, a period and a letter
@@ -335,12 +371,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Periods at begining and end of lines
@@ -384,12 +426,18 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Prepare for next step
