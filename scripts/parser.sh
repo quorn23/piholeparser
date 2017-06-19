@@ -68,7 +68,6 @@ printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 sudo echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo wget -q -O $BTEMPFILE $MIRROREDFILEDL
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo touch $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 elif
 [[ $source == *.7z && -n $SOURCEIP ]]
@@ -77,7 +76,6 @@ printf "$cyan"    "Fetching 7zip List from $UPCHECK located at the IP of "$SOURC
 sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
 sudo 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo touch $BORIGINALFILETEMP
 sudo rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.tar.gz && -n $SOURCEIP ]]
@@ -87,12 +85,20 @@ sudo wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 sudo mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo touch $BORIGINALFILETEMP
 sudo rm $COMPRESSEDTEMPTAR
 else
 printf "$red"    "Somehow All Download Variables Were Missed."
-sudo touch $BORIGINALFILETEMP
 sudo echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+CHECKME=$BORIGINALFILETEMP
+if
+ls $CHECKME &> /dev/null;
+then
+printf "$green"    "Download Successful."
+else
+printf "$red"    "Download Failed."
+sudo touch $BORIGINALFILETEMP
 fi
 echo ""
 
