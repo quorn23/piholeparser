@@ -189,10 +189,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -221,10 +225,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -252,10 +260,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -284,10 +296,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -314,10 +330,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -344,10 +364,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -374,10 +398,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
@@ -402,12 +430,22 @@ else
 :
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-FILESIZEZERO=true
-else
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
 fi
 
 ## Duplicate Removal
@@ -429,10 +467,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+unset ENDCOMMENT
+unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+unset ENDCOMMENT
+unset HOWMANYLINES
 fi
 if
 [[ "$FETCHFILESIZE" -eq 0 ]]
