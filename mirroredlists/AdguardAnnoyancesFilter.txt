@@ -287,6 +287,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+motorpage.ru##.news-subscr
 delfi.lt###newsletter-container
 zdnet.de##[class="box keepUp"]
 foodspring.de##.newsletter-subscription-form
@@ -386,6 +387,7 @@ mail.ru##form[data-module="Subscription"]
 ##.sosyal
 ##.td_block_social_counter
 !
+dailymail.co.uk##.dms-puff
 gofeminin.de##.af-htmlblock-autopromo
 menshealth.com##.pane-blocks-menshealth-ajax-newsletter
 knowyourmeme.com##.combo-wrapper
@@ -435,9 +437,8 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
-receive-sms-online.info##.alert-box
 delfi.ee###ab--notification-ribbon
-rbc.ru##.js-checkad-warning
+rbc.ru##.checkad_info
 wortwuchs.net##.gridlove-ad
 bronydom.net###AltBlocked
 wochenanzeiger-muenchen.de##.alert-danger.alert
@@ -604,7 +605,6 @@ pythonworld.ru##.alert
 ps4.in.ua##.adblockDetectedMessage
 rustorka.com###sukin
 dota2.ru##a#aab
-@@||receive-sms-online.info/advertisment.js
 @@||an.yandex.ru/system/context.js$domain=space.utema.ru
 @@||an.yandex.ru/resource/context_static_r*.js$domain=space.utema.ru
 @@||metabans.com/js/*adv*.js
@@ -683,7 +683,6 @@ temperatur.nu###infobar
 ||filmix.net/*/fuckadblock.js
 deviantart.com##body > div#block-notice
 @@||zx-pk.ru/abp/adblock_detector.js
-@@||fosshub.com/*/js/ads.js
 @@||tvgidsassets.nl/js/ads.js
 @@||pdalife.ru/advertisement.js
 webdesign-master.ru##div[id="adbd"]
@@ -2472,6 +2471,8 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+winfuture.de##body > div[style*="z-index"][style*="bottom"][style*="right"]
+fitnessuebungen-zuhause.de,homegym-exercises.com##body > #main > #cookie + div:last-child:not([class]):not([id])
 chat.lycos.fr##body > div#nomnom
 tennisaddict.fr###infoCookies
 analog-forum.de##.cookiePolicyNotice
@@ -3268,6 +3269,8 @@ ukr-today.com##.soc_vidgets
 !
 ||2app.lk^$third-party
 !
+extramovies.org##.poster > center > .app
+extramovies.org##a[href^="http://m.onelink.me/"]
 m.albamon.com##.app_down_promotion
 m.investing.com###smartbanner
 auto.ru##.promo-max
@@ -4856,8 +4859,10 @@ tuttosportweb.com###sidebar
 ||tuttosportweb.com/tochat
 ||xatech.com/web_gear/chat/chat.swf
 !
-! Donation widgets (which are really annoying)
+! Donation widgets (which are really annoying only)
 !
+||fosshub.com/index/donate
+fosshub.com##.download-dl-boxDN
 ||money.yandex.ru/quickpay/shop-widget$domain=ovgorskiy.ru
 ||funding.webmoney.ru/widgets/$domain=ovgorskiy.ru
 ||money.yandex.ru/embed/$domain=samlab.ws

@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Checksum: no9No4tJAInD6XRJsuiO1w
+! Checksum: mxZL95UAJFcyCZL77d54uQ
 ! [Ad Blocking Rules]/blocking
 ! [Element Hiding Rules]/elemhide
 ! [ads]
@@ -85,9 +85,6 @@ _adlog.
 &utm_campaign=
 /netseerads.
 &fingerprint=
--ad200x200.
--ad_300x200.
--ad_300x300.
 /globaladtag.
 ?adsize=
 -contrib-ads/
@@ -114,9 +111,7 @@ _ad/ads.
 /analytics.html?
 /ad-gallery.
 /ad/ptrk/*
-/ad-728x90.
 /ad/trk/*
-/ad320x50.
 /adtop300.
 /dartads.
 /ads/index/*
@@ -229,7 +224,6 @@ _track/marketing.
 /gameadoverlay/*
 _adriver_
 /videoadslightbox-
-/ad-350x250.
 /tncms/ads.
 /getjsonad?
 /getxmlad?
@@ -319,11 +313,11 @@ _ad.html?
 /tncms/tracking.
 /(\W|_)[0-9]*(advanced|advertise|ajax|article|api|applet|async|banners?|beacon|blog|book|bottom|box|brand|cache|cam|carousel|commercial|common|community|companion|components?|content|contextual|cookie|core|cover|custom|default|deliver|deploy|dfp|display|door|download|dynamic|expanding|external|facebook|featured|files?|flash|float(ing)?|footer|generic|get|global|header|home|house|html|iframe|imgs?|images?|include|index|inline|integrated|internal|javascripts?|jquery|landing|large|left|(lazy)?load|listing|logo|image|impression|leaderboard|link|load|main|media|merchant|mobile|multi|native|new|overlay|page|php|player|pop|popup|post|premium|print|product|promo|realmedia|render|report|request|responsive|right|rotat(e|ing)|secure|script|search|serve|sex|shared|shop|(slide)?show|side(bar)?|site|skyscraper|slider?|small|smart|standard|static|station|sticky|storage|store|stream|subscribe|table|takeover|text|tiles?|top|update|upload|user|video|view|weekly|web(site)?|welcome|word|yahoo)[0-9]*(\W|_)*ads?[0-9]*(\W|_)/$~stylesheet
 ?control_tag_
+/(\W|_)[0-9]*ads?(\W|_)*(100x28|100x70|200x200|300x50|300x60|300x200|300x250|300x300|320x50|350x250|728x90)(\W|_)/$~stylesheet
 /(\W|_)[0-9]*ads?(\W|_)*(background|banners?|bar|below|bottom|box|button|campaign|caption|center|channel|check|client|click(through)?|common|controller|components?|container|count(er)?|create|delivery?|dfp|display|exchange|feedback|files?|footer|free|generated|get|gpt|header|holder|home|hover|i?frame|imgs?|images?|impressions?|init|injector|inline|insert(er)?|instertitial|json|label|large|layers?|leaderboard|left|load(ers?)?|management|manager|medium|module|native|network|new|notice|overlay|page|partners?|placement|placeholder|plugins?|policy|popup|position|premium|promos?|remote|referrer|requests?|right|rotate|sales?|scores|scripts?|search|serv(er?|ice|ing)|session|show|sidebar|skyscraper|slide(out|r)?|slots?|spaces?|squares?|srvr?|stats?|status|stream|tags?|target(ing)?|tech|text|thumbnails?|tiles?|title|top|track(er|ing)?|traffic|type|units?|video|view|widgets?|words|wrapper|yahoo|zone)[0-9]*(\W|_)/$~stylesheet
 /\/([0-9]|[a-z]|analytics|atrk|hit|log|njs|ping|pix|px|stat|track(er|ing)?|visitor)\.gif\?/
 /(\W|_)click(\W|_)?(logging|metrics|stream|track(er|ing)?)(\W|_)/
 /(\W|_)advert(is(e|ements?|ers?|ing)?|orial|s)?[0-9]?(\W|_)/$~stylesheet
-_ad_300x60.
 /kissmetrics/*
 /ipixel?
 /cube_ads/*
@@ -552,7 +546,6 @@ _ad_change/
 /bdindexad.
 /outwebad.
 /pushdownad.
-/ad_100x70.
 /pencilad.
 /javascript_tracker.
 .cqwebtrend.
@@ -610,7 +603,6 @@ _paidplacement_
 /ad.php?
 /ad.js?
 /taboolaborderbg_
-/ads/300x250_
 /incrementviews?
 /paidadslogos/*
 /tracking/tracker?
@@ -635,7 +627,6 @@ _paidplacement_
 /hit.js?
 /counter.js
 /jsadimp.
-_ad_100x28.
 /spotlight_ad_
 .hiveanalytics.
 /tnt.metering.
@@ -649,7 +640,6 @@ _ad_100x28.
 _leaderdigitaladvert_
 /bestads.
 /d1visitscounter?
-/ads_728x90.
 &resp=ad;
 /page_load_metric/*
 /ad-cookie/*
@@ -726,7 +716,6 @@ _doubleclickad2.
 [referrer]
 /browser/stats
 /mutracker.
-/ads/300x250-
 &adusername=
 -opt-in.
 /pixel.php?
@@ -757,7 +746,6 @@ _metricscollection.
 /exodentitytrack.
 .php?a=
 /ping_session.
-/ad_300x50_
 /tracker-article-
 -scroll-tracker.
 _gpt_bootstrap.
@@ -885,10 +873,16 @@ _pixel/partner/
 /statusbarads.
 /get_tracking_id?
 ||geobanner.
-/ad-300x250-
-/ad-300x250.
 .com/ads.
 /popup-voucher.
+_ad_enabled=
+_partner_branding&
+/setcounter.php?
+/controltag/*
+/partner-rss-
+||pagefair.com^$third-party
+/ads/js/*
+/impression.php/*
 ! [ads - affiliates]
 &affiliate=
 /affi_id=
@@ -1011,14 +1005,11 @@ _omniturevarscomm.
 /app_store_mini_badge.
 /itunes_large_badge.
 /chromepromotion.
-/download_on_itunes.
 /itunesaffiliates/*
 /install_flash.
 /appstorebadgeen.
 /upgrade_flash_player2.
 /appstore-install-badges/*
-/download_on_app_store.
-/download_on_google_play.
 /(\W|_)((app(le)?|google|play|windows)[-_]?store|google[-_]?play|android|app|ios)(\W|_)?(badges?|promo)(\W|_)/
 /(\W|_)(badge|banner|promo)(\W|_)?((app|google|play|windows)[-_]?store|google[-_]?play|android|ios|itunes)(\W|_)/
 /(\W|_)get[-_.]?(adobe[-_.]?(flash|reader)|flash[-_.]?player|ios[-_.]?app)(\W|_)/
@@ -1138,6 +1129,7 @@ _toplivechat&
 /no_image_avatar.
 /noavatarmale.
 /sampleforumavatar.
+/mediaavatar/*
 ! [other - cookie policy]
 /popupusecookie.
 /getcookiepolicy.
@@ -1254,7 +1246,7 @@ _suggest/json?
 /better-suggest.
 /searchspring-autocomplete.
 ! [social]
-/(\W|_)(aol|digg|face[-_]?book|flickr|g(oogle)?[-_]?plus|google(\+)?|instagram|linked[-_]?in|myspace|newsvine|pinte?rest|reddit|rss|stumble[-_]?upon|technorati|tumblr|tweet|twitter|vimeo|vkontakte|weibo|whatsapp|yahoo|you[-_]?tube)[0-9]*(\W|_)*(auth|badges?|banners?|bookmarks?|btns?|buttons?|chick?let|connect|count(er)?|favorite|feeds?|follow|footer|header|hover|ico|icone|ico?ns?|ikon|join|likes?|logging|logos?|optly|overlay|popup|redes|shar(e|er|ing)|sidebar|slider|soc(ials?)?|sprites?|subscribe|tab|top|widget)[0-9]?(\W|_)/$~stylesheet,~font
+/(\W|_)(aol|digg|face[-_]?book|flickr|g(oogle)?[-_]?plus|google(\+)?|instagram|linked[-_]?in|myspace|newsvine|pinte?rest|reddit|rss|stumble[-_]?upon|technorati|tumblr|tweet|twitter|vimeo|vkontakte|weibo|whatsapp|yahoo|you[-_]?tube)[0-9]*(\W|_)*(auth|badges?|banners?|bookmarks?|btns?|buttons?|chick?let|connect|count(er)?|favorite|feeds?|follow|footer|header|hover|ico|icone|ico?ns?|ikon|join|likes?|logging|logos?|optly|overlay|popup|redes|shar(e|er|ing)|sidebar|slider|soc(ials?)?|sprites?|subscribe|tab|top|widget)[0-9]*(\W|_)/$~stylesheet,~font
 /(\W|_)(badges?|banners?|bookmarks?|btns?|buttons?|chick?let|connect|favorite|feed|follow|footer|ftr|header|hover|ico|icone|ico?ns?|ikon|likes?|logos?|optly|popup|redes|shar(e|er|ing)|sidebar|sociales|soc(ials?)?|sprites?|subscribe|top|webicon|widgets?)[0-9]*(\W|_)*[0-9]*(aol|digg|face[-_]?book|flickr|google|g(oogle)?[-_]?plus|google(\+)?|instagram|linked[-_]?in|myspace|newsvine|pinte?rest|reddit|rss|stumble[-_]?upon|technorati|tumblr|tweet|twitter|vimeo|vkontakte|weibo|whatsapp|yahoo|you[-_]?tube)[0-9]*(\W|_)/$~stylesheet,~font
 -bottomsharebar.
 -dragtoshare-
@@ -1586,6 +1578,8 @@ _addthisto.
 &furl=
 -shared-count/
 /connect-with-us-
+-socialbuttonreviews?
+=socialbuttonreviews&
 ! [social - blog]
 /(\W|_)(btn|icons?)(\W|_)blog(ger)?(\W|_)/
 /(\W|_)blog[-_]?(badge|lines|lovin|roll)[0-9]*(\W|_)/

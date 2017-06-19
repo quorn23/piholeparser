@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: mz+m5tHlXHErRPFji35uwQ
-! Version: 201706151640
+! Checksum: 4kloGpoygBTLibmQ9P/ZaQ
+! Version: 201706190120
 ! Title: RU AdList: BitBlock
-! Last modified: 15 Jun 2017 16:40 UTC
+! Last modified: 19 Jun 2017 01:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -118,7 +118,6 @@ _vkontakte.png
 ##.vk-share-button
 ##.vk_box
 ##.vkontakte
-##.ya-share2
 ##.yashare-auto-init
 ~ok##a[href*="connect.ok.ru/dk?st.cmd="][href*="share"]
 ~ok.ru##a[href*="odnoklassniki.ru/dk?st.cmd=addShare"]
@@ -189,6 +188,7 @@ _vkontakte.png
 ! *** ruadlist:bitblock/social_specific_block.txt ***
 /plusone.js$domain=play.google.com
 /share.js$domain=vesti.ru
+/ulightbox/$domain=aperock.ucoz.ru|hdkinomax.tv|tvfru.org
 ||a-comics.ru/pics5/1btn/
 ||allbest4free.ru/head.
 ||bar.love.mail.ru^$domain=~mail.ru
@@ -288,6 +288,7 @@ lifehacker.ru###push-panel
 vk.com###pv_hh
 sfw.org.ua###qipbtn
 online.ua###referendum_soc468
+ipleer.fm###rt_share
 delfi.lv###sbookmarks-left
 delfi.ua###sbookmarks_left
 webpark.ru###sc-frame
@@ -420,9 +421,11 @@ mixednews.ru##.head-social
 islam-today.ru##.header__other-buttons
 russian.rt.com##.header__social
 islam-today.ru##.header__social-buttons
+humor.fm##.hfm-social-groups
 mobiledevice.ru##.icons_bar_placeholder
 kinoafisha.info,kinoafisha.msk.ru,kinoafisha.spb.ru##.indent15
 drive.ru##.index-news-ext > h3
+livemaster.ru##.item-page-master-share-link
 avito.ru##.item-socials-share
 goal-time.net##.jbzoo-likes
 smotri-filmi.co##.jiji
@@ -433,7 +436,7 @@ tverigrad.ru##.l-pad.row > .hidden-xs
 vipsop.org##.like.block
 echomsk.spb.ru##.like_wrp
 glavpost.com##.likebox-slider
-tjournal.ru##.likes
+bolshoyvopros.ru,tjournal.ru##.likes
 bobfilm1.co##.line_rating_n
 aif.ru##.links + table[align="center"]
 vesti.ru##.live_container
@@ -452,6 +455,7 @@ disk.yandex.by,disk.yandex.kz,disk.yandex.ru,disk.yandex.ua##.nb-share__button[d
 echo.msk.ru##.netWorkBlock
 novafilm.tv##.news-entry > div:last-child
 1kr.ua##.news-social
+regnum.ru##.news-social-banner
 vgtimes.ru##.news_share
 cameralabs.org##.notlabs
 ntv.ru##.nvideo a[href^="http://connect.mail.ru/share"]
@@ -511,6 +515,7 @@ ukrlib.com.ua##.social-box-item
 1tv.ru##.social-buttons-compact
 sovsport.ru##.social-buttons_right-sticky
 finance.rambler.ru##.social-floating
+livemaster.ru##.social-likes-title
 fishki.net##.social-line
 kopilkasovetov.com##.social-media-area
 lostfilm.tv##.social-pane
@@ -557,6 +562,7 @@ kherson.net.ua##.wBtn.rss
 rbcdaily.ru##.widget-fb-slave__inner
 ain.ua##.widget_like
 detstrana.ru##.with_share
+kinogo-720.net##.ya-share2__item > a
 ojin.tv##.ya-share2_inited
 kinoafisha.info,kinoafisha.msk.ru,kinoafisha.spb.ru##.yaShareWrapper
 kinokong.cc##.yashare-auto-init .b-share__link
@@ -1062,7 +1068,6 @@ _userbar_$image
 /js/vverh.js$script,domain=hdpicture.ru|hdreactor.info|hdreactor.org
 /logo/logo.gif$domain=pornolab.biz|pornolab.cc|pornolab.lib|pornolab.net
 /push.js$script,domain=mail.ru
-/ulightbox/$domain=hdkinomax.tv|tvfru.org
 ||1tv.ru/promo_places/
 ||1tv.ru/rotobanner/
 ||2ip.ru/sbar/
@@ -1492,6 +1497,7 @@ forums.overclockers.ru##.needblock
 tree.tv##.new_back_link
 sports.ru##.news-item__footer > h3
 sports.ru##.news-item__footer > hr
+motorpage.ru##.news-subscr
 newsdozor.ru##.news.normaltext .bbc_img
 ozon.ru##.news_block
 gameru.net##.noad
@@ -1501,7 +1507,7 @@ playground.ru##.page-notification
 www.qrz.ru##.partners_box
 football.sport-express.ru##.place_ratingAnnounce
 adultmult.tv##.player > .date
-baskino.online,kinogo.life,kinozz-hd.ru,megahead.org,wikimovies.ru,ymka.tv##.player-warning
+baskino.online,kinogo.life,kinozz-hd.ru,kinozz.club,megahead.org,wikimovies.ru,ymka.tv##.player-warning
 sports.ru,tribuna.com##.plistaList > a[data-campaign]
 sports.ru,tribuna.com##.plistaList > a[data-category="Акция"]
 kinogb.me##.plz-norec
@@ -1587,6 +1593,7 @@ goha.ru##a[href*="funpay.ru"]
 goha.ru##a[href*="good-steam.ru"]
 sibnet.ru##a[href*="tankmaster.sibnet.ru"]
 pr-cy.ru##a[href="/advertising/"]
+mk.ru##a[href][style*="/banners/subscribe-banner"]
 torrentfx.ru##a[href^="/go"][target="_blank"]
 chastnik-m.ru##a[href^="/public/links/"][href*="block=adver"]
 turbobit.net##a[href^="/turbo?"]
@@ -1632,6 +1639,7 @@ cyberforum.ru##div[id^="edit"][style="padding:0px 0px 3px 0px"] > table ~ div[st
 ntv.ru##div[id^="flamur"]
 network-lab.ru##div[id^="optincrusher"]
 kadets.info##div[id^="post_message_"] + div
+livemaster.ru##div[id^="subscribeISBlock-"]
 livejournal.com##div[lj-widget-promo]
 muz.ru##div[style*="400px;"][style$="240px;"]
 psy-music.ru##div[style*="tranceshop.ru"]
@@ -1705,6 +1713,7 @@ yandex.by,yandex.kz,yandex.ru,yandex.ua##.dist_action_extension
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.distr-popup_js_inited
 yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua##.footer > .themes-promo
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.footer-stripe
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.footer.col > .media-grid[data-bem*="zen"]
 market.yandex.by,market.yandex.kz,market.yandex.ru,market.yandex.ua##.head-banner[data-bem*="mob-app"]
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.head-stripe
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.home-arrow__promo-wrapper
@@ -1823,10 +1832,12 @@ kinogo-2016.net,kinotochka.net#@#.social-likes
 stopgame.ru#@#.social-links
 ddestiny.ru,rambler.ru#@#.social-list
 rambler.ru#@#.social__item
+zik.ua#@#.social_block
 sports.ru#@#.subscribe-button
 ngs.ru#@#.subscribe-popup
 adultmanga.ru,allhentai.ru,doramatv.ru,findanime.ru,grouple.ru,librebook.ru,mintmanga.com,online-mult.net,readmanga.me,selfmanga.ru,soccer.ru,soccer0010.com,tvfru.net#@#.twitter
 loginza.ru,online-mult.net,soccer.ru,soccer0010.com,tvfru.net#@#.vkontakte
+kinogo-720.net#@#.ya-share2
 kinokong.cc#@#.yashare-auto-init
 @@/btns.png$domain=antivirus.ua
 @@/cookie-info.$script,domain=group.aliexpress.com
@@ -6752,6 +6763,7 @@ _youtube_social_
 ##.article__share-bar
 ##.article__share-btns
 ##.article__share-buttons
+##.article__share-title
 ##.article__sharing
 ##.article_content_share_text
 ##.article_facebook
@@ -7470,6 +7482,7 @@ _youtube_social_
 ##.facebook_left
 ##.facebook_like
 ##.facebook_like_box
+##.facebook_likes_facebook_page
 ##.facebook_logo
 ##.facebook_net
 ##.facebook_new
@@ -9716,6 +9729,7 @@ _youtube_social_
 ##.share-zone
 ##.share.stumble
 ##.share1
+##.share2
 ##.share2-vert
 ##.share24
 ##.share24_tool
@@ -11095,6 +11109,7 @@ _youtube_social_
 ##.sprites-linkedin
 ##.sprites-twitter
 ##.sqs-block-socialaccountlinks-v2
+##.sqs-slice-social-icons
 ##.sqs-svg-icon--list
 ##.ss-share
 ##.ss-social
@@ -11507,6 +11522,7 @@ _youtube_social_
 ##.twitter_feed
 ##.twitter_follow
 ##.twitter_follow_button
+##.twitter_followers
 ##.twitter_footer
 ##.twitter_icn
 ##.twitter_icon
@@ -13032,6 +13048,7 @@ _social_rss.
 /cookies-overlay.
 /cookies-policy-
 /cookies-policy/*
+/cookies/popup.
 /cookies_acceptance.
 /cookies_auto-
 /cookies_bar.js
@@ -13406,6 +13423,7 @@ _site_cookie_
 ##.ampz-icon-email
 ##.ampz_email
 ##.aptureTMMBar
+##.article-next-sticky
 ##.article__subscribe
 ##.at_nwletters
 ##.avia-post-nav
@@ -14064,6 +14082,7 @@ _site_cookie_
 ###newsletterblock
 ###newsletterbox
 ###newslettermailboxID
+###newsletters_inline
 ###newsletters_rdr
 ###newslettershow
 ###newslettersignup
@@ -14319,6 +14338,7 @@ _site_cookie_
 ##.float-newsletter-bar
 ##.flyout-newsletter-rr
 ##.follow-embed__newsletter
+##.follow-this-story-form
 ##.follow-us--below-entry
 ##.foo-newsletter
 ##.footer--newsletter
@@ -16292,6 +16312,7 @@ _site_cookie_
 ##.ms-cookie-ok
 ##.msg-cookie
 ##.mxm-cookie-alert
+##.naf-cookies-popup
 ##.nav__cookies
 ##.no-cookies
 ##.notice-cookie
@@ -16745,6 +16766,7 @@ _site_cookie_
 ||mailerlite.com^$third-party
 ||mailjet.com/widget/$third-party
 ||mailmunch.s3.amazonaws.com^
+||moengage.com^$third-party
 ||moreshare.com^$third-party
 ||mozo.com.au/widgets/$third-party
 ||my.leadpages.net^$third-party
@@ -17916,6 +17938,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||underverse.su/min/index.php*/js/share42.js
 @@||ups.com/assets/resources/images/social.png$domain=ups.com
 @@||upwork.com^*/logo-pinterest.svg
+@@||utdstc.com/icons/$image,domain=uptodown.com
 @@||vice.com/images/*-social-media-$image
 @@||vidiload.com/media/banners/fblike.png$domain=vidiload.com
 @@||viewbug.com^*/fb_button.png

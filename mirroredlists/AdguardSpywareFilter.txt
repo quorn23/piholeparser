@@ -3901,6 +3901,7 @@ _tracking.php?b=
 !-------------- Specific web sites ---------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+||liczniki.org/hit.php
 ||kameleoon.eu^$third-party
 ||static-*.plista.com/async.js$third-party
 ||sdwnet.me/index.php?action=tracking_script^
@@ -4615,8 +4616,15 @@ dreamprogs.net##td[width="88"][height="31"]
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5347
+@@||c.newsinc.com/getids^$domain=washingtonexaminer.com
+@@||newsinc.com^*/getPlacements.js?pid=$domain=washingtonexaminer.com
 ! Temporary fix for Samsung internet
 @@||google-analytics.com/analytics.js$domain=cgv.co.kr
+! novayagazeta.ru - fixing page loading
+@@||static.criteo.net/js/ld/publishertag.js$domain=novayagazeta.ru
+! airbnb.ru - fixing the map
+@@||bat.bing.com/bat.js$domain=airbnb.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5244
 @@||cdn.optimizely.com/js/*.js$domain=casper.com
 ! https://forum.adguard.com/index.php?threads/22199/

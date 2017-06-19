@@ -1,11 +1,53 @@
 [Adblock Plus 2.0]
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
-! Last update 2017/06/16
-##.blocker280-20170616
+! Last update 2017/06/18
+##.blocker280-20170618
+!2017/06/18
+
+!erase whitespace
+~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp##[class^="ad-"]:not(body)
+~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com##[class^="ad_"]:not(body)
+~touch.pixiv.net##[class^="ads-"]:not(body)
+##[class^="ads_"]:not(body)
+##[id*="-ads-"]:not(body)
+##[id*="_ads_"]:not(body)
+~bbc.com##[class*="-ads-"]:not(body)
+
+~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com##.adsbygoogle:not(body)
+~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp##.ad:not(body)
+~touch.pixiv.net,~thisav.com,~savevideo.me##.ads:not(body)
+~doujin-free.com,~douga-getter.com###adsense
+
+###textAd
+###ad1
+###ad2
+###adv
+##.ad-01
+##.ad-02
+##.ad-03
+##.ad-banner
+##.ad-box
+##.ad-left
+##.ad-right
+##.ad1
+##.ad2
+###advertise
+~mushinavi.com##.advertise
+~mushinavi.com##.adv
+
+
+!anti-adblock target
+||pagead2.googlesyndication.com/pub-config/$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com
+||pagead2.googlesyndication.com/pagead/js/$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com
+
+
+battlecats-db.com/script/import.js
+phileweb.com##.top-ad-banner
+fuminners.jp##.recommend-area
+
+
 !2017/06/16
-
-
 ||cdn.ad1-click.com
 /js/Overlay.$domain=fc2.com
 google.com##.commercial-unit-mobile-top
@@ -52,8 +94,6 @@ pokemon-matome.net##.rssinline3
 
 
 
-~erodouga-s.com,~phileweb.com,~houdoukyoku.jp,~tsite.jp,~doujin-free.com,~cnn.com,~mofa.go.jp,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[class^="ad-"]
-
 
 
 
@@ -71,29 +111,6 @@ ameblo.jp##._TPiSYerQ
 ||afl.rakuten.co.jp^$third-party,domain=~afl.rakuten.co.jp|~kakaku.com
 
 
-~hackintosh.zone,~douga-getter.com,~battlecats-db.com,~geeksokuhou.net,~earthyworld.com,~myskc.net,~off-soft.net,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~k05.biz,~server-setting.info,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp,~sg-siken.com,~itpassportsiken.com,~fe-siken.com,~ap-siken.com,~sc-siken.com,~nw-siken.com##.adsbygoogle
-
-
-~savevideo.me,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ads
-~houdoukyoku.jp,~8beat-studio.net,~smt.docomo.ne.jp,~doujin-free.com,~cnn.com,~1000mg.jp,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~ralphlauren.co.jp,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad
-
-~keisui.com,~ft.com,~cnn.com,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[class*="-ads-"]
-~surveyenquete.net,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~linguee.jp,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[class^="ad_"]
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[class^="ads-"]
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[class^="ads_"]
-~surveyenquete.net,~ft.com,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[id*="-ads-"]
-~doujin-free.com,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##[id*="_ads_"]
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp###textAd
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp###ad1
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp###ad2
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~lifehacker.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad1
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad2
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.adv
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp###adv
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp###advertise
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-left
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-right
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.advertise
 
 
 
@@ -193,8 +210,6 @@ mecha.cc##.area-pickup
 ||pictbland.net/images/ads/
 
 !2017/04/29
-~hackintosh.zone,~douga-getter.com,~battlecats-db.com,~geeksokuhou.net,~earthyworld.com,~myskc.net,~off-soft.net,~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~k05.biz,~server-setting.info,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp,~sg-siken.com,~itpassportsiken.com,~fe-siken.com,~ap-siken.com,~sc-siken.com,~nw-siken.com###adsense
-
 ##.ads-ad
 ###over_ray_id
 ###sns-buttons
@@ -215,9 +230,6 @@ moeyo.com##[href*="//www.netoff.co.jp"]
 ||s.yimg.jp/images/finance/bnr
 ||ads.pubmatic.com$domain=~hackintosh.zone
 
-
-||pagead2.googlesyndication.com/pub-config/$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~neutral-neutral.com|~daiouoka.hatenablog.jp|~mobilelaby.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~rapidworks.jp|~sevenluckygods.hatenablog.com|~sakano.wp-x.jp|~kikra.ldblog.jp|~gametter.com|~kikra.jp|~f-tools.net|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~tabtter.jp|~surveyenquete.net|~8wayrun.com|~earthyworld.com|~aeoncinema.com|~geeksokuhou.net|~battlecats-db.com|~hackintosh.zone
-||pagead2.googlesyndication.com/pagead/js/$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~neutral-neutral.com|~daiouoka.hatenablog.jp|~mobilelaby.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~rapidworks.jp|~sevenluckygods.hatenablog.com|~sakano.wp-x.jp|~kikra.ldblog.jp|~gametter.com|~kikra.jp|~f-tools.net|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~tabtter.jp|~surveyenquete.net|~8wayrun.com|~earthyworld.com|~aeoncinema.com|~geeksokuhou.net|~battlecats-db.com|~hackintosh.zone
 
 
 
@@ -510,8 +522,6 @@ dropbooks.tv###main-content > center
 
 
 
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-banner
-
 ##.amp-ad
 
 
@@ -570,11 +580,6 @@ gtoys.blog48.fc2.com###hiddenr
 mamikaso.com###ist_overlay1
 mamikaso.com###ist_overlay2
 news.biglobe.ne.jp###smNtvAd
-
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-01
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-02
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-03
-~op.gg,~thisav.com,~togeko.net,~tshimizu.net,~user-infomation.com,~h1ghcontrast.com,~mushinavi.com,~kyoto-np.co.jp,~bbc.com,~sugutama.jp,~news.2chblog.jp,~spica-net.com,~google.com,~google.co.jp,~gmail.com,~yahoo.co.jp,~rakuten.co.jp,~video.fc2.com,~control.blog.fc2.com,~impress.co.jp,~mapion.co.jp,~pixiv.net,~jma.go.jp,~hulu.jp,~webcg.net,~freesoft.tvbok.com,~b.hatena.ne.jp,~msn.com,~cosme.net,~appget.com,~nicovideo.jp,~asg.to,~photobucket.com,~youtube.com,~wsj.com,~plaim.jp,~wikia.com,~response.jp,~tok2.com,~inoreader.com,~koepota.jp,~nijie.info,~amaebi.net,~shitaraba.net,~eiga.com,~my.gamecity.ne.jp##.ad-box
 
 
 
@@ -1570,7 +1575,7 @@ BannerLoader$domain=wikipedia.org
 ##a[href*="feedback.promotionalads.yahoo.co.jp"]
 ##a[href*="global.msmtrakk06d.com"]
 ##a[href*="goo.gl/UpjaIq"]
-##a[href*="h.accesstrade.net/sp"]
+##a[href*="h.accesstrade.net/sp"] img
 ##a[href*="hb.afl.rakuten.co.jp/hsc/"]
 ##a[href*="holeinone.me"]
 ##a[href*="infotop.jp/click.php"]

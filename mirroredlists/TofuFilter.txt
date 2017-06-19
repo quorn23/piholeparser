@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:07 2017/06/15
+! 最終更新 8:51 2017/06/16
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -158,6 +158,7 @@ _ads.php
 !mobile
 ||adnico.jp^$third-party
 
+/://[a-f0-9]{17}\.com/\d{7}/$/
 
 .biz/ad/
 .biz/ads/
@@ -183,10 +184,6 @@ _ads.php
 ||ads.
 
 -ad.com^$third-party
-!||a-i-ad.com^$third-party
-!||agift-ad.com^$third-party
-!||sbs-ad.com^$third-party
-!ほか多数
 
 ||a8.net^$third-party
 ||access-lab.com^$third-party
@@ -203,6 +200,7 @@ _ads.php
 ||adjust-net.jp^$third-party
 ||adjustnetwork.com^$third-party
 ||adlantis.jp^$third-party
+||adlpo.com^$third-party
 ||adnxs.com^$third-party
 ||adprost.com^$third-party
 ||adresult.jp^$third-party
@@ -583,7 +581,7 @@ heavy-r.com##.hd-ban
 
 ||fapdu.com/desktop_popup.
 
-
+$script,third-party,domain=jpidols.tv
 |http://$subdocument,third-party,domain=adf.ly
 |http://$script,third-party,domain=youtube-mp3.org
 ||youtube-mp3.org^$subdocument,domain=youtube-mp3.org
@@ -649,7 +647,6 @@ heavy-r.com##.hd-ban
 ||kidslink.jp/cgi-bin/esb/main.cgi?
 ||kidslink.jp^*/dummy.html
 ||kienizer.com/adv/
-||kissanime.ru/xyz/check.aspx
 ||koepota.jp/js/amazon.js
 ||komachi.yomiuri.co.jp/scripts/g_connect.js
 ||kooss.com/*.htm$subdocument
@@ -977,6 +974,7 @@ heavy-r.com##.hd-ban
 ||trackfeed.com^$third-party
 ||trackword.$third-party
 ||traffimagic.com^$third-party
+||treasuredata.com^$third-party
 ||triggit.com^$third-party
 ||tubemogul.com^$third-party
 ||tynt.com^$third-party
@@ -1331,6 +1329,7 @@ heavy-r.com##.hd-ban
 !----楽天
 ##.plugin-freearea a[href*="afl.rakuten.co.jp"]
 ##.sidewrapper a[href*="afl.rakuten.co.jp"]
+##.side a[href*="item.rakuten.co.jp/"]
 !----livedoorデパート
 ##.plugin-freearea a[href*="depart.livedoor.com/item_detail/"]
 ##.sidewrapper a[href*="depart.livedoor.com/item_detail/"]
@@ -1469,6 +1468,7 @@ oekakies.com##table[cellspacing="3"][border="0"]
 okwave.jp##.big_bnr
 ppp.atbbs.jp##td[style="width:800px;border:solid 0px #000;text-align:center;padding:5px;"]
 projectdesign.jp###base-register
+pya.cc##.netaMain__banner
 rbbtoday.com###adHeader
 rbbtoday.com###headerMiddleRight
 rbbtoday.com##.adArticleSidetile
@@ -1550,8 +1550,8 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 
 !-----------kiss-------------!
 /1126020/*$domain=kissanime.io
-/1121482/*$domain=kissanime.ru
-/1121523/*$domain=kissasian.com
+||ti553.com^
+||kissanime.ru/xyz/check.aspx
 kissasian.com,kissanime.ru##.clear2
 kissasian.com,kissanime.ru##.divCloseBut
 kissasian.com,kissanime.ru##[style^="border-color: #4e4e4e !important; position: relative;"]
