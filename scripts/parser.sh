@@ -74,7 +74,6 @@ sudo wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 sudo mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm "$TEMPDIR""$TARFILEX"
 sudo rm $COMPRESSEDTEMPTAR
 else
 echo " Did Not Download File, Maybe?"
