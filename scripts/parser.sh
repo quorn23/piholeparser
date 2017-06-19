@@ -95,49 +95,60 @@ fi
 done
 
 ####################
-## Create Mirrors ##
+## Check Filesize ##
 ####################
 
-echo ""
-printf "$green"   "Attempting Creation of Mirror File."
-echo ""
-
-## Copy original, one for mirror, one for next step
-sudo cp $BORIGINALFILETEMP $BTEMPFILE
-sudo cp $BORIGINALFILETEMP $BFILETEMP
-sudo rm $BORIGINALFILETEMP
-
-## Github has a 100mb limit, and empty files are useless
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 timestamp=$(echo `date`)
 if 
-[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
-then
-echo ""
-printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-printf "$red"     "Mirror File Too Large For Github. Deleting."
-echo ""
-sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $BTEMPFILE
-elif
 [ "$FETCHFILESIZE" -eq 0 ]
 then
 FILESIZEZERO=true
-echo ""
-printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes. Deleting."
-echo ""
+timestamp=$(echo `date`)
+printf "$red"     "$BASEFILENAME list was an empty file upon download."
 sudo echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $BTEMPFILE
 else
-echo ""
-printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-printf "$yellow"  "Creating Mirror of Unparsed File."
-echo ""
-sudo mv $BTEMPFILE $MIRROREDFILE
+echo -e "\t`wc -l $BORIGINALFILETEMP | cut -d " " -f 1` lines downloaded"
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 fi
+sudo cp $BORIGINALFILETEMP $BTEMPFILE
+sudo cp $BORIGINALFILETEMP $BFILETEMP
+sudo rm $BORIGINALFILETEMP
+echo ""
 
 ####################
-## Pre-Processing ##
+## Create Mirrors ##
+####################
+
+printf "$green"   "Attempting Creation of Mirror File."
+echo ""
+
+## Github has a 100mb limit, and empty files are useless
+timestamp=$(echo `date`)
+if 
+[[ -n $FILESIZEZERO ]]
+then
+printf "$red"     "Not Creating Mirror File. Nothing To Create!"
+sudo rm $BTEMPFILE
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]]
+then
+printf "$red"     "Mirror File Too Large For Github. Deleting."
+sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo rm $BTEMPFILE
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
+then
+printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+printf "$yellow"  "Creating Mirror of Unparsed File."
+sudo mv $BTEMPFILE $MIRROREDFILE
+else
+sudo rm $BTEMPFILE
+fi
+echo ""
+
+####################
+## Processing     ##
 ####################
 
 ## Comments #'s and !'s, also empty lines
@@ -306,7 +317,6 @@ FILESIZEZERO=true
 fi
 
 ## Duplicate Removal
-## if there are fewer lines after this, is something wrong?
 if
 [[ -z $FILESIZEZERO ]]
 then
@@ -326,13 +336,6 @@ then
 FILESIZEZERO=true
 fi
 
-## This was giving me issues
-if
-[[ -n $FILESIZEZERO ]]
-then
-unset FILESIZEZERO
-fi
-
 ## Prepare for next step
 sudo mv $BFILETEMP $BTEMPFILE
 
@@ -345,35 +348,37 @@ printf "$green"   "Attempting Creation of Parsed List."
 echo ""
 
 ## Github has a 100mb limit, and empty files are useless
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 timestamp=$(echo `date`)
 if 
-[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
+[[ -n $FILESIZEZERO ]]
 then
-echo ""
-printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-printf "$red"     "Mirror File Too Large For Github. Deleting."
-echo ""
-sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$red"     "Not Creating Parsed File. Nothing To Create!"
 sudo rm $BTEMPFILE
 elif
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]]
 then
-echo ""
-printf "$red"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes. Deleting."
-echo ""
-sudo echo "* $BASEFILENAME list was an empty file. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to push to github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo rm $BTEMPFILE
-else
-echo ""
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
+then
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-printf "$yellow"  "Copying to the parsed Directory."
-echo ""
+printf "$yellow"  "Creating Mirror of Unparsed File."
 sudo mv $BTEMPFILE $PARSEDFILE
+else
+sudo rm $BTEMPFILE
 fi
-
+echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+## This could give issues if not set
+if
+[[ -n $FILESIZEZERO ]]
+then
+unset FILESIZEZERO
+fi
 
 ## End File Loop
 done
