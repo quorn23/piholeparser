@@ -185,16 +185,7 @@ fi
 #####################################################################
 ## Perl Parser
 if
-[[ -z $FILESIZEZERO ]]
-then
-:
-elif
-[[ $f == $BLIGHTPARSELIST && -n $FILESIZEZERO ]]
-then
-echo "Not a Heavy List, Skipping Perl Parser"
-echo ""
-elif
-[[ $f != $BLIGHTPARSELIST && -n $FILESIZEZERO ]]
+[[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
 then
 PARSECOMMENT="Cutting Lists with the Perl Parser."
 printf "$yellow"  "$PARSECOMMENT"
@@ -203,7 +194,7 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 else
-echo "Variable process borked?"
+:
 fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
