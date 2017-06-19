@@ -72,7 +72,8 @@ elif
 then
 sudo wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
-sudo cat "$TEMPDIR""$TARFILEX" > $BTEMPFILE
+sudo mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
+sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm "$TEMPDIR""$TARFILEX"
 sudo rm $COMPRESSEDTEMPTAR
 else
