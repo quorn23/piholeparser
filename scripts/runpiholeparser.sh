@@ -4,6 +4,8 @@
 ## Variables
 source /etc/piholeparser/scriptvars/staticvariables.var
 
+STARTTIME=$(echo `date`)
+
 ####################
 ## Recent Run Log ##
 ####################
@@ -12,7 +14,7 @@ SCRIPTTEXT="Creating Recent Run Log."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -38,7 +40,7 @@ SCRIPTTEXT="Counting Lists To Process."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -63,7 +65,7 @@ SCRIPTTEXT="Clearing The Path."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -79,7 +81,7 @@ SCRIPTTEXT="Checking For Script Dependencies."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -95,7 +97,7 @@ SCRIPTTEXT="Compiling Whitelists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -111,7 +113,7 @@ SCRIPTTEXT="Running Parser."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -127,7 +129,7 @@ SCRIPTTEXT="Combining All Parsed Lists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -146,12 +148,14 @@ SCRIPTTEXT="Updated Main README.md."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
 sudo rm $MAINREADME
-sudo sed "s/LASTRUNVARIABLEGOESHERE/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
+LASTRUNTIMEFRAME="* Script Started At $STARTTIME
+ * Script Ended at $timestamp"
+sudo sed "s/LASTRUNVARIABLEGOESHERE/$LASTRUNTIMEFRAME/" $MAINREADMEDEFAULT > $MAINREADME
 sudo bash $DELETETEMPFILE
 sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
@@ -162,12 +166,15 @@ echo ""
 ## Push Lists     ##
 ####################
 
+## This looked prettier below, but wasn't getting pushed up.
+sudo echo "* Script completed at $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+
 WHATSCRIPTORUN=$PUSHLISTSSCRIPT
 SCRIPTTEXT="Pushing Lists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
@@ -184,9 +191,7 @@ echo ""
 
 printf "$blue"    "___________________________________________________________"
 echo ""
-printf "$green"   "Script Complete"
-timestamp=$(echo `date`)
-sudo echo "* Script completed at $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$cyan"   "Script Complete"
 echo ""
 printf "$magenta" "___________________________________________________________"
 echo ""
