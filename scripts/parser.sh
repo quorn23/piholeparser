@@ -171,10 +171,10 @@ echo ""
 ####################
 
 ## Comments #'s and !'s, also empty lines
+PARSECOMMENT="Removing Lines with Comments or Empty."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Removing Lines with Comments or Empty."
 printf "$cyan"  "$PARSECOMMENT"
 sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -197,10 +197,10 @@ fi
 ## Invalid Characters
 ## FQDN's  can only have . _ and -
 ## apparently you can have an emoji domain name?
+PARSECOMMENT="Removing Invalid FQDN characters."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$cyan"  "$PARSECOMMENT"
 sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -222,10 +222,10 @@ fi
 
 #####################################################################
 ## Perl Parser
+PARSECOMMENT="Cutting Lists with the Perl Parser."
 if
 [[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
 then
-PARSECOMMENT="Cutting Lists with the Perl Parser."
 printf "$cyan"  "$PARSECOMMENT"
 sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -248,10 +248,10 @@ fi
 #####################################################################
 
 ## Pipes and Carrots
+PARSECOMMENT="Removing Pipes and Carrots."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Removing Pipes and Carrots."
 printf "$cyan"  "$PARSECOMMENT"
 sudo cat -s $BFILETEMP | sed 's/^||//' | cut -d'^' -f-1 > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -272,10 +272,10 @@ printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Remove IP addresses
+PARSECOMMENT="Removing IP Addresses."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Removing IP Addresses."
 printf "$cyan"  "$PARSECOMMENT"
 sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -296,10 +296,10 @@ printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Replace Spaces then Remove Empty Lines
+PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
 printf "$cyan"  "$PARSECOMMENT"
 sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -320,10 +320,10 @@ printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Domain Requirements,, a period and a letter
+PARSECOMMENT="Checking for FQDN Requirements."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Checking for FQDN Requirements."
 printf "$cyan"  "$PARSECOMMENT"
 sed '/[a-z]/!d; /[.]/!d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -345,10 +345,10 @@ fi
 
 ## Periods at begining and end of lines
 ## This should fix Wildcarding
+PARSECOMMENT="Removing Lines With a Period at the Start or End."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$cyan"  "$PARSECOMMENT"
 sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
@@ -369,10 +369,10 @@ printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Duplicate Removal
+PARSECOMMENT="Removing Duplicate Lines."
 if
 [[ -z $FILESIZEZERO ]]
 then
-PARSECOMMENT="Removing Duplicate Lines."
 printf "$cyan"  "$PARSECOMMENT"
 sudo cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
