@@ -54,6 +54,7 @@ printf "$green"    "Ping Test Was A Success!"
 else
 printf "$red"    "Ping Test Failed."
 fi
+echo ""
 
 if
 [[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
