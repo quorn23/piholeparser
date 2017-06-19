@@ -24,10 +24,10 @@ do
 ## Variables
 source /etc/piholeparser/scriptvars/dynamicvariables.var
 
-printf "$cyan"    "Processing $BASEFILENAME list."
+printf "$green"    "Processing $BASEFILENAME list."
 echo "" 
 printf "$cyan"    "The Source In The File Is:"
-printf "$cyan"    "$source"
+printf "$yellow"    "$source"
 echo "" 
 
 ####################
@@ -45,6 +45,14 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 else
 printf "$red"    "$BASEFILENAME Host Unavailable."
 echo ""
+fi
+
+if
+[[ -n $SOURCEIP ]]
+then
+printf "$green"    "Ping Test Was A Success!"
+else
+printf "$red"    "Ping Test Failed."
 fi
 
 if
@@ -152,7 +160,6 @@ sudo rm $BTEMPFILE
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
 then
-printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 printf "$green"  "Creating Mirror of Unparsed File."
 sudo mv $BTEMPFILE $MIRROREDFILE
 else
