@@ -175,7 +175,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -200,7 +199,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -224,7 +222,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 else
 :
@@ -248,7 +245,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -271,7 +267,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -294,7 +289,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -317,7 +311,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -341,7 +334,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -364,7 +356,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "$ENDCOMMENT"
-echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -384,7 +375,7 @@ sudo mv $BFILETEMP $BTEMPFILE
 #################### 
 
 echo ""
-printf "$green"   "Attempting Creation of Parsed List."
+printf "$cyan"   "Attempting Creation of Parsed List."
 echo ""
 
 ## Github has a 100mb limit, and empty files are useless
