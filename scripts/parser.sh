@@ -181,7 +181,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -203,6 +202,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Invalid Characters
 ## FQDN's  can only have . _ and -
@@ -217,7 +217,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -239,6 +238,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 #####################################################################
 ## Perl Parser
@@ -252,7 +252,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -274,6 +273,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 #####################################################################
 
@@ -288,7 +288,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -310,6 +309,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Remove IP addresses
 PARSECOMMENT="Removing IP Addresses."
@@ -322,7 +322,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -344,6 +343,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Replace Spaces then Remove Empty Lines
 PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
@@ -356,7 +356,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -378,6 +377,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking for FQDN Requirements."
@@ -390,7 +390,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -412,6 +411,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Periods at begining and end of lines
 ## This should fix Wildcarding
@@ -425,7 +425,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -447,6 +446,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Duplicate Removal
 PARSECOMMENT="Removing Duplicate Lines."
@@ -459,7 +459,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-echo ""
 else
 :
 fi
@@ -481,6 +480,7 @@ if
 then
 FILESIZEZERO=true
 fi
+echo ""
 
 ## Prepare for next step
 sudo mv $BFILETEMP $BTEMPFILE
