@@ -327,6 +327,13 @@ then
 FILESIZEZERO=true
 fi
 
+## This was giving me issues
+if
+[[ -n $FILESIZEZERO ]]
+then
+unset FILESIZEZERO
+fi
+
 ## Prepare for next step
 sudo mv $BFILETEMP $BTEMPFILE
 
