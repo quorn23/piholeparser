@@ -162,8 +162,8 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$PUSHLISTSLOCALSCRIPT
-SCRIPTTEXT="Pushing Lists to local webserver."
+WHATSCRIPTORUN=$PUSHLISTSSCRIPT
+SCRIPTTEXT="Pushing Lists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -177,35 +177,6 @@ sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
-
-WHATSCRIPTORUN=$PUSHLISTSGITSCRIPT
-SCRIPTTEXT="Pushing Lists to github."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
-echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Tidy Up        ##
-####################
-
-if 
-ls $TEMPCLEANUP &> /dev/null; 
-then
-echo "txt files removed from temp folder"
-sudo rm $TEMPCLEANUP
-else
-echo ""
-fi
 
 ####################
 ## Readme.md      ##
