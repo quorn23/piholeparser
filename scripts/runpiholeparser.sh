@@ -138,6 +138,30 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+####################
+## Readme.md      ##
+####################
+
+SCRIPTTEXT="Updated Main README.md."
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
+sudo rm $MAINREADME
+sudo sed "s/LASTRUNVARIABLEGOESHERE/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+####################
+## Push Lists     ##
+####################
+
 WHATSCRIPTORUN=$PUSHLISTSSCRIPT
 SCRIPTTEXT="Pushing Lists."
 timestamp=$(echo `date`)
@@ -153,16 +177,6 @@ sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
-
-####################
-## Readme.md      ##
-####################
-
-timestamp=$(echo `date`)
-sudo echo "## Updated Main README.md $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-
-sudo rm $MAINREADME
-sudo sed "s/LASTRUNVARIABLEGOESHERE/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
 
 ####################
 ## Script Complete##
