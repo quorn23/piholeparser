@@ -91,6 +91,10 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 ||p.d.nn0e.com^
 ||p.d.rpts.org^
 !
+||sitestatlog.net^$third-party
+||listat.biz^$third-party
+||lmodr.biz^$third-party
+||hexagon-analytics.com^$third-party
 ||stat.media^$third-party
 ||akstat.io^$third-party
 ||top10sportsites.com^$third-party
@@ -3430,6 +3434,9 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 !
 ! Section contains the list of tracking servers, which are hosted on useful sites as subdomains
 !
+||d2qmp7jjpd79k7.cloudfront.net^
+||sat.sanoma.fi^
+||analytics.sanoma.fi^
 ||counter.rian.ru^
 ||logs.spilgames.com^
 ||d22v2nmahyeg2a.cloudfront.net^
@@ -3705,6 +3712,8 @@ charlestownwyllie.oaklawnnonantum.com^
 !-------------- General (unsorted) url blocking --------------------------------!
 !-------------------------------------------------------------------------------!
 !
+/smartpixel.
+/smartpixel-1.js
 .cf/gif/impression?
 /CntRpt.aspx?hCase=
 /analytics/smarttag-
@@ -3901,6 +3910,11 @@ _tracking.php?b=
 !-------------- Specific web sites ---------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+||tracking.content-recommendation.net^$third-party
+||aachener-zeitung.de/zva/pc/zaehler.php
+||telegraaf.tcdn.nl/javascript/analyticsfunctions
+||kazus.ru/js/*/log_trackjs.htm
+||privacy.www.nu.nl/pixel^
 ||liczniki.org/hit.php
 ||kameleoon.eu^$third-party
 ||static-*.plista.com/async.js$third-party
@@ -4616,6 +4630,9 @@ dreamprogs.net##td[width="88"][height="31"]
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5359
+@@||recommender.scarabresearch.com/js/$domain=nkd.com
+@@||recommender.scarabresearch.com/merchants/$domain=nkd.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5347
 @@||c.newsinc.com/getids^$domain=washingtonexaminer.com
 @@||newsinc.com^*/getPlacements.js?pid=$domain=washingtonexaminer.com

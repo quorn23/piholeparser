@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: 1I7e4wPXa/jR/gnNJ8BitQ
-! Version: 201706190231
+! Checksum: XTjGDOjRkVUOrk7yKtS8YA
+! Version: 201706191511
 ! Title: EasyPrivacy without international filters
-! Last modified: 19 Jun 2017 02:31 UTC
+! Last modified: 19 Jun 2017 15:11 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -54,9 +54,11 @@
 -stats/ga.
 -stats/imr.
 -stats/metrica.
+-track-ati.
 -tracking-pixel.
 -tracking.gtm.
 -tracking.js?
+-tracking?referrer=
 -trackingScript.
 -xtcore.js
 .AdmPixelsCacheController?
@@ -237,7 +239,9 @@
 //feedproxy.*/~r/*$image
 /0.png?ver=
 /0pixel.php?
+/1px.gif?
 /1px.php?
+/1x1.a?
 /1x1.gif?browser
 /1x1.gif?tracking
 /1x1.gif?utm
@@ -586,6 +590,7 @@
 /b/ss/*&ndh=
 /b/ss/*&pagename=
 /b/ss/*/h.17--wap?c20=
+/b/ss/*/JS-
 /b/ss/*=event36&
 /b/ss/*=referrers&
 /b/ss/*?aqb=1&pccr=
@@ -601,6 +606,7 @@
 /banner.stats?
 /banners-stat.
 /basesdc.js
+/basilic.php
 /batch.gif?
 /baynote-$script
 /baynote.
@@ -979,6 +985,7 @@
 /dcstorm/track.
 /DecideDNATrackingCode-
 /delivery/lg.
+/delstats/*
 /demandbase.
 /demandbase_
 /demdex.js
@@ -1260,6 +1267,7 @@
 /geo.php?
 /geoAnalysis.js
 /geocc.
+/geocoding.ash
 /geocompteur.
 /geocounter.
 /geoip.html
@@ -1348,6 +1356,7 @@
 /greenoaks.gif?
 /gs-analytics-
 /gscounters.
+/gtm/gtm-
 /gtmTracking.
 /gtrack.
 /gweb/analytics/*
@@ -1447,6 +1456,8 @@
 /imp.php?
 /imp/a.gif?
 /imp/ad_
+/imp/rtm?
+/imp/www.
 /imp2.js?
 /imp?imgid=
 /imp_cnt.gif?
@@ -2038,6 +2049,7 @@
 /pixel.swf?
 /pixel.track2?
 /pixel.track?
+/pixel/*?url=
 /pixel/?__tracker
 /pixel/img/*
 /pixel/impression/*
@@ -2350,6 +2362,7 @@
 /sikquantcast_
 /SilverPop.
 /silverpop/*
+/simple-tracking?
 /simple_reach.js
 /simplereach_counts/*
 /simtracker.min.js
@@ -2387,6 +2400,7 @@
 /smartpixel-1.js
 /smartpixel.
 /smartserve-
+/smarttag-prod.
 /smarttag.js
 /smetrics.*/b/ss/*
 /snowman.gif?p=
@@ -2805,6 +2819,7 @@
 /tracking_id_
 /tracking_iframe.
 /tracking_link_cookie.
+/tracking_NodeheaderJS.
 /tracking_pix.
 /tracking_pixel
 /tracking_super_hot.js
@@ -3229,6 +3244,7 @@
 =xtcore.
 ?&anticache=*filename.gif
 ?[AQB]&ndh=1&t=
+?_cid=*&sxiti=
 ?_siteid=
 ?act=counter&
 ?action=event&
@@ -4355,6 +4371,7 @@ _mongo_stats/
 ||intermundomedia.com^$third-party
 ||interstateanalytics.com^$third-party
 ||intervigil.com^$third-party
+||invisioncloudstats.com^$third-party
 ||invitemedia.com^$third-party
 ||invoc.us^$third-party
 ||invoca.net^$third-party
@@ -4514,6 +4531,7 @@ _mongo_stats/
 ||marketo.net^$third-party
 ||markitondemand.com^$third-party
 ||martianstats.com^$third-party
+||maryneallynndyl.com^$third-party
 ||masterstats.com^$third-party
 ||matheranalytics.com^$third-party
 ||mathtag.com^$third-party
@@ -4546,6 +4564,7 @@ _mongo_stats/
 ||metakeyproducer.com^$third-party
 ||meteorsolutions.com^$third-party
 ||metricsdirect.com^$third-party
+||meyersdalebixby.com^$third-party
 ||mezzobit.com^$third-party
 ||mialbj6.com^$third-party
 ||micpn.com^$third-party
@@ -5911,6 +5930,7 @@ _mongo_stats/
 ||caspionlog.appspot.com^
 ||cc.swiftype.com^
 ||cdn.trafficexchangelist.com^$third-party
+||cdn3.net/pixe/
 ||cdnma.com/apps/capture.js
 ||cdnplanet.com/static/rum/rum.js
 ||ce.lijit.com^
@@ -9865,6 +9885,7 @@ _mongo_stats/
 @@||azureedge.net/trackmeet-profilepicture/$image,domain=gotrackmeet.com
 @@||azureedge.net^*/eventtracking.js$domain=crimemapping.com
 @@||b-europe.com/HttpHandlers/httpCombiner.ashx?*/xiti.js$script
+@@||ba.com/cms/global/scripts/applications/tracking/visualsciences.js
 @@||bam.nr-data.net^$script,domain=play.spotify.com
 @@||barclays.co.uk/touchclarity/mbox.js
 @@||barclays.touchclarity.com^$domain=barclaycard.co.uk

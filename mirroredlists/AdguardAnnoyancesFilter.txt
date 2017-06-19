@@ -287,6 +287,10 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+buzz.be.com###blockRight > .list-ms-item > [class="col-xs-12 col-sm-6 col-md-12 ms-item pull-left widget widget_text"]
+nkd.com##.footerNaviWrapperRight > .footer_newsletterbox
+nkd.com##.footerNaviWrapperRight > .footer_headline:first-child
+giveawayoftheday.com##.wrap_subscrb
 motorpage.ru##.news-subscr
 delfi.lt###newsletter-container
 zdnet.de##[class="box keepUp"]
@@ -424,6 +428,10 @@ gazetevatan.com##form ._soc.news
 !####### These rules are against anti-adblock scripts  #####
 !####### which does not affect the functioning of site #####
 !###########################################################
+!
+!--- TEMPORARY: Google paywall ---
+androidpolice.com##.fc-pinned-message-container
+!
 !
 ! General anti-adblock rules
 /wp-content/plugins/simple-adblock-notice/*
@@ -2471,6 +2479,10 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+buzz.be.com###rw_alert_cookies
+teamliquid.net##body > div[style="position: fixed; bottom: 0px; width: 98%; padding: 1%; text-align: center; z-index: 1000; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(227, 227, 227); background-color: white;"]
+nkd.com##body > #DIV_1
+theverge.com###notice.p-notice
 winfuture.de##body > div[style*="z-index"][style*="bottom"][style*="right"]
 fitnessuebungen-zuhause.de,homegym-exercises.com##body > #main > #cookie + div:last-child:not([class]):not([id])
 chat.lycos.fr##body > div#nomnom
@@ -3097,6 +3109,8 @@ mail.ru##.tooltip div.tooltip__box[-ext-has="div"]
 !----------------------------------!
 !
 !---------- Widgets ---------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/5367
+aachener-zeitung.de###content > section > .tab-nav[-ext-has='ul > li > a:contains(Whatsapp)']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5328
 pz-news.de##.nfy-content+aside.nfy-service > aside > section.nfy-sebox-multibox.nfy-merge-marked[-ext-has=">article > h3 > span:contains(Tages per WhatsApp)"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5171
@@ -3269,6 +3283,8 @@ ukr-today.com##.soc_vidgets
 !
 ||2app.lk^$third-party
 !
+ipaddressguide.com##img[alt="iptools apple app"]
+ipaddressguide.com##img[alt="iptools android app"]
 extramovies.org##.poster > center > .app
 extramovies.org##a[href^="http://m.onelink.me/"]
 m.albamon.com##.app_down_promotion
@@ -3478,6 +3494,8 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+xakep.ru##.snp-fb
+xakep.ru##.snp-pop-127840-overlay
 onpress.info##.modalParent
 eadaily.com###like_box
 chernozem.info###social-community-popup
@@ -3833,7 +3851,6 @@ com-magazin.de##w-div[role$="dialog"]
 ||sud.ua/js/jquery.arcticmodal*.min.js
 ||turkusozu.com/js/fancybox/
 ||ufatime.ru/st/libs/magnific/jquery.magnific-popup.min.js
-||xakep.ru/wp-content/plugins/bloom/js/custom.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4858
 yandex.ru,yandex.com,yandex.ua,yandex.kz,yandex.by,yandex.com.tr##.homescreen.periodical-popup
 !
@@ -3881,8 +3898,6 @@ gagadget.com#$#body.social-open { overflow: visible!important; }
 !
 okino.ua#$#.fader-social { display: none!important; }
 okino.ua#$#body { overflow: visible!important; }
-!
-xakep.ru#%#document.cookie = "etBloomCookie_optin_1 = true";
 !
 thegreatdaily.com#$##fbModel { display: none!important; }
 thegreatdaily.com#$#.modal-backdrop { display: none!important; }
@@ -4023,6 +4038,8 @@ zr.ru#%#document.cookie = "zrPushSubsPopUp=1";
 !
 !######### Remains of ads
 !
+prizyv.ru###text-10.widget_text
+prizyv.ru###text-9.widget_text
 xtreme.rip##.topBorder > table[border="0"][width="100%"][height="205"]+div.separator
 porno720p.org##.side > .side-box > br
 porno720p.org#$#.side { padding: 0px!important }
@@ -4772,6 +4789,8 @@ pesni-tut.com##.r_m_genre_songs + div[id] + div:not([id])
 !
 ! Adviser/online-consultant/feedback widgets
 !
+||me-talk.ru/support/support.js$third-party
+pulscen.ru##.online-consultant-info-bar
 ||highflyers.ru/ven/wiget_consult.js
 ##a[title="WhatsApp Newsletter Marketing"]
 ||az601263.vo.msecnd.net/webview/*/embed.js
