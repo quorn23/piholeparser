@@ -185,7 +185,11 @@ fi
 #####################################################################
 ## Perl Parser
 if
-[[ $f == $BLIGHTPARSELIST && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
+then
+:
+elif
+[[ $f == $BLIGHTPARSELIST && -n $FILESIZEZERO ]]
 then
 echo "Not a Heavy List, Skipping Perl Parser"
 echo ""
