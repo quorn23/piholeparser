@@ -116,8 +116,9 @@ printf "$green"   "Attempting Creation of Mirror File."
 echo ""
 
 ## Copy original, one for mirror, one for next step
-sudo cp $BORIGINALFILETEMP $BFILETEMP
 sudo cp $BORIGINALFILETEMP $BTEMPFILE
+sudo cp $BORIGINALFILETEMP $BFILETEMP
+sudo rm $BORIGINALFILETEMP
 
 ## Github has a 100mb limit, and empty files are useless
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
