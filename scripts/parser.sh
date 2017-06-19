@@ -35,7 +35,6 @@ echo ""
 ####################
 
 printf "$cyan"    "Pinging $BASEFILENAME To Check Host Availability."
-echo "" 
 
 if
 [[ -n $UPCHECK ]]
@@ -54,6 +53,7 @@ printf "$green"    "Ping Test Was A Success!"
 else
 printf "$red"    "Ping Test Failed."
 fi
+echo ""
 echo ""
 
 if
@@ -116,7 +116,6 @@ done
 ####################
 
 printf "$cyan"    "Verifying $BASEFILENAME File Size."
-echo "" 
 
 PARSECOMMENT="Download."
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
@@ -143,7 +142,6 @@ echo ""
 ####################
 
 printf "$cyan"   "Attempting Creation of Mirror File."
-echo ""
 
 ## Github has a 100mb limit, and empty files are useless
 timestamp=$(echo `date`)
@@ -182,7 +180,6 @@ sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -191,7 +188,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Invalid Characters
@@ -206,7 +206,6 @@ sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -215,7 +214,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 #####################################################################
@@ -229,15 +231,18 @@ sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
+echo ""
 else
 :
 fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 #####################################################################
@@ -252,7 +257,6 @@ sudo cat -s $BFILETEMP | sed 's/^||//' | cut -d'^' -f-1 > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -261,7 +265,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Remove IP addresses
@@ -274,7 +281,6 @@ sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -283,7 +289,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Replace Spaces then Remove Empty Lines
@@ -296,7 +305,6 @@ sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -305,7 +313,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Domain Requirements,, a period and a letter
@@ -318,7 +329,6 @@ sed '/[a-z]/!d; /[.]/!d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -327,7 +337,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Periods at begining and end of lines
@@ -341,7 +354,6 @@ sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -350,7 +362,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Duplicate Removal
@@ -363,7 +378,6 @@ sudo cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "$ENDCOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
 else
@@ -372,7 +386,10 @@ fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+else
+printf "$yellow"  "$ENDCOMMENT"
 fi
 
 ## Prepare for next step
@@ -382,9 +399,7 @@ sudo mv $BFILETEMP $BTEMPFILE
 ## Complete Lists ##
 #################### 
 
-echo ""
 printf "$cyan"   "Attempting Creation of Parsed List."
-echo ""
 
 ## Github has a 100mb limit, and empty files are useless
 timestamp=$(echo `date`)
@@ -403,7 +418,7 @@ elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
 then
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
-printf "$green"  "Creating Mirror of Unparsed File."
+printf "$green"  "Parsed File Completed Succesfully."
 sudo mv $BTEMPFILE $PARSEDFILE
 else
 sudo rm $BTEMPFILE
