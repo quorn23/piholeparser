@@ -31,6 +31,30 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ####################
+## Big Source     ##
+####################
+
+SCRIPTTEXT="Counting Lists To Process."
+timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
+sudo cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
+HOWMANYLISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lists to be processed by the script.")
+sudo echo "$HOWMANYLISTS"
+sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo sed '/^$/d' $TEMPFILE > $FILETEMP
+sudo mv $FILETEMP $BIGAPLSOURCE
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+####################
 ## Run Scripts    ##
 ####################
 
