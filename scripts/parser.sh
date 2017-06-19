@@ -42,7 +42,7 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 fi
 
 if
-[[ -n $SOURCEIP ]]
+[[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
 then
 printf "$yellow"    "Fetching List from $UPCHECK located at the IP of "$SOURCEIP"."
 echo ""
@@ -52,22 +52,31 @@ sudo rm $BTEMPFILE
 elif
 [[ -z $SOURCEIP ]]
 then
-printf "$yellow"    "Fetching List From Git Repo Mirror."
+printf "$yellow"    "Attempting To Fetch List From Git Repo Mirror."
 sudo echo "* $BASEFILENAME list unavailable to download. Attempted to use Mirror. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 sudo wget -q -O $BTEMPFILE $MIRROREDFILEDL
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 elif
-[[ $source == BTEMPLOCAL ]]
+[[ $source == *.7z && -n $SOURCEIP ]]
 then
-printf "$yellow"    "Fetching List From Local File."
+printf "$yellow"    "Fetching List from $UPCHECK located at the IP of "$SOURCEIP"."
 echo ""
-sudo curl --silent -L $BTEMPLOCALSOURCE >> $BTEMPFILE
+sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
+sudo 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm $BTEMPFILE
+sudo rm $COMPRESSEDTEMPSEVEN
+elif
+[[ $source == *.tar.gz && -n $SOURCEIP ]]
+then
+sudo wget -q -O $COMPRESSEDTEMPTAR $source
+TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
+sudo cat "$TEMPDIR""$TARFILEX" > $BTEMPFILE
+sudo rm "$TEMPDIR""$TARFILEX"
+sudo rm $COMPRESSEDTEMPTAR
 else
-echo ""
+echo " Did Not Download File, Maybe?"
 fi
 
 ## This was giving me issues
