@@ -8,7 +8,7 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 ## Recent Run Log ##
 ####################
 
-SCRIPTTEXT="Clearing The Path."
+SCRIPTTEXT="Creating Recent Run Log."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
