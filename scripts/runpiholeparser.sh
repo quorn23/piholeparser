@@ -153,9 +153,7 @@ echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
 sudo rm $MAINREADME
-LASTRUNTIMEFRAME="* Script Started At $STARTTIME
- * Script Ended at $timestamp"
-sudo sed "s/LASTRUNVARIABLEGOESHERE/$LASTRUNTIMEFRAME/" $MAINREADMEDEFAULT > $MAINREADME
+sudo sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
 sudo bash $DELETETEMPFILE
 sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
