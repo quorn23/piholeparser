@@ -193,13 +193,17 @@ elif
 then
 echo "Not a Heavy List, Skipping Perl Parser"
 echo ""
-else
+elif
+[[ $f != $BLIGHTPARSELIST && -n $FILESIZEZERO ]]
+then
 PARSECOMMENT="Cutting Lists with the Perl Parser."
 printf "$yellow"  "$PARSECOMMENT"
 sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
+else
+echo "Variable process borked?"
 fi
 if
 [ "$FETCHFILESIZE" -eq 0 ]
