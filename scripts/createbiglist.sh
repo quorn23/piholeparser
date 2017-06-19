@@ -47,7 +47,7 @@ printf "$yellow"  "Big List Created Successfully."
 fi
 
 ####################
-## Big Source edit##
+## Big List edit  ##
 ####################
 
 ## should remove faster than a sed loop
