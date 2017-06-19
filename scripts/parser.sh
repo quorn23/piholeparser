@@ -190,6 +190,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -216,6 +217,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -241,6 +243,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -267,6 +270,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -291,6 +295,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -315,6 +320,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -339,6 +345,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -364,6 +371,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -388,6 +396,7 @@ if
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
+unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
