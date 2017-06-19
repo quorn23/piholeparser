@@ -13,7 +13,6 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 for f in $EVERYLISTFILEWILDCARD
 do
 
-echo ""
 printf "$lightblue"    "___________________________________________________________"
 echo ""
 
@@ -43,7 +42,6 @@ SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 else
 printf "$red"    "$BASEFILENAME Host Unavailable."
-echo ""
 fi
 
 if
@@ -54,13 +52,11 @@ else
 printf "$red"    "Ping Test Failed."
 fi
 echo ""
-echo ""
 
 if
 [[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
-echo ""
 sudo wget -q -O $BTEMPFILE $source
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo touch $BORIGINALFILETEMP
@@ -78,7 +74,6 @@ elif
 [[ $source == *.7z && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching 7zip List from $UPCHECK located at the IP of "$SOURCEIP"."
-echo ""
 sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
 sudo 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
@@ -188,12 +183,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -202,7 +199,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Invalid Characters
 ## FQDN's  can only have . _ and -
@@ -224,12 +220,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -238,7 +236,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 #####################################################################
 ## Perl Parser
@@ -259,12 +256,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -273,7 +272,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 #####################################################################
 
@@ -295,12 +293,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -309,7 +309,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Remove IP addresses
 PARSECOMMENT="Removing IP Addresses."
@@ -329,12 +328,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -343,7 +344,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Replace Spaces then Remove Empty Lines
 PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
@@ -363,12 +363,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -377,7 +379,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking for FQDN Requirements."
@@ -397,12 +398,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -411,7 +414,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Periods at begining and end of lines
 ## This should fix Wildcarding
@@ -432,12 +434,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -446,7 +450,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Duplicate Removal
 PARSECOMMENT="Removing Duplicate Lines."
@@ -466,12 +469,14 @@ if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
 [[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
@@ -480,7 +485,6 @@ if
 then
 FILESIZEZERO=true
 fi
-echo ""
 
 ## Prepare for next step
 sudo mv $BFILETEMP $BTEMPFILE
