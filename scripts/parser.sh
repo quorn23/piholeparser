@@ -82,7 +82,7 @@ fi
 
 ## This was giving me issues
 if
-[[ -n $UPCHECK ]]
+[[ -n $SOURCEIP ]]
 then
 unset SOURCEIP
 fi
