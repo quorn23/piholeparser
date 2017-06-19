@@ -103,8 +103,8 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$LIGHTPARSERSCRIPT
-SCRIPTTEXT="Running Light Parser."
+WHATSCRIPTORUN=$PARSERSCRIPT
+SCRIPTTEXT="Running Parser."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -119,21 +119,37 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$HEAVYPARSERSCRIPT
-SCRIPTTEXT="Running Heavy Parser."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
-echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
+#WHATSCRIPTORUN=$LIGHTPARSERSCRIPT
+#SCRIPTTEXT="Running Light Parser."
+#timestamp=$(echo `date`)
+#printf "$blue"    "___________________________________________________________"
+#echo ""
+#printf "$green"   "$SCRIPTTEXT $timestamp"
+#echo ""
+#sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+#sudo bash $DELETETEMPFILE
+#sudo bash $WHATSCRIPTORUN
+#sudo bash $DELETETEMPFILE
+#sudo echo ""
+#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+#printf "$magenta" "___________________________________________________________"
+#echo ""
+
+#WHATSCRIPTORUN=$HEAVYPARSERSCRIPT
+#SCRIPTTEXT="Running Heavy Parser."
+#timestamp=$(echo `date`)
+#printf "$blue"    "___________________________________________________________"
+#echo ""
+#printf "$green"   "$SCRIPTTEXT $timestamp"
+#echo ""
+#sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+#sudo bash $DELETETEMPFILE
+#sudo bash $WHATSCRIPTORUN
+#sudo bash $DELETETEMPFILE
+#sudo echo ""
+#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+#printf "$magenta" "___________________________________________________________"
+#echo ""
 
 WHATSCRIPTORUN=$CREATEBIGLISTSCRIPT
 SCRIPTTEXT="Combining All Parsed Lists."
