@@ -98,6 +98,7 @@ done
 ## Check Filesize ##
 ####################
 
+PARSECOMMENT="Download."
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 timestamp=$(echo `date`)
 if 
@@ -105,10 +106,11 @@ if
 then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
-printf "$red"     "$BASEFILENAME list was an empty file upon download."
+printf "$red"     "$BASEFILENAME List Was An Empty File After "$PARSECOMMENT"."
 sudo echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-echo -e "\t`wc -l $BORIGINALFILETEMP | cut -d " " -f 1` lines downloaded"
+HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 fi
 sudo cp $BORIGINALFILETEMP $BTEMPFILE
@@ -159,6 +161,9 @@ PARSECOMMENT="Removing Lines with Comments or Empty."
 printf "$yellow"  "$PARSECOMMENT"
 sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -181,6 +186,9 @@ PARSECOMMENT="Removing Invalid FQDN characters."
 printf "$yellow"  "$PARSECOMMENT"
 sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -202,6 +210,9 @@ PARSECOMMENT="Cutting Lists with the Perl Parser."
 printf "$yellow"  "$PARSECOMMENT"
 sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 else
@@ -223,6 +234,9 @@ PARSECOMMENT="Removing Pipes and Carrots."
 printf "$yellow"  "$PARSECOMMENT"
 sudo cat -s $BFILETEMP | sed 's/^||//' | cut -d'^' -f-1 > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -243,6 +257,9 @@ PARSECOMMENT="Removing IP Addresses."
 printf "$yellow"  "$PARSECOMMENT"
 sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -263,6 +280,9 @@ PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
 printf "$yellow"  "$PARSECOMMENT"
 sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -283,6 +303,9 @@ PARSECOMMENT="Checking for FQDN Requirements."
 printf "$yellow"  "$PARSECOMMENT"
 sed '/[a-z]/!d; /[.]/!d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -304,6 +327,9 @@ PARSECOMMENT="Removing Lines With a Period at the Start or End."
 printf "$yellow"  "$PARSECOMMENT"
 sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
@@ -324,6 +350,9 @@ PARSECOMMENT="Removing Duplicate Lines."
 printf "$yellow"  "$PARSECOMMENT"
 sudo cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+printf "$yellow"  "$ENDCOMMENT"
 echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1` lines after $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
 echo ""
