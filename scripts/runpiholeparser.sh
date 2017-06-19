@@ -82,38 +82,6 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-#WHATSCRIPTORUN=$SEVENZIPLISTSSCRIPT
-#SCRIPTTEXT="Downloading and Extracting 7zip Files."
-#timestamp=$(echo `date`)
-#printf "$blue"    "___________________________________________________________"
-#echo ""
-#printf "$green"   "$SCRIPTTEXT $timestamp"
-#echo ""
-#sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-#sudo bash $DELETETEMPFILE
-#sudo bash $WHATSCRIPTORUN
-#sudo bash $DELETETEMPFILE
-#sudo echo ""
-#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-#printf "$magenta" "___________________________________________________________"
-#echo ""
-
-#WHATSCRIPTORUN=$TARLISTSSCRIPT
-#SCRIPTTEXT="Downloading and Extracting Tar Files."
-#timestamp=$(echo `date`)
-#printf "$blue"    "___________________________________________________________"
-#echo ""
-#printf "$green"   "$SCRIPTTEXT $timestamp"
-#echo ""
-#sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-#sudo bash $DELETETEMPFILE
-#sudo bash $WHATSCRIPTORUN
-#sudo bash $DELETETEMPFILE
-#sudo echo ""
-#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-#printf "$magenta" "___________________________________________________________"
-#echo ""
-
 WHATSCRIPTORUN=$PARSERSCRIPT
 SCRIPTTEXT="Running Parser."
 timestamp=$(echo `date`)
