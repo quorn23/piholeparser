@@ -10,7 +10,7 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 ####################
 
 ## Start File Loop
-for f in $HEAVYPARSELISTS
+for f in $EVERYLISTFILEWILDCARD
 do
 
 echo ""
