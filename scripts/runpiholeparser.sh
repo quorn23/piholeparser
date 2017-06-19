@@ -8,16 +8,27 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 ## Recent Run Log ##
 ####################
 
+SCRIPTTEXT="Clearing The Path."
 timestamp=$(echo `date`)
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$green"   "$SCRIPTTEXT $timestamp"
+echo ""
+sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo bash $DELETETEMPFILE
 if 
 ls $RECENTRUN &> /dev/null; 
 then
 sudo rm $RECENTRUN
-sudo echo "## Recent Run Log. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo echo "* Recent Run Log Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 sudo echo "* Recent Run Log Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
+sudo bash $DELETETEMPFILE
+sudo echo ""
+sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
 
 ####################
 ## Run Scripts    ##
@@ -118,38 +129,6 @@ sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
-
-#WHATSCRIPTORUN=$LIGHTPARSERSCRIPT
-#SCRIPTTEXT="Running Light Parser."
-#timestamp=$(echo `date`)
-#printf "$blue"    "___________________________________________________________"
-#echo ""
-#printf "$green"   "$SCRIPTTEXT $timestamp"
-#echo ""
-#sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-#sudo bash $DELETETEMPFILE
-#sudo bash $WHATSCRIPTORUN
-#sudo bash $DELETETEMPFILE
-#sudo echo ""
-#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-#printf "$magenta" "___________________________________________________________"
-#echo ""
-
-#WHATSCRIPTORUN=$HEAVYPARSERSCRIPT
-#SCRIPTTEXT="Running Heavy Parser."
-#timestamp=$(echo `date`)
-#printf "$blue"    "___________________________________________________________"
-#echo ""
-#printf "$green"   "$SCRIPTTEXT $timestamp"
-#echo ""
-#sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-#sudo bash $DELETETEMPFILE
-#sudo bash $WHATSCRIPTORUN
-#sudo bash $DELETETEMPFILE
-#sudo echo ""
-#sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-#printf "$magenta" "___________________________________________________________"
-#echo ""
 
 WHATSCRIPTORUN=$CREATEBIGLISTSCRIPT
 SCRIPTTEXT="Combining All Parsed Lists."
