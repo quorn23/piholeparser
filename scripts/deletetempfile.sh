@@ -13,7 +13,7 @@ then
 sudo rm $CHECKME
 sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo ""
+:
 fi
 
 WHATITIS="Temporary File #2 "
@@ -25,7 +25,7 @@ then
 sudo rm $CHECKME
 sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo ""
+:
 fi
 
 WHATITIS="Temporary Original File"
@@ -37,7 +37,7 @@ then
 sudo rm $CHECKME
 sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo ""
+:
 fi
 
 WHATITIS="Temporary txt Files"
@@ -49,5 +49,5 @@ then
 sudo rm $CHECKME
 sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo ""
+:
 fi
