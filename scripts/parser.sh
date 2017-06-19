@@ -186,11 +186,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -213,11 +212,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -239,11 +237,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -266,11 +263,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -291,11 +287,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -316,11 +311,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -341,11 +335,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -367,11 +360,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
@@ -392,11 +384,10 @@ else
 :
 fi
 if
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$FETCHFILESIZE" -eq 0 && -z $FILESIZEZERO ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 FILESIZEZERO=true
-unset FETCHFILESIZE
 else
 printf "$yellow"  "$ENDCOMMENT"
 fi
