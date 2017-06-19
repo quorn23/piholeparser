@@ -19,3 +19,18 @@ elif
 then
 printf "$red"   "Not Pushing Lists to Github"
 fi }
+
+WHATITIS="web host lists directory"
+CHECKME=$BIGAPLLOCALHOSTDIR
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo echo "* $WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo mkdir $CHECKME
+sudo echo "* $WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+## Copy it over
+sudo cp -p $BIGAPL $BIGAPLLOCALHOST
