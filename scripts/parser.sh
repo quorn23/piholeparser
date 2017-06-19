@@ -48,6 +48,7 @@ printf "$yellow"    "Fetching List from $UPCHECK located at the IP of "$SOURCEIP
 echo ""
 sudo wget -q -O $BTEMPFILE $source
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
+sudo touch $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 elif
 [[ -z $SOURCEIP ]]
@@ -57,6 +58,7 @@ sudo echo "* $BASEFILENAME list unavailable to download. Attempted to use Mirror
 echo ""
 sudo wget -q -O $BTEMPFILE $MIRROREDFILEDL
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
+sudo touch $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 elif
 [[ $source == *.7z && -n $SOURCEIP ]]
@@ -66,6 +68,7 @@ echo ""
 sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
 sudo 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
+sudo touch $BORIGINALFILETEMP
 sudo rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.tar.gz && -n $SOURCEIP ]]
@@ -74,9 +77,11 @@ sudo wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 sudo mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
+sudo touch $BORIGINALFILETEMP
 sudo rm $COMPRESSEDTEMPTAR
 else
 echo " Did Not Download File, Maybe?"
+sudo touch $BORIGINALFILETEMP
 fi
 
 ## This was giving me issues
