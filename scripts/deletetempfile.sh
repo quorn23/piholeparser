@@ -11,7 +11,6 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
 :
 fi
@@ -23,9 +22,7 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Temporary Tar File"
@@ -35,7 +32,5 @@ if
 ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
-sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
