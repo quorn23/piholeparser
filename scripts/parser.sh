@@ -50,6 +50,15 @@ sudo wget -q -O $BTEMPFILE $source
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 elif
+[[ -z $SOURCEIP ]]
+then
+printf "$yellow"    "Fetching List From Git Repo Mirror."
+sudo echo "* $BASEFILENAME list unavailable to download. Attempted to use Mirror. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+sudo wget -q -O $BTEMPFILE $MIRROREDFILEDL
+sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
+sudo rm $BTEMPFILE
+elif
 [[ $source == BTEMPLOCAL ]]
 then
 printf "$yellow"    "Fetching List From Local File."
@@ -58,12 +67,7 @@ sudo curl --silent -L $BTEMPLOCALSOURCE >> $BTEMPFILE
 sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
 sudo rm $BTEMPFILE
 else
-printf "$yellow"    "Fetching List From Git Repo Mirror."
-sudo echo "* $BASEFILENAME list unavailable to download. Attempted to use Mirror. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
-sudo wget -q -O $BTEMPFILE $MIRROREDFILEDL
-sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm $BTEMPFILE
 fi
 
 ## This was giving me issues
