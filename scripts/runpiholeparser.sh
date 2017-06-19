@@ -138,22 +138,6 @@ sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$CLEANUPSCRIPT
-SCRIPTTEXT="Cleanining Up Before Pushing."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$green"   "$SCRIPTTEXT $timestamp"
-echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
 WHATSCRIPTORUN=$PUSHLISTSSCRIPT
 SCRIPTTEXT="Pushing Lists."
 timestamp=$(echo `date`)
