@@ -23,6 +23,7 @@ ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
 else
+:
 fi
 
 WHATITIS="Temporary Tar File"
@@ -33,4 +34,5 @@ ls $CHECKME &> /dev/null;
 then
 sudo rm $CHECKME
 else
+:
 fi
