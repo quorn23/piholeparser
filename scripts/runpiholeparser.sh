@@ -13,10 +13,10 @@ if
 ls $RECENTRUN &> /dev/null; 
 then
 sudo rm $RECENTRUN
-sudo echo "## $RECENTRUN $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* RecentRunLog Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "## Recent Run Log $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Recent Run Log Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "* RecentRunLog Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+sudo echo "* Recent Run Log Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 ####################
