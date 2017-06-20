@@ -153,7 +153,7 @@ echo ""
 printf "$cyan"   "Attempting Creation of Mirror File."
 
 if 
-[[ -z $FILESIZEZERO && $MIRROREDFILE ]]
+[[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
 then
 printf "$green"  "Old Mirror File removed"
 sudo rm $MIRROREDFILE
@@ -559,7 +559,7 @@ sudo mv $BFILETEMP $BTEMPFILE
 printf "$cyan"   "Attempting Creation of Parsed List."
 
 if 
-[[ -z $FILESIZEZERO && $PARSEDFILE ]]
+[[ -z $FILESIZEZERO && -f $PARSEDFILE ]]
 then
 printf "$green"  "Old Parsed File removed"
 sudo rm $PARSEDFILE
