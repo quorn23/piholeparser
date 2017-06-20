@@ -283,39 +283,39 @@ fi
 ## Perl Parser
 ## We skip this if the file is in the "heavy" directory
 ## I hope to remove this soon
-PARSECOMMENT="Cutting Lists with the Perl Parser."
-if
-[[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
+#PARSECOMMENT="Cutting Lists with the Perl Parser."
+#if
+#[[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
+#then
+#printf "$cyan"  "$PARSECOMMENT"
+#sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
+#FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+#HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+#ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+#sudo mv $BTEMPFILE $BFILETEMP
+#else
+#:
+#fi
+#if
+#[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+#then
+#printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+#echo ""
+#unset ENDCOMMENT
+#unset HOWMANYLINES
+#elif
+#[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+#then
+#printf "$yellow"  "$ENDCOMMENT"
+#echo ""
+#unset ENDCOMMENT
+#unset HOWMANYLINES
+#fi
+#if
+#[[ "$FETCHFILESIZE" -eq 0 ]]
+#then
+#FILESIZEZERO=true
+#fi
 
 #####################################################################
 
