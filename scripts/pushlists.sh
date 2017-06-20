@@ -32,5 +32,17 @@ sudo mkdir $CHECKME
 sudo echo "* $WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+WHATITIS="Locally Hosted Biglist"
+CHECKME=$BIGAPLLOCALHOST
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Copy it over
 sudo cp -p $BIGAPL $BIGAPLLOCALHOST
