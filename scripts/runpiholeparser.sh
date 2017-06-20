@@ -36,6 +36,18 @@ echo ""
 ## Big Source     ##
 ####################
 
+WHATITIS="The Source List"
+CHECKME=$BIGAPLSOURCE
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 SCRIPTTEXT="Counting Lists To Process."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
@@ -59,22 +71,6 @@ echo ""
 ####################
 ## Run Scripts    ##
 ####################
-
-WHATSCRIPTORUN=$COLLISIONAVOIDSCRIPT
-SCRIPTTEXT="Clearing The Path."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
 
 WHATSCRIPTORUN=$DEPENDENCYCHECKSCRIPT
 SCRIPTTEXT="Checking For Script Dependencies."
