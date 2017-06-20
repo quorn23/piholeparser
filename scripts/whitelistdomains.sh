@@ -35,22 +35,24 @@ fi
 printf "$yellow"  "Extracting Domains from all .lst files"
 echo ""
 
-## Start File Loop
+if
+ls $BIGAPLSOURCE &> /dev/null;
+then
+for source in `cat $BIGAPLSOURCE`;
+do
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
+sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
+done
+else
 for f in $EVERYLISTFILEWILDCARD
 do
 for source in `cat $f`;
 do
-
-## Variables
-source /etc/piholeparser/scriptvars/dynamicvariables.var
-
-## add to whitelist file
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
 sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
-
-## end of loops
 done
 done
-
+fi
 ###########################
 ## Whitelist sort dedupe ##
 ###########################
