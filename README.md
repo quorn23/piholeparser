@@ -2,9 +2,9 @@
 
 ### Last Run On
 
-* Script Started At Mon 19 Jun 15:25:23 EDT 2017
+* Script Started At Mon 19 Jun 22:40:25 EDT 2017
 
-* Script Ended At Mon 19 Jun 16:18:31 EDT 2017
+* Script Ended At Mon 19 Jun 23:32:11 EDT 2017
 
 ## Less than basic usage
 

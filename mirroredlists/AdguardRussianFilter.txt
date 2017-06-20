@@ -4315,8 +4315,6 @@ overclockers.ru#$##topbanners { position: absolute!important; left: -3000px!impo
 @@||vsetv.net/advert.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3009
 @@||lotzon.com$generichide
-! hdrezka.me
-@@||hdrezka.me/templates/hdrezka/js/*ad*.js
 ! https://forum.adguard.com/index.php?threads/13733/
 mediapure.ru##.showSweetAlert
 ||mediapure.ru/wp-content/plugins/simple-adblock-notice/
@@ -6430,6 +6428,8 @@ poiskvps.ru#$#body a[href*="./adv.php?id="] > img { height: 0px!important; }
 !-----------------------
 !------- HTML ----------
 !-----------------------
+! https://github.com/AdguardTeam/AdguardFilters/issues/5232
+moonwalk.co$$script[tag-content="window.location = rurl;"][max-length="600"]
 ! https://forum.adguard.com/index.php?threads/11233/
 afisha.mail.ru$$script[tag-content="mimic:{setup:"][max-length="6500"]
 ! https://forum.adguard.com/index.php?threads/19208/
@@ -8356,6 +8356,7 @@ rustorka.com$$script[tag-content="postWindowPop"][max-length="25000"]
 /(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+i.ua##.block_gamma_gradient.anons
 tvfru.org###hidd
 ||xenforo.info/banners/
 mundo-latino.ru###advm_preload
