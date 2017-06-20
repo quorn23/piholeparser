@@ -112,6 +112,14 @@ fi
 ## Source completion
 done
 
+## Is List Still Dead?
+if
+[[ -n $FILESIZEZERO && $f == $BDEADPARSELIST ]]
+then
+printf "$red"     "$BASEFILENAME List is in DeadList folder, but the link is active."
+sudo echo "* $BASEFILENAME List is in DeadList folder, but the link is active. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 ####################
 ## Check Filesize ##
 ####################
