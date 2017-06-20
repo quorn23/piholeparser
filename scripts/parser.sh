@@ -6,21 +6,21 @@
 source /etc/piholeparser/scriptvars/staticvariables.var
 
 ####################
-## File Lists     ##
+## File .lst's    ##
 ####################
 
-## Start File Loop
+## Process Every .lst file within the List Directories
 for f in $EVERYLISTFILEWILDCARD
 do
 
 printf "$lightblue"    "___________________________________________________________"
 echo ""
 
-## Process sources within file.lst
+## Process Every source within the .lst from above
 for source in `cat $f`;
 do
 
-## Variables
+## These Variables are to help with Filenaming
 source /etc/piholeparser/scriptvars/dynamicvariables.var
 
 printf "$green"    "Processing $BASEFILENAME list."
@@ -35,6 +35,7 @@ echo ""
 
 printf "$cyan"    "Pinging $BASEFILENAME To Check Host Availability."
 
+## Check to see if source's host is online
 if
 [[ -n $UPCHECK ]]
 then
@@ -43,7 +44,6 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 else
 printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
-
 if
 [[ -n $SOURCEIP ]]
 then
@@ -53,6 +53,7 @@ printf "$red"    "Ping Test Failed."
 fi
 echo ""
 
+## Logically download based on the Upcheck, and file type
 if
 [[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
 then
@@ -91,6 +92,8 @@ printf "$red"    "Somehow All Download Variables Were Missed."
 sudo echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
+## Check that there was a file downloaded
+## If not, touch file
 CHECKME=$BORIGINALFILETEMP
 if
 ls $CHECKME &> /dev/null;
@@ -109,10 +112,12 @@ then
 unset SOURCEIP
 fi
 
-## Source completion
+## This is the source Loop end
+## If multiple sources, it should merge them into one document
 done
 
-## Is List Still Dead?
+## If lst file is in Dead Folder, it means that I was unable to access it at some point
+## This checks to see if the list is back online
 if
 [[ -n $FILESIZEZERO && $f == $BDEADPARSELIST ]]
 then
@@ -123,6 +128,9 @@ fi
 ####################
 ## Check Filesize ##
 ####################
+
+## Throughout the script, if the file has no content, it will skip to the end
+## by setting the FILESIZEZERO variable
 
 printf "$cyan"    "Verifying $BASEFILENAME File Size."
 
@@ -140,11 +148,15 @@ else
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+printf "$yellow"  "$ENDCOMMENT"
 fi
+echo ""
+
+## Duplicate the downloaded file for the next steps
 sudo cp $BORIGINALFILETEMP $BTEMPFILE
 sudo cp $BORIGINALFILETEMP $BFILETEMP
 sudo rm $BORIGINALFILETEMP
-echo ""
+
 
 ####################
 ## Create Mirrors ##
@@ -152,6 +164,7 @@ echo ""
 
 printf "$cyan"   "Attempting Creation of Mirror File."
 
+## This helps when replacing the mirrored file
 if 
 [[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
 then
@@ -186,7 +199,7 @@ echo ""
 ## Processing     ##
 ####################
 
-## Skip IP Lists after Mirror is done
+## I haven't decided what to do with IP Lists yet, so this will skip them after mirroring
 if
 [[ $f == $BIPPARSELIST ]]
 then
@@ -268,6 +281,8 @@ fi
 
 #####################################################################
 ## Perl Parser
+## We skip this if the file is in the "heavy" directory
+## I hope to remove this soon
 PARSECOMMENT="Cutting Lists with the Perl Parser."
 if
 [[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
@@ -559,6 +574,7 @@ sudo mv $BFILETEMP $BTEMPFILE
 
 printf "$cyan"   "Attempting Creation of Parsed List."
 
+## this helps with replacing a parsed file
 if 
 [[ -z $FILESIZEZERO && -f $PARSEDFILE ]]
 then
@@ -592,7 +608,7 @@ echo ""
 printf "$orange" "___________________________________________________________"
 echo ""
 
-## This could give issues if not set
+## This could give issues in the file loop if not set
 if
 [[ -n $FILESIZEZERO ]]
 then
