@@ -55,8 +55,17 @@ done
 ## Whitelist sort dedupe ##
 ###########################
 
-WHITESORTDEDUPE=".lst Domains."
-WHATLISTTOSORT=$LISTWHITELISTDOMAINS
+## Start File Loop
+for f in $WHITELISTDOMAINSALL
+do
+for source in `cat $f`;
+do
+
+## Variables
+source /etc/piholeparser/scriptvars/dynamicvariables.var
+
+WHATLISTTOSORT=$f
+WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $WHITESORTDEDUPE."
 sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
@@ -68,34 +77,12 @@ sudo echo "* Processed "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECE
 sudo echo "* $HOWMANYLINES $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
-WHITESORTDEDUPE="Deathbybandaid Whitelisted Domains"
-WHATLISTTOSORT=$DBBWHITES
-timestamp=$(echo `date`)
-printf "$yellow"  "Processing $WHITESORTDEDUPE."
-sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
-sudo echo "$HOWMANYLINES"
-sudo rm $WHATLISTTOSORT
-sudo mv $TEMPFILE $WHATLISTTOSORT
-sudo echo "* Processed "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* $HOWMANYLINES $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
-
-WHITESORTDEDUPE="Domains that Cause Issues for People."
-WHATLISTTOSORT=$BLOCKEDCOMPLAINTS
-timestamp=$(echo `date`)
-printf "$yellow"  "Processing $WHITESORTDEDUPE."
-sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
-sudo echo "$HOWMANYLINES"
-sudo rm $WHATLISTTOSORT
-sudo mv $TEMPFILE $WHATLISTTOSORT
-sudo echo "* Processed "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* $HOWMANYLINES $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
+## end of loops
+done
+done
 
 WHITESORTDEDUPE="Merging the Whitelists for Later."
-WHATLISTTOSORT="$BLOCKEDCOMPLAINTS $DBBWHITES $LISTWHITELISTDOMAINS"
+WHATLISTTOSORT="$WHITELISTDOMAINSALL"
 timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
 sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
