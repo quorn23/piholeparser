@@ -9,6 +9,18 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 ## Big List       ##
 #################### 
 
+WHATITIS="All Parsed List"
+CHECKME=$BIGAPL
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Combine Small lists
 sudo cat $PARSEDLISTSALL > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
@@ -49,6 +61,18 @@ fi
 ####################
 ## Big List edit  ##
 ####################
+
+WHATITIS="All Parsed List (edited)"
+CHECKME=$BIGAPLE
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+sudo rm $CHECKME
+sudo echo "$WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+else
+sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+fi
 
 ## should remove faster than a sed loop
 sudo gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $BIGAPL > $TEMPFILE
