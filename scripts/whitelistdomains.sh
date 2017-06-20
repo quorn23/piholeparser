@@ -58,8 +58,6 @@ done
 ## Start File Loop
 for f in $WHITELISTDOMAINSALL
 do
-for source in `cat $f`;
-do
 
 ## Variables
 source /etc/piholeparser/scriptvars/dynamicvariables.var
@@ -77,8 +75,7 @@ sudo echo "* Processed "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECE
 sudo echo "* $HOWMANYLINES $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
-## end of loops
-done
+## end of loop
 done
 
 WHITESORTDEDUPE="Merging the Whitelists for Later."
