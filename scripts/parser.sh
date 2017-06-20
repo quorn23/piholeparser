@@ -144,6 +144,13 @@ echo ""
 
 printf "$cyan"   "Attempting Creation of Mirror File."
 
+if 
+[[ -z $FILESIZEZERO && $MIRROREDFILE ]]
+then
+printf "$green"  "Old Mirror File removed"
+sudo rm $MIRROREDFILE
+fi
+
 ## Github has a 100mb limit, and empty files are useless
 timestamp=$(echo `date`)
 if 
@@ -500,6 +507,13 @@ sudo mv $BFILETEMP $BTEMPFILE
 #################### 
 
 printf "$cyan"   "Attempting Creation of Parsed List."
+
+if 
+[[ -z $FILESIZEZERO && $PARSEDFILE ]]
+then
+printf "$green"  "Old Mirror File removed"
+sudo rm $PARSEDFILE
+fi
 
 ## Github has a 100mb limit, and empty files are useless
 timestamp=$(echo `date`)
