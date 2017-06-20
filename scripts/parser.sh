@@ -526,7 +526,7 @@ printf "$cyan"   "Attempting Creation of Parsed List."
 if 
 [[ -z $FILESIZEZERO && $PARSEDFILE ]]
 then
-printf "$green"  "Old Mirror File removed"
+printf "$green"  "Old Parsed File removed"
 sudo rm $PARSEDFILE
 fi
 
