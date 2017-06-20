@@ -6,6 +6,10 @@
 
 * Script Ended At Tue 20 Jun 01:10:54 EDT 2017
 
+## What This Project Is
+
+This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
+
 ## Less than basic usage
 
 In the directory "parsed" are individual lists that I parse daily.
