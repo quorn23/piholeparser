@@ -186,6 +186,13 @@ echo ""
 ## Processing     ##
 ####################
 
+## Skip IP Lists after Mirror is done
+if
+[[ $f == $BIPPARSELIST ]]
+then
+FILESIZEZERO=true
+fi
+
 ## Comments #'s and !'s, also empty lines
 PARSECOMMENT="Removing Lines with Comments or Empty."
 if
