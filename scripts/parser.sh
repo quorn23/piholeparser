@@ -464,7 +464,7 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | grep -v '\.$' | grep -v '\^.' > $BTEMPFILE
+sudo cat $BFILETEMP | sed '/^[.]/d; /[.]$/d' | grep -v '\.$' | grep -v '\^.' > $BTEMPFILE
 #sed '/^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 #sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
