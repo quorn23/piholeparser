@@ -499,7 +499,8 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo sed '/[.gif]$/d; /[.htm]$/d; /[.html]$/d; /[.php]$/d; /[.png]$/d; /[.swf]$/d; /[.jpg]$/d; /[.cgi]$/d; /[.js]$/d' < $BFILETEMP > $BTEMPFILE
+sudo sed '/.gif$/d; /.htm$/d; /.html$/d; /.php$/d; /.png$/d; /.swf$/d; /.jpg$/d; /.cgi$/d; /.js$/d' < $BFILETEMP > $BTEMPFILE
+#sudo sed '/[.gif]$/d; /[.htm]$/d; /[.html]$/d; /[.php]$/d; /[.png]$/d; /[.swf]$/d; /[.jpg]$/d; /[.cgi]$/d; /[.js]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
