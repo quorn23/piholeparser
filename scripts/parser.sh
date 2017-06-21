@@ -43,6 +43,7 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 else
 printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
+
 if
 [[ -n $SOURCEIP ]]
 then
@@ -156,7 +157,6 @@ sudo cp $BORIGINALFILETEMP $BTEMPFILE
 sudo cp $BORIGINALFILETEMP $BFILETEMP
 sudo rm $BORIGINALFILETEMP
 
-
 ####################
 ## Create Mirrors ##
 ####################
@@ -211,7 +211,7 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
+sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /#/d;/[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -248,8 +248,42 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-#sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d; /[][}{)(]/d' < $BFILETEMP > $BTEMPFILE
-sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d' < $BFILETEMP > $BTEMPFILE
+sed '/,/d; /[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /@/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d; /[][}{)(]/d' < $BFILETEMP > $BTEMPFILE
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+sudo mv $BTEMPFILE $BFILETEMP
+else
+:
+fi
+if
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
+printf "$yellow"  "$ENDCOMMENT"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
+
+## Invalid Characters
+PARSECOMMENT="Removing Lines with HTTP or HTTPS."
+if
+[[ -z $FILESIZEZERO ]]
+then
+printf "$cyan"  "$PARSECOMMENT"
+sed '/[https:]/d; /[HTTPS:]/d; /[http:]/d; /[HTTP:]/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -315,7 +349,6 @@ if
 then
 FILESIZEZERO=true
 fi
-
 #####################################################################
 
 ## Pipes and Carrots
@@ -324,7 +357,8 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat -s $BFILETEMP | sed 's/^||//; /[|]/d' | cut -d'^' -f-1 > $BTEMPFILE
+#sudo cat -s $BFILETEMP | sed 's/^||//; /[|]/d' | cut -d'^' -f-1 > $BTEMPFILE
+sudo cat -s $BFILETEMP | sed 's/^[||]//; /[|]/d' | cut -d'^' -f-1 > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -500,7 +534,7 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo sed '/[.gif]$/d; /[.htm]$/d; /[.html]$/d; /[.php]$/d; /[.png]$/d; /[.swf]$/d; /[.jpg]$/d; /[.cgi]$/d; /[.js]$/d' < $BFILETEMP > $BTEMPFILE
+sudo sed '/[.gif]$/d; /[.ovh]$/d; /[.htm]$/d; /[.html]$/d; /[.php]$/d; /[.png]$/d; /[.swf]$/d; /[.jpg]$/d; /[.cgi]$/d; /[.js]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
