@@ -211,8 +211,7 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sed '/[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
-#sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
+sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -279,41 +278,6 @@ then
 FILESIZEZERO=true
 fi
 
-## HTTP and HTTPS
-PARSECOMMENT="Removing Lines with HTTP or HTTPS."
-if
-[[ -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-sed '/[https:]/d; /[HTTPS:]/d; /[http:]/d; /[HTTP:]/d' < $BFILETEMP > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
 #####################################################################
 ## Perl Parser
 ## We skip this if the file is in the "heavy" directory
@@ -323,7 +287,7 @@ if
 [[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo perl $PERLPARSERSCRIPT $BFILETEMP > $BTEMPFILE
+sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
