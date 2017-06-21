@@ -18,14 +18,14 @@ ls $CHECKME &> /dev/null;
 then
 printf "$red"  "Removing $WHATITIS"
 echo ""
-sudo rm $CHECKME
-sudo touch $CHECKME
-sudo echo "* $WHATITIS removed $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+rm $CHECKME
+touch $CHECKME
+echo "* $WHATITIS removed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 printf "$cyan"  "$WHATITIS not there. Not Removing."
 echo ""
-sudo touch $CHECKME
-sudo echo "* $WHATITIS not there, not removing. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+touch $CHECKME
+echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ####################
@@ -41,7 +41,7 @@ then
 for source in `cat $BIGAPLSOURCE`;
 do
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
-sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
+echo "$UPCHECK" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
 done
 else
 for f in $EVERYLISTFILEWILDCARD
@@ -49,7 +49,7 @@ do
 for source in `cat $f`;
 do
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
-sudo echo "$UPCHECK" | sudo tee --append $LISTWHITELISTDOMAINS &>/dev/null
+echo "$UPCHECK" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
 done
 done
 fi
@@ -68,13 +68,13 @@ WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $WHITESORTDEDUPE."
-sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
-sudo echo "$HOWMANYLINES"
-sudo rm $WHATLISTTOSORT
-sudo mv $TEMPFILE $WHATLISTTOSORT
-sudo echo "* Processed "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* $HOWMANYLINES $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLINES"
+rm $WHATLISTTOSORT
+mv $TEMPFILE $WHATLISTTOSORT
+echo "* Processed "$WHITESORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ## end of loop
@@ -84,12 +84,12 @@ WHITESORTDEDUPE="Merging the Whitelists for Later."
 WHATLISTTOSORT="$WHITELISTDOMAINSALL"
 timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
-sudo cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
-sudo echo "$HOWMANYLINES"
-sudo mv $TEMPFILE $WHITELISTTEMP
-sudo echo "* "$WHITESORTDEDUPE". $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* $HOWMANYLINES $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLINES"
+mv $TEMPFILE $WHITELISTTEMP
+echo "* "$WHITESORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ####################
