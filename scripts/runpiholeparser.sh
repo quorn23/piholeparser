@@ -16,20 +16,20 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo bash $DELETETEMPFILE
+bash $DELETETEMPFILE
 if 
 ls $RECENTRUN &> /dev/null; 
 then
-sudo rm $RECENTRUN
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* Recent Run Log Removed and Recreated. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+rm $RECENTRUN
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Recent Run Log Removed and Recreated. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo echo "* Recent Run Log Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Recent Run Log Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+echo ""
+echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -43,10 +43,10 @@ timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
-sudo rm $CHECKME
-sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+rm $CHECKME
+echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 SCRIPTTEXT="Counting Lists To Process."
@@ -55,17 +55,17 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
 HOWMANYLISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lists to be processed by the script.")
-sudo echo "$HOWMANYLISTS"
-sudo echo "* $HOWMANYLISTS $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo sed '/^$/d' $TEMPFILE > $FILETEMP
-sudo mv $FILETEMP $BIGAPLSOURCE
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLISTS"
+echo "* $HOWMANYLISTS $timestamp" | tee --append $RECENTRUN &>/dev/null
+sed '/^$/d' $TEMPFILE > $FILETEMP
+mv $FILETEMP $BIGAPLSOURCE
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -80,12 +80,12 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+bash $WHATSCRIPTORUN
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -96,12 +96,12 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+bash $WHATSCRIPTORUN
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -112,12 +112,12 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+bash $WHATSCRIPTORUN
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -128,12 +128,12 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+bash $WHATSCRIPTORUN
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -146,16 +146,16 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo rm $MAINREADME
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+rm $MAINREADME
 ENDTIME="Script Ended At $(date +"%s")"
 DIFFTIME=$(($ENDTIME-$STARTTIME))
 TOTALRUNTIME="echo " Script took $(($DIFFTIME / 60)) minutes and $(($DIFFTIME % 60)) seconds To Filter Lists.""
-sudo sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALRUNTIME/$TOTALRUNTIME/" $MAINREADMEDEFAULT > $MAINREADME
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALRUNTIME/$TOTALRUNTIME/" $MAINREADMEDEFAULT > $MAINREADME
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
@@ -164,7 +164,7 @@ echo ""
 ####################
 
 ## This looked prettier below, but wasn't getting pushed up.
-sudo echo "* Script completed at $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* Script completed at $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 WHATSCRIPTORUN=$PUSHLISTSSCRIPT
 SCRIPTTEXT="Pushing Lists."
@@ -173,12 +173,12 @@ printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo bash $DELETETEMPFILE
-sudo bash $WHATSCRIPTORUN
-sudo bash $DELETETEMPFILE
-sudo echo ""
-sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+bash $WHATSCRIPTORUN
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
