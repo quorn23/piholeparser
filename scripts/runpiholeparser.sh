@@ -4,7 +4,7 @@
 ## Variables
 source /etc/piholeparser/scriptvars/staticvariables.var
 
-STARTTIME=$(echo `date`)
+STARTTIME="Script Started At $(date +"%s")"
 
 ####################
 ## Recent Run Log ##
@@ -142,7 +142,6 @@ echo ""
 ####################
 
 SCRIPTTEXT="Updated Main README.md."
-timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
@@ -150,7 +149,10 @@ echo ""
 sudo echo "## $SCRIPTTEXT $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
 sudo bash $DELETETEMPFILE
 sudo rm $MAINREADME
-sudo sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$timestamp/" $MAINREADMEDEFAULT > $MAINREADME
+ENDTIME="Script Ended At $(date +"%s")"
+DIFFTIME=$(($ENDTIME-$STARTTIME))
+TOTALRUNTIME="echo " Script took $(($DIFFTIME / 60)) minutes and $(($DIFFTIME % 60)) seconds To Filter Lists.""
+sudo sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALRUNTIME/$TOTALRUNTIME/" $MAINREADMEDEFAULT > $MAINREADME
 sudo bash $DELETETEMPFILE
 sudo echo ""
 sudo echo "" | sudo tee --append $RECENTRUN &>/dev/null
