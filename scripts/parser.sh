@@ -406,13 +406,14 @@ then
 FILESIZEZERO=true
 fi
 
-## Replace Spaces then Remove Empty Lines
-PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
+## Remove empty space
+PARSECOMMENT="Removing Empty Space."
 if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed 's/\s\+/\n/g; /^$/d' > $BTEMPFILE
+cat $BFILETEMP | sed '/^$/d' | grep -v ' ' > $BTEMPFILE
+#cat $BFILETEMP | sed 's/\s\+/\n/g; /^$/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
