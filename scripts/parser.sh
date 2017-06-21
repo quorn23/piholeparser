@@ -9,12 +9,15 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 ####################
 
 ## Process Every .lst file within the List Directories
-for f in $EVERYLISTFILEWILDCARD do
+for f in $EVERYLISTFILEWILDCARD
+do
+
 printf "$lightblue"    "___________________________________________________________"
 echo ""
 
 ## Process Every source within the .lst from above
-for source in `cat $f`; do
+for source in `cat $f`;
+do
 
 ## These Variables are to help with Filenaming
 source /etc/piholeparser/scriptvars/dynamicvariables.var
@@ -40,7 +43,9 @@ SOURCEIP=`echo $SOURCEIPFETCH`
 else
 printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
-if [[ -n $SOURCEIP ]] then
+if
+[[ -n $SOURCEIP ]]
+then
 printf "$green"    "Ping Test Was A Success!"
 else
 printf "$red"    "Ping Test Failed."
@@ -100,7 +105,11 @@ fi
 echo ""
 
 ## This Clears the SourceIP var before the next loop
-if [[ -n $SOURCEIP ]] then unset SOURCEIP fi
+if
+[[ -n $SOURCEIP ]]
+then
+unset SOURCEIP
+fi
 
 ## This is the source Loop end
 ## If multiple sources, it should merge them into one document
@@ -113,6 +122,8 @@ if
 then
 printf "$red"     "$BASEFILENAME List is in DeadList folder, but the link is active."
 echo "* $BASEFILENAME List is in DeadList folder, but the link is active. $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+:
 fi
 
 ## This should let me know if a document is a bad link
@@ -128,6 +139,8 @@ then
 printf "$red"     "$BASEFILENAME List is a bad link. HTML detected."
 echo "* $BASEFILENAME is a bad link. HTML detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
 FILESIZEZERO=true
+else
+:
 fi
 
 ####################
@@ -170,7 +183,9 @@ rm $BORIGINALFILETEMP
 printf "$cyan"   "Attempting Creation of Mirror File."
 
 ## This helps when replacing the mirrored file
-if [[ -z $FILESIZEZERO && -f $MIRROREDFILE ]] then
+if 
+[[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
+then
 printf "$green"  "Old Mirror File removed"
 rm $MIRROREDFILE
 fi
@@ -203,7 +218,11 @@ echo ""
 ####################
 
 ## I haven't decided what to do with IP Lists yet, so this will skip them after mirroring
-if [[ $f == $BIPPARSELIST ]] then FILESIZEZERO=true fi
+if
+[[ $f == $BIPPARSELIST ]]
+then
+FILESIZEZERO=true
+fi
 
 ## Comments #'s and !'s, also empty lines
 PARSECOMMENT="Removing Lines with Comments or Empty."
@@ -216,6 +235,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -232,7 +253,11 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
-if [[ "$FETCHFILESIZE" -eq 0 ]] then FILESIZEZERO=true fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 
 ## Invalid Characters
 ## FQDN's  can only have . _ and -
@@ -247,6 +272,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -263,7 +290,11 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
-if [[ "$FETCHFILESIZE" -eq 0 ]] then FILESIZEZERO=true fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 
 #####################################################################
 ## Perl Parser
@@ -279,6 +310,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -295,7 +328,11 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
-if [[ "$FETCHFILESIZE" -eq 0 ]] then FILESIZEZERO=true fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 
 #####################################################################
 
@@ -310,6 +347,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -326,7 +365,11 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
-if [[ "$FETCHFILESIZE" -eq 0 ]] then FILESIZEZERO=true fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 
 ## Remove IP addresses
 PARSECOMMENT="Removing IP Addresses."
@@ -339,6 +382,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -355,7 +400,11 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
-if [[ "$FETCHFILESIZE" -eq 0 ]] then FILESIZEZERO=true fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 
 ## Replace Spaces then Remove Empty Lines
 PARSECOMMENT="Replacing Spaces with NewLines then Removing Empty Lines."
@@ -368,6 +417,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -402,6 +453,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -438,6 +491,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -471,6 +526,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -504,6 +561,8 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
+else
+:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
