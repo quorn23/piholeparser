@@ -57,38 +57,38 @@ if
 [[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
-sudo wget -q -O $BTEMPFILE $source
-sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo touch $BORIGINALFILETEMP
-sudo rm $BTEMPFILE
+wget -q -O $BTEMPFILE $source
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+touch $BORIGINALFILETEMP
+rm $BTEMPFILE
 elif
 [[ -z $SOURCEIP ]]
 then
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
-sudo echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo wget -q -O $BTEMPFILE $MIRROREDFILEDL
-sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm $BTEMPFILE
+echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+wget -q -O $BTEMPFILE $MIRROREDFILEDL
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $BTEMPFILE
 elif
 [[ $source == *.7z && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching 7zip List from $UPCHECK located at the IP of "$SOURCEIP"."
-sudo wget -q -O $COMPRESSEDTEMPSEVEN $source
-sudo 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
-sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm $COMPRESSEDTEMPSEVEN
+wget -q -O $COMPRESSEDTEMPSEVEN $source
+7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.tar.gz && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching Tar List from $UPCHECK located at the IP of "$SOURCEIP"."
-sudo wget -q -O $COMPRESSEDTEMPTAR $source
+wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
-sudo mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
-sudo cat $BTEMPFILE >> $BORIGINALFILETEMP
-sudo rm $COMPRESSEDTEMPTAR
+mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $COMPRESSEDTEMPTAR
 else
 printf "$red"    "Somehow All Download Variables Were Missed."
-sudo echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Check that there was a file downloaded
@@ -100,7 +100,7 @@ then
 printf "$green"    "Download Successful."
 else
 printf "$red"    "Download Failed."
-sudo touch $BORIGINALFILETEMP
+touch $BORIGINALFILETEMP
 fi
 echo ""
 
@@ -121,7 +121,7 @@ if
 [[ -n $FILESIZEZERO && $f == $BDEADPARSELIST ]]
 then
 printf "$red"     "$BASEFILENAME List is in DeadList folder, but the link is active."
-sudo echo "* $BASEFILENAME List is in DeadList folder, but the link is active. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME List is in DeadList folder, but the link is active. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ####################
@@ -142,7 +142,7 @@ then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
 printf "$red"     "$BASEFILENAME List Was An Empty File After "$PARSECOMMENT"."
-sudo echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -152,9 +152,9 @@ fi
 echo ""
 
 ## Duplicate the downloaded file for the next steps
-sudo cp $BORIGINALFILETEMP $BTEMPFILE
-sudo cp $BORIGINALFILETEMP $BFILETEMP
-sudo rm $BORIGINALFILETEMP
+cp $BORIGINALFILETEMP $BTEMPFILE
+cp $BORIGINALFILETEMP $BFILETEMP
+rm $BORIGINALFILETEMP
 
 
 ####################
@@ -168,7 +168,7 @@ if
 [[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
 then
 printf "$green"  "Old Mirror File removed"
-sudo rm $MIRROREDFILE
+rm $MIRROREDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
@@ -177,20 +177,20 @@ if
 [[ -n $FILESIZEZERO ]]
 then
 printf "$red"     "Not Creating Mirror File. Nothing To Create!"
-sudo rm $BTEMPFILE
+rm $BTEMPFILE
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]]
 then
 printf "$red"     "Mirror File Too Large For Github. Deleting."
-sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $BTEMPFILE
+echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $BTEMPFILE
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
 then
 printf "$green"  "Creating Mirror of Unparsed File."
-sudo mv $BTEMPFILE $MIRROREDFILE
+mv $BTEMPFILE $MIRROREDFILE
 else
-sudo rm $BTEMPFILE
+rm $BTEMPFILE
 fi
 echo ""
 
@@ -211,12 +211,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' > $BTEMPFILE
-#sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' < $BFILETEMP > $BTEMPFILE
+cat $BFILETEMP | sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -249,12 +248,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d' > $BTEMPFILE
-#sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d' < $BFILETEMP > $BTEMPFILE
+cat $BFILETEMP | sed '/[,]/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[#]/d; /[!]/d; /[@]/d; /[~]/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -288,11 +286,11 @@ if
 [[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
+perl /etc/piholeparser/scripts/parser.pl $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -325,11 +323,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat -s $BFILETEMP | sed 's/^||//; /[|]/d' | cut -d'^' -f-1 > $BTEMPFILE
+cat -s $BFILETEMP | sed 's/^||//; /[|]/d' | cut -d'^' -f-1 > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -360,12 +358,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' > $BTEMPFILE
-#sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' < $BFILETEMP > $BTEMPFILE
+cat $BFILETEMP | sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -396,12 +393,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed 's/\s\+/\n/g; /^$/d' > $BTEMPFILE
-#sed 's/\s\+/\n/g; /^$/d' < $BFILETEMP > $BTEMPFILE
+cat $BFILETEMP | sed 's/\s\+/\n/g; /^$/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -432,12 +428,12 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d' > $BTEMPFILE
+cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d' > $BTEMPFILE
 #sed '/[a-z]/!d; /[.]/!d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -469,13 +465,13 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed '/^[.]/d; /[.]$/d' | grep -v '\.$' | grep -v '\^.' > $BTEMPFILE
+cat $BFILETEMP | sed '/^[.]/d; /[.]$/d' | grep -v '\.$' | grep -v '\^.' > $BTEMPFILE
 #sed '/^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 #sed '/^[.],/d; /^[.]/d; /[.]$/d' < $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -506,13 +502,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat $BFILETEMP | sed '/gif$/d; /htm$/d; /html$/d; /php$/d; /png$/d; /swf$/d; /jpg$/d; /cgi$/d; /js$/d' > $BTEMPFILE
-#sudo sed '/gif$/d; /htm$/d; /html$/d; /php$/d; /png$/d; /swf$/d; /jpg$/d; /cgi$/d; /js$/d' < $BFILETEMP > $BTEMPFILE
-#sudo sed '/[.gif]$/d; /[.htm]$/d; /[.html]$/d; /[.php]$/d; /[.png]$/d; /[.swf]$/d; /[.jpg]$/d; /[.cgi]$/d; /[.js]$/d' < $BFILETEMP > $BTEMPFILE
+cat $BFILETEMP | sed '/gif$/d; /htm$/d; /html$/d; /php$/d; /png$/d; /swf$/d; /jpg$/d; /cgi$/d; /js$/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -543,11 +537,11 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-sudo cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
+cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-sudo mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
@@ -573,7 +567,7 @@ FILESIZEZERO=true
 fi
 
 ## Prepare for next step
-sudo mv $BFILETEMP $BTEMPFILE
+mv $BFILETEMP $BTEMPFILE
 
 ####################
 ## Complete Lists ##
@@ -586,7 +580,7 @@ if
 [[ -z $FILESIZEZERO && -f $PARSEDFILE ]]
 then
 printf "$green"  "Old Parsed File removed"
-sudo rm $PARSEDFILE
+rm $PARSEDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
@@ -595,21 +589,21 @@ if
 [[ -n $FILESIZEZERO ]]
 then
 printf "$red"     "Not Creating Parsed File. Nothing To Create!"
-sudo rm $BTEMPFILE
+rm $BTEMPFILE
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-sudo echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to push to github. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
-sudo rm $BTEMPFILE
+echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to push to github. $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $BTEMPFILE
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
 then
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
 printf "$green"  "Parsed File Completed Succesfully."
-sudo mv $BTEMPFILE $PARSEDFILE
+mv $BTEMPFILE $PARSEDFILE
 else
-sudo rm $BTEMPFILE
+rm $BTEMPFILE
 fi
 echo ""
 printf "$orange" "___________________________________________________________"
