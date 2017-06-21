@@ -17,8 +17,8 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At 1498063539
-* Script Ended At 1498066575
+* Script Started At 1498076753
+* Script Ended At 1498079414
 * 
 * [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog)
 
