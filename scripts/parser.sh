@@ -128,13 +128,13 @@ fi
 
 ## This should let me know if a document is a bad link
 if
-[[ -n $FILESIZEZERO && grep -q "\<?php" "$BORIGINALFILETEMP" ]]
+[[ -n $FILESIZEZERO && grep -q "?php" "$BORIGINALFILETEMP" ]]
 then
 printf "$red"     "$BASEFILENAME List is a bad link. PHP detected."
 echo "* $BASEFILENAME is a bad link. PHP detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
 FILESIZEZERO=true
 elif
-[[ -n $FILESIZEZERO && grep -q "\<!DOCTYPE html>" "$BORIGINALFILETEMP" ]]
+[[ -n $FILESIZEZERO && grep -q "DOCTYPE html" "$BORIGINALFILETEMP" ]]
 then
 printf "$red"     "$BASEFILENAME List is a bad link. HTML detected."
 echo "* $BASEFILENAME is a bad link. HTML detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
