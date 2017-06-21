@@ -15,7 +15,7 @@ which whiptail >/dev/null;
 then
 :
 else
-sudo apt-get install -y whiptail
+apt-get install -y whiptail
 fi }
 
 ## Check if already there
@@ -25,12 +25,9 @@ then
 { if
 (whiptail --title "piholeparser" --yes-button "Remove beore install" --no-button "Abort" --yesno "piholeparser is already installed?" 10 80) 
 then
-sudo rm -r /etc/piholeparser
-sudo rm /etc/piholeparser.var
-sudo rm /etc/runpiholeparser.sh
-sudo rm /etc/piholeparserlocal.sh
-sudo rm /etc/piholeparsergithub.sh
-sudo rm /etc/updaterunpiholeparser.sh
+rm -r /etc/piholeparser
+rm /etc/piholeparser.var
+rm /etc/updaterunpiholeparser.sh
 crontab -l | grep -v 'sudo bash /etc/updaterunpiholeparser.sh'  | crontab -
 else
 exit
@@ -41,9 +38,9 @@ fi }
 { if
 (whiptail --title "piholeparser" --yes-button "yes" --no-button "no" --yesno "Do You want to install piholeparser?" 10 80) 
 then
-sudo git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
-sudo cp /etc/piholeparser/scripts/updaterunpiholeparser.sh /etc/updaterunpiholeparser.sh
-sudo cp /etc/piholeparser/scriptvars/piholeparser.var /etc/piholeparser.var
+git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
+cp /etc/piholeparser/scripts/updaterunpiholeparser.sh /etc/updaterunpiholeparser.sh
+cp /etc/piholeparser/scriptvars/piholeparser.var /etc/piholeparser.var
 (crontab -l ; echo "20 0 * * * sudo bash /etc/updaterunpiholeparser.sh") | crontab -
 else
 exit
@@ -53,13 +50,13 @@ fi }
 { if 
 (whiptail --title "piholeparser" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What Version of piholeparser to install?" 10 80) 
 then
-sudo echo "version=local" | sudo tee --append /etc/piholeparser.var
+echo "version=local" | tee --append /etc/piholeparser.var
 else
-sudo echo "version=github" | sudo tee --append /etc/piholeparser.var
+echo "version=github" | tee --append /etc/piholeparser.var
 GITHUBUSERNAME=$(whiptail --inputbox "Github Username" 10 80 "" 3>&1 1>&2 2>&3)
 GITHUBPASSWORD=$(whiptail --inputbox "Github Password" 10 80 "" 3>&1 1>&2 2>&3)
 GITHUBEMAIL=$(whiptail --inputbox "Github Email Address" 10 80 "" 3>&1 1>&2 2>&3)
-sudo echo "GITHUBUSERNAME="$GITHUBUSERNAME"" | sudo tee --append /etc/piholeparser.var
-sudo echo "GITHUBPASSWORD="$GITHUBPASSWORD"" | sudo tee --append /etc/piholeparser.var
-sudo echo "GITHUBEMAIL="$GITHUBEMAIL"" | sudo tee --append /etc/piholeparser.var
+echo "GITHUBUSERNAME="$GITHUBUSERNAME"" | tee --append /etc/piholeparser.var
+echo "GITHUBPASSWORD="$GITHUBPASSWORD"" | tee --append /etc/piholeparser.var
+echo "GITHUBEMAIL="$GITHUBEMAIL"" | tee --append /etc/piholeparser.var
 fi }
