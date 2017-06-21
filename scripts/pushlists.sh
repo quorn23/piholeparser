@@ -10,10 +10,10 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 then
 printf "$green"   "Pushing Lists to Github"
 timestamp=$(echo `date`)
-sudo git -C $REPODIR remote set-url origin $GITWHERETOPUSH
-sudo git -C $REPODIR add .
-sudo git -C $REPODIR commit -m "Update lists $timestamp"
-sudo git -C $REPODIR push -u origin master
+git -C $REPODIR remote set-url origin $GITWHERETOPUSH
+git -C $REPODIR add .
+git -C $REPODIR commit -m "Update lists $timestamp"
+git -C $REPODIR push -u origin master
 elif
 [ "$version" = "local" ]
 then
@@ -26,10 +26,10 @@ timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
-sudo echo "* $WHATITIS Already there no need to mkdir. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* $WHATITIS Already there no need to mkdir. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-sudo mkdir $CHECKME
-sudo echo "* $WHATITIS Created. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+mkdir $CHECKME
+echo "* $WHATITIS Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Locally Hosted Biglist"
@@ -38,11 +38,11 @@ timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
 then
-sudo rm $CHECKME
-sudo echo "* $WHATITIS Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+rm $CHECKME
+echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-sudo echo "* $WHATITIS Not Removed. $timestamp" | sudo tee --append $RECENTRUN &>/dev/null
+echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Copy it over
-sudo cp -p $BIGAPL $BIGAPLLOCALHOST
+cp -p $BIGAPL $BIGAPLLOCALHOST
