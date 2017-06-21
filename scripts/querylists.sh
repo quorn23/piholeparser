@@ -10,7 +10,7 @@ then
 :
 else
 printf "$yellow"  "Installing $WHATITIS"
-sudo apt-get install -y $WHATPACKAGE
+apt-get install -y $WHATPACKAGE
 fi
 
 LISTLOCATION=/etc/piholeparserdev/parsed/*.txt
