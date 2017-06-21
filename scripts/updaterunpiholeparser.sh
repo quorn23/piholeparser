@@ -11,7 +11,7 @@ source /etc/piholeparser/scriptvars/staticvariables.var
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Updating Repository."
-sudo git -C $REPODIR pull
+git -C $REPODIR pull
 printf "$magenta" "___________________________________________________________"
 echo ""
 
