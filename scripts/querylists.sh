@@ -25,7 +25,7 @@ if
 grep -q $DOMAINTOLOOKFOR "$f"
 then
 echo "Found In "$BASEFILENAME". Matching Included:"
-echo "                    `grep $DOMAINTOLOOKFOR $f`"
+echo "`grep $DOMAINTOLOOKFOR $f`"
 echo ""
 else
 :
