@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: Q8Lf8S2OzynT4hmpboWfgg
-! Version: 201706211700
+! Checksum: a5MCLSUsEDut+I2ViDyicw
+! Version: 201706212000
 ! Title: RU AdList
-! Last modified: 21 Jun 2017 17:00 UTC
+! Last modified: 21 Jun 2017 20:00 UTC
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
 ! Дополнительная региональная подписка RU AdList к подписке EasyList
@@ -8372,7 +8372,7 @@ ant-top.ru##.container-fluid > .row:nth-of-type(2)
 mmotop.ru##.container-links
 novostioede.ru##.contdi
 novostioede.ru##.contdiv
-auto.ru,fb.ru##.content /deep/ div[style="display:block;visibility:visible"]
+auto.ru##.content /deep/ div[style="display:block;visibility:visible"]
 mos.news##.content > .comment-block[style^="margin"]
 allhit.org##.content > .inner > div[align="center"]
 bragazeta.ru##.content > [class^="banner"]
@@ -8380,7 +8380,7 @@ riperam.org##.content > a[href][target="_blank"]
 lostpic.net##.content > a[target="_blank"]
 tyurem.net##.content > noindex > :not([href*="tyurem.net"])
 torrentszona.com##.content > p + noindex
-auto.ru,fb.ru##.content div[style="display:block;visibility:visible"]
+auto.ru##.content div[style="display:block;visibility:visible"]
 otzyv.ru##.content table[height="90"]
 3dnews.ru##.content-ads
 filmix.me##.content-avd
@@ -8573,6 +8573,7 @@ video.oboz.ua##.global_overheader
 investoday.ru##.globalmesswarnwrap
 diabethelp.org##.gmp_widget
 oren.ru##.gofollow
+djekxa.ru##.goods ~ h3,.goods ~ h4
 yakako.ru##.goods-blockh
 online.ua##.goods-header-promo
 itc.ua##.google-730
@@ -8988,6 +8989,7 @@ mmotop.ru##.page-header > .left
 mmotop.ru##.page-header > .right
 afisha.ru##.page_banner_top_container
 afisha.ru##.page_block_content_adv-header
+djekxa.ru##.page_index.content > p > a[href][target="_blank"] > img
 filmpro.ru##.page_lcol > div[style]
 filmpro.ru##.page_rcol > div[style*="background:#fff;"]:not(:last-child)
 filmpro.ru##.page_rcol > div[style*="height:400px;"]
@@ -10454,7 +10456,7 @@ postal.ninja##aside.tm-sidebar-a [class*="block"]
 bigcinema.toa-block
 kino-zal.tv##blink
 kakprosto.ru##body /deep/ .billboard__slot
-razlozhi.ru##body /deep/ div[style="display:block;visibility:visible"]
+fb.ru,razlozhi.ru##body /deep/ div[style="display:block;visibility:visible"]
 dynamo.kiev.ua,gagadget.com,vesti-ukr.com##body /deep/ iframe[bb]
 razlozhi.ru##body /deep/ span[class][onclick^="return"]
 kissfm.ua##body > #background
@@ -10568,7 +10570,7 @@ forum.ru-board.com##body > table[cellpadding="2"] td.sh1[align="left"]:first-chi
 chipfind.ru##body > table[height="80"]
 www.google.com,www.google.ru##body > table[style="border: 1px solid #369"]
 christianka.bratstvo.org##body > table[width="99%"] + p[align="center"]
-razlozhi.ru##body div[style="display:block;visibility:visible"]
+fb.ru,razlozhi.ru##body div[style="display:block;visibility:visible"]
 all-tor.net,anti-block.org,bit-tor.org,fast-bit.org,fast-tor.net,film-tor.org,free-tor.org,freedom-tor.org,hd-bit.org,mega-tor.org,mirror-rutor.org,new-ru.org,new-tor.org,no-block.org,open-tor.org,proxy-rutor.org,ru-free-tor.org,ru-tor.net,rus-tor.com,rutor.info,rutor.is,rutor.org,super-tor.net,top-tor.org,tor-bit.net,tor-ru.net,tor-ru.org,vip-tor.org,x-bit.net,zerkalo-rutor.org##body object
 razlozhi.ru##body span[class][onclick^="return"]
 voffka.com##br + noindex
@@ -14125,6 +14127,8 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||ya62.ru/images/flash/
 ||yandex.net^*/superbanner_$domain=kinopoisk.ru
 ||yandex51.ru/joketsuperstar$script
+||yandexadexchange.net/match_r0.html?openedFor=OO_Dir
+||yandexadexchange.net/match_r0.html?openedFor=OO_RTB
 ||yangteacher.ru/s.png
 ||yangteacher.ru^*.js|$script
 ||yapantiabp.ru/player/
@@ -15177,9 +15181,15 @@ yandex.by,yandex.kz,yandex.ru,yandex.ua##div[data-block="banner-view"]
 yandex.ru##ymaps > div[class^="search-placemark-layout-connect_advert"]
 yandex.ru##ymaps > div[class^="search-placemark-layout-connect_special"]
 ! Погода-Yandex
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.clearfix.content__top > .navigation-city_meteum > .title:not(h1)
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.clearfix.content__top > .navigation-city_meteum > .title:not(h1) ~ *
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.clearfix.content__top > :not(.current-weather):not(.navigation-city):not(.graph-month)
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.clearfix.content__top iframe
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.clearfix.content__top ~ div div[style=""]
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.content div[class*="info_pos_"] > .info__map > .teaser-fox:not([class="teaser-fox"])
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.content div[class*="info_pos_"] > .info__map > .teaser-fox:not([class="teaser-fox"]) ~ *
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.forecast-detailed > [class*="forecast-detailed"] + style[rel="stylesheet"] + div[class]:not([id])
+yandex.by,yandex.kz,yandex.ru,yandex.ua##.forecast-detailed > [class*="forecast-detailed"] style[rel="stylesheet"] + div[class]:not([id])
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.info_pos_1.info > :not(.info__map):not(.info__more)
 /pogoda/cry/$subdocument,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua
 yandex.by,yandex.kz,yandex.ru,yandex.ua##body[data-bem*="/pogoda/"] /deep/ div[style="display:block;visibility:visible"]
