@@ -1,6 +1,5 @@
 #!/bin/bash
 ## This is the Parsing Process
-## For Lists that barely need it
 
 ## Variables
 source /etc/piholeparser/scriptvars/staticvariables.var
