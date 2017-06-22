@@ -3,8 +3,8 @@
 
 ## Variables
 source /etc/piholeparser/scriptvars/staticvariables.var
-
-STARTTIME="Script Started At $(date +"%s")"
+STARTTIME="Script Started At$(echo `date`)"
+STARTTIMESTAMP=$(date +"%s")
 
 ####################
 ## Recent Run Log ##
@@ -141,6 +141,11 @@ echo ""
 ## Readme.md      ##
 ####################
 
+ENDTIME="Script Started At$(echo `date`)"
+ENDTIMESTAMP=$(date +"%s")
+DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
+DIFFTIME=`expr $DIFFTIMESEC / 60`
+TOTALRUNTIME="Script Took $DIFFTIME minutes To Filter Lists."
 SCRIPTTEXT="Updated Main README.md."
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -149,10 +154,7 @@ echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 rm $MAINREADME
-ENDTIME="Script Ended At $(date +"%s")"
-DIFFTIME=$(($ENDTIME-$STARTTIME))
-TOTALRUNTIME="echo " Script took $(($DIFFTIME / 60)) minutes and $(($DIFFTIME % 60)) seconds To Filter Lists.""
-sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALRUNTIME/$TOTALRUNTIME/" $MAINREADMEDEFAULT > $MAINREADME
+sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALELAPSEDTIME/$TOTALRUNTIME/" $MAINREADMEDEFAULT > $MAINREADME
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
