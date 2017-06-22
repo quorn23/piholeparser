@@ -245,8 +245,8 @@ then
 FILESIZEZERO=true
 fi
 
-## Comments #'s and !'s, also empty space
-PARSECOMMENT="Removing Lines With Comments And Empty Space."
+## Comments #'s and !'s
+PARSECOMMENT="Removing Lines With Comments."
 if
 [[ -z $FILESIZEZERO ]]
 then
@@ -316,7 +316,7 @@ FILESIZEZERO=true
 fi
 
 ## Empty Space
-PARSECOMMENT="Removing Lines Empty Space."
+PARSECOMMENT="Removing Lines With Empty Space."
 if
 [[ -z $FILESIZEZERO ]]
 then
