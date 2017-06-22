@@ -59,7 +59,7 @@ echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
 HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
-HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script.")
+HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script."
 echo "$HOWMANYSOURCE"
 echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
 sed '/^$/d' $TEMPFILE > $FILETEMP
