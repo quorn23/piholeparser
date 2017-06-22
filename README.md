@@ -17,10 +17,10 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Thu 22 Jun 14:15:18 EDT 2017
-* Script Ended At Thu 22 Jun 15:01:46 EDT 2017
-* Script Took 46 minutes To Filter 	344 Lists.
-* The Edited ALLPARSEDLIST is 65 MB
+* Script Started At Thu 22 Jun 16:20:21 EDT 2017
+* Script Ended At Thu 22 Jun 17:01:43 EDT 2017
+* Script Took 41 minutes To Filter 	344 Lists.
+* The Edited ALLPARSEDLIST is 66 MB and contains 	3079602 Domains.
 * [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog)
 
 ## Individual Lists
