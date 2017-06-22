@@ -15,19 +15,23 @@ do
 printf "$lightblue"    "___________________________________________________________"
 echo ""
 
+## Declare File Name
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+
 ## Amount of sources greater than one?
 timestamp=$(echo `date`)
 HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 if
 [[ "$HOWMANYLINES" -gt 1 ]]
 then
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
 printf "$yellow"    "$BASEFILENAME Has $HOWMANYLINES Sources."
 else
 printf "$yellow"    "$BASEFILENAME Has Only One Source."
 fi
 
+printf "$green"    "Processing $BASEFILENAME List."
+echo "" 
 
 ## Process Every source within the .lst from above
 for source in `cat $f`;
@@ -36,8 +40,6 @@ do
 ## These Variables are to help with Filenaming
 source /etc/piholeparser/scriptvars/dynamicvariables.var
 
-printf "$green"    "Processing $BASEFILENAME List."
-echo "" 
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
 echo "" 
