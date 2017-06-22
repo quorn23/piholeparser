@@ -251,8 +251,77 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/[#]/d; /[!]/d; /^$/d; / /d' > $BTEMPFILE
-#cat $BFILETEMP | sed '/^\s*#/d; s/[#]/\'$'\n/g; /[#]/d; /[!]/d; /^$/d; / /d' > $BTEMPFILE
+cat $BFILETEMP | sed '/[#]/d; /[!]/d' > $BTEMPFILE
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+mv $BTEMPFILE $BFILETEMP
+else
+:
+fi
+if
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
+printf "$yellow"  "$ENDCOMMENT"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
+
+## Remove IP addresses
+PARSECOMMENT="Removing IP Addresses."
+if
+[[ -z $FILESIZEZERO ]]
+then
+printf "$cyan"  "$PARSECOMMENT"
+cat $BFILETEMP | sed 's/^PRIMARY [ \t]*//; s/^localhost [ \t]*//; s/blockeddomain.hosts [ \t]*//; s/^0.0.0.0 [ \t]*//; s/^127.0.0.1 [ \t]*//; s/^::1 [ \t]*//' > $BTEMPFILE
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+mv $BTEMPFILE $BFILETEMP
+else
+:
+fi
+if
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
+printf "$yellow"  "$ENDCOMMENT"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
+
+## Empty Space
+PARSECOMMENT="Removing Lines Empty Space."
+if
+[[ -z $FILESIZEZERO ]]
+then
+printf "$cyan"  "$PARSECOMMENT"
+cat $BFILETEMP | sed '/^$/d; / /d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -404,41 +473,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
-## Remove IP addresses
-PARSECOMMENT="Removing IP Addresses."
-if
-[[ -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed 's/^PRIMARY[ \t]*//; s/^localhost[ \t]*//; s/blockeddomain.hosts[ \t]*//; s/^0.0.0.0[ \t]*//; s/^127.0.0.1[ \t]*//; s/^::1[ \t]*//' > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
 else
 :
 fi
