@@ -15,6 +15,19 @@ do
 printf "$lightblue"    "___________________________________________________________"
 echo ""
 
+## Amount of sources greater than one?
+timestamp=$(echo `date`)
+HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
+if
+[[ "$HOWMANYLINES" -gt 1 ]]
+then
+echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"    "$BASEFILENAME Has $HOWMANYLINES Sources."
+else
+printf "$yellow"    "$BASEFILENAME Has Only One Source."
+fi
+
+
 ## Process Every source within the .lst from above
 for source in `cat $f`;
 do
@@ -22,7 +35,7 @@ do
 ## These Variables are to help with Filenaming
 source /etc/piholeparser/scriptvars/dynamicvariables.var
 
-printf "$green"    "Processing $BASEFILENAME list."
+printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
@@ -53,6 +66,7 @@ fi
 echo ""
 
 ## Logically download based on the Upcheck, and file type
+timestamp=$(echo `date`)
 if
 [[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
 then
@@ -72,7 +86,7 @@ rm $BTEMPFILE
 elif
 [[ $source == *.7z && -n $SOURCEIP ]]
 then
-printf "$cyan"    "Fetching 7zip List from $UPCHECK located at the IP of "$SOURCEIP"."
+printf "$cyan"    "Fetching 7zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPSEVEN $source
 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
@@ -80,7 +94,7 @@ rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.tar.gz && -n $SOURCEIP ]]
 then
-printf "$cyan"    "Fetching Tar List from $UPCHECK located at the IP of "$SOURCEIP"."
+printf "$cyan"    "Fetching Tar List From $UPCHECK Located At The IP Of "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
@@ -117,27 +131,29 @@ done
 
 ## If lst file is in Dead Folder, it means that I was unable to access it at some point
 ## This checks to see if the list is back online
+timestamp=$(echo `date`)
 if
 [[ -n $FILESIZEZERO && $f == $BDEADPARSELIST ]]
 then
-printf "$red"     "$BASEFILENAME List is in DeadList folder, but the link is active."
-echo "* $BASEFILENAME List is in DeadList folder, but the link is active. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
+echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 :
 fi
 
 ## This should let me know if a document is a bad link
+timestamp=$(echo `date`)
 if
 [[ -n $FILESIZEZERO && `grep -q "?php" "$BORIGINALFILETEMP"` ]]
 then
 printf "$red"     "$BASEFILENAME List is a bad link. PHP detected."
-echo "* $BASEFILENAME is a bad link. PHP detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME Is A Bad Link. PHP Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
 FILESIZEZERO=true
 elif
 [[ -n $FILESIZEZERO && `grep -q "DOCTYPE html" "$BORIGINALFILETEMP"` ]]
 then
-printf "$red"     "$BASEFILENAME List is a bad link. HTML detected."
-echo "* $BASEFILENAME is a bad link. HTML detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$BASEFILENAME Is A Bad Link. HTML Detected."
+echo "* $BASEFILENAME Is A Bad Link. HTML Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
 FILESIZEZERO=true
 else
 :
@@ -154,6 +170,7 @@ printf "$cyan"    "Verifying $BASEFILENAME File Size."
 
 PARSECOMMENT="Download."
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
 [ "$FETCHFILESIZE" -eq 0 ]
@@ -161,11 +178,11 @@ then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
 printf "$red"     "$BASEFILENAME List Was An Empty File After "$PARSECOMMENT"."
-echo "* $BASEFILENAME list was an empty file upon download. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$yellow"  "$ENDCOMMENT"
 fi
 echo ""
@@ -186,11 +203,12 @@ printf "$cyan"   "Attempting Creation of Mirror File."
 if 
 [[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
 then
-printf "$green"  "Old Mirror File removed"
+printf "$green"  "Old Mirror File Removed"
 rm $MIRROREDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
 [[ -n $FILESIZEZERO ]]
@@ -198,15 +216,15 @@ then
 printf "$red"     "Not Creating Mirror File. Nothing To Create!"
 rm $BTEMPFILE
 elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Mirror File Too Large For Github. Deleting."
-echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to mirror on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to mirror on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BTEMPFILE
 elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
-printf "$green"  "Creating Mirror of Unparsed File."
+printf "$green"  "Creating Mirror Of Unparsed File."
 mv $BTEMPFILE $MIRROREDFILE
 else
 rm $BTEMPFILE
@@ -225,7 +243,7 @@ FILESIZEZERO=true
 fi
 
 ## Comments #'s and !'s, also empty space
-PARSECOMMENT="Removing Lines with Comments and Empty Space."
+PARSECOMMENT="Removing Lines With Comments And Empty Space."
 if
 [[ -z $FILESIZEZERO ]]
 then
@@ -263,7 +281,7 @@ fi
 ## Invalid Characters
 ## FQDN's  can only have . _ and -
 ## apparently you can have an emoji domain name?
-PARSECOMMENT="Removing Invalid FQDN characters."
+PARSECOMMENT="Removing Invalid FQDN Characters."
 if
 [[ -z $FILESIZEZERO ]]
 then
@@ -301,7 +319,7 @@ fi
 ## Perl Parser
 ## We skip this if the file is in the "heavy" directory
 ## I hope to remove this soon
-PARSECOMMENT="Cutting Lists with the Perl Parser."
+PARSECOMMENT="Cutting Lists With The Perl Parser."
 if
 [[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
 then
@@ -443,7 +461,7 @@ FILESIZEZERO=true
 fi
 
 ## Domain Requirements,, a period and a letter
-PARSECOMMENT="Checking for FQDN Requirements."
+PARSECOMMENT="Checking For FQDN Requirements."
 if
 [[ -z $FILESIZEZERO ]]
 then
@@ -479,7 +497,7 @@ fi
 
 ## Periods at begining of lines
 ## This should fix Wildcarding
-PARSECOMMENT="Removing Lines With a Period at the Start."
+PARSECOMMENT="Removing Lines With A Period At The Start."
 if
 [[ -z $FILESIZEZERO ]]
 then
@@ -590,17 +608,18 @@ mv $BFILETEMP $BTEMPFILE
 ## Complete Lists ##
 #################### 
 
-printf "$cyan"   "Attempting Creation of Parsed List."
+printf "$cyan"   "Attempting Creation Of Parsed List."
 
 ## this helps with replacing a parsed file
 if 
 [[ -z $FILESIZEZERO && -f $PARSEDFILE ]]
 then
-printf "$green"  "Old Parsed File removed"
+printf "$green"  "Old Parsed File Removed"
 rm $PARSEDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
 [[ -n $FILESIZEZERO ]]
@@ -608,15 +627,15 @@ then
 printf "$red"     "Not Creating Parsed File. Nothing To Create!"
 rm $BTEMPFILE
 elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* $BASEFILENAME list was $FETCHFILESIZE bytes, and too large to push to github. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to push to github. $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BTEMPFILE
 elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZE" -lt "$GITHUBLIMIT" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
-printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZE bytes."
+printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$green"  "Parsed File Completed Succesfully."
 mv $BTEMPFILE $PARSEDFILE
 else
