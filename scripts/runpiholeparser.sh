@@ -58,9 +58,10 @@ echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
-HOWMANYLISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lists to be processed by the script.")
-echo "$HOWMANYLISTS"
-echo "* $HOWMANYLISTS $timestamp" | tee --append $RECENTRUN &>/dev/null
+HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
+HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script.")
+echo "$HOWMANYSOURCE"
+echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
 sed '/^$/d' $TEMPFILE > $FILETEMP
 mv $FILETEMP $BIGAPLSOURCE
 bash $DELETETEMPFILE
@@ -166,7 +167,7 @@ ENDTIME="Script Ended At $(echo `date`)"
 ENDTIMESTAMP=$(date +"%s")
 DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
 DIFFTIME=`expr $DIFFTIMESEC / 60`
-TOTALRUNTIME="Script Took $DIFFTIME minutes To Filter Lists."
+TOTALRUNTIME="Script Took $DIFFTIME minutes To Filter $HOWMANYSOURCELISTS Lists."
 SCRIPTTEXT="Updated Main README.md."
 printf "$blue"    "___________________________________________________________"
 echo ""
