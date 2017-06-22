@@ -18,6 +18,9 @@ echo ""
 ## Declare File Name
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
+printf "$green"    "Processing $BASEFILENAME List."
+echo "" 
+
 ## Amount of sources greater than one?
 timestamp=$(echo `date`)
 HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
@@ -29,9 +32,6 @@ printf "$yellow"    "$BASEFILENAME Has $HOWMANYLINES Sources."
 else
 printf "$yellow"    "$BASEFILENAME Has Only One Source."
 fi
-
-printf "$green"    "Processing $BASEFILENAME List."
-echo "" 
 
 ## Process Every source within the .lst from above
 for source in `cat $f`;
