@@ -3,7 +3,7 @@
 
 ## Variables
 source /etc/piholeparser/scriptvars/staticvariables.var
-STARTTIME="Script Started At$(echo `date`)"
+STARTTIME="Script Started At $(echo `date`)"
 STARTTIMESTAMP=$(date +"%s")
 
 ####################
@@ -141,7 +141,7 @@ echo ""
 ## Readme.md      ##
 ####################
 
-ENDTIME="Script Started At$(echo `date`)"
+ENDTIME="Script Ended At $(echo `date`)"
 ENDTIMESTAMP=$(date +"%s")
 DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
 DIFFTIME=`expr $DIFFTIMESEC / 60`
