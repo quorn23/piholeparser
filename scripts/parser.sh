@@ -373,7 +373,7 @@ FILESIZEZERO=true
 fi
 
 ## Content Filtering
-PARSECOMMENT="Removing Lines Content Filtering."
+PARSECOMMENT="Removing Content Filtering Lines."
 if
 [[ -z $FILESIZEZERO ]]
 then
