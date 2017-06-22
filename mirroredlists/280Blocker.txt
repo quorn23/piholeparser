@@ -1,16 +1,21 @@
 [Adblock Plus 2.0]
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
-! Last update 2017/06/21
-##.blocker280-20170621
-##.blocker280-20170618
+! Last update 2017/06/22
+##.blocker280-20170622
 
-!2017/06/21
+!2017/06/22
 ##.bn320x50
+##a[href*="//v-wrd.com"]
+||v-wrd.com
+
+
 !2017/06/18
 !erase whitespace
+
 ~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp##[class^="ad-"]:not(body)
-~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com##[class^="ad_"]:not(body)
+
+~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp##[class^="ad_"]:not(body)
 ~touch.pixiv.net##[class^="ads-"]:not(body)
 ##[class^="ads_"]:not(body)
 ##[id*="-ads-"]:not(body)
@@ -18,9 +23,12 @@
 ~bbc.com##[class*="-ads-"]:not(body)
 
 ~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com##.adsbygoogle:not(body)
-~gmail.com,~mail.google.com,~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp##.ad:not(body)
-~gmail.com,~mail.google.com,~touch.pixiv.net,~thisav.com,~savevideo.me##.ads:not(body)
-~gtoys.blog48.fc2.com,~doujin-free.com,~douga-getter.com###adsense
+
+~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~mail.google.com##.ad:not(body)
+
+~thisav.com,~savevideo.me,~touch.pixiv.net,~gmail.com,~mail.google.com##.ads:not(body)
+
+~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net###adsense
 
 
 ###textAd
@@ -2423,3 +2431,4 @@ nakasoku.blog18.fc2.com##.rss_box
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~world-best-news.doorblog.jp##a[href*="//world-best-news.doorblog.jp/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matometatta-news.net##a[href*="//matometatta-news.net/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~merry-news.com##a[href*="//merry-news.com/"]
+

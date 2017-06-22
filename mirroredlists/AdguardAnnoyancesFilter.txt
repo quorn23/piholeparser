@@ -25,6 +25,10 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3877
 myscore.com.ua###lsid-window-mask
 !
+! https://forum.adguard.com/index.php?threads/22483/
+last.fm##.lazy-recs-bar-full-width-wrapper
+last.fm##.join-cta.link-block
+last.fm##.user-dashboard-banner.link-block
 ! https://forum.adguard.com/index.php?threads/www-theguardian-com.22731/
 theguardian.com##.content__main-column > .contributions__epic
 theguardian.com##.site-message--banner.yellow.site-message--membership-prominent
@@ -32,8 +36,6 @@ theguardian.com##.site-message--banner.yellow.site-message--membership-prominent
 morgenweb.de##.nfy-mobile-sticky-buttons
 ! avinfo.co - browser extension banner
 ||avinfo.co/i/chromavinfo.jpg
-! https://github.com/AdguardTeam/AdguardFilters/issues/5099
-mobil.berliner-zeitung.de##.whatsapp-widget-blz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5132
 snipz.de##.wpb_wrapper > div.sidebar > div.widget_text[id^="text-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5110
@@ -290,6 +292,9 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+schnaeppchenfuchs.com##.sidebar-whatsapp
+mobil.berliner-zeitung.de##.whatsapp-widget-blz
+hulldailymail.co.uk##.iya-test-wrapper
 babycenter.de###welcomeContainer
 babycenter.de###registrationModuleRight
 babycenter.de###registrationModuleBottom
@@ -455,6 +460,7 @@ androidpolice.com##.fc-pinned-message-container
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
+vac-ban.com##[style^="max-width: 728px; height: 90px; overflow: hidden; background-image: url('/img/fallback.png');"]
 delfi.ee###ab--notification-ribbon
 rbc.ru##.checkad_info
 wortwuchs.net##.gridlove-ad
@@ -4769,7 +4775,7 @@ bvb09fans.ru#%#AG_onLoad(function() { document.ondragstart = document.onselectst
 antenasport.eu,bilenlerkabilesi.com,half-musiq.blogspot.com#%#Object.defineProperty(document, 'onmousedown', { get: function() { return; } });
 bigcinema-online.net,bigcinema-tv.club,gidonline-kino.club,kinogo-2017.com,kinogo-720.club,kinogo.club,kinogoonline.club,kinoprofi.su,season-var.net,topcinema.tv,kinogo2.net,kino-kingdom.com,hd-kinogo.co#%#Object.defineProperty(window, 'getSelection', { get: function() { return; } });
 bobfilm.online#%#AG_onLoad(function() { document.body.removeAttribute('oncopy'); });
-bodrumgundem.com,ceplik.com,dijitalx.com,ilife97.com,teknokasif.com,z-news.link,stupdroid.com#%#Object.defineProperty(document, 'oncontextmenu', { get: function() { return; } });
+matematikcifatih.com,bodrumgundem.com,ceplik.com,dijitalx.com,ilife97.com,teknokasif.com,z-news.link,stupdroid.com#%#Object.defineProperty(document, 'oncontextmenu', { get: function() { return; } });
 kinogo-net-2017.ru,cheater-top.ru,discussio.ru,kino-zal.net,tvfru.ru,kinogoonline.club#%#AG_onLoad(function() { document.onselectstart=function(){return true}; document.oncontextmenu=function(){return true}; });
 dijitalx.com#%#Object.defineProperty(window, 'disableEnterKey', { get: function() { return; } });
 f4freesoftware.com#%#Object.defineProperties(document,{oncontextmenu:{set:function(){}},ondragstart:{set:function(){}}});
