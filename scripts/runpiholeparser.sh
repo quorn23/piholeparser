@@ -144,7 +144,8 @@ echo ""
 
 FETCHFILESIZEALL=$(stat -c%s "$BIGAPLE")
 FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
-EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB"
+DOMAINSINALLPARSEDE=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
+EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB and contains $DOMAINSINALLPARSEDE Domains."
 SCRIPTTEXT="Edited ALLPARSEDLIST Result."
 printf "$blue"    "___________________________________________________________"
 echo ""
