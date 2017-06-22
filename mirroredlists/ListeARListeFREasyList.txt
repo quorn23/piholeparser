@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: wGsbBbfCKFGKkYg47qRQLw
-! Version: 201706221711
+! Checksum: 2/IFk5FtAAGmGuNTWXk2Xw
+! Version: 201706221831
 ! Title: Liste AR+Liste FR+EasyList
 ! Abonnements combinés à la Liste AR, la Liste FR et EasyList
-! Dernière modification le 22 Jun 2017 17:11 UTC
+! Dernière modification le 22 Jun 2017 18:31 UTC
 ! Expires: 4 days (fréquence des mises à jour automatiques)
 ! Homepage: https://code.google.com/p/liste-ar-adblock/
 !
@@ -2126,7 +2126,7 @@ soft4sat.net#@#.e3lan
 /a.php?t=*&pgid=*&rebill=
 /a4u_pu.js
 /acad.$script
-/acceptable.*/async|
+/acceptable.*/async|$domain=~millenium.org
 /accrochePub300.
 /acecAdServer.
 /ad-360-280-
@@ -2381,6 +2381,7 @@ soft4sat.net#@#.e3lan
 /apu.php?id=
 /article/ads/*
 /async?*&tid=
+/autopromo.*/async|$domain=~jeuxvideo.com
 /autopromotion.*/async|
 /b/ads/*
 /b728x90a.
@@ -7448,11 +7449,12 @@ $webrtc,domain=9divx.org|akoam.com|bypassed.gold|cocostreaming.com|cpabien.cm|cp
 ||nextwesst.xyz^
 ||nextwest.xyz^
 ! Webediads revolving adservers
-!$script,~third-party,domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|jeuxvideo.com|lestream.fr|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
+!$script,~third-party,domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|jeuxvideo.com|lestream.fr|millenium.org|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
 /acceptable.$domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|jeuxvideo.com|lestream.fr|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
-/autopromo.$domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|lestream.fr|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
+/acceptable.$~script,domain=millenium.org
+/autopromo.$domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|lestream.fr|millenium.org|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
 /autopromo.$~script,domain=jeuxvideo.com
-/autopromotion.$domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|jeuxvideo.com|lestream.fr|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
+/autopromotion.$domain=750g.com|alibabuy.com|allocine.fr|cap-cine.fr|chartsinfrance.net|cotecine.fr|get-the-look.fr|jeuxactu.com|jeuxvideo.com|lestream.fr|millenium.org|musiquemag.com|ozap.com|purebreak.com|purepeople.com|puretrend.com|shopoon.fr|terrafemina.com
 !
 ||a-staticwebedia.com^$third-party
 ||annexere.top^$third-party
@@ -13472,6 +13474,7 @@ msn.com##div[data-aop="stripe.health.ad_ad"]
 msn.com##div[data-aop^="stripe.shopping"]
 msn.com##div[data-module-id*=".shopping."]
 e-monsite.com##div[data-role="sp"]
+e-monsite.com##div[data-role="sp2"]
 allocine.fr##div[data-w="clickCommand"]
 notebookcheck.biz##div[id] + div[class] > img:first-child
 routard.com,sfr.fr##div[id^="A2dEmplacement"]
@@ -14039,8 +14042,8 @@ _blockadblock_
 @@||nouvelle-fiat500.fr/ad-pub.js$script
 @@||pagead2.googlesyndication.com/pagead/$image,domain=annuaire-bleu.net
 @@||pagead2.googlesyndication.com/pagead/expansion_embed.js$domain=universal-soundbank.com
-@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=4downfiles.org|alligatographe.blogspot.fr|cachemoi.com|cuisineactuelle.fr|forum.softmaroc.org|likeup.fr|onvasortir.com|ot-boutique.fr|quebeccoupongratuit.com|slideplayer.fr|sos-lettre.fr|telephoneannuaire.fr|urbeez.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=4downfiles.org|alligatographe.blogspot.fr|bricozone.fr|cachemoi.com|cuisineactuelle.fr|forum.softmaroc.org|leetgamerz.net|likeup.fr|onvasortir.com|quebeccoupongratuit.com|slideplayer.fr|telephoneannuaire.fr|urbeez.com
+@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=4downfiles.org|alligatographe.blogspot.fr|cachemoi.com|cuisineactuelle.fr|forum.softmaroc.org|likeup.fr|ot-boutique.fr|quebeccoupongratuit.com|slideplayer.fr|sos-lettre.fr|telephoneannuaire.fr
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=4downfiles.org|alligatographe.blogspot.fr|bricozone.fr|cachemoi.com|cuisineactuelle.fr|forum.softmaroc.org|leetgamerz.net|likeup.fr|quebeccoupongratuit.com|slideplayer.fr|telephoneannuaire.fr
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=qcm-concours.blogspot.fr
 @@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=ot-boutique.fr|sos-lettre.fr|traductionjeux.com|universal-soundbank.com|zeperfs.com
 @@||pagead2.googlesyndication.com/pub-config/ca-pub-*.js$domain=bricozone.fr
