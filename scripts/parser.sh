@@ -245,13 +245,13 @@ then
 FILESIZEZERO=true
 fi
 
-## Comments #'s and !'s
+## Comments #'s and !'s .'s
 PARSECOMMENT="Removing Lines With Comments."
 if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/[#]/d; /[!]/d' > $BTEMPFILE
+cat $BFILETEMP | sed '/[#]/d; /[!]/d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -433,43 +433,7 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d' > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
-## Periods at begining of lines
-## This should fix Wildcarding
-PARSECOMMENT="Removing Lines With A Period At The Start."
-if
-[[ -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/^[.]/d' | grep -v '\^.' > $BTEMPFILE
+cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
