@@ -152,6 +152,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
+echo "* $EDITEDALLPARSEDSIZEMB" | tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "$EDITEDALLPARSEDSIZEMB"
 bash $DELETETEMPFILE
 echo ""
