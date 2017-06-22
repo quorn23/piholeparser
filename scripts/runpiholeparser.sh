@@ -138,6 +138,27 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ####################
+## ALLPARSEDSIZE  ##
+####################
+
+FETCHFILESIZEALL=$(stat -c%s "$BIGAPLE")
+FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
+EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB"
+SCRIPTTEXT="Edited ALLPARSEDLIST Result."
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+printf "$yellow"   "$EDITEDALLPARSEDSIZEMB"
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+####################
 ## Readme.md      ##
 ####################
 
@@ -154,7 +175,28 @@ echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 rm $MAINREADME
-sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALELAPSEDTIME/$TOTALRUNTIME/" $MAINREADMEDEFAULT > $MAINREADME
+sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALELAPSEDTIME/$TOTALRUNTIME/; s/EDITEDALLPARSEDSIZE/$EDITEDALLPARSEDSIZEMB/" $MAINREADMEDEFAULT > $MAINREADME
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$magenta" "___________________________________________________________"
+echo ""
+
+####################
+## Runtime        ##
+####################
+
+
+SCRIPTTEXT="Total Runtime."
+printf "$blue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+rm $MAINREADME
+printf "$yellow"   "$TOTALRUNTIME"
+echo "* $TOTALRUNTIME" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
