@@ -94,8 +94,8 @@ HOWMANYLINES=$(echo -e "\t`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $WWHITETEMP $WHATLISTTOSORT
-echo "* Processed "$WHITESORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Processed "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ## end of loop
@@ -107,13 +107,15 @@ timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
 HOWMANYLINES=$(echo -e "\t`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
-echo "* "$WHITESORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ###########################
 ## Blacklist sort dedupe ##
 ###########################
+
+echo "## Processing Repo Blacklist." | tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 for f in $BLACKLISTDOMAINSALL
@@ -131,8 +133,8 @@ HOWMANYLINES=$(echo -e "\t`wc -l $BBLACKTEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $BBLACKTEMP $WHATLISTTOSORT
-echo "* Processed "$BLACKSORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Processed "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ## end of loop
@@ -144,8 +146,8 @@ timestamp=$(echo `date`)
 printf "$yellow"  "Processed $BLACKSORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BLACKLISTTEMP
 HOWMANYLINES=$(echo -e "\t`wc -l $BLACKLISTTEMP | cut -d " " -f 1` Lines In File")
-echo "* "$BLACKSORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 
