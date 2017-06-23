@@ -74,8 +74,12 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-## should remove faster than a sed loop
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $BIGAPL > $TEMPFILE
+## Add Blacklist Domains
+cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
+rm $BLACKLISTTEMP
+
+## Remove Whitelist Domains
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP > $TEMPFILE
 rm $WHITELISTTEMP
 
 ## Github has a 100mb limit and empty files are useless
