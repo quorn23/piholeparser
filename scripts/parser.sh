@@ -387,6 +387,46 @@ then
 FILESIZEZERO=true
 fi
 
+#####################################################################
+## Perl Parser
+## We skip this if the file is in the "heavy" directory
+## I hope to remove this soon
+#PARSECOMMENT="Cutting Lists With The Perl Parser."
+#if
+#[[ -n $FILESIZEZERO && $f == $BLIGHTPARSELIST ]]
+#then
+#printf "$cyan"  "$PARSECOMMENT"
+#perl $PERLPARSERSCRIPT $BFILETEMP > $BTEMPFILE
+#FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+#HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+#ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+#mv $BTEMPFILE $BFILETEMP
+#else
+#:
+#fi
+#if
+#[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+#then
+#printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+#echo ""
+#unset ENDCOMMENT
+#unset HOWMANYLINES
+#elif
+#[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+#then
+#printf "$yellow"  "$ENDCOMMENT"
+#echo ""
+#unset ENDCOMMENT
+#unset HOWMANYLINES
+#fi
+#if
+#[[ "$FETCHFILESIZE" -eq 0 ]]
+#then
+#FILESIZEZERO=true
+#fi
+
+#####################################################################
+
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking For FQDN Requirements."
 if
