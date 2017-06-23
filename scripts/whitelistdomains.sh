@@ -68,11 +68,11 @@ WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $WHITESORTDEDUPE."
-cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
+cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
+HOWMANYLINES=$(echo -e "\t`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
-mv $TEMPFILE $WHATLISTTOSORT
+mv $WWHITETEMP $WHATLISTTOSORT
 echo "* Processed "$WHITESORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo ""
@@ -81,13 +81,11 @@ echo ""
 done
 
 WHITESORTDEDUPE="Merging the Whitelists for Later."
-WHATLISTTOSORT="$WHITELISTDOMAINSALL"
+WHATLISTSMERGE="$WHITELISTDOMAINSALL"
 timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
-cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-HOWMANYLINES=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` Lines In File")
-echo "$HOWMANYLINES"
-mv $TEMPFILE $WHITELISTTEMP
+cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
+HOWMANYLINES=$(echo -e "\t`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
 echo "* "$WHITESORTDEDUPE". $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo ""
