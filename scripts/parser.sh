@@ -286,7 +286,7 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/^https/d; /^HTTPS/d; /^http/d; /^HTTP/d; /third-party$/d; /popup$/d; s/^PRIMARY [ \t]*//; s/^localhost [ \t]*//; s/blockeddomain.hosts [ \t]*//; s/^0.0.0.0 [ \t]*//; s/^127.0.0.1 [ \t]*//; s/^::1 [ \t]*//' > $BTEMPFILE
+cat $BFILETEMP | sed '/^https\?:\/\//d; /third-party$/d; /popup$/d; s/^PRIMARY [ \t]*//; s/^localhost [ \t]*//; s/blockeddomain.hosts [ \t]*//; s/^0.0.0.0 [ \t]*//; s/^127.0.0.1 [ \t]*//; s/^::1 [ \t]*//' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
