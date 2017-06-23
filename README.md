@@ -10,6 +10,12 @@ Other aims of this project:
 * Mirror and Filter, any user-submitted blacklist.
 * Handle ANY list, even if it is compressed in tar or 7zip.
 
+## Because people ask often:
+
+* I run this alongside several other things on a Raspberry Pi 3.
+* This is THE ONLY list I use, with nothing whitelisted.
+* Because of this, If there is something blocked that shouldn't be, my wife and I would know.
+
 ### Contribute
 
 * If you think you know the best and most efficient way to parse the lists, please submit a pull request.
@@ -17,10 +23,10 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Fri 23 Jun 07:55:46 EDT 2017
-* Script Ended At Fri 23 Jun 08:40:44 EDT 2017
-* Script Took 44 minutes To Filter 	344 Lists.
-* The Edited ALLPARSEDLIST is 58 MB and contains 	2584119 Domains.
+* Script Started At Fri 23 Jun 11:50:00 EDT 2017
+* Script Ended At Fri 23 Jun 12:42:21 EDT 2017
+* Script Took 52 minutes To Filter 	344 Lists.
+* The Edited ALLPARSEDLIST is 58 MB and contains 	2584031 Domains.
 * [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog)
 
 ## Individual Lists
