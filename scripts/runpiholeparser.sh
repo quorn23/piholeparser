@@ -90,7 +90,7 @@ echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
-WHATSCRIPTORUN=$WHITELISTSCRIPT
+WHATSCRIPTORUN=$REPODOMAINSSCRIPT
 SCRIPTTEXT="Compiling Whitelists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
