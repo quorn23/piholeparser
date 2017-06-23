@@ -107,6 +107,7 @@ timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
 HOWMANYLINES=$(echo -e "\t`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
+echo "$HOWMANYLINES"
 echo "* "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
@@ -146,6 +147,7 @@ timestamp=$(echo `date`)
 printf "$yellow"  "Processed $BLACKSORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BLACKLISTTEMP
 HOWMANYLINES=$(echo -e "\t`wc -l $BLACKLISTTEMP | cut -d " " -f 1` Lines In File")
+echo "$HOWMANYLINES"
 echo "* "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
