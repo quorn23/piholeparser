@@ -13,7 +13,7 @@ printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
 fi
 
-LISTLOCATION=/etc/piholeparserdev/parsed/*.txt
+LISTLOCATION=/etc/piholeparser/parsed/*.txt
 DOMAINTOLOOKFOR=$(whiptail --inputbox "What Domain are you hunting for?" 10 80 "" 3>&1 1>&2 2>&3)
 echo ""
 echo "Searching for $DOMAINTOLOOKFOR"
