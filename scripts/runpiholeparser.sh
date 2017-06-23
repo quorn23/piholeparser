@@ -91,7 +91,7 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 WHATSCRIPTORUN=$REPODOMAINSSCRIPT
-SCRIPTTEXT="Compiling Whitelists."
+SCRIPTTEXT="Compiling Black and White lists."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
