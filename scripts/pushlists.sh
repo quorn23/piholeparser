@@ -2,7 +2,7 @@
 ## This script pushes lists to Github if selected in var
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Push Changes up to Github
 { if 
