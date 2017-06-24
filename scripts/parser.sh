@@ -2,7 +2,7 @@
 ## This is the Parsing Process
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ####################
 ## File .lst's    ##
@@ -38,7 +38,7 @@ for source in `cat $f`;
 do
 
 ## These Variables are to help with Filenaming
-source /etc/piholeparser/scriptvars/dynamicvariables.var
+source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
