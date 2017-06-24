@@ -138,6 +138,39 @@ touch $BORIGINALFILETEMP
 fi
 echo ""
 
+## Check that there was a file downloaded
+## If Not, attempt to download as a browser
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+timestamp=$(echo `date`)
+if 
+[[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
+then
+printf "$red"    "File Empty."
+printf "$cyan"    "Attempting To Fetch List As if we were a browser."
+agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
+curl -s -H "$agent" -L $source >> $BTEMPFILE
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $BTEMPFILE
+fi
+
+## Check that there was a file downloaded
+## If not, attempt the mirror file
+## But only if we didn't already try that
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+timestamp=$(echo `date`)
+if 
+[[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
+then
+printf "$red"    "File Empty."
+printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
+echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+wget -q -O $BTEMPFILE $MIRROREDFILEDL
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $BTEMPFILE
+fi
+
 ## This Clears the SourceIP var before the next loop
 if
 [[ -n $SOURCEIP ]]
@@ -188,40 +221,7 @@ fi
 
 printf "$cyan"    "Verifying $BASEFILENAME File Size."
 
-## Check that there was a file downloaded
-## If Not, attempt to download as a browser
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-timestamp=$(echo `date`)
-if 
-[[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
-then
-printf "$red"    "File Empty."
-printf "$cyan"    "Attempting To Fetch List As if we were a browser."
-agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
-curl -s -H "$agent" -L $source >> $BTEMPFILE
-cat $BTEMPFILE >> $BORIGINALFILETEMP
-rm $BTEMPFILE
-fi
-
-## Check that there was a file downloaded
-## If not, attempt the mirror file
-## But only if we didn't already try that
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-timestamp=$(echo `date`)
-if 
-[[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
-then
-printf "$red"    "File Empty."
-printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
-echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
-wget -q -O $BTEMPFILE $MIRROREDFILEDL
-cat $BTEMPFILE >> $BORIGINALFILETEMP
-rm $BTEMPFILE
-fi
-
-## set filesizezero variable if still empty
+## set filesizezero variable if empty
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
