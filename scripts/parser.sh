@@ -90,7 +90,7 @@ elif
 [[ $source == *.php && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
-sudo curl --silent $source >> $BTEMPFILE
+curl -s -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 touch $BORIGINALFILETEMP
 rm $BTEMPFILE
