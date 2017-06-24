@@ -2,7 +2,7 @@
 ## This should be run alot, to make sure the temp file doesn't get screwed up
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 CHECKME=$TEMPCLEANUP
 if
