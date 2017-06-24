@@ -203,6 +203,7 @@ curl -s -H "$agent" -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 fi
+echo ""
 
 ## Check that there was a file downloaded
 ## If not, attempt the mirror file
@@ -220,6 +221,7 @@ wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 fi
+echo ""
 
 ## set filesizezero variable if still empty
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
@@ -238,6 +240,7 @@ ENDCOMMENT="$HOWMANYLINES Lines After Download."
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$yellow"  "$ENDCOMMENT"
 fi
+echo ""
 
 ## Duplicate the downloaded file for the next steps
 cp $BORIGINALFILETEMP $BTEMPFILE
