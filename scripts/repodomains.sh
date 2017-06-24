@@ -28,26 +28,6 @@ touch $CHECKME
 echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS="Blacklist File"
-CHECKME=$LISTWHITELISTDOMAINS
-timestamp=$(echo `date`)
-printf "$yellow"  "Checking For $WHATITIS"
-echo ""
-if
-ls $CHECKME &> /dev/null;
-then
-printf "$red"  "Removing $WHATITIS"
-echo ""
-rm $CHECKME
-touch $CHECKME
-echo "* $WHATITIS removed $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-printf "$cyan"  "$WHATITIS not there. Not Removing."
-echo ""
-touch $CHECKME
-echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-
 ####################
 ## Whitelist .lst ##
 ####################
@@ -115,8 +95,27 @@ echo ""
 ###########################
 ## Blacklist sort dedupe ##
 ###########################
+echo "## Compiling Repo Blacklist." | tee --append $RECENTRUN &>/dev/null
 
-echo "## Processing Repo Blacklist." | tee --append $RECENTRUN &>/dev/null
+WHATITIS="Blacklist File"
+CHECKME=$LISTWHITELISTDOMAINS
+timestamp=$(echo `date`)
+printf "$yellow"  "Checking For $WHATITIS"
+echo ""
+if
+ls $CHECKME &> /dev/null;
+then
+printf "$red"  "Removing $WHATITIS"
+echo ""
+rm $CHECKME
+touch $CHECKME
+echo "* $WHATITIS removed $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+printf "$cyan"  "$WHATITIS not there. Not Removing."
+echo ""
+touch $CHECKME
+echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
 
 ## Start File Loop
 for f in $BLACKLISTDOMAINSALL
