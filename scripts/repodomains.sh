@@ -157,7 +157,7 @@ echo ""
 ####################
 
 ## Whitelist the domains
-#for source in `cat $LISTWHITELISTDOMAINS`;
+#for source in `cat $WHITELISTTEMP`;
 #do
 #pihole -w $source &>/dev/null
 #done
