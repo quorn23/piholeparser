@@ -2,7 +2,7 @@
 ## This is the central script that ties the others together
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 STARTTIME="Script Started At $(echo `date`)"
 STARTTIMESTAMP=$(date +"%s")
 
