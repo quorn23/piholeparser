@@ -84,7 +84,6 @@ then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 wget -q -O $BTEMPFILE $source
 cat $BTEMPFILE >> $BORIGINALFILETEMP
-touch $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
 [[ $source == *.php && -n $SOURCEIP ]]
@@ -92,7 +91,6 @@ then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
-touch $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
 [[ -z $SOURCEIP ]]
@@ -147,6 +145,7 @@ timestamp=$(echo `date`)
 if 
 [[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
 then
+rm $BORIGINALFILETEMP
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
@@ -165,6 +164,7 @@ timestamp=$(echo `date`)
 if 
 [[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
+rm $BORIGINALFILETEMP
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -210,6 +210,8 @@ elif
 then
 printf "$red"     "$BASEFILENAME Is A Bad Link. HTML Detected."
 echo "* $BASEFILENAME Is A Bad Link. HTML Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $BORIGINALFILETEMP
+touch $BORIGINALFILETEMP
 FILESIZEZERO=true
 else
 :
@@ -235,6 +237,7 @@ FILESIZEZERO=true
 timestamp=$(echo `date`)
 printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
+touch $BORIGINALFILETEMP
 else
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After Download."
