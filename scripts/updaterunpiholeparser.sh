@@ -5,7 +5,7 @@
 ## This File will not be updated often.
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
