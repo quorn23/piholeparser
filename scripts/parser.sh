@@ -199,7 +199,7 @@ then
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
-curl -s -H $agent -L $source >> $BTEMPFILE
+curl -s -H "$agent" -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 fi
