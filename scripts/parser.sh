@@ -194,7 +194,7 @@ FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[[ "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
 then
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
