@@ -68,6 +68,14 @@ printf "$red"    "Ping Test Failed."
 fi
 echo ""
 
+## Is source not using https
+if
+[[ -n $SOURCEIP && $source != https* ]]
+then
+printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
+echo "* $BASEFILENAME List Does NOT Use https. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Logically download based on the Upcheck, and file type
 timestamp=$(echo `date`)
 if
@@ -75,6 +83,14 @@ if
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 wget -q -O $BTEMPFILE $source
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+touch $BORIGINALFILETEMP
+rm $BTEMPFILE
+elif
+[[ $source == *.php && -n $SOURCEIP ]]
+then
+printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
+sudo curl --silent $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 touch $BORIGINALFILETEMP
 rm $BTEMPFILE
