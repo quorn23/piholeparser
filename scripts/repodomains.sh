@@ -2,7 +2,7 @@
 ## This should whitelist all domains that will be parsed
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ####################
 ## File checks    ##
@@ -63,7 +63,7 @@ for f in $WHITELISTDOMAINSALL
 do
 
 ## Variables
-source /etc/piholeparser/scriptvars/dynamicvariables.var
+source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 
 WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
