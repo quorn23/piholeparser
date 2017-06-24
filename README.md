@@ -23,10 +23,10 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Sat 24 Jun 00:20:03 EDT 2017
-* Script Ended At Sat 24 Jun 01:04:58 EDT 2017
-* Script Took 44 minutes To Filter 	344 Lists.
-* The Edited ALLPARSEDLIST is 58 MB and contains 	2585043 Domains.
+* Script Started At Sat 24 Jun 13:58:51 EDT 2017
+* Script Ended At Sat 24 Jun 14:38:19 EDT 2017
+* Script Took 39 minutes To Filter 	344 Lists.
+* The Edited ALLPARSEDLIST is 58 MB and contains 	2585679 Domains.
 * [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog)
 
 ## Individual Lists
@@ -62,7 +62,7 @@ ________________________________________________________________________________
 * I'm already parsing all of the lists daily and uploading them to the parsed directory in this repository.
 * If you prefer to use this project yourself locally, Keep Reading.
 
-### IF YOU HAVE USED THIS SCRIPT BEFORE 6/16/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
+### IF YOU HAVE USED THIS SCRIPT BEFORE 6/24/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
 
     sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/piholeparserinstall.sh
 
