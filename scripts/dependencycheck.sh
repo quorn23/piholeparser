@@ -4,7 +4,7 @@
 ## it installs the program
 
 ## Variables
-source /etc/piholeparser/scriptvars/variables.var
+source /etc/piholeparser/scripts/scriptvars/variables.var
 
 #######################
 ## Check Dependencies##
