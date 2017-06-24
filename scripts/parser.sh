@@ -97,6 +97,7 @@ rm $BTEMPFILE
 elif
 [[ -z $SOURCEIP ]]
 then
+MIRRORVAR=true
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
@@ -187,7 +188,40 @@ fi
 
 printf "$cyan"    "Verifying $BASEFILENAME File Size."
 
-PARSECOMMENT="Download."
+## Check that there was a file downloaded
+## If Not, attempt to download as a browser
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+timestamp=$(echo `date`)
+if 
+[ "$FETCHFILESIZE" -eq 0 ]
+then
+printf "$red"    "File Empty."
+printf "$cyan"    "Attempting To Fetch List As if we were a browser."
+agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
+curl -s -H $agent -L $source >> $BTEMPFILE
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $BTEMPFILE
+fi
+
+## Check that there was a file downloaded
+## If not, attempt the mirror file
+## But only if we didn't already try that
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+timestamp=$(echo `date`)
+if 
+[ "$FETCHFILESIZE" -eq 0 && - z $MIRRORVAR]
+then
+printf "$red"    "File Empty."
+printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
+echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+wget -q -O $BTEMPFILE $MIRROREDFILEDL
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $BTEMPFILE
+fi
+
+## set filesizezero variable if still empty
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
@@ -196,15 +230,14 @@ if
 then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
-printf "$red"     "$BASEFILENAME List Was An Empty File After "$PARSECOMMENT"."
+printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+ENDCOMMENT="$HOWMANYLINES Lines After Download."
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$yellow"  "$ENDCOMMENT"
 fi
-echo ""
 
 ## Duplicate the downloaded file for the next steps
 cp $BORIGINALFILETEMP $BTEMPFILE
