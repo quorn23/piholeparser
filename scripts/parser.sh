@@ -211,7 +211,7 @@ FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[[ "$FETCHFILESIZE" -eq 0 && - z $MIRRORVAR ]]
+[[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
