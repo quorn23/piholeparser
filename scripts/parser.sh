@@ -153,6 +153,7 @@ agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/5
 curl -s -H "$agent" -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
+echo ""
 fi
 
 ## Check that there was a file downloaded
@@ -170,6 +171,7 @@ echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timesta
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
+echo ""
 fi
 
 ## This Clears the SourceIP var before the next loop
