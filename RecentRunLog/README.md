@@ -119,3 +119,21 @@
 
 * Script completed at Sat 24 Jun 17:58:47 EDT 2017
 ## Pushing Lists. Sat 24 Jun 18:00:55 EDT 2017
+* web host lists directory Already there no need to mkdir. Sat 24 Jun 18:03:47 EDT 2017
+* Locally Hosted Biglist Removed. Sat 24 Jun 18:03:47 EDT 2017
+* Locally Hosted Biglist Not Removed. Sat 24 Jun 18:03:47 EDT 2017
+
+* Allparsedlist list was an empty file Sat 24 Jun 18:41:35 EDT 2017
+* All Parsed List (edited) Removed. Sat 24 Jun 18:41:36 EDT 2017
+* Allparsedlist list was an empty file Sat 24 Jun 18:41:36 EDT 2017
+
+## Edited ALLPARSEDLIST Result. Sat 24 Jun 16:04:44 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+## Total Runtime. Sat 24 Jun 16:04:44 EDT 2017
+* Script Took 156 minutes To Filter 	344 Lists.
+
+## Updated Main README.md. Sat 24 Jun 16:04:44 EDT 2017
+
+* Script completed at Sat 24 Jun 16:04:44 EDT 2017
+## Pushing Lists. Sat 24 Jun 18:41:36 EDT 2017
