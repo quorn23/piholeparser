@@ -44,5 +44,18 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
+WHATITIS="Locally Hosted Biglist"
+CHECKME=$BIGAPLLOCALHOST
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
 ## Copy it over
 cp -p $BIGAPL $BIGAPLLOCALHOST
+cp -p $BIGAPL $BIGAPLELOCALHOST
