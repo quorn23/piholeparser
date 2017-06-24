@@ -122,7 +122,7 @@ for f in $BLACKLISTDOMAINSALL
 do
 
 ## Variables
-source /etc/piholeparser/scriptvars/dynamicvariables.var
+source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 
 WHATLISTTOSORT=$f
 BLACKSORTDEDUPE="$BASEFILENAME Domains."
