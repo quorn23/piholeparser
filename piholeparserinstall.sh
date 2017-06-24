@@ -8,6 +8,8 @@
 ##
 ## It also sets the variable for the installation
 
+## Install Variables
+INSTALLPLACE=/etc/piholeparser/
 
 ## Check for whiptail
 { if
@@ -17,6 +19,25 @@ then
 else
 apt-get install -y whiptail
 fi }
+
+## Check for previous install
+if
+[[ -f $INSTALLPLACE ]]
+then
+PREVIOUSINSTALL=true
+fi
+
+## Save a pervious config?
+if
+[[ -z $PREVIOUSINSTALL ]]
+then
+(whiptail --title "piholeparser" --yes-button "Remove beore install" --no-button "Abort" --yesno "piholeparser is already installed?" 10 80) 
+
+if 
+[[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
+then
+rm $MIRROREDFILE
+fi
 
 ## Check if already there
 { if
