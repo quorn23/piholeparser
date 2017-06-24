@@ -32,6 +32,7 @@ if
 [[ -z $PREVIOUSINSTALL ]]
 then
 (whiptail --title "piholeparser" --yes-button "Remove beore install" --no-button "Abort" --yesno "piholeparser is already installed?" 10 80) 
+fi
 
 if 
 [[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
