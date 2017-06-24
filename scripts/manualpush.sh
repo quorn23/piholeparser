@@ -2,7 +2,7 @@
 ## This script pushes lists to Github manually
 
 ## Variables
-source /etc/piholeparser/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Push Changes up to Github
 timestamp=$(echo `date`)
