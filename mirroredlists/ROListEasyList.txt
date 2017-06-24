@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 9t0J7yBXFNSLlDt+/zITzw
-! Version: 201706232031
+! Checksum: GFNzFxb6z2E60Ndv884WHQ
+! Version: 201706240421
 ! Title: ROList+EasyList
 ! ROList and EasyList combination subscription
-! Last modified: 23 Jun 2017 20:31 UTC
+! Last modified: 24 Jun 2017 04:21 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://www.zoso.ro/rolist
 !
@@ -11,7 +11,7 @@
 ! Original list, by Menetz, was handed over to Zoso to host and maintain.
 ! A complementary list, with more strict items, is here zoso.ro/pages/rolist2.txt
 ! Email: mail@zoso.ro
-! Last modified: 7 Iunie 2017 08:00 UTC
+! Last modified: 24 Iunie 2017 07:00 UTC
 !hosts
 ||01.creativecdn.com^
 ||2mdn.net^
@@ -117,7 +117,6 @@ ro##trafic
 !Whitelist
 @@||googletagmanager.com/gtm.js?id=GTM-TKS335$script,domain=emag.ro
 @@||homebank.ro^$~third-party
-@@||hotnews.ro^$generichide
 @@||lumea-luminilor.ro/promotii*
 @@||olx.ro/i2/ajax/ad/getcontact/*
 @@||profitshare.emag.ro/get_ads.php?*
@@ -158,6 +157,7 @@ revista22.ro##IMG[src*="banner"]
 ||jurnalul.ro/usr/casete/
 ||l.yimg.com/g/images/spaceball.gif
 ||libertatea.ro/usr/casete/
+||media.hotnews.ro/media_server1/image-2010-03-18-7044595-0-comunicat-presa.jpg$image
 ||media.hotnews.ro/media_server1/image-2013-01-8-13964838-0-2013-siveco-stanga.jpg$image
 ||media.hotnews.ro/media_server1/image-2015-12-4-20641634-0-paravion-londra-4-dec.jpg$image
 ||media.hotnews.ro/media_server1/image-2016-04-11-20928782-0-timbru-lidl.jpg$image
@@ -182,7 +182,6 @@ revista22.ro##IMG[src*="banner"]
 ||vocea.biz/wp-admin/admin-ajax.php
 ||web3.protv.ro/assets/protv/widgets/newsletter.swf?
 ||ziuaconstanta.ro/images/banners/*
-||media.hotnews.ro/media_server1/image-2010-03-18-7044595-0-comunicat-presa.jpg
 !div rules
 ##a[href="http://romaniacurata.ro/sprijina-romania-curata/"]
 220.ro##DIV#nql_optiuni
@@ -209,6 +208,7 @@ antena3.ro##DIV.spliter.listing-stiri *
 antena3.ro##STYLE + * + * + * > .elements
 automarket.ro###box_alert_container *
 avocatnet.ro###parteneri
+biziday.ro##.img-responsive
 biziday.ro##DIV#tdv-sidebar > *
 biziday.ro##IMG\[src="http://cdn.biziday.ro/wp-content/themes/biziday/images/app-desktop.jpg"]
 biziday.ro##IMG\[src="http://cdn.biziday.ro/wp-content/uploads/2017/02/bt-mic-sidebar.jpg"]
@@ -300,7 +300,6 @@ wall-street.ro##DIV#qra_popup_wrapper *
 yoda.ro##a[href^="http://bit.ly/"]
 yoda.ro##a[href^="https://goo.gl/"]
 zf.ro###bula-ultima-ora
-biziday.ro##.img-responsive
 ! *** easylist.txt ***
 ! The contents of this filter list are fetched from the EasyList repository: https://github.com/easylist/easylist
 ! Licence: https://easylist.to/pages/licence.html
@@ -7419,6 +7418,7 @@ takeover_banner_
 /cdn-cgi/pe/bag2?r*.adglare.org
 /cdn-cgi/pe/bag2?r*.adroll.com
 /cdn-cgi/pe/bag2?r*.codeonclick.com
+/cdn-cgi/pe/bag2?r*.content-ad.net
 /cdn-cgi/pe/bag2?r*.qualitypublishers.com
 /cdn-cgi/pe/bag2?r*.worldoffersdaily.com
 /cdn-cgi/pe/bag2?r*.zergnet.com
@@ -16581,6 +16581,7 @@ _popunder+$popup
 ##.ad--728x90
 ##.ad--article-top
 ##.ad--b
+##.ad--bottom
 ##.ad--bottom-label
 ##.ad--bottommpu
 ##.ad--c
@@ -16596,6 +16597,7 @@ _popunder+$popup
 ##.ad--leaderboard
 ##.ad--mpu
 ##.ad--noscroll
+##.ad--panorama
 ##.ad--pushdown
 ##.ad--right
 ##.ad--scroll
@@ -17221,6 +17223,7 @@ _popunder+$popup
 ##.ad-source
 ##.ad-sp
 ##.ad-space
+##.ad-space-container
 ##.ad-space-mpu-box
 ##.ad-space-topbanner
 ##.ad-spacer
@@ -22745,6 +22748,7 @@ _popunder+$popup
 ##.jp-advertisment-promotional
 ##.js-ad
 ##.js-ad--comment
+##.js-ad-container
 ##.js-ad-doubleimu
 ##.js-ad-dynamic
 ##.js-ad-hideable
@@ -22756,6 +22760,7 @@ _popunder+$popup
 ##.js-ad-loader-bottom
 ##.js-ad-prepared
 ##.js-ad-primary
+##.js-ad-space-container
 ##.js-ad-static
 ##.js-ad-unit-bottom
 ##.js-ad-wrapper
@@ -28616,6 +28621,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||cubics.com^$third-party
 ||cuelinks.com^$third-party
 ||curancience.com^$third-party
+||curredex.com^$third-party
 ||currentlyobsessed.me^$third-party
 ||curtaecompartilha.com^$third-party
 ||curtisfrierson.com^$third-party
@@ -29025,6 +29031,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||feed-ads.com^$third-party
 ||feljack.com^$third-party
 ||fenixm.com^$third-party
+||ferrellis.com^$third-party
 ||feybu.work^$third-party
 ||fiberpairjo.link^$third-party
 ||fidel.to^$third-party
@@ -29190,6 +29197,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||glaswall.online^$third-party
 ||glical.com^$third-party
 ||global-success-club.net^$third-party
+||globaladmedia.com^$third-party
 ||globaladsales.com^$third-party
 ||globaladv.net^$third-party
 ||globalinteractive.com^$third-party
@@ -31512,6 +31520,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||bjcvibh.com^$third-party
 ||i5rl5lf.com^$third-party
 ||oihbs34.com^$third-party
+||usxsp7v.com^$third-party
 ! propellerads
 ||019f2d2d415.review^$third-party
 ||04dn8g4f.space^$third-party
@@ -31803,8 +31812,10 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||unoblotto.net^$third-party
 ||vacwrite.com^$third-party
 ||vip-vip-vup.com^$third-party
+||wrierville.com^$third-party
 ||xmas-xmas-wow.com^$third-party
 ||zim-zim-zam.com^$third-party
+||zip-zip-swan.com^$third-party
 ! Mobile
 ||adbuddiz.com^$third-party
 ||adcolony.com^$third-party
@@ -32151,6 +32162,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||bkmtspywevsk.com^$third-party
 ||bkxkodsmrnqd.com^$third-party
 ||blprkaomvazv.com^$third-party
+||blvqxlczxeda.com^$third-party
 ||bmjccqfxlabturkmpzzokhsahleqqrysudwpuzqjbxbqeakgnf.com^$third-party
 ||bmqnguru.com^$third-party
 ||bmubqabepbcb.com^$third-party
@@ -32690,6 +32702,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||hutkuzwropgf.com^$third-party
 ||huynrscfbulr.com^$third-party
 ||huzmweoxlwanzvstlgygbrnfrmodaodqaczzibeplcezmyjnlv.com^$third-party
+||hvccjhkcvlfr.com^$third-party
 ||hvdddlsdexic.com^$third-party
 ||hvfzacisynoq.com^$third-party
 ||hvfzshrpfueb.com^$third-party
@@ -32841,6 +32854,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||jmbhyqijqhxk.com^$third-party
 ||jmvjmgofvxnu.com^$third-party
 ||jmzaqwcmcbui.com^$third-party
+||jnchbwtzbrrf.com^$third-party
 ||jncjzdohkgic.com^$third-party
 ||jndclagxkvpn.com^$third-party
 ||jnercechoqjb.com^$third-party
@@ -34132,6 +34146,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||yiyycuqozjwc.com^$third-party
 ||yjjglyoytiew.com^$third-party
 ||yjjtxuhfglxa.com^$third-party
+||yjsshralziws.com^$third-party
 ||ykacbmxeapwi.com^$third-party
 ||ykaonbmjjmyi.com^$third-party
 ||ykbcogkoiqdw.com^$third-party
@@ -44038,6 +44053,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ! photobucket.com
 @@||amazonaws.com^$script,domain=photobucket.com
 @@||aviary.com^$image,script,domain=photobucket.com
+@@||code.jquery.com^$script,domain=photobucket.com
 @@||connect.facebook.net^$script,domain=photobucket.com
 @@||pbsrc.com/albums/$image,domain=photobucket.com
 @@||pbsrc.com/footer/$image,domain=photobucket.com
@@ -61441,6 +61457,7 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||perkuinternete.lt/modules/mod_jpayday/js/advertisement.js
 @@||pes-patch.com^$generichide
 @@||phoronix.com^$script,~third-party
+@@||photobucket.com^$generichide
 @@||photofacefun.com^*/adblock.js
 @@||picfont.com^$generichide
 @@||picload.org^$generichide
