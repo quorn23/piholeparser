@@ -132,11 +132,12 @@ if
 ls $CHECKME &> /dev/null;
 then
 printf "$green"    "Download Successful."
+echo ""
 else
 printf "$red"    "Download Failed."
 touch $BORIGINALFILETEMP
-fi
 echo ""
+fi
 
 ## Check that there was a file downloaded
 ## If Not, attempt to download as a browser
