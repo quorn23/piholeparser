@@ -27,34 +27,20 @@ then
 PREVIOUSINSTALL=true
 fi
 
-## Save a pervious config?
+## Remove Prior install
 if
 [[ -z $PREVIOUSINSTALL ]]
-then
-(whiptail --title "piholeparser" --yes-button "Remove beore install" --no-button "Abort" --yesno "piholeparser is already installed?" 10 80) 
-fi
-
-if 
-[[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
-then
-rm $MIRROREDFILE
-fi
-
-## Check if already there
-{ if
-[ -d "/etc/piholeparser/" ] 
 then
 { if
 (whiptail --title "piholeparser" --yes-button "Remove beore install" --no-button "Abort" --yesno "piholeparser is already installed?" 10 80) 
 then
 rm -r /etc/piholeparser
-rm /etc/piholeparser.var
 rm /etc/updaterunpiholeparser.sh
 crontab -l | grep -v 'sudo bash /etc/updaterunpiholeparser.sh'  | crontab -
 else
 exit
 fi }
-fi }
+fi
 
 ## obvious question
 { if
@@ -62,13 +48,29 @@ fi }
 then
 git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
 cp /etc/piholeparser/scripts/updaterunpiholeparser.sh /etc/updaterunpiholeparser.sh
-cp /etc/piholeparser/scriptvars/piholeparser.var /etc/piholeparser.var
 (crontab -l ; echo "20 0 * * * sudo bash /etc/updaterunpiholeparser.sh") | crontab -
 else
 exit
 fi }
 
+## Save a pervious config?
+if
+[[ -z $PREVIOUSINSTALL ]]
+then
+{ if
+(whiptail --title "piholeparser" --yes-button "keep config" --no-button "create new config" --yesno "Keep a previous config?" 10 80) 
+then
+echo "keeping old config"
+else
+rm /etc/piholeparser.var
+cp /etc/piholeparser/scriptvars/piholeparser.var /etc/piholeparser.var
+fi }
+fi
+
 ## What version?
+if
+[[ -n $PREVIOUSINSTALL ]]
+then
 { if 
 (whiptail --title "piholeparser" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What Version of piholeparser to install?" 10 80) 
 then
@@ -82,3 +84,4 @@ echo "GITHUBUSERNAME="$GITHUBUSERNAME"" | tee --append /etc/piholeparser.var
 echo "GITHUBPASSWORD="$GITHUBPASSWORD"" | tee --append /etc/piholeparser.var
 echo "GITHUBEMAIL="$GITHUBEMAIL"" | tee --append /etc/piholeparser.var
 fi }
+fi
