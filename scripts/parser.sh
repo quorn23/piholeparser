@@ -145,7 +145,6 @@ timestamp=$(echo `date`)
 if 
 [[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
 then
-rm $BORIGINALFILETEMP
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
@@ -164,7 +163,6 @@ timestamp=$(echo `date`)
 if 
 [[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
-rm $BORIGINALFILETEMP
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
