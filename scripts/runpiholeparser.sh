@@ -34,43 +34,6 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ####################
-## Big Source     ##
-####################
-
-WHATITIS="The Source List"
-CHECKME=$BIGAPLSOURCE
-timestamp=$(echo `date`)
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-
-SCRIPTTEXT="Counting Lists To Process."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
-HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
-HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script."
-echo "$HOWMANYSOURCE"
-echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
-sed '/^$/d' $TEMPFILE > $FILETEMP
-mv $FILETEMP $BIGAPLSOURCE
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
 ## Run Scripts    ##
 ####################
 
