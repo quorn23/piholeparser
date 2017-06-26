@@ -577,3 +577,66 @@
 
 * Script completed at Mon 26 Jun 14:23:51 EDT 2017
 ## Pushing Lists. Mon 26 Jun 14:24:30 EDT 2017
+* web host lists directory Already there no need to mkdir. Mon 26 Jun 14:24:34 EDT 2017
+* Locally Hosted Biglist Removed. Mon 26 Jun 14:24:34 EDT 2017
+* Locally Hosted Biglist Not Removed. Mon 26 Jun 14:24:35 EDT 2017
+
+* RansomwareTrackerDomainBlocklist List Was An Empty File After Download. Mon 26 Jun 14:25:35 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 26 Jun 14:41:03 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 26 Jun 14:45:40 EDT 2017
+* ReddestDream List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:42 EDT 2017
+* SamsungSmartTVDomains List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:44 EDT 2017
+* SecureMecca List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:46 EDT 2017
+* ShallaMalicious List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:48 EDT 2017
+* Spam404DomainBlacklist List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:52 EDT 2017
+* SpotifyAds List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:54 EDT 2017
+* StevenBlacksHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:56 EDT 2017
+* StevenBlacksKAD List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:45:58 EDT 2017
+* StevenBlacksMicrosoftTelemetry List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:00 EDT 2017
+* StevenBlacksRiskyHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:02 EDT 2017
+* StevenBlacksSpammers List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:04 EDT 2017
+* StevenBlacksSpotifyAds List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:05 EDT 2017
+* StevenBlacksTrackers List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:07 EDT 2017
+* StevenBlacksUncheckyAds List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:09 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGambling List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:12 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGamblingPorn List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:18 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGamblingPornSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:25 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGamblingSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:32 EDT 2017
+* StevenBlacksUnifiedHostsFakenews List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:38 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsPorn List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:44 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsPornSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:46:57 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:04 EDT 2017
+* StevenBlacksUnifiedHostsGambling List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:10 EDT 2017
+* StevenBlacksUnifiedHostsGamblingPorn List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:16 EDT 2017
+* StevenBlacksUnifiedHostsGamblingPornSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:23 EDT 2017
+* StevenBlacksUnifiedHostsGamblingSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:30 EDT 2017
+* StevenBlacksUnifiedHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:36 EDT 2017
+* StevenBlacksUnifiedHostsPorn List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:42 EDT 2017
+* StevenBlacksUnifiedHostsPornSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:49 EDT 2017
+* StevenBlacksUnifiedHostsSocial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:47:56 EDT 2017
+* TakoYachtygiftcardkiller List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:01 EDT 2017
+* TheHostsFileProjectHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:15 EDT 2017
+* Turkadlist List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:24 EDT 2017
+* tyzbit List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:26 EDT 2017
+* UncheckyAds List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:28 EDT 2017
+* Vokins List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:30 EDT 2017
+* WindowsSpyBlocker10 List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:32 EDT 2017
+* WindowsSpyBlocker7 List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:34 EDT 2017
+* WindowsSpyBlocker81 List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:35 EDT 2017
+* yoyoorg List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:48:37 EDT 2017
+
+## Combining All Parsed Lists. Mon 26 Jun 14:48:38 EDT 2017
+* All Parsed List Removed. Mon 26 Jun 14:48:38 EDT 2017
+* All Parsed List (edited) Removed. Mon 26 Jun 14:49:15 EDT 2017
+* Allparsedlist list was an empty file Mon 26 Jun 14:49:16 EDT 2017
+
+## Edited ALLPARSEDLIST Result. Mon 26 Jun 14:48:38 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+## Total Runtime. Mon 26 Jun 14:48:38 EDT 2017
+* Script Took 246 minutes To Filter  Lists.
+
+## Updated Main README.md. Mon 26 Jun 14:48:38 EDT 2017
+
+* Script completed at Mon 26 Jun 14:48:38 EDT 2017
+## Pushing Lists. Mon 26 Jun 14:49:16 EDT 2017
