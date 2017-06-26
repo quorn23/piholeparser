@@ -27,6 +27,14 @@ else
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "* Recent Run Log Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
+if 
+ls $NOHTTPSLISTS &> /dev/null; 
+then
+rm $NOHTTPSLISTS
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
 bash $DELETETEMPFILE
 echo ""
 echo "" | sudo tee --append $RECENTRUN &>/dev/null
