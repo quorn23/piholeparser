@@ -62,7 +62,7 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 WHATSCRIPTORUN=$REPODOMAINSSCRIPT
-SCRIPTTEXT="Compiling Repo Whitelist."
+SCRIPTTEXT="Compiling Repo Domain List."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
