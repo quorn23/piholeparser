@@ -1,30 +1,32 @@
 [Adblock Plus 2.0]
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
-! Last update 2017/06/23
-##.blocker280-20170622
+! Last update 2017/06/25
+##.blocker280-20170625
+!2017/06/25
+##.google-adbox
+##.google-2ad
 
-~inbox.google.com,~mail.google.com##.ad:not(body)
+!||msgs.jp
+||graph.facebook.com^$domain=~facebook.com
+||crashlytics.com^
+||flurry.com^
+
+
+!anti-adblock target
+||pagead2.googlesyndication.com$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com|~earthyworld.com
+
+
+~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp,~newsweekjapan.jp##[class^="ad_"]:not(body)
+~doujin-free.com##[id*="_ads_"]:not(body)
+~mangakansou.com,~touch.pixiv.net##[class^="ads-"]:not(body)
+~earthyworld.com,~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com##.adsbygoogle:not(body)
+~doujin-free.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body)
 ~thisav.com,~savevideo.me,~touch.pixiv.net,~gmail.com,~mail.google.com,~inbox.google.com##.ads:not(body)
-
-
-!2017/06/22
-##.bn320x50
-##a[href*="//v-wrd.com"]
-||v-wrd.com
-
-
-!2017/06/18
-!erase whitespace
-
 ~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp##[class^="ad-"]:not(body)
-~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp##[class^="ad_"]:not(body)
-~touch.pixiv.net##[class^="ads-"]:not(body)
 ##[class^="ads_"]:not(body)
 ##[id*="-ads-"]:not(body)
-##[id*="_ads_"]:not(body)
 ~bbc.com##[class*="-ads-"]:not(body)
-~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com##.adsbygoogle:not(body)
 ~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net###adsense
 ###textAd
 ###ad1
@@ -44,9 +46,35 @@
 ~jma.go.jp,~mushinavi.com##.adv
 
 
-!anti-adblock target
-||pagead2.googlesyndication.com/pub-config/$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com
-||pagead2.googlesyndication.com/pagead/js/$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com
+
+##.hatena-bookmark-button
+##.hatena-star-container
+##.hatena-star-metadata
+##[class^="share-hatena"]
+~hatena.ne.jp,~google.com,~google.co.jp,~search.yahoo.co.jp##a[href*="b.hatena.ne.jp/entry"] img
+~hatena.ne.jp,~google.com,~google.co.jp,~search.yahoo.co.jp##a[href*="b.hatena.ne.jp/add"]
+||b.st-hatena.com/images/entry-button/button$domain=~hatenablog.com|~hatenablog.jp|~hateblo.jp|~hatena.ne.jp|~hatenadiary.com|~hatenadiary.jp
+||b.st-hatena.com/js/bookmark$domain=~hatenablog.com|~hatenablog.jp|~hateblo.jp|~hatena.ne.jp|~hatenadiary.com|~hatenadiary.jp
+||b.st-hatena.com/js/bookmark_button.js$domain=~hatenablog.com|~hatenablog.jp|~hateblo.jp|~hatena.ne.jp|~hatenadiary.com|~hatenadiary.jp
+||api.b.st-hatena.com/entry.count
+||b.hatena.ne.jp/entry.count
+||b.hatena.ne.jp/js/bookmark_button.js
+||b.st-hatena.com/js/bookmark_button.js
+||counter.hatena.ne.jp/js/counter.js
+
+
+
+
+!2017/06/22
+##.bn320x50
+##a[href*="//v-wrd.com"]
+||v-wrd.com
+
+
+!2017/06/18
+!erase whitespace
+
+
 
 
 battlecats-db.com/script/import.js
@@ -302,7 +330,6 @@ amazon.co.jp###ape_detail_btf_detail-mWeb_wrapper
 ||js.wizeraz.net
 ||ma-i2i.jp
 ||mediaweaver.jp
-||msgs.jp
 ||ot.ca-mpr.jp
 ||petametrics.com
 ||primead.jp
@@ -551,23 +578,6 @@ pixiv.net##.ad-mobile-anchor
 ||ero-comic-hunter.net/main-upper-text.sp002.html
 ||glssp.jp
 ||js.aaddcount.com/overlay/
-
-
-##.hatena-bookmark-button
-##.hatena-star-container
-##.hatena-star-metadata
-##[class^="share-hatena"]
-~hatena.ne.jp,~google.com,~google.co.jp,~search.yahoo.co.jp##a[href*="b.hatena.ne.jp/entry"]
-~hatena.ne.jp,~google.com,~google.co.jp,~search.yahoo.co.jp##a[href*="b.hatena.ne.jp/add"]
-||b.st-hatena.com/images/entry-button/button$domain=~hatenablog.com|~hatenablog.jp|~hateblo.jp|~hatena.ne.jp|~hatenadiary.com|~hatenadiary.jp
-||b.st-hatena.com/js/bookmark$domain=~hatenablog.com|~hatenablog.jp|~hateblo.jp|~hatena.ne.jp|~hatenadiary.com|~hatenadiary.jp
-||b.st-hatena.com/js/bookmark_button.js$domain=~hatenablog.com|~hatenablog.jp|~hateblo.jp|~hatena.ne.jp|~hatenadiary.com|~hatenadiary.jp
-||api.b.st-hatena.com/entry.count
-||b.hatena.ne.jp/entry.count
-||b.hatena.ne.jp/js/bookmark_button.js
-||b.st-hatena.com/js/bookmark_button.js
-||counter.hatena.ne.jp/js/counter.js
-
 !2017/02/01
 
 
@@ -1315,7 +1325,7 @@ BannerLoader$domain=wikipedia.org
 ||nukiero.club^
 ||oct-pass.net^
 ||octopuspop.com^
-!||omt.shinobi.jp^
+||omt.shinobi.jp^
 ||sync.shinobi.jp
 ||onclickads.net^
 ||onclicktop.com^
@@ -2426,4 +2436,3 @@ nakasoku.blog18.fc2.com##.rss_box
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~world-best-news.doorblog.jp##a[href*="//world-best-news.doorblog.jp/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matometatta-news.net##a[href*="//matometatta-news.net/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~merry-news.com##a[href*="//merry-news.com/"]
-
