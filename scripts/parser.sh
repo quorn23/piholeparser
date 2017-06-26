@@ -21,6 +21,10 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 
+####################
+## Sources .lst   ##
+####################
+
 ## Amount of sources greater than one?
 timestamp=$(echo `date`)
 HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
@@ -43,6 +47,14 @@ source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
 echo "" 
+
+## Is source not using https
+if
+[[ $source != https* ]]
+then
+printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
+echo "* $BASEFILENAME List Does NOT Use https. $timestamp" | tee --append $NOHTTPSLISTS &>/dev/null
+fi
 
 ####################
 ## Download Lists ##
@@ -67,14 +79,6 @@ else
 printf "$red"    "Ping Test Failed."
 fi
 echo ""
-
-## Is source not using https
-if
-[[ -n $SOURCEIP && $source != https* ]]
-then
-printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
-echo "* $BASEFILENAME List Does NOT Use https. $timestamp" | tee --append $NOHTTPSLISTS &>/dev/null
-fi
 
 ## Logically download based on the Upcheck, and file type
 timestamp=$(echo `date`)
@@ -123,11 +127,25 @@ printf "$red"    "Somehow All Download Variables Were Missed."
 echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-## Check that there was a file downloaded
-## If not, touch file
-CHECKME=$BORIGINALFILETEMP
+## If lst file is in Dead Folder, it means that I was unable to access it at some point
+## This checks to see if the list is back online
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+timestamp=$(echo `date`)
 if
-ls $CHECKME &> /dev/null;
+[[ -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 ]]
+then
+printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
+echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+:
+fi
+
+## Check that there was a file downloaded
+## Try as a browser, and then try a mirror file
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+timestamp=$(echo `date`)
+if
+[[ "$FETCHFILESIZE" -gt 0 ]]
 then
 printf "$green"    "Download Successful."
 echo ""
@@ -136,16 +154,9 @@ printf "$red"    "Download Failed."
 touch $BORIGINALFILETEMP
 echo ""
 fi
-
-## Check that there was a file downloaded
-## If Not, attempt to download as a browser
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-timestamp=$(echo `date`)
 if 
 [[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
 then
-printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
 curl -s -H "$agent" -L $source >> $BTEMPFILE
@@ -153,10 +164,6 @@ cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 echo ""
 fi
-
-## Check that there was a file downloaded
-## If not, attempt the mirror file
-## But only if we didn't already try that
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
@@ -182,18 +189,6 @@ fi
 ## This is the source Loop end
 ## If multiple sources, it should merge them into one document
 done
-
-## If lst file is in Dead Folder, it means that I was unable to access it at some point
-## This checks to see if the list is back online
-timestamp=$(echo `date`)
-if
-[[ -n $FILESIZEZERO && $f == $BDEADPARSELIST ]]
-then
-printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
-echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-:
-fi
 
 ## This should let me know if a document is a bad link
 timestamp=$(echo `date`)
@@ -248,7 +243,6 @@ fi
 cp $BORIGINALFILETEMP $BTEMPFILE
 cp $BORIGINALFILETEMP $BFILETEMP
 rm $BORIGINALFILETEMP
-
 
 ####################
 ## Create Mirrors ##
