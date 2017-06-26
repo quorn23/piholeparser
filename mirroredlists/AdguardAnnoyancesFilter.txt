@@ -448,8 +448,7 @@ gazetevatan.com##form ._soc.news
 !####### which does not affect the functioning of site #####
 !###########################################################
 !
-!--- TEMPORARY: Google paywall ---
-androidpolice.com##.fc-pinned-message-container
+! Important: don't block Google paywall
 !
 !
 ! General anti-adblock rules
@@ -864,6 +863,7 @@ howwindows.ru#%#window.canRunAds = true;
 !#######################################################
 !######### General element hiding rules ################
 !#######################################################
+##.divascookies
 ##.cookie-hint
 ###cookies-alert
 ###cookieChoiceInfo
@@ -2513,6 +2513,13 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+arpaceramiche.it###jbcookies
+arpaceramiche.it##.jb.cookie
+armonieartecasa.com###div_alert_cookies
+cottodeste.it###privacyBox
+inalco.es###div_cookies
+tilelook.com###cl_banner
+la-croix.com###cnill_banner
 sueddeutsche.de##.cookie-consent
 landsend.de##.first-time-visit
 walloniebelgiquetourisme.be###block-wbt-block-domain-cookie
@@ -3552,6 +3559,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+ren.tv###box-view-wrapper
 abercrombie.com###first-look-toaster
 abercrombie.com###simplemodal-overlay
 abercrombie.com###simplemodal-container
@@ -4037,6 +4045,7 @@ livelib.ru,lenta.ru,mychrome,rambler.ru,sports.ru#%#(function() { if (typeof Not
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: 2 }; localStorage.setItem("sports:view:notifications-subscribe-popup:closed:count", JSON.stringify(a)) } } catch (ex) {} })();
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: true }; localStorage.setItem("sports:view:notifications-subscribe-popup:view", JSON.stringify(a)) } } catch (ex) {} })();
 !
+mk.ru##.push-suggest
 ||istiklal.com.tr/assets/site/js/pushControl.js^
 m.timesofindia.com###js-gcm-notif
 m.gadgetsnow.com##.ntfc_popup.notify_alert

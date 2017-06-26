@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D32 
+! Version D35 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -76,6 +76,7 @@
 /?metric=
 /AdvertisingModule.
 /Count.cgi?
+/InterYield/*
 /NativeAdService;
 /PageMoniker?pixel
 /__utm.gif
@@ -746,7 +747,7 @@ images/ads/
 /img2/*$domain=jobs.ge
 /tag.$domain=slashdot.org
 _banner.$domain=youtube.com
-|blob:$domain=laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com
+|blob:$domain=kissmanga.com|laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com
 |http:$xmlhttprequest,third-party,domain=clipconverter.cc
 ||2mdn.net^$domain=foxnews.com
 ||a.*.com/$domain=gsmarena.com
@@ -981,6 +982,7 @@ youtube.com##DIV[class*="-ads-"]
 @@/pubads_$script,domain=foxnews.com|threenow.co.nz
 @@/track.$domain=tnt.com
 @@/track/*$media
+@@/tracking/*$script,domain=ctv.ca
 @@_tracking.$script,domain=slideshare.net
 @@||abclocal.go.com/combiner/*/js/analytics/
 @@||accounts.alibaba.com^
