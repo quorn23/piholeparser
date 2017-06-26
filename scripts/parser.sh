@@ -73,7 +73,7 @@ if
 [[ -n $SOURCEIP && $source != https* ]]
 then
 printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
-echo "* $BASEFILENAME List Does NOT Use https. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME List Does NOT Use https. $timestamp" | tee --append $NOHTTPSLISTS &>/dev/null
 fi
 
 ## Logically download based on the Upcheck, and file type
