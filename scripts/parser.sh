@@ -132,7 +132,7 @@ fi
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 timestamp=$(echo `date`)
 if
-[[ -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 ]]
+[[ -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $f == $BDEADPARSELIST]]
 then
 printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
 echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
