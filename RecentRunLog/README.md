@@ -485,3 +485,65 @@
 
 * Script completed at Mon 26 Jun 14:16:02 EDT 2017
 ## Pushing Lists. Mon 26 Jun 14:16:55 EDT 2017
+* hpHostsMMT List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:17:06 EDT 2017
+* hpHostsPartial List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:17:17 EDT 2017
+* hpHostsPHA List Failed To Download. Attempted to use Mirror. Mon 26 Jun 14:17:33 EDT 2017
+* hpHostsPSH List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:17:49 EDT 2017
+* hpHostsPUP List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:01 EDT 2017
+* hpHostsWRZ List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:13 EDT 2017
+* ImmortalMalwareDomains List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:16 EDT 2017
+* JABCreationsAdblockPlusFilterSubscription List Does NOT Use https. Mon 26 Jun 14:18:16 EDT 2017
+* JABCreationsAdblockPlusFilterSubscription List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:17 EDT 2017
+* JABCreationsAdblockPlusFilterSubscription List Failed To Download. Attempted to use Mirror. Mon 26 Jun 14:18:18 EDT 2017
+* JABCreationsAdblockPlusFilterSubscription List Was An Empty File After Download. Mon 26 Jun 14:18:19 EDT 2017
+* JansalsHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:26 EDT 2017
+* JapaneseSiteAdblockFilter List Does NOT Use https. Mon 26 Jun 14:18:23 EDT 2017
+* JapaneseSiteAdblockFilter List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:37 EDT 2017
+* JapaneseSiteAdblockFilterver2 List Does NOT Use https. Mon 26 Jun 14:18:35 EDT 2017
+* JoeWein List Does NOT Use https. Mon 26 Jun 14:18:46 EDT 2017
+* JapaneseSiteAdblockFilterver2 List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:18:48 EDT 2017
+* web host lists directory Already there no need to mkdir. Mon 26 Jun 14:18:49 EDT 2017
+* Locally Hosted Biglist Removed. Mon 26 Jun 14:18:49 EDT 2017
+* Locally Hosted Biglist Not Removed. Mon 26 Jun 14:18:49 EDT 2017
+
+* JoeWein List Failed To Download. Attempted to use Mirror. Mon 26 Jun 14:18:55 EDT 2017
+* KADHostsFile List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:19:01 EDT 2017
+* KowabitBOD List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:19:03 EDT 2017
+* LehighBOOT List Does NOT Use https. Mon 26 Jun 14:19:00 EDT 2017
+* LehighBOOT List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:19:18 EDT 2017
+* LehighImmortal List Does NOT Use https. Mon 26 Jun 14:19:12 EDT 2017
+* malc0de List Does NOT Use https. Mon 26 Jun 14:19:25 EDT 2017
+* Malwaredomainlisthosts List Does NOT Use https. Mon 26 Jun 14:19:26 EDT 2017
+* LehighImmortal List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:19:29 EDT 2017
+* malc0de List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:19:31 EDT 2017
+* Malwaredomainlisthosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:19:32 EDT 2017
+* MalwareURLsDomains List Does NOT Use https. Mon 26 Jun 14:19:38 EDT 2017
+* MVPSHOSTS List Does NOT Use https. Mon 26 Jun 14:19:55 EDT 2017
+
+## Combining All Parsed Lists. Mon 26 Jun 14:19:56 EDT 2017
+* All Parsed List Removed. Mon 26 Jun 14:19:56 EDT 2017
+* MalwaredomainsJustDomains List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:13 EDT 2017
+* MalwareURLsDomains List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:16 EDT 2017
+* MandiantAPT1Report List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:17 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist List Was An Empty File After Download. Mon 26 Jun 14:20:20 EDT 2017
+* RansomwareTrackerDomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:20 EDT 2017
+* Mat1thDNSaddblock List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:25 EDT 2017
+* RansomwareTrackerLockyRansomwareC2DomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:27 EDT 2017
+* MichaelTrimmsHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:31 EDT 2017
+* RansomwareTrackerLockyRansomwarePaymentSitesDomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:31 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareC2DomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:33 EDT 2017
+* MitchellKrogsBaddBoyzHosts List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:35 EDT 2017
+* MVPSHOSTS List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:38 EDT 2017
+* All Parsed List (edited) Removed. Mon 26 Jun 14:20:39 EDT 2017
+* Allparsedlist list was an empty file Mon 26 Jun 14:20:39 EDT 2017
+
+## Edited ALLPARSEDLIST Result. Mon 26 Jun 14:19:56 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+## Total Runtime. Mon 26 Jun 14:19:56 EDT 2017
+* Script Took 266 minutes To Filter  Lists.
+
+## Updated Main README.md. Mon 26 Jun 14:19:56 EDT 2017
+
+* Script completed at Mon 26 Jun 14:19:56 EDT 2017
+## Pushing Lists. Mon 26 Jun 14:20:40 EDT 2017
