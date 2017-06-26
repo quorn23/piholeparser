@@ -547,3 +547,33 @@
 
 * Script completed at Mon 26 Jun 14:19:56 EDT 2017
 ## Pushing Lists. Mon 26 Jun 14:20:40 EDT 2017
+* Nopelist List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:46 EDT 2017
+* NoTrackBlocklist List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:48 EDT 2017
+* PiwikSpam List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:55 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 26 Jun 14:20:56 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwareC2DomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:56 EDT 2017
+* QuidsupMalicious List Is In DeadList Directory, But The Link Is Active. Mon 26 Jun 14:20:57 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:57 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist List Unavailable To Download. Attempted to use Mirror. Mon 26 Jun 14:20:57 EDT 2017
+* web host lists directory Already there no need to mkdir. Mon 26 Jun 14:21:05 EDT 2017
+* Locally Hosted Biglist Removed. Mon 26 Jun 14:21:05 EDT 2017
+* Locally Hosted Biglist Not Removed. Mon 26 Jun 14:21:05 EDT 2017
+
+* SecureMecca List Does NOT Use https. Mon 26 Jun 14:21:10 EDT 2017
+* TheHostsFileProjectHosts List Does NOT Use https. Mon 26 Jun 14:23:20 EDT 2017
+
+## Combining All Parsed Lists. Mon 26 Jun 14:23:51 EDT 2017
+* All Parsed List Removed. Mon 26 Jun 14:23:51 EDT 2017
+* All Parsed List (edited) Removed. Mon 26 Jun 14:24:29 EDT 2017
+* Allparsedlist list was an empty file Mon 26 Jun 14:24:29 EDT 2017
+
+## Edited ALLPARSEDLIST Result. Mon 26 Jun 14:23:51 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+## Total Runtime. Mon 26 Jun 14:23:51 EDT 2017
+* Script Took 2374 minutes To Filter 	344 Lists.
+
+## Updated Main README.md. Mon 26 Jun 14:23:51 EDT 2017
+
+* Script completed at Mon 26 Jun 14:23:51 EDT 2017
+## Pushing Lists. Mon 26 Jun 14:24:30 EDT 2017
