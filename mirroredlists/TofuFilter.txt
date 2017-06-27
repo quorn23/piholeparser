@@ -588,6 +588,7 @@ $script,third-party,domain=jpidols.tv
 |http://$subdocument,third-party,domain=adf.ly
 |http://$script,third-party,domain=youtube-mp3.org
 ||youtube-mp3.org^$subdocument,domain=youtube-mp3.org
+||2ch.vet/img/ani_
 ||4chan-ads.org^
 ||a.konachan.net^$domain=konachan.com
 ||adbkm.com/api/ad/
@@ -1743,6 +1744,7 @@ dic.nicovideo.jp###header > div:last-child
 ||images-amazon.com/images/*/browser-scripts/DA-
 
 amazon.co.jp###nav-swmslot
+amazon.co.jp###pageContent > a:first-child + div
 
 /bestsellers_
 /tinywidget.min.js
@@ -1967,6 +1969,10 @@ blog.livedoor.jp##[src="http://blog.livedoor.jp/goldennews/settings/ad.js"] + sc
 ||neetetsu.com/RSS/
 neetetsu.com##.sidebody2 img
 neetetsu.com##.head_rss + br + center > table
+
+!ニュー速日P
+blog.livedoor.jp##[data-text$=":ニュー速VIPブログ"] + SCRIPT + .blogbody > #article_amazon_links
+blog.livedoor.jp##A[href*="dmm.co.jp"][href*="/a2aaaeaaiiia-001"]
 
 !nww2 http://nw2.blog112.fc2.com/
 ||nw2.babyblue.jp^

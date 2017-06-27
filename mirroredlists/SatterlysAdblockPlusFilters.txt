@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Checksum: 7SYVqk+whq+WrLeHLt9+8g
+! Checksum: Cp3y+XuhvGWu+qCRbPk49g
 ! [Ad Blocking Rules]/blocking
 ! [Element Hiding Rules]/elemhide
 ! [ads]
@@ -85,6 +85,9 @@ _adlog.
 &utm_campaign=
 /netseerads.
 &fingerprint=
+-ad200x200.
+-ad_300x200.
+-ad_300x300.
 /globaladtag.
 ?adsize=
 -contrib-ads/
@@ -111,7 +114,9 @@ _ad/ads.
 /analytics.html?
 /ad-gallery.
 /ad/ptrk/*
+/ad-728x90.
 /ad/trk/*
+/ad320x50.
 /adtop300.
 /dartads.
 /ads/index/*
@@ -224,6 +229,7 @@ _track/marketing.
 /gameadoverlay/*
 _adriver_
 /videoadslightbox-
+/ad-350x250.
 /tncms/ads.
 /getjsonad?
 /getxmlad?
@@ -264,8 +270,8 @@ _adriver_
 /servads.
 /servead?
 /js/ads-
-/(\W|_)(cgi[-_]?bin|hits?|increment|pagevisit|pixel|show|stats?|view)(\W|_)?count(ers?)?[0-9]?(\W|_)/
-/(\W|_)[0-9]?(adbutler|adelixir|adforge|adfuel|adriver|adroll|admantx|adnexus|adnium|adnxs|adrum|adswizz|adzerk|audiencescience|backlinks?|betrad|bidexchange|bidvertiser|bluekai|brightcove|buysellads|cedexis|casalemedia|chartbeat|clicktale|comscore|coremetrics|criteo|crsspxl|crwdcntrl|cxense|demdex|domdex|dynamicyield|eloqua|ensighten|evercookie|evidon|exelator|exoclick|foresee|gumroad|histats|imrworldwide|inspectlet|intellitxt|lijit|linksynergy|livejasmin|localytics|loggly|marketgid|moatads?|netseer|new[-_]?relic|ooyala|openx|optnmnstr|optimizely|outbrain|parsely|popunder|prebid|publicidad|qksrv|qualtrics|quantcast|quantserve|queryly|realvu|revcontent|revsci|rich[-_]?relevance|sailthru|scorecardresearch|skimlinks|stattrax|super[-_.]?cookie|taboola|teads|tealium|upprev|upsell|utrack|virool|visualdna|visualrevenue|webtrekk|webtrends|yieldmo|yieldoptimizer|zedo|zemanta|zergnet|zone[-_]?id)[0-9]?(\W|_)/$~stylesheet
+/(\W|_)(cgi[-_]?bin|hits?|increment|pagevisit|pixel|show|stats?|view)(\W|_)*count(ers?)?[0-9]*(\W|_)/
+/(\W|_)[0-9]*(adbutler|adelixir|adforge|adfuel|adriver|adroll|admantx|adnexus|adnium|adnxs|adrum|adswizz|adzerk|audiencescience|backlinks?|betrad|bidexchange|bidvertiser|bluekai|brightcove|buysellads|cedexis|casalemedia|chartbeat|clicktale|comscore|coremetrics|criteo|crsspxl|crwdcntrl|cxense|demdex|domdex|dynamicyield|eloqua|ensighten|evercookie|evidon|exelator|exoclick|foresee|gumroad|histats|imrworldwide|inspectlet|intellitxt|lijit|linksynergy|livejasmin|localytics|loggly|marketgid|moatads?|netseer|new[-_]?relic|ooyala|openx|optnmnstr|optimizely|outbrain|parsely|popunder|prebid|publicidad|qksrv|qualtrics|quantcast|quantserve|queryly|realvu|revcontent|revsci|rich[-_]?relevance|sailthru|scorecardresearch|skimlinks|stattrax|super[-_.]?cookie|taboola|teads|tealium|upprev|upsell|utrack|virool|visualdna|visualrevenue|webtrekk|webtrends|yieldmo|yieldoptimizer|zedo|zemanta|zergnet|zone[-_]?id)[0-9]*(\W|_)/$~stylesheet
 /side-bar-ad-
 /sidead160.
 /sideadsize2.
@@ -313,11 +319,11 @@ _ad.html?
 /tncms/tracking.
 /(\W|_)[0-9]*(advanced|advertise|ajax|article|api|applet|async|banners?|beacon|blog|book|bottom|box|brand|cache|cam|carousel|commercial|common|community|companion|components?|content|contextual|cookie|core|cover|custom|default|deliver|deploy|dfp|display|door|download|dynamic|expanding|external|facebook|featured|files?|flash|float(ing)?|footer|generic|get|global|header|home|house|html|iframe|imgs?|images?|include|index|inline|integrated|internal|javascripts?|jquery|landing|large|left|(lazy)?load|listing|logo|image|impression|leaderboard|link|load|main|media|merchant|mobile|multi|native|new|overlay|page|php|player|pop|popup|post|premium|print|product|promo|realmedia|render|report|request|responsive|right|rotat(e|ing)|secure|script|search|serve|sex|shared|shop|(slide)?show|side(bar)?|site|skyscraper|slider?|small|smart|standard|static|station|sticky|storage|store|stream|subscribe|table|takeover|text|tiles?|top|update|upload|user|video|view|weekly|web(site)?|welcome|word|yahoo)[0-9]*(\W|_)*ads?[0-9]*(\W|_)/$~stylesheet
 ?control_tag_
-/(\W|_)[0-9]*ads?(\W|_)*(100x28|100x70|200x200|300x50|300x60|300x200|300x250|300x300|320x50|350x250|728x90)(\W|_)/$~stylesheet
 /(\W|_)[0-9]*ads?(\W|_)*(background|banners?|bar|below|bottom|box|button|campaign|caption|center|channel|check|client|click(through)?|common|controller|components?|container|count(er)?|create|delivery?|dfp|display|exchange|feedback|files?|footer|free|generated|get|gpt|header|holder|home|hover|i?frame|imgs?|images?|impressions?|init|injector|inline|insert(er)?|instertitial|json|label|large|layers?|leaderboard|left|load(ers?)?|management|manager|medium|module|native|network|new|notice|overlay|page|partners?|placement|placeholder|plugins?|policy|popup|position|premium|promos?|remote|referrer|requests?|right|rotate|sales?|scores|scripts?|search|serv(er?|ice|ing)|session|show|sidebar|skyscraper|slide(out|r)?|slots?|spaces?|squares?|srvr?|stats?|status|stream|tags?|target(ing)?|tech|text|thumbnails?|tiles?|title|top|track(er|ing)?|traffic|type|units?|video|view|widgets?|words|wrapper|yahoo|zone)[0-9]*(\W|_)/$~stylesheet
 /\/([0-9]|[a-z]|analytics|atrk|hit|log|njs|ping|pix|px|stat|track(er|ing)?|visitor)\.gif\?/
-/(\W|_)click(\W|_)?(logging|metrics|stream|track(er|ing)?)(\W|_)/
-/(\W|_)advert(is(e|ements?|ers?|ing)?|orial|s)?[0-9]?(\W|_)/$~stylesheet
+/(\W|_)click(\W|_)*(logging|metrics|stream|track(er|ing)?)(\W|_)/
+/(\W|_)advert(is(e|ements?|ers?|ing)?|orial|s)?[0-9]*(\W|_)/$~stylesheet
+_ad_300x60.
 /kissmetrics/*
 /ipixel?
 /cube_ads/*
@@ -449,7 +455,7 @@ _ad_engine_
 /yinteractiontracking_
 /vip-analytics.
 /monetate.
-/(\W|_)tracking(\W|_)?(analytics?|banner|enabled|min|pixel|script|server?|widget)[0-9]*(\W|_)/
+/(\W|_)tracking(\W|_)*(analytics?|banner|enabled|min|pixel|script|server?|widget)[0-9]*(\W|_)/
 /1x1.gif
 /calendarad.
 /bounceusertracking-
@@ -546,6 +552,7 @@ _ad_change/
 /bdindexad.
 /outwebad.
 /pushdownad.
+/ad_100x70.
 /pencilad.
 /javascript_tracker.
 .cqwebtrend.
@@ -603,6 +610,7 @@ _paidplacement_
 /ad.php?
 /ad.js?
 /taboolaborderbg_
+/ads/300x250_
 /incrementviews?
 /paidadslogos/*
 /tracking/tracker?
@@ -627,6 +635,7 @@ _paidplacement_
 /hit.js?
 /counter.js
 /jsadimp.
+_ad_100x28.
 /spotlight_ad_
 .hiveanalytics.
 /tnt.metering.
@@ -640,6 +649,7 @@ _paidplacement_
 _leaderdigitaladvert_
 /bestads.
 /d1visitscounter?
+/ads_728x90.
 &resp=ad;
 /page_load_metric/*
 /ad-cookie/*
@@ -716,6 +726,7 @@ _doubleclickad2.
 [referrer]
 /browser/stats
 /mutracker.
+/ads/300x250-
 &adusername=
 -opt-in.
 /pixel.php?
@@ -737,8 +748,8 @@ _metricscollection.
 ?campaign_id=
 /exitpopup-
 /sctestimonials.
-/(\W|_)(activity|analytics|elq|impression|js|json|link|pixel|recommend|referrer|stats?|traffic|user|visit|web)(\W|_)?tracking[0-9]*(\W|_)/
-/(\W|_)(club|more|new)?testimonials?(bottom|carousel|middle|top)?[0-9]?(\W|_)/$~stylesheet
+/(\W|_)(activity|analytics|elq|impression|js|json|link|pixel|recommend|referrer|stats?|traffic|user|visit|web)(\W|_)*tracking[0-9]*(\W|_)/
+/(\W|_)(club|more|new)?testimonials?(bottom|carousel|middle|top)?[0-9]*(\W|_)/$~stylesheet
 /stats/tracker.
 =postanalytics&
 /logjs.php
@@ -746,6 +757,7 @@ _metricscollection.
 /exodentitytrack.
 .php?a=
 /ping_session.
+/ad_300x50_
 /tracker-article-
 -scroll-tracker.
 _gpt_bootstrap.
@@ -861,7 +873,6 @@ _pixel/partner/
 /ad-betweenposts.
 -ab-analytics/
 /log_interaction?
-/log_interaction?
 =big+ad&
 /toplytics/*
 /marketingwidgets/*
@@ -873,18 +884,14 @@ _pixel/partner/
 /statusbarads.
 /get_tracking_id?
 ||geobanner.
+/ad-300x250-
+/ad-300x250.
 .com/ads.
 /popup-voucher.
 _ad_enabled=
 _partner_branding&
-/setcounter.php?
-/controltag/*
-/partner-rss-
-||pagefair.com^$third-party
-/ads/js/*
-/impression.php/*
-/breaker-ads/*
--list-ad.
+/ads/ads.html
+#referrer=
 ! [ads - affiliates]
 &affiliate=
 /affi_id=
@@ -895,11 +902,11 @@ _partner_branding&
 _affiliate=
 ||affiliate.
 ||affiliates.
-/(\W|_)(commercial)[0-9]?(\W|_)?affiliates?(\W|_)/
+/(\W|_)(commercial)[0-9]*(\W|_)*affiliates?(\W|_)/
 /aff.php?
 ?aff_code=
 ?aff_id=
-/(\W|_)affiliates?(\W|_)?(ads?|banners?|code|frame|icons?|id|impressions?|links?|marketing|program|promo|tag|track|widget)[0-9]?(\W|_)/
+/(\W|_)affiliates?(\W|_)*(ads?|banners?|code|frame|icons?|id|impressions?|links?|marketing|program|promo|tag|track|widget)[0-9]*(\W|_)/
 &aff_id=
 &affid=
 ?affiliatly_code=
@@ -911,7 +918,7 @@ _affiliate=
 /logos/affiliates/*
 ! [ads - amazon]
 /ad-amazon.
-/(\W|_)(amazon|amzn)(\W|_)?(affiliate|ads?)(\W|_)/
+/(\W|_)(amazon|amzn)(\W|_)*(affiliate|ads?)(\W|_)/
 ||amazon-adsystem.com^$third-party
 ||assoc-amazon.co.uk^$third-party
 ||rcm-de.amazon.de^$third-party
@@ -938,7 +945,7 @@ _beacon?
 -beacon-min.
 =%2F%2Fbeacon.
 /beacon-min.
-/(\W|_)(analytics|aol|api|bcn|geo|gravity|js|monitor|track|wikia|yahoo)(\W|_)?beacon(\W|_)/
+/(\W|_)(analytics|aol|api|bcn|geo|gravity|js|monitor|track|wikia|yahoo)(\W|_)*beacon(\W|_)/
 /beacons?
 /beacons/initialize?
 /bcn?
@@ -947,7 +954,7 @@ _beacon.html?
 /beacons/initialize
 ! [ads - google]
 /gaeventtracking.
-/(\W|_)google(\W|_)?(ads?|ad(sense|services)|afd|analytic(ator|s)?|dfp|remarketing)(\W|_)/
+/(\W|_)google(\W|_)*(ads?|ad(sense|services)|afd|analytic(ator|s)?|dfp|remarketing)(\W|_)/
 .googlesyndication.
 /ad_google_
 /(\W|_)adsense(manager|widget)?(\W|_)/
@@ -990,7 +997,7 @@ _dfpmanager/
 /omniturelinkset.
 /omnicode.
 /(\W|_)omniture(base|include|service|tracking)?(\W|_)/
-/(\W|_)s[-_.]code[0-9]?(\W|_)/
+/(\W|_)s[-_.]code[0-9]*(\W|_)/
 _omniturevarscomm.
 /parseomniture.
 /omniturefunctions.
@@ -1012,8 +1019,8 @@ _omniturevarscomm.
 /appstorebadgeen.
 /upgrade_flash_player2.
 /appstore-install-badges/*
-/(\W|_)((app(le)?|google|play|windows)[-_]?store|google[-_]?play|android|app|ios)(\W|_)?(badges?|promo)(\W|_)/
-/(\W|_)(badge|banner|promo)(\W|_)?((app|google|play|windows)[-_]?store|google[-_]?play|android|ios|itunes)(\W|_)/
+/(\W|_)((app(le)?|google|play|windows)[-_]?store|google[-_]?play|android|app|ios)(\W|_)*(badges?|promo)(\W|_)/
+/(\W|_)(badge|banner|promo)(\W|_)*((app|google|play|windows)[-_]?store|google[-_]?play|android|ios|itunes)(\W|_)/
 /(\W|_)get[-_.]?(adobe[-_.]?(flash|reader)|flash[-_.]?player|ios[-_.]?app)(\W|_)/
 ||browser-update.org^$third-party
 ||play.google.com/*/badges/*
@@ -1031,19 +1038,19 @@ _omniturevarscomm.
 /sponsor%20features.
 /amssponsoredsearch/*
 /sponsoradlogo/*
-/(\W|_)sponsored(\W|_)?(by|content|headline|icon|links?|post|sections?|tweets?|widget)[0-9]?(\W|_)/
-/(\W|_)(blog|site|story|weather)(\W|_)?sponsors?(\W|_)?(box|page|partners?|site)?[0-9]?(\W|_)/
+/(\W|_)sponsored(\W|_)*(by|content|headline|icon|links?|post|sections?|tweets?|widget)[0-9]*(\W|_)/
+/(\W|_)(blog|site|story|weather)(\W|_)*sponsors?(\W|_)*(box|page|partners?|site)?[0-9]*(\W|_)/
 /sponsored%20feature.
 /sponsoredtextlink.
 /topsponsorbar.
 /icon-sponsored-
 /thumbs/sponsor/*
 ! [annoyances - anti-adblock]
-/(\W|_)(anti|api|block|check|detect|fuck)(\W|_)?adblock(er)?[0-9]?(\W|_)/
+/(\W|_)(anti|api|block|check|detect|fuck)(\W|_)*adblock(er)?[0-9]*(\W|_)/
 &adblocker=
 /adblocks.php?
 =adblock&
-/(\W|_)(abp|adb(lock(er)?)?)(\W|_)?(checker|dedect|detect(ed|er|or|ion)?|enabled|message|running|test|track(er|ing)?|warning)[0-9]?(\W|_)/
+/(\W|_)(abp|adb(lock(er)?)?)(\W|_)*(checker|dedect|detect(ed|er|or|ion)?|enabled|message|running|test|track(er|ing)?|warning)[0-9]*(\W|_)/
 =adblocked_
 /check_adbl.
 /ablockhint.
@@ -1056,7 +1063,7 @@ _ad_blocker.
 /adblockericon.
 /abdetect.
 ! [annoyances - back to top]
-/(\W|_)(back|btn|float|footer|go|icon|jump|return|scroll|ui|up)[-_.]?(2|to)[-_.]?top[0-9]?(\W|_)/$~stylesheet
+/(\W|_)(back|btn|float|footer|go|icon|jump|return|scroll|ui|up)[-_.]?(2|to)[-_.]?top[0-9]*(\W|_)/$~stylesheet
 /backtotopicon.
 /backtoptab.
 /backtotoparrow.
@@ -1067,12 +1074,6 @@ _ad_blocker.
 /back_to_topup.
 /icon_back_top.
 /backtoptop.
-! [annoyances - clipboard editing]
-/copypaste.js
-/clipboard.min.js
-/clipboard.js
-/(\W|_)zeroclipboard(\W|_)/
-/jquery.clipboard.js
 ! [annoyances - cookies disabled warnings]
 /cookie-disabled.
 /cookies-disabled.
@@ -1081,28 +1082,12 @@ _ad_blocker.
 /livechatlogonew.
 /responselivechat.
 _toplivechat&
-/(\W|_)live(\W|_)?chat[-_.]?(ajax|client|icon|inc|logo|online)?[0-9]?(\W|_)/
+/(\W|_)live(\W|_)*chat[-_.]?(ajax|client|icon|inc|logo|online)?[0-9]*(\W|_)/
 /liveperson/*
 /liveagent/*
 /livepersonmonitor.
 /mylivechat.
 /chat_msg.
-! [annoyances - mobile redirect]
-/mobile_js_redirect/*
-/detectmobilebrowser.
-/tapatalkdetect-
-/mobile_js_redirect.
-/tapatalkdetect.
-/(\W|_)mobile(\W|_)?(check|detect(ion|or)?|redir(ect(ion)?)?)[0-9]?(\W|_)/
-/(\W|_)(detect|redirection)(\W|_)?mobile(\W|_)/
-/mobile_device_detect.
-/mobilebrowsersdetect.
--detectmobilebrowser.
-/mobredirect.
-/mob_redirect.
-/pdmobileredirect.
-/tapadetect.
-/mdetect.js
 ! [annoyances - javascript disabled warnings]
 /javascript_disabled.
 ! [annoyances - smooth scrolling]
@@ -1110,18 +1095,18 @@ _toplivechat&
 /jquery.smooth-scroll.
 /jquery.smoothscroll.
 /jquery.smoothdivscroll-
-/(\W|_)(nice|smooth)(\W|_)?scroll(\.min)?\.js/
+/(\W|_)(nice|smooth)(\W|_)*scroll(\.min)?\.js/
 /smoothpagescroll.
 /jquery.scrollspeed.
 ! [other - adchoices]
 /(\W|_)ad[-_]?choices?(footer|ico|ico?n|logo)?[0-9]*(\W|_)/
 /adchoicesv4.
 ! [other - avatars]
-/(\W|_)(anon(ymous)?|blank|comment|custom|default|empty|forum|generic|get|guest|header|logo|missing|no|nonmember|pluck|post|square|users?)(\W|_)?avatar[0-9]*(\W|_)/
-/(\W|_)avatar(\W|_)?(blank|default|face|generic|male|manager|placeholder|small|thumbnail|user)(\W|_)/
-/(\W|_)(custom)?avatars[0-9]?(\W|_)/
+/(\W|_)(anon(ymous)?|blank|comment|custom|default|empty|forum|generic|get|guest|header|logo|missing|no|nonmember|pluck|post|square|users?)(\W|_)*avatar[0-9]*(\W|_)/
+/(\W|_)avatar(\W|_)*(blank|default|face|generic|male|manager|placeholder|small|thumbnail|user)[0-9]*(\W|_)/
+/(\W|_)(custom)?avatars[0-9]*(\W|_)/
 /no-image-avatar-
-/(\W|_)gravatar[0-9]?(\W|_)/
+/(\W|_)gravatar[0-9]*(\W|_)/
 /xno-avatar.
 /avatar_simple_visitor.
 ?avatar=
@@ -1131,13 +1116,12 @@ _toplivechat&
 /no_image_avatar.
 /noavatarmale.
 /sampleforumavatar.
-/mediaavatar/*
 ! [other - cookie policy]
 /popupusecookie.
 /getcookiepolicy.
 /eucookiecz.
-/(\W|_)eu[-_]?cookie[-_]?(law)?[0-9]?(\W|_)/
-/(\W|_)cookie[-_.]?(banner|bar|choices?|complian(ce|t)|consent|disclaimer|law|notice|notification|policy|preferences|regulation|warning)[0-9]?(\W|_)/$~stylesheet
+/(\W|_)eu[-_]?cookie[-_]?(law)?[0-9]*(\W|_)/
+/(\W|_)cookie[-_.]?(banner|bar|choices?|complian(ce|t)|consent|disclaimer|law|notice|notification|policy|preferences|regulation|warning)[0-9]*(\W|_)/$~stylesheet
 /cookiespolicy.
 /cookieconsentmodal-
 /logo_cookie_reg.
@@ -1148,8 +1132,8 @@ _toplivechat&
 /regulations/cookie/*
 /cookies-policies.
 ! [other - donation requests]
-/(\W|_)(badge|btn|buttons?|ico|ico?n|float|paypal|tab|widget)(\W|_)?donat(e|ion)[0-9]?(\W|_)/
-/(\W|_)donat(e|ion)(\W|_)?(btn|buttons?|ico|ico?n|float|paypal|sidebar|tab|widget)[0-9]?(\W|_)/
+/(\W|_)(badge|btn|buttons?|ico|ico?n|float|paypal|tab|widget)(\W|_)*donat(e|ion)[0-9]*(\W|_)/
+/(\W|_)donat(e|ion)(\W|_)*(btn|buttons?|ico|ico?n|float|paypal|sidebar|tab|widget)[0-9]*(\W|_)/
 _donatecc_
 /cardonationbanner.
 /donateribbon.
@@ -1159,16 +1143,16 @@ _donatecc_
 /donate%20now_
 /buy-me-a-coffee-
 /buy_me_a_coffee_
-/(\W|_)(flattr|patreon)(\W|_)?(badges?|banners?|buttons?|logos?)(\W|_)/
-/(\W|_)(buttons?|logo|plugins?)(\W|_)?(flattr|patreon)(\W|_)/
+/(\W|_)(flattr|patreon)(\W|_)*(badges?|banners?|buttons?|logos?)(\W|_)/
+/(\W|_)(buttons?|logo|plugins?)(\W|_)*(flattr|patreon)(\W|_)/
 /donatemonthly.
 /onetimedonation.
 ! [other - feedback requests]
 -send-us-feedback-
 -send-us-feedback.
 /footericonfeedback.
-/(\W|_)(btn|buttons?|ico|ico?ns?|share|widget)(\W|_)?feedback(\W|_)/
-/(\W|_)feedback(\W|_)?(badge|btn|buttons?|ico|ico?n|float|plugin|survey|tab)[0-9]?(\W|_)/
+/(\W|_)(btn|buttons?|ico|ico?ns?|share|widget)(\W|_)*feedback(\W|_)/
+/(\W|_)feedback(\W|_)*(badge|btn|buttons?|ico|ico?n|float|plugin|survey|tab)[0-9]*(\W|_)/
 ||feedbackify.com^$third-party
 ! [other - google search]
 /(\W|_)google(\W|_)cse(\W|_)/
@@ -1178,8 +1162,8 @@ _donatecc_
 ||cse.google.com^$third-party
 ||google.com/uds/$third-party
 ! [other - powered by]
-/(\W|_)powered[-_]?by[-_.]?(google|hydra|livefyre|logo|trove|zillow)?[0-9]?(\W|_)/
-/(\W|_)(apache|django|drupal|mysql|php|plone|python|sdl|vip)(\W|_)?powered[0-9]?(\W|_)/
+/(\W|_)powered[-_]?by[-_.]?(google|hydra|livefyre|logo|trove|zillow)?[0-9]*(\W|_)/
+/(\W|_)(apache|django|drupal|mysql|php|plone|python|sdl|vip)(\W|_)*powered[0-9]*(\W|_)/
 /curatedby.
 /poweredbyimpulse.
 /poweredbyconvio.
@@ -1197,7 +1181,7 @@ _driven_by_demand_media.
 /poweredbyiplant_
 /hostedby2.
 ! [privacy - autocomplete]
-/(\W|_)(auto|jquery|search(box)?)(\W|_)?suggest(ion)?s?(\W|_)/$~stylesheet
+/(\W|_)(auto|jquery|search(box)?)(\W|_)*suggest(ion)?s?(\W|_)/$~stylesheet
 =autosuggest,
 /complete/search?
 ||google.com/s?*
@@ -1211,7 +1195,7 @@ _driven_by_demand_media.
 /autofilledkeywords.
 ||ac.duckduckgo.com^
 -autocorrect.
-/(\W|_)(search(box)?|swiftype|ui)(\W|_)?autocomplete(\W|_)/$~stylesheet
+/(\W|_)(search(box)?|swiftype|ui)(\W|_)*autocomplete(\W|_)/$~stylesheet
 /advancedtypeaheadresource/*
 /suggestedterms.
 /search_suggestions_
@@ -1306,8 +1290,8 @@ _social.min.
 .socialshareprivacy.
 .tellafriend.
 /(\W|_)[0-9]*(shar(e|ing)|social((\W|_)?media)?)[0-9]*(\W|_)*(article|auth|bar|badges?|banniere|block|blog(ger)?|bookmark(ing|s)?|btns?|buttons?|cnts?|connect|core|count(er|s)?|embed|email|favorite|feeds?|float(er)?|flyout|follow|footer|friends?|header|hover|ico|icone|ico?ns?|i?frame|ikon|(light)?box|likes?|link(s|z)?|login|logos?|manager|menu|module|nav|oauth|overlay|page|panel|pop(in|up)|post|plugins?|plus|promo|referral|shar(e|ed|er|ing)|sidebar|slider|snippet|sprites?|stats|tab|tag|tool(bar|s)?|top(bar)?|track(er|ing)|url|video|widgets?)[0-9]*(\W|_)/$~stylesheet
-/(\W|_)follow(\W|_)?(bar|btn|button|icons?|logo|me|popover|sprite|us)[0-9]*(\W|_)/$~stylesheet
-/(\W|_)bookmark(\W|_)?(button|icons?|it|sprite|this|us|widget)[0-9]*(\W|_)/
+/(\W|_)follow(\W|_)*(bar|btn|button|icons?|logo|me|popover|sprite|us)[0-9]*(\W|_)/$~stylesheet
+/(\W|_)bookmark(\W|_)*(button|icons?|it|sprite|this|us|widget)[0-9]*(\W|_)/
 /add-link-to-
 /(\W|_)(api|article|banners?|block|blog(ger)?|bottom|btns?|but(tons?)?|core|count|embed|email|feed|floating|footer|header|ico|icones?|ico?ns?|join|jquery|link|logos?|modules?|page|player|plugins?|popup|post|sidebar|simple|site|slide|sprites?|tool(bar|s)|top|widgets?)[0-9]*(\W|_)*(shar(e|ing)|socials?)[0-9]*(\W|_)/$~stylesheet
 /(\W|_)add[-_.]?(2|to)[-_.]?(bloglines|bookmarks?|fav(ou?rites?)?|netvibes|my(msn|yahoo)|pageflakes)[0-9]*(\W|_)/
@@ -1547,9 +1531,9 @@ _socialsharebar.
 /friends2follow_
 /api/socialize/*
 /myspace%20logo.
-/(\W|_)share(\W|_)?(it|on|social|this|through)[0-9]*(\W|_)/$~stylesheet
+/(\W|_)share(\W|_)*(it|on|social|this|through)[0-9]*(\W|_)/$~stylesheet
 /myspace-64.
-/\/(aol|digg|face[-_]?book|flickr|g(oogle)?[-_]?plus|google(\+)?|instagram|linked[-_]?in|myspace|newsvine|pinterest|reddit|rss|stumble[-_]?upon|technorati|tumblr|twitter|vimeo|vkontakte|whatsapp|yahoo|you[-_]?tube)\.(bmp|gif|ico|jpe?g|png|svg)/
+/\/(aol|digg|face[-_]?book|flickr|g(oogle)?[-_]?plus|google(\+)?|instagram|linked[-_]?in|myspace|newsvine|pinterest|reddit|rss|stumble[-_]?upon|technorati|tumblr|twitter|vimeo|vkontakte|whatsapp|yahoo|you[-_]?tube)\.(bmp|gif|jpe?g|png|svg)/
 /myaolbuttonsmall.
 /addthislogo.
 /iconaddthis.
@@ -1923,7 +1907,7 @@ _footicon_gplus.
 ! [social - newsletter]
 /icono_newsletter.
 /subscribe-to-our-newsletter.
-/(\W|_)newsletters?(\W|_)*(ad|api|bar|block|bg|box|btn|button|embed|footer|form|hover|ico?n|lightbox|logo|marketing|modal|module|overlays?|pop(in|up)|promo|push|sign[-_]?up|subscri(be|ption)|tout|widget)[0-9]?(\W|_)/$~stylesheet
+/(\W|_)newsletters?(\W|_)*(ad|api|bar|block|bg|box|btn|button|embed|footer|form|hover|ico?n|lightbox|logo|marketing|modal|module|overlays?|pop(in|up)|promo|push|sign[-_]?up|subscri(be|ption)|tout|widget)[0-9]*(\W|_)/$~stylesheet
 -sign-up-for-our-newsletter.
 /ajaxnewsletter.
 /enewsletter-
@@ -1935,7 +1919,7 @@ _newsletter_16x16.
 /newslettersignupform.
 /newsletterajaxhandler.
 /ikona-newsletter-
-/(\W|_)(ad|api|app|box|btn|but(tons?)?|connect|email|embed|follow|foot(er)?|free|ftr|header|ico|ico?ns?|icone|join|js|logo|marketing|menu|modules?|plugin|popup|side(bar)?|signup|slideout|subscribe|widgets?|wysija)(\W|_)*newsletters?[0-9]?(\W|_)/$~stylesheet
+/(\W|_)(ad|api|app|box|btn|but(tons?)?|connect|email|embed|follow|foot(er)?|free|ftr|header|ico|ico?ns?|icone|join|js|logo|marketing|menu|modules?|plugin|popup|side(bar)?|signup|slideout|subscribe|widgets?|wysija)(\W|_)*newsletters?[0-9]*(\W|_)/$~stylesheet
 /newsletterwidgetbg.
 /signupnewsletterbutton.
 /newsletterpagepopup.
@@ -1991,7 +1975,7 @@ _icon_pinit.
 ! [social - reddit]
 /mobredditshare.
 /icon/sm_reddit.
-/(\W|_)spreddit[0-9]?(\W|_)/
+/(\W|_)spreddit[0-9]*(\W|_)/
 /spreddit10.
 /pink%20rss%20button.
 /spreddit10x20.
@@ -2286,7 +2270,7 @@ _footicon_ytube.
 /getnortonsealimage.
 /getnortonsealimaget.
 /bizrate_medal.
-/(\W|_)(secured|trusted|verified)[-_]?by[0-9]?(\W|_)/
+/(\W|_)(secured|trusted|verified)[-_]?by[0-9]*(\W|_)/
 /valid-rss-
 /guaranteedseal_
 /merchant_seal_
@@ -2325,7 +2309,7 @@ _footicon_ytube.
 /trustedbadge/*
 /trust-guard-seal.
 =buysafeseal_
-/(\W|_)(comodo|crowdcurity|geotrust|globalsign|godaddy|honcode|mcafee|norton|rapidssl|shieldsquare|shopify|shopwiki|thawte|truste|trustguard|trustwave|verisign)(\W|_)?(badge|certified|icon|logo|seal|secured?)[0-9]?(\W|_)/
+/(\W|_)(comodo|crowdcurity|geotrust|globalsign|godaddy|honcode|mcafee|norton|rapidssl|shieldsquare|shopify|shopwiki|thawte|truste|trustguard|trustwave|verisign)(\W|_)*(badge|certified|icon|logo|seal|secured?)[0-9]*(\W|_)/
 /certified_secure_
 /entrust_badge.
 /bizrate_medal_
@@ -2333,7 +2317,7 @@ _footicon_ytube.
 /tjoos-badge.
 /trustseals/*
 /secureseal.
-/(\W|_)(badges?|btn|icon|logo|seal)(\W|_)?(comodo|cybertrust|norton|rapidscan|truste|trustwave|verisign|volusion)[0-9]?(\W|_)/
+/(\W|_)(badges?|btn|icon|logo|seal)(\W|_)*(comodo|cybertrust|norton|rapidscan|truste|trustwave|verisign|volusion)[0-9]*(\W|_)/
 /authorize.net-logo-
 /safe_subscribe_logo.
 /bizrate_dynamic_medal.
@@ -2362,11 +2346,10 @@ _footicon_ytube.
 ||shield.sitelock.com^$third-party
 /trustbadges/*
 ! [trust seals - bbb]
-/(\W|_)bbb(\W|_)?(accredited|aplus|badge|cert|footer|grade|ico?n|liability|logo|rating|(reliability)?seal)[0-9]?(\W|_)/
-/(\W|_)(accredited|badges|footer|ico?ns?|logo|trust|seal)(\W|_)?bbb[0-9]?(\W|_)/
+/(\W|_)bbb(\W|_)*(accredited|aplus|badge|cert|footer|grade|ico?n|liability|logo|rating|(reliability)?seal)[0-9]*(\W|_)/
+/(\W|_)(accredited|badges|footer|ico?ns?|logo|trust|seal)[0-9]*(\W|_)*bbb[0-9]*(\W|_)/
 /bbbsealh1.
 /bbbimage-
 /bbb_88x54.
 ||bbb.org/seals/
--icon2-bbb.
 ||seal-*.bbb.org/
