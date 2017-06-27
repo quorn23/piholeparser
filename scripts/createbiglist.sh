@@ -77,10 +77,14 @@ fi
 ## Add Blacklist Domains
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
 rm $BLACKLISTTEMP
+cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+rm $FILETEMP
 
 ## Remove Whitelist Domains
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP > $TEMPFILE
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE > $FILETEMP
 rm $WHITELISTTEMP
+cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+rm $FILETEMP
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
@@ -91,7 +95,6 @@ then
 echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $FILETEMP
 echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
 mv $TEMPFILE $BIGAPLE
 elif
