@@ -1079,7 +1079,8 @@ hackintosh.zone##script:inject(abort-on-property-write.js, onload)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/220
 ! https://github.com/uBlockOrigin/uAssets/issues/426
-bild.de##script:inject(abort-on-property-read.js, de.bild.cmsKonfig.a.b)
+! https://github.com/uBlockOrigin/uAssets/issues/477
+bild.de##script:inject(abort-on-property-read.js, de.bild.cmsKonfig.a.a)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/174
 sueddeutsche.de##script:inject(abort-on-property-write.js, SZAdBlockDetection)
@@ -1612,3 +1613,6 @@ bloomberg.com##.bb-nav-search:style(z-index: 1000 !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/475
 ||reddit.com/api/request_promo.json$xmlhttprequest
+
+! https://github.com/uBlockOrigin/uAssets/issues/480
+qrz.ru##.content_row > div[class]:has(a[href="/help/adblock/"])

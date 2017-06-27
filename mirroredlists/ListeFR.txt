@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: EKEKE9iy+Xn6lWkFjlOyzQ
-! Version: 201706270412
+! Checksum: Fu8TBgNG0wK6luRxpZ8l0g
+! Version: 201706271712
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -2912,6 +2912,7 @@ debugger:$popup
 ||sex-affiliation.com^$third-party
 ||sexclic.com^$third-party
 ||sexequalite.com^$third-party
+||sexpennyauctions.com^$third-party
 ||sextapes2stars.com^$third-party
 ||sexytraf.com^$third-party
 ||sexyxxx.biz^$third-party
@@ -5024,6 +5025,7 @@ $webrtc,domain=123movies.net|9divx.org|akoam.com|bypassed.gold|cocostreaming.com
 ||jolstatic.fr/www/skins/
 ||jolstatic.fr/www/themes/*/habi
 ||jrphotographie.com/pub/
+||js.bulkhentai.com^
 ||js.stream-up.com/fonctions.min.js?
 ||junge-luder.com/Stripbunny/
 ||kaltura.com^*/a.mp4|$media
@@ -6000,6 +6002,15 @@ oload.tv,streamango.com###videooverlay
 ! webchoc.com
 |http://$script,domain=sexefelin.com|tubixe.com|vidsexe.com|webchoc.com
 |https://$script,domain=sexefelin.com|tubixe.com|vidsexe.com|webchoc.com
+! cam4.com
+@@||xcdnpro.com/plugin/epay/js/epay-$script,domain=cam4.com
+@@||xcdnpro.com/web/js/bootstrap-$script,domain=cam4.com
+@@||xcdnpro.com/web/js/build/bundle_$script,domain=cam4.com
+@@||xcdnpro.com/web/js/cam4-$script,domain=cam4.com
+@@||xcdnpro.com/web/js/i18n/com_cam4/jsLang.$script,domain=cam4.com
+@@||xcdnpro.com/web/js/jquery/jquery.$script,domain=cam4.com
+|http://$script,third-party,domain=cam4.com|cam4.fr
+|https://$script,third-party,domain=cam4.com|cam4.fr
 ! speedvid.net
 @@||www.speedvid.net/dl?op=download_orig&id=*&r=$popup,~third-party,domain=speedvid.net
 |http://$script,subdocument,third-party,xmlhttprequest,domain=speedvid.net
@@ -9900,6 +9911,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ##a[href^="http://hits.epochstats.com/"]
 ##a[href^="http://hopinions.info/"]
 ##a[href^="http://jouthad.com/"]
+##a[href^="http://js.bulkhentai.com/"]
 ##a[href^="http://lifeselector.com/game/listGames?"]
 ##a[href^="http://lp.ilividnewtab.com/"]
 ##a[href^="http://m.mobilerevenu.com/idw/"]
@@ -9961,6 +9973,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ##div[id^="adsatlas-"]
 ##div[id^="block-dfp-728-"]
 ##div[id^="crt-"][style*="width:"]
+##div[id^="div-adt-"]
 ##div[onclick*="/regiedeep.php?"]
 ##gwd-doubleclick
 ##iframe[name*="/adunblock_"]

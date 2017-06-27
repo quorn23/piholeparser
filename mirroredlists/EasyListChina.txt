@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: pi3GY0WJgVcJYmhZUOIv0g
-! Version: 201706270412
+! Checksum: szuD3+IJke0fyOk4jgQ4hw
+! Version: 201706271712
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 27 Jun 2017 04:12 UTC
+! Last Modified: 27 Jun 2017 17:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -559,6 +559,8 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn^
+||iqu-operation.com^
+||ciajingman.com^
 .cn/show?id=$script,third-party
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
@@ -1845,7 +1847,6 @@ ubmcmm.baidustatic.com
 ||ulink.cc^$third-party
 ||um29.com^$third-party
 ||unimhk.com^$third-party
-||union.$third-party
 ||union009.com^$third-party
 ||unionbig.com^$third-party
 ||unionli.com^$third-party
@@ -6296,7 +6297,6 @@ mg*.6park.com/img/$image
 ||zhuanyewanjia.com/upload/show/
 ||zhujiangroad.com/js/alltop.js
 ||zhujiceping.com/F/
-||zhujiceping.com/wp-content/uploads/EhQemhZUHBtM/QlmIDXLdFKkP.js
 ||zhulang.com/ad_js/
 ||zhulong.com/poster/get?*_960
 ||zhulong.com/poster/get?positions_name=ZY_JZ_300_02
@@ -6347,15 +6347,23 @@ mg*.6park.com/img/$image
 ||zxba.cc/js/*.gif
 ||zxip.com/2013_ad/
 ||zzc.cn/b1/live_b_
-||zzidc.com/img/
 ||zzidc.com/uploads/tuoguan
 ||zzidc.com^*0.gif
 ||zzimg.51.la^
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||jb51.net/skin/downsoft/js/*down.js
+||jb51.net/good/arc.js
+||jb51.net/imgby/logo_
+||sinaimg.cn/large/7044f931gy1fgzi7n0j5gj20qo02i0u9.jpg
+||thztv.net/6/luoliao.gif
+||btbbt.*/imgs.js
+||btbbt.*/view/image/QT_
+||ckck.tv/inc/
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
+thzav.com###fctrl_attachad + .c + DIV[style="WIDTH: 100%; padding-left:10px;"] > DIV:first-child
 zhainanfulishe.net##.textwidget > A[href^="http"]:not([href^="http://www.zhainanfulishe."])
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
@@ -6772,7 +6780,6 @@ gate.baidu.com,m.baidu.com###container
 jinhua.com.cn###container > div[style^="height:"]
 gg163.net###container > table[width="960"]
 jb51.net###contbot
-zm1z.com###content > .subContent:nth-child(3)
 biquge001.com,fuliba.net,fulibba.com###content > a
 shaoit.com###content > a[target="_blank"]
 fuliba.net,fulibba.com,hexieba.com,uliba.net###content > div:first-child > a:first-child:last-child
@@ -7646,7 +7653,7 @@ chcj.net,yixingjia.com###wp > table[width="960"]
 taoguba.com.cn###wrap_footer > div[style*="960"]
 ganpapa.com###wrapper + div
 gdzjdaily.com.cn###wrapper > div[style^="margin-top:6px;"]
-btbtt.co,btbtt.me,btbtt.net###wrapper2 > .width
+btbbt.top,btbtt.co,btbtt.me,btbtt.net###wrapper2 > .width
 wuleba.com###wulebashowcpc
 k.sogou.com###wx_m
 huanqiu.com###wxhz1
@@ -8774,7 +8781,7 @@ iqiyi.com##.ggwBox
 360doc.com##.ggwz
 douyu.com,douyutv.com##.giftbox
 zhumengwl.com##.git_banner
-zhumengwl.com##.git_rec
+zhumengwl.com##.banner-post
 anquan.org##.gj_download
 2345.com##.gl-couplet
 jiaju.shangdu.com##.global-ad-img
@@ -9971,7 +9978,7 @@ we.poppur.com##.wrap > div[style="height:112px"]
 start.firefoxchina.cn##.wrap > div[style]:last-child
 bbs.feng.com##.wrap.fl_row
 paipai.fm,paipaitxt.com##.wrapbg
-btbtt.co,btbtt.me,btbtt.net##.wrapper_bg_c
+btbbt.top,btbtt.co,btbtt.me,btbtt.net##.wrapper_bg_c
 image.baidu.com##.wrapper_dot_box.dot_black
 wallstreetcn.com##.wscn-page-ad
 taoguba.com.cn##.wz_ad
@@ -10402,7 +10409,7 @@ chinayk.com,e0575.cn,eyuyan.com##div[id^="ads_r_"]
 52ch.net,xiancn.com##div[id^="adv"]
 v.baidu.com##div[id^="adv_asp_"]
 ali213.net##div[id^="ali-ad-js-"]
-zhihujingxuan.com##div[id^="aup"]
+qbiao.com##DIV[id^="aup"]
 8591.com.tw##div[id^="baidu"]
 qianzhan.com##div[id^="baidu_ad_"]
 shm.com.cn##div[id^="baidu_clb_slot_"]
@@ -11427,9 +11434,10 @@ ck101.com,datehub.co,gamer.com.tw#@#.textAd
 ck101.com,datehub.co,gamer.com.tw#@#.text_ad
 ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Baidu Union
+##SPAN + IFRAME[id][style*="vertical-align"][allowtransparency="true"][src*="?"][width][height]
 ###cpro_container
 ##iframe[id][marginwidth="0"][style*="vertical-align"][src*="?"][width][height]
-/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?:[asw]|ns|search)\?(?:[a-z]{6}=.*?&){2}/$subdocument
+/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?:[asw]|ns|search|[a-z0-9]{3})\?[a-z]{6}=\w+&[a-z]{6}=\w+&[a-z]{2}=/$subdocument
 /^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?=[0-9a-z]*[a-z])(?=[0-9a-z]*[0-9])[0-9a-z]{40,62}\.js/$script,domain=~bittiger.io
 /cpro.$popup,third-party
 |http://*&uc=
