@@ -53,7 +53,6 @@ if
 [[ $source != https* ]]
 then
 printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
-echo "* $BASEFILENAME List Does NOT Use https. $timestamp" | tee --append $NOHTTPSLISTS &>/dev/null
 fi
 
 ####################
