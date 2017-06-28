@@ -78,6 +78,9 @@ echo.msk.ru$$script[tag-content="s=screen;"][max-length="200"]
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5449
+donnerwetter.de##.col-xs-12 > div.block.prepend-top[-ext-has='> div.blocktitle-brand > h2 > span.blocktitle-brand:contains(weitere Wetter-Nachrichten)']
+!
 journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Счетчик)"]
 !-------------------------------------------------------------------------------!
 !-------------- Tracking servers list  -----------------------------------------!
@@ -3435,6 +3438,7 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 !
 ! Section contains the list of tracking servers, which are hosted on useful sites as subdomains
 !
+||mtrcs.samba.tv^
 ||stat*.1internet.tv^
 ||stats.persgroep.be^
 ||stats.persgroep.nl^
@@ -3914,6 +3918,9 @@ _tracking.php?b=
 !-------------- Specific web sites ---------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+||vkcache.com/js/video.*counter*.js
+||hqq.watch/cdn-cgi/trace|
+||vidoza.net/papi/*/addevent/promo_data
 ||daxab.com/ip.get^
 ||daxab.com/logger^
 ||sueddeutsche.de/statistics?eventType=
@@ -5299,7 +5306,7 @@ mozilla-russia.org#@#img[width="88"][height="31"]
 @@||hotwirestatic.com^*/opinionLab.js$domain=hotwire.com
 @@||imrworldwide.com/crossdomain.xml$object-subrequest,domain=sbs.com.au
 @@||imrworldwide.com/novms/*/ggcm*.js$domain=europafm.com
-@@||imrworldwide.com/v60.js$domain=musicfeeds.com.au|nzherald.co.nz|sf.se|weatherchannel.com.au
+@@||imrworldwide.com/v60.js$domain=last.fm|musicfeeds.com.au|nzherald.co.nz|realestateview.com.au|sf.se|threenow.co.nz|weatherchannel.com.au|corriereadriatico.it|ilgazzettino.it|ilmattino.it|ilmessaggero.it|leggo.it|quotidianodipuglia.it|freeview.com.au
 @@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com
 @@||imrworldwide.com^*/flashdetect.js
 @@||imrworldwide.com^*/ggce354.swf$domain=espn.go.com
