@@ -9,6 +9,7 @@ source $TEMPVARS
 ## ALLPARSEDSIZE  ##
 ####################
 
+timestamp=$(echo `date`)
 FETCHFILESIZEALL=$(stat -c%s "$BIGAPLE")
 FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
 DOMAINSINALLPARSEDE=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
@@ -32,6 +33,7 @@ echo ""
 ## Runtime        ##
 ####################
 
+timestamp=$(echo `date`)
 SCRIPTTEXT="Total Runtime."
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -56,6 +58,7 @@ echo ""
 ## Readme.md      ##
 ####################
 
+timestamp=$(echo `date`)
 SCRIPTTEXT="Updated Main README.md."
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -80,3 +83,7 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
+
+## Done
+timestamp=$(echo `date`)
+echo "* Script completed at $timestamp" | tee --append $RECENTRUN &>/dev/null
