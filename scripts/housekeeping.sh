@@ -3,7 +3,7 @@
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
-touch /etc/piholeparser/temp/tempvars.var
+echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 source /etc/piholeparser/temp/tempvars.var
 
 ######################
