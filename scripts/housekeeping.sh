@@ -10,10 +10,9 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
-else
-echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 fi
+echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
+source $TEMPVARS
 
 ######################
 ## Set Start Time   ##
@@ -28,9 +27,10 @@ echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 STARTTIME="Script Started At $timestamp"
+STARTIMEVAR=$(echo $STARTIME)
 STARTTIMESTAMP=$(date +"%s")
-echo "STARTTIME="Script Started At $timestamp"" | tee --append $TEMPVARS &>/dev/null
-echo "STARTTIMESTAMP=$(date +"%s")" | tee --append $TEMPVARS &>/dev/null
+echo "STARTTIME='"$STARTTIME"'" | tee --append $TEMPVARS &>/dev/null
+echo "STARTTIMESTAMP=$STARTTIMESTAMP" | tee --append $TEMPVARS &>/dev/null
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -181,3 +181,33 @@ echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$orange" "___________________________________________________________"
 echo ""
 
+####################
+## Big Source     ##
+####################
+
+SCRIPTTEXT="Counting Lists To Process."
+timestamp=$(echo `date`)
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+CHECKME=$BIGAPLSOURCE
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
+HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
+HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script."
+echo "$HOWMANYSOURCE"
+echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
+sed '/^$/d' $TEMPFILE > $FILETEMP
+mv $FILETEMP $BIGAPLSOURCE
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$orange" "___________________________________________________________"
+echo ""
