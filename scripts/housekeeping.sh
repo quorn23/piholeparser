@@ -4,7 +4,17 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
-## Recreate Tempvars
+######################
+## Recreate Tempvars##
+######################
+SCRIPTTEXT="Recreating TempVars."
+timestamp=$(echo `date`)
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
 CHECKME=$TEMPVARS
 if
 ls $CHECKME &> /dev/null;
@@ -13,6 +23,11 @@ rm $CHECKME
 fi
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 source $TEMPVARS
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$orange" "___________________________________________________________"
+echo ""
 
 ######################
 ## Set Start Time   ##
