@@ -6,7 +6,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 CURRENTUSER="$(whoami)"
 GRAVITY=/etc/pihole/gravity.list
 GRAVITYSH=/etc/.pihole/gravity.sh
-ANTIGRAV="/home/"$CURRENTUSER"/antigrav.list
+ANTIGRAV=/home/"$CURRENTUSER"/antigrav.list
 
 ## whiptail required
 WHATITIS=whiptail
@@ -39,6 +39,6 @@ sed "s/^$HOSTIP\s\+[ \t]*//" < $GRAVITY > $TEMPFILE
 
 ## WhatDiff
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $BIGAPLE $TEMPFILE > $ANTIGRAV
-#HOWMANYLINES=$(echo -e "`wc -l $ANTIGRAV | cut -d " " -f 1`")
+HOWMANYLINES=$(echo -e "`wc -l $ANTIGRAV | cut -d " " -f 1`")
 printf "$yellow"  "Antigrav File contains $HOWMANYLINES Domains that are not used by gravity."
 rm $TEMPFILE
