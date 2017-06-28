@@ -5,14 +5,24 @@
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ####################
-## File check     ##
+## Whitelist      ##
 ####################
 
+SCRIPTTEXT="Processing Whitelists."
+timestamp=$(echo `date`)
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
 WHATITIS="Whitelist File"
 CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
 printf "$yellow"  "Checking For $WHATITIS"
 echo ""
+
+## Quick File Check
 if
 ls $CHECKME &> /dev/null;
 then
@@ -28,13 +38,7 @@ touch $CHECKME
 echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-####################
-## Whitelist .lst ##
-####################
-
-printf "$yellow"  "Extracting Domains from all .lst files"
-echo ""
-
+## Create The List
 if
 ls $BIGAPLSOURCE &> /dev/null;
 then
@@ -54,17 +58,10 @@ done
 done
 fi
 
-###########################
-## Whitelist sort dedupe ##
-###########################
-
-## Start File Loop
+## Sort and Dedupe Lists
 for f in $WHITELISTDOMAINSALL
 do
-
-## Variables
 source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-
 WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
@@ -74,13 +71,9 @@ HOWMANYLINES=$(echo -e "\t`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $WWHITETEMP $WHATLISTTOSORT
-echo "* Processed "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
-
-## end of loop
 done
-
+## Merge Whitelist into temp file
 WHITESORTDEDUPE="Merging the Whitelists for Later."
 WHATLISTSMERGE="$WHITELISTDOMAINSALL"
 timestamp=$(echo `date`)
@@ -91,17 +84,31 @@ echo "$HOWMANYLINES"
 echo "* "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$orange" "___________________________________________________________"
+echo ""
 
-###########################
-## Blacklist sort dedupe ##
-###########################
-echo "## Compiling Repo Blacklist." | tee --append $RECENTRUN &>/dev/null
+#################
+## Blacklist   ##
+#################
 
+SCRIPTTEXT="Processing Blacklists."
+timestamp=$(echo `date`)
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
 WHATITIS="Blacklist File"
 CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
 printf "$yellow"  "Checking For $WHATITIS"
 echo ""
+
+## Quick File Check
 if
 ls $CHECKME &> /dev/null;
 then
@@ -117,13 +124,10 @@ touch $CHECKME
 echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-## Start File Loop
+## Sort And Dedupe Lists
 for f in $BLACKLISTDOMAINSALL
 do
-
-## Variables
 source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-
 WHATLISTTOSORT=$f
 BLACKSORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
@@ -136,10 +140,9 @@ mv $BBLACKTEMP $WHATLISTTOSORT
 echo "* Processed "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
-
-## end of loop
 done
 
+## Merge Lists
 BLACKSORTDEDUPE="Merging the Blacklists for Later."
 WHATLISTSMERGE="$BLACKLISTDOMAINSALL"
 timestamp=$(echo `date`)
@@ -150,7 +153,11 @@ echo "$HOWMANYLINES"
 echo "* "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
-
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$orange" "___________________________________________________________"
+echo ""
 
 ####################
 ## pihole -w      ##
