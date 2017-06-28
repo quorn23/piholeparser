@@ -3,84 +3,24 @@
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
-STARTTIME="Script Started At $(echo `date`)"
-STARTTIMESTAMP=$(date +"%s")
 
 ####################
-## Recent Run Log ##
+## Housekeeping   ##
 ####################
 
-SCRIPTTEXT="Creating Recent Run Log."
+SCRIPTTEXT="Running Housekeeping Tasks."
 timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 bash $DELETETEMPFILE
-if 
-ls $RECENTRUN &> /dev/null; 
-then
-rm $RECENTRUN
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* Recent Run Log Removed and Recreated. $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* Recent Run Log Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-if 
-ls $NOHTTPSLISTS &> /dev/null; 
-then
-rm $NOHTTPSLISTS
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
+bash $HOUSEKEEPINGSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
-
-######################
-## Lists Not In Use ##
-######################
-
-SCRIPTTEXT="Removing Parsed Lists No Longer Used."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-for f in $EVERYLISTFILEWILDCARD
-do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-TEMPOFILE="$TEMPDIR"TEMPOFILE.txt
-TEMPOFILEB="$TEMPDIR"TEMPOFILEB.txt
-LISTBASENAMETXT="$BASEFILENAME".txt
-echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
-done
-ls $PARSEDDIR > $TEMPFILE
-cat $TEMPFILE | sed '/README.md/d' > $TEMPOFILE
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPOFILE > $TEMPOFILEB
-for source in `cat $TEMPOFILEB`;
-do
-REMPARSEDFILE="$PARSEDDIR""$source"
-if
-[[ $source == *.txt ]]
-then
-rm $REMPARSEDFILE
-printf "$red"    "The $source .lst No Longer Exists. Parsed File Deleted."
-fi
-done
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-## should do this for mirroredlists too
 
 ####################
 ## Big Source     ##
