@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: UxIKo637y+FWQnPrjdWPkQ
-! Version: 201706280412
+! Checksum: K4vFYwTYwlLm1W+p21RfVQ
+! Version: 201706281342
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 28 Jun 2017 04:12 UTC
+! Last Modified: 28 Jun 2017 13:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -559,6 +559,7 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn^
+||aomeng.net^$third-party
 ||haiyunpush.com^
 .cn/show?id=$script,third-party
 .cn/showpage.asp?u=$script,third-party
@@ -3078,7 +3079,7 @@ mg*.6park.com/img/$image
 ||alicdn.com/tps/*-950-90.
 ||alicdn.com/tps/i3/T19NaCFKFaXXckTCTS-300-100.jpg
 ||alicdn.com/tps/TB19bnbJVXXXXXhXXXXXXXXXXXX-860-100.gif
-||alicdn.com^$domain=acglover.top|freecctv.xyz|mlook.mobi
+||alicdn.com^$domain=acglover.top|mlook.mobi
 ||alicdn.com^*.gif$domain=hmog.me
 ||alicdn.com^*.jpg$domain=hmog.me
 ||alifeifei.net/s/*.js
@@ -3092,7 +3093,7 @@ mg*.6park.com/img/$image
 ||alu.cn/aluTrade/Fragments/ListAdvertisementProducts.
 ||am.6park.com^
 ||am.szhome.com^
-||am.zdnet.com.cn/www/images/$image,object,subdocument
+||am.zhiding.cn/www/images/$image,object,subdocument
 ||amazonaws.com.cn/static-documents/marketing/uda_banner_
 ||amd.cn/yyets.js
 ||amfi.gou.sogou.com^
@@ -4343,7 +4344,6 @@ mg*.6park.com/img/$image
 ||huoyan.tv/yb/img/*.gif
 ||hupu.com^*/stream.js
 ||hur.cn/AhurD/*.gif
-||hutc.zj.cn/skins/hutc2012/js/fp.js
 ||hxjs.tool.hexun.com
 ||hxsame.hexun.com
 ||hxsd.com/templets/js/looyu_pop.js
@@ -6274,9 +6274,6 @@ mg*.6park.com/img/$image
 ||zeyi.cc/js/2412/
 ||zfs.cn/8th/
 ||zgfznews.com/templates/fznews/dl/
-||zgjm.org/data/cache/mytag-13.htm
-||zgjm.org/data/cache/mytag-24.htm
-||zgjm.org/data/cache/mytag-30.htm
 ||zhainanba.org/ac/
 ||zhandi.cc/Runtime/js/*vod
 ||zhandi.cc/Runtime/js/900
@@ -6306,7 +6303,6 @@ mg*.6park.com/img/$image
 ||zhuanyewanjia.com/upload/show/
 ||zhujiangroad.com/js/alltop.js
 ||zhujiceping.com/F/
-||zhulang.com/ad_js/
 ||zhulong.com/poster/get?*_960
 ||zhulong.com/poster/get?positions_name=ZY_JZ_300_02
 ||zhulong.com/poster/get?positions_name=ZY_SP_300
@@ -6319,7 +6315,6 @@ mg*.6park.com/img/$image
 ||zjbdt.com/onexgadimgs/
 ||zjg.js.cn/Public/config/Couplet/Index4
 ||zjjzx.cn*/push/
-||zjjzx.cn/img/zt/yd/
 ||zjol.com.cn/js/duilian/
 ||zjol.com.cn/www/zzhzbd/
 ||zjphoto.yinsha.com/upload/swf/
@@ -6362,7 +6357,10 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||hdchina.club/styles/topshow/AD/
+||airav.cc/AirADPic/20*%
 !------------------------Specific element hiding rules------------------------!
+airav.cc##DIV[id^="Billing"]
 gpcxw.com###AA2
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
@@ -6502,7 +6500,7 @@ dbw.cn###ad-word
 baike.com###ad-xnsc
 duba.com###ad-zongyi
 price.com.hk###ad0
-90oo.com,etest8.com,eworldship.com,hntobacco.com,jc001.cn,p9.com.tw,price.com.hk,vipbuluo.com,xinhuanet.com,ylnet.com.cn,zbgl.net,zimuzu.tv###ad1
+90oo.com,etest8.com,eworldship.com,hntobacco.com,jc001.cn,p9.com.tw,price.com.hk,vipbuluo.com,xinhuanet.com,ylnet.com.cn,zimuzu.tv###ad1
 eworldship.com,junshiqu.com,p9.com.tw,xinhuanet.com,zimuzu.tv###ad2
 zimuzu.tv###ad3
 efu.com.cn###ad4
@@ -7541,11 +7539,10 @@ hacg.fi,hacg.red,hacg.wiki,llss.me###text-25
 hacg.fi,hacg.red,hacg.wiki###text-26
 moe-acg.cc,tumutanzi.com###text-3
 vjmedia.com.hk###text-33
-zreading.cn###text-5
+zreading.cn##.enhanced-text-widget:nth-child(3)
 stoneip.info###text-57
 uisdc.com###text-6
 htcui.com,sea-group.org###text-7
-zreading.cn###text-8
 pbhz.com###text-html-widget-2
 acg18.us###text-html-widget-2 ~ .widget-box
 dsqnw.com###text-html-widget-9
@@ -7822,7 +7819,7 @@ zuimeia.com##.activity-poster:not([href*="zuimeia."])
 2345.com##.activity-skin-trig
 1111.baidu.com,jump.bdimg.com,tieba.baidu.com,tieba.com,xingqu.baidu.com##.activity_iframe_container
 2345.com##.acts11-sidefixed
-001cw.com,0379home.com,10jqka.com.cn,17173.com,17kk.cc,2345.cn,234fang.com,3dmgame.com,3g.tianya.cn,3gsc.com.cn,5011.net,52youpiao.com,72bbb.com,72g.com,8btc.com,acfun.tv,acg.bz,acgbenzi.com,aohua.com.au,baiduyunpan.net,baike.com,banyungong.org,bbs-mychat.com,cailianpress.com,cdyee.com,ce.cn,cfanz.cn,chddh.com,chinaqking.com,chinatimes.com,chinaz.com,cnsoftnews.com,codepub.com,cq.xinhuanet.com,dav01.com,discuss.com.hk,djwma.com,do189.com,dzwww.com,eastday.com,eworldship.com,focus.cn,gminfo.cn,gongkong.com,hanhuazu.cc,hkgalden.com,house.jschina.com.cn,huizhi123.com,iciba.com,ifeng.com,ipeen.com.tw,itavcn.com,jrj.com.cn,junshi.cc,jzclass.com,kumi.cn,kunming.cn,lawtv.com.cn,lyd.com.cn,lzep.cn,m.tianya.cn,marstv.com,maxpda.com,mrhso.com,ncdiy.com,neotv.com.cn,newsmth.net,njdaily.cn,people.com.cn,pharmnet.com.cn,pixnet.net,pptv.com,ptbus.com,qihaa.cn,sd888.org,shanhe.cc,shenchuang.com,sogou.com,tiexue.net,tpy888.cn,tv.sohu.com,u-car.com.tw,wallstreetcn.com,weather.com.cn,wordlm.com,wuhan.net.cn,wuseng.com,xs99.cc,xun9u.com,xyfdcw.com.cn,yawin.cn,ydss.cn,yesky.com,yicheshi.com,yqxs.net,zbgl.net,zhuhai.gd.cn##.ad
+001cw.com,0379home.com,10jqka.com.cn,17173.com,17kk.cc,2345.cn,234fang.com,3dmgame.com,3g.tianya.cn,3gsc.com.cn,5011.net,52youpiao.com,72bbb.com,72g.com,8btc.com,acfun.tv,acg.bz,acgbenzi.com,aohua.com.au,baiduyunpan.net,baike.com,banyungong.org,bbs-mychat.com,cailianpress.com,cdyee.com,ce.cn,cfanz.cn,chddh.com,chinaqking.com,chinatimes.com,chinaz.com,cnsoftnews.com,codepub.com,cq.xinhuanet.com,dav01.com,discuss.com.hk,djwma.com,do189.com,dzwww.com,eastday.com,eworldship.com,focus.cn,gminfo.cn,gongkong.com,hanhuazu.cc,hkgalden.com,house.jschina.com.cn,huizhi123.com,iciba.com,ifeng.com,ipeen.com.tw,itavcn.com,jrj.com.cn,junshi.cc,jzclass.com,kumi.cn,kunming.cn,lawtv.com.cn,lyd.com.cn,lzep.cn,m.tianya.cn,marstv.com,maxpda.com,mrhso.com,ncdiy.com,neotv.com.cn,newsmth.net,njdaily.cn,people.com.cn,pharmnet.com.cn,pixnet.net,pptv.com,ptbus.com,qihaa.cn,sd888.org,shanhe.cc,shenchuang.com,sogou.com,tiexue.net,tpy888.cn,tv.sohu.com,u-car.com.tw,wallstreetcn.com,weather.com.cn,wordlm.com,wuhan.net.cn,wuseng.com,xs99.cc,xun9u.com,xyfdcw.com.cn,yawin.cn,ydss.cn,yesky.com,yicheshi.com,yqxs.net,zhuhai.gd.cn##.ad
 photofans.cn##.ad-1-index
 163.com##.ad-1200-125
 163.com##.ad-1200-60
@@ -8090,7 +8087,6 @@ eeyy.cc##.ads650
 pingshu8.com##.ads_760x90
 autofan.com.cn##.ads_b
 disp.cc##.ads_bot_block
-zhangleisir.cn##.ads_logo
 bthave.com,uho.com.tw##.adsense
 qinbing.cn##.adspic_mid2
 chinaz.com,yawin.cn##.adtext
@@ -8481,7 +8477,6 @@ zdfans.com##.content.column2 > span[style]:first-child
 ptbus.com##.content14
 news.580k.com##.contentAD
 p9.com.tw##.contentRightAd
-xxs8.com##.content_left_adv
 educity.cn##.content_relate:nth-child(5)
 1111.baidu.com,jump.bdimg.com,tieba.baidu.com,tieba.com,xingqu.baidu.com##.content_top
 jpwind.com##.content_you_zt
@@ -8834,7 +8829,7 @@ hkepc.com##.headBanner
 jmw.com.cn##.head_1b
 jmw.com.cn##.head_3
 1111.baidu.com,jump.bdimg.com,tieba.baidu.com,tieba.com,xingqu.baidu.com##.head_middle > div[class]:first-child
-zdnet.com.cn##.headads
+zhiding.cn##.headads
 biz.ifeng.com##.header
 ieforex.com##.header > .left
 onlylady.com##.header > .t2
@@ -9726,7 +9721,6 @@ jxedt.com##.tbad
 gkpass.com##.tbanner
 1111.baidu.com,jump.bdimg.com,tieba.baidu.com,tieba.com,xingqu.baidu.com##.tbui_aside_float_bar + .clearfix
 9u8u.com##.tc-box
-zhangleisir.cn##.tcpads
 newmobilelife.com##.td-a-rec-id-content_inline
 zeekmagazine.com##.td-all-devices
 6park.com##.td1[width="50%"]:nth-child(2)
