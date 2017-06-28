@@ -6,7 +6,8 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 CURRENTUSER="$(whoami)"
 GRAVITY=/etc/pihole/gravity.list
 GRAVITYSH=/etc/.pihole/gravity.sh
-ANTIGRAV=/home/"$CURRENTUSER"/antigrav.list
+#ANTIGRAV=/home/"$CURRENTUSER"/antigrav.list
+ANTIGRAV=/home/pi/antigrav.list
 
 ## whiptail required
 WHATITIS=whiptail
