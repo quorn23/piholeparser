@@ -3,6 +3,7 @@
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+touch /etc/piholeparser/temp/tempvars.var
 source /etc/piholeparser/temp/tempvars.var
 
 ######################
