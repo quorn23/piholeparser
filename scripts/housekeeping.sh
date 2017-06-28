@@ -7,6 +7,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 ######################
 ## Recreate Tempvars##
 ######################
+
 SCRIPTTEXT="Recreating TempVars."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
