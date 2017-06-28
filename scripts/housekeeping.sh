@@ -3,8 +3,17 @@
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+
+## Recreate Tempvars
+CHECKME=$TEMPVARS
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
-source /etc/piholeparser/temp/tempvars.var
+else
+echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
+fi
 
 ######################
 ## Set Start Time   ##
