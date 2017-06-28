@@ -1079,8 +1079,7 @@ hackintosh.zone##script:inject(abort-on-property-write.js, onload)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/220
 ! https://github.com/uBlockOrigin/uAssets/issues/426
-! https://github.com/uBlockOrigin/uAssets/issues/477
-bild.de##script:inject(abort-on-property-read.js, de.bild.cmsKonfig.a.a)
+bild.de##script:inject(abort-on-property-read.js, de.bild.cmsKonfig.a.b)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/174
 sueddeutsche.de##script:inject(abort-on-property-write.js, SZAdBlockDetection)
@@ -1264,7 +1263,7 @@ movie-blog.org##script:inject(abort-on-property-write.js, DCVU)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5yszvt/flashplayer_scam/
 ! https://forums.lanik.us/viewtopic.php?p=118390#p118390
-1337x.to,9xbuddy.com,adf.ly,albumkings.org,ay.gy,daclips.in,filescdn.com,filmuptobox.net,gorillavid.in,hulkload.com,jkanime.net,karanpc.com,microify.com,minecraft-forum.net,opensubtitles.org,psarips.com,stream2watch.cc,uploadrocket.net,uptobox.com,zippyshare.com##script:inject(abort-on-property-write.js, Fingerprint2)
+9xbuddy.com,adf.ly,albumkings.org,ay.gy,daclips.in,filescdn.com,gorillavid.in,hulkload.com,jkanime.net,karanpc.com,microify.com,minecraft-forum.net,opensubtitles.org,psarips.com,stream2watch.cc,uploadrocket.net,uptobox.com,zippyshare.com##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5ywxnd/anyone_know_how_to_block_this_ad/
 watchcartoononline.io##script:inject(fuckadblock.js-3.2.0)
@@ -1564,7 +1563,7 @@ hdencoders.com,ls-streaming.com##script:inject(abort-on-property-write.js, spot_
 bouncebreak.com##script:inject(popads.net.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/458
-||latimes.com^$generichide,important
+||latimes.com$generichide,important
 ||ntv.io^$script,important,domain=latimes.com
 ||rubiconproject.com^$script,important,domain=latimes.com
 
@@ -1603,12 +1602,13 @@ iwatchonline.cr,iwatchonline.eu##script:inject(abort-on-property-write.js, Finge
 xclusivejams.xyz##script:inject(abort-on-property-write.js, Fingerprint2)
 xclusivejams.xyz##script:inject(abort-on-property-write.js, _pop)
 
+! https://forums.lanik.us/viewtopic.php?f=62&t=37105
+@@||photobucket.com^$generichide
+@@||code.jquery.com^$script,domain=photobucket.com
+
 ! https://github.com/uBlockOrigin/uAssets/issues/463
 bloomberg.com##.bb-nav-categories:style(z-index: 1000 !important;)
 bloomberg.com##.bb-nav-search:style(z-index: 1000 !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/475
 ||reddit.com/api/request_promo.json$xmlhttprequest
-
-! https://github.com/uBlockOrigin/uAssets/issues/480
-qrz.ru##.content_row > div[class]:has(a[href="/help/adblock/"])
