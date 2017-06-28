@@ -70,3 +70,13 @@ echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$orange" "___________________________________________________________"
 echo ""
+
+####################
+## Remove Tempvars##
+####################
+CHECKME=$TEMPVARS
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
