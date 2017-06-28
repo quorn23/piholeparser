@@ -23,7 +23,7 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ####################
-## Run Scripts    ##
+## Dependencies   ##
 ####################
 
 WHATSCRIPTORUN=$DEPENDENCYCHECKSCRIPT
@@ -42,6 +42,10 @@ echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+####################
+## Script Domains ##
+####################
+
 WHATSCRIPTORUN=$REPODOMAINSSCRIPT
 SCRIPTTEXT="Compiling Repo Domain List."
 timestamp=$(echo `date`)
@@ -58,6 +62,10 @@ echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
 
+####################
+## Parsing        ##
+####################
+
 WHATSCRIPTORUN=$PARSERSCRIPT
 SCRIPTTEXT="Running Parser."
 timestamp=$(echo `date`)
@@ -73,6 +81,10 @@ echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$magenta" "___________________________________________________________"
 echo ""
+
+####################
+## ALLPARSEDLISTS ##
+####################
 
 WHATSCRIPTORUN=$CREATEBIGLISTSCRIPT
 SCRIPTTEXT="Combining All Parsed Lists."
@@ -91,67 +103,19 @@ printf "$magenta" "___________________________________________________________"
 echo ""
 
 ####################
-## ALLPARSEDSIZE  ##
+## Results        ##
 ####################
 
-FETCHFILESIZEALL=$(stat -c%s "$BIGAPLE")
-FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
-DOMAINSINALLPARSEDE=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
-EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB and contains $DOMAINSINALLPARSEDE Domains."
-SCRIPTTEXT="Edited ALLPARSEDLIST Result."
+WHATSCRIPTORUN=$RESULTSSCRIPT
+SCRIPTTEXT="Results Of The Parsing."
+timestamp=$(echo `date`)
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-echo "* $EDITEDALLPARSEDSIZEMB" | tee --append $RECENTRUN &>/dev/null
-printf "$yellow"   "$EDITEDALLPARSEDSIZEMB"
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Runtime        ##
-####################
-
-
-SCRIPTTEXT="Total Runtime."
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-ENDTIME="Script Ended At $(echo `date`)"
-ENDTIMESTAMP=$(date +"%s")
-DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
-DIFFTIME=`expr $DIFFTIMESEC / 60`
-TOTALRUNTIME="Script Took $DIFFTIME minutes To Filter $HOWMANYSOURCELISTS Lists."
-printf "$yellow"   "$TOTALRUNTIME"
-echo "* $TOTALRUNTIME" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Readme.md      ##
-####################
-
-
-SCRIPTTEXT="Updated Main README.md."
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-rm $MAINREADME
-sed "s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALELAPSEDTIME/$TOTALRUNTIME/; s/EDITEDALLPARSEDSIZE/$EDITEDALLPARSEDSIZEMB/" $MAINREADMEDEFAULT > $MAINREADME
+bash $WHATSCRIPTORUN
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
