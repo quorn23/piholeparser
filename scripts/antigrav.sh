@@ -31,7 +31,13 @@ fi
 
 ## Update Gravity
 # pihole -g
+{ if
+(whiptail --title "piholeparser" --yes-button "No" --no-button "Yes" --yesno "Do you want to run Gravity Now?" 10 80) 
+then
+echo "not running gravity"
+else
 bash $GRAVITYSH
+fi }
 
 ## Trim IP from HOSTS format
 HOSTIP=$(whiptail --inputbox "What IP Needs to be removed?" 10 80 "192.168.1.99" 3>&1 1>&2 2>&3)
