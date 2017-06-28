@@ -18,7 +18,6 @@ which $WHATITIS >/dev/null;
 then
 echo ""
 printf "$yellow"  "$WHATITIS is installed"
-echo "* $WHATITIS already installed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
@@ -33,7 +32,6 @@ which $WHATITIS >/dev/null;
 then
 echo ""
 printf "$yellow"  "$WHATITIS is installed"
-echo "* $WHATITIS already installed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
