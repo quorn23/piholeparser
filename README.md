@@ -27,8 +27,8 @@ Other aims of this project:
 * Script Ended At Wed 28 Jun 12:51:04 EDT 2017
 * Script Took 47 minutes To Filter 	339 Lists.
 * The Edited ALLPARSEDLIST is 84 MB and contains 	3837618 Domains.
-* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog)
-* [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog/listswithouthttps.txt)
+* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
+* [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/listswithouthttps/README.md)
 
 ## Individual Lists
 
@@ -87,7 +87,7 @@ This will allow me to query the individual parsed files for a specific domain.
 
 ## Log
 
-As of 6/13/2017, there is a [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLog)
+As of 6/13/2017, there is a [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
 
 This should provide some insights as to what lists are dead, empty, or too large for github.
 
