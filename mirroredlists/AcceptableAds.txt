@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: ptwHpnRwMYmVZk4hljUg9g
-! Version: 201706281552
+! Checksum: N5T47XcLGiy5IFbRBf+Clg
+! Version: 201706281922
 ! Title: Allow non-intrusive advertising
 ! Expires: 1 days
 ! Homepage: https://acceptableads.com/
@@ -241,7 +241,7 @@ forum.golem.de#@##iqadtile1
 suche.chip.de#@##sponsored_link_bottom
 suche.chip.de#@##google_ads
 suche.chip.de#@##sponsored_link
-! Sponsored links (image + text) and static banner on Reddit.com (https://adblockplus.org/forum/viewtopic.php?f=12&t=11954)
+! Sponsored links (image + text) and static banners on Reddit.com (https://adblockplus.org/forum/viewtopic.php?f=12&t=11954)
 reddit.com#@##siteTable_organic
 reddit.com#@##ad-frame
 reddit.com#@#.sponsorshipbox
@@ -255,6 +255,31 @@ reddit.com#@##ad_main_top
 @@||zkcdn.net/Advertisers/$image,domain=redditmedia.com
 @@||adzerk.net/Advertisers/$image,domain=redditmedia.com
 @@||zkcdn.net^$stylesheet,domain=redditmedia.com,script
+reddit.com###adblock-test
+reddit.com#@#.dfp-ad-container
+reddit.com#@#iframe[id^="google_ads_iframe"]
+reddit.com#@#div[id^="google_ads_iframe_"]
+reddit.com#@#.img_ad
+reddit.com#@##ad_1
+reddit.com#@##ad_2
+reddit.com#@##ad_3
+reddit.com#@##ad_4
+reddit.com#@##ad_5
+reddit.com#@##ad_6
+reddit.com#@##ad_7
+reddit.com#@##ad_8
+reddit.com#@##ad_9
+@@||amazon-adsystem.com/aax2/apstag.js$domain=reddit.com
+@@||g.doubleclick.net/gampad/ads?*%26adblock%3Dwhitelisted%26$script,xmlhttprequest,domain=reddit.com
+@@||g.doubleclick.net/static/glade.js$domain=reddit.com
+@@||g.doubleclick.net/pcs/click?$popup,domain=reddit.com
+@@||g.doubleclick.net/pcs/view?xai=$image,domain=reddit.com
+@@||pagead2.googlesyndication.com/pagead/$script,domain=reddit.com
+@@||googlesyndication.com/simgad/$image,domain=reddit.com
+@@||googlesyndication.com/safeframe/$subdocument,domain=reddit.com,document,other
+@@||googlesyndication.com/pagead/js/*/client/ext/m_window_focus_non_hydra.js$domain=reddit.com
+@@||aax.amazon-adsystem.com^$script,domain=reddit.com
+@@||aax-eu.amazon-adsystem.com^$subdocument,domain=reddit.com,document
 ! suche.freenet.de search ads (https://adblockplus.org/forum/viewtopic.php?f=12&t=12466)
 @@||google.com/ads/search/module/ads/*/search.js$domain=suche.freenet.de
 @@||google.com/uds/$script,subdocument,document,domain=suche.freenet.de

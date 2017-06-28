@@ -1,55 +1,55 @@
-* AdblockFiltersbyGurudee List Does NOT Use https. Wed 28 Jun 12:04:58 EDT 2017
-* AdblockListforFinland List Does NOT Use https. Wed 28 Jun 12:05:10 EDT 2017
-* AyucatPowerful List Does NOT Use https. Wed 28 Jun 12:06:40 EDT 2017
-* BLOGRAMAnalysisBlockFilterListforJapan List Does NOT Use https. Wed 28 Jun 12:08:33 EDT 2017
-* BLOGRAMBasicFilterListforJapan List Does NOT Use https. Wed 28 Jun 12:08:39 EDT 2017
-* BLOGRAMBlogPartsFilterListforJapan List Does NOT Use https. Wed 28 Jun 12:08:40 EDT 2017
-* BLOGRAMElementHidingFilterListforJapan List Does NOT Use https. Wed 28 Jun 12:08:47 EDT 2017
-* CzechFiltersforAdBlock List Does NOT Use https. Wed 28 Jun 12:09:28 EDT 2017
-* DNSBHBulkRegistrars List Does NOT Use https. Wed 28 Jun 12:09:59 EDT 2017
-* EasyListLithuania List Does NOT Use https. Wed 28 Jun 12:10:52 EDT 2017
-* EestiCustomSitesFilter List Does NOT Use https. Wed 28 Jun 12:11:23 EDT 2017
-* FacebookPrivacy List Does NOT Use https. Wed 28 Jun 12:11:29 EDT 2017
-* FinnishAntiSocial List Does NOT Use https. Wed 28 Jun 12:12:09 EDT 2017
-* FirimeFEDEasyDownload List Does NOT Use https. Wed 28 Jun 12:12:21 EDT 2017
-* IcelandicABP List Does NOT Use https. Wed 28 Jun 12:12:30 EDT 2017
-* LehighEDUDomains List Does NOT Use https. Wed 28 Jun 12:12:52 EDT 2017
-* MalwareURLsGrayArea List Does NOT Use https. Wed 28 Jun 12:13:26 EDT 2017
-* MalwareURLs List Does NOT Use https. Wed 28 Jun 12:13:38 EDT 2017
-* Mute List Does NOT Use https. Wed 28 Jun 12:14:23 EDT 2017
-* PLgeneral List Does NOT Use https. Wed 28 Jun 12:15:01 EDT 2017
-* RUAdListOld List Does NOT Use https. Wed 28 Jun 12:16:45 EDT 2017
-* SABlacklist List Does NOT Use https. Wed 28 Jun 12:16:52 EDT 2017
-* SchuzaksUniversalFilter List Does NOT Use https. Wed 28 Jun 12:17:16 EDT 2017
-* squidblacklist List Does NOT Use https. Wed 28 Jun 12:17:32 EDT 2017
-* TheHostsFileProjectAdblockFilters List Does NOT Use https. Wed 28 Jun 12:17:41 EDT 2017
-* TofuFilter List Does NOT Use https. Wed 28 Jun 12:17:53 EDT 2017
-* AirellesPhishingHosts List Does NOT Use https. Wed 28 Jun 12:20:11 EDT 2017
-* DShieldorgRecommendedBlock List Does NOT Use https. Wed 28 Jun 12:20:33 EDT 2017
-* AdZHosts List Does NOT Use https. Wed 28 Jun 12:22:28 EDT 2017
-* AirellesAntiAdvertisementsHosts List Does NOT Use https. Wed 28 Jun 12:23:06 EDT 2017
-* AirellesAntiMiscellaneousHosts List Does NOT Use https. Wed 28 Jun 12:23:18 EDT 2017
-* AirellesAntiSexHosts List Does NOT Use https. Wed 28 Jun 12:24:04 EDT 2017
-* AirellesAntiTrackersHosts List Does NOT Use https. Wed 28 Jun 12:24:59 EDT 2017
-* AirellesMalwareHosts List Does NOT Use https. Wed 28 Jun 12:25:08 EDT 2017
-* BadHosts List Does NOT Use https. Wed 28 Jun 12:25:16 EDT 2017
-* CAMELEONHosts List Does NOT Use https. Wed 28 Jun 12:25:45 EDT 2017
-* DanPollocksHosts List Does NOT Use https. Wed 28 Jun 12:30:14 EDT 2017
-* DNSBHDynamicDNS List Does NOT Use https. Wed 28 Jun 12:30:30 EDT 2017
-* DNSBHFreeWebHosts List Does NOT Use https. Wed 28 Jun 12:30:32 EDT 2017
-* DNSBHMalwareDomainsImmortal List Does NOT Use https. Wed 28 Jun 12:30:33 EDT 2017
-* DNSBHMalwareDomains List Does NOT Use https. Wed 28 Jun 12:30:34 EDT 2017
-* DNSBHSkypeResolvers List Does NOT Use https. Wed 28 Jun 12:30:38 EDT 2017
-* DNSBHURLShorteners List Does NOT Use https. Wed 28 Jun 12:30:39 EDT 2017
-* JABCreationsAdblockPlusFilterSubscription List Does NOT Use https. Wed 28 Jun 12:38:43 EDT 2017
-* JapaneseSiteAdblockFilter List Does NOT Use https. Wed 28 Jun 12:38:51 EDT 2017
-* JapaneseSiteAdblockFilterver2 List Does NOT Use https. Wed 28 Jun 12:39:02 EDT 2017
-* JoeWein List Does NOT Use https. Wed 28 Jun 12:39:13 EDT 2017
-* LehighBOOT List Does NOT Use https. Wed 28 Jun 12:39:48 EDT 2017
-* LehighImmortal List Does NOT Use https. Wed 28 Jun 12:40:02 EDT 2017
-* malc0de List Does NOT Use https. Wed 28 Jun 12:40:13 EDT 2017
-* Malwaredomainlisthosts List Does NOT Use https. Wed 28 Jun 12:40:15 EDT 2017
-* MalwareURLsDomains List Does NOT Use https. Wed 28 Jun 12:40:23 EDT 2017
-* MVPSHOSTS List Does NOT Use https. Wed 28 Jun 12:40:40 EDT 2017
-* SecureMecca List Does NOT Use https. Wed 28 Jun 12:42:34 EDT 2017
-* TheHostsFileProjectHosts List Does NOT Use https. Wed 28 Jun 12:44:03 EDT 2017
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
