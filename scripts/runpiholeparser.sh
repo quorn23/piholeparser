@@ -63,7 +63,7 @@ echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
 done
 ls $PARSEDDIR > $TEMPFILE
 cat $TEMPFILE | sed '/README.md.txt/d' > $TEMPOFILE
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPFILE > $TEMPOFILEB
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPOFILE > $TEMPOFILEB
 for source in `cat $TEMPOFILEB`;
 do
 REMPARSEDFILE="$PARSEDDIR""$source"
