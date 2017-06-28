@@ -62,11 +62,11 @@ LISTBASENAMETXT="$BASEFILENAME".txt
 echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
 done
 ls $PARSEDDIR > $TEMPFILE
-cat $TEMPFILE | sed '/README.md/d' > $TEMPOFILE
+cat $TEMPFILE | sed '/README.md.txt/d' > $TEMPOFILE
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPFILE > $TEMPOFILEB
 for source in `cat $TEMPOFILEB`;
 do
-REMPARSEDFILE="$PARSEDDIR""$source".txt
+REMPARSEDFILE="$PARSEDDIR""$source"
 rm $REMPARSEDFILE
 printf "$red"    "The $source .lst No Longer Exists. Parsed File Deleted."
 done
