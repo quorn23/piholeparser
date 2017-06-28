@@ -39,6 +39,6 @@ sed "s/^$HOSTIP\s\+[ \t]*//" < $GRAVITY > $TEMPFILE
 
 ## WhatDiff
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $BIGAPLE $TEMPFILE > $ANTIGRAV
-HOWMANYLINES=$(echo -e "`wc -l $ANTIGRAV | cut -d " " -f 1`")
-#printf "$yellow"  "Antigrav File contains $HOWMANYLINES Domains taht are not used by gravity."
+#HOWMANYLINES=$(echo -e "`wc -l $ANTIGRAV | cut -d " " -f 1`")
+printf "$yellow"  "Antigrav File contains $HOWMANYLINES Domains that are not used by gravity."
 rm $TEMPFILE
