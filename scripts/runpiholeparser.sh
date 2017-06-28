@@ -126,9 +126,6 @@ echo ""
 ## Push Lists     ##
 ####################
 
-## This looked prettier below, but wasn't getting pushed up.
-echo "* Script completed at $timestamp" | tee --append $RECENTRUN &>/dev/null
-
 WHATSCRIPTORUN=$PUSHLISTSSCRIPT
 SCRIPTTEXT="Pushing Lists."
 timestamp=$(echo `date`)
