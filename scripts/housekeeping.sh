@@ -66,9 +66,9 @@ echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
 if 
-ls $RECENTRUNMAIN &> /dev/null; 
+ls $RECENTRUN &> /dev/null; 
 then
-rm $RECENTRUNMAIN
+rm $RECENTRUN
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "* Recent Run Log Removed and Recreated." | tee --append $RECENTRUN &>/dev/null
 else
@@ -104,6 +104,7 @@ echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 for f in $EVERYLISTFILEWILDCARD
 do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 for source in `cat $f`;
 do
 if
