@@ -251,3 +251,7 @@
 ## Updated Main README.md. Thu 29 Jun 12:51:34 EDT 2017
 
 * Script completed at Thu 29 Jun 12:51:35 EDT 2017
+* All Parsed List (edited) Removed. Thu 29 Jun 12:51:35 EDT 2017
+* Allparsedlist list was an empty file Thu 29 Jun 12:51:35 EDT 2017
+* abusechZeuSCompromisedURLBlocklist List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:51:35 EDT 2017
+* AdAway List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:51:36 EDT 2017
