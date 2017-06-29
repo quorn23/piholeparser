@@ -255,3 +255,15 @@
 * Allparsedlist list was an empty file Thu 29 Jun 12:51:35 EDT 2017
 * abusechZeuSCompromisedURLBlocklist List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:51:35 EDT 2017
 * AdAway List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:51:36 EDT 2017
+* abusechZeuSCompromisedURLBlocklist List Was An Empty File After Download. Thu 29 Jun 12:51:36 EDT 2017
+* All Parsed List (edited) Removed. Thu 29 Jun 12:51:39 EDT 2017
+* Allparsedlist list was an empty file Thu 29 Jun 12:51:39 EDT 2017
+## Edited ALLPARSEDLIST Result. Thu 29 Jun 12:51:39 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+## Total Runtime. Thu 29 Jun 12:51:40 EDT 2017
+* Script Took  minutes To Filter  Lists.
+
+## Updated Main README.md. Thu 29 Jun 12:51:40 EDT 2017
+
+* Script completed at Thu 29 Jun 12:51:40 EDT 2017
