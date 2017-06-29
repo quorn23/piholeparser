@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: qWqpMox7NeUOaDD5/pcAzw
-! Version: 201706290442
+! Checksum: 7vbC4jxnxQXepOrXC9HuTQ
+! Version: 201706291252
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -3440,6 +3440,7 @@ debugger:$popup
 ||fbfd396918c60838.com^$third-party
 ||fdf96bba78a9249ca4e.com^$third-party
 ! iframe
+/:\/\/[a-z]+\.com\/.{400,460}/$subdocument,third-party
 /:\/\/[a-z]+\.info\/.{400,460}/$subdocument,third-party
 ||artelled.com^$third-party
 ||bargetbook.com^$third-party
@@ -3449,6 +3450,7 @@ debugger:$popup
 ||budgement.info^$third-party
 ||charmstroy.info^$third-party
 ||contentpap.info^$third-party
+||evideorun.com^$third-party
 ||fungetbag.info^$third-party
 ||goodbookbook.com^$third-party
 ||greatwork.info^$third-party
@@ -3833,6 +3835,8 @@ debugger:$popup
 !
 !-------------------- Annonceurs popup --------------------!
 !
+/?id=*&langue=*&buying=$popup
+://advidi.$popup
 ||104.154.237.$popup,third-party
 ||104.197.$popup,third-party
 ||104.198.$popup,third-party
@@ -4004,6 +4008,8 @@ debugger:$popup
 ||bluemediappc.com^$popup,third-party
 ||boeangranolith.bid^$popup,third-party
 ||bonnes-affaires.pro^$popup,third-party
+||bonplan1.com^$popup,third-party
+||bonplan5.com^$popup,third-party
 ||booksuper.info^$popup,third-party
 ||boruto.fr^$popup,third-party
 ||brostraffic.com^$popup,third-party
@@ -4020,6 +4026,7 @@ debugger:$popup
 ||cbshift.com^$popup,third-party
 ||cdnrl.com^$popup,third-party
 ||cduporno.fr^$popup,third-party
+||chocam.com^$popup,third-party
 ||cityads.com^$popup,third-party
 ||cityadspix.com^$popup,third-party
 ||cld2r.com^$popup,third-party
@@ -4098,6 +4105,7 @@ debugger:$popup
 ||eravage.com^$popup,third-party
 ||espace-plus.net^$popup,third-party
 ||esprit-click.com^$popup,third-party
+||eurolive.com^$popup,third-party
 ||europacash.com^$popup,third-party
 ||exasharetab.com^$popup,third-party
 ||exhaustionlaurenbremsstrahlung.info^$popup,third-party
@@ -4195,6 +4203,7 @@ debugger:$popup
 ||leechpremium.link^$popup,third-party
 ||linkredirect.biz^$popup,third-party
 ||lionsdrive.com^$popup,third-party
+||live18ans.com^$popup,third-party
 ||livechatdates.com^$popup,third-party
 ||livefreefunwith.me^$popup,third-party
 ||livepartners.com^$popup,third-party
@@ -4203,6 +4212,7 @@ debugger:$popup
 ||lookfueled.com^$popup,third-party
 ||looksmartppc.com^$popup,third-party
 ||lovelinebabydesign.com^$popup,third-party
+||madamecam.com^$popup,third-party
 ||makeitunder.com^$popup,third-party
 ||marsads.com^$popup,third-party
 ||maxidivx.com^$popup,third-party
@@ -4245,6 +4255,7 @@ debugger:$popup
 ||mybankai.net^$popup,third-party
 ||mycamptrack.com^$popup,third-party
 ||myfreesoftwarehub.com^$popup,third-party
+||mykocam.com^$popup,third-party
 ||myninja.club^$popup,third-party
 ||myninja.info^$popup,third-party
 ||myninja.mobi^$popup,third-party
@@ -4287,6 +4298,7 @@ debugger:$popup
 ||only-stream.com^$popup,third-party
 ||onlygamesforme.com^$popup,third-party
 ||onwardclick.com^$popup,third-party
+||optimuum.com^$popup,third-party
 ||optmz.online^$popup,third-party
 ||othip.info^$popup,third-party
 ||ouaitupeuxregarderenillimite.com^$popup,third-party
@@ -4487,6 +4499,7 @@ debugger:$popup
 ||www.gangstabros.com^$popup,third-party
 ||www.meetic-partners.com^$popup,third-party
 ||x.porn.fr^$popup,third-party
+||xcams.net^$popup,third-party
 ||xcapps.com^$popup,third-party
 ||xfore.org^$popup,third-party
 ||xl415.com^$popup,third-party
@@ -5266,7 +5279,6 @@ $webrtc,domain=123movies.net|9divx.org|akoam.com|bypassed.gold|cocostreaming.com
 ||prodownload.newbetakey.com^
 ||promo.asiatique.org^
 ||promo.carasexe.com^
-||promo.chocam.com^$popup
 ||promo.ejaculer.fr^
 ||promo.japanhdv.com^
 ||promo.jeunette.net^
@@ -5917,6 +5929,9 @@ $webrtc,domain=123movies.net|9divx.org|akoam.com|bypassed.gold|cocostreaming.com
 ! embedezcast.com
 |http://$script,third-party,xmlhttprequest,domain=embedezcast.com
 |https://$script,third-party,xmlhttprequest,domain=embedezcast.com
+! opensubtitles.org
+|http://$subdocument,third-party,domain=opensubtitles.org
+|https://$subdocument,third-party,domain=opensubtitles.org
 ! hqq.tv
 @@||api.peer5.com^$script,domain=hqq.tv|hqq.watch
 @@||c.vkcache.com/js/device.js$script,domain=hqq.watch
@@ -6126,9 +6141,11 @@ voodaith7e.com##div > [id^="player"] + div[id][style*="z-index:"]
 @@||ajax.googleapis.com/ajax/libs/$script,domain=g5u.pw|gsurl.in|gsurl.me
 |http://$script,third-party,xmlhttprequest,domain=g5u.pw|gsurl.in|gsurl.me
 |https://$script,third-party,xmlhttprequest,domain=g5u.pw|gsurl.in|gsurl.me
+! adshort.co
+@@||google.com/recaptcha/$subdocument,domain=adshort.co
+|http://$script,subdocument,third-party,xmlhttprequest,domain=adshort.co
 ! adf.ly
-@@||educing.info/popunder.gif|$image,domain=adf.ly|ay.gy|j.gs|q.gs
-@@||therse.info/popunder.gif|$image,domain=adf.ly|ay.gy|j.gs|q.gs
+@@||redirect2719.ws/?$subdocument,domain=adf.ly|j.gs|q.gs
 ||cdn.adf.ly^$script,third-party,domain=~j.gs|~q.gs
 ||cdn.j.gs^$script,third-party,domain=~adf.ly|~q.gs
 ||cdn.q.gs^$script,third-party,domain=~adf.ly|~j.gs
@@ -6206,7 +6223,7 @@ $websocket,domain=clkme.me|cllkme.com|destyy.com|gestyy.com|jigbig.tk|newsfortru
 ||super-virals.com^$subdocument,third-party
 ||uploadbank.com^$subdocument,third-party
 ! popup & popunder
-$popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|cash4files.com|cloudtime.to|croco.site|dailyuploads.net|darkomplayer.com|drstickyfingers.com|dyo.gs|e-wok.tv|easyvid.org|estream.to|etmirror.com|etproxy.com|extra.to|extratorrent.cc|extratorrent.works|extratorrentlive.com|extratorrentonline.com|eztv.ag|file-upload.com|filescdn.com|filesonthe.net|filmstreamvk.ws|freean.us|full-anime.com|full-film.me|full-serie.biz|full-serie.co|getmytorrent.com|go.ad2upapp.com|goneviral.com|gorillavid.com|guadeloupe-paradise.fr|hornywood.tv|imgchili.net|j.gs|jkanime.net|k-streaming.com|kickass.cd|kvid.org|le-streaming.com|letwatch.to|letwatch.us|linkbabes.com|linkbucks.com|media1fire.com|megaline.co|megawatch.net|miniurls.co|mystream.la|mythewatchseries.com|nitroflare.com|notsmutty.com|nowvideo.ag|nowvideo.co|nowvideo.li|oload.tv|onlinevideoconverter.com|openload.co|papstream.com|pelis24.tv|poontown.net|powvideo.net|powvideo.xyz|putstream.com|q.gs|qqc.co|rapidvideo.com|rapidvideo.ws|seriousdeals.net|shrvid.com|smutty.com|sokrostream.cc|speedvid.net|streamango.com|streamay.ws|streamin.to|streaming-boruto.com|streaming-dragon-ball-super.com|streaming-hub.com|streamplay.to|t411.ae|teramixer.com|theseblogs.com|theseforums.com|thevid.net|thevideo.me|thevideobee.to|tinylinks.co|tnabucks.com|torlock.com|tout-sur-le-web.com|tvrush.eu|ultimedia.com|ultrafiles.net|uploadbb.co|uploaded.net|uploadocean.com|uploadrocket.net|uploads.to|uptobox.com|uptostream.com|urlbeat.net|userscloud.com|vid.ag|vidbom.com|vidbull.com|videowood.tv|vidgg.to|vidhos.com|vidlox.me|vidlox.tv|vidshare.me|vidshare.us|vidto.me|vidup.me|vidwatch3.me|vidzi.tv|vimple.me|vkpass.com|watchers.to|watchtvserieslive.org|watchvideo.us|watchvideo10.us|watchvideo11.us|watchvideo12.us|watchvideo13.us|watchvideo14.us|watchvideo15.us|watchvideo2.us|watchvideo5.us|watchvideo8.us|whackyvidz.com|wholecloud.net|xvidstage.com|yourporno.fr|yyv.co|zatnawqy.net|zippyshare.com|zytpirwai.net
+$popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|cash4files.com|cloudtime.to|croco.site|dailyuploads.net|darkomplayer.com|drstickyfingers.com|dyo.gs|e-wok.tv|easyvid.org|estream.to|etmirror.com|etproxy.com|extra.to|extratorrent.cc|extratorrent.works|extratorrentlive.com|extratorrentonline.com|eztv.ag|file-upload.com|filescdn.com|filesonthe.net|filmstreamvk.ws|freean.us|full-anime.com|full-film.me|full-serie.biz|full-serie.co|getmytorrent.com|go.ad2upapp.com|goneviral.com|gorillavid.com|guadeloupe-paradise.fr|hornywood.tv|imgchili.net|j.gs|jkanime.net|k-streaming.com|kickass.cd|kvid.org|le-streaming.com|letwatch.to|letwatch.us|linkbabes.com|linkbucks.com|media1fire.com|megaline.co|megawatch.net|miniurls.co|mystream.la|mythewatchseries.com|nitroflare.com|notsmutty.com|nowvideo.ag|nowvideo.co|nowvideo.li|oload.tv|onlinevideoconverter.com|openload.co|opensubtitles.org|papstream.com|pelis24.tv|poontown.net|powvideo.net|powvideo.xyz|putstream.com|q.gs|qqc.co|rapidvideo.com|rapidvideo.ws|seriousdeals.net|shrvid.com|smutty.com|sokrostream.cc|speedvid.net|streamango.com|streamay.ws|streamin.to|streaming-boruto.com|streaming-dragon-ball-super.com|streaming-hub.com|streamplay.to|t411.ae|teramixer.com|theseblogs.com|theseforums.com|thevid.net|thevideo.me|thevideobee.to|tinylinks.co|tnabucks.com|torlock.com|tout-sur-le-web.com|tvrush.eu|ultimedia.com|ultrafiles.net|uploadbb.co|uploaded.net|uploadocean.com|uploadrocket.net|uploads.to|uptobox.com|uptostream.com|urlbeat.net|userscloud.com|vid.ag|vidbom.com|vidbull.com|videowood.tv|vidgg.to|vidhos.com|vidlox.me|vidlox.tv|vidshare.me|vidshare.us|vidto.me|vidup.me|vidwatch3.me|vidzi.tv|vimple.me|vkpass.com|watchers.to|watchtvserieslive.org|watchvideo.us|watchvideo10.us|watchvideo11.us|watchvideo12.us|watchvideo13.us|watchvideo14.us|watchvideo15.us|watchvideo2.us|watchvideo5.us|watchvideo8.us|whackyvidz.com|wholecloud.net|xvidstage.com|yourporno.fr|yyv.co|zatnawqy.net|zippyshare.com|zytpirwai.net
 ! images hosting
 ||bluesattv.net/gif.gif
 ||hostingpics.net/pics/*468x60.
@@ -8206,6 +8223,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ||dnyjp3iys0r8o.cloudfront.net^
 ||do67etikr7pwz.cloudfront.net^
 ||dohs95d6tfj19.cloudfront.net^
+||dokzl8xhmt1x7.cloudfront.net^
 ||dpb3g4kqr8xz.cloudfront.net^
 ||dpiw925yvtpfq.cloudfront.net^
 ||dqhu0lvuvqh74.cloudfront.net^
@@ -9139,6 +9157,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ##.advertisement-pub
 ##.advertising-box
 ##.advertising-box-full
+##.advertising-item-bottom
 ##.advhead
 ##.advimg46860
 ##.advimg72890
@@ -9373,6 +9392,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ##.marketing-container
 ##.masthead-overHeader
 ##.mb_video_syncad
+##.mbanner-ad-wrapper
 ##.mdmAd-inner
 ##.megapub
 ##.midads
@@ -11477,6 +11497,7 @@ telechargement-film.org##a[href*="-film-"]
 9divx.org,likeur.org##a[href*="-vip.html"]
 9divx.org,ebooks9.fr,films-telecharger.eu,frstreaming.info,frtorrent.fr,jetelecharger1.fr,likeur.org,seriestreaming.net,streamingseries.info,telechargementz.tv##a[href*=".php"]
 planete-series.info##a[href*=".php"] > img
+lien-torrent.com##a[href*=".php"][target="_blank"]
 moviz.net##a[href*=".php?let="]
 leparticulier.fr,paruvendu.fr##a[href*=".xiti.com/go.click?"]
 meilleurs-hebergeurs.com##a[href*="/-"] > img
@@ -12250,6 +12271,7 @@ _blockadblock_
 @@||ad4.liverail.com/|$image,domain=leveldown.fr
 @@||adgear.com/session.js$domain=vtele.ca
 @@||adgear.com^*/adgear.js$domain=vtele.ca
+@@||adshort.co/js/ads.js$script,~third-party
 @@||afreesms.now.im/adblocker.js$script,domain=afreesms.com
 @@||assets.over-blog-kiwi.com/b/blog/bundles/overblogblogblog/js/ads.js$script,domain=mariage-franco-marocain.net
 @@||audipassion.com^*/jsLoader.js?adType=foobar

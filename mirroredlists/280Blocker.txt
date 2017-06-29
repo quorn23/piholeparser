@@ -1,33 +1,32 @@
 [Adblock Plus 2.0]
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
-! Last update 2017/06/25
-##.blocker280-20170625
-!2017/06/25
-##.google-adbox
-##.google-2ad
+! Last update 2017/06/29
+##.blocker280-20170629
+!2017/06/29
 
-!||msgs.jp
-||graph.facebook.com^$domain=~facebook.com
-||crashlytics.com^
-||flurry.com^
+##a[href*="//asp.m-live.jp/"]
+appget.com##[id^="adh"]
+appget.com##.kairos_ad
+/js/overlay_ad.js
+##body > div.aban
+##body > div.abox
+##body > div#wrap >div.abox
 
-
-!anti-adblock target
-||pagead2.googlesyndication.com$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com|~earthyworld.com
-
-
-~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp,~newsweekjapan.jp##[class^="ad_"]:not(body)
+!erase whitespace
+~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp,~ec-bought.com##[class^="ad-"]:not(body)
+~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp,~newsweekjapan.jp,~ec-bought.com,~ferrarilamborghininews.com##[class^="ad_"]:not(body)
+~ec-bought.com##[id*="-ads-"]:not(body):not(header)
+~bbc.com##[class*="-ads-"]:not(body):not(header)
 ~doujin-free.com##[id*="_ads_"]:not(body)
 ~mangakansou.com,~touch.pixiv.net##[class^="ads-"]:not(body)
-~earthyworld.com,~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com##.adsbygoogle:not(body)
-~doujin-free.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body)
+~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com,~off-soft.net,~earthyworld.com##.adsbygoogle:not(body)
 ~thisav.com,~savevideo.me,~touch.pixiv.net,~gmail.com,~mail.google.com,~inbox.google.com##.ads:not(body)
-~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp##[class^="ad-"]:not(body)
+~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~doujin-free.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body)
+
+~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net~smt.docomo.ne.jp,~gmail.com,~ec-bought.com,~ferrarilamborghininews.com###adsense
+
 ##[class^="ads_"]:not(body)
-##[id*="-ads-"]:not(body)
-~bbc.com##[class*="-ads-"]:not(body)
-~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net###adsense
 ###textAd
 ###ad1
 ###ad2
@@ -44,6 +43,29 @@
 ###advertise
 ~mushinavi.com##.advertise
 ~jma.go.jp,~mushinavi.com##.adv
+
+
+~abema.tv,~mamastar.jp,~ameba.jp,~ametopi.jp,~ameblo.jp,~google.com,~google.co.jp,~yahoo.co.jp,~impress.co.jp##a[href*="://ad."]
+|http://ad.$domain=~ameba.jp|~ametopi.jp|~ameblo.jp|~google.com|~google.co.jp|~yahoo.co.jp|~impress.co.jp|~kanajo.com|~mamastar.jp|~jankara.net|~abema.tv|~ponta.jp
+|https://ad.$domain=~ameba.jp|~ametopi.jp|~ameblo.jp|~google.com|~google.co.jp|~yahoo.co.jp|~impress.co.jp|~kanajo.com|~mamastar.jp|~jankara.net|~abema.tv|~ponta.jp
+
+
+
+
+!2017/06/25
+##.google-adbox
+##.google-2ad
+
+!||msgs.jp
+||graph.facebook.com^$domain=~facebook.com
+||crashlytics.com^
+||flurry.com^
+
+
+!anti-adblock target
+||pagead2.googlesyndication.com$domain=~kanajo.com|~oz3gamer.blog.fc2.com|~monnsutogatya.com|~ferrarilamborghininews.com|~antiblock.org|~sakano.wp-x.jp|~gametter.com|~kikra.jp|~thisav.com|~togeko.net|~doujin-free.com|~valuetrust.net|~surveyenquete.net|~8wayrun.com|~aeoncinema.com|~battlecats-db.com|~earthyworld.com
+
+
 
 
 
@@ -72,7 +94,6 @@
 
 
 !2017/06/18
-!erase whitespace
 
 
 
@@ -269,9 +290,7 @@ moeyo.com##[href*="//www.netoff.co.jp"]
 
 
 
-~abema.tv,~mamastar.jp,~ameba.jp,~ametopi.jp,~ameblo.jp,~google.com,~google.co.jp,~yahoo.co.jp,~impress.co.jp##a[href*="://ad."]
-|http://ad.$domain=~ameba.jp|~ametopi.jp|~ameblo.jp|~google.com|~google.co.jp|~yahoo.co.jp|~impress.co.jp|~kanajo.com|~mamastar.jp|~jankara.net|~abema.tv
-|https://ad.$domain=~ameba.jp|~ametopi.jp|~ameblo.jp|~google.com|~google.co.jp|~yahoo.co.jp|~impress.co.jp|~kanajo.com|~mamastar.jp|~jankara.net|~abema.tv
+
 
 
 !2017/04/17
@@ -2436,3 +2455,4 @@ nakasoku.blog18.fc2.com##.rss_box
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~world-best-news.doorblog.jp##a[href*="//world-best-news.doorblog.jp/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matometatta-news.net##a[href*="//matometatta-news.net/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~merry-news.com##a[href*="//merry-news.com/"]
+

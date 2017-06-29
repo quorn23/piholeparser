@@ -25,6 +25,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3877
 myscore.com.ua###lsid-window-mask
 !
+! community.spiceworks.com - proposal for registration
+community.spiceworks.com##.join-promotion
 ! https://forum.adguard.com/index.php?threads/22911/
 sueddeutsche.de##.end-of-article-joboffers
 ! https://forum.adguard.com/index.php?threads/22483/
@@ -294,6 +296,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+science-et-vie.com##.block-inscription-newsletter
 klerk.ru##.subscribe-inside
 klerk.ru##.inside-subscription
 deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com,theroot.com##.js_subscribe-region-sidebar
@@ -465,6 +468,9 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
+sportetstyle.fr##div[id^="cookie"][style="display: block;"]
+science-et-vie.com###detection-block
+science-et-vie.com###detection-block-overlay
 forexpeacearmy.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 artage.io##.spb-block.b300x250
 vek-noviy.ru##body > div.leftbar-wrap > div[style="width: 300px; height: 250px;"]
@@ -2516,6 +2522,14 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+forumconstruire.com###accept_cookie_box
+bricoleurdudimanche.com###cookiesPopin
+papergeek.fr###notification-bar-top
+newpharma.be###box_cookie_acceptance
+monenergie.be###PopUpCookie
+comparateur-energie.be##.cookies
+mon-energie-renouvelable.be##.CookiePolicyWidget
+lefigaro.fr#$#header#fig-header { height: 50px!important; }
 meteopool.org###mainTrackingOptinBox
 ofx.com###cookiebuttons
 bayam.tv###cnill_banner
@@ -3562,6 +3576,10 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+adbuff.com###ppsPopupBgOverlay
+adbuff.com##.ppsPopupShell
+livestrong.com##.newsletter_signup_overlay
+community.spiceworks.com###photo-join-modal[data-modal-el="overlay"]
 groupon.com,groupon.co.uk,groupon.be,groupon.fr###subscribe_modal_container
 groupon.com,groupon.co.uk,groupon.be,groupon.fr###subscribe_modal_container + #spotlight
 tradeciety.com##.cp-modal-popup-container
