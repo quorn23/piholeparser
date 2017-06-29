@@ -82,7 +82,7 @@ echo ""
 ## Logically download based on the Upcheck, and file type
 timestamp=$(echo `date`)
 if
-[[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz ]]
+[[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz && $source != *.zip && $source != *.php ]]
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 wget -q -O $BTEMPFILE $source
@@ -104,6 +104,14 @@ echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $ti
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
+elif
+[[ $source == *.zip && -n $SOURCEIP ]]
+then
+printf "$cyan"    "Fetching zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
+wget -q -O $COMPRESSEDTEMPSEVEN $source
+7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.7z && -n $SOURCEIP ]]
 then
@@ -154,7 +162,7 @@ touch $BORIGINALFILETEMP
 echo ""
 fi
 if 
-[[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz ]]
+[[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
 then
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
