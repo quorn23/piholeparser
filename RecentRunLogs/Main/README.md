@@ -267,3 +267,150 @@
 ## Updated Main README.md. Thu 29 Jun 12:51:40 EDT 2017
 
 * Script completed at Thu 29 Jun 12:51:40 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 12:51:41 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:41 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:41 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 12:51:42 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:42 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:42 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 12:51:43 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:43 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:43 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 12:51:43 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:43 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 12:51:43 EDT 2017
+* AdblockIran List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:51:44 EDT 2017
+* AdblockIran List Was An Empty File After Download. Thu 29 Jun 12:51:45 EDT 2017
+* AdAway Has 2 sources. Thu 29 Jun 12:51:49 EDT 2017
+* AdAway Has 2 sources. Thu 29 Jun 12:51:52 EDT 2017
+* AdAway Has 2 sources. Thu 29 Jun 12:52:01 EDT 2017
+* AdguardDNS Has 2 sources. Thu 29 Jun 12:52:34 EDT 2017
+* AdguardDNS Has 2 sources. Thu 29 Jun 12:52:35 EDT 2017
+* AdguardDNS Has 2 sources. Thu 29 Jun 12:52:41 EDT 2017
+* AdguardDutchFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:52:43 EDT 2017
+* AdguardDutchFilter List Was An Empty File After Download. Thu 29 Jun 12:52:44 EDT 2017
+* AdguardDNS Has 2 sources. Thu 29 Jun 12:52:51 EDT 2017
+* AdguardSafariFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:02 EDT 2017
+* AdguardSafariFilter List Was An Empty File After Download. Thu 29 Jun 12:53:03 EDT 2017
+* AdguardSpywareFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:09 EDT 2017
+* AdguardSpywareFilter List Was An Empty File After Download. Thu 29 Jun 12:53:11 EDT 2017
+* AdZHosts Has 2 sources. Thu 29 Jun 12:53:15 EDT 2017
+* AdZHosts Has 2 sources. Thu 29 Jun 12:53:15 EDT 2017
+* AdZHosts Has 2 sources. Thu 29 Jun 12:53:16 EDT 2017
+* AdZHosts Has 2 sources. Thu 29 Jun 12:53:30 EDT 2017
+* AirellesAntiAdvertisementsHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:48 EDT 2017
+* AirellesAntiAdvertisementsHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:48 EDT 2017
+* AirellesAntiAdvertisementsHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:49 EDT 2017
+* AirellesAntiAdvertisementsHosts List Was An Empty File After Download. Thu 29 Jun 12:53:49 EDT 2017
+* AirellesAntiAdvertisementsHosts List Was An Empty File After Download. Thu 29 Jun 12:53:49 EDT 2017
+* AirellesAntiAdvertisementsHosts List Was An Empty File After Download. Thu 29 Jun 12:53:49 EDT 2017
+* AirellesAntiMiscellaneousHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:51 EDT 2017
+* AirellesAntiMiscellaneousHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:51 EDT 2017
+* AirellesAntiMiscellaneousHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:51 EDT 2017
+* AirellesAntiMiscellaneousHosts List Was An Empty File After Download. Thu 29 Jun 12:53:51 EDT 2017
+* AirellesAntiMiscellaneousHosts List Was An Empty File After Download. Thu 29 Jun 12:53:52 EDT 2017
+* AirellesAntiMiscellaneousHosts List Was An Empty File After Download. Thu 29 Jun 12:53:52 EDT 2017
+* AirellesAntiMiscellaneousHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:54 EDT 2017
+* AirellesAntiSexHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:54 EDT 2017
+* AirellesAntiMiscellaneousHosts List Was An Empty File After Download. Thu 29 Jun 12:53:55 EDT 2017
+* AirellesAntiSexHosts List Was An Empty File After Download. Thu 29 Jun 12:53:55 EDT 2017
+* AirellesAntiSexHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:56 EDT 2017
+* AirellesAntiSexHosts List Was An Empty File After Download. Thu 29 Jun 12:53:57 EDT 2017
+* AirellesAntiTrackersHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:58 EDT 2017
+* AirellesAntiTrackersHosts List Was An Empty File After Download. Thu 29 Jun 12:53:59 EDT 2017
+* AirellesAntiSexHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:59 EDT 2017
+* AirellesMalwareHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:59 EDT 2017
+* AirellesMalwareHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:53:59 EDT 2017
+* AirellesAntiSexHosts List Was An Empty File After Download. Thu 29 Jun 12:54:00 EDT 2017
+* AirellesMalwareHosts List Was An Empty File After Download. Thu 29 Jun 12:54:00 EDT 2017
+* AirellesMalwareHosts List Was An Empty File After Download. Thu 29 Jun 12:54:00 EDT 2017
+* AirellesMalwareHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:54:00 EDT 2017
+* AirellesAntiTrackersHosts List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:54:01 EDT 2017
+* AirellesMalwareHosts List Was An Empty File After Download. Thu 29 Jun 12:54:01 EDT 2017
+* AirellesAntiTrackersHosts List Was An Empty File After Download. Thu 29 Jun 12:54:02 EDT 2017
+* Blackweb list was 180 MB, and too large to mirror on github. Thu 29 Jun 12:56:00 EDT 2017
+* Blackweb list was 168 MB, and too large to mirror on github. Thu 29 Jun 12:56:00 EDT 2017
+* BLOGRAMBlogPartsFilterListforJapan List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:56:17 EDT 2017
+* BLOGRAMBlogPartsFilterListforJapan List Was An Empty File After Download. Thu 29 Jun 12:56:18 EDT 2017
+* BLOGRAMBlogPartsFilterListforJapan List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:56:18 EDT 2017
+* BulgarianListEasyList List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:56:28 EDT 2017
+* BulgarianListEasyList List Was An Empty File After Download. Thu 29 Jun 12:56:29 EDT 2017
+* ChadMayfieldPornBlocklistHeavy List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:57:36 EDT 2017
+* ChadMayfieldPornBlocklistHeavy List Was An Empty File After Download. Thu 29 Jun 12:57:37 EDT 2017
+* ChadMayfieldPornBlocklistHeavy List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:57:38 EDT 2017
+* ChadMayfieldPornBlocklistHeavy List Was An Empty File After Download. Thu 29 Jun 12:57:38 EDT 2017
+* DisconnectMalwareFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:58:01 EDT 2017
+* DisconnectMalwareFilter List Was An Empty File After Download. Thu 29 Jun 12:58:02 EDT 2017
+* EasyListDutchEasyList List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:59:22 EDT 2017
+* EasyListDutchEasyList List Was An Empty File After Download. Thu 29 Jun 12:59:23 EDT 2017
+* EasyListGermanyEasyList List Failed To Download. Attempted to use Mirror. Thu 29 Jun 12:59:33 EDT 2017
+* EasyListGermanyEasyList List Was An Empty File After Download. Thu 29 Jun 12:59:34 EDT 2017
+* EasyList Has 2 sources. Thu 29 Jun 12:59:45 EDT 2017
+* EasyList Has 2 sources. Thu 29 Jun 12:59:49 EDT 2017
+* EasyList Has 2 sources. Thu 29 Jun 12:59:54 EDT 2017
+* EasyPrivacy Has 2 sources. Thu 29 Jun 13:00:08 EDT 2017
+* EasyPrivacy Has 2 sources. Thu 29 Jun 13:00:14 EDT 2017
+* EasyPrivacy Has 2 sources. Thu 29 Jun 13:00:20 EDT 2017
+* FacebookAnnoyancesBlocker List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:00:35 EDT 2017
+* FacebookAnnoyancesBlocker List Was An Empty File After Download. Thu 29 Jun 13:00:36 EDT 2017
+* EasyList Has 2 sources. Thu 29 Jun 13:00:37 EDT 2017
+* EladKarako List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:00:41 EDT 2017
+* EladKarako List Was An Empty File After Download. Thu 29 Jun 13:00:42 EDT 2017
+* EasyPrivacy Has 2 sources. Thu 29 Jun 13:01:00 EDT 2017
+* hpHostsATS List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:02:16 EDT 2017
+* hpHostsFSA List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:03:00 EDT 2017
+* hpHostsFSA List Was An Empty File After Download. Thu 29 Jun 13:03:01 EDT 2017
+* Laicure List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:06:33 EDT 2017
+* Laicure List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:06:33 EDT 2017
+* Laicure List Was An Empty File After Download. Thu 29 Jun 13:06:34 EDT 2017
+* Laicure List Was An Empty File After Download. Thu 29 Jun 13:06:34 EDT 2017
+* LehighBOOT List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:06:54 EDT 2017
+* LehighBOOT List Was An Empty File After Download. Thu 29 Jun 13:06:55 EDT 2017
+* ListeAR List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:07:24 EDT 2017
+* ListeAR List Was An Empty File After Download. Thu 29 Jun 13:07:25 EDT 2017
+* ListKRUnbreak List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:07:34 EDT 2017
+* ListKRUnbreak List Was An Empty File After Download. Thu 29 Jun 13:07:35 EDT 2017
+* Nopelist List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:08:43 EDT 2017
+* Nopelist List Was An Empty File After Download. Thu 29 Jun 13:08:44 EDT 2017
+* PiwikSpam List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:09:25 EDT 2017
+* PiwikSpam List Was An Empty File After Download. Thu 29 Jun 13:09:26 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2URLBlocklist List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:10:20 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2URLBlocklist List Was An Empty File After Download. Thu 29 Jun 13:10:26 EDT 2017
+* ROList List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:12:49 EDT 2017
+* ROList List Was An Empty File After Download. Thu 29 Jun 13:12:54 EDT 2017
+* SatterlysAdblockPlusFilters List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:15 EDT 2017
+* SatterlysAdblockPlusFilters List Was An Empty File After Download. Thu 29 Jun 13:13:16 EDT 2017
+* SatterlysAdblockPlusFilters List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:16 EDT 2017
+* SatterlysAdblockPlusFilters List Was An Empty File After Download. Thu 29 Jun 13:13:17 EDT 2017
+* SchacksAdblockPlusList List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:17 EDT 2017
+* SchuzaksUniversalFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:20 EDT 2017
+* SchuzaksUniversalFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:20 EDT 2017
+* SchuzaksUniversalFilter List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:20 EDT 2017
+* SchuzaksUniversalFilter List Was An Empty File After Download. Thu 29 Jun 13:13:20 EDT 2017
+* SchuzaksUniversalFilter List Was An Empty File After Download. Thu 29 Jun 13:13:21 EDT 2017
+* SchuzaksUniversalFilter List Was An Empty File After Download. Thu 29 Jun 13:13:21 EDT 2017
+* Spam404DomainBlacklist List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:13:53 EDT 2017
+* SpamAssassinBillStearns Has 2 sources. Thu 29 Jun 13:13:54 EDT 2017
+* Spam404DomainBlacklist List Was An Empty File After Download. Thu 29 Jun 13:13:54 EDT 2017
+* SpamAssassinBillStearns Has 2 sources. Thu 29 Jun 13:13:57 EDT 2017
+* SpamAssassinBillStearns Has 2 sources. Thu 29 Jun 13:13:57 EDT 2017
+* StevenBlacksTrackers List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:14:41 EDT 2017
+* StevenBlacksTrackers List Was An Empty File After Download. Thu 29 Jun 13:14:42 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGambling List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:14:45 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGambling List Was An Empty File After Download. Thu 29 Jun 13:14:45 EDT 2017
+* StevenBlacksUnifiedHostsFakenews List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:14:49 EDT 2017
+* StevenBlacksUnifiedHostsFakenews List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:14:49 EDT 2017
+* StevenBlacksUnifiedHostsFakenews List Was An Empty File After Download. Thu 29 Jun 13:14:49 EDT 2017
+* StevenBlacksUnifiedHostsFakenews List Was An Empty File After Download. Thu 29 Jun 13:14:49 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsPorn List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:14:52 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsPorn List Was An Empty File After Download. Thu 29 Jun 13:15:06 EDT 2017
+* ThoughtconvergesCustomAdBlockFilters List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:15:43 EDT 2017
+* ThoughtconvergesCustomAdBlockFilters List Was An Empty File After Download. Thu 29 Jun 13:15:43 EDT 2017
+* All Parsed List Not Removed. Thu 29 Jun 13:16:58 EDT 2017
+* YouTubeRemoveComments List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:16:58 EDT 2017
+* All Parsed List Not Removed. Thu 29 Jun 13:17:02 EDT 2017
+* All Parsed List Not Removed. Thu 29 Jun 13:17:11 EDT 2017
+* All Parsed List (edited) Removed. Thu 29 Jun 13:18:41 EDT 2017
+* All Parsed List (edited) Not Removed. Thu 29 Jun 13:18:41 EDT 2017
+* All Parsed List (edited) Not Removed. Thu 29 Jun 13:18:42 EDT 2017
+* Allparsedlist list was an empty file Thu 29 Jun 13:19:22 EDT 2017

@@ -24,8 +24,8 @@ Other aims of this project:
 ### Last Run On
 
 * 
-* Script Ended At Thu 29 Jun 12:51:40 EDT 2017
-* Script Took  minutes To Filter  Lists.
+* Script Ended At Thu 29 Jun 13:19:22 EDT 2017
+* Script Took  minutes To Filter 	341 Lists.
 * The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
 * [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
 * [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/listswithouthttps)
