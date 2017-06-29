@@ -414,3 +414,18 @@
 * All Parsed List (edited) Not Removed. Thu 29 Jun 13:18:41 EDT 2017
 * All Parsed List (edited) Not Removed. Thu 29 Jun 13:18:42 EDT 2017
 * Allparsedlist list was an empty file Thu 29 Jun 13:19:22 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 13:19:24 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 13:19:24 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 13:19:24 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 13:19:24 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 13:19:24 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 13:19:24 EDT 2017
+* Spam404DomainBlacklist List Failed To Download. Attempted to use Mirror. Thu 29 Jun 13:19:27 EDT 2017
+* Spam404DomainBlacklist List Was An Empty File After Download. Thu 29 Jun 13:19:28 EDT 2017
+* SpamAssassinBillStearns Has 2 sources. Thu 29 Jun 13:19:30 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 29 Jun 13:22:34 EDT 2017
+* Locally Hosted Biglist Removed. Thu 29 Jun 13:22:34 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 29 Jun 13:22:34 EDT 2017
+* All Parsed List Removed. Thu 29 Jun 13:22:43 EDT 2017
+* All Parsed List (edited) Removed. Thu 29 Jun 13:23:53 EDT 2017
+* Allparsedlist list was an empty file Thu 29 Jun 13:24:17 EDT 2017
