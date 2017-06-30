@@ -1,5 +1,6 @@
 
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html class="os_win" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
@@ -10,6 +11,7 @@
         <meta name="description" content="With Cubby, your stuff is shared across all your computers, tablets, and smartphones and always accessible at Cubby.com. It’s everything in its everplace." />
             <link rel="Shortcut Icon" href="/welcome/favicon.ico?50532" />
         
+<!-- Intellisense support for jQuery. It will never be rendered to the browser. -->
         
         <link type="text/css" rel="Stylesheet" href="/Common/CSS/common.css?50532" />
         <link type="text/css" rel="Stylesheet" href="/Common/CSS/account.css?50532" />
@@ -20,7 +22,7 @@
 
 
         <script src="/Common/Scripts/Dynamic/GAScript.ashx" type="text/javascript"></script>
-        <script src="/Common/Scripts/Dynamic/CubbyScript.ashx?636343516253305948" type="text/javascript"></script>
+        <script src="/Common/Scripts/Dynamic/CubbyScript.ashx?636343932510782919" type="text/javascript"></script>
         <script src="/Common/Scripts/loginTracker.js?50532" type="text/javascript"></script>
         <link type="text/css" rel="Stylesheet" href="/Common/CSS/navbar.css?50532" />
         <link href="/welcome/resources/iconfonts/iconfont2.css?50532" rel="stylesheet" type="text/css" />
@@ -33,15 +35,18 @@
          >
 
         
+        <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-56ZZ";
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>    (function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({ 'gtm.start':
 new Date().getTime(), event: 'gtm.js'
         }); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
 '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-56ZZ');
 </script>
+<!-- End Google Tag Manager -->
 
         <form name="aspnetForm" method="post" action="./missing" id="aspnetForm">
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY1NDU2MTA1MmRkltxrGvukxrJpa7BdU6Q2uGzNqzo=" />
@@ -60,6 +65,8 @@ new Date().getTime(), event: 'gtm.js'
                 $.preferCulture('en-US');
                 
                 Sync.Frame.InitControler(
+                    $('#buttonContainer'), 
+                    $('#tabContainer'), 
                     'tab', 
                     'selected', 
                     '', 
@@ -93,6 +100,7 @@ new Date().getTime(), event: 'gtm.js'
 <div id="greenNav">
     
 
+<!--IT is assumed that container div will center the nav-->
 <div class="nav bg-green clearfix">
  <div class="nav-left">
      <span class="brand">
@@ -185,7 +193,7 @@ new Date().getTime(), event: 'gtm.js'
                 </div>
                 <div class="popupButton">
                     
-                    <a class="popupButton" href='https://accounts.logme.in/accountsettings.aspx?clusterid=01&amp;returnurl=https%3a%2f%2fwww.cubby.com%2ffederated%2floginsso.aspx&amp;headerframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fheaderframe.aspx&amp;productframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fdefaultframe.aspx&amp;lang=en-US&amp;noreg=1&amp;skin=cubby&amp;regtype=S&amp;trackingproducttype=3&amp;trackinguniqueid=527e4aba-9d97-4c70-91db-25a464e623f8&amp;socialloginenabled=0'>
+                    <a class="popupButton" href='https://accounts.logme.in/accountsettings.aspx?clusterid=01&amp;returnurl=https%3a%2f%2fwww.cubby.com%2ffederated%2floginsso.aspx&amp;headerframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fheaderframe.aspx&amp;productframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fdefaultframe.aspx&amp;lang=en-US&amp;noreg=1&amp;skin=cubby&amp;regtype=S&amp;trackingproducttype=3&amp;trackinguniqueid=3ae0d4f3-3ac8-437a-88de-039d64696e02&amp;socialloginenabled=0'>
                         Account settings</a>
                     
                 </div>
@@ -201,7 +209,7 @@ new Date().getTime(), event: 'gtm.js'
                 <div class="popupButton">
                     
                     
-                    <a class="popupButton" href='https://accounts.logme.in/logout.aspx?clusterid=01&amp;returnurl=https%3a%2f%2fwww.cubby.com%2ffederated%2floginsso.aspx&amp;headerframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fheaderframe.aspx&amp;productframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fdefaultframe.aspx&amp;lang=en-US&amp;noreg=1&amp;skin=cubby&amp;regtype=S&amp;trackingproducttype=3&amp;trackinguniqueid=527e4aba-9d97-4c70-91db-25a464e623f8&amp;socialloginenabled=0'>
+                    <a class="popupButton" href='https://accounts.logme.in/logout.aspx?clusterid=01&amp;returnurl=https%3a%2f%2fwww.cubby.com%2ffederated%2floginsso.aspx&amp;headerframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fheaderframe.aspx&amp;productframe=https%3a%2f%2fwww.cubby.com%2ffederated%2fresources%2fdefaultframe.aspx&amp;lang=en-US&amp;noreg=1&amp;skin=cubby&amp;regtype=S&amp;trackingproducttype=3&amp;trackinguniqueid=3ae0d4f3-3ac8-437a-88de-039d64696e02&amp;socialloginenabled=0'>
                         Log out</a>
                     
                 </div>
@@ -259,8 +267,9 @@ new Date().getTime(), event: 'gtm.js'
     
     </script>
     
-        <iframe src="https://secure.img-cdn.mediaplex.com/0/22002/universal.html?page_name=cubby_conversion&Cubby_Conversion=1&mpuid=527E4ABA-9D97-4C70-91DB-25A464E623F8"
+        <iframe src="https://secure.img-cdn.mediaplex.com/0/22002/universal.html?page_name=cubby_conversion&Cubby_Conversion=1&mpuid=3AE0D4F3-3AC8-437A-88DE-039D64696E02"
             style="display: none;" height="1" width="1" frameborder="0"></iframe>
     
     </body>
+    <!-- SWWW01-004-->
 </html>

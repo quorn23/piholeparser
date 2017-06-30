@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 13:57 2017/06/27
+! 最終更新 11:04 2017/06/30
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -600,11 +600,9 @@ $script,third-party,domain=jpidols.tv
 ||anitube.se/player/anitubeJWOverlay/
 ||antivirus-news.net/image/*_bnn*.png
 ||asg.to/ad/
-||ashemaletube.com^*/adblock.png
-||ashemaletube.com/ast/
+||ashemaletube.com/ast/b/
+||ashemaletube.com/ast/www/js_271be750/g2bf40db.min.js?
 ||ashemaletube.com/banner-iframe/
-||ashemaletube.com/blocked-banners.php
-||ashemaletube.com^*/adblock.png
 ||atas.io^$domain=toukoucity.to
 ||blog.livedoor.jp/geek/ad-
 ||blog.livedoor.jp/geek/banner-b2012.html
@@ -1092,137 +1090,51 @@ $script,third-party,domain=jpidols.tv
 
 !-----------------------非表示フィルタ-----------------------!
 
-!freesoft.tvbok.com ヘッダー辺り
-~freesoft.tvbok.com,~imgchili.com,~imgchili.net,~login.mail.goo.ne.jp,~nichinoken.co.jp###ad
+###ad
 ###AD
 ###ad1
 ###ad2
-
-!fc2ブログ管理画面 > 画像高速表示の設定
-! akankore.doorblog.jp コメント
-~control.blog.fc2.com,~akankore.doorblog.jp###ads
-
+###ads
 ###ADS
 ###adsense
 ###advertise
-
-! http://www.htb.co.jp/onigiri/index.html
-~htb.co.jp###advertisement
-
-!watch.impress.co.jp右サイドが全部消える
-~watch.impress.co.jp,~google.co.jp,~google.com,~houdoukyoku.jp,~justin.tv,~mapion.co.jp##.ad
-
-~gmail.com,~mail.google.com##.AD
+###advertisement
+##.ad
+##.AD
 ##.ad1
 ##.ad2
-
-!pixiv 全部
-! adf gmail 本文消える 1
-!.adn gmail 本文消える 次
-~touch.pixiv.net##.ads:not(.adf):not(.adn)
+##.ads
 ##.ADS
-!変なの出る
-~sekai-kabuka.com##.adsbygoogle
+##.adsbygoogle
 ##.adsense
-
-! 気象警報・注意報（表形式）が消える
-~jma.go.jp##.adv
-
+##.adv
 ##.advertise
-
-! 2014/11/04 wiimk2.net body直下
-! 2014/12/07 appmk2.net uenionaji
-~appmk2.net,~wiimk2.net##.advertisement
-
-!houdoukyoku.jp 記事
-! 2014/11/04 hulu.jp 全部
-~houdoukyoku.jp,~hulu.jp##[class^="ad-"]:not(body)
-
-!impressヘッダとロゴ
-! linguee.jp top
-! 2014/11/04 webcg.net記事消え
+##.advertisement
+##[class^="ad-"]:not(html):not(body)
 ! http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
-~impress.co.jp,~linguee.jp,~webcg.net,~www.paw.hi-ho.ne.jp,~tofuchan.net##[class^="ad_"]:not(.ad_head_rectangle):not(body)
-
-! freesoft.tvbok.com 本文消え ads-area
-!モバイル版pixiv 検索 次へ
-!mega まっしろ
-~freesoft.tvbok.com,~touch.pixiv.net,~mega.nz##[class^="ads-"]:not(body)
-
-! startpage.com 検索結果うrl
-~startpage.com##[class^="ads_"]:not(body)
-
-!cinematoday.jp 全部
-!gyazo.com 画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
-!moneyforward.com トップ全部
-!msn.com 記事全部
-!search.nicovideo.jp 金枠銀枠消える
-~cinematoday.jp,~google.com,~gyazo.com,~moneyforward.com,~msn.com,~rollingstonejapan.com,~search.nicovideo.jp##[class$="-ad"]:not(body)
-
-! appget.com clear:both
-! mail.ru メール画面
-! mail.google.com ウエバー
-! icon_ad http://www.nicovideo.jp/top_service/ ニコニ広告消え
-! .p_no_ad fc2ブログ コメント送信確認フォーム
-~appget.com,~hongfire.com,~livetter.com,~mail.ru,~mondotv.jp,~tofukko.com,~mail.google.com,~play.google.com##[class$="_ad"]:not(body):not(.icon_ad):not(.p_no_ad)
-
-!ashemaletube.com プレイヤー消える
-!duckduckgo.com ad無効でbodyにno-ads
-!mega 左側
-!blogspot 一部テンプレに.has-ads http://programming-aip.blogspot.jp/
-!yourupload.com 動画見れない
-~ashemaletube.com,~danbooru.donmai.us,~duckduckgo.com,~kissanime.io,~mega.nz,~uncyclopedia.wikia.com,~upornia.com,~yourupload.com##[class$="-ads"]:not(.has-ads):not(body)
-
-!プレーヤーコメント枠が消える
-! 2015/02/18 無効
-!~www.nicovideo.jp##[class$="_ads"]:not(body)
-! cale.google.com 検索バー 2015/12/02
-! mail.google.com カラーパレットが消える
-! play.google.com 検索バー消え 2015/11/10
-! plus.google.com 投稿ボタン消え
-~asg.to,~calendar.google.com,~mail.google.com,~play.google.com,~plus.google.com,~photobucket.com##[class$="Ad"]:not(body)
-
-! nico プレーヤーより上が消える
-! optifine download出来な
-~www.nicovideo.jp,~optifine.net##[class$="Ads"]:not(body)
-
+~www.paw.hi-ho.ne.jp##[class^="ad_"]:not(html):not(body)
+##[class^="ads-"]:not(html):not(body)
+##[class^="ads_"]:not(html):not(body)
+##[class$="-ad"]:not(html):not(body)
+##[class$="_ad"]:not(html):not(body)
+##[class$="-ads"]:not(html):not(body)
+##[class$="_ads"]:not(html):not(body)
+##[class$="Ad"]:not(html):not(body)
+##[class$="Ads"]:not(html):not(body)
 ! http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
-~linguee.jp##[class*=" ad_"]:not(body):not(.ad_distance)
+##[class*=" ad_"]:not(html):not(body):not(.ad_distance)
+##[class*="-ad "]:not(html):not(body)
+##[class*="-ad-"]:not(html):not(body)
+##[class*="_ad_"]:not(html):not(body)
 
-!twitter 動画 コントール消える
-~twitter.com##[class*="-ad "]:not(body)
-
-!answers.yahoo.com htmlに-ad-
-!asahi.com ニュース動画消える
-!youtube TOPが真っ白に(確認できず),~youtube.com 2015/02/12
-!jp.wsj.com 真っ白(body > div)
-!response トップ　clear:both
-!not(body) http://games.yahoo.com/news/more-evidence-playstation-4-absolute-beast-210316772.html
-!wikia テーブル消える http://ja.dont-starve.wikia.com/wiki/MacTusk
-!vjs-ad-controls plaim.jp 動画見れない
-!tver.jp 動画消える　多分
-!live.nicovideo.jp 広告が表示されない :not(.user-ad-block):not(.user-ad-view-area):not(.user-ad-status)
-!xuite.net 動画消える
-~answers.yahoo.com,~asahi.com,~google.com,~jp.wsj.com,~lavasoft.com,~news24.jp,~tver.jp,~response.jp,~youtube.com,~wikia.com,~xuite.net##[class*="-ad-"]:not(body):not(.vjs-ad-controls):not(.user-ad-block):not(.user-ad-view-area):not(.user-ad-status):not(.user-ad-action):not(.user-ad-campaign)
-
-!dailymail html
-!fc2 Container内全部
-~dailymail.co.uk,~mondotv.jp,~video.fc2.com##[class*="_ad_"]:not(body)
-
-!impressヘッダとロゴ
-~blog2.k05.biz,~impress.co.jp,~tok2.com##[id^="ad-"]:not(body)
+~blog2.k05.biz##[id^="ad-"]:not(html):not(body)
 
 !inoreaderエントリ記事右上の日付表示が消える
-!fc2ブログ管理画面 > 画像高速表示の設定
-!fc2doga 右側が消える
-~inoreader.com,~koepota.jp,~video.fc2.com##[id^="ad_"]:not(#ad_table):not(body)
+~inoreader.com##[id^="ad_"]:not(html):not(body)
 
-##[id^="ads-"]:not(body)
-##[id^="ads_"]:not(body)
-
-!タグ登録出来ない
-!miyalabo.jp top全部
-~nijie.info,~google.com,~miyalabo.jp##[id$="-ad"]:not(body)
+##[id^="ads-"]:not(html):not(body)
+##[id^="ads_"]:not(html):not(body)
+##[id$="-ad"]:not(html):not(body)
 
 ! amaebi 次へが消える
 ! ffxiv.gt.exdreams.net トップページ　cookie
@@ -1230,24 +1142,24 @@ $script,third-party,domain=jpidols.tv
 ! mlb.com スケジュ消える http://texas.rangers.mlb.com/schedule/index.jsp?c_id=tex#y=2016&m=3&calendar=DEFAULT
 ! my.gamecity.ne.jp ログイン後アバター部分が消える
 ! smv.to 動画消える
-~amaebi.net,~jbbs.shitaraba.net,~eiga.com,~ffxiv.gt.exdreams.net,~my.gamecity.ne.jp,~mlb.com,~smv.to##[id$="_ad"]:not(body)
+~amaebi.net,~jbbs.shitaraba.net,~eiga.com,~ffxiv.gt.exdreams.net,~my.gamecity.ne.jp,~mlb.com,~smv.to##[id$="_ad"]:not(html):not(body)
 
-##[id$="-ads"]:not(body)
+##[id$="-ads"]:not(html):not(body)
 !本文
-~jp.wsj.com##[id$="_ads"]:not(body)
+~jp.wsj.com##[id$="_ads"]:not(html):not(body)
 
 !google image検索
 !rakuten http://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/100080
 !        http://search.gora.golf.rakuten.co.jp/cal/disp/c_id/100080
-~google.co.jp,~gora.golf.rakuten.co.jp,~windowsfiles.jp##[id$="Ad"]:not(body)
+~google.co.jp,~gora.golf.rakuten.co.jp,~windowsfiles.jp##[id$="Ad"]:not(html):not(body)
 
-##[id$="Ads"]:not(body)
-~live2.nicovideo.jp,~ufc.com##[id*="-ad-"]:not(body)
+##[id$="Ads"]:not(html):not(body)
+~live2.nicovideo.jp,~ufc.com##[id*="-ad-"]:not(html):not(body)
 
 ! adf.ly SKIPADが見えない
 ! fc2ブログ管理画面 > 記事の設定 > RSS広告
 ! video左全部
-~adf.ly,~live.nicovideo.jp,~qanda.rakuten.ne.jp,~control.blog.fc2.com,~video.fc2.com##[id*="_ad_"]:not(body)
+~adf.ly,~live.nicovideo.jp,~qanda.rakuten.ne.jp,~control.blog.fc2.com,~video.fc2.com##[id*="_ad_"]:not(html):not(body)
 
 
 ##[style*="width:728px;"][style*="height:90px;"]
@@ -1379,7 +1291,7 @@ dropbooks.tv##.t_news
 !smh版
 dropbooks.tv###book_adbox_cookie
 dtiblog.com###meerkat-wrap
-e-typing.ne.jp##[class^="ad300"]
+e-typing.ne.jp##[class^="ad"][class*="00"]
 e0166.blog89.fc2.com###side > .module:nth-of-type(3)
 easter.ne.jp##div[align="center"] > br:first-child
 easter.ne.jp##div[align="center"] > table[width="700"][cellspacing="0"][cellpadding="1"][border="0"]
@@ -1419,6 +1331,7 @@ imgbako.com,futalog.com##body > table[border="0"]:nth-of-type(114)
 imgbako.com,futalog.com##body > table[border="0"]:nth-of-type(117)
 imgbako.com,futalog.com##body > table[border="0"]:nth-of-type(120)
 imgbako.com,futalog.com##body > table[border="0"]:last-of-type:not([cellspacing="0"])
+
 inside-games.jp###keyword
 inside-games.jp##.adRecommend
 inside-games.jp##.adRecommendRight
@@ -1558,13 +1471,12 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 ||2chan.net/bin/uucount.php
 
 !-----------kiss-------------!
-/1126020/*$domain=kissanime.io
 ||ti553.com^
 ||kissanime.ru/xyz/check.aspx
 kissasian.com,kissanime.ru##.clear2
 kissasian.com,kissanime.ru##.divCloseBut
 kissasian.com,kissanime.ru##[style^="border-color: #4e4e4e !important; position: relative;"]
-
+@@||kissanime.io/js/ads.js?*
 
 !------------artemis------------!
 ||pop-ad.link^
@@ -1953,6 +1865,7 @@ youtube.com##.pyv-afc-ads-inner
 
 !α波
 ||alfalfalfa.com/*.js|
+@@||blogmaterial.nicoblomaga.jp/material/279/js/comment.js?$domain=alfalfalfa.com
 
 !妹 http://vipsister23.com/
 ||vipsister23.com/randamad
@@ -2053,17 +1966,100 @@ $domain=warotanikki.com,third-party
 @@||yimg.jp/bdv/yahoo/darla/*/darla-dynamic-beacons-min.js$domain=mail.yahoo.co.jp
 @@||yimg.jp/bdv/yahoo/darla/*/darla-dynamic-rotation-min.js$domain=box.yahoo.co.jp
 @@||yimg.jp/bdv/yahoo/javascript/gyao/clover.js?
-
 !Minecraft ビーコン画像
 @@||hydra-media.cursecdn.com/minecraft-ja.gamepedia.com/*/Beacon$image,domain=minecraft-ja.gamepedia.com
 @@||atwikiimg.com/www26.atwiki.jp/minecraft/*/beacon.png$image,domain=www26.atwiki.jp
 
 
-!一部画像が消える
-sai-zen-sen.jp#@#[class*="-ad "]:not(body)
-sai-zen-sen.jp#@#[class$="-ad"]:not(body)
+	!top番組一覧
+abema.tv#@#[class$="Ad"]:not(html):not(body)
+	! fc2ブログ管理画面 > 画像高速表示の設定
+admin.blog.fc2.com#@##ads
+admin.blog.fc2.com#@#[id^="ad_"]:not(html):not(body)
+	!https://appget.com/c/ clear:both
+appget.com#@#[class$="_ad"]:not(html):not(body)
+	!body直下
+appmk2.net#@#.advertisement
+	!動画見れない
+ashemaletube.com#@#[class$="-ads"]:not(html):not(body)
+	!top全部
+cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
+	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
+gyazo.com#@#[class$="-ad"]:not(html):not(body)
+	!左側
+koepota.jp#@#[id^="ad_"]:not(html):not(body)
+	! 気象警報・注意報（表形式）が消える
+jma.go.jp#@#.adv
+	! http://www.htb.co.jp/onigiri/index.html
+htb.co.jp#@##advertisement
+	!記事本文
+houdoukyoku.jp#@#.ad
+houdoukyoku.jp#@#[class^="ad-"]:not(html):not(body)
+	!変なの出る
+sekai-kabuka.com#@#.adsbygoogle
+	!top body直下
+linguee.jp#@#[class^="ad_"]:not(html):not(body)
+linguee.jp#@#[class*=" ad_"]:not(html):not(body):not(.ad_distance)
+	!動画部分
+livetter.com#@#[class$="_ad"]:not(html):not(body)
+	!新規作成ボックスが消える
+mail.google.com#@#.AD
+	!本文
+mail.google.com#@#.ads
+	!カラーパレッド
+mail.google.com#@#[class$="Ad"]:not(html):not(body)
+	!住所検索 > 住所
+mapion.co.jp#@#.ad
+	!全部
+mega.nz#@#[class$="-ads"]:not(html):not(body)
+	!top 全部
+miyalabo.jp#@#[id$="-ad"]:not(html):not(body)
+	!本文
+mondotv.jp#@#[class$="_ad"]:not(html):not(body)
+	!ずれる
+mondotv.jp#@#[class*="_ad_"]:not(html):not(body)
+	!top 他？
+moneyforward.com#@#[class$="-ad"]:not(html):not(body)
+	!動画を再生すると消える
+news24.jp#@#[class*="-ad-"]:not(html):not(body)
+	!GINZA コメント欄が消える
+nicovideo.jp#@#[class$="_ads"]:not(html):not(body)
+nicovideo.jp#@#[class$="Ads"]:not(html):not(body)
+nicovideo.jp#@#[id$="Ads"]:not(html):not(body)
+	!ニコニコ広告部分
+live.nicovideo.jp#@#[class*="-ad-"]:not(html):not(body)
+	!タグ登録できない
+nijie.info#@#[id$="-ad"]:not(html):not(body)
+	!http://optifine.net/downloads ミラー先が消える
+optifine.net#@#[class$="Ads"]:not(html):not(body)
+	! http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
+paw.hi-ho.ne.jp#@#[class^="ad_"]:not(html):not(body)
+	!投稿欄
+plus.google.com#@#[class$="Ad"]:not(html):not(body)
+	!記事本文
+rollingstonejapan.com#@#[class$="-ad"]:not(html):not(body)
+	!一部画像が消える
+sai-zen-sen.jp#@#[class*="-ad "]:not(html):not(body)
+sai-zen-sen.jp#@#[class$="-ad"]:not(html):not(body)
+	!検索次へ
+touch.pixiv.net#@#[class^="ads-"]:not(html):not(body)
+	!本文
+tofukko.com#@#[class$="_ad"]:not(html):not(body)
+tofuchan.net#@#[class^="ad_"]:not(html):not(body)
+	!動画消える
+tver.jp#@#[class*="-ad-"]:not(html):not(body)
+	!動画を再生すると消える
+upornia.com#@#[class$="-ads"]:not(html):not(body)
+	!Container内全部
+video.fc2.com#@#[class*="_ad_"]:not(html):not(body)
+video.fc2.com#@#[id^="ad_"]:not(html):not(body)
+	!動画を再生すると消える
+vlog.xuite.net#@#[class*="-ad-"]:not(html):not(body)
+	!右サイドが全部消える
+watch.impress.co.jp#@#.ad
+	!body直下
+wiimk2.net#@#.advertisement
 
-abema.tv#@#[class$="Ad"]:not(body)
 
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party
