@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:04 2017/06/30
+! 最終更新 0:34 2017/07/01
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -1111,8 +1111,7 @@ $script,third-party,domain=jpidols.tv
 ##.advertise
 ##.advertisement
 ##[class^="ad-"]:not(html):not(body)
-! http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
-~www.paw.hi-ho.ne.jp##[class^="ad_"]:not(html):not(body)
+##[class^="ad_"]:not(html):not(body)
 ##[class^="ads-"]:not(html):not(body)
 ##[class^="ads_"]:not(html):not(body)
 ##[class$="-ad"]:not(html):not(body)
@@ -1121,50 +1120,26 @@ $script,third-party,domain=jpidols.tv
 ##[class$="_ads"]:not(html):not(body)
 ##[class$="Ad"]:not(html):not(body)
 ##[class$="Ads"]:not(html):not(body)
-! http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
+	! .ad_distance http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
 ##[class*=" ad_"]:not(html):not(body):not(.ad_distance)
 ##[class*="-ad "]:not(html):not(body)
 ##[class*="-ad-"]:not(html):not(body)
 ##[class*="_ad_"]:not(html):not(body)
-
-~blog2.k05.biz##[id^="ad-"]:not(html):not(body)
-
-!inoreaderエントリ記事右上の日付表示が消える
-~inoreader.com##[id^="ad_"]:not(html):not(body)
-
+##[id^="ad-"]:not(html):not(body)
+	! #ad_table fc2ブログ管理画面 > 画像高速表示の設定
+##[id^="ad_"]:not(html):not(body):not(#ad_table)
 ##[id^="ads-"]:not(html):not(body)
 ##[id^="ads_"]:not(html):not(body)
 ##[id$="-ad"]:not(html):not(body)
-
-! amaebi 次へが消える
-! ffxiv.gt.exdreams.net トップページ　cookie
-! shitaraba ヘッダーメニューが消える
-! mlb.com スケジュ消える http://texas.rangers.mlb.com/schedule/index.jsp?c_id=tex#y=2016&m=3&calendar=DEFAULT
-! my.gamecity.ne.jp ログイン後アバター部分が消える
-! smv.to 動画消える
-~amaebi.net,~jbbs.shitaraba.net,~eiga.com,~ffxiv.gt.exdreams.net,~my.gamecity.ne.jp,~mlb.com,~smv.to##[id$="_ad"]:not(html):not(body)
-
+##[id$="_ad"]:not(html):not(body)
 ##[id$="-ads"]:not(html):not(body)
-!本文
-~jp.wsj.com##[id$="_ads"]:not(html):not(body)
-
-!google image検索
-!rakuten http://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/100080
-!        http://search.gora.golf.rakuten.co.jp/cal/disp/c_id/100080
-~google.co.jp,~gora.golf.rakuten.co.jp,~windowsfiles.jp##[id$="Ad"]:not(html):not(body)
-
+##[id$="_ads"]:not(html):not(body)
+##[id$="Ad"]:not(html):not(body)
 ##[id$="Ads"]:not(html):not(body)
-~live2.nicovideo.jp,~ufc.com##[id*="-ad-"]:not(html):not(body)
-
-! adf.ly SKIPADが見えない
-! fc2ブログ管理画面 > 記事の設定 > RSS広告
-! video左全部
-~adf.ly,~live.nicovideo.jp,~qanda.rakuten.ne.jp,~control.blog.fc2.com,~video.fc2.com##[id*="_ad_"]:not(html):not(body)
-
+##[id*="-ad-"]:not(html):not(body)
+##[id*="_ad_"]:not(html):not(body)
 
 ##[style*="width:728px;"][style*="height:90px;"]
-
-
 
 ##a[href*="http://ad."]
 ##a[href*="infotop.jp/click.php?"]
@@ -1948,6 +1923,8 @@ $domain=warotanikki.com,third-party
 @@||maps.gstatic.com/maps-api-v3/api/js/19/13/intl/ja_ALL/adsense.js
 ! これないと広告がでる
 @@||media.trafficjunky.net/js/holiday-promo.js$script,domain=pornhub.com
+! あちこち 面倒だから大サービスで全部許可しちゃう 例：スケジュール https://www.mlb.com/rangers/schedule/
+@@||mlb.com^$elemhide
 ! 動画見れない
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
 @@||nytimes.com^$elemhide
@@ -1970,12 +1947,15 @@ $domain=warotanikki.com,third-party
 @@||hydra-media.cursecdn.com/minecraft-ja.gamepedia.com/*/Beacon$image,domain=minecraft-ja.gamepedia.com
 @@||atwikiimg.com/www26.atwiki.jp/minecraft/*/beacon.png$image,domain=www26.atwiki.jp
 
-
 	!top番組一覧
 abema.tv#@#[class$="Ad"]:not(html):not(body)
+	!http://www.ad-toshiba.jp/ad/media/122
+ad-toshiba.jp#@#[class^="ad-"]:not(html):not(body)
+ad-toshiba.jp#@#[class*="-ad-"]:not(html):not(body)
+	! adf.ly SKIPADが見えない
+adf.ly#@#[id*="_ad_"]:not(html):not(body)
 	! fc2ブログ管理画面 > 画像高速表示の設定
 admin.blog.fc2.com#@##ads
-admin.blog.fc2.com#@#[id^="ad_"]:not(html):not(body)
 	!https://appget.com/c/ clear:both
 appget.com#@#[class$="_ad"]:not(html):not(body)
 	!body直下
@@ -1984,10 +1964,12 @@ appmk2.net#@#.advertisement
 ashemaletube.com#@#[class$="-ads"]:not(html):not(body)
 	!top全部
 cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
+	!top崩れる
+eiga.com#@#[id$="_ad"]:not(html):not(body)
 	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
 gyazo.com#@#[class$="-ad"]:not(html):not(body)
 	!左側
-koepota.jp#@#[id^="ad_"]:not(html):not(body)
+koepota.jp#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
 	! 気象警報・注意報（表形式）が消える
 jma.go.jp#@#.adv
 	! http://www.htb.co.jp/onigiri/index.html
@@ -1995,8 +1977,10 @@ htb.co.jp#@##advertisement
 	!記事本文
 houdoukyoku.jp#@#.ad
 houdoukyoku.jp#@#[class^="ad-"]:not(html):not(body)
-	!変なの出る
-sekai-kabuka.com#@#.adsbygoogle
+	!inoreaderエントリ記事右上の日付表示が消える
+inoreader.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
+	!本文
+jp.wsj.com#@#[id$="_ads"]:not(html):not(body)
 	!top body直下
 linguee.jp#@#[class^="ad_"]:not(html):not(body)
 linguee.jp#@#[class*=" ad_"]:not(html):not(body):not(.ad_distance)
@@ -2020,6 +2004,8 @@ mondotv.jp#@#[class$="_ad"]:not(html):not(body)
 mondotv.jp#@#[class*="_ad_"]:not(html):not(body)
 	!top 他？
 moneyforward.com#@#[class$="-ad"]:not(html):not(body)
+	! my.gamecity.ne.jp ログイン後アバター部分が消える
+my.gamecity.ne.jp#@#[id$="_ad"]:not(html):not(body)
 	!動画を再生すると消える
 news24.jp#@#[class*="-ad-"]:not(html):not(body)
 	!GINZA コメント欄が消える
@@ -2027,7 +2013,7 @@ nicovideo.jp#@#[class$="_ads"]:not(html):not(body)
 nicovideo.jp#@#[class$="Ads"]:not(html):not(body)
 nicovideo.jp#@#[id$="Ads"]:not(html):not(body)
 	!ニコニコ広告部分
-live.nicovideo.jp#@#[class*="-ad-"]:not(html):not(body)
+live.nicovideo.jp,live2.nicovideo.jp#@#[class*="-ad-"]:not(html):not(body)
 	!タグ登録できない
 nijie.info#@#[id$="-ad"]:not(html):not(body)
 	!http://optifine.net/downloads ミラー先が消える
@@ -2036,11 +2022,15 @@ optifine.net#@#[class$="Ads"]:not(html):not(body)
 paw.hi-ho.ne.jp#@#[class^="ad_"]:not(html):not(body)
 	!投稿欄
 plus.google.com#@#[class$="Ad"]:not(html):not(body)
+	!右側サイドバー全部
+qanda.rakuten.ne.jp#@#[id*="_ad_"]:not(html):not(body)
 	!記事本文
 rollingstonejapan.com#@#[class$="-ad"]:not(html):not(body)
 	!一部画像が消える
 sai-zen-sen.jp#@#[class*="-ad "]:not(html):not(body)
 sai-zen-sen.jp#@#[class$="-ad"]:not(html):not(body)
+	!変なの出る
+sekai-kabuka.com#@#.adsbygoogle
 	!検索次へ
 touch.pixiv.net#@#[class^="ads-"]:not(html):not(body)
 	!本文
@@ -2052,14 +2042,19 @@ tver.jp#@#[class*="-ad-"]:not(html):not(body)
 upornia.com#@#[class$="-ads"]:not(html):not(body)
 	!Container内全部
 video.fc2.com#@#[class*="_ad_"]:not(html):not(body)
-video.fc2.com#@#[id^="ad_"]:not(html):not(body)
+video.fc2.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
+	!左側
+video.fc2.com#@#[id*="_ad_"]:not(html):not(body)
 	!動画を再生すると消える
 vlog.xuite.net#@#[class*="-ad-"]:not(html):not(body)
 	!右サイドが全部消える
 watch.impress.co.jp#@#.ad
 	!body直下
 wiimk2.net#@#.advertisement
-
+	! 他のもガッツリ行くけど仕方ない http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
+www.paw.hi-ho.ne.jp#@#[class^="ad_"]:not(html):not(body)
+	!top
+youtube.com#@#[class*="-ad-"]:not(html):not(body)
 
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party

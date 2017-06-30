@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: 0DFIzWoW4PxHTJIAMmJIng
-! Version: 201706300422
+! Checksum: au/QSjoOZp1yGQrU+25Gig
+! Version: 201706301822
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 30 Jun 2017 04:22 UTC
+! Last Modified: 30 Jun 2017 18:22 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -6359,8 +6359,13 @@ mg*.6park.com/img/$image
 ||yxdown.com/cj/
 ||zhlzw.com/genfa/
 ||xiaoshuotxt.*/skin/v3/js/
+||wpwdf.com^
+||chinaz.com/zz_img/
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
+aishx.top###frameu9916W_left > .block:nth-child(-n+6)
+tieba.baidu.com##.fixed_bar[href*="/hbOpenApp/"]
+mop.com##.hot-rec-ad
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -11420,11 +11425,12 @@ ck101.com,datehub.co,gamer.com.tw#@#.textAd
 ck101.com,datehub.co,gamer.com.tw#@#.text_ad
 ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Baidu Union
+||b1.51scw.net^
+||100669.com^$third-party
+~baidu.com##A[href*="/cpro/"]
 ||w.xiaopiaoyou.com^
 ###cpro_container
-##DIV[id][style="width: 100%;"] > IFRAME[class][scrolling="no"][allowtransparency="true"][src*="?"][width][height][frameborder="0"]
-##iframe[id][marginwidth="0"][style*="vertical-align"][src*="?"][width][height]
-##iframe[id][style*="vertical-align"][allowtransparency="true"][src*="?"][width][height]
+##DIV[id][style^="width: 100%;"][style*="vertical-align:"] > IFRAME[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
 /^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?=[0-9a-z]*[a-z])(?=[0-9a-z]*[0-9])[0-9a-z]{40,62}\.js/$script,domain=~bittiger.io
 /^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/[a-z0-9]{3}\?[a-z0-9]{3}(?:=[^=]+){30,31}$/$subdocument
 /cpro.$popup,third-party
@@ -11601,6 +11607,7 @@ dj92cc.com,tingqq.com#@#.share_list
 @@/urchin.js$domain=on.cc
 @@=mm_12852562_1778064_$domain=taobao.com|tmall.com
 @@=mm_33231655_8000000_$domain=taobao.com
+@@||sohu.com/cityjson?$domain=mop.com
 @@||120.132.57.41/pjk/pag/
 @@||126.net/images/blank.gif
 @@||7m.cn/v2/js/analyse.js

@@ -1447,6 +1447,11 @@ golovbukh.ua##body:style(overflow: auto !important;)
 ! https://github.com/uBlockOrigin/uAssets/issues/403
 thevideo.me##script:inject(abort-on-property-write.js, Fingerprint2)
 thevideo.me##script:inject(abort-on-property-read.js, inpage_pop_functions)
+! https://adblockplus.org/forum/viewtopic.php?f=10&t=53349
+! TODO: find out whether above filters are now obsolete
+tvad.me##script:inject(abort-on-property-read.js, app.adblockPop)
+||thevideo.me/assets/g=adb
+thevideo.me##script:inject(abort-on-property-read.js, MarketGidJSON)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/411
 @@||uvnc.com^$generichide
@@ -1611,3 +1616,14 @@ bloomberg.com##.bb-nav-search:style(z-index: 1000 !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/480
 qrz.ru##.content_row > div[class]:has(a[href="/help/adblock/"])
+
+! https://adblockplus.org/forum/viewtopic.php?f=10&t=53351
+pornovore.fr##script:inject(abort-on-property-write.js, popUrl)
+
+! https://adblockplus.org/forum/viewtopic.php?f=10&t=53354
+vidnow.to##script:inject(abort-on-property-read.js, BetterJsPop)
+
+! https://github.com/uBlockOrigin/uAssets/issues/409
+4pda.ru###header#header#header#header+div:style(background: #e6e7e9 !important)
+4pda.ru##a[rel][target]:has(> img)
+4pda.ru##a[title="TomTop"][target]

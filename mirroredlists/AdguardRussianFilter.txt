@@ -22,6 +22,9 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||wguke.com^$third-party
+||ulaen.com^$third-party
+||tmozs.com^$third-party
 ||redsquare.rambler.ru^$third-party
 ||skypromotion.ru^$third-party
 ||armame.info^$third-party
@@ -4078,6 +4081,9 @@ votrube.ru,hdpicture.ru,fastpic.ru,hdreactor.org,720video.tv,megapeer.org#%#Obje
 !**
 !*****
 !
+! https://forum.adguard.com/index.php?threads/23061/
+@@||s.rbk.ru/*/scripts/repo/ads/ads.js
+rbc.ru#$#div#topadvert.advert__fullbanner.advert.google_ads.topads.banner.teasers.rbc_adv.adbottom.adbottom { display: block!important; position: absolute!important; left: -3000px!important; height: 20px!important; }
 ! https://forum.adguard.com/index.php?threads/15602/
 @@||viho.tv/player/js/ads.js$domain=viho.tv
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=viho.tv
@@ -6519,6 +6525,7 @@ baskino.co$$style[tag-content=".branding"][max-length="1500"]
 ! https://forum.adguard.com/index.php?threads/15624/
 games.mail.ru$$script[tag-content="getElem('rb_holder_"][max-length="12000"]
 ! Remove WebSockets ads
+tvtorrent.me,comedyportal.tv$$script[wildcard="*script*onerror*atob*"][max-length="1600"]
 znaj.ua$$script[wildcard="*var el*var NMces*innerHTML=atob*"][max-length="7000"]
 znaj.ua$$script[wildcard="*script*onerror*new Worker*"][max-length="1600"]
 free-torrent.org,free-torrents.org,tracktor.tv,hd-720.com$$script[tag-content="eval(atob"]
@@ -8430,7 +8437,7 @@ gismeteo.ua##div[id="weather-rbkua"]
 ! an.ya|ndex - base64
 Ly9hbi55YW5kZXgucnUv$domain=fb.ru
 aHR0cDovL2NyeXByb3gueWFuZGV4Lm5ld$domain=razlozhi.ru
-aHR0cHM6Ly9hbi55YW5kZXgucnUvb$domain=razlozhi.ru|yandex.by|yandex.com.tr|yandex.kz|yandex.ru|yandex.ua
+aHR0cHM6Ly9hbi55YW5kZXgucnUv$domain=razlozhi.ru|yandex.by|yandex.com.tr|yandex.kz|yandex.ru|yandex.ua
 !
 rustorka.com##div[align="center"] > a > img
 /(rustorka.com\/forum\/misc\/js\/(?!ifix)(?!main)(?!fancybox)(?!scrolltopcontrol)(?!jquery)(?!ct)(?!bbcode))/$domain=rustorka.com
@@ -8440,6 +8447,11 @@ rustorka.com$$script[tag-content="postWindowPop"][max-length="25000"]
 /(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+rbc.ru##.js-rbcslider-footer.g-banner__news-footer
+tvtorrent.me##.MIXADVERT_NET+div[id]:not([id="dle-content"]) > a
+tvtorrent.me##center > a[href^="/go.php?url="] > img
+vladtv.ru##img[src^="/upload/rk/"]
+comedyportal.tv##noindex > a[rel="nofollow"] > img
 zx-pk.ru###ad_global_below_navbar
 forum-psn.ru###fo_partners
 ||forum-psn.ru/adv/
@@ -9637,7 +9649,7 @@ yadi.sk##.ns-view-boxContentDirect
 /tizer/*$domain=allfishinggames.ru
 /tplpay/*.js$domain=images-pic.ru|img-pika.ru|imgpics.ru|imgspic.ru|pic-images.ru|pics-images.ru|picstraff.ru|pika-img.ru|pikas-img.ru|pix-images.ru
 /trumedia$domain=goha.ru
-/upload/rk/*$domain=podrobno.uz|xsport.ua|mos.news|tvcom-tv.ru|gorod48.ru|gazeta-n1.ru|shoes-report.ru|sportfm.ru|newkaliningrad.ru|openbusiness.ru|citrus.ua|ktostroit.ru|ural56.ru|dairynews.com.ua|devyatka.ru|freekaliningrad.ru|hi-fi.ru|innov.ru|k1news.ru|meteo-tv.ru|newsroom24.ru|personalaudio.ru|portamur.ru|rigma.info|securitylab.ru|ya62.ru|zebra-tv.ru
+/upload/rk/*$domain=vladtv.ru|podrobno.uz|xsport.ua|mos.news|tvcom-tv.ru|gorod48.ru|gazeta-n1.ru|shoes-report.ru|sportfm.ru|newkaliningrad.ru|openbusiness.ru|citrus.ua|ktostroit.ru|ural56.ru|dairynews.com.ua|devyatka.ru|freekaliningrad.ru|hi-fi.ru|innov.ru|k1news.ru|meteo-tv.ru|newsroom24.ru|personalaudio.ru|portamur.ru|rigma.info|securitylab.ru|ya62.ru|zebra-tv.ru
 015.by,032.ua,0332.ua,0342.ua,0352.ua,0362.ua,0372.ua,0412.ua,0432.ua,04565.com.ua,04578.in.ua,0462.ua,0472.ua,048.ua,04868.com.ua,0512.com.ua,0522.ua,0532.ua,05366.com.ua,0542.ua,0552.ua,056.ua,0564.ua,057.ua,061.ua,06153.com.ua,06239.com.ua,06252.com.ua,06254.in.ua,06255.com.ua,06274.com.ua,0629.com.ua,0642.ua,06432.in.ua,06434.com.ua,3462city.ru,44.ua,5692.com.ua,62.ua,6264.com.ua,8352city.ru,8422city.ru,86155city.ru,8634city.ru,city3012.ru,go31.ru,go862.ru,goroddomodedovo.ru,gorodpushkin.ru,labaved.ru,prokolpino.ru##div[class*="banner_box"]
 04849.com.ua,0566.com.ua,3652.ru,3654.ru,62.ua,mynizhyn.com##.banner_box
 062.ru##a[style*="width: 100;    height: 100"]

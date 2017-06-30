@@ -21,10 +21,9 @@
 !
 !######### Annoying elements (not ads)
 !
-! TEMPORARY: broken auth form
-! https://github.com/AdguardTeam/AdguardFilters/issues/3877
-myscore.com.ua###lsid-window-mask
-!
+! https://forum.adguard.com/index.php?threads/22946/
+||cdn.playwire.com/*/embed.js$domain=filehippo.com
+||view.vzaar.com^$domain=filehippo.com
 ! community.spiceworks.com - proposal for registration
 community.spiceworks.com##.join-promotion
 ! https://forum.adguard.com/index.php?threads/22911/
@@ -296,6 +295,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+wetter.com##aside a[data-label~="WhatsApp_Bild"]
 science-et-vie.com##.block-inscription-newsletter
 klerk.ru##.subscribe-inside
 klerk.ru##.inside-subscription
@@ -2523,6 +2523,9 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+mistertennis.com##.banner_cokie
+levante-emv.com###MensajeCompruebaCookieSite
+benetton.com##.bnt_cookieBar
 materiel.net###cookie
 moneysavingexpert.com###alertBar.std
 base.be##.cookie_flyout
@@ -3371,6 +3374,8 @@ ukr-today.com##.soc_vidgets
 ###smartbanner.ios
 ###smartbanner.windows
 !
+intellicast.com###promoAd
+intellicast.com###stormLink
 m.alles10euro.de##body > .smartbanner
 giveawayoftheday.com##.bottom_b
 dailymail.co.uk,focus.de###smartbanner
