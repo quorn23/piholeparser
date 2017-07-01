@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: qgZpyMEXg8T04+ZXacdHLQ
-! Version: 201706301842
+! Checksum: YYZdGVL0efYL3ajRBp7W7A
+! Version: 201707010432
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -67,7 +67,7 @@
 &voluumdata=*&zoneid=
 &zoneid=*&direct=
 ,728x90&promo_
-,popjs|
+,popjs|$domain=~thevideo.me
 -1000x150.$subdocument
 -120-600-
 -120-x-600-
@@ -6141,10 +6141,9 @@ voodaith7e.com##div > [id^="player"] + div[id][style*="z-index:"]
 |http://$subdocument,third-party,domain=viid.me
 |https://$subdocument,third-party,domain=viid.me
 ! thevideo.me / vidup.me
-@@||thevideo.me/js/jspc.js?ab$script,domain=thevideo.me
 @@||thevideo.me/js/jspc.js?ab|$script,domain=thevideo.me|vidup.me
 @@||vidup.me/adsense.js?$script,domain=vidup.me
-||thevideo.me^$subdocument,~third-party
+||thevideo.me^$subdocument,domain=thevideo.me|vidup.me
 ||vidup.me^$subdocument,~third-party
 ! adhy.pe
 |http://$script,subdocument,third-party,xmlhttprequest,domain=adhy.pe|ah.pe

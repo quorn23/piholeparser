@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Homepage: http://adblock.sk
 ! Title: Easylist Czech and Slovak filter list
-! Last change: 19/06/2017
+! Last change: 01/07/2017
 ! List maintainers: tomasko126, Aslanex, Moskoe, Fanboy
 ! GitHub contributors: hrobky, Conder000, MilanPala, freezy-sk, martinrotter, Blackbird88, adawolfa
 ! Expires: 3 days
@@ -106,6 +106,7 @@ exashare.com###player_img
 ||digitalnitelevize.cz/obrazky/reklamni_odkazy/
 ||dobresenajim.cz/idnesbanner?
 ||edna.cz/static/web/img/banners/branding*
+||eltrack.pro$popup
 ||eserial.cz/liftago2.jpg
 ||eserial.cz/trikator/
 ||espoluprace.cz/affiliate/
@@ -116,6 +117,7 @@ exashare.com###player_img
 ||flash.stream.cz/get_sklik/
 ||forum.w-source.net/images/*banner*.jpg
 ||fotoradce.cz/layout/inzerce/
+||freefilm.sk/banner
 ||games.tiscali.cz/*/extra/*
 ||games.tiscali.cz/*/partnerJsApi*
 ||garaz.autorevue.cz/advantage.js
@@ -625,6 +627,9 @@ zive.cz#@#.box-adsense
 !
 @@/moje-konto/inzeraty/$document,domain=autobazar.sk|bazar.sk|nehnutelnosti.sk
 @@/moje-inzeraty/$document,domain=autobazar.sk|bazar.sk|nehnutelnosti.sk
+@@||bombuj.eu$generichide
+@@||easylist.club^$third-party
+@@||freefilm.sk$generichide
 @@||img.aaaauto.eu/thumb/
 @@||maps.gstatic.com/maps-api-v3/api/js/$domain=mapa-mapy.info.sk
 @@/moje-konto/inzeraty/
@@ -652,6 +657,9 @@ mojevideo.sk#@##video_ad
 @@||topserialy.sk/*/advertisement.js
 @@||topserialy.sk/*/fuckadblock.js
 @@||topserialy.sk/*/popad.js
+@@||topserialy.to/js/advertisements.js
+@@||topserialy.to/js/googlead.js
+@@||topserialy.to$generichide
 @@||tpd.sk/ads/rotator/
 @@||yukata.cz/banners/banner_88_31.png$domain=anime-kool.webnode.sk
 komentare.sme.sk#@#.share-box
@@ -757,6 +765,7 @@ aktualne.cz###reklama-megaboard
 aktualne.cz###reklama-wallpaper
 aktualne.cz###sas-leader
 aktualne.cz###sas-jobbox-300
+aktualne.cz###sas-multisize-1
 aktualne.cz##.adWrapperFlight
 aktualne.cz##.job_box_hp
 aktualne.cz##.job_box_300
@@ -1101,6 +1110,7 @@ lidovky.cz##.authors + DIV:not(.related)
 lidovky.cz##.widesquare
 livesport.cz###box-over-content-a
 lui-magazine.cz##.bannergroup
+lupa.cz##div[data-admarker='reklama']
 lupa.cz###jobs
 lupa.cz###jobs-prace
 lupa.cz###jobs-kurzy
@@ -1193,6 +1203,8 @@ pcworld.cz###skyscraper
 pcworld.cz##.banner
 penize.tiscali.cz###zone-tiscali-penize-wide
 pestujemeweb.cz###lista
+play.iprima.cz###player-wrapper + div
+play.iprima.cz##.vjs-marker-ad
 playzone.cz###block-block-128
 playzone.cz###block-block-132
 playzone.cz###block-block-143
@@ -1393,6 +1405,9 @@ best4you.sk##A[href="http://www.Onlinefilmy.eu"]
 best4you.sk##DIV[style="font-size:20px; font-family:Arial Black, Arial; color:#FF0000; font-weight:bold"]
 blickclick.webnoviny.sk##.ads.center.clr
 bmwklub.sk##DIV[id^="ad"]
+bombuj.eu###reklamacasino
+bombuj.eu###videooverlay
+bombuj.eu###zatvorit-reklamu
 centrum.sk##.h2.grad2.kupons_games
 centrum.sk##.banner
 cucaj.sk###interContainer
@@ -1413,6 +1428,8 @@ freefilm.sk###blockerINFO
 heureka.sk###banner-leaderboard
 heureka.sk##.filtr.category-partner
 hladaj.referaty.atlas.sk###specbox
+hnonline.sk##.s-branding
+hnonline.sk##stripemark
 itnews.sk###backgroundbanner
 itnews.sk##.menu_logo
 lenzabava.sk##A[href="http://on.fb.me/1aR7Kru"]
@@ -1503,7 +1520,6 @@ idnes.cz##DIV[id*="adb-box"]
 @@||i0.cz/js/advert.
 @@||i0.cz/*.js|
 jaguar-club.net#@#.reklama
-||echo24.cz/templateAssets/js/inlog.js
 @@||bbelements.com/bb/bb_one$domain=hrej.cz
 @@||i.imedia.cz/json*seznam.clanky.zpravy$script,domain=stream.cz
 ||onetv.cz/js/fuckadblock.js

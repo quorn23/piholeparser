@@ -1445,12 +1445,10 @@ golovbukh.ua##.megaShadow
 golovbukh.ua##body:style(overflow: auto !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/403
-thevideo.me##script:inject(abort-on-property-write.js, Fingerprint2)
-thevideo.me##script:inject(abort-on-property-read.js, inpage_pop_functions)
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=53349
-! TODO: find out whether above filters are now obsolete
 tvad.me##script:inject(abort-on-property-read.js, app.adblockPop)
 ||thevideo.me/assets/g=adb
+thevideo.me##script:inject(abort-on-property-read.js, app.main.adblock)
 thevideo.me##script:inject(abort-on-property-read.js, MarketGidJSON)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/411
@@ -1621,9 +1619,16 @@ qrz.ru##.content_row > div[class]:has(a[href="/help/adblock/"])
 pornovore.fr##script:inject(abort-on-property-write.js, popUrl)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=53354
+! https://github.com/uBlockOrigin/uAssets/issues/489
 vidnow.to##script:inject(abort-on-property-read.js, BetterJsPop)
+vshare.eu##script:inject(abort-on-property-read.js, BetterJsPop)
+vidup.me##script:inject(abort-on-property-read.js, adsShowPopup)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/409
 4pda.ru###header#header#header#header+div:style(background: #e6e7e9 !important)
-4pda.ru##a[rel][target]:has(> img)
+4pda.ru##a[rel][target]:not([attach_id]):has(> img)
 4pda.ru##a[title="TomTop"][target]
+
+! https://adblockplus.org/forum/viewtopic.php?f=1&t=53362
+hdfree.se###advPlayer
+hdfree.se###videoplayer:style(display: block !important;)
