@@ -22,6 +22,7 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||eventwisparwil.ru^$third-party
 ||wguke.com^$third-party
 ||ulaen.com^$third-party
 ||tmozs.com^$third-party
@@ -4855,6 +4856,8 @@ vk.com##.wall_wrap div[id^="post-"][-ext-has='div.post_content > div.post_info >
 vk.com###feed_rows > div[class="feed_row "] > div[class^="feed_repost-"][-ext-has='div[class="wall_marked_as_ads"]']
 vk.com###page_wall_posts > div[id^="post-"][-ext-has='div._post_content > div.post_content > div.post_info > div.wall_text > div.wall_marked_as_ads']
 !
+! dugtor.ru - удаление отступа сверху
+dugtor.ru#$#body[-ext-has="> div"] { padding-top: 0px!important; }
 ! seasonvar.ru - удаление отступа сверху
 seasonvar.ru#$#body[-ext-has="div.wrapper"] { padding-top:0px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3565
@@ -6335,6 +6338,8 @@ yadi.sk#$#a[href^="https://awaps.yandex.ru/"] {background: none!important;}
 firepic.org#$#body {background-image: none!important; padding-top: 0px!important;}
 ! games-tv.ru - удаление брендированного фона
 games-tv.ru#$#.main {background: none!important;}
+! oper.ru - баннер снизу
+oper.ru#$##wrapper { padding-bottom: 0px!important; }
 ! oper.ru - удаление брендированного фона
 oper.ru#$#body {background-image: none!important;}
 ! ts.kg - удаление брендированного фона, отступа сверху
@@ -8344,7 +8349,8 @@ news.yandex.by,news.yandex.com,news.yandex.kz,news.yandex.ru,news.yandex.ua##.pa
 !
 ! HDGO clickunder
 .ru/*/|$script,domain=46.30.41.195|vg672plpaer.ru|0q265r664x1.ru|66i753q703.ru|0q265r664x1.ru
-/:\/\/[a-z0-9]+\.[a-z0-9]+\.[a-z]+\/\d+\.js/$domain=46.30.41.195|0q265r664x1.ru
+/:\/\/[a-z0-9]+\.[a-z0-9]+\.[a-z]+\/\d+\.js/$domain=46.30.41.195|0q265r664x1.ru|0z5co256u3.ru
+||vq63t40b0z.ru/*.js|
 ||p6co60zgzke.ru/*.js|
 ||p6co60zgzke.ru/*.js|
 ||efqpxlg793ipg.ru/*.js|
@@ -8447,6 +8453,9 @@ rustorka.com$$script[tag-content="postWindowPop"][max-length="25000"]
 /(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+newrutor.org##center > a[href^="//newrutor.org/goaway.php"] > img
+kinosok.org##noindex a[rel="nofollow"] > img
+dugtor.ru##p[style^="text-align: center;"] > a img
 pornolab.net##embed[id^="vsexshop"]
 rbc.ru##.js-rbcslider-footer.g-banner__news-footer
 tvtorrent.me##.MIXADVERT_NET+div[id]:not([id="dle-content"]) > a
