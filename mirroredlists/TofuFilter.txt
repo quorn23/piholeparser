@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 0:34 2017/07/01
+! 最終更新 17:17 2017/07/02
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -797,7 +797,8 @@ $script,third-party,domain=jpidols.tv
 /log4.cgi?
 ! bbc.co.uk音出ない
 ! dropbox.com　リンク取得後縮小画像が見えない
-/logger.js$domain=~bbc.co.uk|~dropbox.com
+! radiko.jp 上部メニューが出ない
+/logger.js$domain=~bbc.co.uk|~dropbox.com|~radiko.jp
 /logking.cgi?
 /logset.cgi?
 /logwrite.cgi?
@@ -1490,6 +1491,7 @@ tok2.com###tok2_footer
 ||yeas.yahoo.co.jp^
 ||shopping.yahooapis.jp/ShoppingWebService/
 ||yimg.jp/bdv/
+||yimg.jp/images/auc/pc/common/js/1.0.0/PromotionFrame.min.js$domain=auctions.yahoo.co.jp
 ||yimg.jp/images/auct/blogparts/
 ||yimg.jp/images/*300_60$domain=blogs.yahoo.co.jp
 ||yimg.jp/images/premium/contents/bnr/$domain=auctions.yahoo.co.jp
@@ -1660,6 +1662,7 @@ amazon.co.jp###pageContent > a:first-child + div
 ##.amazlet-box
 ##.amazon-link
 ##.azlink-box
+##.kaerebalink-box
 
 @@||images-amazon.com^*/beacon/BeaconSprite-$image
 @@||ssl-images-amazon.com^*/beacon/BeaconSprite-$image
@@ -1956,6 +1959,7 @@ ad-toshiba.jp#@#[class*="-ad-"]:not(html):not(body)
 adf.ly#@#[id*="_ad_"]:not(html):not(body)
 	! fc2ブログ管理画面 > 画像高速表示の設定
 admin.blog.fc2.com#@##ads
+amazon.co.jp#@#[class*="-ad-"]:not(html):not(body)
 	!https://appget.com/c/ clear:both
 appget.com#@#[class$="_ad"]:not(html):not(body)
 	!body直下
@@ -1977,6 +1981,8 @@ htb.co.jp#@##advertisement
 	!記事本文
 houdoukyoku.jp#@#.ad
 houdoukyoku.jp#@#[class^="ad-"]:not(html):not(body)
+	!記事右側
+huffingtonpost.jp#@#[class^="ad_"]:not(html):not(body)
 	!inoreaderエントリ記事右上の日付表示が消える
 inoreader.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
 	!本文
