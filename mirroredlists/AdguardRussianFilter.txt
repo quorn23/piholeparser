@@ -22,6 +22,8 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||an.webvisor.org^$third-party
+||d-ughwashes.ru^$third-party
 ||eventwisparwil.ru^$third-party
 ||wguke.com^$third-party
 ||ulaen.com^$third-party
@@ -4301,8 +4303,8 @@ dk24.ru#@##ads1
 @@||otvet.mail.ru^$generichide
 !
 !+ PLATFORM(ext_opera, ext_ff)
-@@||e.mail.ru^$generichide,jsinject,imporant
-mail.ru#@#.slot_left
+@@||e.mail.ru^$generichide,jsinject
+!+ NOT_PLATFORM(ext_opera, ext_ff)
 @@||e.mail.ru^$generichide
 mail.ru#%#Object.defineProperty(Object.prototype, 'restoreVisibility', { get: function() { return { hpConfig: {} }; }, set: function() {} });
 @@||an.yandex.ru/system/context.js$domain=cloud.mail.ru
@@ -8453,6 +8455,15 @@ rustorka.com$$script[tag-content="postWindowPop"][max-length="25000"]
 /(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+snow-motion.ru##.banner
+snow-motion.ru##.reclame-top
+tv.mail.ru##.js-popup_banner
+zserials.cc##div[id^="bn_"]
+||zserials.cc/tv/amp.html
+zoneofgames.ru##div[style^="width:728px;height:90px;"]
+||d30s0lx1onfwyh.cloudfront.net/partner-code/loaders/context_
+mk.ru###article-left-adds
+mk.ru##.Banner_right_240x80
 newrutor.org##center > a[href^="//newrutor.org/goaway.php"] > img
 kinosok.org##noindex a[rel="nofollow"] > img
 dugtor.ru##p[style^="text-align: center;"] > a img
@@ -8771,6 +8782,7 @@ baskino.online##.reklblock
 2ip.ru##.pre-wrapper-ad
 pravda.ru##div[id^="unit_"]
 ||tv.yandex.*/api/*/*?id=R-I-
+||tv.yandex.*/api/*/*?id=D-I-
 tushkan.club##div[id^="b_bn_"]
 tushkan.club##div[id^="bn_"]
 ||ruporus.com/js/e6e8bb.js
@@ -13479,9 +13491,6 @@ zolotonosha.ck.ua##.textwidget > a > img
 zonawareza.net##a[href*="wmcasher.ru/"]
 zonawareza.net##a[href*="yandex.ru/?add="]
 zonawareza.net##form[action^="http://wmcasher.ru/"]
-zoneofgames.ru###mainbg
-zoneofgames.ru##.logo
-zoneofgames.ru##div[id$="_AD2"]
 zoomby.ru##.branding_url
 zoomgirls.net##embed[width="300"][height="225"]
 zoon.ru##.banner-bordered
@@ -14115,7 +14124,6 @@ zvukoff.ru##.adv-list-top
 ||gamegpu.ru/images/*/banners/
 ||gameguru.ru/*/branding/
 ||gameinonline.com/sites/all/themes/ishopping/images/poster_tanki.jpg
-||gamer-mods.ru/.s/src/jquery.smartbanner.js
 ||gamer-mods.ru/images/igrovye_avtomaty.gif
 ||gamer.ru/alarmalarm/uploads/src/*/bottom.jpg
 ||gamer.ru/alarmalarm/uploads/src/*/top.jpg
@@ -15774,6 +15782,9 @@ joyreactor.cc#@#div#sidebar
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1830
 @@||vetton.ru^$jsinject,elemhide
 !#################
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/5534
+@@||fireseo.ru/wp-content/themes/fireseo/images/advertising/$domain=fireseo.ru
 !
 ! Fixing TeaserNet players
 @@/handlebars.js$domain=porn-1080.com|porno-kino.online

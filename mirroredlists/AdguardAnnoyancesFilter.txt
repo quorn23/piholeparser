@@ -468,6 +468,8 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
+@@||sms-receive.net/advertisment.js^
+technews.tw#@#.adsbox
 ||media.dota-trade.com/img/adblock.jpg
 sportetstyle.fr##div[id^="cookie"][style="display: block;"]
 science-et-vie.com###detection-block
@@ -2523,6 +2525,11 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+statusbrew.com##.cookie
+evensi.be###cookie-norm
+santander.co.uk##div[class*="Cookie_Directive"]
+rbs.co.uk##.cookie
+jimmobile.be##.cookie_flyout
 mistertennis.com##.banner_cokie
 levante-emv.com###MensajeCompruebaCookieSite
 benetton.com##.bnt_cookieBar
@@ -2999,6 +3006,8 @@ ziekenhuis.nl#%#AG_onLoad(function() { setTimeout(function() {var check = docume
 !#######################################################
 !######### White list. Fixing filtering errors #########
 !#######################################################
+! https://github.com/AdguardTeam/AdguardFilters/issues/5544
+bezeq.co.il#@#.cookieAlert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5394
 @@||cookiesv2.publiekeomroep.nl/data/script/cconsent-no-rw.$domain=nos.nl
 ! https://forum.adguard.com/index.php?threads/22703/
@@ -3368,12 +3377,15 @@ ukr-today.com##.soc_vidgets
 !######### Banners of mobile apps for the sites ########
 !#######################################################
 !
+/js/jquery.smartbanner.js
 ||2app.lk^$third-party
 !
 ###smartbanner.android
 ###smartbanner.ios
 ###smartbanner.windows
 !
+||rueconomics.ru/template/mobile/assets/jquery.smartbanner/jquery.smartbanner.js
+||gamer-mods.ru/.s/src/jquery.smartbanner.js
 intellicast.com###promoAd
 intellicast.com###stormLink
 m.alles10euro.de##body > .smartbanner
@@ -3586,6 +3598,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+g2crowd.com##.flyin-selector
 gizbot.com##.subscription-popup-overlay
 gizbot.com##.subscription-block
 dailylviv.com###followdaily
@@ -3970,6 +3983,10 @@ com-magazin.de##w-div[role$="dialog"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4858
 yandex.ru,yandex.com,yandex.ua,yandex.kz,yandex.by,yandex.com.tr##.homescreen.periodical-popup
 !
+uinterview.com#$##myNewsModal { display: none!important; }
+uinterview.com#$#.modal-backdrop { display: none!important; }
+uinterview.com#$#body.modal-open { overflow: visible!important; }
+!
 freeview.com.au#$#body { overflow: visible!important; }
 freeview.com.au#$#.modal-backdrop { display: none!important; }
 freeview.com.au#$##adsModal { display: none!important; }
@@ -4095,6 +4112,7 @@ livelib.ru,lenta.ru,mychrome,rambler.ru,sports.ru#%#(function() { if (typeof Not
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: 2 }; localStorage.setItem("sports:view:notifications-subscribe-popup:closed:count", JSON.stringify(a)) } } catch (ex) {} })();
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: true }; localStorage.setItem("sports:view:notifications-subscribe-popup:view", JSON.stringify(a)) } } catch (ex) {} })();
 !
+dunya.com##.wb-push
 mk.ru##.push-suggest
 ||istiklal.com.tr/assets/site/js/pushControl.js^
 m.timesofindia.com###js-gcm-notif
@@ -4692,6 +4710,8 @@ music.yandex.ru,music.yandex.ua,music.yandex.by,music.yandex.kz##.sidebar__under
 music.yandex.ru,music.yandex.ua,music.yandex.by,music.yandex.kz##.event_promo[data-card="promotion"]
 !-----------------------------------------------
 !
+! envato market self-promo
+##.canvas__header > .banner[data-google-analytics-payload]
 ! Yahoo self-promo https://forum.adguard.com/index.php?threads/answers-yahoo-com.17663/
 ||yimg.com/*/js/generic_yset_search-min.js^
 ! sputnik.ru- Sputnik browser
@@ -4922,6 +4942,7 @@ pesni-tut.com##.r_m_genre_songs + div[id] + div:not([id])
 !
 ! Adviser/online-consultant/feedback widgets
 !
+sitejabber.com###url_home > #scrollbox
 ||me-talk.ru/support/support.js$third-party
 pulscen.ru##.online-consultant-info-bar
 ||highflyers.ru/ven/wiget_consult.js
