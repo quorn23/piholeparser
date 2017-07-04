@@ -144,20 +144,18 @@ _ads.php
 .swf?clickTAG=
 /www/delivery/*
 
-
+!geniee
 /://(js|\d{6})\.[-_.a-zA-Z0-9]+/t/\d{3}/\d{3}/a\d{7}\.js$/
 
 !||advision-adnw.jp^$third-party
 !||click-plus.net^$third-party
 !下にも
-!他||gsspcln.jp^
+!他あり||gsspcln.jp^
 !||medi-8.net^$third-party
 !||smac-ssp.com^$third-party
 !||spacenine.biz^$third-party
 !||sprout-ad.com^$third-party
 
-!mobile
-||adnico.jp^$third-party
 
 /://[a-f0-9]{17}\.com/\d{7}/$/
 
@@ -609,6 +607,7 @@ $script,third-party,domain=jpidols.tv
 ||blog.livedoor.jp/geek/banner-b2012.html
 ||blog.livedoor.jp/geek/right-side2.html
 ||blog.seesaa.jp/js/banner.js
+||blog.seesaa.jp/js/insert-ad.min.js
 ||blog.with2.net/ad_frame.php?
 ||blogos.com/pc/js/kotzen.ad_fixed.js?
 ||chaberi.com/html/br/
@@ -1062,6 +1061,8 @@ $script,third-party,domain=jpidols.tv
 ||counter-hosting.*/counter.php?
 ||diamond.jp/oo/
 ||etoyota.net/include/js/measurementBeacon.js
+||fresheye.com^*/js/v
+||fresheye.com/s.gif
 ||fujitv.co.jp^*/rtx/
 ||gnavi.co.jp/analysis/
 ||ismedia.jp/oo/
@@ -1345,6 +1346,8 @@ natalie.mu##.NA_relatedItem
 new-akiba.com###bannerJ
 new-akiba.com##.amazon-sidelist
 new-akiba.com##.amazon-sidelist-right2
+new-akiba.com##.top-column-onsale
+new-akiba.com##.top-column-product
 new-akiba.com##.top-column-sidelist2
 ura-akiba.jp##.dlg
 ura-akiba.jp##a[href^="http://dl.getchu.com/ura_akiba/"]
@@ -1540,6 +1543,8 @@ blog.goo.ne.jp###mod-goo-recommends
 ||rt.rakuten.co.jp^
 ||rakuten.co.jp/common00/omuniture/
 
+||rakuprop.net^$third-party
+
 ##form[action*="afl.rakuten.co.jp"]
 plaza.rakuten.co.jp###commonAdsParts
 recipe.rakuten.co.jp##.rightNaviBanner
@@ -1707,6 +1712,7 @@ comic.pixiv.net##._dialog_overlay
 ||vip.chps-api.fc2.com/apis/footer/
 ||video.fc2.com/ad_video_info.php?
 ||video.fc2.com^$subdocument
+||z-profit.com/js/Overlay.fc2.general.min.js
 admin.blog.fc2.com##.adimn_pr_txt
 fc2.com,fc2blog.net##.AdContainer
 ###fc2_bottom_bnr
@@ -1778,10 +1784,6 @@ youtube.com##.pyv-afc-ads-inner
 !###addivwrapper_0
 ||byzoo.org^$third-party
 
-!------------fresheye------------!
-||lc.fresheye.com^
-||lcexp.fresheye.com^
-||fresheye.com/s.gif
 
 !------------dtiblog------------!
 ||dtiserv.com^$third-party
@@ -1816,13 +1818,14 @@ youtube.com##.pyv-afc-ads-inner
 ||vis1.shinobi.jp/jsr/
 
 !------------ero-video.net------------!
-||uramov.info^$domain=ero-video.net
+|http://$third-party,domain=ero-video.net
 ||dtiserv2.com^$popup
-||jp-sex.com^$domain=ero-video.net
-||shard.jp^$domain=ero-video.net
-||pokoran.com^$domain=ero-video.net
 ||ero-video.net/advert/*
 
+!------------mediafire.com------------
+||mediafire.com^$subdocument
+||4dsply.com^$domain=mediafire.com
+||razwrite.com^$domain=mediafire.com
 
 !------さらに検索する を消す
 /ad_plugin.js
@@ -2065,6 +2068,7 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body)
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party
 ||adfurikun.jp^$third-party
+||adnico.jp^$third-party
 ||adsee.jp^$third-party
 ||alistcloud.com^$third-party
 ||amoad.com^$third-party

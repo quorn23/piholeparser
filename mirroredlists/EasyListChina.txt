@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: mYo9Zebn023C67BhZF/Shw
-! Version: 201707040422
+! Checksum: ss5zXTSYCZNKDMLAt6R9mQ
+! Version: 201707041702
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 04 Jul 2017 04:22 UTC
+! Last Modified: 04 Jul 2017 17:02 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -14,6 +14,7 @@
 !
 !-----------------------General advert blocking filters-----------------------!
 -880-80-4.jpg
+/zhidiy_m_ad_
 -HollandOne_GIF2.gif
 .cc/js/ads/
 .cn/ads/
@@ -561,7 +562,20 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn^
+||e9377f.com^
+||7dah8.com^
+.xyz/vs.php?id=$script,third-party
 ||hao61.net^
+||yixui.com^
+||newtech-beauty.com^
+||whafwl.com^
+||96mob.com^
+||tangoutianxia.com^
+||dandan11.top^
+||hejingroup.cn^
+||xm9178.com^
+||shushijiameng123.com^
+||hxyifu.com^
 .cn/show?id=$script,third-party
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
@@ -6383,8 +6397,11 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||bd-film.com/r/cms/www/movie/js/cms-sidebar-
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
+muchong.com##A[href="http://muchong.com/bbs/purchase.php?f=index&w=top"]
+muchong.com##a[href^="a"][target="_blank"][href$=".html"] > img
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -8912,7 +8929,7 @@ hupu.com##.hp-header-banner
 163.com##.hp_textlink_ad
 tw.mall.yahoo.com##.hpad-wrapper
 0743ds.com##.hq-ad
-muchong.com##.hr_10 + .wrapper + .wrapper:nth-child(11)
+muchong.com##.wrapper > .hr_10 + .wrapper + .wrapper:nth-child(-n+15)
 chinasmartgrid.com.cn##.ht60ad
 epinv.com##.huadong
 9000wy.com##.huazhonghua
@@ -11446,6 +11463,27 @@ ck101.com,datehub.co,gamer.com.tw#@#.textAd
 ck101.com,datehub.co,gamer.com.tw#@#.text_ad
 ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Baidu Union
+||p1.18zhongyao.com^
+/^https?:\/\/(?!www[0-9]?)[0-9a-z-]+\.[0-9a-z-]+\.(?:com|com\.cn|cn|cc|net|org)\/(?=[0-9a-z]*[a-z][0-9]+[a-z])(?:[0-9a-z]{10}|[0-9a-z]{26})\.js$/$script
+||7631.com^
+||ypmeiwen.com^
+||360640.com^
+||qqhuhu.com^
+||1017.cn^
+||wap001.bytravel.cn^
+||luolikong.net^$third-party
+||a.5ykj.com^
+||dm.sanwen8.com^
+##DIV[id][style="width: 100%;"] > DIV > IFRAME[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
+##DIV[id][style="width: 100%;"] > DIV > div > IFRAME[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
+##DIV[id][style="width: 100%;"] > IFRAME[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
+||9wushuo.com^
+||5egk.com^
+||b17.shangc.net^
+||jb.tupianzj.com^
+##DIV[id][style^="width: 100%"][style*="0px"] > DIV > IFRAME[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
+||cc.yac8.com^
+||gg.huangye88.com^
 ||qcrx.cn^
 ||zhantai.com^$third-party
 ###cpro_container
@@ -11591,6 +11629,7 @@ btdigg.co,btkitty.kim,btlibrary.co,diggbt.ws,torrentkitty.ws###box
 ! Caoporn.com
 2c2.website,2p8.space,adultcao.com,adultgao.com,cao.pe,caoaee.com,caodee.com,caofoo.top,caohot.club,caopee.com,caoporn.club,caoporn.com,caoporn.wales,caosee.club,caouoo.com,gaohot.pro,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,qq88.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz,wan1024.com,wan41.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
+||md0z4dh.com^
 .m.miaobige.com^
 .m.biqugezw.com^
 .m.bookben.com^
