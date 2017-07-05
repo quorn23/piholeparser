@@ -16,13 +16,13 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
+
+## Quick File Check
 WHATITIS="Whitelist File"
 CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
 printf "$yellow"  "Checking For $WHATITIS"
 echo ""
-
-## Quick File Check
 if
 ls $CHECKME &> /dev/null;
 then
