@@ -228,3 +228,31 @@ echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$orange" "___________________________________________________________"
 echo ""
+
+####################
+## Domain TLD's   ##
+####################
+
+SCRIPTTEXT="Downloading active TLD's"
+timestamp=$(echo `date`)
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+CHECKME=$VALIDDOMAINTLD
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+wget -q -O $TEMPFILE $VALIDDOMAINTLDLINK
+cat $TEMPFILE | sed '/\#\+/d' > $VALIDDOMAINTLD
+rm $TEMPFILE
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$orange" "___________________________________________________________"
+echo ""
+http://data.iana.org/TLD/tlds-alpha-by-domain.txt
