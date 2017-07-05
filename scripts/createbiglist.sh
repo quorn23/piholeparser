@@ -34,25 +34,33 @@ mv $FILETEMP $TEMPFILE
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 timestamp=$(echo `date`)
 if
-[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
-then
-echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $FILETEMP
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
-mv $TEMPFILE $BIGAPL
-elif
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ -n $FILESIZEZERO ]]
 then
 echo ""
 printf "$red"     "File Empty"
 echo "File Size equaled zero." | tee --append $TEMPFILE
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
-else
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
+then
+echo ""
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $FILETEMP
+echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
+mv $TEMPFILE $BIGAPL
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
+then
 echo ""
 mv $TEMPFILE $BIGAPL
 printf "$yellow"  "Big List Created Successfully."
@@ -88,25 +96,34 @@ rm $FILETEMP
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
 timestamp=$(echo `date`)
 if
-[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
-then
-echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
-mv $TEMPFILE $BIGAPLE
-elif
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ -n $FILESIZEZERO ]]
 then
 echo ""
 printf "$red"     "File Empty"
 echo "File Size equaled zero." | tee --append $TEMPFILE
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPLE
-else
+mv $TEMPFILE $BIGAPL
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
+then
 echo ""
-mv $TEMPFILE $BIGAPLE
-printf "$yellow"  "Big List Edited Created Successfully."
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $FILETEMP
+echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
+mv $TEMPFILE $BIGAPL
+elif
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
+then
+echo ""
+mv $TEMPFILE $BIGAPL
+printf "$yellow"  "Big List Created Successfully."
 fi
