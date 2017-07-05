@@ -12,7 +12,7 @@ ANTIGRAV=/home/pi/antigrav.list
 
 
 ## get ip from setupvars
-awk -v TRIMMEDIP="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> "${2}" < "${1}"
+awk -v TRIMMEDIP="$IPV4_ADDRESS" '{sub(/\r$/,""); print TRIMMEDIP" "$0}' >> "${2}" < "${1}"
 
 ## whiptail required
 WHATITIS=whiptail
