@@ -14,17 +14,17 @@ ANTIGRAV=/home/pi/antigrav.list
 if
 [[ -n "${IPV4_ADDRESS}" && -n "${IPV6_ADDRESS}" ]]
 then
-TRIMMEDIP=$(awk -v ipv4addr="$IPV4_ADDRESS" -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0"\n"ipv6addr" "$0}' >> "${2}" < "${1}")
+TRIMMEDIP=$(echo `awk -v ipv4addr="$IPV4_ADDRESS" -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0"\n"ipv6addr" "$0}' >> "${2}" < "${1}"`)
 elif
 [[ -n "${IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
 then
-TRIMMEDIP=$(awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> "${2}" < "${1}")
+TRIMMEDIP=$(echo `awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> "${2}" < "${1}"`)
 elif
 [[ -z "${IPV4_ADDRESS}" && -n "${IPV6_ADDRESS}" ]]
 then
-TRIMMEDIP=$(awk -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv6addr" "$0}' >> "${2}" < "${1}")
+TRIMMEDIP=$(echo `awk -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv6addr" "$0}' >> "${2}" < "${1}"`)
 elif
-[[ -z "${IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
+[[ -z "${echo `IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
 then
 TRIMMEDIP=""
 fi
