@@ -15,9 +15,9 @@ if
 which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "$WHATITIS Is Already Installed."
+printf "$yellow"  "$WHATITIS $DEPENDENCYA"
 else
-printf "$yellow"  "Installing $WHATITIS"
+printf "$yellow"  "$DEPENDENCYB $WHATITIS"
 apt-get install -y $WHATITIS
 fi
 
@@ -26,8 +26,8 @@ if
 which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "$WHATITIS Is Already Installed."
+printf "$yellow"  "$WHATITIS $DEPENDENCYA"
 else
-printf "$yellow"  "Installing $WHATITIS"
+printf "$yellow"  "$DEPENDENCYB $WHATITIS"
 apt-get install -y $WHATITIS
 fi
