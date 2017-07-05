@@ -1,6 +1,5 @@
 #!/bin/bash
-## This takes the work done in parser.sh
-## and merges it all into one
+## This takes the work done in parser.sh and merges it all into one
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
@@ -9,30 +8,29 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 ## Big List       ##
 #################### 
 
-WHATITIS="All Parsed List"
-CHECKME=$BIGAPL
-timestamp=$(echo `date`)
+## Remove old APL if it is there
 if
-ls $CHECKME &> /dev/null;
+ls $BIGAPL &> /dev/null;
 then
-rm $CHECKME
-echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $BIGAPL
 fi
 
 ## Combine Small lists
 cat $PARSEDLISTSALL > $TEMPFILE
-echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
+printf "$yellow"  "$HOWMANYLINES $LINESAFTER $MERGEINDIVIDUALS"
+echo ""
 
 ## Duplicate Removal
-echo ""
-printf "$yellow"  "Removing duplicates..."
+printf "$yellow"  "$DEDUPE"
 cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $FILETEMP
-echo -e "\t`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
+HOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
+printf "$yellow"  "$HOWMANYLINES $LINESAFTER $DEDUPE"
 mv $FILETEMP $TEMPFILE
+echo ""
 
 ## Github has a 100mb limit and empty files are useless
+WHATISIT="AllPARSEDLIST"
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 if
@@ -45,56 +43,60 @@ if
 [[ -n $FILESIZEZERO ]]
 then
 echo ""
-printf "$red"     "File Empty"
-echo "File Size equaled zero." | tee --append $TEMPFILE
-echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$EMPTYFILE"
+echo "$EMPTYFILE" | tee --append $TEMPFILE
+echo "* $WHATISIT $EMPTYFILE $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$GITHUBUPLOADTOOBIG"
+echo "* $WHATISIT $GITHUBUPLOADTOOBIG $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $FILETEMP
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
+echo "$WHATISIT $GITHUBUPLOADTOOBIG" | tee --append $TEMPFILE
 mv $TEMPFILE $BIGAPL
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
 echo ""
 mv $TEMPFILE $BIGAPL
-printf "$yellow"  "Big List Created Successfully."
+printf "$yellow"  "$WHATISIT $FILESUCCESS"
 fi
 
 ####################
 ## Big List edit  ##
 ####################
 
-WHATITIS="All Parsed List (edited)"
-CHECKME=$BIGAPLE
-timestamp=$(echo `date`)
+## Remove old APLE if it is there
 if
-ls $CHECKME &> /dev/null;
+ls $BIGAPLE &> /dev/null;
 then
-rm $CHECKME
-echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $BIGAPLE
 fi
 
 ## Add Blacklist Domains
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
-rm $BLACKLISTTEMP
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+rm $BLACKLISTTEMP
 rm $FILETEMP
 
 ## Remove Whitelist Domains
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE > $FILETEMP
-rm $WHITELISTTEMP
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+rm $WHITELISTTEMP
 rm $FILETEMP
 
+## Duplicate Removal
+printf "$yellow"  "$DEDUPE"
+cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $FILETEMP
+HOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
+printf "$yellow"  "$HOWMANYLINES $LINESAFTER $DEDUPE"
+mv $FILETEMP $TEMPFILE
+echo ""
+
 ## Github has a 100mb limit and empty files are useless
+WHATISIT="AllPARSEDLIST (Edited)"
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 if
@@ -107,23 +109,23 @@ if
 [[ -n $FILESIZEZERO ]]
 then
 echo ""
-printf "$red"     "File Empty"
-echo "File Size equaled zero." | tee --append $TEMPFILE
-echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$EMPTYFILE"
+echo "$EMPTYFILE" | tee --append $TEMPFILE
+echo "* $WHATISIT $EMPTYFILE $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$GITHUBUPLOADTOOBIG"
+echo "* $WHATISIT $GITHUBUPLOADTOOBIG $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $FILETEMP
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
+echo "$WHATISIT $GITHUBUPLOADTOOBIG" | tee --append $TEMPFILE
 mv $TEMPFILE $BIGAPL
 elif
 [[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
 echo ""
 mv $TEMPFILE $BIGAPL
-printf "$yellow"  "Big List Created Successfully."
+printf "$yellow"  "$WHATISIT $FILESUCCESS"
 fi
