@@ -1,0 +1,37 @@
+## Invalid TLD's
+PARSECOMMENT="Checking For Invalid TLD's."
+if
+[[ -z $FILESIZEZERO ]]
+then
+printf "$cyan"  "$PARSECOMMENT"
+for source in `cat $VALIDDOMAINTLD`;
+do
+cat $BFILETEMP | sed '/$source$/!d' >> $BTEMPFILE
+done
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+mv $BTEMPFILE $BFILETEMP
+else
+:
+fi
+if
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
+printf "$yellow"  "$ENDCOMMENT"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
