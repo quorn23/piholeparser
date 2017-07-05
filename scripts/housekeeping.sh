@@ -247,8 +247,10 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
-wget -q -O $TEMPFILE $VALIDDOMAINTLDLINK
+curl -s -H "$agent" -L $VALIDDOMAINTLDLINK >> $TEMPFILE
 cat $TEMPFILE | sed '/\#\+/d; s/^/./' > $VALIDDOMAINTLD
+HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
+echo "$HOWMANYTLD Valid TLD's"
 rm $TEMPFILE
 bash $DELETETEMPFILE
 echo ""
