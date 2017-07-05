@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: h6MhK7NzYx1jFE0GW4E7aQ
-! Version: 201707050432
+! Checksum: xxFXwcDj2n4bGxXeDeppug
+! Version: 201707052102
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -682,6 +682,7 @@
 /cdn-ads-
 /cdn/affiliates/*
 /cdn/banners/*
+/cg/proxy.$domain=ecranlarge.com|manga-sanctuary.com
 /cgi-bin/affiliates/*
 /choixPubJS.
 /clash/ads/*
@@ -1656,6 +1657,7 @@ _werbebanner_
 /pdv/track.$popup
 /pop.redirect.$popup
 /pop?dfp_id=$popup
+/pop_under.$popup
 /popads.$popup
 /popad|$popup
 /popclick/*$popup
@@ -7300,7 +7302,6 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ||mamytwink.com^*/images/partenaires/
 ||manager-online.fr/images/sidebar/
 ||manga-news.com/public/banners/
-||manga-sanctuary.com^*?url=
 ||manga-streaming.fr/hentai.gif
 ||manifone.com/banner/
 ||mappy.com/*/files/campaigns/
@@ -7675,6 +7676,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ||sendvid.com/assets/marabga-
 ||seneweb.com/dynamic/modules/banners/
 ||senioractu.com/photo/background-
+||senscritique.com/img/memories-of-murder/desktop.jpg
 ||seriehentai.com^$popup,~third-party
 ||seriehentai.com^$script
 ||seriesstreaming.fr/images/partenaire_
@@ -8266,6 +8268,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ||dmtw0i4zln92b.cloudfront.net^
 ||dnyjp3iys0r8o.cloudfront.net^
 ||do67etikr7pwz.cloudfront.net^
+||do69ll745l27z.cloudfront.net^
 ||dohs95d6tfj19.cloudfront.net^
 ||dokzl8xhmt1x7.cloudfront.net^
 ||dpb3g4kqr8xz.cloudfront.net^
@@ -9256,6 +9259,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ##.bannergroup_bannierepub
 ##.banners-adv
 ##.barre_adsense
+##.bci-ad
 ##.before-side-nav-ad
 ##.bg-adsense
 ##.bg_ads300x250
@@ -10091,6 +10095,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ##a[onclick^="CustomWLAdServer."]
 ##a[target="_blank"][href*="/buy-vpn?"] > img
 ##div[id$="textAdsBox"]
+##div[id^="M"][id*="Composite"]
 ##div[id^="PostAd"]
 ##div[id^="adsatlas-"]
 ##div[id^="betAds"]
@@ -11003,6 +11008,7 @@ star7arab.com##.grid[style="width: 770px; height: 69px;"]
 semageek.com##.h300
 zonebourse.com##.hPubRight2
 cbanque.com,logicielmac.com,logitheque.com,made-in-algeria.com,made-in-tunisia.net,maghrebex.com,mediscom.com,navis.ma,toucharger.com##.habillage
+senscritique.com##.habillage-banner
 le2minutes.com##.habillage-left
 le2minutes.com##.habillage-right
 le2minutes.com##.habillage-top
@@ -11349,6 +11355,7 @@ igen.fr##.sidebar [id*="Y"]
 igen.fr##.sidebar [id*="Z"]
 igen.fr##.sidebar div img
 foot01.com##.sidebar img:first-child
+ecranlarge.com##.sidebar-banner
 wikiclic.com##.sidebar-promotion
 deavita.fr##.sidebar_banner
 clicbienetre.com##.sidebar_block
@@ -11491,7 +11498,7 @@ speedvid.net##[id][style*="z-index:"]
 turbo.fr##[id^="ABbypass"]
 bestream.tv##[id^="aff_spion-"]
 comarketing-news.fr##[id^="comar-"]
-ecranlarge.com##[id^="criteo"]
+mystream.la##[id^="dummyid"]
 crichd.info##[id^="floatLayer"]
 commentcamarche.net,free.fr,journaldesfemmes.com,orange.fr##[id^="lig_"]
 leparticulier.fr##[id^="loca_service_simulateur_"]
@@ -11957,10 +11964,8 @@ macg.co##article > a[-abp-properties='*'] > img
 @@||players.brightcove.net/*_default/index.min.js?$script,third-party,domain=lachainemeteo.com
 @@||preprod-img.planet.fr/files/advagg_js/js_*.js$script,domain=femmesplus.fr
 @@||static.mediabong.com/scripts/mb.*.js$script,domain=femmesplus.fr|medisite.fr|planet.fr
-|http://$script,domain=lesfoodies.com
 |http://$script,third-party,domain=aventure-apple.com|femmesplus.fr|ioccasion.fr|lachainemeteo.com|macgeneration.com|medisite.fr|planet.fr|refurbgeneration.com
 |http://$script,third-party,xmlhttprequest,domain=igen.fr|macg.co|watchgeneration.fr
-|https://$script,domain=lesfoodies.com
 |https://$script,third-party,domain=aventure-apple.com|femmesplus.fr|ioccasion.fr|lachainemeteo.com|macgeneration.com|medisite.fr|planet.fr|refurbgeneration.com
 |https://$script,third-party,xmlhttprequest,domain=igen.fr|macg.co|watchgeneration.fr
 ||fourchette-et-bikini.fr^$xmlhttprequest
@@ -12046,7 +12051,6 @@ igen.fr,macg.co,watchgeneration.fr##.bloc-accroches + h2 + br + [id]
 planet.fr##.block-content + div > img
 medisite.fr##.block-gc-ad + [id] > :first-child > img
 femmesplus.fr##.block-views + div > img
-lesfoodies.com##.container > [id] > img
 planet.fr##.even + section > img
 planet.fr##.odd > section > img
 medisite.fr##.region > [id] > img
@@ -12057,11 +12061,9 @@ planet.fr##.region-inner.clearfix > div > img
 femmesplus.fr,planet.fr##.region-sidebar-first [class] > img
 femmesplus.fr,planet.fr##.region-sidebar-first [id] > img
 planet.fr##.region-sidebar-first span > img
-lesfoodies.com##.sidebar_box img
 igen.fr,macg.co,watchgeneration.fr##[class] > img:last-child
 medisite.fr##[id] > a > img
 igen.fr,macg.co,watchgeneration.fr##[id] > img
-lesfoodies.com##[method="post"] + hr + [class] > img
 femmesplus.fr,planet.fr##aside > img
 femmesplus.fr##section[id] > img
 !

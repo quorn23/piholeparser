@@ -471,6 +471,8 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 !
+askleo.com##div[class^="askleo_adblock"]
+sankakucomplex.com##cloudflare-app[app-id="no-adblock"]
 @@||vptpsn.com/templates/frontend/*/js/ads.js
 @@||sms-receive.net/advertisment.js^
 technews.tw#@#.adsbox
@@ -2529,6 +2531,14 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+hi-code.net###cookieWarnings
+lyricstraining.com###cookies-use
+bitdefender.co.uk###uk_cookie_container
+6play.fr##.banner--cookie
+larousse.fr##.ui-widget-overlay
+larousse.fr##div[aria-describedby="popinInfoCNIL"]
+virginradio.fr##.toast.cPolicy
+wimbledon.com###wimPrivacyBanner
 money.cnn.com###notice_banner
 leparisien.fr###topcookie
 openask.com##.allowed-cookies
@@ -3579,12 +3589,19 @@ finanzen.net#%#document.cookie="sb-closed=true; path=/;";
 rozetka.com.ua#%#AG_onLoad(function(){ var e = document.querySelector('a.popup-close'); if (e) e.click(); });
 rozetka.com.ua#%#document.cookie = "hide_popup_banner=true";
 mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(function(){ var e = document.querySelector('span[data-href="/touch/"][id="js-app-promo-close"]'); if (e) e.click(); });
+!
+!
+!--- Whitelist
+!
+! https://forum.adguard.com/index.php?threads/23128/
+@@||mcdonalds.com.tr/Content/Lib/Js/jquery.smartbanner.js$domain=mcdonalds.com.tr
 !#######################################################
 !######### Rules for blocking in page popups ###########
 !#######################################################
 !
 ! Generic rules
 !
+||leadpages.co^$third-party
 /wp-content/plugins/convertplug/*
 ||optnmstr.com^$third-party
 ||messenger.ngageics.com^$third-party
@@ -3607,6 +3624,10 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+askleo.com##.et_bloom_flyin_right
+dailyburn.com##body > #boxes
+dailyburn.com##body > #spmask
+webmd.com##.newsletter-hover
 bbc.com##.nw-c-breaking-news-banner
 firstone.tv##body > div[class]:empty
 firstone.tv##body > div[class]:empty+div[class]
@@ -4086,8 +4107,9 @@ easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = docume
 !--- Whitelist
 !
 ! http://www.tradeciety.com/how-to-choose-the-best-indicators-for-your-trading/
-! lazyload issue
 @@||tradeciety.com/wp-content/plugins/arscode-ninja-popups/js/jquery.placeholder.js
+! https://forum.adguard.com/index.php?threads/23138/
+@@||photoshoptutorials.ws/wp-content/plugins/arscode-ninja-popups/js/jquery.placeholder.js
 !#######################################################
 !######### Rules for blocking push notifications #######
 !#######################################################

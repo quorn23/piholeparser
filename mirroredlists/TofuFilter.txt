@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 17:17 2017/07/02
+! 最終更新 20:36 2017/07/05
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -624,6 +624,9 @@ $script,third-party,domain=jpidols.tv
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
 ||exploader.net/images/nls/
+||gelbooru.com/r18/
+||gelbooru.com/r19/
+||gelbooru.com/thumbnails/0C/
 ||getchu.com/mbanner/$~image
 ||gnst.jp/c/atb/segment.js$domain=gnavi.co.jp
 ||google.com/pagead/
@@ -686,7 +689,6 @@ $script,third-party,domain=jpidols.tv
 ||sea-saw.com^$domain=2dbook.com
 ||seesaa.jp/frame/*$domain=seesaawiki.jp|jbbs.shitaraba.net
 ||shopping.sponichi.co.jp/scripts/sannex_banner_auction.js
-
 ||tatituteto.net/images/banner/
 ||thisav.com/index.js
 ||thisav.com/js/pu.js
@@ -700,6 +702,7 @@ $script,third-party,domain=jpidols.tv
 ||westatic.com/jsad/$domain=weblio.jp
 ||wikiwiki.jp^*/ads_cus.js
 ||woopie.jp^*/banner/
+||xbooru.com/x.js
 ||yaplog.jp^*/pr.js
 ||yaplog.jp/static/js/pc_blog_ad_
 ||zdnet.com/parts/frame/ad_
@@ -1973,6 +1976,8 @@ ashemaletube.com#@#[class$="-ads"]:not(html):not(body)
 cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
 	!top崩れる
 eiga.com#@#[id$="_ad"]:not(html):not(body)
+	!予定が消える
+calendar.google.com #@#[class*="-ad-"]:not(html):not(body)
 	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
 gyazo.com#@#[class$="-ad"]:not(html):not(body)
 	!左側
@@ -2043,6 +2048,8 @@ touch.pixiv.net#@#[class^="ads-"]:not(html):not(body)
 	!本文
 tofukko.com#@#[class$="_ad"]:not(html):not(body)
 tofuchan.net#@#[class^="ad_"]:not(html):not(body)
+	!ヘッダー辺り
+tv-asahi.co.jp#@#[class*="-ad-"]:not(html):not(body)
 	!動画消える
 tver.jp#@#[class*="-ad-"]:not(html):not(body)
 	!動画を再生すると消える

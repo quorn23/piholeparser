@@ -1,10 +1,51 @@
 [Adblock Plus 2.0]
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
-! Last update 2017/06/29
-##.blocker280-20170629
-!2017/06/29
+! Last update 2017/07/05
+##.blocker280-20170705
+!2017/07/05
 
+!||msgs.jp
+!||graph.facebook.com^$domain=~facebook.com
+##.sns_twitter_list
+
+||pokoran.com
+||ad-station.jp
+##a[href*="ad-station.jp"]
+amazon.co.jp###ADPlaceholder
+##a[href*="//pcmax.jp/lp/?ad_id"]
+~livedoor.jp##a[href*="//blog.livedoor.jp/johnjames/"]
+altema.jp##.headerJack
+urutike.com###float-cta
+||cdn.z-profit.com
+yahoo.co.jp###financeDeeplinkBanner
+###ZprofitOverlay
+/js/acb.js
+
+kaola.jp,thailog.net##div.rss_list
+kaola.jp,thailog.net##div.kakotitle
+kaola.jp,thailog.net##div#kakoninki
+
+||ad.affipa.ne.jp
+||ad.agilemedia.jp
+||ad.axyzconductor.jp
+||ad.brainer.jp
+||ad.dmm.com
+||ad.douga-kan.com
+||ad.duga.jp
+||ad.heypo.com
+||ad.impressbm.co.jp
+||ad.mediba.jp
+||ad.mobadme.jp
+||ad.pitta.ne.jp
+||ad.plus-a.net
+||ad.response.jp
+||ad.sp.mbga.jp
+||ad.webdice.jp
+||ad.wiredvision.jp
+
+
+!2017/06/29
 ##a[href*="//asp.m-live.jp/"]
 appget.com##[id^="adh"]
 appget.com##.kairos_ad
@@ -13,18 +54,23 @@ appget.com##.kairos_ad
 ##body > div.abox
 ##body > div#wrap >div.abox
 
-!erase whitespace
 ~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp,~ec-bought.com##[class^="ad-"]:not(body)
+
 ~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp,~newsweekjapan.jp,~ec-bought.com,~ferrarilamborghininews.com##[class^="ad_"]:not(body)
+
 ~ec-bought.com##[id*="-ads-"]:not(body):not(header)
 ~bbc.com##[class*="-ads-"]:not(body):not(header)
 ~doujin-free.com##[id*="_ads_"]:not(body)
 ~mangakansou.com,~touch.pixiv.net##[class^="ads-"]:not(body)
-~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com,~off-soft.net,~earthyworld.com##.adsbygoogle:not(body)
+~ff14angler.com,~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com,~off-soft.net,~earthyworld.com##.adsbygoogle:not(body)
+
 ~thisav.com,~savevideo.me,~touch.pixiv.net,~gmail.com,~mail.google.com,~inbox.google.com##.ads:not(body)
+
 ~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~doujin-free.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body)
 
+
 ~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net~smt.docomo.ne.jp,~gmail.com,~ec-bought.com,~ferrarilamborghininews.com###adsense
+
 
 ##[class^="ads_"]:not(body)
 ###textAd
@@ -56,8 +102,6 @@ appget.com##.kairos_ad
 ##.google-adbox
 ##.google-2ad
 
-!||msgs.jp
-!||graph.facebook.com^$domain=~facebook.com
 ||crashlytics.com^
 ||flurry.com^
 
@@ -94,6 +138,7 @@ appget.com##.kairos_ad
 
 
 !2017/06/18
+!erase whitespace
 
 
 
@@ -2455,4 +2500,3 @@ nakasoku.blog18.fc2.com##.rss_box
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~world-best-news.doorblog.jp##a[href*="//world-best-news.doorblog.jp/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matometatta-news.net##a[href*="//matometatta-news.net/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~merry-news.com##a[href*="//merry-news.com/"]
-
