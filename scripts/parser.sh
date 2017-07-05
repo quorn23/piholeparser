@@ -12,13 +12,13 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 for f in $EVERYLISTFILEWILDCARD
 do
 
-printf "$lightblue"    "___________________________________________________________"
+printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 
 ## Declare File Name
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
-printf "$green"    "Processing $BASEFILENAME List."
+printf "$green"    "$BASEFILENAME"
 echo "" 
 
 ####################
@@ -31,7 +31,7 @@ HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 if
 [[ "$HOWMANYLINES" -gt 1 ]]
 then
-echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME Has $HOWMANYLINES Sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
 printf "$yellow"    "$BASEFILENAME Has $HOWMANYLINES Sources."
 else
 printf "$yellow"    "$BASEFILENAME Has Only One Source."
@@ -52,14 +52,14 @@ echo ""
 if
 [[ $source != https* ]]
 then
-printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
+printf "$yellow"    "$BASEFILENAME $NOHTTPSLIST"
 fi
 
 ####################
 ## Download Lists ##
 ####################
 
-printf "$cyan"    "Pinging $BASEFILENAME To Check Host Availability."
+printf "$cyan"    "$PINGCHECKING"
 
 ## Check to see if source's host is online
 if
@@ -67,15 +67,13 @@ if
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
-else
-printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
 if
 [[ -n $SOURCEIP ]]
 then
-printf "$green"    "Ping Test Was A Success!"
+printf "$green"    "$PINGSUCCESS"
 else
-printf "$red"    "Ping Test Failed."
+printf "$red"    "$PINGFAIL"
 fi
 echo ""
 
@@ -84,14 +82,14 @@ timestamp=$(echo `date`)
 if
 [[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz && $source != *.zip && $source != *.php ]]
 then
-printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
+printf "$cyan"    "$FETCHINGFROM $UPCHECK $IPADDRESSIS "$SOURCEIP"."
 wget -q -O $BTEMPFILE $source
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
 [[ $source == *.php && -n $SOURCEIP ]]
 then
-printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
+printf "$cyan"    "$FETCHINGFROM $UPCHECK $IPADDRESSIS "$SOURCEIP"."
 curl -s -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
@@ -99,15 +97,15 @@ elif
 [[ -z $SOURCEIP ]]
 then
 MIRRORVAR=true
-printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
-echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$cyan"    "$ATTEMPTGITMIRROR"
+echo "* $BASEFILENAME $ATTEMPTGITMIRROR $timestamp" | tee --append $RECENTRUN &>/dev/null
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
 [[ $source == *.zip && -n $SOURCEIP ]]
 then
-printf "$cyan"    "Fetching zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
+printf "$cyan"    "$FETCHINGFROM $UPCHECK $IPADDRESSIS "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPSEVEN $source
 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
@@ -115,7 +113,7 @@ rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.7z && -n $SOURCEIP ]]
 then
-printf "$cyan"    "Fetching 7zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
+printf "$cyan"    "$FETCHINGFROM $UPCHECK $IPADDRESSIS "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPSEVEN $source
 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
@@ -123,15 +121,12 @@ rm $COMPRESSEDTEMPSEVEN
 elif
 [[ $source == *.tar.gz && -n $SOURCEIP ]]
 then
-printf "$cyan"    "Fetching Tar List From $UPCHECK Located At The IP Of "$SOURCEIP"."
+printf "$cyan"    "$FETCHINGFROM $UPCHECK $IPADDRESSIS "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $COMPRESSEDTEMPTAR
-else
-printf "$red"    "Somehow All Download Variables Were Missed."
-echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## If lst file is in Dead Folder, it means that I was unable to access it at some point
@@ -141,8 +136,8 @@ timestamp=$(echo `date`)
 if
 [[ -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $f == $BDEADPARSELIST ]]
 then
-printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
-echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$BASEFILENAME $LISTNOLONGERDEAD"
+echo "* $BASEFILENAME $LISTNOLONGERDEAD $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 :
 fi
@@ -164,8 +159,7 @@ fi
 if 
 [[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
 then
-printf "$cyan"    "Attempting To Fetch List As if we were a browser."
-agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
+printf "$cyan"    "$AGENTDOWNLOAD"
 curl -s -H "$agent" -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
@@ -177,9 +171,9 @@ timestamp=$(echo `date`)
 if 
 [[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
-printf "$red"    "File Empty."
-printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
-echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"    "$EMPTYFILE"
+printf "$cyan"    "$ATTEMPTGITMIRROR"
+echo "* $BASEFILENAME $ATTEMPTGITMIRROR $timestamp" | tee --append $RECENTRUN &>/dev/null
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
@@ -202,19 +196,17 @@ timestamp=$(echo `date`)
 if
 [[ -n $FILESIZEZERO && `grep -q "?php" "$BORIGINALFILETEMP"` ]]
 then
-printf "$red"     "$BASEFILENAME List is a bad link. PHP detected."
-echo "* $BASEFILENAME Is A Bad Link. PHP Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$BASEFILENAME $PHPFILEDOWNLOADED"
+echo "* $BASEFILENAME $PHPFILEDOWNLOADED $timestamp" | tee --append $RECENTRUN &>/dev/null
 FILESIZEZERO=true
 elif
 [[ -n $FILESIZEZERO && `grep -q "DOCTYPE html" "$BORIGINALFILETEMP"` ]]
 then
-printf "$red"     "$BASEFILENAME Is A Bad Link. HTML Detected."
-echo "* $BASEFILENAME Is A Bad Link. HTML Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$BASEFILENAME $HTMLDOWNLOADED"
+echo "* $BASEFILENAME $HTMLDOWNLOADED $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BORIGINALFILETEMP
 touch $BORIGINALFILETEMP
 FILESIZEZERO=true
-else
-:
 fi
 
 ####################
@@ -224,7 +216,7 @@ fi
 ## Throughout the script, if the file has no content, it will skip to the end
 ## by setting the FILESIZEZERO variable
 
-printf "$cyan"    "Verifying $BASEFILENAME File Size."
+printf "$cyan"    "$VERIFYFILESIZE"
 
 ## set filesizezero variable if empty
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
@@ -235,12 +227,12 @@ if
 then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
-printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
-echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "$BASEFILENAME $EMPTYFILE  $AFTERDOWNLOAD"
+echo "* $BASEFILENAME $EMPTYFILE $AFTERDOWNLOAD $timestamp" | tee --append $RECENTRUN &>/dev/null
 touch $BORIGINALFILETEMP
 else
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After Download."
+ENDCOMMENT="$HOWMANYLINES Lines $AFTERDOWNLOAD"
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
