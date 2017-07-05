@@ -39,15 +39,6 @@ echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN
 fi
 
 ## Create The List
-if
-ls $BIGAPLSOURCE &> /dev/null;
-then
-for source in `cat $BIGAPLSOURCE`;
-do
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
-echo "$UPCHECK" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
-done
-else
 for f in $EVERYLISTFILEWILDCARD
 do
 for source in `cat $f`;
@@ -56,7 +47,6 @@ UPCHECK=`echo $source | awk -F/ '{print $3}'`
 echo "$UPCHECK" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
 done
 done
-fi
 
 ## Sort and Dedupe Lists
 for f in $WHITELISTDOMAINSALL
