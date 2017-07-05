@@ -3,11 +3,31 @@
 
 ## Vars
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+source /etc/pihole/setupVars.conf
 CURRENTUSER="$(whoami)"
 GRAVITY=/etc/pihole/gravity.list
 GRAVITYSH=/etc/.pihole/gravity.sh
 #ANTIGRAV=/home/"$CURRENTUSER"/antigrav.list
 ANTIGRAV=/home/pi/antigrav.list
+
+## get ip from setupvars
+if
+[[ -n "${IPV4_ADDRESS}" && -n "${IPV6_ADDRESS}" ]]
+then
+TRIMMEDIP=$(awk -v ipv4addr="$IPV4_ADDRESS" -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0"\n"ipv6addr" "$0}' >> "${2}" < "${1}")
+elif
+[[ -n "${IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
+then
+TRIMMEDIP=$(awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> "${2}" < "${1}")
+elif
+[[ -z "${IPV4_ADDRESS}" && -n "${IPV6_ADDRESS}" ]]
+then
+TRIMMEDIP=$(awk -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv6addr" "$0}' >> "${2}" < "${1}")
+elif
+[[ -z "${IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
+then
+TRIMMEDIP=""
+fi
 
 ## whiptail required
 WHATITIS=whiptail
@@ -41,11 +61,14 @@ bash $GRAVITYSH
 fi }
 
 ## Trim IP from HOSTS format
-HOSTIP=$(whiptail --inputbox "What IP Needs to be removed?" 10 80 "192.168.1.99" 3>&1 1>&2 2>&3)
+HOSTIP=$(whiptail --inputbox "What IP Needs to be removed?" 10 80 "$TRIMMEDIP" 3>&1 1>&2 2>&3)
 sed "s/^$HOSTIP\s\+[ \t]*//" < $GRAVITY > $TEMPFILE
 
 ## WhatDiff
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $BIGAPLE $TEMPFILE > $ANTIGRAV
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $BIGAPLE $TEMPFILE > $FILETEMP
+rm $TEMPFILE
+cat $FILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $ANTIGRAV
+rm $FILETEMP
 HOWMANYLINES=$(echo -e "`wc -l $ANTIGRAV | cut -d " " -f 1`")
 printf "$yellow"  "Antigrav File contains $HOWMANYLINES Domains that are not used by gravity."
-rm $TEMPFILE
+
