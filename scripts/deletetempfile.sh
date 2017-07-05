@@ -9,8 +9,6 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-else
-:
 fi
 
 CHECKME=$COMPRESSEDTEMPSEVEN
@@ -18,8 +16,6 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-else
-:
 fi
 
 CHECKME=$COMPRESSEDTEMPTAR
@@ -27,6 +23,4 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-else
-:
 fi
