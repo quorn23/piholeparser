@@ -4,15 +4,11 @@
 ## Vars
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 source /etc/pihole/setupVars.conf
+TRIMMEDIP=${IPV4_ADDRESS%/*}
 CURRENTUSER="$(whoami)"
 GRAVITY=/etc/pihole/gravity.list
 GRAVITYSH=/etc/.pihole/gravity.sh
-#ANTIGRAV=/home/"$CURRENTUSER"/antigrav.list
-ANTIGRAV=/home/pi/antigrav.list
-
-
-## get ip from setupvars
-TRIMMEDIP=${IPV4_ADDRESS%/*}
+ANTIGRAV="TEMPDIR"antigrav.list.txt
 
 ## whiptail required
 WHATITIS=whiptail
