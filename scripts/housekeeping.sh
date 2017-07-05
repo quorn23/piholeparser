@@ -248,7 +248,7 @@ then
 rm $CHECKME
 fi
 wget -q -O $TEMPFILE $VALIDDOMAINTLDLINK
-cat $TEMPFILE | sed '/\#\+/d' > $VALIDDOMAINTLD
+cat $TEMPFILE | sed '/\#\+/d; s/^/./' > $VALIDDOMAINTLD
 rm $TEMPFILE
 bash $DELETETEMPFILE
 echo ""
