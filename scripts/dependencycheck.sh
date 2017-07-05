@@ -10,30 +10,24 @@ source /etc/piholeparser/scripts/scriptvars/variables.var
 ## Check Dependencies##
 #######################
 
-WHATITIS=p7zip
-WHATPACKAGE=p7zip-full
-timestamp=$(echo `date`)
+WHATITIS=p7zip-full
 if
 which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "$WHATITIS is installed"
+printf "$yellow"  "$WHATITIS $DEPENDENCYA"
 else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$DEPENDENCYB $WHATITIS"
+apt-get install -y $WHATITIS
 fi
 
 WHATITIS=gawk
-WHATPACKAGE=gawk
-timestamp=$(echo `date`)
 if
 which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "$WHATITIS is installed"
+printf "$yellow"  "$WHATITIS $DEPENDENCYA"
 else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$DEPENDENCYB $WHATITIS"
+apt-get install -y $WHATITIS
 fi
