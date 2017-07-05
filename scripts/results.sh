@@ -84,6 +84,16 @@ then
 rm $CHECKME
 fi
 
+####################
+## Remove TLD file##
+####################
+CHECKME=$VALIDDOMAINTLD
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
 ## Done
 timestamp=$(echo `date`)
 echo "* Script completed at $timestamp" | tee --append $RECENTRUN &>/dev/null
