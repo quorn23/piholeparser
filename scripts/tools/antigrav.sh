@@ -10,24 +10,9 @@ GRAVITYSH=/etc/.pihole/gravity.sh
 #ANTIGRAV=/home/"$CURRENTUSER"/antigrav.list
 ANTIGRAV=/home/pi/antigrav.list
 
+
 ## get ip from setupvars
-if
-[[ -n "${IPV4_ADDRESS}" && -n "${IPV6_ADDRESS}" ]]
-then
-TRIMMEDIP=$(echo `awk -v ipv4addr="$IPV4_ADDRESS" -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0"\n"ipv6addr" "$0}' >> "${2}" < "${1}"`)
-elif
-[[ -n "${IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
-then
-TRIMMEDIP=$(echo `awk -v ipv4addr="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> "${2}" < "${1}"`)
-elif
-[[ -z "${IPV4_ADDRESS}" && -n "${IPV6_ADDRESS}" ]]
-then
-TRIMMEDIP=$(echo `awk -v ipv6addr="$IPV6_ADDRESS" '{sub(/\r$/,""); print ipv6addr" "$0}' >> "${2}" < "${1}"`)
-elif
-[[ -z "${echo `IPV4_ADDRESS}" && -z "${IPV6_ADDRESS}" ]]
-then
-TRIMMEDIP=""
-fi
+awk -v TRIMMEDIP="$IPV4_ADDRESS" '{sub(/\r$/,""); print ipv4addr" "$0}' >> "${2}" < "${1}"
 
 ## whiptail required
 WHATITIS=whiptail
