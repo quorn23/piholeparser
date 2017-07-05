@@ -12,7 +12,7 @@ ANTIGRAV=/home/pi/antigrav.list
 
 
 ## get ip from setupvars
-TRIMMEDIP=$(echo -e "`$IPV4_ADDRESS | cut -d " " -f 1`")
+TRIMMEDIP=${IPV4_ADDRESS%/*}
 
 #$IPV4_ADDRESS
 
