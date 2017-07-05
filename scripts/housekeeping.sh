@@ -257,4 +257,3 @@ echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
 printf "$orange" "___________________________________________________________"
 echo ""
-http://data.iana.org/TLD/tlds-alpha-by-domain.txt
