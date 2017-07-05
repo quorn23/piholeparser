@@ -5,13 +5,13 @@
 ! Homepage: https://www.certyficate.it/
 ! Last modified: 4 July 2017
 ! Expires: 2 days
-! Version: 2017070406
+! Version: 2017070408
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na:  https://www.certyficate.it/polski-filtr-adblock/
-! v.2017070406 aktualizacja: wt, 4 lipca 2017, 19:05:00
+! v.2017070408 aktualizacja: wt, 4 lipca 2017, 19:15:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -1184,10 +1184,6 @@ upcpm.pl##.count-clicks
 v10.pl##[id^="newsltr1_"]
 v10.pl##DIV[style="width: 100%; background-color: rgb(0, 0, 0); margin: 0px; position: fixed; bottom: 0px; left: 0px; padding: 0px; height: 15px; line-height: 15px; text-align: center; color: rgb(255, 255, 255); z-index: 1000; font-family: Arial,Helvetica,sans-serif; font-size: 10px;"]
 vampirediaries.pl##[width="300"] + [width="20"] + TD[width="300"]
-videostar.pl###player-guest-message
-videostar.pl###player-timesup
-videostar.pl###modal
-videostar.pl##.reveal-modal-bg
 vitalia.pl###pasekDdd
 wizaz.pl###contentAfPromo
 videowood.tv###tbl1
@@ -1438,7 +1434,6 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||antyweb.pl/wp-content/uploads/2017/03/horizon-cover.jpg$image
 ||antyweb.pl/wp-content/themes/antyweb.autentika/aadv/js/aadv.js
 ||antyweb.pl/wp-content/uploads/20*/*/*1920x1080*.jpg
-||api.videostar.pl/ad/show$xmlhttprequest,domain=videostar.pl
 ||asa.allegrostatic.*/display-pl/$image
 ||avanti24.pl/pub/ips/$subdocument
 ||avanti.fashion/pub/ips/$subdocument
@@ -2022,7 +2017,7 @@ zrabatowani.pl###popup-adblock-bottom
 @@||sjp.pwn.pl/ads.js$script,domain=sjp.pwn.pl
 @@||static.forsal.pl/js/ads.js$script
 @@||static.gazetaprawna.pl/js/ads.js$script
-@@||static.videostar.pl/static/assets/js/adcheck.min.js^
+@@||static-pilot.wp.pl/static/assets/js/ads.js$xmlhttprequest,domain=pilot.wp.pl
 @@||video.gazeta.pl/cdn/ads/ad/banner/_adsense_/_adserver/_adview_.ad.json$xmlhttprequest,domain=video.gazeta.pl
 @@||vod.pl^$generichide
 @@||webcamera.*/js/fuckadblock.js$script,domain=webcamera.pl|webcamera.live
