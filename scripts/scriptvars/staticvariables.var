@@ -3,77 +3,75 @@
 ## Base Variables
 source /etc/piholeparser/scripts/scriptvars/variables.var
 
-## Github
+## Github 100MB limit
 GITHUBLIMIT=104857600
 GITHUBLIMITMB=100
-GITREPOSITORYURL="github.com/deathbybandaid/piholeparser.git"
-GITWHERETOPUSH=https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@"$GITREPOSITORYURL"
 
-## Directories and their Files
-REPODIR=/etc/piholeparser/
+## Repo
+REPONAME=piholeparser
+REPOOWNER=deathbybandaid
+GITREPOSITORYURL="github.com/"$REPOOWNER"/"$REPONAME".git"
+GITWHERETOPUSH=https://"$GITHUBUSERNAME":"$GITHUBPASSWORD"@"$GITREPOSITORYURL"
+MAINFOLDERRAW="https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/"
+  MIRROREDLISTSDIRRAW="$MAINFOLDERRAW"mirroredlists/
+
+## Directories
+REPODIR=/etc/"$REPONAME"/
+
   MAINREADME="$REPODIR"README.md
   
   LOGDIR="$REPODIR"RecentRunLogs/
-    RECENTRUN="$LOGDIR"/Main/README.md
+    RECENTRUN="$LOGDIR"/README.md
     NOHTTPSLISTS="$LOGDIR"/listswithouthttps/README.md
-  
+
   LISTSDIR="$REPODIR"lists/
+    EVERYLISTFILEWILDCARD=$LISTSDIR'*/*.lst'
     IPLISTSDIR="$LISTSDIR"IPlists/
     DEADLISTDIR="$LISTSDIR"deadlists/
-    LIGHTPARSELISTDIR="$LISTSDIR"lightparsing/
-      LIGHTPARSELISTS="$LIGHTPARSELISTDIR"*.lst
-    HEAVYPARSELISTDIR="$LISTSDIR"heavyparsing/
-      HEAVYPARSELISTS="$HEAVYPARSELISTDIR"*.lst
-    SEVENSLISTDIR="$LISTSDIR"7zip/
-      SEVENSLIST="$SEVENSLISTDIR"*.list
-    TARLISTSDIR="$LISTSDIR"tar/
-      TARLISTS="$TARLISTSDIR"*.list
-   EVERYLISTFILEWILDCARD=$LISTSDIR'*/*.lst'
-  
-    WHITELISTEDDIR="$LISTSDIR"whitelisted/
-    LISTWHITELISTDOMAINS="$WHITELISTEDDIR"Script.domains
-    WHITELISTDOMAINSALL="$WHITELISTEDDIR"*.domains
-    
-  BLACKLISTEDDIR="$LISTSDIR"blacklisted/
-    LISTBLACKLISTDOMAINS="$BLACKLISTEDDIR"Script.domains
-    BLACKLISTDOMAINSALL="$BLACKLISTEDDIR"*.domains
-  
+    EMPTYLISTDIR="$LISTSDIR"emptylists/
+    MAINLISTSDIR="$LISTSDIR"mainlists/
+   
+   WHITELISTEDDIR="$LISTSDIR"whitelisted/
+      LISTWHITELISTDOMAINS="$WHITELISTEDDIR"Script.domains
+      WHITELISTDOMAINSALL="$WHITELISTEDDIR"*.domains
+   BLACKLISTEDDIR="$LISTSDIR"blacklisted/
+      BLACKLISTDOMAINSALL="$BLACKLISTEDDIR"*.domains
+
   MIRRORDIR="$REPODIR"mirroredlists/
-    ALLMIRROREDLISTS="$MIRRORDIR"*.txt
-    
+
   PARSEDDIR="$REPODIR"parsed/
-    PARSEDLISTSALL="$PARSEDDIR"*.txt
- 
- PARSEDALLDIR="$REPODIR"parsedall/
-    ALLPARSEDALL="$PARSEDALLDIR"*.txt
-    BIGAPLNAME=1111ALLPARSEDLISTS1111
-    BIGAPL="$PARSEDALLDIR""$BIGAPLNAME".txt
-    BIGAPLE="$PARSEDALLDIR""$BIGAPLNAME"edited.txt
-    BIGAPLSOURCE="$PARSEDALLDIR""$BIGAPLNAME".lst
-  
+      PARSEDLISTSALL="$PARSEDDIR"*.txt
+
+  PARSEDALLDIR="$REPODIR"parsedall/
+      BIGAPLNAME=1111ALLPARSEDLISTS1111
+      BIGAPL="$PARSEDALLDIR""$BIGAPLNAME".txt
+      BIGAPLE="$PARSEDALLDIR""$BIGAPLNAME"edited.txt
+      BIGAPLSOURCE="$PARSEDALLDIR""$BIGAPLNAME".lst
+
   SCRIPTSDIR="$REPODIR"scripts/
-    CLEANUPSCRIPT="$SCRIPTSDIR"cleanup.sh
-    COLLISIONAVOIDSCRIPT="$SCRIPTSDIR"collisionavoid.sh
-    CREATEBIGLISTSCRIPT="$SCRIPTSDIR"createbiglist.sh
-    CREATEBIGLISTSCRIPTEDITED="$SCRIPTSDIR"createbiglistedited.sh
-    CREATEBIGSOURCE="$SCRIPTSDIR"createbigsource.sh
-    DELETETEMPFILE="$SCRIPTSDIR"deletetempfile.sh
-    DEPENDENCYCHECKSCRIPT="$SCRIPTSDIR"dependencycheck.sh
-    HOUSEKEEPINGSCRIPT="$SCRIPTSDIR"housekeeping.sh
-    PARSERSCRIPT="$SCRIPTSDIR"parser.sh
-    PERLPARSERSCRIPT="$SCRIPTSDIR"parser.pl
-    PUSHLISTSSCRIPT="$SCRIPTSDIR"pushlists.sh
-    RESULTSSCRIPT="$SCRIPTSDIR"results.sh
-    RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
-    UPDATESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
-    REPODOMAINSSCRIPT="$SCRIPTSDIR"repodomains.sh
-  
-  SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
-    MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
-  
+      CREATEBIGLISTSCRIPT="$SCRIPTSDIR"createbiglist.sh
+      DELETETEMPFILE="$SCRIPTSDIR"deletetempfile.sh
+      DEPENDENCYCHECKSCRIPT="$SCRIPTSDIR"dependencycheck.sh
+      HOUSEKEEPINGSCRIPT="$SCRIPTSDIR"housekeeping.sh
+      PARSERSCRIPT="$SCRIPTSDIR"parser.sh
+      PUSHLISTSSCRIPT="$SCRIPTSDIR"pushlists.sh
+      REPODOMAINSSCRIPT="$SCRIPTSDIR"repodomains.sh
+      RESULTSSCRIPT="$SCRIPTSDIR"results.sh
+      RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
+      UPDATESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
+      
+      SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
+          MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
+
   TEMPDIR="$REPODIR"temp/
+    TEMPCLEANUP="$TEMPDIR"*.txt
+    TEMPVARS="$TEMPDIR"tempvars.var
     TEMPFILE="$TEMPDIR"tempfile.txt
     FILETEMP="$TEMPDIR"filetemp.txt
+    COMPRESSEDTEMPTAR="$TEMPDIR"compressedseventemporaryfile.tar.gz
+    COMPRESSEDTEMPSEVEN="$TEMPDIR"compressedseventemporaryfile.7z
+    WHITELISTTEMP="$TEMPDIR"whitelist.temp
+    BLACKLISTTEMP="$TEMPDIR"blacklist.temp
     TEMPFILEA="$TEMPDIR"tempfileA.txt
     TEMPFILEB="$TEMPDIR"tempfileB.txt
     TEMPFILEC="$TEMPDIR"tempfileC.txt
@@ -88,21 +86,17 @@ REPODIR=/etc/piholeparser/
     TEMPFILEL="$TEMPDIR"tempfileL.txt
     TEMPFILEM="$TEMPDIR"tempfileM.txt
     TEMPFILEN="$TEMPDIR"tempfileN.txt
-    COMPRESSEDTEMPTAR="$TEMPDIR"compressedseventemporaryfile.tar.gz
-    COMPRESSEDTEMPSEVEN="$TEMPDIR"compressedseventemporaryfile.7z
-    ORIGINALFILETEMP="$TEMPDIR"original
-    WHITELISTTEMP="$TEMPDIR"whitelist.temp
-    BLACKLISTTEMP="$TEMPDIR"blacklist.temp
-    TEMPCLEANUP="$TEMPDIR"*.txt
-    CLEANUPTEMP="$TEMPDIR"*.text
-    TEMPVARS="$TEMPDIR"tempvars.var
 
+## Hosting locally
 BIGAPLLOCALHOSTDIR=/var/www/html/lists/
 BIGAPLLOCALHOST="$BIGAPLLOCALHOSTDIR""$BIGAPLNAME".txt
 BIGAPLELOCALHOST="$BIGAPLLOCALHOSTDIR""$BIGAPLNAME"edited.txt
 
-## Repository Links
-MAINFOLDERRAW="https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/"
-  MIRROREDLISTSDIRRAW="$MAINFOLDERRAW"mirroredlists/
-
+## On Screen Dialogue
+EMPTYFILE="File Size Equaled Zero."
+FILESUCCESS="File Created Successfully."
+GITHUBUPLOADTOOBIG="File Too Large For Github."
 SKIPPINGTOENDOFPARSERLOOP="List File Now Empty."
+LINESAFTER="Lines After"
+DEDUPE="Removing Duplicates."
+MERGEINDIVIDUALS="Merging Individual Lists."
