@@ -14,9 +14,6 @@ ANTIGRAV=/home/pi/antigrav.list
 ## get ip from setupvars
 TRIMMEDIP=${IPV4_ADDRESS%/*}
 
-#$IPV4_ADDRESS
-
-
 ## whiptail required
 WHATITIS=whiptail
 WHATPACKAGE=whiptail
