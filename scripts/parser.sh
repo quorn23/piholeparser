@@ -598,6 +598,14 @@ printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
 rm $PARSEDFILE
 fi
 
+## let's get rid of the deadweight
+if 
+[[ -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO ]]
+then
+echo "* $BASEFILENAME List Was Killed By The Parsing Process. It will be skipped in the future. $timestamp" | tee --append $RECENTRUN &>/dev/null
+mv $f $KILLTHELIST
+fi
+
 ## Github has a 100mb limit, and empty files are useless
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
