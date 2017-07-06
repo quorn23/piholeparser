@@ -533,40 +533,7 @@ then
 FILESIZEZERO=true
 fi
 
-## Duplicate Removal
-PARSECOMMENT="Removing Duplicate Lines."
-if
-[[ -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
+
 
 ## Prepare for next step
 mv $BFILETEMP $BTEMPFILE
