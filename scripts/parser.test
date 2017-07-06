@@ -499,8 +499,7 @@ printf "$cyan"  "$PARSECOMMENT"
 
 for source in `cat $VALIDDOMAINTLD`;
 do
-cat $BFILETEMP | sed '/^${line}$/I!d' >> $BTEMPFILE
-#cat $BFILETEMP | sed '/[$line]$/I!d' >> $BTEMPFILE
+cat $BFILETEMP | sed '/[$line]$/!d' >> $BTEMPFILE
 done
 
 mv $BTEMPFILE $BFILETEMP
