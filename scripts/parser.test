@@ -502,8 +502,6 @@ do
 cat $BFILETEMP | sed '/[$line]$/!d' >> $BTEMPFILE
 done
 
-mv $BTEMPFILE $BFILETEMP
-cat $BFILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
