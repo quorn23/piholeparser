@@ -28,13 +28,17 @@ REPODIR=/etc/"$REPONAME"/
     NOHTTPSLISTS="$LOGDIR"/listswithouthttps/README.md
 
   LISTSDIR="$REPODIR"lists/
-    VALIDDOMAINTLDLINKS="$LISTSDIR"validtlds.list
     
     EVERYLISTFILEWILDCARD=$LISTSDIR'*/*.lst'
     IPLISTSDIR="$LISTSDIR"IPlists/
     DEADLISTDIR="$LISTSDIR"deadlists/
     EMPTYLISTDIR="$LISTSDIR"emptylists/
     MAINLISTSDIR="$LISTSDIR"mainlists/
+   
+   TLDLISTSDIR="$LISTSDIR"TLDlists/
+      MOSTCOMMONTLD="$TLDLISTSDIR"mostcommon.list
+      VALIDDOMAINTLDBKUP="$TLDLISTSDIR"validdomaintldbkup.txt
+      VALIDDOMAINTLDLINKS="$TLDLISTSDIR"validtlds.list
    
    WHITELISTEDDIR="$LISTSDIR"whitelisted/
       LISTWHITELISTDOMAINS="$WHITELISTEDDIR"Script.domains
@@ -67,7 +71,6 @@ REPODIR=/etc/"$REPONAME"/
       
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
-          VALIDDOMAINTLDBKUP="$SCRIPTVARSDIR"validdomaintldbkup.txt
 
   TEMPDIR="$REPODIR"temp/
     TEMPCLEANUP="$TEMPDIR"*.txt
