@@ -505,7 +505,7 @@ cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 done
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $BFILETEMP $TEMPFILEA > $BTEMPFILE
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
 
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
