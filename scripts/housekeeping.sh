@@ -249,11 +249,35 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
+UPCHECK=`echo $VALIDDOMAINTLDLINK | awk -F/ '{print $3}'`
+if
+[[ -n $UPCHECK ]]
+then
+SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIP=`echo $SOURCEIPFETCH`
+else
+printf "$red"    "DOMAIN TLD Host Unavailable."
+fi
+if
+[[ -n $SOURCEIP ]]
+then
 curl -s -H "$agent" -L $VALIDDOMAINTLDLINK >> $TEMPFILE
 cat $TEMPFILE | sed '/\#\+/d; s/^/./' > $VALIDDOMAINTLD
+elif
+[[ -z $SOURCEIP ]]
+then
+cp $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD
+fi
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's"
 rm $TEMPFILE
+CHECKME=$VALIDDOMAINTLDBKUP
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
