@@ -267,16 +267,15 @@ if
 [[ -n $SOURCEIP ]]
 then
 curl -s -H "$agent" -L $source >> $TEMPFILEN
-cat $TEMPFILEN | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; s/^/./' > $TEMPFILEM
-rm $TEMPFILEN
 elif
 [[ -z $SOURCEIP ]]
 then
-cp $VALIDDOMAINTLDBKUP $TEMPFILEM
+cp $VALIDDOMAINTLDBKUP $TEMPFILEN
 fi
-cat $TEMPFILEM >> $TEMPFILEL
-rm $TEMPFILEM
+cat $TEMPFILEN >> $TEMPFILEM
+rm $TEMPFILEN
 done
+cat $TEMPFILEM | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/^/./' > $TEMPFILEL
 cat -s $TEMPFILEL | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 rm $TEMPFILEL
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
