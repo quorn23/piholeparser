@@ -486,6 +486,17 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
+for source in `cat $MOSTCOMMONTLD`;
+do
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+rm $TEMPFILEA
+mv $TEMPFILEB $TEMPFILEA
+fi
+done
 for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
