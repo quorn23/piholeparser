@@ -602,6 +602,7 @@ fi
 if 
 [[ -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO ]]
 then
+printf "$red"  "Current Parsing Method Emptied File. It will be skipped in the future."
 echo "* $BASEFILENAME List Was Killed By The Parsing Process. It will be skipped in the future. $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $f $KILLTHELIST
 fi
