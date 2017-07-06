@@ -94,6 +94,13 @@ rm $WHITELISTTEMP
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 rm $FILETEMP
 
+## Duplicate Removal
+echo ""
+printf "$yellow"  "Removing duplicates..."
+cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $FILETEMP
+echo -e "\t`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
+mv $FILETEMP $TEMPFILE
+
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
