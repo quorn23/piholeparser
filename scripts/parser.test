@@ -4,10 +4,6 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
-
-cp $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD
-
-
 ####################
 ## File .lst's    ##
 ####################
@@ -484,15 +480,29 @@ FILESIZEZERO=true
 fi
 
 ## Invalid TLD's
+
+if
+ls $VALIDDOMAINTLD &> /dev/null;
+then
+:
+else
+cp $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD
+fi
+
+
+
 PARSECOMMENT="Checking For Invalid TLD's."
 if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
+
 for source in `cat $VALIDDOMAINTLD`;
 do
-cat $BFILETEMP | sed '/$source$/!d' >> $BTEMPFILE
+cat $BFILETEMP | sed "/$source$/!d" >> $BTEMPFILE
 done
+
+
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
