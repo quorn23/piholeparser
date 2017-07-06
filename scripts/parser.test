@@ -497,10 +497,16 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 
+cp $BFILETEMP $TEMPFILEA
+
 for source in `cat $VALIDDOMAINTLD`;
 do
-cat $BFILETEMP | sed '/[$line]$/!d' >> $BTEMPFILE
+cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
+rm $TEMPFILEA
+mv $TEMPFILEB $TEMPFILEA
 done
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
+rm $TEMPFILEA
 
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
