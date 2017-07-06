@@ -496,10 +496,12 @@ if
 [[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-for source in `cat $VALIDDOMAINTLD`;
+
+for line in `cat $VALIDDOMAINTLD`;
 do
-cat $BFILETEMP | sed '/[$source]$/I!d' >> $BTEMPFILE
+cat $BFILETEMP | sed '/[$line]$/I!d' >> $BTEMPFILE
 done
+
 mv $BTEMPFILE $BFILETEMP
 cat $BFILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
