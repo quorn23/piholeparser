@@ -278,9 +278,9 @@ cat $TEMPFILEM >> $TEMPFILEL
 rm $TEMPFILEM
 done
 cat -s $TEMPFILEL | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
+rm $TEMPFILEL
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's"
-rm $TEMPFILE
 CHECKME=$VALIDDOMAINTLDBKUP
 if
 ls $CHECKME &> /dev/null;
