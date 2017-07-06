@@ -8,7 +8,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 ## Recreate Tempvars##
 ######################
 
-SCRIPTTEXT=$TEMPVARCREATE
+SCRIPTTEXT="Recreating TempVars."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -22,7 +22,7 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
-echo "## $SCRIPTTEXT" | tee --append $TEMPVARS &>/dev/null
+echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 source $TEMPVARS
 bash $DELETETEMPFILE
 echo ""
@@ -34,7 +34,7 @@ echo ""
 ## Set Start Time   ##
 ######################
 
-SCRIPTTEXT=$SETSTARTTIMEVAR
+SCRIPTTEXT="Setting Start Time Variable."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -42,7 +42,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-STARTTIME="$SCRIPTSTARTEDAT $timestamp"
+STARTTIME="Script Started At $timestamp"
 STARTIMEVAR=$(echo $STARTIME)
 STARTTIMESTAMP=$(date +"%s")
 echo "STARTTIME='"$STARTTIME"'" | tee --append $TEMPVARS &>/dev/null
@@ -57,7 +57,7 @@ echo ""
 ## Recent Run Log   ##
 ######################
 
-SCRIPTTEXT=$RECENTRUNLOGCREATE
+SCRIPTTEXT="Creating Main Recent Run Log."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -70,8 +70,10 @@ ls $RECENTRUN &> /dev/null;
 then
 rm $RECENTRUN
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Recent Run Log Removed and Recreated." | tee --append $RECENTRUN &>/dev/null
 else
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Recent Run Log Created." | tee --append $RECENTRUN &>/dev/null
 fi
 echo "* $STARTTIME" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
@@ -84,7 +86,7 @@ echo ""
 ## https-less lists ##
 ######################
 
-SCRIPTTEXT=$CREATENOHTTPSLOG
+SCRIPTTEXT="Identifying Lists Without https."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -122,7 +124,7 @@ echo ""
 ## Parsed Not In Use ##
 #######################
 
-SCRIPTTEXT=$REMOVEDELETEDPARSEDLISTS
+SCRIPTTEXT="Removing Parsed Lists No Longer Used."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -148,7 +150,7 @@ if
 [[ $source == *.txt ]]
 then
 rm $REMPARSEDFILE
-printf "$red"    "$source $REMOVEDELETEDPARSEDLISTSB"
+printf "$red"    "The $source .lst No Longer Exists. Parsed File Deleted."
 fi
 done
 bash $DELETETEMPFILE
@@ -161,7 +163,7 @@ echo ""
 ## Mirrored Not In Use ##
 #########################
 
-SCRIPTTEXT=$REMOVEDELETEDMIRROREDLISTS
+SCRIPTTEXT="Removing Mirrored Lists No Longer Used."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -187,7 +189,7 @@ if
 [[ $source == *.txt ]]
 then
 rm $REMMIRRORFILE
-printf "$red"    "$source $REMOVEDELETEDMIRROREDLISTSB"
+printf "$red"    "The $source .lst No Longer Exists. Mirror File Deleted."
 fi
 done
 bash $DELETETEMPFILE
@@ -200,7 +202,7 @@ echo ""
 ## Big Source     ##
 ####################
 
-SCRIPTTEXT=$BIGSOURCEGEN
+SCRIPTTEXT="Counting Lists To Process."
 timestamp=$(echo `date`)
 printf "$lightblue"    "___________________________________________________________"
 echo ""
@@ -216,7 +218,7 @@ rm $CHECKME
 fi
 cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
 HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
-HOWMANYSOURCE="$HOWMANYSOURCELISTS $SCRIPTLISTCOUNT"
+HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script."
 echo "HOWMANYSOURCELISTS='"$HOWMANYSOURCELISTS"'" | tee --append $TEMPVARS &>/dev/null
 echo "HOWMANYSOURCE='"$HOWMANYSOURCE"'" | tee --append $TEMPVARS &>/dev/null
 echo "$HOWMANYSOURCE"
