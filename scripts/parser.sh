@@ -239,6 +239,7 @@ printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 touch $BORIGINALFILETEMP
 else
+ORIGFILESIZENOTZERO=true
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After Download."
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
@@ -527,6 +528,14 @@ if
 [[ -z $FILESIZEZERO && -f $PARSEDFILE ]]
 then
 printf "$green"  "Old Parsed File Removed"
+rm $PARSEDFILE
+fi
+
+## Delete Parsed file if current parsing method empties it
+if 
+[[ -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO && -f $PARSEDFILE ]]
+then
+printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
 rm $PARSEDFILE
 fi
 
