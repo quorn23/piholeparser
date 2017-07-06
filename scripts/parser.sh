@@ -488,9 +488,14 @@ printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
 for source in `cat $VALIDDOMAINTLD`;
 do
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
+fi
 done
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
