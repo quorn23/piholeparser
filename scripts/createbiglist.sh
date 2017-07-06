@@ -5,6 +5,10 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
+## Cheap error handling
+touch $BLACKLISTTEMP
+touch $WHITELISTTEMP
+
 ####################
 ## Big List       ##
 #################### 
@@ -34,33 +38,25 @@ mv $FILETEMP $TEMPFILE
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
 timestamp=$(echo `date`)
 if
-[[ -n $FILESIZEZERO ]]
+[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
+then
+echo ""
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $FILETEMP
+echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
+mv $TEMPFILE $BIGAPL
+elif
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "File Empty"
 echo "File Size equaled zero." | tee --append $TEMPFILE
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
-elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
-then
-echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $FILETEMP
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
-mv $TEMPFILE $BIGAPL
-elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
-then
+else
 echo ""
 mv $TEMPFILE $BIGAPL
 printf "$yellow"  "Big List Created Successfully."
@@ -82,50 +78,39 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-## Cheap error handling
-touch $BLACKLISTTEMP
-touch $WHITELISTTEMP
-
 ## Add Blacklist Domains
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
+rm $BLACKLISTTEMP
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 rm $FILETEMP
 
 ## Remove Whitelist Domains
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE > $FILETEMP
-rm $TEMPFILE
-mv $FILETEMP $TEMPFILE
+rm $WHITELISTTEMP
+cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+rm $FILETEMP
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
 timestamp=$(echo `date`)
 if
-[[ -n $FILESIZEZERO ]]
+[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
+then
+echo ""
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
+mv $TEMPFILE $BIGAPLE
+elif
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 echo ""
 printf "$red"     "File Empty"
 echo "File Size equaled zero." | tee --append $TEMPFILE
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPL
-elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
-then
+mv $TEMPFILE $BIGAPLE
+else
 echo ""
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZEMB MB $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $FILETEMP
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
-mv $TEMPFILE $BIGAPL
-elif
-[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
-then
-echo ""
-mv $TEMPFILE $BIGAPL
-printf "$yellow"  "Big List Created Successfully."
+mv $TEMPFILE $BIGAPLE
+printf "$yellow"  "Big List Edited Created Successfully."
 fi
