@@ -82,17 +82,19 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
+## Cheap error handling
+touch $BLACKLISTTEMP
+touch $WHITELISTTEMP
+
 ## Add Blacklist Domains
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
-rm $BLACKLISTTEMP
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 rm $FILETEMP
 
 ## Remove Whitelist Domains
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE > $FILETEMP
-rm $WHITELISTTEMP
-cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-rm $FILETEMP
+rm $TEMPFILE
+mv $FILETEMP $TEMPFILE
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
