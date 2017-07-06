@@ -68,6 +68,8 @@ REPODIR=/etc/"$REPONAME"/
       
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
+          VALIDDOMAINTLD="$SCRIPTVARSDIR"validdomaintld.txt
+          VALIDDOMAINTLDBKUP="$SCRIPTVARSDIR"validdomaintldbkup.txt
 
   TEMPDIR="$REPODIR"temp/
     TEMPCLEANUP="$TEMPDIR"*.txt
@@ -78,7 +80,6 @@ REPODIR=/etc/"$REPONAME"/
     COMPRESSEDTEMPSEVEN="$TEMPDIR"compressedseventemporaryfile.7z
     WHITELISTTEMP="$TEMPDIR"whitelist.temp
     BLACKLISTTEMP="$TEMPDIR"blacklist.temp
-    VALIDDOMAINTLD="$TEMPDIR"validdomaintld.temp
     TEMPFILEA="$TEMPDIR"tempfileA.txt
     TEMPFILEB="$TEMPDIR"tempfileB.txt
     TEMPFILEC="$TEMPDIR"tempfileC.txt
