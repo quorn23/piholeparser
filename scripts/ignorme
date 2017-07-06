@@ -6,7 +6,7 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 for source in `cat $VALIDDOMAINTLD`;
 do
-cat $BFILETEMP | sed '/$source$/!d' >> $BTEMPFILE
+cat $BFILETEMP | sed '/[$source]$/!d' >> $BTEMPFILE
 done
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
