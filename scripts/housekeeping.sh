@@ -249,7 +249,12 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
-UPCHECK=`echo $VALIDDOMAINTLDLINK | awk -F/ '{print $3}'`
+for source in `cat $VALIDDOMAINTLDLINKS`;
+do
+printf "$cyan"    "The Source In The File Is:"
+printf "$yellow"    "$source"
+echo ""
+UPCHECK=`echo $source | awk -F/ '{print $3}'`
 if
 [[ -n $UPCHECK ]]
 then
@@ -261,13 +266,18 @@ fi
 if
 [[ -n $SOURCEIP ]]
 then
-curl -s -H "$agent" -L $VALIDDOMAINTLDLINK >> $TEMPFILE
-cat $TEMPFILE | sed '/\#\+/d; s/^/./' > $VALIDDOMAINTLD
+curl -s -H "$agent" -L $source >> $TEMPFILEN
+cat $TEMPFILEN | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; s/^/./' > $TEMPFILEM
+rm $TEMPFILEN
 elif
 [[ -z $SOURCEIP ]]
 then
-cp $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD
+cp $VALIDDOMAINTLDBKUP $TEMPFILEM
 fi
+cat $TEMPFILEM >> $TEMPFILEL
+rm $TEMPFILEM
+done
+cat -s $TEMPFILEL | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's"
 rm $TEMPFILE
