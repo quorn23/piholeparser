@@ -94,6 +94,29 @@ then
 rm $CHECKME
 fi
 
-## Done
+####################
+## Remove Whites  ##
+####################
+CHECKME=$WHITELISTTEMP
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
+####################
+## Remove blacks  ##
+####################
+CHECKME=$BLACKLISTTEMP
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
+####################
+## End Time       ##
+####################
+
 timestamp=$(echo `date`)
 echo "* Script completed at $timestamp" | tee --append $RECENTRUN &>/dev/null
