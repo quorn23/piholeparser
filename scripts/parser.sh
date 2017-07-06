@@ -56,7 +56,7 @@ printf "$yellow"    "$BASEFILENAME List Does NOT Use https."
 fi
 
 ####################
-## Determine DL   ##
+## Download Lists ##
 ####################
 
 printf "$cyan"    "Pinging $BASEFILENAME To Check Host Availability."
@@ -79,53 +79,24 @@ printf "$red"    "Ping Test Failed."
 fi
 echo ""
 
-## Check if file is modified since last download
-remote_file="$source"
-local_file="$MIRROREDFILE"
-modified=$(curl --silent --head $remote_file | awk -F: '/^Last-Modified/ { print $2 }')
-remote_ctime=$(date --date="$modified" +%s)
-local_ctimea=$(stat -c %z "$local_file")
-local_ctime=$(date --date="$local_ctimea" +%s)
-if
-[ $local_ctime -lt $remote_ctime ]
-then
-printf "$yellow"    "File Has Changed Online."
-elif
-[ $local_ctime -eq $remote_ctime ]
-MAYBESKIPPARSING=true
-printf "$green"    "File Not Updated Online. No Need To Process."
-else
-printf "$yellow"    "Checking File For Update Failed."
-unset SOURCEIP
-fi
-if
-[[ -n $MAYBESKIPPARSING && -f $PARSEDFILE ]]
-then
-FULLSKIPPARSING=true
-fi
-
-####################
-## Download Lists ##
-####################
-
 ## Logically download based on the Upcheck, and file type
 timestamp=$(echo `date`)
 if
-[[ -z $FULLSKIPPARSING && -n $SOURCEIP && $source != *.7z && $source != *.tar.gz && $source != *.zip && $source != *.php ]]
+[[ -n $SOURCEIP && $source != *.7z && $source != *.tar.gz && $source != *.zip && $source != *.php ]]
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 wget -q -O $BTEMPFILE $source
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && $source == *.php && -n $SOURCEIP ]]
+[[ $source == *.php && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $SOURCEIP ]]
+[[ -z $SOURCEIP ]]
 then
 MIRRORVAR=true
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
@@ -133,9 +104,8 @@ echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $ti
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
-mv $f $BDEADPARSELIST
 elif
-[[ -z $FULLSKIPPARSING && $source == *.zip && -n $SOURCEIP ]]
+[[ $source == *.zip && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPSEVEN $source
@@ -143,7 +113,7 @@ wget -q -O $COMPRESSEDTEMPSEVEN $source
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $COMPRESSEDTEMPSEVEN
 elif
-[[ -z $FULLSKIPPARSING && $source == *.7z && -n $SOURCEIP ]]
+[[ $source == *.7z && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching 7zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPSEVEN $source
@@ -151,7 +121,7 @@ wget -q -O $COMPRESSEDTEMPSEVEN $source
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $COMPRESSEDTEMPSEVEN
 elif
-[[ -z $FULLSKIPPARSING && $source == *.tar.gz && -n $SOURCEIP ]]
+[[ $source == *.tar.gz && -n $SOURCEIP ]]
 then
 printf "$cyan"    "Fetching Tar List From $UPCHECK Located At The IP Of "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPTAR $source
@@ -169,11 +139,10 @@ fi
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 timestamp=$(echo `date`)
 if
-[[ -z $FULLSKIPPARSING && -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $f == $BDEADPARSELIST ]]
+[[ -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $f == $BDEADPARSELIST ]]
 then
 printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
 echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $BDEADPARSELIST $BMAINLIST
 else
 :
 fi
@@ -183,7 +152,7 @@ fi
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 timestamp=$(echo `date`)
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -gt 0 ]]
+[[ "$FETCHFILESIZE" -gt 0 ]]
 then
 printf "$green"    "Download Successful."
 echo ""
@@ -193,7 +162,7 @@ touch $BORIGINALFILETEMP
 echo ""
 fi
 if 
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
+[[ "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
 then
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
@@ -206,7 +175,7 @@ FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
+[[ "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
@@ -231,13 +200,13 @@ done
 ## This should let me know if a document is a bad link
 timestamp=$(echo `date`)
 if
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO && `grep -q "?php" "$BORIGINALFILETEMP"` ]]
+[[ -n $FILESIZEZERO && `grep -q "?php" "$BORIGINALFILETEMP"` ]]
 then
 printf "$red"     "$BASEFILENAME List is a bad link. PHP detected."
 echo "* $BASEFILENAME Is A Bad Link. PHP Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
 FILESIZEZERO=true
 elif
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO && `grep -q "DOCTYPE html" "$BORIGINALFILETEMP"` ]]
+[[ -n $FILESIZEZERO && `grep -q "DOCTYPE html" "$BORIGINALFILETEMP"` ]]
 then
 printf "$red"     "$BASEFILENAME Is A Bad Link. HTML Detected."
 echo "* $BASEFILENAME Is A Bad Link. HTML Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -262,7 +231,7 @@ FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]
+[ "$FETCHFILESIZE" -eq 0 ]
 then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
@@ -289,16 +258,9 @@ rm $BORIGINALFILETEMP
 
 printf "$cyan"   "Attempting Creation of Mirror File."
 
-if
-[[ -n $FULLSKIPPARSING ]]
-then
-printf "$green"  "Old Mirror File Retained."
-echo ""
-fi
-
 ## This helps when replacing the mirrored file
 if 
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && -f $MIRROREDFILE ]]
+[[ -z $FILESIZEZERO && -f $MIRROREDFILE ]]
 then
 printf "$green"  "Old Mirror File Removed"
 rm $MIRROREDFILE
@@ -308,18 +270,18 @@ fi
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO ]]
+[[ -n $FILESIZEZERO ]]
 then
 printf "$red"     "Not Creating Mirror File. Nothing To Create!"
 rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Mirror File Too Large For Github. Deleting."
 echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to mirror on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
 printf "$green"  "Creating Mirror Of Unparsed File."
 mv $BTEMPFILE $MIRROREDFILE
@@ -334,7 +296,7 @@ echo ""
 
 ## I haven't decided what to do with IP Lists yet, so this will skip them after mirroring
 if
-[[ -z $FULLSKIPPARSING && $f == $BIPPARSELIST ]]
+[[ $f == $BIPPARSELIST ]]
 then
 FILESIZEZERO=true
 fi
@@ -342,7 +304,7 @@ fi
 ## Comments #'s and !'s .'s
 PARSECOMMENT="Removing Lines With Comments."
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/\#\+/d; /\!\+/d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
@@ -361,7 +323,7 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
@@ -369,7 +331,7 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
@@ -377,7 +339,7 @@ fi
 ## Content Filtering and IP addresses
 PARSECOMMENT="Removing Content Filtering Lines and IP Addresses."
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/^https\?:\/\//d; /third-party$/d; /popup$/d; s/^PRIMARY\s\+[ \t]*//; s/^localhost\s\+[ \t]*//; s/blockeddomain.hosts\s\+[ \t]*//; s/^0.0.0.0\s\+[ \t]*//; s/^127.0.0.1\s\+[ \t]*//; s/^::1\s\+[ \t]*//' > $BTEMPFILE
@@ -389,43 +351,7 @@ else
 :
 fi
 if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
-## Empty Space
-PARSECOMMENT="Removing Lines With Empty Space."
-if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BTEMPFILE
-#cat $BFILETEMP | sed '/^$/d; /\s\+/d' > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 echo ""
@@ -440,7 +366,43 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
+
+## Empty Space
+PARSECOMMENT="Removing Lines With Empty Space."
+if
+[[ -z $FILESIZEZERO ]]
+then
+printf "$cyan"  "$PARSECOMMENT"
+cat $BFILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BTEMPFILE
+#cat $BFILETEMP | sed '/^$/d; /\s\+/d' > $BTEMPFILE
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+mv $BTEMPFILE $BFILETEMP
+else
+:
+fi
+if
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
+printf "$yellow"  "$ENDCOMMENT"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
@@ -450,7 +412,7 @@ fi
 ## apparently you can have an emoji domain name?
 PARSECOMMENT="Removing Invalid FQDN Characters."
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/,/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[@]/d; /~/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d; /\^\//d; s/^||//; /[|]/d' > $BTEMPFILE
@@ -462,14 +424,14 @@ else
 :
 fi
 if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
@@ -477,7 +439,7 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
@@ -485,7 +447,7 @@ fi
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking For FQDN Requirements."
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
@@ -497,14 +459,14 @@ else
 :
 fi
 if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
@@ -512,7 +474,7 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
@@ -520,7 +482,7 @@ fi
 ## Invalid TLD's
 PARSECOMMENT="Checking For Invalid TLD's."
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
@@ -528,7 +490,7 @@ for source in `cat $MOSTCOMMONTLD`;
 do
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -539,7 +501,7 @@ for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -556,7 +518,7 @@ else
 :
 fi
 if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 echo ""
@@ -571,7 +533,7 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
@@ -579,7 +541,7 @@ fi
 ## Duplicate Removal
 PARSECOMMENT="Removing Duplicate Lines."
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
@@ -591,14 +553,14 @@ else
 :
 fi
 if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
@@ -606,7 +568,7 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
@@ -620,21 +582,9 @@ mv $BFILETEMP $BTEMPFILE
 
 printf "$cyan"   "Attempting Creation Of Parsed List."
 
-## if we skipped parsing due to file not changing
-if
-[[ -n $FULLSKIPPARSING && -f $PARSEDFILE ]]
-then
-HOWMANYLINES=$(echo -e "`wc -l $PARSEDFILE | cut -d " " -f 1`")
-printf "$green"  "Old Parsed File Retained."
-printf "$yellow"  "$HOWMANYLINES Lines In File."
-echo ""
-else
-printf "$red"  "No Existing Parsed File?"
-fi
-
 ## this helps with replacing a parsed file
 if 
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && -f $PARSEDFILE ]]
+[[ -z $FILESIZEZERO && -f $PARSEDFILE ]]
 then
 printf "$green"  "Old Parsed File Removed"
 rm $PARSEDFILE
@@ -642,7 +592,7 @@ fi
 
 ## Delete Parsed file if current parsing method empties it
 if 
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO && -f $PARSEDFILE ]]
+[[ -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO && -f $PARSEDFILE ]]
 then
 printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
 rm $PARSEDFILE
@@ -650,7 +600,7 @@ fi
 
 ## let's get rid of the deadweight
 if 
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO ]]
+[[ -n $FILESIZEZERO && -n $ORIGFILESIZENOTZERO ]]
 then
 printf "$red"  "Current Parsing Method Emptied File. It will be skipped in the future."
 echo "* $BASEFILENAME List Was Killed By The Parsing Process. It will be skipped in the future. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -661,18 +611,18 @@ fi
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO ]]
+[[ -n $FILESIZEZERO ]]
 then
 printf "$red"     "Not Creating Parsed File. Nothing To Create!"
 rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to push to github. $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
+[[ -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$green"  "Parsed File Completed Succesfully."
@@ -689,12 +639,6 @@ if
 [[ -n $FILESIZEZERO ]]
 then
 unset FILESIZEZERO
-fi
-
-if
-[[ -n $FULLSKIPPARSING ]]
-then
-unset FULLSKIPPARSING
 fi
 
 ## End File Loop
