@@ -348,7 +348,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING ]]
 then
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 fi
@@ -676,7 +676,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING ]]
 then
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 fi
