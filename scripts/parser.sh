@@ -563,7 +563,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -578,7 +578,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -594,7 +594,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -610,14 +610,16 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
 done
 fi
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $TEMPFILEB
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEB $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
+rm $TEMPFILEB
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
