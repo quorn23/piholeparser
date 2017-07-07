@@ -560,7 +560,7 @@ cp $BFILETEMP $TEMPFILEA
 for source in `cat $MOSTCOMMONTLD`;
 do
 if
-[[ -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -576,7 +576,7 @@ done
 for source in `cat $MOSTCOMMONTLDB`;
 do
 if
-[[ -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -592,7 +592,7 @@ done
 for source in `cat $MOSTCOMMONTLDC`;
 do
 if
-[[ -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -608,7 +608,7 @@ done
 for source in `cat $VALIDDOMAINTLD`;
 do
 if
-[[ -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
