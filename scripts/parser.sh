@@ -91,13 +91,13 @@ if
 then
 printf "$yellow"    "File Has Changed Online."
 elif
-[[ $local_ctime -eq $remote_ctime ]]
+[[ $local_ctime -ge $remote_ctime ]]
 then
 MAYBESKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
-else
-printf "$yellow"    "Checking File For Update Failed."
-unset SOURCEIP
+#else
+#printf "$yellow"    "Checking File For Update Failed."
+#unset SOURCEIP
 fi
 if
 [[ -n $MAYBESKIPPARSING && -f $PARSEDFILE ]]
@@ -131,9 +131,20 @@ then
 MIRRORVAR=true
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
-wget -q -O $BTEMPFILE $MIRROREDFILEDL
-cat $BTEMPFILE >> $BORIGINALFILETEMP
-rm $BTEMPFILE
+#wget -q -O $BTEMPFILE $MIRROREDFILEDL
+#cat $BTEMPFILE >> $BORIGINALFILETEMP
+#rm $BTEMPFILE
+cat $MIRROREDFILE >> $BORIGINALFILETEMP
+elif
+[[ -z $FULLSKIPPARSING && -z $SOURCEIP && $f != $BDEADPARSELIST ]]
+then
+MIRRORVAR=true
+printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
+echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+#wget -q -O $BTEMPFILE $MIRROREDFILEDL
+#cat $BTEMPFILE >> $BORIGINALFILETEMP
+#rm $BTEMPFILE
+cat $MIRROREDFILE >> $BORIGINALFILETEMP
 mv $f $BDEADPARSELIST
 elif
 [[ -z $FULLSKIPPARSING && $source == *.zip && -n $SOURCEIP ]]
