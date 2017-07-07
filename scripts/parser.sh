@@ -171,15 +171,20 @@ TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $COMPRESSEDTEMPTAR
-else
-printf "$red"    "Somehow All Download Variables Were Missed."
-echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
+#else
+#printf "$red"    "Somehow All Download Variables Were Missed."
+#echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## If lst file is in Dead Folder, it means that I was unable to access it at some point
 ## This checks to see if the list is back online
+if
+[[ -z $FULLSKIPPARSING ]]
+then
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
+fi
 if
 [[ -z $FULLSKIPPARSING && -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $f == $BDEADPARSELIST ]]
 then
@@ -192,14 +197,21 @@ fi
 
 ## Check that there was a file downloaded
 ## Try as a browser, and then try a mirror file
+if
+[[ -z $FULLSKIPPARSING ]]
+then
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
+fi
 if
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -gt 0 ]]
 then
 printf "$green"    "Download Successful."
 echo ""
-else
+elif
+[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -le 0 ]]
+then
 printf "$red"    "Download Failed."
 touch $BORIGINALFILETEMP
 echo ""
@@ -270,9 +282,13 @@ fi
 printf "$cyan"    "Verifying $BASEFILENAME File Size."
 
 ## set filesizezero variable if empty
+if
+[[ -z $FULLSKIPPARSING ]]
+then
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
+fi
 if 
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
 then
@@ -317,8 +333,13 @@ rm $MIRROREDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
+if
+[[ -z $FULLSKIPPARSING ]]
+then
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
+fi
 if 
 [[ -z $FULLSKIPPARSING && -n $FILESIZEZERO ]]
 then
@@ -670,8 +691,13 @@ mv $f $KILLTHELIST
 fi
 
 ## Github has a 100mb limit, and empty files are useless
+if
+[[ -z $FULLSKIPPARSING ]]
+then
+FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
+fi
 if 
 [[ -z $FULLSKIPPARSING && -n $FILESIZEZERO ]]
 then
