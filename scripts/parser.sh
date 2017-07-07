@@ -568,7 +568,7 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -lt 1 ]]
 then
 STOPTLDSEARCH=true
 fi
@@ -584,7 +584,7 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -lt 1 ]]
 then
 STOPTLDSEARCH=true
 fi
@@ -600,7 +600,7 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -lt 1 ]]
 then
 STOPTLDSEARCH=true
 fi
@@ -616,7 +616,7 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -lt 1 ]]
 then
 STOPTLDSEARCH=true
 fi
