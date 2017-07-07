@@ -560,7 +560,7 @@ cp $BFILETEMP $TEMPFILEA
 for source in `cat $MOSTCOMMONTLD`;
 do
 if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -568,15 +568,17 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -lt 1 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+:
+else
 STOPTLDSEARCH=true
 fi
 done
 for source in `cat $MOSTCOMMONTLDB`;
 do
 if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -584,15 +586,17 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -lt 1 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+:
+else
 STOPTLDSEARCH=true
 fi
 done
 for source in `cat $MOSTCOMMONTLDC`;
 do
 if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -600,15 +604,17 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -lt 1 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+:
+else
 STOPTLDSEARCH=true
 fi
 done
 for source in `cat $VALIDDOMAINTLD`;
 do
 if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
 cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
@@ -616,8 +622,10 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -lt 1 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+:
+else
 STOPTLDSEARCH=true
 fi
 done
