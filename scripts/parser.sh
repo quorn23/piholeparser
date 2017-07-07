@@ -568,6 +568,10 @@ rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
 done
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+then
 for source in `cat $MOSTCOMMONTLDB`;
 do
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
@@ -579,6 +583,11 @@ rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
 done
+fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+then
 for source in `cat $MOSTCOMMONTLDC`;
 do
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
@@ -590,6 +599,11 @@ rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
 done
+fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+then
 for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
@@ -601,6 +615,7 @@ rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
 done
+fi
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
