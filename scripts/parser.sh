@@ -92,6 +92,7 @@ then
 printf "$yellow"    "File Has Changed Online."
 elif
 [ $local_ctime -eq $remote_ctime ]
+then
 MAYBESKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
 else
