@@ -9,9 +9,10 @@ DIRECTORY=/etc/piholeparser/
 if
 [[ ! -d "$DIRECTORY" ]]
 then
+echo ""
 echo "piholeparser Directory Missing. Cloning Now."
 echo ""
-git clone https://github.com/deathbybandaid/piholeparser.git
+git clone https://github.com/deathbybandaid/piholeparser.git $DIRECTORY
 elif
 [[ -d "$DIRECTORY" ]]
 then
