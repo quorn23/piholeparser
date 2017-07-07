@@ -559,65 +559,70 @@ printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
 for source in `cat $MOSTCOMMONTLD`;
 do
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ -n $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
-done
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+STOPTLDSEARCH=true
+fi
+done
 for source in `cat $MOSTCOMMONTLDB`;
 do
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ -n $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
-done
-fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+STOPTLDSEARCH=true
+fi
+done
 for source in `cat $MOSTCOMMONTLDC`;
 do
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ -n $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
-done
-fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
+STOPTLDSEARCH=true
+fi
+done
 for source in `cat $VALIDDOMAINTLD`;
 do
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ -n $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
-done
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+STOPTLDSEARCH=true
 fi
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $TEMPFILEB
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEB $BFILETEMP > $BTEMPFILE
+done
+unset STOPTLDSEARCH
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
 rm $TEMPFILEB
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
