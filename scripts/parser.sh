@@ -33,7 +33,9 @@ if
 then
 echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
 printf "$yellow"    "$BASEFILENAME Has $HOWMANYLINES Sources."
-else
+elif
+[[ "$HOWMANYLINES" -le 1 ]]
+then
 printf "$yellow"    "$BASEFILENAME Has Only One Source."
 fi
 
@@ -67,37 +69,43 @@ if
 then
 SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
-else
+elif
+[[ -z $UPCHECK ]]
+then
 printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
 if
 [[ -n $SOURCEIP ]]
 then
 printf "$green"    "Ping Test Was A Success!"
-else
+elif
+[[ -z $SOURCEIP ]]
+then
 printf "$red"    "Ping Test Failed."
 fi
 echo ""
 
 ## Check if file is modified since last download
+if 
+[[ -f $MIRROREDFILE ]]
+then
 remote_file="$source"
 local_file="$MIRROREDFILE"
 modified=$(curl --silent --head $remote_file | awk -F: '/^Last-Modified/ { print $2 }')
 remote_ctime=$(date --date="$modified" +%s)
 local_ctimea=$(stat -c %z "$local_file")
 local_ctime=$(date --date="$local_ctimea" +%s)
+DIDWECHECKONLINEFILE=true
+fi
 if
-[[ $local_ctime -lt $remote_ctime ]]
+[[ -n $DIDWECHECKONLINEFILE && $local_ctime -lt $remote_ctime ]]
 then
 printf "$yellow"    "File Has Changed Online."
 elif
-[[ $local_ctime -ge $remote_ctime ]]
+[[ -nDIDWECHECKONLINEFILE $ && $local_ctime -ge $remote_ctime ]]
 then
 MAYBESKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
-#else
-#printf "$yellow"    "Checking File For Update Failed."
-#unset SOURCEIP
 fi
 if
 [[ -n $MAYBESKIPPARSING && -f $PARSEDFILE ]]
@@ -171,9 +179,6 @@ TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $COMPRESSEDTEMPTAR
-#else
-#printf "$red"    "Somehow All Download Variables Were Missed."
-#echo "* $BASEFILENAME List Skipped All Variable Checks at Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## If lst file is in Dead Folder, it means that I was unable to access it at some point
@@ -191,8 +196,6 @@ then
 printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
 echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $BDEADPARSELIST $BMAINLIST
-else
-:
 fi
 
 ## Check that there was a file downloaded
@@ -268,8 +271,6 @@ echo "* $BASEFILENAME Is A Bad Link. HTML Detected. $timestamp" | tee --append $
 rm $BORIGINALFILETEMP
 touch $BORIGINALFILETEMP
 FILESIZEZERO=true
-else
-:
 fi
 
 ####################
@@ -297,7 +298,9 @@ timestamp=$(echo `date`)
 printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 touch $BORIGINALFILETEMP
-else
+elif
+[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -gt 0 ]]
+then
 ORIGFILESIZENOTZERO=true
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After Download."
@@ -356,8 +359,6 @@ elif
 then
 printf "$green"  "Creating Mirror Of Unparsed File."
 mv $BTEMPFILE $MIRROREDFILE
-else
-rm $BTEMPFILE
 fi
 echo ""
 
@@ -383,8 +384,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -418,8 +417,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 sudo mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -454,8 +451,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -491,8 +486,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -526,8 +519,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -585,8 +576,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -620,8 +609,6 @@ FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-else
-:
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
@@ -661,7 +648,9 @@ HOWMANYLINES=$(echo -e "`wc -l $PARSEDFILE | cut -d " " -f 1`")
 printf "$green"  "Old Parsed File Retained."
 printf "$yellow"  "$HOWMANYLINES Lines In File."
 echo ""
-else
+elif
+[[ -n $FULLSKIPPARSING && ! -f $PARSEDFILE ]]
+then
 printf "$red"  "No Existing Parsed File?"
 fi
 
@@ -715,8 +704,6 @@ then
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$green"  "Parsed File Completed Succesfully."
 mv $BTEMPFILE $PARSEDFILE
-else
-rm $BTEMPFILE
 fi
 echo ""
 printf "$orange" "___________________________________________________________"
