@@ -14,7 +14,7 @@ amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.c
 ||dgpot.com^$third-party,domain=~dgpot.com
 ||digiket.com^$third-party
 ||digiket.net^$third-party,domain=~digiket.com
-||dmm.co.jp^$third-party,domain=~dmm.com|~thatav.net
+||dmm.co.jp^$third-party,domain=~dmm.com|~javhub.net|~thatav.net
 ||dmm.com^$third-party,domain=~dmm.co.jp
 ||dl-market.com^$third-party
 ||dlmarket.jp^$third-party
@@ -327,6 +327,7 @@ _ads.php
 ||pop6.com^$third-party
 ||ppc-direct.com^$third-party
 ||primecaster.net^$third-party
+||proparm.jp^$third-party
 ||rakuword.com^$third-party
 ||rentracks.jp^$third-party
 ||rightsnetwork.net^$third-party
@@ -487,6 +488,7 @@ _ads.php
 ||iwanttodeliver.com^$popup
 ||livejasmin.com^$popup
 ||popads.net^$popup
+||r18.com$popup
 
 !----third-party
 ||auone-net.jp/~$image,third-party
@@ -624,6 +626,7 @@ $script,third-party,domain=jpidols.tv
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
 ||exploader.net/images/nls/
+||free-video-movie.com^$domain=2dbook.com
 ||gelbooru.com/r18/
 ||gelbooru.com/r19/
 ||gelbooru.com/thumbnails/0C/
@@ -633,6 +636,7 @@ $script,third-party,domain=jpidols.tv
 ||google.com/uds/?file=ads&
 ||google.com/uds/api/ads/
 ||grupo.jp/ad_loader/$domain=pitamo.jp
+||hentai-foundry.com/themes/default/js/activebar.js
 ||himado.in/player_ad.php
 ||hitomi.la/hitomi.js
 ||hitomi.la/pop.js
@@ -648,6 +652,7 @@ $script,third-party,domain=jpidols.tv
 ||japan.cnet.com/parts/frame/
 ||javfor.me/iframe-as1.html
 ||javfor.me/images/r18$image
+||javhub.net/video_ads.html
 ||jugem.jp/ad/
 ||kakaku.com^*/kakakuad/
 ||kakaku.com^*/RdmReviewAd.js
@@ -676,6 +681,8 @@ $script,third-party,domain=jpidols.tv
 ||nijie.info/banner/
 ||nijie.info/dmm/
 ||news-postseven.com/script/inner_banner.js
+||n1198adserv.xyz^$domain=sankakucomplex.com
+||noadblock.net^$sankakucomplex.com
 ||okwave.jp/ajax_qamatch
 ||p.dmm.co*/p/*/bnr
 ||padotown.net/js/set_keywords.js
@@ -1253,6 +1260,7 @@ atwiki.jp###body_footer .lazy
 atwiki.jp###recommend
 atwiki.jp##[id^="advp"]
 atwiki.jp##div[style="width: 160px;height:600px"]
+b.hatena.ne.jp##[data-track-section="related_product"]
 b9dm.com###ad4
 basso.to,nazca.co.jp##span[style="font-size:12px; line-height:120%;"]:first-child:last-child
 bing.com##.b_ad
@@ -1295,6 +1303,7 @@ google.com,google.co.jp###\5f Ltg
 !サイト内検索
 www.google.co.jp##TABLE[cellpadding="0"][style="border: 1px solid #369"]
 gpara.com##[class*="rank_best_box"]
+hentai-foundry.com##main > center
 imagis.jp,costype.net##.topadv
 imgbako.com##[href="../index.php"] + br + table > tbody > tr > td[width="300"]
 futalog.com##[href="../index.php"] + br + table > tbody > tr > td[width="305"]
@@ -1321,6 +1330,7 @@ irasutoya.com##[class^="entryadwrapper"]
 itmedia.co.jp###amazon-item
 itmedia.co.jp##.colBoxAmazon
 jav4.me###tbl1
+javhub.net###r18_banner
 jugem.jp##.UBH_new
 kakaku.com###listingPr
 kakaku.com###yAuctionBox
@@ -1385,6 +1395,7 @@ ribbon.to##a[target="g"]
 ribbon.to##a[target="t"]
 ribbon.to##a[target="pt"]
 ribbon.to##a[tareget="rdn"]
+sankakucomplex.com##[class^="adbmodal-"]
 search.carview.co.jp##.side_ss
 search.carview.co.jp##.sponsor
 sekkaku.net##[summary="AD"]
@@ -1403,7 +1414,7 @@ tsumanne.net###amazon
 tsumanne.net###inputurl + p
 twitter.com##.modal-overlay
 twitter.com##.promoted-tweet
-twitter.com##.ProfileTweet--promoted
+twitter.com##.promoted-tweet-heading
 uta-net.com###banner_original
 uta-net.com###recommend
 uta-net.com###view_amazon
@@ -1978,6 +1989,8 @@ cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
 eiga.com#@#[id$="_ad"]:not(html):not(body)
 	!予定が消える
 calendar.google.com #@#[class*="-ad-"]:not(html):not(body)
+	!ヘッダー 検索バー
+news.google.com#@#[class$="Ad"]:not(html):not(body)
 	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
 gyazo.com#@#[class$="-ad"]:not(html):not(body)
 	!左側

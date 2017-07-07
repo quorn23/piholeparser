@@ -1143,7 +1143,7 @@ business.dk##script:inject(abort-on-property-write.js, _sp_)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/259
 ! https://github.com/uBlockOrigin/uAssets/issues/394
-101greatgoals.com,allthetests.com,ancient-origins.net,biology-online.org,eurweb.com,grammarist.com,jerusalemonline.com,roadracerunner.com,trifind.com,x17online.com##script:inject(abort-on-property-write.js, upManager)
+101greatgoals.com,allthetests.com,ancient-origins.net,biology-online.org,calcalist.co.il,eurweb.com,grammarist.com,jerusalemonline.com,roadracerunner.com,trifind.com,x17online.com##script:inject(abort-on-property-write.js, upManager)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/394#issuecomment-299711450
 fullmatchesandshows.com##script:inject(noeval.js)
@@ -1216,14 +1216,12 @@ howtogeek.com##.thecontent > div:has(a[href^="http://www.jdoqocy.com/click-"])
 quora.com##.upper_content:has(.promoted_link)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
-worldfree4u.lol##script:inject(abort-on-property-write.js, _$_c55e)
 *$websocket,domain=worldfree4u.lol
 
 ! https://forums.lanik.us/viewtopic.php?p=112050#p112050
 eurogamer.net,rockpapershotgun.com,vg247.com##script:inject(abort-on-property-write.js, yafaIt)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/292
-linkshrink.net##script:inject(abort-on-property-write.js, _$_3dfb)
 linkshrink.net##script:inject(noeval.js)
 *$websocket,domain=linkshrink.net
 
@@ -1234,7 +1232,7 @@ auto-motor-und-sport.de,womenshealth.de##script:inject(abort-on-property-write.j
 ! https://github.com/uBlockOrigin/uAssets/issues/299
 ddlvalley.cool,zippyshare.com##script:inject(noeval.js)
 rarbg.to##script:inject(abort-on-property-read.js, _wm3)
-fullmatchesandshows.com,mediafire.com,pornhub.com,rlslog.net,tinypic.com##script:inject(abort-on-property-write.js, UAParser)
+fullmatchesandshows.com,mediafire.com,newser.com,pornhub.com,rlslog.net,scienceworldreport.com,tinypic.com##script:inject(abort-on-property-write.js, UAParser)
 
 ! https://github.com/gorhill/uBlock/issues/2417
 ##.side-left /deep/ [id^="ecbr-"]
@@ -1650,3 +1648,10 @@ xstory-fr.com##script:inject(abort-on-property-write.js, checkRealLoad)
 
 ! https://github.com/gorhill/uBlock/issues/2759
 slideplayer.com##script:inject(abort-on-property-read.js, service.mode)
+
+! https://github.com/uBlockOrigin/uAssets/issues/497
+bitporno.com##script:inject(nowebrtc.js)
+bitporno.com##script:inject(popads.net.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/498
+receive-sms-online.info##script:inject(abort-on-property-read.js, ga.length)

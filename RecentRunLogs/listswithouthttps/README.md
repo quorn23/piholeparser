@@ -1,6 +1,3 @@
-* AirellesPhishingHosts
-* DShieldorgRecommendedBlock
-* AdblockFiltersbyGurudee
 * AdblockListforFinland
 * AdZHosts
 * AirellesAntiAdvertisementsHosts
