@@ -315,8 +315,8 @@ fi
 
 ## Duplicate the downloaded file for the next steps
 touch $BORIGINALFILETEMP
-if 
-[[ -f $MIRROREDFILE ]]
+if
+ls $BORIGINALFILETEMP &> /dev/null;
 then
 cp $BORIGINALFILETEMP $BTEMPFILE
 cp $BORIGINALFILETEMP $BFILETEMP
