@@ -87,11 +87,11 @@ remote_ctime=$(date --date="$modified" +%s)
 local_ctimea=$(stat -c %z "$local_file")
 local_ctime=$(date --date="$local_ctimea" +%s)
 if
-[ $local_ctime -lt $remote_ctime ]
+[[ $local_ctime -lt $remote_ctime ]]
 then
 printf "$yellow"    "File Has Changed Online."
 elif
-[ $local_ctime -eq $remote_ctime ]
+[[ $local_ctime -eq $remote_ctime ]]
 then
 MAYBESKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
@@ -263,7 +263,7 @@ FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 if 
-[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]
+[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 timestamp=$(echo `date`)
