@@ -556,19 +556,81 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-gawk 'NR==FNR{patts[$1]=$2;next}{for (i in patts) if (($0 ~ i) && ($0 ~ patts[i])) print}' $MOSTCOMMONTLD $BFILETEMP > $BTEMPFILE
-cat $BTEMPFILE | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BFILETEMP
-HOWMANYLINES=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
+## Try Most popular TLD's
+gawk 'NR==FNR{patts[$1]=$2;next}{for (i in patts) if (($0 ~ i) && ($0 ~ patts[i])) print}' $MOSTCOMMONTLD $BFILETEMP > $TEMPFILEA
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $TEMPFILEN
+cat $TEMPFILEA >> $BTEMPFILE
+rm $TEMPFILEA
+rm $BFILETEMP
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEN | cut -d " " -f 1`")
 if
-[[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -gt 0 ]]
 then
-gawk 'NR==FNR{patts[$1]=$2;next}{for (i in patts) if (($0 ~ i) && ($0 ~ patts[i])) print}' $VALIDDOMAINTLD $BFILETEMP > $BTEMPFILE
-mv $BTEMPFILE $BFILETEMP
+MOSTPOPONE=continue
+elif
+[[ $HOWMANYLINES -eq 0 ]]
+then
+rm $TEMPFILEN
 fi
+unset HOWMANYLINES
+## Try Second Most Popular list
+if
+[[ -z $FULLSKIPPARSING && -n MOSTPOPONE ]]
+then
+gawk 'NR==FNR{patts[$1]=$2;next}{for (i in patts) if (($0 ~ i) && ($0 ~ patts[i])) print}' $MOSTCOMMONTLDB $TEMPFILEN > $TEMPFILEB
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEB $TEMPFILEN > $TEMPFILEM
+cat $TEMPFILEB >> $BTEMPFILE
+rm $TEMPFILEB
+rm $TEMPFILEN
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEM | cut -d " " -f 1`")
+fi
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+MOSTPOPTWO=continue
+elif
+[[ $HOWMANYLINES -eq 0 ]]
+then
+rm $TEMPFILEM
+fi
+unset HOWMANYLINES
+## Try Third
+if
+[[ -z $FULLSKIPPARSING && -n MOSTPOPTWO ]]
+then
+gawk 'NR==FNR{patts[$1]=$2;next}{for (i in patts) if (($0 ~ i) && ($0 ~ patts[i])) print}' $MOSTCOMMONTLDC $TEMPFILEM > $TEMPFILEC
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEC $TEMPFILEM > $TEMPFILEL
+cat $TEMPFILEC >> $BTEMPFILE
+rm $TEMPFILEC
+rm $TEMPFILEM
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
+fi
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+MOSTPOPTHREE=continue
+elif
+[[ $HOWMANYLINES -eq 0 ]]
+then
+rm $TEMPFILEL
+fi
+unset HOWMANYLINES
+## If still not there ALL Valid TLD's
+if
+[[ -z $FULLSKIPPARSING && -n MOSTPOPTHREE ]]
+then
+gawk 'NR==FNR{patts[$1]=$2;next}{for (i in patts) if (($0 ~ i) && ($0 ~ patts[i])) print}' $VALIDDOMAINTLD $TEMPFILEL > $TEMPFILED
+cat $TEMPFILED >> $BTEMPFILE
+rm $TEMPFILED
+rm $TEMPFILEL
+fi
+unset MOSTPOPONE
+unset MOSTPOPTWO
+unset MOSTPOPTHREE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-#mv $BTEMPFILE $BFILETEMP
+mv $BTEMPFILE $BFILETEMP
 fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
