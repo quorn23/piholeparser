@@ -314,9 +314,14 @@ echo ""
 fi
 
 ## Duplicate the downloaded file for the next steps
+touch $BORIGINALFILETEMP
+if 
+[[ -f $MIRROREDFILE ]]
+then
 cp $BORIGINALFILETEMP $BTEMPFILE
 cp $BORIGINALFILETEMP $BFILETEMP
 rm $BORIGINALFILETEMP
+fi
 
 ####################
 ## Create Mirrors ##
