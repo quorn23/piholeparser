@@ -712,6 +712,7 @@ elif
 then
 printf "$yellow"     "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$green"  "Parsed File Completed Succesfully."
+echo "* $BASEFILENAME list was Updated. $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $BTEMPFILE $PARSEDFILE
 fi
 echo ""
