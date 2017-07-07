@@ -557,9 +557,6 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
-if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
-then
 for source in `cat $MOSTCOMMONTLD`;
 do
 if
@@ -576,10 +573,6 @@ then
 STOPTLDSEARCH=true
 fi
 done
-fi
-if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
-then
 for source in `cat $MOSTCOMMONTLDB`;
 do
 if
@@ -596,10 +589,6 @@ then
 STOPTLDSEARCH=true
 fi
 done
-fi
-if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
-then
 for source in `cat $MOSTCOMMONTLDC`;
 do
 if
@@ -616,10 +605,6 @@ then
 STOPTLDSEARCH=true
 fi
 done
-fi
-if
-[[ -z $FULLSKIPPARSING && -n $STOPTLDSEARCH ]]
-then
 for source in `cat $VALIDDOMAINTLD`;
 do
 if
@@ -636,7 +621,6 @@ then
 STOPTLDSEARCH=true
 fi
 done
-fi
 unset STOPTLDSEARCH
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
