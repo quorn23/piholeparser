@@ -13,6 +13,8 @@ echo ""
 echo "piholeparser Directory Missing. Cloning Now."
 echo ""
 git clone https://github.com/deathbybandaid/piholeparser.git $DIRECTORY
+## Variables
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 elif
 [[ -d "$DIRECTORY" ]]
 then
