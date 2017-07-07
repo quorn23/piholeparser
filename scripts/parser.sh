@@ -229,9 +229,13 @@ cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 echo ""
 fi
+if
+[[ -z $FULLSKIPPARSING ]]
+then
 FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
+fi
 if 
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
