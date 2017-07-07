@@ -4,9 +4,17 @@
 ##
 ## This File will not be updated often.
 
+DIRECTORY=/etc/piholeparser/
+
+if
+[[ ! -d "$DIRECTORY" ]]
+then
+git clone https://github.com/deathbybandaid/piholeparser.git
+elif
+[[ -d "$DIRECTORY" ]]
+then
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
-
 ## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
 echo ""
@@ -14,6 +22,7 @@ printf "$green"   "Updating Repository."
 git -C $REPODIR pull
 printf "$magenta" "___________________________________________________________"
 echo ""
+fi
 
 ## RunParser
 sudo bash $RUNPIHOLEPARSERSCRIPT
