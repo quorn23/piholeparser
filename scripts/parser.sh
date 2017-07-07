@@ -563,7 +563,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -578,7 +578,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -594,7 +594,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -610,7 +610,7 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ -z $FULLSKIPPARSING && $HOWMANYLINES -gt 0 ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
