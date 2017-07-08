@@ -562,7 +562,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -580,7 +580,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -598,7 +598,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -616,7 +616,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/[$line]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/[$line]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
