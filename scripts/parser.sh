@@ -16,8 +16,7 @@ printf "$lightblue"    "________________________________________________________
 echo ""
 
 ## Declare File Name
-CURRENTLSTFILE=$f
-BASEFILENAME=$(echo `basename $CURRENTLSTFILE | cut -f 1 -d '.'`)
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
@@ -28,7 +27,7 @@ echo ""
 
 ## Amount of sources greater than one?
 timestamp=$(echo `date`)
-HOWMANYLINES=$(echo -e "`wc -l $CURRENTLSTFILE | cut -d " " -f 1`")
+HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 if
 [[ "$HOWMANYLINES" -gt 1 ]]
 then
@@ -41,7 +40,7 @@ printf "$yellow"    "$BASEFILENAME Has Only One Source."
 fi
 
 ## Process Every source within the .lst from above
-for source in `cat $CURRENTLSTFILE`;
+for source in `cat $f`;
 do
 
 ## These Variables are to help with Filenaming
@@ -145,7 +144,7 @@ echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $ti
 #rm $BTEMPFILE
 cat $MIRROREDFILE >> $BORIGINALFILETEMP
 elif
-[[ -z $FULLSKIPPARSING && -z $SOURCEIP && $CURRENTLSTFILE != $BDEADPARSELIST ]]
+[[ -z $FULLSKIPPARSING && -z $SOURCEIP && $f != $BDEADPARSELIST ]]
 then
 MIRRORVAR=true
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
@@ -192,7 +191,7 @@ FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 fi
 if
-[[ -z $FULLSKIPPARSING && -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $CURRENTLSTFILE == $BDEADPARSELIST ]]
+[[ -z $FULLSKIPPARSING && -n $SOURCEIP && "$FETCHFILESIZE" -gt 0 && $f == $BDEADPARSELIST ]]
 then
 printf "$red"     "$BASEFILENAME List Is In DeadList Directory, But The Link Is Active."
 echo "* $BASEFILENAME List Is In DeadList Directory, But The Link Is Active. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -378,7 +377,7 @@ echo ""
 
 ## I haven't decided what to do with IP Lists yet, so this will skip them after mirroring
 if
-[[ -z $FULLSKIPPARSING && $CURRENTLSTFILE == $BIPPARSELIST ]]
+[[ -z $FULLSKIPPARSING && $f == $BIPPARSELIST ]]
 then
 FILESIZEZERO=true
 fi
@@ -592,15 +591,8 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-
 cp $BFILETEMP $TEMPFILEA
-
-for f in $MOSTCOMMONTLDALL
-do
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
-MOSTCOMMONSED=`cat $f`
+MOSTCOMMONSED=`cat $MOSTCOMMONTLD`
 sed -i '$MOSTCOMMONSED' $TEMPFILEA
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -610,10 +602,34 @@ then
 else
 STOPTLDSEARCH=true
 fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+MOSTCOMMONSEDB=`cat $MOSTCOMMONTLDB`
+sed -i '$MOSTCOMMONSEDB' $TEMPFILEA
 fi
-done
-
-
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+MOSTCOMMONSEDC=`cat $MOSTCOMMONTLDC`
+sed -i '$MOSTCOMMONSEDC' $TEMPFILEA
+fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
@@ -640,12 +656,13 @@ do
 sed -i '/[$source]$/d' $BFILETEMP
 done
 mv $BFILETEMP $BTEMPFILE
+#gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-
+fi
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
@@ -745,7 +762,7 @@ if
 then
 printf "$red"  "Current Parsing Method Emptied File. It will be skipped in the future."
 echo "* $BASEFILENAME List Was Killed By The Parsing Process. It will be skipped in the future. $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $CURRENTLSTFILE $KILLTHELIST
+mv $f $KILLTHELIST
 fi
 
 ## Github has a 100mb limit, and empty files are useless
