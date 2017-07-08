@@ -39,10 +39,16 @@ rm $TEMPFILEN
 done
 
 cat $TEMPFILEM | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d' > $TEMPFILEL
-cat -s $TEMPFILEL | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
+tr '[A-Z]' '[a-z]' $TEMPFILEL > $TEMPFILEK
+cat -s $TEMPFILEK | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 rm $TEMPFILEL
+rm $TEMPFILEK
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's"
+
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $MAINTLDLIST $VALIDDOMAINTLD > $TLDCOMPARED
+HOWMANYTLDNEW=$(echo -e "\t`wc -l $TLDCOMPARED | cut -d " " -f 1`")
+echo "$HOWMANYTLDNEW Valid TLD's Not In Main Scan."
 
 CHECKME=$VALIDDOMAINTLDBKUP
 if

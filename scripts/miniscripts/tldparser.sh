@@ -5,7 +5,7 @@
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Start the the most popilar
-cat $TEMPFILEA | sed '/com$/d; /ru$/d; /org$/d; /net$/d; /de$/d; /jp$/d; /uk$/d; /br$/d; /it$/d; /pl$/d; /fr$/d; /in$/d; /ir$/d; /au$/d; /info$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/com$/Id; /ru$/Id; /org$/Id; /net$/Id; /de$/Id; /jp$/Id; /uk$/Id; /br$/Id; /it$/Id; /pl$/Id; /fr$/Id; /in$/Id; /ir$/Id; /au$/Id; /info$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 
@@ -24,7 +24,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/nl$/d; /cn$/d; /es$/d; /cz$/d; /kr$/d; /ca$/d; /eu$/d; /ua$/d; /gr$/d; /co$/d; /ro$/d; /za$/d; /ch$/d; /se$/d; /tw$/d; /biz$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/nl$/Id; /cn$/Id; /es$/Id; /cz$/Id; /kr$/Id; /ca$/Id; /eu$/Id; /ua$/Id; /gr$/Id; /co$/Id; /ro$/Id; /za$/Id; /ch$/Id; /se$/Id; /tw$/Id; /biz$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -40,7 +40,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/hu$/d; /vn$/d; /mx$/d; /be$/d; /at$/d; /tr$/d; /dk$/d; /tv$/d; /ar$/d; /me$/d; /sk$/d; /no$/d; /us$/d; /fi$/d; /cl$/d; /id$/d; /io$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/hu$/Id; /vn$/Id; /mx$/Id; /be$/Id; /at$/Id; /tr$/Id; /dk$/Id; /tv$/Id; /ar$/Id; /me$/Id; /sk$/Id; /no$/Id; /us$/Id; /fi$/Id; /cl$/Id; /id$/Id; /io$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -56,7 +56,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/xyz$/d; /pt$/d; /by$/d; /il$/d; /ie$/d; /nz$/d; /kz$/d; /lt$/d; /hk$/d; /cc$/d; /my$/d; /sg$/d; /club$/d; /top$/d; /bg$/d; /рф$/d; /edu$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/xyz$/Id; /pt$/Id; /by$/Id; /il$/Id; /ie$/Id; /nz$/Id; /kz$/Id; /lt$/Id; /hk$/Id; /cc$/Id; /my$/Id; /sg$/Id; /club$/Id; /top$/Id; /bg$/Id; /рф$/Id; /edu$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -72,7 +72,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/th$/d; /su$/d; /pk$/d; /hr$/d; /rs$/d; /pro$/d; /si$/d; /lv$/d; /az$/d; /pe$/d; /ae$/d; /ph$/d; /download$/d; /pw$/d; /ee$/d; /ng$/d; /online$/d; /cat$/d; /ve$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/th$/Id; /su$/Id; /pk$/Id; /hr$/Id; /rs$/Id; /pro$/Id; /si$/Id; /lv$/Id; /az$/Id; /pe$/Id; /ae$/Id; /ph$/Id; /download$/Id; /pw$/Id; /ee$/Id; /ng$/Id; /online$/Id; /cat$/Id; /ve$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -88,7 +88,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/th$/d; /su$/d; /pk$/d; /hr$/d; /rs$/d; /pro$/d; /si$/d; /lv$/d; /az$/d; /pe$/d; /ae$/d; /ph$/d; /download$/d; /pw$/d; /ee$/d; /ng$/d; /online$/d; /cat$/d; /ve$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/th$/Id; /su$/Id; /pk$/Id; /hr$/Id; /rs$/Id; /pro$/Id; /si$/Id; /lv$/Id; /az$/Id; /pe$/Id; /ae$/Id; /ph$/Id; /download$/Id; /pw$/Id; /ee$/Id; /ng$/Id; /online$/Id; /cat$/Id; /ve$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -104,7 +104,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/mobi$/d; /gov$/d; /tk$/d; /sa$/d; /uz$/d; /ws$/d; /asia$/d; /ma$/d; /lk$/d; /site$/d; /is$/d; /ge$/d; /nu$/d; /lu$/d; /fm$/d; /bd$/d; /xxx$/d; /ba$/d; /to$/d; /am$/d; /uy$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/mobi$/Id; /gov$/Id; /tk$/Id; /sa$/Id; /uz$/Id; /ws$/Id; /asia$/Id; /ma$/Id; /lk$/Id; /site$/Id; /is$/Id; /ge$/Id; /nu$/Id; /lu$/Id; /fm$/Id; /bd$/Id; /xxx$/Id; /ba$/Id; /to$/Id; /am$/Id; /uy$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -120,7 +120,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/ec$/d; /ke$/d; /tn$/d; /website$/d; /mk$/d; /do$/d; /name$/d; /md$/d; /mn$/d; /space$/d; /link$/d; /tokyo$/d; /ml$/d; /travel$/d; /ga$/d; /news$/d; /eg$/d; /today$/d; /np$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/ec$/Id; /ke$/Id; /tn$/Id; /website$/Id; /mk$/Id; /do$/Id; /name$/Id; /md$/Id; /mn$/Id; /space$/Id; /link$/Id; /tokyo$/Id; /ml$/Id; /travel$/Id; /ga$/Id; /news$/Id; /eg$/Id; /today$/Id; /np$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -136,7 +136,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/la$/d; /py$/d; /bz$/d; /im$/d; /al$/d; /life$/d; /tech$/d; /tz$/d; /kg$/d; /coop$/d; /cr$/d; /gt$/d; /ly$/d; /dz$/d; /bo$/d; /qa$/d; /win$/d; /cf$/d; /cy$/d; /jobs$/d; /ug$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/la$/Id; /py$/Id; /bz$/Id; /im$/Id; /al$/Id; /life$/Id; /tech$/Id; /tz$/Id; /kg$/Id; /coop$/Id; /cr$/Id; /gt$/Id; /ly$/Id; /dz$/Id; /bo$/Id; /qa$/Id; /win$/Id; /cf$/Id; /cy$/Id; /jobs$/Id; /ug$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -152,7 +152,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/live$/d; /guru$/d; /media$/d; /click$/d; /sexy$/d; /aero$/d; /li$/d; /pa$/d; /ai$/d; /vc$/d; /world$/d; /tj$/d; /sv$/d; /ag$/d; /jo$/d; /gg$/d; /ao$/d; /one$/d; /rocks$/d; /af$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/live$/Id; /guru$/Id; /media$/Id; /click$/Id; /sexy$/Id; /aero$/Id; /li$/Id; /pa$/Id; /ai$/Id; /vc$/Id; /world$/Id; /tj$/Id; /sv$/Id; /ag$/Id; /jo$/Id; /gg$/Id; /ao$/Id; /one$/Id; /rocks$/Id; /af$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -168,7 +168,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/ps$/d; /kw$/d; /london$/d; /ovh$/d; /mm$/d; /shop$/d; /agency$/d; /bid$/d; /blog$/d; /work$/d; /cm$/d; /lb$/d; /press$/d; /ninja$/d; /sd$/d; /gh$/d; /digital$/d; /ni$/d; /cu$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/ps$/Id; /kw$/Id; /london$/Id; /ovh$/Id; /mm$/Id; /shop$/Id; /agency$/Id; /bid$/Id; /blog$/Id; /work$/Id; /cm$/Id; /lb$/Id; /press$/Id; /ninja$/Id; /sd$/Id; /gh$/Id; /digital$/Id; /ni$/Id; /cu$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -184,7 +184,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/eus$/d; /kh$/d; /nyc$/d; /om$/d; /ci$/d; /video$/d; /center$/d; /mt$/d; /cloud$/d; /mu$/d; /re$/d; /academy$/d; /moe$/d; /gq$/d; /hn$/d; /so$/d; /store$/d; /mo$/d; /rw$/d; /st$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/eus$/Id; /kh$/Id; /nyc$/Id; /om$/Id; /ci$/Id; /video$/Id; /center$/Id; /mt$/Id; /cloud$/Id; /mu$/Id; /re$/Id; /academy$/Id; /moe$/Id; /gq$/Id; /hn$/Id; /so$/Id; /store$/Id; /mo$/Id; /rw$/Id; /st$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -200,7 +200,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/sy$/d; /global$/d; /zw$/d; /bh$/d; /ac$/d; /sn$/d; /pics$/d; /zone$/d; /red$/d; /tips$/d; /vip$/d; /host$/d; /design$/d; /et$/d; /sh$/d; /wiki$/d; /mz$/d; /iq$/d; /ms$/d; /berlin$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/sy$/Id; /global$/Id; /zw$/Id; /bh$/Id; /ac$/Id; /sn$/Id; /pics$/Id; /zone$/Id; /red$/Id; /tips$/Id; /vip$/Id; /host$/Id; /design$/Id; /et$/Id; /sh$/Id; /wiki$/Id; /mz$/Id; /iq$/Id; /ms$/Id; /berlin$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -216,7 +216,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/education$/d; /trade$/d; /tt$/d; /city$/d; /mg$/d; /solutions$/d; /na$/d; /paris$/d; /company$/d; /network$/d; /cx$/d; /zm$/d; /cd$/d; /stream$/d; /bw$/d; /sc$/d; /technology$/d; /social$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/education$/Id; /trade$/Id; /tt$/Id; /city$/Id; /mg$/Id; /solutions$/Id; /na$/Id; /paris$/Id; /company$/Id; /network$/Id; /cx$/Id; /zm$/Id; /cd$/Id; /stream$/Id; /bw$/Id; /sc$/Id; /technology$/Id; /social$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -232,7 +232,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/fo$/d; /gs$/d; /bt$/d; /plus$/d; /porn$/d; /guide$/d; /pg$/d; /expert$/d; /bn$/d; /tm$/d; /blue$/d; /studio$/d; /wang$/d; /ad$/d; /as$/d; /moscow$/d; /events$/d; /party$/d; /int$/d; /tools$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/fo$/Id; /gs$/Id; /bt$/Id; /plus$/Id; /porn$/Id; /guide$/Id; /pg$/Id; /expert$/Id; /bn$/Id; /tm$/Id; /blue$/Id; /studio$/Id; /wang$/Id; /ad$/Id; /as$/Id; /moscow$/Id; /events$/Id; /party$/Id; /int$/Id; /tools$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -248,7 +248,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/bike$/d; /marketing$/d; /gal$/d; /land$/d; /lol$/d; /men$/d; /mv$/d; /bzh$/d; /jm$/d; /works$/d; /tc$/d; /bf$/d; /directory$/d; /nc$/d; /gl$/d; /pf$/d; /review$/d; /cool$/d; /gratis$/d; /pub$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/bike$/Id; /marketing$/Id; /gal$/Id; /land$/Id; /lol$/Id; /men$/Id; /mv$/Id; /bzh$/Id; /jm$/Id; /works$/Id; /tc$/Id; /bf$/Id; /directory$/Id; /nc$/Id; /gl$/Id; /pf$/Id; /review$/Id; /cool$/Id; /gratis$/Id; /pub$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -264,7 +264,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/help$/d; /audio$/d; /systems$/d; /email$/d; /bio$/d; /gi$/d; /ht$/d; /chat$/d; /bm$/d; /mil$/d; /webcam$/d; /fj$/d; /sm$/d; /sx$/d; /gdn$/d; /market$/d; /tl$/d; /community$/d; /watch$/d; /love$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/help$/Id; /audio$/Id; /systems$/Id; /email$/Id; /bio$/Id; /gi$/Id; /ht$/Id; /chat$/Id; /bm$/Id; /mil$/Id; /webcam$/Id; /fj$/Id; /sm$/Id; /sx$/Id; /gdn$/Id; /market$/Id; /tl$/Id; /community$/Id; /watch$/Id; /love$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -280,7 +280,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/services$/d; /sex$/d; /support$/d; /cash$/d; /pink$/d; /school$/d; /science$/d; /tf$/d; /mr$/d; /pm$/d; /photos$/d; /buzz$/d; /reviews$/d; /scot$/d; /team$/d; /codes$/d; /bank$/d; /date$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/services$/Id; /sex$/Id; /support$/Id; /cash$/Id; /pink$/Id; /school$/Id; /science$/Id; /tf$/Id; /mr$/Id; /pm$/Id; /photos$/Id; /buzz$/Id; /reviews$/Id; /scot$/Id; /team$/Id; /codes$/Id; /bank$/Id; /date$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -296,7 +296,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/gy$/d; /mc$/d; /photo$/d; /run$/d; /dj$/d; /international$/d; /wtf$/d; /photography$/d; /report$/d; /bet$/d; /ky$/d; /money$/d; /pr$/d; /gallery$/d; /games$/d; /group$/d; /ink$/d; /bi$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/gy$/Id; /mc$/Id; /photo$/Id; /run$/Id; /dj$/Id; /international$/Id; /wtf$/Id; /photography$/Id; /report$/Id; /bet$/Id; /ky$/Id; /money$/Id; /pr$/Id; /gallery$/Id; /games$/Id; /group$/Id; /ink$/Id; /bi$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -312,7 +312,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/ren$/d; /brussels$/d; /movie$/d; /software$/d; /training$/d; /careers$/d; /mw$/d; /fit$/d; /istanbul$/d; /racing$/d; /church$/d; /gd$/d; /je$/d; /ltd$/d; /vg$/d; /camp$/d; /house$/d; /taipei$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/ren$/Id; /brussels$/Id; /movie$/Id; /software$/Id; /training$/Id; /careers$/Id; /mw$/Id; /fit$/Id; /istanbul$/Id; /racing$/Id; /church$/Id; /gd$/Id; /je$/Id; /ltd$/Id; /vg$/Id; /camp$/Id; /house$/Id; /taipei$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -328,7 +328,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/kim$/d; /wien$/d; /ye$/d; /black$/d; /coffee$/d; /farm$/d; /okinawa$/d; /онлайн$/d; /cafe$/d; /care$/d; /deals$/d; /fun$/d; /casino$/d; /nagoya$/d; /vu$/d; /бел$/d; /укр$/d; /sr$/d; /style$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/kim$/Id; /wien$/Id; /ye$/Id; /black$/Id; /coffee$/Id; /farm$/Id; /okinawa$/Id; /онлайн$/Id; /cafe$/Id; /care$/Id; /deals$/Id; /fun$/Id; /casino$/Id; /nagoya$/Id; /vu$/Id; /бел$/Id; /укр$/Id; /sr$/Id; /style$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -344,7 +344,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/yt$/d; /cv$/d; /vision$/d; /hosting$/d; /swiss$/d; /tel$/d; /direct$/d; /ngo$/d; /university$/d; /business$/d; /faith$/d; /loan$/d; /sl$/d; /dm$/d; /domains$/d; /institute$/d; /lc$/d; /museum$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/yt$/Id; /cv$/Id; /vision$/Id; /hosting$/Id; /swiss$/Id; /tel$/Id; /direct$/Id; /ngo$/Id; /university$/Id; /business$/Id; /faith$/Id; /loan$/Id; /sl$/Id; /dm$/Id; /domains$/Id; /institute$/Id; /lc$/Id; /museum$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -360,7 +360,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/wales$/d; /bb$/d; /energy$/d; /ooo$/d; /ventures$/d; /amsterdam$/d; /gift$/d; /dating$/d; /place$/d; /tube$/d; /beer$/d; /cards$/d; /fund$/d; /show$/d; /uno$/d; /exchange$/d; /express$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/wales$/Id; /bb$/Id; /energy$/Id; /ooo$/Id; /ventures$/Id; /amsterdam$/Id; /gift$/Id; /dating$/Id; /place$/Id; /tube$/Id; /beer$/Id; /cards$/Id; /fund$/Id; /show$/Id; /uno$/Id; /exchange$/Id; /express$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -376,7 +376,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/foundation$/d; /hamburg$/d; /pictures$/d; /ax$/d; /nrw$/d; /poker$/d; /sz$/d; /рус$/d; /bar$/d; /camera$/d; /dog$/d; /earth$/d; /ls$/d; /yokohama$/d; /москва$/d; /boutique$/d; /clothing$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/foundation$/Id; /hamburg$/Id; /pictures$/Id; /ax$/Id; /nrw$/Id; /poker$/Id; /sz$/Id; /рус$/Id; /bar$/Id; /camera$/Id; /dog$/Id; /earth$/Id; /ls$/Id; /yokohama$/Id; /москва$/Id; /boutique$/Id; /clothing$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -392,7 +392,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/fitness$/d; /immo$/d; /jetzt$/d; /kiwi$/d; /barcelona$/d; /delivery$/d; /ist$/d; /kitchen$/d; /menu$/d; /partners$/d; /town$/d; /va$/d; /bayern$/d; /koeln$/d; /parts$/d; /sale$/d; /solar$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/fitness$/Id; /immo$/Id; /jetzt$/Id; /kiwi$/Id; /barcelona$/Id; /delivery$/Id; /ist$/Id; /kitchen$/Id; /menu$/Id; /partners$/Id; /town$/Id; /va$/Id; /bayern$/Id; /koeln$/Id; /parts$/Id; /sale$/Id; /solar$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -408,7 +408,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/tg$/d; /bj$/d; /tienda$/d; /graphics$/d; /quebec$/d; /clinic$/d; /cricket$/d; /desi$/d; /fashion$/d; /law$/d; /sb$/d; /taxi$/d; /toys$/d; /コム$/d; /bs$/d; /engineering$/d; /moda$/d; /移动$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/tg$/Id; /bj$/Id; /tienda$/Id; /graphics$/Id; /quebec$/Id; /clinic$/Id; /cricket$/Id; /desi$/Id; /fashion$/Id; /law$/Id; /sb$/Id; /taxi$/Id; /toys$/Id; /コム$/Id; /bs$/Id; /engineering$/Id; /moda$/Id; /移动$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -424,7 +424,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/gp$/d; /restaurant$/d; /vegas$/d; /wf$/d; /xin$/d; /consulting$/d; /cw$/d; /finance$/d; /gm$/d; /rip$/d; /shoes$/d; /capital$/d; /film$/d; /fish$/d; /game$/d; /green$/d; /onl$/d; /singles$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/gp$/Id; /restaurant$/Id; /vegas$/Id; /wf$/Id; /xin$/Id; /consulting$/Id; /cw$/Id; /finance$/Id; /gm$/Id; /rip$/Id; /shoes$/Id; /capital$/Id; /film$/Id; /fish$/Id; /game$/Id; /green$/Id; /onl$/Id; /singles$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -440,7 +440,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/best$/d; /build$/d; /cg$/d; /coach$/d; /ne$/d; /wedding$/d; /art$/d; /estate$/d; /fyi$/d; /glass$/d; /rio$/d; /tours$/d; /accountant$/d; /adult$/d; /archi$/d; /football$/d; /kp$/d; /kyoto$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/best$/Id; /build$/Id; /cg$/Id; /coach$/Id; /ne$/Id; /wedding$/Id; /art$/Id; /estate$/Id; /fyi$/Id; /glass$/Id; /rio$/Id; /tours$/Id; /accountant$/Id; /adult$/Id; /archi$/Id; /football$/Id; /kp$/Id; /kyoto$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -456,7 +456,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/lat$/d; /legal$/d; /sydney$/d; /band$/d; /bnpparibas$/d; /computer$/d; /dance$/d; /futbol$/d; /gold$/d; /pet$/d; /rentals$/d; /rest$/d; /ski$/d; /tirol$/d; /yoga$/d; /cam$/d; /how$/d; /pn$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/lat$/Id; /legal$/Id; /sydney$/Id; /band$/Id; /bnpparibas$/Id; /computer$/Id; /dance$/Id; /futbol$/Id; /gold$/Id; /pet$/Id; /rentals$/Id; /rest$/Id; /ski$/Id; /tirol$/Id; /yoga$/Id; /cam$/Id; /how$/Id; /pn$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -472,7 +472,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/recipes$/d; /surf$/d; /lr$/d; /repair$/d; /орг$/d; /abbott$/d; /auction$/d; /cab$/d; /gop$/d; /lighting$/d; /pizza$/d; /supply$/d; /vote$/d; /сайт$/d; /aw$/d; /college$/d; /melbourne$/d; /osaka$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/recipes$/Id; /surf$/Id; /lr$/Id; /repair$/Id; /орг$/Id; /abbott$/Id; /auction$/Id; /cab$/Id; /gop$/Id; /lighting$/Id; /pizza$/Id; /supply$/Id; /vote$/Id; /сайт$/Id; /aw$/Id; /college$/Id; /melbourne$/Id; /osaka$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -488,7 +488,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/rent$/d; /viajes$/d; /casa$/d; /ck$/d; /cymru$/d; /exposed$/d; /golf$/d; /hm$/d; /holiday$/d; /leclerc$/d; /properties$/d; /study$/d; /tax$/d; /vet$/d; /alsace$/d; /credit$/d; /dental$/d; /diet$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/rent$/Id; /viajes$/Id; /casa$/Id; /ck$/Id; /cymru$/Id; /exposed$/Id; /golf$/Id; /hm$/Id; /holiday$/Id; /leclerc$/Id; /properties$/Id; /study$/Id; /tax$/Id; /vet$/Id; /alsace$/Id; /credit$/Id; /dental$/Id; /diet$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -504,7 +504,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/family$/d; /gent$/d; /haus$/d; /holdings$/d; /horse$/d; /kaufen$/d; /miami$/d; /ong$/d; /realtor$/d; /ruhr$/d; /saarland$/d; /srl$/d; /한국$/d; /aq$/d; /bible$/d; /capetown$/d; /ceo$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/family$/Id; /gent$/Id; /haus$/Id; /holdings$/Id; /horse$/Id; /kaufen$/Id; /miami$/Id; /ong$/Id; /realtor$/Id; /ruhr$/Id; /saarland$/Id; /srl$/Id; /한국$/Id; /aq$/Id; /bible$/Id; /capetown$/Id; /ceo$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -520,7 +520,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/corsica$/d; /insure$/d; /limited$/d; /promo$/d; /theater$/d; /villas$/d; /vlaanderen$/d; /voyage$/d; /ДЕТИ$/d; /builders$/d; /cern$/d; /cheap$/d; /discount$/d; /fishing$/d; /gmbh$/d; /jewelry$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/corsica$/Id; /insure$/Id; /limited$/Id; /promo$/Id; /theater$/Id; /villas$/Id; /vlaanderen$/Id; /voyage$/Id; /ДЕТИ$/Id; /builders$/Id; /cern$/Id; /cheap$/Id; /discount$/Id; /fishing$/Id; /gmbh$/Id; /jewelry$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -536,7 +536,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/mp$/d; /mq$/d; /post$/d; /productions$/d; /reisen$/d; /sener$/d; /wine$/d; /中国$/d; /auto$/d; /bargains$/d; /equipment$/d; /financial$/d; /garden$/d; /gifts$/d; /gn$/d; /google$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/mp$/Id; /mq$/Id; /post$/Id; /productions$/Id; /reisen$/Id; /sener$/Id; /wine$/Id; /中国$/Id; /auto$/Id; /bargains$/Id; /equipment$/Id; /financial$/Id; /garden$/Id; /gifts$/Id; /gn$/Id; /google$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -552,7 +552,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/healthcare$/d; /hiphop$/d; /irish$/d; /joburg$/d; /ki$/d; /kn$/d; /lawyer$/d; /schule$/d; /shopping$/d; /soy$/d; /supplies$/d; /tattoo$/d; /vi$/d; /みんな$/d; /army$/d; /bradesco$/d; /cars$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/healthcare$/Id; /hiphop$/Id; /irish$/Id; /joburg$/Id; /ki$/Id; /kn$/Id; /lawyer$/Id; /schule$/Id; /shopping$/Id; /soy$/Id; /supplies$/Id; /tattoo$/Id; /vi$/Id; /みんな$/Id; /army$/Id; /bradesco$/Id; /cars$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -568,7 +568,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/fail$/d; /frl$/d; /jcb$/d; /juegos$/d; /kred$/d; /lgbt$/d; /management$/d; /mba$/d; /ryukyu$/d; /بازار$/d; /afl$/d; /associates$/d; /claims$/d; /cleaning$/d; /cologne$/d; /cooking$/d; /coupons$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/fail$/Id; /frl$/Id; /jcb$/Id; /juegos$/Id; /kred$/Id; /lgbt$/Id; /management$/Id; /mba$/Id; /ryukyu$/Id; /بازار$/Id; /afl$/Id; /associates$/Id; /claims$/Id; /cleaning$/Id; /cologne$/Id; /cooking$/Id; /coupons$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -584,7 +584,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/diamonds$/d; /fage$/d; /fans$/d; /flights$/d; /forsale$/d; /furniture$/d; /gf$/d; /guitars$/d; /immobilien$/d; /investments$/d; /komatsu$/d; /krd$/d; /loans$/d; /pharmacy$/d; /shiksha$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/diamonds$/Id; /fage$/Id; /fans$/Id; /flights$/Id; /forsale$/Id; /furniture$/Id; /gf$/Id; /guitars$/Id; /immobilien$/Id; /investments$/Id; /komatsu$/Id; /krd$/Id; /loans$/Id; /pharmacy$/Id; /shiksha$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -600,7 +600,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/td$/d; /vodka$/d; /attorney$/d; /blackfriday$/d; /car$/d; /citic$/d; /dnp$/d; /eco$/d; /gu$/d; /limo$/d; /luxury$/d; /maison$/d; /praxi$/d; /property$/d; /reise$/d; /vin$/d; /信息$/d; /我爱你$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/td$/Id; /vodka$/Id; /attorney$/Id; /blackfriday$/Id; /car$/Id; /citic$/Id; /dnp$/Id; /eco$/Id; /gu$/Id; /limo$/Id; /luxury$/Id; /maison$/Id; /praxi$/Id; /property$/Id; /reise$/Id; /vin$/Id; /信息$/Id; /我爱你$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -616,7 +616,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/apartments$/d; /aws$/d; /axa$/d; /barclaycard$/d; /barclays$/d; /bingo$/d; /cancerresearch$/d; /career$/d; /christmas$/d; /country$/d; /courses$/d; /enterprises$/d; /fk$/d; /florist$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/apartments$/Id; /aws$/Id; /axa$/Id; /barclaycard$/Id; /barclays$/Id; /bingo$/Id; /cancerresearch$/Id; /career$/Id; /christmas$/Id; /country$/Id; /courses$/Id; /enterprises$/Id; /fk$/Id; /florist$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -632,7 +632,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/gives$/d; /hitachi$/d; /monash$/d; /mortgage$/d; /nr$/d; /rodeo$/d; /saxo$/d; /sucks$/d; /tatar$/d; /tickets$/d; /toray$/d; /vacations$/d; /срб$/d; /شبكة$/d; /香港$/d; /닷넷$/d; /aco$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/gives$/Id; /hitachi$/Id; /monash$/Id; /mortgage$/Id; /nr$/Id; /rodeo$/Id; /saxo$/Id; /sucks$/Id; /tatar$/Id; /tickets$/Id; /toray$/Id; /vacations$/Id; /срб$/Id; /شبكة$/Id; /香港$/Id; /닷넷$/Id; /aco$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -648,7 +648,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/audi$/d; /canon$/d; /condos$/d; /construction$/d; /contractors$/d; /cruises$/d; /dhl$/d; /emerck$/d; /engineer$/d; /flowers$/d; /hiv$/d; /hockey$/d; /industries$/d; /km$/d; /lidl$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/audi$/Id; /canon$/Id; /condos$/Id; /construction$/Id; /contractors$/Id; /cruises$/Id; /dhl$/Id; /emerck$/Id; /engineer$/Id; /flowers$/Id; /hiv$/Id; /hockey$/Id; /industries$/Id; /km$/Id; /lidl$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -664,7 +664,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/ltda$/d; /markets$/d; /mini$/d; /neustar$/d; /nf$/d; /nico$/d; /organic$/d; /pictet$/d; /pioneer$/d; /plumbing$/d; /rehab$/d; /sandvik$/d; /scb$/d; /schmidt$/d; /sony$/d; /swatch$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/ltda$/Id; /markets$/Id; /mini$/Id; /neustar$/Id; /nf$/Id; /nico$/Id; /organic$/Id; /pictet$/Id; /pioneer$/Id; /plumbing$/Id; /rehab$/Id; /sandvik$/Id; /scb$/Id; /schmidt$/Id; /sony$/Id; /swatch$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -680,7 +680,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/theatre$/d; /whoswho$/d; /yandex$/d; /қаз$/d; /قطر$/d; /भारत$/d; /বাংলা$/d; /닷컴$/d; /abb$/d; /airforce$/d; /aquarelle$/d; /basketball$/d; /bmw$/d; /bridgestone$/d; /catering$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/theatre$/Id; /whoswho$/Id; /yandex$/Id; /қаз$/Id; /قطر$/Id; /भारत$/Id; /বাংলা$/Id; /닷컴$/Id; /abb$/Id; /airforce$/Id; /aquarelle$/Id; /basketball$/Id; /bmw$/Id; /bridgestone$/Id; /catering$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -696,7 +696,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/cfa$/d; /creditcard$/d; /crs$/d; /degree$/d; /dentist$/d; /durban$/d; /dvag$/d; /edeka$/d; /erni$/d; /everbank$/d; /foo$/d; /frogans$/d; /globo$/d; /goog$/d; /gw$/d; /java$/d; /jll$/d; /kinder$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/cfa$/Id; /creditcard$/Id; /crs$/Id; /degree$/Id; /dentist$/Id; /durban$/Id; /dvag$/Id; /edeka$/Id; /erni$/Id; /everbank$/Id; /foo$/Id; /frogans$/Id; /globo$/Id; /goog$/Id; /gw$/Id; /java$/Id; /jll$/Id; /kinder$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -712,7 +712,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/latrobe$/d; /lease$/d; /mma$/d; /mom$/d; /motorcycles$/d; /nadex$/d; /navy$/d; /ntt$/d; /physio$/d; /reit$/d; /republican$/d; /rich$/d; /ricoh$/d; /salon$/d; /sarl$/d; /sbi$/d; /soccer$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/latrobe$/Id; /lease$/Id; /mma$/Id; /mom$/Id; /motorcycles$/Id; /nadex$/Id; /navy$/Id; /ntt$/Id; /physio$/Id; /reit$/Id; /republican$/Id; /rich$/Id; /ricoh$/Id; /salon$/Id; /sarl$/Id; /sbi$/Id; /soccer$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
@@ -728,7 +728,7 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-cat $TEMPFILEA | sed '/tennis$/d; /tires$/d; /trading$/d; /trust$/d; /voting$/d; /voto$/d; /weir$/d; /հայ$/d; /امارات$/d; /تونس$/d; /موقع$/d; /ไทย$/d; /公司$/d; /台灣$/d; /在线$/d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/tennis$/Id; /tires$/Id; /trading$/Id; /trust$/Id; /voting$/Id; /voto$/Id; /weir$/Id; /հայ$/Id; /امارات$/Id; /تونس$/Id; /موقع$/Id; /ไทย$/Id; /公司$/Id; /台灣$/Id; /在线$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
