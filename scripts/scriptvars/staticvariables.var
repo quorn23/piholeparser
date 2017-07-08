@@ -66,8 +66,6 @@ REPODIR=/etc/"$REPONAME"/
 
   SCRIPTSDIR="$REPODIR"scripts/
       CREATEBIGLISTSCRIPT="$SCRIPTSDIR"createbiglist.sh
-      DELETETEMPFILE="$SCRIPTSDIR"deletetempfile.sh
-      DEPENDENCYCHECKSCRIPT="$SCRIPTSDIR"dependencycheck.sh
       HOUSEKEEPINGSCRIPT="$SCRIPTSDIR"housekeeping.sh
       PARSERSCRIPT="$SCRIPTSDIR"parser.sh
       PUSHLISTSSCRIPT="$SCRIPTSDIR"pushlists.sh
@@ -78,6 +76,18 @@ REPODIR=/etc/"$REPONAME"/
       
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
+
+      MINISCRIPTSDIR="$SCRIPTSDIR"miniscripts/
+          TEMPVARSMSCRIPT="$MINISCRIPTSDIR"tempvars.sh
+          STARTTIMEMSCRIPT="$MINISCRIPTSDIR"starttime.sh
+          RECENTRUNLOGMSCRIPT="$MINISCRIPTSDIR"recentrunlog.sh
+          HTTPSLESSMSCRIPT="$MINISCRIPTSDIR"httpslesslists.sh
+          OLDPARSEDMSCRIPT="$MINISCRIPTSDIR"oldparseddelete.sh
+          OLDMIRRORMSCRIPT="$MINISCRIPTSDIR"oldmirrordelete.sh
+          BIGSOURCEGENMSCRIPT="$MINISCRIPTSDIR"bigsourcegen.sh
+          DOMAINTLDSMSCRIPT="$MINISCRIPTSDIR"domaintlds.sh
+          DELETETEMPFILE="$MINISCRIPTSDIR"deletetempfile.sh
+          DEPENDENCYCHECKSCRIPT="$MINISCRIPTSDIR"dependencycheck.sh
 
   TEMPDIR="$REPODIR"temp/
     TEMPCLEANUP="$TEMPDIR"*.txt
