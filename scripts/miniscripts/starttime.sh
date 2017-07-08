@@ -5,6 +5,7 @@
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 source $TEMPVARS
 
+timestamp=$(echo `date`)
 STARTTIME="Script Started At $timestamp"
 STARTIMEVAR=$(echo $STARTIME)
 STARTTIMESTAMP=$(date +"%s")
