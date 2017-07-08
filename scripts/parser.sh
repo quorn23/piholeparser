@@ -557,12 +557,15 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
 for source in `cat $MOSTCOMMONTLD`;
 do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i '/[$line]$/d' $TEMPFILEA
+sed -i '/[$source]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -573,12 +576,16 @@ else
 STOPTLDSEARCH=true
 fi
 done
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
 for source in `cat $MOSTCOMMONTLDB`;
 do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i '/[$line]$/d' $TEMPFILEA
+sed -i '/[$source]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -589,12 +596,16 @@ else
 STOPTLDSEARCH=true
 fi
 done
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
 for source in `cat $MOSTCOMMONTLDC`;
 do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i '/[$line]$/d' $TEMPFILEA
+sed -i '/[$source]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -605,12 +616,16 @@ else
 STOPTLDSEARCH=true
 fi
 done
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
 for source in `cat $VALIDDOMAINTLD`;
 do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i '/[$line]$/d' $TEMPFILEA
+sed -i '/[$source]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -621,10 +636,11 @@ else
 STOPTLDSEARCH=true
 fi
 done
+fi
 unset STOPTLDSEARCH
 for source in `cat $TEMPFILEA`;
 do
-sed -i '/[$line]$/d' $BFILETEMP
+sed -i '/[$source]$/d' $BFILETEMP
 done
 mv $BFILETEMP $BTEMPFILE
 #gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
