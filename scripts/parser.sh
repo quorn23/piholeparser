@@ -717,6 +717,8 @@ fi
 unset STOPTLDSEARCH
 for source in `cat $TEMPFILEA`;
 do
+touch $TRYNACATCHFIlES
+echo "* $source" | tee --append $TRYNACATCHFIlES &>/dev/null
 sed -i '/[$source]$/d' $BFILETEMP
 done
 mv $BFILETEMP $BTEMPFILE
