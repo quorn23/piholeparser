@@ -152,7 +152,7 @@ echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $ti
 #wget -q -O $BTEMPFILE $MIRROREDFILEDL
 #cat $BTEMPFILE >> $BORIGINALFILETEMP
 #rm $BTEMPFILE
-cat $MIRROREDFILE >> $BORIGINALFILETEMP
+cp $MIRROREDFILE $BORIGINALFILETEMP
 mv $f $BDEADPARSELIST
 elif
 [[ -z $FULLSKIPPARSING && $source == *.zip && -n $SOURCEIP ]]
@@ -160,7 +160,7 @@ then
 printf "$cyan"    "Fetching zip List From $UPCHECK Located At The IP Of "$SOURCEIP"."
 wget -q -O $COMPRESSEDTEMPSEVEN $source
 7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
-cat $BTEMPFILE >> $BORIGINALFILETEMP
+cp $MIRROREDFILE $BORIGINALFILETEMP
 rm $COMPRESSEDTEMPSEVEN
 elif
 [[ -z $FULLSKIPPARSING && $source == *.7z && -n $SOURCEIP ]]
