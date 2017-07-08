@@ -674,9 +674,6 @@ then
 else
 STOPTLDSEARCH=true
 fi
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
 for source in `cat $MOSTCOMMONTLDC`;
 do
 if
@@ -693,10 +690,6 @@ else
 STOPTLDSEARCH=true
 fi
 done
-fi
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
 for source in `cat $VALIDDOMAINTLD`;
 do
 if
@@ -713,7 +706,6 @@ else
 STOPTLDSEARCH=true
 fi
 done
-fi
 unset STOPTLDSEARCH
 touch $TRYNACATCHFIlES
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
