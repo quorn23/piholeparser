@@ -1,5 +1,5 @@
 #!/bin/bash
-## This Recreates The Temporary Variables
+## This Removes old mirrors that we wont be using anymore
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
