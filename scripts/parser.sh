@@ -592,8 +592,7 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
-MOSTCOMMONSED=`cat $MOSTCOMMONTLD`
-sed -i $MOSTCOMMONSED $TEMPFILEA
+sed -i '/com$/d; /ru$/d; /org$/d; /net$/d; /de$/d; /jp$/d; /uk$/d; /br$/d; /it$/d; /pl$/d; /fr$/d; /in$/d; /ir$/d; /au$/d; /info$/d' $TEMPFILEA
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
@@ -605,8 +604,67 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-MOSTCOMMONSEDB=`cat $MOSTCOMMONTLDB`
-sed -i $MOSTCOMMONSEDB $TEMPFILEA
+sed -i '/nl$/d; /cn$/d; /es$/d; /cz$/d; /kr$/d; /ca$/d; /eu$/d; /ua$/d; /gr$/d; /co$/d; /ro$/d; /za$/d; /ch$/d; /se$/d; /tw$/d; /biz$/d' $TEMPFILEA
+fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+sed -i '/hu$/d; /vn$/d; /mx$/d; /be$/d; /at$/d; /tr$/d; /dk$/d; /tv$/d; /ar$/d; /me$/d; /sk$/d; /no$/d; /us$/d; /fi$/d; /cl$/d; /id$/d; /io$/d' $TEMPFILEA
+fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+sed -i '/xyz$/d; /pt$/d; /by$/d; /il$/d; /ie$/d; /nz$/d; /kz$/d; /lt$/d; /hk$/d; /cc$/d; /my$/d; /sg$/d; /club$/d; /top$/d; /bg$/d; /рф$/d; /edu$/d' $TEMPFILEA
+fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+sed -i '/th$/d; /su$/d; /pk$/d; /hr$/d; /rs$/d; /pro$/d; /si$/d; /lv$/d; /az$/d; /pe$/d; /ae$/d; /ph$/d; /download$/d; /pw$/d; /ee$/d; /ng$/d; /online$/d; /cat$/d; /ve$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -619,8 +677,12 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-MOSTCOMMONSEDC=`cat $MOSTCOMMONTLDC`
-sed -i $MOSTCOMMONSEDC $TEMPFILEA
+for source in `cat $MOSTCOMMONTLDC`;
+do
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+sed -i '/[$source]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -629,6 +691,8 @@ then
 :
 else
 STOPTLDSEARCH=true
+fi
+done
 fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
@@ -656,7 +720,6 @@ do
 sed -i '/[$source]$/d' $BFILETEMP
 done
 mv $BFILETEMP $BTEMPFILE
-#gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
