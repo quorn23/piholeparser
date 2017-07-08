@@ -127,8 +127,6 @@ HOWMANYLINES=$(echo -e "\t`wc -l $BBLACKTEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $BBLACKTEMP $WHATLISTTOSORT
-echo "* Processed "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
 done
 
