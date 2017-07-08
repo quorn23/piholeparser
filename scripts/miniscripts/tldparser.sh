@@ -7,6 +7,7 @@ sed -i '/com$/d; /ru$/d; /org$/d; /net$/d; /de$/d; /jp$/d; /uk$/d; /br$/d; /it$/
 #########################################
 ## If still contents in file, continue ##
 #########################################
+
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
