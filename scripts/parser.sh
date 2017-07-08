@@ -553,7 +553,7 @@ fi
 ## File Extensions
 PARSECOMMENT="Removing Common File Extensions."
 if
-[[ -z $FILESIZEZERO ]]
+[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/gif$/d; /htm$/d; /html$/d; /php$/d; /png$/d; /swf$/d; /jpg$/d; /cgi$/d; /js$/d' > $BTEMPFILE
@@ -565,14 +565,14 @@ else
 :
 fi
 if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
 printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
@@ -580,7 +580,7 @@ unset ENDCOMMENT
 unset HOWMANYLINES
 fi
 if
-[[ "$FETCHFILESIZE" -eq 0 ]]
+[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
