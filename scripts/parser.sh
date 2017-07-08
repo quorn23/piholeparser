@@ -635,20 +635,17 @@ fi
 done
 fi
 unset STOPTLDSEARCH
-
 for source in `cat $TEMPFILEA`;
 do
 sed -i '/[$source]$/d' $BFILETEMP
 done
-
-
 mv $BFILETEMP $BTEMPFILE
 rm $TEMPFILEA
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
 mv $BTEMPFILE $BFILETEMP
-fi
+
 if
 [[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
