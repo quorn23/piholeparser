@@ -16,14 +16,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-CHECKME=$TEMPVARS
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
-source $TEMPVARS
+bash $TEMPVARSMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -42,11 +35,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-STARTTIME="Script Started At $timestamp"
-STARTIMEVAR=$(echo $STARTIME)
-STARTTIMESTAMP=$(date +"%s")
-echo "STARTTIME='"$STARTTIME"'" | tee --append $TEMPVARS &>/dev/null
-echo "STARTTIMESTAMP=$STARTTIMESTAMP" | tee --append $TEMPVARS &>/dev/null
+bash $STARTTIMEMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -65,17 +54,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-if 
-ls $RECENTRUN &> /dev/null; 
-then
-rm $RECENTRUN
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* Recent Run Log Removed and Recreated." | tee --append $RECENTRUN &>/dev/null
-else
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* Recent Run Log Created." | tee --append $RECENTRUN &>/dev/null
-fi
-echo "* $STARTTIME" | tee --append $RECENTRUN &>/dev/null
+bash $RECENTRUNLOGMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -94,26 +73,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-if 
-ls $NOHTTPSLISTS &> /dev/null; 
-then
-rm $NOHTTPSLISTS
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-for f in $EVERYLISTFILEWILDCARD
-do
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-for source in `cat $f`;
-do
-if
-[[ $source != https* ]]
-then
-echo "* $BASEFILENAME" | tee --append $NOHTTPSLISTS &>/dev/null
-fi
-done
-done
+bash $HTTPSLESSMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -132,27 +92,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-for f in $EVERYLISTFILEWILDCARD
-do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-TEMPOFILE="$TEMPDIR"TEMPOFILE.txt
-TEMPOFILEB="$TEMPDIR"TEMPOFILEB.txt
-LISTBASENAMETXT="$BASEFILENAME".txt
-echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
-done
-ls $PARSEDDIR > $TEMPFILE
-cat $TEMPFILE | sed '/README.md/d' > $TEMPOFILE
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPOFILE > $TEMPOFILEB
-for source in `cat $TEMPOFILEB`;
-do
-REMPARSEDFILE="$PARSEDDIR""$source"
-if
-[[ $source == *.txt ]]
-then
-rm $REMPARSEDFILE
-printf "$red"    "The $source .lst No Longer Exists. Parsed File Deleted."
-fi
-done
+bash $OLDPARSEDMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -171,27 +111,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-for f in $EVERYLISTFILEWILDCARD
-do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-TEMPOFILE="$TEMPDIR"TEMPOFILE.txt
-TEMPOFILEB="$TEMPDIR"TEMPOFILEB.txt
-LISTBASENAMETXT="$BASEFILENAME".txt
-echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
-done
-ls $MIRRORDIR > $TEMPFILE
-cat $TEMPFILE | sed '/README.md/d' > $TEMPOFILE
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPOFILE > $TEMPOFILEB
-for source in `cat $TEMPOFILEB`;
-do
-REMMIRRORFILE="$MIRRORDIR""$source"
-if
-[[ $source == *.txt ]]
-then
-rm $REMMIRRORFILE
-printf "$red"    "The $source .lst No Longer Exists. Mirror File Deleted."
-fi
-done
+bash $OLDMIRRORMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -210,21 +130,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-CHECKME=$BIGAPLSOURCE
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
-HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
-HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script."
-echo "HOWMANYSOURCELISTS='"$HOWMANYSOURCELISTS"'" | tee --append $TEMPVARS &>/dev/null
-echo "HOWMANYSOURCE='"$HOWMANYSOURCE"'" | tee --append $TEMPVARS &>/dev/null
-echo "$HOWMANYSOURCE"
-echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
-sed '/^$/d' $TEMPFILE > $FILETEMP
-mv $FILETEMP $BIGAPLSOURCE
+bash $BIGSOURCEGENMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
@@ -243,51 +149,7 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-CHECKME=$VALIDDOMAINTLD
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-for source in `cat $VALIDDOMAINTLDLINKS`;
-do
-printf "$cyan"    "The Source In The File Is:"
-printf "$yellow"    "$source"
-echo ""
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
-if
-[[ -n $UPCHECK ]]
-then
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
-SOURCEIP=`echo $SOURCEIPFETCH`
-else
-printf "$red"    "DOMAIN TLD Host Unavailable."
-fi
-if
-[[ -n $SOURCEIP ]]
-then
-curl -s -H "$agent" -L $source >> $TEMPFILEN
-elif
-[[ -z $SOURCEIP ]]
-then
-cp $VALIDDOMAINTLDBKUP $TEMPFILEN
-fi
-cat $TEMPFILEN >> $TEMPFILEM
-rm $TEMPFILEN
-done
-#cat $TEMPFILEM | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/^/./' > $TEMPFILEL
-cat $TEMPFILEM | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d' > $TEMPFILEL
-cat -s $TEMPFILEL | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
-rm $TEMPFILEL
-HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
-echo "$HOWMANYTLD Valid TLD's"
-CHECKME=$VALIDDOMAINTLDBKUP
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+bash $DOMAINTLDSMSCRIPT
 bash $DELETETEMPFILE
 echo ""
 echo "" | tee --append $RECENTRUN &>/dev/null
