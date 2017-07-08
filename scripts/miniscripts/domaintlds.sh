@@ -39,7 +39,7 @@ rm $TEMPFILEN
 done
 
 cat $TEMPFILEM | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d' > $TEMPFILEL
-tr '[A-Z]' '[a-z]' $TEMPFILEL > $TEMPFILEK
+cat $TEMPFILEL | sed 's/.*/\L\1/g' > $TEMPFILEK
 cat -s $TEMPFILEK | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 rm $TEMPFILEL
 rm $TEMPFILEK
