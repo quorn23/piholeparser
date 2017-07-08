@@ -570,8 +570,6 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
 then
-:
-else
 STOPTLDSEARCH=true
 fi
 done
@@ -588,8 +586,6 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
 then
-:
-else
 STOPTLDSEARCH=true
 fi
 done
@@ -606,8 +602,6 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
 then
-:
-else
 STOPTLDSEARCH=true
 fi
 done
@@ -624,8 +618,6 @@ HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
 then
-:
-else
 STOPTLDSEARCH=true
 fi
 done
