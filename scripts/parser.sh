@@ -715,10 +715,15 @@ fi
 done
 fi
 unset STOPTLDSEARCH
+touch $TRYNACATCHFIlES
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 for source in `cat $TEMPFILEA`;
 do
-touch $TRYNACATCHFIlES
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
 echo "* $source" | tee --append $TRYNACATCHFIlES &>/dev/null
+fi
 sed -i '/[$source]$/d' $BFILETEMP
 done
 mv $BFILETEMP $BTEMPFILE
