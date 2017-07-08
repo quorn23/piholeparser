@@ -562,7 +562,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i "/[$line]$/d" $TEMPFILEA
+sed -i '/[$line]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -578,7 +578,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i "/[$line]$/d" $TEMPFILEA
+sed -i '/[$line]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -594,7 +594,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i "/[$line]$/d" $TEMPFILEA
+sed -i '/[$line]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -610,7 +610,7 @@ do
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-sed -i "/[$line]$/d" $TEMPFILEA
+sed -i '/[$line]$/d' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -624,10 +624,9 @@ done
 unset STOPTLDSEARCH
 for source in `cat $TEMPFILEA`;
 do
-sed -i "/[$line]$/d" $BFILETEMP
+sed -i '/[$line]$/d' $BFILETEMP
 done
 mv $BFILETEMP $BTEMPFILE
-
 #gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $TEMPFILEA
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
