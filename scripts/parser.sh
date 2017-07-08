@@ -622,7 +622,14 @@ STOPTLDSEARCH=true
 fi
 done
 unset STOPTLDSEARCH
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
+for source in `cat $TEMPFILEA`;
+do
+sed -i '/[$line]$/d' $BFILETEMP
+done
+mv $BFILETEMP $BTEMPFILE
+
+#gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
+rm $TEMPFILEA
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
