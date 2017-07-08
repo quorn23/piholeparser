@@ -592,15 +592,21 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
+MOSTCOMMONSED=`cat $MOSTCOMMONTLD`
+sed -i '$MOSTCOMMONSED' $TEMPFILEA
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-for source in `cat $MOSTCOMMONTLD`;
-do
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
-sed -i '/[$source]$/d' $TEMPFILEA
+MOSTCOMMONSEDB=`cat $MOSTCOMMONTLDB`
+sed -i '$MOSTCOMMONSEDB' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -610,17 +616,11 @@ then
 else
 STOPTLDSEARCH=true
 fi
-done
-fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
 then
-for source in `cat $MOSTCOMMONTLDB`;
-do
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
-sed -i '/[$source]$/d' $TEMPFILEA
+MOSTCOMMONSEDC=`cat $MOSTCOMMONTLDC`
+sed -i '$MOSTCOMMONSEDC' $TEMPFILEA
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
@@ -629,28 +629,6 @@ then
 :
 else
 STOPTLDSEARCH=true
-fi
-done
-fi
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
-for source in `cat $MOSTCOMMONTLDC`;
-do
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
-sed -i '/[$source]$/d' $TEMPFILEA
-fi
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
-if
-[[ $HOWMANYLINES -gt 0 ]]
-then
-:
-else
-STOPTLDSEARCH=true
-fi
-done
 fi
 if
 [[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
