@@ -1,6 +1,9 @@
 #!/bin/bash
 ## Used in the Parsing Process,,, a bit extreme, but makes the list accurate
 
+## Variables
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+
 ## Start the the most popilar
 cat $TEMPFILEA | sed '/com$/d; /ru$/d; /org$/d; /net$/d; /de$/d; /jp$/d; /uk$/d; /br$/d; /it$/d; /pl$/d; /fr$/d; /in$/d; /ir$/d; /au$/d; /info$/d' > $TEMPFILEB
 rm $TEMPFILEA
