@@ -46,6 +46,12 @@ rm $TEMPFILEK
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's"
 
+CHECKME=$TLDCOMPARED
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $MAINTLDLIST $VALIDDOMAINTLD > $TLDCOMPARED
 HOWMANYTLDNEW=$(echo -e "\t`wc -l $TLDCOMPARED | cut -d " " -f 1`")
 echo "$HOWMANYTLDNEW Valid TLD's Not In Main Scan."
@@ -57,3 +63,10 @@ then
 rm $CHECKME
 fi
 cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+
+CHECKME=$TRYNACATCHFIlES
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
