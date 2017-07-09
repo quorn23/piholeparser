@@ -17,6 +17,9 @@ do
 for source in `cat $f`;
 do
 
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+
 ## Filenaming Vars
 source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 
@@ -106,7 +109,13 @@ fi
 done
 unset CURRENTTLDLIST
 unset MAYBESKIPDL
+echo ""
+printf "$orange" "___________________________________________________________"
+echo ""
 done
+
+printf "$lightblue"    "___________________________________________________________"
+echo ""
 
 CHECKME=$TLDCOMPARED
 if
@@ -140,3 +149,7 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
+
+echo ""
+printf "$orange" "___________________________________________________________"
+echo ""
