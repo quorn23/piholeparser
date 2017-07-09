@@ -8,10 +8,10 @@ cp $BIGAPL $TEMPFILEA
 
 for source in 'cat $MAINTLDLIST'
 do
-HOWMANYTIMESTLDA=$(echo -e "grep -o '$source' $TEMPFILEA | wc -l")
+HOWMANYTIMESTLDA=$(echo -e "grep -o '$TEMPFILEA' | wc -l")
 cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
-HOWMANYTIMESTLDB=$(echo -e "grep -o '$source' $TEMPFILEB | wc -l")
+HOWMANYTIMESTLDB=$(echo -e "grep -o '$TEMPFILEB' | wc -l")
 HOWMANYTIMESTLDDIFF=`expr $HOWMANYTIMESTLDB - $HOWMANYTIMESTLDA`
 echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN
 mv $TEMPFILEB $TEMPFILEA
