@@ -8,8 +8,16 @@ cp $BIGAPL $TEMPFILEA
 
 for source in 'cat $MAINTLDLIST'
 do
-HOWMANYTIMESTLD=$(echo -e "grep -o '$source' $TEMPFILEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA | wc -l")
-echo "$HOWMANYTIMESTLD $source" | tee --append $RECENTRUN &>/dev/null
+HOWMANYTIMESTLDA=$(echo -e "grep -o '$source' $TEMPFILEA | wc -l")
+cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
+rm $TEMPFILEA
+HOWMANYTIMESTLDB=$(echo -e "grep -o '$source' $TEMPFILEB | wc -l")
+HOWMANYTIMESTLDDIFF=`expr $HOWMANYTIMESTLDB - $HOWMANYTIMESTLDA`
+echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN &>/dev/null
+mv $TEMPFILEB $TEMPFILEA
 done
 
-rm $TEMPFILEA
+cat -s $TEMPFILEA | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEB
+#cat $TEMPFILEB | sed 's/[^a-z]*//g' > $TEMPFILEA
+
+mv $TEMPFILEB $TOPTLDPERCENTAGE
