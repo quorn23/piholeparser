@@ -4,6 +4,8 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
+SCRIPTTEXT="Recreating TempVars."
+timestamp=$(echo `date`)
 if 
 ls $RECENTRUN &> /dev/null; 
 then
