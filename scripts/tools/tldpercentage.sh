@@ -13,7 +13,7 @@ cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 HOWMANYTIMESTLDB=$(echo -e "grep -o '$source' $TEMPFILEB | wc -l")
 HOWMANYTIMESTLDDIFF=`expr $HOWMANYTIMESTLDB - $HOWMANYTIMESTLDA`
-echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN
 mv $TEMPFILEB $TEMPFILEA
 done
 
