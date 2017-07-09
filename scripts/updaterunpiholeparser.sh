@@ -6,6 +6,18 @@
 
 DIRECTORY=/etc/piholeparser/
 
+VERSIONVARIABLE=/etc/piholeparser.var
+VERSIONVARDL=https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/scriptvars/piholeparser.var
+CHECKME=$VERSIONVARIABLE
+if
+ls $CHECKME &> /dev/null;
+then
+:
+else
+wget -q -O $VERSIONVARIABLE $VERSIONVARDL
+echo "version=local" | tee --append $VERSIONVARIABLE
+fi
+
 if
 [[ ! -d "$DIRECTORY" ]]
 then
