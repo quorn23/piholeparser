@@ -1837,5 +1837,21 @@ rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
 
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
+cat $TEMPFILEA | sed '/.コム$/Id; /.คอม$/Id; /.ଭାରତ$/Id' > $TEMPFILEB
+rm $TEMPFILEA
+mv $TEMPFILEB $TEMPFILEA
+fi
+
 ##  unset
 unset STOPTLDSEARCH
