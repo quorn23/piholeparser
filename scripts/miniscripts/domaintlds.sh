@@ -92,22 +92,22 @@ timestamp=$(echo `date`)
 if
 [[ -z $MAYBESKIPDL && -n $SOURCEIP ]]
 then
+rm $CURRENTTLDLIST
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
-curl -s -H "$agent" -L $source >> $BTEMPFILE
-cp $BTEMPFILE $CURRENTTLDLIST
-HOWMANYTLD=$(echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1`")
+curl -s -H "$agent" -L $source >> $CURRENTTLDLIST
+HOWMANYTLD=$(echo -e "\t`wc -l $CURRENTTLDLIST | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's in $BASEFILENAME"
-cat $BTEMPFILE >> $VALIDDOMAINTLD
-rm $BTEMPFILE
-else
-cat $CURRENTTLDLIST >> $VALIDDOMAINTLD
 fi
+cat $CURRENTTLDLIST >> $VALIDDOMAINTLD
 done
+
 unset CURRENTTLDLIST
 unset MAYBESKIPDL
+
 echo ""
 printf "$orange" "___________________________________________________________"
 echo ""
+
 done
 
 printf "$lightblue"    "___________________________________________________________"
@@ -124,7 +124,7 @@ fi
 mv $VALIDDOMAINTLD $BTEMPFILE
 cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
 rm $BTEMPFILE
-cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
+cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 rm $BFILETEMP
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's Total."
