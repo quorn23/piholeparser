@@ -98,6 +98,7 @@ curl -s -H "$agent" -L $source >> $CURRENTTLDLIST
 HOWMANYTLD=$(echo -e "\t`wc -l $CURRENTTLDLIST | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's in $BASEFILENAME"
 fi
+touch $CURRENTTLDLIST
 cat $CURRENTTLDLIST >> $VALIDDOMAINTLD
 done
 
