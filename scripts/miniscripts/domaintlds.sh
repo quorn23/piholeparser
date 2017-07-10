@@ -96,7 +96,9 @@ printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SO
 curl -s -H "$agent" -L $source >> $BTEMPFILE
 cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
 rm $BTEMPFILE
-cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
+cat $BFILETEMP | sed 's/^/./' > $BTEMPFILE
+rm $BFILETEMP
+cat -s $BTEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BFILETEMP
 rm $BFILETEMP
 cp $BTEMPFILE $CURRENTTLDLIST
 HOWMANYTLD=$(echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1`")
@@ -131,6 +133,7 @@ HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's Total."
 rm $BTEMPFILE
 
+## Anything New?
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $MAINTLDLIST $VALIDDOMAINTLD > $TLDCOMPARED
 HOWMANYTLDNEW=$(echo -e "\t`wc -l $TLDCOMPARED | cut -d " " -f 1`")
 echo "$HOWMANYTLDNEW Valid TLD's Not In Main Scan."
