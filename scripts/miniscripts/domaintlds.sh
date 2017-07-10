@@ -94,12 +94,6 @@ if
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -H "$agent" -L $source >> $BTEMPFILE
-cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $BFILETEMP
-rm $BTEMPFILE
-cat $BFILETEMP | sed 's/^/./' > $BTEMPFILE
-rm $BFILETEMP
-cat -s $BTEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BFILETEMP
-rm $BFILETEMP
 cp $BTEMPFILE $CURRENTTLDLIST
 HOWMANYTLD=$(echo -e "\t`wc -l $BTEMPFILE | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's in $BASEFILENAME"
@@ -126,11 +120,11 @@ then
 rm $CHECKME
 fi
 
-## Dedupe merge, and dots
+## Cleanup File
 mv $VALIDDOMAINTLD $BTEMPFILE
-cat -s $BTEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BFILETEMP
+cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
 rm $BTEMPFILE
-cat $BFILETEMP | sed 's/^/./' > $VALIDDOMAINTLD
+cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 rm $BFILETEMP
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's Total."
