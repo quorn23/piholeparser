@@ -3,9 +3,11 @@
 
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+source $TEMPVARS
 
-SCRIPTTEXT="Recreating TempVars."
+SCRIPTTEXT="Recreating Recent Run Log."
 timestamp=$(echo `date`)
+
 if 
 ls $RECENTRUN &> /dev/null; 
 then
