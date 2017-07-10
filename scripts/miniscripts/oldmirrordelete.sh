@@ -1,5 +1,5 @@
 #!/bin/bash
-## This Removes old mirrors that we wont be using anymore
+## This Removes Parsed Files That We No Longer Need
 
 ## Static Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
@@ -19,7 +19,7 @@ echo ""
 
 printf "$cyan"    "Making List Of Mirror Files."
 
-## Write contents of mirror directory to a file
+## Write contents of Mirror directory to a file
 ls $MIRRORDIR > $TEMPFILE
 
 ## Ignore readme.md
@@ -45,7 +45,7 @@ if
 then
 rm $REMMIRRORFILE
 echo "* $source" | tee --append $TEMPFILEL &>/dev/null
-echo "* The $source .lst No Longer Exists. Mirror File Deleted." | tee --append $RECENTRUN &>/dev/null
+echo "* The $source .lst No Longer Exists. Mirrored File Deleted." | tee --append $RECENTRUN &>/dev/null
 fi
 
 done
@@ -56,6 +56,8 @@ HOWMANYMIRRORDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
 if
 [[ $HOWMANYMIRRORDELETED -gt 0 ]]
 then
+:
+else
 printf "$red"    "$HOWMANYMIRRORDELETED Lists Deleted."
 fi
 
