@@ -48,7 +48,7 @@ done
 
 cat -s $TEMPFILEN | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEM
 rm $TEMPFILEA
-#cat $TEMPFILEB | sed '/^0/d; s/[^a-z]*//g' > $TEMPFILEA
+#cat $TEMPFILEB | sed 's/[^a-z]*//g' > $TEMPFILEA
 
 mv $TEMPFILEM $TOPTLDPERCENTAGE
 
