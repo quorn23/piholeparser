@@ -556,7 +556,7 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/gif$/d; /htm$/d; /html$/d; /php$/d; /png$/d; /swf$/d; /jpg$/d; /cgi$/d; /js$/d' > $BTEMPFILE
+cat $BFILETEMP | sed '/.gif$/d; /.asp$/d; /.h$/d; /.g$/d; /.h$/d; /.j$/d; /.s$/d; /.g$/d; /.h$/d; /.j$/d; /.p$/d; /.s$/d; /.aspx$/d; /.ImageRotator/.w$/d; /.v$/d; /.txt$/d; /.yu$/d; /.giz$/d; /.dhcpwg$/d; /.comf4a$/d; /.bra$/d; /.htm$/d; /.html$/d; /.php$/d; /.png$/d; /.swf$/d; /.jpg$/d; /.cgi$/d; /.js$/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -592,7 +592,22 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cp $BFILETEMP $TEMPFILEA
+cat $TEMPFILEA | sed '/.com$/Id; /.ru$/Id; /.org$/Id; /.net$/Id; /.de$/Id; /.jp$/Id; /.uk$/Id; /.br$/Id; /.it$/Id; /.pl$/Id; /.fr$/Id; /.in$/Id; /.ir$/Id; /.au$/Id; /.info$/Id' > $TEMPFILEB
+rm $TEMPFILEA
+mv $TEMPFILEB $TEMPFILEA
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -gt 0 ]]
+then
+:
+else
+STOPTLDSEARCH=true
+fi
+if
+[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
+then
 bash $TLDPARSER
+fi
 unset STOPTLDSEARCH
 touch $TRYNACATCHFIlES
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
