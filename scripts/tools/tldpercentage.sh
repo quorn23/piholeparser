@@ -4,8 +4,6 @@
 ## Vars
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
-cp $BIGAPL $TEMPFILEA
-
 CHECKME=$TEMPFILEA
 if
 ls $CHECKME &> /dev/null;
@@ -26,6 +24,8 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
+
+cp $BIGAPL $TEMPFILEA
 
 for source in `cat $MAINTLDLIST`;
 do
