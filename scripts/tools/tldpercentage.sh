@@ -38,7 +38,7 @@ HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
 if
 [[ $HOWMANYTIMESTLDDIFF -eq 0 ]]
 then
-:
+echo "0 $source"
 else
 echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN
 fi
