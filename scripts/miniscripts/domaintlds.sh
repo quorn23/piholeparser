@@ -94,7 +94,7 @@ if
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -H "$agent" -L $source >> $BTEMPFILE
-cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $BFILETEMP
+cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/.*/\L\1/g' > $BFILETEMP
 rm $BTEMPFILE
 cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 rm $BFILETEMP
