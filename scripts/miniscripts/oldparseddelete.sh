@@ -50,7 +50,14 @@ fi
 
 done
 
+touch $TEMPFILEL
 HOWMANYPARSEDDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
+
+if
+[[ $HOWMANYMIRRORDELETED -eq 0 ]]
+then
 printf "$red"    "$HOWMANYPARSEDDELETED Lists Deleted."
+fi
+
 rm $TEMPFILEM
 rm $TEMPFILEL
