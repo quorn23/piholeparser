@@ -27,7 +27,7 @@ fi
 
 cp $BIGAPL $TEMPFILEA
 
-for source in `cat $MAINTLDLIST`;
+for source in `cat $VALIDDOMAINTLDBKUP`;
 do
 echo "Trimming $source"
 HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
