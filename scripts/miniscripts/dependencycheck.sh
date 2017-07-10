@@ -37,3 +37,59 @@ printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
 echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
+
+WHATITIS=sed
+WHATPACKAGE=sed
+timestamp=$(echo `date`)
+if
+which $WHATITIS >/dev/null;
+then
+echo ""
+printf "$yellow"  "$WHATITIS is installed"
+else
+printf "$yellow"  "Installing $WHATITIS"
+apt-get install -y $WHATPACKAGE
+echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS=tar
+WHATPACKAGE=tar
+timestamp=$(echo `date`)
+if
+which $WHATITIS >/dev/null;
+then
+echo ""
+printf "$yellow"  "$WHATITIS is installed"
+else
+printf "$yellow"  "Installing $WHATITIS"
+apt-get install -y $WHATPACKAGE
+echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS=wget
+WHATPACKAGE=wget
+timestamp=$(echo `date`)
+if
+which $WHATITIS >/dev/null;
+then
+echo ""
+printf "$yellow"  "$WHATITIS is installed"
+else
+printf "$yellow"  "Installing $WHATITIS"
+apt-get install -y $WHATPACKAGE
+echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS=curl
+WHATPACKAGE=curl
+timestamp=$(echo `date`)
+if
+which $WHATITIS >/dev/null;
+then
+echo ""
+printf "$yellow"  "$WHATITIS is installed"
+else
+printf "$yellow"  "Installing $WHATITIS"
+apt-get install -y $WHATPACKAGE
+echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
