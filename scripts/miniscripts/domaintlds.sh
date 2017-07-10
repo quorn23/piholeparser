@@ -94,7 +94,7 @@ if
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -H "$agent" -L $source >> $CURRENTTLDLIST
-HOWMANYTLD=$(echo -e "\t`wc -l $CURRENTTLDLIST | cut -d " " -f 1`")
+HOWMANYTLD=$(echo -e "`wc -l $CURRENTTLDLIST | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's in $BASEFILENAME"
 fi
 touch $CURRENTTLDLIST
@@ -121,18 +121,21 @@ rm $CHECKME
 fi
 
 ## Cleanup File
+printf "$cyan"    "Formatting And Removing Duplicatates From TLD List."
 mv $VALIDDOMAINTLD $BTEMPFILE
 cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
 rm $BTEMPFILE
 cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 rm $BFILETEMP
-HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
-echo "$HOWMANYTLD Valid TLD's Total."
+HOWMANYTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
+printf "$yellow"    "$HOWMANYTLD Valid TLD's Total."
+echo ""
 
 ## Anything New?
+printf "$cyan"    "Checking For New TLD's."
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $MAINTLDLIST $VALIDDOMAINTLD > $TLDCOMPARED
-HOWMANYTLDNEW=$(echo -e "\t`wc -l $TLDCOMPARED | cut -d " " -f 1`")
-echo "$HOWMANYTLDNEW Valid TLD's Not In Main Scan."
+HOWMANYTLDNEW=$(echo -e "`wc -l $TLDCOMPARED | cut -d " " -f 1`")
+printf "$yellow"    "$HOWMANYTLDNEW TLD's Not In Main Scan."
 
 CHECKME=$VALIDDOMAINTLDBKUP
 if
