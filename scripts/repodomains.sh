@@ -55,9 +55,9 @@ source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
-printf "$yellow"  "Processing $WHITESORTDEDUPE."
+#printf "$yellow"  "Processing $WHITESORTDEDUPE."
 cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
-HOWMANYLINES=$(echo -e "\t`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
+#HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $WWHITETEMP $WHATLISTTOSORT
@@ -69,7 +69,7 @@ WHATLISTSMERGE="$WHITELISTDOMAINSALL"
 timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
-HOWMANYLINES=$(echo -e "\t`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
+HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 echo "* "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
@@ -123,7 +123,7 @@ BLACKSORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
 printf "$yellow"  "Processing $BLACKSORTDEDUPE."
 cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BBLACKTEMP
-HOWMANYLINES=$(echo -e "\t`wc -l $BBLACKTEMP | cut -d " " -f 1` Lines In File")
+HOWMANYLINES=$(echo -e "`wc -l $BBLACKTEMP | cut -d " " -f 1` Lines In File")
 echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $BBLACKTEMP $WHATLISTTOSORT
@@ -134,10 +134,10 @@ done
 BLACKSORTDEDUPE="Merging the Blacklists for Later."
 WHATLISTSMERGE="$BLACKLISTDOMAINSALL"
 timestamp=$(echo `date`)
-printf "$yellow"  "Processed $BLACKSORTDEDUPE"
+#printf "$yellow"  "Processed $BLACKSORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BLACKLISTTEMP
-HOWMANYLINES=$(echo -e "\t`wc -l $BLACKLISTTEMP | cut -d " " -f 1` Lines In File")
-echo "$HOWMANYLINES"
+HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1` Lines In File")
+#echo "$HOWMANYLINES"
 echo "* "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
