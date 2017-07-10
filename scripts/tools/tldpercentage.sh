@@ -52,4 +52,4 @@ rm $TEMPFILEA
 
 mv $TEMPFILEM $TOPTLDPERCENTAGE
 
-rm /etc/piholeparser/temp*.txt
+rm /etc/piholeparser/temp/*.txt
