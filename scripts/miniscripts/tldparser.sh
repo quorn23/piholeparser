@@ -1,3 +1,18 @@
+#!/bin/bash
+## Used in the Parsing Process,,, a bit extreme, but makes the list accurate
+
+## Variables
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+
+## Start with the the most popular
+cat $TEMPFILEA | sed '/.com$/Id; /.ru$/Id; /.org$/Id; /.net$/Id; /.de$/Id; /.jp$/Id; /.uk$/Id; /.br$/Id; /.it$/Id; /.pl$/Id; /.fr$/Id; /.in$/Id; /.ir$/Id; /.au$/Id; /.info$/Id' > $TEMPFILEB
+rm $TEMPFILEA
+mv $TEMPFILEB $TEMPFILEA
+
+#########################################
+## If still contents in file, continue ##
+#########################################
+
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -gt 0 ]]
