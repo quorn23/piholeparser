@@ -4,21 +4,21 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
-printf "$lightblue"    "___________________________________________________________"
-echo ""
+#printf "$lightblue"    "___________________________________________________________"
+#echo ""
 
-printf "$cyan"    "Cleaning Up Temp Directory."
-echo ""
+#printf "$cyan"    "Cleaning Up Temp Directory."
+#echo ""
 
-printf "$green"    "All .temp Files Will Be Preserved."
-echo ""
+#printf "$green"    "All .temp Files Will Be Preserved."
+#echo ""
 
 CHECKME=$TEMPCLEANUP
 if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-printf "$yellow"    "Temporary tar Files Removed."
+#printf "$yellow"    "Temporary tar Files Removed."
 echo ""
 fi
 
@@ -27,7 +27,7 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-printf "$yellow"    "Temporary tar Files Removed."
+#printf "$yellow"    "Temporary tar Files Removed."
 echo ""
 fi
 
@@ -36,7 +36,7 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-printf "$yellow"    "Temporary tar Files Removed."
+#printf "$yellow"    "Temporary tar Files Removed."
 echo ""
 fi
 
