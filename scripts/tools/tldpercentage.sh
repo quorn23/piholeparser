@@ -40,15 +40,16 @@ if
 then
 echo "0 $source"
 else
-echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN
+echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $TEMPFILEN
 fi
 mv $TEMPFILEB $TEMPFILEA
 echo ""
 done
 
-cat -s $TEMPFILEA | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEB
+cat -s $TEMPFILEN | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEM
+rm $TEMPFILEA
 #cat $TEMPFILEB | sed '/^0/d; s/[^a-z]*//g' > $TEMPFILEA
 
+mv $TEMPFILEM $TOPTLDPERCENTAGE
 
-
-mv $TEMPFILEB $TOPTLDPERCENTAGE
+rm /etc/piholeparser/temp*.txt
