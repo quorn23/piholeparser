@@ -54,7 +54,7 @@ touch $TEMPFILEL
 HOWMANYMIRRORDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
 
 if
-[[ $HOWMANYMIRRORDELETED -eq 0 ]]
+[[ $HOWMANYMIRRORDELETED == 0 ]]
 then
 printf "$red"    "$HOWMANYMIRRORDELETED Lists Deleted."
 fi
