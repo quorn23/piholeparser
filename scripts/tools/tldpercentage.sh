@@ -6,7 +6,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 cp $BIGAPL $TEMPFILEA
 
-for source in 'cat $MAINTLDLIST'
+for source in `cat $MAINTLDLIST`;
 do
 echo "Trimming $source"
 HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
