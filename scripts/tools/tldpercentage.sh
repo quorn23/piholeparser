@@ -35,11 +35,19 @@ cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
 HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
+if
+[[ $HOWMANYTIMESTLDDIFF -eq 0 ]]
+then
+:
+else
 echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN
+fi
 mv $TEMPFILEB $TEMPFILEA
 done
 
 cat -s $TEMPFILEA | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEB
-#cat $TEMPFILEB | sed 's/[^a-z]*//g' > $TEMPFILEA
+#cat $TEMPFILEB | sed '/^0/d; s/[^a-z]*//g' > $TEMPFILEA
+
+
 
 mv $TEMPFILEB $TOPTLDPERCENTAGE
