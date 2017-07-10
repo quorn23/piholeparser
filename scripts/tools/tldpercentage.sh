@@ -43,6 +43,7 @@ else
 echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $RECENTRUN
 fi
 mv $TEMPFILEB $TEMPFILEA
+echo ""
 done
 
 cat -s $TEMPFILEA | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEB
