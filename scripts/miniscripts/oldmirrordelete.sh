@@ -57,6 +57,7 @@ if
 [[ $HOWMANYMIRRORDELETED -eq 0 ]]
 then
 printf "$red"    "$HOWMANYMIRRORDELETED Lists Deleted."
+fi
 
 rm $TEMPFILEM
 rm $TEMPFILEL
