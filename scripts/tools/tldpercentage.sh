@@ -8,6 +8,7 @@ cp $BIGAPL $TEMPFILEA
 
 for source in 'cat $MAINTLDLIST'
 do
+echo "Trimming $source"
 HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
