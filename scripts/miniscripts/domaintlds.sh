@@ -92,7 +92,6 @@ timestamp=$(echo `date`)
 if
 [[ -z $MAYBESKIPDL && -n $SOURCEIP ]]
 then
-rm $CURRENTTLDLIST
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -H "$agent" -L $source >> $CURRENTTLDLIST
 HOWMANYTLD=$(echo -e "\t`wc -l $CURRENTTLDLIST | cut -d " " -f 1`")
