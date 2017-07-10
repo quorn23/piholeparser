@@ -1,29 +1,56 @@
 #!/bin/bash
 ## This Removes old mirrors that we wont be using anymore
 
-## Variables
+## Static Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
+printf "$cyan"    "Making List of All .lst Files."
 for f in $EVERYLISTFILEWILDCARD
 do
+
+## Dynamic Variables
 source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-TEMPOFILE="$TEMPDIR"TEMPOFILE.txt
-TEMPOFILEB="$TEMPDIR"TEMPOFILEB.txt
-LISTBASENAMETXT="$BASEFILENAME".txt
+
+## Make List Of Every .lst file
 echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
+
 done
+echo ""
 
+printf "$cyan"    "Making List Of Mirror Files."
+
+## Write contents of mirror directory to a file
 ls $MIRRORDIR > $TEMPFILE
-cat $TEMPFILE | sed '/README.md/d' > $TEMPOFILE
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPOFILE > $TEMPOFILEB
 
-for source in `cat $TEMPOFILEB`;
+## Ignore readme.md
+cat $TEMPFILE | sed '/README.md/d' > $TEMPFILEN
+echo ""
+
+printf "$cyan"    "Comparing Lists."
+
+## Compare
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $FILETEMP $TEMPFILEN > $TEMPFILEM
+rm $TEMPFILE
+rm $FILETEMP
+rm $TEMPFILEN
+echo ""
+
+for source in `cat $TEMPFILEM`;
 do
+
 REMMIRRORFILE="$MIRRORDIR""$source"
+
 if
 [[ $source == *.txt ]]
 then
 rm $REMMIRRORFILE
-printf "$red"    "The $source .lst No Longer Exists. Mirror File Deleted."
+echo "* $source" | tee --append $TEMPFILEL &>/dev/null
+echo "* The $source .lst No Longer Exists. Mirror File Deleted." | tee --append $RECENTRUN &>/dev/null
 fi
+
 done
+
+HOWMANYMIRRORDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
+printf "$red"    "$HOWMANYMIRRORDELETED Lists Deleted."
+rm $TEMPFILEM
+rm $TEMPFILEL
