@@ -6,6 +6,27 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 cp $BIGAPL $TEMPFILEA
 
+CHECKME=$TEMPFILEA
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
+CHECKME=$TEMPFILEB
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
+CHECKME=$TOPTLDPERCENTAGE
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
 for source in `cat $MAINTLDLIST`;
 do
 echo "Trimming $source"
