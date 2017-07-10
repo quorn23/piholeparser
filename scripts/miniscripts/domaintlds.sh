@@ -94,7 +94,7 @@ if
 then
 printf "$cyan"    "Fetching List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
 curl -s -H "$agent" -L $source >> $BTEMPFILE
-cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
+cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $BFILETEMP
 rm $BTEMPFILE
 cat $BFILETEMP | sed 's/^/./' > $BTEMPFILE
 rm $BFILETEMP
@@ -126,12 +126,14 @@ then
 rm $CHECKME
 fi
 
-## Dedupe merge
+## Dedupe merge, and dots
 mv $VALIDDOMAINTLD $BTEMPFILE
-cat -s $BTEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
+cat -s $BTEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BFILETEMP
+rm $BTEMPFILE
+cat $BFILETEMP | sed 's/^/./' > $VALIDDOMAINTLD
+rm $BFILETEMP
 HOWMANYTLD=$(echo -e "\t`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYTLD Valid TLD's Total."
-rm $BTEMPFILE
 
 ## Anything New?
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $MAINTLDLIST $VALIDDOMAINTLD > $TLDCOMPARED
