@@ -11,16 +11,22 @@ then
 rm $CHECKME
 fi
 
+## Collect all the sources into one file
 cat $EVERYLISTFILEWILDCARD | sort > $TEMPFILE
 
-HOWMANYSOURCELISTS=$(echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1`")
-HOWMANYSOURCE="$HOWMANYSOURCELISTS lists to be processed by the script."
+## Math Time
+HOWMANYSOURCELISTS=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
+HOWMANYSOURCE="$HOWMANYSOURCELISTS Lists Processed By The Script."
 
+## Save to Tempvars
 echo "HOWMANYSOURCELISTS='"$HOWMANYSOURCELISTS"'" | tee --append $TEMPVARS &>/dev/null
 echo "HOWMANYSOURCE='"$HOWMANYSOURCE"'" | tee --append $TEMPVARS &>/dev/null
-echo "$HOWMANYSOURCE"
+
+## Log Activity
 echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
 
-sed '/^$/d' $TEMPFILE > $FILETEMP
+## Terminal Display
+printf "$yellow"    "$HOWMANYSOURCELISTS Lists To Be Processed By The Script."
 
-mv $FILETEMP $BIGAPLSOURCE
+## Remove Empty Lines
+cat $TEMPFILE | sed '/^$/d' > $BIGAPLSOURCE
