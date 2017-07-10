@@ -5,9 +5,9 @@
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Start with the the most popular
-cat $TEMPFILEA | sed '/.com$/Id; /.ru$/Id; /.org$/Id; /.net$/Id; /.de$/Id; /.jp$/Id; /.uk$/Id; /.br$/Id; /.it$/Id; /.pl$/Id; /.fr$/Id; /.in$/Id; /.ir$/Id; /.au$/Id; /.info$/Id' > $TEMPFILEB
-rm $TEMPFILEA
-mv $TEMPFILEB $TEMPFILEA
+#cat $TEMPFILEA | sed '/.com$/Id; /.ru$/Id; /.org$/Id; /.net$/Id; /.de$/Id; /.jp$/Id; /.uk$/Id; /.br$/Id; /.it$/Id; /.pl$/Id; /.fr$/Id; /.in$/Id; /.ir$/Id; /.au$/Id; /.info$/Id' > $TEMPFILEB
+#rm $TEMPFILEA
+#mv $TEMPFILEB $TEMPFILEA
 
 #########################################
 ## If still contents in file, continue ##
