@@ -54,7 +54,7 @@ touch $TEMPFILEL
 HOWMANYMIRRORDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
 
 if
-[[ $HOWMANYMIRRORDELETED -gt 0 ]]
+[[ "$HOWMANYMIRRORDELETED" -gt 0 ]]
 then
 :
 else
