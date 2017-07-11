@@ -591,7 +591,7 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/.h$/d; /.g$/d; /.j$/d; /.s$/d; /.p$/d; /.ImageRotator$/; /.w$/d; /.v$/d; /.yu$/d; /.giz$/d; /.dhcpwg$/d; /.comf4a$/d; /.bra$/d' > $BTEMPFILE
+cat $BFILETEMP | sed '/.h$/Id; /.g$/Id; /.j$/Id; /.s$/Id; /.p$/Id; /.ImageRotator$/Id; /.w$/Id; /.v$/Id; /.yu$/Id; /.giz$/Id; /.dhcpwg$/Id; /.comf4a$/Id; /.bra$/Id' > $BTEMPFILE
 mv $BTEMPFILE $BFILETEMP
 cp $BFILETEMP $TEMPFILEA
 echo ""
