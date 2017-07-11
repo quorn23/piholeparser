@@ -35,7 +35,7 @@ echo "Counting $source"
 #rm $TEMPFILEA
 #HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
 #HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
-HOWMANYTIMESTLD=$(echo -e "grep -o $source $TEMPFILEA | wc -l")
+HOWMANYTIMESTLD=$(echo -e "`grep -o $source $TEMPFILEA | wc -l`")
 
 if
 [[ "$HOWMANYTIMESTLDDIFF" == 0 ]]
