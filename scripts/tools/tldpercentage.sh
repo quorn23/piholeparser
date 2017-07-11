@@ -51,7 +51,7 @@ echo ""
 done
 
 cat -s $TEMPFILEN | sort -n > $TEMPFILEM
-tac TEMPFILEM > TEMPFILEJ
+tac $TEMPFILEM > $TEMPFILEJ
 #cat $TEMPFILEB | sed 's/[^a-z]*//g' > $TEMPFILEA
 
 mv $TEMPFILEJ $TOPTLDPERCENTAGE
