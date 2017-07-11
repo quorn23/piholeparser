@@ -258,6 +258,7 @@ lj_bookmarklet
 !
 ! Extended CSS rules
 !
+stylevamp.de##.site-main > #secondary > .widget > .section-title:contains(Finde uns auf Facebook)
 g2esports.com##.container-fluid > .section-header > .pull-right[-ext-has='a[href="https://twitter.com/G2Esports"]']
 otohaber.com.tr##body > .fancybox-container[-ext-has=".lightbox"]
 schwaebische.de##aside > .grey[-ext-has='>div.fb-page']
@@ -397,6 +398,9 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+blick.ch##.standingShareBar
+royal-canin.ru##.share
+washingtonpost.com##.inline-sharebar
 amp-vox-de.cdn.ampproject.org##.rtli-master-social-share
 gizmodo-com.cdn.ampproject.org##.sharingfooter
 kinomassa.biz###vk_group_kinomassa
@@ -3125,6 +3129,8 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ||cdn-library.su/plusonet/lib/$domain=~pluso.net
 ||mailget.net^$third-party
 !
+watch5s.rs##.modal-backdrop
+watch5s.rs###pop-subscribe
 trancepodcasts.com##.cp-overlay
 trancepodcasts.com##.cp-social-media
 firstone.tv##body > div[class]:empty
@@ -3337,6 +3343,7 @@ bie-dro.de#@#.header-social
 ! 9gag.com - broken Google auth
 @@||apis.google.com/js/platform.js$domain=9gag.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4902
+@@||xing-share.com/assets/spi/message_proxy-*.js$domain=xing.com
 @@||xing-share.com/plugins^$domain=bewerbung.co
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4648
 @@||apis.google.com/js/platform.js$domain=geekinformer.net
