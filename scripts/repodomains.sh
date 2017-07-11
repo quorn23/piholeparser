@@ -57,8 +57,8 @@ WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
 #printf "$yellow"  "Processing $WHITESORTDEDUPE."
 cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
-#HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
-echo "$HOWMANYLINES"
+HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
+#echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $WWHITETEMP $WHATLISTTOSORT
 echo ""
