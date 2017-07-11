@@ -56,9 +56,9 @@ HOWMANYMIRRORDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
 if
 [[ "$HOWMANYMIRRORDELETED" == 0 ]]
 then
-printf "$green"    "$HOWMANYPARSEDDELETED Lists Deleted."
+printf "$green"    "$HOWMANYMIRRORDELETED Lists Deleted."
 else
-printf "$red"    "$HOWMANYPARSEDDELETED Lists Deleted."
+printf "$red"    "$HOWMANYMIRRORDELETED Lists Deleted."
 fi
 
 rm $TEMPFILEM
