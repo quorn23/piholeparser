@@ -61,7 +61,7 @@ HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1` Lines In File")
 #echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $WWHITETEMP $WHATLISTTOSORT
-echo ""
+#echo ""
 done
 
 ## Merge Whitelist into temp file
