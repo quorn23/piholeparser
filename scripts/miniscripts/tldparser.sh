@@ -15,7 +15,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -31,7 +31,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -47,7 +47,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -63,7 +63,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -79,7 +79,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -95,7 +95,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -111,7 +111,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -127,7 +127,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -143,7 +143,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -159,7 +159,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -175,7 +175,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -191,7 +191,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -207,7 +207,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -223,7 +223,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -239,7 +239,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -255,7 +255,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -271,7 +271,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -287,7 +287,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -303,7 +303,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -319,7 +319,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -335,7 +335,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -351,7 +351,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -367,7 +367,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -383,7 +383,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -399,7 +399,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -415,7 +415,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -431,7 +431,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -447,7 +447,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -463,7 +463,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -479,7 +479,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -495,7 +495,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -511,7 +511,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -527,7 +527,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -543,7 +543,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -559,7 +559,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -575,7 +575,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -591,7 +591,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -607,7 +607,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -623,7 +623,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -639,7 +639,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -655,7 +655,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -671,7 +671,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -687,7 +687,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -703,7 +703,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -719,7 +719,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -735,7 +735,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -751,7 +751,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -767,7 +767,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -783,7 +783,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -799,7 +799,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -815,7 +815,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -831,7 +831,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -847,7 +847,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -863,7 +863,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -879,7 +879,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -895,7 +895,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -911,7 +911,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -927,7 +927,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -943,7 +943,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -959,7 +959,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -975,7 +975,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -991,7 +991,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1007,7 +1007,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1023,7 +1023,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1039,7 +1039,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1055,7 +1055,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1071,7 +1071,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1087,7 +1087,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1103,7 +1103,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1119,7 +1119,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1135,7 +1135,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1151,7 +1151,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1167,7 +1167,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1183,7 +1183,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1199,7 +1199,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1215,7 +1215,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1231,7 +1231,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1247,7 +1247,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1263,7 +1263,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1279,7 +1279,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1295,7 +1295,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1311,7 +1311,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1327,7 +1327,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1343,7 +1343,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1359,7 +1359,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1375,7 +1375,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1391,7 +1391,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1407,7 +1407,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1423,7 +1423,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1439,7 +1439,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1455,7 +1455,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1471,7 +1471,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1487,7 +1487,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1503,7 +1503,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1519,7 +1519,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1535,7 +1535,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1551,7 +1551,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1567,7 +1567,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1583,7 +1583,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1599,7 +1599,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1615,7 +1615,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1631,7 +1631,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1647,7 +1647,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1663,7 +1663,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1679,7 +1679,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1695,7 +1695,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1711,7 +1711,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1727,7 +1727,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1743,7 +1743,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1759,7 +1759,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1775,7 +1775,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1791,7 +1791,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1807,7 +1807,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1823,7 +1823,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
@@ -1839,7 +1839,7 @@ fi
 
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYLINES" -gt 0 ]]
 then
 :
 else
