@@ -39,15 +39,15 @@ echo ""
 
 for source in `cat $TEMPFILEG`;
 do
-echo "Counting $source"
+echo "Counting ."$source""
 HOWMANYTIMESTLD=$(echo -e "`grep -o \.$source\$ $TEMPFILEA | wc -l`")
 
 if
 [[ "$HOWMANYTIMESTLD" == 0 ]]
 then
-echo "0 $source"
+echo "0 ."$source""
 else
-echo "$HOWMANYTIMESTLD $source" | tee --append $TEMPFILEN
+echo "$HOWMANYTIMESTLD ."$source"" | tee --append $TEMPFILEN
 fi
 
 echo ""
