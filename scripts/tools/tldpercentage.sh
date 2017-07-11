@@ -27,32 +27,27 @@ fi
 
 cp $BIGAPL $TEMPFILEA
 
+## Total
+HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+echo "$HOWMANYTIMESTLDA Total" | tee --append $TEMPFILEN
+
 for source in `cat $MAINTLDLIST`;
 do
 echo "Counting $source"
-#HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
-#cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
-#rm $TEMPFILEA
-#HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
-#HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
 HOWMANYTIMESTLD=$(echo -e "`grep -o $source $TEMPFILEA | wc -l`")
 
 if
-[[ "$HOWMANYTIMESTLDDIFF" == 0 ]]
+[[ "$HOWMANYTIMESTLD" == 0 ]]
 then
 echo "0 $source"
 else
-#echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $TEMPFILEN
 echo "$HOWMANYTIMESTLD $source" | tee --append $TEMPFILEN
 fi
 
-#mv $TEMPFILEB $TEMPFILEA
 echo ""
-
 done
 
 cat -s $TEMPFILEN | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEM
-rm $TEMPFILEA
 #cat $TEMPFILEB | sed 's/[^a-z]*//g' > $TEMPFILEA
 
 mv $TEMPFILEM $TOPTLDPERCENTAGE
