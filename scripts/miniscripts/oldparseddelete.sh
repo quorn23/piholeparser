@@ -54,7 +54,7 @@ touch $TEMPFILEL
 HOWMANYPARSEDDELETED=$(echo -e "`wc -l $TEMPFILEL | cut -d " " -f 1`")
 
 if
-[[ "$HOWMANYMIRRORDELETED" == 0 ]]
+[[ "$HOWMANYPARSEDDELETED" == 0 ]]
 then
 printf "$green"    "$HOWMANYPARSEDDELETED Lists Deleted."
 else
