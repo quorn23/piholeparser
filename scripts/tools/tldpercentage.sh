@@ -35,15 +35,18 @@ cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
 HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
 HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
+
 if
-[[ "$HOWMANYTIMESTLDDIFF" -eq 0 ]]
+[[ "$HOWMANYTIMESTLDDIFF" == 0 ]]
 then
 echo "0 $source"
 else
 echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $TEMPFILEN
 fi
+
 mv $TEMPFILEB $TEMPFILEA
 echo ""
+
 done
 
 cat -s $TEMPFILEN | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEM
