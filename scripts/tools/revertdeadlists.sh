@@ -6,6 +6,6 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 for f in $KILLTHELISTALL
 do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-mv $f $BMAINPARSELIST
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+mv $f "$MAINLISTSDIR""$BASEFILENAME".lst
 done
