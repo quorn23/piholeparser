@@ -4,6 +4,8 @@
 ## Vars
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
+STARTTIMESTAMP=$(date +"%s")
+
 CHECKME=$TEMPFILEA
 if
 ls $CHECKME &> /dev/null;
@@ -49,8 +51,16 @@ echo ""
 done
 
 cat -s $TEMPFILEN | sort -n > $TEMPFILEM
+tac TEMPFILEM > TEMPFILEJ
 #cat $TEMPFILEB | sed 's/[^a-z]*//g' > $TEMPFILEA
 
-mv $TEMPFILEM $TOPTLDPERCENTAGE
+mv $TEMPFILEJ $TOPTLDPERCENTAGE
 
 rm /etc/piholeparser/temp/*.txt
+
+ENDTIMESTAMP=$(date +"%s")
+DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
+DIFFTIME=`expr $DIFFTIMESEC / 60`
+TOTALRUNTIME="Script Took $DIFFTIME Minutes."
+printf "$yellow"   "$TOTALRUNTIME"
+
