@@ -30,6 +30,7 @@ cp $BIGAPL $TEMPFILEA
 ## Total
 HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 echo "$HOWMANYTIMESTLDA Total" | tee --append $TEMPFILEN
+echo ""
 
 for source in `cat $MAINTLDLIST`;
 do
