@@ -63,6 +63,7 @@ rm $WHATLISTTOSORT
 mv $WWHITETEMP $WHATLISTTOSORT
 echo ""
 done
+
 ## Merge Whitelist into temp file
 WHITESORTDEDUPE="Merging the Whitelists for Later."
 WHATLISTSMERGE="$WHITELISTDOMAINSALL"
@@ -121,23 +122,23 @@ source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 WHATLISTTOSORT=$f
 BLACKSORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
-printf "$yellow"  "Processing $BLACKSORTDEDUPE."
+#printf "$yellow"  "Processing $BLACKSORTDEDUPE."
 cat -s $WHATLISTTOSORT | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BBLACKTEMP
 HOWMANYLINES=$(echo -e "`wc -l $BBLACKTEMP | cut -d " " -f 1` Lines In File")
-echo "$HOWMANYLINES"
+#echo "$HOWMANYLINES"
 rm $WHATLISTTOSORT
 mv $BBLACKTEMP $WHATLISTTOSORT
-echo ""
+#echo ""
 done
 
 ## Merge Lists
 BLACKSORTDEDUPE="Merging the Blacklists for Later."
 WHATLISTSMERGE="$BLACKLISTDOMAINSALL"
 timestamp=$(echo `date`)
-#printf "$yellow"  "Processed $BLACKSORTDEDUPE"
+printf "$yellow"  "Processed $BLACKSORTDEDUPE"
 cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BLACKLISTTEMP
 HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1` Lines In File")
-#echo "$HOWMANYLINES"
+echo "$HOWMANYLINES"
 echo "* "$BLACKSORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
 echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
 echo ""
