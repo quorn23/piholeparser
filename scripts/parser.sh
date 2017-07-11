@@ -556,7 +556,7 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/.gif$/d; /.asp$/d; /.h$/d; /.g$/d; /.h$/d; /.j$/d; /.s$/d; /.g$/d; /.h$/d; /.j$/d; /.p$/d; /.s$/d; /.aspx$/d; /.ImageRotator/.w$/d; /.v$/d; /.txt$/d; /.yu$/d; /.giz$/d; /.dhcpwg$/d; /.comf4a$/d; /.bra$/d; /.htm$/d; /.html$/d; /.php$/d; /.png$/d; /.swf$/d; /.jpg$/d; /.cgi$/d; /.js$/d' > $BTEMPFILE
+cat $BFILETEMP | sed '/.gif$/d; /.asp$/d; /.h$/d; /.g$/d; /.j$/d; /.s$/d; /.p$/d; /.aspx$/d; /.ImageRotator$/; /.w$/d; /.v$/d; /.txt$/d; /.yu$/d; /.giz$/d; /.dhcpwg$/d; /.comf4a$/d; /.bra$/d; /.htm$/d; /.html$/d; /.php$/d; /.png$/d; /.swf$/d; /.jpg$/d; /.cgi$/d; /.js$/d' > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
