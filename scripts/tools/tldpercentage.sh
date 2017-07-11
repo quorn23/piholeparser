@@ -29,15 +29,18 @@ fi
 
 cp $BIGAPL $TEMPFILEA
 
+cp $MAINTLDLIST $TEMPFILEF
+cat $TEMPFILEF | tr -d '.' > $TEMPFILEG
+
 ## Total
 HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 echo "$HOWMANYTIMESTLDA Total" | tee --append $TEMPFILEN
 echo ""
 
-for source in `cat $MAINTLDLIST`;
+for source in `cat $TEMPFILEG`;
 do
 echo "Counting $source"
-HOWMANYTIMESTLD=$(echo -e "`grep -F -o $source\$ $TEMPFILEA | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o \.$source\$ $TEMPFILEA | wc -l`")
 
 if
 [[ "$HOWMANYTIMESTLD" == 0 ]]
