@@ -29,12 +29,14 @@ cp $BIGAPL $TEMPFILEA
 
 for source in `cat $MAINTLDLIST`;
 do
-echo "Trimming $source"
-HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
-cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
-rm $TEMPFILEA
-HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
-HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
+echo "Counting $source"
+#HOWMANYTIMESTLDA=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+#cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
+#rm $TEMPFILEA
+#HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
+#HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
+
+HOWMANYTIMESTLD=$(echo -e "grep -o '$source' $TEMPFILEA | wc -l")
 
 if
 [[ "$HOWMANYTIMESTLDDIFF" == 0 ]]
@@ -44,7 +46,7 @@ else
 echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $TEMPFILEN
 fi
 
-mv $TEMPFILEB $TEMPFILEA
+#mv $TEMPFILEB $TEMPFILEA
 echo ""
 
 done
