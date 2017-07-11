@@ -43,7 +43,8 @@ if
 then
 echo "0 $source"
 else
-echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $TEMPFILEN
+#echo "$HOWMANYTIMESTLDDIFF $source" | tee --append $TEMPFILEN
+echo "$HOWMANYTIMESTLD $source" | tee --append $TEMPFILEN
 fi
 
 #mv $TEMPFILEB $TEMPFILEA
