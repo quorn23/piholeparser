@@ -36,7 +36,7 @@ rm $TEMPFILEA
 HOWMANYTIMESTLDB=$(echo -e "`wc -l $TEMPFILEB | cut -d " " -f 1`")
 HOWMANYTIMESTLDDIFF=$(expr $HOWMANYTIMESTLDA - $HOWMANYTIMESTLDB)
 if
-[[ $HOWMANYTIMESTLDDIFF -eq 0 ]]
+[[ "$HOWMANYTIMESTLDDIFF" -eq 0 ]]
 then
 echo "0 $source"
 else
