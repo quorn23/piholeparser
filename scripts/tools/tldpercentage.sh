@@ -48,6 +48,7 @@ then
 echo "0 ."$source""
 else
 echo "$HOWMANYTIMESTLD ."$source"" | tee --append $TEMPFILEN
+echo "{\"topleveldomainamount\":\""$HOWMANYTIMESTLD"\", \"topleveldomain\":\""$source"\"}" | tee --append $TOPTLDPERCENTAGEJSON
 fi
 
 echo ""
