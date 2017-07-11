@@ -37,7 +37,7 @@ echo ""
 for source in `cat $MAINTLDLIST`;
 do
 echo "Counting $source"
-HOWMANYTIMESTLD=$(echo -e "`grep -o \$source\$ $TEMPFILEA | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o $source\$ $TEMPFILEA | wc -l`")
 
 if
 [[ "$HOWMANYTIMESTLD" == 0 ]]
