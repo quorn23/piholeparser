@@ -17,7 +17,7 @@ do
 for source in `cat $f`;
 do
 
-printf "$lightblue"    "___________________________________________________________"
+printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 
 ## Filenaming Vars
@@ -105,12 +105,12 @@ unset CURRENTTLDLIST
 unset MAYBESKIPDL
 
 echo ""
-printf "$orange" "___________________________________________________________"
+printf "$orange" "$DIVIDERBARB"
 echo ""
 
 done
 
-printf "$lightblue"    "___________________________________________________________"
+printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 
 CHECKME=$TLDCOMPARED
@@ -160,5 +160,5 @@ rm $CHECKME
 fi
 
 echo ""
-printf "$orange" "___________________________________________________________"
+printf "$orange" "$DIVIDERBARB"
 echo ""
