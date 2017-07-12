@@ -4,151 +4,34 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
-####################
-## Housekeeping   ##
-####################
+## Start File Loop
+## For .sh files In The mainscripts Directory
+for f in $RUNSCRIPTSALL
+do
 
-SCRIPTTEXT="Running Housekeeping Tasks."
+# Dynamic Variables
+source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+
+## Loop Variables
+SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
 timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
+
+printf "$blue"    "$DIVIDERBAR"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
+
+## Clear Temp Before
 bash $DELETETEMPFILE
-bash $HOUSEKEEPINGSCRIPT
+
+## Run Script
+bash $f
+
+## Clear Temp After
 bash $DELETETEMPFILE
-echo ""
-echo "" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
+
+echo "" | sudo tee --append $RECENTRUN
+printf "$magenta" "$DIVIDERBAR"
 echo ""
 
-####################
-## Dependencies   ##
-####################
-
-WHATSCRIPTORUN=$DEPENDENCYCHECKSCRIPT
-SCRIPTTEXT="Checking For Script Dependencies."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $WHATSCRIPTORUN
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Script Domains ##
-####################
-
-WHATSCRIPTORUN=$REPODOMAINSSCRIPT
-SCRIPTTEXT="Compiling Repo Domain List."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $WHATSCRIPTORUN
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Parsing        ##
-####################
-
-WHATSCRIPTORUN=$PARSERSCRIPT
-SCRIPTTEXT="Running Parser."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $WHATSCRIPTORUN
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## ALLPARSEDLISTS ##
-####################
-
-WHATSCRIPTORUN=$CREATEBIGLISTSCRIPT
-SCRIPTTEXT="Combining All Parsed Lists."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $WHATSCRIPTORUN
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Results        ##
-####################
-
-WHATSCRIPTORUN=$RESULTSSCRIPT
-SCRIPTTEXT="Results Of The Parsing."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $WHATSCRIPTORUN
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Push Lists     ##
-####################
-
-WHATSCRIPTORUN=$PUSHLISTSSCRIPT
-SCRIPTTEXT="Pushing Lists."
-timestamp=$(echo `date`)
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $WHATSCRIPTORUN
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$magenta" "___________________________________________________________"
-echo ""
-
-####################
-## Script Complete##
-####################
-
-printf "$blue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "Script Complete"
-echo ""
-printf "$magenta" "___________________________________________________________"
-echo ""
+## End Of Loop
+done
