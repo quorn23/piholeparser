@@ -4,7 +4,7 @@
 ## it installs the program
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/variables.var
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Start File Loop
 ## For .dependency files In The dependencies Directory
