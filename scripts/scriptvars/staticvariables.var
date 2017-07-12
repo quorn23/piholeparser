@@ -71,14 +71,9 @@ REPODIR=/etc/"$REPONAME"/
       BIGAPLSOURCE="$PARSEDALLDIR""$BIGAPLNAME".lst
 
   SCRIPTSDIR="$REPODIR"scripts/
-      CREATEBIGLISTSCRIPT="$SCRIPTSDIR"createbiglist.sh
-      HOUSEKEEPINGSCRIPT="$SCRIPTSDIR"housekeeping.sh
-      PARSERSCRIPT="$SCRIPTSDIR"parser.sh
-      PUSHLISTSSCRIPT="$SCRIPTSDIR"pushlists.sh
-      REPODOMAINSSCRIPT="$SCRIPTSDIR"repodomains.sh
-      RESULTSSCRIPT="$SCRIPTSDIR"results.sh
       RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
       UPDATESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
+      DELETETEMPFILE="$SCRIPTSDIR"deletetempfile.sh
       
       RUNMAINSCRIPTSDIR="$SCRIPTSDIR"mainscripts/
           RUNMAINSCRIPTSALL="$RUNMAINSCRIPTSDIR"*.sh
@@ -98,7 +93,7 @@ REPODIR=/etc/"$REPONAME"/
           OLDMIRRORMSCRIPT="$MINISCRIPTSDIR"oldmirrordelete.sh
           BIGSOURCEGENMSCRIPT="$MINISCRIPTSDIR"bigsourcegen.sh
           DOMAINTLDSMSCRIPT="$MINISCRIPTSDIR"tldgen.sh
-          DELETETEMPFILE="$MINISCRIPTSDIR"deletetempfile.sh
+          
           DEPENDENCYCHECKSCRIPT="$MINISCRIPTSDIR"dependencycheck.sh
           TLDPARSER="$MINISCRIPTSDIR"tldparser.sh
 
