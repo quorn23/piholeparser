@@ -561,10 +561,8 @@ for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $TEMPFILEA | wc -l`")
 if
-[[ "$HOWMANYTIMESTLD" == 0 ]]
+[[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-:
-else
 cat $TEMPFILEA | sed '/[\.$source]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
