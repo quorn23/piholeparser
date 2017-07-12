@@ -123,7 +123,8 @@ fi
 ## Cleanup File
 printf "$cyan"    "Formatting And Removing Duplicatates From TLD List."
 mv $VALIDDOMAINTLD $BTEMPFILE
-cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
+#cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
+cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $BFILETEMP
 rm $BTEMPFILE
 cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
 rm $BFILETEMP
