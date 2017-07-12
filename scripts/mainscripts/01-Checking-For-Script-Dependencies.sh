@@ -6,6 +6,8 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
+echo ""
+
 ## Start File Loop
 ## For .dependency files In The dependencies Directory
 for f in $DEPENDENCIESALL
@@ -14,9 +16,7 @@ do
 ## Declare File Name
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-
 printf "$cyan"  "Checking For $BASEFILENAME"
-echo ""
 
 ## Shouldn't be more than one source here
 for source in `cat $f`;
