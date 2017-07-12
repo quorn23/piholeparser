@@ -20,6 +20,9 @@ printf "$blue"    "$DIVIDERBAR"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 
+## Log Section
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
 ## Clear Temp Before
 bash $DELETETEMPFILE
 
