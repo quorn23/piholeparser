@@ -80,8 +80,10 @@ REPODIR=/etc/"$REPONAME"/
       RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
       UPDATESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
       
-      RUNSCRIPTSDIR="$SCRIPTSDIR"mainscripts/
-          RUNSCRIPTSALL="$RUNSCRIPTSDIR"*.sh
+      
+      
+      RUNMAINSCRIPTSDIR="$SCRIPTSDIR"mainscripts/
+          RUNSCRIPTSALL="$RUNMAINSCRIPTSDIR"*.sh
       
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
