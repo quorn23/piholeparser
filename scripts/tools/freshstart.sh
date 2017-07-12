@@ -33,7 +33,8 @@ echo ""
 echo "Reverting Killed Lists"
 for f in $KILLTHELISTALL
 do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+BMAINPARSELIST="$MAINLISTDIR""$BASEFILENAME".lst
 mv $f $BMAINPARSELIST
 done
 echo ""
