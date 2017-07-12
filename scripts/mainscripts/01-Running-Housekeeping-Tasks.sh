@@ -4,154 +4,38 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
-######################
-## Recreate Tempvars##
-######################
+## Start File Loop
+## For .sh files In The housekeepingscripts Directory
+for f in $RUNHOUSEKEEPINGSCRIPTSALL
+do
 
-SCRIPTTEXT="Recreating TempVars."
+# Dynamic Variables
+source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+
+## Loop Variables
+SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
 timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
+
+printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
+## Log Subsection
+echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
+## Clear Temp Before
 bash $DELETETEMPFILE
-bash $TEMPVARSMSCRIPT
+
+## Run Script
+bash $f
+
+## Clear Temp After
 bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
+
+echo "" | tee --append $RECENTRUN
+printf "$orange" "$DIVIDERBARB"
 echo ""
 
-######################
-## Set Start Time   ##
-######################
-
-SCRIPTTEXT="Setting Start Time Variable."
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $STARTTIMEMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-######################
-## Recent Run Log   ##
-######################
-
-SCRIPTTEXT="Creating Main Recent Run Log."
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $RECENTRUNLOGMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-######################
-## https-less lists ##
-######################
-
-SCRIPTTEXT="Identifying Lists Without https."
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $HTTPSLESSMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-#######################
-## Parsed Not In Use ##
-#######################
-
-SCRIPTTEXT="Removing Parsed Lists No Longer Used."
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $OLDPARSEDMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-#########################
-## Mirrored Not In Use ##
-#########################
-
-SCRIPTTEXT="Removing Mirrored Lists No Longer Used."
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $OLDMIRRORMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-####################
-## Big Source     ##
-####################
-
-SCRIPTTEXT="Counting Lists To Process."
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $BIGSOURCEGENMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-####################
-## Domain TLD's   ##
-####################
-
-SCRIPTTEXT="Downloading active TLD's"
-timestamp=$(echo `date`)
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-bash $DOMAINTLDSMSCRIPT
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
+## End Of Loop
+done
