@@ -6,21 +6,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 STARTTIMESTAMP=$(date +"%s")
 
-CHECKME=$TEMPFILEA
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-
-CHECKME=$TEMPFILEB
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-
-CHECKME=$TOPTLDPERCENTAGE
+CHECKME=$TEMPCLEANUP
 if
 ls $CHECKME &> /dev/null;
 then
@@ -48,7 +34,6 @@ then
 echo "0 ."$source""
 else
 echo "$HOWMANYTIMESTLD ."$source"" | tee --append $TEMPFILEN
-#echo "{\"topleveldomainamount\":\""$HOWMANYTIMESTLD"\", \"topleveldomain\":\""$source"\"}" | tee --append $TOPTLDPERCENTAGEJSON
 fi
 
 echo ""
