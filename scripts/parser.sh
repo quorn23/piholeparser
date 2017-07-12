@@ -550,82 +550,27 @@ then
 FILESIZEZERO=true
 fi
 
-## File Extensions
-PARSECOMMENT="Removing Common File Extensions."
-if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/.gif$/d; /.asp$/d; /.aspx$/d; /.txt$/d; /.htm$/d; /.html$/d; /.php$/d; /.png$/d; /.swf$/d; /.jpg$/d; /.cgi$/d; /.js$/d' > $BTEMPFILE
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
-else
-:
-fi
-if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
 ## Invalid TLD's
 PARSECOMMENT="Checking For Invalid TLD's."
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/.h$/Id; /.g$/Id; /.j$/Id; /.s$/Id; /.p$/Id; /.ImageRotator$/Id; /.w$/Id; /.v$/Id; /.yu$/Id; /.giz$/Id; /.dhcpwg$/Id; /.comf4a$/Id; /.bra$/Id' > $BTEMPFILE
-mv $BTEMPFILE $BFILETEMP
 cp $BFILETEMP $TEMPFILEA
-echo ""
-printf "$cyan"  "Reverse Searching Valid TLD's."
-cat $TEMPFILEA | sed '/.com$/Id; /.ru$/Id; /.org$/Id; /.net$/Id; /.de$/Id; /.jp$/Id; /.uk$/Id; /.br$/Id; /.it$/Id; /.pl$/Id; /.fr$/Id; /.in$/Id; /.ir$/Id; /.au$/Id; /.info$/Id' > $TEMPFILEB
-rm $TEMPFILEA
-mv $TEMPFILEB $TEMPFILEA
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+for source in `cat $VALIDDOMAINTLD`;
+do
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $TEMPFILEA | wc -l`")
 if
-[[ $HOWMANYLINES -gt 0 ]]
+[[ "$HOWMANYTIMESTLD" == 0 ]]
 then
 :
 else
-STOPTLDSEARCH=true
-fi
-if
-[[ -z $FULLSKIPPARSING && -z $STOPTLDSEARCH ]]
-then
-bash $TLDPARSER
-fi
-unset STOPTLDSEARCH
-touch $TRYNACATCHFIlES
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
-for source in `cat $TEMPFILEA`;
-do
-if
-[[ $HOWMANYLINES -gt 0 ]]
-then
-echo "* $source" | tee --append $TRYNACATCHFIlES &>/dev/null
-fi
-sed -i '/[$source]$/d' $BFILETEMP
-done
-mv $BFILETEMP $BTEMPFILE
+cat $TEMPFILEA | sed '/\.[$source]$/I!d' > $TEMPFILEB
 rm $TEMPFILEA
+mv $TEMPFILEB $TEMPFILEA
+fi
+done
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
