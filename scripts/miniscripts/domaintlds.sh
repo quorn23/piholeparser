@@ -134,9 +134,9 @@ echo ""
 
 ## Anything New?
 printf "$cyan"    "Checking For New TLD's."
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $MAINTLDLIST $VALIDDOMAINTLD > $TLDCOMPARED
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
 HOWMANYTLDNEW=$(echo -e "`wc -l $TLDCOMPARED | cut -d " " -f 1`")
-printf "$yellow"    "$HOWMANYTLDNEW TLD's Not In Main Scan."
+printf "$yellow"    "$HOWMANYTLDNEW New TLD's."
 
 CHECKME=$VALIDDOMAINTLDBKUP
 if
