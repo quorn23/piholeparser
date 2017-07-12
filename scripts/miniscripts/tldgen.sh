@@ -123,7 +123,6 @@ fi
 ## Cleanup File
 printf "$cyan"    "Formatting And Removing Duplicatates From TLD List."
 mv $VALIDDOMAINTLD $BTEMPFILE
-#cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g; s/^/./' > $BFILETEMP
 cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $BFILETEMP
 rm $BTEMPFILE
 cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
@@ -136,7 +135,14 @@ echo ""
 printf "$cyan"    "Checking For New TLD's."
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
 HOWMANYTLDNEW=$(echo -e "`wc -l $TLDCOMPARED | cut -d " " -f 1`")
+if
+[[ "$HOWMANYTLDNEW" != 0 ]]
+then
 printf "$yellow"    "$HOWMANYTLDNEW New TLD's."
+echo "* $HOWMANYTLDNEW New TLD's" | tee --append $RECENTRUN &>/dev/null
+else
+printf "$yellow"    "No New TLD's"
+fi
 
 CHECKME=$VALIDDOMAINTLDBKUP
 if
