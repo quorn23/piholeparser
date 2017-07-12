@@ -31,11 +31,16 @@ echo ""
 ## Revert Killed Lists ##
 #########################
 echo "Reverting Killed Lists"
+CHECKME=$KILLTHELISTALL
+if
+ls $CHECKME &> /dev/null;
+then
 for f in $KILLTHELISTALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 mv $f "$MAINLISTDIR""$BASEFILENAME".lst
 done
+fi
 echo ""
 
 #####################
