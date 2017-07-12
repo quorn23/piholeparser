@@ -25,6 +25,7 @@ REPODIR=/etc/"$REPONAME"/
   
   LOGDIR="$REPODIR"RecentRunLogs/
     RECENTRUN="$LOGDIR"README.md
+    SPECIFICLOGSDIR="$LOGDIR"details/
     TLDPERCENTORDER="$LOGDIR"tldsinorder.txt
     TLDCOMPARED="$LOGDIR"tldcomparison.listdiff
     TOPTLDPERCENTAGE="$LOGDIR"tldpercentage.txt
@@ -78,6 +79,9 @@ REPODIR=/etc/"$REPONAME"/
       RESULTSSCRIPT="$SCRIPTSDIR"results.sh
       RUNPIHOLEPARSERSCRIPT="$SCRIPTSDIR"runpiholeparser.sh
       UPDATESCRIPT="$SCRIPTSDIR"updaterunpiholeparser.sh
+      
+      RUNSCRIPTSDIR="$SCRIPTSDIR"mainscripts/
+          RUNSCRIPTSALL="$RUNSCRIPTSDIR"*.sh
       
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
