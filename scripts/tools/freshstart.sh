@@ -34,8 +34,7 @@ echo "Reverting Killed Lists"
 for f in $KILLTHELISTALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BMAINPARSELIST="$MAINLISTDIR""$BASEFILENAME".lst
-mv $f $BMAINPARSELIST
+mv $f "$MAINLISTDIR""$BASEFILENAME".lst
 done
 echo ""
 
