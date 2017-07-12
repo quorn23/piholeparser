@@ -3,6 +3,18 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
+## whiptail required
+WHATITIS=whiptail
+WHATPACKAGE=whiptail
+if
+which $WHATITIS >/dev/null;
+then
+:
+else
+printf "$yellow"  "Installing $WHATITIS"
+apt-get install -y $WHATPACKAGE
+fi
+
 #########################
 ## Clean Mirror Folder ##
 #########################
