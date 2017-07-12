@@ -6,90 +6,31 @@
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/variables.var
 
-#######################
-## Check Dependencies##
-#######################
+## Start File Loop
+## For .dependency files In The dependencies Directory
+for f in $DEPENDENCIESALL
+do
 
-WHATITIS=p7zip
-WHATPACKAGE=p7zip-full
+## Declare File Name
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+
+for source in `cat $f`;
+do
+
+WHATITIS=$BASEFILENAME
+WHATPACKAGE=$source
 timestamp=$(echo `date`)
 if
 which $WHATITIS >/dev/null;
 then
 echo ""
-printf "$yellow"  "$WHATITIS is installed"
+printf "$yellow"  "$WHATITIS Is Already Installed."
 else
 printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
 echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-WHATITIS=gawk
-WHATPACKAGE=gawk
-timestamp=$(echo `date`)
-if
-which $WHATITIS >/dev/null;
-then
-echo ""
-printf "$yellow"  "$WHATITIS is installed"
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
 
-WHATITIS=sed
-WHATPACKAGE=sed
-timestamp=$(echo `date`)
-if
-which $WHATITIS >/dev/null;
-then
-echo ""
-printf "$yellow"  "$WHATITIS is installed"
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-
-WHATITIS=tar
-WHATPACKAGE=tar
-timestamp=$(echo `date`)
-if
-which $WHATITIS >/dev/null;
-then
-echo ""
-printf "$yellow"  "$WHATITIS is installed"
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-
-WHATITIS=wget
-WHATPACKAGE=wget
-timestamp=$(echo `date`)
-if
-which $WHATITIS >/dev/null;
-then
-echo ""
-printf "$yellow"  "$WHATITIS is installed"
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-
-WHATITIS=curl
-WHATPACKAGE=curl
-timestamp=$(echo `date`)
-if
-which $WHATITIS >/dev/null;
-then
-echo ""
-printf "$yellow"  "$WHATITIS is installed"
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
+done
+done
