@@ -16,6 +16,7 @@ do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
 printf "$cyan"  "Checking For $BASEFILENAME"
+echo ""
 
 ## Shouldn't be more than one source here
 for source in `cat $f`;
@@ -27,12 +28,12 @@ timestamp=$(echo `date`)
 if
 which $WHATITIS >/dev/null;
 then
-echo ""
 printf "$yellow"  "$WHATITIS Is Already Installed."
 else
 printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
 fi
+echo ""
 
 ## End Of Loops
 done
