@@ -12,8 +12,12 @@ for f in $DEPENDENCIESALL
 do
 
 ## Declare File Name
+
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
+printf "$cyan"  "Checking For $BASEFILENAME"
+
+## Shouldn't be more than one source here
 for source in `cat $f`;
 do
 
@@ -28,9 +32,8 @@ printf "$yellow"  "$WHATITIS Is Already Installed."
 else
 printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
-echo "* $WHATITIS was installed $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
-
+## End Of Loops
 done
 done
