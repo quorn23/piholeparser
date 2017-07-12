@@ -6,7 +6,7 @@ source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
-for f in $RUNMAINSCRIPTSDIR
+for f in $RUNMAINSCRIPTSALL
 do
 
 # Dynamic Variables
