@@ -565,7 +565,7 @@ if
 then
 :
 else
-cat $TEMPFILEA | sed '/[$source]$/I!d' > $TEMPFILEB
+cat $TEMPFILEA | sed '/\.[$source]$/Id' > $TEMPFILEB
 rm $TEMPFILEA
 mv $TEMPFILEB $TEMPFILEA
 fi
