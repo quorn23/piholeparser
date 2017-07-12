@@ -158,7 +158,3 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
-
-echo ""
-printf "$orange" "$DIVIDERBARB"
-echo ""
