@@ -1,6 +1,9 @@
 #!/bin/bash
 ## This should help me find what parsed list contains a domain
 
+## Variables
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+
 ## whiptail required
 WHATITIS=whiptail
 WHATPACKAGE=whiptail
@@ -13,12 +16,11 @@ printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
 fi
 
-LISTLOCATION=/etc/piholeparser/parsed/*.txt
 DOMAINTOLOOKFOR=$(whiptail --inputbox "What Domain are you hunting for?" 10 80 "" 3>&1 1>&2 2>&3)
 echo ""
 echo "Searching for $DOMAINTOLOOKFOR"
 echo ""
-for f in $LISTLOCATION
+for f in $PARSEDLISTSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 if 
