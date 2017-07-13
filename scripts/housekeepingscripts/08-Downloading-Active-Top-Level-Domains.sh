@@ -131,6 +131,15 @@ HOWMANYTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 printf "$yellow"    "$HOWMANYTLD Valid TLD's Total."
 echo ""
 
+## Backup TLD list if not there
+CHECKME=$VALIDDOMAINTLDBKUP
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+
 ## Anything New?
 printf "$cyan"    "Checking For New TLD's."
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
