@@ -2,7 +2,8 @@
 ## This should create the fun info for the run log, and Readme.md
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 source $TEMPVARS
 
 ####################
