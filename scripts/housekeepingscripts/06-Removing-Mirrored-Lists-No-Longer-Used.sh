@@ -2,14 +2,15 @@
 ## This Removes Parsed Files That We No Longer Need
 
 ## Static Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 printf "$cyan"    "Making List of All .lst Files."
 for f in $EVERYLISTFILEWILDCARD
 do
 
 ## Dynamic Variables
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 
 ## Make List Of Every .lst file
 echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
