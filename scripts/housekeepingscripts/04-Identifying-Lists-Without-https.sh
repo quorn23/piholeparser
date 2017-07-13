@@ -2,7 +2,8 @@
 ## This Generates a list of which blacklists don't use https
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 if 
 ls $NOHTTPSLISTS &> /dev/null; 
