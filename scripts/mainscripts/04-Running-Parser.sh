@@ -390,6 +390,7 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/\#\+/d; /\!\+/d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
 touch $BTEMPFILE
+rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -424,6 +425,7 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/^https\?:\/\//d; /third-party$/d; /popup$/d; s/^PRIMARY\s\+[ \t]*//; s/^localhost\s\+[ \t]*//; s/blockeddomain.hosts\s\+[ \t]*//; s/^0.0.0.0\s\+[ \t]*//; s/^127.0.0.1\s\+[ \t]*//; s/^::1\s\+[ \t]*//' > $BTEMPFILE
 touch $BTEMPFILE
+rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -457,8 +459,8 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BTEMPFILE
-#cat $BFILETEMP | sed '/^$/d; /\s\+/d' > $BTEMPFILE
 touch $BTEMPFILE
+rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -495,6 +497,7 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/,/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[@]/d; /~/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d; /\^\//d; s/^||//; /[|]/d' > $BTEMPFILE
 touch $BTEMPFILE
+rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -529,6 +532,7 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
 touch $BTEMPFILE
+rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
@@ -609,6 +613,7 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
 touch $BTEMPFILE
+rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
