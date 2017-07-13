@@ -52,7 +52,7 @@ done
 ## Sort and Dedupe Lists
 for f in $WHITELISTDOMAINSALL
 do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
@@ -119,7 +119,7 @@ fi
 ## Sort And Dedupe Lists
 for f in $BLACKLISTDOMAINSALL
 do
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 WHATLISTTOSORT=$f
 BLACKSORTDEDUPE="$BASEFILENAME Domains."
 timestamp=$(echo `date`)
