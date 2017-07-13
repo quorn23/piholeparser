@@ -2,7 +2,8 @@
 ## This should help me find what parsed list contains a domain
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 ## whiptail required
 WHATITIS=whiptail
