@@ -2,8 +2,8 @@
 ## This Recreates Recent Run Log
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
-
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 SCRIPTTEXT="Creating Main Recent Run Log."
 timestamp=$(echo `date`)
