@@ -2,7 +2,8 @@
 ## Sets The Beginning Script Time
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 source $TEMPVARS
 
 timestamp=$(echo `date`)
