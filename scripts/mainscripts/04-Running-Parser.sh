@@ -560,20 +560,21 @@ printf "$cyan"  "$PARSECOMMENT"
 
 
 
-cp $BFILETEMP $TEMPFILEA
+#cp $BFILETEMP $TEMPFILEA
 for source in `cat $VALIDDOMAINTLD`;
 do
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $TEMPFILEA | wc -l`")
+#HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $TEMPFILEA | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-cat $TEMPFILEA | sed '/[\.$source]$/Id' > $TEMPFILEB
-rm $TEMPFILEA
-mv $TEMPFILEB $TEMPFILEA
+#cat $TEMPFILEA | sed '/[\.$source]$/Id' > $TEMPFILEB
+cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
+#rm $TEMPFILEA
+#mv $TEMPFILEB $TEMPFILEA
 fi
 done
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
-
+#gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 
 
 
