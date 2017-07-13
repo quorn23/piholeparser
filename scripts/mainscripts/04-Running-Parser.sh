@@ -556,6 +556,10 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
+
+
+
+
 cp $BFILETEMP $TEMPFILEA
 for source in `cat $VALIDDOMAINTLD`;
 do
@@ -569,6 +573,10 @@ mv $TEMPFILEB $TEMPFILEA
 fi
 done
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
+
+
+
+
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
