@@ -2,7 +2,8 @@
 ## This is the Parsing Process
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 ####################
 ## File .lst's    ##
