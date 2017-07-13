@@ -49,6 +49,8 @@ ls $CHECKME &> /dev/null;
 then
 for f in $KILLTHELISTALL
 do
+source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 mv $f "$MAINLISTDIR""$BASEFILENAME".lst
 done
