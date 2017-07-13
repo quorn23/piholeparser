@@ -575,7 +575,7 @@ cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 fi
 done
 #gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
-
+rm $BFILETEMP
 
 
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
