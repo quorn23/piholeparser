@@ -2,7 +2,8 @@
 ## This Recreates The Temporary Variables
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 CHECKME=$TEMPVARS
 if
