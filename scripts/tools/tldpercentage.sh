@@ -2,7 +2,8 @@
 ## This should help me find out the percentage of TLD's to optimize script speed
 
 ## Vars
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 STARTTIMESTAMP=$(date +"%s")
 
