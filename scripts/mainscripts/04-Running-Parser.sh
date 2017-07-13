@@ -45,7 +45,7 @@ for source in `cat $f`;
 do
 
 ## These Variables are to help with Filenaming
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
