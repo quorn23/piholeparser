@@ -518,7 +518,7 @@ FILESIZEZERO=true
 fi
 
 ## Domain Requirements,, a period and a letter
-PARSECOMMENT="Checking For FQDN Requirements."
+PARSECOMMENT="Checking For Fully Qulified Domain Name Requirements."
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
@@ -551,33 +551,23 @@ FILESIZEZERO=true
 fi
 
 ## Invalid TLD's
-PARSECOMMENT="Checking For Invalid TLD's."
+PARSECOMMENT="Reverse Searching For Invalid Top Level Domains."
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-
-
-
-
-#cp $BFILETEMP $TEMPFILEA
 for source in `cat $VALIDDOMAINTLD`;
 do
-#HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $TEMPFILEA | wc -l`")
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-#cat $TEMPFILEA | sed '/[\.$source]$/Id' > $TEMPFILEB
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
-#rm $TEMPFILEA
-#mv $TEMPFILEB $TEMPFILEA
+HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
+printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
 fi
 done
-#gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEA $BFILETEMP > $BTEMPFILE
 rm $BFILETEMP
-
-
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
