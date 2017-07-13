@@ -2,7 +2,8 @@
 ## This should whitelist all domains that will be parsed
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 ####################
 ## Whitelist      ##
