@@ -3,7 +3,8 @@
 ## and merges it all into one
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 ## Cheap error handling
 touch $BLACKLISTTEMP
