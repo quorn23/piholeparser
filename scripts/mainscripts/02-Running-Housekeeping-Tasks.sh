@@ -11,7 +11,7 @@ for f in $RUNHOUSEKEEPINGSCRIPTSALL
 do
 
 # Dynamic Variables
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 
 ## Loop Variables
 SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
