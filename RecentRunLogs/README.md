@@ -202,3 +202,9 @@
 * Script completed at Thu 13 Jul 10:43:57 EDT 2017
 
 ## Pushing Lists. Thu 13 Jul 10:43:57 EDT 2017
+* web host lists directory Already there no need to mkdir. Thu 13 Jul 10:50:02 EDT 2017
+* Locally Hosted Biglist Removed. Thu 13 Jul 10:50:02 EDT 2017
+* Locally Hosted Biglist Not Removed. Thu 13 Jul 10:50:02 EDT 2017
+
+## Script Complete. Thu 13 Jul 10:50:20 EDT 2017
+
