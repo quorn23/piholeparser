@@ -2,7 +2,8 @@
 ## This Recreates The Valid TLD file
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 CHECKME=$VALIDDOMAINTLD
 if
@@ -21,7 +22,7 @@ printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 
 ## Filenaming Vars
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
