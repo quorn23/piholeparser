@@ -103,7 +103,7 @@ if
 then
 printf "$yellow"    "File Has Changed Online."
 elif
-[[ -n $DIDWECHECKONLINEFILE && $local_ctime -gt $remote_ctime ]]
+[[ -n $DIDWECHECKONLINEFILE && $local_ctime -ge $remote_ctime ]]
 then
 MAYBESKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
