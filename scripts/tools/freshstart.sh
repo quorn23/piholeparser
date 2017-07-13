@@ -1,7 +1,8 @@
 #!/bin/bash
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
 
 ## whiptail required
 WHATITIS=whiptail
@@ -18,6 +19,7 @@ fi
 #########################
 ## Clean Mirror Folder ##
 #########################
+
 echo "Cleaning Mirror Directory"
 CHECKME=$MIRROREDLISTSALL
 if
@@ -30,6 +32,7 @@ echo ""
 #########################
 ## Clean Parsed Folder ##
 #########################
+
 echo "Cleaning Parsed Directory"
 CHECKME=$PARSEDLISTSALL
 if
@@ -42,6 +45,7 @@ echo ""
 #########################
 ## Revert Killed Lists ##
 #########################
+
 echo "Reverting Killed Lists"
 CHECKME=$KILLTHELISTALL
 if
@@ -49,9 +53,7 @@ ls $CHECKME &> /dev/null;
 then
 for f in $KILLTHELISTALL
 do
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+source $DYNOVARS
 mv $f "$MAINLISTDIR""$BASEFILENAME".lst
 done
 fi
@@ -60,6 +62,7 @@ echo ""
 #####################
 ## Clean TLD Lists ##
 #####################
+
 echo "Cleaning TLD Lists"
 CHECKME=$CLEANTLDS
 if
@@ -79,6 +82,7 @@ echo ""
 ###############################
 ## Push Changes up to Github ##
 ###############################
+
 timestamp=$(echo `date`)
 WHYYOUDODIS=$(whiptail --inputbox "Why are you doing a manual push?" 10 80 " $timestamp" 3>&1 1>&2 2>&3)
 echo "Pushing Lists to Github"
