@@ -3918,7 +3918,7 @@ vshare.eu#%#Object.defineProperty(window, 'popns', { get: function() { return {}
 !
 ! AdMaven
 1337x.to,unblocked.ink,albumkings.org,uploadocean.com,zippyshare.com,bigfile.to,flashxx.tv,imgcandy.net,uptobox.com,embed.nowvideo.sx,uptostream.com,flashx.tv,userscloud.com,imageweb.ws,salefiles.com,eztv.ag,extra.to,pornscum.com,pornsocket.com,depositfiles.com,depositfiles.org,dfiles.eu,dfiles.ru,pornve.com,yourbittorrent.com,nowvideo.ag,nowvideo.co,nowvideo.li,nowvideo.sx,nowvideo.to,karanpc.com,daclips.in,gorillavid.in,movpod.in,uplod.ws,psarips.com,freelive365.com,imgchili.net,porntrex.com,pornfay.com,hulkload.com,ddlvalley.cool,unblocked.onl,zone.telechargementz.tv,xmovies8.tv,imgclick.net,watchers.to,letwatch.to,bitvid.sx,deportesmax.com,gorillavid.com,daclips.com,speedvid.net,indishare.me,bdupload.info,vidlox.tv,img24.org,uploadrocket.net,sceper.ws,streamhub.live,prefiles.com,300mbfilms.co,yourporn.sexy,vidfile.net,anime-odcinki.pl,u2s.io,247hd.info,kingvid.tv,zippyaudio2.com,flashx.to,computerworm.net,extratorrent.cc,xmovies8.ru,clicknupload.link,suprafiles.co,lipstickalley.com,xmovies.to,streamflv.com,auroravid.to,watchvideo.us,uploading.site,coo5shaine.com,onhax.me,wholecloud.net,movpod.net,katfile.com,bestream.tv#%#Object.defineProperties(window,{admvpu:{get:function(){},set:function(a){if("function"==typeof a)throw Error();}},Fingerprint2:{get:function(){},set:function(){throw Error();}}});
-cloudyfiles.org#%#Object.defineProperties(window,{admvpu:{get:function(){},set:function(a){if("function"==typeof a)throw Error();}},Fingerprint2:{get:function(){},set:function(){throw Error();}}});
+ebook-gratuit.co,cloudyfiles.org#%#Object.defineProperties(window,{admvpu:{get:function(){},set:function(a){if("function"==typeof a)throw Error();}},Fingerprint2:{get:function(){},set:function(){throw Error();}}});
 !
 ! Let Adguard test page know that we're here
 static.adguard.com#%#window.helloFromAdguard = 1;
@@ -3970,6 +3970,8 @@ watchseries-online.nl,btsone.cc#%#Object.defineProperty(window,'_drp', { get:fun
 !*****
 !**********************************
 !
+! https://forum.adguard.com/index.php?threads/23211/
+hqq.watch#%#AG_onLoad(function() { setTimeout(function() {after_click();}, 300); });
 ! https://forum.adguard.com/index.php?threads/12858/
 pornhd.com#%#Object.defineProperty(window, 'popU', { get: function() { return {}; } });
 !
@@ -4017,7 +4019,7 @@ drudgereport.com#%#URL.createObjectURL=function(){return"about:blank"};
 wikia.com,nydailynews.com,champion.gg,collegehumor.com,dorkly.com,drudgereport.com,investopedia.com,merriam-webster.com,topix.com,androidcentral.com,drudgereport.com#%#Object.defineProperty(window,'adonisConnType',{get:function(){},set:function(){throw'Adguard: stopped a script execution.'}});
 !
 ! https://forum.adguard.com/index.php?threads/www-foumovies-com-windows.22664/
-123movies.net,foumovies.com#%#(function() { var _eval = window.eval; window.eval = function(a) { if ( a.toString().indexOf('charCodeAt') === -1 ) { _eval(a); return; } }; })();
+psarips.com,123movies.net,foumovies.com#%#(function() { var _eval = window.eval; window.eval = function(a) { if ( a.toString().indexOf('charCodeAt') === -1 ) { _eval(a); return; } }; })();
 ! https://forum.adguard.com/index.php?threads/21834/
 kickasstorrent.hu#%#Object.defineProperty(window, 'TABUnder', { get: function() { return; } });
 ! https://forum.adguard.com/index.php?threads/22027/
@@ -4774,10 +4776,10 @@ http://www.ads.$third-party
 ! RoughTed malvertising servers
 ! https://blog.malwarebytes.com/cybercrime/2017/05/roughted-the-anti-ad-blocker-malvertiser/
 !
-&tid=*&red=1&abt=$empty
-?tid=*&red=1&*&abt=$empty
-/?&pid=*&subid=$empty
-/?&subid=*&pid=$empty
+&tid=*&red=1&abt=$empty,important
+?tid=*&red=1&*&abt=$empty,important
+/?&pid=*&subid=$empty,important
+/?&subid=*&pid=$empty,important
 !-------------------------------------------------------------------------------!
 !------------------ Rules for specific web sites -------------------------------!
 !-------------------------------------------------------------------------------!
@@ -4848,6 +4850,8 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 !+ PLATFORM (windows, mac, android)
 ||syndication.exoclick.com/splash.php$empty,important
 !
+gofobo.com##.adsbygoogle
+||exdynsrv.com^$domain=openload.co
 photobucket.com##.ads_top
 photobucket.com##.ads_bottom
 reverso.net###vdasection
@@ -21554,9 +21558,11 @@ _popunder+$popup
 ###div-web-ad-performance
 ###divAd
 ###divAdBox
+###divAdDetail
 ###divAdHere
 ###divAdHorizontal
 ###divAdLeft
+###divAdMain
 ###divAdRight
 ###divAdSpecial
 ###divAdWrapper
@@ -28243,6 +28249,7 @@ _popunder+$popup
 ##.adunit_rectangle
 ##.adunitfirst
 ##.adunitrd
+##.adup-ad-container
 ##.adv-160
 ##.adv-200-200
 ##.adv-250-250
@@ -39151,6 +39158,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||putrr9.com^$third-party
 ||puttme.ga^$third-party
 ||pwrads.net^$third-party
+||pwzn9ze.com^$third-party
 ||px3792.com^$third-party
 ||pxl2015x1.com^$third-party
 ||pxstda.com^$third-party
@@ -45143,6 +45151,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||ad.sensismediasmart.com.au^
 ||ad.sharethis.com^$third-party
 ||ad.smartclip.net^
+||ad.smartmediarep.com^$third-party
 ||ad.spielothek.so^
 ||ad.sponsoreo.com^$third-party
 ||ad.valuecalling.com^$third-party
@@ -45729,7 +45738,6 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||droidnetwork.net/img/vendors/
 ||dropbox.com^*/aff-resources/$domain=gramfeed.com
 ||dsh7ky7308k4b.cloudfront.net^
-||dsms0mj1bbhn4.cloudfront.net^
 ||dtrk.slimcdn.com^
 ||dttek.com/sponsors/
 ||du2uh7rq0r0d3.cloudfront.net^
@@ -67465,6 +67473,7 @@ motherless.com##table[style*="max-width:"]
 @@||alphabaseinc.com/images/display_adz/$~third-party
 @@||alusa.org/store/modules/blockadvertising/$~third-party
 @@||amazon-adsystem.com/aax2/amzn_ads.js$domain=deadspin.com|food.com|foodnetwork.com|gawker.com|gizmodo.com|io9.com|jalopnik.com|jezebel.com|kotaku.com|lifehacker.com|weather.com
+@@||amazon-adsystem.com/aax2/apstag.js$domain=eurogamer.net|nintendolife.com|rockpapershotgun.com|usgamer.net|vg247.com
 @@||amazon-adsystem.com/aax2/getads.js$domain=eurogamer.net|nintendolife.com|rockpapershotgun.com|usgamer.net|vg247.com
 @@||amazon-adsystem.com/js/$script,domain=voldingenglish.com
 @@||amazon-adsystem.com/panda/$script,domain=voldingenglish.com

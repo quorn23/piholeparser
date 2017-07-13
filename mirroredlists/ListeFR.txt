@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: qC3Sc10+hFXI/cZJfdqY8w
-! Version: 201707121752
+! Checksum: vQSLGHjOwVawrRJztPIDtg
+! Version: 201707130542
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -2984,7 +2984,6 @@ debugger:$popup
 ||shmokiads.com^$third-party
 ||shoppingate.info^$third-party
 ||shoppytab.com^$third-party
-||shoptimate.net^$third-party
 ||shortgoo.com^$third-party
 ||shortinfo.mobi^$third-party
 ||shoto-kan.com^$third-party
@@ -3809,6 +3808,7 @@ debugger:$popup
 ||artelled.com^$third-party
 ||bargetbook.com^$third-party
 ||beershavartb.com^$third-party
+||besied.com^$third-party
 ||bestarmour4u.link^$third-party
 ||bowlingle.com^$third-party
 ||budgement.info^$third-party
@@ -6140,8 +6140,8 @@ $webrtc,domain=123movies.net|9divx.org|akoam.com|bypassed.gold|cineiz.co|cineiz.
 |http://$popup,script,subdocument,third-party,xmlhttprequest,domain=cpabien.ch|cpabien.co|cpabien.xyz|cpasbien.io|mania-torrent.ws|torrent9.biz|torrent9.cc|torrent9.info|torrent9.me|torrent9.top|torrent9.tv|torrent9.ws|torrents9.org|torrents9.tv
 |https://$popup,script,subdocument,third-party,xmlhttprequest,domain=cpabien.ch|cpabien.co|cpabien.xyz|cpasbien.io|mania-torrent.ws|torrent9.biz|torrent9.cc|torrent9.info|torrent9.me|torrent9.top|torrent9.tv|torrent9.ws|torrents9.org|torrents9.tv
 ! nextorrent.net
-|http://$script,third-party,xmlhttprequest,domain=nextorrent.biz|nextorrent.cc|nextorrent.net|nextorrent.ws
-|https://$script,third-party,xmlhttprequest,domain=nextorrent.biz|nextorrent.cc|nextorrent.net|nextorrent.ws
+|http://$script,third-party,xmlhttprequest,domain=nextorrent.biz|nextorrent.cc|nextorrent.ch|nextorrent.com|nextorrent.net|nextorrent.org|nextorrent.ws
+|https://$script,third-party,xmlhttprequest,domain=nextorrent.biz|nextorrent.cc|nextorrent.ch|nextorrent.com|nextorrent.net|nextorrent.org|nextorrent.ws
 ! proxyportal.org
 @@||ajax.googleapis.com/ajax/libs/$script,domain=bypassed.gold|immunicity.gold|unblocked.gold
 @@||cdnjs.cloudflare.com/ajax/libs/$script,domain=bypassed.gold|immunicity.gold|unblocked.gold
@@ -6500,11 +6500,11 @@ oload.tv,streamango.com###videooverlay
 !|http://$script,third-party,domain=megawatch.net
 !|https://$script,third-party,domain=megawatch.net
 ! youwatch.org
-$popup,domain=voodaith7e.com|youwatch.org
-voodaith7e.com##div > [id^="player"] + div[id][style*="z-index:"]
-|http://$script,subdocument,third-party,xmlhttprequest,domain=voodaith7e.com|youwatch.org
-|https://$script,subdocument,third-party,xmlhttprequest,domain=voodaith7e.com|youwatch.org
-||voodaith7e.com^*.html|$subdocument,~third-party
+$popup,domain=he2eini7ka.com|youwatch.org
+he2eini7ka.com##div > [id^="player"] + div[id][style*="z-index:"]
+|http://$script,subdocument,third-party,xmlhttprequest,domain=he2eini7ka.com|youwatch.org
+|https://$script,subdocument,third-party,xmlhttprequest,domain=he2eini7ka.com|youwatch.org
+||he2eini7ka.com^*.html|$subdocument,~third-party
 ! watchers.to (revolving redirection)
 ||watchers.to^$subdocument,third-party
 ! nowvideo
@@ -8040,7 +8040,7 @@ $popup,domain=35.184.169.188|adf.ly|allanalpass.com|any.gs|auroravid.to|ay.gy|ca
 ||sendvid.com/assets/marabga-
 ||seneweb.com/dynamic/modules/banners/
 ||senioractu.com/photo/background-
-||senscritique.com/img/memories-of-murder/desktop.jpg
+||senscritique.com/img/*/desktop.jpg
 ||seriehentai.com^$popup,~third-party
 ||seriehentai.com^$script
 ||seriesstreaming.fr/images/partenaire_
@@ -11114,6 +11114,7 @@ traildesforts.com##.advertising
 statistiks.fr##.adz
 aufeminin.com##.af-block-native
 permaculteurs.com##.aff
+ed-protect.org##.affichier_lien > tbody > tr + tr[class]
 captainmugiwara.over-blog.com##.afterload
 detecteur.net##.alert-warning
 algerianmag.com##.alger-in
