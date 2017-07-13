@@ -567,6 +567,7 @@ HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
 printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
 fi
 done
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
 rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
