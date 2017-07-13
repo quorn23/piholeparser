@@ -1,8 +1,11 @@
 #!/bin/bash
 ## This should show what lines are not making it through gravity.sh
 
-## Vars
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+## Variables
+script_dir=$(dirname $0)
+source "$script_dir"/../scriptvars/staticvariables.var
+
+## Pihole vars
 source /etc/pihole/setupVars.conf
 TRIMMEDIP=${IPV4_ADDRESS%/*}
 CURRENTUSER="$(whoami)"
