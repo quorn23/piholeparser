@@ -572,6 +572,7 @@ if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
+touch $BTEMPFILE
 HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
 printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
 fi
