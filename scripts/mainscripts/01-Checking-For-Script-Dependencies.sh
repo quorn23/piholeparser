@@ -6,7 +6,6 @@
 ## Variables
 script_dir=$(dirname $0)
 source "$script_dir"/../scriptvars/staticvariables.var
-#source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 
 echo ""
 
