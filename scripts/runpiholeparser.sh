@@ -2,7 +2,8 @@
 ## This is the central script that ties the others together
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/scriptvars/staticvariables.var
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
@@ -10,7 +11,7 @@ for f in $RUNMAINSCRIPTSALL
 do
 
 # Dynamic Variables
-source /etc/piholeparser/scripts/scriptvars/dynamicvariables.var
+source $DYNOVARS
 
 ## Loop Variables
 SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
