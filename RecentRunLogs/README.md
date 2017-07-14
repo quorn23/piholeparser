@@ -1927,3 +1927,109 @@
 
 * Script completed at Fri 14 Jul 15:56:11 EDT 2017
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+## Pushing Lists. Fri 14 Jul 15:56:12 EDT 2017
+* web host lists directory Already there no need to mkdir. Fri 14 Jul 15:56:13 EDT 2017
+* Locally Hosted Biglist Removed. Fri 14 Jul 15:56:13 EDT 2017
+* Locally Hosted Biglist Not Removed. Fri 14 Jul 15:56:13 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Pushing-Lists.txt)
+
+## Script Complete. Fri 14 Jul 15:56:14 EDT 2017
+* WindowsSpyBlocker81 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:55:12 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Script-Complete.txt)
+
+* WindowsSpyBlocker10 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:55:10 EDT 2017
+* WindowsSpyBlocker7 List Was An Empty File After Download. Fri 14 Jul 15:56:15 EDT 2017
+* WindowsSpyBlocker7 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:56:15 EDT 2017
+* Vokins List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:55:08 EDT 2017
+* WindowsSpyBlocker81 List Was An Empty File After Download. Fri 14 Jul 15:56:15 EDT 2017
+* WindowsSpyBlocker10 List Was An Empty File After Download. Fri 14 Jul 15:56:15 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+* WindowsSpyBlocker81 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:56:16 EDT 2017
+
+* WindowsSpyBlocker10 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:56:16 EDT 2017
+## Combining All Parsed Lists. Fri 14 Jul 15:56:16 EDT 2017
+* WindowsSpyBlocker7 List Was An Empty File After Download. Fri 14 Jul 15:56:16 EDT 2017
+* All Parsed List Removed. Fri 14 Jul 15:56:16 EDT 2017
+* WindowsSpyBlocker7 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:56:16 EDT 2017
+* WindowsSpyBlocker81 List Was An Empty File After Download. Fri 14 Jul 15:56:16 EDT 2017
+* WindowsSpyBlocker81 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:56:16 EDT 2017
+* WindowsSpyBlocker81 List Was Killed By The Parsing Process. It will be skipped in the future. Fri 14 Jul 15:55:13 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Combining All Parsed Lists. Fri 14 Jul 15:56:18 EDT 2017
+* All Parsed List Not Removed. Fri 14 Jul 15:56:18 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Combining All Parsed Lists. Fri 14 Jul 15:56:18 EDT 2017
+* All Parsed List Not Removed. Fri 14 Jul 15:56:18 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Combining All Parsed Lists. Fri 14 Jul 15:56:19 EDT 2017
+* All Parsed List Not Removed. Fri 14 Jul 15:56:19 EDT 2017
+* All Parsed List (edited) Removed. Fri 14 Jul 15:56:40 EDT 2017
+* All Parsed List (edited) Removed. Fri 14 Jul 15:56:40 EDT 2017
+* All Parsed List (edited) Not Removed. Fri 14 Jul 15:56:40 EDT 2017
+* All Parsed List (edited) Not Removed. Fri 14 Jul 15:56:40 EDT 2017
+* Allparsedlist list was an empty file Fri 14 Jul 15:56:53 EDT 2017
+* Allparsedlist list was an empty file Fri 14 Jul 15:56:53 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
+
+
+
+
+## Results Of The Parsing. Fri 14 Jul 15:56:53 EDT 2017
+## Results Of The Parsing. Fri 14 Jul 15:56:53 EDT 2017
+## Results Of The Parsing. Fri 14 Jul 15:56:53 EDT 2017
+## Results Of The Parsing. Fri 14 Jul 15:56:53 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 14 Jul 15:56:53 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 14 Jul 15:56:53 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 14 Jul 15:56:53 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 14 Jul 15:56:53 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+
+
+## Total Runtime. Fri 14 Jul 15:56:54 EDT 2017
+## Total Runtime. Fri 14 Jul 15:56:54 EDT 2017
+## Total Runtime. Fri 14 Jul 15:56:54 EDT 2017
+
+## Total Runtime. Fri 14 Jul 15:56:54 EDT 2017
+* Script Took  minutes To Filter  Lists.
+* Script Took  minutes To Filter  Lists.
+* Script Took  minutes To Filter  Lists.
+* Script Took  minutes To Filter  Lists.
+
+
+
+## Updated Main README.md. Fri 14 Jul 15:56:54 EDT 2017
+## Updated Main README.md. Fri 14 Jul 15:56:54 EDT 2017
+## Updated Main README.md. Fri 14 Jul 15:56:54 EDT 2017
+
+## Updated Main README.md. Fri 14 Jul 15:56:54 EDT 2017
+
+
+
+
+* Script completed at Fri 14 Jul 15:56:54 EDT 2017
+* Script completed at Fri 14 Jul 15:56:54 EDT 2017
+* Script completed at Fri 14 Jul 15:56:54 EDT 2017
+* Script completed at Fri 14 Jul 15:56:54 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+
+## Pushing Lists. Fri 14 Jul 15:56:54 EDT 2017
+## Pushing Lists. Fri 14 Jul 15:56:55 EDT 2017
+## Pushing Lists. Fri 14 Jul 15:56:55 EDT 2017
+## Pushing Lists. Fri 14 Jul 15:56:55 EDT 2017
