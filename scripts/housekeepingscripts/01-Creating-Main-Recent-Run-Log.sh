@@ -15,6 +15,7 @@ rm $RECENTRUN
 printf "$red" "Old Log Purged."
 fi
 
+echo "## Running Housekeeping Tasks $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "* Recent Run Log Recreated." | tee --append $RECENTRUN &>/dev/null
 
