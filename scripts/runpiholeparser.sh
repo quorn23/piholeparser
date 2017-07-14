@@ -6,7 +6,7 @@ script_dir=$(dirname $0)
 source "$script_dir"/scriptvars/staticvariables.var
 
 ## Logo
-#bash $AVATARSCRIPT
+bash $AVATARSCRIPT
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
