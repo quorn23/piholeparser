@@ -2,7 +2,8 @@
 ## This should be run alot, to make sure the temp file doesn't get screwed up
 
 ## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+script_dir=$(dirname $0)
+source "$script_dir"/scriptvars/staticvariables.var
 
 #printf "$lightblue"    "___________________________________________________________"
 #echo ""
