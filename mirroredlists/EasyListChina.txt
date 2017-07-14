@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: 0vmqYzWTMO4lOnP9MUmQLw
-! Version: 201707140432
+! Checksum: 9ZEorDqskYEw2M8P70TzUg
+! Version: 201707141902
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 14 Jul 2017 04:32 UTC
+! Last Modified: 14 Jul 2017 19:02 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -14,6 +14,7 @@
 !
 !-----------------------General advert blocking filters-----------------------!
 -880-80-4.jpg
+/js/dyguosj/*
 -HollandOne_GIF2.gif
 .cc/js/ads/
 .cn/ads/
@@ -564,6 +565,14 @@ _popAds.
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn^
+||6travel.com^$third-party
+||lytubaobao.com^
+||023hysj.com^
+||quw18.com^
+||a0c77.com^
+||kuaipai666.cn^
+||lsxmg.com^
+||wangdaizao.com^
 ||idianfang.com^
 ||ggdoubi.com^
 .cn/show?id=$script,third-party
@@ -6470,8 +6479,15 @@ mg*.6park.com/img/$image
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||dmhy.ml^*g?$image
+||zuishulou.com/assets/scripts/m.js
+/js/layer.js$domain=99kk6.com
+||sinaimg.cn^$domain=99kk6.com
+||678pan.com/TC/
+||buimg.com/1949/da2113bdb374cb7f.gif
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
+99kk6.com##.spots
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -11574,6 +11590,18 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ##div[style^="width: 100%;"][style$="visibility: visible;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
 ##div[style^="width: 100%;"][style$="z-index: inherit;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
 ! Baidu Union
+||namedq.com^
+||2.5aigushi.com^
+||1.i1766.com^
+||dejing.laobanfa.com^
+||21shebao.com^$third-party
+||wenshenbang.com^$third-party
+||xue.zbyw.cn^
+||hapic1.jhkxwl.com^
+||bbdm.051661.com^
+||4name.com^$third-party
+||a1.huanqiumil.com^
+||w1.diaoyou.com^
 ||daima.23yy.com^
 ||b1.c1km4.com^
 ||vi1.souid.com^
@@ -11871,6 +11899,9 @@ btdigg.co,btkitty.kim,btlibrary.co,diggbt.ws,torrentkitty.ws###box
 ! Caoporn.com
 2c2.website,2p8.space,adultcao.com,adultgao.com,cao.pe,caoaee.com,caodee.com,caofoo.top,caohot.club,caopee.com,caoporn.club,caoporn.com,caoporn.wales,caosee.club,caouoo.com,gaohot.pro,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,qq88.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz,wan1024.com,wan41.com##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
+||awyys.com^
+||vers80.com^
+||zxjjzx.com^
 ||aicydb.com^
 .m.23sw.net^
 .m.beidouxin.com^

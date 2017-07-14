@@ -343,6 +343,8 @@ teleboy.ch#@#.adWrapper
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5639
+vip.de##.rtli-master-article > [class="rtli-master-section"][-ext-has='.rtli-master-ad']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5617
 focus.de###sidebar > .block.grid_4[-ext-has='> .content > [id^="fwid"] > .surftippTitle > .surftipp:contains(Partnerangebot)']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5476
@@ -635,6 +637,13 @@ chip.de$$article[tag-content="Anzeige |"]
 ! http://forum.adguard.com/showthread.php?8979 (#17)
 ||static.p7s1.com/vendor/webtrekk
 !
+sat1spiele.de##.background-banner
+sat1spiele.de##.off-canvas-content > .background[style^="background-image"]
+mein-wahres-ich.de##.googlebanner
+mein-wahres-ich.de###banneranzeige-leaderboard
+vip.de###pl_playerBreakAd
+vip.de##.rtli-master-ad
+vip.de##[data-adformat="octopus_mr"]
 mein--mmo-de.cdn.ampproject.org##.amp-ad-wrapper
 www-bloomberg-com.cdn.ampproject.org##section.main-column > .body-copy > div[data-position="mobile-box"]
 dejure.org##.reihe.googlediv
