@@ -33,7 +33,7 @@ bash $f
 ## Clear Temp After
 bash $DELETETEMPFILE
 
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | sudo tee --append $RECENTRUN
 printf "$magenta" "$DIVIDERBAR"
 echo ""
