@@ -679,6 +679,7 @@ if
 then
 printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
 rm $PARSEDFILE
+rm $MIRROREDFILE
 fi
 
 ## let's get rid of the deadweight
