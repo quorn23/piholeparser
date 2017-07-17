@@ -13,7 +13,7 @@ source "$script_dir"/../scriptvars/staticvariables.var
 for f in $EVERYLISTFILEWILDCARD
 do
 
-printf "$lightblue"    "___________________________________________________________"
+printf "$lightblue"    "$DIVIDERBAR"
 echo ""
 
 ## Declare File Name
@@ -27,17 +27,11 @@ echo ""
 ####################
 
 ## Amount of sources greater than one?
-timestamp=$(echo `date`)
 HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 if
 [[ "$HOWMANYLINES" -gt 1 ]]
 then
-echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
 printf "$yellow"    "$BASEFILENAME Has $HOWMANYLINES Sources."
-elif
-[[ "$HOWMANYLINES" -le 1 ]]
-then
-printf "$yellow"    "$BASEFILENAME Has Only One Source."
 fi
 
 ## Process Every source within the .lst from above
@@ -75,6 +69,7 @@ elif
 then
 printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
+
 if
 [[ -n $SOURCEIP ]]
 then
@@ -83,35 +78,30 @@ elif
 [[ -z $SOURCEIP ]]
 then
 printf "$red"    "Ping Test Failed."
+PINGTESTFAILED=true
 fi
 echo ""
 
 ## Check if file is modified since last download
 if 
-[[ -f $MIRROREDFILE ]]
+[[ -f $MIRROREDFILE && -z $PINGTESTFAILED ]]
 then
-remote_file="$source"
-local_file="$MIRROREDFILE"
-modified=$(curl --silent --head $remote_file | awk -F: '/^Last-Modified/ { print $2 }')
-remote_ctime=$(date --date="$modified" +%s)
-local_ctimea=$(stat -c %z "$local_file")
-local_ctime=$(date --date="$local_ctimea" +%s)
+SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
+SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
+LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
+LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
 DIDWECHECKONLINEFILE=true
 fi
+
 if
-[[ -n $DIDWECHECKONLINEFILE && $local_ctime -lt $remote_ctime ]]
+[[ -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
 then
 printf "$yellow"    "File Has Changed Online."
 elif
-[[ -n $DIDWECHECKONLINEFILE && $local_ctime -ge $remote_ctime ]]
-then
-MAYBESKIPPARSING=true
-printf "$green"    "File Not Updated Online. No Need To Process."
-fi
-if
-[[ -n $MAYBESKIPPARSING && -f $PARSEDFILE ]]
+[[ -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
 then
 FULLSKIPPARSING=true
+printf "$green"    "File Not Updated Online. No Need To Process."
 fi
 
 ####################
@@ -140,9 +130,6 @@ then
 MIRRORVAR=true
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
-#wget -q -O $BTEMPFILE $MIRROREDFILEDL
-#cat $BTEMPFILE >> $BORIGINALFILETEMP
-#rm $BTEMPFILE
 cat $MIRROREDFILE >> $BORIGINALFILETEMP
 elif
 [[ -z $FULLSKIPPARSING && -z $SOURCEIP && $f != $BDEADPARSELIST ]]
@@ -150,9 +137,6 @@ then
 MIRRORVAR=true
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
-#wget -q -O $BTEMPFILE $MIRROREDFILEDL
-#cat $BTEMPFILE >> $BORIGINALFILETEMP
-#rm $BTEMPFILE
 cp $MIRROREDFILE $BORIGINALFILETEMP
 mv $f $BDEADPARSELIST
 elif
@@ -217,11 +201,14 @@ elif
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -le 0 ]]
 then
 printf "$red"    "Download Failed."
+DOWNLOADFAILED=true
 touch $BORIGINALFILETEMP
 echo ""
 fi
+
+## Attempt agent download
 if 
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
+[[ -z $FULLSKIPPARSING && -z $DOWNLOADFAILED && "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
 then
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 agent="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36"
@@ -237,8 +224,10 @@ FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 timestamp=$(echo `date`)
 fi
+
+## attempt mirror if not done already
 if 
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
+[[ -z $FULLSKIPPARSING && -z $DOWNLOADFAILED && "$FETCHFILESIZE" -eq 0 && -z $MIRRORVAR ]]
 then
 printf "$red"    "File Empty."
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
@@ -250,33 +239,11 @@ echo ""
 fi
 
 ## This Clears the SourceIP var before the next loop
-if
-[[ -n $SOURCEIP ]]
-then
 unset SOURCEIP
-fi
 
 ## This is the source Loop end
 ## If multiple sources, it should merge them into one document
 done
-
-## This should let me know if a document is a bad link
-timestamp=$(echo `date`)
-if
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO && `grep -q "?php" "$BORIGINALFILETEMP"` ]]
-then
-printf "$red"     "$BASEFILENAME List is a bad link. PHP detected."
-echo "* $BASEFILENAME Is A Bad Link. PHP Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
-FILESIZEZERO=true
-elif
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO && `grep -q "DOCTYPE html" "$BORIGINALFILETEMP"` ]]
-then
-printf "$red"     "$BASEFILENAME Is A Bad Link. HTML Detected."
-echo "* $BASEFILENAME Is A Bad Link. HTML Detected. $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $BORIGINALFILETEMP
-touch $BORIGINALFILETEMP
-FILESIZEZERO=true
-fi
 
 ####################
 ## Check Filesize ##
@@ -375,13 +342,6 @@ echo ""
 ####################
 ## Processing     ##
 ####################
-
-## I haven't decided what to do with IP Lists yet, so this will skip them after mirroring
-if
-[[ -z $FULLSKIPPARSING && $f == $BIPPARSELIST ]]
-then
-FILESIZEZERO=true
-fi
 
 ## Comments #'s and !'s .'s
 PARSECOMMENT="Removing Lines With Comments."
@@ -659,18 +619,6 @@ HOWMANYLINES=$(echo -e "`wc -l $PARSEDFILE | cut -d " " -f 1`")
 printf "$green"  "Old Parsed File Retained."
 printf "$yellow"  "$HOWMANYLINES Lines In File."
 echo ""
-elif
-[[ -n $FULLSKIPPARSING && ! -f $PARSEDFILE ]]
-then
-printf "$red"  "No Existing Parsed File?"
-fi
-
-## this helps with replacing a parsed file
-if 
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && -f $PARSEDFILE ]]
-then
-printf "$green"  "Old Parsed File Removed"
-rm $PARSEDFILE
 fi
 
 ## Delete Parsed file if current parsing method empties it
@@ -679,7 +627,6 @@ if
 then
 printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
 rm $PARSEDFILE
-rm $MIRROREDFILE
 fi
 
 ## let's get rid of the deadweight
@@ -723,29 +670,11 @@ printf "$orange" "___________________________________________________________"
 echo ""
 
 ## This could give issues in the file loop if not set
-if
-[[ -n $FILESIZEZERO ]]
-then
 unset FILESIZEZERO
-fi
-
-if
-[[ -n $FULLSKIPPARSING ]]
-then
 unset FULLSKIPPARSING
-fi
-
-if
-[[ -n $MAYBESKIPPARSING ]]
-then
 unset MAYBESKIPPARSING
-fi
-
-if
-[[ -n $DIDWECHECKONLINEFILE ]]
-then
 unset DIDWECHECKONLINEFILE
-fi
+unset PINGTESTFAILED
 
 ## End File Loop
 done
