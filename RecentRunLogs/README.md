@@ -564,3 +564,109 @@
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
 
 ## Pushing Lists. Mon 17 Jul 11:42:32 EDT 2017
+* ABPindoEasyList List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:42:15 EDT 2017
+* ABPindo List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:42:37 EDT 2017
+* ABPJapaneseFilters List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:42:39 EDT 2017
+* abusechZeuSDomainBlocklistBadDomains List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:42:57 EDT 2017
+* web host lists directory Already there no need to mkdir. Mon 17 Jul 11:43:00 EDT 2017
+* Locally Hosted Biglist Removed. Mon 17 Jul 11:43:00 EDT 2017
+* Locally Hosted Biglist Not Removed. Mon 17 Jul 11:43:00 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Pushing-Lists.txt)
+
+## Script Complete. Mon 17 Jul 11:43:00 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Script-Complete.txt)
+
+* abusechZeuSDomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:11 EDT 2017
+* AdAwayBlockingHostsFileforJapan List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:15 EDT 2017
+* AdblockIran List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:17 EDT 2017
+* AdblockListforFinland List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:33 EDT 2017
+* AdblockPolska List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:35 EDT 2017
+* AdblockYouTubeAds List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:37 EDT 2017
+* add2o7Net List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:39 EDT 2017
+* addDead List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:40 EDT 2017
+* addRisk List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:43 EDT 2017
+* addSpam List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:45 EDT 2017
+* AdguardAnnoyancesFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:48 EDT 2017
+* AdguardDNSFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:51 EDT 2017
+* AdguardDNS Has 2 sources. Mon 17 Jul 11:43:51 EDT 2017
+* AdguardDNS List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:43:54 EDT 2017
+* AdguardEnglishFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:02 EDT 2017
+* AdguardGermanFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:06 EDT 2017
+* AdguardMobileAdsFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:08 EDT 2017
+* AdguardRussianFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:11 EDT 2017
+* AdguardSocialMediaFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:14 EDT 2017
+* AdguardSpywareFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:16 EDT 2017
+* AdZHosts Has 2 sources. Mon 17 Jul 11:44:17 EDT 2017
+* AdZHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:44:34 EDT 2017
+* AirellesAntiAdvertisementsHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:45:06 EDT 2017
+* AirellesAntiMiscellaneousHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:45:15 EDT 2017
+* AirellesAntiSexHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:45:49 EDT 2017
+* AirellesAntiTrackersHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:27 EDT 2017
+* AirellesMalwareHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:33 EDT 2017
+* AnudeepYoutube List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:46 EDT 2017
+* AyucatPowerful List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:48 EDT 2017
+* BadHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:50 EDT 2017
+* BadJAVSites List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:53 EDT 2017
+* BillStearns List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:54 EDT 2017
+* BlocktheEUCookieShit List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:57 EDT 2017
+* BreakingTheNews List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:46:59 EDT 2017
+* BulgarianListEasyList List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:47:03 EDT 2017
+* BulgarianList List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:47:12 EDT 2017
+* CAMELEONHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:47:15 EDT 2017
+* ChadMayfieldPornBlocklistHeavy List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:47:41 EDT 2017
+* ChadMayfieldPornBlocklistlight List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:32 EDT 2017
+* ClickbaitBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:35 EDT 2017
+* DanPollocksHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:39 EDT 2017
+* DisconnectAdvertisingFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:41 EDT 2017
+* DisconnectMalvertisingFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:43 EDT 2017
+* DisconnectMalwareFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:45 EDT 2017
+* DisconnectTrackingFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:46 EDT 2017
+* DNSBHFreeWebHosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:47 EDT 2017
+* DNSBHMalwareDomainsImmortal List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:48 EDT 2017
+* DNSBHMalwareDomains List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:50 EDT 2017
+* DNSBHSkypeResolvers List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:53 EDT 2017
+* DNSBHURLShorteners List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:50:53 EDT 2017
+* DshieldSuspiciousHigh List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:08 EDT 2017
+* DshieldSuspiciousLow List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:24 EDT 2017
+* DshieldSuspiciousMedium List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:38 EDT 2017
+* EasyListChinaEasyList List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:41 EDT 2017
+* EasyListChina List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:47 EDT 2017
+* EasyListCzechandSlovak List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:49 EDT 2017
+* EasyListCzechSlovakEasyList List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:51:52 EDT 2017
+* EasyListLithuania List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:52:04 EDT 2017
+* EasyList Has 2 sources. Mon 17 Jul 11:52:05 EDT 2017
+* EasyPrivacy Has 2 sources. Mon 17 Jul 11:52:13 EDT 2017
+* hpHostsEMD List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:53:05 EDT 2017
+* hpHostsFSA List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:53:43 EDT 2017
+* hpHostsPartial List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:55:15 EDT 2017
+* hpHostsPHA List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:55:31 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:57:46 EDT 2017
+* RansomwareTrackerDomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:57:58 EDT 2017
+* RansomwareTrackerLockyRansomwareC2DomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:58:10 EDT 2017
+* RansomwareTrackerLockyRansomwarePaymentSitesDomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:58:22 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareC2DomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:58:36 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:58:49 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwareC2DomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:59:01 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon 17 Jul 11:59:13 EDT 2017
+* SpamAssassinBillStearns Has 2 sources. Mon 17 Jul 11:59:39 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Combining All Parsed Lists. Mon 17 Jul 12:00:24 EDT 2017
+* All Parsed List Not Removed. Mon 17 Jul 12:00:24 EDT 2017
+* All Parsed List (edited) Removed. Mon 17 Jul 12:01:09 EDT 2017
+* Allparsedlist list was an empty file Mon 17 Jul 12:01:35 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
+
+## Results Of The Parsing. Mon 17 Jul 12:01:35 EDT 2017
+## Edited ALLPARSEDLIST Result. Mon 17 Jul 12:01:35 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+## Total Runtime. Mon 17 Jul 12:01:35 EDT 2017
+* Script Took  minutes To Filter  Lists.
+
+## Updated Main README.md. Mon 17 Jul 12:01:35 EDT 2017
+
+* Script completed at Mon 17 Jul 12:01:35 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+## Pushing Lists. Mon 17 Jul 12:01:36 EDT 2017
