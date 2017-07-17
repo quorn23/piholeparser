@@ -25,7 +25,7 @@ echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $REC
 elif
 [[ "$HOWMANYLINES" -le 1 ]]
 then
-echo ""
+:
 #printf "$yellow"    "$BASEFILENAME Has Only One Source."
 fi
 
