@@ -566,7 +566,10 @@ xhamster.com##.avdo.fr
 
 !-----------xvideos.com
 ||xvideos.com/in.php?
-||xvideos.com/pics-error/
+!popup
+||www.xvideos.com/video$xmlhttprequest
+||flashservice.xvideos.com/embedframe/$xmlhttprequest
+
 xvideos.com###video-sponsor-links
 xvideos.com##.sponsor_popup
 
@@ -2127,6 +2130,9 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 
 !uBO
 *$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com
-xhamster.com##script:inject(abort-on-property-write.js, dataPopUnder)
+xhamster.com##script:contains(dataPopUnder)
+youporn.com##script:contains(ChromePopMouseDownHandler)
+tube8.*##script:contains(zoneDetails)
+
 	!待ち時間回避
 nikkansports.com##script:contains(async-hide)

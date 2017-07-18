@@ -360,3 +360,71 @@
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
 
 ## Pushing Lists. Tue 18 Jul 01:50:01 EDT 2017
+* web host lists directory Already there no need to mkdir. Tue 18 Jul 01:52:48 EDT 2017
+* Locally Hosted Biglist Removed. Tue 18 Jul 01:52:49 EDT 2017
+* Locally Hosted Biglist Not Removed. Tue 18 Jul 01:52:49 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Pushing-Lists.txt)
+
+## Script Complete. Tue 18 Jul 01:53:14 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Script-Complete.txt)
+
+
+### Downloading Active Top Level Domains. Tue 18 Jul 08:56:40 EDT 2017
+
+### Housekeeping Completed. Tue 18 Jul 08:56:59 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Housekeeping-Tasks.txt)
+
+## Compiling Repo Domain List. Tue 18 Jul 08:56:59 EDT 2017
+## Processing Whitelists. Tue 18 Jul 08:57:00 EDT 2017
+* Whitelist File removed Tue 18 Jul 08:57:00 EDT 2017
+* Merging the Whitelists for Later..
+* 175 Lines In File
+
+## Processing Blacklists. Tue 18 Jul 08:57:06 EDT 2017
+* Blacklist File removed Tue 18 Jul 08:57:06 EDT 2017
+* Merging the Blacklists for Later..
+* 10 Lines In File
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Repo-Domain-List.txt)
+
+## Running Parser. Tue 18 Jul 08:57:07 EDT 2017
+* DisconnectMalvertisingFilter list was Updated. Tue 18 Jul 08:59:42 EDT 2017
+* DisconnectMalwareFilter list was Updated. Tue 18 Jul 09:00:01 EDT 2017
+* DshieldSuspiciousHigh list was Updated. Tue 18 Jul 09:00:33 EDT 2017
+* DshieldSuspiciousLow list was Updated. Tue 18 Jul 09:01:03 EDT 2017
+* DshieldSuspiciousMedium list was Updated. Tue 18 Jul 09:01:34 EDT 2017
+* hpHostsEMD list was Updated. Tue 18 Jul 09:04:07 EDT 2017
+* hpHostsFSA list was Updated. Tue 18 Jul 09:06:01 EDT 2017
+* hpHostsPartial list was Updated. Tue 18 Jul 09:07:38 EDT 2017
+* hpHostsPHA list was Updated. Tue 18 Jul 09:08:15 EDT 2017
+* hpHostsPSH list was Updated. Tue 18 Jul 09:09:48 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist list was Updated. Tue 18 Jul 09:11:47 EDT 2017
+* RansomwareTrackerDomainBlocklist list was Updated. Tue 18 Jul 09:12:17 EDT 2017
+* RansomwareTrackerLockyRansomwareC2DomainBlocklist list was Updated. Tue 18 Jul 09:12:44 EDT 2017
+* RansomwareTrackerLockyRansomwarePaymentSitesDomainBlocklist list was Updated. Tue 18 Jul 09:13:12 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareC2DomainBlocklist list was Updated. Tue 18 Jul 09:13:39 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist list was Updated. Tue 18 Jul 09:14:07 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwareC2DomainBlocklist list was Updated. Tue 18 Jul 09:14:34 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist list was Updated. Tue 18 Jul 09:15:02 EDT 2017
+* TofuFilter list was Updated. Tue 18 Jul 09:16:52 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Combining All Parsed Lists. Tue 18 Jul 09:17:09 EDT 2017
+* All Parsed List Removed. Tue 18 Jul 09:17:09 EDT 2017
+* All Parsed List (edited) Removed. Tue 18 Jul 09:20:33 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
+
+## Results Of The Parsing. Tue 18 Jul 09:24:25 EDT 2017
+## Edited ALLPARSEDLIST Result. Tue 18 Jul 09:24:25 EDT 2017
+* The Edited ALLPARSEDLIST is 90 MB and contains 	4232077 Domains.
+
+## Total Runtime. Tue 18 Jul 09:24:29 EDT 2017
+* Script Took  minutes To Filter  Lists.
+
+## Updated Main README.md. Tue 18 Jul 09:24:29 EDT 2017
+
+* Script completed at Tue 18 Jul 09:24:29 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+## Pushing Lists. Tue 18 Jul 09:24:29 EDT 2017
