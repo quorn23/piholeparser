@@ -551,7 +551,7 @@ pornhub.com,redtube.com,tube8.com,youporn.com###pb_template
 xtube.com##.col-xs-24.col-xl-8 > div:first-child
 
 !-----------xhamster
-||xhamster.com^$subdocument,domain=xhamster.com
+|https://$subdocument,domain=xhamster.com
 ||xhamster.com/cnt.php?
 ||xhcdn.com/js/m.js
 
@@ -606,7 +606,7 @@ $script,third-party,domain=jpidols.tv
 ||antivirus-news.net/image/*_bnn*.png
 ||asg.to/ad/
 ||ashemaletube.com/ast/b/
-||ashemaletube.com/ast/www/js_271be750/g2bf40db.min.js?
+||ashemaletube.com/ast/www/*.min.js?url=
 ||ashemaletube.com/banner-iframe/
 ||atas.io^$domain=toukoucity.to
 ||blog.livedoor.jp/geek/ad-
@@ -1146,6 +1146,7 @@ $script,third-party,domain=jpidols.tv
 ##[class*=" ad_"]:not(html):not(body):not(.ad_distance)
 ##[class*="-ad "]:not(html):not(body)
 	! vjs-ad- 動画消える → http://videojs.com/
+	!			https://www.brightcove.com/
 ##[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ##[class*="_ad_"]:not(html):not(body)
 ##[id^="ad-"]:not(html):not(body)
@@ -1465,6 +1466,7 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 ||2chan.net/bin/uucount.php
 
 !-----------kiss-------------!
+blob:http://kissasian.com/
 ||ti553.com^
 ||kissanime.ru/xyz/check.aspx
 kissasian.com,kissanime.ru##.clear2
@@ -2124,6 +2126,7 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 
 
 !uBO
-*$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com|xhamster.com|youporn.com
+*$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com
+xhamster.com##script:inject(abort-on-property-write.js, dataPopUnder)
 	!待ち時間回避
 nikkansports.com##script:contains(async-hide)
