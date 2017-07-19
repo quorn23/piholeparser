@@ -485,48 +485,13 @@ then
 FILESIZEZERO=true
 fi
 
-## Convert All Text To Lower Case
+## Convert All Text To . Case
 PARSECOMMENT="Converting All Text To Lower Case."
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 cat $BFILETEMP | sed 's/\([A-Z]\)/\L\1/g' > $BTEMPFILE
-touch $BTEMPFILE
-rm $BFILETEMP
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
-fi
-if
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
-then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
-then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
-## Remove All NonPrintable Characters
-PARSECOMMENT="Removing All NonPrintable Characters."
-if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
-then
-printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/[^A-Za-z0-9_.-]/d' > $BTEMPFILE
 touch $BTEMPFILE
 rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
