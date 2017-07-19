@@ -520,6 +520,41 @@ then
 FILESIZEZERO=true
 fi
 
+## Remove All NonPrintable Characters
+PARSECOMMENT="Removing All NonPrintable Characters."
+if
+[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+then
+printf "$cyan"  "$PARSECOMMENT"
+cat $BFILETEMP | sed '/[^A-Za-z0-9.-_]/d' > $BTEMPFILE
+touch $BTEMPFILE
+rm $BFILETEMP
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+mv $BTEMPFILE $BFILETEMP
+fi
+if
+[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+elif
+[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+then
+printf "$yellow"  "$ENDCOMMENT"
+echo ""
+unset ENDCOMMENT
+unset HOWMANYLINES
+fi
+if
+[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
+
 ## Domain Requirements,, a period and a letter
 PARSECOMMENT="Checking For Fully Qulified Domain Name Requirements."
 if
