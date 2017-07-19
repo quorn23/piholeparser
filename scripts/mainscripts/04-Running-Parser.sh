@@ -526,7 +526,7 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-cat $BFILETEMP | sed '/[^A-Za-z0-9.-_]/d' > $BTEMPFILE
+cat $BFILETEMP | sed '/[^A-Za-z0-9_.-]/d' > $BTEMPFILE
 touch $BTEMPFILE
 rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
