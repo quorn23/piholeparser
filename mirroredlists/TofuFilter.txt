@@ -183,6 +183,9 @@ _ads.php
 ||ads.
 
 -ad.com^$third-party
+	!サイド辺り
+-ads.com^$third-party,domain=~cookpad.com
+!||da-ads.com^$third-party
 
 ||a8.net^$third-party
 ||access-lab.com^$third-party
@@ -252,7 +255,6 @@ _ads.php
 ||cyber-traffic.net^$third-party
 ||cyberwing.co.jp^$third-party
 ||d-064.com^$third-party
-||da-ads.com^$third-party
 ||devo.jp^$third-party
 ||dl-rms.com^$third-party
 ||doubleclick.net^$third-party
@@ -375,6 +377,7 @@ _ads.php
 ||trafficjunky.$third-party
 ||trafficsway.net^$third-party
 ||trustclick.ne.jp^$third-party
+||tyrellsys.com^$third-party
 ||utarget.co.uk^$third-party
 ||valueclick.ne.jp^$third-party
 ||valuecommerce.com^$third-party
@@ -604,7 +607,11 @@ $script,third-party,domain=jpidols.tv
 ||a.konachan.net^$domain=konachan.com
 ||adbkm.com/api/ad/
 ||adbkm.com/js/adscrpt.min.js
+||ads-twitter.com^$third-party
 ||aiasahi.jp/ad_deliver/$domain=japan.cnet.com
+||akibablog.net/ad-
+||akibablog.net/banner-
+||akibablog.net/right-side2.html
 ||alc.co.jp/content/js/mc.js?
 ||anitube.se/player/anitubeJWOverlay/
 ||antivirus-news.net/image/*_bnn*.png
@@ -613,8 +620,6 @@ $script,third-party,domain=jpidols.tv
 ||ashemaletube.com/ast/www/*.min.js?url=
 ||ashemaletube.com/banner-iframe/
 ||atas.io^$domain=toukoucity.to
-||blog.livedoor.jp/geek/ad-
-||blog.livedoor.jp/geek/banner-b2012.html
 ||blog.livedoor.jp/geek/right-side2.html
 ||blog.seesaa.jp/js/banner.js
 ||blog.seesaa.jp/js/insert-ad.min.js
@@ -627,9 +632,9 @@ $script,third-party,domain=jpidols.tv
 ||chixi.jp/img.php?filename=b
 ||cinematoday.jp^*affiliate
 ||clipconverter.cc/www/d/
-||onclasrv.com^$domain=clipconverter.cc
 |http://$xmlhttprequest,third-party,domain=clipconverter.cc
 ||cookpad.com/iframe/
+||cosp.jp/images/spacer.gif
 ||diced.jp/webs/
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
@@ -1109,7 +1114,6 @@ $script,third-party,domain=jpidols.tv
 ||stats.wordpress.com^
 ||toyokeizai.net/oo/
 ||tv-asahi.co.jp/common/js/analysis*.js
-||twitter.com*/t.gif?
 ||wikimedia.org/geoiplookup
 ||zokugo-dict.com^*/ac.js
 
@@ -1974,6 +1978,8 @@ $domain=warotanikki.com,third-party
 @@||share-videos.se^$elemhide
 	!TOP 総合ランキング
 @@||smp.sankei.co.jp/js/analytics/skd.Analysis.js
+	!antiadblock
+@@||trafficjunky.net/delivery/js/abp/$domain=tube8.com
 	! 動画見れない
 @@||vidoza.net/js/ads.js$domain=vidoza.net
 @@||vidoza.net/js/pop.js$domain=vidoza.net
@@ -2003,8 +2009,14 @@ appmk2.net#@#.advertisement
 ashemaletube.com#@#[class$="-ads"]:not(html):not(body)
 	!top全部
 cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
+	!サイド 広告だから消しても良い気もする
+cookpad.com#@##ad
+cookpad.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
+cookpad.com#@#[id*="_ad_"]:not(html):not(body)
 	!top崩れる
 eiga.com#@#[id$="_ad"]:not(html):not(body)
+	!動画見れない
+gogoanime.to#@#[class$="-ads"]:not(html):not(body)
 	!予定が消える
 calendar.google.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 	!ヘッダー 検索バー
@@ -2139,7 +2151,7 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 *$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com
 xhamster.com##script:contains(dataPopUnder)
 youporn.com##script:contains(ChromePopMouseDownHandler)
-tube8.*##script:contains(zoneDetails)
+tube8.*##script:contains(adblock)
 vidoza.net##script:contains($('.pvr'))
 
 	!待ち時間回避

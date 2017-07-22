@@ -23,6 +23,8 @@
 !
 ! Section contains list of advertising networks
 !
+||kvkoqywl.com^
+||sgqmhpqrstwzwd.com^
 ||tummiarunzpf.com^
 ||play.entretenimientolz.com^
 ||8cc5ff581a88.bitsngo.net^
@@ -811,6 +813,8 @@ j.gs#@##bottom
 !*
 !*****
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5770
+@@||tune.pk/js/ads.js^
 ! http://ps.w.org/monitor-adblock/tags/2.3/monitorblockad.php
 mmoplus.info,securityonline.info,xkorean.net,h-hentai.com,honatur.com,xyzbikini.com,hentaisos.com,lanouvelletribune.info,supertelatv.net,yearn-magazine.fr,msphdscholarship.com,kinoking.to,fierasdelaingenieria.com,cantaringles.com,cscscholarships.org,javgay.com,rozbor-dila.cz,teenboytwink.com,filmeseserieshd.org,kizzboy.com,meterpreter.org,pronunciaciones.com,atelevisao.com,streaming2040.org,worldoftrucks.ru,novelleleggere.com,plant-home.net,mundo-pack.com,scholarshipsads.org,jmusic.me###adblock_screen
 ! https://forum.adguard.com/index.php?threads/23575/
@@ -3358,6 +3362,8 @@ bb.is$$div[class="banner"]
 !---------------------------------------------------------------------
 !------------------------------ Indian -------------------------------
 !---------------------------------------------------------------------
+! https://github.com/AdguardTeam/AdguardFilters/issues/4787#issuecomment-316871958
+adageindia.in,bombaytimes.com,businessinsider.in,gizmodo.in,iamgujarat.com,in.techradar.com,lifehacker.co.in,mensxp.com,indiatimes.com,samayam.com,idiva.com#%#Object.defineProperty(window,'trev',{get:function(){return function(){var a=document.currentScript;if(!a){var c=document.getElementsByTagName('script');a=c[c.length-1]}if(a&&/typeof\sotab\s==\s'function'/.test(a.textContent)){var d=a.previousSibling,b=d;while(b=b.previousSibling)if(b.nodeType==Node.COMMENT_NODE&&/\d{5,}\s\d{1,2}/.test(b.data)){d.style.setProperty('display','none','important');return}}}},set:function(){}});
 ! https://forum.adguard.com/index.php?threads/resolved-m-indiatimes-com-missed-ads-ios.20774/#post-140718
 ||media.indiatimes.in/idthat/
 ! https://forum.adguard.com/index.php?threads/22437/
@@ -4051,7 +4057,7 @@ pornicom.com#%#Object.defineProperty(window, 'exoWrap', { get: function() { retu
 !
 ! PopAds-a
 uplod.ws,uplod.so,flashxx.tv,pandamovie.net,vipleague.me,hdporn720.net,playpornx.net,hdporner720.com,newpct1.com,2ddl.ag,jkmk.net#%#Object.defineProperty(window, 'PopAds', { get: function() { return {}; } });
-hdsector.com,newpct1.com,al.ly,uplod.ws,tumejortorrent.com#%#Object.defineProperty(window, '_pop', { get: function() { return {}; } });
+300mbfilms.co,itdmusic.com,hdsector.com,newpct1.com,al.ly,uplod.ws,tumejortorrent.com#%#Object.defineProperty(window, '_pop', { get: function() { return {}; } });
 !
 ! PopAds-b
 letwatch.to,hqq.tv,xonline.vip,pornhd.com,thevideo.me,sextfun.com,vidup.me,imgoutlet.com,imgrock.net#%#Object.defineProperty(window, 'popns', { get: function() { return {}; } });
@@ -4572,6 +4578,10 @@ zippymoviez.com#%#window.open = function() {};
 !-------------------
 !-------CSS---------
 !-------------------
+! https://forum.adguard.com/index.php?threads/23588/
+psprices.com#$#.ezoic-ad { position: absolute!important; left: -3000px!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/5657
+greenbayphoenix.com#$#[class="component c-nav c-nav-sport"][role="navigation"] { top: 120px; }
 ! https://forum.adguard.com/index.php?threads/computerworld-com-au-missed-ads-windows.23530/
 computerworld.com.au#$#body.lo-body { padding-top: 85px!important; }
 computerworld.com.au#$#.lo-top > header.lo-header { top: 0px!important; }
@@ -5028,6 +5038,11 @@ hardwarebbq.com##.ads120_600-widget
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 hardwarebbq.com##.home-ads
 !
+cbsnews.com##.nativeAds
+net-load.com##.ao-assioma > a[target="_top"] > img
+net-load.com##div[id^="heatmapthemead-"][id$="-sidebar"]
+greenbayphoenix.com##.stickyLeaderboard
+greenbayphoenix.com##.c-contentstream__ad
 1062804$domain=sockshare.net
 subscene.com##.banner
 filehippo.com##div[id^="ad-slot-"]
@@ -7607,7 +7622,7 @@ lxax.com###parrot
 ||zkake.exashare.com^
 ||zonasports.to/js/tiempo2.js
 ||zorwrite.com/*/Tag.a1b$domain=itechpost.com
-://*.bid^$script,third-party,domain=kat.how|openload.co|thepiratebay.org|vshare.eu
+://*.bid^$script,third-party,domain=kat.how|openload.co|thepiratebay.org|vshare.eu|psarips.com
 !-------------------------------------------------------------------------------!
 !------------------ White list (exceptions list) -------------------------------!
 !-------------------------------------------------------------------------------!
@@ -7648,6 +7663,8 @@ pornhub.com#@#.sectionWrapper > div[class*=" "]:not([class="sectionTitle"]):not(
 protopage.com#%#(function(){var pageParams={};Object.defineProperty(window,"pageParams",{get:function(){return pageParams},set:function(){}});Object.defineProperty(pageParams,"dispAds",{get:function(){return false},set:function(){}});Object.defineProperty(pageParams,"attemptDisplayAdAtBottom",{get:function(){return false},set:function(){}})})();
 !#########################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5737
+@@||cbsistatic.com/scripts/NativeAdManager.js^$domain=cbsnews.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5755
 !+ PLATFORM(windows)
 @@||google.com/chromebook/$generichide
@@ -9979,6 +9996,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /?view=ad
 /_/ads/*
 /_30/ads/*
+/__adstop.
 /_ads/*
 /_affiliatebanners/*
 /_global/ads/*
@@ -36359,6 +36377,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||abnad.net^$third-party
 ||aboutads.quantcast.com^$third-party
 ||abscontal.com^$third-party
+||absential.info^$third-party
 ||abtracker.us^$third-party
 ||accelacomm.com^$third-party
 ||access-mc.com^$third-party
@@ -37078,6 +37097,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||areasins.com^$third-party
 ||areasnap.com^$third-party
 ||arecio.work^$third-party
+||arrassley.info^$third-party
 ||arti-mediagroup.com^$third-party
 ||articulty.com^$third-party
 ||as-farm.com^$third-party
@@ -37660,6 +37680,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||curtisfrierson.com^$third-party
 ||cwkuki.com^$third-party
 ||cwtrackit.com^$third-party
+||cxmedia.co^$third-party
 ||cybmas.com^$third-party
 ||cygnus.com^$third-party
 ||czasnaherbate.info^$third-party
@@ -40938,6 +40959,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||catwrite.com^$third-party
 ||centwrite.com^$third-party
 ||cold-cold-freezing.com^$third-party
+||crickwrite.com^$third-party
 ||data-data-vac.com^$third-party
 ||del-del-ete.com^$third-party
 ||dit-dit-dot.com^$third-party
@@ -40961,6 +40983,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||parwrite.com^$third-party
 ||raz-raz-mataz.com^$third-party
 ||razwrite.com^$third-party
+||rick-rick-rob.com^$third-party
 ||tek-tek-trek.com^$third-party
 ||tic-tic-bam.com^$third-party
 ||tic-tic-toc.com^$third-party
@@ -52924,12 +52947,6 @@ a.upnorma.com^$webrtc
 |http://$script,third-party,xmlhttprequest,domain=4shared.com
 |https://$script,third-party,xmlhttprequest,domain=4shared.com
 |ws://$domain=4shared.com
-@@||ajax.googleapis.com^$script,domain=tweaktown.com
-@@||connect.facebook.net^$script,domain=tweaktown.com
-|http://$script,third-party,xmlhttprequest,domain=tweaktown.com
-|https://$script,third-party,xmlhttprequest,domain=tweaktown.com
-||tweaktown.com/zyx?p=$image,~third-party
-||tweaktown.com^$object
 @@||apis.google.com^$script,third-party,domain=tvmuse.com
 @@||s.tvmuze.eu^$script,third-party,domain=tvmuse.com
 |http://$script,third-party,xmlhttprequest,domain=tvmuse.com
@@ -64507,7 +64524,6 @@ oddee.com##div > div + span + span
 monova.org##div > div > [target="_blank"]
 ancient-origins.net##div > div > iframe
 mywatchseries.to##div > div > style + [class]
-pocketnow.com##div > div > table:last-child
 hngn.com##div > div[class]:first-child + div > div > div[class]:first-child
 destructoid.com,thefreethoughtproject.com,tweaktown.com,veteranstoday.com##div > div[id] > iframe[id]
 search.mywebsearch.com##div > div[style="padding-bottom: 12px;"]
@@ -65505,6 +65521,7 @@ pcmag.com##iframe[id][marginheight="0"]
 baltimoresun.com,boston.com,calgaryherald.com,capitalgazette.com,carrollcountytimes.com,chicagotribune.com,citypaper.com,courant.com,dailypress.com,deathandtaxesmag.com,edmontonjournal.com,edmunds.com,financialpost.com,gofugyourself.com,hearthhead.com,infinitiev.com,latimes.com,leaderpost.com,lolking.net,mcall.com,montrealgazette.com,nasdaq.com,nationalpost.com,orlandosentinel.com,ottawacitizen.com,ranker.com,sandiegouniontribune.com,saveur.com,sherdog.com,spin.com,sporcle.com,stereogum.com,sun-sentinel.com,theprovince.com,thestarphoenix.com,timeanddate.com,tmn.today,vagazette.com,vancouversun.com,vibe.com,windsorstar.com##iframe[name*="ads_iframe"]
 imgbar.net##iframe[src="earn.php"]
 briansarmiento.website,streamin.to##iframe[src]
+torrentfunk.com##iframe[src][sandbox]
 goolink.me##iframe[src][style][height]
 torlock.com,yourbittorrent.com##iframe[src][width]
 cybergamer.com##iframe[src^="http://au.cybergamer.com/iframe_cgbanners.php?"]
@@ -70762,6 +70779,7 @@ motherless.com##table[style*="max-width:"]
 @@||universityherald.com/common/js/common/ads.js
 @@||universityherald.com^$generichide
 @@||unlockpwd.com^$generichide
+@@||up-4ever.com^$generichide
 @@||up-flow.org/advertisement.js
 @@||upi.com^$generichide
 @@||upload.so^$generichide

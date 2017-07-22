@@ -1,245 +1,203 @@
-## Running Housekeeping Tasks Fri Jul 21 00:26:12 EDT 2017
-### Creating Main Recent Run Log. Fri Jul 21 00:26:12 EDT 2017
+## Running Housekeeping Tasks Sat Jul 22 00:20:06 EDT 2017
+### Creating Main Recent Run Log. Sat Jul 22 00:20:06 EDT 2017
 * Recent Run Log Recreated.
 
-### Recreating TempVar File. Fri Jul 21 00:26:12 EDT 2017
+### Recreating TempVar File. Sat Jul 22 00:20:06 EDT 2017
 
-### Setting Start Time Variable. Fri Jul 21 00:26:12 EDT 2017
+### Setting Start Time Variable. Sat Jul 22 00:20:06 EDT 2017
 
-### Identifying Lists Without https. Fri Jul 21 00:26:12 EDT 2017
+### Identifying Lists Without https. Sat Jul 22 00:20:06 EDT 2017
 
-### Removing Parsed Lists No Longer Used. Fri Jul 21 00:26:14 EDT 2017
+### Removing Parsed Lists No Longer Used. Sat Jul 22 00:20:08 EDT 2017
 
-### Removing Mirrored Lists No Longer Used. Fri Jul 21 00:26:21 EDT 2017
-* The AakList.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ABPJapanese3rdPartySNSFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ABPJapaneseElementhidingFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ABPJapaneseParanoidFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ABPXFiles.txt .lst No Longer Exists. Mirrored File Deleted.
-* The abusechFeodoBadIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The abusechFeodoDomainBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The abusechFeodoIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The abusechZeuSCompromisedURLBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The abusechZeuSIPBlocklistBadIPs.txt .lst No Longer Exists. Mirrored File Deleted.
-* The abusechZeuSIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AcceptableAds.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockFiltersbyGurudee.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockKorea.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockPersian.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockPolishSocialRules.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockuBlockPolishCookiesFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockuBlockPolishFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdblockWarningRemoval.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardDutchFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardExperimentalFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardJapaneseFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardSafariFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardSpanishPortugueseFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardTurkishFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdguardUsefulAdsFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AdwareFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AirellesPhishingHosts.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AntiFacebook.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AntiPopAds.txt .lst No Longer Exists. Mirrored File Deleted.
-* The AntiPubWeb.txt .lst No Longer Exists. Mirrored File Deleted.
-* The BankiruPlusAdblock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Blockzilla.txt .lst No Longer Exists. Mirrored File Deleted.
-* The BLOGRAMAnalysisBlockFilterListforJapan.txt .lst No Longer Exists. Mirrored File Deleted.
-* The BLOGRAMBasicFilterListforJapan.txt .lst No Longer Exists. Mirrored File Deleted.
-* The BLOGRAMBlogPartsFilterListforJapan.txt .lst No Longer Exists. Mirrored File Deleted.
-* The BLOGRAMElementHidingFilterListforJapan.txt .lst No Longer Exists. Mirrored File Deleted.
-* The CJXsAnnoyance.txt .lst No Longer Exists. Mirrored File Deleted.
-* The CookieBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Corset.txt .lst No Longer Exists. Mirrored File Deleted.
-* The CzechFiltersforAdBlock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The DNSBHAdblockPlusMalwareDomainsFull.txt .lst No Longer Exists. Mirrored File Deleted.
-* The DNSBHBulkRegistrars.txt .lst No Longer Exists. Mirrored File Deleted.
-* The DNSBHDynamicDNS.txt .lst No Longer Exists. Mirrored File Deleted.
-* The DShieldBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The DShieldorgRecommendedBlock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyListChinainIT.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyListDutch.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyListHebrew.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyListItaly.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyListLiteChina.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyListSpanish.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyPrivacyWithoutInternationalFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The EasyTest.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FacebookAnnoyancesBlocker.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FacebookNewsFeedAnnoyancesBlocker.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FacebookPrivacy.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FacebookSidebarBlocker.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FakeNews.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysAnnoyance.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysAntithirdpartyFonts.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysCookiemonster.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysEnhancedStats.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysEnhancedTracking.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysIndian.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysIsraelList.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysJapanese.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysKorean.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysPolish.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysSocialBlocking.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysSpanishPortuguese.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysSwedish.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysTurkish.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FanboysVietnamese.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Filtersbyhant0508.txt .lst No Longer Exists. Mirrored File Deleted.
-* The FirimeFEDEasyDownload.txt .lst No Longer Exists. Mirrored File Deleted.
-* The GandJAdBlock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The GNUBlacklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Hosts2ch.txt .lst No Longer Exists. Mirrored File Deleted.
-* The IcelandicABP.txt .lst No Longer Exists. Mirrored File Deleted.
-* The IDontCareaboutCookies.txt .lst No Longer Exists. Mirrored File Deleted.
-* The IlyakatzsAdditionalFiltersforAdblock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ImOKwithCookies.txt .lst No Longer Exists. Mirrored File Deleted.
-* The JansalsHostsLight.txt .lst No Longer Exists. Mirrored File Deleted.
-* The JansalsHosts.txt .lst No Longer Exists. Mirrored File Deleted.
-* The JapaneseSiteAdblockFilter.txt .lst No Longer Exists. Mirrored File Deleted.
-* The JapaneseSiteAdblockFilterver2.txt .lst No Longer Exists. Mirrored File Deleted.
-* The KADScams.txt .lst No Longer Exists. Mirrored File Deleted.
-* The KoreanAdblock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The LatvianList.txt .lst No Longer Exists. Mirrored File Deleted.
-* The LehighEDUDomains.txt .lst No Longer Exists. Mirrored File Deleted.
-* The LinkedinsanityRules.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ListeAR.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ListKR.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ListKRUnbreak.txt .lst No Longer Exists. Mirrored File Deleted.
-* The malc0de.txt .lst No Longer Exists. Mirrored File Deleted.
-* The MalwareURLsGrayArea.txt .lst No Longer Exists. Mirrored File Deleted.
-* The MalwareURLs.txt .lst No Longer Exists. Mirrored File Deleted.
-* The MessageSeenRemoverforFacebook.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Mute.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Notrackingdomains.txt .lst No Longer Exists. Mirrored File Deleted.
-* The OpenPhishPhishingIntelligenceCommunityFeed.txt .lst No Longer Exists. Mirrored File Deleted.
-* The OverlayBlocker.txt .lst No Longer Exists. Mirrored File Deleted.
-* The PeterLowes.txt .lst No Longer Exists. Mirrored File Deleted.
-* The PopupBlocker.txt .lst No Longer Exists. Mirrored File Deleted.
-* The PrebakeQuiet.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerCryptoWallRansomwareC2URLBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerLockyRansomwareC2IPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RansomwareTrackerURLBlocklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The ReddestDream.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RUAdListBitBlock.txt .lst No Longer Exists. Mirrored File Deleted.
-* The RUAdListCounters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The SatterlysAdblockPlusFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The squidblacklist.txt .lst No Longer Exists. Mirrored File Deleted.
-* The TheHostsFileProjectAdblockFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uAssetsBadware.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uAssetsExperimental.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uAssetsFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uAssetsPrivacy.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uAssetsUnbreak.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uBlockAntiskimming.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uBlockFiltersPlus.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uBlockPolishFiltersSupplement.txt .lst No Longer Exists. Mirrored File Deleted.
-* The uBOPersonalFilters.txt .lst No Longer Exists. Mirrored File Deleted.
-* The WiltteriReborn.txt .lst No Longer Exists. Mirrored File Deleted.
-* The Wiltteri.txt .lst No Longer Exists. Mirrored File Deleted.
-* The XFilesHWSHarmfulWebSites.txt .lst No Longer Exists. Mirrored File Deleted.
-* The XFilesNoFacebookAds.txt .lst No Longer Exists. Mirrored File Deleted.
-* The YousList.txt .lst No Longer Exists. Mirrored File Deleted.
-* The YouTubeOtherAnnoyances.txt .lst No Longer Exists. Mirrored File Deleted.
-* The YouTubePureVideoExperience.txt .lst No Longer Exists. Mirrored File Deleted.
-* The YouTubeRemoveComments.txt .lst No Longer Exists. Mirrored File Deleted.
-* The YouTubeRemoveYoutubeSuggestions.txt .lst No Longer Exists. Mirrored File Deleted.
+### Removing Mirrored Lists No Longer Used. Sat Jul 22 00:20:15 EDT 2017
 
-### Counting Lists To Process. Fri Jul 21 00:26:29 EDT 2017
+### Counting Lists To Process. Sat Jul 22 00:20:21 EDT 2017
 * 193 Lists Processed By The Script. 
 
-### Checking For Lists With Multiple Sources. Fri Jul 21 00:26:29 EDT 2017
-* AdAway Has 2 sources. Fri Jul 21 00:26:29 EDT 2017
-* AdguardDNS Has 2 sources. Fri Jul 21 00:26:29 EDT 2017
-* AdZHosts Has 2 sources. Fri Jul 21 00:26:30 EDT 2017
-* EasyList Has 2 sources. Fri Jul 21 00:26:30 EDT 2017
-* EasyPrivacy Has 2 sources. Fri Jul 21 00:26:30 EDT 2017
-* SpamAssassinBillStearns Has 2 sources. Fri Jul 21 00:26:32 EDT 2017
+### Checking For Lists With Multiple Sources. Sat Jul 22 00:20:22 EDT 2017
+* AdAway Has 2 sources. Sat Jul 22 00:20:22 EDT 2017
+* AdguardDNS Has 2 sources. Sat Jul 22 00:20:22 EDT 2017
+* AdZHosts Has 2 sources. Sat Jul 22 00:20:22 EDT 2017
+* EasyList Has 2 sources. Sat Jul 22 00:20:23 EDT 2017
+* EasyPrivacy Has 2 sources. Sat Jul 22 00:20:23 EDT 2017
+* SpamAssassinBillStearns Has 2 sources. Sat Jul 22 00:20:24 EDT 2017
 
-### Downloading Active Top Level Domains. Fri Jul 21 00:26:32 EDT 2017
+### Downloading Active Top Level Domains. Sat Jul 22 00:20:25 EDT 2017
 
-### Housekeeping Completed. Fri Jul 21 00:26:41 EDT 2017
+### Housekeeping Completed. Sat Jul 22 00:20:43 EDT 2017
 
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Housekeeping-Tasks.txt)
 
-## Compiling Repo Domain List. Fri Jul 21 00:26:41 EDT 2017
-## Processing Whitelists. Fri Jul 21 00:26:41 EDT 2017
-* Whitelist File removed Fri Jul 21 00:26:41 EDT 2017
+## Compiling Repo Domain List. Sat Jul 22 00:20:43 EDT 2017
+## Processing Whitelists. Sat Jul 22 00:20:43 EDT 2017
+* Whitelist File removed Sat Jul 22 00:20:43 EDT 2017
 * Merging the Whitelists for Later..
 * 176 Lines In File
 
-## Processing Blacklists. Fri Jul 21 00:26:46 EDT 2017
-* Blacklist File removed Fri Jul 21 00:26:46 EDT 2017
+## Processing Blacklists. Sat Jul 22 00:20:48 EDT 2017
+* Blacklist File removed Sat Jul 22 00:20:48 EDT 2017
 * Merging the Blacklists for Later..
 * 10 Lines In File
 
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Repo-Domain-List.txt)
 
-## Running Parser. Fri Jul 21 00:26:46 EDT 2017
-* ABPindoEasyList list was Updated. Fri Jul 21 00:27:07 EDT 2017
-* BulgarianListEasyList list was Updated. Fri Jul 21 00:29:12 EDT 2017
-* DisconnectMalvertisingFilter list was Updated. Fri Jul 21 00:29:44 EDT 2017
-* DisconnectMalwareFilter list was Updated. Fri Jul 21 00:30:01 EDT 2017
-* DshieldSuspiciousHigh list was Updated. Fri Jul 21 00:30:37 EDT 2017
-* DshieldSuspiciousLow list was Updated. Fri Jul 21 00:31:04 EDT 2017
-* DshieldSuspiciousMedium list was Updated. Fri Jul 21 00:31:31 EDT 2017
-* EasyListChinaEasyList list was Updated. Fri Jul 21 00:31:51 EDT 2017
-* EasyListChina list was Updated. Fri Jul 21 00:32:07 EDT 2017
-* EasyListCzechSlovakEasyList list was Updated. Fri Jul 21 00:32:27 EDT 2017
-* EasyListDutchEasyList list was Updated. Fri Jul 21 00:32:46 EDT 2017
-* EasyListGermanyEasyList list was Updated. Fri Jul 21 00:33:04 EDT 2017
-* EasyListGermany list was Updated. Fri Jul 21 00:33:20 EDT 2017
-* EasyListHebrewEasyList list was Updated. Fri Jul 21 00:33:38 EDT 2017
-* EasyListItalyEasyList list was Updated. Fri Jul 21 00:33:57 EDT 2017
-* EasyListLithuaniaEasyList list was Updated. Fri Jul 21 00:34:15 EDT 2017
-* EasyListWithoutElementHidingRules list was Updated. Fri Jul 21 00:34:41 EDT 2017
-* EasyListWithoutRulesforAdultSites list was Updated. Fri Jul 21 00:34:59 EDT 2017
-* EasyPrivacyEasyList list was Updated. Fri Jul 21 00:35:17 EDT 2017
-* FanboysComplete list was Updated. Fri Jul 21 00:35:40 EDT 2017
-* FanboysUltimate list was Updated. Fri Jul 21 00:35:57 EDT 2017
-* LatvianListEasyList list was Updated. Fri Jul 21 00:39:25 EDT 2017
-* ListeARListeFREasyList list was Updated. Fri Jul 21 00:40:07 EDT 2017
-* ListeFREasyList list was Updated. Fri Jul 21 00:40:26 EDT 2017
-* ListeFR list was Updated. Fri Jul 21 00:40:43 EDT 2017
-* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist list was Updated. Fri Jul 21 00:41:46 EDT 2017
-* RansomwareTrackerDomainBlocklist list was Updated. Fri Jul 21 00:42:13 EDT 2017
-* RansomwareTrackerLockyRansomwareC2DomainBlocklist list was Updated. Fri Jul 21 00:42:38 EDT 2017
-* RansomwareTrackerLockyRansomwarePaymentSitesDomainBlocklist list was Updated. Fri Jul 21 00:43:02 EDT 2017
-* RansomwareTrackerTeslaCryptRansomwareC2DomainBlocklist list was Updated. Fri Jul 21 00:43:28 EDT 2017
-* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist list was Updated. Fri Jul 21 00:43:53 EDT 2017
-* RansomwareTrackerTorrentLockerRansomwareC2DomainBlocklist list was Updated. Fri Jul 21 00:44:18 EDT 2017
-* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist list was Updated. Fri Jul 21 00:44:44 EDT 2017
-* ROListEasyList list was Updated. Fri Jul 21 00:45:06 EDT 2017
-* RUAdListEasyList list was Updated. Fri Jul 21 00:45:25 EDT 2017
-* RUAdList list was Updated. Fri Jul 21 00:45:40 EDT 2017
-* TofuFilter list was Updated. Fri Jul 21 00:46:49 EDT 2017
+## Running Parser. Sat Jul 22 00:20:48 EDT 2017
+* 280Blocker list was Updated. Sat Jul 22 00:21:10 EDT 2017
+* ABPindoEasyList list was Updated. Sat Jul 22 00:21:27 EDT 2017
+* ABPindo list was Updated. Sat Jul 22 00:21:45 EDT 2017
+* ABPJapaneseFilters list was Updated. Sat Jul 22 00:22:02 EDT 2017
+* abusechZeuSDomainBlocklistBadDomains list was Updated. Sat Jul 22 00:22:32 EDT 2017
+* abusechZeuSDomainBlocklist list was Updated. Sat Jul 22 00:23:02 EDT 2017
+* AdblockIran list was Updated. Sat Jul 22 00:23:22 EDT 2017
+* AdblockPolska list was Updated. Sat Jul 22 00:23:48 EDT 2017
+* AdblockYouTubeAds list was Updated. Sat Jul 22 00:24:04 EDT 2017
+* add2o7Net list was Updated. Sat Jul 22 00:24:20 EDT 2017
+* addDead list was Updated. Sat Jul 22 00:24:36 EDT 2017
+* addRisk list was Updated. Sat Jul 22 00:24:53 EDT 2017
+* addSpam list was Updated. Sat Jul 22 00:25:09 EDT 2017
+* AdguardAnnoyancesFilter list was Updated. Sat Jul 22 00:25:27 EDT 2017
+* AdguardDNSFilter list was Updated. Sat Jul 22 00:25:43 EDT 2017
+* AdguardDNS list was Updated. Sat Jul 22 00:26:07 EDT 2017
+* AdguardEnglishFilter list was Updated. Sat Jul 22 00:26:24 EDT 2017
+* AdguardGermanFilter list was Updated. Sat Jul 22 00:26:39 EDT 2017
+* AdguardMobileAdsFilter list was Updated. Sat Jul 22 00:26:56 EDT 2017
+* AdguardRussianFilter list was Updated. Sat Jul 22 00:27:12 EDT 2017
+* AdguardSocialMediaFilter list was Updated. Sat Jul 22 00:27:29 EDT 2017
+* AdguardSpywareFilter list was Updated. Sat Jul 22 00:27:44 EDT 2017
+* AnudeepYoutube list was Updated. Sat Jul 22 00:28:23 EDT 2017
+* AyucatPowerful list was Updated. Sat Jul 22 00:28:39 EDT 2017
+* BadJAVSites list was Updated. Sat Jul 22 00:28:56 EDT 2017
+* BlocktheEUCookieShit list was Updated. Sat Jul 22 00:29:14 EDT 2017
+* BreakingTheNews list was Updated. Sat Jul 22 00:29:30 EDT 2017
+* BulgarianListEasyList list was Updated. Sat Jul 22 00:29:48 EDT 2017
+* BulgarianList list was Updated. Sat Jul 22 00:30:05 EDT 2017
+* ChadMayfieldPornBlocklistHeavy list was Updated. Sat Jul 22 00:37:53 EDT 2017
+* ChadMayfieldPornBlocklistlight list was Updated. Sat Jul 22 00:38:18 EDT 2017
+* ClickbaitBlocklist list was Updated. Sat Jul 22 00:38:34 EDT 2017
+* DisconnectMalvertisingFilter list was Updated. Sat Jul 22 00:38:56 EDT 2017
+* DisconnectMalwareFilter list was Updated. Sat Jul 22 00:39:13 EDT 2017
+* DNSBHMalwareDomainsImmortal list was Updated. Sat Jul 22 00:39:32 EDT 2017
+* DNSBHMalwareDomains list was Updated. Sat Jul 22 00:39:56 EDT 2017
+* DshieldSuspiciousHigh list was Updated. Sat Jul 22 00:40:21 EDT 2017
+* DshieldSuspiciousLow list was Updated. Sat Jul 22 00:40:47 EDT 2017
+* DshieldSuspiciousMedium list was Updated. Sat Jul 22 00:41:13 EDT 2017
+* EasyListChinaEasyList list was Updated. Sat Jul 22 00:41:31 EDT 2017
+* EasyListChina list was Updated. Sat Jul 22 00:41:47 EDT 2017
+* EasyListCzechandSlovak list was Updated. Sat Jul 22 00:42:02 EDT 2017
+* EasyListCzechSlovakEasyList list was Updated. Sat Jul 22 00:42:20 EDT 2017
+* EasyListDutchEasyList list was Updated. Sat Jul 22 00:42:37 EDT 2017
+* EasyListGermanyEasyList list was Updated. Sat Jul 22 00:42:54 EDT 2017
+* EasyListGermany list was Updated. Sat Jul 22 00:43:10 EDT 2017
+* EasyListHebrewEasyList list was Updated. Sat Jul 22 00:43:27 EDT 2017
+* EasyListItalyEasyList list was Updated. Sat Jul 22 00:43:44 EDT 2017
+* EasyListLithuaniaEasyList list was Updated. Sat Jul 22 00:44:02 EDT 2017
+* EasyList list was Updated. Sat Jul 22 00:44:24 EDT 2017
+* EasyListThailand list was Updated. Sat Jul 22 00:44:39 EDT 2017
+* EasyListWithoutElementHidingRules list was Updated. Sat Jul 22 00:44:56 EDT 2017
+* EasyListWithoutRulesforAdultSites list was Updated. Sat Jul 22 00:45:13 EDT 2017
+* EasyPrivacyEasyList list was Updated. Sat Jul 22 00:45:31 EDT 2017
+* EasyPrivacy list was Updated. Sat Jul 22 00:45:53 EDT 2017
+* EestiCustomSitesFilter list was Updated. Sat Jul 22 00:46:08 EDT 2017
+* EladKarako list was Updated. Sat Jul 22 00:48:13 EDT 2017
+* FanboysComplete list was Updated. Sat Jul 22 00:48:29 EDT 2017
+* FanboysUltimate list was Updated. Sat Jul 22 00:48:45 EDT 2017
+* FiltrosNauscopicosHosts list was Updated. Sat Jul 22 00:49:02 EDT 2017
+* FiltrosNauscopicos list was Updated. Sat Jul 22 00:49:18 EDT 2017
+* GandJHosts list was Updated. Sat Jul 22 00:49:46 EDT 2017
+* gmbk0sAdAwayHostsforAndroid list was Updated. Sat Jul 22 00:50:01 EDT 2017
+* GreekAdBlockFilter list was Updated. Sat Jul 22 00:50:16 EDT 2017
+* HenningVanRaumleYoutube list was Updated. Sat Jul 22 00:50:31 EDT 2017
+* HOSTSAdBlock list was Updated. Sat Jul 22 00:52:35 EDT 2017
+* hpHostsEMD list was Updated. Sat Jul 22 00:53:52 EDT 2017
+* hpHostsFSA list was Updated. Sat Jul 22 00:55:31 EDT 2017
+* hpHostsPartial list was Updated. Sat Jul 22 00:57:04 EDT 2017
+* hpHostsPSH list was Updated. Sat Jul 22 00:58:09 EDT 2017
+* hufilter list was Updated. Sat Jul 22 00:58:46 EDT 2017
+* ImmortalMalwareDomains list was Updated. Sat Jul 22 00:59:04 EDT 2017
+* iploggerfilter list was Updated. Sat Jul 22 00:59:19 EDT 2017
+* JABCreationsAdblockPlusFilterSubscription list was Updated. Sat Jul 22 00:59:34 EDT 2017
+* KADHostsFile list was Updated. Sat Jul 22 00:59:56 EDT 2017
+* LatvianListEasyList list was Updated. Sat Jul 22 01:00:17 EDT 2017
+* LeadGenerator list was Updated. Sat Jul 22 01:00:32 EDT 2017
+* LehighBOOT List Was An Empty File After Download. Sat Jul 22 01:00:42 EDT 2017
+* LehighBOOT List Was Killed By The Parsing Process. It will be skipped in the future. Sat Jul 22 01:00:42 EDT 2017
+* LehighImmortal List Was An Empty File After Download. Sat Jul 22 01:00:53 EDT 2017
+* LehighImmortal List Was Killed By The Parsing Process. It will be skipped in the future. Sat Jul 22 01:00:53 EDT 2017
+* ListeARListeFREasyList list was Updated. Sat Jul 22 01:01:12 EDT 2017
+* ListeFREasyList list was Updated. Sat Jul 22 01:01:30 EDT 2017
+* ListeFR list was Updated. Sat Jul 22 01:01:46 EDT 2017
+* MalwaredomainsJustDomains list was Updated. Sat Jul 22 01:02:14 EDT 2017
+* Mat1thDNSaddblock list was Updated. Sat Jul 22 01:02:43 EDT 2017
+* MayvsPrivateAdblockFilters list was Updated. Sat Jul 22 01:03:03 EDT 2017
+* MichaelTrimmsHosts list was Updated. Sat Jul 22 01:03:27 EDT 2017
+* MitchellKrogsBaddBoyzHosts list was Updated. Sat Jul 22 01:03:45 EDT 2017
+* Nopelist list was Updated. Sat Jul 22 01:04:02 EDT 2017
+* NoTrackBlocklist list was Updated. Sat Jul 22 01:04:18 EDT 2017
+* Notrackinghostnames list was Updated. Sat Jul 22 01:04:46 EDT 2017
+* PiwikSpam list was Updated. Sat Jul 22 01:05:02 EDT 2017
+* PrebakeObtrusive list was Updated. Sat Jul 22 01:05:19 EDT 2017
+* PrivacyFilters list was Updated. Sat Jul 22 01:05:36 EDT 2017
+* QuidsupMalicious list was Updated. Sat Jul 22 01:05:51 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist list was Updated. Sat Jul 22 01:06:20 EDT 2017
+* RansomwareTrackerDomainBlocklist list was Updated. Sat Jul 22 01:06:46 EDT 2017
+* RansomwareTrackerLockyRansomwareC2DomainBlocklist list was Updated. Sat Jul 22 01:07:10 EDT 2017
+* RansomwareTrackerLockyRansomwarePaymentSitesDomainBlocklist list was Updated. Sat Jul 22 01:07:34 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareC2DomainBlocklist list was Updated. Sat Jul 22 01:07:59 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist list was Updated. Sat Jul 22 01:08:23 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwareC2DomainBlocklist list was Updated. Sat Jul 22 01:08:47 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist list was Updated. Sat Jul 22 01:09:11 EDT 2017
+* ROadBlock list was Updated. Sat Jul 22 01:09:27 EDT 2017
+* ROListEasyList list was Updated. Sat Jul 22 01:09:48 EDT 2017
+* RUAdListEasyList list was Updated. Sat Jul 22 01:10:08 EDT 2017
+* RUAdList list was Updated. Sat Jul 22 01:10:24 EDT 2017
+* Spam404DomainBlacklist list was Updated. Sat Jul 22 01:10:47 EDT 2017
+* Spam404 list was Updated. Sat Jul 22 01:11:03 EDT 2017
+* SpotifyAds list was Updated. Sat Jul 22 01:11:26 EDT 2017
+* StevenBlacksHosts list was Updated. Sat Jul 22 01:11:41 EDT 2017
+* StevenBlacksKAD list was Updated. Sat Jul 22 01:11:57 EDT 2017
+* StevenBlacksMicrosoftTelemetry list was Updated. Sat Jul 22 01:12:13 EDT 2017
+* StevenBlacksRiskyHosts list was Updated. Sat Jul 22 01:12:30 EDT 2017
+* StevenBlacksSpammers list was Updated. Sat Jul 22 01:12:46 EDT 2017
+* StevenBlacksSpotifyAds list was Updated. Sat Jul 22 01:13:01 EDT 2017
+* StevenBlacksTrackers list was Updated. Sat Jul 22 01:13:16 EDT 2017
+* StevenBlacksUncheckyAds list was Updated. Sat Jul 22 01:13:31 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGambling list was Updated. Sat Jul 22 01:13:59 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsGamblingPorn list was Updated. Sat Jul 22 01:14:28 EDT 2017
+* StevenBlacksUnifiedHostsFakenews list was Updated. Sat Jul 22 01:14:55 EDT 2017
+* StevenBlacksUnifiedHostsFakenewsPorn list was Updated. Sat Jul 22 01:15:24 EDT 2017
+* StevenBlacksUnifiedHostsGambling list was Updated. Sat Jul 22 01:15:51 EDT 2017
+* StevenBlacksUnifiedHostsGamblingPorn list was Updated. Sat Jul 22 01:16:19 EDT 2017
+* StevenBlacksUnifiedHosts list was Updated. Sat Jul 22 01:16:46 EDT 2017
+* StevenBlacksUnifiedHostsPorn list was Updated. Sat Jul 22 01:17:14 EDT 2017
+* SVNSlovenian list was Updated. Sat Jul 22 01:17:29 EDT 2017
+* TakoYachtygiftcardkiller list was Updated. Sat Jul 22 01:17:45 EDT 2017
+* ThoughtconvergesCustomAdBlockFilters list was Updated. Sat Jul 22 01:18:01 EDT 2017
+* TofuFilter list was Updated. Sat Jul 22 01:18:18 EDT 2017
+* Turkadlist list was Updated. Sat Jul 22 01:18:34 EDT 2017
+* tyzbit list was Updated. Sat Jul 22 01:18:49 EDT 2017
+* UncheckyAds list was Updated. Sat Jul 22 01:19:04 EDT 2017
+* Vokins list was Updated. Sat Jul 22 01:19:25 EDT 2017
+* WindowsSpyBlocker10 list was Updated. Sat Jul 22 01:19:40 EDT 2017
+* WindowsSpyBlocker7 list was Updated. Sat Jul 22 01:19:55 EDT 2017
+* WindowsSpyBlocker81 list was Updated. Sat Jul 22 01:20:10 EDT 2017
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
 
-## Combining All Parsed Lists. Fri Jul 21 00:47:06 EDT 2017
-* All Parsed List Removed. Fri Jul 21 00:47:06 EDT 2017
-* All Parsed List (edited) Removed. Fri Jul 21 00:48:38 EDT 2017
+## Combining All Parsed Lists. Sat Jul 22 01:20:12 EDT 2017
+* All Parsed List Removed. Sat Jul 22 01:20:12 EDT 2017
+* All Parsed List (edited) Removed. Sat Jul 22 01:21:45 EDT 2017
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Combining-All-Parsed-Lists.txt)
 
-## Results Of The Parsing. Fri Jul 21 00:50:46 EDT 2017
-## Edited ALLPARSEDLIST Result. Fri Jul 21 00:50:46 EDT 2017
-* The Edited ALLPARSEDLIST is 81 MB and contains 	3667812 Domains.
+## Results Of The Parsing. Sat Jul 22 01:23:54 EDT 2017
+## Edited ALLPARSEDLIST Result. Sat Jul 22 01:23:54 EDT 2017
+* The Edited ALLPARSEDLIST is 81 MB and contains 	3667923 Domains.
 
-## Total Runtime. Fri Jul 21 00:50:46 EDT 2017
-* Script Took 24 minutes To Filter 193 Lists.
+## Total Runtime. Sat Jul 22 01:23:55 EDT 2017
+* Script Took 63 minutes To Filter 193 Lists.
 
-## Updated Main README.md. Fri Jul 21 00:50:46 EDT 2017
+## Updated Main README.md. Sat Jul 22 01:23:55 EDT 2017
 
-* Script completed at Fri Jul 21 00:50:46 EDT 2017
+* Script completed at Sat Jul 22 01:23:55 EDT 2017
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
 
-## Pushing Lists. Fri Jul 21 00:50:47 EDT 2017
+## Pushing Lists. Sat Jul 22 01:23:55 EDT 2017
