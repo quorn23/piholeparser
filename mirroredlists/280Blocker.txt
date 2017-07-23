@@ -1,36 +1,73 @@
 [Adblock Plus 2.0]
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
-! Last update 2017/07/13
-##.blocker280-20170713
-!2017/07/13
+! Last update 2017/07/22
+##.blocker280-20170722
+!2017/07/22
 
+###shareButtonFixed
+##.blogroll-wrapper
+##.popmake-overlay
+##.yadsOverlay
+/sougo_rss
+2ch-2.net##.overlay
+anige-sokuhouvip.com##[id^="top_center"]
+app.famitsu.com##.adInterstitial
+chiebukuro.yahoo.co.jp##.listAd
+cookpad.com###ad_wrapper
+nikipedia.jp###flipdesk
+phil-portal.com##.sp_footer_bana
+spsoku.com,neetetsu.com,sophiech.blog.jp##a[href*="http://bit.ly/"]
+
+||a.cookpad-ads.com
+||api.primecaster.net
+||api.uca.cloud.unity3d.com
+||aplkp.valuecommerce.com
+||app-measurement.com
+||click-plus.net
+||cocoad.jp
+||csi.gstatic.com
+||events.appsflyer.com
+||iadsdk.apple.com
+||ingest.crittercism.com
+||j.zucks.net.zimg.jp.cdngc.net
+||js.passaro-de-fogo.biz
+||metrics.mzstatic.com
+||ssl-google-analytics.l.google.com
+||stats.unity3d.com
+||unityads.unity3d.com
+||s3-ap-northeast-1.amazonaws.com/seedapp-script/
+
+
+!2017/07/13
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matomegane.com##a[href*="//matomegane.com/"]
 amazon.co.jp###div-gpt-ad
 ##a[href*="//affiliate."]
-##.yadsOverlay
 
 !2017/07/08
 
 ##[class$="-sns-box"]
+||ads280dummy.com
 !||durasite.net
 !||ad-api-v01.uliza.jp^
 !||ad-beacon-v01.uliza.jp^
 ||sankei2ad.durasite.net
 
 
-~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp,~ec-bought.com##[class^="ad-"]:not(body)
+~surveyenquete.net,~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp,~ec-bought.com##[class^="ad-"]:not(body)
 ~video.fc2.com,~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~smt.docomo.ne.jp,~newsweekjapan.jp,~ec-bought.com,~ferrarilamborghininews.com##[class^="ad_"]:not(body)
-~ec-bought.com##[id*="-ads-"]:not(body):not(header)
+~surveyenquete.net,~ec-bought.com##[id*="-ads-"]:not(body):not(header)
 ~bbc.com##[class*="-ads-"]:not(body):not(header)
 ~doujin-free.com##[id*="_ads_"]:not(body)
 ~mangakansou.com,~touch.pixiv.net##[class^="ads-"]:not(body)
 ~z0i.net,~ff14angler.com,~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com,~off-soft.net,~earthyworld.com##.adsbygoogle:not(body)
 ~thisav.com,~savevideo.me,~touch.pixiv.net,~gmail.com,~mail.google.com,~inbox.google.com##.ads:not(body)
+~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~doujin-free.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body)
+~surveyenquete.net,~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net~smt.docomo.ne.jp,~gmail.com,~ec-bought.com,~ferrarilamborghininews.com,~sorasi.net,~akb48gnittimatome.com,~gametter.com,~halchim.jp,~jinseinokiduki.com,~kamikiyuki.hatenablog.com,~kyukyoku-matome.com,~mukulog.com,~omutulove.blog.fc2.com,~repeat-drama.info,~shindan-apps.net,~wakudan.seesaa.net,~www.anime-drama.com,~www.footballnews.jp,~eikaiwamastery.blogspot.jp,~nasubiblog.com,~kashinoen.com###adsense
 
 
-!~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~smt.docomo.ne.jp,~gmail.com,~doujin-free.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body)
-~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net~smt.docomo.ne.jp,~gmail.com,~ec-bought.com,~ferrarilamborghininews.com,~sorasi.net,~akb48gnittimatome.com,~gametter.com,~halchim.jp,~jinseinokiduki.com,~kamikiyuki.hatenablog.com,~kyukyoku-matome.com,~mukulog.com,~omutulove.blog.fc2.com,~repeat-drama.info,~shindan-apps.net,~wakudan.seesaa.net,~www.anime-drama.com,~www.footballnews.jp,~eikaiwamastery.blogspot.jp,~nasubiblog.com,~kashinoen.com###adsense
+
+
 
 ##[class^="ads_"]:not(body)
 ###textAd
@@ -646,7 +683,6 @@ geekheart.info###main
 genkosha.com##a[href*="shuffle.genkosha.com/special.html"]
 mudainodocument.com##a[href*="//recott.me/"]
 neetetsu.com##a[href*="//www.deli-tokyo.net/"]
-neetetsu.com,sophiech.blog.jp##a[href*="http://bit.ly/"]
 pixiv.net##.ad-container
 pixiv.net##.ad-mobile-anchor
 ||ads2-adnow.com
@@ -1167,7 +1203,6 @@ BannerLoader$domain=wikipedia.org
 ||ads.nikkeibp.co.jp^
 ||ads1.jp.msn.com^
 ||ads1.msads.net^
-||ads280dummy.com^
 ||adsee.jp^
 ||adsk2.co^
 ||adtc.daum.net^
@@ -2509,3 +2544,4 @@ nakasoku.blog18.fc2.com##.rss_box
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~world-best-news.doorblog.jp##a[href*="//world-best-news.doorblog.jp/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matometatta-news.net##a[href*="//matometatta-news.net/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~merry-news.com##a[href*="//merry-news.com/"]
+

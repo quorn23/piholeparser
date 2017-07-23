@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: tbOfzmlTGHZWQsMARtm4vg
-! Version: 201707220500
+! Checksum: FWy73yps86y6hUi4j81jQw
+! Version: 201707230500
 ! Title: RU AdList
-! Last modified: 22 Jul 2017 05:00 UTC
+! Last modified: 23 Jul 2017 05:00 UTC
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
 ! Дополнительная региональная подписка RU AdList к подписке EasyList
@@ -1416,6 +1416,7 @@ _spy2wc.org
 _tizer.
 _tizer2.
 _tizers.
+||agency/init.js$third-party,script
 ||biz/banner/$third-party
 ||biz/v^$third-party,script
 ||com/bgout.php?id=$third-party,script
@@ -1424,6 +1425,8 @@ _tizers.
 ||com/video/*^format=rotator&$third-party,script
 ||in/?for=$third-party,script
 ||info/alert/
+||info/banner/tiz.php?$third-party,script
+||info/init.js$third-party,script
 ||info/vk2/
 ||madbanner.$~object-subrequest
 ||net/banners/
@@ -1482,18 +1485,16 @@ _tizers.
 ||servebbs.net^$third-party,script,subdocument
 ||zavetiss.ru^$third-party
 !
-||agency/init.js$third-party,script
-||asia^$third-party,script,subdocument
-||info/banner/tiz.php?$third-party,script
-||info/init.js$third-party,script
-||pw^$third-party,script,domain=~adwiz.pp.ua|~softpir.com|~xn--drakulastrem-b7e.com
+||asia^$third-party,script,subdocument,xmlhttprequest
+||pw^$third-party,script,xmlhttprequest,domain=~adwiz.pp.ua|~softpir.com|~xn--drakulastrem-b7e.com
+||xyz^$third-party,script,subdocument,xmlhttprequest
 !
 ! Исключения
-@@||12go.asia^$script,subdocument,domain=tourister.ru
+@@||12go.asia^$domain=tourister.ru
 @@||1cdn.pw^$third-party
 @@||azvideo.asia^$domain=miwed.ru
-@@||callback.pw^$third-party,script
-@@||nyan.pw^$third-party,script
+@@||callback.pw^$third-party,script,xmlhttprequest
+@@||nyan.pw^$third-party,script,xmlhttprequest
 ! -----------------------------------------------------------------------------
 ! *** advblock/thirdparty.txt ***
 .serialu.tv^$third-party
@@ -2970,7 +2971,6 @@ _tizers.
 ||ad1.ru^$third-party
 ||ad1game.ru^$third-party
 ||ad4sell.com^$third-party
-||adavz.xyz^$third-party
 ||adbetclickin.pink^$third-party
 ||adbix.tv^$third-party
 ||adblade.com^$third-party
@@ -3077,7 +3077,6 @@ _tizers.
 ||adwise.agency^$third-party
 ||adylalahb.ru^$third-party
 ||adzos.com^$third-party
-||aeflkaaw.xyz^$third-party
 ||aegke.top^$third-party
 ||aenjj.com^$third-party
 ||aerontre.com^
@@ -3104,8 +3103,6 @@ _tizers.
 ||aintes.com^
 ||airlead.ru^$third-party
 ||ajaxbig.ru^$third-party
-||ajpxs.xyz^$third-party
-||ajvvavsjtijcva.xyz^$third-party
 ||akashy.com^
 ||aksessuarov.ru^$third-party
 ||aktites.ru^$third-party
@@ -3167,7 +3164,6 @@ _tizers.
 ||apycomm.com^$third-party
 ||apypxl.com^$third-party
 ||apytrc.com^$third-party
-||aqcmri.xyz^$third-party
 ||aqwelso.ru^$third-party
 ||araratfood.ru^$third-party
 ||arbadgika.ru^$third-party
@@ -3203,14 +3199,11 @@ _tizers.
 ||avdego.net^$third-party
 ||avmgetdo.ru^$third-party
 ||avmul.space^$third-party
-||avtviscrjrjiir.xyz^$third-party
 ||awebanner.net^$third-party
 ||aweets.com^$third-party
 ||awesomeredirector*com^
 ||awhate.ru^$third-party
-||awpodidrawyeo.xyz^$third-party
 ||axaxh.com^$third-party
-||axlpf.xyz^$third-party
 ||ayjvb.com^$third-party
 ||az708531.vo.msecnd.net^
 ||azart24.net^$third-party
@@ -3234,7 +3227,6 @@ _tizers.
 ||banamertur.com^$third-party
 ||banermaner.com^$third-party
 ||banner-media.ru^$third-party
-||banner2203.xyz^$third-party
 ||bannerms54489.com^
 ||bannersold.eu^$third-party
 ||bannersvideo.com^$third-party
@@ -3306,7 +3298,6 @@ _tizers.
 ||biper1.ru^$third-party
 ||bistr3.ru^
 ||bistroduy.ru^$third-party
-||bitpit.xyz^$third-party
 ||bitvene.ru^$third-party
 ||bixmarketing.ru^
 ||bizmix.ru^$third-party
@@ -3412,13 +3403,11 @@ _tizers.
 ||castdome.ru^$third-party
 ||castellol.com^$third-party
 ||catcut.net^$third-party
-||catholicgreatestinterpret.xyz^$third-party
 ||cccpkinocom.ru^$third-party
 ||cccpkinonet.ru^$third-party
 ||cclaf.top^$third-party
 ||cclick.ru^$third-party
 ||ccokeryfilm.services^$third-party
-||cdcwn.xyz^$third-party
 ||cddn.ru^$third-party
 ||cdn-ds.ddns.net^$third-party
 ||cdn-img.ru^$third-party
@@ -3451,7 +3440,6 @@ _tizers.
 ||cettenu.com^
 ||cettenus.com^
 ||cf9tn.ru^$third-party
-||cgfleuvly.xyz^$third-party
 ||chabg.top^$third-party
 ||chajv.top^$third-party
 ||cheburchik.ru^$third-party
@@ -3464,7 +3452,6 @@ _tizers.
 ||cilep.ru^$third-party
 ||citaire.com^
 ||citerrol.com^$third-party
-||citof.xyz^$third-party
 ||cityads.com^$third-party
 ||cityads.ru^$third-party
 ||ciuvo.com^$third-party
@@ -3485,7 +3472,6 @@ _tizers.
 ||clickcashmoney.com^
 ||clickiocdna.com^$third-party
 ||clicknetwork.ru^$third-party
-||clickpartoffon.xyz^$third-party
 ||clickspay.ru^
 ||clicktoclick.ru^$third-party
 ||clickunderad.com^
@@ -3564,7 +3550,6 @@ _tizers.
 ||crackac.com^
 ||crapka.ru^$third-party
 ||crateac.com^
-||cratorit.xyz^$third-party
 ||creofive.com^$third-party
 ||creofun.com^$third-party
 ||crpoy.com^
@@ -3628,7 +3613,6 @@ _tizers.
 ||delo-teh.ru^$third-party
 ||delta.mediafort.ru^$third-party
 ||demilith.com^
-||democratlungmust.xyz^$third-party
 ||deobp.com^$third-party
 ||derderus.ru^$third-party
 ||derilam.com^$third-party
@@ -3641,12 +3625,9 @@ _tizers.
 ||devilclicks.com^
 ||devoknet.ru^$third-party
 ||devrik.ru^$third-party
-||dexpz.xyz^$third-party
 ||df09rp0cm6rp6.cloudfront.net^
 ||dfebr.com^$third-party
 ||dfgqz.com^$third-party
-||dflfnrmi.xyz^$third-party
-||dfpmvwyku.xyz^$third-party
 ||dfthplx.net^
 ||dgulden.ru^$third-party
 ||dicki.net^$third-party
@@ -3672,7 +3653,6 @@ _tizers.
 ||disklaimer.ru^$third-party
 ||disredi.ru^$third-party
 ||disterme.com^
-||divorceshameenough.xyz^$third-party
 ||dizzyac.com^
 ||djbvq.top^$third-party
 ||djpff.top^$third-party
@@ -3717,9 +3697,7 @@ _tizers.
 ||drulelet.ru^$third-party
 ||drycle.ru^$third-party
 ||dskrt.net^$third-party
-||dtggesz.xyz^$third-party
 ||dtudz.top^$third-party
-||dtwpb.xyz^$third-party
 ||dubnokhi.ru^$third-party
 ||dunta.ru^
 ||dupalet.com^$third-party
@@ -3734,15 +3712,12 @@ _tizers.
 ||dz01rk.com^
 ||eaplay.ru^$third-party
 ||eaqci.com^$third-party
-||easygetfreesoft4you.xyz^$third-party
-||eattransitgifted.xyz^$third-party
 ||eban.su^$third-party
 ||ebitda-i-demping.me^$third-party
 ||ebkofor.ru^$third-party
 ||ebloren.ru^$third-party
 ||ebmzp.top^$third-party
 ||ec2f1xubcblb.ru^$third-party
-||ecefibwja.xyz^$third-party
 ||ecgawdakfa.biz^$third-party
 ||echobanners.net^
 ||econdus.com^
@@ -3760,7 +3735,6 @@ _tizers.
 ||eichmann.biz^$third-party
 ||eijwpxc.net^
 ||eioxy.top^$third-party
-||ejjymqm.xyz^$third-party
 ||ejmovec.ru^$third-party
 ||ekinos.net^$third-party
 ||eksemech.ru^$third-party
@@ -3818,8 +3792,6 @@ _tizers.
 ||euzavnv.info^$third-party
 ||evendividualita.com^
 ||evsembu.com^
-||evyhhq.xyz^$third-party
-||evztib.xyz^$third-party
 ||ewfzv.top^$third-party
 ||ewtopas.ru^$third-party
 ||ewutka.ru^$third-party
@@ -3832,7 +3804,6 @@ _tizers.
 ||extronext.ru^
 ||exwazar.info^$third-party
 ||eyenewton.ru/scripts/sda.min.js$third-party,script
-||eyuya.xyz^$third-party
 ||ezaktak.ru^$third-party
 ||ezaste.ru^$third-party
 ||eznagi.ru^
@@ -3879,7 +3850,6 @@ _tizers.
 ||float-l.ru^$third-party
 ||flushmviolent.org^
 ||fmusive.ru^
-||fmywa.xyz^$third-party
 ||fobise.ru^$third-party
 ||foreverseed.ru^$third-party
 ||forsupwron.pro^$third-party
@@ -3902,14 +3872,10 @@ _tizers.
 ||freeimg.ru^$third-party
 ||freeone.link^$third-party
 ||fresh-video.com^$third-party
-||frfgn.xyz^$third-party
-||frklz.xyz^$third-party
 ||frmsafe.com^
-||fsdwd.xyz^$third-party
 ||fseed.ru^$third-party
 ||fsibs.top^$third-party
 ||fstredirr.com^
-||fttmayia.xyz^$third-party
 ||fuder.ru^$third-party
 ||fueox.us^$third-party
 ||fufko.com^$third-party
@@ -3948,7 +3914,6 @@ _tizers.
 ||gddrio.com^
 ||gdsln.ru^$third-party
 ||gefetot.com^$third-party
-||gentlemanautomobilebread.xyz^$third-party
 ||geotraff.com^$third-party
 ||gerbara.com^$third-party
 ||gerberka.com^$third-party
@@ -3957,7 +3922,6 @@ _tizers.
 ||get-hit.ru^$third-party
 ||getbonus.info^
 ||getelem.ru^$third-party
-||getfreesoft4you.xyz^$third-party
 ||getgale.info^$third-party
 ||getrotai.ru^$third-party
 ||getrotaq.ru^$third-party
@@ -3966,7 +3930,6 @@ _tizers.
 ||getuplinks.ru^$third-party
 ||gfstrck.com^$third-party
 ||ghaires.com^
-||ghyrqvw.xyz^$third-party
 ||gidrantus.ru^$third-party
 ||gingardo.com^
 ||giokole.com^
@@ -3982,7 +3945,6 @@ _tizers.
 ||gj7.ru^$third-party
 ||gjslm.com^
 ||gkiop.com^$third-party
-||gkwtk.xyz^$third-party
 ||gladra.ru^$third-party
 ||glammor.ru^$third-party
 ||glavrich.com^
@@ -4037,16 +3999,6 @@ _tizers.
 ||greeentea.ru^$third-party
 ||greenfelder.link^$third-party
 ||grofku.com^$third-party
-||grogdri.xyz^$third-party
-||grogeri.xyz^$third-party
-||grogfri.xyz^$third-party
-||groghri.xyz^$third-party
-||grogjri.xyz^$third-party
-||grogpri.xyz^$third-party
-||grogqri.xyz^$third-party
-||grogsri.xyz^$third-party
-||grogtri.xyz^$third-party
-||groguri.xyz^$third-party
 ||ground24.info^$third-party
 ||grouteg.com^$third-party
 ||grt04.com^$third-party
@@ -4084,14 +4036,13 @@ _tizers.
 ||heqop.ru^$third-party
 ||hermiston.biz^$third-party
 ||hertugwa.pro^$third-party
-||hfgjdcbrv.xyz^$third-party
-||hfmqjxwz.xyz^$third-party
 ||hgfsdzfs.com^$third-party
 ||hgqea.top^$third-party
 ||hgtem.com^$third-party
 ||hgvkw.us^$third-party
 ||hickle.biz^$third-party
 ||highlightingalive.in^
+||highofferever.com^$third-party
 ||hilll.biz^$third-party
 ||himowith.pro^$third-party
 ||hiopdi.com^$third-party
@@ -4118,7 +4069,6 @@ _tizers.
 ||humanredirect.ru^
 ||hundana.ru^$third-party
 ||hupers.ru^$third-party
-||huylo.xyz^$third-party
 ||hw4mm.ru^$third-party
 ||hydr.work^$third-party
 ||hyndir.com^$third-party
@@ -4173,7 +4123,6 @@ _tizers.
 ||ihlasbe.ru^
 ||iholot.ru^$third-party
 ||ihqht.com^$third-party
-||iiutq.xyz^$third-party
 ||ijdenha.ru^$third-party
 ||ijsve.com^$third-party
 ||ikersont.com^
@@ -4206,7 +4155,6 @@ _tizers.
 ||imamby.ru^
 ||imeteti.info^$third-party
 ||img1461.r.worldssl.net^$third-party
-||imgnew.xyz^$third-party
 ||impannon.com^
 ||imparfum.com^
 ||impromot.com^
@@ -4219,7 +4167,6 @@ _tizers.
 ||imwhite-ru^
 ||imwhite.ru^
 ||imycpm.ru^$third-party
-||imzhv.xyz^$third-party
 ||inaly.ru^$third-party
 ||incielle.com^
 ||inctivee.com^
@@ -4271,12 +4218,10 @@ _tizers.
 ||ivsiveg.ru^$third-party
 ||iwantyourpromo.com^$third-party
 ||iwhha.top^$third-party
-||ixjwi.xyz^$third-party
 ||ixtuseq.info^$third-party
 ||ixtyted.ru^
 ||iygke.com^$third-party
 ||izdatra.ru^$third-party
-||izlqp.xyz^$third-party
 ||izuvis.ru^$third-party
 ||izvygon.ru^$third-party
 ||jadedi.com^
@@ -4331,7 +4276,6 @@ _tizers.
 ||kadanoda.ru^
 ||kadavara.com^
 ||kagortus.ru^$third-party
-||kak-dela.xyz^$third-party
 ||kamradamnaradost.ru^$third-party
 ||kan.kanoner.com^
 ||kan.karpovka.net^
@@ -4395,7 +4339,6 @@ _tizers.
 ||kitri.tk^$third-party
 ||kiworeequnasaw.info^
 ||kjaay.com^$third-party
-||kkpur.xyz^$third-party
 ||kletki16.ru^$third-party
 ||klyuchev.in.ua^
 ||klyunker.ru^$third-party
@@ -4435,7 +4378,6 @@ _tizers.
 ||ksdnf.com^$third-party
 ||kshop2.biz^
 ||ktozabanittotkirkorov.ru^
-||ktozvonil.xyz^$third-party
 ||kupivip.ru^$third-party
 ||kurberi.ru^$third-party
 ||kuretr.ru^$third-party
@@ -4482,7 +4424,6 @@ _tizers.
 ||lbbanners.net^$third-party
 ||lc2ads.ru^$third-party
 ||lcads.ru^
-||ldnxy.xyz^$third-party
 ||leadadvert.ru^$third-party
 ||leadmob.ru^$third-party
 ||leads.su^$third-party
@@ -4581,7 +4522,6 @@ _tizers.
 ||logsoc.ru^$third-party
 ||lolaken.com^$third-party
 ||lolper.ru^$third-party
-||lolxm.xyz^$third-party
 ||lomtor.com^$third-party
 ||loneday.com^
 ||look4file.ru^
@@ -4601,8 +4541,6 @@ _tizers.
 ||lotraden.online^$third-party
 ||lotsofslots.net^
 ||lounerr.com^$third-party
-||lovedontletmego.xyz^$third-party
-||lpmde.xyz^$third-party
 ||lptiu.top^$third-party
 ||lpwre.top^$third-party
 ||lresoza.ru^$third-party
@@ -4645,8 +4583,6 @@ _tizers.
 ||ma-code.ru^$third-party
 ||ma-static.ru^$third-party
 ||macanspeed.com^$third-party
-||machineblock.xyz^$third-party
-||machinese.xyz^$third-party
 ||madnet.ru^$third-party
 ||magariusaqmuri.cf^$third-party
 ||magicanfy.com^
@@ -4661,16 +4597,12 @@ _tizers.
 ||mallplg.com^
 ||mamypos.com^
 ||managedcollapsed.in^
-||manchina.xyz^$third-party
-||manifesr.xyz^$third-party
 ||manuelu.com^
-||marchina.xyz^$third-party
 ||marchtv.ru^$third-party
 ||margadoncat.com^$third-party
 ||markhab.ru^
 ||marmuzhi.ru^$third-party
 ||martakava.ru^
-||maschina.xyz^$third-party
 ||mashinnaya-shtukaturka.ru^$third-party
 ||masterconvert.ru^
 ||masterdomain24.com^$third-party
@@ -4695,7 +4627,6 @@ _tizers.
 ||mdeih.com^$third-party
 ||mdlo324fsd.ru^
 ||mdomata.ru^$third-party
-||mechina.xyz^$third-party
 ||med22iwqeq.ru^
 ||medads.ru^$third-party
 ||medhurst.biz^$third-party
@@ -4777,11 +4708,9 @@ _tizers.
 ||miokoo.com^
 ||mirotools.net^$third-party
 ||mirskidok.net^
-||misqb.xyz^$third-party
 ||mithdilinonel.ru^$third-party
 ||mixadvert.com^$third-party
 ||mixtraff.silvercdn.com^$third-party
-||mkris.xyz^$third-party
 ||mkvaviod.info^$third-party
 ||mlivaka.ru^$third-party
 ||mmoney.services^$third-party
@@ -4796,7 +4725,6 @@ _tizers.
 ||mobikont.com^
 ||mobile-click.biz^$third-party
 ||mobiledirectors.com^
-||mobiledraftdog.xyz^$third-party
 ||mobiloba.com^
 ||mobioffers.ru^$third-party
 ||mobirollcom.ru^
@@ -4821,7 +4749,6 @@ _tizers.
 ||monox.org/getcode.
 ||moonhappy.ru^
 ||mooo.com^$third-party
-||morakter.xyz^$third-party
 ||morar.biz^$third-party
 ||more152.net^
 ||more427.net^
@@ -4879,7 +4806,6 @@ _tizers.
 ||myloveadblock.ucoz.club^$third-party
 ||mynagor.com^
 ||mynaruto.at.ua^$third-party
-||mynbase.xyz^$third-party
 ||mynysy.com^$third-party
 ||myonionsoup.com^$third-party
 ||myshops.biz^$third-party
@@ -4900,7 +4826,6 @@ _tizers.
 ||naplene.ru^$third-party
 ||naruhap.pro^$third-party
 ||naruto-base.ru^$object,other,script,subdocument,xmlhttprequest
-||naruto-base.xyz^$third-party
 ||naruto-baseru.ru^$third-party
 ||naruto-basetv.ru^$third-party
 ||nasledstvo.int.ru^
@@ -4962,7 +4887,6 @@ _tizers.
 ||nimigal.ru^$third-party
 ||ninavyg.ru^third-party
 ||nizliro.ru^$third-party
-||nlserver.xyz^$third-party
 ||nmn.pp.ua^$third-party
 ||noblok.com^
 ||nogee.ru^$third-party
@@ -4973,12 +4897,10 @@ _tizers.
 ||norinning.com^$third-party
 ||nostushi.ru^
 ||not-only.info^$third-party
-||notionredcrush.xyz^$third-party
 ||novbrom.com^$third-party
 ||novfox2.com^$third-party
 ||novinkifilmov.com^$third-party
 ||novwolf.com^$third-party
-||nqtxg.xyz^$third-party
 ||nrged.com^
 ||nrzcj.top^$third-party
 ||nsx3g.ru^$third-party
@@ -5008,10 +4930,8 @@ _tizers.
 ||obnamed.ru^$third-party
 ||obsudam.ru^$third-party
 ||obuynits.ru^$third-party
-||obywsosx.xyz^$third-party
 ||ochanki.ru^$third-party
 ||ochze.com^$third-party
-||ocmcbyxm.xyz^$third-party
 ||oconner.link^$third-party
 ||octobird.com^$third-party
 ||octoclick.net^$third-party
@@ -5158,8 +5078,6 @@ _tizers.
 ||perfecttds.net^$third-party
 ||peromut.com^$third-party
 ||perrest.com^$third-party
-||pexebkhmd.xyz^$third-party
-||pfrve.xyz^$third-party
 ||pgold.pro^$third-party
 ||pheriss.com^$third-party
 ||phibile.ru^$third-party
@@ -5192,7 +5110,6 @@ _tizers.
 ||plusvkarmuvam.ru^$third-party
 ||pmddby.com^$third-party
 ||poblemi.info^$third-party
-||pofqm.xyz^$third-party
 ||pointclc.com^
 ||pointrtb.com^
 ||poketall.ru^
@@ -5224,7 +5141,6 @@ _tizers.
 ||poymiteetobespolezno.ru^$third-party
 ||poyva.com^$third-party
 ||ppvlj.com^$~third-party
-||pqaqmwtgaf.xyz^$third-party
 ||pr28.com^
 ||prbn.ru^
 ||precision-machining-tw.com^
@@ -5235,7 +5151,6 @@ _tizers.
 ||privetadb4.ru^$third-party
 ||privetadblock.ru^$third-party
 ||problogrus.ru^
-||projecteverythingauto.xyz^$third-party
 ||proligtb.com^
 ||prolinker.ru^$third-party
 ||promedia-click.ru^
@@ -5252,7 +5167,6 @@ _tizers.
 ||promoheads.com^$third-party
 ||promojet.ru^$third-party
 ||promonew.biz^$third-party
-||promotecheatdeeply.xyz^$third-party
 ||promoworld.pw^$third-party
 ||proravenstvo.ru^
 ||proravnovesie.ru^
@@ -5265,7 +5179,6 @@ _tizers.
 ||proxy.dlf.lt^
 ||proxy4http.appspot.com^$third-party
 ||prozapas.dn.ua^
-||psljyojh.xyz^$third-party
 ||psma01.com.^
 ||psma02.com.^
 ||psma03.com.^
@@ -5307,7 +5220,6 @@ _tizers.
 ||qurtol.com^$third-party
 ||qwertypay.com^$third-party
 ||qwshop.ru^$third-party
-||qxull.xyz^$third-party
 ||qzoeltaw.info^$third-party
 ||r.interakt.ru^$third-party
 ||r0tl.info^$third-party
@@ -5371,8 +5283,6 @@ _tizers.
 ||returso.com^
 ||reunice.com^
 ||rewdinghes.com^$third-party
-||rfskbylbsf.xyz^$third-party
-||rgitc.xyz^$third-party
 ||rich-adv-code.net^
 ||richthof.com^
 ||riibl.com^$third-party
@@ -5384,7 +5294,6 @@ _tizers.
 ||riverlead.ru^$third-party
 ||rj7xw.ru^$third-party
 ||rle.ru^
-||rliqvcw.xyz^$third-party
 ||rmnje.top^$third-party
 ||rnet.plus^$third-party
 ||rnnuw.com^$third-party
@@ -5500,7 +5409,6 @@ _tizers.
 ||santim.com.ua^$third-party
 ||sapmedia.ru^
 ||sapmedia.ru^$third-party
-||satoriomo.xyz^$third-party
 ||sawayn.link^$third-party
 ||scafer.ru^$third-party
 ||scancpa.ru^$third-party
@@ -5538,7 +5446,6 @@ _tizers.
 ||seilope.com^$third-party
 ||seligers.ru^
 ||selosin.com^$third-party
-||sendmathsilly.xyz^$third-party
 ||senkevich-vk.net^
 ||seoftsup.pro^$third-party
 ||seoha.ru^$third-party
@@ -5558,7 +5465,6 @@ _tizers.
 ||server-number-1.ru^$third-party
 ||server-rotation.ru^$third-party
 ||server2034.ru^
-||serverbest.xyz^$third-party
 ||serving.plexop.net^
 ||servized.com^
 ||setads.bid^$third-party
@@ -5722,7 +5628,6 @@ _tizers.
 ||tajmaru.ru^$third-party
 ||takealldir.ru^
 ||takeman.ru^$third-party
-||taolrfcxuc.xyz^$third-party
 ||tare51vkh.ru^$third-party
 ||targetan.com^$third-party
 ||targeterra.com^$third-party
@@ -5858,7 +5763,6 @@ _tizers.
 ||tmozs.com^$third-party
 ||tmska.com^
 ||tmstrack.com^$third-party
-||tmuurnthtf.xyz^$third-party
 ||tn.mybb.ru^$third-party
 ||to/code/$third-party,script
 ||to/files/$third-party
@@ -5916,10 +5820,8 @@ _tizers.
 ||traffpartner.ru^$third-party
 ||traffpay.ru^
 ||traffru.ru^
-||trafgid.xyz^$third-party
 ||trafidet.ru^$~popup,popup
 ||trafka.ru^$third-party
-||traflabs.xyz^$third-party
 ||trafmake.ru^
 ||trafmaster.com^$third-party
 ||trafned.ru^$third-party
@@ -5980,7 +5882,6 @@ _tizers.
 ||tv-ads.ru^$third-party
 ||tvoigost.ru^
 ||tvoy-start.com/partnerka/
-||twgib.xyz^$third-party
 ||twitep.com^
 ||twodrive.su^$third-party
 ||txapela.ru^$third-party
@@ -5996,7 +5897,6 @@ _tizers.
 ||ugyfw.top^$third-party
 ||uhabab.com^$third-party
 ||uhdif.top^$third-party
-||uihdlx.xyz^$third-party
 ||uitrens.ru^$third-party
 ||ujokee.com^$third-party
 ||ukamer.ru^$third-party
@@ -6021,7 +5921,6 @@ _tizers.
 ||untily.com^
 ||unwsrv.ru^$third-party
 ||uocux.com^$third-party
-||upxip.xyz^$third-party
 ||uredy.top^$third-party
 ||urgdk.top^$third-party
 ||urlrtb.com^
@@ -6044,7 +5943,6 @@ _tizers.
 ||uvrago.ru^$third-party
 ||uwqfq.space^$third-party
 ||uwuyn.us^$third-party
-||uxxop.xyz^$third-party
 ||uytichas.ru^$third-party
 ||uznat-vse.ru^$third-party
 ||v1v.be^$third-party
@@ -6072,7 +5970,6 @@ _tizers.
 ||verhedttot.pro^$third-party
 ||veroui.com^
 ||vesofich.ru^$third-party
-||vginpar.xyz^$third-party
 ||vi.cdnvideo.ru^$third-party
 ||vi012.com^$third-party
 ||vidalak.com^$third-party
@@ -6139,7 +6036,6 @@ _tizers.
 ||viparchive1.ru^$third-party
 ||vipteaser.net^$third-party
 ||viral-cdn.ru^$third-party
-||virtl.xyz^$third-party
 ||viruntek.ru^$third-party
 ||vis19.com^$third-party
 ||visitscounter.ru^
@@ -6189,7 +6085,6 @@ _tizers.
 ||vqfqo.us^$third-party
 ||vqjep.com^$third-party
 ||vrcteam.ru^$third-party
-||vryxb.xyz^$third-party
 ||vrzgn.com^$third-party
 ||vsdjk44.ru^$third-party
 ||vtomate.biz^
@@ -6228,7 +6123,6 @@ _tizers.
 ||waveview.info^$third-party
 ||wbid.ru^
 ||wdcxuezpxivqgmecukeirnsyhjpjoqdqfdtchquwyqatlwxtgq.com^
-||wearter.xyz^$third-party
 ||web-games.biz^$third-party
 ||web-rotation.net^
 ||web-rotator.net^
@@ -6240,7 +6134,6 @@ _tizers.
 ||webrotator.org^
 ||webturn.ru^$third-party
 ||wecai.us^$third-party
-||wedewdew.xyz^$third-party
 ||wedgeac.com^
 ||wednesfeb.com^$third-party
 ||wedtor.com^$third-party
@@ -6251,7 +6144,6 @@ _tizers.
 ||wertuip.com^$third-party
 ||wetpussyhd.com^
 ||wett45.ru^$third-party
-||wfvyr.xyz^$third-party
 ||wguke.com^$third-party
 ||wheretogo.bid^$third-party
 ||whisla.com^
@@ -6269,7 +6161,6 @@ _tizers.
 ||winvideo.me^$third-party
 ||winvideo.org^$third-party
 ||winvideo.su^$third-party
-||winvideo.xyz^$third-party
 ||wirtusspro.ru^$third-party
 ||wisertb.com^
 ||wisoky.biz^$third-party
@@ -6282,12 +6173,10 @@ _tizers.
 ||wlboon.com^
 ||wlsport.com^$third-party
 ||wmbankir.ru^
-||wmbgc.xyz^$third-party
 ||wme.biz^$third-party
 ||wmip.ru^
 ||wmrak.com^
 ||wmrfast.com^$third-party
-||wmwyq.xyz^$third-party
 ||wokoq.com^$third-party
 ||wom8day.ru^$third-party
 ||womenchop.com^$third-party
@@ -6298,7 +6187,6 @@ _tizers.
 ||wowboom2.ru^$third-party
 ||wowodarta.com^$third-party
 ||wpvdt.space^$third-party
-||wqlwx.xyz^$third-party
 ||wqs7j.ru^
 ||wregf.biz^
 ||wshosting.ru^$third-party
@@ -6312,12 +6200,10 @@ _tizers.
 ||wwgate.ru^$third-party
 ||wwgdpbvbrublvjfbeunqvkrnvggoeubcfxzdjrgcgbnvgcolbf.com^
 ||www.rt-ns.ru^
-||www0.xyz^$third-party
 ||wwwapteka.info^$third-party
 ||wxbup.top^$third-party
 ||wycji.top^$third-party
 ||wydpt.com^$third-party
-||wyfpz.xyz^$third-party
 ||wyuxy.com^$third-party
 ||wyznj.com^$third-party
 ||x-ip-adv.com^
@@ -6329,8 +6215,6 @@ _tizers.
 ||xaogi.com^
 ||xawab.com^$third-party
 ||xaxvixamanwka.tk^$third-party
-||xbmhm.xyz^$third-party
-||xbosombpvz.xyz^$third-party
 ||xcufz.top^$third-party
 ||xeclick.com^
 ||xeemcol.com^$third-party
@@ -6342,7 +6226,6 @@ _tizers.
 ||xiepl.com^
 ||xiss.ru^
 ||xiuuh.com^
-||xjmrl.xyz^$third-party
 ||xjqha.com^$third-party
 ||xl415.com^$third-party
 ||xlbz.com^$third-party
@@ -6350,7 +6233,6 @@ _tizers.
 ||xlrvh.top^$third-party
 ||xltraff.net^$~popup,popup
 ||xmediaserve.com^$third-party
-||xmqju.xyz^$third-party
 ||xn-----7kcnh2ac3afebiffxijf2d6a5e.xn--p1ai^$third-party
 ||xn----etbhjdhwegjlz.xn--p1ai^$third-party
 ||xoalt.com^$third-party
@@ -6383,21 +6265,16 @@ _tizers.
 ||yap2017ura.ru^$third-party
 ||yaprealpolza.ru^$third-party
 ||yapspecialrequest.ru^
-||ybjpvh.xyz^$third-party
 ||ybvnx.top^$third-party
 ||ydare.space^$third-party
 ||ydbbs.us^$third-party
 ||ydbsmpnt.mobi^$third-party
 ||ydjak.com^$third-party
-||yfkha.xyz^$third-party
-||yhake.xyz^$third-party
 ||yidop.com^
-||yjgmmpkot.xyz^$third-party
+||yiudy.com^$third-party
 ||yjmvx.space^$third-party
 ||yjuqi.top^$third-party
-||ylhvfij.xyz^$third-party
 ||yluvo.com^$third-party
-||ynfolstw.xyz^$third-party
 ||ynwia.com^$third-party
 ||yohioo.com^
 ||yost.biz^$third-party
@@ -6449,6 +6326,7 @@ _tizers.
 ||zhazha.ru^$third-party
 ||zherva.ru^$third-party
 ||zhinkichi.info^$third-party
+||zhyefedo.info^$third-party
 ||zilabi.ru^$third-party
 ||zinutay.com^$third-party
 ||zirikoni.com^
@@ -6459,21 +6337,16 @@ _tizers.
 ||znnmt.com^$third-party
 ||zontrans.com^
 ||zopodta.ru^$third-party
-||zowlu.xyz^$third-party
 ||zozoter.ru^$third-party
 ||zqclick.net^
 ||zqizn.com^$third-party
-||zqmwf.xyz^$third-party
-||zqvix.xyz^$third-party
 ||zrepe.com^$third-party
-||zrzggef.xyz^$third-party
 ||ztgm17.ru^$third-party
 ||ztmol.club^$third-party
 ||zu-zu.ru^$third-party
 ||zuaoo.top^$third-party
 ||zvonok.mapakids.net^
 ||zwmms11941.ru^$third-party
-||zwvlniavwi.xyz^$third-party
 ||zwvwh.us^$third-party
 ||zxpxt.space^$third-party
 ||zxrtn.com^$third-party
@@ -6944,6 +6817,7 @@ aliez.me###adbtm
 demotivation.me###add2_div
 system-fx.ru###add_header
 vpk.name###adds
+kinogo-online.online###adf
 minizal.su,wefilms.ru###adfoxPromoBanner
 bigpicture.ru###adfox_tgb1
 bigpicture.ru###adfox_tgb2
@@ -6984,7 +6858,7 @@ book-online.com.ua,motorshop.kz###advertising
 bosova-gdz.ru,botanam.net,egeurok.ru,gdz-putina.info,gdz.ru,gdzometr.ru,gdzputina.com,gdzputina.me,getsoch.ru,mp3poisk.online,muzofond.com,otbet.ru,pedportal.net,pro-filmix.net,ronl.ru,sims4pack.ru,slovo.ws,spishy-online.ru,stavcur.ru,xn----otba0aibt0b.su,спиши-ру.su###advideo_adv
 vse42.ru###advippanel
 click.alfabank.ru###advise
-tvfru.org###advm_preload
+kinorom.com,tvfru.org###advm_preload
 all-episodes.net###advtts
 androidphone.su###after_ask_helpful
 sosista.live###after_video_ad
@@ -7338,6 +7212,7 @@ megalyrics.ru###header_bottom
 pesiq.ru###header_right_cell
 autosport.com.ru###headerbanner
 gzt-sv.ru###headerq
+chess-samara.ru###headlineAdv
 lostfilm.info###heraplper > a[href]
 wbprx.com###hidemead
 intvua.com###hit_pr
@@ -7799,6 +7674,7 @@ sudakonline.info###top45
 spbit.ru###top4banners
 sudakonline.info###top6out
 om1.ru###topAdb
+chess-samara.ru###topAdsBlock
 ya62.ru###topBan
 sibmama.ru###topBaner
 avatan.ru,iplayer.fm###topBanner
@@ -7972,7 +7848,7 @@ bhf.su##.ad_sponsor_banner_forum
 center.bz##.ad_sponsor_newbanner_forum
 autotraveler.ru##.ad_yad
 allcrimea.net##.adavia
-allinfo.kz,drahelas.ru,leroymerlin-jeb.ru##.adb
+allinfo.kz,leroymerlin-jeb.ru##.adb
 om1.ru##.adbHtmlCanvas
 beon.ru##.adbg
 allforpeople.net,anime-rus.ru,govp.info,kinoprofi.club,kinoprofi.org,naurfo.ru##.adblock
@@ -8222,7 +8098,7 @@ kinodroid.net##.banerp
 sexgamesbox.com##.baners
 sberometer.ru##.banks > div[style]
 nr2.ru,russian-bazaar.com##.bann
-05366.com.ua,1yar.tv,2mm.ru,2pricolisty.ru,46tv.ru,agronews.ru,agrotv.ru,animeteatr.ru,avoka.do,avtodispetcher.ru,be-in.ru,bgoperator.ru,bigcinema.to,blizko.ru,bragazeta.ru,cassad.net,chipfind.ru,comments.ua,copyright.ru,crazys.info,danilin.biz,delovoibiysk.ru,dirty.ru,dni.ru,echomsk.spb.ru,ecology.md,econo.com.ua,euro-football.ru,examen.ru,f1cd.ru,f1news.ru,factroom.ru,foodinnovation.ru,football.ua,forum.tiguans.ru,gamestar.ru,gazeta.ru,gooool.org,gorod55.ru,hd-dream.ru,hdrezka.biz,hen-tai.ru,hostingkartinok.com,igry-man.net,iguides.ru,inosmi.ru,interfax.by,ixbt.com,joxi.ru,kherson.net.ua,kino-go.co,kino-nada.net,kinoplex.ru,klassnye-chasy.ru,kolesa.kz,kritika24.ru,kufar.by,kulichki.net,kurs.com.ua,kyivpost.ua,lentasporta.com,life.ru,livejournal.com,lookatme.ru,loveradio.ru,marker.ru,maximum.ru,medinfo.ua,minus.lviv.ua,moviestape.com,moyareklama.ru,namba.kg,namba.tj,news.pn,newslab.ru,nnm.me,odpublic.net,oneprog.ru,online-mult.net,ontvtime.ru,opentorrent.ru,oper.ru,pn.com.ua,post-tracker.ru,prm.ru,radiorecord.ru,render911.ru,reverso.net,roem.ru,root.ua,rusfolder.com,russia.ru,rybalka.com,sakh.com,sakhalin.info,savepic.ru,seodiz.ru,showgid.tv,slon.ru,softkey.ru,sonikelf.ru,sopsport.org,stereo.ru,stranaru.ru,superomsk.ru,supersadovnik.ru,teramult.org.ua,topwar.ru,tr.anidub.com,trademaster.ua,tsn.ua,tulapressa.ru,tumix.ru,turizm.ru,tvernews.ru,tvfru.org,tvrain.ru,ucrazy.ru,ukrreal.info,val.ua,vce-besplatno.ru,vgtimes.ru,vkinoteatre.net,vprognoze.ru,wday.ru,weacom.ru,wildo.ru,woman.ru,yk.kz,yourlink.in,yuginform.ru,yznal.ru,zanoza.kg,zvezdi.ru##.banner
+05366.com.ua,1yar.tv,2mm.ru,2pricolisty.ru,46tv.ru,agronews.ru,agrotv.ru,animeteatr.ru,avoka.do,avtodispetcher.ru,be-in.ru,bgoperator.ru,bigcinema.to,blizko.ru,bragazeta.ru,cassad.net,chipfind.ru,comments.ua,copyright.ru,crazys.info,danilin.biz,delovoibiysk.ru,dirty.ru,dni.ru,echomsk.spb.ru,ecology.md,econo.com.ua,euro-football.ru,examen.ru,f1cd.ru,f1news.ru,factroom.ru,foodinnovation.ru,football.ua,forum.tiguans.ru,gamestar.ru,gazeta.ru,gooool.org,gorod55.ru,hd-dream.ru,hdrezka.biz,hen-tai.ru,hostingkartinok.com,igry-man.net,iguides.ru,inosmi.ru,interfax.by,ixbt.com,joxi.ru,kherson.net.ua,kino-go.co,kino-nada.net,kinoplex.ru,kinorom.com,klassnye-chasy.ru,kolesa.kz,kritika24.ru,kufar.by,kulichki.net,kurs.com.ua,kyivpost.ua,lentasporta.com,life.ru,livejournal.com,lookatme.ru,loveradio.ru,marker.ru,maximum.ru,medinfo.ua,minus.lviv.ua,moviestape.com,moyareklama.ru,namba.kg,namba.tj,news.pn,newslab.ru,nnm.me,odpublic.net,oneprog.ru,online-mult.net,ontvtime.ru,opentorrent.ru,oper.ru,pn.com.ua,post-tracker.ru,prm.ru,radiorecord.ru,render911.ru,reverso.net,roem.ru,root.ua,rusfolder.com,russia.ru,rybalka.com,sakh.com,sakhalin.info,savepic.ru,seodiz.ru,showgid.tv,slon.ru,softkey.ru,sonikelf.ru,sopsport.org,stereo.ru,stranaru.ru,superomsk.ru,supersadovnik.ru,teramult.org.ua,topwar.ru,tr.anidub.com,trademaster.ua,tsn.ua,tulapressa.ru,tumix.ru,turizm.ru,tvernews.ru,tvfru.org,tvrain.ru,ucrazy.ru,ukrreal.info,val.ua,vce-besplatno.ru,vgtimes.ru,vkinoteatre.net,vprognoze.ru,wday.ru,weacom.ru,wildo.ru,woman.ru,yk.kz,yourlink.in,yuginform.ru,yznal.ru,zanoza.kg,zvezdi.ru##.banner
 warfiles.ru##.banner > a
 avtovzglyad.ru,dni.ru##.banner-240x400
 roem.ru##.banner-970x90
@@ -9932,6 +9808,7 @@ kirovnet.ru##[id^="bg_link_"]
 bigkiev.com.ua##[id^="block-views-ad-"]
 imgfiles.ru##[id^="bn"] > *
 horadric.ru##[id^="brand-"]
+kinorom.com##[id^="branding"]
 politeka.net##[id^="campaign-static"]
 funmult.ru##[id^="icqwin_"]
 out-club.ru##[id^="rbs_banner"]
@@ -10111,7 +9988,7 @@ noob-club.ru##a[href*="funpay.ru"]
 rgmechanics.ru##a[href*="garantmarket.net"]
 rustorka.com##a[href*="gearbest.com"]
 gtp-tabs.ru,newrutor.org,rutorgames.org##a[href*="goaway.php"]
-10torrent.net,3torrent.org,4allwomen.ru,7torrents.net,a-age.ru,abw.by,aces.gg,all-freeload.net,allbesta.net,alleng.ru,androidsmartfony.com,audioboo.ru,badtorrent.com,biblprog.org.ua,bobfilm1.cc,cheb.ru,cheboksary.ws,citysmile.org,comss.ru,diakov.net,dota2.ru,dugtor.ru,ex-fs.com,ex-fs.net,failovik.com,fb.ru,filmasik.com.ua,filmitorrent.org,for-ua.info,forklog.com,fstreker.net,games-portal.ws,geekteam.pro,gig-torrent.org,gig-torrent.ru,gmt-max.org,goldenshara.net,goldenshara.org,gorod55.ru,gtp-tabs.ru,hentaiz.org,igri-torrent.net,igryday.ru,ilenta.com,imageban.ru,javadevblog.com,kino-live.red,kino-live2.org,kinocok.com,kinoplace.org,kinosok.org,kinotorka.ru,kinotrek.org,klubok.com,kontrolnaya-rabota.ru,kritka.su,megatrack.info,microstock.ru,mixsoft.org,mobiltelefon.ru,muzyka-torrent.ru,my-tfile.org,n-torrents.ru,na-svyazi.ru,newrutor.net,nnm.me,oper.ru,pesni-tut.com,pikabu.ru,prosadiogorod.ru,protanki.tv,ra1ohx.ru,radiopotok.ru,rg-mechanics.org,rsload.net,rusbitor.ru,rutor.co,rutorgames.org,sbornik-music.ru,serialpro.net,sewin.net,skachat-igri-besplatno.info,skidows.com,softbaze.ru,softikbox.com,softportal.com,stereotraker.ru,stranamam.ru,superg.ru,tankist.su,torentor.net,torrent-besplatno.net,torrent-club.net,torrent-games-2016.ru,torrent-games.net,torrent-igri.com,torrent-soft.net,torrent9.ru,torrentk.ru,torrentom.com,torrents-game.net,torrentum.net,trademaster.ua,tuchkatv.ru,v-torrente.ru,varlamov.ru,vashipitomcy.ru,vgtimes.ru,vsofte.biz,vtorrents.net,winxland.ru,ximepa.net,yaminecraft.ru,zarulem.ws,zserials.cc,zserials.tv##a[href*="goo.gl"]
+10torrent.net,3torrent.org,4allwomen.ru,7torrents.net,a-age.ru,abw.by,aces.gg,all-freeload.net,allbesta.net,alleng.ru,androidsmartfony.com,audioboo.ru,badtorrent.com,biblprog.org.ua,bobfilm1.cc,cheb.ru,cheboksary.ws,citysmile.org,comss.ru,diakov.net,dota2.ru,dugtor.ru,ex-fs.com,ex-fs.net,failovik.com,fb.ru,filmasik.com.ua,filmitorrent.org,for-ua.info,forklog.com,fstreker.net,games-portal.ws,geekteam.pro,gig-torrent.org,gig-torrent.ru,gmt-max.org,goldenshara.net,goldenshara.org,gorod55.ru,gtp-tabs.ru,hentaiz.org,igri-torrent.net,igryday.ru,ilenta.com,imageban.ru,javadevblog.com,kino-live.red,kino-live2.org,kinocok.com,kinoplace.org,kinorom.com,kinosok.org,kinotorka.ru,kinotrek.org,klubok.com,kontrolnaya-rabota.ru,kritka.su,megatrack.info,microstock.ru,mixsoft.org,mobiltelefon.ru,muzyka-torrent.ru,my-tfile.org,n-torrents.ru,na-svyazi.ru,newrutor.net,nnm.me,oper.ru,pesni-tut.com,pikabu.ru,prosadiogorod.ru,protanki.tv,ra1ohx.ru,radiopotok.ru,rg-mechanics.org,rsload.net,rusbitor.ru,rutor.co,rutorgames.org,sbornik-music.ru,serialpro.net,sewin.net,skachat-igri-besplatno.info,skidows.com,softbaze.ru,softikbox.com,softportal.com,stereotraker.ru,stranamam.ru,superg.ru,tankist.su,torentor.net,torrent-besplatno.net,torrent-club.net,torrent-games-2016.ru,torrent-games.net,torrent-igri.com,torrent-soft.net,torrent9.ru,torrentk.ru,torrentom.com,torrents-game.net,torrentum.net,trademaster.ua,tuchkatv.ru,v-torrente.ru,varlamov.ru,vashipitomcy.ru,vgtimes.ru,vsofte.biz,vtorrents.net,winxland.ru,ximepa.net,yaminecraft.ru,zarulem.ws,zserials.cc,zserials.tv##a[href*="goo.gl"]
 info-mage.ru##a[href*="goobmizd.ashx"]
 voroniny-online.pw##a[href*="gpclick.ru"]
 vsezdes.info##a[href*="grovieavtomati.vip"]
@@ -10744,7 +10621,7 @@ xakep.ru##body > a
 vc.ru##body > a[class][target="_blank"]
 biqle.ru,lostfilmonline.ru,svetmonet.ru,unionpeer.com##body > a[href]
 24video.adult,24video.in##body > a[href][style*="brand"]
-1in.am,border-fan.ru,c-inform.info,comments.ua,dad-fan.ru,e-libra.ru,facenews.ua,fashiony.ru,freehat.cc,grif-fan.ru,kinogo-tut.net,lalapaluza.ru,ne-kurim.ru,post-tracker.ru,simp-fan.ru,sinoptik.com.ru,sinoptik.ua,sopsport.org,sp-fan.ru,torentor.co,vipsop.org,zorgee.ru##body > a[href][target="_blank"]
+1in.am,border-fan.ru,c-inform.info,comments.ua,dad-fan.ru,e-libra.ru,facenews.ua,fashiony.ru,freehat.cc,grif-fan.ru,kinogo-tut.net,kinorom.com,lalapaluza.ru,ne-kurim.ru,post-tracker.ru,simp-fan.ru,sinoptik.com.ru,sinoptik.ua,sopsport.org,sp-fan.ru,torentor.co,vipsop.org,zorgee.ru##body > a[href][target="_blank"]
 naruto-hokage.ru##body > a[href^="/go?"]
 kinatgames.ru,kinatvideo.ru##body > a[href^="http://lnk.do/"]
 yap.ru,yaplakal.com##body > a[id^="clk-"]
@@ -10914,6 +10791,7 @@ delfi.lv##div[class="adsAdmin-iblock-pinned"]
 maintracker.org,rutracker.cr,rutracker.net,rutracker.nl,rutracker.org,sssr-rutracker.org##div[class="bn-idx"]
 wap.sasisa.ru##div[class="item"][id^="_"]
 nntt.org##div[class="postbody"][id^="post"] ~ center
+konorama.ru##div[class="r"]
 filmon.in.ua##div[class="recepton"]
 anwap.org##div[class] > a[href^="/"][target="_blank"]
 moyareklama.ru##div[class][bannerlocation]
@@ -11036,8 +10914,8 @@ censor.net.ua##div[id$="_megadiv"]
 ave-brasil.ru,latino-serialo.ru,mundo-latino.ru##div[id$="_preload"]
 rghost.net,rghost.ru##div[id$="_wrapper"]
 c-s.net.ua##div[id$="toplayer"]
-flebolab.ru,nalivali.ru,nasotke.ru,nisorinki.net,saymigren.net,spinazdorov.ru,tuningkod.ru,vashflebolog.ru,zpppstop.ru##div[id*="-stgroup-"]
-flebolab.ru,nalivali.ru,nasotke.ru,nisorinki.net,saymigren.net,spinazdorov.ru,tuningkod.ru,vashflebolog.ru,zpppstop.ru##div[id*="-text-block-"]
+flebolab.ru,mesjachnye.com,nalivali.ru,nasotke.ru,nisorinki.net,saymigren.net,spinazdorov.ru,tuningkod.ru,vashflebolog.ru,zpppstop.ru##div[id*="-stgroup-"]
+flebolab.ru,mesjachnye.com,nalivali.ru,nasotke.ru,nisorinki.net,saymigren.net,spinazdorov.ru,tuningkod.ru,vashflebolog.ru,zpppstop.ru##div[id*="-text-block-"]
 66.ru##div[id*="Adb"]
 get-tune.cc,ipleer.fm,k1news.ru,market4game.ru,xmusik.me,xmuzic.me##div[id*="Banner"]
 mirtesen.ru##div[id*="BannerSmiTwo"]
@@ -11048,7 +10926,8 @@ forum.cxem.net##div[id*="_rekl"]
 kavkazova.ru##div[id*="actionteaser"]
 hotfiesta.com##div[id*="az_branding"]
 ochevidets.ru##div[id*="baner"]
-bel.ru,chem21.info,hentaichan.me,kakprosto.ru,mirtesen.ru,pl.com.ua,snow-motion.ru,zn.ua##div[id*="banner"]
+bel.ru,chem21.info,hentaichan.me,kakprosto.ru,mirtesen.ru,pl.com.ua,propozitsiya.com,snow-motion.ru,zn.ua##div[id*="banner"]
+propozitsiya.com##div[id*="bunner"]
 drom.ru,newsvl.ru,vl.ru##div[id*="candy"]
 akipress.org##div[id*="carousel"]
 softbesplatno.net##div[id*="mediaget"]
@@ -11234,7 +11113,7 @@ allserial.tv##div[onclick*="document.getElementById('ambn"]
 abw.by##div[onclick*="goo.gl"]
 torrentk.ru##div[onclick*="savefrom.ws"]
 mastergrad.com##div[onclick*="Кликнул по рекламе"]
-big-bang-online.ru,bigcinema-tv.net,cinema-hd.tv,comedy-portal.net,comedyportal.tv,dt.ua,elise.com.ua,fastpic.ru,filmio.tv,griffiny.ru,hdkinoclub.com,hdrezka.biz,hdrezka2.me,igra-prestolov-hd.xyz,ipleer.fm,kiev.ua,kino-go.co,kino-hd1080.ru,kino-nada.net,kinogb.me,kinogo-net-co.ru,kinogo-online.club,kinogo-online.com,kinogo.by,kinoha.club,kinokrad-tv.ru,kinokrad.club,kinokrad.su,kinoogo.ru,kinoprofi.su,metromusicfest.ru,mp3club24.ru,novosti-n.org,nur.kz,ok-tv.org,online-freebee.ru,only-tv.org,pesnik.su,qmp3.cc,qmp3.org,rango.tv,rudifilm.com,smotret-online.kz,smotri-online.me,sobytiya.net,sputniktv.in.ua,televizorus.com,torrentom.com,tvizor.org,uakino.tv,vsetv.net,vsitv.org,westernfilm.ru,zn.ua,znaj.ua##div[oncontextmenu^="return false"]
+big-bang-online.ru,bigcinema-tv.net,cinema-hd.tv,comedy-portal.net,comedyportal.tv,dt.ua,elise.com.ua,fastpic.ru,filmio.tv,griffiny.ru,hdkinoclub.com,hdrezka.biz,hdrezka2.me,igra-prestolov-hd.xyz,ipleer.fm,kiev.ua,kino-go.co,kino-hd1080.ru,kino-nada.net,kinogb.me,kinogo-net-co.ru,kinogo-online.club,kinogo-online.com,kinogo.by,kinoha.club,kinokrad-tv.ru,kinokrad.club,kinokrad.su,kinoogo.ru,kinoprofi.su,kinorom.com,metromusicfest.ru,mp3club24.ru,novosti-n.org,nur.kz,ok-tv.org,online-freebee.ru,only-tv.org,pesnik.su,qmp3.cc,qmp3.org,rango.tv,rudifilm.com,smotret-online.kz,smotri-online.me,sobytiya.net,sputniktv.in.ua,televizorus.com,torrentom.com,tvizor.org,uakino.tv,vsetv.net,vsitv.org,westernfilm.ru,zn.ua,znaj.ua##div[oncontextmenu^="return false"]
 my-hit.org##div[skyadvert_baner]
 mega-tracker.net##div[style$="#CCCCCC;"]
 mobiledevice.ru##div[style$="468px;"]
@@ -11673,7 +11552,7 @@ $third-party,object-subrequest,domain=videokub.online
 $third-party,popup,script,stylesheet,xmlhttprequest,domain=biqle.ru|daxab.com
 $third-party,script,domain=diabethelp.org|free-torrents.org|freerutor.org|kinovideo.tv|nude-moon.com|rogoff.club
 $third-party,subdocument,domain=fastpic.ru
-$websocket,domain=0day.kiev.ua|176.114.0.126|176.114.0.132|192.102.7.159|193.106.30.70|193.106.30.84|24tv.ua|24video.adult|24videos.in|2baksa.net|3dn.ru|3porosenka.ru|4ertik.xxx|4films.net|4torrentgames.net|abook-club.ru|ace-stream.tv|adultmult.tv|ahs-online.net|ahs-online.xyz|alexlan.org|all-best.pro|all-episodes.net|all-tor.net|all-tv.org|allbesta.net|allday2.com|allhentai.ru|allhit.org|allmovie.pro|allmovie.tv|amovies.biz|anatomia-strasti.com|anekdot.ru|anidub-online.ru|anilibria.tv|anime-rus.ru|animespirit.ru|anistar.me|anti-block.org|apostrophe.ua|argumenti.ru|artword.com.ua|asbook.net|asn.in.ua|au-books.com|audilka.com|audioboo.ru|autonews.com.ua|ave-brasil.ru|babushky.ru|badcinema.ru|badtorrent.com|bagnet.org|baskino-hd.ru|baskino.co|baskino.online|baskinoclub.ru|baskinohd.ru|benfilm.net|best-torrentor.ru|bestgamer.net|bestserials.net|big-bang-online.ru|bigbang-tv.net|bigbangtv.space|bigcinema-hd.tv|bigcinema-online.ru|bigcinema-tv.net|bigcinema-tv.ru|bigcinema.org|bigcinema.to|bigcinemahd.net|bigkiev.com.ua|bigtorrent.org|biqle.ru|bit-tor.org|blogspot.com|blogspot.ru|bludlivaya-california.com|bo-em.com|bobfilm-online.ru|bobfilm.club|bobfilm.online|bobfilm.tv|bobfilm1.cc|bobfilm1.co|book-online.com.ua|bookitut.ru|bookskeeper.ru|border-fan.ru|brovary.net.ua|bugaga.ru|business.ua|cccp-kino.com|censor.net.ua|champion.com.ua|cinema-hd.tv|coldfilm.ru|com-x.life|comedy-portal.net|comedyportal.tv|concretejungle.ru|consol-games.net|coocook.me|coop-land.ru|couber.be|cvid.kiev.ua|cwer.ru|dad-fan.ru|dead-online.net|dead-serial.com|delfilm.ru|deviloff.net|dialog.ua|directadvert.ru|dnevniki-vampira.net|dnevniki-vampira.org|dni24.com|dochronika.ru|dokonlin.ru|dokpro.club|dokumentfilm.ru|dom-filmov.ru|dom23.tv|dom25.tv|dom2tv.info|doramatv.ru|dostfilms.net|dream-film.tv|drevnie-online.net|drevnie-tv.com|dt.ua|dugtor.ru|dynamo.kiev.ua|egeurok.ru|elementarno-tv.com|elise.com.ua|epidemz.co|ereko.ru|ero-top.com|euro-football.ru|ex-fs.com|ex-fs.net|exfs.to|f-picture.net|facenews.ua|fakty.ua|fan-tv.net|fan-tv.ru|fanserials.tv|fantasticfilm.ru|fargo-online.net|fast-bit.org|fast-tor.net|fast-torrent.org|fast-torrent.ru|fastpic.ru|fastpicc.ru|fasttorrent.ru|favoritemovies.at.ua|filin.tv|film-max.ru|film-tor.org|film720.ru|filmio.tv|filmix-online.net|filmix.me|filmogo.co|filmtor.net|filmzguru.ru|findanime.me|firebit.net|fithacker.ru|fizrukoff.net|football-russian.me|football.kulichki.net|football.ua|football24.ua|footballhd.ru|free-tor.org|free-torrent.org|free-torrent.pw|free-torrents.org|free-torrents.pw|freedom-tor.org|freehat.cc|freehd.com.ua|freerutor.org|friends-online.co|from-ua.com|fstreker.net|gagadget.com|game-torrent.info|games-reviews.net|gamesontorrent.ru|gamestracker.org|gazeta.dt.ua|gazeta.ua|gdzometr.ru|get-tune.cc|gidonline-kino.club|gidonline.club|gidonlinehd.ru|gig-torrent.org|gighub.net|glavpost.com|gmt-max.org|goblin-online.ru|golos.zp.ua|gooool.org|gorno-altaisk.info|great-tv.ru|grif-fan.ru|griffiny.ru|grimm-online.org|grouple.co|gvirt.com|hardnews.info|hd-720.biz|hd-720.com|hd-720.ucoz.net|hd-720.ucoz.ru|hd-bit.org|hd-club.ru|hd-dream.ru|hd-kinogo.co|hd-kinomax.net|hd-kinomax.org|hd720.biz|hdclub.org|hdgo.cc|hdkino.biz|hdkinoclub.com|hdkinohit.net|hdkinoklub.com|hdkinolenta.com|hdkinomax.tv|hdkinomir.com|hdkinoset.net|hdkinoshka.net|hdkinoteatr.com|hdmulti.net|hdpicture.ru|hdreactor.info|hdreactor.org|hdrezka.ag|hdrezka.biz|hdrezka1.me|hdrezka2.me|hdzal.net|hentaiz.org|hindcine.net|history.vn.ua|hlamer.ru|hotcharts.ru|hothome.info|hronika.info|hvylya.net|igra-prestoloff.cx|igra-prestolov-hd.xyz|igra-prestolov.me|ikino.su|ikinogo.net|ikinohd.club|imperiyanews.ru|imtw.ru|india-tv.net|informat.com.ua|inopressa.ru|interesnoiveselo.ru|ipleer.fm|it-like.ru|itop-gear.ru|joyreactor.cc|kadu.ru|kaifzona.ru|katushka.net|katushka.org|kaztorka.org|kesemvv.com|kinino.ru|kino-az.net|kino-dom.org|kino-filmi.net|kino-fs.ucoz.net|kino-go.club|kino-go.co|kino-hd.in|kino-hd1080.ru|kino-hd720.net|kino-kingdom.com|kino-klub.net|kino-live.red|kino-live1.org|kino-live2.org|kino-max.com|kino-nada.net|kino-online.club|kino-panda.net|kino-sayt.net|kino-sezon.ru|kino-torrent.net|kino-v-dome.net|kino-v-online.tv|kinobaks.net|kinobal.ru|kinobar.cc|kinobar.kz|kinobos.com|kinobublik.net|kinoclips.net|kinoclips.tv|kinocok.com|kinodacha.ucoz.ru|kinodema.com|kinodroid.net|kinoflux.org|kinoframe.tv|kinofrog.ru|kinofrukt.club|kinogb.me|kinogo-1080.net|kinogo-1080hd.ru|kinogo-2016-net.ru|kinogo-2016.net|kinogo-2017.com|kinogo-720.club|kinogo-720.co|kinogo-720p.ru|kinogo-club-online.net|kinogo-club.com|kinogo-co-2016.ru|kinogo-dom.com|kinogo-film.co|kinogo-filmov.net|kinogo-hd-720.club|kinogo-hd.net|kinogo-hd.pro|kinogo-hdtv.net|kinogo-net-2016.ru|kinogo-net-2017.ru|kinogo-net-co.ru|kinogo-net.me|kinogo-onlain.club|kinogo-onlain.net|kinogo-onlain.ru|kinogo-onlaine.net|kinogo-online.club|kinogo-online.com|kinogo-online.net|kinogo-ru.net|kinogo-smotret.net|kinogo-v-hd.ru|kinogo-x.net|kinogo-x.ru|kinogo.by|kinogo.club|kinogo.eu|kinogo.life|kinogo.ru.net|kinogo1.club|kinogo16.net|kinogo2.net|kinogo22.net|kinogo720hd.ru|kinogo720p.net|kinogo720p.org|kinogod.club|kinogohd.net|kinogol.com|kinograd.tv|kinoha.club|kinohd-online.com|kinohome.org|kinohost.nov.ru|kinoklad.net|kinokong.cc|kinokrad-2017.net|kinokrad-hd-720.net|kinokrad-onlain.net|kinokrad-online.net|kinokrad-tv.ru|kinokrad.biz|kinokrad.club|kinokrad.co|kinokrad.su|kinokrik.net|kinoliza.net|kinomafia.tv|kinomagnit.net|kinomassa.biz|kinomaxpro.com|kinomirkz.net|kinomol.ru|kinomoov.net|kinomoov.org|kinoogo.ru|kinopati.ru|kinopictures.net|kinoplen.ru|kinopov.com|kinoprofi.club|kinoprofi.su|kinoprosmotr.club|kinopult.com|kinorob.net|kinorubik.com|kinosafe.net|kinoseriya.net|kinosklad.net|kinosok.org|kinospy.net|kinostok.tv|kinosvit.tv|kinosweet.net|kinotochka.club|kinovideo.tv|kinovo.org|kinozadrot.club|kinozal.me|kinozal.tv|kinozal.website|kinozz-hd.ru|kinozz.club|kkkino.club|kkkino.net|klipzona.club|knighki.com|knijky.ru|kodik.cc|kodik.name|komedra.com|kordonivkakino.club|kordonivkakino.tv|korrespondent.net|korzik.net|koshara.co|kosti-tv.com|kp.ua|kriminal.tv|krutor.org|kubik3.ru|kulturologia.ru|lalapaluza.ru|latino-serialo.ru|libertycity.ru|librebook.ru|libtor.club|linecinema.org|live-rutor.org|live-torrents.ru|livesport.ws|livetv-torrent.com|lokomotiv.info|lostfilm-online.ru|lostfilmhd.ru|lostfilmonline.ru|loveread.ec|lyudiipolitika.ru|main-rutor.org|meddaily.ru|mega-tor.org|mega-torrent.co|mega-trek.com|mega-trek.net|megahead.org|megahead.ru|megaserial.net|megashara.com|megogo-hd.net|meteoprog.ua|minfin.com.ua|minizal.su|mintmanga.com|mirknig.su|mirmegashara.com|mirmult.com|mirror-rutor.org|moiserialy.net|molodegka.xyz|movieshok.ru|moviestape.net|mp3-mus.net|mp3.cc|mp3cc.com|mp3club24.ru|mp3zv.ru|mrutor.org|multiki-online24.ru|multivarka.tv|multon-line.ru|multyasha.com|mundo-latino.ru|muz-color.ru|muzofond.com|muztorr.ru|muzyka-torrent.ru|my-hit.fm|my-hit.org|my-music-kiosk.ru|my-tfile.org|myflashgame.com.ua|mymult.net|myserialy.ru|myvideopl.com|myvimir.ru|n-torrents.ru|naruto-base.su|narutoplanet.ru|naspravdi.info|nevsedoma.com.ua|new-kinokrad.net|new-ru.org|new-rutor.org|new-tfile.org|new-tor.org|newfilms.online|newrutor.org|newserials.tv|newsmsk.com|newspravda.com|newsru.com|newsyou.info|nice-film.ru|nizaika.tv|nnm-club.me|nnm-club.name|nnm-club.to|nnm.me|nnmclub.to|no-block.org|nod32eset.ru|nod32keys2018.ru|nokino.biz|notfilm.ru|noviyfilm.me|novosti-n.org|nowa.cc|nur.kz|ojin.tv|ok-tv.org|okino.tv|oko-planet.su|on-movie.net|onedivision.ru|onelike.tv|onfilmz.net|onlainfilm.ucoz.ua|online-freebee.ru|online-futurama.ru|online-life.club|online-south-park.ru|online.anidub.com|onlinemultfilmy.ru|only-tv.org|onlyf.net|onlymult.com|open-tor.org|ostfilm.org|ostfilm.tv|ostfilmtv.org|ovgorskiy.ru|pc-torrents.net|pdalife.ru|pesni-tut.com|pesnik.su|petamusic.ru|petamusik.ru|piguiqproxy.com|pixelbrush.ru|planeta-mult.ru|play-apk.ru|pleer.ws|podrobnosti.ua|poiskm.co|politeka.net|politnavigator.net|popadenec.ru|porjati.ru|pornreactor.cc|pravda.com.ua|primgazeta.ru|prnt.sc|prntscr.com|proxy-rutor.org|pure-t.ru|putin-today.ru|qiqru.org|qmp3.cc|qmp3.org|qrz.ru|qwasd.ru|radikal.ru|rango.tv|razlozhi.ru|reactor.cc|readmanga.me|real-game.net|real-vin.com|report.if.ua|rgmechanics.ru|ria-m.tv|rifey.ru|rogoff.club|royallib.com|rp-mechanics.ru|rsload.net|ru-free-tor.org|ru-tor.net|rubook.org|rudifilm.com|rufilmtv.org|rumedia.ws|rupolitshow.ru|rus-porno.org|rus-tor.com|rusdialog.ru|rusdozor.ru|rusjev.net|russiapost.su|russkoekino.net|rustorka.com|rutor.co|rutor.info|rutor.is|rutor.net|rutor.org|rutorgames.org|rutorka.net|rutracker.club|rvb.ru|sbornik-music.ru|season-var.net|seasonvar-hd.net|seasonvar.cc|seasonvar.re|seasonvar.ru|seedoff.cc|seedoff.tv|segodnya.ua|selflib.me|selfmanga.ru|seria-z.net|serial.wiki|serialbox.org|serialguru.ru|serialis.net|serialpro.net|serialsend.ru|serialytut.tv|sexvhd.net|sexytal.com|sezon-hd.ru|shanson.name|share-serials.net|sherlok.me|show-online.tv|showgid.tv|sibnet.ru|simp-fan.ru|sinoptik.com.ru|sinoptik.ua|skidows.com|small-game.com|smo333.com|smotret-online.kz|smotri-filmi.co|smotri-filmu.ru|smotri-online.me|sobytiya.net|soccer.ru|soccer0010.com|soccer365-1.xyz|soccer365.ru|sovkinofilm.ru|sp-fan.ru|sportlook.tv|sputniktv.in.ua|srubirubli.ru|sshut.ru|stereotraker.ru|strana.ua|strela-online.com|super-tor.net|sverhestestvenoe.com|tapochek.net|tbperedachi.ucoz.ru|teenwolf-tv.com|televizorus.com|tengrinews.kz|tes-game.ru|tfile-music.org|tfile.cc|tfile.co|tfile.me|tfilm.co|the-cinema.net|the-cinema.ru|the-rutor.org|the100-tv.com|theflash-tv.com|tivix.co|tizam.tv|top-tor.org|tor-bit.net|tor-ru.net|tor-ru.org|torentor.co|torentor.net|torrent-baza.com|torrent-filmi.net|torrent-games.net|torrent-mob.at.ua|torrent-soft.net|torrent-windows.net|torrent-zona.com|torrent-zone.ru|torrent2games.net|torrentino.me|torrentk.ru|torrentom.com|torrentor.co|torrents-free.ru|torrents-game.net|torrentum.org|torrentum.ru|totori.ru|tparser.org|tracker.hdclub.com.ua|trackeroc.ru|tracktor.tv|trialeset.org|trialeset.ru|trymobile.ru|turboserial.net|turkcinema.tv|turkey-tv.net|turksinema.net|tushkan.club|tut-film.com|tv-300.ru|tv-torrent.org|tvbook.tv|tvfru.org|tvizor.org|tvonline.su|tvseason.net|tvserial-online.biz|tvtorrent.me|tyachivnews.in.ua|u-news.com.ua|ua-cinema.com|uainfo.org|uakino.net|uakino.tv|uaonlinefilms.com|uchebnik-online.net|uchim.org|ukr.net|ukrlib.com.ua|ukrlit.vn.ua|uniongang.net|unionpeer.com|univeroff.net|unn.com.ua|ura-inform.com|uraltrack.net|v-torrente.ru|valuta.online.ua|vd-tv.ru|vdvsn.ru|vepizode.net|veroyatno.com.ua|versii.com|vesti-ukr.com|vgorode.ua|vgtimes.ru|videokub.online|vikingi-online.net|vikka.ua|viks.tv|vinixmult.net|vip-tor.org|vipvideoclub.ru|vkino-tv.ru|vkinoteatre.net|vklipe.com|vserialy.com|vserpg.ru|vsesochineniya.ru|vsetop.com|vsetv.net|vsitv.org|vskazke-tv.com|webantiblock.ru|westernfilm.ru|wikianime.ru|wikimovies.ru|wkino.net|women-page.ru|wood-film.net|world-ua.com|wow-show.ru|wsturbo.net|x-bit.net|x-true.info|xhamster.com|ximepa.net|xmuzic.me|xn----etbhjjtcfb7b.net|xn----otba0aibt0b.su|xn--80aikhbrhr.net|xn--c1adkjnf.net|xn--c1ajfnfb.net|xn--j1aidcn.org|xrutor.ru|xuk.net|yahooeu.ru|yallaneliera.com|yaminecraft.ru|ymka.tv|yourcinema.tv|youtubetv.com.ua|ytra.ru|yummyanime.com|zagonka.ru|zakon.kz|zaycev.online|zerkalo-rutor.org|zerx.club|zfilm-hd.club|zhd.life|zn.ua|znaj.ua|zombie-tv.org|zpravda.ru|zserials.cc|zserials.ru|zserials.tv|киного-нет.net|киного.net|кинокрад.net|легион.net|спиши-ру.su|укроп.org
+$websocket,domain=0day.kiev.ua|176.114.0.126|176.114.0.132|192.102.7.159|193.106.30.70|193.106.30.84|24tv.ua|24video.adult|24videos.in|2baksa.net|3dn.ru|3porosenka.ru|4ertik.xxx|4films.net|4torrentgames.net|abook-club.ru|ace-stream.tv|adultmult.tv|ahs-online.net|ahs-online.xyz|alexlan.org|all-best.pro|all-episodes.net|all-tor.net|all-tv.org|allbesta.net|allday2.com|allhentai.ru|allhit.org|allmovie.pro|allmovie.tv|amovies.biz|anatomia-strasti.com|anekdot.ru|anidub-online.ru|anilibria.tv|anime-rus.ru|animespirit.ru|anistar.me|anti-block.org|apostrophe.ua|argumenti.ru|artword.com.ua|asbook.net|asn.in.ua|au-books.com|audilka.com|audioboo.ru|autonews.com.ua|ave-brasil.ru|babushky.ru|badcinema.ru|badtorrent.com|bagnet.org|baskino-hd.ru|baskino.co|baskino.online|baskinoclub.ru|baskinohd.ru|benfilm.net|best-torrentor.ru|bestgamer.net|bestserials.net|big-bang-online.ru|bigbang-tv.net|bigbangtv.space|bigcinema-hd.tv|bigcinema-online.ru|bigcinema-tv.net|bigcinema-tv.ru|bigcinema.org|bigcinema.to|bigcinemahd.net|bigkiev.com.ua|bigtorrent.org|biqle.ru|bit-tor.org|blogspot.com|blogspot.ru|bludlivaya-california.com|bo-em.com|bobfilm-online.ru|bobfilm.club|bobfilm.online|bobfilm.tv|bobfilm1.cc|bobfilm1.co|book-online.com.ua|bookitut.ru|bookskeeper.ru|border-fan.ru|brovary.net.ua|bugaga.ru|business.ua|cccp-kino.com|censor.net.ua|champion.com.ua|cinema-hd.tv|coldfilm.ru|com-x.life|comedy-portal.net|comedyportal.tv|concretejungle.ru|consol-games.net|coocook.me|coop-land.ru|couber.be|cvid.kiev.ua|cwer.ru|dad-fan.ru|dead-online.net|dead-serial.com|delfilm.ru|deviloff.net|dialog.ua|directadvert.ru|dnevniki-vampira.net|dnevniki-vampira.org|dni24.com|dochronika.ru|dokonlin.ru|dokpro.club|dokumentfilm.ru|dom-filmov.ru|dom23.tv|dom25.tv|dom2tv.info|doramatv.ru|dostfilms.net|dream-film.tv|drevnie-online.net|drevnie-tv.com|dt.ua|dugtor.ru|dynamo.kiev.ua|egeurok.ru|elementarno-tv.com|elise.com.ua|epidemz.co|ereko.ru|ero-top.com|euro-football.ru|ex-fs.com|ex-fs.net|exfs.to|f-picture.net|facenews.ua|fakty.ua|fan-tv.net|fan-tv.ru|fanserials.tv|fantasticfilm.ru|fargo-online.net|fast-bit.org|fast-tor.net|fast-torrent.org|fast-torrent.ru|fastpic.ru|fastpicc.ru|fasttorrent.ru|favoritemovies.at.ua|filin.tv|film-max.ru|film-tor.org|film720.ru|filmio.tv|filmix-online.net|filmix.me|filmogo.co|filmtor.net|filmzguru.ru|findanime.me|firebit.net|fithacker.ru|fizrukoff.net|football-russian.me|football.kulichki.net|football.ua|football24.ua|footballhd.ru|free-tor.org|free-torrent.org|free-torrent.pw|free-torrents.org|free-torrents.pw|freedom-tor.org|freehat.cc|freehd.com.ua|freerutor.org|friends-online.co|from-ua.com|fstreker.net|gagadget.com|game-torrent.info|games-reviews.net|gamesontorrent.ru|gamestracker.org|gazeta.dt.ua|gazeta.ua|gdzometr.ru|get-tune.cc|gidonline-kino.club|gidonline.club|gidonlinehd.ru|gig-torrent.org|gighub.net|glavpost.com|gmt-max.org|goblin-online.ru|golos.zp.ua|gooool.org|gorno-altaisk.info|great-tv.ru|grif-fan.ru|griffiny.ru|grimm-online.org|grouple.co|gvirt.com|hardnews.info|hd-720.biz|hd-720.com|hd-720.ucoz.net|hd-720.ucoz.ru|hd-bit.org|hd-club.ru|hd-dream.ru|hd-kinogo.co|hd-kinomax.net|hd-kinomax.org|hd720.biz|hdclub.org|hdgo.cc|hdkino.biz|hdkinoclub.com|hdkinohit.net|hdkinoklub.com|hdkinolenta.com|hdkinomax.tv|hdkinomir.com|hdkinoset.net|hdkinoshka.net|hdkinoteatr.com|hdmulti.net|hdpicture.ru|hdreactor.info|hdreactor.org|hdrezka.ag|hdrezka.biz|hdrezka1.me|hdrezka2.me|hdzal.net|hentaiz.org|hindcine.net|history.vn.ua|hlamer.ru|hotcharts.ru|hothome.info|hronika.info|hvylya.net|igra-prestoloff.cx|igra-prestolov-hd.xyz|igra-prestolov.me|ikino.su|ikinogo.net|ikinohd.club|imperiyanews.ru|imtw.ru|india-tv.net|informat.com.ua|inopressa.ru|interesnoiveselo.ru|ipleer.fm|it-like.ru|itop-gear.ru|joyreactor.cc|kadu.ru|kaifzona.ru|katushka.net|katushka.org|kaztorka.org|kesemvv.com|kinino.ru|kino-az.net|kino-dom.org|kino-filmi.net|kino-fs.ucoz.net|kino-go.club|kino-go.co|kino-hd.in|kino-hd1080.ru|kino-hd720.net|kino-kingdom.com|kino-klub.net|kino-live.red|kino-live1.org|kino-live2.org|kino-max.com|kino-nada.net|kino-online.club|kino-panda.net|kino-sayt.net|kino-sezon.ru|kino-torrent.net|kino-v-dome.net|kino-v-online.tv|kinobaks.net|kinobal.ru|kinobar.cc|kinobar.kz|kinobos.com|kinobublik.net|kinoclips.net|kinoclips.tv|kinocok.com|kinodacha.ucoz.ru|kinodema.com|kinodroid.net|kinoflux.org|kinoframe.tv|kinofrog.ru|kinofrukt.club|kinogb.me|kinogo-1080.net|kinogo-1080hd.ru|kinogo-2016-net.ru|kinogo-2016.net|kinogo-2017.com|kinogo-720.club|kinogo-720.co|kinogo-720p.ru|kinogo-club-online.net|kinogo-club.com|kinogo-co-2016.ru|kinogo-dom.com|kinogo-film.co|kinogo-filmov.net|kinogo-hd-720.club|kinogo-hd.net|kinogo-hd.pro|kinogo-hdtv.net|kinogo-net-2016.ru|kinogo-net-2017.ru|kinogo-net-co.ru|kinogo-net.me|kinogo-onlain.club|kinogo-onlain.net|kinogo-onlain.ru|kinogo-onlaine.net|kinogo-online.club|kinogo-online.com|kinogo-online.net|kinogo-online.online|kinogo-ru.net|kinogo-smotret.net|kinogo-v-hd.ru|kinogo-x.net|kinogo-x.ru|kinogo.by|kinogo.club|kinogo.eu|kinogo.life|kinogo.ru.net|kinogo1.club|kinogo16.net|kinogo2.net|kinogo22.net|kinogo720hd.ru|kinogo720p.net|kinogo720p.org|kinogod.club|kinogohd.net|kinogol.com|kinograd.tv|kinoha.club|kinohd-online.com|kinohome.org|kinohost.nov.ru|kinoklad.net|kinokong.cc|kinokrad-2017.net|kinokrad-hd-720.net|kinokrad-onlain.net|kinokrad-online.net|kinokrad-tv.ru|kinokrad.biz|kinokrad.club|kinokrad.co|kinokrad.su|kinokrik.net|kinoliza.net|kinomafia.tv|kinomagnit.net|kinomassa.biz|kinomaxpro.com|kinomirkz.net|kinomol.ru|kinomoov.net|kinomoov.org|kinoogo.ru|kinopati.ru|kinopictures.net|kinoplen.ru|kinopov.com|kinoprofi.club|kinoprofi.su|kinoprosmotr.club|kinopult.com|kinorob.net|kinorom.com|kinorubik.com|kinosafe.net|kinoseriya.net|kinosklad.net|kinosok.org|kinospy.net|kinostok.tv|kinosvit.tv|kinosweet.net|kinotochka.club|kinovideo.tv|kinovo.org|kinozadrot.club|kinozal.me|kinozal.tv|kinozal.website|kinozz-hd.ru|kinozz.club|kkkino.club|kkkino.net|klipzona.club|knighki.com|knijky.ru|kodik.cc|kodik.name|komedra.com|kordonivkakino.club|kordonivkakino.tv|korrespondent.net|korzik.net|koshara.co|kosti-tv.com|kp.ua|kriminal.tv|krutor.org|kubik3.ru|kulturologia.ru|lalapaluza.ru|latino-serialo.ru|libertycity.ru|librebook.ru|libtor.club|linecinema.org|live-rutor.org|live-torrents.ru|livesport.ws|livetv-torrent.com|lokomotiv.info|lostfilm-online.ru|lostfilmhd.ru|lostfilmonline.ru|loveread.ec|lyudiipolitika.ru|main-rutor.org|meddaily.ru|mega-tor.org|mega-torrent.co|mega-trek.com|mega-trek.net|megahead.org|megahead.ru|megaserial.net|megashara.com|megogo-hd.net|meteoprog.ua|minfin.com.ua|minizal.su|mintmanga.com|mirknig.su|mirmegashara.com|mirmult.com|mirror-rutor.org|moiserialy.net|molodegka.xyz|movieshok.ru|moviestape.net|mp3-mus.net|mp3.cc|mp3cc.com|mp3club24.ru|mp3zv.ru|mrutor.org|multiki-online24.ru|multivarka.tv|multon-line.ru|multyasha.com|mundo-latino.ru|muz-color.ru|muzofond.com|muztorr.ru|muzyka-torrent.ru|my-hit.fm|my-hit.org|my-music-kiosk.ru|my-tfile.org|myflashgame.com.ua|mymult.net|myserialy.ru|myvideopl.com|myvimir.ru|n-torrents.ru|naruto-base.su|narutoplanet.ru|naspravdi.info|nevsedoma.com.ua|new-kinokrad.net|new-ru.org|new-rutor.org|new-tfile.org|new-tor.org|newfilms.online|newrutor.org|newserials.tv|newsmsk.com|newspravda.com|newsru.com|newsyou.info|nice-film.ru|nizaika.tv|nnm-club.me|nnm-club.name|nnm-club.to|nnm.me|nnmclub.to|no-block.org|nod32eset.ru|nod32keys2018.ru|nokino.biz|notfilm.ru|noviyfilm.me|novosti-n.org|nowa.cc|nur.kz|ojin.tv|ok-tv.org|okino.tv|oko-planet.su|on-movie.net|onedivision.ru|onelike.tv|onfilmz.net|onlainfilm.ucoz.ua|online-freebee.ru|online-futurama.ru|online-life.club|online-south-park.ru|online.anidub.com|onlinemultfilmy.ru|only-tv.org|onlyf.net|onlymult.com|open-tor.org|ostfilm.org|ostfilm.tv|ostfilmtv.org|ovgorskiy.ru|pc-torrents.net|pdalife.ru|pesni-tut.com|pesnik.su|petamusic.ru|petamusik.ru|piguiqproxy.com|pixelbrush.ru|planeta-mult.ru|play-apk.ru|pleer.ws|podrobnosti.ua|poiskm.co|politeka.net|politnavigator.net|popadenec.ru|porjati.ru|pornreactor.cc|pravda.com.ua|primgazeta.ru|prnt.sc|prntscr.com|proxy-rutor.org|pure-t.ru|putin-today.ru|qiqru.org|qmp3.cc|qmp3.org|qrz.ru|qwasd.ru|radikal.ru|rango.tv|razlozhi.ru|reactor.cc|readmanga.me|real-game.net|real-vin.com|report.if.ua|rgmechanics.ru|ria-m.tv|rifey.ru|rogoff.club|royallib.com|rp-mechanics.ru|rsload.net|ru-free-tor.org|ru-tor.net|rubook.org|rudifilm.com|rufilmtv.org|rumedia.ws|rupolitshow.ru|rus-porno.org|rus-tor.com|rusdialog.ru|rusdozor.ru|rusjev.net|russiapost.su|russkoekino.net|rustorka.com|rutor.co|rutor.info|rutor.is|rutor.net|rutor.org|rutorgames.org|rutorka.net|rutracker.club|rvb.ru|sbornik-music.ru|season-var.net|seasonvar-hd.net|seasonvar.cc|seasonvar.re|seasonvar.ru|seedoff.cc|seedoff.tv|segodnya.ua|selflib.me|selfmanga.ru|seria-z.net|serial.wiki|serialbox.org|serialguru.ru|serialis.net|serialpro.net|serialsend.ru|serialytut.tv|sexvhd.net|sexytal.com|sezon-hd.ru|shanson.name|share-serials.net|sherlok.me|show-online.tv|showgid.tv|sibnet.ru|simp-fan.ru|sinoptik.com.ru|sinoptik.ua|skidows.com|small-game.com|smo333.com|smotret-online.kz|smotri-filmi.co|smotri-filmu.ru|smotri-online.me|sobytiya.net|soccer.ru|soccer0010.com|soccer365-1.xyz|soccer365.ru|sovkinofilm.ru|sp-fan.ru|sportlook.tv|sputniktv.in.ua|srubirubli.ru|sshut.ru|stereotraker.ru|strana.ua|strela-online.com|super-tor.net|sverhestestvenoe.com|tapochek.net|tbperedachi.ucoz.ru|teenwolf-tv.com|televizorus.com|tengrinews.kz|tes-game.ru|tfile-music.org|tfile.cc|tfile.co|tfile.me|tfilm.co|the-cinema.net|the-cinema.ru|the-rutor.org|the100-tv.com|theflash-tv.com|tivix.co|tizam.tv|top-tor.org|tor-bit.net|tor-ru.net|tor-ru.org|torentor.co|torentor.net|torrent-baza.com|torrent-filmi.net|torrent-games.net|torrent-mob.at.ua|torrent-soft.net|torrent-windows.net|torrent-zona.com|torrent-zone.ru|torrent2games.net|torrentino.me|torrentk.ru|torrentom.com|torrentor.co|torrents-free.ru|torrents-game.net|torrentum.org|torrentum.ru|totori.ru|tparser.org|tracker.hdclub.com.ua|trackeroc.ru|tracktor.tv|trialeset.org|trialeset.ru|trymobile.ru|turboserial.net|turkcinema.tv|turkey-tv.net|turksinema.net|tushkan.club|tut-film.com|tv-300.ru|tv-torrent.org|tvbook.tv|tvfru.org|tvizor.org|tvonline.su|tvseason.net|tvserial-online.biz|tvtorrent.me|tyachivnews.in.ua|u-news.com.ua|ua-cinema.com|uainfo.org|uakino.net|uakino.tv|uaonlinefilms.com|uchebnik-online.net|uchim.org|ukr.net|ukrlib.com.ua|ukrlit.vn.ua|uniongang.net|unionpeer.com|univeroff.net|unn.com.ua|ura-inform.com|uraltrack.net|v-torrente.ru|valuta.online.ua|vd-tv.ru|vdvsn.ru|vepizode.net|veroyatno.com.ua|versii.com|vesti-ukr.com|vgorode.ua|vgtimes.ru|videokub.online|vikingi-online.net|vikka.ua|viks.tv|vinixmult.net|vip-tor.org|vipvideoclub.ru|vkino-tv.ru|vkinoteatre.net|vklipe.com|vserialy.com|vserpg.ru|vsesochineniya.ru|vsetop.com|vsetv.net|vsitv.org|vskazke-tv.com|webantiblock.ru|westernfilm.ru|wikianime.ru|wikimovies.ru|wkino.net|women-page.ru|wood-film.net|world-ua.com|wow-show.ru|wsturbo.net|x-bit.net|x-true.info|xhamster.com|ximepa.net|xmuzic.me|xn----etbhjjtcfb7b.net|xn----otba0aibt0b.su|xn--80aikhbrhr.net|xn--c1adkjnf.net|xn--c1ajfnfb.net|xn--j1aidcn.org|xrutor.ru|xuk.net|yahooeu.ru|yallaneliera.com|yaminecraft.ru|ymka.tv|yourcinema.tv|youtubetv.com.ua|ytra.ru|yummyanime.com|zagonka.ru|zakon.kz|zaycev.online|zerkalo-rutor.org|zerx.club|zfilm-hd.club|zhd.life|zn.ua|znaj.ua|zombie-tv.org|zpravda.ru|zserials.cc|zserials.ru|zserials.tv|киного-нет.net|киного.net|кинокрад.net|легион.net|спиши-ру.su|укроп.org
 -torrent.*/forum/$object,domain=free-torrent.org|free-torrents.org|free-torrents.pw|game-torrent.info
 -torrent.*/t/$script,domain=free-torrent.org|free-torrents.org|free-torrents.pw|game-torrent.info
 .1gdz.ru^$script,domain=1gdz.ru
@@ -11991,7 +11870,7 @@ $websocket,domain=0day.kiev.ua|176.114.0.126|176.114.0.132|192.102.7.159|193.106
 /orbitum$image,domain=picusha.net|pornoisland.org
 /output/index/$script,domain=serial24.com
 /polyoxidonium.mp4$domain=megogo.net
-/prime-ads/$domain=flebolab.ru|nalivali.ru|nasotke.ru|nisorinki.net|saymigren.net|spinazdorov.ru|tuningkod.ru|vashflebolog.ru|zpppstop.ru
+/prime-ads/$domain=flebolab.ru|mesjachnye.com|nalivali.ru|nasotke.ru|nisorinki.net|saymigren.net|spinazdorov.ru|tuningkod.ru|vashflebolog.ru|zpppstop.ru
 /rklm/*$domain=kirovnet.ru|ui.ua
 /rotator.js|$domain=antistarforce.com|rustorka.com|rustorka.net
 /rover/$script,domain=noob-club.ru
@@ -12017,7 +11896,7 @@ html?a=$domain=0629.com.ua
 igdz1.ru^$script,domain=igdz.ru
 ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 |blob:$domain=prnt.sc|prntscr.com
-|blob:$script,domain=0day.kiev.ua|176.114.0.126|176.114.0.132|192.102.7.159|193.106.30.70|193.106.30.84|24video.adult|24videos.in|2baksa.net|3dn.ru|3porosenka.ru|4ertik.xxx|4films.net|4torrentgames.net|abook-club.ru|ace-stream.tv|adultmult.tv|ahs-online.net|ahs-online.xyz|alexlan.org|all-best.pro|all-episodes.net|all-tor.net|all-tv.org|allbesta.net|allday2.com|allhentai.ru|allhit.org|allmovie.pro|allmovie.tv|amovies.biz|anatomia-strasti.com|anekdot.ru|anidub-online.ru|anime-rus.ru|animespirit.ru|anistar.me|anti-block.org|apostrophe.ua|argumenti.ru|artword.com.ua|asbook.net|asn.in.ua|au-books.com|audilka.com|audioboo.ru|autonews.com.ua|ave-brasil.ru|babushky.ru|badcinema.ru|badtorrent.com|bagnet.org|baskino-hd.ru|baskino.co|baskino.online|baskinoclub.ru|baskinohd.ru|benfilm.net|best-torrentor.ru|bestgamer.net|bestserials.net|big-bang-online.ru|bigbang-tv.net|bigbangtv.space|bigcinema-hd.tv|bigcinema-online.ru|bigcinema-tv.net|bigcinema-tv.ru|bigcinema.org|bigcinema.to|bigcinemahd.net|bigkiev.com.ua|bigtorrent.org|biqle.ru|bit-tor.org|blogspot.com|blogspot.ru|bludlivaya-california.com|bo-em.com|bobfilm-online.ru|bobfilm.club|bobfilm.online|bobfilm.tv|bobfilm1.cc|bobfilm1.co|book-online.com.ua|bookitut.ru|bookskeeper.ru|border-fan.ru|brovary.net.ua|bugaga.ru|buhgalter.com.ua|business.ua|cccp-kino.com|censor.net.ua|champion.com.ua|cinema-hd.tv|coldfilm.ru|com-x.life|comedy-portal.net|comedyportal.tv|concretejungle.ru|consol-games.net|coocook.me|coop-land.ru|couber.be|cvid.kiev.ua|cwer.ru|dad-fan.ru|dead-online.net|dead-serial.com|delfilm.ru|deviloff.net|dialog.ua|directadvert.ru|dnevniki-vampira.net|dnevniki-vampira.org|dni24.com|dochronika.ru|dokonlin.ru|dokpro.club|dokumentfilm.ru|dom-filmov.ru|dom23.tv|dom25.tv|dom2tv.info|doramatv.ru|dostfilms.net|dream-film.tv|drevnie-online.net|drevnie-tv.com|dt.ua|dugtor.ru|dynamo.kiev.ua|egeurok.ru|elementarno-tv.com|elise.com.ua|epidemz.co|ereko.ru|ero-top.com|euro-football.ru|ex-fs.com|ex-fs.net|exfs.to|f-picture.net|facenews.ua|fakty.ua|fan-tv.net|fan-tv.ru|fanserials.tv|fantasticfilm.ru|fargo-online.net|fast-bit.org|fast-tor.net|fast-torrent.org|fast-torrent.ru|fastpic.ru|fastpicc.ru|fasttorrent.ru|favoritemovies.at.ua|filin.tv|film-max.ru|film-tor.org|film720.ru|filmix-online.net|filmix.me|filmogo.co|filmtor.net|filmzguru.ru|findanime.me|firebit.net|fithacker.ru|fizrukoff.net|football-russian.me|football.kulichki.net|football.ua|football24.ua|footballhd.ru|free-tor.org|free-torrent.org|free-torrent.pw|free-torrents.org|free-torrents.pw|freedom-tor.org|freehat.cc|freehd.com.ua|freerutor.org|friends-online.co|from-ua.com|fstreker.net|gagadget.com|game-torrent.info|games-reviews.net|gamesontorrent.ru|gamestracker.org|gazeta.dt.ua|gazeta.ua|gdzometr.ru|get-tune.cc|gidonline-kino.club|gidonline.club|gidonlinehd.ru|gig-torrent.org|gighub.net|glavpost.com|gmt-max.org|goblin-online.ru|golos.zp.ua|gooool.org|gorno-altaisk.info|great-tv.ru|grif-fan.ru|griffiny.ru|grimm-online.org|grouple.co|gvirt.com|hardnews.info|hd-720.biz|hd-720.com|hd-720.ucoz.net|hd-720.ucoz.ru|hd-bit.org|hd-club.ru|hd-dream.ru|hd-kinogo.co|hd-kinomax.net|hd-kinomax.org|hd720.biz|hdclub.org|hdgo.cc|hdkino.biz|hdkinohit.net|hdkinoklub.com|hdkinolenta.com|hdkinomax.tv|hdkinomir.com|hdkinoset.net|hdkinoshka.net|hdkinoteatr.com|hdmulti.net|hdpicture.ru|hdreactor.info|hdreactor.org|hdrezka.ag|hdrezka1.me|hdrezka2.me|hdzal.net|hentaiz.org|hindcine.net|history.vn.ua|hlamer.ru|hotcharts.ru|hothome.info|hronika.info|hvylya.net|igra-prestoloff.cx|igra-prestolov.me|ikino.su|ikinogo.net|ikinohd.club|imperiyanews.ru|imtw.ru|india-tv.net|informat.com.ua|inopressa.ru|interesnoiveselo.ru|ipleer.fm|it-like.ru|itop-gear.ru|joyreactor.cc|kadu.ru|kaifzona.ru|katushka.net|katushka.org|kaztorka.org|kesemvv.com|kinino.ru|kino-az.net|kino-dom.org|kino-filmi.net|kino-fs.ucoz.net|kino-go.club|kino-hd.in|kino-hd720.net|kino-klub.net|kino-live.red|kino-live1.org|kino-live2.org|kino-max.com|kino-online.club|kino-panda.net|kino-sayt.net|kino-sezon.ru|kino-torrent.net|kino-v-dome.net|kino-v-online.tv|kinobaks.net|kinobal.ru|kinobar.cc|kinobar.kz|kinobos.com|kinobublik.net|kinoclips.net|kinoclips.tv|kinocok.com|kinodacha.ucoz.ru|kinodema.com|kinodroid.net|kinoflux.org|kinoframe.tv|kinofrog.ru|kinofrukt.club|kinogo-1080.net|kinogo-1080hd.ru|kinogo-2016-net.ru|kinogo-2016.net|kinogo-720.club|kinogo-720.co|kinogo-720p.ru|kinogo-club-online.net|kinogo-club.com|kinogo-co-2016.ru|kinogo-dom.com|kinogo-film.co|kinogo-filmov.net|kinogo-hd-720.club|kinogo-hd.net|kinogo-hd.pro|kinogo-hdtv.net|kinogo-net-2016.ru|kinogo-net-2017.ru|kinogo-net.me|kinogo-onlain.club|kinogo-onlain.net|kinogo-onlain.ru|kinogo-onlaine.net|kinogo-online.net|kinogo-ru.net|kinogo-smotret.net|kinogo-v-hd.ru|kinogo-x.net|kinogo-x.ru|kinogo.club|kinogo.eu|kinogo.life|kinogo.ru.net|kinogo1.club|kinogo16.net|kinogo2.net|kinogo22.net|kinogo720hd.ru|kinogo720p.net|kinogo720p.org|kinogod.club|kinogohd.net|kinogol.com|kinograd.tv|kinohd-online.com|kinohome.org|kinohost.nov.ru|kinoklad.net|kinokong.cc|kinokrad-2017.net|kinokrad-hd-720.net|kinokrad-onlain.net|kinokrad-online.net|kinokrad.biz|kinokrad.club|kinokrik.net|kinoliza.net|kinomafia.tv|kinomagnit.net|kinomassa.biz|kinomaxpro.com|kinomirkz.net|kinomol.ru|kinomoov.net|kinomoov.org|kinopati.ru|kinopictures.net|kinoplen.ru|kinopov.com|kinoprofi.club|kinoprosmotr.club|kinopult.com|kinorob.net|kinorubik.com|kinosafe.net|kinoseriya.net|kinosklad.net|kinosok.org|kinostok.tv|kinosvit.tv|kinosweet.net|kinotochka.club|kinovideo.tv|kinovo.org|kinozadrot.club|kinozal.me|kinozal.tv|kinozal.website|kinozz-hd.ru|kinozz.club|kkkino.club|kkkino.net|klipzona.club|knighki.com|knijky.ru|komedra.com|kordonivkakino.club|kordonivkakino.tv|korrespondent.net|korzik.net|koshara.co|kosti-tv.com|kp.ua|kriminal.tv|krutor.org|kubik3.ru|kulturologia.ru|lalapaluza.ru|latino-serialo.ru|libertycity.ru|librebook.ru|libtor.club|linecinema.org|live-rutor.org|live-torrents.ru|livesport.ws|livetv-torrent.com|lokomotiv.info|lostfilm-online.ru|lostfilmhd.ru|lostfilmonline.ru|loveread.ec|lyudiipolitika.ru|main-rutor.org|meddaily.ru|mega-tor.org|mega-torrent.co|mega-trek.com|mega-trek.net|megahead.org|megahead.ru|megaserial.net|megashara.com|megogo-hd.net|meteoprog.ua|minfin.com.ua|minizal.su|mintmanga.com|mirknig.su|mirmegashara.com|mirmult.com|mirror-rutor.org|moiserialy.net|molodegka.xyz|movieshok.ru|moviestape.net|mp3-mus.net|mp3.cc|mp3cc.com|mp3club24.ru|mp3zv.ru|mrutor.org|multiki-online24.ru|multivarka.tv|multon-line.ru|multyasha.com|mundo-latino.ru|muz-color.ru|muzofond.com|muztorr.ru|muzyka-torrent.ru|my-hit.fm|my-hit.org|my-music-kiosk.ru|my-tfile.org|myflashgame.com.ua|mymult.net|myserialy.ru|myvideopl.com|myvimir.ru|n-torrents.ru|naruto-base.su|narutoplanet.ru|naspravdi.info|nevsedoma.com.ua|new-kinokrad.net|new-ru.org|new-rutor.org|new-tfile.org|new-tor.org|newfilms.online|newrutor.org|newserials.tv|newsmsk.com|newspravda.com|newsru.com|newsyou.info|nice-film.ru|nizaika.tv|nnm-club.me|nnm-club.name|nnm-club.to|nnm.me|nnmclub.to|no-block.org|nod32eset.ru|nod32keys2018.ru|nokino.biz|notfilm.ru|noviyfilm.me|novosti-n.org|nowa.cc|nur.kz|ojin.tv|ok-tv.org|okino.tv|oko-planet.su|on-movie.net|onedivision.ru|onelike.tv|onfilmz.net|onlainfilm.ucoz.ua|online-freebee.ru|online-futurama.ru|online-life.club|online-south-park.ru|online.anidub.com|onlinemultfilmy.ru|only-tv.org|onlyf.net|onlymult.com|open-tor.org|ostfilm.org|ostfilm.tv|ostfilmtv.org|ovgorskiy.ru|pc-torrents.net|pdalife.ru|pesni-tut.com|pesnik.su|petamusic.ru|petamusik.ru|pixelbrush.ru|planeta-mult.ru|play-apk.ru|pleer.ws|podrobnosti.ua|poiskm.co|politeka.net|politnavigator.net|popadenec.ru|porjati.ru|pornreactor.cc|pravda.com.ua|primgazeta.ru|proxy-rutor.org|pure-t.ru|putin-today.ru|qiqru.org|qmp3.cc|qmp3.org|qrz.ru|qwasd.ru|radikal.ru|rango.tv|razlozhi.ru|reactor.cc|readmanga.me|real-game.net|real-vin.com|report.if.ua|rgmechanics.ru|ria-m.tv|rifey.ru|rogoff.club|royallib.com|rp-mechanics.ru|rsload.net|ru-free-tor.org|ru-tor.net|rubook.org|rudifilm.com|rufilmtv.org|rumedia.ws|rupolitshow.ru|rus-porno.org|rus-tor.com|rusdialog.ru|rusdozor.ru|rusjev.net|russiapost.su|russkoekino.net|rustorka.com|rutor.co|rutor.info|rutor.is|rutor.net|rutor.org|rutorgames.org|rutorka.net|rutracker.club|rvb.ru|sbornik-music.ru|season-var.net|seasonvar-hd.net|seasonvar.cc|seasonvar.re|seasonvar.ru|seedoff.cc|seedoff.tv|segodnya.ua|selflib.me|selfmanga.ru|seria-z.net|serial.wiki|serialbox.org|serialguru.ru|serialis.net|serialpro.net|serialsend.ru|serialytut.tv|sexvhd.net|sexytal.com|sezon-hd.ru|shanson.name|share-serials.net|sherlok.me|show-online.tv|showgid.tv|sibnet.ru|simp-fan.ru|sinoptik.com.ru|sinoptik.ua|skidows.com|small-game.com|smo333.com|smotret-online.kz|smotri-filmi.co|smotri-filmu.ru|smotri.com|sobytiya.net|soccer.ru|soccer0010.com|soccer365-1.xyz|soccer365.ru|sovkinofilm.ru|sp-fan.ru|sportlook.tv|sputniktv.in.ua|srubirubli.ru|sshut.ru|stereotraker.ru|strana.ua|strela-online.com|super-tor.net|sverhestestvenoe.com|tapochek.net|tbperedachi.ucoz.ru|teenwolf-tv.com|televizorus.com|tengrinews.kz|tes-game.ru|tfile-music.org|tfile.cc|tfile.co|tfile.me|tfilm.co|the-cinema.net|the-cinema.ru|the-rutor.org|the100-tv.com|theflash-tv.com|tivix.co|tizam.tv|top-tor.org|tor-bit.net|tor-ru.net|tor-ru.org|torentor.co|torentor.net|torrent-baza.com|torrent-filmi.net|torrent-games.net|torrent-mob.at.ua|torrent-soft.net|torrent-windows.net|torrent-zona.com|torrent-zone.ru|torrent2games.net|torrentino.me|torrentk.ru|torrentom.com|torrentor.co|torrents-free.ru|torrents-game.net|torrentum.org|torrentum.ru|totori.ru|tparser.org|tracker.hdclub.com.ua|trackeroc.ru|tracktor.tv|trialeset.org|trialeset.ru|trymobile.ru|turboserial.net|turkcinema.tv|turkey-tv.net|turksinema.net|tushkan.club|tut-film.com|tv-300.ru|tv-torrent.org|tvbook.tv|tvfru.org|tvizor.org|tvonline.su|tvseason.net|tvserial-online.biz|tvtorrent.me|tyachivnews.in.ua|u-news.com.ua|ua-cinema.com|uainfo.org|uaonlinefilms.com|uchebnik-online.net|uchim.org|ukr.net|ukrlib.com.ua|ukrlit.vn.ua|uniongang.net|unionpeer.com|univeroff.net|unn.com.ua|ura-inform.com|uraltrack.net|v-torrente.ru|valuta.online.ua|vd-tv.ru|vdvsn.ru|vepizode.net|veroyatno.com.ua|versii.com|vesti-ukr.com|vgorode.ua|vgtimes.ru|videokub.online|vikingi-online.net|vikka.ua|viks.tv|vinixmult.net|vip-tor.org|vipvideoclub.ru|vkino-tv.ru|vkinoteatre.net|vklipe.com|vserialy.com|vserpg.ru|vsesochineniya.ru|vsetop.com|vsetv.net|vsitv.org|vskazke-tv.com|webantiblock.ru|wikianime.ru|wikimovies.ru|wkino.net|women-page.ru|wood-film.net|world-ua.com|wow-show.ru|wsturbo.net|x-bit.net|x-true.info|xhamster.com|ximepa.net|xmuzic.me|xn----etbhjjtcfb7b.net|xn----otba0aibt0b.su|xn--80aikhbrhr.net|xn--c1adkjnf.net|xn--c1ajfnfb.net|xn--j1aidcn.org|xrutor.org|xrutor.ru|xuk.net|yahooeu.ru|yaminecraft.ru|ymka.tv|yourcinema.tv|youtubetv.com.ua|ytra.ru|yummyanime.com|zagonka.ru|zakon.kz|zaycev.online|zerkalo-rutor.org|zerx.club|zfilm-hd.club|zhd.life|zn.ua|znaj.ua|zombie-tv.org|zpravda.ru|zserials.cc|zserials.ru|zserials.tv|киного-нет.net|киного.net|кинокрад.net|легион.net|спиши-ру.su|укроп.org
+|blob:$script,domain=0day.kiev.ua|176.114.0.126|176.114.0.132|192.102.7.159|193.106.30.70|193.106.30.84|24video.adult|24videos.in|2baksa.net|3dn.ru|3porosenka.ru|4ertik.xxx|4films.net|4torrentgames.net|abook-club.ru|ace-stream.tv|adultmult.tv|ahs-online.net|ahs-online.xyz|alexlan.org|all-best.pro|all-episodes.net|all-tor.net|all-tv.org|allbesta.net|allday2.com|allhentai.ru|allhit.org|allmovie.pro|allmovie.tv|amovies.biz|anatomia-strasti.com|anekdot.ru|anidub-online.ru|anime-rus.ru|animespirit.ru|anistar.me|anti-block.org|apostrophe.ua|argumenti.ru|artword.com.ua|asbook.net|asn.in.ua|au-books.com|audilka.com|audioboo.ru|autonews.com.ua|ave-brasil.ru|babushky.ru|badcinema.ru|badtorrent.com|bagnet.org|baskino-hd.ru|baskino.co|baskino.online|baskinoclub.ru|baskinohd.ru|benfilm.net|best-torrentor.ru|bestgamer.net|bestserials.net|big-bang-online.ru|bigbang-tv.net|bigbangtv.space|bigcinema-hd.tv|bigcinema-online.ru|bigcinema-tv.net|bigcinema-tv.ru|bigcinema.org|bigcinema.to|bigcinemahd.net|bigkiev.com.ua|bigtorrent.org|biqle.ru|bit-tor.org|blogspot.com|blogspot.ru|bludlivaya-california.com|bo-em.com|bobfilm-online.ru|bobfilm.club|bobfilm.online|bobfilm.tv|bobfilm1.cc|bobfilm1.co|book-online.com.ua|bookitut.ru|bookskeeper.ru|border-fan.ru|brovary.net.ua|bugaga.ru|buhgalter.com.ua|business.ua|cccp-kino.com|censor.net.ua|champion.com.ua|cinema-hd.tv|coldfilm.ru|com-x.life|comedy-portal.net|comedyportal.tv|concretejungle.ru|consol-games.net|coocook.me|coop-land.ru|couber.be|cvid.kiev.ua|cwer.ru|dad-fan.ru|dead-online.net|dead-serial.com|delfilm.ru|deviloff.net|dialog.ua|directadvert.ru|dnevniki-vampira.net|dnevniki-vampira.org|dni24.com|dochronika.ru|dokonlin.ru|dokpro.club|dokumentfilm.ru|dom-filmov.ru|dom23.tv|dom25.tv|dom2tv.info|doramatv.ru|dostfilms.net|dream-film.tv|drevnie-online.net|drevnie-tv.com|dt.ua|dugtor.ru|dynamo.kiev.ua|egeurok.ru|elementarno-tv.com|elise.com.ua|epidemz.co|ereko.ru|ero-top.com|euro-football.ru|ex-fs.com|ex-fs.net|exfs.to|f-picture.net|facenews.ua|fakty.ua|fan-tv.net|fan-tv.ru|fanserials.tv|fantasticfilm.ru|fargo-online.net|fast-bit.org|fast-tor.net|fast-torrent.org|fast-torrent.ru|fastpic.ru|fastpicc.ru|fasttorrent.ru|favoritemovies.at.ua|filin.tv|film-max.ru|film-tor.org|film720.ru|filmix-online.net|filmix.me|filmogo.co|filmtor.net|filmzguru.ru|findanime.me|firebit.net|fithacker.ru|fizrukoff.net|football-russian.me|football.kulichki.net|football.ua|football24.ua|footballhd.ru|free-tor.org|free-torrent.org|free-torrent.pw|free-torrents.org|free-torrents.pw|freedom-tor.org|freehat.cc|freehd.com.ua|freerutor.org|friends-online.co|from-ua.com|fstreker.net|gagadget.com|game-torrent.info|games-reviews.net|gamesontorrent.ru|gamestracker.org|gazeta.dt.ua|gazeta.ua|gdzometr.ru|get-tune.cc|gidonline-kino.club|gidonline.club|gidonlinehd.ru|gig-torrent.org|gighub.net|glavpost.com|gmt-max.org|goblin-online.ru|golos.zp.ua|gooool.org|gorno-altaisk.info|great-tv.ru|grif-fan.ru|griffiny.ru|grimm-online.org|grouple.co|gvirt.com|hardnews.info|hd-720.biz|hd-720.com|hd-720.ucoz.net|hd-720.ucoz.ru|hd-bit.org|hd-club.ru|hd-dream.ru|hd-kinogo.co|hd-kinomax.net|hd-kinomax.org|hd720.biz|hdclub.org|hdgo.cc|hdkino.biz|hdkinohit.net|hdkinoklub.com|hdkinolenta.com|hdkinomax.tv|hdkinomir.com|hdkinoset.net|hdkinoshka.net|hdkinoteatr.com|hdmulti.net|hdpicture.ru|hdreactor.info|hdreactor.org|hdrezka.ag|hdrezka1.me|hdrezka2.me|hdzal.net|hentaiz.org|hindcine.net|history.vn.ua|hlamer.ru|hotcharts.ru|hothome.info|hronika.info|hvylya.net|igra-prestoloff.cx|igra-prestolov.me|ikino.su|ikinogo.net|ikinohd.club|imperiyanews.ru|imtw.ru|india-tv.net|informat.com.ua|inopressa.ru|interesnoiveselo.ru|ipleer.fm|it-like.ru|itop-gear.ru|joyreactor.cc|kadu.ru|kaifzona.ru|katushka.net|katushka.org|kaztorka.org|kesemvv.com|kinino.ru|kino-az.net|kino-dom.org|kino-filmi.net|kino-fs.ucoz.net|kino-go.club|kino-hd.in|kino-hd720.net|kino-klub.net|kino-live.red|kino-live1.org|kino-live2.org|kino-max.com|kino-online.club|kino-panda.net|kino-sayt.net|kino-sezon.ru|kino-torrent.net|kino-v-dome.net|kino-v-online.tv|kinobaks.net|kinobal.ru|kinobar.cc|kinobar.kz|kinobos.com|kinobublik.net|kinoclips.net|kinoclips.tv|kinocok.com|kinodacha.ucoz.ru|kinodema.com|kinodroid.net|kinoflux.org|kinoframe.tv|kinofrog.ru|kinofrukt.club|kinogo-1080.net|kinogo-1080hd.ru|kinogo-2016-net.ru|kinogo-2016.net|kinogo-720.club|kinogo-720.co|kinogo-720p.ru|kinogo-club-online.net|kinogo-club.com|kinogo-co-2016.ru|kinogo-dom.com|kinogo-film.co|kinogo-filmov.net|kinogo-hd-720.club|kinogo-hd.net|kinogo-hd.pro|kinogo-hdtv.net|kinogo-net-2016.ru|kinogo-net-2017.ru|kinogo-net.me|kinogo-onlain.club|kinogo-onlain.net|kinogo-onlain.ru|kinogo-onlaine.net|kinogo-online.net|kinogo-online.online|kinogo-ru.net|kinogo-smotret.net|kinogo-v-hd.ru|kinogo-x.net|kinogo-x.ru|kinogo.club|kinogo.eu|kinogo.life|kinogo.ru.net|kinogo1.club|kinogo16.net|kinogo2.net|kinogo22.net|kinogo720hd.ru|kinogo720p.net|kinogo720p.org|kinogod.club|kinogohd.net|kinogol.com|kinograd.tv|kinohd-online.com|kinohome.org|kinohost.nov.ru|kinoklad.net|kinokong.cc|kinokrad-2017.net|kinokrad-hd-720.net|kinokrad-onlain.net|kinokrad-online.net|kinokrad.biz|kinokrad.club|kinokrik.net|kinoliza.net|kinomafia.tv|kinomagnit.net|kinomassa.biz|kinomaxpro.com|kinomirkz.net|kinomol.ru|kinomoov.net|kinomoov.org|kinopati.ru|kinopictures.net|kinoplen.ru|kinopov.com|kinoprofi.club|kinoprosmotr.club|kinopult.com|kinorob.net|kinorubik.com|kinosafe.net|kinoseriya.net|kinosklad.net|kinosok.org|kinostok.tv|kinosvit.tv|kinosweet.net|kinotochka.club|kinovideo.tv|kinovo.org|kinozadrot.club|kinozal.me|kinozal.tv|kinozal.website|kinozz-hd.ru|kinozz.club|kkkino.club|kkkino.net|klipzona.club|knighki.com|knijky.ru|komedra.com|kordonivkakino.club|kordonivkakino.tv|korrespondent.net|korzik.net|koshara.co|kosti-tv.com|kp.ua|kriminal.tv|krutor.org|kubik3.ru|kulturologia.ru|lalapaluza.ru|latino-serialo.ru|libertycity.ru|librebook.ru|libtor.club|linecinema.org|live-rutor.org|live-torrents.ru|livesport.ws|livetv-torrent.com|lokomotiv.info|lostfilm-online.ru|lostfilmhd.ru|lostfilmonline.ru|loveread.ec|lyudiipolitika.ru|main-rutor.org|meddaily.ru|mega-tor.org|mega-torrent.co|mega-trek.com|mega-trek.net|megahead.org|megahead.ru|megaserial.net|megashara.com|megogo-hd.net|meteoprog.ua|minfin.com.ua|minizal.su|mintmanga.com|mirknig.su|mirmegashara.com|mirmult.com|mirror-rutor.org|moiserialy.net|molodegka.xyz|movieshok.ru|moviestape.net|mp3-mus.net|mp3.cc|mp3cc.com|mp3club24.ru|mp3zv.ru|mrutor.org|multiki-online24.ru|multivarka.tv|multon-line.ru|multyasha.com|mundo-latino.ru|muz-color.ru|muzofond.com|muztorr.ru|muzyka-torrent.ru|my-hit.fm|my-hit.org|my-music-kiosk.ru|my-tfile.org|myflashgame.com.ua|mymult.net|myserialy.ru|myvideopl.com|myvimir.ru|n-torrents.ru|naruto-base.su|narutoplanet.ru|naspravdi.info|nevsedoma.com.ua|new-kinokrad.net|new-ru.org|new-rutor.org|new-tfile.org|new-tor.org|newfilms.online|newrutor.org|newserials.tv|newsmsk.com|newspravda.com|newsru.com|newsyou.info|nice-film.ru|nizaika.tv|nnm-club.me|nnm-club.name|nnm-club.to|nnm.me|nnmclub.to|no-block.org|nod32eset.ru|nod32keys2018.ru|nokino.biz|notfilm.ru|noviyfilm.me|novosti-n.org|nowa.cc|nur.kz|ojin.tv|ok-tv.org|okino.tv|oko-planet.su|on-movie.net|onedivision.ru|onelike.tv|onfilmz.net|onlainfilm.ucoz.ua|online-freebee.ru|online-futurama.ru|online-life.club|online-south-park.ru|online.anidub.com|onlinemultfilmy.ru|only-tv.org|onlyf.net|onlymult.com|open-tor.org|ostfilm.org|ostfilm.tv|ostfilmtv.org|ovgorskiy.ru|pc-torrents.net|pdalife.ru|pesni-tut.com|pesnik.su|petamusic.ru|petamusik.ru|pixelbrush.ru|planeta-mult.ru|play-apk.ru|pleer.ws|podrobnosti.ua|poiskm.co|politeka.net|politnavigator.net|popadenec.ru|porjati.ru|pornreactor.cc|pravda.com.ua|primgazeta.ru|proxy-rutor.org|pure-t.ru|putin-today.ru|qiqru.org|qmp3.cc|qmp3.org|qrz.ru|qwasd.ru|radikal.ru|rango.tv|razlozhi.ru|reactor.cc|readmanga.me|real-game.net|real-vin.com|report.if.ua|rgmechanics.ru|ria-m.tv|rifey.ru|rogoff.club|royallib.com|rp-mechanics.ru|rsload.net|ru-free-tor.org|ru-tor.net|rubook.org|rudifilm.com|rufilmtv.org|rumedia.ws|rupolitshow.ru|rus-porno.org|rus-tor.com|rusdialog.ru|rusdozor.ru|rusjev.net|russiapost.su|russkoekino.net|rustorka.com|rutor.co|rutor.info|rutor.is|rutor.net|rutor.org|rutorgames.org|rutorka.net|rutracker.club|rvb.ru|sbornik-music.ru|season-var.net|seasonvar-hd.net|seasonvar.cc|seasonvar.re|seasonvar.ru|seedoff.cc|seedoff.tv|segodnya.ua|selflib.me|selfmanga.ru|seria-z.net|serial.wiki|serialbox.org|serialguru.ru|serialis.net|serialpro.net|serialsend.ru|serialytut.tv|sexvhd.net|sexytal.com|sezon-hd.ru|shanson.name|share-serials.net|sherlok.me|show-online.tv|showgid.tv|sibnet.ru|simp-fan.ru|sinoptik.com.ru|sinoptik.ua|skidows.com|small-game.com|smo333.com|smotret-online.kz|smotri-filmi.co|smotri-filmu.ru|smotri.com|sobytiya.net|soccer.ru|soccer0010.com|soccer365-1.xyz|soccer365.ru|sovkinofilm.ru|sp-fan.ru|sportlook.tv|sputniktv.in.ua|srubirubli.ru|sshut.ru|stereotraker.ru|strana.ua|strela-online.com|super-tor.net|sverhestestvenoe.com|tapochek.net|tbperedachi.ucoz.ru|teenwolf-tv.com|televizorus.com|tengrinews.kz|tes-game.ru|tfile-music.org|tfile.cc|tfile.co|tfile.me|tfilm.co|the-cinema.net|the-cinema.ru|the-rutor.org|the100-tv.com|theflash-tv.com|tivix.co|tizam.tv|top-tor.org|tor-bit.net|tor-ru.net|tor-ru.org|torentor.co|torentor.net|torrent-baza.com|torrent-filmi.net|torrent-games.net|torrent-mob.at.ua|torrent-soft.net|torrent-windows.net|torrent-zona.com|torrent-zone.ru|torrent2games.net|torrentino.me|torrentk.ru|torrentom.com|torrentor.co|torrents-free.ru|torrents-game.net|torrentum.org|torrentum.ru|totori.ru|tparser.org|tracker.hdclub.com.ua|trackeroc.ru|tracktor.tv|trialeset.org|trialeset.ru|trymobile.ru|turboserial.net|turkcinema.tv|turkey-tv.net|turksinema.net|tushkan.club|tut-film.com|tv-300.ru|tv-torrent.org|tvbook.tv|tvfru.org|tvizor.org|tvonline.su|tvseason.net|tvserial-online.biz|tvtorrent.me|tyachivnews.in.ua|u-news.com.ua|ua-cinema.com|uainfo.org|uaonlinefilms.com|uchebnik-online.net|uchim.org|ukr.net|ukrlib.com.ua|ukrlit.vn.ua|uniongang.net|unionpeer.com|univeroff.net|unn.com.ua|ura-inform.com|uraltrack.net|v-torrente.ru|valuta.online.ua|vd-tv.ru|vdvsn.ru|vepizode.net|veroyatno.com.ua|versii.com|vesti-ukr.com|vgorode.ua|vgtimes.ru|videokub.online|vikingi-online.net|vikka.ua|viks.tv|vinixmult.net|vip-tor.org|vipvideoclub.ru|vkino-tv.ru|vkinoteatre.net|vklipe.com|vserialy.com|vserpg.ru|vsesochineniya.ru|vsetop.com|vsetv.net|vsitv.org|vskazke-tv.com|webantiblock.ru|wikianime.ru|wikimovies.ru|wkino.net|women-page.ru|wood-film.net|world-ua.com|wow-show.ru|wsturbo.net|x-bit.net|x-true.info|xhamster.com|ximepa.net|xmuzic.me|xn----etbhjjtcfb7b.net|xn----otba0aibt0b.su|xn--80aikhbrhr.net|xn--c1adkjnf.net|xn--c1ajfnfb.net|xn--j1aidcn.org|xrutor.org|xrutor.ru|xuk.net|yahooeu.ru|yaminecraft.ru|ymka.tv|yourcinema.tv|youtubetv.com.ua|ytra.ru|yummyanime.com|zagonka.ru|zakon.kz|zaycev.online|zerkalo-rutor.org|zerx.club|zfilm-hd.club|zhd.life|zn.ua|znaj.ua|zombie-tv.org|zpravda.ru|zserials.cc|zserials.ru|zserials.tv|киного-нет.net|киного.net|кинокрад.net|легион.net|спиши-ру.su|укроп.org
 |http*//*.cf^$third-party,domain=freerutor.org|goblin-online.ru
 |http*//*.ga^$third-party,domain=freerutor.org|goblin-online.ru
 |http*//*.gq^$third-party,domain=freerutor.org|goblin-online.ru
@@ -12140,7 +12019,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||abw.by/new/branding/
 ||actualcomment.ru^*/banner/
 ||actualtraffic.ru/uploads/promo/
-||ad.admitad.com^$domain=1track.ru|2x2forum.ru|3porosenka.ru|alexkolobok.ru|alive-ua.com|bakemono.ru|bigtorrent.org|bloknot-khersona.ks.ua|bobfilm-online.ru|etika-education.ru|gooool.org|goroskop.ru|igri-2012.ru|igui.mobi|ilenta.com|kino-govna.net|kinogo-net-co.ru|mywishlist.ru|ogribax.ru|onedivision.ru|osnovu-ved.ru|outsidethebox.ms|privatbankrf.ru|real-vin.com|rus-game.net|samelectric.ru|sovetremont.com|sshut.ru|superg.ru|svxg.su|topmmo-games.ru|torrentigri.xyz|torrentiko.net|torrentum.ru|webtoks.ru
+||ad.admitad.com^$domain=1track.ru|2x2forum.ru|3porosenka.ru|alexkolobok.ru|alive-ua.com|audioknigi.club|bakemono.ru|bigtorrent.org|bloknot-khersona.ks.ua|bobfilm-online.ru|etika-education.ru|gooool.org|goroskop.ru|igri-2012.ru|igui.mobi|ilenta.com|kino-govna.net|kinogo-net-co.ru|mywishlist.ru|ogribax.ru|onedivision.ru|osnovu-ved.ru|outsidethebox.ms|privatbankrf.ru|real-vin.com|rus-game.net|samelectric.ru|sovetremont.com|sshut.ru|superg.ru|svxg.su|topmmo-games.ru|torrentigri.xyz|torrentiko.net|torrentum.ru|webtoks.ru
 ||ad.adriver.ru^$object-subrequest,domain=bigcinema.to|onlineguru.ru|peers.tv|seasonvar.ru|zoomby.ru
 ||ad.babyblog.ru/
 ||ad.cbonds.info/
@@ -13145,6 +13024,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||kinopoisk.ru/b/$object
 ||kinopoisk.ru/cry/
 ||kinopoisk.ru/storage.mds.yandex.net/get-bstor/
+||kinorom.com/img/binfon.
 ||kinosklad.net/asdfg/
 ||kinovideo.tv*/pWindow.$script,stylesheet
 ||kinoylei.ru/br/
@@ -14244,6 +14124,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||twirpx.com/fubbn/
 ||tyachivnews.in.ua/uploads/blocks/
 ||tyt.by^*/banner/
+||tz.audioknigi.club/
 ||tz.topwar.ru/
 ||u-tv.ru/ajax?f=bigbaner_
 ||u-tv.ru/images/overlay/
@@ -14590,14 +14471,15 @@ gismeteo.kz##div[id^="rek-gis-news"]
 @@||go.ctufcv6vbmqb.ru/hdplayer/$script,domain=ctufcv6vbmqb.ru
 @@||go.eg0o0kbpvk7.ru/hdplayer/$script,domain=eg0o0kbpvk7.ru
 @@||go.ewklhilcl3tl5.ru/hdplayer/$script,domain=ewklhilcl3tl5.ru
+@@||go.vjwwbmtg6mv.ru/hdplayer/$script,domain=vjwwbmtg6mv.ru
 @@||goog.dd1lfuoz46o3.ru/hdplayer/$script,domain=dd1lfuoz46o3.ru
-@@||googleapis.com^$script,domain=017psfgde76bn.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0uxpf8oh4tc4.ru|1mxhr8iyvdk.ru|248hg9eyg5ogp.ru|27i2gr13ad7w.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|4dd1lfuoz46o.ru|4tb2n0klfdx1j.ru|6allgpo0.ru|6skl0qwmd723.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|81yet6cm0vz.ru|8zdxa0zugv.xyz|99gn1l38j7sir.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|ad7w9xhkde.ru|apollostream.xyz|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dnsvideo.ru|e5m280mv.ru|eg0o0kbpvk7.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|govideoget.ru|hdgoo.ru|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hu0mkcpw6lu.ru|i9j1i7rmhp9.xyz|iframestream.ru|intcdnstream.ru|interstreamvideo.ru|jaskervideocdn.ru|jbswth1zqip.ru|km396z9t3.xyz|livevideoproton.ru|martinstreamvideo.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|navg93dyidbk.xyz|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|pandastream.ru|pifzxd886h.ru|protonstream.ru|protonstream3.ru|rq0vbl0mxq9.ru|s7mk9wm9l.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|uyzdl6a410wo.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vk7d5kdjvlim5k.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|w34sbr55mfu.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|ykknavg93.xyz|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|zf5tcn4auwhy.ru|zf99fw27i.ru
+@@||googleapis.com^$script,domain=017psfgde76bn.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0uxpf8oh4tc4.ru|1mxhr8iyvdk.ru|248hg9eyg5ogp.ru|27i2gr13ad7w.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|4dd1lfuoz46o.ru|4tb2n0klfdx1j.ru|6allgpo0.ru|6skl0qwmd723.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|81yet6cm0vz.ru|8zdxa0zugv.xyz|99gn1l38j7sir.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|ad7w9xhkde.ru|apollostream.xyz|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dnsvideo.ru|e5m280mv.ru|eg0o0kbpvk7.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|govideoget.ru|hdgoo.ru|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hu0mkcpw6lu.ru|i9j1i7rmhp9.xyz|iframestream.ru|intcdnstream.ru|interstreamvideo.ru|jaskervideocdn.ru|jbswth1zqip.ru|km396z9t3.xyz|livevideoproton.ru|martinstreamvideo.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|navg93dyidbk.xyz|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|pandastream.ru|pifzxd886h.ru|protonstream.ru|protonstream3.ru|rq0vbl0mxq9.ru|s7mk9wm9l.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|uyzdl6a410wo.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vjwwbmtg6mv.ru|vk7d5kdjvlim5k.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|w34sbr55mfu.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|ykknavg93.xyz|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|zf5tcn4auwhy.ru|zf99fw27i.ru
 @@||index.4dd1lfuoz46o.ru/hdplayer/$script,domain=4dd1lfuoz46o.ru
 @@||ok.0z5co256u3.ru/hdplayer/$script,domain=0z5co256u3.ru
 @@||server.248hg9eyg5ogp.ru/hdplayer/$script,domain=248hg9eyg5ogp.ru
 @@||server.vk7d5kdjvlim5k.ru/hdplayer/$script,domain=server.vk7d5kdjvlim5k.ru
 @@||ya.1mxhr8iyvdk.ru/hdplayer/$script,domain=1mxhr8iyvdk.ru
-|http://$third-party,script,domain=017psfgde76bn.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0uxpf8oh4tc4.ru|1mxhr8iyvdk.ru|248hg9eyg5ogp.ru|27i2gr13ad7w.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|4dd1lfuoz46o.ru|4tb2n0klfdx1j.ru|6allgpo0.ru|6skl0qwmd723.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|81yet6cm0vz.ru|8zdxa0zugv.xyz|99gn1l38j7sir.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|ad7w9xhkde.ru|apollostream.xyz|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dnsvideo.ru|e5m280mv.ru|eg0o0kbpvk7.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|govideoget.ru|hdgoo.ru|hekenden.pw|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hrenchik.pw|hu0mkcpw6lu.ru|i9j1i7rmhp9.xyz|iframestream.ru|intcdnstream.ru|interstreamvideo.ru|jaskervideocdn.ru|jbswth1zqip.ru|km396z9t3.xyz|kozlodoev.info|lar4ik.info|livevideoproton.ru|m1kstrax.ru|magazin4ik.info|martinstreamvideo.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|navg93dyidbk.xyz|olenevod.pw|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|pandastream.ru|pifzxd886h.ru|protonstream.ru|protonstream3.ru|r2ugailo.ru|rq0vbl0mxq9.ru|ru3gailo.ru|rug4ailo.ru|ruga5ilo.ru|s7mk9wm9l.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|t1hrones.ru|t2hrones.ru|th3rones.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|thr4ones.ru|thro5nes.ru|uyzdl6a410wo.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vk7d5kdjvlim5k.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|w34sbr55mfu.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|ykknavg93.xyz|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|zemlyanin.pw|zf5tcn4auwhy.ru|zf99fw27i.ru
+|http://$third-party,script,domain=017psfgde76bn.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0uxpf8oh4tc4.ru|1mxhr8iyvdk.ru|248hg9eyg5ogp.ru|27i2gr13ad7w.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|4dd1lfuoz46o.ru|4tb2n0klfdx1j.ru|6allgpo0.ru|6skl0qwmd723.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|81yet6cm0vz.ru|8zdxa0zugv.xyz|99gn1l38j7sir.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|ad7w9xhkde.ru|apollostream.xyz|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dnsvideo.ru|e5m280mv.ru|eg0o0kbpvk7.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|govideoget.ru|hdgoo.ru|hekenden.pw|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hrenchik.pw|hu0mkcpw6lu.ru|i9j1i7rmhp9.xyz|iframestream.ru|intcdnstream.ru|interstreamvideo.ru|jaskervideocdn.ru|jbswth1zqip.ru|km396z9t3.xyz|kozlodoev.info|lar4ik.info|livevideoproton.ru|m1kstrax.ru|magazin4ik.info|martinstreamvideo.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|navg93dyidbk.xyz|olenevod.pw|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|pandastream.ru|pifzxd886h.ru|protonstream.ru|protonstream3.ru|r2ugailo.ru|rq0vbl0mxq9.ru|ru3gailo.ru|rug4ailo.ru|ruga5ilo.ru|s7mk9wm9l.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|t1hrones.ru|t2hrones.ru|th3rones.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|thr4ones.ru|thro5nes.ru|uyzdl6a410wo.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vjwwbmtg6mv.ru|vk7d5kdjvlim5k.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|w34sbr55mfu.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|ykknavg93.xyz|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|zemlyanin.pw|zf5tcn4auwhy.ru|zf99fw27i.ru
 |http://*.accountant/*/|$third-party,script
 |http://*.accountant/*js$third-party,script
 |http://*.bargains/*/|$third-party,script
@@ -14809,6 +14691,7 @@ gismeteo.kz##div[id^="rek-gis-news"]
 ||ujpl4gyzm2.ru^
 ||upq9a31zel3q3.ru^
 ||v2owyvlq5c0.ru^
+||vjwwbmtg6mv.ru^$script
 ||vk7d5kdjvlim5k.ru^$script
 ||vmqbs88ujpl4g.ru^
 ||vq63t40b0z.ru^
@@ -16388,6 +16271,7 @@ kinogo-720.net#@#.ya-share2
 @@||bugaga.tut.by/attachments/$image,domain=rebenok.by
 @@||calameo.com^$subdocument,domain=yangteacher.ru
 @@||casino-mining.com/includes/ads_kola/$domain=casino-mining.com
+@@||cdn.kinorom.com/video/$websocket,domain=cdn.kinorom.com
 @@||cdn.phoenix.intergi.com/$object-subrequest,domain=wao3iewu.com
 @@||changecopyright.ru/bannersout/
 @@||chipmaker.ru/index.php?app*post&attach_id=$image,domain=chipmaker.ru
@@ -16754,6 +16638,7 @@ kinopoisk.ru,kosmos-x.net.ru,mac-torrent-download.net,pr-cy.ru#@#.adsbox
 3dsmaxvideo.ru,5urokov.ru,archicadvideo.ru,autocadvideo.ru,avatarko.ru,bestradio.fm,coreldrawvideo.ru,discounts-online.info,excelvideo.ru,gta-gaming.ru,gudfilm.ru,hosgeldi.com,isemko.net,kompasvideo.ru,kosmos-x.net.ru,kttc.ru,lost-alpha.com,photoshopvideo.ru,satsis.org.ua,sinref.ru,solidworksvideo.ru,static.xtubeporno.net,testkrok.org.ua,tests24.ru,texnic.ru,vimperor.ru,webos-forums.ru,wordvideo.ru,wotsite.net,wotspeak.ru,www.qrz.ru#@#.adsbygoogle
 kinobel.by#@#.adver
 1tv.ru,all-episodes.net,feofan.net,mts-smart.ru,nulled.cc,popmech.ru#@#.afs_ads
+drahelas.ru#@#.forumAd
 zhurnaly.biz#@#.item-ads
 baibako.tv,bitinfocharts.com,blog.foolsoft.ru,divan.tv,echo.msk.ru,fairtop.in,gazeta.ru,gismeteo.ru,hyser.com.ua,kakprosto.ru,kinogb.net,kinopoisk.ru,kurs.com.ua,life-film.ru,life.ru,mail.ru,only-tv.org,picmix.com,soccer365-1.xyz,soccer365.ru,track24.ru,tut.by,vg672plpaer.ru,video.kinoogo.ru,vk.com,vsetv.net,звонки.онлайн#@#.pub_300x250
 baibako.tv,bitinfocharts.com,blog.foolsoft.ru,divan.tv,echo.msk.ru,fairtop.in,gazeta.ru,gismeteo.ru,hyser.com.ua,kakprosto.ru,kinogb.net,kinopoisk.ru,kurs.com.ua,life-film.ru,life.ru,mail.ru,only-tv.org,picmix.com,soccer365-1.xyz,soccer365.ru,track24.ru,tut.by,vg672plpaer.ru,video.kinoogo.ru,vk.com,vsetv.net,звонки.онлайн#@#.pub_300x250m
@@ -16846,6 +16731,8 @@ baibako.tv,bitinfocharts.com,blog.foolsoft.ru,divan.tv,echo.msk.ru,fairtop.in,ga
 @@||dota2.ru/js/adriver.js$script,domain=dota2.ru
 @@||doubleclick.net/pagead/ads?$object-subrequest,domain=multoigri.ru
 @@||doubleclick.net^$script,domain=investing.com
+@@||drahelas.ru/r/www/delivery/spc.php?zones=$script,domain=drahelas.ru
+@@||drahelas.ru/r/www/delivery/spcjs.php?id=$script,domain=drahelas.ru
 @@||engine.rbc.medialand.ru/code?pid=*&gid=$script,domain=rbc.ru
 @@||et-code.ru/bens/vinos.js$script,domain=moviestape.com|smotri.com
 @@||example.com^$image,subdocument,domain=izzylaif.com

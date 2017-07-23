@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 10:31 2017/07/21
+! 最終更新 16:58 2017/07/22
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
@@ -147,6 +147,7 @@ _ads.php
 !geniee
 /://(js|\d{6})\.[-_.a-zA-Z0-9]+/t/\d{3}/\d{3}/a\d{7}\.js$/
 
+!||adnico.jp^$third-party
 !||advision-adnw.jp^$third-party
 !||click-plus.net^$third-party
 !下にも
@@ -602,6 +603,7 @@ $script,third-party,domain=jpidols.tv
 |http://$subdocument,third-party,domain=adf.ly
 |http://$script,third-party,domain=youtube-mp3.org
 ||youtube-mp3.org^$subdocument,domain=youtube-mp3.org
+/link.js$domain=iqoo.me|masutabe.info
 ||2ch.vet/img/ani_
 ||4chan-ads.org^
 ||a.konachan.net^$domain=konachan.com
@@ -620,7 +622,6 @@ $script,third-party,domain=jpidols.tv
 ||ashemaletube.com/ast/www/*.min.js?url=
 ||ashemaletube.com/banner-iframe/
 ||atas.io^$domain=toukoucity.to
-||blog.livedoor.jp/geek/right-side2.html
 ||blog.seesaa.jp/js/banner.js
 ||blog.seesaa.jp/js/insert-ad.min.js
 ||blog.with2.net/ad_frame.php?
@@ -2122,7 +2123,6 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party
 ||adfurikun.jp^$third-party
-||adnico.jp^$third-party
 ||adsee.jp^$third-party
 ||alistcloud.com^$third-party
 ||amoad.com^$third-party
@@ -2153,6 +2153,7 @@ xhamster.com##script:contains(dataPopUnder)
 youporn.com##script:contains(ChromePopMouseDownHandler)
 tube8.*##script:contains(adblock)
 vidoza.net##script:contains($('.pvr'))
+youtube-mp3.org##script:contains(_prop)
 
 	!待ち時間回避
 nikkansports.com##script:contains(async-hide)

@@ -258,6 +258,9 @@ lj_bookmarklet
 !
 ! Extended CSS rules
 !
+mobilmp3ler.com##body > .title2[-ext-has='center:contains(Bu Şarkıyı Arkadaşlarınızla Paylaşın)']
+mobilmp3ler.com##body > .title2 + .content[-ext-has='a[href^="http://facebook.com/share.php"]']
+onlinedizi.com##.row > .list-container-item.col-md-4[-ext-has='h2:contains(Facebook Sayfamız)']
 online-life.club###container > #content > table > tbody > tr > td > div.left-block[-ext-has="> noindex div.block_title:contains(НАША ГРУППА)"]
 csgo-stats.net##.container > div.row > div > div.picture-list[-ext-has="> div.card-header > h2:contains(Share)"]
 kachelmannwetter.com##.row > .col-lg-6 > h2.head-index:contains(Facebook)
@@ -401,6 +404,13 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+cbsnews.com##.right-headline > .box.twitter
+cbsnews.com##.right-headline > .box.facebook
+cbsnews.com##.right-headline > .box.email
+lifewire.com##.social-share
+lifewire.com##.pinit-btn
+canlidizihd5.org##.paylasma
+abcdizi.com##.safirShare
 indiatimes.com##.social-icons
 clashofclansforum.de##.fbLikeCounter
 circa.com##.ShareBar-shareItems > [class^="ShareLink"]:not([data-service="mailto"])
@@ -3172,6 +3182,8 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ||mailget.net^$third-party
 ||my.hellobar.com^$third-party
 !
+vgolos.com.ua###likesplash
+vgolos.com.ua###fader
 topito.com###social-slide-box
 endlessflix.co.uk##body > .reveal-modal
 alimentation-sante.net##body > [id^="spu-"]
@@ -3363,6 +3375,8 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! Section fixing issues caused by social filter
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5737
+cbsnews.com#@#.social-icons
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5629
 circa.com#@#.icon-facebook
 circa.com#@#.icon-twitter
