@@ -5,7 +5,7 @@
 ! 最終更新 21:17 2017/07/23
 !
 !--------通販サイト--------!
-amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp
+amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
 ||amiami.jp^$third-party
 ||amiami.com^$third-party
 ||animemerchant.com^$third-party
@@ -507,6 +507,7 @@ _ads.php
 !----third-party
 ||auone-net.jp/~$image,third-party
 ||bbchat.tv^*/bannar/
+||gunosy.com/adnet/
 ||idea-unlimited.com/adsimg/
 ||imagefreak*.com^
 ||mkd777.net/pd/
@@ -655,6 +656,7 @@ $script,third-party,domain=jpidols.tv
 ||gelbooru.com/r19/
 ||gelbooru.com/thumbnails/0C/
 ||getchu.com/mbanner/$~image
+||gigazine.net/pw/p.js
 ||gnst.jp/c/atb/segment.js$domain=gnavi.co.jp
 ||google.com/pagead/
 ||google.com/uds/?file=ads&
@@ -1399,6 +1401,7 @@ oekakies.com##hr:nth-last-of-type(2) + center
 oekakies.com##table[cellpadding="2"][border="1"]
 oekakies.com##table[cellspacing="3"][border="0"]
 okwave.jp##.big_bnr
+otakomu.jp##a[href*="amazon"]
 ppp.atbbs.jp##td[style="width:800px;border:solid 0px #000;text-align:center;padding:5px;"]
 projectdesign.jp###base-register
 pya.cc##.netaMain__banner
@@ -1722,9 +1725,10 @@ pixiv.net##.hover-item
 pixiv.net##._ui-tooltip[href^="https://booth.pm/ja/search/"]
 !検索プレミア
 pixiv.net##a[href*="/premium.php?ref=popular_d_body"]
-!comicjama--
-comic.pixiv.net###pauser
+!jama--
+pixiv.net###pauser
 comic.pixiv.net##._dialog_overlay
+novel.pixiv.net##.info.related-books
 
 @@||melonbooks.com/api/pixiv/get_promotion_ads.php?$domain=pixiv.net
 
@@ -2150,7 +2154,6 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ||zucks.net^$third-party
 
 ||amazonaws.com/ad-arata/$domain=fc2.com
-||assets.gunosy.com/adnet/*$domain=touch.pixiv.net
 ||sp-a.gree.net/g/u.html?
 
 
