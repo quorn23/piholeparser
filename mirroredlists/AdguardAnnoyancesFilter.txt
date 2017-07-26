@@ -312,6 +312,8 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+techcrunch.com##.newsletters-signup
+pg3dhacks.com##.blog-sidebar-separator > ul.columnlist-blog > div:not([class]):not([id]) > form[id^="form"]
 mobil.nwzonline.de###sticky-share
 mobil.nwzonline.de##.page-footer > a[href^="https://aktion.nwzonline.de/landingpages/whatsapp/?utm_source=off&utm_medium="]
 mobil.mz-web.de##.teaserFullsizeImg > a[href="http://newsletteranmeldung.mz-web.de"]
@@ -2587,6 +2589,9 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+gallica.bnf.fr##.alerte_cookie
+digit-photo.be##p#messcookie
+||popmech.ru/ajax/getDisclamer/
 blutv.com.tr###cookies-popover
 ing.be##.cm-cookie-pop
 digit-photo.com###messcookie
@@ -3115,6 +3120,8 @@ ziekenhuis.nl#%#AG_onLoad(function() { setTimeout(function() {var check = docume
 !#######################################################
 !######### White list. Fixing filtering errors #########
 !#######################################################
+! https://forum.adguard.com/index.php?threads/23625/
+groupon.nl#@##cookie-modal
 ! https://forum.adguard.com/index.php?threads/rabobank-nl.23514/
 rabobank.nl#@#.cookie-opt-in
 ! https://forum.adguard.com/index.php?threads/22917/
@@ -3737,6 +3744,8 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+groupon.nl###subscribe_modal_container
+groupon.nl###spotlight
 vgolos.com.ua###likesplash
 vgolos.com.ua###fader
 topito.com###social-slide-box
@@ -4290,6 +4299,7 @@ livelib.ru,lenta.ru,mychrome,rambler.ru,sports.ru#%#(function() { if (typeof Not
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: 2 }; localStorage.setItem("sports:view:notifications-subscribe-popup:closed:count", JSON.stringify(a)) } } catch (ex) {} })();
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: true }; localStorage.setItem("sports:view:notifications-subscribe-popup:view", JSON.stringify(a)) } } catch (ex) {} })();
 !
+hellomagazine.com##.push-wrap
 m.lenta.ru##.js-custom-push-notifications
 ||nation-news.ru/assets/js/push.js
 scoopwhoop.com##body > #permission_div

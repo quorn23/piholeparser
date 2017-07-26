@@ -22,6 +22,7 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||nqvlw.com^$third-party
 ||utraff.com^$third-party
 ||us1tryasemi.ru^$third-party
 ||cl3orbelen.ru^$third-party
@@ -5938,6 +5939,8 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !-----------------------
 !------- CSS -----------
 !-----------------------
+! https://forum.adguard.com/index.php?threads/23380/
+online-life.club#$#iframe#iframe { height: 740px!important; }
 ! https://forum.adguard.com/index.php?threads/21741/
 border-fan.ru,lalapaluza.ru,freehat.cc,grif-fan.ru,simp-fan.ru,dad-fan.ru,sp-fan.ru#$##page { z-index: 11!important; margin-top: auto!important; }
 ! myscore.com.ua - исправляем попап, расположенный под оверлеем
@@ -8568,10 +8571,13 @@ rustorka.com##a[href^="http://www.gearbest.com/"]
 rustorka.com##div[align="center"] > a > img
 /(rustorka.com\/forum\/misc\/js\/(?!ifix)(?!ajax)(?!main)(?!fancybox)(?!scrolltopcontrol)(?!jquery)(?!ct)(?!bbcode))/$domain=rustorka.com
 @@||rustorka.com/forum/shoutbox_view.php
+!+ PLATFORM(ext_ff, ext_opera, ext_ublock)
 rustorka.com##.post_body > div[align="center"] > a > img
-/(rustorka.com\/forum\/(?!login)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$domain=rustorka.com,popup
+/(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+online-life.club##div[style="text-align: center;position: relative"] > span.cross_spec
+stopgame.ru##.lent-left > div[class="main_text\""][style$="min-height: 90px;"]
 turbobit.net##img[width="600"][height="80"]
 rsload.net##.full-text > center > a[target="blank"]:not([href*="rsload.net"]) > img
 repackov.net##.downldmed
@@ -15800,7 +15806,7 @@ zvukoff.ru##.adv-list-top
 ||warnet.ws/templates/rek/best.gif
 ||warnet.ws/warnet.js
 ||watchngo.ru^$domain=sound-park.ru
-||webcampromo.com^$domain=kordonivkakino.tv
+||webcampromo.com^$domain=kordonivkakino.tv|sex-empire.tv
 ||webdiana.ru/myout.php
 ||webeffector.ru$domain=2ip.ru
 ||webfile.ru/adv/
@@ -16051,6 +16057,9 @@ joyreactor.cc#@#div#sidebar
 @@||vetton.ru^$jsinject,elemhide
 !#################
 !
+! tv.yandex.ru - infinite reloading
+@@||an.yandex.ru/system/context.js$domain=tv.yandex.by|tv.yandex.kz|tv.yandex.ru|tv.yandex.ua
+@@||an.yandex.ru/resource/context_static_r_*.js$domain=tv.yandex.by|tv.yandex.kz|tv.yandex.ru|tv.yandex.ua
 ! https://forum.adguard.com/index.php?threads/23614/
 free-sex-video.net#@#.adv
 ! goodgame.ru

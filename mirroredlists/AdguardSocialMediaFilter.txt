@@ -404,6 +404,12 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+sitepoint.com##article-sharer
+yeniakit.com.tr##.module-default-social
+pg3dhacks.com##div[data-wzb="SocialTab"] > iframe.ztb-sb-widget-iframe
+netzwelt.de###social-inline > .cl-ap
+netzwelt.de###socialbar-fixed > .socialbar-item:not([href="#kommentare"])
+sat1.de##.box.module_group.psdcontainer.has_header[data-track$="cont:Werde Fan auf Facebook"]
 vpnmentor.com##a[id^="sl_share_"]
 cbsnews.com##.right-headline > .box.twitter
 cbsnews.com##.right-headline > .box.facebook
@@ -2305,6 +2311,7 @@ zdnet.co.kr##ul.sub_view_tit4.clfx
 !
 ! Section contains list general hiding rules
 !
+##.share-container
 ##.addthis-smartlayers-desktop
 ##.addthis-smartlayers
 ##.article-sharing
@@ -3378,6 +3385,10 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! Section fixing issues caused by social filter
 !
 !
+! https://forum.adguard.com/index.php?threads/23672/
+@@||yastatic.net/share2/share.js$domain=mazda.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/5835
+@@||mercury.landmarkglobal.com/tracking/track.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5737
 cbsnews.com#@#.social-icons
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5629
