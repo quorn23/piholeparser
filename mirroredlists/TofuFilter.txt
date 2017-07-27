@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 17:06 2017/07/25
+! 最終更新 7:58 2017/07/27
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -383,6 +383,7 @@ _ads.php
 ||traffichaus.com^$third-party
 ||trafficjunky.$third-party
 ||trafficsway.net^$third-party
+||triver.jp^$third-party
 ||trustclick.ne.jp^$third-party
 ||tyrellsys.com^$third-party
 ||utarget.co.uk^$third-party
@@ -495,7 +496,6 @@ _ads.php
 ||xtendmedia.com^$third-party
 ||zemanta.com^$third-party
 ||zerezas.com^$third-party
-||zog.link^$third-party
 
 !$popup
 ||ban-ban-boin.com^$popup
@@ -510,6 +510,7 @@ _ads.php
 !----third-party
 ||auone-net.jp/~$image,third-party
 ||bbchat.tv^*/bannar/
+||googlesyndication.com/pagead/
 ||gunosy.com/adnet/
 ||idea-unlimited.com/adsimg/
 ||imagefreak*.com^
@@ -523,43 +524,25 @@ _ads.php
 
 !-----pornhubnetwork
 
-
-/pb_block/*
-
+!共通
 /ht.js?site_
-
-||amiblood.com^
 ||doublepimp.com^$third-party
-
-
-
-||redtube.com/_status/
-redtube.com##.add-blocker-msg
-redtube.com##.tja
-redtube.com##[id^="adb_"]
-!anti adblock
-@@||redtubefiles.com/js/adframe.js?
-
-$xmlhttprequest,popup,domain=redtube.com|tube8.com|youporn.com
-
-
-||tube8.phncdn.com^*/pb_block/$domain=tube8.com
-tube8.com##.cont-col-02
-
-youporn.com##div[style="width: 64.3%; float: right; height: 374px; position: relative; clear: none; text-align: center; margin: 0px auto;"]
-
-
-||pornhub.phncdn.com/www-static/js/htmlPauseRoll/
-
-||phncdn.com/www-static/js/ph-tracking.js?
-||doublepimpssl.com/Scripts/infinity.js.aspx?$domain=pornhub.com
-pornhub.com,redtube.com,tube8.com,youporn.com###pb_template
-
 ||etahub.com^$third-party
-
 ||phncdn.com/stattracker-
-
+!pornhub
+||phncdn.com/www-static/js/ph-tracking.js?
+||phncdn.com/www-static/js/htmlPauseRoll/
+!redtube
+||redtube.com/_status/
+!xtube.com
 xtube.com##.col-xs-24.col-xl-8 > div:first-child
+
+!-----TXXX Network
+||com^*?z=*&sub=$~third-party
+||zog.link^$third-party
+||ipornia.com/frends/
+||bulkhentai.com^*/bulkhentai2.js
+hclips.com,hotmovs.com,txxx.com,upornia.com,vjav.com#@#[class$="-ads"]:not(html):not(body)
 
 !-----------xhamster
 |https://$subdocument,domain=xhamster.com
@@ -595,7 +578,6 @@ xvideos.com##.sponsor_popup
 ||pron.tv/js/xp/pt.js?*
 
 
-/upornia/*$~media,domain=upornia.com
 javbuz.com##.player-ads-bottom
 
 ||heavy-r.com/ilove/bananas.php
@@ -606,10 +588,6 @@ heavy-r.com##.hd-ban
 
 ||fapdu.com/desktop_popup.
 
-! http://voyeurhit.com/
-||voyeurhit.com/aed40.php?
-||ipornia.com/frends/
-||bulkhentai.com^*/bulkhentai2.js
 
 $script,third-party,domain=jpidols.tv
 |http://$subdocument,third-party,domain=adf.ly
@@ -1152,6 +1130,20 @@ $script,third-party,domain=jpidols.tv
 ##.adv
 ##.advertise
 ##.advertisement
+
+##[id^="ad-"]:not(html):not(body)
+	! #ad_table fc2ブログ管理画面 > 画像高速表示の設定
+##[id^="ad_"]:not(html):not(body):not(#ad_table)
+##[id^="ads-"]:not(html):not(body)
+##[id^="ads_"]:not(html):not(body)
+##[id$="-ad"]:not(html):not(body)
+##[id$="_ad"]:not(html):not(body)
+##[id$="-ads"]:not(html):not(body)
+##[id$="_ads"]:not(html):not(body)
+##[id$="Ad"]:not(html):not(body)
+##[id$="Ads"]:not(html):not(body)
+##[id*="-ad-"]:not(html):not(body)
+##[id*="_ad_"]:not(html):not(body)
 ##[class^="ad-"]:not(html):not(body)
 ##[class^="ad_"]:not(html):not(body)
 ##[class^="ads-"]:not(html):not(body)
@@ -1170,19 +1162,6 @@ $script,third-party,domain=jpidols.tv
 	!			https://www.brightcove.com/
 ##[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ##[class*="_ad_"]:not(html):not(body)
-##[id^="ad-"]:not(html):not(body)
-	! #ad_table fc2ブログ管理画面 > 画像高速表示の設定
-##[id^="ad_"]:not(html):not(body):not(#ad_table)
-##[id^="ads-"]:not(html):not(body)
-##[id^="ads_"]:not(html):not(body)
-##[id$="-ad"]:not(html):not(body)
-##[id$="_ad"]:not(html):not(body)
-##[id$="-ads"]:not(html):not(body)
-##[id$="_ads"]:not(html):not(body)
-##[id$="Ad"]:not(html):not(body)
-##[id$="Ads"]:not(html):not(body)
-##[id*="-ad-"]:not(html):not(body)
-##[id*="_ad_"]:not(html):not(body)
 
 ##[style*="width:728px;"][style*="height:90px;"]
 
@@ -1441,7 +1420,6 @@ tsumanne.net###rakutenac
 twitter.com##.modal-overlay
 twitter.com##.promoted-tweet
 twitter.com##.promoted-tweet-heading
-upornia.com###mjs-undervideo
 uta-net.com###banner_original
 uta-net.com###recommend
 uta-net.com###view_amazon
@@ -1976,8 +1954,6 @@ $domain=warotanikki.com,third-party
 @@||linkbucks.com/scripts/intermissionLink.
 	! https://downdetector.jp/shougai/ocn/mappu map消える
 @@||maps.gstatic.com/maps-api-v3/api/js/19/13/intl/ja_ALL/adsense.js
-	! これないと広告がでる
-@@||media.trafficjunky.net/js/holiday-promo.js$script,domain=pornhub.com
 	! あちこち 面倒だから大サービスで全部許可 例：スケジュール https://www.mlb.com/rangers/schedule/
 @@||mlb.com^$elemhide
 	! 動画見れない
@@ -2033,6 +2009,8 @@ cookpad.com#@#[id*="_ad_"]:not(html):not(body)
 eiga.com#@#[id$="_ad"]:not(html):not(body)
 	!動画見れない
 gogoanime.to#@#[class$="-ads"]:not(html):not(body)
+	!編集画面にて終日のチェックボックスが消える
+calendar.google.com#@#[id$="-ad"]:not(html):not(body)
 	!予定が消える
 calendar.google.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 	!ヘッダー 検索バー
@@ -2116,8 +2094,6 @@ tv-asahi.co.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 	!動画消える
 	!2017/07/16:not([class*="vjs-ad-"])
 	!tver.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-	!動画を再生すると消える
-upornia.com#@#[class$="-ads"]:not(html):not(body)
 	!Container内全部
 video.fc2.com#@#[class*="_ad_"]:not(html):not(body)
 video.fc2.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
@@ -2163,9 +2139,12 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 
 !uBO
 *$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com
-xhamster.com##script:contains(dataPopUnder)
 youporn.com##script:contains(ChromePopMouseDownHandler)
+redtube.com##script:contains(var rAb=)
+redtube.com##script:contains(tj_ads)
+pornhub.com##script:contains(tj_ads)
 tube8.*##script:contains(adblock)
+xhamster.com##script:contains(dataPopUnder)
 vidoza.net##script:contains($('.pvr'))
 youtube-mp3.org##script:contains(_prop)
 
