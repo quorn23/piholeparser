@@ -562,23 +562,18 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 printf "$yellow"  "This Process Normally Takes Longer Than The Others."
-#DOT="."
 HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
-TLDPERCENTAGEMATH=`expr $WHATLINENUMBER / $HOWMANYVALIDTLD`
+TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
 TLDPERCENTAGE="$TLDPERCENTAGEMATH Percent Done."
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
-#HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
-#printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
-#echo -ne "$DOT \r"
-#DOT="${DOT}."
 fi
 echo -ne "$TLDPERCENTAGE \r"
 done
