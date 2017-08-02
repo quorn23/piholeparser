@@ -567,16 +567,15 @@ for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
-#TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
-TLDPERCENTAGEMATH=$(awk "BEGIN { 100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}}")
-TLDPERCENTAGE="$TLDPERCENTAGEMATH Percent Done."
+TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
+#TLDPERCENTAGE="$TLDPERCENTAGEMATH Percent Done."
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
 fi
-echo -ne "$TLDPERCENTAGE \r"
+echo -ne "Percent Done Is $TLDPERCENTAGEMATH \r"
 sleep 1
 done
 touch $BTEMPFILE
