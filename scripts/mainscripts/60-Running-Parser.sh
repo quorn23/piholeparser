@@ -563,14 +563,17 @@ then
 printf "$cyan"  "$PARSECOMMENT"
 for source in `cat $VALIDDOMAINTLD`;
 do
+DOT="."
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
-HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
-printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
+#HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
+#printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
+printf "$green"  "${DOT}\r"
+DOT="${DOT}."
 fi
 done
 touch $BTEMPFILE
