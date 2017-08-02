@@ -561,10 +561,15 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
-DOT="."
+printf "$yellow"  "This Process Normally Takes Longer Than The Others."
+#DOT="."
+HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
+WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD`")
+TLDPERCENTAGEMATH=`expr $WHATLINENUMBER / $HOWMANYVALIDTLD`
+TLDPERCENTAGE="$TLDPERCENTAGEMATH Percent Done."
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
@@ -572,9 +577,10 @@ cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
 #HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
 #printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
-echo -ne "$DOT \r"
-DOT="${DOT}."
+#echo -ne "$DOT \r"
+#DOT="${DOT}."
 fi
+echo -ne "$TLDPERCENTAGE \r"
 done
 touch $BTEMPFILE
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
