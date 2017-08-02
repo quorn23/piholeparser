@@ -20,8 +20,8 @@ HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BIGAPLE | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-cat $BFILETEMP | grep -e [.]$source\$ >> $TEMPFILEZ
-touch $BTEMPFILE
+cat $BIGAPLE | grep -e [.]$source\$ >> $TEMPFILEZ
+touch $TEMPFILEZ
 HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $TEMPFILEZ | wc -l`")
 printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
 fi
