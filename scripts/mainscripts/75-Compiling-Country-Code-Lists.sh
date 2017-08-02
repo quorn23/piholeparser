@@ -29,6 +29,7 @@ fi
 ## End Source Loop
 done
 
+touch $TEMPFILEZ
 cat $TEMPFILEZ | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $TEMPFILEY
 rm $TEMPFILEZ
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEY | cut -d " " -f 1`")
