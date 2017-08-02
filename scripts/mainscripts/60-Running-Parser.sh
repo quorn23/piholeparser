@@ -561,9 +561,9 @@ if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
+DOT="."
 for source in `cat $VALIDDOMAINTLD`;
 do
-DOT="."
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
