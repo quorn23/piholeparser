@@ -572,7 +572,7 @@ cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
 #HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $BTEMPFILE | wc -l`")
 #printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
-echo -ne "$DOT /r"
+echo -ne "$DOT \r"
 DOT="${DOT}."
 fi
 done
