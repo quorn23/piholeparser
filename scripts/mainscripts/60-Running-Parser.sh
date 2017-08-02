@@ -578,7 +578,6 @@ fi
 echo -ne "$TLDPERCENTAGE \r"
 sleep 1
 done
-echo -ne " \r"
 touch $BTEMPFILE
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
 rm $BFILETEMP
