@@ -567,7 +567,7 @@ HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
-WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD`")
+WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
 TLDPERCENTAGEMATH=`expr $WHATLINENUMBER / $HOWMANYVALIDTLD`
 TLDPERCENTAGE="$TLDPERCENTAGEMATH Percent Done."
 if
