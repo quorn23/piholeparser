@@ -28,8 +28,7 @@ cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
 fi
 
-#echo -ne "$TLDPERCENTAGEMATH \r"
-echo -ne "$WHATLINENUMBER Of $HOWMANYVALIDTLD Domains Processed \r"
+echo -ne "$TLDPERCENTAGEMATH \r"
 
 done
 
