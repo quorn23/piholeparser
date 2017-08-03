@@ -567,8 +567,7 @@ for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
-#TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
-TLDPERCENTAGEMATH=$(echo -e `"scale=2; ${WHATLINENUMBER}*100/${HOWMANYVALIDTLD}" | bc` &>/dev/null)
+TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
