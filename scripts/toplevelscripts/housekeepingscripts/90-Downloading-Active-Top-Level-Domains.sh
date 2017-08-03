@@ -22,6 +22,7 @@ printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 
 ## Filenaming Vars
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 source $DYNOVARS
 
 printf "$cyan"    "The Source In The File Is:"
