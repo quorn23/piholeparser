@@ -21,7 +21,7 @@ then
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
 fi
-echo -ne "Percent Done Is "$TLDPERCENTAGEMATH". Currently Scanning for ."$source" Domain. \r"
+echo -ne "Percent Done Is "$TLDPERCENTAGEMATH". \r"
 done
 touch $BTEMPFILE
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
