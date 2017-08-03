@@ -53,6 +53,7 @@ ls $CHECKME &> /dev/null;
 then
 for f in $KILLTHELISTALL
 do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 source $DYNOVARS
 mv $f "$MAINLISTDIR""$BASEFILENAME".lst
 done
