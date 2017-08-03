@@ -344,6 +344,15 @@ echo ""
 ## Processing     ##
 ####################
 
+## test
+for p in $ALLPARSINGSCRIPTS
+do
+
+echo "$p"
+
+done
+
+
 ## Comments #'s and !'s .'s
 PARSECOMMENT="Removing Lines With Comments."
 if
