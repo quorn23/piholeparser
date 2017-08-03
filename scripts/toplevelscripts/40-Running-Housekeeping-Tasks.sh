@@ -7,7 +7,7 @@ source "$script_dir"/../scriptvars/staticvariables.var
 
 ## Start File Loop
 ## For .sh files In The housekeepingscripts Directory
-for f in $RUNHOUSEKEEPINGSCRIPTSALL
+for f in $ALLHOUSEKEEPINGSCRIPTS
 do
 
 # Dynamic Variables
