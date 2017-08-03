@@ -26,6 +26,7 @@ cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
 touch $BTEMPFILE
 fi
 
+echo -ne " \r"
 echo -ne "$TLDPERCENTAGEMATH \r"
 
 done
