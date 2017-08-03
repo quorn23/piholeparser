@@ -18,6 +18,7 @@ echo ""
 
 ## Declare File Name
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPVARS &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
@@ -715,4 +716,5 @@ unset DIDWECHECKONLINEFILE
 unset PINGTESTFAILED
 
 ## End File Loop
+sed -i '/BASEFILENAME/d' $TEMPVARS &>/dev/null
 done
