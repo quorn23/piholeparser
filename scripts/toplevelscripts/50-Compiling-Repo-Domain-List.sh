@@ -52,6 +52,7 @@ done
 ## Sort and Dedupe Lists
 for f in $WHITELISTDOMAINSALL
 do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 source $DYNOVARS
 WHATLISTTOSORT=$f
 WHITESORTDEDUPE="$BASEFILENAME Domains."
@@ -119,6 +120,7 @@ fi
 ## Sort And Dedupe Lists
 for f in $BLACKLISTDOMAINSALL
 do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 source $DYNOVARS
 WHATLISTTOSORT=$f
 BLACKSORTDEDUPE="$BASEFILENAME Domains."
