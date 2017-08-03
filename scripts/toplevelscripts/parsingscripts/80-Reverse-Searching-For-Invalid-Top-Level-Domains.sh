@@ -25,7 +25,7 @@ touch $BTEMPFILE
 fi
 
 #echo -ne "$TLDPERCENTAGEMATH \r"
-echo -ne "$TLDPERCENTAGEMATH"
+echo "$TLDPERCENTAGEMATH \c"
 
 done
 
