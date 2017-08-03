@@ -12,6 +12,8 @@ HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 
 TLDPERCENTAGEMATH="0"
 
+echo -ne "$TLDPERCENTAGEMATH \r"
+
 for source in `cat $VALIDDOMAINTLD`;
 do
 
