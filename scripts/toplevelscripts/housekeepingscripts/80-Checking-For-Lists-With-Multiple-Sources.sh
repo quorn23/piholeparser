@@ -6,7 +6,7 @@
 
 ## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/../scriptvars/staticvariables.var
+source "$script_dir"/../../scriptvars/staticvariables.var
 
 ## Process Every .lst file within the List Directories
 for f in $EVERYLISTFILEWILDCARD
