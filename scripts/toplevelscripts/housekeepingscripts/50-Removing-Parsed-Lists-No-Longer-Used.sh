@@ -3,7 +3,7 @@
 
 ## Static Variables
 script_dir=$(dirname $0)
-source "$script_dir"/../scriptvars/staticvariables.var
+source "$script_dir"/../../scriptvars/staticvariables.var
 
 printf "$cyan"    "Making List of All .lst Files."
 for f in $EVERYLISTFILEWILDCARD
