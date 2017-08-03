@@ -13,7 +13,7 @@ for source in `cat $VALIDDOMAINTLD`;
 do
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
-TLDPERCENTAGEMATHA=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1 &>/dev/null}")
+TLDPERCENTAGEMATHA=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}" &>/dev/null)
 TLDPERCENTAGEMATH="70"
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
