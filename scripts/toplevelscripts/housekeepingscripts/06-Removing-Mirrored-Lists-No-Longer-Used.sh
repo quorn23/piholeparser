@@ -1,5 +1,5 @@
 #!/bin/bash
-## This Removes Parsed Files That We No Longer Need
+## This Removes Mirrored Files That We No Longer Need
 
 ## Static Variables
 script_dir=$(dirname $0)
