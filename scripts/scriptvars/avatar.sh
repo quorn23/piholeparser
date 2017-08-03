@@ -82,3 +82,4 @@ cat << "EOF"
 
 EOF
 echo ""
+sleep 10
