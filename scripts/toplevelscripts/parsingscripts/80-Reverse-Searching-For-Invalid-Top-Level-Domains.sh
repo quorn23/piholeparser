@@ -29,7 +29,7 @@ touch $BTEMPFILE
 fi
 
 #echo -ne "$TLDPERCENTAGEMATH \r"
-echo -ne "$WHATLINENUMBER Of $TLDPERCENTAGEMATH Domains Processed \r"
+echo -ne "$WHATLINENUMBER Of $HOWMANYVALIDTLD Domains Processed \r"
 
 done
 
