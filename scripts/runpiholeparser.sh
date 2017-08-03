@@ -10,7 +10,7 @@ bash $AVATARSCRIPT
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
-for f in $RUNMAINSCRIPTSALL
+for f in $ALLTOPLEVELSCRIPTS
 do
 
 # Dynamic Variables
