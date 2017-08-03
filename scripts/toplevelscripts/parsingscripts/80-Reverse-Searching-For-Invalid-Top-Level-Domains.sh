@@ -15,11 +15,9 @@ TLDPERCENTAGEMATH="0"
 for source in `cat $VALIDDOMAINTLD`;
 do
 
-echo -ne "$TLDPERCENTAGEMATH \r"
-
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
-TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}" )
-
+#TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}" )
+TLDPERCENTAGEMATH=$(echo -e "scale=2\n(($HOWMANYVALIDTLD-$WHATLINENUMBER)*100)/$HOWMANYVALIDTLD"|bc)
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
