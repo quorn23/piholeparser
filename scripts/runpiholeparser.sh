@@ -14,6 +14,7 @@ for f in $ALLTOPLEVELSCRIPTS
 do
 
 # Dynamic Variables
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 source $DYNOVARS
 
 ## Loop Variables
