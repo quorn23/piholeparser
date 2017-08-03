@@ -16,7 +16,8 @@ printf "$yellow"  "0 Percent Done."
 for source in `cat $VALIDDOMAINTLD`;
 do
 
-
+tput rc;tput el
+printf "$yellow"  "$TLDPERCENTAGEMATH Percent Done."
 
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
 TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}" )
