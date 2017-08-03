@@ -522,7 +522,7 @@ FILESIZEZERO=true
 fi
 
 ## Domain Requirements,, a period and a letter
-PARSECOMMENT="Checking For Fully Qulified Domain Name Requirements."
+PARSECOMMENT="Checking For Fully Qualified Domain Name Requirements."
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
