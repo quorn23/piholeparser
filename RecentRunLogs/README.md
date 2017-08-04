@@ -18212,3 +18212,9 @@
 
 * Script completed at Fri 4 Aug 13:51:24 EDT 2017
 * Script completed at Fri 4 Aug 13:51:24 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+
+## Pushing Lists. Fri 4 Aug 13:51:25 EDT 2017
+## Pushing Lists. Fri 4 Aug 13:51:25 EDT 2017
