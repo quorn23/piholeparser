@@ -18150,3 +18150,65 @@
 
 ## Pushing Lists. Fri 4 Aug 13:51:11 EDT 2017
 ## Pushing Lists. Fri 4 Aug 13:51:11 EDT 2017
+* web host lists directory Already there no need to mkdir. Fri 4 Aug 13:51:14 EDT 2017
+* Locally Hosted Biglist Removed. Fri 4 Aug 13:51:14 EDT 2017
+* Locally Hosted Biglist Not Removed. Fri 4 Aug 13:51:14 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Pushing-Lists.txt)
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+
+## Script Complete. Fri 4 Aug 13:51:16 EDT 2017
+## Results Of The Parsing. Fri 4 Aug 13:51:16 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Script-Complete.txt)
+
+## Edited ALLPARSEDLIST Result. Fri 4 Aug 13:51:17 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+
+
+## Total Runtime. Fri 4 Aug 13:51:18 EDT 2017
+* Script Took  minutes To Filter  Lists.
+## Results Of The Parsing. Fri 4 Aug 13:51:18 EDT 2017
+
+## Updated Main README.md. Fri 4 Aug 13:51:19 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 4 Aug 13:51:19 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+
+
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+* Script completed at Fri 4 Aug 13:51:20 EDT 2017
+
+## Total Runtime. Fri 4 Aug 13:51:20 EDT 2017
+## Results Of The Parsing. Fri 4 Aug 13:51:20 EDT 2017
+## Results Of The Parsing. Fri 4 Aug 13:51:20 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+* Script Took  minutes To Filter  Lists.
+
+## Edited ALLPARSEDLIST Result. Fri 4 Aug 13:51:21 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 4 Aug 13:51:21 EDT 2017
+## Updated Main README.md. Fri 4 Aug 13:51:21 EDT 2017
+## Pushing Lists. Fri 4 Aug 13:51:21 EDT 2017
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+
+
+## Total Runtime. Fri 4 Aug 13:51:22 EDT 2017
+
+## Total Runtime. Fri 4 Aug 13:51:22 EDT 2017
+* Script completed at Fri 4 Aug 13:51:22 EDT 2017
+* Script Took  minutes To Filter  Lists.
+* Script Took  minutes To Filter  Lists.
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+## Updated Main README.md. Fri 4 Aug 13:51:23 EDT 2017
+
+
+## Updated Main README.md. Fri 4 Aug 13:51:23 EDT 2017
+
+## Pushing Lists. Fri 4 Aug 13:51:23 EDT 2017
+
+* Script completed at Fri 4 Aug 13:51:24 EDT 2017
+* Script completed at Fri 4 Aug 13:51:24 EDT 2017
