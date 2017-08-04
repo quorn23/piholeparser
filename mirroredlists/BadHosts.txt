@@ -1,87 +1,10 @@
-#
-# DATE:     Samedi    2017-01-28
-#
-# hhhobbit gnat securemecca.com
-# This hosts file is available here:
-#
-#    http://www.hostsfile.org/hosts.html
-#    http://www.securemecca.com/hosts.html
-#	( zip format only for main packages )
-#	( also 7z format for auto downloaders )
-#	( HOSTSFILE.ORG DOES NOT DOWNLOAD 7-ZIPS!)
-#	( all files are visible here: )
-#	( http://www.securemecca.com/Downloads/ )
-#
-# It is meant to be used with the PAC filter that we have
-# created:
-#
-#    http://www.hostsfile.org/pac.html
-#    http://www.securemecca.com/pac.html
-#	( zip format only for main packages )
-#	( also 7z format for auto downloaders )
-#
-# It is licensed under the LGPL as GPLv2. A copy of the
-# license may be viewed at:
-#      http://www.gnu.org/licenses/lgpl.txt
-#
-# This data is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied
-# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
-# PURPOSE.  See the GNU General Public License for more details.
-#
-# We strongly acknowledge the contributions of Airelle (French):
-# in the construction of this hosts file, and the translation of
-# and input to creating the French version of the PAC filer with
-# rules that are applicable in that language. However this file
-# is NOT purely a derivative of Airelle's  hosts files since it
-# is designed to be used with the PAC filter. Here is Airelle's
-# hosts file web site for more comprehensive hosts files:
-#
-#	http://rlwpx.free.fr/WPFF/hosts.htm
-#
-# One more note - the PAC filter stops many or most of these
-# malware hosts without even knowing their host name.  This
-# is becoming more important all of the time because most of
-# the malware hosts I am investigating have a life-time of staying
-# in DNS less than 8 hours.  Blocking those by host name is impossible.
-#
 127.0.0.1	localhost
 
-# ALL OF THE HOSTS IN THIS COMMENTED OUT SECTION CAUSE PROBLEMS
-# IN ONE WAY OR ANOTHER.  UNCOMMENT / ACTIVATE AT YOUR OWN RISK!
-# SOME OF THEM HAVE ALREADY BEEN UNCOMMENTED FOR YOU.  IF THEY
-# CAUSE PROBLEMS FOR YOU THEN COMMENT THEM OUT!
 
-# Google-Earth - also have exclusion in PAC filter for 2nd.
-#
-# 127.0.0.1	csi.gstatic.com
-# 127.0.0.1	googleads.g.doubleclick.net
 
-# This block MAY cause problems for DigID.nl:
-#
-# 127.0.0.1	nl.sitestat.com
-#
-# In the PAC filter these two rules will be added for
-# allowing sitestat.com not to be blocked by the PAC
-# filter at DigID.nl and also for phish protection:
-#	GoodDomains[i++] = "digid.nl";
-#	BadHostParts[i++] = "digid\.nl";
-# If you always use "www.digid.nl" which it redirects to
-# if you use just "digid.nl" you can make phish protection
-# even stronger by making the GoodDomains rule this:
-#	GoodDomains[i++] = ".digid.nl";
-# The first less restrictive GoodDomains allows thinkgs like
-# "FakeDigID.nl" through but the the second GoodDomains
-# rule doesn't consider it acceptable so it drops down
-# and fails the BadHostParts rule test.
 
-# This affects LiveChat
-# 127.0.0.1	sales.liveperson.net
 
-# This affects podcasts
-# 127.0.0.1	stat3.cybermonitor.com
 
-# SCAMMER PRODUCT ABUSE - use for self & trusted others only
 127.0.0.1	ammyy.com
 127.0.0.1	www.ammyy.com
 127.0.0.1	gotomypc.com
@@ -92,100 +15,46 @@
 127.0.0.1	splashtop.com
 127.0.0.1	www.splashtop.com
 
-# HEALTHCARE.GOV ISSUES
-# Supposedly used but I didn't see it.
-# 127.0.0.1	static.chartbeat.com
-# Next was used but ABP was blocking with no ill effects.
-# blocking it may affect 2go.co, forbes.com, freeshipping.com,
-# heroku.com, hotukdeals.com, imageshack.com, policymic.com,
-# ricardo.ch, sigfig.com, and techrepublic.com.
-# 127.0.0.1	cdn.optimizely.com
 
-# Their IE Cookie Manager program has a proxy.  Internet proxies
-# and the PAC filter are mutually incompatible.
-# 127.0.0.1	ofsoft.com
-# 127.0.0.1	www.ofsoft.com
 
-# Verizon & NissanUSA.com
-# TURN OFF PAC FILTER TO GO TO NissanUSA.com
 127.0.0.1	fls.doubleclick.net
 
-# tv.com, NissanUSA.com and other domains
-# COMMENT OUT ad.doubleclick.net
-# AND TURN OFF PAC FILTER TO GO TO THESE DOMAINS
 127.0.0.1	ad.doubleclick.net
 
-# NissanUSA.com
-# ALSO TURN OFF PAC FILTER TO GO TO NissanUSA.com
 127.0.0.1	ak1.abmr.net
 127.0.0.1	ak1s.abmr.net
-# 127.0.0.1	metrics.nissanusa.com
 
-# Job Search sites (also turn off PAC filter)
 127.0.0.1	bs.serving-sys.com
 
-# This may cause problems at espn.com but ABP blocks it
-# ABP's EasyPrivacy gives exclusion for abcnews.go.com
-# 127.0.0.1	w88.go.com
 
-# MapQuest & AOL
 127.0.0.1	ar.atwola.com
 127.0.0.1	pr.atwola.com
 
-# OLD Hotmail image server
 127.0.0.1	ads1.msn.com
-# OLD MSN Messenger
-# 127.0.0.1	rad.msn.com
-# OLD zone.msn.com needs one of these three
 127.0.0.1	a.global.msads.net
 127.0.0.1	global.msads.net
 127.0.0.1	rmads.msn.com
-# Next may affect Hotmail signup
-# 127.0.0.1	switch.atdmt.com
 
-# Yahoo
 127.0.0.1	visit.webhosting.yahoo.com
 
-# NPR.org
 127.0.0.1	stats.surfaid.ihost.com
 
-# Toronto Star
 127.0.0.1	ads.thestar.com
 
-# collegehumor.com.com videos
-# 127.0.0.1	cdn.visiblemeasures.com
 
-# SourceForge.com PDF downloads are blocked by this.  There
-# may be others affected by it.  IT DOES TRACK!  Also make
-# sure you do NOT block clicks.slashdot.org.
-# 127.0.0.1	clk.ml-links.com
 
-# om.symantec.com IS AN ALIAS TO symanteccom.112.2o7.net
 127.0.0.1	om.symantec.com
 
-# French tracker
-# 127.0.0.1	perso0.free.fr
 
-# causes problems at multiple websites
-# 127.0.0.1	cdn.taboola.com
 
-# https browser slow-down
 127.0.0.1	google-analytics.com
 127.0.0.1	www.google-analytics.com
 127.0.0.1	ssl.google-analytics.com
 
-# Blocks CNet.com downloads
-# 127.0.0.1	dw.cbsi.com
-# 127.0.0.1	dw.com.com
 
-# Google Ads
-# 127.0.0.1	www.googleadservices.com
-# 127.0.0.1	partner.googleadservices.com
 127.0.0.1	4.afs.googleadservices.com
 127.0.0.1	pagead2.googleadservices.com
 
-# Privacy Concerns
-# pumping private data directly into Google
 127.0.0.1	instantcheckmate.com
 127.0.0.1	www.instantcheckmate.com
 127.0.0.1	mylife.com
@@ -193,155 +62,51 @@
 127.0.0.1	publicrecords360.com
 127.0.0.1	www.publicrecords360.com
 
-# whattoexpect.com & others
 127.0.0.1	gscounters.gigya.com
 127.0.0.1	tracking.whattoexpect.com
 
-# Trackers with  webmail images.
-# 127.0.0.1	img.constantcontact.com
-# 127.0.0.1	imgssl.constantcontact.com
 
-# They provide services for others - I block them for myself.
-# 127.0.0.1	surveymonkey.com
-# 127.0.0.1	www.surveymonkey.com
 
-# Blocking this host causes problems in Opera at Amazon.fr.
-# What it does is block the Secure icon from turning on.
-# There may be others as well which is why I don't block
-# this host in the hosts file and give it a free pass in
-# the PAC filter.  I block the amazon-adsystem.com domain
-# in the PAC filter.  See the hhh_2013_03_04_changes.txt
-# PAC filter change log.
-# 127.0.0.1	aax-eu.amazon-adsystem.com
 
-# This causes (caused?) problems at amazon.ca & amazon.fr
-# 127.0.0.1	media.richrelevance.com
 
-# These may cause problems with streaming video
-# 127.0.0.1	livepass.conviva.com
-# 127.0.0.1	livepassdl.conviva.com
 
-# It is supposed to cause problems with the following websites:
-# citibank.com, enmasse.com, skype.com, westernunion.com.
-# Specifically, what is causing the problem is the blocking of
-# mpsnare.iesnare.com/snare.js
-# iesnare.com will also be removed from the cookie block list.
-# 127.0.0.1	mpsnare.iesnare.com
-# Also found at  https://moneymutual.com/
 127.0.0.1	wdpbeta.iesnare.com
 
-# May cause problems at Landsend.com but I didn't notice it
-# 127.0.0.1	assets.adobedtm.com
 
-# May cause problems at Verizon
-# 127.0.0.1	cdn.tt.omtrdc.net
 
-# May cause problems at Sprint.com
-# 127.0.0.1	survey.112.2o7.net
 
-# If you really don't want Facebook to track you even if you are
-# not a member you need to block all of these hosts:
-# 127.0.0.1	connect.facebook.net
-# 127.0.0.1	facebook.com
-# 127.0.0.1	www.facebook.com
-# 127.0.0.1	graph.facebook.com
-# 127.0.0.1	profile-a.xx.fbcdn.net
-# 127.0.0.1	profile.ak.fbcdn.net
-# 127.0.0.1	scontent-b.xx.fbcdn.net
-# 127.0.0.1	scontent.xx.fbcdn.net
-# 127.0.0.1	static.ak.fbcdn.net
-# The PAC filter rule that blocks "facebook" any place in the
-# host name is still available (but is commented out).
-# Unfortunately it is no longer very useful for blocking phish.
-# I removed the BadDomains rules for  fbcdn.com  and  fbcdn.net
-# from the PAC filter because the park service and others are
-# using them to deliever images.  IOW, These individual blocks
-# are the ONLY way to turn off Facebook tracking for people like
-# me that are NOT on Facebook.
 
-# eBay
-# 127.0.0.1	counters.auctionwatch.com
 127.0.0.1	counters.freewebs.com
-# 127.0.0.1	counters.honesty.com
 127.0.0.1	gscounters.eu1.gigya.com
 127.0.0.1	gscounters.us1.gigya.com
 
-# AddThis / ShareThis
-# 127.0.0.1	addthis.com
-# 127.0.0.1	www.addthis.com
 127.0.0.1	ct1.addthis.com
 127.0.0.1	p.addthis.com
-# 127.0.0.1	s3.addthis.com
-# 127.0.0.1	s7.addthis.com
-# 127.0.0.1	s9.addthis.com
-#
 127.0.0.1	l.sharethis.com
 127.0.0.1	seg.sharethis.com
-# 127.0.0.1	wd-edge.sharethis.com
-# 127.0.0.1	ws.sharethis.com
 
-# /etc/ssh/ssh_config should have:
-# ForwardAgent no
-# ForwardX11 no
-# before you play around with this
-# (SeLinux enabled recommended)
 127.0.0.1	play.coker.com.au
 
-# www.TLD abuse
 127.0.0.1	www.de
 127.0.0.1	www.fr
 127.0.0.1	www.gd
 127.0.0.1	www.im
 
-# If you cannot control your gambling uncomment this which offers
-# FantasySports betting (I block them now).  I will add a PAC filter
-# rule that allows the sports but blocks the fantasy betting.  If
-# are a newbie at doing this kind of betting you will be eaten alive.
-# 127.0.0.1	sports.yahoo.com
 
-#
-# URL minimizers
-# spam & malware from all but noted
-# activate only those you use
-#
 127.0.0.1	0rz.tw
 127.0.0.1	www.0rz.tw
-#
-# Used by one phisher and will activate if more abuse
-# 127.0.0.1	1drv.ms
-#
 127.0.0.1	1url.com
 127.0.0.1	www.1url.com
 127.0.0.1	7.ly
 127.0.0.1	www.7.ly
 127.0.0.1	adf.ly
 127.0.0.1	www.adf.ly
-#
-# alturl.com  has a preview - USE IT!
-# alturl.com & shorturl.com are sister services
-#
-# 127.0.0.1	alturl.com
-# 127.0.0.1	www.alturl.com
-# 127.0.0.1	preview.alturl.com
-#
-# I have no spam or malware from this domain bit it redirects
-#
-# 127.0.0.1	beam.to
-# 127.0.0.1	www.beam.to
-#
 127.0.0.1	bit.do
 127.0.0.1	www.bit.do
-#
-# Leads to both malware & spam and tracks.
-# Comment out to install Adblock in Google Chrome and Safari
-# It was even used to install malware on Anonymous member machines.
-# But its primary purpose is to track.  BLOCKING MAY CAUSE PROBLEMS!
-# Nevertheless the malware is reaching a crescendo so it is blocked.
 127.0.0.1	bit.ly
 127.0.0.1	www.bit.ly
 127.0.0.1	bitly.com
 127.0.0.1	www.bitly.com
-#
 127.0.0.1	bix.im
 127.0.0.1	www.bix.im
 127.0.0.1	boo.vg
@@ -350,13 +115,8 @@
 127.0.0.1	www.brzu.net
 127.0.0.1	buzurl.com
 127.0.0.1	www.buzurl.com
-#
-# Hijacking of social site bound traffic and
-# lots of phish at PhishTank use bz9.com
-#
 127.0.0.1	bz9.com
 127.0.0.1	www.bz9.com
-#
 127.0.0.1	c99.nl
 127.0.0.1	www.c99.nl
 127.0.0.1	clck.ru
@@ -369,11 +129,8 @@
 127.0.0.1	www.db.tt
 127.0.0.1	dlvr.it
 127.0.0.1	www.dlvr.it
-#
-# 127.0.0.1	abuse.doiop.com
 127.0.0.1	doiop.com
 127.0.0.1	www.doiop.com
-#
 127.0.0.1	dyo.gs
 127.0.0.1	www.dyo.gs
 127.0.0.1	end.ai
@@ -387,14 +144,8 @@
 127.0.0.1	www.get.al
 127.0.0.1	go2.lc
 127.0.0.1	www.go2.lc
-#
-# Used internally by Google AND some hackers now.
-# Got malware through it on 2014-6-26 and it was
-# still available almost 24 hours later.
-# Others will have to unblock this themselves now.
 127.0.0.1	goo.gl
 127.0.0.1	www.goo.gl
-#
 127.0.0.1	gourl.us
 127.0.0.1	www.gourl.us
 127.0.0.1	h28.ro
@@ -403,7 +154,6 @@
 127.0.0.1	www.hec.su
 127.0.0.1	ho.io
 127.0.0.1	www.ho.io
-# href.li is actually a referrer hider
 127.0.0.1	href.li
 127.0.0.1	www.href.li
 127.0.0.1	ht.ly
@@ -433,21 +183,12 @@
 127.0.0.1	www.migre.me
 127.0.0.1	moourl.com
 127.0.0.1	www.moourl.com
-#
-# Have PAC filter rule for *.notlong.com
-#
 127.0.0.1	notlong.com
 127.0.0.1	www.notlong.com
-#
 127.0.0.1	odun.net
 127.0.0.1	www.odun.net
 127.0.0.1	opc.to
 127.0.0.1	www.opc.to
-#
-# Needed for emergencies at Yahoo
-# 127.0.0.1	ow.ly
-# 127.0.0.1	www.ow.ly
-#
 127.0.0.1	p.pw
 127.0.0.1	www.p.pw
 127.0.0.1	ppt.cc
@@ -470,11 +211,7 @@
 127.0.0.1	www.reg45.ru
 127.0.0.1	retwt.me
 127.0.0.1	www.retwt.me
-#
-# used at PhishTank (also manage.smarturl.it)
-#
 127.0.0.1	redshiftleads.steele.net
-#
 127.0.0.1	ri.ms
 127.0.0.1	www.ri.ms
 127.0.0.1	sh.st
@@ -483,18 +220,9 @@
 127.0.0.1	www.shorte.st
 127.0.0.1	shortn.me
 127.0.0.1	www.shortn.me
-#
-# Needed for alturl.com - give others preview
-# alturl.com & shorturl.com are sister services
-#
-# 127.0.0.1	shorturl.com
-# 127.0.0.1	www.shorturl.com
-# 127.0.0.1	preview.shorturl.com
-#
 127.0.0.1	manage.smarturl.it
 127.0.0.1	smarturl.it
 127.0.0.1	www.smarturl.it
-#
 127.0.0.1	sn.im
 127.0.0.1	www.sn.im
 127.0.0.1	snipr.com
@@ -503,29 +231,13 @@
 127.0.0.1	www.snipurl.com
 127.0.0.1	soo.gd
 127.0.0.1	www.soo.gd
-#
-# I have no spam or malware from this domain - used to track
-# 127.0.0.1	svy.mk
-# 127.0.0.1	www.svy.mk
-#
 127.0.0.1	t.cn
-#
-# Used at Twitter
-# 127.0.0.1	t.co
-# 127.0.0.1	www.t.co
-#
 127.0.0.1	tinurl.mobi
 127.0.0.1	www.tinurl.mobi
 127.0.0.1	tiny.cc
 127.0.0.1	www.tiny.cc
 127.0.0.1	tinyarrows.com
 127.0.0.1	www.tinyarrows.com
-#
-# Give ONLY preview.tinyurl.com URL to others
-# 127.0.0.1	preview.tinyurl.com
-# 127.0.0.1	tinyurl.com
-# 127.0.0.1	www.tinyurl.com
-#
 127.0.0.1	tmblr.co
 127.0.0.1	to.ly
 127.0.0.1	www.to.ly
@@ -559,18 +271,12 @@
 127.0.0.1	www.xrl.us
 127.0.0.1	xurl.es
 127.0.0.1	www.xurl.es
-#
-# URL minimizer tools but I have had spam from it.
-#
 127.0.0.1	yourls.org
 127.0.0.1	www.yourls.org
-#
 127.0.0.1	yyv.co
 127.0.0.1	www.yyv.co
 127.0.0.1	zite.to
 127.0.0.1	www.zite.to
-#
-# END OF HEADER HOSTS
 
 127.0.0.1	0.r.msn.com
 127.0.0.1	005.free-counter.co.uk
