@@ -18335,3 +18335,32 @@
 
 ## Total Runtime. Fri 4 Aug 13:51:43 EDT 2017
 ## Edited ALLPARSEDLIST Result. Fri 4 Aug 13:51:43 EDT 2017
+
+* Script Took  minutes To Filter  Lists.
+* The Edited ALLPARSEDLIST is 0 MB and contains 	1 Domains.
+## Pushing Lists. Fri 4 Aug 13:51:44 EDT 2017
+* Script completed at Fri 4 Aug 13:51:44 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+* Script Took  minutes To Filter  Lists.
+## Updated Main README.md. Fri 4 Aug 13:51:44 EDT 2017
+
+
+## Total Runtime. Fri 4 Aug 13:51:44 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
+
+
+## Updated Main README.md. Fri 4 Aug 13:51:44 EDT 2017
+* Script Took  minutes To Filter  Lists.
+## Results Of The Parsing. Fri 4 Aug 13:51:45 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+
+## Pushing Lists. Fri 4 Aug 13:51:45 EDT 2017
+## Updated Main README.md. Fri 4 Aug 13:51:45 EDT 2017
+
+* Script completed at Fri 4 Aug 13:51:45 EDT 2017
+
+* Script completed at Fri 4 Aug 13:51:45 EDT 2017
+## Edited ALLPARSEDLIST Result. Fri 4 Aug 13:51:45 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
