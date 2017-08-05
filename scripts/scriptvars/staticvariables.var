@@ -1,9 +1,5 @@
 ## These Variables are file and foldernames
 
-## Base Variables
-var_dir=$(dirname $0)
-source "$var_dir"/scriptvars/staticvariables.var
-
 ## Github 100MB limit
 GITHUBLIMIT=104857600
 GITHUBLIMITMB=100
@@ -91,6 +87,8 @@ REPODIR=/etc/"$REPONAME"/
           ALLPARSINGSCRIPTS="$PARSINGSCRIPTSDIR"*.sh
       
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
+          BASICVARS="$SCRIPTVARSDIR"variables.var
+            source $BASICVARS
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
           DYNOVARS="$SCRIPTVARSDIR"dynamicvariables.var
           DEPENDENCIESDIR="$SCRIPTVARSDIR"dependencies/
