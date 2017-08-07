@@ -21,6 +21,10 @@
 !
 !######### Annoying elements (not ads)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/5998
+kitguru.net###check-also-box
+! https://github.com/AdguardTeam/AdguardFilters/issues/5992
+dn.se##.navigation__top-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6011
 mobile.twitter.com##header[role="banner"] + ._2FU3NGw4 > [class="kHlKyFGV _1363jyKz thXr_Z-z"]
 ! mozilla.org - was this page helpful widget
@@ -322,6 +326,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+sitepoint.com##[class="l-w-100 l-pv2 l-pv4--2col versioning-background f-c-white l-p-rel"]
 tutsplus.com##.free-trial-highlight
 tutsplus.com##.weekly-digest-subscription
 stackoverflow.com###newsletter-ad
@@ -573,6 +578,7 @@ topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr
 @@||s3.amazonaws.com/assets.sidearmsports.com/plugins/detector.min.js?$domain=greenbayphoenix.com
 greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+poeaffix.net###ADBAR
 dn.se###pwOverlay
 @@||poedb.tw/js/ads.js
 html.de##.noticeContainer
@@ -2650,6 +2656,7 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+reddit.com##[class="EUCookieNotice"]
 softonic.com###message-cookie
 rapidgator.net##.eu-cookie
 alternate.de#$##header[style^="margin-top:"] { margin-top: auto!important; }
@@ -3831,6 +3838,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Generic rules
 !
+/plugins/facebook-page-promoter-$~stylesheet
 ||my.hellobar.com^$third-party
 ||leadpages.co^$third-party
 /wp-content/plugins/convertplug/*

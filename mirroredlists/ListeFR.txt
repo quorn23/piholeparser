@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: GY+hWN33SyXWjOjE1NmxPg
-! Version: 201708070421
+! Checksum: v0Us0jOdeK486S/Wxi9+cA
+! Version: 201708071521
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -285,6 +285,7 @@
 /728x300-banner.
 /728x90FR.
 /728x90n-
+/728x90n2.
 /728x90px.
 /728X90px_
 /790-90.
@@ -316,6 +317,10 @@
 /ad.bon-plan-
 /ad.js?_=
 /AD.Loader-
+/ad/*/160/*
+/ad/*/300/*
+/ad/*/728/*
+/ad/*?amtarget=$subdocument
 /ad/*_300250_
 /ad/ad3/*
 /ad/banners_
@@ -6555,6 +6560,7 @@ $subdocument,third-party,domain=e-wok.tv|flashx.tv|gomovies.co|gomovies.es|letwa
 @@/assets/js/license.adbl.js$script,~third-party,domain=streamango.com
 @@/assets/js/script.2539.js$script,~third-party,domain=openload.co
 @@/assets/js/script.2541.js$script,~third-party,domain=openload.co
+@@/assets/js/script.2542.js$script,~third-party,domain=openload.co
 @@/popunder1.js$script,domain=oload.tv|openload.co
 @@/popunder2.js$script,~third-party,domain=streamango.com
 @@|https://easylist.club/*.js|$script,domain=oload.tv|openload.co
@@ -7708,6 +7714,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ||lefigaro.fr^*/bazarchic/
 ||legalis.net^*/swf/pub_
 ||legazdeschiste.fr/images/banner_
+||leguide.com^*/ad/
 ||lejournaldelemploi.dz/images/banners/
 ||lelogicielgratuit.com/media/js/popupGenerator.min.js
 ||lemaghrebdz.com/images/pub/
@@ -8230,7 +8237,8 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ||sfr.fr^*/framePub_
 ||shink.in/js/p.
 ||shoppingbox.liberation.fr^
-||signification-prenom.com/images/starmyname-prenom.gif
+||signification-prenom.com/images/myprenom-site.gif
+||signification-prenom.com/Images/voyance-par-telephone.gif
 ||silicon.fr/wp-content/uploads/*/skin_
 ||site-de-cul.com/images/boost/
 ||ski-powder.com/images/pub/
@@ -8996,6 +9004,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ###adsence
 ###adsense-droite-001
 ###adsense-droite-002
+###adsense-fiche
 ###adsense-liste1
 ###adsense-liste2
 ###adsense-liste3
@@ -9503,6 +9512,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ###sbPubRegie
 ###sg-pub-980x200
 ###shopper-widget-wrapper
+###shopper_adsense
 ###show_banner_bottom_leaderboard
 ###show_banner_leaderboard
 ###sideBarGoogleAnnounces
@@ -9865,6 +9875,8 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##.block_ad_container
 ##.block_adtop
 ##.block_pub
+##.block_pub1
+##.block_pub2
 ##.block_small_pub
 ##.blocpub
 ##.blocpubbas
@@ -10333,6 +10345,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##.removeAds
 ##.remove_ads
 ##.replaceDelayedAds
+##.right-advertising
 ##.rightPub
 ##.rightRailAdContainer
 ##.right_advertissment
@@ -10872,6 +10885,7 @@ zebulon.fr###col_droite
 zebulon.fr###col_droite_fine
 soundlightup.com###colonnePub
 renovationettravaux.fr###colorbox
+signification-prenom.com###colpub > #bloc_forum
 orange.fr###commercial-links
 oujdacity.net###common-top-widget
 matchendirect.fr###comparateur
@@ -11406,7 +11420,6 @@ pornovore.fr##.bandeau-vertical
 01net.com##.bandeau_promos
 syskb.com##.bandeaupub
 cdmail.fr##.bandeauvert
-logemaroc.com##.baniere
 orientation-chabab.com##.bann
 afrik-foot.com,afrik.com,afrikeco.com,canalplus.fr,glenatbd.com,gulli.fr,hdnumerique.com,kpopfm.fr,manga-news.com,medialot.fr,mesbagages.com,orientation-chabab.com,showx.tech,telquel.ma,textnow.com,trimag.fr,up02.net,up05.pro,ventsdouest.com,video-2-cul.com##.banner
 batiactu.com##.banner-background
