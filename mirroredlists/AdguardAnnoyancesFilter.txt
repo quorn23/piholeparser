@@ -326,6 +326,8 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+soft-file.ru##.sbar
+||widget.manychat.com^$domain=ukrinform.ru
 sitepoint.com##[class="l-w-100 l-pv2 l-pv4--2col versioning-background f-c-white l-p-rel"]
 tutsplus.com##.free-trial-highlight
 tutsplus.com##.weekly-digest-subscription
@@ -572,12 +574,16 @@ gazetevatan.com##form ._soc.news
 /wp-content/plugins/kill-adblock/*
 ##.kill-adblock-container
 ! FuckAdBlock
-topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
+kshowonline.com,topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5657
 @@||s3.amazonaws.com/assets.sidearmsports.com/plugins/detector.min.js?$domain=greenbayphoenix.com
 greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+imagebam.com##.box_wait#hideifpossible
+javur.com###alertAdblock
+@@||kinokrad.co/templates/all/ads.js^
+poecraft.com##.im-header-container > .u-flex-fixed[pcad]
 poeaffix.net###ADBAR
 dn.se###pwOverlay
 @@||poedb.tw/js/ads.js
@@ -2656,6 +2662,7 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+diariodemallorca.es###MensajeCompruebaCookieSite
 reddit.com##[class="EUCookieNotice"]
 softonic.com###message-cookie
 rapidgator.net##.eu-cookie
@@ -3344,6 +3351,9 @@ mycard2go.com#@#.cookiebar
 !
 !
 !--- Reamains of ads ---
+yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua##li.search-snippet-view[-ext-has="> div.search-direct-snippet-view > div[style] > div.search-direct-snippet-view__text > div.ad-label-view"]
+forum.ru-board.com##body > table[bgcolor="#FFFFFF"] > tbody > tr > td[align="left"][style="font-size: 11px;"][-ext-has='a[href^="https://devline.ru/demo"]']
+pornolab.lib,pornolab.biz,pornolab.cc,pornolab.net##.forums > tbody > tr[id^="f-"][-ext-has=' > td > p.forum_desc.hidden > script']
 itpro.co.uk###block-onscroll-onscroll[-ext-matches-css-before="content:Advertisement"]
 ds-scene.net###boxes > div[id^="item_left_item_"][-ext-has='div.boxHdr:contains(Advertisement)']
 uploads.to###btn_download_block > .row > center[-ext-has='ins.adsbygoogle']
@@ -3378,6 +3388,7 @@ patronlardunyasi.com##td[bgcolor="#F5F5F5"][-ext-has='ins[class$="adsbygoogle"]'
 zoomgirls.net##ul[class$="side-panel"][-ext-has='noscript']
 !
 !--- Reamains of socials ---
+torrent-indir.net###sidebar div.sidebarborder[-ext-has='div.facebookbox']
 mathematik-wissen.de###infobereich > div.info[-ext-has="h4:contains(Facebook)"]
 muhammetefe.com###leftcol .module-outer[-ext-has='a[href^="http://www.facebook.com"]']
 vanion.eu##.sidebar_inner article.widget[-ext-has="div#facebook-widget"]
@@ -3389,6 +3400,7 @@ shiftdelete.net##div[itemprop="articleBody"] p[-ext-has='a[href*="/app"] > img']
 !----------------------------------!
 !
 !--- Reamains of counters ---------!
+ubuntumaniac.com##div[class="widget HTML"][id^="HTML"][-ext-has='a[class="quickedit"]']
 sun.az##.blokmy[-ext-has=".blokbtm:contains(Sayğaclar)"]
 run.az##div[class$="bolmem"][-ext-has='load:contains(Sayğac)']
 !
@@ -3443,6 +3455,7 @@ morgenpost.de##.article--type-news > aside.article__aside[-ext-has="> div.sideba
 !
 !--- Ads ---
 !
+torrentec.com##center > a[href^="https://goo.gl/"] > img
 btscenetorrents.unlockpro.racing##.dlb > a[rel="nofollow"][onclick]:not(.dl_black)
 btscenetorrents.unlockpro.racing###wrap > div[style*="width:99%"]
 btscenetorrents.unlockpro.racing##.analytics_container + div[style*="width:99%"]
@@ -3863,6 +3876,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+prizyv.ru##.pum-overlay
 tomsguide.com###ec-popup-modal
 softonic.com##div[id^="Newsletter-Subscription"]
 cebhe.info###rooteto_geri
@@ -4526,7 +4540,6 @@ a.pr-cy.ru##.analysis-head-box+div.announce
 agravery.com##figure.text-center > figcaption
 gooool.org##.socialb+div.block_d
 forum.ru-board.com$$td[align="left"][style="font-size: 11px;"][tag-content="https://devline.ru/demo"]
-forum.ru-board.com##body > table[bgcolor="#FFFFFF"] > tbody > tr > td[align="left"][style="font-size: 11px;"][-ext-has='a[href^="https://devline.ru/demo"]']
 newsoboz.org##.widget_center > div.articl ~ br
 russian7.ru##aside#sidebar
 fullhdfilm.gen.tr###film-ek-tab
@@ -4602,7 +4615,6 @@ thedaretelly.com##.details_img > span
 filehorse.com##.dx-sb-1
 efirde.az##.fban
 hdfilmsitesi.com##.filmsagi > div#userp
-pornolab.lib,pornolab.biz,pornolab.cc,pornolab.net##.forums > tbody > tr[id^="f-"][-ext-has=' > td > p.forum_desc.hidden > script']
 gazeteciler.com##.fr
 unian.info,unian.net,unian.ua##.gallery-item.wide-3
 handelsblatt.com##.hcf-sponsoring
@@ -4932,7 +4944,6 @@ drive2.ru##.c-block > div[class^="c-dv-"]
 !
 !######### Remains of counters ###############
 xtreme.ws##aside[role="complementary"] > div.counter1
-ubuntumaniac.com##div[class="widget HTML"][id^="HTML"][-ext-has='a[class="quickedit"]']
 !
 !######### Remains of social widgets #########
 !
@@ -4947,7 +4958,6 @@ taslar.net###right > .rightbaslik[style*="color:#3b5998"]
 taslar.net###right > .rightbaslik[style*="color:#3b5998"] + .rightalan
 sadeempc.com###secondary > aside#text-16
 key4biz.it###share-left
-torrent-indir.net###sidebar div.sidebarborder[-ext-has='div.facebookbox']
 mimikama.at###text-33
 mimikama.at###text-93
 androidcentral.com##.container > .col-right
@@ -5068,6 +5078,7 @@ cnews.ru##.video.img-block
 1tv.ru##.footer-promo-place
 1tv.ru##.promo-place
 !
+meduza.io##.NewsMaterial-banner
 cc-fan.ru,cn-fan.ru,fox-fan.ru###Shop
 /upload/rk/*$domain=radugaskidok.ru
 ||banner.consultant.ru^
@@ -5279,6 +5290,7 @@ pesni-tut.com##.r_m_genre_songs + div[id] + div:not([id])
 ||kinoafisha.ua/widget/$third-party
 !
 ! START: Adviser/online-consultant/feedback widgets
+/PRVD_partnerChat.js
 ||form.cloudleadia.com^$third-party
 ||highflyers.ru^$third-party
 ||widgets.mango-office.ru^$third-party
@@ -5329,6 +5341,7 @@ pesni-tut.com##.r_m_genre_songs + div[id] + div:not([id])
 ||widgets.livetex.ru^$third-party
 ||zopim.com^$third-party
 !
+||law-divorce.ru/_fb/widget.php
 astrospeak.com##.lucy
 yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 sitejabber.com###url_home > #scrollbox
