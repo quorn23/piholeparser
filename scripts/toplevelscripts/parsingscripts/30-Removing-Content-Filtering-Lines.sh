@@ -7,4 +7,4 @@ source "$script_dir"/../../scriptvars/staticvariables.var
 source $TEMPVARS
 source $DYNOVARS
 
-cat $TEMPFILEL | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $BTEMPFILE
+cat $TEMPFILEL | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $TEMPFILEM
