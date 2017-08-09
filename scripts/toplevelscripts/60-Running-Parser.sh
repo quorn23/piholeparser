@@ -344,6 +344,9 @@ echo ""
 ## Processing     ##
 ####################
 
+## New Parsing logic
+mv $BFILETEMP $TEMPFILEL
+
 ## Start File Loop
 ## For .sh files In The parsing scripts Directory
 for p in $ALLPARSINGSCRIPTS
@@ -351,21 +354,22 @@ do
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
-## Loop Variables
 SCRIPTTEXT=""$PBNAMEPRETTYSCRIPTTEXT"."
 PARSECOMMENT="$SCRIPTTEXT"
+
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
 printf "$cyan"  "$PARSECOMMENT"
 bash $p
-touch $BTEMPFILE
-rm $BFILETEMP
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+touch $TEMPFILEM
+rm $TEMPFILEL
+FETCHFILESIZE=$(stat -c%s "$TEMPFILEM")
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEM | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $BTEMPFILE $BFILETEMP
+mv $TEMPFILEM $TEMPFILEL
 fi
+
 if
 [[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
 then
@@ -381,12 +385,17 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 fi
+
 if
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
+
 done
+
+## End new logix
+mv $TEMPFILEL $BFILETEMP
 
 ## Prepare for next step
 mv $BFILETEMP $BTEMPFILE
