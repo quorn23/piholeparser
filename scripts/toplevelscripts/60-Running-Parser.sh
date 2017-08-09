@@ -348,11 +348,7 @@ echo ""
 mv $BFILETEMP $TEMPFILEL
 
 ## Start time
-if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
-then
 STARTPARSESTAMP=$(date +"%s")
-fi
 
 ## Start File Loop
 ## For .sh files In The parsing scripts Directory
@@ -401,16 +397,19 @@ fi
 
 done
 
+echo ""
+printf "$cyan"   "Calculating Parse Time."
+
 ## end time
-if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
-then
 ENDPARSESTAMP=$(date +"%s")
 DIFFTIMEPARSESEC=`expr $ENDPARSESTAMP - $STARTPARSESTAMP`
 DIFFTIMEPARSE=`expr $DIFFTIMEPARSESEC / 60`
+if
+[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+then
 echo "$DIFFTIMEPARSE" | tee --append $PARSEAVERAGEFILE &>/dev/null
 fi
-
+printf "$yellow"   "List took $DIFFTIMEPARSE Minutes To Parse."
 unset ENDPARSESTAMP
 unset STARTPARSESTAMP
 unset DIFFTIMEPARSE
