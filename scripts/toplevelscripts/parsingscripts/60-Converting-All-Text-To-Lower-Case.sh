@@ -7,4 +7,4 @@ source "$script_dir"/../../scriptvars/staticvariables.var
 source $TEMPVARS
 source $DYNOVARS
 
-cat $TEMPFILEL | sed 's/\([A-Z]\)/\L\1/g' > $BTEMPFILE
+cat $TEMPFILEL | sed 's/\([A-Z]\)/\L\1/g' > $TEMPFILEM
