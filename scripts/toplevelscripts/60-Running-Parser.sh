@@ -348,7 +348,11 @@ echo ""
 mv $BFILETEMP $TEMPFILEL
 
 ## Start time
+if
+[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+then
 STARTPARSESTAMP=$(date +"%s")
+fi
 
 ## Start File Loop
 ## For .sh files In The parsing scripts Directory
@@ -398,12 +402,19 @@ fi
 done
 
 ## end time
+if
+[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+then
 ENDPARSESTAMP=$(date +"%s")
-
-##add to file
 DIFFTIMEPARSESEC=`expr $ENDPARSESTAMP - $STARTPARSESTAMP`
 DIFFTIMEPARSE=`expr $DIFFTIMEPARSESEC / 60`
 echo "$DIFFTIMEPARSE" | tee --append $PARSEAVERAGEFILE &>/dev/null
+fi
+
+unset ENDPARSESTAMP
+unset STARTPARSESTAMP
+unset DIFFTIMEPARSE
+unset DIFFTIMEPARSESEC
 
 ## End new logix
 mv $TEMPFILEL $BFILETEMP
