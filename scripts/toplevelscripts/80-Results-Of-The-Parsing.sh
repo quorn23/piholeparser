@@ -42,8 +42,9 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 bash $DELETETEMPFILE
-AVERAGEPARSETIME=$(awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE)
-printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME"
+AVERAGEPARSETIMESEC=$(awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE)
+AVERAGEPARSETIME=`expr $AVERAGEPARSETIMESEC / 60`
+printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME Minutes."
 echo "* Average Parsing Time Was $AVERAGEPARSETIME Minutes." | tee --append $RECENTRUN &>/dev/null
 rm $PARSEAVERAGEFILE
 bash $DELETETEMPFILE
