@@ -397,7 +397,6 @@ fi
 
 done
 
-echo ""
 printf "$cyan"   "Calculating Parse Time."
 
 ## end time
@@ -407,9 +406,16 @@ DIFFTIMEPARSE=`expr $DIFFTIMEPARSESEC / 60`
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
-echo "$DIFFTIMEPARSE" | tee --append $PARSEAVERAGEFILE &>/dev/null
+echo "$DIFFTIMEPARSESEC" | tee --append $PARSEAVERAGEFILE &>/dev/null
 fi
+if
+[[ $DIFFTIMEPARSE != 0 ]]
+then
 printf "$yellow"   "List took $DIFFTIMEPARSE Minutes To Parse."
+else
+printf "$yellow"   "List took Less Than A Minute To Parse."
+fi
+echo ""
 unset ENDPARSESTAMP
 unset STARTPARSESTAMP
 unset DIFFTIMEPARSE
