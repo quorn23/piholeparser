@@ -7,4 +7,4 @@ source "$script_dir"/../../scriptvars/staticvariables.var
 source $TEMPVARS
 source $DYNOVARS
 
-cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
+cat -s $TEMPFILEL | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BTEMPFILE
