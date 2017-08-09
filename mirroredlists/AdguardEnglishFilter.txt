@@ -23,6 +23,7 @@
 !
 ! Section contains list of advertising networks
 !
+||htmonster.com^$third-party
 ||nb42mac.com^$third-party
 ||shulhanafuh.com^$third-party
 ||wellmov.com^$third-party
@@ -835,6 +836,27 @@ j.gs#@##bottom
 !*
 !*****
 !
+! https://forum.adguard.com/index.php?threads/24045/
+@@||copypastecharacter.com^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/6120
+adgaterewards.com#%#Object.defineProperty(window,'adblockIsEnabled',{value:false});
+@@||adgaterewards.com/assets/js/vc/advertisement.js|$~third-party
+@@||asmwall.com/js/ads.js|$~third-party
+ebonus.gg#@#.adsbox
+! https://github.com/AdguardTeam/AdguardFilters/issues/6066
+picturetopeople.org#@#.adsbox
+! https://forum.adguard.com/index.php?threads/24023/
+gntai.xyz#%#window.showAds = true;
+@@||res.cloudinary.com/*/advertisement.js$domain=gntai.xyz
+! https://github.com/AdguardTeam/AdguardFilters/issues/6060
+||hamsab.net/golden/js/checkme.js
+hamsab.net#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
+!+ PLATFORM(ios, ext_android_cb)
+@@||hamsab.net^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/6059
+swissadspaysethfaucet.com#%#Object.defineProperty(window,'adBlockEnabled',{value:false});
+swissadspaysethfaucet.com#@#.adsbox
+swissadspaysethfaucet.com#@#.adsBox
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6056
 aternos.org#$##detect { height: 1px!important; }
 !+ PLATFORM(ios, ext_android_cb)
@@ -2512,6 +2534,8 @@ facebook.com##.home_right_column > div#pagelet_ego_pane[-ext-has='div.ego_unit_c
 facebook.com##div[id^="substream_"] > div:not([id]):not([class]) > div[id] div[id^="hyperfeed_story_id_"][-ext-has=".fbUserContent span>a._m8c"]
 facebook.com##div[id^="substream_"] > div:not([id]):not([class]) > div[id] div[id^="hyperfeed_story_id_"][-ext-has=".userContentWrapper > div[class] > div[class] > span > span._m8d"]
 !
+! https://forum.adguard.com/index.php?threads/http-jav911-com-nsfw.23974/
+jav911.com##.main-page > .container > .box[-ext-has='.title:contains(Advertisers)']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6062 - lesyt.xyz - ad leftover
 lesyt.xyz##.sb > .sb-item-group > .sb-item.island[-ext-has='.sb-item-title.bgc:contains(Advertisement)']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5990
@@ -3152,7 +3176,14 @@ dnvod.tv##.clickbg[-ext-has="+*"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4652
 sockscap64.com#@#.adsbygoogle
 !
+avtb01.com##.ads
+avtb01.com##.ads-player
+avtb01.com##body > div[id^="haoetv"]
+avtb01.com##a[href^="http://xgn66.com/?aff="]
+||gygdmy.com^$third-party
 ||ourusababy.com/bsj.js
+ifeng.com##a[href^="http://ids.deliver.ifeng.com/"]
+ifeng.com##.luckybag
 ||e.ejiakm.net^$third-party
 ||www5.oss-cn-hangzhou.aliyuncs.com^
 ||sfsft.com/ckplayer/1config.js
@@ -4312,7 +4343,7 @@ drtuber.com,planetsuzy.org#%#Object.defineProperty(window, 'phantomPopunder', { 
 !
 ! impspcabe (anti adblock clickunder)
 videotoolbox.com,convertfiles.com,private-shows.net,flashx.tv,extratorrent.cc,uploads.to,drtuber.com,uplod.it,4bir.com,rapidvideo.com,losmovies.club,mcfucker.com,befuck.com,streamgaroo.com,pandamovie.net,pipec.ru,xyya.net,playpornx.net,imageweb.ws,the-watch-series.to,linkshrink.net,imageban.ru,vid.ag,userscloud.com,animeflv.net,icefilms.info,vidzi.tv,subs.ro,tumejortorrent.com,hdxpornx.com,thefappening.one,thefappening2015.com,thefappeningnew.com,yourporn.sexy,vshare.eu,anon-v.com,raptu.com,tubedupe.com,estream.to,hentai-id.tv,soundpark.pt,kingvid.tv,demonoid.pw,demonoid.click,dreamamateurs.com,thenewporn.com,ddlvalley.cool,salefiles.com,watchvideo.us#%#Object.defineProperties(window, { "_impspcabe_alpha": { value: false, writable: false }, "_impspcabe_beta": { value: false, writable: false }, "_impspcabe_path": { value: 'about:blank', writable: false }, "_impspcabe": { value: false, writable: false } });
-hotasiantubes.com#%#Object.defineProperties(window, { "_impspcabe_alpha": { value: false, writable: false }, "_impspcabe_beta": { value: false, writable: false }, "_impspcabe_path": { value: 'about:blank', writable: false }, "_impspcabe": { value: false, writable: false } });
+javfind.com,hotasiantubes.com#%#Object.defineProperties(window, { "_impspcabe_alpha": { value: false, writable: false }, "_impspcabe_beta": { value: false, writable: false }, "_impspcabe_path": { value: 'about:blank', writable: false }, "_impspcabe": { value: false, writable: false } });
 !
 ! prscripts clickunder
 tvspots.tv,sportbet.tips,dragonthumbs.com,crissymoran.net,freebets.claims,bettingtips.expert,tubepornovideo.com,amateursgonebad.com,glamourmodelsgonebad.com,anonimag.es,ukbettips.co.uk,bestbet.tips,ikwilthepiratebay.org,1337x.to,pornve.com,thepiratebay.org,imagebam.com,pornleech.com,rarbg.to,rocktv.co,flashx.tv#%#Object.defineProperties(window, { _wm: { get: function(){ return null; } }, _wm_settings: { get: function(){return{};} } });
@@ -5323,6 +5354,13 @@ tomsguide.com##.page-content-rightcol > div[id] > div[class^="_"]
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 tomsguide.com##.page-content > div.p-u-1.txt-center > div[id] > div[id="[ID]"][class^="_"]
 !
+xnxx.com##.mobile-only-hide
+javfind.com##.wrap-tab > div[style="width: 728px;height: 90px;margin: 10px auto; overflow: hidden"]
+hqasiananal.com##.banner
+hqasiananal.com###topbar1
+hqasiananal.com##.invideo[onclick^="$('.close-btn')"]
+asianxxxvids.com##.b-block
+swissadspaysethfaucet.com##a[href^="//mellowads.com/networkspace/"]
 eporner.com##.ad300px
 roblox.com##.in-game-search-ad
 roblox.com##.abp-spacer
@@ -36082,7 +36120,6 @@ _popunder+$popup
 ##script[src^="http://free-shoutbox.net/app/webroot/shoutbox/sb.php?shoutbox="] + #freeshoutbox_content
 ##topadblock
 ###\5f _admvnlb_modal_container
-##A[href*="/AF_TA/"]
 ##a[href^="http://duckcash.eu/"]
 ##a[href^="http://www.cash-duck.com/"]
 ##a[href^="http://www.coinducks.com/"]
@@ -64979,6 +65016,7 @@ linuxbsdos.com##div[class^="topStrip"]
 yttalk.com##div[class^="toppedbit"]
 mlbstream.me##div[class^="vip"]
 realmadrid.com##div[data-ads-block="desktop"]
+lifehacker.co.in##div[data-agent="web"]
 yahoo.com##div[data-beacon] > div[class*="streamBoxShadow"]
 wayn.com##div[data-commercial-type="MPU"]
 monova.org##div[data-id]
@@ -66204,6 +66242,7 @@ downace.com##ins[data-ad-client^="ca-pub-"]
 uploadocean.com##ins[id][style]
 startlr.com##ins[style="display:inline-block;width:300px;height:600px"]
 timesofisrael.com##item-spotlight
+lifehacker.co.in##li[data-ad]
 webgurubb.com##li[data-author="Ads Master"]
 yahoo.com##li[data-beacon^="https://beap.adss.yahoo.com/"]
 yahoo.com##li[data-beacon^="https://beap.gemini.yahoo.com/"]

@@ -4967,11 +4967,6 @@ koshara.co#$#body[-ext-has="div"] { padding-top: 0px!important; }
 dugtor.ru#$#body[-ext-has="> div"] { padding-top: 0px!important; }
 ! seasonvar.ru - удаление отступа сверху
 seasonvar.ru#$#body[-ext-has="div.wrapper"] { padding-top:0px!important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/3565
-fishki.net##.drag_list > div.drag_element > div[data-post-id][-ext-has='a[href$="-poleznaja-reklama.html"]']
-fishki.net##.drag_list > div.drag_element > div[data-post-id][-ext-has='a[href="/profile/543769"]']
-old.fishki.net##.fishki-post-list > div[id^="post-"][-ext-has='a[href="/profile/543769/"]']
-old.fishki.net##.list-view-items > div[id^="post-"][-ext-has='a[href="/profile/543769/"]']
 ! https://forum.adguard.com/index.php?threads/16126/
 autoit-script.ru###forumposts > form[action] > div.windowbg[-ext-has="ins.adsbygoogle"]
 ! https://forum.adguard.com/index.php?threads/15645/
@@ -4991,6 +4986,9 @@ spaces.ru###index_page > div[class][id][-ext-has='> div[class*=" "][id] > a[href
 cyberforum.ru##.page > div[style][align="left"] > table[align="center"][-ext-has='> tbody > tr > td > div > div[id^="yandex_rtb_"]']
 cyberforum.ru##.page > div[style][align="left"] > div[id^="edit"] > div[style^="margin: 3px 0px 0px"][-ext-has='> table[class][align="center"] > tbody > tr > td > span.bigusername:contains(Yandex)']
 !
+tvigle.ru#$#body[-ext-has="div"] { padding-top: 0px!important; }
+ren.tv##.region-sidebar > div.block-block[-ext-has="> div.content > div#yandex_ad"]
+ren.tv##.region-sidebar > div.block-block[-ext-has="> div.content > div#SportExpress_sidebar"]
 wikianime.ru#$#body[-ext-has="div"] { padding-top: 0px!important; }
 fainaidea.com##.td-main-sidebar div.td-ss-main-sidebar > aside.widget.widget_text[-ext-has="> div.block-title > span:contains(Новости партнера)"]
 zagonka.ru#$#body > div.sitebox[-ext-has='div'] { margin-top: 0px!important; }
@@ -5022,7 +5020,6 @@ pikabu.ru##div.story[-ext-has=".story__pin"]
 buhgalter911.com##div[class="news c_content"][-ext-has="span.rubric:contains(Реклама)"]
 x.epidemz.co,x.epidemz.com##div[class="shortstory"][-ext-has='a[href^="http://xfapa.com/"]']
 apidog.ru##div[class="wall-item"]:not([id^="wall-post"])[-ext-has='div[class="wall-head-meta"]:contains(Реклама)']
-yap.ru,yaplakal.com,yaplakal.ru###content-inner form[method="POST"][name="collect"] > table[width="100%"][id^="p_row_"][-ext-has='td[align="center"][valign="middle"] > span[class=""] > b > u:contains(Administration)']
 kerch.fm##li.slick-slide[-ext-contains="На правах рекламы"]
 bhf.io##li[id^="post-"][-ext-has='center>span[style="margin-right:2px;"]>a[rel="nofollow"]>img']
 overclockers.ru#$#td#mainplace > table > tbody > tr > td[class^="fifty-fifty-"] > table.decoblock[-ext-contains="(реклама)"] { position: absolute!important; left: -4000px!important; }
@@ -5746,9 +5743,9 @@ s4galaxy.ru,3dnews.ru,lenovo-smart.ru#%#Object.defineProperty(window, 'SocialMar
 rustorka.com,pise4ka.net,nnm-club.me,nnm-club.ws,nnmclub.to,onlainfilm.ucoz.ua,rutor.is,baskino.club,rutor.info,nnm.me,korzik.net,seasonvar.ru,rsload.net,nnm-club.me,nnmclub.to,rustorka.com,auto.mail.ru,horo.mail.ru,realty.mail.ru,health.mail.ru,afisha.mail.ru,cloud.mail.ru,otvet.mail.ru,pogoda.mail.ru,sport.mail.ru,tv.mail.ru,torg.mail.ru,cars.mail.ru,hi-tech.mail.ru,free-torrent.org,free-torrents.org,ukrinform.ru,radikal.ru,trackeroc.ru,trackerock.ru#%#window.WebSocket = undefined;
 !
 ! Yandex ads
-yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com#%#var empty = { get: function() { return []; }, set: function() {} }; Object.defineProperties(window, { yandex_context_callbacks: empty, yandexContextAsyncCallbacks: empty, yandexContextSyncCallbacks: empty });
+yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net#%#var empty = { get: function() { return []; }, set: function() {} }; Object.defineProperties(window, { yandex_context_callbacks: empty, yandexContextAsyncCallbacks: empty, yandexContextSyncCallbacks: empty });
 !+ PLATFORM(ext_ublock)
-otzovik.com##script:inject(abort-on-property-write.js, Ya.Context)
+yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net##script:inject(abort-on-property-write.js, Ya.Context)
 !
 ! https://forum.adguard.com/index.php?threads/23865/
 fainaidea.com#%#AG_onLoad(function() { jQuery(function() { jQuery('body').unbind('click').removeAttr("body").css("cursor","default"); }); });
@@ -5987,10 +5984,16 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !-----------------------
 !------- CSS -----------
 !-----------------------
+! banki.ru - удаление отступа сверху
+banki.ru#$#body > header.header--short { margin-top: auto!important; }
+! gidonline.club - удаление отступа сверху
+gidonline.club#$#body { margin: auto 0 0 0!important; }
+! profootball.ua - удаление отступа сверху
+profootball.ua#$##container { margin-top: auto!important; }
 ! aniplay.tv - удаление отступа сверху
 aniplay.tv#$#.ap2-main-header { height: auto!important; }
 ! dota2.ru - удаление брендированного фона, отступа сверху
-dota2.ru#$#body > div[class^="f1u"]:first-child { background: none!important; padding-top: 0px!important; }
+dota2.ru#$#body > div[class^="f"]:first-child { background: none!important; padding-top: 0px!important; }
 ! vashdosug.ru - удаление отступа сверху
 vashdosug.ru#$#body.branded { margin-top: -200px!important; }
 ! fastpic.ru - удаление отступа сверху
@@ -8476,6 +8479,12 @@ gazeta.ru###news_lenta_intro > div:not([id]):not([class])
 gazeta.ru###ltop > div.left.row > :not(div) > :not(div):not(span):not(table)
 !+ PLATFORM(ios, ext_opera, ext_ff, ext_ublock)
 gazeta.ru##main > div.row > :not(div) > :not(div):not(span):not(table)
+!+ PLATFORM(ios, ext_opera, ext_ff, ext_ublock, android)
+fishki.net##.adv-placeholder
+!+ PLATFORM(ios, ext_opera, ext_ff, ext_ublock, android)
+fishki.net##body > div[class="loaded"][id] > div[id$="-close"]
+!+ PLATFORM(ios, ext_opera, ext_ff, ext_ublock, android)
+fishki.net##div[id^="yandex_ad_"]
 !----------------
 !
 ! Specific WS
@@ -8639,6 +8648,14 @@ rustorka.com##.post_body > div[align="center"] > a > img
 /(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+biwork.ru###top-sam-banner
+astromeridian.ru##noindex a[rel="nofollow"] > img
+rosbalt.ru##.ad_tele > a
+rosbalt.ru##.ad_tele > div[class^="ad_tele_"]
+nation-news.ru##div[id*="Composite"]
+fishki.net##.cycle-carousel-wrap > a[id^="id_ap_"]
+scarabey.org##.textwidget > center > a[rel="noopener"] > img
+uniongang.net##div[id^="bn_"]
 nnm-club.name,nnm-club.me,nnmclub.to##div[id*="Composite"]
 ||24v.tv/video/xmi?*&vast=
 tvzvezda.ru##.banner_300x600
@@ -8678,7 +8695,7 @@ seedoff.tv##div[id*="Composite"]
 ||nnm.me/m/g.php
 ||dota2.ru/partner.html
 dota2.ru##.a-in-after
-dota2.ru##div[class^="bnka"]
+dota2.ru##div[class^="brnka"]
 dota2.ru##.bn-btm
 ://*.rumedia.ws^$popup,domain=rumedia.ws
 /:\/\/(rumedia.ws)\/[a-zA-Z]*.js$/$script,domain=rumedia.ws
@@ -9001,7 +9018,6 @@ informweek.com##div[id^="text-html-widget-"][style="text-align:center;"] > cente
 informweek.com###execphp-5
 ||profootball.ua/images/parimatch/
 profootball.ua##.comments ~ div.anoserblock
-profootball.ua#$##container { margin-top: auto!important; }
 dv-gazeta.info##.sid_ad300x250
 /\.ru\/.*\.*\/\d+$/$domain=kakprosto.ru
 ||st03.kakprosto.ru//static/85dbfd5f883b9a91e2257ada93035a48-2.js
