@@ -31,6 +31,27 @@ printf "$orange" "___________________________________________________________"
 echo ""
 
 ####################
+## Ave Parse Time ##
+####################
+
+timestamp=$(echo `date`)
+SCRIPTTEXT="Average Parsing Time."
+printf "$lightblue"    "___________________________________________________________"
+echo ""
+printf "$cyan"   "$SCRIPTTEXT $timestamp"
+echo ""
+echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+AVERAGEPARSETIME=$(awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE)
+printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME"
+echo "* Average Parsing Time Was $AVERAGEPARSETIME Minutes." | tee --append $RECENTRUN &>/dev/null
+bash $DELETETEMPFILE
+echo ""
+echo "" | tee --append $RECENTRUN &>/dev/null
+printf "$orange" "___________________________________________________________"
+echo ""
+
+####################
 ## Runtime        ##
 ####################
 
