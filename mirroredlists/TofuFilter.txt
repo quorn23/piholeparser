@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 16:57 2017/08/08
+! 最終更新 8:16 2017/08/10
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -378,6 +378,7 @@ _ads.php
 ||tgknt.com^$third-party
 ||themediaplanets.com^$third-party
 ||tofutyama.org^$third-party
+||toki-aiad.com^$third-party
 ||tophatenar.com^$third-party
 ||topsurfer.com^$third-party
 ||traffic-exchange.tv^$third-party
@@ -1184,18 +1185,18 @@ $script,third-party,domain=jpidols.tv
 ##a[href*="ac.ebis.ne.jp/tr_set.php?"]
 ##a[href*="accesstrade.net/at/"]
 ##a[href*="accesstrade.net/sp/"]
-##a[href*="ad-house00.com"]
 ##a[href*="adservicesnet.info"]
 ##a[href*="adsp.jp"]
 ##a[href*="adrcf.com"]
 ##a[href*="aff-net.jp"]
 ##a[href*="affiliate.fc2.com/cgi-bin/click.cgi?"]
 ##a[href*="bannerbridge.net/click"]
+##a[href*="clcount.com"]
 ##a[href*="click.duga.jp/"]
 ##a[href*="click.dtiserv2.com"]
 ##a[href*="click.j-a-net.jp"]
 ##a[href*="click.linksynergy.com"]:not([href*="&type=2"]):not([href*="&type=3"]):not([href*="=http%3A%2F%2F"]):not([href*="=http%253A%252F%252F"])
-##a[href*="clcount.com"]
+##a[href*="cloud-affiliation.net"]
 ##a[href*="cyber-ad01.com"]
 ##a[href*="dgpot.com"][href*="affiliate_banner_id"]
 ##a[href*="direct7.net"]
@@ -1851,6 +1852,24 @@ youtube.com##.pyv-afc-ads-inner
 |http://$third-party,domain=ero-video.net
 ||dtiserv2.com^$popup
 ||ero-video.net/advert/*
+
+!------------minnano-av.com------------!
+!----------- minnano-anime.com/
+!------------minnano-camera.com
+
+||minnano-av.com/agent/js/
+||minnano-*.com/top_center_bn/
+||minnnano-fuzoku.com/av/detailspage/
+||minnano-shopping.com^$third-party
+||queen-casino.info/affi/
+
+||minnano-av.com/p/anime_bn634.png
+||minnano-av.com/p/minanno_fzk.png
+||minnano-av.com/p/my_guide_bn634.png
+
+minnano-av.com##.leftbottom_bn
+minnano-av.com##.txtthumb
+minnano-av.com##.type-fuzoku
 
 !------------mediafire.com------------
 ||mediafire.com^$subdocument
