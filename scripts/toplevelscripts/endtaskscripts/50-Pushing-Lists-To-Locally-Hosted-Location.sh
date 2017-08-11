@@ -5,7 +5,7 @@
 script_dir=$(dirname $0)
 source "$script_dir"/../../scriptvars/staticvariables.var
 
-WHATITIS="web host lists directory"
+WHATITIS="Localhost Web Directory"
 CHECKME=$BIGAPLLOCALHOSTDIR
 timestamp=$(echo `date`)
 if
@@ -13,8 +13,8 @@ ls $CHECKME &> /dev/null;
 then
 echo "* $WHATITIS Already there no need to mkdir. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-mkdir $CHECKME
-echo "* $WHATITIS Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $WHATITIS Not There. Please Fix. $timestamp" | tee --append $RECENTRUN &>/dev/null
+exit
 fi
 
 WHATITIS="Locally Hosted Biglist"
@@ -28,19 +28,33 @@ echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
-
-WHATITIS="Locally Hosted Biglist"
-CHECKME=$BIGAPLLOCALHOST
-timestamp=$(echo `date`)
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
-fi
-
 ## Copy it over
+CHECKME=$BIGAPLELOCALHOST
+if
+ls $CHECKME &> /dev/null;
+then
 cp -p $BIGAPL $BIGAPLLOCALHOST
+else
+echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
+WHATITIS="Locally Hosted Biglist (Edited)"
+CHECKME=$BIGAPLELOCALHOST
+timestamp=$(echo `date`)
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+## Copy it over
+CHECKME=$BIGAPLELOCALHOST
+if
+ls $CHECKME &> /dev/null;
+then
 cp -p $BIGAPLE $BIGAPLELOCALHOST
+else
+echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
