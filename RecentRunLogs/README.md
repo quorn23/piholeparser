@@ -587,3 +587,11 @@
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Results-Of-The-Parsing.txt)
 
 ## Pushing Lists. Fri 11 Aug 03:34:36 EDT 2017
+* web host lists directory Already there no need to mkdir. Fri 11 Aug 03:37:58 EDT 2017
+* Locally Hosted Biglist Removed. Fri 11 Aug 03:37:58 EDT 2017
+* Locally Hosted Biglist Not Removed. Fri 11 Aug 03:37:58 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Pushing-Lists.txt)
+
+## Script Complete. Fri 11 Aug 03:38:22 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Script-Complete.txt)
+
