@@ -3,23 +3,21 @@
 
 ## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/scriptvars/staticvariables.var
-
-#printf "$lightblue"    "___________________________________________________________"
-#echo ""
-
-#printf "$cyan"    "Cleaning Up Temp Directory."
-#echo ""
-
-#printf "$green"    "All .temp Files Will Be Preserved."
-#echo ""
+STATICVARS="$script_dir"/scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
 
 CHECKME=$TEMPCLEANUP
 if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-#printf "$yellow"    "Temporary tar Files Removed."
 echo ""
 fi
 
@@ -28,7 +26,6 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-#printf "$yellow"    "Temporary tar Files Removed."
 echo ""
 fi
 
@@ -37,9 +34,5 @@ if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
-#printf "$yellow"    "Temporary tar Files Removed."
 echo ""
 fi
-
-#printf "$orange" "___________________________________________________________"
-#echo ""
