@@ -6,7 +6,8 @@
 
 ## Variables
 script_dir=$(dirname $0)
-REPONAMED=$(echo `basename $0 | cut -f 1 -d '.'`)
+#REPONAMED=$(echo `basename $0 | cut -f 1 -d '.'`)
+REPONAMED=piholeparser
 MAINVAR="$script_dir"/"$REPONAMED".var
 CHECKME=$MAINVAR
 if
