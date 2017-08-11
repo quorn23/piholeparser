@@ -1,9 +1,17 @@
 #!/bin/bash
 ## This should help me find out the percentage of TLD's to optimize script speed
 
-## Vars
+## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/../scriptvars/staticvariables.var
+STATICVARS="$script_dir"/../scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
 
 STARTTIMESTAMP=$(date +"%s")
 
