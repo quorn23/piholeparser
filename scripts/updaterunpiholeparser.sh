@@ -5,8 +5,8 @@
 ## This File will not be updated often.
 
 ## Variables
-REPONAMED=piholeparser
-MAINVAR=./"$REPONAMED".var
+REPONAME=piholeparser
+MAINVAR=./"$REPONAME".var
 if
 [[ -f "$MAINVAR" ]]
 then
