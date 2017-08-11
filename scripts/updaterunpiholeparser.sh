@@ -39,4 +39,4 @@ echo ""
 source "$REPODIR"scripts/scriptvars/staticvariables.var
 
 ## RunParser
-sudo bash $RUNPIHOLEPARSERSCRIPT
+bash $RUNPIHOLEPARSERSCRIPT
