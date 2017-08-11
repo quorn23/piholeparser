@@ -1,7 +1,8 @@
 ## These variables get injected into source loops
 
 ## Base Variables
-source variables.var
+var_dir="$(dirname "$0")"
+source "$var_dir"/variables.var
 
 ## Timestamp
 timestamp=$(echo `date`)
