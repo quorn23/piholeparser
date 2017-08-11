@@ -6,7 +6,7 @@
 
 ## Variables
 script_dir=$(dirname $0)
-REPONAMED=$(basename $0)
+REPONAMED=$(echo `basename $0 | cut -f 1 -d '.'`)
 MAINVAR="$script_dir"/"$REPONAMED".var
 CHECKME=$MAINVAR
 if
@@ -25,7 +25,7 @@ then
 echo ""
 echo "piholeparser Directory Missing. Cloning Now."
 echo ""
-git clone $GITREPOSITORYURL $REPODIR
+git clone $GITREPOSITORYURLB $REPODIR
 elif
 [[ -d "$REPODIR" ]]
 then
