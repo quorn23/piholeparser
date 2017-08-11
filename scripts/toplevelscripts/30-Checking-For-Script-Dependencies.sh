@@ -5,7 +5,15 @@
 
 ## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/../scriptvars/staticvariables.var
+STATICVARS="$script_dir"/../scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
 
 echo ""
 
