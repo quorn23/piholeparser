@@ -1,5 +1,5 @@
 #!/bin/bash
-## This Recreates Recent Run Log
+## This Removes *.temp files
 
 ## Variables
 script_dir=$(dirname $0)
