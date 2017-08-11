@@ -1,0 +1,10 @@
+#!/bin/bash
+## Adjusting Readme.md
+
+## Variables
+script_dir=$(dirname $0)
+source "$script_dir"/../../scriptvars/staticvariables.var
+source $TEMPVARS
+
+rm $MAINREADME
+sed "s/AVERAGELISTPARSINGTIME/$AVERAGEPARSETIME/; s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALELAPSEDTIME/$TOTALRUNTIME/; s/EDITEDALLPARSEDSIZE/$EDITEDALLPARSEDSIZEMB/" $MAINREADMEDEFAULT > $MAINREADME
