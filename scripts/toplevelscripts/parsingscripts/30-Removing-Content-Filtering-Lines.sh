@@ -12,21 +12,5 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
-if
-[[ -f $DYNOVARS ]]
-then
-source $DYNOVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
 
 cat $TEMPFILEL | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $TEMPFILEM
