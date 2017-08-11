@@ -14,21 +14,5 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
-if
-[[ -f $DYNOVARS ]]
-then
-source $DYNOVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
 
 cat $TEMPFILEL | sed '/,/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[@]/d; /~/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d; /\^\//d; s/^||//; /[|]/d' > $TEMPFILEM
