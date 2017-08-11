@@ -5,10 +5,9 @@
 ## This File will not be updated often.
 
 ## Variables
-REPONAMED=piholeparser
 script_dir=$(dirname $0)
+REPONAMED=$(basename $0)
 MAINVAR="$script_dir"/"$REPONAMED".var
-MAINVARONLINE="https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/scriptvars/piholeparser.var"
 CHECKME=$MAINVAR
 if
 ls $CHECKME &> /dev/null;
@@ -20,35 +19,16 @@ echo "Main Vars File Missing, Exiting."
 exit
 fi
 
-REPODIRECTORY=/etc/piholeparser/
-
-VERSIONVARIABLE=/etc/piholeparser.var
-VERSIONVARDL=https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/scriptvars/piholeparser.var
-CHECKME=$VERSIONVARIABLE
 if
-ls $CHECKME &> /dev/null;
-then
-:
-else
-wget -q -O $VERSIONVARIABLE $VERSIONVARDL
-echo "version=local" | tee --append $VERSIONVARIABLE
-fi
-
-if
-[[ ! -d "$REPODIRECTORY" ]]
+[[ ! -d "$REPODIR" ]]
 then
 echo ""
 echo "piholeparser Directory Missing. Cloning Now."
 echo ""
-git clone https://github.com/deathbybandaid/piholeparser.git $REPODIRECTORY
-## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
+git clone $GITREPOSITORYURL $REPODIR
 elif
-[[ -d "$REPODIRECTORY" ]]
+[[ -d "$REPODIR" ]]
 then
-## Variables
-source /etc/piholeparser/scripts/scriptvars/staticvariables.var
-## Pull new lists on github
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Updating Repository."
@@ -56,6 +36,8 @@ git -C $REPODIR pull
 printf "$magenta" "___________________________________________________________"
 echo ""
 fi
+
+source "$REPODIR"/scripts/scriptvars/staticvariables.var
 
 ## RunParser
 sudo bash $RUNPIHOLEPARSERSCRIPT
