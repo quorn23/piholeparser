@@ -1,7 +1,8 @@
 ## These Variables are file and foldernames
 
 ## Base Variables
-source variables.var
+var_dir="$(dirname "$0")"
+source "$var_dir"/variables.var
 
 ## Github 100MB limit
 GITHUBLIMIT=104857600
