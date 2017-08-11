@@ -26,6 +26,8 @@ echo ""
 git clone $GITREPOSITORYURLB $REPODIR
 fi
 
+SCRIPTVARSDIR="$REPODIR"scripts/scriptvars/
+
 echo "___________________________________________________________"
 echo ""
 echo "Updating Repository."
