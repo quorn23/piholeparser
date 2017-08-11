@@ -4,143 +4,40 @@
 ## Variables
 script_dir=$(dirname $0)
 source "$script_dir"/../scriptvars/staticvariables.var
-source $TEMPVARS
 
-####################
-## ALLPARSEDSIZE  ##
-####################
+## Start File Loop
+## For .sh files In The cleanupscripts Directory
+for f in $ALLCLEANUPSCRIPTS
+do
 
+# Dynamic Variables
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+source $DYNOVARS
+
+## Loop Variables
+SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
 timestamp=$(echo `date`)
-FETCHFILESIZEALL=$(stat -c%s "$BIGAPLE")
-FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
-DOMAINSINALLPARSEDE=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
-EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB and contains $DOMAINSINALLPARSEDE Domains."
-SCRIPTTEXT="Edited ALLPARSEDLIST Result."
-printf "$lightblue"    "___________________________________________________________"
+
+printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
+## Log Subsection
+echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
+## Clear Temp Before
 bash $DELETETEMPFILE
-echo "* $EDITEDALLPARSEDSIZEMB" | tee --append $RECENTRUN &>/dev/null
-printf "$yellow"   "$EDITEDALLPARSEDSIZEMB"
+
+## Run Script
+bash $f
+
+## Clear Temp After
 bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
+
+echo "" | tee --append $RECENTRUN
+printf "$orange" "$DIVIDERBARB"
 echo ""
 
-####################
-## Ave Parse Time ##
-####################
-
-timestamp=$(echo `date`)
-SCRIPTTEXT="Average Parsing Time."
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-AVERAGEPARSETIMESEC=`awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE`
-AVERAGEPARSETIME=`expr $AVERAGEPARSETIMESEC / 60`
-printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME Minutes."
-echo "* Average Parsing Time Was $AVERAGEPARSETIME Minutes." | tee --append $RECENTRUN &>/dev/null
-rm $PARSEAVERAGEFILE
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-####################
-## Runtime        ##
-####################
-
-timestamp=$(echo `date`)
-SCRIPTTEXT="Total Runtime."
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-ENDTIME="Script Ended At $(echo `date`)"
-ENDTIMESTAMP=$(date +"%s")
-DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
-DIFFTIME=`expr $DIFFTIMESEC / 60`
-TOTALRUNTIME="Script Took $DIFFTIME minutes To Filter $HOWMANYSOURCELISTS Lists."
-printf "$yellow"   "$TOTALRUNTIME"
-echo "* $TOTALRUNTIME" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-####################
-## Readme.md      ##
-####################
-
-timestamp=$(echo `date`)
-SCRIPTTEXT="Updated Main README.md."
-printf "$lightblue"    "___________________________________________________________"
-echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
-echo ""
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-bash $DELETETEMPFILE
-rm $MAINREADME
-sed "s/AVERAGELISTPARSINGTIME/$AVERAGEPARSETIME/; s/LASTRUNSTART/$STARTTIME/; s/LASTRUNSTOP/$ENDTIME/; s/TOTALELAPSEDTIME/$TOTALRUNTIME/; s/EDITEDALLPARSEDSIZE/$EDITEDALLPARSEDSIZEMB/" $MAINREADMEDEFAULT > $MAINREADME
-bash $DELETETEMPFILE
-echo ""
-echo "" | tee --append $RECENTRUN &>/dev/null
-printf "$orange" "___________________________________________________________"
-echo ""
-
-####################
-## Remove Tempvars##
-####################
-CHECKME=$TEMPVARS
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-
-####################
-## Remove TLD file##
-####################
-CHECKME=$VALIDDOMAINTLD
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-
-####################
-## Remove Whites  ##
-####################
-CHECKME=$WHITELISTTEMP
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-
-####################
-## Remove blacks  ##
-####################
-CHECKME=$BLACKLISTTEMP
-if
-ls $CHECKME &> /dev/null;
-then
-rm $CHECKME
-fi
-
-####################
-## End Time       ##
-####################
-
-timestamp=$(echo `date`)
-echo "* Script completed at $timestamp" | tee --append $RECENTRUN &>/dev/null
+## End Of Loop
+done
