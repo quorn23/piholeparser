@@ -26,14 +26,31 @@ echo ""
 git clone $GITREPOSITORYURLB $REPODIR
 fi
 
-printf "$blue"    "___________________________________________________________"
+echo "___________________________________________________________"
 echo ""
-printf "$green"   "Updating Repository."
+echo "Updating Repository."
+echo ""
 git -C $REPODIR pull
-printf "$magenta" "___________________________________________________________"
+echo ""
+echo "___________________________________________________________"
 echo ""
 
-source "$REPODIR"scripts/scriptvars/staticvariables.var
+STATICVARS="$REPODIR"scripts/scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
 
 ## RunParser
+if
+[[ -f $RUNPIHOLEPARSERSCRIPT ]]
+then
 bash $RUNPIHOLEPARSERSCRIPT
+else
+echo "$RUNPIHOLEPARSERSCRIPT Missing, Exiting."
+exit
+fi
