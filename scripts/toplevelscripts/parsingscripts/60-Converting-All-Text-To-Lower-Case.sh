@@ -1,5 +1,5 @@
 #!/bin/bash
-## ## Convert All Text To Lower Case
+## Convert All Text To Lower Case
 
 ## Variables
 script_dir=$(dirname $0)
