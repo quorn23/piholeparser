@@ -1,7 +1,3 @@
-! Title: Adguard Mobile Ads Filter
-!
-! This filter blocks all known mobile ad networks and banners.
-!
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -881,8 +877,8 @@ westseattleblog.com#@#.header-ad
 ! Extended CSS rules
 !
 ! https://forum.adguard.com/index.php?threads/24017/
-m.fishki.net##.list-view-items > div.content__intro-text[-ext-has='> p.content__intro-text__author > a[href="/profile/543769"]']
-m.fishki.net##.list-view-items > div.content__preview[-ext-has='> div.picture-holder > a[href^="/go/"][target="_blank"]']
+fishki.net##.list-view-items div.content__preview[-ext-has='> div.picture-holder > a[href="/go/"][target="_blank"]']
+fishki.net##div[class^="list-view"] > div[class^="content__intro-text"][-ext-has='> p.content__intro-text__author > a[href="/profile/543769"]']
 ! Context ads in Yandex search results
 yandex.ru,yandex.com,yandex.ua,yandex.kz,yandex.by,yandex.com.tr##.main > div.serp-list > div.serp-item[-ext-has='> div.organic > h2 > a[href^="http://yabs.yandex.ru/count/"]']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5316
@@ -1605,6 +1601,8 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ||graph.facebook.com^$app=com.cmplay.cellconnect
 ||graph.facebook.com^$app=com.apxsoft.dodonpachi_gg
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6134
+@@||imasdk.googleapis.com/native/core/*/native_bridge__*.js$app=com.ysb.esh
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6133
 @@||imasdk.googleapis.com/native/core/*/native_bridge__*.js$app=com.digiturk.ligtv
 ! https://forum.adguard.com/index.php?threads/13437/

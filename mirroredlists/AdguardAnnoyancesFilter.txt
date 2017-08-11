@@ -1,9 +1,5 @@
-! Title: Adguard Annoyances Filter
-!
-! Blocks irritating elements on webpages including cookie notices third-party widgets and in-page popups.
-!
-! License: http://creativecommons.org/licenses/by-sa/3.0/
 ! Homepage: http://adguard.com/filters.html#annoyances
+! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
 !-------------------------------------------------------------------!
 !------------------ General JS API ---------------------------------!
@@ -580,6 +576,10 @@ tmohentai.com,kshowonline.com,topsante.com,topsante.com,getgreenshot.org,forexpe
 @@||s3.amazonaws.com/assets.sidearmsports.com/plugins/detector.min.js?$domain=greenbayphoenix.com
 greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+@@||lostfilm.tv/css/b/240x400_.js
+drtuber.com###abmessage
+iceporn.com###abmessage
+mofosex.com##.attentionMsg
 ||tumangaonline.com/views/includes/higerAdv.html
 imagebam.com##.box_wait#hideifpossible
 javur.com###alertAdblock
@@ -985,6 +985,9 @@ socialblade.com##div[style^="width: px; height: 250px;"]
 !
 ivi.ru#%#document.cookie = "adbNotice=1";
 ivi.ru#%#AG_onLoad(function() { document.cookie = "adbNotice=1"; });
+!
+! outlook.live.com BETA - antiblock with placeholder
+outlook.live.com##div#app > div.ms-Fabric > div:last-child > div:first-child > div:first-child > div[data-min-width][data-max-width][style^="width:"]~div:last-child
 ! outlook.live.com - antiblock with placeholder
 outlook.live.com##div[class="_n_h"][style*="width: 165px;"]
 outlook.live.com#$##primaryContainer > div[style*="right: 165px;"] { width: 100% !important; }
@@ -2663,6 +2666,8 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+mitele.es##.cookies-consent
+animeforce.org###cookieChoiceInfo
 diariodemallorca.es###MensajeCompruebaCookieSite
 reddit.com##[class="EUCookieNotice"]
 softonic.com###message-cookie

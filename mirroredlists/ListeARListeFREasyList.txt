@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: y70fDK2ZsHEhDKe1yktSOQ
-! Version: 201708100601
+! Checksum: aMgEzQpuC41hycssxKdYOA
+! Version: 201708110621
 ! Title: Liste AR+Liste FR+EasyList
 ! Abonnements combinés à la Liste AR, la Liste FR et EasyList
-! Dernière modification le 10 Aug 2017 06:01 UTC
+! Dernière modification le 11 Aug 2017 06:21 UTC
 ! Expires: 4 days (fréquence des mises à jour automatiques)
 ! Homepage: https://code.google.com/p/liste-ar-adblock/
 !
@@ -8477,6 +8477,7 @@ oload.tv,streamango.com###videooverlay
 @@||www.kvid.org/v2/poop/src/jquery.min.js$script,domain=kvid.org
 |http://$script,stylesheet,subdocument,third-party,xmlhttprequest,domain=k-streaming.com|kvid.org|le-streaming.com
 |https://$script,stylesheet,subdocument,third-party,xmlhttprequest,domain=k-streaming.com|kvid.org|le-streaming.com
+||k-streaming.com/wp-content/cache/$script
 ||kvid.org^$script
 ||kvid.org^$subdocument,~third-party
 ! streamin.to
@@ -8526,8 +8527,9 @@ he2eini7ka.com##div > [id^="player"] + div[id][style*="z-index:"]
 ||he2eini7ka.com^*.html|$subdocument,~third-party
 ||youwatch.org^$subdocument,third-party
 ! mystream.la
-|http://$script,subdocument,third-party,xmlhttprequest,domain=mystream.la
-|https://$script,subdocument,third-party,xmlhttprequest,domain=mystream.la
+@@||89.33.8.108^$image,domain=mystream.la
+|http://$image,ping,script,subdocument,third-party,xmlhttprequest,domain=mystream.la
+|https://$image,ping,script,subdocument,third-party,xmlhttprequest,domain=mystream.la
 ||mystream.la^$subdocument,third-party
 ! watchers.to
 @@||watchers.to/js/fuckadblock.js$script,domain=watchers.to
@@ -14568,6 +14570,7 @@ femmesplus.fr##section[id] > img
 ! mais d'empêcher les possibles dysfonctionnements liés aux filtres bloquants présents ci-dessus.
 !
 @@|blob:$popup,domain=caf.fr|cerise-prim.fr
+@@|blob:https://hqq.watch/$script,domain=hqq.watch
 @@|http://ad4.fr^$~third-party
 @@||123comparer.fr/photoProd/*00px/*-120x60-$image,domain=123comparer.fr
 @@||123comparer.fr/photoProd/*00px/*-300-x-250-$image,domain=123comparer.fr
@@ -43963,7 +43966,6 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||brighteroption.com^$third-party
 ||brightshare.com^$third-party
 ||britiesee.info^$third-party
-||brkmd.com^$third-party
 ||broadstreetads.com^$third-party
 ||brokeloy.com^$third-party
 ||browsersfeedback.com^$third-party
@@ -53338,7 +53340,6 @@ a.upnorma.com^$webrtc
 ||movie4all.co^$third-party
 ||mozo-widgets.f2.com.au^
 ||mp3ix.com^$third-party
-||mps.nbcuni.com^
 ||mrc.org/sites/default/files/uploads/images/Collusion_Banner
 ||mrc.org^*/Collusion_Banner300x250.jpg
 ||mrc.org^*/take-over-charlotte300x250.gif
@@ -53540,6 +53541,7 @@ a.upnorma.com^$webrtc
 ||pubexchange.com/module/*-prod$third-party
 ||pubexchange.com/modules/display/$script,third-party
 ||public.porn.fr^$third-party
+||pubportal.brkmd.com^
 ||pubs.hiddennetwork.com^
 ||puntersparadise.com.au/banners/
 ||purevpn.com/affiliates/
@@ -59023,7 +59025,7 @@ a.upnorma.com^$webrtc
 ||yourwire.net/images/refssder.gif
 ||youserials.com/i/banner_pos.jpg
 ||youtube-mp3.org/acode/
-||youtube.com/get_midroll_info?
+||youtube.com/get_midroll_
 ||youtube.com/pagead/
 ||youwatch.org/9elawi.html
 ||youwatch.org/driba.html

@@ -1,8 +1,3 @@
-! Title: Adguard Russian Filter
-!
-! Filter that enables removing of the ads from websites with Russian content.
-! Фильтр, позволяющий убрать рекламу с сайтов на русском языке.
-!
 ! Homepage: http://adguard.com/filters.html#russian
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -22,6 +17,11 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||uioopnblobble.ru^$third-party
+||mujuclaster.ru^$third-party
+||code.barrior.online^$third-party
+||promokashka.space^$third-party
+||ban-host.ru^$third-party
 ||adblockotsosal.ru^$third-party
 ||ofughrop.pro^$third-party
 ||ftrnum.club^$third-party
@@ -4145,6 +4145,8 @@ seedoff.tv,rumedia.ws,hdkinoset.org,filmix.me,it-like.ru,doramatv.ru,librebook.r
 @@||franecki.net/assets^$domain=hdgo.cx
 hdgo.cx###hdplayer-btn.linkbtn
 hdgo.cx###hdplayer-linktxt.linktxt
+! fishki.net
+fishki.net#@#.adsbox
 ! rustorka.com - fixing ad selection tool in browser extension
 rustorka.com#%#Object.defineProperty(window, 'antiadblock', { get: function() { return function() {}; } });
 ! drahelas.ru
@@ -4233,8 +4235,8 @@ game-torrent.info,free-torrent.org,free-torrents.org#%#Object.defineProperty(win
 ||ajax.googleapis.com/ajax/libs/*$domain=katushka.net|katushka.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4935
 ||nikagg.com/ads.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/4846
-@@||vse.fm/advert.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/6101
+@@||vse.fm/js/ext/fuckadblock.js
 ! gismeteo.ru - ads replacement script(Fab)
 @@||gismeteo.ru^$generichide
 ! https://forum.adguard.com/index.php?threads/21075/
@@ -4665,6 +4667,7 @@ manshet.ru###k788
 ! http://forum.adguard.com/showthread.php?7482
 gisher.org#@#.afs_ads
 ! 1tv.ru - anti-adblock message in the player
+@@||static.1tv.ru/player/special/banner.gif
 @@||stats.1internet.tv/vod2/showads.gif$domain=1tv.ru
 @@||static.1tv.ru/player/config/banner.gif$domain=1tv.ru
 @@||stream.1tv.ru/assets/player-current/ads.js
@@ -4934,6 +4937,11 @@ nnm-club.lib,nnm-club.me,nnmclub.to,nnm-club.name###logo > center[-ext-has='ifra
 !+ PLATFORM(ext_ff, ext_opera, ext_ublock)
 seedoff.tv#$#body > div[style$="display: block;background: white;position: relative;margin-left: auto;margin-right: auto;"][-ext-has='iframe:not([src]):not([id="adguard-assistant-dialog"])'] { position: absolute!important; left: -3000px!important; }
 !
+!+ PLATFORM(android)
+fishki.net##.drag_list div.drag_element[-ext-has='> div[data-post-id] > div.slider--wide > div.slide__item > div.post-img > div.picture-holder > div.slide__info > div.author > a[href="/profile/543769"]']
+!+ PLATFORM(android)
+old.fishki.net##.list-view-items div[id^="post-"][-ext-has='> div.post-author-wrap > div.author > a[href="/profile/543769/"]']
+!
 hdclub.org##.mainouter td[align="center"][class="outer"][valign="top"] > p > table[width="100%"][-ext-has="font.block-title > strong:contains(ПАРТНЕР)"]+div[style*="/themes/HDClub/images/block_bg_.jpg"]
 hdclub.org##.mainouter td[align="center"][class="outer"][valign="top"] > p > table[width="100%"][-ext-has="font.block-title > strong:contains(ПАРТНЕР)"]
 hdclub.org##.mainouter td[width="155"] > table[width="155"][-ext-has="font.block-title > nobr > strong:contains(MarketShop)"]
@@ -4986,6 +4994,7 @@ spaces.ru###index_page > div[class][id][-ext-has='> div[class*=" "][id] > a[href
 cyberforum.ru##.page > div[style][align="left"] > table[align="center"][-ext-has='> tbody > tr > td > div > div[id^="yandex_rtb_"]']
 cyberforum.ru##.page > div[style][align="left"] > div[id^="edit"] > div[style^="margin: 3px 0px 0px"][-ext-has='> table[class][align="center"] > tbody > tr > td > span.bigusername:contains(Yandex)']
 !
+zaycev.online#$#.content[-ext-has="> div"] { margin-top: 0!important; }
 tvigle.ru#$#body[-ext-has="div"] { padding-top: 0px!important; }
 ren.tv##.region-sidebar > div.block-block[-ext-has="> div.content > div#yandex_ad"]
 ren.tv##.region-sidebar > div.block-block[-ext-has="> div.content > div#SportExpress_sidebar"]
@@ -5743,7 +5752,7 @@ s4galaxy.ru,3dnews.ru,lenovo-smart.ru#%#Object.defineProperty(window, 'SocialMar
 rustorka.com,pise4ka.net,nnm-club.me,nnm-club.ws,nnmclub.to,onlainfilm.ucoz.ua,rutor.is,baskino.club,rutor.info,nnm.me,korzik.net,seasonvar.ru,rsload.net,nnm-club.me,nnmclub.to,rustorka.com,auto.mail.ru,horo.mail.ru,realty.mail.ru,health.mail.ru,afisha.mail.ru,cloud.mail.ru,otvet.mail.ru,pogoda.mail.ru,sport.mail.ru,tv.mail.ru,torg.mail.ru,cars.mail.ru,hi-tech.mail.ru,free-torrent.org,free-torrents.org,ukrinform.ru,radikal.ru,trackeroc.ru,trackerock.ru#%#window.WebSocket = undefined;
 !
 ! Yandex ads
-yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net#%#var empty = { get: function() { return []; }, set: function() {} }; Object.defineProperties(window, { yandex_context_callbacks: empty, yandexContextAsyncCallbacks: empty, yandexContextSyncCallbacks: empty });
+minigames.mail.ru,yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net#%#var empty = { get: function() { return []; }, set: function() {} }; Object.defineProperties(window, { yandex_context_callbacks: empty, yandexContextAsyncCallbacks: empty, yandexContextSyncCallbacks: empty });
 !+ PLATFORM(ext_ublock)
 yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net##script:inject(abort-on-property-write.js, Ya.Context)
 !
@@ -8396,6 +8405,8 @@ tizblock.ru/news.js
 /show/out.php?t=*&async=1&v=$third-party
 .cf/get-image?image=$third-party
 .info/init.js?$third-party
+.ru/code.php?id=
+/js/code.php?id=
 !-------------------------------------------------------------------------------!
 !------------------ News exchange ----------------------------------------------!
 !-------------------------------------------------------------------------------!
@@ -8648,6 +8659,26 @@ rustorka.com##.post_body > div[align="center"] > a > img
 /(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+seedoff.cc##div[id*="Composite"]
+||animespirit.ru/banners/
+fotokto.ru###pageContainer > div[class="m2"]
+||simpsonsua.com.ua/photos/baner-reklama/
+||cy-pr.com/images/stat/tr.png
+miytvideo.ru##body > noindex
+goldenshara.net##center > a[href="/goldenshara.net.php?url"] > img
+zaycev.online##div[data-cookie="mainBanner"]
+||bazr.ru/vast?$xmlhttprequest
+||image.winudf.com/*/upload/promopure/$domain=apkpure.com
+24auto.ru##.brrr_place
+mp3cc.com###headerBanner
+mp3cc.com##.playlist-ad
+mp3cc.com###footerBanner
+anistar.me##body > div[class^="heade-"]
+chatovod.ru##.chatlist > tbody > tr[class="bold"]:not([class^="chatitem"])
+||chatovod.ru/i/promo2/workle.png
+||chatovod.ru/i/promo2/toptorrent.png
+chatovod.ru##a[href="http://0pk.ru/"]
+chatovod.ru##object#\32 40x400
 biwork.ru###top-sam-banner
 astromeridian.ru##noindex a[rel="nofollow"] > img
 rosbalt.ru##.ad_tele > a
@@ -14183,7 +14214,7 @@ zvukoff.ru##.adv-list-top
 ||batpic.com/*/rocket.js
 ||batzbatz.com/c/$script
 ||batzbatz.ru/c/*.js
-||bazr.ru/player$domain=allsoch.ru|bobfilm.net|bosova-gdz.ru|egeurok.ru|gdz.ru|gdzometr.ru|gdzputina.com|getsoch.ru|megaresheba.ru|muzofon.com|muzofond.com|my-hit.fm|pedportal.net|resheba.com|ronl.ru|slovo.ws|spishy-online.ru|spishy-ru.com|spishy.net|stavcur.ru|teledidar.tv|zoobrilka.org
+||bazr.ru/player?$domain=allsoch.ru|bosova-gdz.ru|botanam.net|egeurok.ru|gdz-online.ws|gdz-putina.info|gdz.ru|gdzometr.ru|gdzputina.com|gdzputina.me|getsoch.ru|kinokrad.co|lit-era.com|megaresheba.ru|mp3poisk.online|muzofon.com|muzofond.com|my-hit.fm|otbet.ru|pedportal.net|pro-filmix.net|resheba.com|ronl.ru|sims4pack.ru|slovo.ws|spishy-online.ru|spishy-ru.com|spishy.net|stavcur.ru|teledidar.tv|xn----otba0aibt0b.su|zaycev.online|zoobrilka.org|спиши-ру.su|bobfilm.net
 ||bb.легион.net/c/*.js
 ||bbcdn.go.arbopl.bbelements.com
 ||bcli.flash-xxx.com^
@@ -16236,6 +16267,8 @@ joyreactor.cc#@#div#sidebar
 @@||vetton.ru^$jsinject,elemhide
 !#################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6137
+@@||parlament.ch/_layouts/*/Branding/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5950
 windscribe.com#@#.affiliate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5946

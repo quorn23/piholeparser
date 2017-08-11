@@ -1,8 +1,3 @@
-! Title: Adguard Social Media Filter
-!
-! If you do not like numerous «Like» and «Tweet» buttons on all the popular websites on the Internet,
-! subscribe to this filter, and you will not see them anymore.
-!
 ! Homepage: http://adguard.com/filters.html#social
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -410,6 +405,10 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+hdfilmizle.life##.bw_sharetom
+chowhound.com##.fb_iframe_widget_w
+chowhound.com##.fr_pin_bubble
+javhole.com##.sosyal_buton
 donanimhaber.com##.twitterBTN
 siberyol.com##.post-social
 teknokulis.com##li.facebook
@@ -3457,6 +3456,8 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! Section fixing issues caused by social filter
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6058
+chowhound.com#@#a[href^="http://pinterest.com/pin/create/button/"]
 ! https://forum.adguard.com/index.php?threads/http-news-filehippo-com.24015/
 @@||technews.wpengine.netdna-cdn.com/wp-content/themes/filehippo/js/socialite.min.js$domain=filehippo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5927

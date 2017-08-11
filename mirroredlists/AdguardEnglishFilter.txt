@@ -1,9 +1,3 @@
-! Title: Adguard English Filter.
-!
-! Filter that enables removing of the ads from websites with English content.
-! Originally based on the EasyList filter (https://easylist.adblockplus.org/).
-! Modified by Adguard team according to the complaints from users.
-!
 ! Homepage: http://adguard.com/filters.html#english
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -24,6 +18,7 @@
 ! Section contains list of advertising networks
 !
 ||htmonster.com^$third-party
+||dohillright.com^$third-party
 ||nb42mac.com^$third-party
 ||shulhanafuh.com^$third-party
 ||wellmov.com^$third-party
@@ -802,13 +797,13 @@ cmacapps.com##cloudflare-app[app-id="no-adblock"]
 !
 ! Ads replacement script (trafmag.com)
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
-oklivetv.com##iframe:not([src])
+animeflv.me,jkanime.co,animeid.io,oklivetv.com##iframe:not([src])
 !+ NOT_PLATFORM(windows, mac, android)
-oklivetv.com#%#var dce = document.createElement.bind(document); document.createElement = function(a) { var el = dce(a); if(a.toLowerCase() == "script") { Object.defineProperty(el, 'textContent', { set: function(i) { /*console.log(i);*/ if(!/function\(mz_str\).*?"[a-z0-9]{100,}"/.test(i)) { Object.getOwnPropertyDescriptor(Node.prototype, 'textContent').set.call(el, i); } }, get: function () { return el.textContent; } }) } return el; };
+animeflv.me,jkanime.co,animeid.io,oklivetv.com#%#var dce = document.createElement.bind(document); document.createElement = function(a) { var el = dce(a); if(a.toLowerCase() == "script") { Object.defineProperty(el, 'textContent', { set: function(i) { /*console.log(i);*/ if(!/function\(mz_str\).*?"[a-z0-9]{100,}"/.test(i)) { Object.getOwnPropertyDescriptor(Node.prototype, 'textContent').set.call(el, i); } }, get: function () { return el.textContent; } }) } return el; };
 !+ NOT_PLATFORM(windows, mac, android)
-oklivetv.com#$#iframe:not([src]):not([id="adguard-assistant-dialog"]) { position: absolute!important; left: -3000px!important; }
-oklivetv.com$$script[wildcard="*(function(){var _a*String.fromCharCode(parseInt*function*"][max-length="7200"]
-oklivetv.com$$script[wildcard="*(function*String.fromCharCode(parseInt*.substr*"][max-length="7200"]
+animeflv.me,jkanime.co,animeid.io,oklivetv.com#$#iframe:not([src]):not([id="adguard-assistant-dialog"]) { position: absolute!important; left: -3000px!important; }
+animeflv.me,jkanime.co,animeid.io,oklivetv.com$$script[wildcard="*(function(){var _a*String.fromCharCode(parseInt*function*"][max-length="7200"]
+animeflv.me,jkanime.co,animeid.io,oklivetv.com$$script[wildcard="*(function*String.fromCharCode(parseInt*.substr*"][max-length="7200"]
 !
 !---------------------
 !
@@ -836,6 +831,9 @@ j.gs#@##bottom
 !*
 !*****
 !
+! https://forum.adguard.com/index.php?threads/24061/
+@@||adm.fwmrm.net/p/aetn_live/AdManager.js$domain=history.com
+history.com#@#.ad
 ! https://forum.adguard.com/index.php?threads/24045/
 @@||copypastecharacter.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6120
@@ -2537,6 +2535,8 @@ facebook.com##.home_right_column > div#pagelet_ego_pane[-ext-has='div.ego_unit_c
 facebook.com##div[id^="substream_"] > div:not([id]):not([class]) > div[id] div[id^="hyperfeed_story_id_"][-ext-has=".fbUserContent span>a._m8c"]
 facebook.com##div[id^="substream_"] > div:not([id]):not([class]) > div[id] div[id^="hyperfeed_story_id_"][-ext-has=".userContentWrapper > div[class] > div[class] > span > span._m8d"]
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6058
+chowhound.com##.freyja_container > .col.gu4 > .wp_rrmw[-ext-has='.sb_mpu']
 ! https://forum.adguard.com/index.php?threads/http-jav911-com-nsfw.23974/
 jav911.com##.main-page > .container > .box[-ext-has='.title:contains(Advertisers)']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6062 - lesyt.xyz - ad leftover
@@ -3186,6 +3186,8 @@ dnvod.tv##.clickbg[-ext-has="+*"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4652
 sockscap64.com#@#.adsbygoogle
 !
+||kuhou.com^$third-party
+||youle55.com^$third-party
 avtb01.com##.ads
 avtb01.com##.ads-player
 avtb01.com##body > div[id^="haoetv"]
@@ -3787,6 +3789,11 @@ goalim4you.site###f765
 !---------------------------------------------------------------------
 !------------------------------ Italian ------------------------------
 !---------------------------------------------------------------------
+! https://github.com/AdguardTeam/AdguardFilters/issues/6055
+@@||animeforce.org^$generichide
+animeforce.org#$#[id^="MarketGidWrap"] { position: absolute!important; left: -3000px!important; }
+||animeforce.org/frames/site-300.250.html
+||animeforce.org/frames/300.250.html
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5902
 dasolo.me#%#Object.defineProperty(window,'adblock_aktiv',{value:false});
 @@||dasolo.me^$generichide
@@ -4332,7 +4339,7 @@ pornicom.com#%#Object.defineProperty(window, 'exoWrap', { get: function() { retu
 !
 ! PopAds-a
 uplod.ws,uplod.so,flashxx.tv,pandamovie.net,vipleague.me,hdporn720.net,playpornx.net,hdporner720.com,newpct1.com,2ddl.ag,jkmk.net#%#Object.defineProperty(window, 'PopAds', { get: function() { return {}; } });
-bdsmpornhd.com,bestpornever.xyz,fuckedintransit.com,gayporn-videos.xyz,handjob.pro,jav-hd.xyz,lezbiyen-tube.com,mybigbeautifulwoman.com,mystreetgirl.com,pinay-porn.xyz,sex-jav.com,shemale-videos.xyz,thaiporn-videos.xyz,vrporn-videos.xyz,300mbfilms.co,itdmusic.com,hdsector.com,newpct1.com,al.ly,uplod.ws,tumejortorrent.com#%#Object.defineProperty(window, '_pop', { get: function() { return {}; } });
+hdfilminadresi.org,bdsmpornhd.com,bestpornever.xyz,fuckedintransit.com,gayporn-videos.xyz,handjob.pro,jav-hd.xyz,lezbiyen-tube.com,mybigbeautifulwoman.com,mystreetgirl.com,pinay-porn.xyz,sex-jav.com,shemale-videos.xyz,thaiporn-videos.xyz,vrporn-videos.xyz,300mbfilms.co,itdmusic.com,hdsector.com,newpct1.com,al.ly,uplod.ws,tumejortorrent.com#%#Object.defineProperty(window, '_pop', { get: function() { return {}; } });
 !
 ! PopAds-b
 letwatch.to,hqq.tv,xonline.vip,pornhd.com,thevideo.me,sextfun.com,vidup.me,imgoutlet.com,imgrock.net#%#Object.defineProperty(window, 'popns', { get: function() { return {}; } });
@@ -4395,6 +4402,9 @@ watchseries-online.nl,btsone.cc#%#Object.defineProperty(window,'_drp', { get:fun
 !*****
 !**********************************
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6128
+mofosex.com#%#document.cookie = "popundr=1";
+extremetube.com#%#document.cookie = "popundr=1";
 ! https://forum.adguard.com/index.php?threads/23885/
 dailyuploads.net#%#window.open = function() {};
 ! https://forum.adguard.com/index.php?threads/23611/
@@ -4863,6 +4873,10 @@ zippymoviez.com#%#window.open = function() {};
 !-------------------
 !-------CSS---------
 !-------------------
+! https://github.com/AdguardTeam/AdguardFilters/issues/6071
+sexoasis.com#$#.detail-side-td { visibility: hidden!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/6063
+greenwichmeantime.com#$#.ezoic-ad { position: absolute!important; left: -3000px!important; }
 ! https://forum.adguard.com/index.php?threads/yourdictionary-com-missed-ads-windows.24013/
 yourdictionary.com#$#body > .floating-nav { top: 0px; }
 yourdictionary.com#$#body > #ydHeaderContainer[style="display: block; top: 145px;"] { top: 45px!important; }
@@ -5129,7 +5143,7 @@ neowin.net#$#div[class^="banner-"] { height: 0px!important; min-height:0px!impor
 ! androidcentral.com - ads
 androidcentral.com$$script[tag-content="tmntag.cmd.push"][max-length="200"]
 ! htapop
-porneq.com,dato.porn$$script[tag-content="var __htapop = {};"][max-length="400"]
+alotporn.com,porneq.com,dato.porn$$script[tag-content="var __htapop = {};"][max-length="400"]
 ! MarketGid ads(for app)
 postimg.org$$script[tag-content="mg_ws"][max-length="1600"]
 ! https://forum.adguard.com/index.php?threads/msn-com.21237/
@@ -5364,6 +5378,36 @@ tomsguide.com##.page-content-rightcol > div[id] > div[class^="_"]
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 tomsguide.com##.page-content > div.p-u-1.txt-center > div[id] > div[id="[ID]"][class^="_"]
 !
+||cdn.flyingjizz.com/js/cache/x.js
+xasianbeauties.com###topbar1
+xasianbeauties.com##.content > div.line-bs
+||orange.jo/ar/offers/pages/$domain=~orange.jo
+poebuilds.net###comp-j4xa15dr
+poebuilds.net##.wp2[title="Sponsor Ad.png"]
+poebuilds.net##a[href="https://www.instant-gaming.com/igr/poebuilds/"]:not([role="button"])
+poebuilds.net##a[href^="https://www.mulefactory.com/"][target="_blank"]:not([role="button"])
+||static.wixstatic.com/media/2b1814_8e9e8ee46c054f11a3cac63dfa7ff4a8~mv2.png/v1/fill/w_300,h_22,al_c/2b1814_8e9e8ee46c054f11a3cac63dfa7ff4a8~mv2.png
+tube8.com##.content-wrapper > div#home_page_wrapper~div#search_page_wrapper_instant~input+div[id]
+drtuber.com##.drt-sponsor-block
+||iceppsn.com/templates/frontend/iceporn_v*/js/_piceporn.js
+iceporn.com##.drt-video-player > div.drt-spot-box
+iceporn.com##.maintenance >div.watch+div.furtherance
+toptiertactics.com##.widget.widget_text
+||xxxtubeset.com/promo
+||xpornotubes.com/ponrtube.html
+xpornotubes.com###ubr
+||sexu.com/nb-old?z=
+hdxxnxx.com###div_invideo_ad
+||website.informer.com/img/sponsored.png
+porn1free.com##.player > #embed__pre
+||porn1free.com/eb.js
+videos6.com##.player > #embed__pre
+||videos6.com/eb.js
+extremetube.com##.vjs-inplayer-overlay
+extremetube.com##.underplayer-wrapper > p[style="text-align: center"]
+mofosex.com##.thumb-list-5 > .auto[style="width: 950px; margin: 20px auto;"] > div[style="clear:both; text-align:center;"]
+||soska.us/api/get_link?$domain=mofosex.com
+||cdn1-static-extremetube.spankcdn.net/js/pht2/pht2.js
 xnxx.com##.mobile-only-hide
 javfind.com##.wrap-tab > div[style="width: 728px;height: 90px;margin: 10px auto; overflow: hidden"]
 hqasiananal.com##.banner
@@ -8209,6 +8253,11 @@ pornhub.com#@#.sectionWrapper > div[class*=" "]:not([class="sectionTitle"]):not(
 @@||protopage.com^$elemhide
 protopage.com#%#(function(){var pageParams={};Object.defineProperty(window,"pageParams",{get:function(){return pageParams},set:function(){}});Object.defineProperty(pageParams,"dispAds",{get:function(){return false},set:function(){}});Object.defineProperty(pageParams,"attemptDisplayAdAtBottom",{get:function(){return false},set:function(){}})})();
 !#########################################
+!
+! outlook.live.com - when this file is modified by AG, windows defender detects it as a HTML/Phish
+@@||outlook.live.com/owa/projection.aspx$document
+! https://github.com/AdguardTeam/AdguardFilters/issues/6100
+techport.ru#@#.banners_block
 !
 ! https://forum.adguard.com/index.php?threads/23950/
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -38096,7 +38145,6 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||brighteroption.com^$third-party
 ||brightshare.com^$third-party
 ||britiesee.info^$third-party
-||brkmd.com^$third-party
 ||broadstreetads.com^$third-party
 ||brokeloy.com^$third-party
 ||browsersfeedback.com^$third-party
@@ -47446,7 +47494,6 @@ a.upnorma.com^$webrtc
 ||movie4all.co^$third-party
 ||mozo-widgets.f2.com.au^
 ||mp3ix.com^$third-party
-||mps.nbcuni.com^
 ||mrc.org/sites/default/files/uploads/images/Collusion_Banner
 ||mrc.org^*/Collusion_Banner300x250.jpg
 ||mrc.org^*/take-over-charlotte300x250.gif
@@ -47648,6 +47695,7 @@ a.upnorma.com^$webrtc
 ||pubexchange.com/module/*-prod$third-party
 ||pubexchange.com/modules/display/$script,third-party
 ||public.porn.fr^$third-party
+||pubportal.brkmd.com^
 ||pubs.hiddennetwork.com^
 ||puntersparadise.com.au/banners/
 ||purevpn.com/affiliates/
@@ -53116,7 +53164,7 @@ a.upnorma.com^$webrtc
 ||yourwire.net/images/refssder.gif
 ||youserials.com/i/banner_pos.jpg
 ||youtube-mp3.org/acode/
-||youtube.com/get_midroll_info?
+||youtube.com/get_midroll_
 ||youtube.com/pagead/
 ||youwatch.org/9elawi.html
 ||youwatch.org/driba.html
