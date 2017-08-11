@@ -3,7 +3,15 @@
 
 ## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/scriptvars/staticvariables.var
+STATICVARS="$script_dir"/scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
 
 ## Logo
 bash $AVATARSCRIPT
@@ -15,7 +23,14 @@ do
 
 # Dynamic Variables
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+if
+[[ -f $DYNOVARS ]]
+then
 source $DYNOVARS
+else
+echo "Dynamic Vars File Missing, Exiting."
+exit
+fi
 
 ## Loop Variables
 SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
