@@ -26,18 +26,16 @@ echo ""
 echo "piholeparser Directory Missing. Cloning Now."
 echo ""
 git clone $GITREPOSITORYURLB $REPODIR
-elif
-[[ -d "$REPODIR" ]]
-then
+fi
+
 printf "$blue"    "___________________________________________________________"
 echo ""
 printf "$green"   "Updating Repository."
 git -C $REPODIR pull
 printf "$magenta" "___________________________________________________________"
 echo ""
-fi
 
-source "$REPODIR"/scripts/scriptvars/staticvariables.var
+source "$REPODIR"scripts/scriptvars/staticvariables.var
 
 ## RunParser
 sudo bash $RUNPIHOLEPARSERSCRIPT
