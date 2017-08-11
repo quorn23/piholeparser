@@ -13,6 +13,14 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+if
+[[ -f $SUBMAINVAR ]]
+then
+source $SUBMAINVAR
+else
+echo "Sub Main Vars File Missing, Exiting."
+exit
+fi
 
 ## Logo
 bash $AVATARSCRIPT
