@@ -35,8 +35,8 @@ then
 (whiptail --title "piholeparser" --yes-button "Remove beore install" --no-button "Abort" --yesno "piholeparser is already installed?" 10 80) 
 then
 rm -r /etc/piholeparser
-rm /etc/updaterunpiholeparser.sh
-crontab -l | grep -v 'sudo bash /etc/updaterunpiholeparser.sh'  | crontab -
+rm /etc/piholeparser.sh
+crontab -l | grep -v 'sudo bash /etc/piholeparser.sh'  | crontab -
 else
 exit
 fi }
@@ -47,8 +47,8 @@ fi
 (whiptail --title "piholeparser" --yes-button "yes" --no-button "no" --yesno "Do You want to install piholeparser?" 10 80) 
 then
 git clone https://github.com/deathbybandaid/piholeparser.git /etc/piholeparser/
-cp /etc/piholeparser/scripts/updaterunpiholeparser.sh /etc/updaterunpiholeparser.sh
-(crontab -l ; echo "20 0 * * * sudo bash /etc/updaterunpiholeparser.sh") | crontab -
+cp /etc/piholeparser/scripts/piholeparser.sh /etc/piholeparser.sh
+(crontab -l ; echo "20 0 * * * sudo bash /etc/piholeparser.sh") | crontab -
 else
 exit
 fi }
