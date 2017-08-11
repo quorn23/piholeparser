@@ -21,7 +21,7 @@ if
 [[ ! -d "$REPODIR" ]]
 then
 echo ""
-echo "piholeparser Directory Missing. Cloning Now."
+echo "$REPONAME Directory Missing. Cloning Now."
 echo ""
 git clone $GITREPOSITORYURLB $REPODIR
 fi
