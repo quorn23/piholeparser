@@ -46,7 +46,7 @@ fi
 ## Update Gravity
 # pihole -g
 { if
-(whiptail --title "piholeparser" --yes-button "No" --no-button "Yes" --yesno "Do you want to run Gravity Now?" 10 80) 
+(whiptail --title "AntiGrav" --yes-button "No" --no-button "Yes" --yesno "Do you want to run Gravity Now?" 10 80) 
 then
 echo "not running gravity"
 else
