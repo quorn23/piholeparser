@@ -3,7 +3,15 @@
 
 ## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/../scriptvars/staticvariables.var
+STATICVARS="$script_dir"/../scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
 
 ####################
 ## File .lst's    ##
@@ -39,8 +47,16 @@ fi
 for source in `cat $f`;
 do
 
-## These Variables are to help with Filenaming
+# Dynamic Variables
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+if
+[[ -f $DYNOVARS ]]
+then
 source $DYNOVARS
+else
+echo "Dynamic Vars File Missing, Exiting."
+exit
+fi
 
 printf "$cyan"    "The Source In The File Is:"
 printf "$yellow"    "$source"
