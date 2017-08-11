@@ -19,7 +19,15 @@ for f in $EVERYLISTFILEWILDCARD
 do
 
 ## Dynamic Variables
+if
+[[ -f $DYNOVARS ]]
+then
 source $DYNOVARS
+else
+echo "Dymamic Vars File Missing, Exiting."
+exit
+fi
+
 
 ## Make List Of Every .lst file
 echo "$LISTBASENAMETXT" | tee --append $FILETEMP &>/dev/null
