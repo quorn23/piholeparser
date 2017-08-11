@@ -7,7 +7,7 @@ source "$script_dir"/../scriptvars/staticvariables.var
 
 ## Start File Loop
 ## For .sh files In The cleanupscripts Directory
-for f in $ALLCLEANUPSCRIPTS
+for f in $ALLENDTASKSCRIPTS
 do
 
 # Dynamic Variables
