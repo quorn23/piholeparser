@@ -3,7 +3,8 @@
 
 ## Variables
 script_dir=$(dirname $0)
-STATICVARS="$script_dir"/../../scriptvars/staticvariables.var
+SCRIPTVARSDIR="$script_dir"/../../scriptvars/
+STATICVARS="$SCRIPTVARSDIR"staticvariables.var
 if
 [[ -f $STATICVARS ]]
 then
@@ -12,6 +13,7 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+
 if 
 ls $NOHTTPSLISTS &> /dev/null; 
 then
