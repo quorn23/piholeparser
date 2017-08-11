@@ -9,6 +9,13 @@ WHATITIS="Localhost Web Directory"
 CHECKME=$BIGAPLLOCALHOSTDIR
 timestamp=$(echo `date`)
 if
+[[ -z $CHECKME ]]
+then
+echo "* $WHATITIS Not Set. Please Fix. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "Local Host Web Directory Not Set."
+exit
+fi
+if
 ls $CHECKME &> /dev/null;
 then
 echo "* $WHATITIS Already there no need to mkdir. $timestamp" | tee --append $RECENTRUN &>/dev/null
