@@ -37,7 +37,7 @@ echo ""
 echo "___________________________________________________________"
 echo ""
 
-STATICVARS="$REPODIR"scripts/scriptvars/staticvariables.var
+STATICVARS="$SCRIPTVARSDIR"staticvariables.var
 if
 [[ -f $STATICVARS ]]
 then
@@ -49,10 +49,10 @@ fi
 
 ## RunParser
 if
-[[ -f $RUNPIHOLEPARSERSCRIPT ]]
+[[ -f $TOPRUNSCRIPT ]]
 then
-bash $RUNPIHOLEPARSERSCRIPT
+bash $TOPRUNSCRIPT
 else
-echo "$RUNPIHOLEPARSERSCRIPT Missing, Exiting."
+echo "$TOPRUNSCRIPT Missing, Exiting."
 exit
 fi
