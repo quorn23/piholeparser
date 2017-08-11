@@ -61,7 +61,6 @@ ls $CHECKME &> /dev/null;
 then
 for f in $KILLTHELISTALL
 do
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 # Dynamic Variables
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 if
