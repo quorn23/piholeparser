@@ -4,7 +4,23 @@
 ##
 ## This File will not be updated often.
 
-DIRECTORY=/etc/piholeparser/
+## Variables
+REPONAMED=piholeparser
+script_dir=$(dirname $0)
+MAINVAR="$script_dir"/"$REPONAMED".var
+MAINVARONLINE="https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/scriptvars/piholeparser.var"
+CHECKME=$MAINVAR
+if
+ls $CHECKME &> /dev/null;
+then
+echo "Main Vars Check Successful"
+source $MAINVAR
+else
+echo "Main Vars File Missing, Exiting."
+exit
+fi
+
+REPODIRECTORY=/etc/piholeparser/
 
 VERSIONVARIABLE=/etc/piholeparser.var
 VERSIONVARDL=https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/scripts/scriptvars/piholeparser.var
@@ -19,16 +35,16 @@ echo "version=local" | tee --append $VERSIONVARIABLE
 fi
 
 if
-[[ ! -d "$DIRECTORY" ]]
+[[ ! -d "$REPODIRECTORY" ]]
 then
 echo ""
 echo "piholeparser Directory Missing. Cloning Now."
 echo ""
-git clone https://github.com/deathbybandaid/piholeparser.git $DIRECTORY
+git clone https://github.com/deathbybandaid/piholeparser.git $REPODIRECTORY
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
 elif
-[[ -d "$DIRECTORY" ]]
+[[ -d "$REPODIRECTORY" ]]
 then
 ## Variables
 source /etc/piholeparser/scripts/scriptvars/staticvariables.var
