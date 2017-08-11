@@ -40,6 +40,7 @@ DOMAINSINALLPARSEDE=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
 EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB and contains $DOMAINSINALLPARSEDE Domains."
 echo "* $EDITEDALLPARSEDSIZEMB" | tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "$EDITEDALLPARSEDSIZEMB"
+echo "EDITEDALLPARSEDSIZEMB='"$EDITEDALLPARSEDSIZEMB"'" | tee --append $TEMPVARS &>/dev/null
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
