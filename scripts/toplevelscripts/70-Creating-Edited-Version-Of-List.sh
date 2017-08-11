@@ -33,6 +33,14 @@ rm $WHITELISTTEMP
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 rm $FILETEMP
 
+## Result
+FETCHFILESIZEALL=$(stat -c%s "$BIGAPLE")
+FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
+DOMAINSINALLPARSEDE=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
+EDITEDALLPARSEDSIZEMB="The Edited ALLPARSEDLIST is $FETCHFILESIZEALLMB MB and contains $DOMAINSINALLPARSEDE Domains."
+echo "* $EDITEDALLPARSEDSIZEMB" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"   "$EDITEDALLPARSEDSIZEMB"
+
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
 timestamp=$(echo `date`)
