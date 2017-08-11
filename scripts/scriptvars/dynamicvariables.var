@@ -1,8 +1,8 @@
 ## These variables get injected into source loops
 
 ## Base Variables
-REPONAMED=piholeparser
-source /etc/"$REPONAMED"/scripts/scriptvars/variables.var
+SUBMAINVAR="$SCRIPTVARSDIR"variables.var
+source $SUBMAINVAR
 
 ## Timestamp
 timestamp=$(echo `date`)
