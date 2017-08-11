@@ -29,6 +29,14 @@ cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $FILETEMP
 echo -e "\t`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
 mv $FILETEMP $TEMPFILE
 
+## Result
+FETCHFILESIZEALL=$(stat -c%s "$BIGAPL")
+FETCHFILESIZEALLMB=`expr $FETCHFILESIZEALL / 1024 / 1024`
+DOMAINSINALLPARSED=$(echo -e "\t`wc -l $BIGAPLE | cut -d " " -f 1`")
+ALLPARSEDSIZEMB="The ALLPARSEDLIST is $FETCHFILESIZEALLMB MB and contains $DOMAINSINALLPARSED Domains."
+echo "* $ALLPARSEDSIZEMB" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"   "$ALLPARSEDSIZEMB"
+
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
 timestamp=$(echo `date`)
