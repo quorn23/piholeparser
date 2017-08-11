@@ -12,21 +12,5 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
-if
-[[ -f $DYNOVARS ]]
-then
-source $DYNOVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
 
 cat $TEMPFILEL | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^[.]/d' | grep -v '\^.' > $TEMPFILEM
