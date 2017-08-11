@@ -1,9 +1,26 @@
 #!/bin/bash
 ## This Removes Parsed Files That We No Longer Need
 
-## Static Variables
+## Variables
 script_dir=$(dirname $0)
-source "$script_dir"/../../scriptvars/staticvariables.var
+STATICVARS="$script_dir"/../../scriptvars/staticvariables.var
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
+if
+[[ -f $TEMPVARS ]]
+then
+source $TEMPVARS
+else
+echo "Temp Vars File Missing, Exiting."
+exit
+fi
+
 
 printf "$cyan"    "Making List of All .lst Files."
 for f in $EVERYLISTFILEWILDCARD
