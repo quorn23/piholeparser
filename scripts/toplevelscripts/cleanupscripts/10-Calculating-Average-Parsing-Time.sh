@@ -1,5 +1,5 @@
 #!/bin/bash
-## This Removes *.temp files
+## average parsing time
 
 ## Variables
 script_dir=$(dirname $0)
