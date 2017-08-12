@@ -22,10 +22,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-## Process Every source within the .lst from above
-for source in `cat $FILEBEINGPROCESSED`;
-do
-
 ## Is source not using https
 if
 [[ $source != https* ]]
@@ -34,5 +30,3 @@ printf "$red"    "$BASEFILENAME List Does NOT Use https."
 else
 printf "$green"    "$BASEFILENAME List Does Use https."
 fi
-
-done
