@@ -27,6 +27,7 @@ for source in `cat $FILEBEINGPROCESSED`;
 do
 
 printf "$yellow"    "$source"
+echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo ""
 
 done
