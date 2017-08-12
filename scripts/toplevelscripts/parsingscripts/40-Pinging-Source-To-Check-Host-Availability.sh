@@ -22,10 +22,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-## Process Every source within the .lst from above
-for source in `cat $FILEBEINGPROCESSED`;
-do
-
 UPCHECK=`echo $source | awk -F/ '{print $3}'`
 echo "UPCHECK="$UPCHECK"" | tee --append $TEMPPARSEVARS &>/dev/null
 
@@ -55,5 +51,3 @@ PINGTEST=fail
 fi
 echo ""
 echo "PINGTEST="$PINGTEST"" | tee --append $TEMPPARSEVARS &>/dev/null
-
-done
