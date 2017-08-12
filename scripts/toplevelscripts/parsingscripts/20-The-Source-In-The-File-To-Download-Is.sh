@@ -23,11 +23,13 @@ exit
 fi
 
 ## Process Every source within the .lst from above
-for source in `cat $FILEBEINGPROCESSED`;
-do
+#for source in `cat $FILEBEINGPROCESSED`;
+#do
+
+source=`cat $FILEBEINGPROCESSED`
 
 printf "$yellow"    "$source"
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo ""
 
-done
+#done
