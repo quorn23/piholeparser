@@ -112,11 +112,11 @@ DIDWECHECKONLINEFILE=true
 fi
 
 if
-[[ -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
+[[ -f $MIRROREDFILE && -z $PINGTESTFAILED && -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
 then
 printf "$yellow"    "File Has Changed Online."
 elif
-[[ -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
+[[ -f $MIRROREDFILE && -z $PINGTESTFAILED && -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
 then
 FULLSKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
@@ -369,7 +369,7 @@ STARTPARSESTAMP=$(date +"%s")
 
 ## Start File Loop
 ## For .sh files In The parsing scripts Directory
-for p in $ALLPARSINGSCRIPTS
+for p in $ALLACTUALPARSINGSCRIPTS
 do
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
