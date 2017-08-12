@@ -35,12 +35,12 @@ if
 [[ -n $SOURCEIP ]]
 then
 printf "$green"    "Ping Test Was A Success!"
-PINGTEST=success
 elif
 [[ -z $SOURCEIP ]]
 then
 printf "$red"    "Ping Test Failed."
-PINGTEST=fail
+PINGTESTFAILED=true
+echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 echo ""
-echo "PINGTEST="$PINGTEST"" | tee --append $TEMPPARSEVARS &>/dev/null
+
