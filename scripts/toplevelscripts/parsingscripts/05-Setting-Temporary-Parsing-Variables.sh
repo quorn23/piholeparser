@@ -22,6 +22,28 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+printf "$yellow"    "Setting Variables for $BASEFILENAME List."
+echo ""
+
 ## Download URL
 source=`cat $FILEBEINGPROCESSED`
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
+
+## This extracts the domain from source
+SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
+echo "SOURCEDOMAIN="$SOURCEDOMAIN"" | tee --append $TEMPPARSEVARS &>/dev/null
+
+## Mirrored File (local directory)
+MIRROREDFILE="$MIRRORDIR""$BASEFILENAME".txt
+echo "MIRROREDFILE="$MIRROREDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
+
+## Mirrored File (github)
+MIRROREDFILEDL="$MIRROREDLISTSDIRRAW""$BASEFILENAME".txt
+echo "MIRROREDFILEDL="$MIRROREDFILEDL"" | tee --append $TEMPPARSEVARS &>/dev/null
+
+## Temp Files
+BTEMPFILE="$TEMPDIR""$BASEFILENAME".tempfile.txt
+echo "BTEMPFILE="$BTEMPFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
+BFILETEMP="$TEMPDIR""$BASEFILENAME".filetemp.txt
+echo "BFILETEMP="$BFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
+
