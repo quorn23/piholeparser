@@ -380,6 +380,19 @@ PARSECOMMENT="$SCRIPTTEXT"
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
+touch $TEMPFILEL
+FETCHFILESIZE=$(stat -c%s "$TEMPFILEL")
+fi
+
+if
+[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+then
+FILESIZEZERO=true
+fi
+
+if
+[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+then
 printf "$cyan"  "$PARSECOMMENT"
 bash $p
 touch $TEMPFILEM
