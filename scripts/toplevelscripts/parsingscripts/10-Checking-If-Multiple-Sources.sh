@@ -18,7 +18,7 @@ if
 then
 source $TEMPPARSEVARS
 else
-echo "Static Vars File Missing, Exiting."
+echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
