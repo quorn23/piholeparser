@@ -42,4 +42,5 @@ elif
 then
 FULLSKIPPARSING=true
 printf "$green"    "File Not Updated Online. No Need To Process."
+echo "FULLSKIPPARSING="$FULLSKIPPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
