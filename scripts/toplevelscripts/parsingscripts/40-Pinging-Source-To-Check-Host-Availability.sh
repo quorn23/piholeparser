@@ -22,20 +22,13 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
-echo "UPCHECK="$UPCHECK"" | tee --append $TEMPPARSEVARS &>/dev/null
-
-## Check to see if source's host is online
+## If $SOURCEDOMAIN is set, Ping it
 if
-[[ -n $UPCHECK ]]
+[[ -n $SOURCEDOMAIN ]]
 then
-SOURCEIPFETCH=`ping -c 1 $UPCHECK | gawk -F'[()]' '/PING/{print $2}'`
+SOURCEIPFETCH=`ping -c 1 $SOURCEDOMAIN | gawk -F'[()]' '/PING/{print $2}'`
 SOURCEIP=`echo $SOURCEIPFETCH`
 echo "SOURCEIP="$SOURCEIP"" | tee --append $TEMPPARSEVARS &>/dev/null
-elif
-[[ -z $UPCHECK ]]
-then
-printf "$red"    "$BASEFILENAME Host Unavailable."
 fi
 
 if
