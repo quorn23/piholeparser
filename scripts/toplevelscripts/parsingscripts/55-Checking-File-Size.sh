@@ -50,6 +50,19 @@ printf "$yellow"  "$ENDCOMMENT"
 echo ""
 fi
 
+## Cheap error handling
+if
+[[ -f $BTEMPFILE ]]
+then
+rm $BTEMPFILE
+fi
+
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
+
 ## Duplicate the downloaded file for the next steps
 touch $BORIGINALFILETEMP
 if
