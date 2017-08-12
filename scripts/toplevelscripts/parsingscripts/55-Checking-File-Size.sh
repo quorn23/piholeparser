@@ -43,6 +43,7 @@ elif
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -gt 0 ]]
 then
 ORIGFILESIZENOTZERO=true
+echo "ORIGFILESIZENOTZERO="$ORIGFILESIZENOTZERO"" | tee --append $TEMPPARSEVARS &>/dev/null
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After Download."
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
