@@ -6,7 +6,7 @@
 
 ## Variables
 REPONAME=piholeparser
-MAINVAR=./"$REPONAME".var
+MAINVAR=/etc/"$REPONAME".var
 if
 [[ -f "$MAINVAR" ]]
 then
