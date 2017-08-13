@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: GkkK+hM5W8aCzCmjWI0t/g
-! Version: 201708121600
+! Checksum: iG9jSKO5wR88vZ41nQov6Q
+! Version: 201708130630
 ! Title: RU AdList
-! Last modified: 12 Aug 2017 16:00 UTC
+! Last modified: 13 Aug 2017 06:30 UTC
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
 ! Дополнительная региональная подписка RU AdList к подписке EasyList
@@ -911,6 +911,7 @@ by,ru,ua##.banner_box
 ~bodyclick.net##a[href*="/bodyclick.net"]
 ##a[href*="/get-torrent.ru"]
 ~maniya.info##a[href*="/maniya.info"]
+~onvix.tv##a[href*="/onvix.tv/promo/"][target=_blank] > img
 ##a[href*="/vkout.ru"]
 ~1xwgn.xyz##a[href*="1xwgn.xyz"]
 ~2di.site##a[href*="2di.site"]
@@ -3421,6 +3422,7 @@ _tizers.
 ||bzlwe.com^$third-party
 ||c.cpl1.ru^$third-party
 ||c2mix.ru^$third-party
+||c3itnot.ru^$third-party
 ||c4mwm.ru^$third-party
 ||cachand.com^
 ||cache.betweendigital.com^
@@ -7346,7 +7348,7 @@ batpic.com###l0ZKuGa775
 myscore.com.ua###lang-box-wrapper
 stranamam.ru###last-ad-link-block
 nnm-club.me,nnm-club.name,nnm-club.to,nnmclub.to###lastp.genmed
-streamguard.cc###launcher > span ~ *
+newfilms.online,streamguard.cc###launcher > span ~ *
 volynpost.com###layout-center > a[target]
 mobiltelefon.ru###lbanners
 33urista.ru###leadia_science_widget
@@ -11637,6 +11639,7 @@ zoom.cnews.ru##.promo_block
 rafkino.com##.ytp-ad-progress-list
 file-upload.cc,overclockers.ru,ph4.ru,pvpru.com##[id^="aswift_"]
 2ip.ru##[id^="aswift_"] > iframe
+hdkinoteatr.com##a[href*="/onvix.tv/promo/"][target=_blank] > img
 overclockers.ru##a[href*="banner"][target="_blank"]
 freerutor.org##a[href*="goo.gl"]
 vnx.su##a[href*="got.by"]
@@ -15202,7 +15205,8 @@ $websocket,domain=afisha.mail.ru|auto.mail.ru|cloud.mail.ru|e.mail.ru|games.mail
 ok.ru###hook_Block_ForthColumnTopBanner
 ok.ru###hook_Block_StickyBannerContainer
 ok.ru###hook_Block_TargetBanner
-okminigames.mail.ru###ok-wrap > div[class] > div[class] > div[class]
+okminigames.mail.ru###ok-wrapper.container div[class][style="width: 100%;"]
+okminigames.mail.ru###ok-wrapper.container span.js-href
 ok.ru##.dialogWrapperBanner
 ok.ru##.exit-popup
 ok.ru##.forthTopAdv

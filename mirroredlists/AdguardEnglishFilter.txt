@@ -4416,6 +4416,9 @@ watchseries-online.nl,btsone.cc#%#Object.defineProperty(window,'_drp', { get:fun
 !*****
 !**********************************
 !
+! thevideo.me - ads and popups
+thevideo.me#%#window._mgq = { push: function() {} };
+tvad.me#%#Object.defineProperty(window, 'TheVideoJsPop', { get: function() { return {}; }, set: function() {} });
 ! https://forum.adguard.com/index.php?threads/http-www-xxxmovies-pro-nsfw.24031/
 xxxmovies.pro#%#document.cookie = "popunder_cookie=1";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6128
@@ -4889,6 +4892,8 @@ zippymoviez.com#%#window.open = function() {};
 !-------------------
 !-------CSS---------
 !-------------------
+! thevideo.me - ads
+thevideo.me#$#div[id*="Composite"] { position: absolute!important; top: -2000px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6132
 paraphrasing-tool.com#$#.ezoic-ad { position: absolute!important; left: -3000px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6071
@@ -5396,6 +5401,10 @@ tomsguide.com##.page-content-rightcol > div[id] > div[class^="_"]
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 tomsguide.com##.page-content > div.p-u-1.txt-center > div[id] > div[id="[ID]"][class^="_"]
 !
+tvad.me##.TheVideoJsPopOverlay
+tvad.me##body > div[style^="width: 100%; height: 100%; position: fixed;"][style*="z-index: 9999999;"]
+thevideo.me##.sponsored-content
+thevideo.me###vplayer > .vjs-overlay-banner300x
 accuweather.com##body #header-davek
 visitnorway.com###dtnContainer
 hubcoins.xyz##a[href^="http://fadetoblk.space/"][target="_blank"] > img
@@ -32377,6 +32386,7 @@ _popunder+$popup
 ##.iconAdChoices
 ##.icon_ad_choices
 ##.iconads
+##.icx_ad
 ##.id-Advert
 ##.id-Article-advert
 ##.idGoogleAdsense
@@ -35134,6 +35144,7 @@ _popunder+$popup
 ##.top-ad-center
 ##.top-ad-container
 ##.top-ad-content
+##.top-ad-div
 ##.top-ad-horizontal
 ##.top-ad-inside
 ##.top-ad-multiplex
