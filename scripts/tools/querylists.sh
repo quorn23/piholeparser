@@ -45,4 +45,27 @@ fi
 done
 echo ""
 echo ""
+
+echo "Checking Big Lists"
+if 
+grep -q $DOMAINTOLOOKFOR "$BIGAPL"
+then
+echo "Found In "$BASEFILENAME". Matching Included:"
+echo "`grep $DOMAINTOLOOKFOR $BIGAPL`"
+echo ""
+else
+:
+fi
+if 
+grep -q $DOMAINTOLOOKFOR "$BIGAPLE"
+then
+echo "Found In "$BASEFILENAME". Matching Included:"
+echo "`grep $DOMAINTOLOOKFOR $BIGAPLE`"
+echo ""
+else
+:
+fi
+echo ""
+echo ""
+
 echo "The Search For $DOMAINTOLOOKFOR completed. "
