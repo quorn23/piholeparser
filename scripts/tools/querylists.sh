@@ -51,6 +51,7 @@ if
 grep -q $DOMAINTOLOOKFOR "$BIGAPL"
 then
 echo "Found on Big List (Normal)"
+echo "`grep $DOMAINTOLOOKFOR $BIGAPL`"
 echo ""
 else
 echo "Not Found on Big List (Normal)"
@@ -59,6 +60,7 @@ if
 grep -q $DOMAINTOLOOKFOR "$BIGAPLE"
 then
 echo "Found on Big List (Edited)"
+echo "`grep $DOMAINTOLOOKFOR $BIGAPLE`"
 echo ""
 else
 echo "Not Found on Big List (Edited)"
