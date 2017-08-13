@@ -50,20 +50,18 @@ echo "Checking Big Lists"
 if 
 grep -q $DOMAINTOLOOKFOR "$BIGAPL"
 then
-echo "Found In "$BASEFILENAME". Matching Included:"
-echo "`grep $DOMAINTOLOOKFOR $BIGAPL`"
+echo "Found on Big List (Normal)"
 echo ""
 else
-:
+echo "Not Found on Big List (Normal)"
 fi
 if 
 grep -q $DOMAINTOLOOKFOR "$BIGAPLE"
 then
-echo "Found In "$BASEFILENAME". Matching Included:"
-echo "`grep $DOMAINTOLOOKFOR $BIGAPLE`"
+echo "Found on Big List (Edited)"
 echo ""
 else
-:
+echo "Not Found on Big List (Edited)"
 fi
 echo ""
 echo ""
