@@ -194,3 +194,60 @@
 * Localhost Web Directory Not Set. Please Fix. Mon 14 Aug 18:09:29 EDT 2017
 
 ### Pushing Lists To Github. Mon 14 Aug 18:09:29 EDT 2017
+
+### Removing Temporary Whitelist. Mon 14 Aug 18:09:30 EDT 2017
+
+### Removing Temporary Blacklist. Mon 14 Aug 18:09:30 EDT 2017
+
+### Removing Temporary TLD List. Mon 14 Aug 18:09:30 EDT 2017
+
+### Pushing Lists To Locally Hosted Location. Mon 14 Aug 18:09:30 EDT 2017
+* Localhost Web Directory Not Set. Please Fix. Mon 14 Aug 18:09:30 EDT 2017
+
+### Pushing Lists To Github. Mon 14 Aug 18:09:30 EDT 2017
+
+### Cleanup Completed. Mon 14 Aug 18:09:31 EDT 2017
+* Script completed at Mon 14 Aug 18:09:31 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+* Allparsedlist list was an empty file Mon 14 Aug 18:09:36 EDT 2017
+
+### Compiling Edited Combined List. Mon 14 Aug 18:09:36 EDT 2017
+* All Parsed List (edited) Removed. Mon 14 Aug 18:09:36 EDT 2017
+* Allparsedlist list was an empty file Mon 14 Aug 18:09:36 EDT 2017
+
+### Compiling Country Code Lists. Mon 14 Aug 18:09:37 EDT 2017
+
+### Cleanup Completed. Mon 14 Aug 18:09:54 EDT 2017
+* Script completed at Mon 14 Aug 18:09:54 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Writing-Additional-Lists.txt)
+
+## Compiling Country Code Lists. Mon 14 Aug 18:09:59 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Compiling-Country-Code-Lists.txt)
+
+## Completing End Tasks. Mon 14 Aug 18:09:59 EDT 2017
+### Calculating Average Parsing Time. Mon 14 Aug 18:09:59 EDT 2017
+* Average Parsing Time Was  Minutes.
+
+### Calculating Total Runtime Of Script. Mon 14 Aug 18:09:59 EDT 2017
+* Script Took  minutes To Filter  Lists.
+
+### Adjusting README. Mon 14 Aug 18:10:00 EDT 2017
+
+### Removing Temporary Variables. Mon 14 Aug 18:10:00 EDT 2017
+
+### Removing Temporary Whitelist. Mon 14 Aug 18:10:00 EDT 2017
+
+### Removing Temporary Blacklist. Mon 14 Aug 18:10:00 EDT 2017
+
+### Removing Temporary TLD List. Mon 14 Aug 18:10:00 EDT 2017
+
+### Pushing Lists To Locally Hosted Location. Mon 14 Aug 18:10:00 EDT 2017
+* Localhost Web Directory Not Set. Please Fix. Mon 14 Aug 18:10:01 EDT 2017
+
+### Pushing Lists To Github. Mon 14 Aug 18:10:01 EDT 2017
