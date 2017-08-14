@@ -23,9 +23,9 @@ WHATITIS="All Parsed List"
 CHECKME=$BIGAPL
 timestamp=$(echo `date`)
 if
-ls $CHECKME &> /dev/null;
+[[ -f $BIGAPL ]]
 then
-rm $CHECKME
+rm $BIGAPL
 echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -77,17 +77,27 @@ printf "$yellow"  "Big List Created Successfully."
 fi
 echo ""
 
+if
+[[ -f $TEMPFILE ]]
+then
+rm $TEMPFILE
+fi
+if
+[[ -f $FILETEMP ]]
+then
+rm $FILETEMP
+fi
+
 ####################
 ## Big List edit  ##
 ####################
 
 WHATITIS="All Parsed List (edited)"
-CHECKME=$BIGAPLE
 timestamp=$(echo `date`)
 if
-ls $CHECKME &> /dev/null;
+[[ -f $BIGAPLE ]]
 then
-rm $CHECKME
+rm $BIGAPLE
 echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
