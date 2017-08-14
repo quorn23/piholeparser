@@ -30,7 +30,17 @@ WHITESORTDEDUPE="Merging the Whitelists for Later."
 WHATLISTSMERGE="$WHITELISTDOMAINSALL"
 timestamp=$(echo `date`)
 printf "$yellow"  "Processed $WHITESORTDEDUPE"
-cat -s $WHATLISTSMERGE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
+cat -s $WHATLISTSMERGE >> $TEMPFILEJ
+
+## Clean up later, but add other whites
+cat -s $LISTWHITELISTDOMAINS >> $TEMPFILEJ
+
+## Dedupe
+cat -s $TEMPFILEJ | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
+
+## fix me
+rm $TEMPFILEJ
+
 HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
 printf "$yellow"  "$HOWMANYLINES"
 
