@@ -62,19 +62,16 @@ timestamp=$(echo `date`)
 if
 [ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
 then
-echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 elif
 [ "$FETCHFILESIZE" -eq 0 ]
 then
-echo ""
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 else
-echo ""
 mv $TEMPFILE $BIGAPL
 printf "$yellow"  "Big List Created Successfully."
 fi
@@ -100,17 +97,18 @@ fi
 if
 [[ ! -f $BLACKLISTTEMP ]]
 then
-echo "Static Vars File Missing, Exiting."
+printf "$red"  "Blacklist File Missing."
 MISSINGBLACK=true
 fi
 if
 [[ ! -f $WHITELISTTEMP ]]
 then
-echo "Static Vars File Missing, Exiting."
+printf "$red"  "Whitelist File Missing."
 MISSINGWHITE=true
 fi
 
 printf "$cyan"  "Generating All Parsed List (edited)."
+echo ""
 
 ## Add Blacklist Domains
 if
