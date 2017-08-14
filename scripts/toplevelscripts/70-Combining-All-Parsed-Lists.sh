@@ -117,7 +117,6 @@ then
 printf "$yellow"  "Adding Blacklist Domains."
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after blacklist"
-rm $BLACKLISTTEMP
 echo ""
 else
 cp $BIGAPL $FILETEMP
@@ -132,7 +131,6 @@ gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP > $TEMPFILE
 rm $FILETEMP
 mv $TEMPFILE $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
-rm $WHITELISTTEMP
 echo ""
 fi
 
