@@ -30,8 +30,20 @@ echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 
+for p in $ALLPARSINGSCRIPTS
+do
 
+PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
+PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
+PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
+SCRIPTTEXT=""$PBNAMEPRETTYSCRIPTTEXT"."
+PARSECOMMENT="$SCRIPTTEXT"
 
+printf "$cyan"  "$PARSECOMMENT"
+bash $p
 
+## End of parsing Loop
+done
 
+## End of File Loop
 done
