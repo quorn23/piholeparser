@@ -33,15 +33,29 @@ fi
 
 ## Combine Small lists
 printf "$yellow"  "Merging Individual Lists."
+if
+ls $PARSEDLISTSALL &> /dev/null;
+then
 cat $PARSEDLISTSALL > $TEMPFILE
-echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
+echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
+else
+printf "$red"  "No Parsed Files Available To Merge."
+touch $TEMPFILE
+INDIVIDUALMERGEFAILED=true
+fi
+echo ""
 
 ## Duplicate Removal
+if
+[[ -z INDIVIDUALMERGEFAILED ]]
+then
 echo ""
-printf "$yellow"  "Removing duplicates..."
+printf "$yellow"  "Removing duplicates."
 cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $FILETEMP
-echo -e "\t`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
 mv $FILETEMP $TEMPFILE
+echo ""
+fi
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
@@ -60,7 +74,6 @@ elif
 then
 echo ""
 printf "$red"     "File Empty"
-echo "File Size equaled zero." | tee --append $TEMPFILE
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 else
@@ -99,7 +112,7 @@ echo "Static Vars File Missing, Exiting."
 MISSINGWHITE=true
 fi
 
-printf "$yellow"  "Generating All Parsed List (edited)."
+printf "$cyan"  "Generating All Parsed List (edited)."
 
 ## Add Blacklist Domains
 if
@@ -107,7 +120,9 @@ if
 then
 printf "$yellow"  "Adding Blacklist Domains."
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after blacklist"
 rm $BLACKLISTTEMP
+echo ""
 else
 cp $BIGAPL $FILETEMP
 fi
@@ -120,13 +135,17 @@ printf "$yellow"  "Removing whitelist Domains."
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP > $TEMPFILE
 rm $FILETEMP
 mv $TEMPFILE $FILETEMP
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 rm $WHITELISTTEMP
+echo ""
 fi
 
 ## Dedupe
 printf "$yellow"  "Removing Duplicates."
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
+echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after deduping"
 rm $FILETEMP
+echo ""
 
 ## Github has a 100mb limit and empty files are useless
 FETCHFILESIZE=$(stat -c%s $TEMPFILE)
@@ -134,7 +153,6 @@ timestamp=$(echo `date`)
 if
 [ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
 then
-echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
@@ -142,13 +160,10 @@ mv $TEMPFILE $BIGAPLE
 elif
 [ "$FETCHFILESIZE" -eq 0 ]
 then
-echo ""
 printf "$red"     "File Empty"
-echo "File Size equaled zero." | tee --append $TEMPFILE
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPLE
 else
-echo ""
 mv $TEMPFILE $BIGAPLE
 printf "$yellow"  "Big List Edited Created Successfully."
 fi
