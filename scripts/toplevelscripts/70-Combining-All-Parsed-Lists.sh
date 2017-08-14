@@ -15,10 +15,6 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-## Cheap error handling
-touch $BLACKLISTTEMP
-touch $WHITELISTTEMP
-
 ####################
 ## Big List       ##
 #################### 
@@ -36,6 +32,7 @@ echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Combine Small lists
+printf "$yellow"  "Merging Individual Lists."
 cat $PARSEDLISTSALL > $TEMPFILE
 echo -e "\t`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
 
@@ -88,15 +85,46 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
+## Cheap error handling
+if
+[[ ! -f $BLACKLISTTEMP ]]
+then
+echo "Static Vars File Missing, Exiting."
+MISSINGBLACK=true
+fi
+if
+[[ ! -f $WHITELISTTEMP ]]
+then
+echo "Static Vars File Missing, Exiting."
+MISSINGWHITE=true
+fi
+
+printf "$yellow"  "Generating All Parsed List (edited)."
+
 ## Add Blacklist Domains
+if
+[[ -z $MISSINGBLACK ]]
+then
+printf "$yellow"  "Adding Blacklist Domains."
 cat $BLACKLISTTEMP $BIGAPL > $FILETEMP
 rm $BLACKLISTTEMP
-cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
-rm $FILETEMP
+else
+cp $BIGAPL $FILETEMP
+fi
 
 ## Remove Whitelist Domains
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE > $FILETEMP
+if
+[[ -z $MISSINGWHITE ]]
+then
+printf "$yellow"  "Removing whitelist Domains."
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP > $TEMPFILE
+rm $FILETEMP
+mv $TEMPFILE $FILETEMP
 rm $WHITELISTTEMP
+fi
+
+## Dedupe
+printf "$yellow"  "Removing Duplicates."
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILE
 rm $FILETEMP
 
