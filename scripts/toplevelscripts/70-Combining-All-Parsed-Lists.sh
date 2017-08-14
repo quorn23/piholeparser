@@ -47,9 +47,8 @@ echo ""
 
 ## Duplicate Removal
 if
-[[ -z INDIVIDUALMERGEFAILED ]]
+[[ -z $INDIVIDUALMERGEFAILED ]]
 then
-echo ""
 printf "$yellow"  "Removing duplicates."
 cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
@@ -66,8 +65,6 @@ then
 echo ""
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $FILETEMP
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
 mv $TEMPFILE $BIGAPL
 elif
 [ "$FETCHFILESIZE" -eq 0 ]
@@ -81,6 +78,7 @@ echo ""
 mv $TEMPFILE $BIGAPL
 printf "$yellow"  "Big List Created Successfully."
 fi
+echo ""
 
 ####################
 ## Big List edit  ##
