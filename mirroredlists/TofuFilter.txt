@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 21:21 2017/08/13
+! 最終更新 11:56 2017/08/15
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -150,7 +150,7 @@ _ads.php
 ^zoneid=
 ^zone_id=
 !geniee
-/://(?:js|\d{6})\.[-_.a-zA-Z0-9]+/t/\d{3}/\d{3}/a\d{7}\.js$/
+/://(?:js|\d{6})\.[-.0-9a-z]+/t/\d{3}/\d{3}/a\d{7}\.js$/
 
 !||adnico.jp^$third-party
 !||advision-adnw.jp^$third-party
@@ -163,7 +163,7 @@ _ads.php
 !||sprout-ad.com^$third-party
 
 
-/://[a-f0-9]{10,}\.com/\d{5,}/$/
+/://[0-9a-z]{10,}\.com/\d{5,}/$/$third-party
 
 .biz/ad/
 .biz/ads/
@@ -643,7 +643,6 @@ $script,third-party,domain=jpidols.tv
 ||chem-station.com^*/adrotate-pro/
 ||chixi.jp/img.php?filename=b
 ||cinematoday.jp^*affiliate
-|http://$xmlhttprequest,third-party,domain=clipconverter.cc
 ||cookpad.com/iframe/
 ||cosp.jp/images/spacer.gif
 ||diced.jp/webs/

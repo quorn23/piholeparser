@@ -17,6 +17,8 @@
 !
 !######### Annoying elements (not ads)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6211
+aftonbladet.se###header.abThemeBgLight > div[class="_3lW80"]
 ! wikipedia.org - requests for donations
 wikipedia.org###frb-nag
 wikipedia.org###frb-inline
@@ -52,8 +54,9 @@ e.mail.ru###b-announcements
 ! https://forum.adguard.com/index.php?threads/21288/
 kinopoisk.ru##.film-thin-teaser
 ! https://forum.adguard.com/index.php?threads/22946/
+! https://github.com/AdguardTeam/AdguardFilters/issues/6125
 ||cdn.playwire.com/*/embed.js$domain=filehippo.com
-||view.vzaar.com^$domain=filehippo.com
+||view.vzaar.com/*/player$domain=filehippo.com
 ! community.spiceworks.com - proposal for registration
 community.spiceworks.com##.join-promotion
 ! https://forum.adguard.com/index.php?threads/22911/
@@ -321,6 +324,10 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+mobil.news.at##a[href="http://www.onlinenewsletter.news.at/neuanmeldung"]
+mobil.news.at##a[href="http://mobil.news.at/whatsapp"]
+iz.ru##.get_news_link
+expansion.com##.modulo.especial.newsletter
 soft-file.ru##.sbar
 ||widget.manychat.com^$domain=ukrinform.ru
 sitepoint.com##[class="l-w-100 l-pv2 l-pv4--2col versioning-background f-c-white l-p-rel"]
@@ -2668,6 +2675,7 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+flooxer.com##.cookies
 visitnorway.com##.alert-wrapper-cookie
 mitele.es##.cookies-consent
 animeforce.org###cookieChoiceInfo
@@ -3886,6 +3894,8 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+||popup*.lifterapps.com^$domain=linuxandubuntu.com
+tamiltunes.live###fbslidebox
 dota2.ru###vkd2ru-content
 dota2.ru###vkd2ru-overlay
 prizyv.ru##.pum-overlay
@@ -3944,7 +3954,7 @@ adbuff.com##.ppsPopupShell
 livestrong.com##.newsletter_signup_overlay
 community.spiceworks.com###photo-join-modal[data-modal-el="overlay"]
 groupon.com,groupon.co.uk,groupon.be,groupon.fr###subscribe_modal_container
-groupon.com,groupon.co.uk,groupon.be,groupon.fr###subscribe_modal_container + #spotlight
+groupon.com,groupon.co.uk,groupon.be,groupon.fr###subscribe_modal_container ~ #spotlight
 tradeciety.com##.cp-modal-popup-container
 fairbinaryoptions.com##.popup-banner.overlay.normal
 ren.tv###box-view-wrapper
@@ -4463,6 +4473,7 @@ livelib.ru,lenta.ru,mychrome,rambler.ru,sports.ru#%#(function() { if (typeof Not
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: 2 }; localStorage.setItem("sports:view:notifications-subscribe-popup:closed:count", JSON.stringify(a)) } } catch (ex) {} })();
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: true }; localStorage.setItem("sports:view:notifications-subscribe-popup:view", JSON.stringify(a)) } } catch (ex) {} })();
 !
+dtf.ru###push_subscribe
 sporx.com##.box-push
 hellomagazine.com##.push-wrap
 m.lenta.ru##.js-custom-push-notifications
