@@ -1862,6 +1862,7 @@ youtube.com##.pyv-afc-ads-inner
 
 !------------ero-video.net------------!
 |http://$third-party,domain=ero-video.net
+|https://$third-party,domain=ero-video.net
 ||dtiserv2.com^$popup
 ||ero-video.net/advert/*
 
@@ -2181,6 +2182,8 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 
 
 !uBO
+ero-video.net##script:contains(showPopUpBanner)
+
 *$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com
 youporn.com##script:contains(ChromePopMouseDownHandler)
 redtube.com##script:contains(var rAb=)
