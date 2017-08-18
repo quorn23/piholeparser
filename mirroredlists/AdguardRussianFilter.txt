@@ -17,6 +17,7 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||zhitkise.info^$third-party
 ||eg.light2gr0w.me^$third-party
 ||puh.winniepuh.info^$third-party
 ||n1219adserv.xyz^
@@ -296,7 +297,6 @@
 /clicks/vkmsgs.php?idadv=$third-party
 /codeeeeeeeyeye/*$third-party
 /getThumbs?uid=$third-party
-/js/loader.js|$third-party
 /lo.php?id=$third-party
 /newcode/?kf=$third-party
 /paypaypay/?www=$third-party
@@ -4484,10 +4484,10 @@ qq-new.ru##.xenOverlay
 ! https://forum.adguard.com/index.php?threads/13600/
 @@||go.uakino.net/ifr_player.php$generichide
 ! Yandex Mail
-@@||mail.yandex.ua^$genericblock
-@@||mail.yandex.ru^$genericblock
-@@||mail.yandex.kz^$genericblock
-@@||mail.yandex.by^$genericblock
+@@||mail.yandex.ua^$genericblock,generichide
+@@||mail.yandex.ru^$genericblock,generichide
+@@||mail.yandex.kz^$genericblock,generichide
+@@||mail.yandex.by^$genericblock,generichide
 ! https://forum.adguard.com/index.php?threads/17392
 @@/rekl$domain=happy-hack.ru,script
 ! https://forum.adguard.com/index.php?threads/12959/
@@ -5794,10 +5794,12 @@ s4galaxy.ru,3dnews.ru,lenovo-smart.ru#%#Object.defineProperty(window, 'SocialMar
 rustorka.com,pise4ka.net,nnm-club.me,nnm-club.ws,nnmclub.to,onlainfilm.ucoz.ua,rutor.is,baskino.club,rutor.info,nnm.me,korzik.net,seasonvar.ru,rsload.net,nnm-club.me,nnmclub.to,rustorka.com,auto.mail.ru,horo.mail.ru,realty.mail.ru,health.mail.ru,afisha.mail.ru,cloud.mail.ru,otvet.mail.ru,pogoda.mail.ru,sport.mail.ru,tv.mail.ru,torg.mail.ru,cars.mail.ru,hi-tech.mail.ru,free-torrent.org,free-torrents.org,ukrinform.ru,radikal.ru,trackeroc.ru,trackerock.ru#%#window.WebSocket = undefined;
 !
 ! Yandex ads
-fb.ru,minigames.mail.ru,yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net#%#var empty = { get: function() { return []; }, set: function() {} }; Object.defineProperties(window, { yandex_context_callbacks: empty, yandexContextAsyncCallbacks: empty, yandexContextSyncCallbacks: empty });
+fb.ru,minigames.mail.ru,yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua#%#var empty = { get: function() { return []; }, set: function() {} }; Object.defineProperties(window, { yandex_context_callbacks: empty, yandexContextAsyncCallbacks: empty, yandexContextSyncCallbacks: empty });
 !+ PLATFORM(ext_ublock)
-yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net##script:inject(abort-on-property-write.js, Ya.Context)
+yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,otzovik.com,fishki.net,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua##script:inject(abort-on-property-write.js, Ya.Context)
 !
+! https://forum.adguard.com/index.php?threads/24201/
+macdigger.ru#%#Object.defineProperty(window, 'funnyIsInit', { get: function() { return true; } });
 ! https://forum.adguard.com/index.php?threads/14791/
 samods.ru#%#Object.defineProperty(window, 'PopShow3', { get: function() { return; } });
 ! https://forum.adguard.com/index.php?threads/23865/
@@ -8555,12 +8557,9 @@ fishki.net##div[id^="yandex_ad_"]
 !
 ! Директ в выдаче (по запросу Юлмарт)
 beta.yandex.by,yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua##.content__right > .serp-list > .serp-adv__head ~ div.serp-item
-! yandex mail
-mail.yandex.ru##.mail-Layout-Aside-Inner > div[class^="ns-view-left-box"][data-key="box=left-box"] > div[class*="mail-NestedList mail-FolderList js-folders"]
 !
 yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua##div[class$="b-direct_message-w-bg"]
 ! Yandex Почта (некоторые аккаунты)
-mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.b-direct_message-w-bg
 mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.ns-view-banner
 mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.ns-view-messages-direct-box
 ! Yandex Почта - реклама после отправки письма
@@ -8709,6 +8708,10 @@ rustorka.com##.post_body > div[align="center"] > a > img
 /(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+||diakov.net/27.png
+||macdigger.ru/wp-content/themes/headlines3/a8d8g5tm/a8d8g5tm.js
+samods.ru##center > a[href^="https://goo.gl/"] > img
+||porno-kino.online/*.php?q=$script
 ||nwcod.com/rikkom_znayka.swf
 ||pornreactor.cc/images/bk/
 last.fm##.chartlist-row--mobile-ad
@@ -8766,7 +8769,6 @@ miytvideo.ru##body > noindex
 goldenshara.net##center > a[href="/goldenshara.net.php?url"] > img
 zaycev.online##div[data-cookie="mainBanner"]
 ||bazr.ru/vast?$xmlhttprequest
-||image.winudf.com/*/upload/promopure/$domain=apkpure.com
 24auto.ru##.brrr_place
 mp3cc.com###headerBanner
 mp3cc.com##.playlist-ad
@@ -12108,8 +12110,6 @@ mail.rambler.ru###banner-top-content
 oneprog.ru,plomba911.ru##.banner_left
 radiomayak.ru,vc.ru,yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua##.b-adv
 watch.ru###banner1
-mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.b-teaser
-mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.mail-DirectLine
 rutracker.lib,pornolab.lib,maintracker.org,pornolab.biz,pornolab.cc,pornolab.net,rutracker.cr,rutracker.net,rutracker.org###adriver-240x120
 rutracker.lib,pornolab.lib,maintracker.org,pornolab.biz,pornolab.cc,pornolab.net,rutracker.cr,rutracker.net,rutracker.org###bn-top-block
 rutracker.lib,maintracker.org,rutracker-org.appspot.com,rutracker.cr,rutracker.net,rutracker.org##.bn-topic
@@ -16263,6 +16263,8 @@ zvukoff.ru##.adv-list-top
 ://goodgame.ru/|$important,replace=/.*}/{}/
 ! https://forum.adguard.com/index.php?threads/22933/
 ||videoframe.online/?$replace=/\{timer:\d\d\, hardTimer\:\d\d\,/\{timer:0\, hardTimer\:0\,/i,important
+! Yandex Mail - block hidden ads
+||an.yandex.ru/meta/$domain=mail.yandex.by|mail.yandex.kz|mail.yandex.ru|mail.yandex.ua,replace=/Ya\[([0-9]{10\,15})\]\([\s\S]*\)\$/,important
 ! Yandex Pogoda
 ://yandex.*/pogoda/*/|$replace=/Ya\[([0-9]{10\,15})\]\([\s\S]*\)\$/,important
 ! Yandex Radio and Music ads
@@ -16994,8 +16996,9 @@ guzei.com#@#object[width="300"][height="60"]
 @@||ads.adfox.ru/*/goLink$domain=sports.ru
 ! игра рыбная ферма
 @@||188.93.63.85$domain=mail.ru
+! Fixing mail.ru games  (mail.ru API loader)
+@@||connect.mail.ru/js/loader.js
 ! Приложения my.mail.ru
-@@||connect.mail.ru/js/loader.js$domain=mail.ru
 @@||film.ru/sites/default/files/adverts/forum.jpg
 @@||gorod55.ru/board/
 @@||mirmario.ru/$domain=xtreme.ws
