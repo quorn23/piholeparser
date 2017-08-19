@@ -326,6 +326,7 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+money.cnn.com###mc-embedded-subscribe-form
 popculture.com##form.pc-newsletter-sidebar
 history.com##.newsletter-signup
 comicallyincorrect.com###sidebar > #text-4.widget_text
@@ -2682,6 +2683,7 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+acquavivalive.it##.biscotto
 webnovel.com##body > .m-streamer.lh1d5
 iphonesoft.fr###bannerCookie
 houseoffraser.co.uk##.global-messages
@@ -3217,6 +3219,7 @@ aliexpress.com###j-site-notice-header[-ext-has='>.site-notice-container:contains
 !
 ! JS rules
 !
+nu.nl#%#AG_onLoad(function() { setTimeout(function() { var el=document.querySelector('a#sanoma-consent-accept-button'); if(el) el.click(); }, 300); });
 ed.nl#%#AG_onLoad(function() { setTimeout(function() { var check = document.getElementsByClassName('fjs-accept')[0]; if (check){check.click();}; }, 300); });
 gezondheidsplein.nl#%#AG_onLoad(function() { var el=document.querySelector('a.button[href="/?acceptcookies=true"]'); if(el) el.click(); });
 3suisses.fr#%#!function(a,b,c,f,g,d,e){e=a[c]||a['WebKit'+c]||a['Moz'+c],e&&(d=new e(function(){b[f].contains(g)&&(b[f].remove(g),d.disconnect())}),d.observe(b,{attributes:!0,attributeFilter:['class']}))}(window,document.documentElement,'MutationObserver','classList','layer_cookie__visible');
@@ -3254,6 +3257,8 @@ ziekenhuis.nl#%#AG_onLoad(function() { setTimeout(function() {var check = docume
 !#######################################################
 !######### White list. Fixing filtering errors #########
 !#######################################################
+! https://github.com/AdguardTeam/AdguardFilters/issues/6270
+@@||consent.snmmd.nl/js/cookiebar-latest.js$domain=nu.nl
 ! https://forum.adguard.com/index.php?threads/23680/
 maisonapart.com#@#.accept-cookie
 ! https://forum.adguard.com/index.php?threads/23625/
@@ -3405,7 +3410,6 @@ vizyonfilmizle.com.tr##.solside[-ext-has="h2:contains(REKLAM)"]
 uploads.to##.table > tbody > tr[-ext-has='ins.adsbygoogle']
 tagesspiegel.de##.ts-container[-ext-has='div[class$="ts-area ts-billboard-area"]']
 uploads.to##center > #btn_download_block > .row[-ext-has='ins.adsbygoogle']
-filmizle.live##div.sidebar-content.clearfix.widget_text[-ext-has='div[id*="ScriptRootC"]']
 efirde.az##div[class$="block bpop"][-ext-has='h3[class$="btl"]:contains(Reklamlar)']
 legend.az##div[class$="block"][-ext-has='a[href^="/?do=feedback"]']
 shoes-report.ru##div[id^="side_"] div.widget-top[-ext-has="h4:contains(Реклама)"]
@@ -3650,6 +3654,8 @@ ukr-today.com##.soc_vidgets
 !
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
 !
+mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.popup-overlay
+instagram.com##a[href^="https://itunes.apple.com/app/instagram/id389801252?"][role="alert"]
 chip.de##amp-app-banner
 appleinsider.ru###ioimedia_app_banner
 radugaskidok.ru#$#.rs-header-line-new { top: 0px!important; }
@@ -5116,6 +5122,9 @@ cnews.ru##.video.img-block
 1tv.ru##.footer-promo-place
 1tv.ru##.promo-place
 !
+ebay.de##ul.mfe-recos > li.mfe-reco-ct[-ext-has='div.mfe-promoted-label']
+office.com##.m-alert.f-information
+youtube.com###ticker-content
 meduza.io##.NewsMaterial-banner
 cc-fan.ru,cn-fan.ru,fox-fan.ru###Shop
 /upload/rk/*$domain=radugaskidok.ru

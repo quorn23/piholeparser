@@ -1222,6 +1222,7 @@ m.auto.ru##.listing__page > div[class^="_"]:not([class$="listing__item_view_old"
 ! https://forum.adguard.com/index.php?threads/10464/
 ||images-*.ssl-images-amazon.com/images/*/ape/sf/MAsf-*_.js
 !
+mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.direct
 chip.de##.amp-article-ad
 chip.de##.amp-outbrain
 trustedreviews.com##.ipc-advert
@@ -1563,6 +1564,8 @@ auth.wi-fi.ru##.c-fullscreen-banner
 !
 ! Section contains rules for specific applications
 !
+! ru.yandex.metro
+||extmaps-api.yandex.net/promo/api/
 ! ua.slando - fixing adverts
 @@||www.olx.ua/api^$app=ua.slando
 ! com.devexpert.weather https://github.com/AdguardTeam/AdguardFilters/issues/3865
@@ -1571,6 +1574,7 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ||googleads.g.doubleclick.net/mads/gma?carrier=$app=com.devexpert.weather,important,replace=/\<script\>[\s\S]*\<\/script\>/
 !
 ! Blocking of Facebook ads
+||graph.facebook.com^$app=com.inswall.wallpaper
 ||graph.facebook.com^$app=jp.gocro.smartnews.android
 ||graph.facebook.com^$app=com.zynga.crosswordswithfriends
 ||graph.facebook.com^$app=com.urbandroid.sleep

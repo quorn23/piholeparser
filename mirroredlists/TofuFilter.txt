@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:56 2017/08/15
+! 最終更新 11:02 2017/08/19
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -447,7 +447,6 @@ _ads.php
 ||awempire.com^$third-party
 ||bebi.com^$third-party
 ||bidadx.com^$third-party
-||brandreachsys.com^$third-party
 ||clickfusion.net^$third-party
 ||clickiocdn.com^$third-party
 ||clicksvenue.com^$third-party
@@ -552,6 +551,8 @@ xtube.com##.col-xs-24.col-xl-8 > div:first-child
 ||bulkhentai.com^*/bulkhentai2.js
 hclips.com,hotmovs.com,txxx.com,upornia.com,vjav.com#@#[class$="-ads"]:not(html):not(body)
 
+txxx.com###myElement + DIV
+
 !-----------xhamster
 |https://$subdocument,domain=xhamster.com
 ||xhamster.com/cnt.php?
@@ -646,6 +647,8 @@ $script,third-party,domain=jpidols.tv
 ||cookpad.com/iframe/
 ||cosp.jp/images/spacer.gif
 ||diced.jp/webs/
+||dl8x.com/banner/
+||dl8x.com/product?
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
 ||exploader.net/images/nls/
@@ -662,6 +665,9 @@ $script,third-party,domain=jpidols.tv
 ||google.com/pagead/
 ||google.com/uds/?file=ads&
 ||google.com/uds/api/ads/
+||gotporn.com/desktop/js/popunder-
+||gotporn.com/main/js/exo-loader/
+||tsyndicate.com/iframes2/*$domain=gotporn.com
 ||grupo.jp/ad_loader/$domain=pitamo.jp
 ||hentai-foundry.com/themes/default/js/activebar.js
 ||himado.in/player_ad.php
@@ -720,6 +726,7 @@ $script,third-party,domain=jpidols.tv
 ||sanspo.com^*/adsence_
 ||sea-saw.com^$domain=2dbook.com
 ||seesaa.jp/frame/
+||share-videos.se/js/pjs.js
 ||shopping.sponichi.co.jp/scripts/sannex_banner_auction.js
 ||tatituteto.net/images/banner/
 ||thisav.com/index.js
@@ -1295,6 +1302,7 @@ coliss.com###sponsors
 coliss.com###sponsorsTop
 d.hatena.ne.jp###amazon
 d.hatena.ne.jp##.hotamazon-left
+dl8x.com##[class^="dx-banner-"]
 dropbooks.tv##.t_news
 !smh版
 dropbooks.tv###book_adbox_cookie
@@ -2190,6 +2198,7 @@ redtube.com##script:contains(tj_ads)
 pornhub.com##script:contains(tj_ads)
 thisav.com##script:contains(jsPopunder)
 tube8.*##script:contains(adblock)
+txxx.com##script:contains(ad_sub)
 xhamster.com##script:contains(dataPopUnder)
 vidoza.net##script:contains($('.pvr'))
 youtube-mp3.org##script:contains(_prop)
