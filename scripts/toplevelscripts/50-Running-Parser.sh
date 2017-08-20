@@ -18,6 +18,16 @@ fi
 for f in $EVERYLISTFILEWILDCARD
 do
 
+## Clear Temp Before
+if
+[[ -f $DELETETEMPFILE ]]
+then
+bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
+
 printf "$lightblue"    "$DIVIDERBAR"
 echo ""
 
@@ -44,6 +54,16 @@ bash $p
 
 ## End of parsing Loop
 done
+
+## Clear Temp After
+if
+[[ -f $DELETETEMPFILE ]]
+then
+bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
 
 ## End of File Loop
 done
