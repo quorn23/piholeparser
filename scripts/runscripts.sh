@@ -23,7 +23,13 @@ exit
 fi
 
 ## Logo
+if
+[[ -f $SUBMAINVAR ]]
+then
 bash $AVATARSCRIPT
+else
+echo "Deathbybandaid Logo Missing."
+fi
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
@@ -53,13 +59,27 @@ printf "$cyan"   "$SCRIPTTEXT $timestamp"
 echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Clear Temp Before
+if
+[[ -f $DELETETEMPFILE ]]
+then
 bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
 
 ## Run Script
 bash $f
 
 ## Clear Temp After
+if
+[[ -f $DELETETEMPFILE ]]
+then
 bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
 
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | sudo tee --append $RECENTRUN
