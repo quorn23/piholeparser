@@ -22,6 +22,7 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+echo "$source"
 ## What type of source?
 if
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.7z ]]
