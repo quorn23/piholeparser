@@ -43,6 +43,14 @@ elif
 then
 curl -s -L $source >> $BTEMPFILE
 elif
+[[ -z $FULLSKIPPARSING && $SOURCETYPE == htm ]]
+then
+curl -s -L $source >> $BTEMPFILE
+elif
+[[ -z $FULLSKIPPARSING && $SOURCETYPE == html ]]
+then
+curl -s -L $source >> $BTEMPFILE
+elif
 [[ -z $FULLSKIPPARSING && $SOURCETYPE == usemirrorfile ]]
 then
 cat $MIRROREDFILE >> $BTEMPFILE
