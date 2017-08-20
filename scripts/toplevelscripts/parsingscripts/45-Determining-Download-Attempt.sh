@@ -69,7 +69,7 @@ echo "SOURCETYPE="$SOURCETYPE"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && -z $SOURCETYPE ]]
 then
-SOURCETYPE="unknown"
+SOURCETYPE=unknown
 fi
 
 ## Terminal Display
