@@ -108,7 +108,9 @@ if
 then
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
-else
+elif
+[[ -z $FULLSKIPPARSING && ! -f $BTEMPFILE ]]
+then
 printf "$red"    "File Download Failed."
 DOWNLOADFAILED=true
 touch $BORIGINALFILETEMP
