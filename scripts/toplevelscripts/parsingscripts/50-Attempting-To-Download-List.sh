@@ -22,6 +22,13 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+## FULLSKIPPARSING text
+if
+[[ -n $FULLSKIPPARSING ]]
+then
+printf "$yellow"    "Not Downloading List."
+fi
+
 ## What type of source?
 if
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source != *.7z ]]
