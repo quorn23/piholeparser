@@ -24,23 +24,23 @@ fi
 
 ## What type of source?
 if
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source != *.7z ]]
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.7z ]]
 then
 SOURCETYPE=sevenzip
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source != *.tar.gz ]]
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.tar.gz ]]
 then
 SOURCETYPE=tar
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source != *.zip ]]
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.zip ]]
 then
 SOURCETYPE=zip
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source != *.php ]]
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.php ]]
 then
 SOURCETYPE=php
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source != *.txt ]]
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.txt ]]
 then
 SOURCETYPE=text
 elif
