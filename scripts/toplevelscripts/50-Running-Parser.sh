@@ -51,6 +51,7 @@ PARSECOMMENT="$SCRIPTTEXT"
 
 printf "$cyan"  "$PARSECOMMENT"
 bash $p
+echo ""
 
 ## End of parsing Loop
 done
