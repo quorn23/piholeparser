@@ -55,6 +55,7 @@ fi
 echo "SOURCETYPE="$SOURCETYPE"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Terminal Display
+printf "$yellow"    "The Download Should use the $SOURCETYPE Preset."
 timestamp=$(echo `date`)
 if
 [[ -z $FULLSKIPPARSING && -n $SOURCEIP && -n $UPCHECK && -n $SOURCETYPE ]]
