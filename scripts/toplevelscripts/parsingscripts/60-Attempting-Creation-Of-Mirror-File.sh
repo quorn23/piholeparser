@@ -26,7 +26,6 @@ if
 [[ -n $FULLSKIPPARSING ]]
 then
 printf "$green"  "Old Mirror File Retained."
-echo ""
 fi
 
 ## This helps when replacing the mirrored file
@@ -62,5 +61,3 @@ then
 printf "$green"  "Creating Mirror Of Unparsed File."
 mv $BTEMPFILE $MIRROREDFILE
 fi
-echo ""
-
