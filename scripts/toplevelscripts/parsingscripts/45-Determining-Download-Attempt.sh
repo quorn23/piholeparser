@@ -55,21 +55,20 @@ elif
 [[ -z $FULLSKIPPARSING && -n PINGTESTFAILED && -f $MIRROREDFILE ]]
 then
 SOURCETYPE=usemirrorfile
-elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED ]]
+fi
+
+## set the sourcetype if not
+if
+[[ -z $FULLSKIPPARSING && -z $SOURCETYPE ]]
 then
 SOURCETYPE=unknown
 fi
 
 ## Add to tempvars
 if
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && -n $SOURCETYPE ]]
+[[ -z $FULLSKIPPARSING && -n $SOURCETYPE ]]
 then
 echo "SOURCETYPE="$SOURCETYPE"" | tee --append $TEMPPARSEVARS &>/dev/null
-elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && -z $SOURCETYPE ]]
-then
-SOURCETYPE=unknown
 fi
 
 ## Terminal Display
