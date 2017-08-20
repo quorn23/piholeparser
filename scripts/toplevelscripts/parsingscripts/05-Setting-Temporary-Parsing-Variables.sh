@@ -23,7 +23,6 @@ exit
 fi
 
 printf "$yellow"    "Setting Variables for $BASEFILENAME List."
-echo ""
 
 ## Download URL
 source=`cat $FILEBEINGPROCESSED`
