@@ -40,6 +40,14 @@ elif
 then
 SOURCETYPE=php
 elif
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.htm ]]
+then
+SOURCETYPE=htm
+elif
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.html ]]
+then
+SOURCETYPE=html
+elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.txt ]]
 then
 SOURCETYPE=text
@@ -47,7 +55,9 @@ elif
 [[ -z $FULLSKIPPARSING && -n PINGTESTFAILED && -f $MIRROREDFILE ]]
 then
 SOURCETYPE=usemirrorfile
-else
+elif
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED ]]
+then
 SOURCETYPE=unknown
 fi
 
