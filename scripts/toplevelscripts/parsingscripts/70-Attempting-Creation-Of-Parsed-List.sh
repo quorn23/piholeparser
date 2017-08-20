@@ -29,7 +29,6 @@ then
 HOWMANYLINES=$(echo -e "`wc -l $PARSEDFILE | cut -d " " -f 1`")
 printf "$green"  "Old Parsed File Retained."
 printf "$yellow"  "$HOWMANYLINES Lines In File."
-echo ""
 fi
 
 ## Delete Parsed file if current parsing method empties it
