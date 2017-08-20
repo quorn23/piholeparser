@@ -42,5 +42,3 @@ printf "$red"    "Ping Test Failed."
 PINGTESTFAILED=true
 echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
-echo ""
-
