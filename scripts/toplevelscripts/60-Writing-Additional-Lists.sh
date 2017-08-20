@@ -43,13 +43,27 @@ echo ""
 echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Clear Temp Before
+if
+[[ -f $DELETETEMPFILE ]]
+then
 bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
 
 ## Run Script
 bash $f
 
 ## Clear Temp After
+if
+[[ -f $DELETETEMPFILE ]]
+then
 bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
 
 echo "" | tee --append $RECENTRUN
 printf "$orange" "$DIVIDERBARB"
