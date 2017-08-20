@@ -51,7 +51,10 @@ elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.txt ]]
 then
 SOURCETYPE=text
-elif
+fi
+
+## use mirror
+if
 [[ -z $FULLSKIPPARSING && -n PINGTESTFAILED && -f $MIRROREDFILE ]]
 then
 SOURCETYPE=usemirrorfile
