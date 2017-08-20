@@ -23,4 +23,3 @@ exit
 fi
 
 printf "$yellow"    "$source"
-echo ""
