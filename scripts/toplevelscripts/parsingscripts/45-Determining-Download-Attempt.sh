@@ -23,40 +23,42 @@ exit
 fi
 
 echo "$source"
+echo "$FULLSKIPPARSING"
+echo "$PINGTESTFAILED"
 ## What type of source?
 if
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.7z ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.7z ]]
 then
 SOURCETYPE=sevenzip
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.tar.gz ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.tar.gz ]]
 then
 SOURCETYPE=tar
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.zip ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.zip ]]
 then
 SOURCETYPE=zip
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.php ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.php ]]
 then
 SOURCETYPE=php
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.htm ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.htm ]]
 then
 SOURCETYPE=htm
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.html ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.html ]]
 then
 SOURCETYPE=html
 elif
-[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.txt ]]
+[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.txt ]]
 then
 SOURCETYPE=text
 fi
 
 ## use mirror
 if
-[[ -z $FULLSKIPPARSING && -n PINGTESTFAILED && -f $MIRROREDFILE ]]
+[[ -z $FULLSKIPPARSING && -n $PINGTESTFAILED && -f $MIRROREDFILE ]]
 then
 SOURCETYPE=usemirrorfile
 fi
