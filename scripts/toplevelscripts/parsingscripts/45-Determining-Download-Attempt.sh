@@ -22,9 +22,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-echo "$source"
-echo "$FULLSKIPPARSING"
-echo "$PINGTESTFAILED"
 ## What type of source?
 if
 [[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.7z ]]
@@ -68,6 +65,10 @@ if
 [[ -z $FULLSKIPPARSING && -z $SOURCETYPE ]]
 then
 SOURCETYPE=unknown
+elif
+[[ -n $FULLSKIPPARSING && -z $SOURCETYPE ]]
+then
+SOURCETYPE=skip
 fi
 
 ## Add to tempvars
