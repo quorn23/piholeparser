@@ -26,43 +26,51 @@ fi
 if
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.7z ]]
 then
-SOURCETYPE="sevenzip"
+SOURCETYPE=sevenzip
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.tar.gz ]]
 then
-SOURCETYPE="tar"
+SOURCETYPE=tar
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.zip ]]
 then
-SOURCETYPE="zip"
+SOURCETYPE=zip
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.php ]]
 then
-SOURCETYPE="php"
+SOURCETYPE=php
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.htm ]]
 then
-SOURCETYPE="htm"
+SOURCETYPE=htm
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.html ]]
 then
-SOURCETYPE="html"
+SOURCETYPE=html
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && $source == *.txt ]]
 then
-SOURCETYPE="text"
+SOURCETYPE=text
 elif
 [[ -z $FULLSKIPPARSING && -n PINGTESTFAILED && -f $MIRROREDFILE ]]
 then
-SOURCETYPE="usemirrorfile"
+SOURCETYPE=usemirrorfile
 elif
 [[ -z $FULLSKIPPARSING && -z PINGTESTFAILED ]]
 then
-SOURCETYPE="unknown"
+SOURCETYPE=unknown
 fi
 
 ## Add to tempvars
+if
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && -n $SOURCETYPE ]]
+then
 echo "SOURCETYPE="$SOURCETYPE"" | tee --append $TEMPPARSEVARS &>/dev/null
+elif
+[[ -z $FULLSKIPPARSING && -z PINGTESTFAILED && -z $SOURCETYPE ]]
+then
+SOURCETYPE="unknown"
+fi
 
 ## Terminal Display
 printf "$yellow"    "The Download Should use the $SOURCETYPE Preset."
