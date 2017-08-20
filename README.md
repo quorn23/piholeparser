@@ -23,8 +23,8 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Sat 19 Aug 00:20:14 EDT 2017
-* Script Ended At Sat 19 Aug 02:33:45 EDT 2017
+* Script Started At Sun 20 Aug 00:20:14 EDT 2017
+* Script Ended At Sun 20 Aug 02:33:23 EDT 2017
 * Script Took 133 minutes To Filter 152 Lists.
 * 
 * 

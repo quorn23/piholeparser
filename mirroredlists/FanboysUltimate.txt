@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: tiOGJhyx5RcT7zx6y9pNqw
+! Checksum: PbYvmiTd3lz6tXXbgtXazQ
 ! Title: Fanboy+Easylist-Merged Ultimate List
-! Version: 201708190440
+! Version: 201708200440
 ! The contents of this filter list are fetched from the EasyList repository: https://github.com/easylist/easylist
 ! Expires: 3 days (update frequency)
-! Last modified: 19 Aug 2017 04:40 UTC
+! Last modified: 20 Aug 2017 04:40 UTC
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
 !
@@ -664,6 +664,7 @@
 .popupvideoad.
 .refit.ads.
 .rolloverad.
+.ru/ads/
 .se/*placement=$script,subdocument,third-party
 .se/*redirect&$script,subdocument,third-party
 .se/ads/
@@ -7176,6 +7177,7 @@ takeover_banner_
 /\.bid\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
 /\.click\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
 /\.club\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
+/\.com\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
 /\.cricket\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
 /\.date\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
 /\.download\/[0-9]{2,9}\/$/$script,stylesheet,third-party,xmlhttprequest
@@ -16477,6 +16479,7 @@ _popunder+$popup
 ##.ad--right
 ##.ad--scroll
 ##.ad--showmob
+##.ad--sidebar
 ##.ad--square-rectangle
 ##.ad--top-label
 ##.ad--top-leaderboard
@@ -29344,6 +29347,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||gynax.com^$third-party
 ||h-images.net^$third-party
 ||h12-media.com^$third-party
+||h6y654wgfdhd.com^$third-party
 ||halfpriceozarks.com^$third-party
 ||hallucius.com^$third-party
 ||halogennetwork.com^$third-party
@@ -39297,6 +39301,7 @@ a.upnorma.com^$webrtc
 ||ad.services.distractify.com^
 ||ad.spreaker.com^
 ||ad.xmovies8.ru^
+||ad.xmovies8.tv^
 ||adaderana.lk/banners/
 ||adamvstheman.com/wp-content/uploads/*/AVTM_banner.jpg
 ||adcitrus.com^
@@ -39976,6 +39981,7 @@ a.upnorma.com^$webrtc
 ||d.imwx.com/js/wx-a21-plugthis-
 ||d.thelocal.com^
 ||d2gqmq0lf9q8i2.cloudfront.net^*.gif$domain=heromaza.in
+||d2na2p72vtqyok.cloudfront.net^
 ||d5e.info/1.gif
 ||d5e.info/2.png
 ||d6vwe9xdz9i45.cloudfront.net/psa.js$domain=sporcle.com
@@ -45071,7 +45077,7 @@ bento.de##a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][t
 ||ziddu.com/onclickpop.php$popup
 ||zmovie.tv^$popup,domain=deditv.com|vidbox.net
 ! regex to pickup ip-address popups
-/([0-9]{1,3}\.){3}[0-9]{1,3}/$popup,domain=briansarmiento.website|divxatope1.com|newpct.com|pelisplus.tv|strikeout.co|torrentz2.eu
+/([0-9]{1,3}\.){3}[0-9]{1,3}/$popup,domain=briansarmiento.website|divxatope1.com|kissanime.ru|newpct.com|pelisplus.tv|rapidvideo.com|strikeout.co|torrentz2.eu
 ! *** easylist:easylist_adult/adult_specific_block.txt ***
 .download^$other,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
 .info^$script,domain=www.pornhub.com
@@ -52272,6 +52278,7 @@ bnd.com##.jobs_widget_large
 ninemsn.com.au##.jobsearchBox
 radiotoday.com.au##.jobsstyle
 toorgle.net##.join
+buzzfeed.com##.js-bfa-impression
 haaretz.com##.js-clickTracker-for-addBlocker
 mixcloud.com##.js-dfp-mpu
 careerbuilder.com##.jsHomeSpotBanner
@@ -55637,6 +55644,7 @@ newindianexpress.com##div[id^="pro_menu"]
 proz.com##div[id^="proz_ad_zone_"]
 space.com##div[id^="rightcol_top"]
 target.com##div[id^="rr_promo_"]
+sawlive.tv##div[id^="sawdiv"]
 indeed.com##div[id^="sjob_"]
 vipboxeu.co##div[id^="slot"]
 facebook.com##div[id^="sponsoredTickerStory_"]
@@ -59180,6 +59188,7 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||collective-media.net/crossdomain.xml$object-subrequest
 @@||collective-media.net/pfadx/wtv.wrc/$object-subrequest,domain=wrc.com
 @@||collectivelyconscious.net^$generichide
+@@||collegehumor.com^$generichide
 @@||colorado.gov/airquality/psi/adv.png
 @@||comboadmedia.adperfect.com^$domain=classifieds.nydailynews.com
 @@||comeadvertisewithus.com^$script,domain=thecountrycaller.com|thefreethoughtproject.com
@@ -63696,6 +63705,8 @@ www.google.com#@##videoads
 /admantx/*
 /admonitoring.
 /admp-
+/adobe/AppMeasurement-
+/adobe/VideoHeartbeat-
 /AdobeCustomVideoMeasurement.swf
 /adonis_event/*
 /adpixel.
@@ -64252,9 +64263,9 @@ www.google.com#@##videoads
 /com_joomla-visites/*
 /com_joomlawatch/*
 /competeTracking_test.html?
-/compiled/tracking.
 /comscore.
 /comscore/pageview_
+/comscore/streamsense.
 /comscore_beacon.
 /comscore_engine.
 /comscore_stats.
@@ -65033,6 +65044,7 @@ www.google.com#@##videoads
 /leadgen/ga.js
 /leadgen_track
 /lib/analytics.
+/lib/tracking/*
 /library/svy/*/broker.js
 /library/svy/broker.js
 /libs/tracker.js
@@ -65421,6 +65433,7 @@ www.google.com#@##videoads
 /pageview?pageviewId
 /pageview?user_guid=
 /pageviews-counter-
+/pageviews.gif?
 /pageviews/*$domain=~tools.wmflabs.org
 /pageviews?token=
 /pageviews_counter.
@@ -66238,12 +66251,14 @@ www.google.com#@##videoads
 /tracking/*/agof-
 /tracking/addview/*
 /tracking/adobe.js
+/tracking/adobe/*
 /tracking/ads.
 /tracking/article.
 /tracking/article/*
 /tracking/at.js
 /tracking/beacon/?
 /tracking/clicks
+/tracking/comscore/*
 /tracking/create?
 /tracking/csp?
 /tracking/epixels.
@@ -72463,6 +72478,7 @@ _mongo_stats/
 ||hits.eluniversal.com.mx^
 ||leadzu.com^$third-party
 ||maik.ff-bt.net^
+||pixel.zumby.io^
 ||reachandrich.antevenio.com^
 ||stats.lnol.com.ar^
 ||stats.miarroba.info^
@@ -77692,6 +77708,7 @@ youporn.com###adblock_1
 @@||mshcdn.com/assets/advertisement-*.js
 @@||msn.com/advertisement.ad.js
 @@||muyinteresante.es/js/ads.js
+@@||mwpaste.com^$generichide
 @@||myex.com/ads/$script
 @@||mygaming.co.za^*/ads.js
 @@||nasdaq.com/includes/advertisement.js
@@ -77952,6 +77969,8 @@ lifehacker.com,gizmodo.com,deadspin.com,theroot.com,kinja.com##.newsletter-subsc
 ! yourfreetube.net
 @@.png#$image,domain=yourfreetube.net
 @@||yourfreetube.net^$generichide
+! 1337x
+/\/1337x\.to\/.*[a-f]{7,}/$script
 ! mylifetime.com (TODO: history.com,)
 @@||doubleclick.net/gpt/pubads_impl_$domain=mylifetime.com
 ! streamingdramakorea.com
@@ -78142,6 +78161,8 @@ hardware.info#@#.advertorial
 ! geekzone.co.nz
 @@||geekzone.co.nz^$generichide
 geekzone.co.nz##.share__button
+geekzone.co.nz##div[style*="width:160px;height:600px;"]
+geekzone.co.nz##div[style*="width:336px; height:280px;"]
 ! flashback.org
 @@||flashback.org/ads/
 ! adage.com
@@ -78172,6 +78193,15 @@ kitguru.net##div[style^="z-index:"]
 ! coderexample.com
 @@||coderexample.com^$generichide
 coderexample.com##[data-ad-client]
+! collegehumor.com
+@@||adserver.xpanama.net/client-*.js$domain=collegehumor.com
+@@||amazon-adsystem.com/aax2/apstag.js$domain=collegehumor.com
+@@||doubleclick.net/gampad/ads?$domain=collegehumor.com
+@@||doubleclick.net/gpt/pubads_impl$domain=collegehumor.com
+@@||googlesyndication.com/pagead/js/*/m_window_focus_non_hydra.js$domain=collegehumor.com
+@@||googlesyndication.com/pagead/js/*/osd_listener.js$domain=collegehumor.com
+@@||googlesyndication.com/simgad/$domain=collegehumor.com
+collegehumor.com##[style="border: 0pt none;"] > iframe
 ! nydailynews.com
 @@||amazon-adsystem.com/aax2/apstag.js$domain=nydailynews.com
 @@||go.sonobi.com^$script,domain=nydailynews.com
@@ -78835,6 +78865,8 @@ haber1903.com##.logoAds
 haber1903.com##.newsINAds
 haber1903.com##div[id^="div-gpt-ad"]
 ! Espanol
+@@.gif#$domain=clasicotas.org
+@@||clasicotas.org^$generichide
 @@||eltiempohoy.es^$generichide
 @@||eltiempohoy.es^*/adjs.js
 @@||mitele.es/vendor/adjs.js
@@ -83875,6 +83907,7 @@ _youtube_social_
 ###aviso-cookies
 ###avisoCookies
 ###avisoCookiesLayer
+###aviso_cookies
 ###avviso_cookie
 ###axs_cookie_toggle
 ###bandeau-c
@@ -97334,6 +97367,7 @@ thedailymeal.com##.sub_alert_block
 mademan.com##.sub_header
 medicaldaily.com##.subbox
 medicaldaily.com##.subbox01
+buzzfeed.com##.subbuzz-pullquote
 usmagazine.com##.subnav-holder
 newyorker.com##.subs
 rugby365.com##.subs-block
@@ -100152,6 +100186,7 @@ cinquantamila.it###privacy
 farmacieaperte.it###warning-popup
 elettrocasa.it##.bottomBarMessage
 tomshw.it##.content-autopromo
+tomshw.it##.content-related
 aeroportoditorino.it##.cookie
 radioitalia.it##.cookies
 forumfree.it##.jnote
