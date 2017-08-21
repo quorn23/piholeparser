@@ -37,14 +37,13 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-echo "___________________________________________________________"
+printf "$blue"    "$DIVIDERBAR"
 echo ""
-echo "Updating Repository."
+printf "$cyan"    "Updating Repository."
 echo ""
-printf "\e[1;34m%s\e[0m\n"    "$(git -C $REPODIR pull)"
-#git -C $REPODIR pull
+printf "$green"    "$(git -C $REPODIR pull)"
 echo ""
-echo "___________________________________________________________"
+printf "$magenta" "$DIVIDERBAR"
 echo ""
 
 ## RunParser
