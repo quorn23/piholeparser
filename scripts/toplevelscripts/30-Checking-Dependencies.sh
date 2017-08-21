@@ -23,13 +23,12 @@ do
 
 ## Declare File Name
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+echo ""
 printf "$cyan"  "Checking For $BASEFILENAME"
 
 ## Shouldn't be more than one source here
 source=`cat $f`
 timestamp=$(echo `date`)
-
-echo ""
 
 if
 which $BASEFILENAME >/dev/null;
