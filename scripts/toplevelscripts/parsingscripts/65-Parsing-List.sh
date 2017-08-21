@@ -29,7 +29,8 @@ mv $BFILETEMP $TEMPFILEL
 STARTPARSESTAMP=$(date +"%s")
 
 ## Start File Loop
-## For .sh files In The parsing scripts Directory
+## For .sh files In The actualparsing scripts Directory
+echo ""
 for p in $ALLACTUALPARSINGSCRIPTS
 do
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
