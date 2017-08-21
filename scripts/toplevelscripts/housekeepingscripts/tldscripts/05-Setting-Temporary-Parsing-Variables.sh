@@ -22,3 +22,7 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+## Download URL
+source=`cat $FILEBEINGPROCESSED`
+echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
+
