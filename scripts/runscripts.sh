@@ -31,24 +31,33 @@ else
 echo "Deathbybandaid Logo Missing."
 fi
 
+## tempvars error handling
+if
+[[ ! -f $TEMPVARS ]]
+then
+touch $TEMPVARS
+fi
+
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
 for f in $ALLTOPLEVELSCRIPTS
 do
 
-# Dynamic Variables
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 if
-[[ -f $DYNOVARS ]]
+[[ -f $TEMPVARS ]]
 then
-source $DYNOVARS
+source $TEMPVARS
 else
-echo "Dynamic Vars File Missing, Exiting."
+echo "Temp Vars File Missing, Exiting."
 exit
 fi
 
-## Loop Variables
-SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
+## Loop Vars
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
+BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
+BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
+TAGTHEREPOLOG="[Details If Any]("$RECENTRUNLOGSDIRRAW""$BASEFILENAMENUM".txt)"
 timestamp=$(echo `date`)
 
 printf "$blue"    "$DIVIDERBAR"
@@ -56,7 +65,7 @@ echo ""
 printf "$cyan"   "$SCRIPTTEXT $timestamp"
 
 ## Log Section
-echo "## $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Clear Temp Before
 if
@@ -83,6 +92,7 @@ fi
 
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | sudo tee --append $RECENTRUN
+
 printf "$magenta" "$DIVIDERBAR"
 echo ""
 
