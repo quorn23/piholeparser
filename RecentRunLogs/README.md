@@ -266,3 +266,154 @@
 * Localhost Web Directory Not Set. Please Fix. Mon 21 Aug 01:07:01 EDT 2017
 
 ### Pushing Lists To Github. Mon 21 Aug 01:07:01 EDT 2017
+* EasyList list was Updated. Mon 21 Aug 01:07:41 EDT 2017
+* EasyListSpanish list was Updated. Mon 21 Aug 01:07:46 EDT 2017
+* EasyListThailand list was Updated. Mon 21 Aug 01:07:54 EDT 2017
+* EasyListWithoutElementHidingRules list was Updated. Mon 21 Aug 01:07:59 EDT 2017
+* EasyListWithoutRulesforAdultSites list was Updated. Mon 21 Aug 01:08:04 EDT 2017
+* EasyPrivacyEasyList list was Updated. Mon 21 Aug 01:08:10 EDT 2017
+* EasyPrivacy list was Updated. Mon 21 Aug 01:08:14 EDT 2017
+* EasyPrivacyWithoutInternationalFilters list was Updated. Mon 21 Aug 01:08:19 EDT 2017
+* EasyTest list was Updated. Mon 21 Aug 01:08:22 EDT 2017
+* EestiCustomSitesFilter list was Updated. Mon 21 Aug 01:08:27 EDT 2017
+* EladKarako list was Updated. Mon 21 Aug 01:09:24 EDT 2017
+* FacebookAnnoyancesBlocker list was Updated. Mon 21 Aug 01:09:29 EDT 2017
+* FacebookNewsFeedAnnoyancesBlocker list was Updated. Mon 21 Aug 01:09:32 EDT 2017
+* FacebookSidebarBlocker list was Updated. Mon 21 Aug 01:09:37 EDT 2017
+* FakeNews list was Updated. Mon 21 Aug 01:09:42 EDT 2017
+* FanboysAnnoyance list was Updated. Mon 21 Aug 01:09:47 EDT 2017
+* FanboysAntithirdpartyFonts list was Updated. Mon 21 Aug 01:09:51 EDT 2017
+* FanboysComplete list was Updated. Mon 21 Aug 01:09:59 EDT 2017
+* FanboysCookiemonster list was Updated. Mon 21 Aug 01:10:04 EDT 2017
+* FanboysEnhancedStats list was Updated. Mon 21 Aug 01:10:11 EDT 2017
+* FanboysEnhancedTracking list was Updated. Mon 21 Aug 01:10:19 EDT 2017
+* FanboysIndian list was Updated. Mon 21 Aug 01:10:26 EDT 2017
+* FanboysIsraelList list was Updated. Mon 21 Aug 01:10:34 EDT 2017
+* FanboysJapanese list was Updated. Mon 21 Aug 01:10:41 EDT 2017
+* FanboysKorean list was Updated. Mon 21 Aug 01:10:49 EDT 2017
+* FanboysPolish list was Updated. Mon 21 Aug 01:10:54 EDT 2017
+* FanboysSocialBlocking list was Updated. Mon 21 Aug 01:10:59 EDT 2017
+* FanboysSpanishPortuguese list was Updated. Mon 21 Aug 01:11:07 EDT 2017
+* FanboysSwedish list was Updated. Mon 21 Aug 01:11:11 EDT 2017
+* FanboysTurkish list was Updated. Mon 21 Aug 01:11:21 EDT 2017
+* FanboysUltimate list was Updated. Mon 21 Aug 01:11:31 EDT 2017
+* FanboysVietnamese list was Updated. Mon 21 Aug 01:11:37 EDT 2017
+* Filtersbyhant0508 list was Updated. Mon 21 Aug 01:11:48 EDT 2017
+
+### Script Completed. Mon 21 Aug 01:11:55 EDT 2017
+* Script completed at Mon 21 Aug 01:11:55 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+* FiltrosNauscopicosHosts list was Updated. Mon 21 Aug 01:11:55 EDT 2017
+
+* FiltrosNauscopicos list was Updated. Mon 21 Aug 01:12:01 EDT 2017
+* FirimeFEDEasyDownload list was Updated. Mon 21 Aug 01:12:17 EDT 2017
+* GandJAdBlock List Was An Empty File After Download. Mon 21 Aug 01:12:18 EDT 2017
+* GandJHosts List Was An Empty File After Download. Mon 21 Aug 01:12:20 EDT 2017
+* gmbk0sAdAwayHostsforAndroid List Was An Empty File After Download. Mon 21 Aug 01:12:22 EDT 2017
+* GNUBlacklist List Was An Empty File After Download. Mon 21 Aug 01:12:23 EDT 2017
+* GreekAdBlockFilter list was Updated. Mon 21 Aug 01:12:29 EDT 2017
+* HenningVanRaumleYoutube list was Updated. Mon 21 Aug 01:12:35 EDT 2017
+* Hosts2ch List Was An Empty File After Download. Mon 21 Aug 01:12:36 EDT 2017
+* HOSTSAdBlockAntiAnnoyanceBonus list was Updated. Mon 21 Aug 01:12:43 EDT 2017
+* HOSTSAdBlock list was Updated. Mon 21 Aug 01:13:32 EDT 2017
+* hufilter list was Updated. Mon 21 Aug 01:16:19 EDT 2017
+* IcelandicABP list was Updated. Mon 21 Aug 01:16:22 EDT 2017
+* IDontCareaboutCookies list was Updated. Mon 21 Aug 01:16:27 EDT 2017
+* IlyakatzsAdditionalFiltersforAdblock list was Updated. Mon 21 Aug 01:16:32 EDT 2017
+* ImOKwithCookies list was Updated. Mon 21 Aug 01:16:46 EDT 2017
+* iploggerfilter list was Updated. Mon 21 Aug 01:16:51 EDT 2017
+* JABCreationsAdblockPlusFilterSubscription list was Updated. Mon 21 Aug 01:16:54 EDT 2017
+* JansalsHostsLight list was Updated. Mon 21 Aug 01:17:00 EDT 2017
+* JansalsHosts list was Updated. Mon 21 Aug 01:17:06 EDT 2017
+* KADHostsFile list was Updated. Mon 21 Aug 01:17:39 EDT 2017
+* KADScams list was Updated. Mon 21 Aug 01:17:44 EDT 2017
+* KoreanAdblock list was Updated. Mon 21 Aug 01:17:50 EDT 2017
+* KowabitBOD list was Updated. Mon 21 Aug 01:17:57 EDT 2017
+* Laicure list was Updated. Mon 21 Aug 01:18:03 EDT 2017
+* LatvianListEasyList list was Updated. Mon 21 Aug 01:18:09 EDT 2017
+* LatvianList list was Updated. Mon 21 Aug 01:18:12 EDT 2017
+* LeadGenerator list was Updated. Mon 21 Aug 01:18:23 EDT 2017
+* LinkedinsanityRules list was Updated. Mon 21 Aug 01:19:03 EDT 2017
+* ListeARListeFREasyList list was Updated. Mon 21 Aug 01:19:09 EDT 2017
+* ListeAR list was Updated. Mon 21 Aug 01:19:13 EDT 2017
+* ListeFREasyList list was Updated. Mon 21 Aug 01:19:19 EDT 2017
+* ListeFR list was Updated. Mon 21 Aug 01:19:24 EDT 2017
+* ListKR list was Updated. Mon 21 Aug 01:19:33 EDT 2017
+* ListKRUnbreak list was Updated. Mon 21 Aug 01:19:40 EDT 2017
+* Mute list was Updated. Mon 21 Aug 01:20:33 EDT 2017
+* OpenPhishPhishingIntelligenceCommunityFeed list was Updated. Mon 21 Aug 01:20:54 EDT 2017
+* PeterLowes List Was An Empty File After Download. Mon 21 Aug 01:20:59 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2DomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:21:39 EDT 2017
+* RansomwareTrackerCryptoWallRansomwareC2URLBlocklist List Was An Empty File After Download. Mon 21 Aug 01:21:43 EDT 2017
+* RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:21:47 EDT 2017
+* RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:21:50 EDT 2017
+* RansomwareTrackerDomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:21:54 EDT 2017
+* RansomwareTrackerIPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:21:58 EDT 2017
+* RansomwareTrackerLockyRansomwareC2DomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:01 EDT 2017
+* RansomwareTrackerLockyRansomwareC2IPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:05 EDT 2017
+* RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:09 EDT 2017
+* RansomwareTrackerLockyRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:13 EDT 2017
+* RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:16 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareC2DomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:20 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:24 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:28 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:32 EDT 2017
+* RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:35 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwareC2DomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:39 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:43 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesDomainBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:46 EDT 2017
+* RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:50 EDT 2017
+* RansomwareTrackerURLBlocklist List Was An Empty File After Download. Mon 21 Aug 01:22:54 EDT 2017
+* ReddestDream list was Updated. Mon 21 Aug 01:22:59 EDT 2017
+* ROadBlock list was Updated. Mon 21 Aug 01:23:04 EDT 2017
+* ROList list was Updated. Mon 21 Aug 01:23:12 EDT 2017
+* RUAdListBitBlock list was Updated. Mon 21 Aug 01:23:15 EDT 2017
+* RUAdListCounters List Was An Empty File After Download. Mon 21 Aug 01:23:16 EDT 2017
+* RUAdListEasyList List Was An Empty File After Download. Mon 21 Aug 01:23:17 EDT 2017
+* RUAdList List Was An Empty File After Download. Mon 21 Aug 01:23:18 EDT 2017
+* SatterlysAdblockPlusFilters List Was An Empty File After Download. Mon 21 Aug 01:23:24 EDT 2017
+* StevenBlacksUnifiedHostsPorn list was Updated. Mon 21 Aug 01:25:10 EDT 2017
+* SVNSlovenian list was Updated. Mon 21 Aug 01:25:15 EDT 2017
+* TheHostsFileProjectAdblockFilters list was Updated. Mon 21 Aug 01:25:22 EDT 2017
+* TofuFilter list was Updated. Mon 21 Aug 01:25:32 EDT 2017
+* uAssetsFilters list was Updated. Mon 21 Aug 01:25:53 EDT 2017
+* uBlockPolishFiltersSupplement list was Updated. Mon 21 Aug 01:26:12 EDT 2017
+* UniversiteToulouseMalware List Was An Empty File After Download. Mon 21 Aug 01:26:31 EDT 2017
+* YouTubeOtherAnnoyances list was Updated. Mon 21 Aug 01:27:19 EDT 2017
+* YouTubeRemoveComments list was Updated. Mon 21 Aug 01:27:23 EDT 2017
+* yoyoorg List Was An Empty File After Download. Mon 21 Aug 01:27:26 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Writing Additional Lists. Mon 21 Aug 01:27:27 EDT 2017
+### Compiling Combined List. Mon 21 Aug 01:27:27 EDT 2017
+* All Parsed List Removed. Mon 21 Aug 01:27:27 EDT 2017
+
+### Compiling Edited Combined List. Mon 21 Aug 01:29:09 EDT 2017
+* All Parsed List (edited) Removed. Mon 21 Aug 01:29:09 EDT 2017
+
+### Compiling Country Code Lists. Mon 21 Aug 01:30:23 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Writing-Additional-Lists.txt)
+
+## Completing End Tasks. Mon 21 Aug 01:33:47 EDT 2017
+### Calculating Average Parsing Time. Mon 21 Aug 01:33:47 EDT 2017
+* Average Parsing Time Was  Minutes.
+
+### Calculating Total Runtime Of Script. Mon 21 Aug 01:33:47 EDT 2017
+* Script Took  minutes To Filter  Lists.
+
+### Adjusting README. Mon 21 Aug 01:33:47 EDT 2017
+
+### Removing Temporary Variables. Mon 21 Aug 01:33:48 EDT 2017
+
+### Removing Temporary Whitelist. Mon 21 Aug 01:33:48 EDT 2017
+
+### Removing Temporary Blacklist. Mon 21 Aug 01:33:48 EDT 2017
+
+### Removing Temporary TLD List. Mon 21 Aug 01:33:48 EDT 2017
+
+### Pushing Lists To Locally Hosted Location. Mon 21 Aug 01:33:48 EDT 2017
+* Localhost Web Directory Not Set. Please Fix. Mon 21 Aug 01:33:48 EDT 2017
+
+### Pushing Lists To Github. Mon 21 Aug 01:33:48 EDT 2017
