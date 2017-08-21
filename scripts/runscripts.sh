@@ -13,6 +13,7 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+
 if
 [[ -f $SUBMAINVAR ]]
 then
@@ -24,7 +25,7 @@ fi
 
 ## Logo
 if
-[[ -f $SUBMAINVAR ]]
+[[ -f $AVATARSCRIPT ]]
 then
 bash $AVATARSCRIPT
 else
