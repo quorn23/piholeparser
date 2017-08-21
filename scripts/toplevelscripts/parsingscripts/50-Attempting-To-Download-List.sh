@@ -102,25 +102,23 @@ if
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -gt 0 ]]
 then
 printf "$green"    "Download Successful."
-echo ""
 elif
 [[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -le 0 ]]
 then
 printf "$red"    "Download Failed."
 DOWNLOADFAILED=true
 touch $BORIGINALFILETEMP
-echo ""
 fi
 
 ## Attempt agent download
 if 
 [[ -z $FULLSKIPPARSING && -n $DOWNLOADFAILED && "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
 then
+echo ""
 printf "$cyan"    "Attempting To Fetch List As if we were a browser."
 curl -s -H "$AGENTDOWNLOAD" -L $source >> $BTEMPFILE
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
-echo ""
 fi
 if
 [[ -z $FULLSKIPPARSING && -f $BORIGINALFILETEMP ]]
@@ -139,5 +137,4 @@ echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timesta
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
-echo ""
 fi
