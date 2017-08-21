@@ -48,6 +48,6 @@ HOWMANYLISTSWITHMULTSOURCEB=$(expr $HOWMANYLISTSWITHMULTSOURCE - 1)
 echo ""
 printf "$yellow"    "$HOWMANYLISTSWITHMULTSOURCEB Lists With More Than One Source. See Log For Details."
 else
-printf "$green"   "All Lists Use https."
+printf "$green"   "All Lists Only Have One Source."
 echo "All Lists Only Have One Source." | tee --append $MORETHANONESOURCE &>/dev/null
 fi
