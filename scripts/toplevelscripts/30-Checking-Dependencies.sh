@@ -16,35 +16,26 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-echo ""
-
 ## Start File Loop
 ## For .dependency files In The dependencies Directory
 for f in $DEPENDENCIESALL
 do
 
 ## Declare File Name
-
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 printf "$cyan"  "Checking For $BASEFILENAME"
 
 ## Shouldn't be more than one source here
-for source in `cat $f`;
-do
-
-WHATITIS=$BASEFILENAME
-WHATPACKAGE=$source
+source=`cat $f`
 timestamp=$(echo `date`)
-if
-which $WHATITIS >/dev/null;
-then
-printf "$yellow"  "$WHATITIS Is Already Installed."
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-fi
-echo ""
 
-## End Of Loops
-done
+if
+which $BASEFILENAME >/dev/null;
+then
+printf "$yellow"  "$BASEFILENAME Is Already Installed."
+else
+printf "$yellow"  "Installing $BASEFILENAME"
+apt-get install -y $source
+fi
+
 done
