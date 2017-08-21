@@ -18,7 +18,7 @@ if
 [[ -f $MORETHANONESOURCE ]]
 then
 rm $MORETHANONESOURCE
-printf "$red"   "Old https-less List Removed"
+printf "$red"   "Old Multi-Source List Removed"
 fi
 
 ## Process Every .lst file within the List Directories
