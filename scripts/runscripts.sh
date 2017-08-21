@@ -11,7 +11,7 @@ then
 source $STATICVARS
 else
 echo "Static Vars File Missing, Exiting."
-exit
+exit 1
 fi
 
 if
@@ -20,7 +20,7 @@ then
 source $SUBMAINVAR
 else
 echo "Sub Main Vars File Missing, Exiting."
-exit
+exit 1
 fi
 
 ## Logo
