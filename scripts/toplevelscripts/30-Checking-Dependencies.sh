@@ -29,6 +29,8 @@ printf "$cyan"  "Checking For $BASEFILENAME"
 source=`cat $f`
 timestamp=$(echo `date`)
 
+echo ""
+
 if
 which $BASEFILENAME >/dev/null;
 then
