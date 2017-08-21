@@ -1,5 +1,5 @@
 #!/bin/bash
-## This should be run alot, to make sure the temp file doesn't get screwed up
+## This should be run alot, to make sure the temp folder doesn't get screwed up
 
 ## Variables
 script_dir=$(dirname $0)
@@ -14,26 +14,23 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-CHECKME=$TEMPCLEANUP
 if
-ls $CHECKME &> /dev/null;
+[[ -f $TEMPCLEANUP ]]
 then
-rm $CHECKME
+rm $TEMPCLEANUP
 echo ""
 fi
 
-CHECKME=$COMPRESSEDTEMPSEVEN
 if
-ls $CHECKME &> /dev/null;
+[[ -f $COMPRESSEDTEMPSEVEN ]]
 then
-rm $CHECKME
+rm $COMPRESSEDTEMPSEVEN
 echo ""
 fi
 
-CHECKME=$COMPRESSEDTEMPTAR
 if
-ls $CHECKME &> /dev/null;
+[[ -f $COMPRESSEDTEMPTAR ]]
 then
-rm $CHECKME
+rm $COMPRESSEDTEMPTAR
 echo ""
 fi
