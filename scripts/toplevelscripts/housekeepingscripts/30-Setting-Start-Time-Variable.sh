@@ -20,6 +20,9 @@ STARTIMEVAR=$(echo $STARTIME)
 STARTTIMESTAMP=$(date +"%s")
 
 echo "STARTTIME='"$STARTTIME"'" | tee --append $TEMPVARS &>/dev/null
+echo "STARTIMEVAR='"$STARTIMEVAR"'" | tee --append $TEMPVARS &>/dev/null
 echo "STARTTIMESTAMP=$STARTTIMESTAMP" | tee --append $TEMPVARS &>/dev/null
 
 printf "$yellow" "$STARTTIME"
+
+echo "Start Time Set To $timestamp" | tee --append $RECENTRUN &>/dev/null
