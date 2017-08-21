@@ -1,8 +1,5 @@
 #!/bin/bash
-## This will help log it better
-##########
-############
-########## Fix me soon
+## This will log lists with more than one source
 
 ## Variables
 script_dir=$(dirname $0)
