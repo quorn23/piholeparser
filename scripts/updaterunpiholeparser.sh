@@ -27,16 +27,6 @@ git clone $GITREPOSITORYURLB $REPODIR
 fi
 
 SCRIPTVARSDIR="$REPODIR"scripts/scriptvars/
-
-echo "___________________________________________________________"
-echo ""
-echo "Updating Repository."
-echo ""
-git -C $REPODIR pull
-echo ""
-echo "___________________________________________________________"
-echo ""
-
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
 if
 [[ -f $STATICVARS ]]
@@ -46,6 +36,16 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+
+echo "___________________________________________________________"
+echo ""
+echo "Updating Repository."
+echo ""
+printf "\e[1;34m%s\e[0m\n"    "$(git -C $REPODIR pull)"
+#git -C $REPODIR pull
+echo ""
+echo "___________________________________________________________"
+echo ""
 
 ## RunParser
 if
