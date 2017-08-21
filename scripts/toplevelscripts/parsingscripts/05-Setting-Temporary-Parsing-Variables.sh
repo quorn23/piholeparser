@@ -22,8 +22,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-printf "$yellow"    "Setting Variables for $BASEFILENAME List."
-
 ## Download URL
 source=`cat $FILEBEINGPROCESSED`
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
