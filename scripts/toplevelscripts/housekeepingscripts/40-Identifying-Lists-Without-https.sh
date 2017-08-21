@@ -15,7 +15,7 @@ exit
 fi
 
 if 
-ls $NOHTTPSLISTS &> /dev/null; 
+[[ -f $NOHTTPSLISTS ]]
 then
 rm $NOHTTPSLISTS
 printf "$red"   "Old https-less List Removed"
