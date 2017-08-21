@@ -23,7 +23,7 @@ exit
 fi
 
 if
-[[ `wget -S --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
+[[ `wget -S --spider $MIRROREDFILEDL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
 printf "$green"  "Github Mirror Currently Available."
 fi
