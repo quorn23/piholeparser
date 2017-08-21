@@ -19,15 +19,6 @@ fi
 for f in $ALLHOUSEKEEPINGSCRIPTS
 do
 
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
-
 ## Loop Vars
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
