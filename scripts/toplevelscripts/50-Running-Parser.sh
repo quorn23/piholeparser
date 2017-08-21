@@ -33,8 +33,8 @@ echo ""
 
 ## Declare File Name
 FILEBEINGPROCESSED=$f
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "FILEBEINGPROCESSED="$FILEBEINGPROCESSED"" | tee --append $TEMPPARSEVARS &>/dev/null
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
@@ -50,7 +50,10 @@ SCRIPTTEXT=""$PBNAMEPRETTYSCRIPTTEXT"."
 PARSECOMMENT="$SCRIPTTEXT"
 
 printf "$cyan"  "$PARSECOMMENT"
+echo ""
+
 bash $p
+
 echo ""
 
 ## End of parsing Loop
@@ -65,6 +68,9 @@ else
 echo "Error Deleting Temp Files."
 exit
 fi
+
+printf "$orange" "$DIVIDERBARB"
+echo ""
 
 ## End of File Loop
 done
