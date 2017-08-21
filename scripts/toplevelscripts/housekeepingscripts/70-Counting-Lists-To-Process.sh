@@ -14,12 +14,12 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-CHECKME=$BIGAPLSOURCE
 if
-ls $CHECKME &> /dev/null;
+[[ -f $BIGAPLSOURCE ]]
 then
-rm $CHECKME
+rm $BIGAPLSOURCE
 printf "$red"    "Purging Old Source List."
+echo "Old Source List Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Collect all the sources into one file
@@ -35,10 +35,10 @@ echo "HOWMANYSOURCELISTS='"$HOWMANYSOURCELISTS"'" | tee --append $TEMPVARS &>/de
 echo "HOWMANYSOURCE='"$HOWMANYSOURCE"'" | tee --append $TEMPVARS &>/dev/null
 
 ## Log Activity
-echo "* $HOWMANYSOURCE $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYSOURCE" | tee --append $RECENTRUN &>/dev/null
 
 ## Terminal Display
-printf "$yellow"    "$HOWMANYSOURCELISTS Lists To Be Processed By The Script."
+printf "$yellow"    "$HOWMANYSOURCE"
 
 ## Remove Empty Lines
 cat $TEMPFILE | sed '/^$/d' > $BIGAPLSOURCE
