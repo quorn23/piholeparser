@@ -14,11 +14,6 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-if
-[[ -f $VALIDDOMAINTLD ]]
-then
-rm $VALIDDOMAINTLD
-echo "Old TLD List Removed." | tee --append $RECENTRUN &>/dev/null
-fi
+
 
 
