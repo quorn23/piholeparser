@@ -38,6 +38,8 @@ then
 touch $TEMPVARS
 fi
 
+echo ""
+
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
 for f in $ALLTOPLEVELSCRIPTS
