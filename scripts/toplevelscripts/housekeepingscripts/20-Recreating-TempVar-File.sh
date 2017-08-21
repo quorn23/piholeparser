@@ -15,7 +15,7 @@ exit
 fi
 
 if
-[[ ! -f $TEMPVARS ]]
+[[ -f $TEMPVARS ]]
 then
 rm $TEMPVARS
 printf "$red"   "Purging Old TempVars File."
