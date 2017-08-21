@@ -14,19 +14,20 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-CHECKME=$TEMPVARS
 if
-ls $CHECKME &> /dev/null;
+[[ ! -f $TEMPVARS ]]
 then
-rm $CHECKME
+rm $TEMPVARS
 printf "$red"   "Purging Old TempVars File."
 fi
 
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 
-CHECKME=$TEMPVARS
 if
-ls $CHECKME &> /dev/null;
+[[ -f $TEMPVARS ]]
 then
 printf "$yellow"   "TempVars File Recreated."
+else
+printf "$red"   "TempVars File Missing, Exiting."
+exit
 fi
