@@ -44,13 +44,14 @@ done
 done
 
 if 
-ls $NOHTTPSLISTS &> /dev/null; 
+[[ -f $NOHTTPSLISTS ]]
 then
-:
+printf "$yellow"   "https-less List Recreated."
 else
+printf "$green"   "All Lists Use https."
 echo "All Lists Use https." | tee --append $NOHTTPSLISTS &>/dev/null
 fi
-printf "$yellow"   "https-less List Recreated."
+echo ""
 
 HOWMANYLISTSWITHOUTHTTPS=$(echo -e "`wc -l $NOHTTPSLISTS | cut -d " " -f 1`")
 HOWMANYLISTSWITHOUTHTTPSB=$(expr $HOWMANYLISTSWITHOUTHTTPS - 1)
