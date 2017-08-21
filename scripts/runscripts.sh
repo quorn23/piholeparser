@@ -31,28 +31,12 @@ else
 echo "Deathbybandaid Logo Missing."
 fi
 
-## tempvars error handling
-if
-[[ ! -f $TEMPVARS ]]
-then
-touch $TEMPVARS
-fi
-
 echo ""
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
 for f in $ALLTOPLEVELSCRIPTS
 do
-
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
 
 ## Loop Vars
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
@@ -64,7 +48,7 @@ timestamp=$(echo `date`)
 
 printf "$blue"    "$DIVIDERBAR"
 echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
+printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 
 ## Log Section
 echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
