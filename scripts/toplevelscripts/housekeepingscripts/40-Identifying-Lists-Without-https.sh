@@ -49,9 +49,9 @@ then
 printf "$yellow"   "https-less List Recreated."
 HOWMANYLISTSWITHOUTHTTPS=$(echo -e "`wc -l $NOHTTPSLISTS | cut -d " " -f 1`")
 HOWMANYLISTSWITHOUTHTTPSB=$(expr $HOWMANYLISTSWITHOUTHTTPS - 1)
+echo ""
 printf "$red"    "$HOWMANYLISTSWITHOUTHTTPSB Lists Do NOT Use HTTPS. See Log For Details."
 else
 printf "$green"   "All Lists Use https."
 echo "All Lists Use https." | tee --append $NOHTTPSLISTS &>/dev/null
 fi
-echo ""
