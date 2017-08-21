@@ -19,28 +19,31 @@ fi
 for f in $ALLHOUSEKEEPINGSCRIPTS
 do
 
-# Dynamic Variables
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 if
-[[ -f $DYNOVARS ]]
+[[ -f $TEMPVARS ]]
 then
-source $DYNOVARS
+source $TEMPVARS
 else
-echo "Dynamic Vars File Missing, Exiting."
+echo "Temp Vars File Missing, Exiting."
 exit
 fi
 
-## Loop Variables
-SCRIPTTEXT=""$BNAMEPRETTYSCRIPTTEXT"."
+## Loop Vars
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
+BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
+BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
+TAGTHEREPOLOG="[Details If Any]("$RECENTRUNLOGSDIRRAW""$BASEFILENAMENUM".txt)"
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
 echo ""
-printf "$cyan"   "$SCRIPTTEXT $timestamp"
+
+printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 echo ""
 
 ## Log Subsection
-echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "### $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Clear Temp Before
 if
@@ -66,6 +69,7 @@ exit
 fi
 
 echo "" | tee --append $RECENTRUN
+
 printf "$orange" "$DIVIDERBARB"
 echo ""
 
