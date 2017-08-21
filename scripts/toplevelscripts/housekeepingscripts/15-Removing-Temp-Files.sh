@@ -14,12 +14,11 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-CHECKME=$TEMPCLEANUPB
 if
-ls $CHECKME &> /dev/null;
+[[ -f $TEMPCLEANUPB ]]
 then
 printf "$red"   "Purging Old Temp Files."
-rm $CHECKME
+rm $TEMPCLEANUPB
 else
 printf "$yellow"   "No Temp Files To Remove."
 fi
