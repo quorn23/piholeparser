@@ -19,6 +19,7 @@ if
 then
 rm $NOHTTPSLISTS
 printf "$red"   "Old https-less List Removed"
+echo "Old https-less List Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Start File Loop
