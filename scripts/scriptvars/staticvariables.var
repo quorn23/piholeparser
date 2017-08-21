@@ -72,7 +72,6 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
 
   SCRIPTSDIR="$REPODIR"scripts/
       TOPRUNSCRIPT="$SCRIPTSDIR"runscripts.sh
-      DELETETEMPFILE="$SCRIPTSDIR"deletetempfile.sh
       
       TOPLEVELSCRIPTSDIR="$SCRIPTSDIR"toplevelscripts/
           ALLTOPLEVELSCRIPTS="$TOPLEVELSCRIPTSDIR"*.sh
@@ -93,14 +92,16 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
       
       DEPENDENCIESDIR="$TOPLEVELSCRIPTSDIR"dependencies/
               DEPENDENCIESALL="$DEPENDENCIESDIR"*.dep
-              
+      
+      COMMONSCRIPTSDIR="$TOPLEVELSCRIPTSDIR"commonscripts/
+          AVATARSCRIPT="$COMMONSCRIPTSDIR"avatar.sh
+          DELETETEMPFILE="$COMMONSCRIPTSDIR"deletetempfile.sh
+          
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           BASICVARS="$SCRIPTVARSDIR"variables.var
             source $BASICVARS
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
           DYNOVARS="$SCRIPTVARSDIR"dynamicvariables.var
-
-      AVATARSCRIPT="$SCRIPTVARSDIR"avatar.sh
 
   TEMPDIR="$REPODIR"temp/
     TEMPCLEANUP="$TEMPDIR"*.txt
