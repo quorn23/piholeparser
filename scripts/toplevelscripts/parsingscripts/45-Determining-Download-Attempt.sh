@@ -82,9 +82,9 @@ fi
 printf "$yellow"    "The Download Should use the $SOURCETYPE Preset."
 timestamp=$(echo `date`)
 if
-[[ -z $FULLSKIPPARSING && -n $SOURCEIP && -n $UPCHECK && -n $SOURCETYPE ]]
+[[ -z $FULLSKIPPARSING && -n $SOURCEIP && -n $SOURCEDOMAIN && -n $SOURCETYPE ]]
 then
-printf "$cyan"    "Fetching $SOURCETYPE List From $UPCHECK Located At The IP address Of "$SOURCEIP"."
+printf "$cyan"    "Fetching $SOURCETYPE List From $SOURCEDOMAIN Located At The IP address Of "$SOURCEIP"."
 elif
 [[ -z $FULLSKIPPARSING && $SOURCETYPE == usemirrorfile ]]
 then
