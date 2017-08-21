@@ -48,7 +48,6 @@ HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After Download."
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
 printf "$yellow"  "$ENDCOMMENT"
-echo ""
 fi
 
 ## Cheap error handling
