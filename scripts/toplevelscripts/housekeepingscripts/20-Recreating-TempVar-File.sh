@@ -19,6 +19,7 @@ if
 then
 rm $TEMPVARS
 printf "$red"   "Purging Old TempVars File."
+echo "Old TempVars File Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
@@ -27,6 +28,7 @@ if
 [[ -f $TEMPVARS ]]
 then
 printf "$yellow"   "TempVars File Recreated."
+echo "TempVars File Recreated." | tee --append $RECENTRUN &>/dev/null
 else
 printf "$red"   "TempVars File Missing, Exiting."
 exit
