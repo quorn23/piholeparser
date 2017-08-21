@@ -39,7 +39,33 @@ echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 
+for p in $ALLTLDSCRIPTS
+do
 
+PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
+PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
+PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
 
+printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
+
+bash $p
+
+echo ""
+
+## End of parsing Loop
+done
+
+## Clear Temp After
+if
+[[ -f $DELETETEMPFILE ]]
+then
+bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
+
+printf "$orange" "$DIVIDERBARB"
+echo ""
 
 done
