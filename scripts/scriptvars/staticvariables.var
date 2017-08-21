@@ -91,13 +91,14 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
       ACTUALPARSINGSCRIPTSDIR="$PARSINGSCRIPTSDIR"actualparsing/
           ALLACTUALPARSINGSCRIPTS="$ACTUALPARSINGSCRIPTSDIR"*.sh
       
+      DEPENDENCIESDIR="$TOPLEVELSCRIPTSDIR"dependencies/
+              DEPENDENCIESALL="$DEPENDENCIESDIR"*.dep
+              
       SCRIPTVARSDIR="$SCRIPTSDIR"scriptvars/
           BASICVARS="$SCRIPTVARSDIR"variables.var
             source $BASICVARS
           MAINREADMEDEFAULT="$SCRIPTVARSDIR"README.md.default
           DYNOVARS="$SCRIPTVARSDIR"dynamicvariables.var
-          DEPENDENCIESDIR="$SCRIPTVARSDIR"dependencies/
-              DEPENDENCIESALL="$DEPENDENCIESDIR"*.dep
 
       AVATARSCRIPT="$SCRIPTVARSDIR"avatar.sh
 
