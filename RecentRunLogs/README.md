@@ -413,3 +413,9 @@ Old Source List Purged.
 * Localhost Web Directory Not Set. Please Fix. Mon 21 Aug 20:08:12 EDT 2017
 
 ### Pushing Lists To Github Mon 21 Aug 20:08:12 EDT 2017
+
+### Script Completed Mon 21 Aug 20:10:22 EDT 2017
+* Script completed at Mon 21 Aug 20:10:22 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
