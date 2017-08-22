@@ -47,7 +47,7 @@ if
 [[ -n $PINGTESTFAILEDA  ]]
 then
 { if
-[[ `wget -S --spider $MIRROREDFILEDL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
+[[ `wget -S --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
 printf "$green"  "Header Check Successful."
 else
