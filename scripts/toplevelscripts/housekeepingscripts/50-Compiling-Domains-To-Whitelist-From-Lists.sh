@@ -15,37 +15,37 @@ exit
 fi
 
 ## Quick File Check
-WHATITIS="Whitelist File"
-CHECKME=$LISTWHITELISTDOMAINS
 timestamp=$(echo `date`)
 
 printf "$yellow"  "Checking For $WHATITIS"
 echo ""
 
 if
-ls $CHECKME &> /dev/null;
+[[ -f $LISTWHITELISTDOMAINS ]]
 then
-printf "$red"  "Removing $WHATITIS"
+printf "$red"  "Removing Whitelist File."
 echo ""
-rm $CHECKME
-touch $CHECKME
-echo "* $WHATITIS removed $timestamp" | tee --append $RECENTRUN &>/dev/null
+rm $LISTWHITELISTDOMAINS
+touch $LISTWHITELISTDOMAINS
+echo "* Whitelist File removed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-printf "$cyan"  "$WHATITIS not there. Not Removing."
+printf "$cyan"  "Whitelist File not there. Not Removing."
 echo ""
-touch $CHECKME
-echo "* $WHATITIS not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
+touch $LISTWHITELISTDOMAINS
+echo "* Whitelist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 ## Create The List
 for f in $EVERYLISTFILEWILDCARD
 do
 
-for source in `cat $f`;
-do
+source=`cat $f`
 
-UPCHECK=`echo $source | awk -F/ '{print $3}'`
-echo "$UPCHECK" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
+SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
+if
+[[ -n $SOURCEDOMAIN ]]
+then
+echo "$SOURCEDOMAIN" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
+fi
 
-done
 done
