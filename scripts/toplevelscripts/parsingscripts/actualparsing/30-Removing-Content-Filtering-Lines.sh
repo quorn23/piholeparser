@@ -13,5 +13,13 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+else
+echo "Temp Parsing Vars File Missing, Exiting."
+exit
+fi
 
-cat $TEMPFILEL | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $TEMPFILEM
+cat $BFILETEMP | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $BTEMPFILE
