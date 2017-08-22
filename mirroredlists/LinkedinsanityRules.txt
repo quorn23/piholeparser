@@ -1,0 +1,103 @@
+[Adblock Plus 2.0]
+! Version: 201708161730
+! Checksum: 8mlTWKGq84X6ryXLzbQVtw
+! Title: Linked Insanity Annoyance Rules
+! Last modified: 16 August 2017 17:30 UTC
+! Expires: 30 days (update frequency)
+! Homepage: https://raw.githubusercontent.com/taylr/linkedinsanity/master/linkedinsanity.txt
+! Licence: MIT License
+!--------------------------------------------------------------------!
+!
+!! LinkedIn
+!
+! make the feed a lot more useful
+linkedin.com##article[class*="sponsored"]
+linkedin.com##article[class*="pymk"]
+linkedin.com##article[class*="jymbii"]
+linkedin.com##article[class*="lynda"]
+! messenger and spying on your presence
+linkedin.com##aside#msg-overlay
+linkedin.com/voyager/api/messaging/presenceStatuses
+! follows
+linkedin.com##div[class*="feed-s-follows-module"]
+linkedin.com##button[class*=follow-button]
+! click bait
+linkedin.com##div.search-s-news-module
+linkedin.com##article.feed-s-update--channel
+! low quality tutorials
+linkedin.com##div[class*="-learning"]
+linkined.com##section[class*=course-recommendations]
+linkedin.com##section[class*=-course-recommendations]
+! remove people-you-may-know filler from pages
+linkedin.com##section[class*="pymk"]
+! remove navbar cruft
+linkedin.com##li#spotlight-one-nav-item
+linkedin.com##li#app-launcher-nav-item
+! remove upsells
+linkedin.com##section.mn-abi-form
+linkedin.com##div[class*=jobs-upsell]
+linkedin.com##a[class*=premium-upsell]
+linkedin.com##div[class*=premium-upsell]
+linkedin.com##div.reg-upsell
+linkedin.com##button[class*="cta--"]
+linkedin.com##ul.recruiter-upsell
+! trick you into uploading your address book
+linkedin.com##div[class*=mn-wylo-promo]
+linkedin.com##article.feed-s-update--promo
+linkedin.com##article.promo-update
+linkedin.com##article.promo-update--is-abi
+! diversions from current page
+linkedin.com##div.name-search
+linkedin.com##div.jserp
+! tracking where you go/what you do
+linkedin.com/mob/tracking
+linkedin.com/li/track
+linkedin.com/lite/ua/error
+! surveys
+linkedin.com##div.survey-questions
+linkedin.com##div.survey
+!
+!! Twitter
+!
+twitter.com##.WhoToFollow
+twitter.com##.trends.Trends.module
+!
+!! Amazon
+!
+amazon.com##div#ah-dashboard
+amazon.com##div#fresh-shoveler
+amazon.com##div#gw-desktop-herotator
+amazon.com##div[class*=digital-dash-gateway]
+amazon.com##div.huc-first-upsell-row
+amazon.com##div#huc-v2-cobrand-stripe
+amazon.com##div.huc-last-upsell-rows
+amazon.com##div[id*=-upsell-]
+! Recommendations, History, Featured (RHF) is delayed -- block the HTML fetch
+amazon.com##div.rhf
+amazon.com##div.rhf-frame
+amazon.com##div#rhf-error
+amazon.com/gp/recent-history-footer/external/rhf-handler.html
+amazon.com##div#sc-rec-bottom
+amazon.com##div#sc-rec-right
+amazon.com##div#sc-new-upsell
+amazon.com##div#btfContent
+amazon.com##div.bestsellers
+amazon.com##div#sidebarbtf
+! search clutter
+amazon.com##div#centerBelowExtraHowsMySearch
+amazon.com##div#hows-my-search
+! page ads and self promotion (incl. 3 ways of quick promotion)
+amazon.com##div#pdagEncapsulated
+amazon.com##div[id*=QuickPromo]
+amazon.com##div[id*=quick-promo]
+amazon.com##div[id*=quickPromo]
+amazon.com##div#detail-ilm_div
+amazon.com##div#cbcc_banner
+amazon.com##div#giveaway_feature_div
+amazon.com##div.prime-ad-banner-content
+!
+!! Github
+!
+github.com##div[class*=octofication]
+github.com##div[class*=signup-prompt]
+github.com##div.js-notice
