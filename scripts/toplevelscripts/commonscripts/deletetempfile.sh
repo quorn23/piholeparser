@@ -1,9 +1,9 @@
 #!/bin/bash
-## This should be run alot, to make sure the temp file doesn't get screwed up
+## This should be run alot, to make sure the temp folder doesn't get screwed up
 
 ## Variables
 script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/scriptvars/
+SCRIPTVARSDIR="$script_dir"/../../scriptvars/
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
 if
 [[ -f $STATICVARS ]]
