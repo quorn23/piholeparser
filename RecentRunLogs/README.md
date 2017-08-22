@@ -413,3 +413,9 @@ Old TLD List Removed.
 * Localhost Web Directory Not Set. Please Fix. Tue 22 Aug 14:38:28 EDT 2017
 
 ### Pushing Lists To Github Tue 22 Aug 14:38:28 EDT 2017
+
+### Script Completed Tue 22 Aug 14:44:54 EDT 2017
+* Script completed at Tue 22 Aug 14:44:54 EDT 2017
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
