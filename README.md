@@ -23,9 +23,9 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Tue 22 Aug 00:20:14 EDT 2017
-* Script Ended At Tue 22 Aug 03:35:39 EDT 2017
-* Script Took 195 minutes To Filter 341 Lists.
+* Script Started At Tue 22 Aug 10:37:38 EDT 2017
+* Script Ended At Tue 22 Aug 14:38:27 EDT 2017
+* Script Took 240 minutes To Filter 341 Lists.
 * 
 * 
 * [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
