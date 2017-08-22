@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:02 2017/08/19
+! 最終更新 12:31 2017/08/22
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -14,7 +14,7 @@ amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.c
 ||dgpot.com^$third-party,domain=~dgpot.com
 ||digiket.com^$third-party
 ||digiket.net^$third-party,domain=~digiket.com
-||dmm.co.jp^$third-party,domain=~dmm.com|~javhub.net|~jpidols.tv|~sougouwiki.com|~thatav.net
+||dmm.co.jp^$third-party,domain=~dmm.com
 ||dmm.com^$third-party,domain=~dmm.co.jp
 ||dl-market.com^$third-party
 ||dlmarket.jp^$third-party
@@ -143,6 +143,7 @@ _ads.php
 /www/delivery/*
 	!/afr.php?
 	!/ajs.php?
+	!/apu.php?
 	!.php?zoneid=
 	!||clipconverter.cc/www/d/
 	!||phncdn.com/iframe
@@ -608,6 +609,14 @@ heavy-r.com##.hd-ban
 
 ||fapdu.com/desktop_popup.
 
+!------------danbooru系
+!sankaku channel
+||chan.sankakucomplex.com/javascripts/ls.
+||otaserve.net^$domain=sankakucomplex.com
+
+!gelbooru
+	!antiadblock
+@@||gelbooru.com/ads.js
 
 $script,third-party,domain=jpidols.tv
 |http://$subdocument,third-party,domain=adf.ly
@@ -656,9 +665,6 @@ $script,third-party,domain=jpidols.tv
 ||fod.fujitv.co.jp/pc/image/wbhjfr/
 ||fod.fujitv.co.jp/mz/*
 ||free-video-movie.com^$domain=2dbook.com
-||gelbooru.com/r18/
-||gelbooru.com/r19/
-||gelbooru.com/thumbnails/0C/
 ||getchu.com/mbanner/$~image
 ||gigazine.net/pw/p.js
 ||gnst.jp/c/atb/segment.js$domain=gnavi.co.jp
@@ -1989,6 +1995,7 @@ $domain=warotanikki.com,third-party
 @@||bc.geocities.yahoo.co.jp/js/bbs/
 @@||bing.com/fd/ls/*$ping
 @@||dlsite.com/img/
+@@||dmm.co.jp/mono/movie/adult/$image
 	!動画見れない
 @@||doubleclick.net/gampad/ads?$xmlhttprequest,domain=tver.jp|video.tv-tokyo.co.jp
 @@||fwmrm.net^*/AdManager.swf?
