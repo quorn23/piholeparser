@@ -14,7 +14,6 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-CHECKME=$TLDCOMPARED
 if
 [[ -f $TLDCOMPARED ]]
 then

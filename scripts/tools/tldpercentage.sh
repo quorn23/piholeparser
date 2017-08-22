@@ -16,16 +16,28 @@ fi
 
 STARTTIMESTAMP=$(date +"%s")
 
-CHECKME=$TEMPCLEANUP
 if
-ls $CHECKME &> /dev/null;
+[[ -f $TEMPCLEANUP ]]
 then
 rm $CHECKME
 fi
 
+if
+[[ -f $BIGAPL ]]
+then
 cp $BIGAPL $TEMPFILEA
+else
+exit
+fi
 
+if
+[[ -f $VALIDDOMAINTLDBKUP ]]
+then
 cp $VALIDDOMAINTLDBKUP $TEMPFILEF
+else
+exit
+fi
+
 cat $TEMPFILEF | tr -d '.' > $TEMPFILEG
 
 ## Total
