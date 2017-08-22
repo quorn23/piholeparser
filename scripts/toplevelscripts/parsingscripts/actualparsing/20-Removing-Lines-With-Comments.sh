@@ -13,5 +13,17 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+else
+echo "Temp Parsing Vars File Missing, Exiting."
+exit
+fi
 
-cat $TEMPFILEL | sed '/\#\+/d; /\!\+/d; /^[.]/d' | grep -v '\^.' > $TEMPFILEM
+if
+[[ -f $BFILETEMP ]]
+then
+cat $BFILETEMP | sed '/\#\+/d; /\!\+/d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
+fi
