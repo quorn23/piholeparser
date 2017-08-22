@@ -13,6 +13,14 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+else
+echo "Temp Parsing Vars File Missing, Exiting."
+exit
+fi
 
 HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
 
@@ -28,17 +36,17 @@ do
 WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
 TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}" )
 
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $TEMPFILEL | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-cat $TEMPFILEL | grep -e [.]$source\$ >> $TEMPFILEM
-touch $TEMPFILEM
+cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
+touch $BTEMPFILE
 fi
 
 echo -ne "$TLDPERCENTAGEMATH \r"
 
 done
 
-touch $TEMPFILEM
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $TEMPFILEM $TEMPFILEL >> $TRYNACATCHFIlES
+touch $BTEMPFILE
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
