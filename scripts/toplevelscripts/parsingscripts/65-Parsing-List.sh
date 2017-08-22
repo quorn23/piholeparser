@@ -22,9 +22,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-## New Parsing logic
-mv $BFILETEMP $TEMPFILEL
-
 ## Start time
 STARTPARSESTAMP=$(date +"%s")
 
@@ -42,8 +39,8 @@ PARSECOMMENT="$SCRIPTTEXT"
 if
 [[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
 then
-touch $TEMPFILEL
-FETCHFILESIZE=$(stat -c%s "$TEMPFILEL")
+touch $BFILETEMP
+FETCHFILESIZE=$(stat -c%s "$BFILETEMP")
 fi
 
 if
@@ -57,12 +54,12 @@ if
 then
 printf "$cyan"  "$PARSECOMMENT"
 bash $p
-touch $TEMPFILEM
-rm $TEMPFILEL
-FETCHFILESIZE=$(stat -c%s "$TEMPFILEM")
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEM | cut -d " " -f 1`")
+touch $BTEMPFILE
+rm $BFILETEMP
+FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
+HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
-mv $TEMPFILEM $TEMPFILEL
+mv $BTEMPFILE $BFILETEMP
 fi
 
 if
@@ -113,9 +110,6 @@ unset ENDPARSESTAMP
 unset STARTPARSESTAMP
 unset DIFFTIMEPARSE
 unset DIFFTIMEPARSESEC
-
-## End new logix
-mv $TEMPFILEL $BFILETEMP
 
 ## Prepare for next step
 mv $BFILETEMP $BTEMPFILE
