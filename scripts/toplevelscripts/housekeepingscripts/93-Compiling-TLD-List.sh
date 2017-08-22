@@ -24,18 +24,18 @@ fi
 if
 [[ -f $VALIDDOMAINTLD ]]
 then
-mv $VALIDDOMAINTLD $BTEMPFILE
+mv $VALIDDOMAINTLD $TEMPFILEJ
 else
-touch $BTEMPFILE
+touch $TEMPFILEJ
 fi
 
 printf "$cyan"    "Formatting And Removing Duplicatates From TLD List."
 
-cat $BTEMPFILE | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $BFILETEMP
-rm $BTEMPFILE
+cat $TEMPFILEJ | sed '/[/]/d; /\#\+/d; s/\s\+$//; /^$/d; /[[:blank:]]/d; /[.]/d; s/\([A-Z]\)/\L\1/g' > $TEMPFILEF
+rm $TEMPFILEJ
 
-cat -s $BFILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
-rm $BFILETEMP
+cat -s $TEMPFILEF | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $VALIDDOMAINTLD
+rm $TEMPFILEF
 
 HOWMANYTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 printf "$yellow"    "$HOWMANYTLD Valid TLD's Total."
