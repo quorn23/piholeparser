@@ -23,7 +23,7 @@ exit
 fi
 
 ## Download URL
-source=`cat $FILEBEINGPROCESSED`
+source="$(echo `cat $FILEBEINGPROCESSED`)"
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## This extracts the domain from source
