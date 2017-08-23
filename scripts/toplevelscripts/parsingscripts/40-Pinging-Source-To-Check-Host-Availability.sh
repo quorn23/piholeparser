@@ -63,3 +63,11 @@ then
 printf "$red"  "List Marked As Dead."
 mv $FILEBEINGPROCESSED $BDEADPARSELIST
 fi
+
+if
+[[ -z $PINGTESTFAILED && $FILEBEINGPROCESSED == $BDEADPARSELIST ]]
+then
+printf "$green"  "List Was Marked As Dead, But Now Works."
+UNDEADLIST=true
+echo "UNDEADLIST="$UNDEADLIST"" | tee --append $TEMPPARSEVARS &>/dev/null
+fi
