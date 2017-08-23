@@ -76,5 +76,11 @@ fi
 
 printf "$orange" "$DIVIDERBARB"
 
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+rm $TEMPPARSEVARS
+fi
+
 ## End of File Loop
 done
