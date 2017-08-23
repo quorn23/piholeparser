@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Pinging Host
 
 ## Variables
 script_dir=$(dirname $0)
