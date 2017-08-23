@@ -60,6 +60,10 @@ elif
 then
 SOURCETYPE=plaintext
 elif
+[[ -z $SKIPDOWNLOAD && $source == *.csv ]]
+then
+SOURCETYPE=plaintext
+elif
 [[ -z $SKIPDOWNLOAD && $source == *hosts ]]
 then
 SOURCETYPE=plaintext
