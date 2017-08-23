@@ -40,7 +40,14 @@ printf "$yellow"    "File Has Changed Online."
 elif
 [[ -f $MIRROREDFILE && -z $PINGTESTFAILED && -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
 then
+printf "$green"    "File Not Updated Online. No Need To Download."
+SKIPDOWNLOAD=true
+fi
+
+if
+[[ -f $MIRROREDFILE && -f $PARSEDFILE && -n $SKIPDOWNLOAD ]]
+then
+printf "$green"    "Since Parsed File is Present, There Is No Need To Process."
 FULLSKIPPARSING=true
-printf "$green"    "File Not Updated Online. No Need To Process."
 echo "FULLSKIPPARSING="$FULLSKIPPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
