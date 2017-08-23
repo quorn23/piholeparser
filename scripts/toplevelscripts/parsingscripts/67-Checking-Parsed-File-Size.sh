@@ -76,5 +76,5 @@ if
 then
 PARSEDHOWMANYLINES=$(echo -e "`wc -l $BPARSEDFILETEMP | cut -d " " -f 1`")
 echo "PARSEDHOWMANYLINES="$PARSEDHOWMANYLINES"" | tee --append $TEMPPARSEVARS &>/dev/null
-printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Download."
+printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Parsing."
 fi
