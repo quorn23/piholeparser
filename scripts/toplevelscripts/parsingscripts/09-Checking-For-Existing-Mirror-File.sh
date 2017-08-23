@@ -26,6 +26,8 @@ if
 [[ -f $MIRROREDFILE ]]
 then
 printf "$green"  "Mirror File Currently Available."
+MIRRORFILEPRESENT=true
+echo "MIRRORFILEPRESENT="$MIRRORFILEPRESENT"" | tee --append $TEMPPARSEVARS &>/dev/null
 else
 printf "$red"  "Mirror File Currently Unavailable."
 fi
