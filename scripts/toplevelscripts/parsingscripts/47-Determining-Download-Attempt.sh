@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## How should we download
 
 ## Variables
 script_dir=$(dirname $0)
