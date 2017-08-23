@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Check File size
 
 ## Variables
 script_dir=$(dirname $0)
@@ -24,30 +24,52 @@ fi
 
 ## set filesizezero variable if empty
 if
-[[ -z $FULLSKIPPARSING ]]
+[[ -f $BORIGINALFILETEMP ]]
 then
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEBYTES=$(stat -c%s "$BORIGINALFILETEMP")
+FETCHFILESIZEKB=`expr $FETCHFILESIZE / 1024`
 FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-timestamp=$(echo `date`)
 fi
-if 
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-echo "FILESIZEZERO="$FILESIZEZERO"" | tee --append $TEMPPARSEVARS &>/dev/null
+
 timestamp=$(echo `date`)
+
+if 
+[[ "$FETCHFILESIZEBYTES" -eq 0 ]]
+then
 printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
+printf "$red"  "List Marked As Dead."
+mv $FILEBEINGPROCESSED $BDEADPARSELIST
+timestamp=$(echo `date`)
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
-touch $BORIGINALFILETEMP
+rm $BORIGINALFILETEMP
 elif
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -gt 0 ]]
+[[ "$FETCHFILESIZEBYTES" -gt 0 ]]
 then
 ORIGFILESIZENOTZERO=true
 echo "ORIGFILESIZENOTZERO="$ORIGFILESIZENOTZERO"" | tee --append $TEMPPARSEVARS &>/dev/null
-HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After Download."
+fi
+
+## File size
+if
+[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEMB" -gt 0 && "$FETCHFILESIZEKB" -gt 0 && "$FETCHFILESIZEBYTES" -gt 0 ]]
+then
 printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
-printf "$yellow"  "$ENDCOMMENT"
+elif
+[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEMB" -eq 0 && "$FETCHFILESIZEKB" -gt 0 && "$FETCHFILESIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEKB KB."
+elif
+[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEMB" -eq 0 && "$FETCHFILESIZEKB" -eq 0 && "$FETCHFILESIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEBYTES Bytes."
+fi
+
+## How Many Lines
+if
+[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEBYTES" -gt 0 ]]
+then
+HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
+printf "$yellow"  "$HOWMANYLINES Lines After Download."
 fi
 
 ## Cheap error handling
@@ -64,9 +86,8 @@ rm $BFILETEMP
 fi
 
 ## Duplicate the downloaded file for the next steps
-touch $BORIGINALFILETEMP
 if
-[[ -f $BORIGINALFILETEMP ]]
+[[ -n $ORIGFILESIZENOTZERO && -f $BORIGINALFILETEMP ]]
 then
 cp $BORIGINALFILETEMP $BTEMPFILE
 cp $BORIGINALFILETEMP $BFILETEMP
