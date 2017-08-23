@@ -60,8 +60,6 @@ printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
 fi
 
-echo ""
-
 ## End of parsing Loop
 done
 
@@ -76,7 +74,6 @@ exit
 fi
 
 printf "$orange" "$DIVIDERBARB"
-echo ""
 
 ## End of File Loop
 done
