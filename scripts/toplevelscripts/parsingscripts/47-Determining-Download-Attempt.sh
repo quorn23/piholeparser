@@ -52,6 +52,10 @@ elif
 then
 SOURCETYPE=webpage
 elif
+[[ -z $SKIPDOWNLOAD && $source == *".html?"* ]]
+then
+SOURCETYPE=webpage
+elif
 [[ -z $SKIPDOWNLOAD && $source == *.txt ]]
 then
 SOURCETYPE=plaintext
