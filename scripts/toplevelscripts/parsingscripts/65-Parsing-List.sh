@@ -24,6 +24,7 @@ fi
 
 ## Start time
 STARTPARSESTAMP=$(date +"%s")
+echo "STARTPARSESTAMP="$STARTPARSESTAMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Cheap error handling
 if
@@ -37,6 +38,14 @@ if
 [[ -f $BORIGINALFILETEMP ]]
 then
 cp $BORIGINALFILETEMP $BFILETEMP
+fi
+
+HOWMANYLINES=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
+if
+[[ $HOWMANYLINES -eq 0 ]]
+then
+GOTOENDPARSING=true
+echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 ## Start File Loop
@@ -56,79 +65,29 @@ source $TEMPPARSEVARS
 fi
 
 if
-[[ -z $FILESIZEZERO ]]
-then
-touch $BFILETEMP
-FETCHFILESIZE=$(stat -c%s "$BFILETEMP")
-fi
-
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
-fi
-
-if
-[[ -z $FILESIZEZERO ]]
+[[ -z $GOTOENDPARSING ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
-touch $BTEMPFILE
-rm $BFILETEMP
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
-mv $BTEMPFILE $BFILETEMP
-fi
-
-if
-[[ -n $ENDCOMMENT && $HOWMANYLINES -eq 0 ]]
+{ if
+[[ $HOWMANYLINES -eq 0 ]]
 then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
+GOTOENDPARSING=true
+echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
-[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ $HOWMANYLINES -ge 1 ]]
 then
-printf "$yellow"  "$ENDCOMMENT"
-echo ""
-unset ENDCOMMENT
-unset HOWMANYLINES
-fi
-
-if
-[[ "$FETCHFILESIZE" -eq 0 ]]
-then
-FILESIZEZERO=true
+mv $BTEMPFILE $BFILETEMP
+fi }
 fi
 
 done
 
-printf "$cyan"   "Calculating Parse Time."
-
-## end time
+## End Time
 ENDPARSESTAMP=$(date +"%s")
-DIFFTIMEPARSESEC=`expr $ENDPARSESTAMP - $STARTPARSESTAMP`
-DIFFTIMEPARSE=`expr $DIFFTIMEPARSESEC / 60`
-if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
-then
-echo "$DIFFTIMEPARSESEC" | tee --append $PARSEAVERAGEFILE &>/dev/null
-fi
-if
-[[ $DIFFTIMEPARSE != 0 ]]
-then
-printf "$yellow"   "List took $DIFFTIMEPARSE Minutes To Parse."
-else
-printf "$yellow"   "List took Less Than A Minute To Parse."
-fi
-echo ""
-
-unset ENDPARSESTAMP
-unset STARTPARSESTAMP
-unset DIFFTIMEPARSE
-unset DIFFTIMEPARSESEC
+echo "ENDPARSESTAMP="$ENDPARSESTAMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Prepare for next step
 mv $BFILETEMP $BTEMPFILE
