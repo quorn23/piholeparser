@@ -54,11 +54,15 @@ source $TEMPPARSEVARS
 fi
 
 if
-[[ -z $FULLSKIPPARSING && -f $FILEBEINGPROCESSED ]]
+[[ -z $FULLSKIPPARSING && -f $f ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
 echo ""
+elif
+[[ -z $FULLSKIPPARSING && ! -f $f ]]
+then
+echo "list file missing"
 fi
 
 ## End of parsing Loop
@@ -81,6 +85,8 @@ if
 then
 rm $TEMPPARSEVARS
 fi
+
+unset 
 
 ## End of File Loop
 done
