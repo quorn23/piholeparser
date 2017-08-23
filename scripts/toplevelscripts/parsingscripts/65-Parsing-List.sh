@@ -25,40 +25,59 @@ fi
 ## Start time
 STARTPARSESTAMP=$(date +"%s")
 
+## Cheap error handling
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
+
+## Transition File for Processing
+if
+[[ -f $BORIGINALFILETEMP ]]
+then
+cp $BORIGINALFILETEMP $BFILETEMP
+fi
+
 ## Start File Loop
 ## For .sh files In The actualparsing scripts Directory
 echo ""
 for p in $ALLACTUALPARSINGSCRIPTS
 do
+
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
-SCRIPTTEXT=""$PBNAMEPRETTYSCRIPTTEXT"."
-PARSECOMMENT="$SCRIPTTEXT"
 
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+fi
+
+if
+[[ -z $FILESIZEZERO ]]
 then
 touch $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BFILETEMP")
 fi
 
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
 
 if
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO ]]
+[[ -z $FILESIZEZERO ]]
 then
-printf "$cyan"  "$PARSECOMMENT"
+printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
 touch $BTEMPFILE
 rm $BFILETEMP
 FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PARSECOMMENT"
+ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
 mv $BTEMPFILE $BFILETEMP
 fi
 
@@ -70,7 +89,7 @@ echo ""
 unset ENDCOMMENT
 unset HOWMANYLINES
 elif
-[[ -z $FULLSKIPPARSING && -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
+[[ -n $ENDCOMMENT && $HOWMANYLINES -gt 0 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 echo ""
@@ -79,7 +98,7 @@ unset HOWMANYLINES
 fi
 
 if
-[[ -z $FULLSKIPPARSING && "$FETCHFILESIZE" -eq 0 ]]
+[[ "$FETCHFILESIZE" -eq 0 ]]
 then
 FILESIZEZERO=true
 fi
