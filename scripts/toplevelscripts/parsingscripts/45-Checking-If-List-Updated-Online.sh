@@ -31,6 +31,10 @@ SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
 LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
 LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
 DIDWECHECKONLINEFILE=true
+elif
+[[ ! -f $MIRROREDFILE && -z $PINGTESTFAILED ]]
+then
+printf "$red"    "No Mirror File To Compare With, Proceeding with Download."
 fi
 
 if
