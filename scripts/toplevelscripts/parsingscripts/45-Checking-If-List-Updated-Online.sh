@@ -46,6 +46,7 @@ elif
 then
 printf "$green"    "File Not Updated Online. No Need To Download."
 SKIPDOWNLOAD=true
+echo "SKIPDOWNLOAD="$SKIPDOWNLOAD"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 if
