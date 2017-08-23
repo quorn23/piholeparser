@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Checks if github mirror present
 
 ## Variables
 script_dir=$(dirname $0)
