@@ -22,13 +22,9 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
-
 printf "$yellow"  "This Process Normally Takes Longer Than The Others."
 
-TLDPERCENTAGEMATH="0"
-
-echo -ne "$TLDPERCENTAGEMATH \r"
+HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
 
 for source in `cat $VALIDDOMAINTLD`;
 do
@@ -41,12 +37,23 @@ if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
 cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
-touch $BTEMPFILE
 fi
 
 echo -ne "$TLDPERCENTAGEMATH \r"
 
 done
 
+if
+[[ ! -f $BTEMPFILE ]]
+then
 touch $BTEMPFILE
+fi
+
+## What doesn't make it through
+if
+[[ -f $TRYNACATCHFIlES ]]
+then
+rm $TRYNACATCHFIlES
+fi
+
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
