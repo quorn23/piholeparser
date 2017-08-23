@@ -79,13 +79,16 @@ ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
 { if
 [[ $HOWMANYLINES -eq 0 ]]
 then
+printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 GOTOENDPARSING=true
 echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
 [[ $HOWMANYLINES -ge 1 ]]
 then
+printf "$yellow"  "$ENDCOMMENT"
 mv $BTEMPFILE $BFILETEMP
 fi }
+echo ""
 fi
 
 done
