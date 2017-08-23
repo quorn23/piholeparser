@@ -73,15 +73,3 @@ then
 printf "$yellow"    "The Download Should use the $SOURCETYPE Preset."
 echo "SOURCETYPE="$SOURCETYPE"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
-
-if
-[[ -z $SKIPDOWNLOAD && $SOURCETYPE != usemirrorfile ]]
-then
-printf "$yellow"    "Fetching $SOURCETYPE List From $SOURCEDOMAIN Located At The IP address Of "$SOURCEIP"."
-fi
-
-if
-[[ $SOURCETYPE == usemirrorfile ]]
-then
-printf "$yellow"    "Using Existing Mirror File."
-fi
