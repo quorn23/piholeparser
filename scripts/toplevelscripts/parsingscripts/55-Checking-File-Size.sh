@@ -71,6 +71,7 @@ fi
 if
 [[ -n $ORIGFILESIZENOTZERO && "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
-HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
-printf "$yellow"  "$HOWMANYLINES Lines After Download."
+ORIGHOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
+echo "ORIGHOWMANYLINES="$ORIGHOWMANYLINES"" | tee --append $TEMPPARSEVARS &>/dev/null
+printf "$yellow"  "$ORIGHOWMANYLINES Lines After Download."
 fi
