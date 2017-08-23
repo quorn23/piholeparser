@@ -41,44 +41,36 @@ if
 then
 wget -q -O $BTEMPFILE $source
 elif
-[[ $SOURCETYPE == text ]]
-then
-wget -q -O $BTEMPFILE $source
-elif
-[[ $SOURCETYPE == php ]]
-then
-curl -s -L $source >> $BTEMPFILE
-elif
-[[ $SOURCETYPE == htm ]]
-then
-curl -s -L $source >> $BTEMPFILE
-elif
-[[ $SOURCETYPE == html ]]
-then
-curl -s -L $source >> $BTEMPFILE
-elif
 [[ $SOURCETYPE == usemirrorfile ]]
 then
 cat $MIRROREDFILE >> $BTEMPFILE
 USEDMIRRORFILE=true
 echo "USEDMIRRORFILE="$USEDMIRRORFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
+[[ $SOURCETYPE == plaintext ]]
+then
+wget -q -O $BTEMPFILE $source
+elif
+[[ $SOURCETYPE == webpage ]]
+then
+curl -s -L $source >> $BTEMPFILE
+elif
 [[ $SOURCETYPE == zip ]]
 then
 wget -q -O $COMPRESSEDTEMPZIP $source
-7z e -so $COMPRESSEDTEMPZIP > $BTEMPFILE
+7z e -so $COMPRESSEDTEMPZIP >> $BTEMPFILE
 rm $COMPRESSEDTEMPZIP
 elif
 [[ $SOURCETYPE == seven ]]
 then
 wget -q -O $COMPRESSEDTEMPSEVEN $source
-7z e -so $COMPRESSEDTEMPSEVEN > $BTEMPFILE
+7z e -so $COMPRESSEDTEMPSEVEN >> $BTEMPFILE
 elif
 [[ $SOURCETYPE == tar ]]
 then
 wget -q -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
-mv "$TEMPDIR""$TARFILEX" $BTEMPFILE
+cat "$TEMPDIR""$TARFILEX" >> $BTEMPFILE
 fi
 
 ## Check If File Was Downloaded
