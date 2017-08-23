@@ -24,4 +24,14 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+if
+[[ -f $BFILETEMP ]]
+then
 cat $BFILETEMP | sed '/,/d; s/"/'\''/g; /\"\//d; /[+]/d; /[\]/d; /[/]/d; /[<]/d; /[>]/d; /[?]/d; /[*]/d; /[@]/d; /~/d; /[`]/d; /[=]/d; /[:]/d; /[;]/d; /[%]/d; /[&]/d; /[(]/d; /[)]/d; /[$]/d; /\[\//d; /\]\//d; /[{]/d; /[}]/d; /[][]/d; /\^\//d; s/^||//; /[|]/d' > $BTEMPFILE
+fi
+
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
