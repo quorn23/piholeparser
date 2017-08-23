@@ -38,19 +38,19 @@ SOURCETYPE=zip
 elif
 [[ -z $SKIPDOWNLOAD && $source == *.php ]]
 then
-SOURCETYPE=php
+SOURCETYPE=webpage
 elif
 [[ -z $SKIPDOWNLOAD && $source == *.htm ]]
 then
-SOURCETYPE=htm
+SOURCETYPE=webpage
 elif
 [[ -z $SKIPDOWNLOAD && $source == *.html ]]
 then
-SOURCETYPE=html
+SOURCETYPE=webpage
 elif
 [[ -z $SKIPDOWNLOAD && $source == *.txt ]]
 then
-SOURCETYPE=text
+SOURCETYPE=plaintext
 fi
 
 ## use mirror
