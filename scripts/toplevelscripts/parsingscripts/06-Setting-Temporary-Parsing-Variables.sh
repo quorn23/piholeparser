@@ -69,6 +69,8 @@ BFILETEMP="$TEMPDIR""$BASEFILENAME".filetemp.txt
 echo "BFILETEMP="$BFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 BORIGINALFILETEMP="$TEMPDIR""$BASEFILENAME".original.txt
 echo "BORIGINALFILETEMP="$BORIGINALFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
+BPARSEDFILETEMP="$TEMPDIR""$BASEFILENAME".parsed.txt
+echo "BPARSEDFILETEMP="$BPARSEDFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Terminal Display
 printf "$yellow"    "$BASEFILENAME TempVars Have Been Set."
