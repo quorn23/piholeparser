@@ -54,7 +54,7 @@ source $TEMPPARSEVARS
 fi
 
 if
-[[ -z $FULLSKIPPARSING ]]
+[[ -z $FULLSKIPPARSING && -f $FILEBEINGPROCESSED ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
