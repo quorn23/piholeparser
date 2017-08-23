@@ -60,7 +60,7 @@ source $TEMPPARSEVARS
 fi
 
 if
-[[ -z $FULLSKIPPARSING && -f $f ]]
+[[ -z $FULLSKIPPARSING && -f $FILEBEINGPROCESSED ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
@@ -69,6 +69,13 @@ fi
 
 ## End of parsing Loop
 done
+
+## Dead List Alive
+if
+[[ -n $UNDEADLIST && -f $FILEBEINGPROCESSED ]]
+then
+mv $FILEBEINGPROCESSED $BUNDEADPARSELIST
+fi
 
 ## Clear Temp After
 if
@@ -89,6 +96,7 @@ rm $TEMPPARSEVARS
 fi
 
 unset FULLSKIPPARSING
+unset UNDEADLIST
 
 ## End of File Loop
 done
