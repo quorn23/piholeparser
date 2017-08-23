@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Phasing out DYNOVARS by claiming vars here
 
 ## Variables
 script_dir=$(dirname $0)
