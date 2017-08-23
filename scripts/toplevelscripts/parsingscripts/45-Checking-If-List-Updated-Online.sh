@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Check online header
 
 ## Variables
 script_dir=$(dirname $0)
