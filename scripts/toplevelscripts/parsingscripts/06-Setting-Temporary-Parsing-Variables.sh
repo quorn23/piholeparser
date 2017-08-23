@@ -23,7 +23,15 @@ exit
 fi
 
 ## Download URL
+if
+[[ "$AMOUNTOFSOURCES" -le 1 ]]
+then
 source="$(echo `cat $FILEBEINGPROCESSED`)"
+elif
+[[ "$AMOUNTOFSOURCES" -gt 1 ]]
+then
+source="$(echo `cat $FILEBEINGPROCESSED | head -1`)"
+fi
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## This extracts the domain from source
@@ -54,3 +62,5 @@ echo "BFILETEMP="$BFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 BORIGINALFILETEMP="$TEMPDIR""$BASEFILENAME".original.txt
 echo "BORIGINALFILETEMP="$BORIGINALFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
+## Terminal Display
+printf "$yellow"    "$BASEFILENAME TempVars Have Been Set."
