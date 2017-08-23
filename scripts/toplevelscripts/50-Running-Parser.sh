@@ -47,9 +47,18 @@ PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
 
-printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+fi
 
+if
+[[ -z $FULLSKIPPARSING ]]
+then
+printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
+fi
 
 echo ""
 
