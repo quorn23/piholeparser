@@ -47,15 +47,15 @@ fi
 if 
 [[ "$PARSEDFILESIZEBYTES" -eq 0 ]]
 then
-printf "$red"     "Not Creating Mirror File. Nothing To Create!"
+printf "$red"     "Not Creating Parsed File. Nothing To Create!"
 elif
 [[ "$PARSEDFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
-printf "$red"     "Mirror File Too Large For Github."
-echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to mirror on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"     "Parsed File Too Large For Github."
+echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to upload on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
 elif
 [[ "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
 then
-printf "$green"  "Creating Mirror Of Unparsed File."
+printf "$green"  "Creating Parsed File."
 cp $BPARSEDFILETEMP $PARSEDFILE
 fi
