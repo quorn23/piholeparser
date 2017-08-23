@@ -26,15 +26,18 @@ fi
 if
 [[ -f $BORIGINALFILETEMP ]]
 then
-FETCHFILESIZEBYTES=$(stat -c%s "$BORIGINALFILETEMP")
-FETCHFILESIZEKB=`expr $FETCHFILESIZE / 1024`
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+ORIGFILESIZEBYTES=$(stat -c%s "$BORIGINALFILETEMP")
+echo "ORIGFILESIZEBYTES="$ORIGFILESIZEBYTES"" | tee --append $TEMPPARSEVARS &>/dev/null
+ORIGFILESIZEKB=`expr $FETCHFILESIZE / 1024`
+echo "ORIGFILESIZEKB="$ORIGFILESIZEKB"" | tee --append $TEMPPARSEVARS &>/dev/null
+ORIGFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
+echo "ORIGFILESIZEMB="$ORIGFILESIZEMB"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 timestamp=$(echo `date`)
 
 if 
-[[ "$FETCHFILESIZEBYTES" -eq 0 ]]
+[[ "$ORIGFILESIZEBYTES" -eq 0 ]]
 then
 printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
 printf "$red"  "List Marked As Dead."
@@ -43,7 +46,7 @@ timestamp=$(echo `date`)
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BORIGINALFILETEMP
 elif
-[[ "$FETCHFILESIZEBYTES" -gt 0 ]]
+[[ "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
 ORIGFILESIZENOTZERO=true
 echo "ORIGFILESIZENOTZERO="$ORIGFILESIZENOTZERO"" | tee --append $TEMPPARSEVARS &>/dev/null
@@ -51,22 +54,22 @@ fi
 
 ## File size
 if
-[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEMB" -gt 0 && "$FETCHFILESIZEKB" -gt 0 && "$FETCHFILESIZEBYTES" -gt 0 ]]
+[[ -n $ORIGFILESIZENOTZERO && "$ORIGFILESIZEMB" -gt 0 && "$ORIGFILESIZEKB" -gt 0 && "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
-printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEMB MB."
+printf "$yellow"  "Size of $BASEFILENAME = $ORIGFILESIZEMB MB."
 elif
-[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEMB" -eq 0 && "$FETCHFILESIZEKB" -gt 0 && "$FETCHFILESIZEBYTES" -gt 0 ]]
+[[ -n $ORIGFILESIZENOTZERO && "$ORIGFILESIZEMB" -eq 0 && "$ORIGFILESIZEKB" -gt 0 && "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
-printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEKB KB."
+printf "$yellow"  "Size of $BASEFILENAME = $ORIGFILESIZEKB KB."
 elif
-[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEMB" -eq 0 && "$FETCHFILESIZEKB" -eq 0 && "$FETCHFILESIZEBYTES" -gt 0 ]]
+[[ -n $ORIGFILESIZENOTZERO && "$ORIGFILESIZEMB" -eq 0 && "$ORIGFILESIZEKB" -eq 0 && "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
-printf "$yellow"  "Size of $BASEFILENAME = $FETCHFILESIZEBYTES Bytes."
+printf "$yellow"  "Size of $BASEFILENAME = $ORIGFILESIZEBYTES Bytes."
 fi
 
 ## How Many Lines
 if
-[[ -n $ORIGFILESIZENOTZERO && "$FETCHFILESIZEBYTES" -gt 0 ]]
+[[ -n $ORIGFILESIZENOTZERO && "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 printf "$yellow"  "$HOWMANYLINES Lines After Download."
@@ -83,13 +86,4 @@ if
 [[ -f $BFILETEMP ]]
 then
 rm $BFILETEMP
-fi
-
-## Duplicate the downloaded file for the next steps
-if
-[[ -n $ORIGFILESIZENOTZERO && -f $BORIGINALFILETEMP ]]
-then
-cp $BORIGINALFILETEMP $BTEMPFILE
-cp $BORIGINALFILETEMP $BFILETEMP
-rm $BORIGINALFILETEMP
 fi
