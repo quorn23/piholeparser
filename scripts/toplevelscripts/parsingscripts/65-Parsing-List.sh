@@ -32,6 +32,11 @@ if
 then
 rm $BFILETEMP
 fi
+if
+[[ -f $BTEMPFILE ]]
+then
+rm $BTEMPFILE
+fi
 
 ## Transition File for Processing
 if
