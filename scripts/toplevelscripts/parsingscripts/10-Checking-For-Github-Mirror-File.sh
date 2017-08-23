@@ -26,6 +26,8 @@ if
 [[ `wget -S --spider $MIRROREDFILEDL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
 printf "$green"  "Github Mirror File Currently Available."
+GIFILEONLINE=true
+echo "GIFILEONLINE="$GIFILEONLINE"" | tee --append $TEMPPARSEVARS &>/dev/null
 else
 printf "$red"  "Github Mirror File Currently Unavailable."
 fi
