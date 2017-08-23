@@ -89,6 +89,7 @@ rm $BFILETEMP
 fi
 
 ## Duplicate the downloaded file for the next steps
+## Remove This Later!
 if
 [[ -n $ORIGFILESIZENOTZERO && -f $BORIGINALFILETEMP ]]
 then
