@@ -24,70 +24,64 @@ fi
 
 ## What type of source?
 if
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.7z ]]
+[[ -z $SKIPDOWNLOAD && $source == *.7z ]]
 then
 SOURCETYPE=sevenzip
 elif
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.tar.gz ]]
+[[ -z $SKIPDOWNLOAD && $source == *.tar.gz ]]
 then
 SOURCETYPE=tar
 elif
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.zip ]]
+[[ -z $SKIPDOWNLOAD && $source == *.zip ]]
 then
 SOURCETYPE=zip
 elif
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.php ]]
+[[ -z $SKIPDOWNLOAD && $source == *.php ]]
 then
 SOURCETYPE=php
 elif
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.htm ]]
+[[ -z $SKIPDOWNLOAD && $source == *.htm ]]
 then
 SOURCETYPE=htm
 elif
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.html ]]
+[[ -z $SKIPDOWNLOAD && $source == *.html ]]
 then
 SOURCETYPE=html
 elif
-[[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.txt ]]
+[[ -z $SKIPDOWNLOAD && $source == *.txt ]]
 then
 SOURCETYPE=text
 fi
 
 ## use mirror
 if
-[[ -z $FULLSKIPPARSING && -n $PINGTESTFAILED && -f $MIRROREDFILE ]]
+[[ -n $SKIPDOWNLOAD ]]
 then
 SOURCETYPE=usemirrorfile
 fi
 
 ## set the sourcetype if not
 if
-[[ -z $FULLSKIPPARSING && -z $SOURCETYPE ]]
+[[ -z $SOURCETYPE ]]
 then
 SOURCETYPE=unknown
-elif
-[[ -n $FULLSKIPPARSING && -z $SOURCETYPE ]]
-then
-SOURCETYPE=skip
 fi
 
-## Add to tempvars
 if
-[[ -z $FULLSKIPPARSING && -n $SOURCETYPE ]]
+[[ -n $SOURCETYPE ]]
 then
+printf "$yellow"    "The Download Should use the $SOURCETYPE Preset."
 echo "SOURCETYPE="$SOURCETYPE"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
-## Terminal Display
-printf "$yellow"    "The Download Should use the $SOURCETYPE Preset."
-timestamp=$(echo `date`)
 if
-[[ -z $FULLSKIPPARSING && -n $SOURCEIP && -n $SOURCEDOMAIN && -n $SOURCETYPE ]]
+[[ -z $SKIPDOWNLOAD && $SOURCETYPE != usemirrorfile ]]
 then
-printf "$cyan"    "Fetching $SOURCETYPE List From $SOURCEDOMAIN Located At The IP address Of "$SOURCEIP"."
+printf "$yellow"    "Fetching $SOURCETYPE List From $SOURCEDOMAIN Located At The IP address Of "$SOURCEIP"."
 elif
-[[ -z $FULLSKIPPARSING && $SOURCETYPE == usemirrorfile ]]
+[[ $SOURCETYPE == usemirrorfile ]]
 then
-printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
+printf "$yellow"    "Attempting To Fetch List From Git Repo Mirror."
+timestamp=$(echo `date`)
 echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
