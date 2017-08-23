@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Just On-screen display of https or not
 
 ## Variables
 script_dir=$(dirname $0)
