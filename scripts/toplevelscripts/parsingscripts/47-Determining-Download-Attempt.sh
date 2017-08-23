@@ -51,6 +51,10 @@ elif
 [[ -z $SKIPDOWNLOAD && $source == *.txt ]]
 then
 SOURCETYPE=plaintext
+elif
+[[ -z $SKIPDOWNLOAD && $source == *hosts ]]
+then
+SOURCETYPE=plaintext
 fi
 
 ## use mirror
