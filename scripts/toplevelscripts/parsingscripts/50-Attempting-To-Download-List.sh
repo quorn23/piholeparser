@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Attempt Download
 
 ## Variables
 script_dir=$(dirname $0)
@@ -73,7 +73,7 @@ TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 cat "$TEMPDIR""$TARFILEX" >> $BTEMPFILE
 fi
 
-## Check If File Was Downloaded
+## Check that there was a file downloaded
 if
 [[ -f $BTEMPFILE ]]
 then
@@ -84,55 +84,61 @@ elif
 then
 printf "$red"    "File Download Failed."
 DOWNLOADFAILED=true
-touch $BORIGINALFILETEMP
-fi
-
-## Check that there was a file downloaded
-## Try as a browser, and then try a mirror file
-if
-[[ -f $BORIGINALFILETEMP ]]
-then
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-timestamp=$(echo `date`)
-fi
-if
-[[ "$FETCHFILESIZE" -gt 0 ]]
-then
-printf "$green"    "Download Successful."
-elif
-[[ "$FETCHFILESIZE" -le 0 ]]
-then
-printf "$red"    "Download Failed."
-DOWNLOADFAILED=true
-touch $BORIGINALFILETEMP
 fi
 
 ## Attempt agent download
-if 
-[[ -n $DOWNLOADFAILED && "$FETCHFILESIZE" -eq 0 && $source != *.7z && $source != *.tar.gz && $source != *.zip ]]
+if
+[[ -n $DOWNLOADFAILED && $SOURCETYPE != zip && $SOURCETYPE != tar && $SOURCETYPE != seven && $SOURCETYPE != usemirrorfile ]]
 then
 echo ""
-printf "$cyan"    "Attempting To Fetch List As if we were a browser."
+printf "$cyan"    "Attempting To Fetch List As If We Were A Browser."
 curl -s -H "$AGENTDOWNLOAD" -L $source >> $BTEMPFILE
-cat $BTEMPFILE >> $BORIGINALFILETEMP
-rm $BTEMPFILE
-fi
-if
-[[ -f $BORIGINALFILETEMP ]]
-then
-FETCHFILESIZE=$(stat -c%s "$BORIGINALFILETEMP")
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
 fi
 
-## attempt mirror if not done already
-if 
-[[ -z $DOWNLOADFAILED && "$FETCHFILESIZE" -eq 0 && -z $USEDMIRRORFILE ]]
+## Check that there was a file downloaded
+if
+[[ -n $DOWNLOADFAILED && -f $BTEMPFILE ]]
 then
-printf "$red"    "File Empty."
+cat $BTEMPFILE >> $BORIGINALFILETEMP
+rm $BTEMPFILE
+elif
+[[ -n $DOWNLOADFAILED && ! -f $BTEMPFILE ]]
+then
+printf "$red"    "File Download Failed As Agent."
+AGENTDOWNLOADFAILED=true
+fi
+
+## Try git Mirror
+if 
+[[ -n $DOWNLOADFAILED && -n $AGENTDOWNLOADFAILED && -n $GITFILEONLINE ]]
+then
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
 wget -q -O $BTEMPFILE $MIRROREDFILEDL
+GITATTEMPTED=true
+fi
+
+## Check that there was a file downloaded
+if
+[[ -n $DOWNLOADFAILED  && -n $AGENTDOWNLOADFAILED && -n $GITATTEMPTED && -f $BTEMPFILE ]]
+then
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
+elif
+[[ -n $DOWNLOADFAILED  && -n $AGENTDOWNLOADFAILED && -n $GITATTEMPTED && ! -f $BTEMPFILE ]]
+then
+printf "$red"    "Git Mirror Failed."
+fi
+
+## Check File
+if
+[[ -f $BORIGINALFILETEMP ]]
+then
+printf "$green"    "Download Successful."
+elif
+[[ ! -f $BORIGINALFILETEMP ]]
+then
+printf "$red"    "Download Failed."
+printf "$red"  "List Marked As Dead."
+mv $FILEBEINGPROCESSED $BDEADPARSELIST
 fi
