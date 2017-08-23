@@ -32,5 +32,5 @@ if
 then
 printf "$yellow"   "List took $DIFFTIMEPARSE Minutes To Parse."
 else
-printf "$yellow"   "List took Less Than $DIFFTIMEPARSESEC Seconds To Parse."
+printf "$yellow"   "List took $DIFFTIMEPARSESEC Seconds To Parse."
 fi
