@@ -22,4 +22,14 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+if
+[[ -f $BFILETEMP ]]
+then
 cat $BFILETEMP | sed 's/^PRIMARY\s\+[ \t]*//; s/^localhost\s\+[ \t]*//; s/blockeddomain.hosts\s\+[ \t]*//; s/^0.0.0.0\s\+[ \t]*//; s/^127.0.0.1\s\+[ \t]*//; s/^::1\s\+[ \t]*//' > $BTEMPFILE
+fi
+
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
