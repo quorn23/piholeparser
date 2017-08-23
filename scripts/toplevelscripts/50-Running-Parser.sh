@@ -28,6 +28,12 @@ echo "Error Deleting Temp Files."
 exit
 fi
 
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+rm $TEMPPARSEVARS
+fi
+
 printf "$lightblue"    "$DIVIDERBAR"
 echo ""
 
@@ -54,15 +60,17 @@ source $TEMPPARSEVARS
 fi
 
 if
+[[ -n $FULLSKIPPARSING ]]
+then
+echo "skipping parsing"
+fi
+
+if
 [[ -z $FULLSKIPPARSING && -f $f ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
 echo ""
-elif
-[[ -z $FULLSKIPPARSING && ! -f $f ]]
-then
-echo "list file missing"
 fi
 
 ## End of parsing Loop
@@ -86,7 +94,7 @@ then
 rm $TEMPPARSEVARS
 fi
 
-unset 
+unset FULLSKIPPARSING
 
 ## End of File Loop
 done
