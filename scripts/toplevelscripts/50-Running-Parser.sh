@@ -60,12 +60,6 @@ source $TEMPPARSEVARS
 fi
 
 if
-[[ -n $FULLSKIPPARSING ]]
-then
-echo "skipping parsing"
-fi
-
-if
 [[ -z $FULLSKIPPARSING && -f $f ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
