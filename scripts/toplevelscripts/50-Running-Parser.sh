@@ -58,6 +58,7 @@ if
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
+echo ""
 fi
 
 ## End of parsing Loop
