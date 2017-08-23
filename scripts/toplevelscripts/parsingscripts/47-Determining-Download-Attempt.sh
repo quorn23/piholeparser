@@ -78,10 +78,10 @@ if
 [[ -z $SKIPDOWNLOAD && $SOURCETYPE != usemirrorfile ]]
 then
 printf "$yellow"    "Fetching $SOURCETYPE List From $SOURCEDOMAIN Located At The IP address Of "$SOURCEIP"."
-elif
+fi
+
+if
 [[ $SOURCETYPE == usemirrorfile ]]
 then
-printf "$yellow"    "Attempting To Fetch List From Git Repo Mirror."
-timestamp=$(echo `date`)
-echo "* $BASEFILENAME List Unavailable To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"    "Using Existing Mirror File."
 fi
