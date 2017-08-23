@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## How many sources in the file
 
 ## Variables
 script_dir=$(dirname $0)
