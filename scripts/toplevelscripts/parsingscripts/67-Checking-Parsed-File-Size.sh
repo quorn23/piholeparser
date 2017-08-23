@@ -45,6 +45,20 @@ mv $FILEBEINGPROCESSED $KILLTHELIST
 fi
 
 if 
+[[ -f $KILLTHELIST && -f $PARSEDFILE ]]
+then
+printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
+rm $PARSEDFILE
+fi
+
+if 
+[[ -f $KILLTHELIST && -f $MIRROREDFILE ]]
+then
+printf "$red"  "Current Parsing Method Emptied File. Mirror File Removed."
+rm $MIRROREDFILE
+fi
+
+if 
 [[ -f $BPARSEDFILETEMP && "$PARSEDFILESIZEBYTES" -eq 0 ]]
 then
 rm $BPARSEDFILETEMP
