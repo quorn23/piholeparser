@@ -17,7 +17,7 @@ fi
 ## Quick File Check
 timestamp=$(echo `date`)
 
-printf "$yellow"  "Checking For $WHATITIS"
+printf "$yellow"  "Checking For Whitelist File"
 echo ""
 
 if
