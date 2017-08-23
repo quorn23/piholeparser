@@ -35,14 +35,18 @@ fi
 
 timestamp=$(echo `date`)
 
-if 
-[[ -f $BPARSEDFILETEMP && "$PARSEDFILESIZEBYTES" -eq 0 ]]
+if
+[[ -n $PARSINGEMPTIEDFILE && "$PARSEDFILESIZEBYTES" -eq 0 ]]
 then
 printf "$red"  "Current Parsing Method Emptied File. It will be skipped in the future."
 timestamp=$(echo `date`)
 echo "* $BASEFILENAME List Was Killed By The Parsing Process. It will be skipped in the future. $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $FILEBEINGPROCESSED $KILLTHELIST
-echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
+fi
+
+if 
+[[ -f $BPARSEDFILETEMP && "$PARSEDFILESIZEBYTES" -eq 0 ]]
+then
 rm $BPARSEDFILETEMP
 elif
 [[ -f $BPARSEDFILETEMP && "$PARSEDFILESIZEBYTES" -gt 0 ]]
