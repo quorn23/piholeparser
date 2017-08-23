@@ -98,5 +98,11 @@ fi
 unset FULLSKIPPARSING
 unset UNDEADLIST
 
+if
+[[ -f $BORIGINALFILETEMP ]]
+then
+rm $BORIGINALFILETEMP
+fi
+
 ## End of File Loop
 done
