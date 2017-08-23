@@ -74,25 +74,3 @@ then
 HOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 printf "$yellow"  "$HOWMANYLINES Lines After Download."
 fi
-
-## Cheap error handling
-if
-[[ -f $BTEMPFILE ]]
-then
-rm $BTEMPFILE
-fi
-
-if
-[[ -f $BFILETEMP ]]
-then
-rm $BFILETEMP
-fi
-
-## Duplicate the downloaded file for the next steps
-## Remove This Later!
-if
-[[ -n $ORIGFILESIZENOTZERO && -f $BORIGINALFILETEMP ]]
-then
-cp $BORIGINALFILETEMP $BTEMPFILE
-cp $BORIGINALFILETEMP $BFILETEMP
-fi
