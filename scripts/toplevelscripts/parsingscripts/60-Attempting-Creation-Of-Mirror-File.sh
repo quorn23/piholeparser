@@ -22,42 +22,27 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-if
-[[ -n $FULLSKIPPARSING ]]
-then
-printf "$green"  "Old Mirror File Retained."
-fi
-
 ## This helps when replacing the mirrored file
 if 
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && -f $MIRROREDFILE ]]
+[[ -n $ORIGFILESIZENOTZERO && -f $MIRROREDFILE ]]
 then
 printf "$green"  "Old Mirror File Removed"
 rm $MIRROREDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
-if
-[[ -z $FULLSKIPPARSING ]]
-then
-FETCHFILESIZE=$(stat -c%s "$BTEMPFILE")
-FETCHFILESIZEMB=`expr $FETCHFILESIZE / 1024 / 1024`
-timestamp=$(echo `date`)
-fi
 if 
-[[ -z $FULLSKIPPARSING && -n $FILESIZEZERO ]]
+[[ "$ORIGFILESIZEBYTES" -eq 0 ]]
 then
 printf "$red"     "Not Creating Mirror File. Nothing To Create!"
-rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && "$FETCHFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
+[[ "$ORIGFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
-printf "$red"     "Mirror File Too Large For Github. Deleting."
+printf "$red"     "Mirror File Too Large For Github."
 echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to mirror on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
-rm $BTEMPFILE
 elif
-[[ -z $FULLSKIPPARSING && -z $FILESIZEZERO && "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
+[[ "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" ]]
 then
 printf "$green"  "Creating Mirror Of Unparsed File."
-mv $BTEMPFILE $MIRROREDFILE
+cp $BORIGINALFILETEMP $MIRROREDFILE
 fi
