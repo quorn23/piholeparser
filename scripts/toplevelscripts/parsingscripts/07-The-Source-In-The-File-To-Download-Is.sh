@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## This  just displays on screen
 
 ## Variables
 script_dir=$(dirname $0)
