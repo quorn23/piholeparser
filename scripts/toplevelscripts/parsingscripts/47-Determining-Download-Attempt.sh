@@ -40,6 +40,10 @@ elif
 then
 SOURCETYPE=webpage
 elif
+[[ -z $SKIPDOWNLOAD && $source == *.php?* ]]
+then
+SOURCETYPE=webpage
+elif
 [[ -z $SKIPDOWNLOAD && $source == *.htm ]]
 then
 SOURCETYPE=webpage
