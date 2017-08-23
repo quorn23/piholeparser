@@ -95,4 +95,30 @@ ENDPARSESTAMP=$(date +"%s")
 echo "ENDPARSESTAMP="$ENDPARSESTAMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Prepare for next step
-mv $BFILETEMP $BTEMPFILE
+if
+[[ -f $BFILETEMP ]]
+then
+HOWMANYLINES=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
+{ if
+[[ $HOWMANYLINES -eq 0 ]]
+then
+PARSINGEMPTIEDFILE=true
+echo "PARSINGEMPTIEDFILE="$PARSINGEMPTIEDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
+elif
+[[ $HOWMANYLINES -ge 1 ]]
+then
+cp $BFILETEMP $BPARSEDFILETEMP
+fi }
+fi
+
+## Cheap error handling
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
+if
+[[ -f $BTEMPFILE ]]
+then
+rm $BTEMPFILE
+fi
