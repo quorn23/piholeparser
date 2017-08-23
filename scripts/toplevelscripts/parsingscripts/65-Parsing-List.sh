@@ -74,6 +74,7 @@ if
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
+
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
 { if
@@ -86,8 +87,8 @@ elif
 [[ $HOWMANYLINES -ge 1 ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
-mv $BTEMPFILE $BFILETEMP
 fi }
+mv $BTEMPFILE $BFILETEMP
 echo ""
 fi
 
@@ -107,6 +108,7 @@ HOWMANYLINES=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
 then
 PARSINGEMPTIEDFILE=true
 echo "PARSINGEMPTIEDFILE="$PARSINGEMPTIEDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
+touch $BPARSEDFILETEMP
 elif
 [[ $HOWMANYLINES -ge 1 ]]
 then
