@@ -22,4 +22,14 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
+if
+[[ -f $BFILETEMP ]]
+then
 cat $BFILETEMP | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $BTEMPFILE
+fi
+
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
