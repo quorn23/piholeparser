@@ -14,13 +14,15 @@ exit
 fi
 
 ## whiptail required
+WHATITIS=whiptail
+WHATPACKAGE=whiptail
 if
-which whiptail >/dev/null;
+which $WHATITIS >/dev/null;
 then
 :
 else
-printf "$yellow"  "Installing whiptail"
-apt-get install -y whiptail
+printf "$yellow"  "Installing $WHATITIS"
+apt-get install -y $WHATPACKAGE
 fi
 
 #########################
@@ -30,7 +32,7 @@ fi
 echo "Cleaning Mirror Directory"
 CHECKME=$MIRROREDLISTSALL
 if
-[[ -f $CHECKME ]]
+ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
@@ -43,7 +45,7 @@ echo ""
 echo "Cleaning Parsed Directory"
 CHECKME=$PARSEDLISTSALL
 if
-[[ -f $CHECKME ]]
+ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
@@ -54,8 +56,9 @@ echo ""
 #########################
 
 echo "Reverting Killed Lists"
+CHECKME=$KILLTHELISTALL
 if
-[[ -f $KILLTHELISTALL ]]
+ls $CHECKME &> /dev/null;
 then
 for f in $KILLTHELISTALL
 do
@@ -79,16 +82,18 @@ echo ""
 #####################
 
 echo "Cleaning TLD Lists"
+CHECKME=$CLEANTLDS
 if
-[[ -f $CLEANTLDS ]]
+ls $CHECKME &> /dev/null;
 then
-rm $CLEANTLDS
+rm $CHECKME
 fi
 
+CHECKME=$VALIDDOMAINTLDBKUP
 if
-[[ -f $VALIDDOMAINTLDBKUP ]]
+ls $CHECKME &> /dev/null;
 then
-rm $VALIDDOMAINTLDBKUP
+rm $CHECKME
 fi
 echo ""
 
