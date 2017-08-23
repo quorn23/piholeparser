@@ -87,3 +87,11 @@ if
 then
 rm $BFILETEMP
 fi
+
+## Duplicate the downloaded file for the next steps
+if
+[[ -n $ORIGFILESIZENOTZERO && -f $BORIGINALFILETEMP ]]
+then
+cp $BORIGINALFILETEMP $BTEMPFILE
+cp $BORIGINALFILETEMP $BFILETEMP
+fi
