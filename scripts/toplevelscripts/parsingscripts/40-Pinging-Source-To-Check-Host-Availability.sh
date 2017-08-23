@@ -70,4 +70,6 @@ then
 printf "$green"  "List Was Marked As Dead, But Now Works."
 UNDEADLIST=true
 echo "UNDEADLIST="$UNDEADLIST"" | tee --append $TEMPPARSEVARS &>/dev/null
+timestamp=$(echo `date`)
+echo "* $BASEFILENAME List Unavailable To Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
