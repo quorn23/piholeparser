@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Checks If Mirror File Is There
 
 ## Variables
 script_dir=$(dirname $0)
@@ -26,8 +26,6 @@ if
 [[ -f $MIRROREDFILE ]]
 then
 printf "$green"  "Mirror File Currently Available."
-MIRRORFILEPRESENT=true
-echo "MIRRORFILEPRESENT="$MIRRORFILEPRESENT"" | tee --append $TEMPPARSEVARS &>/dev/null
 else
 printf "$red"  "Mirror File Currently Unavailable."
 fi
