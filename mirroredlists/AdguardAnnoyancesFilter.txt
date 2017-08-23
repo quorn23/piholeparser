@@ -17,6 +17,8 @@
 !
 !######### Annoying elements (not ads)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6305
+vizer.tv##body > .vizerNewBox.vizerNoticia
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6340
 softonic.com##.modal.overlay-alternative-apps
 ! https://forum.adguard.com/index.php?threads/24059/
@@ -328,6 +330,15 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+nytimes.com###newsletter-promo
+magicvalley.com###tncms-region-article_instory_middle
+thetimes.co.uk##.ConversionPopup
+barstoolsports.com##.newsletterSignup
+ohmymag.de###signup-holder
+ohmymag.de##body.omm .larger.button-subscribe
+dotesports.com##body ._1j8km1l
+dotesports.com##.hidden-md-down > .mt-1.mb-2
+latimes.com##.trb_nls_c
 pokemongopocket.com##.g1-newsletter
 trustedreviews.com##.keystone-newsletter-class
 warringtonguardian.co.uk,eveningtimes.co.uk,swindonadvertiser.co.uk##.cta-component-half-width
@@ -591,6 +602,8 @@ gazetevatan.com##form ._soc.news
 ! FuckAdBlock
 iphonesoft.fr,tmohentai.com,kshowonline.com,topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr.com,theland.com.au,greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+carbu.com#%#window.canRunAds = true;
+@@||carbu.com^*templates/media/js/ads.js
 @@||pokemongopocket.com/advertisement.js
 @@||musiker-board.de/js/advertisement.js
 propolski.com##body > div[id][class][style*="z-index: 9999"] + div[class][style*="z-index: 9999"]
@@ -2697,6 +2710,9 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+hearthhead.com##.cookie-banner
+wowhead.com###layout > .announcement-fixed
+fussball.de##.cookie-advise
 next-episode.net###eu_cookies_disclaimer
 aida64.com##body > #sliding-popup
 warringtonguardian.co.uk,eveningtimes.co.uk,swindonadvertiser.co.uk###cookieWarningR
@@ -5148,6 +5164,7 @@ cnews.ru##.video.img-block
 1tv.ru##.footer-promo-place
 1tv.ru##.promo-place
 !
+||journalistenwatch.com/wp-content/uploads/2017/08/Boxerin-03.gif
 ||vkstorm.ru/banners/$third-party
 ||files.webmoney.ru/files/vHbEEBYW/inline
 rozetka.com.ua##.exponea-popup-banner
