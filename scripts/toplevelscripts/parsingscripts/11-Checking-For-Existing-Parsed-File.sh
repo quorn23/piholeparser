@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Checks for parsed file
 
 ## Variables
 script_dir=$(dirname $0)
