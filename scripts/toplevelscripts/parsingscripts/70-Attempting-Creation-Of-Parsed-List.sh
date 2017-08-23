@@ -22,25 +22,12 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-## Delete Parsed file if current parsing method empties it
-if 
-[[ -f $KILLTHELIST && -f $PARSEDFILE ]]
-then
-printf "$red"  "Current Parsing Method Emptied File. Old File Removed."
-rm $PARSEDFILE
-elif
+## Delete Parsed file
+if
 [[ ! -f $KILLTHELIST && -f $PARSEDFILE ]]
 then
 printf "$green"  "Old Parsed File Removed."
 rm $PARSEDFILE
-fi
-
-## Remove mirror if we killed the list
-if 
-[[ -f $KILLTHELIST && -f $MIRROREDFILE ]]
-then
-printf "$red"  "Current Parsing Method Emptied File. Mirror File Removed."
-rm $MIRROREDFILE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
