@@ -108,7 +108,6 @@ HOWMANYLINES=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
 then
 PARSINGEMPTIEDFILE=true
 echo "PARSINGEMPTIEDFILE="$PARSINGEMPTIEDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
-touch $BPARSEDFILETEMP
 elif
 [[ $HOWMANYLINES -ge 1 ]]
 then
