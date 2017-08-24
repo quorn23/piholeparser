@@ -20,17 +20,21 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
   MAINREADME="$REPODIR"README.md
   
   COUNTRYCODESLISTSDIR="$REPODIR"CountryCodesLists/
+      ALLCOUNTRYCODESLISTS="$COUNTRYCODESLISTSDIR"*.txt
   
   LOGDIR="$REPODIR"RecentRunLogs/
+    
     RECENTRUN="$LOGDIR"README.md
+    
     SPECIFICLOGSDIR="$LOGDIR"details/
-    TLDPERCENTORDER="$LOGDIR"tldsinorder.txt
-    TLDCOMPARED="$LOGDIR"tldcomparison.listdiff
-    TOPTLDPERCENTAGE="$LOGDIR"tldpercentage.txt
-    TOPTLDPERCENTAGEJSON="$LOGDIR"tldpercentage.json
-    TRYNACATCHFIlES="$LOGDIR"thingsthatdontpassTLDtest.txt
-    NOHTTPSLISTS="$LOGDIR"/listswithouthttps.txt
-    MORETHANONESOURCE="$LOGDIR"/listswithmorethanonesource.txt
+      CLEANLOGS="$SPECIFICLOGSDIR"*.log
+      TLDPERCENTORDER="$SPECIFICLOGSDIR"tldsinorder.log
+      TLDCOMPARED="$SPECIFICLOGSDIR"tldcomparison.log
+      TOPTLDPERCENTAGE="$SPECIFICLOGSDIR"tldpercentage.log
+      TOPTLDPERCENTAGEJSON="$SPECIFICLOGSDIR"tldpercentage.json
+      TRYNACATCHFIlES="$SPECIFICLOGSDIR"thingsthatdontpassTLDtest.log
+      NOHTTPSLISTS="$SPECIFICLOGSDIR"/listswithouthttps.log
+      MORETHANONESOURCE="$SPECIFICLOGSDIR"/listswithmorethanonesource.log
 
   LISTSDIR="$REPODIR"lists/
     
@@ -68,6 +72,7 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
       PARSEDLISTSALL="$PARSEDDIR"*.txt
 
   PARSEDALLDIR="$REPODIR"parsedall/
+      ALLPARSEDALLTXT="$PARSEDALLDIR"*.txt
       BIGAPLNAME=1111ALLPARSEDLISTS1111
       BIGAPL="$PARSEDALLDIR""$BIGAPLNAME".txt
       BIGAPLE="$PARSEDALLDIR""$BIGAPLNAME"edited.txt
