@@ -65,6 +65,16 @@ do
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
+TAGTHEREPOLOG="[Details If Any]("$ACTUALPARSINGLOGDIRRAW""$PBASEFILENAME".log)"
+BREPOLOG="$ACTUALPARSINGLOGDIR""$BASEFILENAME".log
+
+## Create Log
+if
+[[ -f $BREPOLOG ]]
+then
+rm $BREPOLOG
+fi
+touch $BREPOLOG
 
 if
 [[ -f $TEMPPARSEVARS ]]
@@ -77,7 +87,6 @@ if
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
 bash $p
-
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
 { if
@@ -96,6 +105,9 @@ echo ""
 fi
 
 done
+
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## End Time
 ENDPARSESTAMP=$(date +"%s")
