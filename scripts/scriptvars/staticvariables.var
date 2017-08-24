@@ -37,6 +37,7 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
     EVERYLISTFILEWILDCARD=$LISTSDIR'*/*.lst'
     IPLISTSDIR="$LISTSDIR"IPlists/
     DEADLISTDIR="$LISTSDIR"deadlists/
+        DEADLISTALL="$DEADLISTDIR"*.lst
     EMPTYLISTDIR="$LISTSDIR"emptylists/
     MAINLISTSDIR="$LISTSDIR"mainlists/
    
@@ -58,6 +59,7 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
       BLACKLISTDOMAINSALL="$BLACKLISTEDDIR"*.domains
 
    LISTSTHATDIEDIR="$LISTSDIR"liststhatdie/
+      KILLTHELISTALL="$LISTSTHATDIEDIR"*.list
 
   MIRRORDIR="$REPODIR"mirroredlists/
       MIRROREDLISTSALL="$MIRRORDIR"*.txt
@@ -152,6 +154,3 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
 SKIPPINGTOENDOFPARSERLOOP="List File Now Empty."
 DIVIDERBAR="___________________________________________________________"
 DIVIDERBARB="___________________________________________________________"
-
-
-KILLTHELISTALL="$LISTSTHATDIEDIR"*.list
