@@ -28,8 +28,8 @@ printf "$red" "Old Log Purged."
 RECENTPURGED=true
 fi
 
-echo "## Running Housekeeping Tasks $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "## Running Housekeeping Tasks $timestamp" | tee --append $RECENTRUNA &>/dev/null
+echo "### $SCRIPTTEXT $timestamp" | tee --append $RECENTRUNA &>/dev/null
 
 if
 [[ -n $RECENTPURGED ]]
