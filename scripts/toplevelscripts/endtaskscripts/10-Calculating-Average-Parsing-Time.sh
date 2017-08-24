@@ -14,8 +14,18 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-AVERAGEPARSETIMESEC=`awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE`
+if
+[[ -f $PARSEAVERAGEFILE ]]
+then
+AVERAGEPARSETIMESEC=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE`)
 AVERAGEPARSETIME=`expr $AVERAGEPARSETIMESEC / 60`
+fi
+
+if
+[[ -z $AVERAGEPARSETIME ]]
+then
+AVERAGEPARSETIME="unknown"
+fi
 
 printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME Minutes."
 
