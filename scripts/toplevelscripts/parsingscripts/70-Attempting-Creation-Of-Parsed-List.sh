@@ -39,9 +39,9 @@ elif
 [[ "$PARSEDFILESIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github."
-echo "* $BASEFILENAME list was $FETCHFILESIZEMB MB, and too large to upload on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME list was $PARSEDFILESIZEMB MB, and too large to upload on github. $timestamp" | tee --append $RECENTRUN &>/dev/null
 elif
-[[ "$FETCHFILESIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
+[[ "$PARSEDFILESIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
 then
 printf "$green"  "Creating Parsed File."
 cp $BPARSEDFILETEMP $PARSEDFILE
