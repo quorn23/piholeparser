@@ -40,8 +40,6 @@ if
 [[ "$ORIGFILESIZEBYTES" -eq 0 ]]
 then
 printf "$red"     "$BASEFILENAME List Was An Empty File After Download."
-printf "$red"  "List Marked As Dead."
-mv $FILEBEINGPROCESSED $BDEADPARSELIST
 timestamp=$(echo `date`)
 echo "* $BASEFILENAME List Was An Empty File After Download. $timestamp" | tee --append $RECENTRUN &>/dev/null
 rm $BORIGINALFILETEMP
@@ -50,6 +48,13 @@ elif
 then
 ORIGFILESIZENOTZERO=true
 echo "ORIGFILESIZENOTZERO="$ORIGFILESIZENOTZERO"" | tee --append $TEMPPARSEVARS &>/dev/null
+fi
+
+if
+[[ "$ORIGFILESIZEBYTES" -eq 0 && $FILEBEINGPROCESSED != $BDEADPARSELIST]]
+then
+printf "$red"  "List Marked As Dead."
+mv $FILEBEINGPROCESSED $BDEADPARSELIST
 fi
 
 ## File size
