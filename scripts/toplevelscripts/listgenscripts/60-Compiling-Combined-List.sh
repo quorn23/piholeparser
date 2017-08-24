@@ -51,23 +51,59 @@ mv $FILETEMP $TEMPFILE
 echo ""
 fi
 
-## Github has a 100mb limit and empty files are useless
-FETCHFILESIZE=$(stat -c%s $TEMPFILE)
-timestamp=$(echo `date`)
 if
-[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
+[[ -f $TEMPFILE ]]
+then
+ALLPARSEDSIZEBYTES=$(stat -c%s "$TEMPFILE")
+ALLPARSEDSIZEKB=`expr $ALLPARSEDSIZEBYTES / 1024`
+ALLPARSEDSIZEMB=`expr $ALLPARSEDSIZEBYTES / 1024 / 1024`
+echo "ALLPARSEDSIZEMB="$ALLPARSEDSIZEMB"" | tee --append $TEMPVARS &>/dev/null
+fi
+
+if
+[[ "$ALLPARSEDSIZEMB" -gt 0 && "$ALLPARSEDSIZEKB" -gt 0 && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $ALLPARSEDSIZEMB MB."
+elif
+[[ "$ALLPARSEDSIZEMB" -eq 0 && "$ALLPARSEDSIZEKB" -gt 0 && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $ALLPARSEDSIZEKB KB."
+elif
+[[ "$ALLPARSEDSIZEMB" -eq 0 && "$ALLPARSEDSIZEKB" -eq 0 && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $ALLPARSEDSIZEBYTES Bytes."
+fi
+
+if
+[[ "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+PARSEDHOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
+printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Compiling."
+fi
+
+if
+[[ -f $BIGAPL && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$green"  "Old BIGAPL File Removed."
+rm $PARSEDFILE
+fi
+
+## Github has a 100mb limit, and empty files are useless
+if 
+[[ "$ALLPARSEDSIZEBYTES" -eq 0 ]]
+then
+printf "$red"     "File Empty"
+echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
+mv $TEMPFILE $BIGAPL
+elif
+[[ "$ALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 elif
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$ALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
 then
-printf "$red"     "File Empty"
-echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPL
-else
 mv $TEMPFILE $BIGAPL
 printf "$yellow"  "Big List Created Successfully."
 fi
-echo ""
