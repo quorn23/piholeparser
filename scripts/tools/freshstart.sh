@@ -51,6 +51,46 @@ rm $CHECKME
 fi
 echo ""
 
+############################
+## Clean ParsedALL Folder ##
+############################
+
+echo "Cleaning Parsedall Directory"
+CHECKME=$ALLPARSEDALLTXT
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+############################
+## Clean ParsedALL List   ##
+############################
+
+echo "Cleaning Parsedall List"
+CHECKME=$BIGAPLSOURCE
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+#########################
+## Country Codes Folder##
+#########################
+
+echo "Cleaning Country Codes Directory"
+CHECKME=$ALLCOUNTRYCODESLISTS
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+
 #########################
 ## Revert Killed Lists ##
 #########################
@@ -120,6 +160,18 @@ ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
+
+###################
+## Cleaning Logs ##
+###################
+
+CHECKME=$CLEANLOGS
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
 
 ###############################
 ## Push Changes up to Github ##
