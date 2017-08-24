@@ -1,1 +1,1 @@
-## This Folder will be the subsribable Lists
+## This Folder will be the subscribable Lists
