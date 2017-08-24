@@ -32,7 +32,9 @@ elif
 then
 source="$(echo `cat $FILEBEINGPROCESSED | head -1`)"
 fi
-echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
+
+#echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
+echo "source='$source'" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## This extracts the domain from source
 SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
