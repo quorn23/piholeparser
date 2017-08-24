@@ -2,6 +2,7 @@
 ## This Recreates Recent Run Log
 
 ## Variables
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 script_dir=$(dirname $0)
 SCRIPTVARSDIR="$script_dir"/../../scriptvars/
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
@@ -14,13 +15,15 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
+RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+
 SCRIPTTEXT="Creating Main Recent Run Log."
 timestamp=$(echo `date`)
 
 if 
-[[ -f $RECENTRUN ]]
+[[ -f $RECENTRUNA ]]
 then
-rm $RECENTRUN
+rm $RECENTRUNA
 printf "$red" "Old Log Purged."
 RECENTPURGED=true
 fi
