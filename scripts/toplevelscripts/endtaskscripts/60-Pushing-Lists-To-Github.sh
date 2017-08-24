@@ -2,6 +2,7 @@
 ## This script pushes lists to Github if selected in var
 
 ## Variables
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 script_dir=$(dirname $0)
 SCRIPTVARSDIR="$script_dir"/../../scriptvars/
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
@@ -13,6 +14,8 @@ else
 echo "Static Vars File Missing, Exiting."
 exit
 fi
+
+RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
 
 ## Push Changes up to Github
 if 
