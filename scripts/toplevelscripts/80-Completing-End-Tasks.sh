@@ -27,7 +27,8 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$RECENTRUNLOGSDIRRAW""$BASEFILENAMENUM".txt)"
+TAGTHEREPOLOG="[Details If Any]("$ENDTASKSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
+BREPOLOG="$ENDTASKSCRIPTSLOGDIR""$BASEFILENAME".log
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
@@ -38,6 +39,14 @@ echo ""
 
 ## Log Subsection
 echo "### $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
+## Create Log
+if
+[[ -f $BREPOLOG ]]
+then
+rm $BREPOLOG
+fi
+touch $BREPOLOG
 
 ## Clear Temp Before
 if
@@ -62,6 +71,7 @@ echo "Error Deleting Temp Files."
 exit
 fi
 
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | tee --append $RECENTRUN
 
 printf "$orange" "$DIVIDERBARB"
