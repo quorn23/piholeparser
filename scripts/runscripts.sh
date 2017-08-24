@@ -44,7 +44,8 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$RECENTRUNLOGSDIRRAW""$BASEFILENAMENUM".txt)"
+TAGTHEREPOLOG="[Details If Any]("$RECENTRUNLOGSDIRRAW""$BASEFILENAME".log)"
+BREPOLOG="$SPECIFICLOGSDIR""$BASEFILENAME".log
 timestamp=$(echo `date`)
 
 printf "$blue"    "$DIVIDERBAR"
@@ -53,6 +54,14 @@ printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 
 ## Log Section
 echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+
+## Create Log
+if
+[[ -f $BREPOLOG ]]
+then
+rm $BREPOLOG
+fi
+touch $BREPOLOG
 
 ## Clear Temp Before
 if
