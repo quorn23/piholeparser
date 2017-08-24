@@ -2,6 +2,7 @@
 ## Domain Requirements,, a period and a letter
 
 ## Variables
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 script_dir=$(dirname $0)
 SCRIPTVARSDIR="$script_dir"/../../../scriptvars/
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
@@ -21,6 +22,8 @@ else
 echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
+
+RECENTRUN="$ACTUALPARSINGLOGDIR""$SCRIPTBASEFILENAME".log
 
 if
 [[ -f $BFILETEMP ]]
