@@ -35,7 +35,9 @@ do
 #WHATLINENUMBER=$(echo -e "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
 WHATLINENUMBER=$(echo "`grep -n $source $VALIDDOMAINTLD | cut -d : -f 1`")
 #TLDPERCENTAGEMATH=$(awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}" )
-TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+#TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+TLDPERCENTAGEMATHA=`expr $WHATLINENUMBER / $HOWMANYVALIDTLD `
+TLDPERCENTAGEMATH=`expr $TLDPERCENTAGEMATHA * 100 `
 
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
 if
