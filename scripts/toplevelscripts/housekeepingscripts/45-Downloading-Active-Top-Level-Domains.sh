@@ -38,9 +38,19 @@ FILEBEINGPROCESSED=$f
 echo "FILEBEINGPROCESSED="$FILEBEINGPROCESSED"" | tee --append $TEMPPARSEVARS &>/dev/null
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
+TAGTHEREPOLOG="[Details If Any]("$TLDSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
+BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".log
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
+
+## Create Log
+if
+[[ -f $BREPOLOG ]]
+then
+rm $BREPOLOG
+fi
+touch $BREPOLOG
 
 for p in $ALLTLDSCRIPTS
 do
@@ -68,6 +78,8 @@ echo "Error Deleting Temp Files."
 exit
 fi
 
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$orange" "$DIVIDERBARB"
 echo ""
 
