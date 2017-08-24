@@ -44,7 +44,7 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$RECENTRUNLOGSDIRRAW""$BASEFILENAME".log)"
+TAGTHEREPOLOG="[Details If Any]("$SPECIFICLOGSDIRDIRRAW""$BASEFILENAME".log)"
 BREPOLOG="$SPECIFICLOGSDIR""$BASEFILENAME".log
 timestamp=$(echo `date`)
 
@@ -53,7 +53,7 @@ echo ""
 printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 
 ## Log Section
-echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUNA &>/dev/null
 
 ## Create Log
 if
@@ -86,8 +86,8 @@ echo "Error Deleting Temp Files."
 exit
 fi
 
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
-echo "" | sudo tee --append $RECENTRUN
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUNA &>/dev/null
+echo "" | sudo tee --append $RECENTRUNA
 
 printf "$magenta" "$DIVIDERBAR"
 echo ""
