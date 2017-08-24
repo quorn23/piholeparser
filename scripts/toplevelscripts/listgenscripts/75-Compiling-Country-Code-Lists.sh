@@ -40,7 +40,7 @@ then
 cat $BIGAPLE | grep -e [.]$source\$ >> $TEMPFILEZ
 touch $TEMPFILEZ
 HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $TEMPFILEZ | wc -l`")
-printf "$yellow"  "$HOWMANYTIMESTLDAFTER Domains Using ."$source""
+printf "$yellow"  "$BASEFILENAME Has $HOWMANYTIMESTLDAFTER Domains Using ."$source""
 fi
 
 ## End Source Loop
