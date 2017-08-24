@@ -15,6 +15,8 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
+RECENTRUN="$SPECIFICLOGSDIR""$SCRIPTBASEFILENAME".log
+
 ## Start File Loop
 ## For .sh files In The listgen Directory
 for f in $ALLLISTGENSCRIPTS
