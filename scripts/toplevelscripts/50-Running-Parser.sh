@@ -55,6 +55,16 @@ do
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
+TAGTHEREPOLOG="[Details If Any]("$PARSINGSCRIPTSLOGDIRRAW""$PBASEFILENAME".log)"
+BREPOLOG="$PARSINGSCRIPTSLOGDIR""$BASEFILENAME".log
+
+## Create Log
+if
+[[ -f $BREPOLOG ]]
+then
+rm $BREPOLOG
+fi
+touch $BREPOLOG
 
 if
 [[ -f $TEMPPARSEVARS ]]
@@ -107,5 +117,7 @@ then
 rm $BORIGINALFILETEMP
 fi
 
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "" | sudo tee --append $RECENTRUN &>/dev/null
 ## End of File Loop
 done
