@@ -40,39 +40,3 @@ rm $TEMPFILEF
 HOWMANYTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 printf "$yellow"    "$HOWMANYTLD Valid TLD's Total."
 echo ""
-
-## Backup TLD list if not there
-if
-[[ -f $VALIDDOMAINTLDBKUP ]]
-then
-rm $VALIDDOMAINTLDBKUP
-fi
-
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
-
-## Anything New?
-printf "$cyan"    "Checking For New TLD's."
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
-HOWMANYTLDNEW=$(echo -e "`wc -l $TLDCOMPARED | cut -d " " -f 1`")
-if
-[[ "$HOWMANYTLDNEW" != 0 ]]
-then
-printf "$yellow"    "$HOWMANYTLDNEW New TLD's."
-echo "* $HOWMANYTLDNEW New TLD's" | tee --append $RECENTRUN &>/dev/null
-else
-printf "$yellow"    "No New TLD's"
-fi
-
-if
-[[ -f $VALIDDOMAINTLDBKUP ]]
-then
-rm $VALIDDOMAINTLDBKUP
-fi
-
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
-
-if
-[[ -f $TRYNACATCHFIlES ]]
-then
-rm $TRYNACATCHFIlES
-fi
