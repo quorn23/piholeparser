@@ -39,16 +39,30 @@ if
 then
 cat $BIGAPLE | grep -e [.]$source\$ >> $TEMPFILEZ
 touch $TEMPFILEZ
+{ if
+[[ -f $TEMPFILEZ ]]
+then
 HOWMANYTIMESTLDAFTER=$(echo -e "`grep -o [.]$source\$ $TEMPFILEZ | wc -l`")
 printf "$yellow"  "$BASEFILENAME Has $HOWMANYTIMESTLDAFTER Domains Using ."$source""
+fi }
 fi
 
 ## End Source Loop
 done
 
+if
+[[ -f $TEMPFILEZ ]]
+then
 touch $TEMPFILEZ
 cat $TEMPFILEZ | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $TEMPFILEY
 rm $TEMPFILEZ
+fi
+
+if
+[[ ! -f $TEMPFILEY ]]
+then
+touch $TEMPFILEY
+fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEY | cut -d " " -f 1`")
 
 if
