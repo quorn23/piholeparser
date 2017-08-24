@@ -17,6 +17,30 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
 
+CHECKME=$CLEANLOGS
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+CHECKME=$CLEANLOGSB
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+CHECKME=$CLEANLOGSC
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
 SCRIPTTEXT="Creating Main Recent Run Log."
 timestamp=$(echo `date`)
 
