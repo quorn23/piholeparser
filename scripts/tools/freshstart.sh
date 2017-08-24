@@ -173,6 +173,22 @@ rm $CHECKME
 fi
 echo ""
 
+CHECKME=$CLEANLOGSB
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+CHECKME=$CLEANLOGSC
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
 ###############################
 ## Push Changes up to Github ##
 ###############################
