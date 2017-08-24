@@ -14,8 +14,23 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-
 CHECKME=$CLEANLOGS
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+CHECKME=$CLEANLOGSB
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
+CHECKME=$CLEANLOGSC
 if
 ls $CHECKME &> /dev/null;
 then
