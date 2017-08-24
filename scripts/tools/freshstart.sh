@@ -56,25 +56,12 @@ echo ""
 #########################
 
 echo "Reverting Killed Lists"
-CHECKME=$KILLTHELISTALL
-if
-ls $CHECKME &> /dev/null;
-then
 for f in $KILLTHELISTALL
 do
-# Dynamic Variables
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-if
-[[ -f $DYNOVARS ]]
-then
-source $DYNOVARS
-else
-echo "Dynamic Vars File Missing, Exiting."
-exit
-fi
-mv $f "$MAINLISTDIR""$BASEFILENAME".lst
+BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
+mv $f $BUNDEADPARSELIST
 done
-fi
 echo ""
 
 #####################
@@ -96,6 +83,30 @@ then
 rm $CHECKME
 fi
 echo ""
+
+###################
+## Cleaning Temp ##
+###################
+
+echo "Cleaning Temp"
+CHECKME=$TEMPCLEANUP
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+CHECKME=$TEMPCLEANUPB
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+CHECKME=$TEMPCLEANUPC
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
 
 ###############################
 ## Push Changes up to Github ##
