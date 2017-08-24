@@ -79,23 +79,59 @@ echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after deduping"
 rm $FILETEMP
 echo ""
 
-## Github has a 100mb limit and empty files are useless
-FETCHFILESIZE=$(stat -c%s $TEMPFILE)
-timestamp=$(echo `date`)
 if
-[ "$FETCHFILESIZE" -ge "$GITHUBLIMIT" ]
+[[ -f $TEMPFILE ]]
 then
-printf "$red"     "Parsed File Too Large For Github. Deleting."
-echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "File exceeded Githubs 100mb limitation" | tee --append $TEMPFILE
-mv $TEMPFILE $BIGAPLE
+EDITEDALLPARSEDSIZEBYTES=$(stat -c%s "$TEMPFILE")
+EDITEDALLPARSEDSIZEKB=`expr $EDITEDALLPARSEDSIZEBYTES / 1024`
+EDITEDALLPARSEDSIZEMB=`expr $EDITEDALLPARSEDSIZEBYTES / 1024 / 1024`
+echo "EDITEDALLPARSEDSIZEMB="$EDITEDALLPARSEDSIZEMB"" | tee --append $TEMPVARS &>/dev/null
+fi
+
+if
+[[ "$EDITEDALLPARSEDSIZEMB" -gt 0 && "$EDITEDALLPARSEDSIZEKB" -gt 0 && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $EDITEDALLPARSEDSIZEMB MB."
 elif
-[ "$FETCHFILESIZE" -eq 0 ]
+[[ "$EDITEDALLPARSEDSIZEMB" -eq 0 && "$EDITEDALLPARSEDSIZEKB" -gt 0 && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $EDITEDALLPARSEDSIZEKB KB."
+elif
+[[ "$EDITEDALLPARSEDSIZEMB" -eq 0 && "$EDITEDALLPARSEDSIZEKB" -eq 0 && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$yellow"  "Size of $BASEFILENAME = $EDITEDALLPARSEDSIZEBYTES Bytes."
+fi
+
+if
+[[ "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+PARSEDHOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
+printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Compiling."
+fi
+
+if
+[[ -f $BIGAPLE && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+then
+printf "$green"  "Old BIGAPLE File Removed."
+rm $PARSEDFILE
+fi
+
+## Github has a 100mb limit, and empty files are useless
+if 
+[[ "$EDITEDALLPARSEDSIZEBYTES" -eq 0 ]]
 then
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPLE
-else
+elif
+[[ "$EDITEDALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
+then
+printf "$red"     "Parsed File Too Large For Github. Deleting."
+echo "* Allparsedlist list was too large to host on github. $EDITEDALLPARSEDSIZEMB bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
+mv $TEMPFILE $BIGAPLE
+elif
+[[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
+then
 mv $TEMPFILE $BIGAPLE
 printf "$yellow"  "Big List Edited Created Successfully."
 fi
