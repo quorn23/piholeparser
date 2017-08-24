@@ -22,6 +22,13 @@ printf "$red"   "Purging Old TempVars File."
 echo "Old TempVars File Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 
+CHECKME=$TEMPCLEANUPC
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 
 if
