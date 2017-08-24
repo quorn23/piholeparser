@@ -17,16 +17,27 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
 
+if
+[[ ! -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+then
+cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+fi
+
 ## Anything New?
 if
 [[ -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
 then
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
+fi
+
+if
+[[ -f $TLDCOMPARED ]]
+then
 HOWMANYTLDNEW=$(echo -e "`wc -l $TLDCOMPARED | cut -d " " -f 1`")
 fi
 
 if
-[[ "$HOWMANYTLDNEW" != 0 ]]
+[[ -n $HOWMANYTLDNEW && "$HOWMANYTLDNEW" != 0 ]]
 then
 printf "$yellow"    "$HOWMANYTLDNEW New TLD's."
 echo "* $HOWMANYTLDNEW New TLD's" | tee --append $RECENTRUN &>/dev/null
