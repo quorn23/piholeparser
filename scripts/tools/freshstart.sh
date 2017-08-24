@@ -96,12 +96,17 @@ echo ""
 #########################
 
 echo "Reverting Killed Lists"
+CHECKME=$KILLTHELISTALL
+if
+ls $CHECKME &> /dev/null;
+then
 for f in $KILLTHELISTALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
 mv $f $BUNDEADPARSELIST
 done
+fi
 echo ""
 
 #########################
@@ -109,12 +114,17 @@ echo ""
 #########################
 
 echo "Reverting Dead Lists"
+CHECKME=$DEADLISTALL
+if
+ls $CHECKME &> /dev/null;
+then
 for f in $DEADLISTALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
 mv $f $BUNDEADPARSELIST
 done
+fi
 echo ""
 
 #####################
