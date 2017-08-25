@@ -389,3 +389,9 @@
 [Details If Any](50-Running-Parser.log)
 
 ## Writing Additional Lists Fri 25 Aug 14:02:42 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+[Details If Any](60-Writing-Additional-Lists.log)
+
+## Completing End Tasks Fri 25 Aug 14:05:07 EDT 2017
+[Details If Any](60-Writing-Additional-Lists.log)
