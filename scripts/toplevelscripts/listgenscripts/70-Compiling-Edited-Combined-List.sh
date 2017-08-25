@@ -108,15 +108,15 @@ fi
 if
 [[ "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-PARSEDHOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
-printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Compiling."
+EDITEDALLPARSEDHOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
+printf "$yellow"  "$EDITEDALLPARSEDHOWMANYLINES Lines After Compiling."
 fi
 
 if
 [[ -f $BIGAPLE && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
 then
 printf "$green"  "Old BIGAPLE File Removed."
-rm $PARSEDFILE
+rm $BIGAPLE
 fi
 
 ## Github has a 100mb limit, and empty files are useless
@@ -133,7 +133,7 @@ printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $EDITEDALLPARSEDSIZEMB bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPLE
 elif
-[[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
+[[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $BIGAPLE ]]
 then
 mv $TEMPFILE $BIGAPLE
 printf "$yellow"  "Big List Edited Created Successfully."
