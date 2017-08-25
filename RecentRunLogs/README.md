@@ -469,3 +469,8 @@
 ## Completing End Tasks Fri 25 Aug 14:17:28 EDT 2017
 [Details If Any](80-Completing-End-Tasks.log)
 
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+[Details If Any](60-Writing-Additional-Lists.log)
+
+## Completing End Tasks Fri 25 Aug 14:18:22 EDT 2017
