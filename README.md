@@ -28,7 +28,7 @@ Other aims of this project:
 ### Last Run On
 
 * 
-* Script Ended At Fri 25 Aug 14:45:39 EDT 2017
+* Script Ended At Fri 25 Aug 14:47:33 EDT 2017
 * Script Took minutes To Filter Lists.
 * 0
 * unknown
