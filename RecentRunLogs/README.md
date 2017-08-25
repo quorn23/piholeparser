@@ -399,3 +399,53 @@
 ## Completing End Tasks Fri 25 Aug 14:05:42 EDT 2017
 [Details If Any](80-Completing-End-Tasks.log)
 
+[Details If Any](80-Completing-End-Tasks.log)
+
+[Details If Any](60-Writing-Additional-Lists.log)
+
+## Completing End Tasks Fri 25 Aug 14:07:19 EDT 2017
+[Details If Any](80-Completing-End-Tasks.log)
+
+[Details If Any](60-Writing-Additional-Lists.log)
+
+## Completing End Tasks Fri 25 Aug 14:08:02 EDT 2017
+[Details If Any](60-Writing-Additional-Lists.log)
+
+## Completing End Tasks Fri 25 Aug 14:08:39 EDT 2017
+[Details If Any](80-Completing-End-Tasks.log)
+
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:09:06 EDT 2017
+[Details If Any](80-Completing-End-Tasks.log)
+
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:10:06 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:10:39 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:11:56 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:12:05 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:12:17 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:12:25 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:12:27 EDT 2017
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:12:36 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Running-Parser.txt)
+
+## Writing Additional Lists Fri 25 Aug 14:12:40 EDT 2017
+[Details If Any](60-Writing-Additional-Lists.log)
+
+## Completing End Tasks Fri 25 Aug 14:14:12 EDT 2017
