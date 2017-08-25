@@ -105,7 +105,7 @@ printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
 mv $TEMPFILE $BIGAPL
 elif
-[[ "$ALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $BPARSEDFILETEMP ]]
+[[ "$ALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $TEMPFILE ]]
 then
 mv $TEMPFILE $BIGAPL
 printf "$yellow"  "Big List Created Successfully."
