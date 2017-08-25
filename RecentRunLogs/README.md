@@ -203,3 +203,12 @@
 [Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Writing-Additional-Lists.txt)
 
 ## Completing End Tasks Fri 25 Aug 13:26:11 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Writing-Additional-Lists.txt)
+
+## Completing End Tasks Fri 25 Aug 13:26:29 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
