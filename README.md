@@ -1,5 +1,9 @@
 # piholeparser
 
+## Note
+
+#### I plan on changing the subscribable list location at some point in the near future.
+
 This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
 
 Other aims of this project:
@@ -8,7 +12,7 @@ Other aims of this project:
 * Build a user-driven blacklist.
 * Build a user-driven whitelist.
 * Mirror and Filter, any user-submitted blacklist.
-* Handle ANY list, even if it is compressed in tar or 7zip.
+* Handle ANY list, even if it is compressed.
 
 ## Because people ask often:
 
@@ -23,18 +27,19 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Thu 24 Aug 00:20:14 EDT 2017
-* Script Ended At Thu 24 Aug 03:19:27 EDT 2017
-* Script Took 179 minutes To Filter 189 Lists.
-* 
-* 
-* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
-* [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/listswithouthttps)
+* Script Started At Thu 24 Aug 16:03:15 EDT 2017
+* Script Ended At Thu 24 Aug 20:44:19 EDT 2017
+* Script Took 281 minutes To Filter 340 Lists.
+* 0
+* unknown
+* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/README.md)
+* [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/listswithouthttps.txt)
 
 ## Individual Lists
 
 * Individual lists tend to be safer than all of them Combined.
-* You will find them Within the "parsed" directory.
+* You will find them Within the "Subscribable-Lists" directory.
+* There are now Country Specific Lists!
 
 #### Adding Them to [Pi-hole(tm)](https://pi-hole.net/)
 
@@ -49,22 +54,24 @@ Simply copy the RAW format url for the list and add them.
 
 Just add
  
-    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsedall/1111ALLPARSEDLISTS1111.txt
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111.txt
 
 ###### I also have a list that is driven by the userbase.
 
 * To request a list to be whitelisted or blacklisted, please submit an issue containing WHY it should be added or removed.
 
-    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/parsedall/1111ALLPARSEDLISTS1111edited.txt
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111edited.txt
 
 _______________________________________________________________________________________________________________________
 
-### IF YOU ARE NEW TO LINUX AND PI-HOLE, CONSIDER ADDING THE LISTS I HAVE ALREADY PARSED
+# IF YOU ARE NEW TO LINUX AND PI-HOLE, CONSIDER ADDING THE LISTS I HAVE ALREADY PARSED
 
 * I'm already parsing all of the lists daily and uploading them to the parsed directory in this repository.
 * If you prefer to use this project yourself locally, Keep Reading.
 
-### IF YOU HAVE USED THIS SCRIPT BEFORE 8/11/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
+_______________________________________________________________________________________________________________________
+
+### IF YOU HAVE USED THIS SCRIPT BEFORE 8/24/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
 
     sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/NAMEOFTHEREPOSITORYinstall.sh
 
@@ -82,15 +89,19 @@ ________________________________________________________________________________
 
 ## Query Lists Tool
 
-As of 6/20/2017, there is a querylists.sh within the scripts directory.
+There is a querylists.sh within the scripts directory.
 
 This will allow me to query the individual parsed files for a specific domain.
 
 ## Log
 
-As of 6/13/2017, there is a [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
+There is a [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
 
 This should provide some insights as to what lists are dead, empty, or too large for github.
+
+## AntiGrav
+
+A pun on Pi-hole's gravity.sh, this tool allows me to see what domains are on my list versus gravity.list
 
 _______________________________________________________________________________________________________________________
 
@@ -108,7 +119,8 @@ ________________________________________________________________________________
 
 ### Downloading
 
-* Check to see if host of list is available.
+* Checks to see if host of list is available.
+* Checks to see if a list was updated online.
 * Download based on host availability, file extension (tar or 7z), or attempt to use a mirrored copy from this repository.
 
 ### Parsing
@@ -122,9 +134,15 @@ ________________________________________________________________________________
 * Checks for FQDN Requirements. A Period and a Letter.
 * Remove Periods at Beginning and End Of Lines.
 * Filter out common file extensions used in assets
+* Reverse Searches Top Level Domains
 * Remove Duplicates, If any.
 * Create Parsed File, if it survives this process.
 
+### Additional lists
+
+* This will take all the small lists and merge them.
+* I then take that list, add user-submitted blacklists, remove user-submitted whitelists, and produce another Big List.
+* I take the Big List and generate small lists based on Country Codes.
 _______________________________________________________________________________________________________________________
 
 ## Disclaimer
