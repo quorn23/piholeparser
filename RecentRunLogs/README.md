@@ -488,3 +488,5 @@
 [Details If Any](60-Writing-Additional-Lists.log)
 
 ## Completing End Tasks Fri 25 Aug 14:20:06 EDT 2017
+[Details If Any](80-Completing-End-Tasks.log)
+
