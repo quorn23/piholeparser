@@ -380,3 +380,12 @@
 ## Completing End Tasks Fri 25 Aug 14:01:23 EDT 2017
 [Details If Any](50-Running-Parser.log)
 
+## Writing Additional Lists Fri 25 Aug 14:01:59 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Writing-Additional-Lists.txt)
+
+## Completing End Tasks Fri 25 Aug 14:02:09 EDT 2017
+[Details If Any](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/RecentRunLogs/-Completing-End-Tasks.txt)
+
+[Details If Any](50-Running-Parser.log)
+
+## Writing Additional Lists Fri 25 Aug 14:02:42 EDT 2017
