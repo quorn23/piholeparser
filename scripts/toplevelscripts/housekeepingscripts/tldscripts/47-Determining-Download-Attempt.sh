@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TLDSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## What type of source?
 if
 [[ -z $FULLSKIPPARSING && -z $PINGTESTFAILED && $source == *.7z ]]
