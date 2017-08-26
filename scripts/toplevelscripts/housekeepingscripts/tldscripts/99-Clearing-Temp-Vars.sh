@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TLDSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 if
 [[ -f $TEMPPARSEVARS ]]
 then
