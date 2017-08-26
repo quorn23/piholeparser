@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$SPECIFICLOGSDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$SPECIFICLOGSDIR""$SCRIPTBASEFILENAME".md
 
 ## Start File Loop
 ## For .sh files In The cleanupscripts Directory
@@ -27,8 +27,8 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$ENDTASKSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
-BREPOLOG="$ENDTASKSCRIPTSLOGDIR""$BASEFILENAME".log
+TAGTHEREPOLOG="[Details If Any]("$ENDTASKSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+BREPOLOG="$ENDTASKSCRIPTSLOGDIR""$BASEFILENAME".md
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
