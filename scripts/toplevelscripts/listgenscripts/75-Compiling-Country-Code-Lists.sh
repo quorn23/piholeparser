@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$LISTGENSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$LISTGENSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 ## Process Every .clist file within CountryCode List Directory
 for f in $EVERYCCTLD
