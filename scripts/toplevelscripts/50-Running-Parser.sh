@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$SPECIFICLOGSDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".log
 
 ## Process Every .lst file within the List Directories
 for f in $EVERYLISTFILEWILDCARD
