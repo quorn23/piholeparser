@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$LISTGENSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$LISTGENSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 WHATITIS="All Parsed List (edited)"
 timestamp=$(echo `date`)
