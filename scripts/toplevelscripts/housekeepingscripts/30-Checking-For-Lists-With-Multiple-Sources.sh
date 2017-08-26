@@ -17,13 +17,6 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
-if 
-[[ -f $MORETHANONESOURCE ]]
-then
-rm $MORETHANONESOURCE
-printf "$red"   "Old Multi-Source List Removed"
-fi
-
 ## Process Every .lst file within the List Directories
 for f in $EVERYLISTFILEWILDCARD
 do
@@ -45,7 +38,7 @@ done
 if 
 [[ -f $MORETHANONESOURCE ]]
 then
-printf "$yellow"   "https-less List Recreated."
+printf "$yellow"   "Multi-Source List Recreated."
 HOWMANYLISTSWITHMULTSOURCE=$(echo -e "`wc -l $MORETHANONESOURCE | cut -d " " -f 1`")
 HOWMANYLISTSWITHMULTSOURCEB=$(expr $HOWMANYLISTSWITHMULTSOURCE - 1)
 echo ""
