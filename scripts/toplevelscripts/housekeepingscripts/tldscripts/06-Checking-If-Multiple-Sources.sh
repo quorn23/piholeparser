@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TLDSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## Amount of sources greater than one?
 HOWMANYLINES=$(echo -e "`wc -l $FILEBEINGPROCESSED | cut -d " " -f 1`")
 if
