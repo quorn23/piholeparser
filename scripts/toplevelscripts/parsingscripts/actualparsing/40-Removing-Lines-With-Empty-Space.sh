@@ -24,8 +24,6 @@ exit
 fi
 
 
-RECENTRUN="$ACTUALPARSINGLOGDIR""$SCRIPTBASEFILENAME".log
-
 if
 [[ -f $BFILETEMP ]]
 then
