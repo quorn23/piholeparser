@@ -15,8 +15,6 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 echo ""
 
 timestamp=$(echo `date`)
