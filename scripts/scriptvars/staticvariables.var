@@ -69,8 +69,6 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
       TOPTLDPERCENTAGE="$LOGDIR"tldpercentage.md
       TOPTLDPERCENTAGEJSON="$LOGDIR"tldpercentage.json
       TRYNACATCHFIlES="$LOGDIR"thingsthatdontpassTLDtest.md
-      NOHTTPSLISTS="$LOGDIR"/listswithouthttps.md
-      MORETHANONESOURCE="$LOGDIR"/listswithmorethanonesource.md
 
   LISTSDIR="$REPODIR"ScriptLists/
     
@@ -138,7 +136,8 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
           DYNOVARS="$SCRIPTVARSDIR"dynamicvariables.var
 
   TEMPDIR="$REPODIR"temp/
-    TLDCOMPARED="$LOGDIR"tldcomparison.temp
+    NOHTTPSLISTS="$TEMPDIR"listswithouthttps.temp
+    TLDCOMPARED="$TEMPDIR"tldcomparison.temp
     TEMPCLEANUP="$TEMPDIR"*.txt
     TEMPCLEANUPB="$TEMPDIR"*.temp
     TEMPCLEANUPC="$TEMPDIR"*.var
@@ -148,6 +147,7 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
     FILETEMP="$TEMPDIR"filetemp.txt
     TEMPLOGMAIN="$TEMPDIR"mainlog.temp
     TEMPLOGDEPS="$TEMPDIR"depslog.temp
+    MORETHANONESOURCE="$TEMPDIR"listswithmorethanonesource.md
     VALIDDOMAINTLD="$TEMPDIR"validdomaintld.temp
     COMPRESSEDTEMPTAR="$TEMPDIR"compressedseventemporaryfile.tar.gz
     COMPRESSEDTEMPSEVEN="$TEMPDIR"compressedseventemporaryfile.7z
