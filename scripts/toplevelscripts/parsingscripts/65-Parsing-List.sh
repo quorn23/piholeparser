@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$PARSINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## Start time
 STARTPARSESTAMP=$(date +"%s")
 echo "STARTPARSESTAMP="$STARTPARSESTAMP"" | tee --append $TEMPPARSEVARS &>/dev/null
