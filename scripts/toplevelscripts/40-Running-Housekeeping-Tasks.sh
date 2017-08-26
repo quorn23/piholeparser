@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 
 ## Start File Loop
 ## For .sh files In The housekeepingscripts Directory
@@ -27,7 +27,7 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-BREPOLOG="$HOUSEKEEPINGSCRIPTSLOGDIR""$BASEFILENAME".log
+BREPOLOG="$HOUSEKEEPINGSCRIPTSLOGDIR""$BASEFILENAME".md
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
@@ -38,7 +38,7 @@ echo ""
 
 ## Log Subsection
 echo "### $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
+TAGTHEREPOLOG="[Details If Any]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | tee --append $RECENTRUN
 
