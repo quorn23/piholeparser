@@ -41,6 +41,7 @@ if
 [[ $source != https* ]]
 then
 echo "* $BASEFILENAME" | tee --append $RECENTRUN &>/dev/null
+echo "* $BASEFILENAME" | tee --append $NOHTTPSLISTS &>/dev/null
 fi
 
 ## End Source Loop
