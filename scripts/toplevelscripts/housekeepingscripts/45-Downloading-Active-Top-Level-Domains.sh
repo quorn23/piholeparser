@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 for f in $VALIDDOMAINTLDLINKS
 do
@@ -40,6 +40,7 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$TLDSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
 BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".log
+echo "RECENTRUN="$RECENTRUN"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
