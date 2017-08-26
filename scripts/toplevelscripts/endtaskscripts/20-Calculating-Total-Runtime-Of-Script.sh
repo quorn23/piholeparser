@@ -23,7 +23,7 @@ echo "Temp Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 ENDTIME="Script Ended At $(echo `date`)"
 ENDTIMESTAMP=$(date +"%s")
