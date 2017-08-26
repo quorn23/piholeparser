@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$ACTUALPARSINGLOGDIR""$SCRIPTBASEFILENAME".log
-
 if
 [[ -f $BFILETEMP ]]
 then
