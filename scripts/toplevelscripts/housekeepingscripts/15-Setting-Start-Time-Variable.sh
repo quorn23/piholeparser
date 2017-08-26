@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 timestamp=$(echo `date`)
 STARTTIME="Script Started At $timestamp"
