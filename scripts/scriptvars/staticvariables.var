@@ -66,7 +66,6 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
       CLEANLOGSB=$LOGDIR'*/*.md'
       CLEANLOGSC=$LOGDIR'*/*/*.md'
       TLDPERCENTORDER="$LOGDIR"tldsinorder.md
-      TLDCOMPARED="$LOGDIR"tldcomparison.md
       TOPTLDPERCENTAGE="$LOGDIR"tldpercentage.md
       TOPTLDPERCENTAGEJSON="$LOGDIR"tldpercentage.json
       TRYNACATCHFIlES="$LOGDIR"thingsthatdontpassTLDtest.md
@@ -139,6 +138,7 @@ MAINFOLDERRAW="https://raw.githubusercontent.com/"$REPOOWNER"/"$REPONAME"/master
           DYNOVARS="$SCRIPTVARSDIR"dynamicvariables.var
 
   TEMPDIR="$REPODIR"temp/
+    TLDCOMPARED="$LOGDIR"tldcomparison.temp
     TEMPCLEANUP="$TEMPDIR"*.txt
     TEMPCLEANUPB="$TEMPDIR"*.temp
     TEMPCLEANUPC="$TEMPDIR"*.var
