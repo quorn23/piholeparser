@@ -50,12 +50,3 @@ if
 then
 touch $BTEMPFILE
 fi
-
-## What doesn't make it through
-if
-[[ -f $TRYNACATCHFIlES ]]
-then
-rm $TRYNACATCHFIlES
-fi
-
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
