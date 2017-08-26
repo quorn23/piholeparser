@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: 56GduMVFYBdJN9oqOb1vPQ
-! Version: 201708251931
+! Checksum: FqzfJ7yHhXVsDHjV/mVoiQ
+! Version: 201708260421
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 25 Aug 2017 19:31 UTC
+! Last Modified: 26 Aug 2017 04:21 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -585,7 +585,6 @@ _xiuno_com_ad/
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn^
-||duoqumanhua.com^
 .cn/show?id=$script,third-party
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
@@ -1225,6 +1224,7 @@ ubmcmm.baidustatic.com
 ||dugbvb.com^
 ||duiwai.baidu.com^
 ||duomai.com^$third-party
+||duoqumanhua.com^
 ||dushimj.com^$third-party
 ||duusuu.com^
 ||duyihu.net^
@@ -2723,6 +2723,7 @@ mg*.6park.com/img/$image
 ||33.autoimg.cn/homeurl/*.js
 ||33.autoimg.cn/t/Adhtmlnet/*.jpg
 ||33.autoimg.cn/t/Adhtmlnet/*.swf
+||3344xu.com/js/
 ||3399.com/act/5599/js/kuang
 ||3399.com/act/fk/
 ||3399.com/Common/OnlineServer.html
@@ -3932,6 +3933,7 @@ mg*.6park.com/img/$image
 ||dmhy.ml^*g?$image
 ||dmzj.com/js/m_BtmApp.js
 ||dn-geekpark-new.qbox.me/uploads/ad/
+||dnvod.tv/g/
 ||dnvod.tv/upload/mycontent/
 ||dnvod.tv^*.gif$object-subrequest
 ||dnvod.tv^*.jpg$object-subrequest
@@ -4055,6 +4057,7 @@ mg*.6park.com/img/$image
 ||edu24ol.com/web_news/js/1100.jpg
 ||educity.cn/self_text/text_disp.aspx?id=
 ||eduuu.com/gaokao/2015/bannerDaili.js
+||eduuu.com/website/public_js/pc_aso.js
 ||eeee42.com/Ads/
 ||eepw.com.cn/pub/js/TopFullScreen.js
 ||eeyy.cc/style/yxj.js
@@ -4649,6 +4652,7 @@ mg*.6park.com/img/$image
 ||ijia360.com/data/poster/
 ||ik123.com/js/dd.js
 ||ikaka.com/globalad/
+||ikankanwu.com/xuxu/
 ||im1g.6park.com/img/
 ||im286.net/286/
 ||image-shop.baidu.com/n/imageproduct?
@@ -6675,13 +6679,13 @@ mg*.6park.com/img/$image
 ||zzz4.com/JS_AD/
 ||zzzsao.com/data/attachment/portal/201707/08/135857dkt8trrxk3g8zvq8.png
 ||zzzyk.com/js/
-||eduuu.com/website/public_js/pc_aso.js
-||3344xu.com/js/
-||ikankanwu.com/xuxu/
-||dnvod.tv/g/
+||gougou2018.com/js/item
+||chinaz.com/sc_images/sc_font.js
 !------------------------Specific element hiding rules------------------------!
-dnvod.tv###w
 gpcxw.com###AA2
+gpsuu.com##DIV[class^="top_96"]
+8264.com##A[href*=".renrenjiang."]
+fawan.com###ynetG_B1
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -7988,6 +7992,7 @@ loldk.com###video_right_ad
 loldk.com###video_right_ad2
 aipai.com###videosRightDown
 jstv.com###vplayad
+dnvod.tv###w
 zqzq.com###wAdTop1
 zqzq.com###wAdTop2
 kamlm.com###wanmeiffad1
@@ -11361,8 +11366,6 @@ brandsales.58.com#@#div[id^="ad_"]
 gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
-@@||images.sohu.com/bill/$domain=auto.sohu.com
-@@||sohu.com/adgtr/$domain=auto.sohu.com
 @@.adserver.$domain=litv.tv
 @@.com/adv/$domain=my.ctrip.com
 @@.gif#$domain=cnprint.org|tgfcer.com|wgun.net
@@ -11435,6 +11438,7 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 @@?adType=$domain=taotaosou.com
 @@?sid=ads$domain=126.com|mail.163.com
 @@u-ads.adap.tv*youku.$domain=youku.com
+@@|http://www.dilidili.wang/|$genericblock
 @@|https://tieba.baidu.com/index.html|$genericblock
 @@||012.tw^$script,domain=apk.tw
 @@||060s.com/images_ad/*.png
@@ -11597,7 +11601,6 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 @@||damai.cn^*/TopAd/
 @@||daoju.qq.com/time/*/js/ad/
 @@||digiland.tw/advert.js
-@@|http://www.dilidili.wang/|$genericblock
 @@||disney.com.tw/tv/global/swf/banner728x90.swf
 @@||dmhy.org/common/generate-captcha?
 @@||dolc.de/source/plugin/unadblock/
@@ -11667,6 +11670,7 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 @@||ifengimg.com/ifeng/sources/inice_$domain=auto.ifeng.com|v.ifeng.com|www.ifeng.com
 @@||ifengimg.com/ifeng/sources/region_$domain=auto.ifeng.com|www.ifeng.com
 @@||ifengimg.com/pdt/cfg/mudu/aplayer.xml$domain=v.ifeng.com
+@@||images.sohu.com/bill/$domain=auto.sohu.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=now.com|xuite.net
 @@||img.ybbbs.com/2014/*app
 @@||inskinmedia.com^*/js/base/api/$domain=appledaily.com|nextmedia.com
@@ -11781,6 +11785,7 @@ gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
 @@||sipa.gov.tw/img/rightbanner/
 @@||sjsmitaa.org/bin/showads.
 @@||sogou.com/adpub/cfg/sendmsg.
+@@||sohu.com/adgtr/$domain=auto.sohu.com
 @@||sozi.cn/images/ad/tj
 @@||static.atm.youku.com^*.swf
 @@||static.hdslb.com/ad-images/$image
@@ -11901,6 +11906,9 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ~baidu.com##a[href*="/cpro."]
 ~baidu.com##a[href*="/cpro/"]
 ! Baidu Union
+||a1.zhanzhang.net^
+||tansuo70.com^
+||1.zou114.com^
 ###cpro_container
 ##a[href*="/mobads.php?"]
 ##div[id][style="width: 100%;"] > div > div > iframe[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
@@ -12315,7 +12323,6 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Caoporn.com
 2c2.website,2p8.space,adultgao.com,baocee.com,baofee.com,baonee.com,baopee.com,baowee.com,baoxee.com,baozoo.com,caoporn.com,caouoo.com,caoxee.com,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
-||xnjzsn.com^
 .m.23sw.net^
 .m.3dllc.cc^
 .m.beidouxin.com^
@@ -12428,6 +12435,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||xacqp.com^
 ||xcbmwx.com^
 ||xmcxz.com^
+||xnjzsn.com^
 ||xujx8.com^
 ||xztms.com^
 ||yisloda.com^

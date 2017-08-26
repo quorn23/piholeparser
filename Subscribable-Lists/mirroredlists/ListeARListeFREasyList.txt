@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: UEzhHSTT2bP9NiJ71R3K7Q
-! Version: 201708252041
+! Checksum: Dj2mBUVN23fBmrg7WdFbqA
+! Version: 201708260511
 ! Title: Liste AR+Liste FR+EasyList
 ! Abonnements combinés à la Liste AR, la Liste FR et EasyList
-! Dernière modification le 25 Aug 2017 20:41 UTC
+! Dernière modification le 26 Aug 2017 05:11 UTC
 ! Expires: 4 days (fréquence des mises à jour automatiques)
 ! Homepage: https://code.google.com/p/liste-ar-adblock/
 !
@@ -3412,7 +3412,7 @@ _werbebanner_
 ||com/bannieres/$image,object,subdocument,domain=~dse-ecologie.com|~visuels.l214.com
 ! regex
 /\.(accountant|bid|click|club|com|cricket|date|download|faith|link|loan|lol|men|online|party|racing|review|science|site|space|stream|top|trade|webcam|website|win|xyz|com)\/(([0-9]{2,9})(\.|\/)(css)?)$/$script,stylesheet,third-party,xmlhttprequest
-/\.(com|info)\/[a-zA-Z0-9\+\/]{64,}/$image,third-party,domain=flowyourvideo.com|mystream.la|torrentfunk.com|vidtodo.com
+/\.(com|info)\/[a-zA-Z0-9\+\/]{64,}/$image,third-party,domain=flashx.tv|flowyourvideo.com|mystream.la|torrentfunk.com|vidtodo.com
 /\/[a-z]{1,3}\?zoneId\=\d{7}\-\d{7}$/$script
 /license\.\d{1,5}\.js$/$script,~third-party
 ! CDN filters
@@ -3711,6 +3711,7 @@ _werbebanner_
 ?*.clksite.com$popup
 ?action=linkpub&$popup
 ?ad=*&affId=$popup
+?ad=*&zone=$popup
 ?adCampaign=$popup
 ?adslotid=$popup
 ?adTagId=$popup
@@ -5897,6 +5898,7 @@ debugger:$popup
 ||toolsins.com^$third-party
 ||triction.info^$third-party
 ||trigginge.com^$third-party
+||tuclother.info^$third-party
 ||uauthere.com^$third-party
 ||underers.info^$third-party
 ||undousun.com^$third-party
@@ -7320,7 +7322,7 @@ $subdocument,third-party,domain=e-wok.tv|flashx.tv|gomovies.co|gomovies.es|letwa
 ||dacia.fr/10ans-et-demi/$popup,domain=yahoo.fr
 ||dailymotion.com/widget/$subdocument,domain=37.187.173.205
 ||dailymotion.com^$domain=manga-fr.com|mangastreaming.fr
-||dailymotion.com^*autoplay=1$domain=anime301.com|animeresistance.com|animes-mangas-ddl.net|anogaming.fr|bescherelletamere.fr|blagues-mobiles.com|buzzutopia.com|dailymotion.com|filmsvostfr.xyz|hitek.fr|mangas-ddl-free.over-blog.com|mangaxd.com|mavanime.com|mavanimes.com|otakufr.com|pokemon-streaming.com|pokercast.eu|pokercast.tv|prison-break-hd-streaming.com|robindesdroits.me|sonyoutube.com|stream4free.pro|tous-sports.tv|tv-streaming-serie.xyz|youzapping.com
+||dailymotion.com^*autoplay=1$domain=anime301.com|animeresistance.com|animes-mangas-ddl.net|anogaming.fr|bescherelletamere.fr|blagues-mobiles.com|buzzutopia.com|dailymotion.com|filmsvostfr.xyz|gum-gum-streaming.com|hitek.fr|mangas-ddl-free.over-blog.com|mangaxd.com|mavanime.com|mavanimes.com|otakufr.com|pokemon-streaming.com|pokercast.eu|pokercast.tv|prison-break-hd-streaming.com|robindesdroits.me|sonyoutube.com|stream4free.pro|tous-sports.tv|tv-streaming-serie.xyz|youzapping.com
 ||dailymotion.com^*autoplay=true$domain=greysanatomystreaming.com|protect-iframe.com
 ||dailymotion.com^*mute=1$domain=captainmugiwara.over-blog.com
 ||damoh.schneevonmorgen.com^
@@ -10248,6 +10250,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ||sky-animes.com/ban/partenaires/
 ||sky-animes.com/pubs/
 ||sky-animes.com/scripts/liens.php
+||slideplayer.*/*/*/|$image
 ||snowsurf.com/media/habillage/
 ||societe.com/cgi-bin/coalesce?
 ||societegenerale.fr^*/Habillage/
@@ -11931,6 +11934,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##.carrepub
 ##.catAds
 ##.cazAd
+##.closeStartAdZone
 ##.co-ads
 ##.codeneric_ultimate_ads_manager_ad_wrapper
 ##.col-advert
@@ -12344,6 +12348,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##.publicite_locale
 ##.publicite_r
 ##.publicite_sous_slider
+##.publicite_text
 ##.publiciteac
 ##.publiciteright
 ##.publicity
@@ -12379,6 +12384,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##.removeAds
 ##.remove_ads
 ##.replaceDelayedAds
+##.responsive-house-ad
 ##.right-advertising
 ##.rightPub
 ##.rightRailAdContainer
@@ -14217,14 +14223,11 @@ ddl-island.su,emule-island.ru,stream-island.su##a[href*="/xxx/"]
 rtl.be##a[href*="://ad.doubleclick.net/"]
 comment-supprimer.com,igen.fr,leparking.fr,macg.co,needsandmoods.com,refurbgeneration.com,sosiphone.com,watchgeneration.fr##a[href*="://ad.zanox.com/"]
 ddl-island.su,emule-island.ru,stream-island.ru,stream-island.su##a[href*="://ads."]
-korben.info##a[href*="://amzn.to/"]
-internetparsatellite.net,korben.info,lebonfap.com,letagparfait.com,pixhost.org,rockfile.eu,streaminghd.fr,telesatellite.com##a[href*="://bit.ly/"]
-korben.info##a[href*="://bitly.com/"]
+internetparsatellite.net,lebonfap.com,letagparfait.com,pixhost.org,rockfile.eu,streaminghd.fr,telesatellite.com##a[href*="://bit.ly/"]
 abidjan.net,algerie360.com,direct-torrents.com,dpstreaming.watch,dragon-ball-super-streaming.com,extratorrents.ch,gum-gum-streaming.com,igen.fr,israelmagazine.co.il,journaldumusulman.fr,limetorrents.cc,lnc.nc,macg.co,mangastreaming.fr,orientation-chabab.com,proxylistpro.com,streaming-boruto.com,streaming-dragon-ball-super.com,tendancehotellerie.fr,watchgeneration.fr##a[href*="://goo.gl/"]
 dpstream.net##a[href*="://plarium.com/"]
 amateur2sexe.fr,pornovore.fr##a[href*="://pqr."]
 channelbiz.fr,itespresso.fr,silicon.fr##a[href*="://pubads.g.doubleclick.net/"]
-korben.info##a[href*="://www.amazon.fr/gp/"]
 jeuxetcompagnie.fr##a[href*="://www.ludeek.com/"] > img
 voyageforum.com##a[href*=";text_ad="]
 filmzenstream.com##a[href*="="]
