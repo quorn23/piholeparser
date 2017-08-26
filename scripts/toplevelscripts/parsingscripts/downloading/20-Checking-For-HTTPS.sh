@@ -1,5 +1,5 @@
 #!/bin/bash
-## This  just displays the source on screen
+## This checks for secure connection
 
 ## Variables
 SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
