@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TLDSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## If $SOURCEDOMAIN is set, Ping it
 if
 [[ -n $SOURCEDOMAIN ]]
