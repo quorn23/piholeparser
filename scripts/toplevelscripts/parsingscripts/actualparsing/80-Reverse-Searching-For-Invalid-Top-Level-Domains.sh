@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$ACTUALPARSINGLOGDIR""$SCRIPTBASEFILENAME".log
-
 printf "$yellow"  "This Process Normally Takes Longer Than The Others."
 
 HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
