@@ -23,6 +23,4 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$PARSINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 printf "$yellow"    "$source"
