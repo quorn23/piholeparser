@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TLDSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## Download URL
 source="$(echo `cat $FILEBEINGPROCESSED`)"
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
