@@ -17,7 +17,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$SPECIFICLOGSDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".log
 
 ## Start File Loop
 ## For .dependency files In The dependencies Directory
