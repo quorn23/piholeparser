@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$TLDSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## Is source not using https
 if
 [[ $source != https* ]]
