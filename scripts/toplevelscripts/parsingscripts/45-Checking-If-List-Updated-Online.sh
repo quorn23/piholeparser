@@ -23,8 +23,6 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$PARSINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
-
 ## Check if file is modified since last download
 if 
 [[ -f $MIRROREDFILE && -z $PINGTESTFAILED ]]
