@@ -2,6 +2,7 @@
 ## This sets up whitelisting
 
 ## Variables
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 script_dir=$(dirname $0)
 SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 SCRIPTVARSDIR="$script_dir"/../../scriptvars/
@@ -15,7 +16,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".log
+RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 ## Sort and Dedupe Lists
 for f in $WHITELISTDOMAINSALL
