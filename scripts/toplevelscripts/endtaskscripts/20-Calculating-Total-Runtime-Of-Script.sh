@@ -25,15 +25,16 @@ fi
 
 RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
-ENDTIME="Script Ended At $(echo `date`)"
+timestamp=$(echo `date`)
+ENDTIME=$timestamp
+echo "ENDTIME='$timestamp'" | tee --append $TEMPVARS &>/dev/null
+
 ENDTIMESTAMP=$(date +"%s")
 DIFFTIMESEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
 DIFFTIME=`expr $DIFFTIMESEC / 60`
-TOTALRUNTIME="Script Took $DIFFTIME minutes To Filter $HOWMANYSOURCELISTS Lists."
+
+TOTALRUNTIME=$DIFFTIME
+echo "* $TOTALRUNTIME" | tee --append $RECENTRUN &>/dev/null
+echo "TOTALRUNTIME='"$TOTALRUNTIME"'" | tee --append $TEMPVARS &>/dev/null
 
 printf "$yellow"   "$TOTALRUNTIME"
-
-echo "* $TOTALRUNTIME" | tee --append $RECENTRUN &>/dev/null
-
-echo "ENDTIME='"$ENDTIME"'" | tee --append $TEMPVARS &>/dev/null
-echo "TOTALRUNTIME='"$TOTALRUNTIME"'" | tee --append $TEMPVARS &>/dev/null
