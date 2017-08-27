@@ -17,4 +17,16 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
-ls -t | awk '{printf("%s",$0);exit}'
+YOUNGESTPARSINGFILE=$(echo `ls -t $ACTUALPARSINGSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
+YOUNGESTPARSINGFILEB="$ACTUALPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
+
+YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
+YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
+
+CURRENTTIME=$(( date +%s )
+
+if
+[[ file_time < ( current_time - ( 60 * 60 * 24 ) ) ]]
+then
+echo "$filename is older than 100 days"
+fi
