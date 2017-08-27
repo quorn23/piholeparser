@@ -15,7 +15,7 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUN="$SPECIFICLOGSDIR""$SCRIPTBASEFILENAME".md
+RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 
 ## Start File Loop
 ## For .sh files In The cleanupscripts Directory
