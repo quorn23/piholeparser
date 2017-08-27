@@ -27,9 +27,9 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Sun 27 Aug 08:51:51 EDT 2017
-* Script Ended At Sun 27 Aug 09:40:06 EDT 2017
-* Script Took  minutes To Filter 192 Lists.
+* Script Started At Sun 27 Aug 09:46:23 EDT 2017
+* Script Ended At Sun 27 Aug 10:25:44 EDT 2017
+* Script Took 39 Minutes To Filter 192 Lists.
 * The Edited AllParsed File is 81 MB.
 * Average Parsing Time Was unknown Minutes.
 * RECENTRUNMAINLINK
