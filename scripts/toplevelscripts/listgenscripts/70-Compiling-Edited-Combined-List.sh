@@ -110,6 +110,7 @@ if
 then
 EDITEDALLPARSEDHOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
 printf "$yellow"  "$EDITEDALLPARSEDHOWMANYLINES Lines After Compiling."
+echo "EDITEDALLPARSEDHOWMANYLINES="$EDITEDALLPARSEDHOWMANYLINES"" | tee --append $TEMPVARS &>/dev/null
 fi
 
 if
