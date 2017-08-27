@@ -27,13 +27,13 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Sun 27 Aug 00:20:14 EDT 2017
-* Script Ended At Sun 27 Aug 03:29:40 EDT 2017
-* Script Took 189 minutes To Filter 193 Lists.
-* 81
-* unknown
-* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/README.md)
-* [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/listswithouthttps.txt)
+* Script Started At Sun 27 Aug 08:51:51 EDT 2017
+* Script Ended At Sun 27 Aug 09:40:06 EDT 2017
+* Script Took  minutes To Filter 192 Lists.
+* The Edited AllParsed File is 81 MB.
+* Average Parsing Time Was unknown Minutes.
+* RECENTRUNMAINLINK
+* LISTSWITHOUTHTTPSLINK
 
 ## Individual Lists
 

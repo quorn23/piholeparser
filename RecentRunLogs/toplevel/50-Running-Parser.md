@@ -1,185 +1,110 @@
-* Blackweb List Unavailable To Download. Sun 27 Aug 00:20:54 EDT 2017
-* Blackweb List Was An Empty File After Download. Sun 27 Aug 00:20:55 EDT 2017
+* 280Blocker List Unavailable To Download. Sun 27 Aug 08:52:21 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* DisconnectTrackingFilter List Unavailable To Download. Sun 27 Aug 00:20:58 EDT 2017
+* DisconnectMalvertisingFilter List Unavailable To Download. Sun 27 Aug 08:53:22 EDT 2017
+* DisconnectMalvertisingFilter List Was An Empty File After Download. Sun 27 Aug 08:53:23 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* EasyListCzechSlovakEasyList List Unavailable To Download. Sun 27 Aug 00:22:04 EDT 2017
+* DisconnectMalwareFilter List Unavailable To Download. Sun 27 Aug 08:53:26 EDT 2017
+* DisconnectMalwareFilter List Was An Empty File After Download. Sun 27 Aug 08:53:27 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* HOSTSAdBlockAntiAnnoyanceBonus List Unavailable To Download. Sun 27 Aug 00:23:06 EDT 2017
-* HOSTSAdBlockAntiAnnoyanceBonus List Was An Empty File After Download. Sun 27 Aug 00:23:08 EDT 2017
+* EasyListGermany List Unavailable To Download. Sun 27 Aug 08:53:30 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* Laicure List Unavailable To Download. Sun 27 Aug 00:23:10 EDT 2017
-* Laicure List Was An Empty File After Download. Sun 27 Aug 00:23:11 EDT 2017
+* EasyListHebrewEasyList List Unavailable To Download. Sun 27 Aug 08:54:38 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* MoaABMotherofAllADBLOCKING List Unavailable To Download. Sun 27 Aug 00:23:15 EDT 2017
-* MoaABMotherofAllADBLOCKING List Was An Empty File After Download. Sun 27 Aug 00:23:16 EDT 2017
+* ListeFREasyList List Unavailable To Download. Sun 27 Aug 08:55:47 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* RUAdListCounters List Unavailable To Download. Sun 27 Aug 00:23:19 EDT 2017
+* ListeFR List Unavailable To Download. Sun 27 Aug 08:56:56 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
-* RUAdListCounters List Was Killed By The Parsing Process. It will be skipped in the future. Sun 27 Aug 00:23:21 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* SchuzaksUniversalFilter List Unavailable To Download. Sun 27 Aug 00:23:24 EDT 2017
-* SchuzaksUniversalFilter List Was An Empty File After Download. Sun 27 Aug 00:23:25 EDT 2017
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-* 280Blocker List Was An Empty File After Download. Sun 27 Aug 00:23:32 EDT 2017
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
+* Blackweb List Was An Empty File After Download. Sun 27 Aug 09:00:03 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
@@ -187,10 +112,8 @@
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* DisconnectMalvertisingFilter List Was An Empty File After Download. Sun 27 Aug 01:06:39 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* DisconnectMalwareFilter List Was An Empty File After Download. Sun 27 Aug 01:06:42 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
@@ -214,112 +137,67 @@
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
+* HOSTSAdBlockAntiAnnoyanceBonus List Was An Empty File After Download. Sun 27 Aug 09:06:34 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
@@ -345,7 +223,7 @@
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
@@ -354,52 +232,34 @@
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
+* Laicure List Was An Empty File After Download. Sun 27 Aug 09:16:27 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-* ListeFR List Was An Empty File After Download. Sun 27 Aug 02:01:29 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
@@ -410,63 +270,36 @@
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
+* MoaABMotherofAllADBLOCKING List Was An Empty File After Download. Sun 27 Aug 09:17:44 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
@@ -501,178 +334,97 @@
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
+* SchuzaksUniversalFilter List Was An Empty File After Download. Sun 27 Aug 09:28:07 EDT 2017
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
-
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
 
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/99-Clearing-Temp-Vars.md)
 
