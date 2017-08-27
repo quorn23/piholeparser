@@ -8749,6 +8749,11 @@ rustorka.com##.post_body > div[align="center"] > a > img
 /(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+||goodgame.ru/js/libraries/addhtml.js
+||lifehacker.ru/lh-deal/
+lifehacker.ru##.lh-deal-iframe
+life-webmaster.ru##div[style^="height:400px;width:240px"]
+||lumpics.ru/wp-content/uploads/2017/08/yandex.png
 ixbt.com##.wrapcenter > a[rel="nofollow"] > img
 pornobest2017.com###hide
 ##a[href^="http://putanapartners.com/go.php"]
@@ -8760,7 +8765,7 @@ my.mail.ru##.b-left-menu__item__rotation
 my.mail.ru##body .b-fourth-pseudo-column .b-fourth-pseudo-column_wrapper .b-mimic-adv
 my.mail.ru##.b-photo__banner-bottom
 ||vk.com/video_ext.php$domain=tvfru.org
-bobfilm.club,zzonlinepleer.info,moonwalk.center,seria-z.net,servkino.ru,video.kinoshca.ru,cdn.hdrezka2.me,cdn.cinema-24.online,cdn.kinoljap.ru,cdn.polnyj-film.net,cdn.kinobay.club,se.jugugemanevan.online,cdn.kinoliza.net,movie-on.ru,pandastream.cc,31.220.0.145,pl.theserials.ru,video.hdlava.me,video.duralenta.ru,cdn.ettochno.ru,i.kino-nada.net,yallaneliera.com,online.kinopleer.info,cdn.filmtybe.pl,kinomoove.com,video.hostapi.ru,server.zzonlinepleer.info,cdn.kinorom.com,hd.films-online.cc,streamguard.cc,online.hdkinogohit.net,cdn.newfilms.online,kinogo.site,play.rudaily.ru,hd.kinogo.com.ua,cdn.smotri-online.me,video.hdrezka.pro,37.220.36.15,cdnapponline.com,hdkinoteatr.com,moonwalk.cc,capricornus.cc,online.the-cinema.tv,video.muvix.org,staticnlcdn.com,player.kinolist.org,video.icinemax.net,video.tvepisodeswatch.net,new-serials.ru,kinospy.net,play.hdnow.biz,apollocdn.cc,video.kodik.name,kino-strah.ru,anilibria.tv,ua-cinema.com,serpens.nl,creativportal.ru,online.kinozz.net,moonwalk.center,kinogo-hd-720.net,cdn.kinoprofi.tv,video.kinorom.com,cdn1.kinogo-720.club,kino.ivi-ru.xyz,a.kinoboom.net,mw.kinolution.com,cdn.wifilm.ru,bob.videobob.ru,online.zzonlinepleer.info,lastfilms.org,video.kinoogo.ru,cdn.kapnob.ru,servkino.ru,kinosky.net,onlinemix.org,kinosklad.net,kinoleto.com,video.anpopcorn.com,zserials.me,kinoprofi.club,bestkino.su,cdn.ex-fs.net,blackoctopus.cc,hydrus.cc,cdn.tvfru.ru###adv_player
+fanserials.tv,korp.tv,adultmult.tv,bobfilm.club,zzonlinepleer.info,moonwalk.center,seria-z.net,servkino.ru,video.kinoshca.ru,cdn.hdrezka2.me,cdn.cinema-24.online,cdn.kinoljap.ru,cdn.polnyj-film.net,cdn.kinobay.club,se.jugugemanevan.online,cdn.kinoliza.net,movie-on.ru,pandastream.cc,31.220.0.145,pl.theserials.ru,video.hdlava.me,video.duralenta.ru,cdn.ettochno.ru,i.kino-nada.net,yallaneliera.com,online.kinopleer.info,cdn.filmtybe.pl,kinomoove.com,video.hostapi.ru,server.zzonlinepleer.info,cdn.kinorom.com,hd.films-online.cc,streamguard.cc,online.hdkinogohit.net,cdn.newfilms.online,kinogo.site,play.rudaily.ru,hd.kinogo.com.ua,cdn.smotri-online.me,video.hdrezka.pro,37.220.36.15,cdnapponline.com,hdkinoteatr.com,moonwalk.cc,capricornus.cc,online.the-cinema.tv,video.muvix.org,staticnlcdn.com,player.kinolist.org,video.icinemax.net,video.tvepisodeswatch.net,new-serials.ru,kinospy.net,play.hdnow.biz,apollocdn.cc,video.kodik.name,kino-strah.ru,anilibria.tv,ua-cinema.com,serpens.nl,creativportal.ru,online.kinozz.net,moonwalk.center,kinogo-hd-720.net,cdn.kinoprofi.tv,video.kinorom.com,cdn1.kinogo-720.club,kino.ivi-ru.xyz,a.kinoboom.net,mw.kinolution.com,cdn.wifilm.ru,bob.videobob.ru,online.zzonlinepleer.info,lastfilms.org,video.kinoogo.ru,cdn.kapnob.ru,servkino.ru,kinosky.net,onlinemix.org,kinosklad.net,kinoleto.com,video.anpopcorn.com,zserials.me,kinoprofi.club,bestkino.su,cdn.ex-fs.net,blackoctopus.cc,hydrus.cc,cdn.tvfru.ru##div[id^="adv_player"]
 ixbt.com##.bn1
 ||ixbt.com/divideo/
 tut.by##.news-section-fwfnc
@@ -16348,7 +16353,7 @@ zvukoff.ru##.adv-list-top
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5988
 ||franecki.net/assets/vendor/*.xml^$important,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ! https://forum.adguard.com/index.php?threads/23743/
-://goodgame.ru/|$important,replace=/.*}/{}/
+://goodgame.ru/|$important,replace=/^{[\s\S]+"duration":\s\d\d}/{}/
 ! https://forum.adguard.com/index.php?threads/22933/
 ||videoframe.online/?$replace=/\{timer:\d\d\, hardTimer\:\d\d\,/\{timer:0\, hardTimer\:0\,/i,important
 ! Yandex Mail - block hidden ads
@@ -16453,6 +16458,10 @@ joyreactor.cc#@#div#sidebar
 @@||vetton.ru^$jsinject,elemhide
 !#################
 !
+! goodgame.ru - broken auth
+@@||goodgame.ru/ajax/*$domain=goodgame.ru
+! https://forum.adguard.com/index.php?threads/24242/
+@@||ngs.ru^$content
 ! https://forum.adguard.com/index.php?threads/24366/
 @@||ssvim.com/ajax^$domain=pornbase.info
 @@||ssvim.com/news.js$domain=pornbase.info

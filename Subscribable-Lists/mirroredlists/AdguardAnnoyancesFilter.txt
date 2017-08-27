@@ -612,6 +612,7 @@ gazetevatan.com##form ._soc.news
 ! FuckAdBlock
 iphonesoft.fr,tmohentai.com,kshowonline.com,topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr.com,theland.com.au,greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+glamour.nl##.message-glamour
 @@||adslzone.net/app/themes/adslzone-net-mykonos/assets/js/ads.min.js
 @@||txxx.com/js/advertising.js^
 hdzog.com#@#.adsbox
@@ -2727,6 +2728,8 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+||glamour.nl/js/partials/cookie-law.js
+life-webmaster.ru##.div152
 extrem-bodybuilding.de##body > .activebar-container
 medicalnewstoday.com##.cookies_eu
 firefox-usb.com##.jb.cookie
@@ -3554,6 +3557,8 @@ morgenpost.de##.article--type-news > aside.article__aside[-ext-has="> div.sideba
 !
 !--- Ads ---
 !
+||factum-magazin.ch/sites/default/files/werbung
+factum-magazin.ch##.view-werbung
 torrentec.com##center > a[href^="https://goo.gl/"] > img
 btscenetorrents.unlockpro.racing##.dlb > a[rel="nofollow"][onclick]:not(.dl_black)
 btscenetorrents.unlockpro.racing###wrap > div[style*="width:99%"]
@@ -3983,6 +3988,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+huffingtonpost.de##.follow-huffpost
 wildo.ru###shadow_vk
 wildo.ru###vk_wiget_popup
 meleklermekani.com##.FloatingContainer
@@ -4568,6 +4574,8 @@ livelib.ru,lenta.ru,mychrome,rambler.ru,sports.ru#%#(function() { if (typeof Not
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: 2 }; localStorage.setItem("sports:view:notifications-subscribe-popup:closed:count", JSON.stringify(a)) } } catch (ex) {} })();
 sports.ru#%#(function() { try { if ("undefined" != typeof localStorage) { var a = { date: (new Date).toString(), time: (new Date).getTime(), data: true }; localStorage.setItem("sports:view:notifications-subscribe-popup:view", JSON.stringify(a)) } } catch (ex) {} })();
 !
+mail.yandex.com.tr,mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.js-push-notifications-promo
+mail.yandex.com.tr,mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.ns-view-done-promo-push-notifications
 ||appleinsider.ru/wp-content/plugins/ioimedia-pushbanner/pushmodal.js
 dtf.ru###push_subscribe
 sporx.com##.box-push
@@ -5393,6 +5401,15 @@ webspor2.com,biyografi.info,seiya-saiga.com#%#AG_onLoad(function() { setTimeout(
 twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|console|empty|copy|contextmenu"]
 !*
 !*****
+!
+!##############################
+!######### HTML tweaks ########
+!##############################
+!
+! Disable aytoplay
+||oe24.at$important,replace=/"autostart":"true"/"autostart":"false"/
+||huffingtonpost.de$important,replace=/autoplay=true/autoplay=false/
+||video.golem.de$important,replace=/autoPl:\s"true"/autoPl:"false"/
 !#######################################################
 !######### Block useless widgets #######################
 !### Weather, money exchange, 3rd-party feedbacks, #####
