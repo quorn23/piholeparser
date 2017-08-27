@@ -25,8 +25,15 @@ YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
 
 CURRENTTIME=$(( date +%s )
 
+TIMEANCHORFILE="$SCRIPTVARSDIR"time-anchor-file.txt
+TIMEANCHORFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
+TIMEANCHORFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
+
 if
-[[ file_time < ( current_time - ( 60 * 60 * 24 ) ) ]]
+[[ $YOUNGFILEMODIFIEDTIME -gt $TIMEANCHORFILEMODIFIEDTIME ]]
 then
-echo "$filename is older than 100 days"
+echo "Parsing Method Changed"
+EXECUTEORDERSIXTYSIX=true
 fi
+
+touch $TIMEANCHORFILE
