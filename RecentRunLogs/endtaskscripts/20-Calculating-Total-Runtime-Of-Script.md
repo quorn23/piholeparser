@@ -1,1 +1,1 @@
-* Script Took 264 minutes To Filter 343 Lists.
+* Script Took 189 minutes To Filter 193 Lists.

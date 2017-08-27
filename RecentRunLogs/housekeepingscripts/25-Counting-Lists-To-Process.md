@@ -1,2 +1,2 @@
 Old Source List Purged.
-* 343 Lists Processed By The Script.
+* 193 Lists Processed By The Script.

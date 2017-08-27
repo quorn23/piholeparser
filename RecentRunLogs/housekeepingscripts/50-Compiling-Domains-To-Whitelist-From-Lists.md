@@ -1,1 +1,1 @@
-* Whitelist File removed Sat 26 Aug 16:50:21 EDT 2017
+* Whitelist File removed Sun 27 Aug 00:20:38 EDT 2017

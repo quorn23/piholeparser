@@ -10,3 +10,8 @@
 * EasyList
 * EasyPrivacy
 * SpamAssassinBillStearns
+* AdAway
+* AdguardDNS
+* EasyList
+* EasyPrivacy
+* SpamAssassinBillStearns

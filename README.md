@@ -27,10 +27,10 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Sat 26 Aug 16:49:59 EDT 2017
-* Script Ended At Sat 26 Aug 21:14:17 EDT 2017
-* Script Took 264 minutes To Filter 343 Lists.
-* 73
+* Script Started At Sun 27 Aug 00:20:14 EDT 2017
+* Script Ended At Sun 27 Aug 03:29:40 EDT 2017
+* Script Took 189 minutes To Filter 193 Lists.
+* 81
 * unknown
 * [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/README.md)
 * [Lists that do NOT uses https](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/listswithouthttps.txt)
