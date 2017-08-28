@@ -26,22 +26,25 @@ fi
 RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 BIGAPLHOWMANY=$(echo -e "`wc -l $BIGAPL | cut -d " " -f 1`")
+HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
 
 for source in `cat $VALIDDOMAINTLDBKUP`;
 do
-echo "Counting ."$source""
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BIGAPL | wc -l`")
 
+WHATLINENUMBER=$(echo "`grep -n $source $VALIDDOMAINTLDBKUP | cut -d : -f 1`")
+TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BIGAPL | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${BIGAPLHOWMANY}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
-echo "$TLDPERCENTAGEMATH Percent ."$source"" | tee --append $TEMPFILEN
+TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${BIGAPLHOWMANY}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+echo "$TLDPERCENTAGERESULT Percent ."$source"" | tee --append $TEMPFILEN &>/dev/null
 fi
 
-echo ""
+echo -ne "$TLDPERCENTAGEMATH \r"
 done
 
-echo "________________________________________________"" | tee --append $RECENTRUN
+echo "________________________________________________"" | tee --append $RECENTRUN &>/dev/null
 cat -s $TEMPFILEN | sort -n > $TEMPFILEM
 tac $TEMPFILEM >> $RECENTRUN
