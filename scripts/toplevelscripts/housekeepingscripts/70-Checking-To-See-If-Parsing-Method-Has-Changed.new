@@ -23,17 +23,37 @@ YOUNGESTPARSINGFILEB="$ACTUALPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
 YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
 YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
 
-CURRENTTIME=$(( date +%s )
-
-TIMEANCHORFILE="$SCRIPTVARSDIR"time-anchor-file.txt
-TIMEANCHORFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
-TIMEANCHORFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
-
 if
-[[ $YOUNGFILEMODIFIEDTIME -gt $TIMEANCHORFILEMODIFIEDTIME ]]
+[[ -f $TIMEANCHORFILE ]]
 then
-echo "Parsing Method Changed"
-EXECUTEORDERSIXTYSIX=true
+source $TIMEANCHORFILE
+else
+TIMEANCHORSTAMP=$YOUNGFILEMODIFIEDTIME
 fi
 
-touch $TIMEANCHORFILE
+if
+[[ $YOUNGFILEMODIFIEDTIME -gt $TIMEANCHORSTAMP ]]
+then
+printf "$green"   "Parsing Method Changed."
+EXECUTEORDERSIXTYSIX=true
+else
+printf "$yellow"   "Parsing Method Has Not Changed."
+fi
+
+## update timestamp on anchor file
+if
+[[ -f $TIMEANCHORFILE ]]
+then
+rm $TIMEANCHORFILE
+echo "## This is a time anchor file" | tee --append $TIMEANCHORFILE &>/dev/null
+echo "## This is the Timestamp that the parsing process last changed" | tee --append $TIMEANCHORFILE &>/dev/null
+echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE &>/dev/null
+fi
+
+#if
+#[[ -n EXECUTEORDERSIXTYSIX ]]
+#then
+#echo ""
+## rm all *.txt in parsed directory
+## revert killed lists
+#fi
