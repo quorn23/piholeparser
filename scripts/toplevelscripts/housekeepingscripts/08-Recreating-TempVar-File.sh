@@ -22,15 +22,22 @@ if
 then
 rm $TEMPVARS
 printf "$red"   "Purging Old TempVars File."
-echo "Old TempVars File Purged." | tee --append $RECENTRUN &>/dev/null
+echo "* Old TempVars File Purged." | tee --append $RECENTRUN &>/dev/null
+else
+echo "* Old TempVars File Not Present." | tee --append $RECENTRUN &>/dev/null
 fi
+echo "" | tee --append $RECENTRUN &>/dev/null
 
 CHECKME=$TEMPCLEANUPC
 if
 ls $CHECKME &> /dev/null;
 then
+echo "* Other Temp Vars Files Purged." | tee --append $RECENTRUN &>/dev/null
 rm $CHECKME
+else
+echo "* Other Temp Vars Files Purged." | tee --append $RECENTRUN &>/dev/null
 fi
+echo "" | tee --append $RECENTRUN &>/dev/null
 
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 
@@ -38,8 +45,9 @@ if
 [[ -f $TEMPVARS ]]
 then
 printf "$yellow"   "TempVars File Recreated."
-echo "TempVars File Recreated." | tee --append $RECENTRUN &>/dev/null
+echo "* TempVars File Recreated." | tee --append $RECENTRUN &>/dev/null
 else
 printf "$red"   "TempVars File Missing, Exiting."
+echo "* TempVars Files Missing, Script Exited." | tee --append $RECENTRUN &>/dev/null
 exit
 fi
