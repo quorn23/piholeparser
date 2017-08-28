@@ -21,6 +21,8 @@ RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 for f in $EVERYLISTFILEWILDCARD
 do
 
+RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
+
 ## Clear Temp Before
 if
 [[ -f $DELETETEMPFILE ]]
@@ -50,6 +52,8 @@ echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 BREPOLOG="$PARSINGSCRIPTSLOGDIR""$BASEFILENAME".md
 echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$PARSINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Create Log
 if
@@ -120,7 +124,5 @@ then
 rm $BORIGINALFILETEMP
 fi
 
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
-echo "" | sudo tee --append $RECENTRUN &>/dev/null
 ## End of File Loop
 done
