@@ -24,6 +24,8 @@ RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 for f in $DEPENDENCIESALL
 do
 
+timestamp=$(echo `date`)
+
 ## Declare File Name
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo ""
@@ -32,7 +34,6 @@ echo "### $BASEFILENAME $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Shouldn't be more than one source here
 source=`cat $f`
-timestamp=$(echo `date`)
 
 if
 which $BASEFILENAME >/dev/null;
