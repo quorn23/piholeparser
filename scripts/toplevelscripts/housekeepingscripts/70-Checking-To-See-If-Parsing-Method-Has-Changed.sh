@@ -45,13 +45,14 @@ if
 [[ -f $TIMEANCHORFILE ]]
 then
 rm $TIMEANCHORFILE
+fi
+
 echo "## This is a time anchor file" | tee --append $TIMEANCHORFILE &>/dev/null
 echo "## This is the Timestamp that the parsing process last changed" | tee --append $TIMEANCHORFILE &>/dev/null
 echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE &>/dev/null
-fi
 
 if
-[[ -n EXECUTEORDERSIXTYSIX ]]
+[[ EXECUTEORDERSIXTYSIX == true ]]
 then
 echo "Execute Order 66"
 fi
