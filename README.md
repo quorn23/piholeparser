@@ -1,4 +1,4 @@
-# NAMEOFTHEREPOSITORY
+# piholeparser
 
 ## Note
 
@@ -27,11 +27,11 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Mon 28 Aug 10:11:33 EDT 2017
-* Script Ended At Mon 28 Aug 11:00:01 EDT 2017
-* Script Took 48 Minutes To Filter 192 Lists.
-* The Edited AllParsed File is 81 MB And Contains 3703401 Domains.
-* Average Parsing Time Was unknown Minutes.
+* Script Started At Mon 28 Aug 12:59:20 EDT 2017
+* Script Ended At Mon 28 Aug 13:42:07 EDT 2017
+* Script Took 42 Minutes To Filter 192 Lists.
+* The Edited AllParsed File is 81 MB And Contains 3703468 Domains.
+* Average Parsing Time Was 1 Minutes.
 * RECENTRUNMAINLINK
 * LISTSWITHOUTHTTPSLINK
 
@@ -54,13 +54,13 @@ Simply copy the RAW format url for the list and add them.
 
 Just add
  
-    https://raw.githubusercontent.com/deathbybandaid/NAMEOFTHEREPOSITORY/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111.txt
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111.txt
 
 ###### I also have a list that is driven by the userbase.
 
 * To request a list to be whitelisted or blacklisted, please submit an issue containing WHY it should be added or removed.
 
-    https://raw.githubusercontent.com/deathbybandaid/NAMEOFTHEREPOSITORY/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111edited.txt
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111edited.txt
 
 _______________________________________________________________________________________________________________________
 
@@ -73,13 +73,13 @@ ________________________________________________________________________________
 
 ### IF YOU HAVE USED THIS SCRIPT BEFORE 8/24/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
 
-    sudo wget https://raw.githubusercontent.com/deathbybandaid/NAMEOFTHEREPOSITORY/master/NAMEOFTHEREPOSITORYinstall.sh
+    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/NAMEOFTHEREPOSITORYinstall.sh
 
-    sudo bash NAMEOFTHEREPOSITORYinstall.sh
+    sudo bash piholeparserinstall.sh
     
 #### Manual Run
 
-    sudo bash /etc/updaterunNAMEOFTHEREPOSITORY.sh
+    sudo bash /etc/updaterunpiholeparser.sh
 
 #### A local copy of the big list is available to be used.
 
@@ -95,7 +95,7 @@ This will allow me to query the individual parsed files for a specific domain.
 
 ## Log
 
-There is a [Log Available](https://github.com/deathbybandaid/NAMEOFTHEREPOSITORY/tree/master/RecentRunLogs/Main)
+There is a [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
 
 This should provide some insights as to what lists are dead, empty, or too large for github.
 
