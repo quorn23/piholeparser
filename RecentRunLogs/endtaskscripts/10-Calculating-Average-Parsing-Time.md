@@ -1,1 +1,1 @@
-* Average Parsing Time Was unknown Minutes.
+* Average Parsing Time Was 66.2 Seconds.
