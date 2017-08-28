@@ -51,13 +51,23 @@ echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE
 fi
 
 if
-[[ -n EXECUTEORDERSIXTYSIX && ls $PARSEDLISTSALL &> /dev/null ]]
+ls $PARSEDLISTSALL &> /dev/null;
+then
+KILLPARSEDFILES=true
+fi
+if
+[[ -n EXECUTEORDERSIXTYSIX && -n $KILLPARSEDFILES ]]
 then
 rm $PARSEDLISTSALL
 fi
 
 if
-[[ -n EXECUTEORDERSIXTYSIX && ls $KILLTHELISTALL &> /dev/null ]]
+ls $KILLTHELISTALL &> /dev/null;
+then
+REVERTKILLED=true
+fi
+if
+[[ -n EXECUTEORDERSIXTYSIX && -n $REVERTKILLED ]]
 then
 for f in $KILLTHELISTALL
 do
