@@ -17,9 +17,9 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
+## Find The most recently modified parsing.sh
 YOUNGESTPARSINGFILE=$(echo `ls -t $ACTUALPARSINGSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
 YOUNGESTPARSINGFILEB="$ACTUALPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
-
 YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
 YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
 
@@ -50,10 +50,19 @@ echo "## This is the Timestamp that the parsing process last changed" | tee --ap
 echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE &>/dev/null
 fi
 
-#if
-#[[ -n EXECUTEORDERSIXTYSIX ]]
-#then
-#echo ""
-## rm all *.txt in parsed directory
-## revert killed lists
-#fi
+if
+[[ -n EXECUTEORDERSIXTYSIX && ls $PARSEDLISTSALL &> /dev/null; ]]
+then
+rm $PARSEDLISTSALL
+fi
+
+if
+[[ -n EXECUTEORDERSIXTYSIX && ls $KILLTHELISTALL &> /dev/null; ]]
+then
+for f in $KILLTHELISTALL
+do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
+mv $f $BUNDEADPARSELIST
+done
+fi
