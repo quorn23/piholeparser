@@ -38,6 +38,12 @@ cp $MAINREADMEDEFAULT $MAINREADME
 fi
 
 if
+[[ -f $MAINREADME ]]
+then
+sed -i "s/NAMEOFTHEREPOSITORY/$REPONAME/" $MAINREADME
+fi
+
+if
 [[ -n $STARTTIME ]]
 then
 STARTTIMEMD="Script Started At $STARTTIME"
