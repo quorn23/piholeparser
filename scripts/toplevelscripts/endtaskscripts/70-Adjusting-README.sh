@@ -85,7 +85,7 @@ fi
 if
 [[ -n $AVERAGEPARSETIME ]]
 then
-AVERAGELISTPARSINGTIMEMD="Average Parsing Time Was $AVERAGEPARSETIME Minutes."
+AVERAGELISTPARSINGTIMEMD="Average Parsing Time Was $AVERAGEPARSETIME Seconds."
 else
 AVERAGELISTPARSINGTIMEMD="Error Setting Average Parse Time."
 fi
