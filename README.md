@@ -1,9 +1,5 @@
 # piholeparser
 
-## Note
-
-#### I plan on changing the subscribable list location at some point in the near future.
-
 This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
 
 Other aims of this project:
@@ -27,13 +23,13 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Mon 28 Aug 14:44:14 EDT 2017
-* Script Ended At Mon 28 Aug 15:29:09 EDT 2017
+* Script Started At Mon 28 Aug 15:53:08 EDT 2017
+* Script Ended At Mon 28 Aug 16:37:51 EDT 2017
 * Script Took 44 Minutes To Filter 192 Lists.
-* The Edited AllParsed File is 81 MB And Contains 3703809 Domains.
+* The Edited AllParsed File is 81 MB And Contains 3703868 Domains.
 * Average Parsing Time Was unknown Minutes.
-* [Log Of Recent Run](RECENTRUNMAINLINKB)
-* [Lists That Do NOT Use https](LISTSWITHOUTHTTPSLINKB)
+* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+* [Lists That Do NOT Use https](/etc/piholeparser/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
 
 ## Individual Lists
 
