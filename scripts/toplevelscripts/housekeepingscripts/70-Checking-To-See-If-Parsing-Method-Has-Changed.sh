@@ -54,30 +54,26 @@ echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE
 if
 [[ EXECUTEORDERSIXTYSIX == true ]]
 then
-echo "Execute Order 66"
+{ if
+ls $PARSEDLISTSALL &> /dev/null;
+then
+printf "$yellow"   "Resetting Parsed Lists For Reprocessing."
+rm $PARSEDLISTSALL
+fi }
 fi
 
-#if
-#[[ -n EXECUTEORDERSIXTYSIX ]]
-#then
-#{ if
-#ls $PARSEDLISTSALL &> /dev/null;
-#then
-#rm $PARSEDLISTSALL
-#fi }
-#fi
-
-#if
-#[[ -n EXECUTEORDERSIXTYSIX ]]
-#then
-#{ if
-#ls $KILLTHELISTALL &> /dev/null;
-#then
-#for f in $KILLTHELISTALL
-#do
-#BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-#BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
-#mv $f $BUNDEADPARSELIST
-#done
-#fi }
-#fi
+if
+[[ EXECUTEORDERSIXTYSIX == true ]]
+then
+{ if
+ls $KILLTHELISTALL &> /dev/null;
+then
+printf "$yellow"   "Resetting Killed Lists For Reprocessing."
+for f in $KILLTHELISTALL
+do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
+mv $f $BUNDEADPARSELIST
+done
+fi }
+fi
