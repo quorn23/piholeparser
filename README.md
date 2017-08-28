@@ -27,13 +27,13 @@ Other aims of this project:
 
 ### Last Run On
 
-* Script Started At Mon 28 Aug 12:59:20 EDT 2017
-* Script Ended At Mon 28 Aug 13:42:07 EDT 2017
-* Script Took 42 Minutes To Filter 192 Lists.
-* The Edited AllParsed File is 81 MB And Contains 3703468 Domains.
-* Average Parsing Time Was 1 Minutes.
-* RECENTRUNMAINLINK
-* LISTSWITHOUTHTTPSLINK
+* Script Started At Mon 28 Aug 14:44:14 EDT 2017
+* Script Ended At Mon 28 Aug 15:29:09 EDT 2017
+* Script Took 44 Minutes To Filter 192 Lists.
+* The Edited AllParsed File is 81 MB And Contains 3703809 Domains.
+* Average Parsing Time Was unknown Minutes.
+* [Log Of Recent Run](RECENTRUNMAINLINKB)
+* [Lists That Do NOT Use https](LISTSWITHOUTHTTPSLINKB)
 
 ## Individual Lists
 
