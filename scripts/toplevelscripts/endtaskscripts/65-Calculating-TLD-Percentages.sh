@@ -42,7 +42,7 @@ TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${BIGAPLHOWMA
 { if
 [[ "$TLDPERCENTAGERESULT" != 0 ]]
 then
-echo "$TLDPERCENTAGERESULT Percent ."$source"" | tee --append $TEMPFILEN &>/dev/null
+echo "* "$TLDPERCENTAGERESULT"% ."$source"" | tee --append $TEMPFILEN &>/dev/null
 fi }
 fi
 
