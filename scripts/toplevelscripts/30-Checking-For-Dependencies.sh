@@ -30,7 +30,7 @@ timestamp=$(echo `date`)
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo ""
 printf "$cyan"  "Checking For $BASEFILENAME"
-echo "### $BASEFILENAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "## $BASEFILENAME $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Shouldn't be more than one source here
 source=`cat $f`
