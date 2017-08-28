@@ -1,6 +1,9 @@
-Old https-less List Purged.
+# Identifying Lists Without https
+
+* Old https-less List Does Not Exist.
 
 ___________________________________________________________________
+### Lists That Do NOT use https.
 * AdblockListforFinland
 * AyucatPowerful
 * BadHosts

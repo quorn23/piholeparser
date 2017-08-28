@@ -1,4 +1,3 @@
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/actualparsing/90-Removing-Duplicate-Lines.log)
-
+List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/parsingscripts/RansomwareTrackerLockyRansomwareC2DomainBlocklist.md)
 
