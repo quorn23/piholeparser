@@ -22,6 +22,8 @@ RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 for f in $ALLHOUSEKEEPINGSCRIPTS
 do
 
+LOOPSTART=$(date +"%s")
+
 ## Loop Vars
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
@@ -37,10 +39,8 @@ printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 echo ""
 
 ## Log Subsection
-echo "### $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
-echo "" | tee --append $RECENTRUN
 
 ## Create Log
 if
@@ -48,7 +48,8 @@ if
 then
 rm $BREPOLOG
 fi
-touch $BREPOLOG
+echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG
+echo "" | tee --append $BREPOLOG
 
 ## Clear Temp Before
 if
@@ -72,6 +73,24 @@ else
 echo "Error Deleting Temp Files."
 exit
 fi
+
+LOOPEND=$(date +"%s")
+
+DIFFTIMELOOPSEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
+DIFFTIMELOOP=`expr $DIFFTIMESEC / 60`
+if
+[[ $DIFFTIMELOOPSEC -ge 60 && $DIFFTIME -gt 0 ]]
+then
+LOOPTIMEDIFF="$DIFFTIMELOOP Minutes."
+elif
+[[ $DIFFTIMELOOPSEC -lt 60 && $DIFFTIME -eq 0 ]]
+then
+LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
+fi
+
+echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUNA &>/dev/null
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "" | tee --append $RECENTRUN
 
 printf "$orange" "$DIVIDERBARB"
 echo ""
