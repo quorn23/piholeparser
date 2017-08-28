@@ -43,9 +43,21 @@ echo ""
 ## Declare File Name
 FILEBEINGPROCESSED=$f
 echo "FILEBEINGPROCESSED="$FILEBEINGPROCESSED"" | tee --append $TEMPPARSEVARS &>/dev/null
-echo "RECENTRUN="$RECENTRUN"" | tee --append $TEMPPARSEVARS &>/dev/null
+
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
+
+BREPOLOG="$PARSINGSCRIPTSLOGDIR""$BASEFILENAME".md
+echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
+TAGTHEREPOLOG="[Details If Any]("$PARSINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+
+## Create Log
+if
+[[ -f $BREPOLOG ]]
+then
+rm $BREPOLOG
+fi
+touch $BREPOLOG
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
@@ -56,16 +68,6 @@ do
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$PARSINGSCRIPTSLOGDIRRAW""$PBASEFILENAME".md)"
-BREPOLOG="$PARSINGSCRIPTSLOGDIR""$BASEFILENAME".md
-
-## Create Log
-if
-[[ -f $BREPOLOG ]]
-then
-rm $BREPOLOG
-fi
-touch $BREPOLOG
 
 if
 [[ -f $TEMPPARSEVARS ]]
