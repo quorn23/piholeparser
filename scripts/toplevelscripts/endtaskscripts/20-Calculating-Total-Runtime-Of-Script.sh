@@ -26,7 +26,7 @@ fi
 RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 timestamp=$(echo `date`)
-ENDTIME="$timestamp"
+ENDTIME=$(echo $timestamp)
 echo "ENDTIME='$timestamp'" | tee --append $TEMPVARS &>/dev/null
 
 ENDTIMESTAMP=$(date +"%s")
