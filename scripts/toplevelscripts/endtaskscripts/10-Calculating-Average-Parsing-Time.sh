@@ -20,8 +20,7 @@ RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 if
 [[ -f $PARSEAVERAGEFILE ]]
 then
-AVERAGEPARSETIMESEC=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE`)
-AVERAGEPARSETIME=`expr $AVERAGEPARSETIMESEC / 60`
+AVERAGEPARSETIME=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE`)
 fi
 
 if
@@ -30,11 +29,11 @@ then
 AVERAGEPARSETIME="unknown"
 fi
 
-printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME Minutes."
+printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME Seconds."
 
 echo "AVERAGEPARSETIME='"$AVERAGEPARSETIME"'" | tee --append $TEMPVARS &>/dev/null
 
-echo "* Average Parsing Time Was $AVERAGEPARSETIME Minutes." | tee --append $RECENTRUN &>/dev/null
+echo "* Average Parsing Time Was $AVERAGEPARSETIME Seconds." | tee --append $RECENTRUN &>/dev/null
 
 CHECKME=$PARSEAVERAGEFILE
 if
