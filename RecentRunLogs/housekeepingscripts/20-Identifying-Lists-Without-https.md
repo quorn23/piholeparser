@@ -1,7 +1,6 @@
 Old https-less List Purged.
 
 ___________________________________________________________________
-* SchuzaksUniversalFilter
 * AdblockListforFinland
 * AyucatPowerful
 * BadHosts
@@ -24,6 +23,7 @@ ___________________________________________________________________
 * MVPSHOSTS
 * PLgeneral
 * RUAdListOld
+* SchuzaksUniversalFilter
 * SecureMecca
 * SpamAssassinBillStearns
 * TheHostsFileProjectHosts
