@@ -27,13 +27,13 @@ Other aims of this project:
 
 ### Last Run On
 
-* $STARTTIMEMD
-* $ENDTIMEMD
-* $TOTALRUNTIMEMD
-* $EDITEDALLPARSEDMD
-* $AVERAGELISTPARSINGTIMEMD
-* $THEMAINLOGFILE
-* $LISTSWITHOUTHTTPSLOG
+* Script Started At Mon 28 Aug 10:11:33 EDT 2017
+* Script Ended At Mon 28 Aug 11:00:01 EDT 2017
+* Script Took 48 Minutes To Filter 192 Lists.
+* The Edited AllParsed File is 81 MB And Contains 3703401 Domains.
+* Average Parsing Time Was unknown Minutes.
+* RECENTRUNMAINLINK
+* LISTSWITHOUTHTTPSLINK
 
 ## Individual Lists
 
