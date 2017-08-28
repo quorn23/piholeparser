@@ -24,10 +24,13 @@ if
 then
 rm $NOHTTPSLISTS
 printf "$red"   "Old https-less List Removed"
-echo "Old https-less List Purged." | tee --append $RECENTRUN &>/dev/null
+echo "* Old https-less List Purged." | tee --append $RECENTRUN &>/dev/null
+else
+echo "* Old https-less List Does Not Exist." | tee --append $RECENTRUN &>/dev/null
+fi
+
 echo "" | tee --append $RECENTRUN &>/dev/null
 echo "___________________________________________________________________" | tee --append $RECENTRUN &>/dev/null
-fi
 
 ## Start File Loop
 ## For Every .lst File
@@ -42,7 +45,6 @@ do
 if
 [[ $source != https* ]]
 then
-echo "* $BASEFILENAME" | tee --append $RECENTRUN &>/dev/null
 echo "* $BASEFILENAME" | tee --append $NOHTTPSLISTS &>/dev/null
 fi
 
@@ -52,6 +54,8 @@ done
 ## End File Loop
 done
 
+echo "### Lists That Do NOT use https." | tee --append $RECENTRUN &>/dev/null
+
 if 
 [[ -f $NOHTTPSLISTS ]]
 then
@@ -60,7 +64,9 @@ HOWMANYLISTSWITHOUTHTTPS=$(echo -e "`wc -l $NOHTTPSLISTS | cut -d " " -f 1`")
 HOWMANYLISTSWITHOUTHTTPSB=$(expr $HOWMANYLISTSWITHOUTHTTPS - 1)
 echo ""
 printf "$red"    "$HOWMANYLISTSWITHOUTHTTPSB Lists Do NOT Use HTTPS. See Log For Details."
+cat $NOHTTPSLISTS >> $RECENTRUN
+rm $NOHTTPSLISTS
 else
 printf "$green"   "All Lists Use https."
-echo "All Lists Use https." | tee --append $NOHTTPSLISTS &>/dev/null
+echo "All Lists Use https." | tee --append $RECENTRUN &>/dev/null
 fi
