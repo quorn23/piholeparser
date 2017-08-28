@@ -46,6 +46,8 @@ echo ""
 for f in $ALLTOPLEVELSCRIPTS
 do
 
+LOOPSTART=$(date +"%s")
+
 ## Loop Vars
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
@@ -61,8 +63,6 @@ printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 
 ## Log Section
 echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUNA &>/dev/null
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUNA &>/dev/null
-echo "" | sudo tee --append $RECENTRUNA
 
 ## Create Log
 if
@@ -70,7 +70,8 @@ if
 then
 rm $BREPOLOG
 fi
-touch $BREPOLOG
+echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG
+echo "" | tee --append $BREPOLOG
 
 ## Clear Temp Before
 if
@@ -94,6 +95,24 @@ else
 echo "Error Deleting Temp Files."
 exit
 fi
+
+LOOPEND=$(date +"%s")
+
+DIFFTIMELOOPSEC=`expr $ENDTIMESTAMP - $STARTTIMESTAMP`
+DIFFTIMELOOP=`expr $DIFFTIMESEC / 60`
+if
+[[ $DIFFTIMELOOPSEC -ge 60 && $DIFFTIME -gt 0 ]]
+then
+LOOPTIMEDIFF="$DIFFTIMELOOP Minutes."
+elif
+[[ $DIFFTIMELOOPSEC -lt 60 && $DIFFTIME -eq 0 ]]
+then
+LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
+fi
+
+echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUNA &>/dev/null
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUNA &>/dev/null
+echo "" | sudo tee --append $RECENTRUNA
 
 printf "$magenta" "$DIVIDERBAR"
 echo ""
