@@ -71,7 +71,7 @@ then
 rm $BREPOLOG
 fi
 echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
-echo "" | tee --append $BREPOLOG
+echo "" | tee --append $BREPOLOG &>/dev/null
 
 ## Clear Temp Before
 if
