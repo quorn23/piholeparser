@@ -18,7 +18,7 @@ fi
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 timestamp=$(echo `date`)
-STARTTIME=$(echo $timestamp)
+STARTTIME=$(echo `date`)
 echo "STARTTIME='$timestamp'" | tee --append $TEMPVARS &>/dev/null
 
 STARTIMEVAR=$(echo $STARTIME)
