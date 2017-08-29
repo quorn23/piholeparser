@@ -52,7 +52,7 @@ HOWMANYSOURCELISTS=$(echo -e "`wc -l $BIGAPLSOURCE | cut -d " " -f 1`")
 else
 HOWMANYSOURCELISTS="unknown amount"
 fi
-HOWMANYSOURCE="$HOWMANYSOURCELISTS Lists Processed By The Script."
+HOWMANYSOURCE="$HOWMANYSOURCELISTS"
 
 ## Save to Tempvars
 echo "HOWMANYSOURCELISTS='"$HOWMANYSOURCELISTS"'" | tee --append $TEMPVARS &>/dev/null
