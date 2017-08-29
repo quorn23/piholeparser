@@ -29,8 +29,7 @@ HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 if
 [[ "$HOWMANYLINES" -gt 1 ]]
 then
-echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $RECENTRUN &>/dev/null
-echo "* $BASEFILENAME" | tee --append $MORETHANONESOURCE &>/dev/null
+echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $MORETHANONESOURCE &>/dev/null
 fi
 
 done
@@ -39,11 +38,17 @@ if
 [[ -f $MORETHANONESOURCE ]]
 then
 printf "$yellow"   "Multi-Source List Recreated."
+echo "* Multi-Source List Recreated" | tee --append $RECENTRUN &>/dev/null
 HOWMANYLISTSWITHMULTSOURCE=$(echo -e "`wc -l $MORETHANONESOURCE | cut -d " " -f 1`")
 HOWMANYLISTSWITHMULTSOURCEB=$(expr $HOWMANYLISTSWITHMULTSOURCE - 1)
 echo ""
 printf "$yellow"    "$HOWMANYLISTSWITHMULTSOURCEB Lists With More Than One Source. See Log For Details."
+echo "$HOWMANYLISTSWITHMULTSOURCEB Lists With More Than One Source." | tee --append $RECENTRUN &>/dev/null
+echo "_________________________________________" | tee --append $RECENTRUN &>/dev/null
+cat $MORETHANONESOURCE >> $RECENTRUN
+rm $MORETHANONESOURCE
 else
+echo "_________________________________________" | tee --append $RECENTRUN &>/dev/null
 printf "$green"   "All Lists Only Have One Source."
-echo "All Lists Only Have One Source." | tee --append $MORETHANONESOURCE &>/dev/null
+echo "All Lists Only Have One Source." | tee --append $RECENTRUN &>/dev/null
 fi
