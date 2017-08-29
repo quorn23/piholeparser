@@ -17,6 +17,9 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
+SCRIPTTEXT="Merging Individual TLD Lists."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 CHECKME=$ALLTLDMLISTSDIR
 if
 ls $CHECKME &> /dev/null;
@@ -25,7 +28,12 @@ cat $ALLTLDMLISTSDIR >> $VALIDDOMAINTLD
 else
 touch $VALIDDOMAINTLD
 fi
+HOWMANYLINES=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
+SCRIPTTEXT="Removing Old TEMP TLD If Present."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TLDCOMPARED ]]
 then
@@ -35,7 +43,9 @@ else
 echo "Old TLD Comparison Not Present." | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-printf "$cyan"    "Formatting TLD List."
+SCRIPTTEXT="Formatting TLD List."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $VALIDDOMAINTLD ]]
 then
@@ -44,8 +54,12 @@ rm $VALIDDOMAINTLD
 else
 touch $TEMPFILEF
 fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEF | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
-printf "$cyan"    "Removing Duplicatates From TLD List."
+SCRIPTTEXT="Removing Duplicatates From TLD List."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TEMPFILEF ]]
 then
@@ -54,8 +68,13 @@ rm $TEMPFILEF
 else
 touch $VALIDDOMAINTLD
 fi
+HOWMANYLINES=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+
+echo "____________________________________" | sudo tee --append $RECENTRUN &>/dev/null
 
 HOWMANYTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "HOWMANYTLDTOTAL='"$HOWMANYTLD"'" | tee --append $TEMPVARS &>/dev/null
+
 printf "$yellow"    "$HOWMANYTLD Valid TLD's Total."
 echo "$HOWMANYTLD Valid TLD's Total." | sudo tee --append $RECENTRUN &>/dev/null
