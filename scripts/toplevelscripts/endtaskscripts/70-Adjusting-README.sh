@@ -46,7 +46,7 @@ then
 sed -i "s/NAMEOFTHEREPOSITORY/$REPONAME/g" $MAINREADME
 fi
 
-Start Time
+## Start Time
 if
 [[ -n $STARTTIME ]]
 then
