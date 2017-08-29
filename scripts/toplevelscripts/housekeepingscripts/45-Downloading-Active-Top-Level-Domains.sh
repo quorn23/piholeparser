@@ -55,9 +55,10 @@ if
 then
 rm $BREPOLOG
 fi
-touch $BREPOLOG
+echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
+echo "## Processing $BASEFILENAME List." | sudo tee --append $BREPOLOG &>/dev/null
 echo "" 
 
 for p in $ALLTLDSCRIPTS
@@ -67,11 +68,20 @@ PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
 PBASEFILENAMEDASHNUM=$(echo $PBASEFILENAME | sed 's/[0-9\-]/ /g')
 PBNAMEPRETTYSCRIPTTEXT=$(echo $PBASEFILENAMEDASHNUM)
 
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+fi
+
+#if
+#[[ -z $FULLSKIPPARSING && -f $FILEBEINGPROCESSED ]]
+#then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
-
+echo "## $PBNAMEPRETTYSCRIPTTEXT" | sudo tee --append $BREPOLOG &>/dev/null
 bash $p
-
 echo ""
+#fi
 
 ## End of parsing Loop
 done
