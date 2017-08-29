@@ -17,6 +17,9 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
+SCRIPTTEXT="Checking For Old TempVars File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TEMPVARS ]]
 then
@@ -27,7 +30,11 @@ else
 echo "* Old TempVars File Not Present." | tee --append $RECENTRUN &>/dev/null
 fi
 echo "" | tee --append $RECENTRUN &>/dev/null
+echo ""
 
+SCRIPTTEXT="Checking For Other Temp Vars Files."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 CHECKME=$TEMPCLEANUPC
 if
 ls $CHECKME &> /dev/null;
@@ -38,9 +45,13 @@ else
 echo "* Other Temp Vars Files Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 echo "" | tee --append $RECENTRUN &>/dev/null
+echo ""
 
 echo "## Vars that we don't keep" | tee --append $TEMPVARS &>/dev/null
 
+SCRIPTTEXT="Checking For TempVars File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TEMPVARS ]]
 then
