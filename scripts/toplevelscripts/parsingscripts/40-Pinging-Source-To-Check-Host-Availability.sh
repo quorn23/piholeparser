@@ -45,12 +45,13 @@ echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/nul
 fi
 
 if
-[[ -z $PINGTESTFAILED ]]
+[[ -n $PINGTESTFAILED ]]
 then
 { if
 [[ `wget -S --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
 printf "$green"  "Header Check Successful."
+unset PINGTESTFAILED
 else
 printf "$red"  "Header Check Unsuccessful."
 PINGTESTFAILED=true
