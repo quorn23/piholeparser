@@ -53,22 +53,26 @@ if
 then
 printf "$yellow"   "Parsing Method Has Not Changed."
 echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/null
-else
+NOPARSINGCHANGE="true"
+elif
+[[ $DIFFTIMEANCHOR -le 0 ]]
+then
 printf "$green"   "Parsing Method Has Changed."
 echo "Parsing Method Has Changed." | sudo tee --append $RECENTRUN &>/dev/null
 EXECUTEORDERSIXTYSIX="true"
 fi
 
 if
-[[ -n $EXECUTEORDERSIXTYSIX ]]
+[[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
+echo ""
 SCRIPTTEXT="Resetting For a Re-Parse."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 if
-[[ -n $EXECUTEORDERSIXTYSIX ]]
+[[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
 { if
 ls $PARSEDLISTSALL &> /dev/null;
@@ -80,7 +84,7 @@ fi }
 fi
 
 if
-[[ -n $EXECUTEORDERSIXTYSIX ]]
+[[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
 { if
 ls $KILLTHELISTALL &> /dev/null;
@@ -96,14 +100,24 @@ done
 fi }
 fi
 
+if
+[[ -z $NOPARSINGCHANGE ]]
+then
 SCRIPTTEXT="Updating Time Anchor File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
 if
-[[ -f $TIMEANCHORFILE ]]
+[[ -z $NOPARSINGCHANGE && -f $TIMEANCHORFILE ]]
 then
 rm $TIMEANCHORFILE
 fi
+
+if
+[[ -z $NOPARSINGCHANGE && ! -f $TIMEANCHORFILE ]]
+then
 echo "## This is a time anchor file" | tee --append $TIMEANCHORFILE &>/dev/null
 echo "## This is the Timestamp that the parsing process last changed" | tee --append $TIMEANCHORFILE &>/dev/null
 echo "TIMEANCHORSTAMP="$YOUNGFILEMODIFIEDTIME"" | tee --append $TIMEANCHORFILE &>/dev/null
+fi
