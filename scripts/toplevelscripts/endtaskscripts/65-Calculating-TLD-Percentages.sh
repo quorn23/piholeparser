@@ -42,7 +42,11 @@ TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${BIGAPLHOWMA
 { if
 [[ "$TLDPERCENTAGERESULT" != 0 ]]
 then
-echo "* "$TLDPERCENTAGERESULT"% ."$source"" | tee --append $TEMPFILEN &>/dev/null
+echo "$TLDPERCENTAGERESULT % ."$source"" | tee --append $TEMPFILEN &>/dev/null
+elif
+[[ "$TLDPERCENTAGERESULT" == 0 ]]
+then
+echo "0.5 % ."$source"" | tee --append $TEMPFILEN &>/dev/null
 fi }
 fi
 
@@ -51,5 +55,27 @@ echo -ne "$TLDPERCENTAGEMATH \r"
 done
 
 echo "________________________________________________" | tee --append $RECENTRUN &>/dev/null
+if
+[[ -f $TEMPFILEN ]]
+then
 cat -s $TEMPFILEN | sort -n > $TEMPFILEM
-tac $TEMPFILEM >> $RECENTRUN
+else
+touch $TEMPFILEM
+fi
+
+if
+[[ -f $TEMPFILEM ]]
+then
+tac $TEMPFILEM >> $TEMPFILEP
+else
+touch $TEMPFILEP
+fi
+
+if
+[[ -f $TEMPFILEP ]]
+then
+for source in `cat $TEMPFILEP`;
+do
+echo "* $source" | tee --append $RECENTRUN &>/dev/null
+done
+fi
