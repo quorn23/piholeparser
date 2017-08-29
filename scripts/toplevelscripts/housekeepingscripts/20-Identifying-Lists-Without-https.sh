@@ -42,6 +42,9 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 ## For Every .lst File
+if
+ls $EVERYLISTFILEWILDCARD &> /dev/null;
+then
 for f in $EVERYLISTFILEWILDCARD
 do
 
@@ -62,6 +65,7 @@ done
 
 ## End File Loop
 done
+fi
 echo ""
 
 SCRIPTTEXT="Checking List."
@@ -109,6 +113,9 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 ## For Every .lst File
+if
+ls $VALIDDOMAINTLDLINKS &> /dev/null;
+then
 for f in $VALIDDOMAINTLDLINKS
 do
 
@@ -129,6 +136,7 @@ done
 
 ## End File Loop
 done
+fi
 echo ""
 
 SCRIPTTEXT="Checking List."
