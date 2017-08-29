@@ -17,30 +17,48 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
-## Find The most recently modified parsing.sh
+SCRIPTTEXT="Finding The most recently modified Parsing Script File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 YOUNGESTPARSINGFILE=$(echo `ls -t $ACTUALPARSINGSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
 YOUNGESTPARSINGFILEB="$ACTUALPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
 YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
 YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
+printf "$yellow"    "The Most Recently Updated Parsing Script is $YOUNGESTPARSINGFILE"
+echo "* The Most Recently Updated Parsing Script is $YOUNGESTPARSINGFILE" | sudo tee --append $RECENTRUN &>/dev/null
 
+SCRIPTTEXT="Checking For Time Anchor File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TIMEANCHORFILE ]]
 then
+echo "Time Anchor File Present." | sudo tee --append $RECENTRUN &>/dev/null
 source $TIMEANCHORFILE
+printf "$yellow"  "Time Anchor is set to $TIMEANCHORSTAMP"
 else
+echo "Time Anchor Not Present. Using $YOUNGESTPARSINGFILE Modified Time." | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "Time Anchor Not Present. Using $YOUNGESTPARSINGFILE Modified Time."
 TIMEANCHORSTAMP=$YOUNGFILEMODIFIEDTIME
 fi
 
+SCRIPTTEXT="Comparing Time."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ $YOUNGFILEMODIFIEDTIME -gt $TIMEANCHORSTAMP ]]
 then
 printf "$green"   "Parsing Method Changed."
+echo "Parsing Method Changed." | sudo tee --append $RECENTRUN &>/dev/null
 EXECUTEORDERSIXTYSIX=true
 else
 printf "$yellow"   "Parsing Method Has Not Changed."
+echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
-## update timestamp on anchor file
+SCRIPTTEXT="Updating Time Anchor File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TIMEANCHORFILE ]]
 then
@@ -54,9 +72,18 @@ echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE
 if
 [[ EXECUTEORDERSIXTYSIX == true ]]
 then
+SCRIPTTEXT="Resetting For a Re-Parse."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+fi
+
+if
+[[ EXECUTEORDERSIXTYSIX == true ]]
+then
 { if
 ls $PARSEDLISTSALL &> /dev/null;
 then
+echo "* Resetting Parsed Lists For Reprocessing" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "Resetting Parsed Lists For Reprocessing."
 rm $PARSEDLISTSALL
 fi }
@@ -68,6 +95,7 @@ then
 { if
 ls $KILLTHELISTALL &> /dev/null;
 then
+echo "* Resetting Killed Lists For Reprocessing" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "Resetting Killed Lists For Reprocessing."
 for f in $KILLTHELISTALL
 do
