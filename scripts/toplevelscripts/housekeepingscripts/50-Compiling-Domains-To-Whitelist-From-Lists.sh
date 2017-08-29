@@ -94,7 +94,6 @@ mv $TEMPFILEH $LISTWHITELISTDOMAINS
 else
 touch $LISTWHITELISTDOMAINS
 fi
-
 HOWMANYLINES=$(echo -e "`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
