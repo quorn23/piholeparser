@@ -1,4 +1,7 @@
 # Counting Lists To Process
 
+### Checking For Big Source List File.
 * Old Multisource List Purged.
-* 192 Lists Processed By The Script. Lists To Be Processed.
+### Merging Sources.
+187 After Merging Sources.
+* 187 Lists To Be Processed.

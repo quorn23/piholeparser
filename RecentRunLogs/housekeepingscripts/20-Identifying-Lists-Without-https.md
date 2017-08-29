@@ -1,10 +1,10 @@
 # Identifying Lists Without https
 
+### Checking For Old https-Less File.
 * Old https-less List Does Not Exist.
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* SchuzaksUniversalFilter
 * AdblockListforFinland
 * AyucatPowerful
 * BadHosts
@@ -31,3 +31,9 @@ ___________________________________________________________________
 * SpamAssassinBillStearns
 * TheHostsFileProjectHosts
 * TofuFilter
+### Checking For Old https-Less File.
+* Old https-less List Does Not Exist.
+
+___________________________________________________________________
+### TLD Lists That Do NOT use https.
+* InternetAssignedNumbersAuthority

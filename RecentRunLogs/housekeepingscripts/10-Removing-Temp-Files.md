@@ -1,3 +1,4 @@
 # Removing Temp Files
 
-* No Temp Files To Purge.
+### Checking For Old Temp Files.
+* Old Temp Files Purged.

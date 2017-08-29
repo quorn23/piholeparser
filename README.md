@@ -1,8 +1,19 @@
 # piholeparser
 
-This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
+### Last Run Stats
 
-Other aims of this project:
+* Script Started Tue 29 Aug 14:21:13 EDT 2017
+* Script Ended Tue 29 Aug 15:06:14 EDT 2017
+* [](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+* TOTALELAPSEDTIME
+* The Edited AllParsed File is 73 MB And Contains 3231136 Domains.
+* Average Parsing Time Was 73.8571 Seconds.
+* 1720 Valid Top Level Domains. No New TLD's.
+* [26 Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
+
+### This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
+
+#### Other aims of this project:
 
 * Lists update daily if there are any changes.
 * Build a user-driven blacklist.
@@ -10,27 +21,11 @@ Other aims of this project:
 * Mirror and Filter, any user-submitted blacklist.
 * Handle ANY list, even if it is compressed.
 
-## Because people ask often:
+#### Because people ask often:
 
 * I run this alongside several other things on a Raspberry Pi 3.
 * This is THE ONLY list I use, with nothing whitelisted.
 * Because of this, If there is something blocked that shouldn't be, my wife and I would know.
-
-### Contribute
-
-* If you think you know the best and most efficient way to parse the lists, please submit a pull request.
-* Help me create the best blocklists by submitting issues.
-
-### Last Run On
-
-* Script Started At Tue 29 Aug 00:20:15 EDT 2017
-* Script Ended At Tue 29 Aug 03:31:34 EDT 2017
-* Script Took 191 Minutes To Filter 192 Lists.
-* The Edited AllParsed File is 73 MB And Contains 3230022 Domains.
-* Average Parsing Time Was 67.3577 Seconds.
-* 1706 Valid Top Level Domains. No New TLD's.
-* [Log Of Recent Run](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
-* [Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
 
 ## Individual Lists
 
@@ -38,7 +33,7 @@ Other aims of this project:
 * You will find them Within the "Subscribable-Lists" directory.
 * There are now Country Specific Lists!
 
-#### Adding Them to [Pi-hole(tm)](https://pi-hole.net/)
+## Adding Them to [Pi-hole(tm)](https://pi-hole.net/)
 
 Simply copy the RAW format url for the list and add them.
 
@@ -51,13 +46,13 @@ Simply copy the RAW format url for the list and add them.
 
 Just add
  
-    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111.txt
+    BIGAPLRAWLINK
 
 ###### I also have a list that is driven by the userbase.
 
 * To request a list to be whitelisted or blacklisted, please submit an issue containing WHY it should be added or removed.
 
-    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111edited.txt
+    BIGAPLERAWLINK
 
 _______________________________________________________________________________________________________________________
 
@@ -66,11 +61,18 @@ ________________________________________________________________________________
 * I'm already parsing all of the lists daily and uploading them to the parsed directory in this repository.
 * If you prefer to use this project yourself locally, Keep Reading.
 
+````
+Caution: The Script Has Evolved to the point that it runs other analytical tasks that add time to the process.
+
+You have been warned.
+````
+
 _______________________________________________________________________________________________________________________
 
 ### IF YOU HAVE USED THIS SCRIPT BEFORE 8/24/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
 
-    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/NAMEOFTHEREPOSITORYinstall.sh
+    
+    sudo wget INSTALLERLINKRAW
 
     sudo bash piholeparserinstall.sh
     
@@ -92,7 +94,7 @@ This will allow me to query the individual parsed files for a specific domain.
 
 ## Log
 
-There is a [Log Available](https://github.com/deathbybandaid/piholeparser/tree/master/RecentRunLogs/Main)
+There is a [Log Available](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
 
 This should provide some insights as to what lists are dead, empty, or too large for github.
 
