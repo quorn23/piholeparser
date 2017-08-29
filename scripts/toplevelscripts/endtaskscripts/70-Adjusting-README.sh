@@ -187,3 +187,16 @@ if
 then
 sed -i "s/BIGAPLERAWLINK/$BIGAPLEMD/" $MAINREADME
 fi
+
+if
+[[ -n $INSTALLERFILERAW ]]
+then
+INSTALLERMD="$INSTALLERFILERAW"
+else
+INSTALLERMD="Error Setting Installer Link."
+fi
+if
+[[ -f $MAINREADME ]]
+then
+sed -i "s/INSTALLERLINKRAW/$INSTALLERMD/" $MAINREADME
+fi
