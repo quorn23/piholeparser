@@ -77,6 +77,7 @@ echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/nul
 NOPARSINGCHANGE="true"
 elif
 [[ $DIFFTIMEANCHOR != 0 ]]
+then
 printf "$green"   "Parsing Method Has Changed."
 echo "Parsing Method Has Changed." | sudo tee --append $RECENTRUN &>/dev/null
 EXECUTEORDERSIXTYSIX="true"
