@@ -4,7 +4,7 @@
 
 * Script Started Tue 29 Aug 17:06:13 EDT 2017
 * Script Ended Tue 29 Aug 17:38:06 EDT 2017
-* [](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+* [Script Took $TOTALRUNTIME Minutes To Filter $HOWMANYSOURCELISTS Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
 * The Edited AllParsed File is 73 MB And Contains 3231653 Domains.
 * Average Parsing Time Was 80.25 Seconds.
 * 1720 Valid Top Level Domains. No New TLD's.
