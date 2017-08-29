@@ -45,7 +45,12 @@ LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
 [[ $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
 then
 SKIPDOWNLOAD=true
+elif
+[[ $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
+then
+:
 else
+printf "$red"    "File Header Check Failed."
 TRYFILESIZETEST=true
 fi }
 fi
@@ -53,12 +58,19 @@ fi
 if 
 [[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD && -n $TRYFILESIZETEST ]]
 then
+printf "$cyan"    "Attempting To Test File Size."
 SOURCEFILESIZE=$(curl -s $source | wc -c)
 LOCALFILESIZE=$(stat -c%s "$MIRROREDFILE")
 { if
 [[ $SOURCEFILESIZE == $LOCALFILESIZE ]]
 then
 SKIPDOWNLOAD=true
+elif
+[[ $SOURCEFILESIZE != $LOCALFILESIZE ]]
+then
+:
+else
+printf "$red"    "File Size Check Failed."
 fi }
 fi
 
