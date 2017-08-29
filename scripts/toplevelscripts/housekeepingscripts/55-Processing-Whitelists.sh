@@ -39,7 +39,7 @@ mv $WWHITETEMP $f
 echo ""
 done
 
-SCRIPTTEXT="Deduplicating List."
+SCRIPTTEXT="Deduplicating Merged  List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
