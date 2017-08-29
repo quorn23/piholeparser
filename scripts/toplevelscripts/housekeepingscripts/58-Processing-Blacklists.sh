@@ -30,7 +30,7 @@ printf "$cyan"  "Processing $BASEFILENAME"
 source $DYNOVARS
 timestamp=$(echo `date`)
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $BBLACKTEMP
-HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1`")
+HOWMANYLINES=$(echo -e "`wc -l $BBLACKTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 rm $f
@@ -57,7 +57,7 @@ then
 cat -s $TEMPFILEJ | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BLACKLISTTEMP
 rm $TEMPFILEJ
 else
-touch $WHITELISTTEMP
+touch $BLACKLISTTEMP
 fi
 
 HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1`")
