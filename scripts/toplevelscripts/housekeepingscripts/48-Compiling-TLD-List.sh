@@ -30,6 +30,7 @@ touch $VALIDDOMAINTLD
 fi
 HOWMANYLINES=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Removing Old TEMP TLD If Present."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -56,6 +57,7 @@ touch $TEMPFILEF
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEF | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Removing Duplicatates From TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
