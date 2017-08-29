@@ -30,6 +30,7 @@ printf "$cyan"  "Processing $BASEFILENAME"
 source $DYNOVARS
 timestamp=$(echo `date`)
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BBLACKTEMP
+cat $BBLACKTEMP >> $BLACKLISTTEMP
 HOWMANYLINES=$(echo -e "`wc -l $BBLACKTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
@@ -38,28 +39,15 @@ mv $BBLACKTEMP $f
 echo ""
 done
 
-SCRIPTTEXT="Merging the Individual Blacklists for Later."
+SCRIPTTEXT="Deduplicating Merged List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $BLACKLISTDOMAINSALL ]]
+[[ -f $BLACKLISTTEMP ]]
 then
-cat -s $BLACKLISTDOMAINSALL >> $TEMPFILEJ
-else
-touch $TEMPFILEJ
-fi
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEJ | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-
-SCRIPTTEXT="Deduplicating List."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-if
-[[ -f $TEMPFILEJ ]]
-then
-cat -s $TEMPFILEJ | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BLACKLISTTEMP
-rm $TEMPFILEJ
+cat -s $BLACKLISTTEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILER
+rm $BLACKLISTTEMP
+mv $TEMPFILER $BLACKLISTTEMP
 else
 touch $BLACKLISTTEMP
 fi
