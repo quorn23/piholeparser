@@ -40,25 +40,22 @@ elif
 [[ -z $SOURCEIP ]]
 then
 printf "$red"    "Ping Test Failed."
-PINGTESTFAILEDA=true
-echo "PINGTESTFAILEDA="$PINGTESTFAILEDA"" | tee --append $TEMPPARSEVARS &>/dev/null
+PINGTESTFAILED=true
+echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 if
+[[ -z $PINGTESTFAILED ]]
+then
+{ if
 [[ `wget -S --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
 printf "$green"  "Header Check Successful."
 else
 printf "$red"  "Header Check Unsuccessful."
-PINGTESTFAILEDB=true
-echo "PINGTESTFAILEDB="$PINGTESTFAILEDB"" | tee --append $TEMPPARSEVARS &>/dev/null
-fi
-
-if
-[[ -n $PINGTESTFAILEDA && -n $PINGTESTFAILEDB ]]
-then
 PINGTESTFAILED=true
 echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
+fi }
 fi
 
 if
