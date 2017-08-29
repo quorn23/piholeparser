@@ -138,6 +138,7 @@ then
 LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
+RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | sudo tee --append $RECENTRUN &>/dev/null
