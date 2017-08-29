@@ -48,35 +48,13 @@ SCRIPTTEXT="Comparing Time."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -n $YOUNGFILEMODIFIEDTIME && -n $TIMEANCHORSTAMP ]]
-then
-{ if
 [[ $YOUNGFILEMODIFIEDTIME == $TIMEANCHORSTAMP ]]
-then
-DIFFTIMEANCHOR=0
-else
-DIFFTIMEANCHOR=$(echo `expr $YOUNGFILEMODIFIEDTIME - $TIMEANCHORSTAMP`)
-fi }
-else
-DIFFTIMEANCHOR=0
-fi
-
-if
-[[ -z $DIFFTIMEANCHOR ]]
-then
-DIFFTIMEANCHOR=0
-fi
-
-echo "$DIFFTIMEANCHOR"
-
-if
-[[ $DIFFTIMEANCHOR == 0 ]]
 then
 printf "$yellow"   "Parsing Method Has Not Changed."
 echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/null
 NOPARSINGCHANGE="true"
 elif
-[[ $DIFFTIMEANCHOR != 0 ]]
+[[ $YOUNGFILEMODIFIEDTIME != $TIMEANCHORSTAMP ]]
 then
 printf "$green"   "Parsing Method Has Changed."
 echo "Parsing Method Has Changed." | sudo tee --append $RECENTRUN &>/dev/null
@@ -136,7 +114,7 @@ rm $TIMEANCHORFILE
 fi
 
 if
-[[ -z $NOPARSINGCHANGE && ! -f $TIMEANCHORFILE ]]
+[[ ! -f $TIMEANCHORFILE ]]
 then
 echo "## This is a time anchor file" | tee --append $TIMEANCHORFILE &>/dev/null
 echo "## This is the Timestamp that the parsing process last changed" | tee --append $TIMEANCHORFILE &>/dev/null
