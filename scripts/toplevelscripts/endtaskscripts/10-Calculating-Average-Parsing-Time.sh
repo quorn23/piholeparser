@@ -21,6 +21,7 @@ if
 [[ -f $PARSEAVERAGEFILE ]]
 then
 AVERAGEPARSETIME=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILE`)
+AVERAGEPARSENUM=$(echo -e "`wc -l $PARSEAVERAGEFILE | cut -d " " -f 1`")
 fi
 
 if
@@ -28,16 +29,20 @@ if
 then
 AVERAGEPARSETIME="unknown"
 fi
-
-printf "$yellow"   "Average Parsing Time Was $AVERAGEPARSETIME Seconds."
-
 echo "AVERAGEPARSETIME='"$AVERAGEPARSETIME"'" | tee --append $TEMPVARS &>/dev/null
 
-echo "* Average Parsing Time Was $AVERAGEPARSETIME Seconds." | tee --append $RECENTRUN &>/dev/null
-
-CHECKME=$PARSEAVERAGEFILE
 if
-ls $CHECKME &> /dev/null;
+[[ -z $AVERAGEPARSENUM ]]
 then
-rm $CHECKME
+AVERAGEPARSENUM="unknown"
+fi
+echo "AVERAGEPARSENUM='"$AVERAGEPARSENUM"'" | tee --append $TEMPVARS &>/dev/null
+printf "$yellow"   "Average Parsing Time Of $AVERAGEPARSENUM Lists Was $AVERAGEPARSETIME Seconds."
+
+echo "* Average Parsing Time Of $AVERAGEPARSENUM Lists Was $AVERAGEPARSETIME Seconds." | tee --append $RECENTRUN &>/dev/null
+
+if
+ls $PARSEAVERAGEFILE &> /dev/null;
+then
+rm $PARSEAVERAGEFILE
 fi
