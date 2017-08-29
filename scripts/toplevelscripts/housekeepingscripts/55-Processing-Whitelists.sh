@@ -33,6 +33,7 @@ echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 rm $f
 mv $WWHITETEMP $f
+rm $WWHITETEMP
 done
 
 SCRIPTTEXT="Merging the Individual Whitelists for Later."
