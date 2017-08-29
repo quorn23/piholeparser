@@ -47,9 +47,3 @@ elif
 then
 rm $BTEMPFILE
 fi
-
-if
-[[ -f $CURRENTTLDLIST ]]
-then
-cat $CURRENTTLDLIST >> $VALIDDOMAINTLD
-fi
