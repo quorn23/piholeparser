@@ -45,7 +45,7 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 
-BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".log
+BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".md
 echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$TLDSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
 
