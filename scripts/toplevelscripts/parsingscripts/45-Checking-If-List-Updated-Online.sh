@@ -54,8 +54,9 @@ printf "$yellow"    "Source Date Is Newer."
 else
 printf "$red"    "File Header Check Failed."
 fi }
+else
+printf "$red"    "File Header Check Failed."
 fi
-echo ""
 
 if 
 [[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD ]]
@@ -75,8 +76,9 @@ printf "$yellow"    "File Size Is Different."
 else
 printf "$red"    "File Size Check Failed."
 fi }
+else
+printf "$red"    "File Size Check Failed."
 fi
-echo ""
 
 if
 [[ -n $GOAHEADANDTEST && -n $SKIPDOWNLOAD ]]
