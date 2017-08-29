@@ -31,6 +31,7 @@ echo "* Old https-less List Purged." | tee --append $RECENTRUN &>/dev/null
 else
 echo "* Old https-less List Does Not Exist." | tee --append $RECENTRUN &>/dev/null
 fi
+echo ""
 
 echo "" | tee --append $RECENTRUN &>/dev/null
 echo "___________________________________________________________________" | tee --append $RECENTRUN &>/dev/null
@@ -61,6 +62,7 @@ done
 
 ## End File Loop
 done
+echo ""
 
 SCRIPTTEXT="Checking List."
 printf "$cyan"    "$SCRIPTTEXT"
