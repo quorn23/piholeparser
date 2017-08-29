@@ -61,13 +61,16 @@ then
 DIFFTIMEANCHOR=0
 fi
 
+echo "$DIFFTIMEANCHOR"
+
 if
-[[ $DIFFTIMEANCHOR -gt 0 ]]
+[[ $DIFFTIMEANCHOR == 0 ]]
 then
 printf "$yellow"   "Parsing Method Has Not Changed."
 echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/null
 NOPARSINGCHANGE="true"
-else
+elif
+[[ $DIFFTIMEANCHOR != 0 ]]
 printf "$green"   "Parsing Method Has Changed."
 echo "Parsing Method Has Changed." | sudo tee --append $RECENTRUN &>/dev/null
 EXECUTEORDERSIXTYSIX="true"
