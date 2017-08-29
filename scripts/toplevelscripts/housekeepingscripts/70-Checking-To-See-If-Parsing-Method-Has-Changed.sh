@@ -25,6 +25,7 @@ YOUNGESTPARSINGFILEB="$ACTUALPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
 YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
 YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
 printf "$yellow"    "The Most Recently Updated Parsing Script is $YOUNGESTPARSINGFILE"
+printf "$yellow"  "Young File timestamp is set to $YOUNGFILEMODIFIEDTIME"
 echo "* The Most Recently Updated Parsing Script is $YOUNGESTPARSINGFILE" | sudo tee --append $RECENTRUN &>/dev/null
 
 SCRIPTTEXT="Checking For Time Anchor File."
@@ -35,42 +36,31 @@ if
 then
 echo "Time Anchor File Present." | sudo tee --append $RECENTRUN &>/dev/null
 source $TIMEANCHORFILE
-printf "$yellow"  "Time Anchor is set to $TIMEANCHORSTAMP"
 else
 echo "Time Anchor Not Present. Using $YOUNGESTPARSINGFILE Modified Time." | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "Time Anchor Not Present. Using $YOUNGESTPARSINGFILE Modified Time."
 TIMEANCHORSTAMP=$YOUNGFILEMODIFIEDTIME
 fi
 
+printf "$yellow"  "Time Anchor is set to $TIMEANCHORSTAMP"
+
 SCRIPTTEXT="Comparing Time."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+DIFFTIMEANCHOR=`expr $YOUNGFILEMODIFIEDTIME - $TIMEANCHORSTAMP`
 if
-[[ $YOUNGFILEMODIFIEDTIME -gt $TIMEANCHORSTAMP ]]
+[[ $DIFFTIMEANCHOR -gt 0 ]]
 then
-printf "$green"   "Parsing Method Changed."
-echo "Parsing Method Changed." | sudo tee --append $RECENTRUN &>/dev/null
-EXECUTEORDERSIXTYSIX=true
-else
 printf "$yellow"   "Parsing Method Has Not Changed."
 echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/null
+else
+printf "$green"   "Parsing Method Has Changed."
+echo "Parsing Method Has Changed." | sudo tee --append $RECENTRUN &>/dev/null
+EXECUTEORDERSIXTYSIX="true"
 fi
 
-SCRIPTTEXT="Updating Time Anchor File."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $TIMEANCHORFILE ]]
-then
-rm $TIMEANCHORFILE
-fi
-
-echo "## This is a time anchor file" | tee --append $TIMEANCHORFILE &>/dev/null
-echo "## This is the Timestamp that the parsing process last changed" | tee --append $TIMEANCHORFILE &>/dev/null
-echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE &>/dev/null
-
-if
-[[ EXECUTEORDERSIXTYSIX == true ]]
+[[ -n $EXECUTEORDERSIXTYSIX ]]
 then
 SCRIPTTEXT="Resetting For a Re-Parse."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -78,7 +68,7 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 fi
 
 if
-[[ EXECUTEORDERSIXTYSIX == true ]]
+[[ -n $EXECUTEORDERSIXTYSIX ]]
 then
 { if
 ls $PARSEDLISTSALL &> /dev/null;
@@ -90,7 +80,7 @@ fi }
 fi
 
 if
-[[ EXECUTEORDERSIXTYSIX == true ]]
+[[ -n $EXECUTEORDERSIXTYSIX ]]
 then
 { if
 ls $KILLTHELISTALL &> /dev/null;
@@ -105,3 +95,15 @@ mv $f $BUNDEADPARSELIST
 done
 fi }
 fi
+
+SCRIPTTEXT="Updating Time Anchor File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+if
+[[ -f $TIMEANCHORFILE ]]
+then
+rm $TIMEANCHORFILE
+fi
+echo "## This is a time anchor file" | tee --append $TIMEANCHORFILE &>/dev/null
+echo "## This is the Timestamp that the parsing process last changed" | tee --append $TIMEANCHORFILE &>/dev/null
+echo "TIMEANCHORSTAMP='"$YOUNGFILEMODIFIEDTIME"'" | tee --append $TIMEANCHORFILE &>/dev/null
