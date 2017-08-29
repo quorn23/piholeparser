@@ -58,7 +58,7 @@ fi
 echo ""
 
 if 
-[[ -n $GOAHEADANDTEST ]]
+[[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD ]]
 then
 printf "$cyan"    "Attempting To Test File Size."
 SOURCEFILESIZE=$(curl -s $source | wc -c)
