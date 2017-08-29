@@ -20,6 +20,8 @@ RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 for f in $VALIDDOMAINTLDLINKS
 do
 
+RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+
 ## Clear Temp Before
 if
 [[ -f $DELETETEMPFILE ]]
@@ -33,17 +35,19 @@ fi
 printf "$lightblue"    "$DIVIDERBAR"
 echo ""
 
+LOOPSTART=$(date +"%s")
+
 ## Declare File Name
 FILEBEINGPROCESSED=$f
 echo "FILEBEINGPROCESSED="$FILEBEINGPROCESSED"" | tee --append $TEMPPARSEVARS &>/dev/null
+
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$TLDSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
-BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".log
-echo "RECENTRUN="$RECENTRUN"" | tee --append $TEMPPARSEVARS &>/dev/null
+echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 
-printf "$green"    "Processing $BASEFILENAME List."
-echo "" 
+BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".log
+echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
+TAGTHEREPOLOG="[Details If Any]("$TLDSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
 
 ## Create Log
 if
@@ -52,6 +56,9 @@ then
 rm $BREPOLOG
 fi
 touch $BREPOLOG
+
+printf "$green"    "Processing $BASEFILENAME List."
+echo "" 
 
 for p in $ALLTLDSCRIPTS
 do
@@ -79,6 +86,20 @@ echo "Error Deleting Temp Files."
 exit
 fi
 
+LOOPEND=$(date +"%s")
+DIFFTIMELOOPSEC=`expr $LOOPEND - $LOOPSTART`
+if
+[[ $DIFFTIMELOOPSEC -ge 60 ]]
+then
+DIFFTIMELOOPMIN=`expr $DIFFTIMELOOPSEC / 60`
+LOOPTIMEDIFF="$DIFFTIMELOOPMIN Minutes."
+elif
+[[ $DIFFTIMELOOPSEC -lt 60 ]]
+then
+LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
+fi
+
+echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$orange" "$DIVIDERBARB"
