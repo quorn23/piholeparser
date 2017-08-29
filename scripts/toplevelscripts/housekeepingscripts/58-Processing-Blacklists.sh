@@ -35,7 +35,6 @@ echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 rm $f
 mv $BBLACKTEMP $f
-rm $BBLACKTEMP
 echo ""
 done
 
