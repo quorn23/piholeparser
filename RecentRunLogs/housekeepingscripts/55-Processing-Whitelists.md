@@ -40,7 +40,7 @@
 #### reddit
 1 In reddit
 #### Script
-49 In Script
+48 In Script
 #### Skype
 11 In Skype
 #### sonarr
@@ -62,4 +62,4 @@
 #### youtube
 3 In youtube
 ### Deduplicating Merged  List.
-177 After Deduplicating Merged  List.
+176 After Deduplicating Merged  List.
