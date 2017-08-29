@@ -17,6 +17,9 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
+SCRIPTTEXT="Checking For Old Temp Files."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 CHECKME=$TEMPCLEANUPB
 if
 ls $CHECKME &> /dev/null;
