@@ -45,6 +45,7 @@ LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
 { if
 [[ $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
 then
+printf "$yellow"    "Date Is Different."
 SKIPDOWNLOAD=true
 elif
 [[ $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
@@ -65,6 +66,7 @@ LOCALFILESIZE=$(stat -c%s "$MIRROREDFILE")
 { if
 [[ $SOURCEFILESIZE == $LOCALFILESIZE ]]
 then
+printf "$yellow"    "Size Is The Same."
 SKIPDOWNLOAD=true
 elif
 [[ $SOURCEFILESIZE != $LOCALFILESIZE ]]
@@ -74,6 +76,7 @@ else
 printf "$red"    "File Size Check Failed."
 fi }
 fi
+echo ""
 
 if
 [[ -n $GOAHEADANDTEST && -n $SKIPDOWNLOAD ]]
