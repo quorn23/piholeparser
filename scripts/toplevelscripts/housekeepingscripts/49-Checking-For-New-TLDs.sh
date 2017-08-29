@@ -43,7 +43,10 @@ printf "$yellow"    "$HOWMANYTLDNEW New TLD's."
 echo "* $HOWMANYTLDNEW New TLD's" | tee --append $RECENTRUN &>/dev/null
 else
 printf "$yellow"    "No New TLD's"
+HOWMANYTLDNEW="No"
+echo "* No New TLD's" | tee --append $RECENTRUN &>/dev/null
 fi
+echo "HOWMANYTLDNEW='"$HOWMANYTLDNEW"'" | tee --append $TEMPVARS &>/dev/null
 
 ## Backup TLD list if not there
 if
@@ -51,4 +54,8 @@ if
 then
 rm $VALIDDOMAINTLDBKUP
 fi
+if
+[[ -f $VALIDDOMAINTLD ]]
+then
 cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+fi
