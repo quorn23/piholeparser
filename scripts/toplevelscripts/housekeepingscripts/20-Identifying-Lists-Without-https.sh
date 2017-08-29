@@ -19,6 +19,9 @@ RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 RECENTRUNWITHOUTHTTPSMD="$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$SCRIPTBASEFILENAME".md
 echo "RECENTRUNWITHOUTHTTPSMD='"$RECENTRUNWITHOUTHTTPSMD"'" | tee --append $TEMPVARS &>/dev/null
 
+SCRIPTTEXT="Checking For Old https-Less File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if 
 [[ -f $NOHTTPSLISTS ]]
 then
@@ -31,6 +34,10 @@ fi
 
 echo "" | tee --append $RECENTRUN &>/dev/null
 echo "___________________________________________________________________" | tee --append $RECENTRUN &>/dev/null
+
+SCRIPTTEXT="Lists That Do NOT use https."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Start File Loop
 ## For Every .lst File
@@ -45,6 +52,7 @@ do
 if
 [[ $source != https* ]]
 then
+printf "$red"    "$BASEFILENAME"
 echo "* $BASEFILENAME" | tee --append $NOHTTPSLISTS &>/dev/null
 fi
 
@@ -54,16 +62,14 @@ done
 ## End File Loop
 done
 
-echo "### Lists That Do NOT use https." | tee --append $RECENTRUN &>/dev/null
-
+SCRIPTTEXT="Checking List."
+printf "$cyan"    "$SCRIPTTEXT"
 if 
 [[ -f $NOHTTPSLISTS ]]
 then
 printf "$yellow"   "https-less List Recreated."
 HOWMANYLISTSWITHOUTHTTPS=$(echo -e "`wc -l $NOHTTPSLISTS | cut -d " " -f 1`")
-HOWMANYLISTSWITHOUTHTTPSB=$(expr $HOWMANYLISTSWITHOUTHTTPS - 1)
-echo ""
-printf "$red"    "$HOWMANYLISTSWITHOUTHTTPSB Lists Do NOT Use HTTPS. See Log For Details."
+printf "$red"    "$HOWMANYLISTSWITHOUTHTTPS Lists Do NOT Use HTTPS. See Log For Details."
 cat $NOHTTPSLISTS >> $RECENTRUN
 rm $NOHTTPSLISTS
 else
