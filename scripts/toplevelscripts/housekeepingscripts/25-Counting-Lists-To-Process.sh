@@ -27,6 +27,7 @@ rm $BIGAPLSOURCE
 printf "$red"    "Purging Old Source List."
 echo "* Old Multisource List Purged." | tee --append $RECENTRUN &>/dev/null
 fi
+echo ""
 
 SCRIPTTEXT="Merging Sources."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -41,6 +42,7 @@ touch $BIGAPLSOURCE
 fi
 HOWMANYLINES=$(echo -e "`wc -l $BIGAPLSOURCE | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
 
 ## Math Time
 if
