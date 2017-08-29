@@ -45,7 +45,12 @@ if
 [[ -f $BLACKLISTDOMAINSALL ]]
 then
 cat -s $BLACKLISTDOMAINSALL >> $TEMPFILEJ
+else
+touch $TEMPFILEJ
 fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEJ | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Deduplicating List."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -58,7 +63,6 @@ rm $TEMPFILEJ
 else
 touch $BLACKLISTTEMP
 fi
-
 HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
