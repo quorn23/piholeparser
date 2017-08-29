@@ -59,6 +59,7 @@ done
 HOWMANYLINES=$(echo -e "`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
+echo ""
 
 SCRIPTTEXT="Pulling Domains From TLD Lists."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -72,20 +73,24 @@ SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
 if
 [[ -n $SOURCEDOMAIN ]]
 then
-echo "$SOURCEDOMAIN" | tee --append $TEMPFILEN &>/dev/null
+echo "$SOURCEDOMAIN" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
 fi
 
 done
+HOWMANYLINES=$(echo -e "`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 echo ""
 
 SCRIPTTEXT="Deduping List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $TEMPFILEN ]]
+[[ -f $LISTWHITELISTDOMAINS ]]
 then
-cat -s $TEMPFILEN | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $LISTWHITELISTDOMAINS
-rm $TEMPFILEN
+cat -s $LISTWHITELISTDOMAINS | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEH
+rm $LISTWHITELISTDOMAINS
+mv $TEMPFILEH $LISTWHITELISTDOMAINS
 else
 touch $LISTWHITELISTDOMAINS
 fi
