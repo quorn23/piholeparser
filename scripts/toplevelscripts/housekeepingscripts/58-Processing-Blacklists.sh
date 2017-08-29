@@ -29,7 +29,7 @@ echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$cyan"  "Processing $BASEFILENAME"
 source $DYNOVARS
 timestamp=$(echo `date`)
-cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $BBLACKTEMP
+cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BBLACKTEMP
 HOWMANYLINES=$(echo -e "`wc -l $BBLACKTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
@@ -44,7 +44,7 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $BLACKLISTDOMAINSALL ]]
 then
-cat -s $BLACKLISTDOMAINSALL >> $TEMPFILEJ
+cat -s $BLACKLISTDOMAINSALL > $TEMPFILEJ
 fi
 
 SCRIPTTEXT="Deduplicating List."
