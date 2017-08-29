@@ -21,9 +21,9 @@ RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 ## Quick File Check
 timestamp=$(echo `date`)
 
-printf "$yellow"  "Checking For Whitelist File"
-echo ""
-
+SCRIPTTEXT="Checking For Whitelist File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $LISTWHITELISTDOMAINS ]]
 then
@@ -38,8 +38,11 @@ echo ""
 touch $LISTWHITELISTDOMAINS
 echo "* Whitelist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
+echo ""
 
-## Create The List
+SCRIPTTEXT="Pulling Domains From Lists."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 for f in $EVERYLISTFILEWILDCARD
 do
 
@@ -53,3 +56,24 @@ echo "$SOURCEDOMAIN" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
 fi
 
 done
+HOWMANYLINES=$(echo -e "`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+
+SCRIPTTEXT="Pulling Domains From TLD Lists."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+for f in $VALIDDOMAINTLDLINKS
+do
+
+source=`cat $f`
+
+SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
+if
+[[ -n $SOURCEDOMAIN ]]
+then
+echo "$SOURCEDOMAIN" | tee --append $LISTWHITELISTDOMAINS &>/dev/null
+fi
+
+done
+HOWMANYLINES=$(echo -e "`wc -l $LISTWHITELISTDOMAINS | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
