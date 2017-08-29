@@ -54,8 +54,6 @@ printf "$yellow"    "Source Date Is Newer."
 else
 printf "$red"    "File Header Check Failed."
 fi }
-else
-printf "$red"    "File Header Check Failed."
 fi
 
 if 
@@ -76,8 +74,6 @@ printf "$yellow"    "File Size Is Different."
 else
 printf "$red"    "File Size Check Failed."
 fi }
-else
-printf "$red"    "File Size Check Failed."
 fi
 
 if
