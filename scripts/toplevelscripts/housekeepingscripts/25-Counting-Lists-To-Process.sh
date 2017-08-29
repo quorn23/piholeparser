@@ -17,6 +17,9 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
+SCRIPTTEXT="Checking For Big Source List File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $BIGAPLSOURCE ]]
 then
@@ -25,8 +28,9 @@ printf "$red"    "Purging Old Source List."
 echo "* Old Multisource List Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 
-## Collect all the sources into one file
-printf "$cyan"    "Merging Sources."
+SCRIPTTEXT="Merging Sources."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 CHECKME=$EVERYLISTFILEWILDCARD
 if
 ls $CHECKME &> /dev/null;
@@ -35,6 +39,8 @@ cat $EVERYLISTFILEWILDCARD | sort | sed '/^$/d' >> $BIGAPLSOURCE
 else
 touch $BIGAPLSOURCE
 fi
+HOWMANYLINES=$(echo -e "`wc -l $BIGAPLSOURCE | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## Math Time
 if
