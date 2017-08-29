@@ -54,9 +54,7 @@ then
 printf "$yellow"   "Parsing Method Has Not Changed."
 echo "Parsing Method Has Not Changed." | sudo tee --append $RECENTRUN &>/dev/null
 NOPARSINGCHANGE="true"
-elif
-[[ $DIFFTIMEANCHOR -le 0 ]]
-then
+else
 printf "$green"   "Parsing Method Has Changed."
 echo "Parsing Method Has Changed." | sudo tee --append $RECENTRUN &>/dev/null
 EXECUTEORDERSIXTYSIX="true"
