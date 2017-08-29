@@ -1,6 +1,6 @@
 # Recreating TempVar File
 
-* Old TempVars File Purged.
+* Old TempVars File Not Present.
 
 * Other Temp Vars Files Purged.
 

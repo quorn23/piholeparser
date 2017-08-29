@@ -3,7 +3,7 @@
 ! Title: Simplified domain names filter
 ! Homepage: https://github.com/AdguardTeam/AdguardDNS
 ! License: https://github.com/AdguardTeam/AdguardDNS/blob/master/LICENSE
-! Last modified: 2017-08-26 12:32:49
+! Last modified: 2017-08-27 13:57:49
 ! Decsription: Filter composed from several other filters (English filter, Social media filter, Spyware filter, Mobile ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.
 !
 ! Adservice
@@ -10833,6 +10833,7 @@ ws*://video.docfilms.info^
 !
 ! Section contains list of advertising networks
 !
+||adclickxpress.com^
 ||jsc.mgid.com^
 ||pussl10.com^
 ||y5wflt0xibmoufuvsayg1efy80yq0ystkjncf76cqm.com^
@@ -15173,6 +15174,10 @@ koutube.com##.iframe_ads
 !
 ! Section contains the list of tracking servers, which are hosted on useful sites as subdomains
 !
+||stats.media.onet.pl^
+||clk.onet.pl^
+||csr.onet.pl^
+||kropka.onet.pl^
 ||telemetry.jivosite.com^
 ||c1hit.tut.by^
 ||awsync.yandex.ru^
@@ -15461,6 +15466,7 @@ charlestownwyllie.oaklawnnonantum.com^
 !
 ! Section contains rules for mobile analytics and spyware
 !
+||track.adform.net^
 ||analytics.ff.avast.com^
 ||api.miui.security.xiaomi.com^
 ||metok.sys.miui.com^
@@ -15710,6 +15716,8 @@ charlestownwyllie.oaklawnnonantum.com^
 !--------------------
 !
 ! Adguard DNS exceptions
+! https://github.com/AdguardTeam/AdguardFilters/issues/6486
+@@||track.rutarget.ru^
 ! https://github.com/AdguardTeam/AdguardDNS/issues/151
 ! Fixing searching ads on Google Search
 @@||pagead.l.doubleclick.net^

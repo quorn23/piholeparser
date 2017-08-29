@@ -1,3 +1,3 @@
 # Compiling Domains To Whitelist From Lists
 
-* Whitelist File removed Mon 28 Aug 20:21:14 EDT 2017
+* Whitelist File removed Tue 29 Aug 00:20:32 EDT 2017

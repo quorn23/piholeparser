@@ -17,6 +17,8 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||wwxxww.ru^
+||onepixshare.ru^$third-party
 ||easy.mmoney.services^$third-party
 ||mwcvu.com^$third-party
 ||duck.wings-dark.services^$third-party
@@ -4037,6 +4039,7 @@ http://v.*.com/x?$third-party
 !
 ! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
 !
+||js.krutor.org.pl^
 ||ad.tam.by^$domain=~ad.tam.by
 ||export.voffka.com^
 ||vozer.voffka.com^
@@ -6072,6 +6075,10 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !-----------------------
 !------- CSS -----------
 !-----------------------
+! https://forum.adguard.com/index.php?threads/21622/
+katushka.org#$#img[style="display: inline !important;"]  { position: absolute!important; left: -3000px!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/6498
+pikabu.ru#$#div[id^="branding_ad_"] { position: absolute!important; left: -3000px!important; }
 ! https://forum.adguard.com/index.php?threads/24484/
 soccer365.ru#$#body > div[class*="no-mobile"] > div[onclick] { position: absolute!important; left: -3000px!important; }
 soccer365.ru#$#div[style^="width:980px;height:90px;"] { position: absolute!important; left: -3000px!important; }
@@ -8509,6 +8516,7 @@ tizblock.ru/news.js
 .info/init.js?$third-party
 .ru/code.php?id=
 /js/code.php?id=
+/din_new6.php?code=*&bid=*&linkdest=
 !-------------------------------------------------------------------------------!
 !------------------ News exchange ----------------------------------------------!
 !-------------------------------------------------------------------------------!
@@ -8758,6 +8766,36 @@ rustorka.com##.post_body > div[align="center"] > a > img
 /(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+xuk.net##a[href^="http://chat.xuk.net/?ban"]
+/static/lib/*.js$domain=moonwalk.cc,third-party
+ixbt.com##iframe[src^="//rose.ixbt.com/"]
+ixbt.com##.classadv
+ixbt.com##._js.floatedBlock
+||ixbt.com/*branded_*.css
+tvfru.org###article > center > span
+katushka.org##.tizer
+wotpack.ru##center > a[rel="nofollow"] > img
+w-mod.ru##a[href^="http://shrtr.ru/"] img
+||w-mod.ru/wp-content/uploads/2017/08/456.jpg
+4cheat.ru##a[href^="https://ad.admitad.com/"]
+4cheat.ru##a[href^="https://4cheat.ru/rbs_banner.php"]
+gmt-max.net##.full_news_content > center > a > img
+torrent-am.com##a[href^="https://goo.gl/"] > img
+||muztor.net/22.gif
+x-lime.net##div[class^="promo-"]
+://*.x-lime.net^
+x-lime.net###scrol-promo
+n-torrents.ru##.download_button_mediaget
+rg-mechanics.org##.short > center > noindex
+rg-mechanics.org###game-ads-container
+||allbesta.cc/uploads/am-$image
+games--torrent.ru##center > a[href^="https://goo.gl/"] > img
+torrent10.ru##a.speed
+torrent-games-2016.ru##a[href="http://torrent-games-2016.ru/playkey.html"]
+saydiabetu.net##.vex
+saydiabetu.net##.tizerintext
+saydiabetu.net##div[id^="teaser_group"]
+sport.mail.ru##.pm-toolbar__banner
 ||czx.to/images/flama/
 ||czx.to/moonlight/init.js
 torrent-besplatno.net##.pagebg > div.dclass
@@ -10363,7 +10401,7 @@ yadi.sk##.ns-view-boxContentDirect
 /partners/*$third-party,domain=bestgamer.ru
 /pics/bn/*$domain=tavto.ru
 /preroll.js$domain=goha.ru
-/protjs/*$domain=ip.ru|tsutsumov.info|мой-торрент.рф|kvn.ipb.su|online-torg.club|videofun.cf|torrents-club.org|imgcach.ru|free-tor.com|1sexxx.com|kinorun.online|kinozal.website|imgbase.ru|lookszone.ru|kubik3.ru|adult-torrent.com|appspot.com|armourbook.com|cristals.ga|dsvload.net|estasos.ru|foto-click.net|freeimg.ru|game-rust.ru|henchan.me|img-picas.ru|img24.org|imgchilibum.ru|imgclick.ru|imgic.ru|imgpics.ru|imgspic.ru|joyreactor.cc|kinoshek.net|loftlm.ru|mapakids.net|mega-pics-money.ru|megapost.org|monkeypx.ru|moskva-tv.com|mskd-ru.net|myru.tv|nod32-key2016.ru|nolamers.net|nude-moon.com|pawno-info.ru|payforpic.ru|photopixs.ru|pic4share.ru|piccash.net|picclick.ru|piccloud.ru|picfrees.ru|pics2share.ru|picstraff.ru|picusha.net|pix-x.net|playlist24.ru|pornolab.eu|pornopda.net|pornreactor.cc|pslan.com|publicagent.ru|reactor.cc|ruspicbox.ru|socola.ru|soft-portal.club|svetmonet.ru|torrent-telik.com|torrentx.net|unionpeer.org|upsskirt.ru|upssss.ru|uralsoft.net|uzhgorod.name|yellosoft-club.ru
+/protjs/*$domain=krutor.org.pl|ip.ru|tsutsumov.info|мой-торрент.рф|kvn.ipb.su|online-torg.club|videofun.cf|torrents-club.org|imgcach.ru|free-tor.com|1sexxx.com|kinorun.online|kinozal.website|imgbase.ru|lookszone.ru|kubik3.ru|adult-torrent.com|appspot.com|armourbook.com|cristals.ga|dsvload.net|estasos.ru|foto-click.net|freeimg.ru|game-rust.ru|henchan.me|img-picas.ru|img24.org|imgchilibum.ru|imgclick.ru|imgic.ru|imgpics.ru|imgspic.ru|joyreactor.cc|kinoshek.net|loftlm.ru|mapakids.net|mega-pics-money.ru|megapost.org|monkeypx.ru|moskva-tv.com|mskd-ru.net|myru.tv|nod32-key2016.ru|nolamers.net|nude-moon.com|pawno-info.ru|payforpic.ru|photopixs.ru|pic4share.ru|piccash.net|picclick.ru|piccloud.ru|picfrees.ru|pics2share.ru|picstraff.ru|picusha.net|pix-x.net|playlist24.ru|pornolab.eu|pornopda.net|pornreactor.cc|pslan.com|publicagent.ru|reactor.cc|ruspicbox.ru|socola.ru|soft-portal.club|svetmonet.ru|torrent-telik.com|torrentx.net|unionpeer.org|upsskirt.ru|upssss.ru|uralsoft.net|uzhgorod.name|yellosoft-club.ru
 /rose.ixbt.
 /show.php?id=$domain=baskino.club|bobfilm1.net|fastpic.ru|kino-dom.org|kino-live2.org|kino777.ru|kinobanda.net|kinogo.co|kinogo2.net|kinokong.net|libtor.net|mrutor.org|smotri-filmi.net|tfilm.me
 /show.php?id=$third-party,domain=hd720.biz|kinogo-2016.net|kinogorod.net|kinokrad.net|nice-film.ru
@@ -14189,7 +14227,7 @@ zpppstop.ru##div[id^="zpppstop-stgroup-wrap"]
 zserials.tv##noindex a[rel="nofollow"] > img
 zvukoff.ru##.adv-list-top
 |http*://$image,third-party,domain=image2you.ru
-|http*://$script,third-party,domain=rus.porn|fast2picture.ru|fastpic.ru|homeporn.tv|images-pic.ru|img-picas.ru|img-pika.ru|imgpics.ru|mega-pics-money.ru|monkeypx.ru|pic-money.ru|pic-you.com|pic4art.ru|picfrees.ru|picpower.ru|pics-money.ru|pikas-img.ru|platimzafoto.ru|yyouut.ru
+|http*://$script,third-party,domain=imgbun.ru|rus.porn|fast2picture.ru|fastpic.ru|homeporn.tv|images-pic.ru|img-picas.ru|img-pika.ru|imgpics.ru|mega-pics-money.ru|monkeypx.ru|pic-money.ru|pic-you.com|pic4art.ru|picfrees.ru|picpower.ru|pics-money.ru|pikas-img.ru|platimzafoto.ru|yyouut.ru
 |http*://*.fast2img.ru^
 |http*://*.fasti2mages.ru^
 |http*://*.rusdozor.ru^

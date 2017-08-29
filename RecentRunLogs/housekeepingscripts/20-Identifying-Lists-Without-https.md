@@ -4,6 +4,7 @@
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
+* SchuzaksUniversalFilter
 * AdblockListforFinland
 * AyucatPowerful
 * BadHosts
@@ -26,7 +27,6 @@ ___________________________________________________________________
 * MVPSHOSTS
 * PLgeneral
 * RUAdListOld
-* SchuzaksUniversalFilter
 * SecureMecca
 * SpamAssassinBillStearns
 * TheHostsFileProjectHosts

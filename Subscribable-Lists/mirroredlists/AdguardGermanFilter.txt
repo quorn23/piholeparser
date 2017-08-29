@@ -368,6 +368,9 @@ teleboy.ch#@#.adWrapper
 !
 ! Extended CSS rules
 !
+! https://forum.adguard.com/index.php?threads/wuerzburgerleben-de.24438/
+wuerzburgerleben.de##.newsfeed > li[-ext-has='a:contains(Anzeige)']
+wuerzburgerleben.de##.post-related > ul > li[-ext-has='a:contains(Anzeige)']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6307
 heidelberg24.de##.id-SiteMain > .id-g--oneCol:first-child[-ext-has='> div:first-child > div:first-child > div[data-id-advertdfpconf]']
 ! https://forum.adguard.com/index.php?threads/kreiszeitung-de.24399/
@@ -685,6 +688,13 @@ chip.de$$article[tag-content="Anzeige |"]
 ! http://forum.adguard.com/showthread.php?8979 (#17)
 ||static.p7s1.com/vendor/webtrekk
 !
+anpfiff.info##.content-col-r > div[style="min-height:250px;"]
+anpfiff.info##.content-col-r > div[style="min-height:250px;"] ~ hr.linie-seperator
+anpfiff.info##.content-col-r > div > div[style="min-height:250px;"]
+anpfiff.info##.content-col-r > div > div[style="min-height:250px;"] ~ hr.linie-seperator
+anpfiff.info##div[id^="divAdv"]
+anpfiff.info###DIVnaMediaAd_SUPERBANNER
+piste.de##.banner
 mtvema.com##.linelist-item-ad
 ||1load.sx/popup.js.php
 1load.sx###widget_LinkTrade
