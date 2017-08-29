@@ -21,6 +21,7 @@ RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 SCRIPTTEXT="Sorting and Deduping Individual Whitelists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
 for f in $WHITELISTDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
@@ -28,13 +29,14 @@ echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$cyan"  "Processing $BASEFILENAME"
 source $DYNOVARS
 timestamp=$(echo `date`)
-cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
+cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $WWHITETEMP
 HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 rm $f
 mv $WWHITETEMP $f
 rm $WWHITETEMP
+echo ""
 done
 
 SCRIPTTEXT="Merging the Individual Whitelists for Later."
@@ -46,7 +48,7 @@ then
 cat -s $WHITELISTDOMAINSALL >> $TEMPFILEJ
 fi
 
-SCRIPTTEXT="Merging the  Whitelists for Later."
+SCRIPTTEXT="Merging the Lists Domain Whitelists for Later."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
