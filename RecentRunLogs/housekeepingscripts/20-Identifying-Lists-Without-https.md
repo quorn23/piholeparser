@@ -11,7 +11,6 @@ ___________________________________________________________________
 * CAMELEONHosts
 * DanPollocksHosts
 * DNSBHFreeWebHosts
-* DNSBHMalwareDomainsImmortal
 * DNSBHMalwareDomains
 * DNSBHSkypeResolvers
 * DNSBHURLShorteners

@@ -2,14 +2,13 @@
 
 ### Last Run Stats
 
-* Script Started Tue 29 Aug 14:21:13 EDT 2017
-* Script Ended Tue 29 Aug 15:06:14 EDT 2017
+* Script Started Tue 29 Aug 17:06:13 EDT 2017
+* Script Ended Tue 29 Aug 17:38:06 EDT 2017
 * [](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
-* TOTALELAPSEDTIME
-* The Edited AllParsed File is 73 MB And Contains 3231136 Domains.
-* Average Parsing Time Was 73.8571 Seconds.
+* The Edited AllParsed File is 73 MB And Contains 3231653 Domains.
+* Average Parsing Time Was 80.25 Seconds.
 * 1720 Valid Top Level Domains. No New TLD's.
-* [26 Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
+* [25 Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
 
 ### This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
 
@@ -46,13 +45,13 @@ Simply copy the RAW format url for the list and add them.
 
 Just add
  
-    BIGAPLRAWLINK
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111.txt
 
 ###### I also have a list that is driven by the userbase.
 
 * To request a list to be whitelisted or blacklisted, please submit an issue containing WHY it should be added or removed.
 
-    BIGAPLERAWLINK
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111edited.txt
 
 _______________________________________________________________________________________________________________________
 
@@ -72,7 +71,7 @@ ________________________________________________________________________________
 ### IF YOU HAVE USED THIS SCRIPT BEFORE 8/24/2017, YOU WILL NEED TO RUN/RERUN THIS (updated) INSTALLER
 
     
-    sudo wget INSTALLERLINKRAW
+    sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/piholeparserinstall.sh
 
     sudo bash piholeparserinstall.sh
     
