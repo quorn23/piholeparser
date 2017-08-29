@@ -53,7 +53,7 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $LISTWHITELISTDOMAINS ]]
 then
-cat -s $LISTWHITELISTDOMAINS > $TEMPFILEJ
+cat -s $LISTWHITELISTDOMAINS >> $TEMPFILEJ
 fi
 
 SCRIPTTEXT="Deduplicating List."
