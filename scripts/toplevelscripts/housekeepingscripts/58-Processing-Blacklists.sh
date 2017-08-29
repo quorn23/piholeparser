@@ -44,7 +44,7 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $BLACKLISTDOMAINSALL ]]
 then
-cat -s $BLACKLISTDOMAINSALL > $TEMPFILEJ
+cat -s $BLACKLISTDOMAINSALL >> $TEMPFILEJ
 fi
 
 SCRIPTTEXT="Deduplicating List."
