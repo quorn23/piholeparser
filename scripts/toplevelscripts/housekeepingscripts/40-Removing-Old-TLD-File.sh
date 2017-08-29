@@ -21,5 +21,7 @@ if
 [[ -f $VALIDDOMAINTLD ]]
 then
 rm $VALIDDOMAINTLD
-echo "Old TLD List Removed." | tee --append $RECENTRUN &>/dev/null
+echo "* Old TLD List Removed." | tee --append $RECENTRUN &>/dev/null
+else
+echo "* Old TLD List Not Present." | tee --append $RECENTRUN &>/dev/null
 fi
