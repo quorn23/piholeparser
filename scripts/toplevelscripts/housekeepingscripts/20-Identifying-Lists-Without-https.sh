@@ -75,4 +75,7 @@ rm $NOHTTPSLISTS
 else
 printf "$green"   "All Lists Use https."
 echo "All Lists Use https." | tee --append $RECENTRUN &>/dev/null
+HOWMANYLISTSWITHOUTHTTPS="No"
 fi
+
+echo "HOWMANYLISTSWITHOUTHTTPS='"$HOWMANYLISTSWITHOUTHTTPS"'" | tee --append $TEMPVARS &>/dev/null
