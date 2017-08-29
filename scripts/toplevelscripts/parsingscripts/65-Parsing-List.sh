@@ -46,6 +46,12 @@ then
 cp $BORIGINALFILETEMP $BFILETEMP
 fi
 
+if
+[[ ! -f $BFILETEMP ]]
+then
+touch $BFILETEMP
+fi
+
 HOWMANYLINES=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
 if
 [[ $HOWMANYLINES -eq 0 ]]
