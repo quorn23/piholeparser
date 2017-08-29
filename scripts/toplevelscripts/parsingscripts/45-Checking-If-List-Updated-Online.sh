@@ -23,31 +23,52 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-## Check if file is modified since last download
 if 
 [[ -f $MIRROREDFILE && -z $PINGTESTFAILED ]]
 then
-SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
-SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
-LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
-LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
-DIDWECHECKONLINEFILE=true
+GOAHEADANDTEST=true
 elif
 [[ ! -f $MIRROREDFILE && -z $PINGTESTFAILED ]]
 then
 printf "$red"    "No Mirror File To Compare With, Proceeding with Download."
 fi
 
-if
-[[ -f $MIRROREDFILE && -z $PINGTESTFAILED && -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
+## Check if file is modified since last download
+if 
+[[ -n $GOAHEADANDTEST ]]
 then
-printf "$yellow"    "File Has Changed Online."
-elif
-[[ -f $MIRROREDFILE && -z $PINGTESTFAILED && -n $DIDWECHECKONLINEFILE && $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
+SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
+SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
+LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
+LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
+{ if
+[[ $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
+then
+SKIPDOWNLOAD=true
+else
+TRYFILESIZETEST=true
+fi }
+fi
+
+if 
+[[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD && -n $TRYFILESIZETEST ]]
+then
+SOURCEFILESIZE=$(curl -s $source | wc -c)
+LOCALFILESIZE=$(stat -c%s "$MIRROREDFILE")
+{ if
+[[ $SOURCEFILESIZE == $LOCALFILESIZE ]]
+then
+SKIPDOWNLOAD=true
+fi }
+fi
+
+if
+[[ -n $GOAHEADANDTEST && -n $SKIPDOWNLOAD ]]
 then
 printf "$green"    "File Not Updated Online. No Need To Download."
-SKIPDOWNLOAD=true
 echo "SKIPDOWNLOAD="$SKIPDOWNLOAD"" | tee --append $TEMPPARSEVARS &>/dev/null
+else
+printf "$yellow"    "File Has Changed Online."
 fi
 
 if
