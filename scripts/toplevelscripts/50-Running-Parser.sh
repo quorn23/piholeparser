@@ -62,7 +62,7 @@ if
 then
 rm $BREPOLOG
 fi
-touch $BREPOLOG
+echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
@@ -84,6 +84,7 @@ if
 [[ -z $FULLSKIPPARSING && -f $FILEBEINGPROCESSED ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
+echo "## $PBNAMEPRETTYSCRIPTTEXT" | sudo tee --append $BREPOLOG &>/dev/null
 bash $p
 echo ""
 fi
