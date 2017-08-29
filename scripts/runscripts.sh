@@ -118,3 +118,10 @@ echo ""
 
 ## End Of Loop
 done
+
+## Push Changes To Github
+if
+[[ -f $PUSHTOGITHUBSCRIPT ]]
+then
+bash $PUSHTOGITHUBSCRIPT
+fi
