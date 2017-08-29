@@ -30,6 +30,7 @@ timestamp=$(echo `date`)
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
 HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 rm $f
 mv $WWHITETEMP $f
 done
@@ -52,6 +53,9 @@ then
 cat -s $LISTWHITELISTDOMAINS >> $TEMPFILEJ
 fi
 
+SCRIPTTEXT="Deduplicating List."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $TEMPFILEJ ]]
 then
