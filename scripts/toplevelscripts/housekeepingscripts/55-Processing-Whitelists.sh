@@ -45,7 +45,12 @@ if
 [[ -f $WHITELISTDOMAINSALL ]]
 then
 cat -s $WHITELISTDOMAINSALL >> $TEMPFILEJ
+else
+touch $TEMPFILEJ
 fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEJ | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Merging the Lists Domain Whitelists for Later."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -54,7 +59,12 @@ if
 [[ -f $LISTWHITELISTDOMAINS ]]
 then
 cat -s $LISTWHITELISTDOMAINS >> $TEMPFILEJ
+else
+touch $TEMPFILEJ
 fi
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEJ | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Deduplicating List."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -67,7 +77,6 @@ rm $TEMPFILEJ
 else
 touch $WHITELISTTEMP
 fi
-
 HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
