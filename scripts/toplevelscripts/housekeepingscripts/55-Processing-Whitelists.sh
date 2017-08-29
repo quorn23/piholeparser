@@ -18,36 +18,49 @@ fi
 
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
-## Sort and Dedupe Lists
+SCRIPTTEXT="Sorting and Deduping Individual Whitelists."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 for f in $WHITELISTDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 source $DYNOVARS
 timestamp=$(echo `date`)
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
+HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1`")
+echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 rm $f
 mv $WWHITETEMP $f
 done
 
-## Merge Whitelist into temp file
-WHITESORTDEDUPE="Merging the Whitelists for Later."
-WHATLISTSMERGE="$WHITELISTDOMAINSALL"
-timestamp=$(echo `date`)
-printf "$yellow"  "Processed $WHITESORTDEDUPE"
-cat -s $WHATLISTSMERGE >> $TEMPFILEJ
+SCRIPTTEXT="Merging the Individual Whitelists for Later."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+if
+[[ -f $WHITELISTDOMAINSALL ]]
+then
+cat -s $WHITELISTDOMAINSALL >> $TEMPFILEJ
+fi
 
-## Clean up later, but add other whites
+SCRIPTTEXT="Merging the  Whitelists for Later."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+if
+[[ -f $LISTWHITELISTDOMAINS ]]
+then
 cat -s $LISTWHITELISTDOMAINS >> $TEMPFILEJ
+fi
 
-## Dedupe
+if
+[[ -f $TEMPFILEJ ]]
+then
 cat -s $TEMPFILEJ | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
-
-## fix me
 rm $TEMPFILEJ
+else
+touch $WHITELISTTEMP
+fi
 
-HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1` Lines In File")
-printf "$yellow"  "$HOWMANYLINES"
-
-echo "* "$WHITESORTDEDUPE"." | tee --append $RECENTRUN &>/dev/null
-echo "* $HOWMANYLINES" | tee --append $RECENTRUN &>/dev/null
-echo "" | tee --append $RECENTRUN &>/dev/null
+HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
