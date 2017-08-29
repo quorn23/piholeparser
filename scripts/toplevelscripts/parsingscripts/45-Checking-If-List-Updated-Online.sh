@@ -37,6 +37,7 @@ fi
 if 
 [[ -n $GOAHEADANDTEST ]]
 then
+printf "$cyan"    "Attempting To Test File Modified Date."
 SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
 SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
 LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
@@ -51,12 +52,12 @@ then
 :
 else
 printf "$red"    "File Header Check Failed."
-TRYFILESIZETEST=true
 fi }
 fi
+echo ""
 
 if 
-[[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD && -n $TRYFILESIZETEST ]]
+[[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD ]]
 then
 printf "$cyan"    "Attempting To Test File Size."
 SOURCEFILESIZE=$(curl -s $source | wc -c)
