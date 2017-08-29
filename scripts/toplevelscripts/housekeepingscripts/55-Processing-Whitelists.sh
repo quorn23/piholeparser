@@ -30,6 +30,7 @@ printf "$cyan"  "Processing $BASEFILENAME"
 source $DYNOVARS
 timestamp=$(echo `date`)
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
+cat $WWHITETEMP >> $WHITELISTTEMP
 HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
@@ -38,42 +39,15 @@ mv $WWHITETEMP $f
 echo ""
 done
 
-SCRIPTTEXT="Merging the Individual Whitelists for Later."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-if
-[[ -f $WHITELISTDOMAINSALL ]]
-then
-cat -s $WHITELISTDOMAINSALL >> $TEMPFILEJ
-else
-touch $TEMPFILEJ
-fi
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEJ | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-
-SCRIPTTEXT="Merging the Lists Domain Whitelists for Later."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-if
-[[ -f $LISTWHITELISTDOMAINS ]]
-then
-cat -s $LISTWHITELISTDOMAINS >> $TEMPFILEJ
-else
-touch $TEMPFILEJ
-fi
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEJ | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-
 SCRIPTTEXT="Deduplicating List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $TEMPFILEJ ]]
+[[ -f $WHITELISTTEMP ]]
 then
-cat -s $TEMPFILEJ | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WHITELISTTEMP
-rm $TEMPFILEJ
+cat -s $WHITELISTTEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILET
+rm $WHITELISTTEMP
+mv $TEMPFILET $WHITELISTTEMP
 else
 touch $WHITELISTTEMP
 fi
