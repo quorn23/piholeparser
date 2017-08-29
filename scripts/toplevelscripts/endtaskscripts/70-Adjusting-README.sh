@@ -105,9 +105,9 @@ fi
 
 ## average parsing time
 if
-[[ -n $AVERAGEPARSETIME ]]
+[[ -n $AVERAGEPARSETIME && -n $AVERAGEPARSENUM ]]
 then
-AVERAGELISTPARSINGTIMEMD="Average Parsing Time Was $AVERAGEPARSETIME Seconds."
+AVERAGELISTPARSINGTIMEMD="Average Parsing Time Of $AVERAGEPARSENUM Lists Was $AVERAGEPARSETIME Seconds."
 else
 AVERAGELISTPARSINGTIMEMD="Error Setting Average Parse Time."
 fi
