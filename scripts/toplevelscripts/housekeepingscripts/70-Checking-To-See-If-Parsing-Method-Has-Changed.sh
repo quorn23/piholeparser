@@ -47,7 +47,20 @@ printf "$yellow"  "Time Anchor is set to $TIMEANCHORSTAMP"
 SCRIPTTEXT="Comparing Time."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-DIFFTIMEANCHOR=`expr $YOUNGFILEMODIFIEDTIME - $TIMEANCHORSTAMP`
+if
+[[ -n $YOUNGFILEMODIFIEDTIME && -n $TIMEANCHORSTAMP ]]
+then
+DIFFTIMEANCHOR=$(echo `expr $YOUNGFILEMODIFIEDTIME - $TIMEANCHORSTAMP`)
+else
+DIFFTIMEANCHOR=0
+fi
+
+if
+[[ -z $DIFFTIMEANCHOR ]]
+then
+DIFFTIMEANCHOR=0
+fi
+
 if
 [[ $DIFFTIMEANCHOR -gt 0 ]]
 then
