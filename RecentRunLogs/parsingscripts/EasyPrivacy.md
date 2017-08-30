@@ -8,3 +8,10 @@
 ## Checking For HTTPS
 ## Pinging Source To Check Host Availability
 ## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* EasyPrivacy List Was Killed By The Parsing Process. It will be skipped in the future. Wed 30 Aug 00:44:27 EDT 2017

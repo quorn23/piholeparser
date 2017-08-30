@@ -7,4 +7,3 @@
 ## The Source In The File To Download Is
 ## Checking For HTTPS
 ## Pinging Source To Check Host Availability
-## Checking If List Updated Online

@@ -5,17 +5,15 @@
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* AdblockListforFinland
-* AyucatPowerful
-* BadHosts
-* CAMELEONHosts
-* DanPollocksHosts
-* DNSBHFreeWebHosts
-* DNSBHMalwareDomains
-* DNSBHSkypeResolvers
-* DNSBHURLShorteners
-* EasyListLithuania
-* EestiCustomSitesFilter
+* Adblock-List-for-Finland
+* CAMELEON-Hosts
+* Dan-Pollocks-Hosts
+* DNS-BH-Free-Web-Hosts
+* DNS-BH-Malware-Domains
+* DNS-BH-Skype-Resolvers
+* DNS-BH-URL-Shorteners
+* EasyList-Lithuania
+* Eesti-Custom-Sites-Filter
 * FinnishAntiSocial
 * JABCreationsAdblockPlusFilterSubscription
 * JoeWein
