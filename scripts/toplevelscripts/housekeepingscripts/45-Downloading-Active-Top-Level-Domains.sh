@@ -48,6 +48,8 @@ echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 BREPOLOG="$TLDSCRIPTSLOGDIR""$BASEFILENAME".md
 echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$TLDSCRIPTSLOGDIRRAW""$BASEFILENAME".log)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TLDSCRIPTSLOGDIRRAW""$SCRIPTBASEFILENAME".md)"
+TAGTHEUPTWOREPOLOG="[Go Up Two Levels]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$HOUSKEEPINGSCRIPTBASENAME".md)"
 
 ## Create Log
 if
@@ -55,6 +57,11 @@ if
 then
 rm $BREPOLOG
 fi
+echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEUPTWOREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
