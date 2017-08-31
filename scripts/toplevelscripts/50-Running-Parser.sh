@@ -29,7 +29,7 @@ if
 [[ -z $FULLSKIPPARSING ]]
 then
 printf "$magenta"    "Devmode Parsing Skip Enabled."
-exit
+exit 1
 fi
 
 ## Process Every .lst file within the List Directories
