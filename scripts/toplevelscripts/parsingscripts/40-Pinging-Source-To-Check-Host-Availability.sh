@@ -37,7 +37,6 @@ SOURCEIP="unknown"
 echo "SOURCEIP="$SOURCEIP"" | tee --append $TEMPPARSEVARS &>/dev/null
 TESTPINGFAILED=true
 fi
-echo ""
 
 ## curl Header
 if
@@ -48,18 +47,16 @@ else
 printf "$red"  "Curl Header Check Unsuccessful."
 TESTCURLHEADERFAILED=true
 fi
-echo ""
 
 ## wget header
 if
 [[ `wget -S --header="$WGETAGENTDOWNLOAD" --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
-printf "$green"  "Header Check Successful."
+printf "$green"  "Wget Header Check Successful."
 else
-printf "$red"  "Header Check Unsuccessful."
+printf "$red"  "Wget Header Check Unsuccessful."
 TESTWGETHEADERFAILED=true
 fi
-echo ""
 
 ## host unavailable
 if
