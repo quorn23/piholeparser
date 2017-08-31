@@ -18,7 +18,7 @@ fi
 RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 ## Process Every .lst file within the List Directories
-for f in $EVERYLISTFILEWILDCARD
+for f in $EVERYBLISTFILEWILDCARD
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
