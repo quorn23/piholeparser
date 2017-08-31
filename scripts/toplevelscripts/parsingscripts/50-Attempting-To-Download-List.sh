@@ -50,26 +50,26 @@ echo "USEDMIRRORFILE="$USEDMIRRORFILE"" | tee --append $TEMPPARSEVARS &>/dev/nul
 elif
 [[ $SOURCETYPE == plaintext ]]
 then
-wget -q -O $BTEMPFILE $source
+wget -q --header="$AGENTDOWNLOAD" -O $BTEMPFILE $source
 elif
 [[ $SOURCETYPE == webpage ]]
 then
-curl -s -L $source >> $BTEMPFILE
+curl -s -L -H "$AGENTDOWNLOAD" $source >> $BTEMPFILE
 elif
 [[ $SOURCETYPE == zip ]]
 then
-wget -q -O $COMPRESSEDTEMPZIP $source
+wget -q --header="$AGENTDOWNLOAD" -O $COMPRESSEDTEMPZIP $source
 7z e -so $COMPRESSEDTEMPZIP >> $BTEMPFILE
 rm $COMPRESSEDTEMPZIP
 elif
 [[ $SOURCETYPE == seven ]]
 then
-wget -q -O $COMPRESSEDTEMPSEVEN $source
+wget -q --header="$AGENTDOWNLOAD" -O $COMPRESSEDTEMPSEVEN $source
 7z e -so $COMPRESSEDTEMPSEVEN >> $BTEMPFILE
 elif
 [[ $SOURCETYPE == tar ]]
 then
-wget -q -O $COMPRESSEDTEMPTAR $source
+wget -q --header="$AGENTDOWNLOAD" -O $COMPRESSEDTEMPTAR $source
 TARFILEX=$(tar -xavf "$COMPRESSEDTEMPTAR" -C "$TEMPDIR")
 cat "$TEMPDIR""$TARFILEX" >> $BTEMPFILE
 fi
@@ -87,31 +87,9 @@ printf "$red"    "File Download Failed."
 DOWNLOADFAILED=true
 fi
 
-## Attempt agent download
-if
-[[ -n $DOWNLOADFAILED && $SOURCETYPE != zip && $SOURCETYPE != tar && $SOURCETYPE != seven && $SOURCETYPE != usemirrorfile ]]
-then
-echo ""
-printf "$cyan"    "Attempting To Fetch List As If We Were A Browser."
-curl -s -H "$AGENTDOWNLOAD" -L $source >> $BTEMPFILE
-fi
-
-## Check that there was a file downloaded
-if
-[[ -n $DOWNLOADFAILED && -f $BTEMPFILE ]]
-then
-cat $BTEMPFILE >> $BORIGINALFILETEMP
-rm $BTEMPFILE
-elif
-[[ -n $DOWNLOADFAILED && ! -f $BTEMPFILE ]]
-then
-printf "$red"    "File Download Failed As Agent."
-AGENTDOWNLOADFAILED=true
-fi
-
 ## Try git Mirror
 if 
-[[ -n $DOWNLOADFAILED && -n $AGENTDOWNLOADFAILED && -n $GITFILEONLINE ]]
+[[ -n $DOWNLOADFAILED && -n $GITFILEONLINE ]]
 then
 printf "$cyan"    "Attempting To Fetch List From Git Repo Mirror."
 echo "* $BASEFILENAME List Failed To Download. Attempted to use Mirror. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -121,12 +99,12 @@ fi
 
 ## Check that there was a file downloaded
 if
-[[ -n $DOWNLOADFAILED  && -n $AGENTDOWNLOADFAILED && -n $GITATTEMPTED && -f $BTEMPFILE ]]
+[[ -n $DOWNLOADFAILED && -n $GITATTEMPTED && -f $BTEMPFILE ]]
 then
 cat $BTEMPFILE >> $BORIGINALFILETEMP
 rm $BTEMPFILE
 elif
-[[ -n $DOWNLOADFAILED  && -n $AGENTDOWNLOADFAILED && -n $GITATTEMPTED && ! -f $BTEMPFILE ]]
+[[ -n $DOWNLOADFAILED && -n $GITATTEMPTED && ! -f $BTEMPFILE ]]
 then
 printf "$red"    "Git Mirror Failed."
 fi
