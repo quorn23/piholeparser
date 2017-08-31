@@ -56,6 +56,12 @@ echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/nul
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 if
+[[ -f $DBBWHITELIST ]]
+then
+rm $DBBWHITELIST
+fi
+
+if
 [[ -f $WHITELISTTEMP ]]
 then
 cp $WHITELISTTEMP $DBBWHITELIST
