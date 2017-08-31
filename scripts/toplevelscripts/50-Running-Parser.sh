@@ -34,7 +34,7 @@ exit
 fi
 
 ## Process Every .lst file within the List Directories
-for f in $EVERYLISTFILEWILDCARD
+for f in $EVERYBLISTFILEWILDCARD
 do
 
 RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
