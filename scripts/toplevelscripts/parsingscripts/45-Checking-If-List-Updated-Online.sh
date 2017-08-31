@@ -41,7 +41,7 @@ printf "$cyan"    "Attempting To Test File Modified Date."
 fi
 
 if
-[[ -n $GOAHEADANDTEST && `curl -s -H "$AGENTDOWNLOAD" -z "$localfile" -o /dev/null -I -w "%{http_code}" "$source" | grep '304'` ]]
+[[ -n $GOAHEADANDTEST && `curl -s -H "$AGENTDOWNLOAD" -z "$MIRROREDFILE" -o /dev/null -I -w "%{http_code}" "$source" | grep '304'` ]]
 then
 printf "$yellow"    "Source Date Not Newer."
 SKIPDOWNLOAD=true
