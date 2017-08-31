@@ -50,3 +50,22 @@ if
 then
 touch $BTEMPFILE
 fi
+
+## What doesn't make it through
+if
+[[ -f $TRYNACATCHFIlES ]]
+then
+rm $TRYNACATCHFIlES
+fi
+
+if
+[[ -f $BTEMPFILE && -f $BFILETEMP ]]
+then
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
+fi
+
+if
+[[ -f $BFILETEMP ]]
+then
+rm $BFILETEMP
+fi
