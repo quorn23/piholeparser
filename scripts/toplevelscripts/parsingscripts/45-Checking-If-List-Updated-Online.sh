@@ -38,57 +38,34 @@ if
 [[ -n $GOAHEADANDTEST ]]
 then
 printf "$cyan"    "Attempting To Test File Modified Date."
+MIRROREDFILESIZE=$(stat -c%s "$MIRROREDFILE")
+CURLFILESIZE=$(curl -s -H "$AGENTDOWNLOAD" $source | wc -c)
 fi
 
 if
 [[ -n $GOAHEADANDTEST && `curl -s -H "$AGENTDOWNLOAD" -z "$MIRROREDFILE" -o /dev/null -I -w "%{http_code}" "$source" | grep '304'` ]]
 then
 printf "$yellow"    "Source Date Not Newer."
-SKIPDOWNLOAD=true
+TESTCURLDATESAME=true
 else
 printf "$yellow"    "Source Date Is Newer."
 fi
 
-#if 
-#[[ -n $GOAHEADANDTEST ]]
-#then
-#printf "$cyan"    "Attempting To Test File Modified Date."
-#SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
-#SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
-#LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
-#LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
-#{ if
-#[[ $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
-#then
-#printf "$yellow"    "Source Date Not Newer."
-#SKIPDOWNLOAD=true
-#elif
-#[[ $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
-#then
-#printf "$yellow"    "Source Date Is Newer."
-#else
-#printf "$red"    "File Header Check Failed."
-#fi }
-#fi
-
-if 
-[[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD ]]
-then
-printf "$cyan"    "Attempting To Test File Size."
-SOURCEFILESIZE=$(curl -s $source | wc -c)
-LOCALFILESIZE=$(stat -c%s "$MIRROREDFILE")
-{ if
-[[ $SOURCEFILESIZE == $LOCALFILESIZE ]]
+if
+[[ -n $GOAHEADANDTEST && $MIRROREDFILESIZE -ge $CURLFILESIZE ]]
 then
 printf "$yellow"    "File Size Is The Same."
-SKIPDOWNLOAD=true
+TESTCURLSIZESAME=true
 elif
-[[ $SOURCEFILESIZE != $LOCALFILESIZE ]]
+[[ -n $GOAHEADANDTEST && $MIRROREDFILESIZE != $CURLFILESIZE ]]
 then
 printf "$yellow"    "File Size Is Different."
-else
-printf "$red"    "File Size Check Failed."
-fi }
+fi
+
+if
+[[ -n $TESTCURLSIZESAME || -n $TESTCURLDATESAME ]]
+then
+SKIPDOWNLOAD=true
 fi
 
 if
