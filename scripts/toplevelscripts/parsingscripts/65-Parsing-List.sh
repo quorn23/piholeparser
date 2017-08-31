@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+## Parsing loop
 
 ## Variables
 SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
@@ -80,6 +80,7 @@ if
 [[ -z $GOTOENDPARSING ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
+HOWMANYLINESSTART=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 bash $p
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
@@ -90,9 +91,13 @@ printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
 GOTOENDPARSING=true
 echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
-[[ $HOWMANYLINES -ge 1 ]]
+[[ $HOWMANYLINES -ge 1 && $HOWMANYLINESSTART -ge $HOWMANYLINES ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
+elif
+[[ $HOWMANYLINES -ge 1 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
+then
+printf "$green"  "$ENDCOMMENT"
 fi }
 mv $BTEMPFILE $BFILETEMP
 echo ""
