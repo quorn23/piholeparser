@@ -33,12 +33,12 @@ echo "SOURCEIP="$SOURCEIP"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 if
-[[ `curl -s -o /dev/null -I -w "%{http_code}" $source | grep '200'` ]]
+[[ `curl -s -H "$AGENTDOWNLOAD" -o /dev/null -I -w "%{http_code}" $source | grep '200'` ]]
 then
-printf "$green"  "Header Check Successful."
+printf "$green"  "Curl Header Check Successful."
 unset PINGTESTFAILED
 else
-printf "$red"  "Header Check Unsuccessful."
+printf "$red"  "Curl Header Check Unsuccessful."
 PINGTESTFAILED=true
 echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
@@ -55,13 +55,11 @@ PINGTESTFAILED=true
 echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
-
-
 #if
 #[[ -n $PINGTESTFAILED ]]
 #then
 #{ if
-#[[ `wget -S --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
+#[[ `wget -S --header="$WGETAGENTDOWNLOAD" --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 #then
 #printf "$green"  "Header Check Successful."
 #unset PINGTESTFAILED
