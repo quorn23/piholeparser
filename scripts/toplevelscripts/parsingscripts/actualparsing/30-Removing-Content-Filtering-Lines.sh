@@ -27,7 +27,7 @@ if
 [[ -f $BFILETEMP ]]
 then
 #cat $BFILETEMP | sed '/^https\?:\/\//d; /^http\?:\/\//d; /third-party$/d; /popup$/d' > $BTEMPFILE
-cat $BFILETEMP | sed '/^https\?:\/\//d; /^http\?:\/\//d' > $BTEMPFILE
+cat $BFILETEMP | sed '/^https\?:\/\//d; /^http\?:\/\//d; s/third-party$//g; s/popup$//g; s/^||//; s/[\^]$//g' > $BTEMPFILE
 fi
 
 if
