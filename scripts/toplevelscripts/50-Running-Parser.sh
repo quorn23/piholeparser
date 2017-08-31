@@ -17,6 +17,13 @@ fi
 
 RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
 
+if
+[[ -z $FULLSKIPPARSING ]]
+then
+printf "$magenta"    "Devmode Parsing Skip Enabled."
+exit
+fi
+
 ## Process Every .lst file within the List Directories
 for f in $EVERYLISTFILEWILDCARD
 do
