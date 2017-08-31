@@ -50,7 +50,7 @@ fi
 
 ## wget header
 if
-[[ `wget -S --header="$WGETAGENTDOWNLOAD" --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
+[[ `wget -S --header="$AGENTDOWNLOAD" --spider $source  2>&1 | grep 'HTTP/1.1 200 OK'` ]]
 then
 printf "$green"  "Wget Header Check Successful."
 else
