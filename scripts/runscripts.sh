@@ -70,6 +70,7 @@ if
 then
 rm $BREPOLOG
 fi
+echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
 echo "" | tee --append $BREPOLOG &>/dev/null
 
