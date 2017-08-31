@@ -41,6 +41,7 @@ echo ""
 ## Log Subsection
 echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELLOGSDIRRAW""$SCRIPTBASEFILENAME".md)"
 
 ## Create Log
 if
@@ -48,6 +49,10 @@ if
 then
 rm $BREPOLOG
 fi
+echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
 echo "" | tee --append $BREPOLOG &>/dev/null
 
