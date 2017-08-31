@@ -2,7 +2,8 @@
 
 ## Version
 REPONAME=piholeparser
-source /etc/"$REPONAME".var
+OUTSIDEDIRVARS=/etc/"$REPONAME".var
+source $OUTSIDEDIRVARS
 
 ## These are the colors used throughout the script.
 red='\e[1;31m%s\e[0m\n'
