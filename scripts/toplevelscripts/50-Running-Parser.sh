@@ -29,6 +29,7 @@ if
 [[ -n $FULLSKIPPARSING ]]
 then
 printf "$magenta"    "Devmode Parsing Skip Enabled."
+echo "Devmode Parsing Skip Enabled." | sudo tee --append $RECENTRUN &>/dev/null
 exit
 fi
 
@@ -70,6 +71,7 @@ echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 BREPOLOG="$PARSINGSCRIPTSLOGDIR""$BASEFILENAME".md
 echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
 TAGTHEREPOLOG="[Details If Any]("$PARSINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELLOGSDIRRAW""$SCRIPTBASEFILENAME".md)"
 
 ## Create Log
 if
@@ -77,6 +79,10 @@ if
 then
 rm $BREPOLOG
 fi
+echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
