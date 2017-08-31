@@ -92,15 +92,10 @@ echo "HOWMANYLISTSWITHOUTHTTPS='"$HOWMANYLISTSWITHOUTHTTPS"'" | tee --append $TE
 
 SCRIPTTEXT="Checking For Old https-Less File."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if 
 [[ -f $NOHTTPSLISTS ]]
 then
 rm $NOHTTPSLISTS
-printf "$red"   "Old https-less List Removed"
-echo "* Old https-less List Purged." | tee --append $RECENTRUN &>/dev/null
-else
-echo "* Old https-less List Does Not Exist." | tee --append $RECENTRUN &>/dev/null
 fi
 echo ""
 
