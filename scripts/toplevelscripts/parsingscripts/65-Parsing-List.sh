@@ -80,7 +80,7 @@ if
 [[ -z $GOTOENDPARSING ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
-HOWMANYLINESSTART=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
+HOWMANYLINESSTART=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
 bash $p
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
