@@ -38,23 +38,38 @@ if
 [[ -n $GOAHEADANDTEST ]]
 then
 printf "$cyan"    "Attempting To Test File Modified Date."
-SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
-SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
-LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
-LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
-{ if
-[[ $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
+fi
+
+if
+[[ -n $GOAHEADANDTEST && `curl -s -H "$AGENTDOWNLOAD" -z "$localfile" -o /dev/null -I -w "%{http_code}" "$source" | grep '304'` ]]
 then
 printf "$yellow"    "Source Date Not Newer."
 SKIPDOWNLOAD=true
-elif
-[[ $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
-then
-printf "$yellow"    "Source Date Is Newer."
 else
-printf "$red"    "File Header Check Failed."
-fi }
+printf "$yellow"    "Source Date Is Newer."
 fi
+
+#if 
+#[[ -n $GOAHEADANDTEST ]]
+#then
+#printf "$cyan"    "Attempting To Test File Modified Date."
+#SOURCEMODIFIEDLAST=$(curl --silent --head $source | awk -F: '/^Last-Modified/ { print $2 }')
+#SOURCEMODIFIEDTIME=$(date --date="$SOURCEMODIFIEDLAST" +%s)
+#LOCALFILEMODIFIEDLAST=$(stat -c %z "$MIRROREDFILE")
+#LOCALFILEMODIFIEDTIME=$(date --date="$LOCALFILEMODIFIEDLAST" +%s)
+#{ if
+#[[ $LOCALFILEMODIFIEDTIME -ge $SOURCEMODIFIEDTIME ]]
+#then
+#printf "$yellow"    "Source Date Not Newer."
+#SKIPDOWNLOAD=true
+#elif
+#[[ $LOCALFILEMODIFIEDTIME -lt $SOURCEMODIFIEDTIME ]]
+#then
+#printf "$yellow"    "Source Date Is Newer."
+#else
+#printf "$red"    "File Header Check Failed."
+#fi }
+#fi
 
 if 
 [[ -n $GOAHEADANDTEST && -z $SKIPDOWNLOAD ]]
