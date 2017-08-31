@@ -37,7 +37,6 @@ fi
 if 
 [[ -n $GOAHEADANDTEST ]]
 then
-printf "$cyan"    "Attempting To Test File Modified Date."
 MIRROREDFILESIZE=$(stat -c%s "$MIRROREDFILE")
 CURLFILESIZE=$(curl -s -H "$AGENTDOWNLOAD" $source | wc -c)
 fi
@@ -45,21 +44,21 @@ fi
 if
 [[ -n $GOAHEADANDTEST && `curl -s -H "$AGENTDOWNLOAD" -z "$MIRROREDFILE" -o /dev/null -I -w "%{http_code}" "$source" | grep '304'` ]]
 then
-printf "$yellow"    "Source Date Not Newer."
+printf "$green"    "Source Date Not Newer."
 TESTCURLDATESAME=true
 else
-printf "$yellow"    "Source Date Is Newer."
+printf "$red"    "Source Date Is Newer."
 fi
 
 if
 [[ -n $GOAHEADANDTEST && $MIRROREDFILESIZE -ge $CURLFILESIZE ]]
 then
-printf "$yellow"    "File Size Is The Same."
+printf "$green"    "File Size Is The Same."
 TESTCURLSIZESAME=true
 elif
 [[ -n $GOAHEADANDTEST && $MIRROREDFILESIZE != $CURLFILESIZE ]]
 then
-printf "$yellow"    "File Size Is Different."
+printf "$red"    "File Size Is Different."
 fi
 
 if
@@ -68,6 +67,7 @@ then
 SKIPDOWNLOAD=true
 fi
 
+echo ""
 if
 [[ -n $GOAHEADANDTEST && -n $SKIPDOWNLOAD ]]
 then
