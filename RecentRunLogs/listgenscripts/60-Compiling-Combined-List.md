@@ -1,3 +1,3 @@
 # Compiling Combined List
 
-* All Parsed List Removed. Wed 30 Aug 21:37:08 EDT 2017
+* All Parsed List Removed. Thu 31 Aug 01:20:34 EDT 2017

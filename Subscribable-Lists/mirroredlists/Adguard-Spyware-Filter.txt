@@ -1,3 +1,9 @@
+! Checksum: dvlMOwKRabsobYTE9NRcwA
+! Title: Spyware filter
+! Description: The most comprehensive list of various online counters and web analytics tools. If you do not want your actions on the Internet to be tracked, use this filter.
+! Version: 1.0.14.23
+! TimeUpdated: 2017-08-30T22:00:39.366+04:00
+! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -46,9 +52,6 @@ accountkiller.com#%#window.ga = function(){var a = arguments[5];a&&a.hitCallback
 !-------------------
 !-------HTML--------
 !-------------------
-citystar.ru$$script[tag-content="acn.rucounter.ru"][max-length="500"]
-echo.msk.ru$$script[tag-content="r=d.im.width"][max-length="200"]
-echo.msk.ru$$script[tag-content="s=screen;"][max-length="200"]
 !-------------------------------------------------------------------------------!
 !-------------- General hiding rules--------------------------------------------!
 !-------------------------------------------------------------------------------!
@@ -97,6 +100,7 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 ! Should be uncommented once v2.10 goes live
 ! ||app-measurement.com^
 !
+||fandommetrics.com^$third-party
 ||m.dubcm.com^$third-party
 ||a1.huiqituan.com^$third-party
 ||geo.kaloo.ga^$third-party
@@ -3585,6 +3589,8 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 !
 ! Section contains the list of tracking servers, which are hosted on useful sites as subdomains
 !
+||tr.suedkurier.de^
+||track.toroadvertising.com^
 ||stats.media.onet.pl^
 ||clk.onet.pl^
 ||csr.onet.pl^
@@ -4104,6 +4110,12 @@ _tracking.php?b=
 ||scorecardresearch.com^$domain=cnet.com,important
 ! End: cnet.com trackers
 !
+||suedkurier.de/storage/scr/*_webtrekk.js.js
+||phoenix.de/php/mediaplayer/conf/tracking_
+||youtube.com/youtubei/*/log_event?
+||infranken.de/_fWS/json/Statistic
+||infranken.de/fileadmin/scripts/tracking
+||infranken.de/_CPiX
 ||stadtbibliothek-rostock.de/weblication/grid5/gui/scripts/wClickLogger.js
 ||kindernetz.de/static/tracking/xtclicks.js
 ||mtvema.com/media/module/ENT_Reporting
@@ -4139,8 +4151,8 @@ computerbild.de##.articleAdditional > .mehrthema
 ||xtraffstat.com/js/ktr.js
 ||zapcdn.space/zapret.js
 ||patreon.com/api/tracking^
-/index/ping^$domain=adf.ly|ay.gy|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com
-/callback/*$domain=adf.ly|ay.gy|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com
+/index/ping^$domain=adf.ly|ay.gy|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|kaitect.com|simizer.com|coginator.com|cogismith.com
+/callback/*$domain=adf.ly|ay.gy|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|kaitect.com|simizer.com|coginator.com|cogismith.com
 ||tracking-opi.fonpit.de/tracking/
 ||cdn3.net/pixe/
 ||dig.ultimedia.com^
@@ -4902,8 +4914,6 @@ dreamprogs.net##td[width="88"][height="31"]
 @@||cloudflare.com/*/fingerprint2.min.js$domain=saavn.com
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5839
-!+ PLATFORM(ios, ext_safari, ext_android_cb)
-@@||rover.ebay.com.au^*&cguid=$domain=ebay.com.au
 !
 ! http://forum.ru-board.com/topic.cgi?forum=2&topic=5372&start=420#3
 !+ NOT_PLATFORM(windows, mac, android, ext_safari)

@@ -1,3 +1,9 @@
+! Checksum: k8zimnS3mG7QjuYDKloQkw
+! Title: Social media filter
+! Description: Filter for social media widgets (Like buttons and such).
+! Version: 1.0.22.68
+! TimeUpdated: 2017-08-30T20:00:52.304+04:00
+! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#social
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -254,6 +260,7 @@ lj_bookmarklet
 !
 ! Extended CSS rules
 !
+denizliguncel.com###haber > .row-fluid[-ext-has=".btn-social-wrapper"]
 finikeakdeniz.com.tr##tbody > tr > td[width="307"][valign="top"][bgcolor="#FFFFFF"] > table[width="100%"][cellpadding="8"][-ext-has='strong:contains(Bizi Facebook'ta takip edin)']
 piste.de###wrapper > .large-4 > .headline[-ext-has='h5 > span.red:contains(Facebook)']
 prjaga.ru###right > div#right_nav > h3:contains(Мы )
@@ -393,10 +400,6 @@ m.tf.co.kr#$#li.sBtn_reply { float: initial!important; display: inline-block!imp
 !-------------------
 !-------HTML--------
 !-------------------
-firstonetv.eu$$style[tag-content=".facebook_container"][max-length="1700"]
-seopult.tv$$script[tag-content="dialog("][max-length="300"]
-digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
-048.ua,62.ua,048.ua,057.ua,056.ua,061.ua,0642.ua,0629.com.ua,0512.com.ua,0564.ua,032.ua,0352.ua,0542.ua,05366.com.ua,0552.ua,0412.ua,0432.ua,0332.ua,0522.ua,0342.ua,0532.ua,44.ua,06274.com.ua,06153.com.ua,0462.ua,0362.ua,0372.ua,0472.ua,06252.com.ua,06255.com.ua,06254.in.ua,04565.com.ua,04578.in.ua,06239.com.ua,06239.com.ua,5692.com.ua,6264.com.ua,04868.com.ua,06432.in.ua,06434.com.ua,8352city.ru,8422city.ru,8634city.ru,labaved.ru,gorodpushkin.ru,3462city.ru,015.by,go31.ru,goroddomodedovo.ru,prokolpino.ru,86155city.ru,city3012.ru,go862.ru$$script[tag-content="showSocialPopup"][max-length="500"]
 !-------------------------------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !-------------- Specific web sites ---------------------------------------------!
@@ -410,6 +413,17 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+berliner-zeitung.de##.dm_article_share
+nhk.or.jp##.social-btn-area
+fullstuff.co##.share-icons > div.entry-comment-count ~ a
+fullstuff.co##.sd-sharing
+seriesytv.tv,animeytv.tv,peliculasytv.com##.share
+hdsonbolumizleyin.org,yuzlercedizitv.com##.share.meta
+spieletest.at##.navArrows > a[href^="javascript:window.open"]
+iz.ru##.share_bottom
+imgskull.com###tab-about > .panel-share-networks
+imgskull.com##.btn.red[data-target="modal-share"]
+cumhuriyet.com.tr##.share-this.tu
 milligazete.com.tr##.sidbox > .in > .block-pano.t2
 milligazete.com.tr##.block-fan
 aetv.com,fyi.tv,history.com##.share-facebook

@@ -1,3 +1,9 @@
+! Checksum: EW9A8b+oZeZD8/GllnGZVg
+! Title: Mobile Ads filter
+! Description: Filter for all known mobile ad networks. Useful for mobile devices.
+! Version: 1.0.9.51
+! TimeUpdated: 2017-08-29T19:02:09.342+04:00
+! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -957,13 +963,9 @@ deviantart.com#$#div[class*="dp-ad-"] {height:0px!important; width:0px!important
 !-------HTML--------
 !-------------------
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4285
-dropapk.com$$script[tag-content="function(){if (window.atob)"][max-length="5000"]
 ! WebSocket ads
-rutorgames.org$$script[wildcard="*document.createElement*new Worker*w.onmessage*"][max-length="1600"]
-bobfilm.tv$$script[wildcard="*script*this.onerror*eval(atob*"][max-length="1000"]
 ! or #%#Object.defineProperty(window, 'AMSP', { get: function() { return []; } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2637
-nasimke.ru$$script[tag-content="function show_ads"][max-length="6000"]
 !---------------------------------------------------------------------------!
 !-------------- General URL blocking rules ---------------------------------!
 !---------------------------------------------------------------------------!
@@ -1035,11 +1037,8 @@ nasimke.ru$$script[tag-content="function show_ads"][max-length="6000"]
 @@||mobileads.indiatimes.com/Web_Ads/js/22april16/prebid_1.js$script,domain=m.timesofindia.com
 timesofindia.indiatimes.com#@#style[type="text/css"] + div[class]:not([id]):not([style]):not([class*=" "])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/976
-@@||imasdk.googleapis.com/native/core/*/native_bridge__*.js$app=com.crunchyroll.crunchyroid
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/1256
-@@||bats.video.yahoo.com$app=com.yahoo.mobile.client.android.mail
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5539
-@@||imasdk.googleapis.com/native/core/*/native_bridge_*.js$app=com.sonyliv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3708
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=m.legacy.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4965
@@ -1050,7 +1049,6 @@ timesofindia.indiatimes.com#@#style[type="text/css"] + div[class]:not([id]):not(
 @@||pubads.g.doubleclick.net/gampad/ads?env=vp&gdfp_req=1&output=xml_vast*&url=http%3A%2F%2Famp.usatoday.com
 @@||players.brightcove.net/*/index.html?videoId=$domain=amp.usatoday.com
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/1160
-@@||api.branch.io^$app=com.reddit.frontpage
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4659
 @@||report-ads-to.pubnation.com/dist/pnr.js?t=$domain=m.neogaf.com
 ! https://github.com/AdguardTeam/AdguardDNS/issues/64
@@ -1067,11 +1065,9 @@ timesofindia.indiatimes.com#@#style[type="text/css"] + div[class]:not([id]):not(
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4317
 @@||films.imhonet.ru^$jsinject
 ! https://forum.adguard.com/index.php?threads/le-bon-coin-apk-from-googleplay.18840/ fix ?ad_id= in Liste FR
-@@||mobile.leboncoin.fr/templates/api/view.json?ad_id=$app=fr.leboncoin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4243
 @@||bc.marfeel.com/statics/marfeel/gardac.js$domain=elperiodico.com
 ! http://4pda.ru/forum/index.php?showtopic=601691&st=8140#entry57313153
-@@||mc.yandex.ru^$app=ru.yandex.weatherplugin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4060
 @@||google-analytics.com/plugins/ua/ec.js$domain=saturn.de
 @@||google-analytics.com/analytics.js$domain=saturn.de
@@ -1091,9 +1087,7 @@ m.veporn.net#@##topAds
 ! https://forum.adguard.com/index.php?threads/16893/
 @@||g.doubleclick.net/gpt/pubads_impl_$script,domain=ukr.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3610
-@@||mafia-rules.net^$app=net.bestmafia,document
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/925
-@@||config2.mparticle.com^$app=via.rider
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3492
 @@||b.marfeel.com/statics/marfeel/gardac.js$domain=applesencia.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3465
@@ -1109,12 +1103,9 @@ idownloadblog.com#@#.header-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2943
 @@||metrics.us.playstation.com/b/ss/
 ! Play Music mad blocked counter issue
-@@||doubleclick.net^$app=com.google.android.music
-@@||googleadservices.com^$app=com.google.android.music
 ! redtube.com - fixing icons
 @@||static.redtube.com/mobi/images/$domain=redtube.com
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/2153
-@@||ads.adfox.ru/*/getCode$app=ru.infoshell.android
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2830
 @@||appmetrica.yandex.com/serve/$domain=m.habrahabr.ru
 ! https://forum.adguard.com/index.php?threads/12453/
@@ -1209,7 +1200,6 @@ deviantart.com#@#.mobile-ad
 @@||android.clients.google.com/market/GetBinary/$document
 @@||play.google.com/store/apps/$document
 ! Youtube & Samsung issue: https://github.com/AdguardTeam/AdguardForAndroid/issues/986
-@@||googleadservices.com^|$app=com.google.android.youtube
 !---------------------------------------------------------------------------!
 !-------------- Rules for specific websites --------------------------------!
 !---------------------------------------------------------------------------!
@@ -1230,6 +1220,9 @@ m.auto.ru##.listing__page > div[class^="_"]:not([class$="listing__item_view_old"
 ! https://forum.adguard.com/index.php?threads/10464/
 ||images-*.ssl-images-amazon.com/images/*/ape/sf/MAsf-*_.js
 !
+m.sfgate.com##.ad-point
+healthline.com##div.mlb
+healthline.com##div.mmr.row
 baidu.com##.ec_wise_ad
 mobile.donanimhaber.com##.yorumlar > article~div.ondabir
 mobile.donanimhaber.com##.reklamiatla
@@ -1568,7 +1561,6 @@ pornhd.com##ul.thumbs.inside-row > li:not([data-thumbindexes])
 auth.wi-fi.ru##.c-video-banner
 auth.wi-fi.ru##.c-fullscreen-banner
 ||static.wi-fi.ru/brandings/_cacheAssets/branding.js
-||wi-fi.ru/ad_video/$mp4,important
 ||login.wi-fi.ru^$script,third-party
 ||static.wi-fi.ru/brandings/rb/
 ||static0.wi-fi.ru/static/000/ios/index.html
@@ -1581,85 +1573,30 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ! ru.yandex.metro
 ||extmaps-api.yandex.net/promo/api/
 ! ua.slando - fixing adverts
-@@||www.olx.ua/api^$app=ua.slando
 ! com.devexpert.weather https://github.com/AdguardTeam/AdguardFilters/issues/3865
 ! apptornado ads, when Google/FB ads are blocked
-@@||googleads.g.doubleclick.net/mads/static/mad/sdk/native/*/sdk-core-v40-impl.js$app=com.devexpert.weather
-||googleads.g.doubleclick.net/mads/gma?carrier=$app=com.devexpert.weather,important,replace=/\<script\>[\s\S]*\<\/script\>/
 !
 ! Blocking of Facebook ads
-||graph.facebook.com^$app=com.estmob.android.sendanywhere
-||graph.facebook.com^$app=com.inswall.wallpaper
-||graph.facebook.com^$app=jp.gocro.smartnews.android
-||graph.facebook.com^$app=com.zynga.crosswordswithfriends
-||graph.facebook.com^$app=com.urbandroid.sleep
-||graph.facebook.com^$app=com.conjoinix.smartparent
-||graph.facebook.com^$app=com.msmobile.hb
-||graph.facebook.com^$app=com.ketchapp.donttouchthespikes
-||graph.facebook.com^$app=com.appdlab.radarexpress
-||graph.facebook.com^$app=com.rcplatform.nocrop
-||graph.facebook.com^$app=com.game.JewelsStar
-||graph.facebook.com^$app=com.p74.player
-||graph.facebook.com^$app=com.ivanGavrilov.CalcKit
-||graph.facebook.com^$app=com.contapps.android
-||graph.facebook.com^$app=com.balysv.loop
-||graph.facebook.com^$app=org.aastudio.games.longnards
-||graph.facebook.com^$app=com.flyersoft.moonreader
-||graph.facebook.com^$app=com.sofascore.results
-||graph.facebook.com^$app=com.textra
-||graph.facebook.com^$app=es.rafalense.themes
-||graph.facebook.com^$app=com.xoopsoft.apps.bundesliga.free
-||graph.facebook.com^$app=com.trungpt.video.download
-||graph.facebook.com^$app=com.devexpert.weather
-||graph.facebook.com^$app=com.eterno
-||graph.facebook.com^$app=com.hornet.android
-||graph.facebook.com^$app=com.jrtstudio.AnotherMusicPlayer
-||graph.facebook.com^$app=com.ketchapp.donttouchthespikes
-||graph.facebook.com^$app=com.laurencedawson.reddit_sync
-||graph.facebook.com^$app=com.mobilefootie.wc2010
-||graph.facebook.com^$app=com.mobilesrepublic.appy
-||graph.facebook.com^$app=com.mobilesrepublic.appygeek
-||graph.facebook.com^$app=com.musixmatch.android.lyrify
-||graph.facebook.com^$app=com.mxtech.videoplayer.ad
-||graph.facebook.com^$app=com.popularapp.thirtydayfitnesschallenge
-||graph.facebook.com^$app=com.sonyericsson.trackid
-||graph.facebook.com^$app=com.xda.labs.play
-||graph.facebook.com^$app=ferp.android
-||graph.facebook.com^$app=fr.meteo
-||graph.facebook.com^$app=io.casper.android
-||graph.facebook.com^$app=com.cmplay.cellconnect
-||graph.facebook.com^$app=com.apxsoft.dodonpachi_gg
 !
 ! https://forum.adguard.com/index.php?threads/24268/
 ||mobile-campaigns.avast.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6167
 ||ketchapp.org/crosspromo/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6134
-@@||imasdk.googleapis.com/native/core/*/native_bridge__*.js$app=com.ysb.esh
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6133
-@@||imasdk.googleapis.com/native/core/*/native_bridge__*.js$app=com.digiturk.ligtv
 ! https://forum.adguard.com/index.php?threads/13437/
-/ads|$app=system
-/cpd|$app=system
-/cps|$app=system
 ! https://forum.adguard.com/index.php?threads/13437/
-||loc.map.baidu.com^$app=com.xiaomi.metoknlp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5248
 ||global.appnext.com/offerWallApi.aspx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3346
-||api.ebay-kleinanzeigen.de/api/ads.json*^q=$app=com.ebay.kleinanzeigen,replace=/"(adsense|ecn|native-ad)"/"x\$1"/
 ! https://forum.adguard.com/index.php?threads/le-bon-coin-apk-from-googleplay.18840/
 ! fix ?ad_id= in Liste FR
-@@||mobile.leboncoin.fr/templates/api/view.json?ad_id=$app=fr.leboncoin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5191
 ||104.199.8.250^*/webservices/getDialogAdDetails.php
 ! https://forum.adguard.com/index.php?threads/21611/
 ||todayweather.co/ads.json
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4901
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$app=com.makonda.blic
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4898
-||dict.leo.org/api/mobile/production/hello/adb/0?b=$app=org.leo.android.dict,replace=/\/adv_pda" rel="nofollow"><img width=/\\/adv_pda" rel="nofollow"><im_ width=/i
-||dict.leo.org/api/mobile/production/hello/adb/0?b=$app=org.leo.android.dict,important,replace=/\/adv_pda" rel="nofollow"><img width=/\\/adv_pda" rel="nofollow"><im_ width=/i
 ! https://forum.adguard.com/index.php?threads/s-photo-editor-missed-ads-android.21096/
 ||advs2sonline.goforandroid.com^
 ||adpush.goforandroid.com^
@@ -1669,7 +1606,6 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ! com.camerasideas.instashot
 ||ad.api.kaffnet.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4774
-@@||irr.ru/mobile_api^$app=com.umojo.irr.android
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4757
 ||ad.flipboard.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4759
@@ -1677,7 +1613,6 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4722
 ||api.bitmango.com/api/ad_manager
 ! https://forum.adguard.com/index.php?threads/19617/
-@@||gabe.it.gemius.pl/gemiuslib.js$app=com.saipm.dh|com.twipemobile.laderniereheure|com.vlan.capteo|be.rossel.sudpresse.sports|be.rossel.lesoir.sports|be.rossel.westtoer|com.audaxis.mobile.sudpresse.lameuse|com.audaxis.mobile.sudpresse.lacapitale|com.audaxis.mobile.sudpresse.laprovince|com.audaxis.mobile.sudpresse.lanouvellegazette|com.audaxis.mobile.sudpresse.nordeclair|be.lesoir.geeko|be.lesoir.goToJo|be.rossel.android.communales|be.sudpresse.blogs|be.sudpresse.reader|be.vlan.reader|com.rossel.hslesoir|com.audaxis.mobile.sudpresse|be.rossel.soirmag|com.rosselfestival|be.appsolution.lesoir|com.twipemobile.lalibreplus|com.tapptic.cinebel|com.tapptic.lalibre|be.twizz
 ! https://forum.adguard.com/index.php?threads/20641/
 ||wpsconfig4svr.elasticbeanstalk.com/config/android/list?
 ||minfo.wps.cn/minfo/infos.ads?
@@ -1691,46 +1626,32 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4644
 ||api.hh.ru/banners_targeting
 ! https://forum.adguard.com/index.php?threads/le-bon-coin-apk-from-googleplay.18840/ fix ?ad_id= in Liste FR
-@@||mobile.leboncoin.fr/templates/api/view.json?ad_id=$app=fr.leboncoin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4572
-||config.ioam.de^$app=com.netbiscuits.kicker
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4572
 ||m.banner.t-online.de/adsdk/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4493
-@@||imasdk.googleapis.com/native/core/*/native_bridge__*.js$app=com.mylocaltv.wptv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4471
-@@||bbci.co.uk/static/*/adunit.json|$app=bbc.mobile.news.ww
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/1016
-||taboola.com^$app=com.microsoft.microsoftsolitairecollection
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4184
-||apis.tapatalk.com/api/user/info/$replace=/"ads":/"bbb":/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4161
-||baidu.com/setting/grobal_strategy?p=com.adslib.mobovee$app=cn.xender
 ! com.sofoot app
-@@||engine.widespace.com/map/provisioning?appId=com.sofoot$app=com.sofoot
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3933
 ! Yandex apps
 ||banners-slb.mobile.yandex.net^
 ||banners.mobile.yandex.net^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3533
-@@||rutube.ru/api/play/options/$app=ru.rutube.app|ru.rutube.RutubeKids,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3738
 ||crosspromo*.qplaze.com/PushCampaignXMLOut.php
-||crosspromo*.qplaze.com^$app=com.nomoc.wolfonfarm
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3717
-@@||ups.ksmobile.net^$app=com.cleanmaster.security
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3634
 ||server.idreams.pl/news/ads_sfr_*.json
 ! FOCUS Online
-@@||imasdk.googleapis.com^$app=de.cellular.focus
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3131
 @@||ads.cricbuzz.com/adserver/units/mobile/set_ads_values.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2697
-@@||connect.tapjoy.com/connect$app=com.lucasarts.starts_goo
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/569
 ||alxanosoft.com/rk/$empty
 ! Dailyhunt
-||api-news.dailyhunt.in/api/*/content?$replace=/externalAd/-externalAd/
 ! sport1.mobile.android.apps
 ||assets.sport1.de/imagix/filter2/jpeg/_set=dyn_size_no_crop/imagix/
 ! Gumtree app
@@ -1741,7 +1662,6 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ||afreeca-tag.ad-mapps.com^
 ||mtag.mman.kr^
 ! Zigbang (analytics)
-||cognito-identity.us-east-1.amazonaws.com^$app=com.chbreeze.jikbang4a
 ! Tinder (analytics)
 ||etl.tindersparks.com^
 ! https://forum.adguard.com/index.php?threads/13437/#post-101138
@@ -1749,15 +1669,8 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ||market.mi-img.com/download/AdCenter/
 ||market.xiaomi.com/download/AdCenter/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2461
-@@||imasdk.googleapis.com/native/core/*/native_bridge_$app=com.totrix.glwiz
-@@||imasdk.googleapis.com/native/sdkloader/native_sdk_$app=com.totrix.glwiz
 ! https://forum.adguard.com/index.php?threads/adguard-blocking-news-clips-on-ynet-app.10114/#post-81493
-@@||imasdk.googleapis.com/native/core/*/native_bridge_$app=com.goldtouch.ynet
-@@||imasdk.googleapis.com/native/sdkloader/native_sdk_v3.html?$app=com.goldtouch.ynet
-@@||pubads.g.doubleclick.net/gampad/ads?$app=com.goldtouch.ynet
 ! Daily Mail Online
-@@||imasdk.googleapis.com/native/core/$app=com.dailymail.online
-@@||imasdk.googleapis.com/native/sdkloader/native_sdk_$app=com.dailymail.online
 ! GO Keyboard
 ||navigation.api.hk.goforandroid.com/api/*/website/navigations?virtual_id=
 ! Investing.com Forex
@@ -1767,7 +1680,6 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2462
 ! The Chive
 @@||api.branch.io/v1/open
-@@||api.branch.io^$app=com.thechive
 ! Watch ABC
 ||api.ads.watchabc.go.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2318
@@ -1777,30 +1689,18 @@ auth.wi-fi.ru##.c-fullscreen-banner
 ! https://forum.adguard.com/index.php?threads/10722/
 ||banners.etermax.com^
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/587
-||espresso.economist.com/api/v1/ad/*/json$replace=/html/abcd\,/i
-||espresso.economist.com/api/v1/ad/*/json$replace=/html/abcd\,/i,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2245
 @@||mingle.kijiji.ca/api/ads/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2182
 ||config.sdk.scopely.io/*/android/ads_config.json
 ||s3.amazonaws.com/promos.withbuddies.com/prod/ads/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2253
-||onceux.unicornmedia.com/now/ads/vmap/*&UMADPARAMcsid=imdb.us.android$important,replace=/(<vmap:VMAP[\s\S]*?>)[\s\S]*<\/vmap:VMAP>/\$1<\/vmap:VMAP>/
-||onceux.unicornmedia.com/now/ads/vmap/*&UMADPARAMcsid=imdb.us.android$replace=/(<vmap:VMAP[\s\S]*?>)[\s\S]*<\/vmap:VMAP>/\$1<\/vmap:VMAP>/
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/2191
 @@||googleads.g.doubleclick.net/mads/gma?*&_package_name=com.nextradiotv.bfmbusiness
 @@||googleads.g.doubleclick.net/mads/gma?request_id=*&_package_name=com.nextradiotv.bfmbusiness
 ! Start: YT app
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/573
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/621
-||googleapis.com/youtubei/v1/browse?$important,protobuf=62887855|49413586|51621377
-||googleapis.com/youtubei/v1/browse?$protobuf=62887855|49413586|51621377
-||googleapis.com/youtubei/v1/next?$important,protobuf=55514441|62960614|65002523|105649908|82182324|99845384
-||googleapis.com/youtubei/v1/next?$protobuf=55514441|62960614|65002523|105649908|82182324|99845384
-||googleapis.com/youtubei/v1/player$important,protobuf=48841103|63112829|23|25
-||googleapis.com/youtubei/v1/player$protobuf=48841103|63112829|23|25
-||googleapis.com/youtubei/v1/search?$important,protobuf=73920376
-||googleapis.com/youtubei/v1/search?$protobuf=73920376
 ! End: YT app
 ! https://forum.adguard.com/index.php?threads/10132/
 ||api.live.daum.net/*/ad/
@@ -1829,22 +1729,17 @@ auth.wi-fi.ru##.c-fullscreen-banner
 @@||api.bufferapp.com/*/service/
 @@||api.bufferapp.com/*/user
 ! com.setsnail.daddylonglegs
-||d27tpsznug51gz.cloudfront.net/creatives/*.mp4$mp4
 ||d27tpsznug51gz.cloudfront.net^
 ! Crunchyroll
 @@||api.crunchyroll.com/log_ad_event.0.json
 @@||v.fwmrm.net/ad/*&resp=vast2
-||v.lvlt.crcdn.net/*/video.mp4?$mp4
 ! megogo for Android
 ||vcdn.biz/*_mggads/
 ! START: ivi.ru for Android
 .mp4?redirected=1&quality=
-.mp4?redirected=1&quality=$mp4,domain=ivi.ru
 @@.digitalaccess.ru/*sessionID=
 @@.ivi.ru/*sessionID=
 @@.mp4?redirected=1&sessionID=$domain=ivi.ru
-_*sec.mp4$mp4,domain=ivi.ru
-||cdn-ugc.brainient.com/*.mp4$mp4
 ||dfs.digitalaccess.ru/mp4-hi/*digitalaccess.ru/contents/*.mp4$domain=ivi.ru
 ! END: ivi.ru for Android
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1083
@@ -1866,7 +1761,6 @@ _*sec.mp4$mp4,domain=ivi.ru
 ||spotify.com/ads/
 ||trackersimulator.org^
 ! AMC app
-||mdialog.com/*/stream_time_events$replace=/[\s\S]+/{}/
 !---------------------------------------------------------------------------!
 !-------------- Rules for mobile analytics ---------------------------------!
 !---------------------------------------------------------------------------!
@@ -2133,16 +2027,10 @@ _*sec.mp4$mp4,domain=ivi.ru
 ! The content replacement rules
 !
 ! https://forum.adguard.com/index.php?threads/23599/
-||nabd-app.com/app/*/important_news_$replace=/<article>[\s\S]*?<promoted>1<\/promoted>[\s\S]*?<\/article>/
 ! https://forum.adguard.com/index.php?threads/23662/
-||x.instreamatic.com/v2/vast/*.xml$important,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5676
-||football.ua/hnd/Android/News.ashx$replace=/<item type=\"banner\">.{280\,400}.*<\/background><\/item>/
 ! https://forum.adguard.com/index.php?threads/21029/
-||pubads.g.doubleclick.net/gampad/ads?env=vp&gdfp_req=1&output=xml_vast*&url=http%3A%2F%2Famp.usatoday.com$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
-||pubads.g.doubleclick.net/gampad/ads?env=vp&gdfp_req=1&output=xml_vast*&url=http%3A%2F%2Famp.usatoday.com$important,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 !
-||startappnetwork.com/simpleM2M/clientRequestEnhancedXmlAd$important,replace=/(<tns:AdType[\s\S]*?>)[\s\S]*<\/tns:Ad>/\$1<\/tns:Ad>/
 !---------------------------------------------------------------------------!
 !-------------- Rules, which absent in mobile filters ----------------------!
 !---------------------------------------------------------------------------!
@@ -2164,10 +2052,6 @@ dnepr.info##.item-bg
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5009
 ekurilka.ua##a[href^="https://ekurilka.ua/rbs_banner.php"]
 ! 4pda.ru ads
-4pda.ru$$div[style="position: absolute; left: 0px; top: 0px; visibility: hidden;"][parent-elements="div"]
-4pda.ru$$img[src=".gif"][width="1"][height="1"][parent-elements="section"][parent-search-level="5"]
-||s.4pda.to/*.css$replace=/background:\s*[#\(\)\,\w]+\s+url\(\s*(http:)?\/\/s\.4pda\.to\/\w+\.jpg[\?\/\.\*\|:\w]*\s*\)/background: #e6e7e9/
-||s.4pda.to/*.css$replace=/background:\s*[#\(\)\,\w]+\s+url\(\s*(http:)?\/\/s\.4pda\.to\/\w+\.jpg[\?\/\.\*\|:\w]*\s*\)/background: #e6e7e9/,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4692
 forum.exploit.in##body > div > table[align="center"] a[rel$="nofollow"] > img
 ! https://forum.adguard.com/index.php?threads/13627/
