@@ -37,6 +37,10 @@ elif
 then
 SOURCETYPE=zip
 elif
+[[ -z $SKIPDOWNLOAD && $source == "file:///"* ]]
+then
+SOURCETYPE=localfile
+elif
 [[ -z $SKIPDOWNLOAD && $source == *"?"* ]]
 then
 SOURCETYPE=webpage
