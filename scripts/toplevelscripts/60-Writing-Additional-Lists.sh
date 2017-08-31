@@ -30,6 +30,7 @@ BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
 TAGTHEREPOLOG="[Details If Any]("$LISTGENSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELLOGSDIRRAW""$SCRIPTBASEFILENAME".md)"
 BREPOLOG="$LISTGENSCRIPTSLOGDIR""$BASEFILENAME".md
 timestamp=$(echo `date`)
 
@@ -47,8 +48,11 @@ if
 then
 rm $BREPOLOG
 fi
-echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
-echo "" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
+echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 ## Clear Temp Before
 if
