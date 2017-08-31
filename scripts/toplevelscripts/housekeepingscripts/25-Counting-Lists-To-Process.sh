@@ -32,11 +32,11 @@ echo ""
 SCRIPTTEXT="Merging Sources."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-CHECKME=$EVERYLISTFILEWILDCARD
+CHECKME=$EVERYBLISTFILEWILDCARD
 if
 ls $CHECKME &> /dev/null;
 then
-cat $EVERYLISTFILEWILDCARD | sort | sed '/^$/d' >> $BIGAPLSOURCE
+cat $EVERYBLISTFILEWILDCARD | sort | sed '/^$/d' >> $BIGAPLSOURCE
 else
 touch $BIGAPLSOURCE
 fi
