@@ -33,18 +33,6 @@ echo "SOURCEIP="$SOURCEIP"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 if
-[[ -n $SOURCEIP ]]
-then
-printf "$green"    "Ping Test Was A Success!"
-elif
-[[ -z $SOURCEIP ]]
-then
-printf "$red"    "Ping Test Failed."
-PINGTESTFAILED=true
-echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
-fi
-
-if
 [[ -n $PINGTESTFAILED ]]
 then
 { if
@@ -58,6 +46,20 @@ PINGTESTFAILED=true
 echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi }
 fi
+
+if
+[[ -n $SOURCEIP ]]
+then
+printf "$green"    "Ping Test Was A Success!"
+elif
+[[ -z $SOURCEIP ]]
+then
+printf "$red"    "Ping Test Failed."
+PINGTESTFAILED=true
+echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
+fi
+
+
 
 #if
 #[[ -n $PINGTESTFAILED ]]
