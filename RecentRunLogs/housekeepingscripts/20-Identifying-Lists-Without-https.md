@@ -14,20 +14,19 @@ ___________________________________________________________________
 * DNS-BH-URL-Shorteners
 * EasyList-Lithuania
 * Eesti-Custom-Sites-Filter
-* FinnishAntiSocial
-* JABCreationsAdblockPlusFilterSubscription
+* Finnish-AntiSocial
+* JABCreations
 * JoeWein
-* LehighBOOT
-* LehighImmortal
-* Malwaredomainlisthosts
-* MalwareURLsDomains
-* MVPSHOSTS
+* Lehigh-BOOT
+* Lehigh-Immortal-Malware
+* Malware-URLs-Domains
+* MVPS-HOSTS
 * PLgeneral
-* RUAdListOld
+* RU-AdList-Old
 * SecureMecca
-* SpamAssassinBillStearns
-* TheHostsFileProjectHosts
-* TofuFilter
+* Spam-Assassin-Bill-Stearns
+* The-Hosts-File-Project
+* Tofu-Filter
 ### Checking For Old https-Less File.
 * Old https-less List Does Not Exist.
 

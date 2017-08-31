@@ -1,3 +1,3 @@
 # Calculating Average Parsing Time
 
-* Average Parsing Time Of 24 Lists Was 84.25 Seconds.
+* Average Parsing Time Of 31 Lists Was 93.9032 Seconds.
