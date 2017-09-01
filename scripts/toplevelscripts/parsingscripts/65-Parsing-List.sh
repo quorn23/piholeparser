@@ -92,13 +92,13 @@ printf "$red"  "$ENDCOMMENT List File Now Empty."
 GOTOENDPARSING=true
 echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
-[[ $HOWMANYLINES -gt 0 && $HOWMANYLINESSTART -eq $HOWMANYLINES ]]
+[[ $HOWMANYLINES -gt 0 && $HOWMANYLINES -eq $HOWMANYLINESSTART ]]
 then
-printf "$yellow"  "$ENDCOMMENT"
+printf "$yellow"    "$ENDCOMMENT"
 elif
-[[ $HOWMANYLINES -gt 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
+[[ $HOWMANYLINES -gt 0 && $HOWMANYLINES -lt $HOWMANYLINESSTART ]]
 then
-printf "$green"  "$ENDCOMMENT"
+printf "$green"    "$ENDCOMMENT"
 fi }
 
 mv $BTEMPFILE $BFILETEMP
