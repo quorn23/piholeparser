@@ -27,8 +27,11 @@ fi
 if
 [[ -n $TESTPINGFAILED && -n $TESTCURLHEADERFAILED && -n $TESTWGETHEADERFAILED ]]
 then
+printf "$red"  "Host Unavailable."
 PINGTESTFAILED=true
 echo "PINGTESTFAILED="$PINGTESTFAILED"" | tee --append $TEMPPARSEVARS &>/dev/null
+else
+printf "$green"  "Host Available."
 fi
 
 ## Dead List?
