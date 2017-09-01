@@ -2,22 +2,21 @@
 ## Local Log Directories ##
 ###########################
 
-
 ## Main Logs Folder
 RECENTRUNLOGSDIR="$REPODIR"RecentRunLogs/
     MAINRECENTRUNLOGMD="$LOGDIR"Mainlog.md
 
 ## Common Scripts Logs
-COMMONSCRIPTSLOGDIR="$LOGDIR"CommonScriptsLogs/
+COMMONSCRIPTSLOGDIR="$LOGDIR"CommonScripts/
 
 ## Tool Script Logs
-TOOLSCRIPTSLOGDIR="$LOGDIR"ToolScriptsLogs/
+TOOLSCRIPTSLOGDIR="$LOGDIR"ToolScripts/
 
 ## Top Level Scripts Logs
-TOPLEVELSCRIPTSLOGSDIR="$LOGDIR"TopLevelScriptLogs/
+TOPLEVELSCRIPTSLOGSDIR="$LOGDIR"TopLevelScripts/
 
-## Housekeeping Scripts Logs
-    HOUSEKEEPINGSCRIPTSLOGDIR="$LOGDIR"HousekeepingScripts/
+## Initial Tasks Scripts Logs
+    INITIALTASKSSCRIPTSLOGDIR="$LOGDIR"InitialTasksScripts/
 
 ## TLD Scripts Losgs
     TLDLISTSSCRIPTSLOGDIR="$LOGDIR"TLDlistScripts/
@@ -34,9 +33,35 @@ TOPLEVELSCRIPTSLOGSDIR="$LOGDIR"TopLevelScriptLogs/
 ## End Task Script Logs
     ENDTASKSCRIPTSLOGDIR="$LOGDIR"EndtaskScripts/
 
+## Clean Log Directories
+CLEANLOGS="$LOGDIR"*.md
+CLEANLOGSB=$LOGDIR'*/*.md'
+CLEANLOGSC=$LOGDIR'*/*/*.md'
+
+######################################
+## Github Log Directories (NOT Raw) ##
+######################################
+
+## Main Repository URL
+MAINREPOFOLDERGIT="https://github.com/"$REPOOWNER"/"$REPONAME"/blob/"$REPOBRANCH"/"
+
+## Git URL for Logs
+RECENTRUNLOGSDIRGIT="$MAINREPOFOLDERGIT"RecentRunLogs/
+    MAINRECENTRUNLOGMDGIT="$RECENTRUNLOGSDIRGIT"README.md
 
 
 
+
+      
+      TAGTHEMAINREPOLOG="[Return To Main]("$RECENTRUNLOGSDIRRAWMD")"
+      TOPLEVELLOGSDIRRAW="$RECENTRUNLOGSDIRRAW"toplevel/
+      COMMONSCRIPTSLOGDIRRAW="$RECENTRUNLOGSDIRRAW"commonscripts/
+      ENDTASKSCRIPTSLOGDIRRAW="$RECENTRUNLOGSDIRRAW"endtaskscripts/
+      HOUSEKEEPINGSCRIPTSLOGDIRRAW="$RECENTRUNLOGSDIRRAW"housekeepingscripts/
+        TLDSCRIPTSLOGDIRRAW="$HOUSEKEEPINGSCRIPTSLOGDIRRAW"tldscripts/
+      LISTGENSCRIPTSLOGDIRRAW="$RECENTRUNLOGSDIRRAW"listgenscripts/
+      PARSINGSCRIPTSLOGDIRRAW="$RECENTRUNLOGSDIRRAW"parsingscripts/
+        ACTUALPARSINGLOGDIRRAW="$PARSINGSCRIPTSLOGDIRRAW"actualparsing/
 
 
 
