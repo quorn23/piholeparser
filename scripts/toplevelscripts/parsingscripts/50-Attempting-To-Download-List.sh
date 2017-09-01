@@ -48,6 +48,10 @@ cat $MIRROREDFILE >> $BTEMPFILE
 USEDMIRRORFILE=true
 echo "USEDMIRRORFILE="$USEDMIRRORFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
+[[ $SOURCETYPE == localfile ]]
+then
+curl -s -L $source >> $BTEMPFILE
+elif
 [[ $SOURCETYPE == plaintext ]]
 then
 wget -q --header="$AGENTDOWNLOAD" -O $BTEMPFILE $source
