@@ -34,8 +34,11 @@ HOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
 printf "$yellow"    "$HOWMANYLINES Lines After Deduping."
 echo "* $HOWMANYLINES Lines After Deduping. $timestamp" | tee --append $RECENTRUN &>/dev/null
 echo "____________________________________________________" | tee --append $RECENTRUN &>/dev/null
-cat $FILETEMP >> $RECENTRUN
+for source in `cat $FILETEMP`;
+do
+echo "* $source" | tee --append $RECENTRUN &>/dev/null
+done
 rm $FILETEMP
 else
-printf "$yellow"  "Either all lines past test, or the file is missing."
+printf "$yellow"  "Either all lines past TLD test, or the file is missing."
 fi
