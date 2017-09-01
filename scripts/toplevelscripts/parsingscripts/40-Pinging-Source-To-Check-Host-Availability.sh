@@ -38,16 +38,6 @@ echo "SOURCEIP="$SOURCEIP"" | tee --append $TEMPPARSEVARS &>/dev/null
 TESTPINGFAILED=true
 fi
 
-#chttp_code=`curl -s -o /dev/null -I -w "%{http_code}" $source`
-#whttp_code=`wget --server-response $source 2>&1 | awk '/^  HTTP/{print $2}'`
-#if
-#[[ $chttp_code == 200 || $whttp_code == 200 ]]
-#then
-#echo "yes"
-#else
-#echo "no"
-#fi
-
 ## curl Header
 if
 [[ `curl -s -H "$AGENTDOWNLOAD" -o /dev/null -I -w "%{http_code}" $source | grep '200'` ]]
