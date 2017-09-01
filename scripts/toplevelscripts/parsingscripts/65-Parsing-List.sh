@@ -87,7 +87,7 @@ ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
 { if
 [[ $HOWMANYLINES -eq 0 ]]
 then
-printf "$red"  "$ENDCOMMENT $SKIPPINGTOENDOFPARSERLOOP"
+printf "$red"  "$ENDCOMMENT List File Now Empty."
 GOTOENDPARSING=true
 echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
