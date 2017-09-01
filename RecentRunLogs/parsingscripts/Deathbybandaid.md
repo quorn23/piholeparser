@@ -11,16 +11,16 @@ ____________________________________
 ## The Source In The File To Download Is
 ## Checking For HTTPS
 ## Pinging Source To Check Host Availability
-* Deathbybandaid List Already Marked As Dead. Fri 1 Sep 06:54:14 EDT 2017
+* Deathbybandaid List Already Marked As Dead. Fri 1 Sep 08:48:02 EDT 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* Deathbybandaid List Was An Empty File After Download. Fri 1 Sep 06:54:14 EDT 2017
+* Deathbybandaid List Was An Empty File After Download. Fri 1 Sep 08:48:02 EDT 2017
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ## Checking Parsed File Size
-* Deathbybandaid List Was Killed By The Parsing Process. It will be skipped in the future. Fri 1 Sep 06:54:15 EDT 2017
+* Deathbybandaid List Was Killed By The Parsing Process. It will be skipped in the future. Fri 1 Sep 08:48:03 EDT 2017
 ## Attempting Creation Of Parsed List
 ## Calculating Parse Time
 ## Clearing Temp Vars

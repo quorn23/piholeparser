@@ -4,4 +4,4 @@
 ____________________________________
 # Setting Start Time Variable
 
-* Start Time Set To Fri 1 Sep 06:53:38 EDT 2017
+* Start Time Set To Fri 1 Sep 08:47:24 EDT 2017

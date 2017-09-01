@@ -11,5 +11,4 @@ ____________________________________
 ## The Source In The File To Download Is
 ## Checking For HTTPS
 ## Pinging Source To Check Host Availability
-* EasyList-China List Unavailable To Download. Fri 1 Sep 06:54:25 EDT 2017
 ## Checking If List Updated Online
