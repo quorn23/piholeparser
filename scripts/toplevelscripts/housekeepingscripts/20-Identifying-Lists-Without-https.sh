@@ -54,7 +54,7 @@ for source in `cat $f`;
 do
 
 if
-[[ $source != https* ]]
+[[ $source != https* && $source != "file://"* ]]
 then
 printf "$red"    "$BASEFILENAME"
 echo "* $BASEFILENAME" | tee --append $NOHTTPSLISTS &>/dev/null
