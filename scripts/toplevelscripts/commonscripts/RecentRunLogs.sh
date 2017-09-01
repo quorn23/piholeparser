@@ -45,15 +45,15 @@ fi
 echo ""
 
 if
-[[ -f $RECENTRUNA ]]
+[[ -f $MAINRECENTRUNLOGMD ]]
 then
 echo "* Old Recent Run Log Purged." | tee --append $TEMPLOGMAIN &>/dev/null
-rm $RECENTRUNA
+rm $MAINRECENTRUNLOGMD
 fi
 
 if
 [[ -f $TEMPLOGMAIN ]]
 then
 echo "* Recent Run Log Recreated." | tee --append $TEMPLOGMAIN &>/dev/null
-mv $TEMPLOGMAIN $RECENTRUNA
+mv $TEMPLOGMAIN $MAINRECENTRUNLOGMD
 fi
