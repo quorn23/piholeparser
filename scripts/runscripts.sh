@@ -62,7 +62,7 @@ echo ""
 printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
 
 ## Log Section
-echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUNA &>/dev/null
+echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $MAINRECENTRUNLOGMD &>/dev/null
 
 ## Create Log
 if
@@ -112,9 +112,9 @@ then
 LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
-echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUNA &>/dev/null
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUNA &>/dev/null
-echo "" | sudo tee --append $RECENTRUNA
+echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
+echo "$TAGTHEREPOLOG" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
+echo "" | sudo tee --append $MAINRECENTRUNLOGMD
 
 printf "$magenta" "$DIVIDERBAR"
 echo ""
