@@ -23,10 +23,11 @@ echo "Temp Parsing Vars File Missing, Exiting."
 exit
 fi
 
-chttp_code=`curl -s -o /dev/null -I -w "%{http_code}" $source`
-whttp_code=`wget --server-response $source 2>&1 | awk '/^  HTTP/{print $2}'`
+HTTPCODECURL=`curl -s -o /dev/null -I -w "%{http_code}" $source`
+HTTPCODEWGET=`wget --server-response $source 2>&1 | awk '/^  HTTP/{print $2}'`
+
 if
-[[ $chttp_code == 200 || $whttp_code == 200 ]]
+[[ $HTTPCODECURL == 200 || $HTTPCODEWGET == 200 ]]
 then
 echo "yes"
 else
