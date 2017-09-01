@@ -20,3 +20,14 @@ Process Took 26 Seconds.
 Process Took 59 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/toplevel/80-Completing-End-Tasks.md)
 
+Process Took 39 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/toplevel/50-Running-Parser.md)
+
+## Writing Additional Lists Fri 1 Sep 00:59:54 EDT 2017
+Process Took 3 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/toplevel/60-Writing-Additional-Lists.md)
+
+## Completing End Tasks Fri 1 Sep 01:03:23 EDT 2017
+Process Took 4 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/toplevel/80-Completing-End-Tasks.md)
+

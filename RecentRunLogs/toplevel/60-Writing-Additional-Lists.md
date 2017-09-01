@@ -3,15 +3,15 @@
 ____________________________________
 # Writing Additional Lists
 
-## Compiling Combined List Fri 1 Sep 00:34:53 EDT 2017
-Process Took 5 Seconds.
+## Compiling Combined List Fri 1 Sep 00:59:54 EDT 2017
+Process Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/listgenscripts/60-Compiling-Combined-List.md)
 
-## Compiling Edited Combined List Fri 1 Sep 00:34:58 EDT 2017
-Process Took 0 Seconds.
+## Compiling Edited Combined List Fri 1 Sep 01:01:04 EDT 2017
+Process Took 31 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/listgenscripts/70-Compiling-Edited-Combined-List.md)
 
-## Compiling Country Code Lists Fri 1 Sep 00:34:58 EDT 2017
-Process Took 21 Seconds.
+## Compiling Country Code Lists Fri 1 Sep 01:01:35 EDT 2017
+Process Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/listgenscripts/75-Compiling-Country-Code-Lists.md)
 

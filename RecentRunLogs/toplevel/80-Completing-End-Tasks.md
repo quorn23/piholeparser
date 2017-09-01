@@ -3,31 +3,31 @@
 ____________________________________
 # Completing End Tasks
 
-## Calculating Average Parsing Time Fri 1 Sep 00:35:19 EDT 2017
+## Calculating Average Parsing Time Fri 1 Sep 01:03:24 EDT 2017
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/10-Calculating-Average-Parsing-Time.md)
 
-## Calculating Total Runtime Of Script Fri 1 Sep 00:35:19 EDT 2017
-Process Took 1 Seconds.
+## Calculating Total Runtime Of Script Fri 1 Sep 01:03:24 EDT 2017
+Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/20-Calculating-Total-Runtime-Of-Script.md)
 
-## Calculating TLD Percentages Fri 1 Sep 00:35:20 EDT 2017
-Process Took 56 Seconds.
+## Calculating TLD Percentages Fri 1 Sep 01:03:24 EDT 2017
+Process Took 4 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/65-Calculating-TLD-Percentages.md)
 
-## Looking At What Did Not Pass TLD Test Fri 1 Sep 00:36:16 EDT 2017
+## Looking At What Did Not Pass TLD Test Fri 1 Sep 01:07:32 EDT 2017
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/68-Looking-At-What-Did-Not-Pass-TLD-Test.md)
 
-## Adjusting README Fri 1 Sep 00:36:16 EDT 2017
-Process Took 1 Seconds.
+## Adjusting README Fri 1 Sep 01:07:32 EDT 2017
+Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/70-Adjusting-README.md)
 
-## Removing Temporary Script Files Fri 1 Sep 00:36:17 EDT 2017
-Process Took 0 Seconds.
+## Removing Temporary Script Files Fri 1 Sep 01:07:32 EDT 2017
+Process Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/75-Removing-Temporary-Script-Files.md)
 
-## Pushing Lists To Locally Hosted Location Fri 1 Sep 00:36:17 EDT 2017
+## Pushing Lists To Locally Hosted Location Fri 1 Sep 01:07:33 EDT 2017
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/80-Pushing-Lists-To-Locally-Hosted-Location.md)
 

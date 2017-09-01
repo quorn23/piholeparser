@@ -3,4 +3,4 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/endtaskscripts/80-Completing-End-Tasks.md)
 ____________________________________
 # 80-Pushing-Lists-To-Locally-Hosted-Location
-* Localhost Web Directory Not Set. Please Fix. Fri 1 Sep 00:36:17 EDT 2017
+* Localhost Web Directory Not Set. Please Fix. Fri 1 Sep 01:07:33 EDT 2017
