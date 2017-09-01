@@ -76,6 +76,6 @@ if
 then
 for source in `cat $TEMPFILEP`;
 do
-echo "* $source" | tee --append $RECENTRUN &>/dev/null
+echo "* '$source'" | tee --append $RECENTRUN &>/dev/null
 done
 fi
