@@ -84,21 +84,23 @@ HOWMANYLINESSTART=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
 bash $p
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
+
 { if
-[[ $HOWMANYLINES -eq 0 ]]
+[[ $HOWMANYLINES -eq 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
 then
 printf "$red"  "$ENDCOMMENT List File Now Empty."
 GOTOENDPARSING=true
 echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 elif
-[[ $HOWMANYLINES -ge 1 && $HOWMANYLINESSTART -ge $HOWMANYLINES ]]
+[[ $HOWMANYLINES -gt 0 && $HOWMANYLINESSTART -eq $HOWMANYLINES ]]
 then
 printf "$yellow"  "$ENDCOMMENT"
 elif
-[[ $HOWMANYLINES -ge 1 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
+[[ $HOWMANYLINES -gt 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
 then
 printf "$green"  "$ENDCOMMENT"
 fi }
+
 mv $BTEMPFILE $BFILETEMP
 echo ""
 fi
