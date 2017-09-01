@@ -5,11 +5,11 @@ ____________________________________
 # Downloading Active Top Level Domains
 
 ## InternetAssignedNumbersAuthority
-List Took 5 Seconds.
+List Took 7 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/tldscripts/InternetAssignedNumbersAuthority.log)
 
 ## PublicSuffix
-List Took 4 Seconds.
+List Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/tldscripts/PublicSuffix.log)
 
 ## TLDListCom

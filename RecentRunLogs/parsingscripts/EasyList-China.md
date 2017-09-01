@@ -11,4 +11,5 @@ ____________________________________
 ## The Source In The File To Download Is
 ## Checking For HTTPS
 ## Pinging Source To Check Host Availability
-* EasyList-China List Marked As Dead. Fri 1 Sep 00:39:19 EDT 2017
+* EasyList-China List Unavailable To Download. Fri 1 Sep 06:54:25 EDT 2017
+## Checking If List Updated Online

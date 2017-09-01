@@ -2,13 +2,13 @@
 
 ### Last Run Stats
 
-* Error Setting Start Time.
-* Script Ended Fri 1 Sep 01:03:24 EDT 2017
-* [Error Calculating Script Run Time.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
-* The Edited AllParsed File is 32 MB And Contains 1610978 Domains.
-* Average Parsing Time Of 5 Lists Was 46.2 Seconds.
-* Error Setting The Amount Of Valid TLD's.
-* [Error Setting https-less Link]()
+* Script Started Fri 1 Sep 06:53:38 EDT 2017
+* Script Ended Fri 1 Sep 07:50:12 EDT 2017
+* [Script Took 56 Minutes To Filter 149 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+* The Edited AllParsed File is 74 MB And Contains 3273816 Domains.
+* Average Parsing Time Of 11 Lists Was 100.091 Seconds.
+* 1720 Valid Top Level Domains. No New TLD's.
+* [21 Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
 
 ### This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
 

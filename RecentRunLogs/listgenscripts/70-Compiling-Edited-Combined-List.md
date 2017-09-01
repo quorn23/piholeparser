@@ -3,4 +3,4 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/listgenscripts/60-Writing-Additional-Lists.md)
 ____________________________________
 # 70-Compiling-Edited-Combined-List
-* All Parsed List (edited) Removed. Fri 1 Sep 01:01:04 EDT 2017
+* All Parsed List (edited) Removed. Fri 1 Sep 07:44:53 EDT 2017
