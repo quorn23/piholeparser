@@ -132,7 +132,7 @@ echo ""
 #####################
 
 echo "Cleaning TLD Lists"
-CHECKME=$CLEANTLDS
+CHECKME=$ALLTLDMLISTSDIR
 if
 ls $CHECKME &> /dev/null;
 then
