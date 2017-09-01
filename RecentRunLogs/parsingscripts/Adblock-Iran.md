@@ -1,3 +1,7 @@
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
+[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/toplevel/50-Running-Parser.md)
+____________________________________
 # Adblock-Iran
 ## Setting Temporary Parsing Variables
 ## Checking For Existing Mirror File

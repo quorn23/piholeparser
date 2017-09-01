@@ -1,8 +1,8 @@
-! Checksum: dvlMOwKRabsobYTE9NRcwA
+! Checksum: vFHVO8BOWkKhUJAuCy08XA
 ! Title: Spyware filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. If you do not want your actions on the Internet to be tracked, use this filter.
-! Version: 1.0.14.23
-! TimeUpdated: 2017-08-30T22:00:39.366+04:00
+! Version: 1.0.14.26
+! TimeUpdated: 2017-08-31T20:00:45.563+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -101,6 +101,9 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 ! ||app-measurement.com^
 !
 ||fandommetrics.com^$third-party
+||chengyuplaza.com^$third-party
+||ip.hivps.xyz^$third-party
+||12fou.com^$third-party
 ||m.dubcm.com^$third-party
 ||a1.huiqituan.com^$third-party
 ||geo.kaloo.ga^$third-party
@@ -4110,6 +4113,8 @@ _tracking.php?b=
 ||scorecardresearch.com^$domain=cnet.com,important
 ! End: cnet.com trackers
 !
+||altapress.ru/story/counter/
+unilad.co.uk###sidebar > #text-64 > .block-title
 ||suedkurier.de/storage/scr/*_webtrekk.js.js
 ||phoenix.de/php/mediaplayer/conf/tracking_
 ||youtube.com/youtubei/*/log_event?
@@ -4923,6 +4928,8 @@ dreamprogs.net##td[width="88"][height="31"]
 !+ NOT_PLATFORM(windows, mac, android)
 @@||ssp.rambler.ru/capirs_async.js$domain=lenta.ru|championat.com|afisha.ru
 !
+! https://forum.adguard.com/index.php?threads/24670/
+@@||pixel.quantserve.com/pixel^$domain=mixcloud.com
 ! Unblock adblockanalytics.com marker
 @@||adblockanalytics.com/ads.js|
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6269

@@ -1,8 +1,8 @@
-! Checksum: jdA1Cn50L4ojrc3ZgVz5qw
+! Checksum: RXMDA6F0FH18w+ILY4bPBw
 ! Title: Annoyances filter
 ! Description: Blocks irritating elements on webpages including cookie notices third-party widgets and in-page popups.
-! Version: 1.0.17.62
-! TimeUpdated: 2017-08-30T22:02:17.786+04:00
+! Version: 1.0.17.69
+! TimeUpdated: 2017-08-31T23:02:30.023+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#annoyances
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -23,6 +23,8 @@
 !
 !######### Annoying elements (not ads)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6409
+haaretz.com##.footer-toolbar.float
 ! https://forum.adguard.com/index.php?threads/24112/
 iz.ru#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("player.live.current.play", "false") } } catch (ex) {} })();
 iz.ru#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("player.live.current.mute", "false") } } catch (ex) {} })();
@@ -340,6 +342,8 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+haaretz.com##.js-newsletter--alerts
+haaretz.com##.newsletterInarticle
 aetv.com,mylifetime.com,history.com##.show-newsletter-container
 wildo.ru##form.mail
 medicalnewstoday.com###footer_newsletter
@@ -622,6 +626,12 @@ gazetevatan.com##form ._soc.news
 ! FuckAdBlock
 iphonesoft.fr,tmohentai.com,kshowonline.com,topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr.com,theland.com.au,greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+@@||palemoon.org/ads.js
+yeptube.com###abmessage
+@@||watson.ch/cc/js/*/advertising.js
+trakt.tv###huckster-desktop-wrapper
+trakt.tv###huckster-mobile-top-square
+stol.it###block-message
 glamour.nl##.message-glamour
 @@||adslzone.net/app/themes/adslzone-net-mykonos/assets/js/ads.min.js
 @@||txxx.com/js/advertising.js^
@@ -2729,6 +2739,8 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+tampermonkey.net##.cookie_hint
+televisa.com##.parent-box-cookies
 riffhold.com###cookie_notice
 habboin.net###privacy_cookies
 obozrevatel.com##.privasypolicy-info
@@ -3994,6 +4006,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+haaretz.com##.modal-wrapper--dark
 ibrasoftware.com##.msb
 zamundatorrentr.com###kdfbplug
 huffingtonpost.de##.follow-huffpost
@@ -5218,6 +5231,11 @@ cnews.ru##.video.img-block
 1tv.ru##.footer-promo-place
 1tv.ru##.promo-place
 !
+porndoe.com##.go-premium-drawer
+txxx.com##.rek-desk-list
+zmovs.com##.in-gallery-banner
+zmovs.com##.im-b.show
+txxx.com##.rek-iv
 milfhdporno.com##.fc-right
 mover.uz##.block-info-vertical
 ||journalistenwatch.com/wp-content/uploads/2017/08/Boxerin-03.gif
@@ -5333,8 +5351,6 @@ gogoanime.io#%#AG_onLoad(function() { setTimeout(function() { var e = document.q
 dailypost.co.uk#%#AG_onLoad(function() { setTimeout(function() { var e = document.querySelector('span.autoplay-cancel'); if (e) e.click(); }, 3300); });
 ! rutracker.org - allow pages preview in NewsFox RSS reader in FireFox
 rutracker.org#%#window.self = window.top;
-! flashx.tv - need to click twice for starting the vimeo. Make the first click
-flashx.tv#%#AG_onLoad(function() { setTimeout(function() { var e = document.querySelector('input[onclick]'); if (e) e.click(); }, 700); });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4440
 raptu.com#%#AG_onLoad(function(){var el=document.querySelector('body > #normalmsg > form[action="#"]');if(el)el.submit()});
 ! https://forum.adguard.com/index.php?threads/resolved-watchseries-cr.19055/#post-126304
@@ -5413,6 +5429,10 @@ webspor2.com,biyografi.info,seiya-saiga.com#%#AG_onLoad(function() { setTimeout(
 !##############################
 !
 ! Disable aytoplay
+||focus.de$important,~script,~stylesheet,~xmlhttprequest,replace=/autoPlay:true/autoPlay:false/
+||oe24.at$important,~script,~stylesheet,~xmlhttprequest,replace=/"autostart":"true"/"autostart":"false"/
+||huffingtonpost.de$important,~script,~stylesheet,~xmlhttprequest,replace=/autoplay=true/autoplay=false/
+||video.golem.de$important,~script,~stylesheet,~xmlhttprequest,replace=/autoPl:\s"true"/autoPl:"false"/
 !#######################################################
 !######### Block useless widgets #######################
 !### Weather, money exchange, 3rd-party feedbacks, #####

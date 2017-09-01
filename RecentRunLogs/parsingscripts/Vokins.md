@@ -1,3 +1,7 @@
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
+[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/toplevel/50-Running-Parser.md)
+____________________________________
 # Vokins
 ## Setting Temporary Parsing Variables
 ## Checking For Existing Mirror File
@@ -10,6 +14,7 @@
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
+* Vokins List Failed To Download. Attempted to use Mirror. 
 ## Checking File Size
 ## Attempting Creation Of Mirror File
 ## Parsing List

@@ -2,13 +2,13 @@
 
 ### Last Run Stats
 
-* Script Started Thu 31 Aug 00:20:13 EDT 2017
-* Script Ended Thu 31 Aug 01:28:46 EDT 2017
-* [Script Took 68 Minutes To Filter 148 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
-* The Edited AllParsed File is 73 MB And Contains 3222912 Domains.
-* Average Parsing Time Of 40 Lists Was 60.225 Seconds.
+* Script Started Fri 1 Sep 00:20:14 EDT 2017
+* Script Ended Fri 1 Sep 00:35:20 EDT 2017
+* [Script Took 15 Minutes To Filter 149 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+* The Edited AllParsed File is 0 MB And Contains 10 Domains.
+* Average Parsing Time Of 16 Lists Was 31.375 Seconds.
 * 1720 Valid Top Level Domains. No New TLD's.
-* [22 Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
+* [21 Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/20-Identifying-Lists-Without-https.md)
 
 ### This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
 
@@ -45,13 +45,13 @@ Simply copy the RAW format url for the list and add them.
 
 Just add
  
-    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111.txt
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/ALLPARSEDLISTS.txt
 
 ###### I also have a list that is driven by the userbase.
 
 * To request a list to be whitelisted or blacklisted, please submit an issue containing WHY it should be added or removed.
 
-    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/1111ALLPARSEDLISTS1111edited.txt
+    https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/parsedall/ALLPARSEDLISTSedited.txt
 
 _______________________________________________________________________________________________________________________
 
@@ -81,7 +81,7 @@ ________________________________________________________________________________
 
 #### A local copy of the big list is available to be used.
 
-http://pi.hole/lists/1111ALLPARSEDLISTS1111.txt
+http://pi.hole/lists/ALLPARSEDLISTS.txt
 
 _______________________________________________________________________________________________________________________
 

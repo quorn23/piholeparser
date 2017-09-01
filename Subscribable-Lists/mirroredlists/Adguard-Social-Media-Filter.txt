@@ -1,8 +1,8 @@
-! Checksum: k8zimnS3mG7QjuYDKloQkw
+! Checksum: lf679Ruk9SiajEFnGvK40Q
 ! Title: Social media filter
 ! Description: Filter for social media widgets (Like buttons and such).
-! Version: 1.0.22.68
-! TimeUpdated: 2017-08-30T20:00:52.304+04:00
+! Version: 1.0.22.70
+! TimeUpdated: 2017-08-31T22:01:01.017+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#social
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -413,6 +413,12 @@ m.tf.co.kr#$#li.sBtn_reply { float: initial!important; display: inline-block!imp
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+haaretz.com##ul.nav > li[title="Reddit"]
+haaretz.com##ul.nav > li[title="StumbleUpon"]
+mixcloud.com##.social.gplus
+mixcloud.com##.social.twitter
+mixcloud.com##.social.facebook
+mixcloud.com##.social.pinterest
 berliner-zeitung.de##.dm_article_share
 nhk.or.jp##.social-btn-area
 fullstuff.co##.share-icons > div.entry-comment-count ~ a
@@ -3571,7 +3577,8 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 !
 ! Section fixing issues caused by social filter
 !
-!
+! https://forum.adguard.com/index.php?threads/24670/
+@@||facebook.com/plugins/page.php^$domain=mixcloud.com
 ! https://forum.adguard.com/index.php?threads/https-www-ghacks-net.24274/
 ghacks.net#@#.synved-social-button
 ! https://forum.adguard.com/index.php?threads/23548/

@@ -1,3 +1,7 @@
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
+[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/README.md)
+[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/housekeepingscripts/40-Running-Housekeeping-Tasks.md)
+____________________________________
 # Processing Whitelists
 
 ### Sorting and Deduping Individual Whitelists.
@@ -40,7 +44,7 @@
 #### reddit
 1 In reddit
 #### Script
-47 In Script
+49 In Script
 #### Skype
 11 In Skype
 #### sonarr
@@ -62,4 +66,4 @@
 #### youtube
 3 In youtube
 ### Deduplicating Merged  List.
-175 After Deduplicating Merged  List.
+177 After Deduplicating Merged  List.

@@ -1,8 +1,8 @@
-! Checksum: dwkqhchYi8WbOd1+Z3sb1Q
+! Checksum: dpLwzwJTAC7kQhULIrcH1Q
 ! Title: Russian filter
 ! Description: Adguard Russian filter. Filter that enables blocking of ads on websites in Russian.
-! Version: 1.0.56.26
-! TimeUpdated: 2017-08-30T20:00:22.183+04:00
+! Version: 1.0.56.29
+! TimeUpdated: 2017-08-31T20:00:23.682+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#russian
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -23,6 +23,10 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||bsvideo10.ru^$third-party
+||vsdcdn.com^$third-party
+||vidshm.com^$third-party
+||88.85.75.147^$third-party
 ||dnudg.com^$third-party
 ||uqfot.com^$third-party
 ||mtdatahaba.rocks^$third-party
@@ -4965,8 +4969,8 @@ hdclub.org##.mainouter td[align="center"][class="outer"][valign="top"] > p+div[s
 hdclub.org##.mainouter td[align="center"][class="outer"][valign="top"] > table[width="100%"][-ext-has="font.block-title > strong:contains(SEEDBOX.ORG.UA)"]
 hdclub.org##.mainouter td[align="center"][class="outer"][valign="top"] > table[width="100%"][-ext-has="font.block-title > strong:contains(SEEDBOX.ORG.UA)"]+div[style*="/themes/HDClub/images/block_bg_.jpg"]
 !
-pb.wtf,piratbit.org,piratbit.ru###main_content > div[id][-ext-has='> div[class] > a[style][target="_blank"]']
-pb.wtf,piratbit.org,piratbit.ru###topics_main > tbody[class="row1"]+tbody[class="row1"][-ext-has='> tr > td.poster_info img[data-name="PiratBot"]']
+pb.wtf,piratbit.org,piratbit.ru###main_content > div[-ext-has='> div[class]:matches-css(display:*inline-block*) > a[style][target="_blank"]']
+pb.wtf,piratbit.org,piratbit.ru###topics_main > tbody[class="row1"]+tbody[class="row1"][-ext-has='> tr > td.poster_info img[data-name^="Pirat"]']
 !
 vk.com###page_wall_posts > div[id^="post-"][-ext-has='> div._post_content > div.post_content > div.post_info > div.wall_text > div.wall_post_cont > div.wall_marked_as_ads']
 vk.com##.wall_wrap div[id^="post-"][-ext-has='div.post_content > div.post_info > div.wall_text > div.wall_post_cont > div.wall_marked_as_ads']
@@ -6003,6 +6007,10 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !-----------------------
 !------- CSS -----------
 !-----------------------
+! altapress.ru - удаление отступа сверху
+altapress.ru#$#.banner-top { height: 0px!important; }
+altapress.ru#$#.main-menu { top: 0px!important; }
+altapress.ru#$#.top-menu { top: 30px!important; }
 ! game-digest.com - удаление отступа сверху
 game-digest.com#$##zefirka + #page { margin:15px auto 0!important; }
 ! https://forum.adguard.com/index.php?threads/21622/
@@ -8464,6 +8472,11 @@ rustorka.com##div[align="center"] > a > img
 /(rustorka.com\/forum\/(?!login)(?!index)(?!tracker)(?!shoutbox)(?!viewtopic)(?!privmsg)(?!search)(?!thanks)(?!posting)(?!profile)).*php/$popup,domain=rustorka.com
 !rustorka.com##a[href$=".php"]:not([class]) > :not(img)
 !
+minigames.mail.ru##.rb_banner
+altapress.ru##.b-partners_news
+||media.aso.altapress.ru^
+||altapress.ru/img/_branding/
+auto.ru##div[class*=" _"][id]
 minigames.mail.ru##.pm-toolbar__banner
 minigames.mail.ru##.container > div > a[href^="https://r.mail.ru/"][rel="noopener"][target="_blank"][style*="display: block;"]
 ||wwxww.ru^$script
@@ -12566,11 +12579,11 @@ paruskg.info##.ads-sidebanner
 pawno-info.ru###wgo img[width="400"][height="50"]
 payforpic.ru###notice
 payforpic.ru##noindex
-pb.wtf,piratbit.org,piratbit.ru###topic_main > thead > tr.hidden-sm
+piratbit.ru##thead > tr.hidden-sm[style]
 pb.wtf,piratbit.org,piratbit.ru##a[href^="/ext/"]
 pb.wtf,piratbit.org,piratbit.ru##a[href^="/axt/"]
 pb.wtf,piratbit.org,piratbit.ru##a[href^="/bxt/"]
-pb.wtf,piratbit.org,piratbit.ru##.re_top
+pb.wtf,piratbit.org,piratbit.ru##a[href^="/ixt/"]
 pc-torrents.com##a[class^="cc_mod_"]
 pc4me.ru###optincrusher
 pcpro100.info##a[href="/wp-content/themes/pcpro100/block/picture.php?id=uskor"]
@@ -13939,7 +13952,7 @@ zpppstop.ru##div[id^="zpppstop-stgroup-wrap"]
 zserials.tv##noindex a[rel="nofollow"] > img
 zvukoff.ru##.adv-list-top
 |http*://$image,third-party,domain=image2you.ru
-|http*://$script,third-party,domain=wwxww.ru|hdporno.ru|imgbun.ru|rus.porn|fast2picture.ru|fastpic.ru|homeporn.tv|images-pic.ru|img-picas.ru|img-pika.ru|imgpics.ru|mega-pics-money.ru|monkeypx.ru|pic-money.ru|pic-you.com|pic4art.ru|picfrees.ru|picpower.ru|pics-money.ru|pikas-img.ru|platimzafoto.ru|yyouut.ru
+|http*://$script,third-party,domain=kinofrukt.club|wwxww.ru|hdporno.ru|imgbun.ru|rus.porn|fast2picture.ru|fastpic.ru|homeporn.tv|images-pic.ru|img-picas.ru|img-pika.ru|imgpics.ru|mega-pics-money.ru|monkeypx.ru|pic-money.ru|pic-you.com|pic4art.ru|picfrees.ru|picpower.ru|pics-money.ru|pikas-img.ru|platimzafoto.ru|yyouut.ru
 |http*://*.fast2img.ru^
 |http*://*.fasti2mages.ru^
 |http*://*.rusdozor.ru^
@@ -14054,7 +14067,6 @@ zvukoff.ru##.adv-list-top
 ||allsoft.ru/ads/
 ||allsport-live.net/1xbet/
 ||alogvinov.com/Skinning_1920x1080_new.jpg
-||altapress.ru/img/alpari/
 ||amic.ru/banners/
 ||amic.ru/publib/getbbg.php
 ||amit.ru/images/amit_cond_*.gif
@@ -16157,6 +16169,9 @@ joyreactor.cc#@#div#sidebar
 @@||vetton.ru^$jsinject,elemhide
 !#################
 !
+! https://forum.adguard.com/index.php?threads/5844/
+altapress.ru#@#.banner-top
+altapress.ru#@##banner-top
 ! gsmvezde.ru - broken by Adguard injections
 @@||gsmvezde.ru/imgs|$document
 ! goodgame.ru - broken auth
