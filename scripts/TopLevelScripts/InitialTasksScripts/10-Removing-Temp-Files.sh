@@ -13,7 +13,7 @@ if
 ls $CHECKME &> /dev/null;
 then
 printf "$red"   "Purging Old Temp Files."
-rm $TEMPCLEANUPB
+rm $TEMPCLEANUPTWO
 echo "* Old Temp Files Purged." | tee --append $RECENTRUN &>/dev/null
 else
 printf "$yellow"   "No Temp Files To Remove."
