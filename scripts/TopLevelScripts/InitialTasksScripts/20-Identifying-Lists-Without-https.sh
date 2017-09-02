@@ -2,7 +2,8 @@
 ## This Generates a list of which blacklists don't use https
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 RECENTRUNWITHOUTHTTPSMD="$INITIALTASKSSCRIPTSLOGSGIT""$SCRIPTBASEFILENAME".md
 echo "RECENTRUNWITHOUTHTTPSMD='"$RECENTRUNWITHOUTHTTPSMD"'" | tee --append $TEMPVARS &>/dev/null
