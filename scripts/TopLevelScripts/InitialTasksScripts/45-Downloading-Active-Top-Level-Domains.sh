@@ -9,7 +9,7 @@ for f in $TLDLSTALL
 do
 
 ## Variables
-source ./foldervars.var
+source "$SCRIPTDIR"/foldervars.var
 
 ## Clear Temp Before
 if
