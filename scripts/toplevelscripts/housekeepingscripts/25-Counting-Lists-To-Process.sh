@@ -8,9 +8,9 @@ SCRIPTTEXT="Checking For Big Source List File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $BIGAPLSOURCE ]]
+[[ -f $COMBINEDBLACKLISTSSOURCE ]]
 then
-rm $BIGAPLSOURCE
+rm $COMBINEDBLACKLISTSSOURCE
 printf "$red"    "Purging Old Source List."
 echo "* Old Multisource List Purged." | tee --append $RECENTRUN &>/dev/null
 fi
@@ -23,19 +23,19 @@ CHECKME=$EVERYBLISTFILEWILDCARD
 if
 ls $CHECKME &> /dev/null;
 then
-cat $EVERYBLISTFILEWILDCARD | sort | sed '/^$/d' >> $BIGAPLSOURCE
+cat $EVERYBLISTFILEWILDCARD | sort | sed '/^$/d' >> $COMBINEDBLACKLISTSSOURCE
 else
-touch $BIGAPLSOURCE
+touch $COMBINEDBLACKLISTSSOURCE
 fi
-HOWMANYLINES=$(echo -e "`wc -l $BIGAPLSOURCE | cut -d " " -f 1`")
+HOWMANYLINES=$(echo -e "`wc -l $COMBINEDBLACKLISTSSOURCE | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ## Math Time
 if
-[[ -f $BIGAPLSOURCE ]]
+[[ -f $COMBINEDBLACKLISTSSOURCE ]]
 then
-HOWMANYSOURCELISTS=$(echo -e "`wc -l $BIGAPLSOURCE | cut -d " " -f 1`")
+HOWMANYSOURCELISTS=$(echo -e "`wc -l $COMBINEDBLACKLISTSSOURCE | cut -d " " -f 1`")
 else
 HOWMANYSOURCELISTS="unknown amount"
 fi
