@@ -19,9 +19,9 @@ fi
 ## Combine Small lists
 printf "$yellow"  "Merging Individual Lists."
 if
-ls $PARSEDLISTSALL &> /dev/null;
+ls $PARSEDBLACKLISTSSUBALL &> /dev/null;
 then
-cat $PARSEDLISTSALL >> $TEMPFILE
+cat $PARSEDBLACKLISTSSUBALL >> $TEMPFILE
 echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
 else
 printf "$red"  "No Parsed Files Available To Merge."
