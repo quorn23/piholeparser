@@ -58,7 +58,7 @@ then
 rm $BREPOLOG
 fi
 echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPTWOREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
