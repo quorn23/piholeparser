@@ -2,7 +2,8 @@
 ## This creates my custom biglist
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 WHATITIS="All Parsed List (edited)"
 timestamp=$(echo `date`)
