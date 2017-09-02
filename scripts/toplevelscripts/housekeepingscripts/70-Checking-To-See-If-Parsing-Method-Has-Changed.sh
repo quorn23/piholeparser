@@ -73,11 +73,11 @@ if
 [[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
 { if
-ls $KILLTHELISTALL &> /dev/null;
+ls $BLACKLSTSTHATDIEALL &> /dev/null;
 then
 echo "* Resetting Killed Lists For Reprocessing" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "Resetting Killed Lists For Reprocessing."
-for f in $KILLTHELISTALL
+for f in $BLACKLSTSTHATDIEALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
