@@ -29,7 +29,7 @@ echo ""
 SCRIPTTEXT="Pulling Domains From Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-for f in $EVERYBLISTFILEWILDCARD
+for f in $BLACKLSTALL
 do
 
 source=`cat $f`
