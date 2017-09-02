@@ -8,7 +8,7 @@ source "$SCRIPTDIRA"/foldervars.var
 SCRIPTTEXT="Checking For Old Temp Files."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-CHECKME=$TEMPCLEANUPB
+CHECKME=$TEMPCLEANUPTWO
 if
 ls $CHECKME &> /dev/null;
 then
