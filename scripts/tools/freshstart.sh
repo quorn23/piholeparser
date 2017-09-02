@@ -43,7 +43,7 @@ echo ""
 #########################
 
 echo "Cleaning Parsed Directory"
-CHECKME=$PARSEDLISTSALL
+CHECKME=$PARSEDBLACKLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
 then
