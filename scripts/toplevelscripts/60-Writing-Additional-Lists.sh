@@ -6,7 +6,7 @@ source ./foldervars.var
 
 ## Start File Loop
 ## For .sh files In The listgen Directory
-for f in $ALLLISTGENSCRIPTS
+for f in $LISTGENSCRIPTSALL
 do
 
 LOOPSTART=$(date +"%s")
