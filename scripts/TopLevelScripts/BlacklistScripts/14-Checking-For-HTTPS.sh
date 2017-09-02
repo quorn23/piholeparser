@@ -2,7 +2,8 @@
 ## This checks for secure connection
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Is source not using https
 if
