@@ -2,7 +2,8 @@
 ## This Sets up the writing of additional lists
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIR"/foldervars.var
 
 ## Start File Loop
 ## For .sh files In The listgen Directory
