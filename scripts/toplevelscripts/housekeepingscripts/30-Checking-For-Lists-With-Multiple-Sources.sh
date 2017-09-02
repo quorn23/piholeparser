@@ -5,7 +5,7 @@
 source ./foldervars.var
 
 ## Process Every .lst file within the List Directories
-for f in $EVERYBLISTFILEWILDCARD
+for f in $BLACKLSTALL
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
