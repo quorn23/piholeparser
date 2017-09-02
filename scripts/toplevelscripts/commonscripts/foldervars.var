@@ -1,21 +1,21 @@
 ## These Folders Are For the Scripts in this Directory
 
 ## Script Location
-SCRIPTDIRFETCH=$(dirname $0)
-SCRIPTDIR="$SCRIPTDIRFETCH"/
+SCRIPTDIR=$(dirname $0)
 
 ## Folder Name of Script
 SCRIPTDIRNAME=${PWD##*/}
 
+## Name Of Current Script
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
+
 ## Amount Of Folders Between
-FOLDERDIFF=../..
-SCRIPTFOLDERDIFF="$SCRIPTDIR""$FOLDERDIFF"/
+FOLDERDIFFDOTS="../"
+FOLDERDIFF="$FOLDERDIFFDOTS""$FOLDERDIFFDOTS"
+SCRIPTFOLDERDIFF="$SCRIPTDIR"/"$FOLDERDIFF"
 
 ## Script Vars DIR
 SCRIPTVARSDIR="$SCRIPTFOLDERDIFF"scriptvars/
-
-## Name Of Current Script
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 
 ## Static Vars Location
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
