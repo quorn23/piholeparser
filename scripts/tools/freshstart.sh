@@ -56,7 +56,7 @@ echo ""
 ############################
 
 echo "Cleaning Parsedall Directory"
-CHECKME=$ALLPARSEDALLTXT
+CHECKME=$COMBINEDBLACKLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
 then
@@ -69,7 +69,7 @@ echo ""
 ############################
 
 echo "Cleaning Parsedall List"
-CHECKME=$BIGAPLSOURCE
+CHECKME=$COMBINEDBLACKLISTSSOURCE
 if
 ls $CHECKME &> /dev/null;
 then
