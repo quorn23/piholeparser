@@ -2,28 +2,7 @@
 ## TLD Percentages
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 BIGAPLHOWMANY=$(echo -e "`wc -l $BIGAPL | cut -d " " -f 1`")
 HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
