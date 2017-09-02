@@ -2,7 +2,7 @@
 ## This is the central script that ties the others together
 
 ## Variables
-SCRIPTDIR=$(dirname $0)
+SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIR"/foldervars.var
 
 ## Run Logs
