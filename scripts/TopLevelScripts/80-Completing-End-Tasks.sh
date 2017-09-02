@@ -2,7 +2,8 @@
 ## This should create the fun info for the run log, and Readme.md
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIR"/foldervars.var
 
 ## Start File Loop
 ## For .sh files In The cleanupscripts Directory
