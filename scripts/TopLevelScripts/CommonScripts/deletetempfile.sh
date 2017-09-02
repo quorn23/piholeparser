@@ -5,7 +5,7 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-CHECKME=$TEMPCLEANUP
+CHECKME=$TEMPCLEANUPONE
 if
 ls $CHECKME &> /dev/null;
 then
