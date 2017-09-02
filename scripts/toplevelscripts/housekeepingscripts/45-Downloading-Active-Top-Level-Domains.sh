@@ -4,7 +4,7 @@
 ## Variables
 source ./foldervars.var
 
-for f in $VALIDDOMAINTLDLINKS
+for f in $TLDLSTALL
 do
 
 ## Variables
