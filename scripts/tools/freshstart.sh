@@ -30,7 +30,7 @@ fi
 #########################
 
 echo "Cleaning Mirror Directory"
-CHECKME=$MIRROREDLISTSALL
+CHECKME=$MIRROREDBLACKLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
 then
