@@ -152,19 +152,19 @@ echo ""
 ###################
 
 echo "Cleaning Temp"
-CHECKME=$TEMPCLEANUP
+CHECKME=$TEMPCLEANUPONE
 if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
-CHECKME=$TEMPCLEANUPB
+CHECKME=$TEMPCLEANUPTWO
 if
 ls $CHECKME &> /dev/null;
 then
 rm $CHECKME
 fi
-CHECKME=$TEMPCLEANUPC
+CHECKME=$TEMPCLEANUPTHREE
 if
 ls $CHECKME &> /dev/null;
 then
