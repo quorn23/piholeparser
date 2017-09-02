@@ -7,11 +7,11 @@ source ./foldervars.var
 SCRIPTTEXT="Merging Individual TLD Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-CHECKME=$ALLTLDMLISTSDIR
+CHECKME=$MIRROREDTLDLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
 then
-cat $ALLTLDMLISTSDIR >> $VALIDDOMAINTLD
+cat $MIRROREDTLDLISTSSUBALL >> $VALIDDOMAINTLD
 else
 touch $VALIDDOMAINTLD
 fi
