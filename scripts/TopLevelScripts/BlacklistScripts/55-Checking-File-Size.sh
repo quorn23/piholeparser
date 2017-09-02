@@ -2,8 +2,8 @@
 ## Check File size
 
 ## Variables
-source ./foldervars.var
-fi
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## set filesizezero variable if empty
 if
