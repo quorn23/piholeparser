@@ -45,6 +45,21 @@ exit
 fi
 
 if
+[[ ! -f $TEMPPARSEVARS ]]
+then
+touch $TEMPPARSEVARS
+fi
+
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+else
+echo "Temp Parsing Vars File Missing, Exiting."
+exit
+fi
+
+if
 [[ -f $SUBMAINVAR ]]
 then
 source $SUBMAINVAR
