@@ -2,7 +2,8 @@
 ## TLD Percentages
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 COMBINEDBLACKLISTSHOWMANY=$(echo -e "`wc -l $COMBINEDBLACKLISTS | cut -d " " -f 1`")
 HOWMANYVALIDTLD=$(echo -e "`wc -l $TLDBKUP | cut -d " " -f 1`")
