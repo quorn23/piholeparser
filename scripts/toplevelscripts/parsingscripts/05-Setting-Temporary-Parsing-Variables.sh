@@ -22,7 +22,7 @@ SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
 echo "SOURCEDOMAIN="$SOURCEDOMAIN"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Mirrored File (local directory)
-MIRROREDFILE="$MIRRORDIR""$BASEFILENAME".txt
+MIRROREDFILE="$MIRROREDBLACKLISTSSUBDIR""$BASEFILENAME".txt
 echo "MIRROREDFILE="$MIRROREDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Mirrored File (github)
