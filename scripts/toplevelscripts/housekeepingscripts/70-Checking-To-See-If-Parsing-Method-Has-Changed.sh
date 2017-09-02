@@ -61,11 +61,11 @@ if
 [[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
 { if
-ls $PARSEDLISTSALL &> /dev/null;
+ls $PARSEDBLACKLISTSSUBALL &> /dev/null;
 then
 echo "* Resetting Parsed Lists For Reprocessing" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "Resetting Parsed Lists For Reprocessing."
-rm $PARSEDLISTSALL
+rm $PARSEDBLACKLISTSSUBALL
 fi }
 fi
 
