@@ -1,5 +1,8 @@
 # piholeparser
 
+# Major Script Changes, Please stay tuned
+
+
 ### Last Run Stats
 
 * Script Started Fri 1 Sep 08:47:24 EDT 2017
