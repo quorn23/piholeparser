@@ -114,11 +114,11 @@ echo ""
 #########################
 
 echo "Reverting Dead Lists"
-CHECKME=$DEADLISTALL
+CHECKME=$DEADBLACKLSTALL
 if
 ls $CHECKME &> /dev/null;
 then
-for f in $DEADLISTALL
+for f in $DEADBLACKLSTALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
