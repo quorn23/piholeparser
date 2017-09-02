@@ -2,7 +2,8 @@
 ## Remove TempVars
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 CHECKME=$TEMPVARS
 if
