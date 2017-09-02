@@ -2,7 +2,8 @@
 ## This Recreates The Valid TLD file
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Merging Individual TLD Lists."
 printf "$cyan"    "$SCRIPTTEXT"
