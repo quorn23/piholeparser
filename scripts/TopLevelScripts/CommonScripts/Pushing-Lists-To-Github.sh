@@ -2,7 +2,8 @@
 ## This Pushes Changes To Github
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Push Changes up to Github
 if 
