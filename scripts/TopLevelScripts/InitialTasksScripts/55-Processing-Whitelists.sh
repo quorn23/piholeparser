@@ -9,7 +9,7 @@ SCRIPTTEXT="Sorting and Deduping Individual Whitelists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
-for f in $WHITELISTDOMAINSALL
+for f in $WHITEDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
