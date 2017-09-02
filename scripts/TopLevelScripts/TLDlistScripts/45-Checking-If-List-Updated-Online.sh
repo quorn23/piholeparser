@@ -2,7 +2,8 @@
 ##
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Check if file is modified since last download
 if 
