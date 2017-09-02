@@ -18,7 +18,7 @@ fi
 RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
 
 WHATITIS="Localhost Web Directory"
-CHECKME=$BIGAPLLOCALHOSTDIR
+CHECKME=$LOCALHOSTDIR
 timestamp=$(echo `date`)
 if
 [[ -z $CHECKME ]]
@@ -37,7 +37,7 @@ exit
 fi
 
 WHATITIS="Locally Hosted Biglist"
-CHECKME=$BIGAPLLOCALHOST
+CHECKME=$CLOCALHOST
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
@@ -48,7 +48,7 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 ## Copy it over
-CHECKME=$BIGAPLELOCALHOST
+CHECKME=$CLOCALHOST
 if
 ls $CHECKME &> /dev/null;
 then
@@ -58,7 +58,7 @@ echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Locally Hosted Biglist (Edited)"
-CHECKME=$BIGAPLELOCALHOST
+CHECKME=$DBBLOCALHOST
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
@@ -69,7 +69,7 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 ## Copy it over
-CHECKME=$BIGAPLELOCALHOST
+CHECKME=$DBBLOCALHOST
 if
 ls $CHECKME &> /dev/null;
 then
