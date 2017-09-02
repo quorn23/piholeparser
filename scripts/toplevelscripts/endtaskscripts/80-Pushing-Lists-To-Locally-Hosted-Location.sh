@@ -39,7 +39,7 @@ CHECKME=$CLOCALHOST
 if
 ls $CHECKME &> /dev/null;
 then
-cp -p $BIGAPL $BIGAPLLOCALHOST
+cp -p $COMBINEDBLACKLISTS $CLOCALHOST
 else
 echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
@@ -60,7 +60,7 @@ CHECKME=$DBBLOCALHOST
 if
 ls $CHECKME &> /dev/null;
 then
-cp -p $BIGAPLE $BIGAPLELOCALHOST
+cp -p $COMBINEDBLACKLISTSDBB $DBBLOCALHOST
 else
 echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
