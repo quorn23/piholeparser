@@ -2,7 +2,8 @@
 ## This downloads the valid tld lists
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Checking For Old TLD File."
 printf "$cyan"    "$SCRIPTTEXT"
