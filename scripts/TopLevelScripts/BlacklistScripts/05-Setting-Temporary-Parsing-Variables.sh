@@ -2,7 +2,8 @@
 ## Phasing out DYNOVARS by claiming vars here
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Download URL
 if
