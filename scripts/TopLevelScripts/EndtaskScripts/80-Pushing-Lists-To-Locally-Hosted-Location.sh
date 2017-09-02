@@ -2,7 +2,8 @@
 ## Push to local location
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 WHATITIS="Localhost Web Directory"
 CHECKME=$LOCALHOSTDIR
