@@ -2,7 +2,8 @@
 ## This Recreates The Temporary Variables
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Checking For Old TempVars File."
 printf "$cyan"    "$SCRIPTTEXT"
