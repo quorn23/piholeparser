@@ -8,9 +8,9 @@ source ./foldervars.var
 WHATITIS="All Parsed List"
 timestamp=$(echo `date`)
 if
-[[ -f $BIGAPL ]]
+[[ -f $COMBINEDBLACKLISTS ]]
 then
-rm $BIGAPL
+rm $COMBINEDBLACKLISTS
 echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -72,9 +72,9 @@ printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Compiling."
 fi
 
 if
-[[ -f $BIGAPL && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+[[ -f $COMBINEDBLACKLISTS && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-printf "$green"  "Old BIGAPL File Removed."
+printf "$green"  "Old COMBINEDBLACKLISTS File Removed."
 rm $PARSEDFILE
 fi
 
@@ -84,16 +84,16 @@ if
 then
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPL
+mv $TEMPFILE $COMBINEDBLACKLISTS
 elif
 [[ "$ALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPL
+mv $TEMPFILE $COMBINEDBLACKLISTS
 elif
 [[ "$ALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $TEMPFILE ]]
 then
-mv $TEMPFILE $BIGAPL
+mv $TEMPFILE $COMBINEDBLACKLISTS
 printf "$yellow"  "Big List Created Successfully."
 fi
