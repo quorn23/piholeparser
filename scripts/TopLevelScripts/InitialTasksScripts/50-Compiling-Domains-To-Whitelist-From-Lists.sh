@@ -2,7 +2,8 @@
 ## This sets up whitelisting for domains in .lst files
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Quick File Check
 timestamp=$(echo `date`)
