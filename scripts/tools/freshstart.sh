@@ -132,7 +132,7 @@ echo ""
 #####################
 
 echo "Cleaning TLD Lists"
-CHECKME=$ALLTLDMLISTSDIR
+CHECKME=$MIRROREDTLDLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
 then
