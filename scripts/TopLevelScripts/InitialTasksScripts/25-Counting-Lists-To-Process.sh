@@ -2,7 +2,8 @@
 ## This Recreates The SourceList
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Checking For Big Source List File."
 printf "$cyan"    "$SCRIPTTEXT"
