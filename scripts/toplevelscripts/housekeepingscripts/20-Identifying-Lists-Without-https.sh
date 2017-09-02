@@ -97,9 +97,9 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 ## Start File Loop
 ## For Every .lst File
 if
-ls $VALIDDOMAINTLDLINKS &> /dev/null;
+ls $TLDLSTALL &> /dev/null;
 then
-for f in $VALIDDOMAINTLDLINKS
+for f in $TLDLSTALL
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
