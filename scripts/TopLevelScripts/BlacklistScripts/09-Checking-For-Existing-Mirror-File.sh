@@ -2,7 +2,8 @@
 ## Checks If Mirror File Is There
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 if
 [[ -f $MIRROREDFILE ]]
