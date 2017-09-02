@@ -19,7 +19,7 @@ for f in $BLACKLSTALL
 do
 
 ## Variables
-source ./foldervars.var
+source "$SCRIPTDIR"/foldervars.var
 
 ## Clear Temp Before
 if
@@ -143,7 +143,7 @@ LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
 ## Variables
-source ./foldervars.var
+source "$SCRIPTDIR"/foldervars.var
 
 echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
