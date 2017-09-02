@@ -31,9 +31,9 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 ## Start File Loop
 ## For Every .lst File
 if
-ls $EVERYBLISTFILEWILDCARD &> /dev/null;
+ls $BLACKLSTALL &> /dev/null;
 then
-for f in $EVERYBLISTFILEWILDCARD
+for f in $BLACKLSTALL
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
