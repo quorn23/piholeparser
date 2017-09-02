@@ -2,7 +2,8 @@
 ## This Checks if parsing method has changed
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Finding The most recently modified Parsing Script File."
 printf "$cyan"    "$SCRIPTTEXT"
