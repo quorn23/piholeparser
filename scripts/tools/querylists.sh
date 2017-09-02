@@ -48,20 +48,20 @@ echo ""
 
 echo "Checking Big Lists"
 if 
-grep -q $DOMAINTOLOOKFOR "$BIGAPL"
+grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
 echo "Found on Big List (Normal)"
-echo "`grep $DOMAINTOLOOKFOR $BIGAPL`"
+echo "`grep $DOMAINTOLOOKFOR $COMBINEDBLACKLISTS`"
 echo ""
 else
 echo "Not Found on Big List (Normal)"
 fi
 
 if 
-grep -q $DOMAINTOLOOKFOR "$BIGAPLE"
+grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTSDBB"
 then
 echo "Found on Big List (Edited)"
-echo "`grep $DOMAINTOLOOKFOR $BIGAPLE`"
+echo "`grep $DOMAINTOLOOKFOR $COMBINEDBLACKLISTSDBB`"
 echo ""
 else
 echo "Not Found on Big List (Edited)"
