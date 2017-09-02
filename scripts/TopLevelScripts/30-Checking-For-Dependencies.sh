@@ -4,7 +4,8 @@
 ## it installs the program
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Start File Loop
 ## For .dependency files In The dependencies Directory
