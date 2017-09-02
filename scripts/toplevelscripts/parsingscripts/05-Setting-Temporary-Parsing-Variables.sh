@@ -15,7 +15,6 @@ then
 source="$(echo `cat $FILEBEINGPROCESSED | head -1`)"
 fi
 
-#echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo "source='$source'" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## This extracts the domain from source
@@ -31,7 +30,7 @@ MIRROREDFILEDL="$MIRROREDLISTSDIRRAW""$BASEFILENAME".txt
 echo "MIRROREDFILEDL="$MIRROREDFILEDL"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Parsed File
-PARSEDFILE="$PARSEDDIR""$BASEFILENAME".txt
+PARSEDFILE="$PARSEDBLACKLISTSSUBDIR""$BASEFILENAME".txt
 echo "PARSEDFILE="$PARSEDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## DeadList
