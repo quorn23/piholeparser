@@ -2,7 +2,8 @@
 ## This should be run alot, to make sure the temp folder doesn't get screwed up
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 CHECKME=$TEMPCLEANUP
 if
