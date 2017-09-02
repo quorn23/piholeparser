@@ -25,7 +25,7 @@ echo ""
 
 ## Start File Loop
 ## For .sh files In The mainscripts Directory
-for f in $ALLTOPLEVELSCRIPTS
+for f in $TOPLEVELSCRIPTSALL
 do
 
 LOOPSTART=$(date +"%s")
