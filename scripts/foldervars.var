@@ -4,7 +4,8 @@
 SCRIPTDIR=$(dirname $0)
 
 ## Folder Name of Script
-SCRIPTDIRNAME=${PWD##*/}
+COMPLETEFOLDERPATH=$(realpath $SCRIPTDIR)
+SCRIPTDIRNAME=$(echo `basename $COMPLETEFOLDERPATH | cut -f 1 -d '.'`)
 
 ## Name Of Current Script
 SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
