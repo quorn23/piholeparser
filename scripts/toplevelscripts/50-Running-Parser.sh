@@ -69,7 +69,7 @@ echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 
-for p in $ALLPARSINGSCRIPTS
+for p in $BLACKLISTSSCRIPTSALL
 do
 
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
