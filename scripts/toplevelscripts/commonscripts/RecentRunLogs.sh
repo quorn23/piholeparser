@@ -9,7 +9,7 @@ timestamp=$(echo `date`)
 
 echo "## $SCRIPTTEXT $timestamp" | tee --append $TEMPLOGMAIN &>/dev/null
 
-CHECKME=$CLEANLOGS
+CHECKME=$CLEANRECENTRUNLOGSONE
 if
 ls $CHECKME &> /dev/null;
 then
@@ -17,7 +17,7 @@ rm $CHECKME
 fi
 echo ""
 
-CHECKME=$CLEANLOGSB
+CHECKME=$CLEANRECENTRUNLOGSTWO
 if
 ls $CHECKME &> /dev/null;
 then
@@ -25,7 +25,7 @@ rm $CHECKME
 fi
 echo ""
 
-CHECKME=$CLEANLOGSC
+CHECKME=$CLEANRECENTRUNLOGSTHREE
 if
 ls $CHECKME &> /dev/null;
 then
