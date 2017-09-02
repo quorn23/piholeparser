@@ -3,7 +3,8 @@
 ## and merges it all into one
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 WHATITIS="All Parsed List"
 timestamp=$(echo `date`)
