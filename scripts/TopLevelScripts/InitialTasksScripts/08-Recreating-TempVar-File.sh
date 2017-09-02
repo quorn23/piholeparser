@@ -23,7 +23,7 @@ echo ""
 SCRIPTTEXT="Checking For Other Temp Vars Files."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-CHECKME=$TEMPCLEANUPC
+CHECKME=$TEMPCLEANUPTHREE
 if
 ls $CHECKME &> /dev/null;
 then
