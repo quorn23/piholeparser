@@ -70,7 +70,7 @@ if
 then
 rm $BREPOLOG
 fi
-echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
