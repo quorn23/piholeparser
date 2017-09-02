@@ -2,7 +2,8 @@
 ##
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## If $SOURCEDOMAIN is set, Ping it
 if
