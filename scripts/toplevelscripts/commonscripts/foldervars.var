@@ -1,0 +1,33 @@
+## These Folders Are For the Scripts in this Directory
+
+## Script Location
+SCRIPTDIRFETCH=$(dirname $0)
+SCRIPTDIR="$SCRIPTDIRFETCH"/
+
+## Folder Name of Script
+SCRIPTDIRNAME=${PWD##*/}
+
+## Amount Of Folders Between
+FOLDERDIFF=../..
+SCRIPTFOLDERDIFF="$SCRIPTDIR""$FOLDERDIFF"/
+
+## Script Vars DIR
+SCRIPTVARSDIR="$SCRIPTFOLDERDIFF"scriptvars/
+
+## Name Of Current Script
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
+
+## Static Vars Location
+STATICVARS="$SCRIPTVARSDIR"staticvariables.var
+
+if
+[[ -f $STATICVARS ]]
+then
+source $STATICVARS
+else
+echo "Static Vars File Missing, Exiting."
+exit
+fi
+
+## Log File
+RECENTRUN="$RECENTRUNLOGSDIR""$SCRIPTDIRNAME"/"$SCRIPTBASEFILENAME".md
