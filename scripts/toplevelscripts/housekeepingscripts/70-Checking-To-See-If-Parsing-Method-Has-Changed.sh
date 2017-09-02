@@ -80,7 +80,7 @@ printf "$yellow"   "Resetting Killed Lists For Reprocessing."
 for f in $KILLTHELISTALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
+BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
 mv $f $BUNDEADPARSELIST
 done
 fi }
