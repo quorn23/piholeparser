@@ -2,7 +2,8 @@
 ##
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 if
 [[ -f $CURRENTTLDLIST ]]
