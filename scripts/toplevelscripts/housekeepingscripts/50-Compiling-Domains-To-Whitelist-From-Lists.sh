@@ -50,7 +50,7 @@ echo ""
 SCRIPTTEXT="Pulling Domains From TLD Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-for f in $VALIDDOMAINTLDLINKS
+for f in $TLDLSTALL
 do
 
 source=`cat $f`
