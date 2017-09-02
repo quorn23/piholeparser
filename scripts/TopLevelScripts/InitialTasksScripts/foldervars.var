@@ -45,5 +45,20 @@ echo "Temp Vars File Missing, Exiting."
 exit
 fi
 
+if
+[[ ! -f $TEMPPARSEVARS ]]
+then
+touch $TEMPPARSEVARS
+fi
+
+if
+[[ -f $TEMPPARSEVARS ]]
+then
+source $TEMPPARSEVARS
+else
+echo "Temp Parsing Vars File Missing, Exiting."
+exit
+fi
+
 ## Log File
 RECENTRUN="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTDIRNAME"/"$SCRIPTBASEFILENAME".md
