@@ -2,7 +2,8 @@
 ## Attempt Download
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Terminal Display
 if
