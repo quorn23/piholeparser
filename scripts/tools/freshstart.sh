@@ -96,11 +96,11 @@ echo ""
 #########################
 
 echo "Reverting Killed Lists"
-CHECKME=$KILLTHELISTALL
+CHECKME=$BLACKLSTSTHATDIEALL
 if
 ls $CHECKME &> /dev/null;
 then
-for f in $KILLTHELISTALL
+for f in $BLACKLSTSTHATDIEALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
