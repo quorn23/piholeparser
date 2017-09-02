@@ -82,7 +82,7 @@ echo ""
 #########################
 
 echo "Cleaning Country Codes Directory"
-CHECKME=$ALLCOUNTRYCODESLISTS
+CHECKME=$COUNTRYCODESLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
 then
