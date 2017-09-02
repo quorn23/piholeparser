@@ -2,21 +2,9 @@
 ## This Generates a list of which blacklists don't use https
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
+source ./foldervars.var
 
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
-RECENTRUNWITHOUTHTTPSMD="$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$SCRIPTBASEFILENAME".md
+RECENTRUNWITHOUTHTTPSMD="$INITIALTASKSSCRIPTSLOGSGIT""$SCRIPTBASEFILENAME".md
 echo "RECENTRUNWITHOUTHTTPSMD='"$RECENTRUNWITHOUTHTTPSMD"'" | tee --append $TEMPVARS &>/dev/null
 
 SCRIPTTEXT="Checking For Old https-Less File."
@@ -43,9 +31,9 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 ## Start File Loop
 ## For Every .lst File
 if
-ls $EVERYBLISTFILEWILDCARD &> /dev/null;
+ls $BLACKLSTALL &> /dev/null;
 then
-for f in $EVERYBLISTFILEWILDCARD
+for f in $BLACKLSTALL
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
@@ -109,9 +97,9 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 ## Start File Loop
 ## For Every .lst File
 if
-ls $VALIDDOMAINTLDLINKS &> /dev/null;
+ls $TLDLSTALL &> /dev/null;
 then
-for f in $VALIDDOMAINTLDLINKS
+for f in $TLDLSTALL
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)

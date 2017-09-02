@@ -2,23 +2,10 @@
 ## Push to local location
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 WHATITIS="Localhost Web Directory"
-CHECKME=$BIGAPLLOCALHOSTDIR
+CHECKME=$LOCALHOSTDIR
 timestamp=$(echo `date`)
 if
 [[ -z $CHECKME ]]
@@ -37,7 +24,7 @@ exit
 fi
 
 WHATITIS="Locally Hosted Biglist"
-CHECKME=$BIGAPLLOCALHOST
+CHECKME=$CLOCALHOST
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
@@ -48,17 +35,17 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 ## Copy it over
-CHECKME=$BIGAPLELOCALHOST
+CHECKME=$CLOCALHOST
 if
 ls $CHECKME &> /dev/null;
 then
-cp -p $BIGAPL $BIGAPLLOCALHOST
+cp -p $COMBINEDBLACKLISTS $CLOCALHOST
 else
 echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 WHATITIS="Locally Hosted Biglist (Edited)"
-CHECKME=$BIGAPLELOCALHOST
+CHECKME=$DBBLOCALHOST
 timestamp=$(echo `date`)
 if
 ls $CHECKME &> /dev/null;
@@ -69,11 +56,11 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 ## Copy it over
-CHECKME=$BIGAPLELOCALHOST
+CHECKME=$DBBLOCALHOST
 if
 ls $CHECKME &> /dev/null;
 then
-cp -p $BIGAPLE $BIGAPLELOCALHOST
+cp -p $COMBINEDBLACKLISTSDBB $DBBLOCALHOST
 else
 echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi

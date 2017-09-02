@@ -2,24 +2,11 @@
 ## This Sets up the writing of additional lists
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 ## Start File Loop
 ## For .sh files In The listgen Directory
-for f in $ALLLISTGENSCRIPTS
+for f in $LISTGENSCRIPTSALL
 do
 
 LOOPSTART=$(date +"%s")
@@ -29,9 +16,9 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$LISTGENSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$LISTGENSCRIPTSLOGDIRRAW""$SCRIPTBASEFILENAME".md)"
-BREPOLOG="$LISTGENSCRIPTSLOGDIR""$BASEFILENAME".md
+TAGTHEREPOLOG="[Details If Any]("$LISTGENSCRIPTSLOGSDIRGIT""$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$LISTGENSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
+BREPOLOG="$LISTGENSCRIPTSLOGSDIR""$BASEFILENAME".md
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
@@ -48,8 +35,8 @@ if
 then
 rm $BREPOLOG
 fi
-echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null

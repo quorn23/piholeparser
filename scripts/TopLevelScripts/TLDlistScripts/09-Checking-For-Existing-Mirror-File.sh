@@ -1,11 +1,11 @@
 #!/bin/bash
-## Checks If Mirror File Is There
+##
 
 ## Variables
 source ./foldervars.var
 
 if
-[[ -f $MIRROREDFILE ]]
+[[ -f $CURRENTTLDLIST ]]
 then
 printf "$green"  "Mirror File Currently Available."
 else

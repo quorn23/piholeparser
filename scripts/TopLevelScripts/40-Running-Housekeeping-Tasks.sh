@@ -2,30 +2,17 @@
 ## This should do some initial housekeeping for the script
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 ## Start File Loop
 ## For .sh files In The housekeepingscripts Directory
-for f in $ALLHOUSEKEEPINGSCRIPTS
+for f in $INITIALTASKSSCRIPTSALL
 do
 
 if
-[[ -f $TEMPVARS && -z $HOUSKEEPINGSCRIPTBASENAME ]]
+[[ -f $TEMPVARS && -z $INITIALTASKSSCRIPTBASENAME ]]
 then
-echo "HOUSKEEPINGSCRIPTBASENAME='"$SCRIPTBASEFILENAME"'" | tee --append $TEMPVARS &>/dev/null
+echo "INITIALTASKSSCRIPTBASENAME='"$SCRIPTBASEFILENAME"'" | tee --append $TEMPVARS &>/dev/null
 fi
 
 LOOPSTART=$(date +"%s")
@@ -35,7 +22,7 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-BREPOLOG="$HOUSEKEEPINGSCRIPTSLOGDIR""$BASEFILENAME".md
+BREPOLOG="$INITIALTASKSSCRIPTSLOGSDIR""$BASEFILENAME".md
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
@@ -46,8 +33,8 @@ echo ""
 
 ## Log Subsection
 echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$HOUSEKEEPINGSCRIPTSLOGDIRRAW""$SCRIPTBASEFILENAME".md)"
+TAGTHEREPOLOG="[Details If Any]("$INITIALTASKSSCRIPTSLOGSGIT""$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$INITIALTASKSSCRIPTSLOGSGIT""$SCRIPTBASEFILENAME".md)"
 
 ## Create Log
 if
@@ -55,8 +42,8 @@ if
 then
 rm $BREPOLOG
 fi
-echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null

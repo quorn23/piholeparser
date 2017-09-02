@@ -2,20 +2,7 @@
 ## Sets The Beginning Script Time
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 timestamp=$(echo `date`)
 STARTTIME=$(echo `date`)

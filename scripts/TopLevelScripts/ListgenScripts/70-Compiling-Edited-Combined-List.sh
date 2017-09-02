@@ -2,27 +2,14 @@
 ## This creates my custom biglist
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$LISTGENSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 WHATITIS="All Parsed List (edited)"
 timestamp=$(echo `date`)
 if
-[[ -f $BIGAPLE ]]
+[[ -f $COMBINEDBLACKLISTSDBB ]]
 then
-rm $BIGAPLE
+rm $COMBINEDBLACKLISTSDBB
 echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -41,10 +28,10 @@ printf "$red"  "Whitelist File Missing."
 MISSINGWHITE=true
 fi
 if
-[[ ! -f $BIGAPL ]]
+[[ ! -f $COMBINEDBLACKLISTS ]]
 then
 printf "$red"  "Big List File Missing."
-touch $BIGAPL
+touch $COMBINEDBLACKLISTS
 fi
 
 printf "$cyan"  "Generating All Parsed List (edited)."
@@ -55,11 +42,11 @@ if
 [[ -z $MISSINGBLACK ]]
 then
 printf "$yellow"  "Adding Blacklist Domains."
-cat $BLACKLISTTEMP $BIGAPL >> $FILETEMP
+cat $BLACKLISTTEMP $COMBINEDBLACKLISTS >> $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after blacklist"
 echo ""
 else
-cp $BIGAPL $FILETEMP
+cp $COMBINEDBLACKLISTS $FILETEMP
 fi
 
 ## Remove Whitelist Domains
@@ -114,10 +101,10 @@ echo "EDITEDALLPARSEDHOWMANYLINES="$EDITEDALLPARSEDHOWMANYLINES"" | tee --append
 fi
 
 if
-[[ -f $BIGAPLE && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+[[ -f $COMBINEDBLACKLISTSDBB && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-printf "$green"  "Old BIGAPLE File Removed."
-rm $BIGAPLE
+printf "$green"  "Old COMBINEDBLACKLISTSDBB File Removed."
+rm $COMBINEDBLACKLISTSDBB
 fi
 
 ## Github has a 100mb limit, and empty files are useless
@@ -126,16 +113,16 @@ if
 then
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPLE
+mv $TEMPFILE $COMBINEDBLACKLISTSDBB
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $EDITEDALLPARSEDSIZEMB bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPLE
+mv $TEMPFILE $COMBINEDBLACKLISTSDBB
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $TEMPFILE ]]
 then
-mv $TEMPFILE $BIGAPLE
+mv $TEMPFILE $COMBINEDBLACKLISTSDBB
 printf "$yellow"  "Big List Edited Created Successfully."
 fi

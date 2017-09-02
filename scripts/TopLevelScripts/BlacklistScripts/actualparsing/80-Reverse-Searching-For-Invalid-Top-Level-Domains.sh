@@ -25,13 +25,13 @@ fi
 
 printf "$yellow"  "This Process Normally Takes Longer Than The Others."
 
-HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
+HOWMANYVALIDTLD=$(echo -e "`wc -l $TLDBKUP | cut -d " " -f 1`")
 
-for source in `cat $VALIDDOMAINTLDBKUP`;
+for source in `cat $TLDBKUP`;
 do
 
 
-WHATLINENUMBER=$(echo "`grep -n $source $VALIDDOMAINTLDBKUP | cut -d : -f 1`")
+WHATLINENUMBER=$(echo "`grep -n $source $TLDBKUP | cut -d : -f 1`")
 TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
 
 HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")

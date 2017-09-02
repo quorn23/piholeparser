@@ -2,20 +2,7 @@
 ## This should create the fun info for the run log, and Readme.md
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 ## Start File Loop
 ## For .sh files In The cleanupscripts Directory
@@ -29,9 +16,9 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
 BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-TAGTHEREPOLOG="[Details If Any]("$ENDTASKSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$ENDTASKSCRIPTSLOGDIRRAW""$SCRIPTBASEFILENAME".md)"
-BREPOLOG="$ENDTASKSCRIPTSLOGDIR""$BASEFILENAME".md
+TAGTHEREPOLOG="[Details If Any]("$ENDTASKSCRIPTSLOGSDIRGIT""$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$ENDTASKSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
+BREPOLOG="$ENDTASKSCRIPTSLOGSDIR""$BASEFILENAME".md
 timestamp=$(echo `date`)
 
 printf "$lightblue"    "$DIVIDERBARB"
@@ -49,8 +36,8 @@ if
 then
 rm $BREPOLOG
 fi
-echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null

@@ -2,43 +2,22 @@
 ## TLD Percentages
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
+source ./foldervars.var
 
-RECENTRUN="$ENDTASKSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+COMBINEDBLACKLISTSHOWMANY=$(echo -e "`wc -l $COMBINEDBLACKLISTS | cut -d " " -f 1`")
+HOWMANYVALIDTLD=$(echo -e "`wc -l $TLDBKUP | cut -d " " -f 1`")
 
-BIGAPLHOWMANY=$(echo -e "`wc -l $BIGAPL | cut -d " " -f 1`")
-HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
-
-for source in `cat $VALIDDOMAINTLDBKUP`;
+for source in `cat $TLDBKUP`;
 do
 
-WHATLINENUMBER=$(echo "`grep -n $source $VALIDDOMAINTLDBKUP | cut -d : -f 1`")
+WHATLINENUMBER=$(echo "`grep -n $source $TLDBKUP | cut -d : -f 1`")
 TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
 
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BIGAPL | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $COMBINEDBLACKLISTS | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${BIGAPLHOWMANY}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${COMBINEDBLACKLISTSHOWMANY}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
 { if
 [[ "$TLDPERCENTAGERESULT" != 0 ]]
 then

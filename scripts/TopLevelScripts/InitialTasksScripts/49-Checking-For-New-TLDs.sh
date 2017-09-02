@@ -2,33 +2,20 @@
 ## This checks for new tld's
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 SCRIPTTEXT="Making Backup Copy of TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ ! -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+[[ ! -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+cp $VALIDDOMAINTLD $TLDBKUP
 elif
-[[ -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+[[ -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
-rm $VALIDDOMAINTLDBKUP
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+rm $TLDBKUP
+cp $VALIDDOMAINTLD $TLDBKUP
 fi
 echo ""
 
@@ -36,9 +23,9 @@ SCRIPTTEXT="Checking For New TLDs."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+[[ -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
 { if
 [[ -f $TLDCOMPARED ]]
 then

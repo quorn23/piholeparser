@@ -2,29 +2,9 @@
 ## This is the Parsing Process
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-if
-[[ -f $TEMPVARS ]]
-then
-source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
+source ./foldervars.var
 
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
-
+## This is a way to skipp parsing
 if
 [[ -n $FULLSKIPPARSING ]]
 then
@@ -34,10 +14,11 @@ exit
 fi
 
 ## Process Every .lst file within the List Directories
-for f in $EVERYBLISTFILEWILDCARD
+for f in $BLACKLSTALL
 do
 
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
+## Variables
+source ./foldervars.var
 
 ## Clear Temp Before
 if
@@ -68,9 +49,9 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 
-BREPOLOG="$PARSINGSCRIPTSLOGDIR""$BASEFILENAME".md
+BREPOLOG="$BLACKLISTSSCRIPTSLOGSDIR""$BASEFILENAME".md
 echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$PARSINGSCRIPTSLOGDIRRAW""$BASEFILENAME".md)"
+TAGTHEREPOLOG="[Details If Any]("$BLACKLISTSSCRIPTSLOGSDIRGIT""$BASEFILENAME".md)"
 TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELLOGSDIRRAW""$SCRIPTBASEFILENAME".md)"
 
 ## Create Log
@@ -79,8 +60,8 @@ if
 then
 rm $BREPOLOG
 fi
-echo "$TAGTHEMAINFOLDERNOTRAW" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEMAINREPOLOG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
@@ -88,7 +69,7 @@ echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 
-for p in $ALLPARSINGSCRIPTS
+for p in $BLACKLISTSSCRIPTSALL
 do
 
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
@@ -160,7 +141,9 @@ then
 LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
-RECENTRUN="$TOPLEVELLOGSDIR""$SCRIPTBASEFILENAME".md
+## Variables
+source ./foldervars.var
+
 echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | sudo tee --append $RECENTRUN &>/dev/null

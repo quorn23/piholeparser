@@ -1,5 +1,5 @@
 #!/bin/bash
-## This checks for secure connection
+##
 
 ## Variables
 source ./foldervars.var

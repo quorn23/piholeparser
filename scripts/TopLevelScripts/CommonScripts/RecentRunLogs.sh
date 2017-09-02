@@ -2,25 +2,14 @@
 ## This Recreates Recent Run Log
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
+source ./foldervars.var
 
 SCRIPTTEXT="Creating Main Recent Run Log."
 timestamp=$(echo `date`)
 
 echo "## $SCRIPTTEXT $timestamp" | tee --append $TEMPLOGMAIN &>/dev/null
 
-CHECKME=$CLEANLOGS
+CHECKME=$CLEANRECENTRUNLOGSONE
 if
 ls $CHECKME &> /dev/null;
 then
@@ -28,7 +17,7 @@ rm $CHECKME
 fi
 echo ""
 
-CHECKME=$CLEANLOGSB
+CHECKME=$CLEANRECENTRUNLOGSTWO
 if
 ls $CHECKME &> /dev/null;
 then
@@ -36,7 +25,7 @@ rm $CHECKME
 fi
 echo ""
 
-CHECKME=$CLEANLOGSC
+CHECKME=$CLEANRECENTRUNLOGSTHREE
 if
 ls $CHECKME &> /dev/null;
 then

@@ -3,27 +3,14 @@
 ## and merges it all into one
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$LISTGENSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 WHATITIS="All Parsed List"
 timestamp=$(echo `date`)
 if
-[[ -f $BIGAPL ]]
+[[ -f $COMBINEDBLACKLISTS ]]
 then
-rm $BIGAPL
+rm $COMBINEDBLACKLISTS
 echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
@@ -32,9 +19,9 @@ fi
 ## Combine Small lists
 printf "$yellow"  "Merging Individual Lists."
 if
-ls $PARSEDLISTSALL &> /dev/null;
+ls $PARSEDBLACKLISTSSUBALL &> /dev/null;
 then
-cat $PARSEDLISTSALL >> $TEMPFILE
+cat $PARSEDBLACKLISTSSUBALL >> $TEMPFILE
 echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after merging individual lists"
 else
 printf "$red"  "No Parsed Files Available To Merge."
@@ -85,9 +72,9 @@ printf "$yellow"  "$PARSEDHOWMANYLINES Lines After Compiling."
 fi
 
 if
-[[ -f $BIGAPL && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
+[[ -f $COMBINEDBLACKLISTS && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-printf "$green"  "Old BIGAPL File Removed."
+printf "$green"  "Old COMBINEDBLACKLISTS File Removed."
 rm $PARSEDFILE
 fi
 
@@ -97,16 +84,16 @@ if
 then
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPL
+mv $TEMPFILE $COMBINEDBLACKLISTS
 elif
 [[ "$ALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $FETCHFILESIZE bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $BIGAPL
+mv $TEMPFILE $COMBINEDBLACKLISTS
 elif
 [[ "$ALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $TEMPFILE ]]
 then
-mv $TEMPFILE $BIGAPL
+mv $TEMPFILE $COMBINEDBLACKLISTS
 printf "$yellow"  "Big List Created Successfully."
 fi

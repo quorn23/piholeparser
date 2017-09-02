@@ -2,26 +2,13 @@
 ## This Checks if parsing method has changed
 
 ## Variables
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-RECENTRUN="$HOUSEKEEPINGSCRIPTSLOGDIR""$SCRIPTBASEFILENAME".md
+source ./foldervars.var
 
 SCRIPTTEXT="Finding The most recently modified Parsing Script File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-YOUNGESTPARSINGFILE=$(echo `ls -t $ACTUALPARSINGSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
-YOUNGESTPARSINGFILEB="$ACTUALPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
+YOUNGESTPARSINGFILE=$(echo `ls -t $ACTUALBLACKPARSINGSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
+YOUNGESTPARSINGFILEB="$ACTUALBLACKPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
 YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
 YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
 printf "$yellow"    "The Most Recently Updated Parsing Script is $YOUNGESTPARSINGFILE"
@@ -74,11 +61,11 @@ if
 [[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
 { if
-ls $PARSEDLISTSALL &> /dev/null;
+ls $PARSEDBLACKLISTSSUBALL &> /dev/null;
 then
 echo "* Resetting Parsed Lists For Reprocessing" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "Resetting Parsed Lists For Reprocessing."
-rm $PARSEDLISTSALL
+rm $PARSEDBLACKLISTSSUBALL
 fi }
 fi
 
@@ -86,14 +73,14 @@ if
 [[ -n $EXECUTEORDERSIXTYSIX && -z $NOPARSINGCHANGE ]]
 then
 { if
-ls $KILLTHELISTALL &> /dev/null;
+ls $BLACKLSTSTHATDIEALL &> /dev/null;
 then
 echo "* Resetting Killed Lists For Reprocessing" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"   "Resetting Killed Lists For Reprocessing."
-for f in $KILLTHELISTALL
+for f in $BLACKLSTSTHATDIEALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BUNDEADPARSELIST="$MAINLISTSDIR""$BASEFILENAME".lst
+BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
 mv $f $BUNDEADPARSELIST
 done
 fi }
