@@ -2,7 +2,8 @@
 ## This is the Parsing Process
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIR"/foldervars.var
 
 ## This is a way to skipp parsing
 if
