@@ -139,7 +139,7 @@ then
 rm $CHECKME
 fi
 
-CHECKME=$VALIDDOMAINTLDBKUP
+CHECKME=$TLDBKUP
 if
 ls $CHECKME &> /dev/null;
 then
