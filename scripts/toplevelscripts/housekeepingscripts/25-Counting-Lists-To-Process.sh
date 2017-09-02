@@ -19,11 +19,11 @@ echo ""
 SCRIPTTEXT="Merging Sources."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-CHECKME=$EVERYBLISTFILEWILDCARD
+CHECKME=$BLACKLSTALL
 if
 ls $CHECKME &> /dev/null;
 then
-cat $EVERYBLISTFILEWILDCARD | sort | sed '/^$/d' >> $COMBINEDBLACKLISTSSOURCE
+cat $BLACKLSTALL | sort | sed '/^$/d' >> $COMBINEDBLACKLISTSSOURCE
 else
 touch $COMBINEDBLACKLISTSSOURCE
 fi
