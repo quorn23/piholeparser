@@ -6,7 +6,7 @@ source ./foldervars.var
 
 ## Start File Loop
 ## For .sh files In The housekeepingscripts Directory
-for f in $ALLHOUSEKEEPINGSCRIPTS
+for f in $INITIALTASKSSCRIPTSALL
 do
 
 if
