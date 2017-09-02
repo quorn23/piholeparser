@@ -56,7 +56,7 @@ printf "$green"    "Processing $BASEFILENAME List."
 echo "## Processing $BASEFILENAME List." | sudo tee --append $BREPOLOG &>/dev/null
 echo "" 
 
-for p in $ALLTLDSCRIPTS
+for p in $TLDLISTSSCRIPTSALL
 do
 
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
