@@ -2,7 +2,8 @@
 ## This Removes *.temp files
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Checking For Old Temp Files."
 printf "$cyan"    "$SCRIPTTEXT"
