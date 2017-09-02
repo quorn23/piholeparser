@@ -2,7 +2,8 @@
 ## This Recreates Recent Run Log
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Creating Main Recent Run Log."
 timestamp=$(echo `date`)
