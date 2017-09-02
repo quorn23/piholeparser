@@ -29,7 +29,7 @@ echo ""
 echo "Searching for $DOMAINTOLOOKFOR"
 echo ""
 
-for f in $PARSEDLISTSALL
+for f in $PARSEDBLACKLISTSSUBALL
 do
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
