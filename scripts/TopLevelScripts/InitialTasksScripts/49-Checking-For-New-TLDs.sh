@@ -2,7 +2,8 @@
 ## This checks for new tld's
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Making Backup Copy of TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
