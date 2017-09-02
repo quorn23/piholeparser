@@ -42,14 +42,14 @@ HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
-if
-[[ -f $DBBWHITELIST ]]
-then
-rm $DBBWHITELIST
-fi
+#if
+#[[ -f $DBBWHITELIST ]]
+#then
+#rm $DBBWHITELIST
+#fi
 
-if
-[[ -f $WHITELISTTEMP ]]
-then
-cp $WHITELISTTEMP $DBBWHITELIST
-fi
+#if
+#[[ -f $WHITELISTTEMP ]]
+#then
+#cp $WHITELISTTEMP $DBBWHITELIST
+#fi
