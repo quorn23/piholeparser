@@ -2,7 +2,8 @@
 ## is the file available?
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## host unavailable
 if
