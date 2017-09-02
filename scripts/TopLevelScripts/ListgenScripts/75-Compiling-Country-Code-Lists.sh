@@ -2,7 +2,8 @@
 ## This spits out lists based on country codes
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Process Every .clist file within CountryCode List Directory
 for f in $EVERYCCTLD
