@@ -14,7 +14,7 @@ exit
 fi
 
 ## Process Every .lst file within the List Directories
-for f in $EVERYBLISTFILEWILDCARD
+for f in $BLACKLSTALL
 do
 
 ## Variables
