@@ -2,7 +2,8 @@
 ## This sets up blacklisting
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
 printf "$cyan"    "$SCRIPTTEXT"
