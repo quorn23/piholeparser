@@ -2,7 +2,8 @@
 ## This sets up whitelisting
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Sorting and Deduping Individual Whitelists."
 printf "$cyan"    "$SCRIPTTEXT"
