@@ -2,7 +2,8 @@
 ## This should do some initial housekeeping for the script
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Start File Loop
 ## For .sh files In The housekeepingscripts Directory
