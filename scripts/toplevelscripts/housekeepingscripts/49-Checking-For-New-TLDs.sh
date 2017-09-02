@@ -8,14 +8,14 @@ SCRIPTTEXT="Making Backup Copy of TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ ! -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+[[ ! -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+cp $VALIDDOMAINTLD $TLDBKUP
 elif
-[[ -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+[[ -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
-rm $VALIDDOMAINTLDBKUP
-cp $VALIDDOMAINTLD $VALIDDOMAINTLDBKUP
+rm $TLDBKUP
+cp $VALIDDOMAINTLD $TLDBKUP
 fi
 echo ""
 
@@ -23,9 +23,9 @@ SCRIPTTEXT="Checking For New TLDs."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $VALIDDOMAINTLDBKUP && -f $VALIDDOMAINTLD ]]
+[[ -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $VALIDDOMAINTLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $TLDBKUP $VALIDDOMAINTLD > $TLDCOMPARED
 { if
 [[ -f $TLDCOMPARED ]]
 then
