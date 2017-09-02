@@ -14,7 +14,7 @@ do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$cyan"  "Processing $BASEFILENAME"
-source $DYNOVARS
+BBLACKTEMP="$TEMPDIR""$BASEFILENAME".blacktemp.txt
 timestamp=$(echo `date`)
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $BBLACKTEMP
 cat $BBLACKTEMP >> $BLACKLISTTEMP
