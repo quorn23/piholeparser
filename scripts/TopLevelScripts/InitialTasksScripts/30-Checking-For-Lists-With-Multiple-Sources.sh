@@ -2,7 +2,8 @@
 ## This will log lists with more than one source
 
 ## Variables
-source ./foldervars.var
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Process Every .lst file within the List Directories
 for f in $BLACKLSTALL
