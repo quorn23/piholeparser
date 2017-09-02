@@ -3,7 +3,7 @@
 
 ## Variables
 SCRIPTDIRA=$(dirname $0)
-source "$SCRIPTDIR"/foldervars.var
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Run Logs
 if
