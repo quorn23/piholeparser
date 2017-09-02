@@ -8,7 +8,7 @@ SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
-for f in $BLACKLISTDOMAINSALL
+for f in $BLACKDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
