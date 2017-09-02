@@ -4,7 +4,7 @@
 ## Variables
 source ./foldervars.var
 
-BIGAPLHOWMANY=$(echo -e "`wc -l $BIGAPL | cut -d " " -f 1`")
+COMBINEDBLACKLISTSHOWMANY=$(echo -e "`wc -l $COMBINEDBLACKLISTS | cut -d " " -f 1`")
 HOWMANYVALIDTLD=$(echo -e "`wc -l $VALIDDOMAINTLDBKUP | cut -d " " -f 1`")
 
 for source in `cat $VALIDDOMAINTLDBKUP`;
@@ -13,11 +13,11 @@ do
 WHATLINENUMBER=$(echo "`grep -n $source $VALIDDOMAINTLDBKUP | cut -d : -f 1`")
 TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
 
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BIGAPL | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $COMBINEDBLACKLISTS | wc -l`")
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${BIGAPLHOWMANY}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+TLDPERCENTAGERESULT=$(echo `awk "BEGIN { pc=100*${HOWMANYTIMESTLD}/${COMBINEDBLACKLISTSHOWMANY}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
 { if
 [[ "$TLDPERCENTAGERESULT" != 0 ]]
 then
