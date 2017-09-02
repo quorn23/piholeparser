@@ -44,7 +44,7 @@ fi
 ## Start File Loop
 ## For .sh files In The actualparsing scripts Directory
 echo ""
-for p in $ALLACTUALPARSINGSCRIPTS
+for p in $ACTUALBLACKPARSINGSCRIPTSALL
 do
 
 PBASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
