@@ -44,14 +44,5 @@ echo "Temp Vars File Missing, Exiting."
 exit
 fi
 
-if
-[[ -f $SUBMAINVAR ]]
-then
-source $SUBMAINVAR
-else
-echo "Sub Main Vars File Missing, Exiting."
-exit
-fi
-
 ## Log File
 RECENTRUN="$RECENTRUNLOGSDIR""$SCRIPTDIRNAME"/"$SCRIPTBASEFILENAME".md
