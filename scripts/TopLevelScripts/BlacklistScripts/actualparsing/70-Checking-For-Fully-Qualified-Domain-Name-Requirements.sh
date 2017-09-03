@@ -26,7 +26,7 @@ fi
 if
 [[ -f $BFILETEMP ]]
 then
-cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
+cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^\./d; /\.$/d' > $BTEMPFILE
 fi
 
 if
