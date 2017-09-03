@@ -1,6 +1,6 @@
-[Return To Repository](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/)
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
-[Go Up One Level](50-Running-Parser.md)
+[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/50-Running-Parser.md)
 ____________________________________
 # Michael-Trimms-Hosts
 ## Setting Temporary Parsing Variables

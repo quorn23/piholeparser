@@ -1,17 +1,17 @@
-[Return To Repository](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/)
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 ____________________________________
 # Checking For Dependencies
 
-## curl Sat 2 Sep 16:55:36 EDT 2017
-curl Already Installed Sat 2 Sep 16:55:36 EDT 2017
-## gawk Sat 2 Sep 16:55:36 EDT 2017
-gawk Already Installed Sat 2 Sep 16:55:36 EDT 2017
-## p7zip Sat 2 Sep 16:55:36 EDT 2017
-p7zip Already Installed Sat 2 Sep 16:55:36 EDT 2017
-## sed Sat 2 Sep 16:55:36 EDT 2017
-sed Already Installed Sat 2 Sep 16:55:36 EDT 2017
-## tar Sat 2 Sep 16:55:36 EDT 2017
-tar Already Installed Sat 2 Sep 16:55:36 EDT 2017
-## wget Sat 2 Sep 16:55:36 EDT 2017
-wget Already Installed Sat 2 Sep 16:55:36 EDT 2017
+## curl Sun 3 Sep 11:02:53 EDT 2017
+curl Already Installed Sun 3 Sep 11:02:53 EDT 2017
+## gawk Sun 3 Sep 11:02:53 EDT 2017
+gawk Already Installed Sun 3 Sep 11:02:53 EDT 2017
+## p7zip Sun 3 Sep 11:02:53 EDT 2017
+p7zip Already Installed Sun 3 Sep 11:02:53 EDT 2017
+## sed Sun 3 Sep 11:02:53 EDT 2017
+sed Already Installed Sun 3 Sep 11:02:53 EDT 2017
+## tar Sun 3 Sep 11:02:53 EDT 2017
+tar Already Installed Sun 3 Sep 11:02:53 EDT 2017
+## wget Sun 3 Sep 11:02:53 EDT 2017
+wget Already Installed Sun 3 Sep 11:02:53 EDT 2017

@@ -1,8 +1,8 @@
-! Checksum: kHYKTROFeVi4XqqfC8rauw
+! Checksum: m5doX1U8SAbrfeUQvJJuVw
 ! Title: German filter
 ! Description: EasyList Germany + Adguard German filter. Filter list that specifically removes adverts on German language websites.
-! Version: 1.0.36.47
-! TimeUpdated: 2017-09-01T01:01:25.015+04:00
+! Version: 1.0.36.49
+! TimeUpdated: 2017-09-02T23:01:25.509+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#german
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -333,6 +333,7 @@ teleboy.ch#@#.adWrapper
 ! Extended CSS rules
 !
 ! https://forum.adguard.com/index.php?threads/24626/
+pfalz-express.de###sidelist > h3:contains(Anzeige)
 pfalz-express.de###sidelist > .sidebar_widget[-ext-has='h3:contains(Anzeige)']
 ! https://forum.adguard.com/index.php?threads/24493/
 derstandard.at##li.group[-ext-has="iframe[src*='/AdServer/']"]
@@ -653,8 +654,10 @@ freenet.de#$##frnMain { min-height: 0px!important; }
 ! http://forum.adguard.com/showthread.php?8979 (#17)
 ||static.p7s1.com/vendor/webtrekk
 !
+spiegel.de##.cuponation-widget
+||widgets.outbrain.com^$domain=spiegel.de
+bbv-net.de###WallpaperBanner
 pfalz-express.de###alternative_footer
-pfalz-express.de###sidelist > h3:contains(Anzeige)
 pfalz-express.de##div[id^="banner_unter_menu"]
 pfalz-express.de###likeboxwrap
 pfalz-express.de###banner_unter_accordion

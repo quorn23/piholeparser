@@ -1,8 +1,8 @@
-! Checksum: CeKlbvnhpZCsLuY1QTap0g
+! Checksum: Vs1LL1d9FMMU1CPjWsLDNg
 ! Title: Annoyances filter
 ! Description: Blocks irritating elements on webpages including cookie notices third-party widgets and in-page popups.
-! Version: 1.0.17.70
-! TimeUpdated: 2017-09-01T15:02:34.265+04:00
+! Version: 1.0.17.77
+! TimeUpdated: 2017-09-03T19:02:19.678+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#annoyances
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -342,6 +342,8 @@ vchaspik.ua##div[id="conteiner"][style="height: 410px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+sobesednik.ru##.block--sobesednik-advertising
+iptvultra.com##.sidebar > #HTML13
 haaretz.com##.js-newsletter--alerts
 haaretz.com##.newsletterInarticle
 aetv.com,mylifetime.com,history.com##.show-newsletter-container
@@ -626,6 +628,7 @@ gazetevatan.com##form ._soc.news
 ! FuckAdBlock
 iphonesoft.fr,tmohentai.com,kshowonline.com,topsante.com,topsante.com,getgreenshot.org,forexpeacearmy.com,pr-cy.ru,pokehuntr.com,theland.com.au,greenbayphoenix.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links {display:block!important;}
 !
+@@||mmovie.it/wp-content/plugins/clean-selection/assets/js/advertisement.min.js
 @@||palemoon.org/ads.js
 yeptube.com###abmessage
 @@||watson.ch/cc/js/*/advertising.js
@@ -2739,6 +2742,7 @@ _europecookielaw.
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
+bbv-net.de###fi-cookieconsent
 latribune.fr###cookie-display
 tampermonkey.net##.cookie_hint
 televisa.com##.parent-box-cookies
@@ -3252,6 +3256,11 @@ wykop.pl#$#.type-permanent+#nav { top: 0px!important; }
 ||publiekeomroep.nl/data/script/cconsent
 ||tol.postnl.nl/toestemming
 !
+!
+urlaub.de#$#.cookies { display: none!important; }
+urlaub.de#$#.wrapper.hasCookies .page-header { top: 0px!important; }
+urlaub.de#$#body > .wrapper.hasCookies { margin-top: 0px!important }
+!
 prizee.com#$##allow_cookie_holder { display: none!important; }
 prizee.com#$#body.is-cookie-display { padding-top: 0px!important; }
 prizee.com#$#body.is-cookie-display #user .content-user { top: 0px!important; }
@@ -3343,6 +3352,8 @@ ziekenhuis.nl#%#AG_onLoad(function() { setTimeout(function() {var check = docume
 !#######################################################
 !######### White list. Fixing filtering errors #########
 !#######################################################
+! https://github.com/AdguardTeam/AdguardFilters/issues/6573
+momox.de#@#.cookie-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6465
 idealo.de#@##privacypolicy
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6270
@@ -4007,6 +4018,7 @@ mail.yandex.ua,mail.yandex.ru,mail.yandex.kz,mail.yandex.com.tr#%#AG_onLoad(func
 !
 ! Specific sites
 !
+iptvultra.com###fbOnscroll
 latribune.fr##[id^="acquisition-modal"]
 haaretz.com##.modal-wrapper--dark
 ibrasoftware.com##.msb
@@ -4678,6 +4690,7 @@ zr.ru#%#document.cookie = "zrPushSubsPopUp=1";
 !
 !######### Remains of ads
 !
+animev.net###siteContent > div.cAlign > div#sidebarGeral
 distrowatch.com##td[style="width: 19%; vertical-align: top; border: none"] > table[class="News"]+br+table[width="100%"]
 distrowatch.com##td[style^="width: 20%; vertical-align: top; border: none;"] > table[class="News"]+br+table[class="Info"]
 fb.ru##div.also_read > article+div.box+div[id]
@@ -5198,6 +5211,8 @@ music.yandex.ru,music.yandex.ua,music.yandex.by,music.yandex.kz##.sidebar__under
 music.yandex.ru,music.yandex.ua,music.yandex.by,music.yandex.kz##.event_promo[data-card="promotion"]
 !-----------------------------------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6572
+bitfinex.com##.onchart-tv-logo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6527
 gsmarena.com###wrapper > div#outer > div#subHeader
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6343

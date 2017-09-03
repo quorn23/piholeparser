@@ -1,7 +1,11 @@
-[Return To Repository](https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/)
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 ____________________________________
 # Running Parser
+
+## TorrentLocker-Ransomware-C2-Domain-Blocklist
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/TorrentLocker-Ransomware-C2-Domain-Blocklist.md)
 
 ## 280blocker-For-Japanese-Mobile-Site
 List Took 1 Minutes.
@@ -108,7 +112,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/CAMELEON-Hosts.md)
 
 ## Chad-Mayfield-Porn-Blocklist-Heavy
-List Took 10 Minutes.
+List Took 9 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Chad-Mayfield-Porn-Blocklist-Heavy.md)
 
 ## Chad-Mayfield-Porn-Blocklist-Light
@@ -200,7 +204,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Eesti-Custom-Sites-Filter.md)
 
 ## EladKarako
-List Took 3 Minutes.
+List Took 2 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/EladKarako.md)
 
 ## FadeMind-add2o7Net
@@ -252,7 +256,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-ATS.md)
 
 ## HpHosts-EMD
-List Took 2 Minutes.
+List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-EMD.md)
 
 ## HpHosts-EXP
@@ -260,7 +264,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-EXP.md)
 
 ## HpHosts-FSA
-List Took 2 Minutes.
+List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-FSA.md)
 
 ## HpHosts-GRM
@@ -276,7 +280,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-HJK.md)
 
 ## HpHosts
-List Took 4 Minutes.
+List Took 2 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts.md)
 
 ## HpHosts-MMT
@@ -292,7 +296,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-PHA.md)
 
 ## HpHosts-PSH
-List Took 2 Minutes.
+List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/HpHosts-PSH.md)
 
 ## HpHosts-PUP
@@ -312,7 +316,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/JABCreations.md)
 
 ## JoeWein
-List Took 2 Minutes.
+List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/JoeWein.md)
 
 ## KADHosts
@@ -344,7 +348,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Malware-Domains-Just-Domains.md)
 
 ## Malware-Domains
-List Took 1 Minutes.
+List Took 3 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Malware-Domains.md)
 
 ## Malware-URLs-Domains
@@ -376,7 +380,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Mitchell-Krogs-Badd-Boyz-Hosts.md)
 
 ## Mother-of-All-ADBLOCKING
-List Took 2 Minutes.
+List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Mother-of-All-ADBLOCKING.md)
 
 ## MVPS-HOSTS
@@ -543,10 +547,6 @@ List Took 1 Minutes.
 List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Tofu-Filter.md)
 
-## TorrentLocker-Ransomware-C2-Domain-Blocklist
-List Took 6 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/TorrentLocker-Ransomware-C2-Domain-Blocklist.md)
-
 ## TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist
 List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist.md)
@@ -560,7 +560,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Tyzbit.md)
 
 ## Universite-Toulouse-Adult
-List Took 19 Minutes.
+List Took 18 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/BlacklistScripts/Universite-Toulouse-Adult.md)
 
 ## Void-Greek-AdBlock-Filter

@@ -1,1 +1,1 @@
-* TorrentLocker-Ransomware-C2-Domain-Blocklist List Marked As Dead. Sat 2 Sep 20:00:26 EDT 2017
+* TorrentLocker-Ransomware-C2-Domain-Blocklist List Unavailable To Download. Sun 3 Sep 11:03:53 EDT 2017
