@@ -25,9 +25,9 @@ printf "$yellow"  "Installing $WHATITIS"
 apt-get install -y $WHATPACKAGE
 fi
 
-for f in $EVERYCCTLDOLD
+for f in $BLACKLSTSTHATDIEALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BUNDEADPARSELIST="$COUNTRYCODESTLDDIR""$BASEFILENAME".lst
+BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
 mv $f $BUNDEADPARSELIST
 done
