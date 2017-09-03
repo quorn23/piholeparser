@@ -1,8 +1,8 @@
-! Checksum: 07qWIt8J9/EbYiT6nR0Q7w
+! Checksum: KoeQcbnIxT7dnP5W2iTTGQ
 ! Title: Social media filter
 ! Description: Filter for social media widgets (Like buttons and such).
-! Version: 1.0.22.72
-! TimeUpdated: 2017-09-01T16:00:45.596+04:00
+! Version: 1.0.22.74
+! TimeUpdated: 2017-09-01T21:08:47.337+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#social
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -260,6 +260,7 @@ lj_bookmarklet
 !
 ! Extended CSS rules
 !
+silentall.com###dle-content > .cerceve[-ext-has="> #social-media"]
 denizliguncel.com###haber > .row-fluid[-ext-has=".btn-social-wrapper"]
 finikeakdeniz.com.tr##tbody > tr > td[width="307"][valign="top"][bgcolor="#FFFFFF"] > table[width="100%"][cellpadding="8"][-ext-has='strong:contains(Bizi Facebook'ta takip edin)']
 piste.de###wrapper > .large-4 > .headline[-ext-has='h5 > span.red:contains(Facebook)']
@@ -413,6 +414,9 @@ m.tf.co.kr#$#li.sBtn_reply { float: initial!important; display: inline-block!imp
 ||mimimi.tv/?*=*&_=
 ||mindspace.ru/?*=*&_=
 !
+iptvultra.com###share-this
+iptvultra.com##.sidebar > #HTML16
+thebody.com##.socialbar
 hdfulldiziler.com##.safirShare
 sineturk.co##.video > center > .grey-94
 hdfilmsizle.org###alt
@@ -3380,6 +3384,7 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ||mailget.net^$third-party
 ||my.hellobar.com^$third-party
 !
+iptvultra.com###fbOnscroll
 ibrasoftware.com##.msb
 zamundatorrentr.com###kdfbplug
 wildo.ru###shadow_vk
