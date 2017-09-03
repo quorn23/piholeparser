@@ -13,21 +13,16 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-## whiptail required
-WHATITIS=whiptail
-WHATPACKAGE=whiptail
+echo "Reverting Killed Lists"
+CHECKME=$BLACKLSTSTHATDIEALL
 if
-which $WHATITIS >/dev/null;
+ls $CHECKME &> /dev/null;
 then
-:
-else
-printf "$yellow"  "Installing $WHATITIS"
-apt-get install -y $WHATPACKAGE
-fi
-
 for f in $BLACKLSTSTHATDIEALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
 mv $f $BUNDEADPARSELIST
 done
+fi
+echo ""
