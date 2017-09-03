@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 ## average parsing time
 
 ## Variables
