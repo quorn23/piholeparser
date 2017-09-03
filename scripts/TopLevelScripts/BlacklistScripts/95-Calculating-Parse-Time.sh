@@ -8,7 +8,7 @@ source "$SCRIPTDIRA"/foldervars.var
 ## end time
 DIFFTIMEPARSESEC=`expr $ENDPARSESTAMP - $STARTPARSESTAMP`
 DIFFTIMEPARSE=`expr $DIFFTIMEPARSESEC / 60`
-echo "$DIFFTIMEPARSESEC" | tee --append $PARSEAVERAGEFILE &>/dev/null
+echo "$DIFFTIMEPARSESEC" | tee --append $PARSEAVERAGEFILETIME &>/dev/null
 
 if
 [[ $DIFFTIMEPARSESEC -gt 60 ]]
