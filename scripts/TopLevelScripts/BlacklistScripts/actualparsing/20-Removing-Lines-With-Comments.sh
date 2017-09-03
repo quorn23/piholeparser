@@ -26,7 +26,7 @@ fi
 if
 [[ -f $BFILETEMP ]]
 then
-cat $BFILETEMP | sed '/\#\+/d; /\!\+/d; /^[.]/d' | grep -v '\^.' > $BTEMPFILE
+cat $BFILETEMP | sed '/^\#/d; s/[[:space:]]\#.*$//g; /^\!/d; s/[[:space:]]\!.*$//g; /^\./d; /\.$/d' > $BTEMPFILE
 fi
 
 if
