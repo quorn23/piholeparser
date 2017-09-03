@@ -1,4 +1,4 @@
-# piholeparser
+<center># piholeparser </center>
 
 ### Last Run Stats
 
