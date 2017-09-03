@@ -56,10 +56,12 @@ printf "$yellow"  "Size of $BASEFILENAME = $ORIGFILESIZEBYTES Bytes."
 fi
 
 ## How Many Lines
+## Now helps calculate average at the end
 if
 [[ -n $ORIGFILESIZENOTZERO && "$ORIGFILESIZEBYTES" -gt 0 ]]
 then
 ORIGHOWMANYLINES=$(echo -e "`wc -l $BORIGINALFILETEMP | cut -d " " -f 1`")
 echo "ORIGHOWMANYLINES="$ORIGHOWMANYLINES"" | tee --append $TEMPPARSEVARS &>/dev/null
+echo "$ORIGHOWMANYLINES" | tee --append $PARSEAVERAGEFILELINES &>/dev/null
 printf "$yellow"  "$ORIGHOWMANYLINES Lines After Download."
 fi
