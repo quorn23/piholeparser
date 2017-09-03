@@ -27,7 +27,7 @@ fi
 if
 [[ -f $BFILETEMP ]]
 then
-cat $BFILETEMP | sed 's/\s\+$//; /^$/d; /[[:blank:]]/d' > $BTEMPFILE
+cat $BFILETEMP | sed 's/^\s\+[ \t]//g; s/\s\+[ \t]$//g; /^\s*$/d; / /d' > $BTEMPFILE
 fi
 
 if
