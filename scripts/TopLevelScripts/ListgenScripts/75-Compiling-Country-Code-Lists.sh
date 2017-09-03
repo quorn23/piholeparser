@@ -23,12 +23,12 @@ fi
 for source in `cat $f`;
 do
 
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BIGAPLE | wc -l`")
+HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $COMBINEDBLACKLISTSDBB | wc -l`")
 
 if
 [[ "$HOWMANYTIMESTLD" != 0 ]]
 then
-cat $BIGAPLE | grep -e [.]$source\$ >> $TEMPFILEZ
+cat $COMBINEDBLACKLISTSDBB | grep -e [.]$source\$ >> $TEMPFILEZ
 touch $TEMPFILEZ
 { if
 [[ -f $TEMPFILEZ ]]
