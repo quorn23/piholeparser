@@ -16,33 +16,34 @@ do
 
 timestamp=$(echo `date`)
 
-## Declare File Name
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-echo ""
-printf "$cyan"  "Checking For $BASEFILENAME"
-echo "## $BASEFILENAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+## Name Of Package
+DEPENDENCYNAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
-## Shouldn't be more than one source here
-source=`cat $f`
+## Actual Package
+DEPENDENCYPACKAGE=`cat $f`
+
+echo ""
+printf "$cyan"  "Checking For $DEPENDENCYNAME"
+echo "## $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 if
-which $BASEFILENAME >/dev/null;
+which $DEPENDENCYNAME >/dev/null;
 then
-printf "$yellow"  "$BASEFILENAME Is Already Installed."
-echo "$BASEFILENAME Already Installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$DEPENDENCYNAME Is Already Installed."
+echo "$DEPENDENCYNAME Already Installed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-echo "Installing $BASEFILENAME $timestamp" | tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "Installing $BASEFILENAME"
-apt-get install -y $source
+echo "Installing $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "Installing $DEPENDENCYNAME"
+apt-get install -y $DEPENDENCYPACKAGE
 fi
 
 if
-which $BASEFILENAME >/dev/null;
+which $DEPENDENCYNAME >/dev/null;
 then
 :
 else
-echo "Error Installing $BASEFILENAME $timestamp" | tee --append $RECENTRUN &>/dev/null
-printf "$red"  "Error Installing $BASEFILENAME"
+echo "Error Installing $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+printf "$red"  "Error Installing $DEPENDENCYNAME"
 fi
 
 done
