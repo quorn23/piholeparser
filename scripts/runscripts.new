@@ -1,6 +1,31 @@
+#!/bin/bash
+## This is the central script that ties the others together
 
+## Variables
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
+## Run Logs
+if
+[[ -f $RUNLOGSCRIPT ]]
+then
+bash $RUNLOGSCRIPT
+fi
 
-for d in */; do
-    echo "$d"
+## Logo
+if
+[[ -f $AVATARSCRIPT ]]
+then
+bash $AVATARSCRIPT
+else
+echo "Deathbybandaid Logo Missing."
+fi
+
+echo ""
+
+for d in "$TOPLEVELSCRIPTSLOGSDIR"*/;
+do
+
+echo "$d"
+
 done
