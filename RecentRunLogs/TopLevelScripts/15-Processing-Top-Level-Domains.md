@@ -7,7 +7,7 @@ ____________________________________
 ____________________________________
 # 
 ## Internet-Assigned-Numbers-Authority
-List Took 4 Seconds.
+List Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Internet-Assigned-Numbers-Authority.log)
 
 [Return To Repository](https://github.com/deathbybandaid/piholeparser/)
@@ -15,7 +15,7 @@ List Took 4 Seconds.
 ____________________________________
 # 
 ## Public-Suffix
-List Took 2 Seconds.
+List Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Public-Suffix.log)
 
 [Return To Repository](https://github.com/deathbybandaid/piholeparser/)
