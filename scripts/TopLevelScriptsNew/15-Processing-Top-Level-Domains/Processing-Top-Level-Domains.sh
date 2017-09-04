@@ -47,16 +47,16 @@ TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTDIRNAM
 
 
 ## Create Log
-if
-[[ -f $BREPOLOG ]]
-then
-rm $BREPOLOG
-fi
-echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
-echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
-echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
-echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
+#if
+#[[ -f $BREPOLOG ]]
+#then
+#rm $BREPOLOG
+#fi
+#echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
+#echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
+#echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
+#echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
+#echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "## Processing $BASEFILENAME List." | sudo tee --append $BREPOLOG &>/dev/null
