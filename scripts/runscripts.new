@@ -22,8 +22,8 @@ source "$SCRIPTDIRA"/foldervars.var
 #fi
 
 #echo ""
-
-for d in $(find "$TOPLEVELSCRIPTSDIR" -maxdepth 1 -type d)
+for d in "$TOPLEVELSCRIPTSDIR"*
+#for d in $(find "$TOPLEVELSCRIPTSDIR" -maxdepth 1 -type d)
 do
 
 echo "$d"
