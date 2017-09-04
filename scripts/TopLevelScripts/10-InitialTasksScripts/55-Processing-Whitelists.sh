@@ -11,18 +11,22 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 for f in $WHITEDOMAINSALL
 do
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$cyan"  "Processing $BASEFILENAME"
-WWHITETEMP="$TEMPDIR""$BASEFILENAME".whitetemp.txt
+
 timestamp=$(echo `date`)
-cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $WWHITETEMP
-cat $WWHITETEMP >> $WHITELISTTEMP
-HOWMANYLINES=$(echo -e "`wc -l $WWHITETEMP | cut -d " " -f 1`")
+WBASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+echo "#### $WBASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$cyan"  "Processing $WBASEFILENAME"
+
+cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEA
+cat $TEMPFILEA >> $WHITELISTTEMP
+
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
+
 rm $f
-mv $WWHITETEMP $f
+mv $TEMPFILEA $f
+
 echo ""
 done
 
@@ -41,15 +45,3 @@ fi
 HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-
-#if
-#[[ -f $DBBWHITELIST ]]
-#then
-#rm $DBBWHITELIST
-#fi
-
-#if
-#[[ -f $WHITELISTTEMP ]]
-#then
-#cp $WHITELISTTEMP $DBBWHITELIST
-#fi
