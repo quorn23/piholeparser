@@ -1,5 +1,5 @@
 #!/bin/bash
-## This is the Parsing Process
+## This is the Blacklist Parsing Process
 
 ## Variables
 SCRIPTDIRA=$(dirname $0)
