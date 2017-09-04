@@ -8,8 +8,8 @@ source "$SCRIPTDIRA"/foldervars.var
 SCRIPTTEXT="Finding The most recently modified Parsing Script File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-YOUNGESTPARSINGFILE=$(echo `ls -t $ACTUALBLACKPARSINGSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
-YOUNGESTPARSINGFILEB="$ACTUALBLACKPARSINGSCRIPTSDIR""$YOUNGESTPARSINGFILE"
+YOUNGESTPARSINGFILE=$(echo `ls -t $PARSINGPROCESSSCRIPTSDIR | awk '{printf("%s",$0);exit}'`)
+YOUNGESTPARSINGFILEB="$PARSINGPROCESSSCRIPTSDIR""$YOUNGESTPARSINGFILE"
 YOUNGFILEMODIFIEDLAST=$(stat -c %z "$YOUNGESTPARSINGFILEB")
 YOUNGFILEMODIFIEDTIME=$(date --date="$YOUNGFILEMODIFIEDLAST" +%s)
 printf "$yellow"    "The Most Recently Updated Parsing Script is $YOUNGESTPARSINGFILE"
