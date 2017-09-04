@@ -7,7 +7,15 @@ REPONAME=piholeparser
 
 ## Vars Saved Outside the Repo
 OUTSIDEDIRVARS=/etc/"$REPONAME".var
+if
+[[ -f $OUTSIDEDIRVARS ]]
+then
 source $OUTSIDEDIRVARS
+else
+echo "Outside Vars File Missing, Exiting."
+exit
+fi
+
 
 ## These are the colors used throughout the script.
 red='\e[1;31m%s\e[0m\n'
