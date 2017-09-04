@@ -5,11 +5,10 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
+RECENTRUNBANDAID="$RECENTRUN"
+
 for f in $TLDLSTALL
 do
-
-## Variables
-source "$SCRIPTDIRA"/../foldervars.var
 
 ## Clear Temp Before
 if
@@ -32,7 +31,7 @@ echo "FILEBEINGPROCESSED="$FILEBEINGPROCESSED"" | tee --append $TEMPPARSEVARS &>
 
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
-echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+echo "## $BASEFILENAME" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 
 BREPOLOGDIRECTORY="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTBASEFOLDERNAME"/
 if
@@ -103,31 +102,36 @@ then
 LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
-echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
-echo "" | sudo tee --append $RECENTRUN &>/dev/null
+## Variables
+source "$SCRIPTDIRA"/../foldervars.var
+
+echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
+echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
+echo "" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 printf "$orange" "$DIVIDERBARB"
 echo ""
 
 done
 
+echo "____________________________________" | tee --append $RECENTRUNBANDAID &>/dev/null
+
 SCRIPTTEXT="Checking For Old TLD File."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 if
 [[ -f $VALIDDOMAINTLD ]]
 then
 printf "$cyan"    "Old TLD List Removed."
 rm $VALIDDOMAINTLD
-echo "* Old TLD List Removed." | tee --append $RECENTRUN &>/dev/null
+echo "* Old TLD List Removed." | tee --append $RECENTRUNBANDAID &>/dev/null
 else
 printf "$cyan"    "Old TLD List Not Present."
-echo "* Old TLD List Not Present." | tee --append $RECENTRUN &>/dev/null
+echo "* Old TLD List Not Present." | tee --append $RECENTRUNBANDAID &>/dev/null
 fi
 
 SCRIPTTEXT="Merging Individual TLD Lists."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 CHECKME=$MIRROREDTLDLISTSSUBALL
 if
 ls $CHECKME &> /dev/null;
@@ -137,24 +141,24 @@ else
 touch $VALIDDOMAINTLD
 fi
 HOWMANYLINES=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Removing Old TEMP TLD If Present."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 if
 [[ -f $TLDCOMPARED ]]
 then
 rm $TLDCOMPARED
-echo "Old TLD Comparison Removed." | sudo tee --append $RECENTRUN &>/dev/null
+echo "Old TLD Comparison Removed." | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 else
-echo "Old TLD Comparison Not Present." | sudo tee --append $RECENTRUN &>/dev/null
+echo "Old TLD Comparison Not Present." | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 fi
 
 SCRIPTTEXT="Formatting TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 if
 [[ -f $VALIDDOMAINTLD ]]
 then
@@ -164,12 +168,12 @@ else
 touch $TEMPFILEF
 fi
 HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEF | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 
 SCRIPTTEXT="Removing Duplicatates From TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 if
 [[ -f $TEMPFILEF ]]
 then
@@ -179,19 +183,19 @@ else
 touch $VALIDDOMAINTLD
 fi
 HOWMANYLINES=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 
-echo "____________________________________" | sudo tee --append $RECENTRUN &>/dev/null
+echo "____________________________________" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 
 HOWMANYTLD=$(echo -e "`wc -l $VALIDDOMAINTLD | cut -d " " -f 1`")
 echo "HOWMANYTLDTOTAL='"$HOWMANYTLD"'" | tee --append $TEMPVARS &>/dev/null
 
 printf "$yellow"    "$HOWMANYTLD Valid TLD's Total."
-echo "$HOWMANYTLD Valid TLD's Total." | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYTLD Valid TLD's Total." | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 
 SCRIPTTEXT="Making Backup Copy of TLD List."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 if
 [[ ! -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
@@ -206,7 +210,7 @@ echo ""
 
 SCRIPTTEXT="Checking For New TLDs."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
 if
 [[ -f $TLDBKUP && -f $VALIDDOMAINTLD ]]
 then
@@ -224,10 +228,10 @@ if
 [[ -n $HOWMANYTLDNEW && "$HOWMANYTLDNEW" != 0 ]]
 then
 printf "$yellow"    "$HOWMANYTLDNEW New TLD's."
-echo "* $HOWMANYTLDNEW New TLD's" | tee --append $RECENTRUN &>/dev/null
+echo "* $HOWMANYTLDNEW New TLD's" | tee --append $RECENTRUNBANDAID &>/dev/null
 else
 printf "$yellow"    "No New TLD's"
 HOWMANYTLDNEW="No"
-echo "* No New TLD's" | tee --append $RECENTRUN &>/dev/null
+echo "* No New TLD's" | tee --append $RECENTRUNBANDAID &>/dev/null
 fi
 echo "HOWMANYTLDNEW='"$HOWMANYTLDNEW"'" | tee --append $TEMPVARS &>/dev/null
