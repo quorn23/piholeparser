@@ -18,9 +18,8 @@ SCRIPTFOLDERDIFF="$SCRIPTDIR"/"$FOLDERDIFF"
 ## Script Vars DIR
 SCRIPTVARSDIR="$SCRIPTFOLDERDIFF"scriptvars/
 
-## Static Vars Location
+## Static Vars
 STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-
 if
 [[ -f $STATICVARS ]]
 then
@@ -30,28 +29,10 @@ echo "Static Vars File Missing, Exiting."
 exit
 fi
 
-if
-[[ ! -f $TEMPVARS ]]
-then
 touch $TEMPVARS
-fi
-
-if
-[[ -f $TEMPVARS ]]
-then
 source $TEMPVARS
-else
-echo "Temp Vars File Missing, Exiting."
-exit
-fi
 
-if
-[[ ! -d $TOPLEVELSCRIPTSLOGSDIR ]]
-then
-mkdir $TOPLEVELSCRIPTSLOGSDIR
-fi
-
-RECENTRUNLOGDIRECTORY="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTDIRNAME"/
+RECENTRUNLOGDIRECTORY="$TOPLEVELSCRIPTSLOGSDIR"
 if
 [[ ! -d $RECENTRUNLOGDIRECTORY ]]
 then
