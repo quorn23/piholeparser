@@ -10,6 +10,14 @@ timestamp=$(echo `date`)
 
 echo "## $SCRIPTTEXT $timestamp" | tee --append $TEMPLOGMAIN &>/dev/null
 
+CHECKME=$RECENTRUNLOGSDIRCLEAN
+if
+ls $CHECKME &> /dev/null;
+then
+rm $CHECKME
+fi
+echo ""
+
 CHECKME=$CLEANRECENTRUNLOGSONE
 if
 ls $CHECKME &> /dev/null;
