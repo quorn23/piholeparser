@@ -5,7 +5,48 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
-## This is a way to skipp parsing
+RECENTRUNBANDAID="$RECENTRUN"
+
+SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo ""
+for f in $BLACKDOMAINSALL
+do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$cyan"  "Processing $BASEFILENAME"
+
+timestamp=$(echo `date`)
+cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEA
+cat $TEMPFILEA >> $BLACKLISTTEMP
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
+rm $f
+mv $TEMPFILEA $f
+echo ""
+done
+
+SCRIPTTEXT="Deduplicating Merged List."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+if
+[[ -f $BLACKLISTTEMP ]]
+then
+cat -s $BLACKLISTTEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILER
+rm $BLACKLISTTEMP
+mv $TEMPFILER $BLACKLISTTEMP
+else
+touch $BLACKLISTTEMP
+fi
+HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1`")
+echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
+
+echo "____________________________________" | tee --append $RECENTRUN &>/dev/null
+
+## This is a way to skip parsing
 if
 [[ -n $FULLSKIPPARSING ]]
 then
@@ -18,8 +59,7 @@ fi
 for f in $BLACKLSTALL
 do
 
-## Variables
-source "$SCRIPTDIR"/foldervars.var
+RECENTRUN="$RECENTRUNBANDAID"
 
 ## Clear Temp Before
 if
@@ -50,12 +90,18 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 
-BREPOLOG="$BLACKLISTSSCRIPTSLOGSDIR""$BASEFILENAME".md
-echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$BLACKLISTSSCRIPTSLOGSDIRGIT""$BASEFILENAME".md)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
+BREPOLOGDIRECTORY="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTBASEFOLDERNAME"/
+if
+[[ ! -d $BREPOLOGDIRECTORY ]]
+then
+mkdir $BREPOLOGDIRECTORY
+fi
 
-## Create Log
+BREPOLOG="$BREPOLOGDIRECTORY""$BASEFILENAME".md
+echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
+TAGTHEREPOLOG="[Details If Any]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTBASEFOLDERNAME"/"$BASEFILENAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTDIRNAME".md)"
+# Create Log
 if
 [[ -f $BREPOLOG ]]
 then
@@ -69,6 +115,8 @@ echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
+
+BLACKLISTSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
 
 for p in $BLACKLISTSSCRIPTSALL
 do
@@ -142,8 +190,7 @@ then
 LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
-## Variables
-source "$SCRIPTDIR"/foldervars.var
+RECENTRUN="$RECENTRUNBANDAID"
 
 echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
 echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
