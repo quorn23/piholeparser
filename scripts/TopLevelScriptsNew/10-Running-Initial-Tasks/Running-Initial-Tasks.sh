@@ -15,6 +15,7 @@ timestamp=$(echo `date`)
 LOOPSTART=$(date +"%s")
 
 INITIALTASK="$f"
+INITIALTASKBASENAME=$(echo `basename $INITIALTASK | cut -f 1 -d '.'`)
 INITIALTASKNAME=$(echo `basename $INITIALTASK | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
 INITIALTASKSCRIPTTEXT=$(echo $INITIALTASKNAME | sed 's/[0-9\-]/ /g')
 INITIALTASKSREPOLOG="[Details If Any]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTDIRNAME"/"$INITIALTASKNAME".md)"
