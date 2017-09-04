@@ -5,50 +5,29 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
+INITIALTASKSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
+
 ## Start File Loop
-## For .sh files In The housekeepingscripts Directory
 for f in $INITIALTASKSSCRIPTSALL
 do
 
-if
-[[ -f $TEMPVARS && -z $INITIALTASKSSCRIPTBASENAME ]]
-then
-echo "INITIALTASKSSCRIPTBASENAME='"$SCRIPTBASEFILENAME"'" | tee --append $TEMPVARS &>/dev/null
-fi
-
+timestamp=$(echo `date`)
 LOOPSTART=$(date +"%s")
 
-## Loop Vars
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BASEFILENAMENUM=$(echo $BASEFILENAME | sed 's/[0-9]//g')
-BASEFILENAMEDASHNUM=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
-BNAMEPRETTYSCRIPTTEXT=$(echo $BASEFILENAMEDASHNUM)
-BREPOLOG="$INITIALTASKSSCRIPTSLOGSDIR""$BASEFILENAME".md
-timestamp=$(echo `date`)
+INITIALTASK="$f"
+INITIALTASKNAME=$(echo `basename $INITIALTASK | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
+INITIALTASKSCRIPTTEXT=$(echo $INITIALTASK | sed 's/[0-9\-]/ /g')
+TAGTHEREPOLOG="[Details If Any]("$INITIALTASKSSCRIPTSLOGSGIT""$INITIALTASKNAME".md)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
 
 printf "$lightblue"    "$DIVIDERBARB"
 echo ""
 
-printf "$cyan"   "$BNAMEPRETTYSCRIPTTEXT $timestamp"
+printf "$cyan"   "$INITIALTASKSCRIPTTEXT $timestamp"
 echo ""
 
 ## Log Subsection
-echo "## $BNAMEPRETTYSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$INITIALTASKSSCRIPTSLOGSGIT""$BASEFILENAME".md)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
-
-## Create Log
-if
-[[ -f $BREPOLOG ]]
-then
-rm $BREPOLOG
-fi
-echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
-echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
-echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
-echo "# $BNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
-echo "" | tee --append $BREPOLOG &>/dev/null
+echo "## $INITIALTASKSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Clear Temp Before
 if
