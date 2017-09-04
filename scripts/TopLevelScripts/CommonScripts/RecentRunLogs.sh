@@ -14,7 +14,7 @@ CHECKME=$RECENTRUNLOGSDIRCLEAN
 if
 ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+rm -rf $CHECKME
 fi
 echo ""
 
