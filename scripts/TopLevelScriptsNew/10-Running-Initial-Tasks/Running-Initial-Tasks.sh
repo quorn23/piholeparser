@@ -17,7 +17,7 @@ LOOPSTART=$(date +"%s")
 INITIALTASK="$f"
 INITIALTASKNAME=$(echo `basename $INITIALTASK | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
 INITIALTASKSCRIPTTEXT=$(echo $INITIALTASKNAME | sed 's/[0-9\-]/ /g')
-TAGTHEREPOLOG="[Details If Any]("$INITIALTASKSSCRIPTSLOGSGIT""$INITIALTASKNAME".md)"
+INITIALTASKSREPOLOG="[Details If Any]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTDIRNAME"/"$INITIALTASKNAME".md)"
 
 printf "$lightblue"    "$DIVIDERBARB"
 echo ""
@@ -65,7 +65,7 @@ LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
 echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
-echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$INITIALTASKSREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
 echo "" | tee --append $RECENTRUN
 
 printf "$orange" "$DIVIDERBARB"
