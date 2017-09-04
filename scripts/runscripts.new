@@ -25,10 +25,10 @@ source "$SCRIPTDIRA"/foldervars.var
 for dir in "$TOPLEVELSCRIPTSDIRNEW"*/
 do
 
-DIRNAME=$(echo `basename $dir | cut -f 1 -d '.'`)
+TOPLEVELSUBDIRPATH="$dir"
+TOPLEVELSUBDIRNAME=$(echo `basename $TOPLEVELSUBDIRPATH | cut -f 1 -d '.' | sed 's/[0-9\-]/ /g'`)
+#TOPLEVELSUBDIRNAMECLEAN=$(echo $BASEFILENAME | sed 's/[0-9\-]/ /g')
 
-echo "dir is $dir"
-echo "dir basename is $DIRNAME"
-
+echo "$TOPLEVELSUBDIRNAME"
 
 done
