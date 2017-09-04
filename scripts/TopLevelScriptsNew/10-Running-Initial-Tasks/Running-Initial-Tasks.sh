@@ -18,7 +18,6 @@ INITIALTASK="$f"
 INITIALTASKNAME=$(echo `basename $INITIALTASK | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
 INITIALTASKSCRIPTTEXT=$(echo $INITIALTASKNAME | sed 's/[0-9\-]/ /g')
 TAGTHEREPOLOG="[Details If Any]("$INITIALTASKSSCRIPTSLOGSGIT""$INITIALTASKNAME".md)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
 
 printf "$lightblue"    "$DIVIDERBARB"
 echo ""
