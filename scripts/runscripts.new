@@ -6,24 +6,24 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 ## Run Logs
-if
-[[ -f $RUNLOGSCRIPT ]]
-then
-bash $RUNLOGSCRIPT
-fi
+#if
+#[[ -f $RUNLOGSCRIPT ]]
+#then
+#bash $RUNLOGSCRIPT
+#fi
 
 ## Logo
-if
-[[ -f $AVATARSCRIPT ]]
-then
-bash $AVATARSCRIPT
-else
-echo "Deathbybandaid Logo Missing."
-fi
+#if
+#[[ -f $AVATARSCRIPT ]]
+#then
+#bash $AVATARSCRIPT
+#else
+#echo "Deathbybandaid Logo Missing."
+#fi
 
-echo ""
+#echo ""
 
-for d in "$TOPLEVELSCRIPTSLOGSDIR"*/;
+for d in "$TOPLEVELSCRIPTSLOGSDIR"*;
 do
 
 echo "$d"
