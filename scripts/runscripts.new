@@ -6,29 +6,104 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 ## Run Logs
-#if
-#[[ -f $RUNLOGSCRIPT ]]
-#then
-#bash $RUNLOGSCRIPT
-#fi
+if
+[[ -f $RUNLOGSCRIPT ]]
+then
+bash $RUNLOGSCRIPT
+fi
 
 ## Logo
-#if
-#[[ -f $AVATARSCRIPT ]]
-#then
-#bash $AVATARSCRIPT
-#else
-#echo "Deathbybandaid Logo Missing."
-#fi
+if
+[[ -f $AVATARSCRIPT ]]
+then
+bash $AVATARSCRIPT
+else
+echo "Deathbybandaid Logo Missing."
+fi
 
-#echo ""
+echo ""
 for dir in "$TOPLEVELSCRIPTSDIRNEW"[0-9]*/
 do
 
+LOOPSTART=$(date +"%s")
 TOPLEVELSUBDIRPATH="$dir"
 TOPLEVELSUBDIRNAME=$(echo `basename $TOPLEVELSUBDIRPATH | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
 TOPLEVELSUBDIRSCRIPT="$TOPLEVELSUBDIRPATH""$TOPLEVELSUBDIRNAME".sh
+TOPLEVELSUBDIRSCRIPTTEXT=$(echo `basename $TOPLEVELSUBDIRPATH | cut -f 1 -d '.' | sed 's/[0-9\-]/ /g'`)
+TOPLEVELSUBDIRSCRIPTREPOLOGTAG="$TOPLEVELSCRIPTSLOGSDIR""$TOPLEVELSUBDIRNAME".md
+TOPLEVELSUBDIRSCRIPTREPOLOGTAG="[Details If Any]("$TOPLEVELSCRIPTSLOGSDIRGIT""$TOPLEVELSUBDIRNAME".md)"
 
-echo "$TOPLEVELSUBDIRSCRIPT"
+printf "$blue"    "$DIVIDERBAR"
+echo ""
+printf "$cyan"   "$TOPLEVELSUBDIRSCRIPTTEXT $timestamp"
 
+## Log Section
+echo "## $TOPLEVELSUBDIRSCRIPTTEXT $timestamp" | tee --append $MAINRECENTRUNLOGMD &>/dev/null
+
+## Create Log
+if
+[[ -f $TOPLEVELSUBDIRSCRIPTREPOLOGTAG ]]
+then
+rm $TOPLEVELSUBDIRSCRIPTREPOLOGTAG
+fi
+echo "$MAINREPOFOLDERGITTAG" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGTAG &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGTAG &>/dev/null
+echo "____________________________________" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGTAG &>/dev/null
+echo "# $TOPLEVELSUBDIRSCRIPTTEXT" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGTAG &>/dev/null
+echo "" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGTAG &>/dev/null
+
+## Clear Temp Before
+if
+[[ -f $DELETETEMPFILE ]]
+then
+bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
+
+if
+[[ -f $TOPLEVELSUBDIRSCRIPT ]]
+then
+bash $TOPLEVELSUBDIRSCRIPT
+fi
+
+## Clear Temp After
+if
+[[ -f $DELETETEMPFILE ]]
+then
+bash $DELETETEMPFILE
+else
+echo "Error Deleting Temp Files."
+exit
+fi
+
+LOOPEND=$(date +"%s")
+DIFFTIMELOOPSEC=`expr $LOOPEND - $LOOPSTART`
+if
+[[ $DIFFTIMELOOPSEC -ge 60 ]]
+then
+DIFFTIMELOOPMIN=`expr $DIFFTIMELOOPSEC / 60`
+LOOPTIMEDIFF="$DIFFTIMELOOPMIN Minutes."
+elif
+[[ $DIFFTIMELOOPSEC -lt 60 ]]
+then
+LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
+fi
+
+echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
+echo "$TAGTHEREPOLOG" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
+echo "" | sudo tee --append $MAINRECENTRUNLOGMD
+
+printf "$magenta" "$DIVIDERBAR"
+echo ""
+
+## End Of Loop
 done
+
+## Push Changes To Github
+if
+[[ -f $PUSHTOGITHUBSCRIPT ]]
+then
+bash $PUSHTOGITHUBSCRIPT
+fi
