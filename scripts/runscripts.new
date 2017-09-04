@@ -23,7 +23,7 @@ source "$SCRIPTDIRA"/foldervars.var
 
 #echo ""
 
-for d in "$TOPLEVELSCRIPTSLOGSDIR"*;
+for d in $(find "$TOPLEVELSCRIPTSLOGSDIR" -maxdepth 1 -type d)
 do
 
 echo "$d"
