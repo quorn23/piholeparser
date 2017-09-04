@@ -51,12 +51,7 @@ echo "$MAINREPOFOLDERGITTAG" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/de
 echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
 echo "____________________________________" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
 echo "# $TOPLEVELSUBDIRSCRIPTTEXT" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
-echo "" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
-if
-[[ ! -f $TOPLEVELSUBDIRSCRIPTREPOLOGMD ]]
-then
-echo "found the problem,,,, fuuuuuu"
-fi
+
 ## Clear Temp Before
 if
 [[ -f $DELETETEMPFILE ]]
