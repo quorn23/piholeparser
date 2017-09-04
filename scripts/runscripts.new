@@ -25,6 +25,7 @@ echo ""
 for dir in "$TOPLEVELSCRIPTSDIRNEW"[0-9]*/
 do
 
+timestamp=$(echo `date`)
 LOOPSTART=$(date +"%s")
 TOPLEVELSUBDIRPATH="$dir"
 TOPLEVELSUBDIRNAME=$(echo `basename $TOPLEVELSUBDIRPATH | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
@@ -51,7 +52,11 @@ echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &
 echo "____________________________________" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
 echo "# $TOPLEVELSUBDIRSCRIPTTEXT" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
 echo "" | tee --append $TOPLEVELSUBDIRSCRIPTREPOLOGMD &>/dev/null
-
+if
+[[ ! -f $TOPLEVELSUBDIRSCRIPTREPOLOGMD ]]
+then
+echo "found the problem,,,, fuuuuuu"
+fi
 ## Clear Temp Before
 if
 [[ -f $DELETETEMPFILE ]]
