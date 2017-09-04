@@ -5,6 +5,7 @@ SCRIPTDIR=$(dirname $0)
 
 ## Folder Name of Script
 COMPLETEFOLDERPATH=$(realpath $SCRIPTDIR)
+SCRIPTBASEFOLDERNAME=$(echo `basename $COMPLETEFOLDERPATH | cut -f 1 -d '.'`)
 
 ## Name Of Current Script
 SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
@@ -45,7 +46,7 @@ exit
 fi
 
 ## Log File
-RECENTRUN="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTDIRNAME".md
+RECENTRUN="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTBASEFOLDERNAME".md
 
 echo "$MAINREPOFOLDERGITTAG" | tee --append $RECENTRUN &>/dev/null
 echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $RECENTRUN &>/dev/null
