@@ -1,6 +1,6 @@
-## Creating Main Recent Run Log. Mon 4 Sep 13:34:46 EDT 2017
+## Creating Main Recent Run Log. Mon 4 Sep 13:35:29 EDT 2017
 * Recent Run Log Recreated.
 ## Checking For Dependencies 
-Process Took 0 Seconds.
+Process Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/Checking-For-Dependencies.md)
 
