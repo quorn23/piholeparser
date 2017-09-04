@@ -7,8 +7,6 @@ source "$SCRIPTDIRA"/../foldervars.var
 
 INITIALTASKSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
 
-RECENTRUNBANDAID="$RECENTRUN"
-
 ## Start File Loop
 for f in $INITIALTASKSSCRIPTSALL
 do
@@ -29,7 +27,7 @@ printf "$cyan"   "$INITIALTASKSCRIPTTEXT $timestamp"
 echo ""
 
 ## Log Subsection
-echo "## $INITIALTASKSCRIPTTEXT $timestamp" | tee --append $RECENTRUNBANDAID &>/dev/null
+echo "## $INITIALTASKSCRIPTTEXT $timestamp" | tee --append $RECENTRUN &>/dev/null
 
 ## Clear Temp Before
 if
@@ -67,8 +65,9 @@ then
 LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
-echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
-echo "$INITIALTASKSREPOLOG" | sudo tee --append $RECENTRUNBANDAID &>/dev/null
+echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$INITIALTASKSREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+echo "" | tee --append $RECENTRUN
 
 printf "$orange" "$DIVIDERBARB"
 echo ""
