@@ -1,11 +1,3 @@
-[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
-[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
-[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/TLDlistScripts/45-Downloading-Active-Top-Level-Domains.md)
-[Go Up Two Levels](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/InitialTasksScripts/40-Running-Initial-Tasks.md)
-____________________________________
-# Internet-Assigned-Numbers-Authority
-## Processing Internet-Assigned-Numbers-Authority List.
-## Setting Temporary Parsing Variables
 ## Checking If Multiple Sources
 ## The Source In The File To Download Is
 ## Checking For HTTPS

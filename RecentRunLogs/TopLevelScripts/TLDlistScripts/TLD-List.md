@@ -1,7 +1,7 @@
-[Return To Repository](https://github.com/deathbybandaid/piholeparser/blob/master/)
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/)
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/TLDlistScripts/45-Downloading-Active-Top-Level-Domains.md)
-[Go Up Two Levels](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/InitialTasksScripts/40-Running-Initial-Tasks.md)
+[Go Up Two Levels](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/InitialTasksScripts/.md)
 ____________________________________
 # TLD-List
 ## Processing TLD-List List.
