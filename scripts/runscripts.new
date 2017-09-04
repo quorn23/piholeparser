@@ -26,7 +26,7 @@ for dir in "$TOPLEVELSCRIPTSDIRNEW"*/
 do
 
 TOPLEVELSUBDIRPATH="$dir"
-TOPLEVELSUBDIRNAME=$(echo `basename $TOPLEVELSUBDIRPATH | cut -f 1 -d '.' | sed 's/[0-9]/ /g'`)
+TOPLEVELSUBDIRNAME=$(echo `basename $TOPLEVELSUBDIRPATH | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
 TOPLEVELSUBDIRSCRIPT="$TOPLEVELSUBDIRPATH""$TOPLEVELSUBDIRNAME".sh
 
 echo "$TOPLEVELSUBDIRSCRIPT"
