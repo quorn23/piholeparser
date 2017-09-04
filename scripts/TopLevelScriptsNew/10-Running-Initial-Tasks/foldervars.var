@@ -8,7 +8,7 @@ COMPLETEFOLDERPATH=$(realpath $SCRIPTDIR)
 SCRIPTDIRNAME=$(echo `basename $COMPLETEFOLDERPATH | cut -f 1 -d '.'`)
 
 ## Name Of Current Script
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
 
 ## Amount Of Folders Between
 FOLDERDIFFDOTS="../"
