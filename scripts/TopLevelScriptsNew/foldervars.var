@@ -8,7 +8,7 @@ COMPLETEFOLDERPATH=$(realpath $SCRIPTDIR)
 SCRIPTDIRNAME=$(echo `basename $COMPLETEFOLDERPATH | cut -f 1 -d '.'`)
 
 ## Name Of Current Script
-SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.'`)
+SCRIPTBASEFILENAME=$(echo `basename $0 | cut -f 1 -d '.' | sed 's/[0-9]/ /g' | sed 's/[\-]/ /'`)
 
 ## Amount Of Folders Between
 FOLDERDIFFDOTS="../"
@@ -45,12 +45,5 @@ echo "Temp Vars File Missing, Exiting."
 exit
 fi
 
-RECENTRUNLOGDIRECTORY="$RECENTRUNLOGSDIR""$SCRIPTDIRNAME"/
-if
-[[ ! -d $RECENTRUNLOGDIRECTORY ]]
-then
-mkdir $RECENTRUNLOGDIRECTORY
-fi
-
 ## Log File
-RECENTRUN="$RECENTRUNLOGDIRECTORY""$SCRIPTBASEFILENAME".md
+RECENTRUN="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTBASEFILENAME".md
