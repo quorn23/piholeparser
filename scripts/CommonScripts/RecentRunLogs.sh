@@ -60,6 +60,8 @@ CHECKME=$TOPLEVELSCRIPTSLOGSDIR
 if
 ls $CHECKME &> /dev/null;
 then
-rm -rf $CHECKME
+:
+else
+mkdir $CHECKME
 fi
 echo ""
