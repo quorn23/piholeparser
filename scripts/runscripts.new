@@ -92,7 +92,7 @@ LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
 fi
 
 echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
-echo "$TAGTHEREPOLOG" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
+echo "$TOPLEVELSUBDIRSCRIPTREPOLOGTAG" | sudo tee --append $MAINRECENTRUNLOGMD &>/dev/null
 echo "" | sudo tee --append $MAINRECENTRUNLOGMD
 
 printf "$magenta" "$DIVIDERBAR"
