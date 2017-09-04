@@ -55,3 +55,11 @@ then
 echo "* Recent Run Log Recreated." | tee --append $TEMPLOGMAIN &>/dev/null
 mv $TEMPLOGMAIN $MAINRECENTRUNLOGMD
 fi
+
+CHECKME=$TOPLEVELSCRIPTSLOGSDIR
+if
+ls $CHECKME &> /dev/null;
+then
+rm -rf $CHECKME
+fi
+echo ""
