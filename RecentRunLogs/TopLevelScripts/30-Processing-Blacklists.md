@@ -19,3 +19,7 @@ List Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/280blocker-For-Japanese-Mobile-Site.md)
 
 ## AakList
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/AakList.md)
+
+## ABP-Bulgarian-List

@@ -20,3 +20,4 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ## Checking Parsed File Size
+* 280blocker-For-Japanese-Mobile-Site List Was Killed By The Parsing Process. It will be skipped in the future. Mon 4 Sep 19:53:59 EDT 2017
