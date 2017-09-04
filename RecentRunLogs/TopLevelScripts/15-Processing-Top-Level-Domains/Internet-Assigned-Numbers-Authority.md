@@ -1,3 +1,8 @@
+[Return To Repository](https://github.com/deathbybandaid/piholeparser/)
+[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
+[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
+____________________________________
+# Internet-Assigned-Numbers-Authority
 ## Processing Internet-Assigned-Numbers-Authority List.
 ## Setting Temporary Parsing Variables
 ## Checking If Multiple Sources
