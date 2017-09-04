@@ -5,20 +5,6 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
-SCRIPTTEXT="Checking For Old TLD File."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-if
-[[ -f $VALIDDOMAINTLD ]]
-then
-printf "$cyan"    "Old TLD List Removed."
-rm $VALIDDOMAINTLD
-echo "* Old TLD List Removed." | tee --append $RECENTRUN &>/dev/null
-else
-printf "$cyan"    "Old TLD List Not Present."
-echo "* Old TLD List Not Present." | tee --append $RECENTRUN &>/dev/null
-fi
-
 for f in $TLDLSTALL
 do
 
@@ -48,11 +34,18 @@ BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
 echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
 echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 
-BREPOLOG="$TLDLISTSSCRIPTSLOGSDIR""$BASEFILENAME".md
+BREPOLOGDIRECTORY="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTDIRNAME"/
+if
+[[ ! -d $BREPOLOGDIRECTORY ]]
+then
+mkdir $BREPOLOGDIRECTORY
+fi
+
+BREPOLOG="$BREPOLOGDIRECTORY""$BASEFILENAME".md
 echo "RECENTRUN="$BREPOLOG"" | tee --append $TEMPPARSEVARS &>/dev/null
-TAGTHEREPOLOG="[Details If Any]("$TLDLISTSSCRIPTSLOGSDIRGIT""$BASEFILENAME".log)"
-TAGTHEUPONEREPOLOG="[Go Up One Level]("$TLDLISTSSCRIPTSLOGSDIRGIT""$SCRIPTBASEFILENAME".md)"
-TAGTHEUPTWOREPOLOG="[Go Up Two Levels]("$INITIALTASKSSCRIPTSLOGSGIT""$INITIALTASKSSCRIPTBASENAME".md)"
+TAGTHEREPOLOG="[Details If Any]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTDIRNAME"/"$BASEFILENAME".log)"
+TAGTHEUPONEREPOLOG="[Go Up One Level]("$TOPLEVELSCRIPTSLOGSDIRGIT""$SCRIPTDIRNAME".md)"
+
 
 ## Create Log
 if
@@ -63,13 +56,14 @@ fi
 echo "$MAINREPOFOLDERGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
 echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
-echo "$TAGTHEUPTWOREPOLOG" | tee --append $BREPOLOG &>/dev/null
 echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
 echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
 
 printf "$green"    "Processing $BASEFILENAME List."
 echo "## Processing $BASEFILENAME List." | sudo tee --append $BREPOLOG &>/dev/null
 echo "" 
+
+TLDLISTSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
 
 for p in $TLDLISTSSCRIPTSALL
 do
@@ -117,12 +111,19 @@ echo ""
 
 done
 
-#!/bin/bash
-## This Recreates The Valid TLD file
-
-## Variables
-SCRIPTDIRA=$(dirname $0)
-source "$SCRIPTDIRA"/foldervars.var
+SCRIPTTEXT="Checking For Old TLD File."
+printf "$cyan"    "$SCRIPTTEXT"
+echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+if
+[[ -f $VALIDDOMAINTLD ]]
+then
+printf "$cyan"    "Old TLD List Removed."
+rm $VALIDDOMAINTLD
+echo "* Old TLD List Removed." | tee --append $RECENTRUN &>/dev/null
+else
+printf "$cyan"    "Old TLD List Not Present."
+echo "* Old TLD List Not Present." | tee --append $RECENTRUN &>/dev/null
+fi
 
 SCRIPTTEXT="Merging Individual TLD Lists."
 printf "$cyan"    "$SCRIPTTEXT"
