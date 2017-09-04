@@ -7,6 +7,8 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
+DEPENDENCIESALL="$COMPLETEFOLDERPATH"*.dep
+
 ## Start File Loop
 ## For .dependency files In The dependencies Directory
 for f in $DEPENDENCIESALL
