@@ -47,3 +47,8 @@ fi
 
 ## Log File
 RECENTRUN="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTBASEFILENAME".md
+
+echo "$MAINREPOFOLDERGITTAG" | tee --append $RECENTRUN &>/dev/null
+echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $RECENTRUN &>/dev/null
+echo "____________________________________" | tee --append $RECENTRUN &>/dev/null
+echo "# $TOPLEVELSUBDIRSCRIPTTEXT" | tee --append $RECENTRUN &>/dev/null
