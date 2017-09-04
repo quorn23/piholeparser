@@ -2,31 +2,31 @@
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 ____________________________________
 # 
-## Recreating TempVar File Mon 4 Sep 14:56:06 EDT 2017
+## Recreating TempVar File Mon 4 Sep 15:08:15 EDT 2017
 Process Took 0 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Recreating-TempVar-File.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Recreating-TempVar-File.md)
 
-## Removing Temp Files Mon 4 Sep 14:56:06 EDT 2017
+## Removing Temp Files Mon 4 Sep 15:08:15 EDT 2017
 Process Took 0 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Removing-Temp-Files.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Removing-Temp-Files.md)
 
-## Setting Start Time Variable Mon 4 Sep 14:56:06 EDT 2017
-Process Took 1 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Setting-Start-Time-Variable.md)
+## Setting Start Time Variable Mon 4 Sep 15:08:16 EDT 2017
+Process Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Setting-Start-Time-Variable.md)
 
-## Identifying Lists Without https Mon 4 Sep 14:56:07 EDT 2017
+## Identifying Lists Without https Mon 4 Sep 15:08:16 EDT 2017
 Process Took 2 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Identifying-Lists-Without-https.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Identifying-Lists-Without-https.md)
 
-## Counting Lists To Process Mon 4 Sep 14:56:09 EDT 2017
+## Counting Lists To Process Mon 4 Sep 15:08:18 EDT 2017
 Process Took 0 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Counting-Lists-To-Process.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Counting-Lists-To-Process.md)
 
-## Checking For Lists With Multiple Sources Mon 4 Sep 14:56:09 EDT 2017
+## Checking For Lists With Multiple Sources Mon 4 Sep 15:08:18 EDT 2017
 Process Took 3 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Checking-For-Lists-With-Multiple-Sources.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Checking-For-Lists-With-Multiple-Sources.md)
 
-## Checking To See If Parsing Method Has Changed Mon 4 Sep 14:56:12 EDT 2017
-Process Took 1 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-InitialTasksScripts/Checking-To-See-If-Parsing-Method-Has-Changed.md)
+## Checking To See If Parsing Method Has Changed Mon 4 Sep 15:08:22 EDT 2017
+Process Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/Checking-To-See-If-Parsing-Method-Has-Changed.md)
 
