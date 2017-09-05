@@ -1,8 +1,6 @@
 [Return To Repository](https://github.com/deathbybandaid/piholeparser/)
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
-# Vokins
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # Vokins
-## [ ]*
 ## [ ]*

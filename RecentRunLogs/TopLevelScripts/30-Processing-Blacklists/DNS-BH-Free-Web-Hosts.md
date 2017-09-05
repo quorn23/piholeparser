@@ -3,9 +3,6 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # DNS-BH-Free-Web-Hosts
-## Checking For Github Mirror File
-## Checking For Existing Parsed File
-## Checking If Multiple Sources
 ## The Source In The File To Download Is
-## Calculating Parse Time
-## Clearing Temp Vars
+## Checking For HTTPS
+## Pinging Source To Check Host Availability

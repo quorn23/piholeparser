@@ -5676,3 +5676,266 @@ List Took 5 Seconds.
 ## LatvianList
 ## AdZHosts
 ## uBlockFiltersPlus
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LatvianList.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBlockFiltersPlus.md)
+
+## Lead-Generator
+## uBlockPolishFiltersSupplement
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lead-Generator.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBlockPolishFiltersSupplement.md)
+List Took 2 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/AdZHosts.md)
+
+## Lehigh-BOOT
+## uBOPersonalFilters
+## Airelles-AntiAdvertisements-Hosts
+List Took 3 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-URL-Shorteners.md)
+List Took 3 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lehigh-BOOT.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Disconnect-Advertising-Filter.md)
+
+
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBOPersonalFilters.md)
+
+## DShield-Recommended-Block
+## Disconnect-Malvertising-Filter
+## LehighEDUDomains
+## Universite-Toulouse-Adult
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LehighEDUDomains.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Universite-Toulouse-Adult.md)
+## LinkedinsanityRules
+
+## Void-Greek-AdBlock-Filter
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LinkedinsanityRules.md)
+
+List Took 1 Seconds.
+## ListeAR
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Void-Greek-AdBlock-Filter.md)
+List Took 2 Seconds.
+
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DShield-Recommended-Block.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Disconnect-Malvertising-Filter.md)
+
+
+List Took 2 Seconds.
+## Vokins
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Airelles-AntiAdvertisements-Hosts.md)
+List Took 1 Seconds.
+
+## Dshield-Suspicious-High
+## Disconnect-Malware-Filter
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListeAR.md)
+
+## Airelles-AntiMiscellaneous-Hosts
+## ListKR
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Vokins.md)
+
+List Took 1 Seconds.
+## Wiltteri
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKR.md)
+
+## ListKRUnbreak
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Wiltteri.md)
+
+List Took 0 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKRUnbreak.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Disconnect-Malware-Filter.md)
+
+
+## WiltteriReborn
+## Locky-Ransomware-C2-Domain-Blocklist
+## Disconnect-Tracking-Filter
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WiltteriReborn.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-C2-Domain-Blocklist.md)
+## WindowsSpyBlocker10
+
+List Took 3 Seconds.
+## Locky-Ransomware-Payment-Sites-Domain-Blocklist
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Dshield-Suspicious-High.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WindowsSpyBlocker10.md)
+
+List Took 3 Seconds.
+## Dshield-Suspicious-Low
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Airelles-AntiMiscellaneous-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-Payment-Sites-Domain-Blocklist.md)
+List Took 1 Seconds.
+
+## WindowsSpyBlocker7
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Disconnect-Tracking-Filter.md)
+
+## malc0de
+## Airelles-AntiSex-Hosts
+## DNS-BH-ABP-Malware-Domains-Full
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WindowsSpyBlocker7.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/malc0de.md)
+
+## WindowsSpyBlocker81
+## Malware-Domains-Just-Domains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WindowsSpyBlocker81.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains-Just-Domains.md)
+
+## XFilesHWSHarmfulWebSites
+## Malware-Domains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/XFilesHWSHarmfulWebSites.md)
+
+List Took 2 Seconds.
+List Took 1 Seconds.
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Airelles-AntiSex-Hosts.md)
+List Took 3 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-ABP-Malware-Domains-Full.md)
+
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Dshield-Suspicious-Low.md)
+
+## XFilesNoFacebookAds
+
+## Malware-URLs-Domains
+## Airelles-AntiTrackers-Hosts
+## DNS-BH-Bulk-Registrars
+## Dshield-Suspicious-Medium
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/XFilesNoFacebookAds.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-URLs-Domains.md)
+## Yhonay-AntiPopAds
+
+## MalwareURLsGrayArea
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Yhonay-AntiPopAds.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLsGrayArea.md)
+## YousList
+List Took 2 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-Bulk-Registrars.md)
+
+## MalwareURLs
+## DNS-BH-Dynamic-DNS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YousList.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLs.md)
+
+## YouTubeOtherAnnoyances
+List Took 3 Seconds.
+## Mandiant-APT1-Report
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Dshield-Suspicious-Medium.md)
+
+List Took 1 Seconds.
+## EasyList-China
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubeOtherAnnoyances.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mandiant-APT1-Report.md)
+
+## YouTubePureVideoExperience
+List Took 4 Seconds.
+## Mat1th-DNS-add-block
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Airelles-AntiTrackers-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-Dynamic-DNS.md)
+
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubePureVideoExperience.md)
+
+## Airelles-Malware-Hosts
+## DNS-BH-Free-Web-Hosts
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mat1th-DNS-add-block.md)
+## YouTubeRemoveComments
+
+List Took 1 Seconds.
+## Mayvs-Private-Adblock-Filters
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-China.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubeRemoveComments.md)
+
+## EasyList-Czech-Slovak
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mayvs-Private-Adblock-Filters.md)
+
+## YouTubeRemoveYoutubeSuggestions
+## MessageSeenRemoverforFacebook
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubeRemoveYoutubeSuggestions.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MessageSeenRemoverforFacebook.md)
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-Free-Web-Hosts.md)
+
+
+## Yoyoorg
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Airelles-Malware-Hosts.md)
+## Metaphoricgiraffe-Privacy-Filters
+
+## DNS-BH-Malware-Domains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Czech-Slovak.md)
+
+## Airelles-Phishing-Hosts
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Yoyoorg.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Metaphoricgiraffe-Privacy-Filters.md)
+## EasyList-Dutch
+
+## ZeuS-Domain-Blocklist-Bad-Domains
+## Michael-Trimms-Hosts
+List Took 0 Seconds.
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ZeuS-Domain-Blocklist-Bad-Domains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Michael-Trimms-Hosts.md)
+
+
+## Mitchell-Krogs-Badd-Boyz-Hosts
+## ZeuS-Domain-Blocklist
+List Took 0 Seconds.
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ZeuS-Domain-Blocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mitchell-Krogs-Badd-Boyz-Hosts.md)
+
+
+## Mother-of-All-ADBLOCKING

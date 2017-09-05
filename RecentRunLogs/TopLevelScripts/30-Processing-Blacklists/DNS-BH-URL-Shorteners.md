@@ -4,3 +4,5 @@
 ____________________________________
 # DNS-BH-URL-Shorteners
 ## Setting Temporary Parsing Variables
+## Checking For Existing Mirror File
+## Checking For Github Mirror File
