@@ -3,5 +3,3 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # EasyList-Liste-FR
-## Determining Host Availability
-## Checking If List Updated Online

@@ -4,4 +4,3 @@
 ____________________________________
 # FadeMind-Dead
 ## Setting Temporary Parsing Variables
-## Checking For Existing Mirror File

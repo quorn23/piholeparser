@@ -3,4 +3,4 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/Completing-End-Tasks.md)
 ____________________________________
 # 20-Calculating-Total-Runtime-Of-Script
-* 428
+* 

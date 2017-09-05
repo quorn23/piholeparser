@@ -6718,3 +6718,1742 @@ List Took 0 Seconds.
 List Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ZeuS-Domain-Blocklist.md)
 
+List Took 4 Seconds.
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-Malware-Domains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Hant05080-Filters.md)
+
+List Took 5 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/FadeMind-SpotifyAds.md)
+
+## DNS-BH-Skype-Resolvers
+## Henning-VanRaumle-Youtube
+## Fanboy-Annoyances-List
+List Took 13 Seconds.
+List Took 13 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-Skype-Resolvers.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Henning-VanRaumle-Youtube.md)
+
+
+## DNS-BH-URL-Shorteners
+## HpHosts-ATS
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DNS-BH-URL-Shorteners.md)
+List Took 0 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-ATS.md)
+
+## DShield-Recommended-Block
+## HpHosts-EMD
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/DShield-Recommended-Block.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-EMD.md)
+
+## Dshield-Suspicious-High
+## HpHosts-EXP
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Fanboy-Annoyances-List.md)
+
+## Filtros-Nauscopicos
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Filtros-Nauscopicos.md)
+
+## Finnish-AntiSocial
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-EXP.md)
+
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Dshield-Suspicious-High.md)
+
+## HpHosts-FSA
+## Dshield-Suspicious-Low
+List Took 26 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Dshield-Suspicious-Low.md)
+List Took 26 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-FSA.md)
+
+## Dshield-Suspicious-Medium
+## HpHosts-GRM
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Dshield-Suspicious-Medium.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-GRM.md)
+
+## EasyList-China
+## HpHosts-HFS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-China.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-HFS.md)
+
+## EasyList-Czech-Slovak
+## HpHosts-HJK
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Czech-Slovak.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-HJK.md)
+
+## EasyList-Dutch
+## HpHosts
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Dutch.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts.md)
+
+## EasyList-Germany
+## HpHosts-MMT
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Germany.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-MMT.md)
+
+## EasyList-Hebrew
+## HpHosts-Partial
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Hebrew.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-Partial.md)
+
+## EasyList-Italy
+## HpHosts-PHA
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Italy.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PHA.md)
+
+## EasyList-Latvian
+## HpHosts-PSH
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Latvian.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PSH.md)
+
+## EasyList-Liste-AR
+## HpHosts-PUP
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Liste-AR.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PUP.md)
+
+## EasyList-Liste-FR
+## HpHosts-WRZ
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Liste-FR.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-WRZ.md)
+
+## EasyList-Lithuania
+## Hufilter
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Lithuania.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Hufilter.md)
+
+
+## EasyList
+## Icelandic-ABP
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Icelandic-ABP.md)
+
+
+## EasyList-Thailand
+## I-Dont-Care-about-Cookies
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyList-Thailand.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/I-Dont-Care-about-Cookies.md)
+
+
+## EasyPrivacy
+## Ilyakatzs-inpage-popups
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyPrivacy.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Ilyakatzs-inpage-popups.md)
+
+
+## EasyTest
+## ImmortalMalwareDomains
+List Took 8 Seconds.
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ImmortalMalwareDomains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EasyTest.md)
+
+
+## Eesti-Custom-Sites-Filter
+## JABCreations
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Eesti-Custom-Sites-Filter.md)
+List Took 6 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JABCreations.md)
+
+## EladKarako
+## JansalsHostsLight
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/EladKarako.md)
+List Took 0 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JansalsHostsLight.md)
+
+## Facebook-Annoyances-Blocker
+## JansalsHosts
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Facebook-Annoyances-Blocker.md)
+List Took 0 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JansalsHosts.md)
+
+## Facebook-NewsFeed-Annoyances-Blocker
+## JapaneseSiteAdblockFilter
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Facebook-NewsFeed-Annoyances-Blocker.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JapaneseSiteAdblockFilter.md)
+
+## Facebook-Privacy
+## JapaneseSiteAdblockFilterver2
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Finnish-AntiSocial.md)
+
+## Firime-FED
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Firime-FED.md)
+
+## GandJ-Hosts
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/GandJ-Hosts.md)
+List Took 26 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Facebook-Privacy.md)
+List Took 26 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JapaneseSiteAdblockFilterver2.md)
+
+## Gmbk0s-Android
+## Facebook-Sidebar-Blocker
+## JoeWein
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Gmbk0s-Android.md)
+
+## GNU-Blacklist
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Facebook-Sidebar-Blocker.md)
+
+## FadeMind-add2o7Net
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JoeWein.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/GNU-Blacklist.md)
+
+## KADHosts
+## Greek-AdBlock-Filter
+List Took 8 Seconds.
+List Took 8 Seconds.
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KADHosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/FadeMind-add2o7Net.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Greek-AdBlock-Filter.md)
+
+
+
+## KADScams
+## FadeMind-addRisk
+## Hant05080-Filters
+List Took 7 Seconds.
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KADScams.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Hant05080-Filters.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/FadeMind-addRisk.md)
+
+
+
+## Henning-VanRaumle-Youtube
+## KoreanAdblock
+## FadeMind-addSpam
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/FadeMind-addSpam.md)
+
+List Took 1 Minutes.
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KoreanAdblock.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Henning-VanRaumle-Youtube.md)
+
+
+## FadeMind-Dead
+## KowabitBOD
+## HpHosts-ATS
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-ATS.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KowabitBOD.md)
+List Took 1 Seconds.
+
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/FadeMind-Dead.md)
+
+## Laicure
+## HpHosts-EMD
+## FadeMind-SpotifyAds
+List Took 7 Seconds.
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-EMD.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/FadeMind-SpotifyAds.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Laicure.md)
+
+
+
+## HpHosts-EXP
+## Fanboy-Annoyances-List
+## LatvianList
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Fanboy-Annoyances-List.md)
+List Took 9 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-EXP.md)
+
+## Filtros-Nauscopicos
+## HpHosts-FSA
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Filtros-Nauscopicos.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-FSA.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LatvianList.md)
+
+
+
+## Finnish-AntiSocial
+## HpHosts-GRM
+## Lead-Generator
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lead-Generator.md)
+
+## Lehigh-BOOT
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Finnish-AntiSocial.md)
+
+## Firime-FED
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lehigh-BOOT.md)
+
+## LehighEDUDomains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Firime-FED.md)
+
+## GandJ-Hosts
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LehighEDUDomains.md)
+
+## LinkedinsanityRules
+List Took 10 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-GRM.md)
+
+## HpHosts-HFS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/GandJ-Hosts.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LinkedinsanityRules.md)
+
+## Gmbk0s-Android
+## ListeAR
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListeAR.md)
+
+## ListKR
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Gmbk0s-Android.md)
+
+## GNU-Blacklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKR.md)
+
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-HFS.md)
+## ListKRUnbreak
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/GNU-Blacklist.md)
+
+## HpHosts-HJK
+## Greek-AdBlock-Filter
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKRUnbreak.md)
+
+## Locky-Ransomware-C2-Domain-Blocklist
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-HJK.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Greek-AdBlock-Filter.md)
+
+
+## HpHosts
+## Hant05080-Filters
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-C2-Domain-Blocklist.md)
+
+## Locky-Ransomware-Payment-Sites-Domain-Blocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Hant05080-Filters.md)
+
+List Took 1 Seconds.
+## HpHosts-MMT
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-Payment-Sites-Domain-Blocklist.md)
+## Henning-VanRaumle-Youtube
+
+## malc0de
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Henning-VanRaumle-Youtube.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-MMT.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/malc0de.md)
+
+## HpHosts-ATS
+
+## HpHosts-Partial
+## Malware-Domains-Just-Domains
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-ATS.md)
+
+## HpHosts-EMD
+List Took 6 Seconds.
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-Partial.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains-Just-Domains.md)
+
+
+## HpHosts-PHA
+List Took 1 Seconds.
+## Malware-Domains
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-EMD.md)
+
+## HpHosts-EXP
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains.md)
+
+## Malware-URLs-Domains
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PHA.md)
+
+## HpHosts-PSH
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-EXP.md)
+
+## HpHosts-FSA
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PSH.md)
+
+## HpHosts-PUP
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-FSA.md)
+
+## HpHosts-GRM
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PUP.md)
+
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-URLs-Domains.md)
+## HpHosts-WRZ
+
+List Took 1 Seconds.
+## MalwareURLsGrayArea
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-GRM.md)
+
+## HpHosts-HFS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-WRZ.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLsGrayArea.md)
+
+## Hufilter
+## MalwareURLs
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-HFS.md)
+
+## HpHosts-HJK
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Hufilter.md)
+
+List Took 1 Seconds.
+## Icelandic-ABP
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLs.md)
+
+## Mandiant-APT1-Report
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-HJK.md)
+
+## HpHosts
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Icelandic-ABP.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mandiant-APT1-Report.md)
+List Took 1 Seconds.
+## I-Dont-Care-about-Cookies
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts.md)
+
+## Mat1th-DNS-add-block
+## HpHosts-MMT
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/I-Dont-Care-about-Cookies.md)
+List Took 1 Seconds.
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mat1th-DNS-add-block.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-MMT.md)
+
+
+## Ilyakatzs-inpage-popups
+## Mayvs-Private-Adblock-Filters
+## HpHosts-Partial
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Ilyakatzs-inpage-popups.md)
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mayvs-Private-Adblock-Filters.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-Partial.md)
+
+
+## ImmortalMalwareDomains
+## MessageSeenRemoverforFacebook
+## HpHosts-PHA
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ImmortalMalwareDomains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MessageSeenRemoverforFacebook.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PHA.md)
+
+
+
+## Metaphoricgiraffe-Privacy-Filters
+## JABCreations
+## HpHosts-PSH
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PSH.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JABCreations.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Metaphoricgiraffe-Privacy-Filters.md)
+
+
+
+## JansalsHostsLight
+## HpHosts-PUP
+## Michael-Trimms-Hosts
+List Took 8 Seconds.
+List Took 8 Seconds.
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Michael-Trimms-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-PUP.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JansalsHostsLight.md)
+
+
+
+## Mitchell-Krogs-Badd-Boyz-Hosts
+## HpHosts-WRZ
+## JansalsHosts
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mitchell-Krogs-Badd-Boyz-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/HpHosts-WRZ.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JansalsHosts.md)
+
+
+
+## Hufilter
+## Mother-of-All-ADBLOCKING
+## JapaneseSiteAdblockFilter
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Hufilter.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JapaneseSiteAdblockFilter.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mother-of-All-ADBLOCKING.md)
+
+
+
+## Icelandic-ABP
+## JapaneseSiteAdblockFilterver2
+## Mute
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JapaneseSiteAdblockFilterver2.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Icelandic-ABP.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mute.md)
+
+
+
+## JoeWein
+## I-Dont-Care-about-Cookies
+## MVPS-HOSTS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JoeWein.md)
+List Took 1 Seconds.
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MVPS-HOSTS.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/I-Dont-Care-about-Cookies.md)
+
+
+## KADHosts
+## Nopelist
+## Ilyakatzs-inpage-popups
+List Took 6 Seconds.
+List Took 6 Seconds.
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KADHosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Nopelist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Ilyakatzs-inpage-popups.md)
+
+
+
+## KADScams
+## NoTrack-Blocklist
+## ImmortalMalwareDomains
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/NoTrack-Blocklist.md)
+
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ImmortalMalwareDomains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KADScams.md)
+## Notrackingdomains
+
+
+## JABCreations
+## KoreanAdblock
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Notrackingdomains.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KoreanAdblock.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JABCreations.md)
+
+## Notracking-hostnames
+
+## JansalsHostsLight
+## KowabitBOD
+List Took 9 Seconds.
+List Took 9 Seconds.
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Notracking-hostnames.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JansalsHostsLight.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KowabitBOD.md)
+
+
+
+## OpenPhishPhishingIntelligenceCommunityFeed
+## Laicure
+## JansalsHosts
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Laicure.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/OpenPhishPhishingIntelligenceCommunityFeed.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JansalsHosts.md)
+
+
+
+## LatvianList
+## OverlayBlocker
+## JapaneseSiteAdblockFilter
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LatvianList.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/OverlayBlocker.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JapaneseSiteAdblockFilter.md)
+
+
+## Lead-Generator
+## PeterLowes
+## JapaneseSiteAdblockFilterver2
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JapaneseSiteAdblockFilterver2.md)
+
+## JoeWein
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PeterLowes.md)
+
+## Piperuns-iplogger-filter
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lead-Generator.md)
+
+## Lehigh-BOOT
+List Took 3 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Piperuns-iplogger-filter.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/JoeWein.md)
+
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lehigh-BOOT.md)
+## Piwik-Spam
+## KADHosts
+
+## LehighEDUDomains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KADHosts.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+## KADScams
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Piwik-Spam.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LehighEDUDomains.md)
+
+
+## PLgeneral
+## LinkedinsanityRules
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KADScams.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+## KoreanAdblock
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LinkedinsanityRules.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PLgeneral.md)
+
+
+## ListeAR
+## PopupBlocker
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KoreanAdblock.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListeAR.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PopupBlocker.md)
+
+## KowabitBOD
+## ListKR
+## Prebake-Obtrusive
+List Took 8 Seconds.
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prebake-Obtrusive.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/KowabitBOD.md)
+
+
+## PrebakeQuiet
+## Laicure
+List Took 9 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKR.md)
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Laicure.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PrebakeQuiet.md)
+
+
+## ListKRUnbreak
+## LatvianList
+## Prigent-ADS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKRUnbreak.md)
+List Took 1 Seconds.
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LatvianList.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-ADS.md)
+
+
+## Locky-Ransomware-C2-Domain-Blocklist
+## Lead-Generator
+## Prigent-Malware
+List Took 6 Seconds.
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-Malware.md)
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lead-Generator.md)
+
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-C2-Domain-Blocklist.md)
+
+## Prigent-Phishing
+## Lehigh-BOOT
+## Locky-Ransomware-Payment-Sites-Domain-Blocklist
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Lehigh-BOOT.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-Phishing.md)
+List Took 1 Seconds.
+
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-Payment-Sites-Domain-Blocklist.md)
+
+## LehighEDUDomains
+## Quidsup-Malicious
+## malc0de
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LehighEDUDomains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Quidsup-Malicious.md)
+List Took 1 Seconds.
+
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/malc0de.md)
+
+## LinkedinsanityRules
+## Ransomware-Domain-Blocklist
+## Malware-Domains-Just-Domains
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Ransomware-Domain-Blocklist.md)
+
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/LinkedinsanityRules.md)
+List Took 7 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains-Just-Domains.md)
+## RansomwareTrackerCryptoWallRansomwareC2URLBlocklist
+
+## ListeAR
+## Malware-Domains
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListeAR.md)
+
+List Took 2 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwareC2URLBlocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains.md)
+
+
+## ListKR
+## RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist
+## Malware-URLs-Domains
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKR.md)
+List Took 1 Minutes.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist.md)
+
+## ListKRUnbreak
+## RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-URLs-Domains.md)
+
+## MalwareURLsGrayArea
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ListKRUnbreak.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist.md)
+
+## Locky-Ransomware-C2-Domain-Blocklist
+## RansomwareTrackerIPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLsGrayArea.md)
+
+## MalwareURLs
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-C2-Domain-Blocklist.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerIPBlocklist.md)
+
+## Locky-Ransomware-Payment-Sites-Domain-Blocklist
+## RansomwareTrackerLockyRansomwareC2IPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLs.md)
+
+## Mandiant-APT1-Report
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Locky-Ransomware-Payment-Sites-Domain-Blocklist.md)
+
+## malc0de
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwareC2IPBlocklist.md)
+
+## RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mandiant-APT1-Report.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/malc0de.md)
+
+## Mat1th-DNS-add-block
+## Malware-Domains-Just-Domains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mat1th-DNS-add-block.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains-Just-Domains.md)
+
+## RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist
+
+## Mayvs-Private-Adblock-Filters
+## Malware-Domains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mayvs-Private-Adblock-Filters.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-Domains.md)
+
+## RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist
+
+## MessageSeenRemoverforFacebook
+## Malware-URLs-Domains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MessageSeenRemoverforFacebook.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Malware-URLs-Domains.md)
+
+
+## RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist
+## MalwareURLsGrayArea
+## Metaphoricgiraffe-Privacy-Filters
+List Took 7 Seconds.
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLsGrayArea.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Metaphoricgiraffe-Privacy-Filters.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist.md)
+
+
+
+## MalwareURLs
+## Michael-Trimms-Hosts
+## RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Michael-Trimms-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MalwareURLs.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist.md)
+
+
+
+## Mitchell-Krogs-Badd-Boyz-Hosts
+## RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist
+## Mandiant-APT1-Report
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mitchell-Krogs-Badd-Boyz-Hosts.md)
+
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist.md)
+## Mother-of-All-ADBLOCKING
+List Took 7 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mandiant-APT1-Report.md)
+
+## RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist
+## Mat1th-DNS-add-block
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mother-of-All-ADBLOCKING.md)
+
+## Mute
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist.md)
+
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mat1th-DNS-add-block.md)
+
+## RansomwareTrackerURLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mute.md)
+
+## Mayvs-Private-Adblock-Filters
+## MVPS-HOSTS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mayvs-Private-Adblock-Filters.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerURLBlocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MVPS-HOSTS.md)
+
+## MessageSeenRemoverforFacebook
+
+## ReddestDream
+## Nopelist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MessageSeenRemoverforFacebook.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ReddestDream.md)
+List Took 1 Seconds.
+
+## Metaphoricgiraffe-Privacy-Filters
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Nopelist.md)
+
+## ROad-Block
+## NoTrack-Blocklist
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROad-Block.md)
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/NoTrack-Blocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Metaphoricgiraffe-Privacy-Filters.md)
+
+
+
+## ROList2
+## Notrackingdomains
+## Michael-Trimms-Hosts
+List Took 7 Seconds.
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Notrackingdomains.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Michael-Trimms-Hosts.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROList2.md)
+
+
+## Mitchell-Krogs-Badd-Boyz-Hosts
+## Notracking-hostnames
+## ROList
+List Took 0 Seconds.
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Notracking-hostnames.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mitchell-Krogs-Badd-Boyz-Hosts.md)
+List Took 1 Seconds.
+
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROList.md)
+
+## OpenPhishPhishingIntelligenceCommunityFeed
+## Mother-of-All-ADBLOCKING
+## RUAdListBitBlock
+List Took 42 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RUAdListBitBlock.md)
+
+## RUAdListCounters
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/OpenPhishPhishingIntelligenceCommunityFeed.md)
+
+## OverlayBlocker
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/OverlayBlocker.md)
+
+## PeterLowes
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mother-of-All-ADBLOCKING.md)
+
+## Mute
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PeterLowes.md)
+
+## Piperuns-iplogger-filter
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Piperuns-iplogger-filter.md)
+
+## Piwik-Spam
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Piwik-Spam.md)
+
+## PLgeneral
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PLgeneral.md)
+
+## PopupBlocker
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PopupBlocker.md)
+
+## Prebake-Obtrusive
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prebake-Obtrusive.md)
+
+## PrebakeQuiet
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PrebakeQuiet.md)
+
+## Prigent-ADS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-ADS.md)
+
+## Prigent-Malware
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-Malware.md)
+
+## Prigent-Phishing
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-Phishing.md)
+
+## Quidsup-Malicious
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RUAdListCounters.md)
+
+## RU-AdList
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Mute.md)
+
+## MVPS-HOSTS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/MVPS-HOSTS.md)
+
+## Nopelist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Nopelist.md)
+
+## NoTrack-Blocklist
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/NoTrack-Blocklist.md)
+
+## Notrackingdomains
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Notrackingdomains.md)
+
+## Notracking-hostnames
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Notracking-hostnames.md)
+
+## OpenPhishPhishingIntelligenceCommunityFeed
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/OpenPhishPhishingIntelligenceCommunityFeed.md)
+
+## OverlayBlocker
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/OverlayBlocker.md)
+
+## PeterLowes
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PeterLowes.md)
+
+## Piperuns-iplogger-filter
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Piperuns-iplogger-filter.md)
+
+## Piwik-Spam
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Piwik-Spam.md)
+
+## PLgeneral
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PLgeneral.md)
+
+## PopupBlocker
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PopupBlocker.md)
+
+## Prebake-Obtrusive
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prebake-Obtrusive.md)
+
+## PrebakeQuiet
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/PrebakeQuiet.md)
+
+## Prigent-ADS
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-ADS.md)
+
+## Prigent-Malware
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Quidsup-Malicious.md)
+
+## Ransomware-Domain-Blocklist
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RU-AdList.md)
+
+## RU-AdList-Old
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-Malware.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RU-AdList-Old.md)
+
+## Prigent-Phishing
+## Rudloff-ImOKwithCookies
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Ransomware-Domain-Blocklist.md)
+
+## RansomwareTrackerCryptoWallRansomwareC2URLBlocklist
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Prigent-Phishing.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Rudloff-ImOKwithCookies.md)
+
+
+## Quidsup-Malicious
+## Samsung-SmartTV-Domains
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Samsung-SmartTV-Domains.md)
+
+## SatterlysAdblockPlusFilters
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Quidsup-Malicious.md)
+
+## Ransomware-Domain-Blocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SatterlysAdblockPlusFilters.md)
+
+## Schacks-Adblock-Plus-Liste
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Ransomware-Domain-Blocklist.md)
+
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Schacks-Adblock-Plus-Liste.md)
+
+## RansomwareTrackerCryptoWallRansomwareC2URLBlocklist
+## SchuzaksUniversalFilter
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwareC2URLBlocklist.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SchuzaksUniversalFilter.md)
+
+## RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist
+## SecureMecca
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SecureMecca.md)
+
+## RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist
+## Shalla-Malicious
+List Took 5 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Shalla-Malicious.md)
+
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist.md)
+
+## Spam404-Domain-Blacklist
+## RansomwareTrackerIPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam404-Domain-Blacklist.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerIPBlocklist.md)
+
+## Spam404
+## RansomwareTrackerLockyRansomwareC2IPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam404.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwareC2IPBlocklist.md)
+
+## Spam-Assassin-Bill-Stearns
+## RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam-Assassin-Bill-Stearns.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist.md)
+
+## squidblacklist
+## RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/squidblacklist.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist.md)
+
+## Steven-Blacks-Fakenews
+## RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Fakenews.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist.md)
+
+## Steven-Blacks-Gambling
+## RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Gambling.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist.md)
+
+## Steven-Blacks-Hosts
+## RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Hosts.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist.md)
+
+## Steven-Blacks-Microsoft-Telemetry
+## RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Microsoft-Telemetry.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist.md)
+
+## Steven-Blacks-Porn
+## RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Porn.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist.md)
+
+## Steven-Blacks-Risky-Hosts
+## RansomwareTrackerURLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Risky-Hosts.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerURLBlocklist.md)
+
+## Steven-Blacks-Trackers
+## ReddestDream
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Trackers.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ReddestDream.md)
+
+## Steven-Blacks-Unchecky-Ads
+## ROad-Block
+List Took 14 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Unchecky-Ads.md)
+
+## Steven-Blacks-Unified-Hosts
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Unified-Hosts.md)
+
+## SVN-Slovenian
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SVN-Slovenian.md)
+
+## TakoYachty-Gift-Card-Killer
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/TakoYachty-Gift-Card-Killer.md)
+
+## TeslaCrypt-Ransomware-C2-Domain-Blocklist
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwareC2URLBlocklist.md)
+
+## RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist
+List Took 3 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/TeslaCrypt-Ransomware-C2-Domain-Blocklist.md)
+
+List Took 1 Seconds.
+## TeslaCrypt-Ransomware-Payment-Sites-Domain-Blocklist
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwarePaymentSitesDomainBlocklist.md)
+
+## RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/TeslaCrypt-Ransomware-Payment-Sites-Domain-Blocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerCryptoWallRansomwarePaymentSitesIPBlocklist.md)
+
+
+## TheHostsFileProjectAdblockFilters
+## RansomwareTrackerIPBlocklist
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/TheHostsFileProjectAdblockFilters.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerIPBlocklist.md)
+
+
+## The-Hosts-File-Project
+## RansomwareTrackerLockyRansomwareC2IPBlocklist
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwareC2IPBlocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/The-Hosts-File-Project.md)
+
+
+## RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist
+## Thoughtconverge-AdBlock-Filters
+List Took 8 Seconds.
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwareDistributionSiteURLBlocklist.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Thoughtconverge-AdBlock-Filters.md)
+
+
+## RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist
+## Tofu-Filter
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Tofu-Filter.md)
+
+## TorrentLocker-Ransomware-C2-Domain-Blocklist
+List Took 10 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerLockyRansomwarePaymentSitesIPBlocklist.md)
+
+## RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/TorrentLocker-Ransomware-C2-Domain-Blocklist.md)
+
+## TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist
+List Took 2 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwareC2URLBlocklist.md)
+
+## RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist.md)
+
+## Turk-adlist
+List Took 3 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwareDistributionSiteURLBlocklist.md)
+
+## RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist
+List Took 4 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Turk-adlist.md)
+
+## Tyzbit
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTeslaCryptRansomwarePaymentSitesIPBlocklist.md)
+
+## RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Tyzbit.md)
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTorrentLockerRansomwareC2IPBlocklist.md)
+
+
+## uAssetsBadware
+## RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uAssetsBadware.md)
+List Took 0 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerTorrentLockerRansomwarePaymentSitesIPBlocklist.md)
+
+## uAssetsExperimental
+## RansomwareTrackerURLBlocklist
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uAssetsExperimental.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RansomwareTrackerURLBlocklist.md)
+
+## uAssetsFilters
+## ReddestDream
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uAssetsFilters.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ReddestDream.md)
+
+## uAssetsPrivacy
+## ROad-Block
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROad-Block.md)
+
+## ROList2
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROList2.md)
+
+## ROList
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROad-Block.md)
+
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uAssetsPrivacy.md)
+## ROList2
+
+## uAssetsUnbreak
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROList.md)
+
+## RUAdListBitBlock
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROList2.md)
+
+## ROList
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RUAdListBitBlock.md)
+
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ROList.md)
+## RUAdListCounters
+
+## RUAdListBitBlock
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uAssetsUnbreak.md)
+
+## uBlockAntiskimming
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBlockAntiskimming.md)
+
+## uBlockFiltersPlus
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RUAdListCounters.md)
+
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBlockFiltersPlus.md)
+
+## RU-AdList
+## uBlockPolishFiltersSupplement
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RU-AdList.md)
+
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBlockPolishFiltersSupplement.md)
+
+## RU-AdList-Old
+## uBOPersonalFilters
+List Took 2 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RUAdListBitBlock.md)
+
+## RUAdListCounters
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/uBOPersonalFilters.md)
+
+## Universite-Toulouse-Adult
+List Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RU-AdList-Old.md)
+
+List Took 13 Seconds.
+## Rudloff-ImOKwithCookies
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RUAdListCounters.md)
+
+## RU-AdList
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Universite-Toulouse-Adult.md)
+
+## Void-Greek-AdBlock-Filter
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Rudloff-ImOKwithCookies.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RU-AdList.md)
+
+List Took 1 Seconds.
+## Samsung-SmartTV-Domains
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Void-Greek-AdBlock-Filter.md)
+
+## RU-AdList-Old
+## Vokins
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Samsung-SmartTV-Domains.md)
+
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/RU-AdList-Old.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Vokins.md)
+## SatterlysAdblockPlusFilters
+
+
+## Rudloff-ImOKwithCookies
+## Wiltteri
+List Took 8 Seconds.
+List Took 8 Seconds.
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Rudloff-ImOKwithCookies.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SatterlysAdblockPlusFilters.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Wiltteri.md)
+
+
+
+## Samsung-SmartTV-Domains
+## Schacks-Adblock-Plus-Liste
+## WiltteriReborn
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Samsung-SmartTV-Domains.md)
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Schacks-Adblock-Plus-Liste.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WiltteriReborn.md)
+
+
+## SatterlysAdblockPlusFilters
+## SchuzaksUniversalFilter
+## WindowsSpyBlocker10
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SchuzaksUniversalFilter.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SatterlysAdblockPlusFilters.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WindowsSpyBlocker10.md)
+
+
+
+## Schacks-Adblock-Plus-Liste
+## SecureMecca
+## WindowsSpyBlocker7
+List Took 7 Seconds.
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SecureMecca.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WindowsSpyBlocker7.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Schacks-Adblock-Plus-Liste.md)
+
+
+
+## WindowsSpyBlocker81
+## Shalla-Malicious
+## SchuzaksUniversalFilter
+List Took 1 Seconds.
+List Took 1 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Shalla-Malicious.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/WindowsSpyBlocker81.md)
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SchuzaksUniversalFilter.md)
+
+
+## Spam404-Domain-Blacklist
+## XFilesHWSHarmfulWebSites
+## SecureMecca
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam404-Domain-Blacklist.md)
+List Took 1 Seconds.
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/SecureMecca.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/XFilesHWSHarmfulWebSites.md)
+
+
+## Spam404
+## XFilesNoFacebookAds
+## Shalla-Malicious
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/XFilesNoFacebookAds.md)
+
+## Yhonay-AntiPopAds
+List Took 6 Seconds.
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam404.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Shalla-Malicious.md)
+
+
+## Spam-Assassin-Bill-Stearns
+## Spam404-Domain-Blacklist
+List Took 11 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Yhonay-AntiPopAds.md)
+
+## YousList
+List Took 12 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam404-Domain-Blacklist.md)
+
+## Spam404
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YousList.md)
+
+## YouTubeOtherAnnoyances
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam404.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubeOtherAnnoyances.md)
+
+## Spam-Assassin-Bill-Stearns
+## YouTubePureVideoExperience
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam-Assassin-Bill-Stearns.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubePureVideoExperience.md)
+
+## squidblacklist
+## YouTubeRemoveComments
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/squidblacklist.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubeRemoveComments.md)
+
+## Steven-Blacks-Fakenews
+## YouTubeRemoveYoutubeSuggestions
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Fakenews.md)
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/YouTubeRemoveYoutubeSuggestions.md)
+
+## Steven-Blacks-Gambling
+## Yoyoorg
+List Took 21 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Spam-Assassin-Bill-Stearns.md)
+
+## squidblacklist
+List Took 0 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/squidblacklist.md)
+
+## Steven-Blacks-Fakenews
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Fakenews.md)
+
+## Steven-Blacks-Gambling
+List Took 13 Seconds.
+List Took 13 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Yoyoorg.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Gambling.md)
+
+
+## Steven-Blacks-Hosts
+## ZeuS-Domain-Blocklist-Bad-Domains
+List Took 6 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Gambling.md)
+
+## Steven-Blacks-Hosts
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ZeuS-Domain-Blocklist-Bad-Domains.md)
+
+
+## Steven-Blacks-Microsoft-Telemetry
+## ZeuS-Domain-Blocklist
+List Took 2 Seconds.
+List Took 1 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Hosts.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Microsoft-Telemetry.md)
+
+List Took 1 Seconds.
+
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/ZeuS-Domain-Blocklist.md)
+
+## Steven-Blacks-Microsoft-Telemetry
+## Steven-Blacks-Porn
+List Took 9 Seconds.
+List Took 9 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Porn.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Microsoft-Telemetry.md)
+
+
+## Steven-Blacks-Risky-Hosts
+## Steven-Blacks-Porn
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Risky-Hosts.md)
+
+List Took 8 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Porn.md)
+
+## Steven-Blacks-Trackers
+## Steven-Blacks-Risky-Hosts
+List Took 7 Seconds.
+List Took 7 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Trackers.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Steven-Blacks-Risky-Hosts.md)
+
+
+## Steven-Blacks-Trackers
+## Steven-Blacks-Unchecky-Ads

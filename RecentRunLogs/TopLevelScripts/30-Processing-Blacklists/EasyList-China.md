@@ -3,4 +3,3 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # EasyList-China
-## Setting Temporary Parsing Variables

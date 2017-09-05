@@ -40,3 +40,14 @@ Process Took 1149 Minutes.
 Process Took 1174 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 
+Process Took 1134 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
+
+## Writing Additional Lists Tue 5 Sep 15:26:32 EDT 2017
+Process Took 14 Seconds.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists.md)
+
+## Completing End Tasks Tue 5 Sep 15:26:47 EDT 2017
+Process Took 1 Minutes.
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/90-Completing-End-Tasks.md)
+
