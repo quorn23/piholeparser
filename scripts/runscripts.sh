@@ -22,7 +22,7 @@ echo "Deathbybandaid Logo Missing."
 fi
 
 echo ""
-for dir in "$TOPLEVELSCRIPTSDIRNEW"[0-9]*/
+for dir in "$TOPLEVELSCRIPTSDIR"[0-9]*/
 do
 
 timestamp=$(echo `date`)
