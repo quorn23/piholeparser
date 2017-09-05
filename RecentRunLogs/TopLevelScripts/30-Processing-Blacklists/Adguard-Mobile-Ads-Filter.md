@@ -17,7 +17,3 @@ ____________________________________
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-## Checking Parsed File Size
-* Adguard-Mobile-Ads-Filter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 4 Sep 21:41:00 EDT 2017

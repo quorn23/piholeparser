@@ -3,9 +3,6 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # Adguard-Social-Media-Filter
-## Setting Temporary Parsing Variables
-## Checking For Existing Mirror File
-## Checking For Github Mirror File
 ## Checking For Existing Parsed File
 ## Checking If Multiple Sources
 ## The Source In The File To Download Is
@@ -16,8 +13,6 @@ ____________________________________
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-## Checking Parsed File Size
-* Adguard-Social-Media-Filter List Was Killed By The Parsing Process. It will be skipped in the future. Mon 4 Sep 21:45:11 EDT 2017
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

@@ -3,7 +3,6 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # DNS-BH-Bulk-Registrars
-## Setting Temporary Parsing Variables
 ## Checking For Existing Mirror File
 ## Checking For Github Mirror File
 ## Checking For Existing Parsed File
@@ -20,4 +19,4 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ## Checking Parsed File Size
-* DNS-BH-Bulk-Registrars List Was Killed By The Parsing Process. It will be skipped in the future. Mon 4 Sep 22:40:40 EDT 2017
+## Clearing Temp Vars

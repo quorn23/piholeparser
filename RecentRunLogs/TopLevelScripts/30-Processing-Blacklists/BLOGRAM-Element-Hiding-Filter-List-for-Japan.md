@@ -20,4 +20,4 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ## Checking Parsed File Size
-* BLOGRAM-Element-Hiding-Filter-List-for-Japan List Was Killed By The Parsing Process. It will be skipped in the future. Mon 4 Sep 22:03:00 EDT 2017
+## Clearing Temp Vars
