@@ -1,9 +1,9 @@
 [Adblock Plus 2.1]
-! Checksum: jHmedPBZHXm0tEFPaF8G7g
-! Version: 201709031551
+! Checksum: BgU2s4iI3L3xlvuaxATUaQ
+! Version: 201709050251
 ! Title: EasyList China
 ! Chinese supplement for the EasyList filters
-! Last Modified: 03 Sep 2017 15:51 UTC
+! Last Modified: 05 Sep 2017 02:51 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpchina.org/forum/
 ! License: https://easylist-downloads.adblockplus.org/COPYING
@@ -589,7 +589,6 @@ _xiuno_com_ad/
 ##script + .sptable[cellpadding="5"]
 !----------------------------------Ads-Union----------------------------------!
 .8ox.cn^
-||taboola.com^$third-party
 .cn/show?id=$script,third-party
 .cn/showpage.asp?u=$script,third-party
 .cn/vs.php?id=$script,third-party
@@ -1906,6 +1905,7 @@ ubmcmm.baidustatic.com
 ||ta80.com^$third-party
 ||taat00889.com^
 ||tab20.com^$third-party
+||taboola.com^$third-party
 ||tad.suning.com^
 ||tanchuang002.info^$third-party
 ||tangoutianxia.com^
@@ -4930,6 +4930,7 @@ mg*.6park.com/img/$image
 ||jpwind.com^*/scroll.js
 ||jrjimg.cn/common/foot/allfc.js
 ||jrjimg.cn/zqt-red-1000/js/v3/itg-widget.
+||jrzj.com/img_index/guanggao
 ||js-1.pchome.net^
 ||js.05sun.com^
 ||js.45bubu.com^
@@ -5177,6 +5178,7 @@ mg*.6park.com/img/$image
 ||m1905.cn/afp/mdsfw.js
 ||m1905.cn/images/vod/vod*-90.jpg
 ||m1905.com/asp_js/k.js
+||m2.lelemh.com^
 ||ma.baiducdn2.com^*/main.js?t=
 ||macd.cn/macd-topads.html
 ||mahoupao.net/api.php?mod=ad&
@@ -5399,6 +5401,7 @@ mg*.6park.com/img/$image
 ||okbmf.com^*950_120
 ||oldpig.org/live.html
 ||olevod.com/poppagen.php
+||om.cn/api/ad-om/
 ||on.cc/js/v2/iframe_ysm_
 ||onedala.tv/uploads/banner/
 ||onegreen.net/MyFile/
@@ -5749,6 +5752,7 @@ mg*.6park.com/img/$image
 ||ruian.com/img/y13/
 ||runmang.com/img/
 ||runsky.com/bbsadv-
+||runsky.com/flash/dalian_content_top_flash_
 ||runsky.com/html/*_index_
 ||ruten.com.tw/js/ahd_
 ||ruten.com.tw/js/gads_
@@ -6706,14 +6710,13 @@ mg*.6park.com/img/$image
 ||zzz4.com/JS_AD/
 ||zzzsao.com/data/attachment/portal/201707/08/135857dkt8trrxk3g8zvq8.png
 ||zzzyk.com/js/
-||m2.lelemh.com^
-||jrzj.com/img_index/guanggao
-||om.cn/api/ad-om/
-||runsky.com/flash/dalian_content_top_flash_
+||chinawutong.com/WutongManager//UploadFiles/ImgAdvert/
+||chinawutong.com/js/indexfudong.js
+||netease.com/home/2017/4/28/2017042810491144cd7.jpg
+||netease.com/house-public/articleyunyans.js
 !------------------------Specific element hiding rules------------------------!
 gpcxw.com###AA2
-7wenta.com###doudouDivWrp
-jjmmw.com##.fixed-ad
+dj97.com###J_A_B
 hc360.com,yaolan.com###AD
 21yq.com,yaolan.com###AD1
 itavcn.com###ADE
@@ -7273,6 +7276,7 @@ dnpz.net###dnpz_ad3
 dnpz.net###dnpz_ad3_zz
 docin.com###docindex_ad
 udn.com###doctop
+7wenta.com###doudouDivWrp
 2345.com###down-browser-jiasu
 niutuku.com###downAD1
 sm.cn###download-uc
@@ -9072,6 +9076,7 @@ elecfans.com##.fix-btmad
 12306.cn##.fix-yh
 9724.com##.fix_bottom_ad
 opda.com##.fix_twice
+jjmmw.com##.fixed-ad
 163.com##.fixed_foot_ad
 oeofo.com##.fixediv
 bbs.actoys.net##.fl[style$="float:right;"]
@@ -11415,6 +11420,7 @@ gamer.com.tw#@#a[href^="http://bs.serving-sys.com/"]
 gamer.com.tw#@#a[href^="https://ad.doubleclick.net/"]
 brandsales.58.com#@#div[id^="ad_"]
 gohome.com.hk,m.gamer.com.tw#@#div[id^="div-gpt-ad"]
+tt1069.com#@##adcontent
 !---------------------------------URL Whitelist-------------------------------!
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@.adserver.$domain=litv.tv
@@ -11958,10 +11964,6 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ~baidu.com##a[href*="/cpro."]
 ~baidu.com##a[href*="/cpro/"]
 ! Baidu Union
-||z1.zyjjqxw.com^
-||1.ufc123.com^
-||1.xuejiazhao.com^
-||abcj.dooccn.com^
 ###cpro_container
 ##a[href*="/mobads.php?"]
 ##div[id][style="width: 100%;"] > div > div > iframe[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"]
@@ -11993,10 +11995,12 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||1.soufy.cn^
 ||1.tulaoshi.com^
 ||1.uc129.com^
+||1.ufc123.com^
 ||1.win7china.com^
 ||1.win7sky.com^
 ||1.xiaopin5.com^
 ||1.xilu.com^
+||1.xuejiazhao.com^
 ||1.zou114.com^
 ||1.zouning.net^
 ||1.zw3e.com^
@@ -12072,6 +12076,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||aa.xiangxiangmf.com^
 ||aa808.com^$third-party
 ||ab.sc115.com^
+||abcj.dooccn.com^
 ||adccoo.cn^
 ||add.mmyuer.com^
 ||adjb.5nd.com^
@@ -12355,6 +12360,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ||yun1.yahoo001.com^
 ||yunzuowen.com^$third-party
 ||yx1.managershare.com^
+||z1.zyjjqxw.com^
 ||zhantai.com^$third-party
 ||zhaoshang8.com^
 ||zhifenjie.com^
@@ -12384,6 +12390,7 @@ ck101.com,datehub.co,gamer.com.tw#@#.text_ads
 ! Caoporn.com
 2c2.website,2p8.space,adultgao.com,baocee.com,baofee.com,baonee.com,baopee.com,baowee.com,baoxee.com,baozoo.com,caoporn.com,caouoo.com,caoxee.com,h3e.pw,h3y.pw,k88.club,me88.pw,p5p.space,se88.space,t2p.space,tb001.xyz,te88.pw,vgao.xyz,vlang.xyz,vwan.xyz##div[style="margin-top:5px;margin-bottom:5px;"]:first-child
 ! Novels
+||chersc.com^
 .m.23sw.net^
 .m.3dllc.cc^
 .m.beidouxin.com^
