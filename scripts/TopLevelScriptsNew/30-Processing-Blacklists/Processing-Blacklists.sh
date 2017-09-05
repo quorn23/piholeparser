@@ -6,7 +6,7 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
 RECENTRUNBANDAID="$RECENTRUN"
-ONEUPBANDAID="$SCRIPTBASEFILENAME"
+ONEUPBANDAID="$SCRIPTBASEFOLDERNAME"
 
 SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
 printf "$cyan"    "$SCRIPTTEXT"
