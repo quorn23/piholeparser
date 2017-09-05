@@ -14,13 +14,3 @@ ____________________________________
 ## Checking File Header
 ## Determining Host Availability
 ## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-* uBlockFiltersPlus list was  MB, and too large to mirror on github. 
-* uBlockFiltersPlus list was  MB, and too large to mirror on github. 
-## Parsing List
-## Checking Parsed File Size
-* uBlockFiltersPlus List Was Killed By The Parsing Process. It will be skipped in the future. Tue 5 Sep 15:23:56 EDT 2017
-* uBlockFiltersPlus List Was Killed By The Parsing Process. It will be skipped in the future. Tue 5 Sep 15:23:56 EDT 2017
