@@ -19,3 +19,12 @@
 *  List Was An Empty File After Download. Tue 5 Sep 15:01:25 EDT 2017
 * ListKRUnbreak List Was An Empty File After Download. Tue 5 Sep 15:02:07 EDT 2017
 *  List Was An Empty File After Download. Tue 5 Sep 15:02:14 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:02:23 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:02:36 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:02:36 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:02:50 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:03:03 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:03:03 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:03:14 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:03:14 EDT 2017
+*  List Was An Empty File After Download. Tue 5 Sep 15:03:19 EDT 2017

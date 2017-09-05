@@ -3,5 +3,5 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # DNS-BH-Skype-Resolvers
-## Checking For Github Mirror File
-## Checking Parsed File Size
+## Setting Temporary Parsing Variables
+## Checking For Existing Mirror File

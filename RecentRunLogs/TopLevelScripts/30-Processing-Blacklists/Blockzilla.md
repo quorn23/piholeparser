@@ -4,7 +4,9 @@
 ____________________________________
 # Blockzilla
 ## Setting Temporary Parsing Variables
-## Checking For Existing Mirror File
-## Checking For Github Mirror File
-## Checking For Existing Parsed File
-## Checking If Multiple Sources
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

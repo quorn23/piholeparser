@@ -3,6 +3,7 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # DNS-BH-URL-Shorteners
-## Setting Temporary Parsing Variables
 ## Checking For Existing Mirror File
-## Checking For Github Mirror File
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

@@ -4,4 +4,3 @@
 ____________________________________
 # BLOGRAM-Basic-Filter-List-for-Japan
 ## Setting Temporary Parsing Variables
-## Checking For Existing Mirror File

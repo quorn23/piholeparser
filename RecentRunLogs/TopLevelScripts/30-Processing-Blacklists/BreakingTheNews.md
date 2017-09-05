@@ -6,6 +6,5 @@ ____________________________________
 ## Setting Temporary Parsing Variables
 ## Checking For Existing Mirror File
 ## Checking For Github Mirror File
-## Checking For Existing Parsed File
 ## Calculating Parse Time
 ## Clearing Temp Vars

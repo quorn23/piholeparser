@@ -4,4 +4,3 @@
 ____________________________________
 # CAMELEON-Hosts
 ## Setting Temporary Parsing Variables
-## Checking For Existing Mirror File

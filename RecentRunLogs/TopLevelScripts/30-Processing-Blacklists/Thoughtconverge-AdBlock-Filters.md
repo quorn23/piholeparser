@@ -3,4 +3,6 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # Thoughtconverge-AdBlock-Filters
+* Thoughtconverge-AdBlock-Filters List Was An Empty File After Download. Tue 5 Sep 15:03:15 EDT 2017
 ## [ ]*
+* Thoughtconverge-AdBlock-Filters List Was An Empty File After Download. Tue 5 Sep 15:03:16 EDT 2017

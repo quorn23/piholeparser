@@ -3,6 +3,7 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # Corset
-## Checking For Existing Parsed File
-## Checking If Multiple Sources
-## The Source In The File To Download Is
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+## Attempting Creation Of Mirror File

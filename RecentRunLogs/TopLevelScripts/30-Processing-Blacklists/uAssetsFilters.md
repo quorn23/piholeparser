@@ -4,3 +4,5 @@
 ____________________________________
 # uAssetsFilters
 ## [ ]*
+* uAssetsFilters List Was An Empty File After Download. Tue 5 Sep 15:03:22 EDT 2017
+* uAssetsFilters List Was An Empty File After Download. Tue 5 Sep 15:03:22 EDT 2017
