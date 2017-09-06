@@ -16,10 +16,10 @@ ____________________________________
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
-* FadeMind-addSpam List Failed To Download. Attempted to use Mirror. 
-* FadeMind-addSpam List Failed To Download. Attempted to use Mirror. 
 ## Checking File Size
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ## Checking Parsed File Size
-* FadeMind-addSpam List Was Killed By The Parsing Process. It will be skipped in the future. Tue 5 Sep 15:08:56 EDT 2017
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

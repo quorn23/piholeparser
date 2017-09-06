@@ -2,6 +2,14 @@
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 ____________________________________
 # 
+### Checking For Whitelist File.
+* Whitelist File removed Wed 6 Sep 00:20:44 EDT 2017
+### Pulling Domains From Lists.
+141 After Pulling Domains From Lists.
+### Pulling Domains From TLD Lists.
+144 After Pulling Domains From TLD Lists.
+### Deduping List.
+40 After Deduping List.
 ### Sorting and Deduping Individual Whitelists.
 #### appleappstore
 1 In appleappstore

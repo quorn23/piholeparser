@@ -8,8 +8,4 @@ ____________________________________
 ### Checking For Time Anchor File.
 Time Anchor File Present.
 ### Comparing Time.
-Parsing Method Has Changed.
-### Resetting For a Re-Parse.
-* Resetting Parsed Lists For Reprocessing
-* Resetting Killed Lists For Reprocessing
-### Updating Time Anchor File.
+Parsing Method Has Not Changed.
