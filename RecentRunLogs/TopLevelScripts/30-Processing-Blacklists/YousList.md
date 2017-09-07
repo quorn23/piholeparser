@@ -13,14 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* YousList List Unavailable To Download. Wed 6 Sep 00:27:38 EDT 2017
 ## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars
