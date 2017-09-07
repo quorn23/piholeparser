@@ -11,14 +11,7 @@ do
 
 # Dynamic Variables
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-if
-[[ -f $DYNOVARS ]]
-then
-source $DYNOVARS
-else
-echo "Dynamic Vars File Missing, Exiting."
-exit
-fi
+COUNTRYCODECOMPLETE="$COUNTRYCODESSUBSDIR""$BASEFILENAME".txt
 
 for source in `cat $f`;
 do
