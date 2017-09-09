@@ -1,8 +1,8 @@
-! Checksum: liAcQS+g5L8Rbq8DhIYwhA
+! Checksum: hnoYs+XVnN58NRYK4u3O9g
 ! Title: English filter
 ! Description: EasyList + Adguard English filter. Filter list that specifically removes adverts on English language websites.
-! Version: 1.1.30.21
-! TimeUpdated: 2017-09-09T04:00:47.848+04:00
+! Version: 1.1.30.26
+! TimeUpdated: 2017-09-09T21:00:37.701+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#english
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -2586,6 +2586,8 @@ yeptube.com##.wrapper > div.container[-ext-has="> div.c-title > div.c-medtitle-o
 2ddl.pro###side-content >div#posts > div[class="post"][-ext-has="> .postmeta > .metaright > .advert"]
 askvg.com##.post > p[-ext-contains="Advertisements"]
 askvg.com###sidebarSingle > p[-ext-contains="Advertisements"]
+! https://forum.adguard.com/index.php?threads/24881/
+time.com##div[class="row vZMmMa_9"] > div[class="column small-12"] > div.row[-ext-has='> div[id^="ad-"]']
 ! https://forum.adguard.com/index.php?threads/24774/
 dailytelegraph.com.au##.widget-area-main-content > div.widget_newscorpau_capi_sync_collection > div.tgs-mosaicv2-rootwidget div.tgc-mosaicv2-slim-m_flex_child[-ext-has='> article.tge-cardv2 > a.tge-cardv2_wrapper[href="#"]']
 ! facebook.com
@@ -4503,7 +4505,7 @@ nhaccuatui.com##div[class^="adv_"]
 !*****
 !*****
 ! ExoClick (clickunder or/and ads)
-tubedupe.com,porntube.com,doolls.org,topboard.org,youjizz.com,hipornvideo.com,imageweb.ws,planetsuzy.org,imagetwist.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
+8muses.com,japanesefuck.com,tubedupe.com,porntube.com,doolls.org,topboard.org,youjizz.com,hipornvideo.com,imageweb.ws,planetsuzy.org,imagetwist.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
 !
 ! PopAds-a
 uplod.ws,uplod.so,flashxx.tv,pandamovie.net,vipleague.me,hdporn720.net,playpornx.net,hdporner720.com,newpct1.com,2ddl.ag,jkmk.net#%#Object.defineProperty(window, 'PopAds', { get: function() { return {}; } });
@@ -4883,8 +4885,6 @@ multiup.org#%#window.open = function() {};
 dailyuploads.net#%#(function() { var w_open = window.open, regex = /sapphirum.com/; window.open = function(a, b) { if (typeof a !== 'string' || !regex.test(a)) { w_open(a, b); } }; })();
 ! https://forum.adguard.com/index.php?threads/13075/
 zoomtv.me#%#Object.defineProperty(window, '_pao', { get: function() { return {}; } });
-! https://forum.adguard.com/index.php?threads/13189/
-8muses.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2918
 redtube.com#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPops', 'undefined__1'); }
 redtube.com#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPopsExpire', new Date(new Date().setYear(2020))); }
@@ -5088,6 +5088,8 @@ zippymoviez.com#%#window.open = function() {};
 !-------------------
 !-------CSS---------
 !-------------------
+! https://forum.adguard.com/index.php?threads/24881/
+time.com#$#.column.small-12[data-reactid="101"] > div.row > div.column:last-child { float: left!important; }
 ! https://forum.adguard.com/index.php?threads/24871/
 daporn.com#$##mediaOverlay { position: absolute!important; left: -3000px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6422
@@ -5569,6 +5571,15 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 !
 !
 !
+! https://forum.adguard.com/index.php?threads/24914/
+!
+||prepathon.com/embeds/vqa/*&utm_campaign=vqa_ads
+thevideo.me##.player-options-section > div[class="col-md-4 p-l-0"]
+makeuseof.com##.new-offers
+dildoxxxtube.com##iframe[src="http://dildoxxxtube.com/dxt.html"]
+dildoxxxtube.com###ubr
+||japanesefuck.com/adboom.php
+animenova.org,animeplus.tv##td[align="center"][height="250"]
 plusasianporn.com##.vi-br-w > .vi-br
 orientalasianporn.com##.bottom-hor-block > .bottom-hor-b
 6japaneseporn.com##.player-place > .player-place-wide-bn-ob
@@ -15176,6 +15187,7 @@ https://forum.adguard.com/index.php?threads/resolved-itv-com-windows.22200/
 /javascripts/ads/*
 /Javascripts/SBA-
 /jcorner.php?partner=
+/jetpack-ads/*
 /jitads.
 /jivoxadplayer.
 /jlist-affiliates/*
@@ -27618,6 +27630,7 @@ _popunder+$popup
 ##.ad-zone-s-q-l
 ##.ad.super
 ##.ad01
+##.ad01-obj
 ##.ad02
 ##.ad03
 ##.ad04
@@ -38045,6 +38058,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||adprovi.de^$third-party
 ||adprs.net^$third-party
 ||adpushup.com^$third-party
+||adqic.com^$third-party
 ||adquantix.com^$third-party
 ||adquest3d.com^$third-party
 ||adrcdn.com^$third-party
@@ -64171,7 +64185,7 @@ time4tv.com##.thumbimg
 dt-updates.com##.thx > .bottomBorderDotted + .block[style]:last-child
 razorianfly.com##.ticker
 browardpalmbeach.com,citypages.com,dallasobserver.com,houstonpress.com,laweekly.com,lifebuzz.com,miaminewtimes.com,phoenixnewtimes.com,villagevoice.com,westword.com##.ticket
-browardpalmbeach.com,dallasobserver.com,houstonpress.com,laweekly.com,phoenixnewtimes.com,westword.com##.ticket-button
+browardpalmbeach.com,citypages.com,dallasobserver.com,houstonpress.com,laweekly.com,miaminewtimes.com,phoenixnewtimes.com,villagevoice.com,westword.com##.ticket-button
 nhl.com##.ticket-link
 nytimes.com##.ticketNetworkModule
 nbcsports.msnbc.com##.ticketsnow-widget
