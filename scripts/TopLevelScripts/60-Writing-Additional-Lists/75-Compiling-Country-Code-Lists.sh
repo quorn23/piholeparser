@@ -4,9 +4,9 @@
 ## Variables
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
-echo "hi"
+
 ## Process Every .clist file within CountryCode List Directory
-for f in $EVERYCCTLD
+for f in $COUNTRYCODESTLDALL
 do
 
 # Dynamic Variables
