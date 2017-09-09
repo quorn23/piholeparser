@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: EyWikNAuwYIEdc1AkeEBSQ
-! Version: 201709080431
+! Checksum: 9lRw11fwGpXV5E+dXdH0Gg
+! Version: 201709090431
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -162,6 +162,7 @@
 .adtech.
 .adv?*_id=
 .adv?id=
+.advertica-
 .adxcore.
 .AmazonProducts.js
 .asp?adv=
@@ -535,6 +536,7 @@
 /adstrack/*
 /adsvrz-
 /adsw1.
+/adtechv2_
 /adtube.js
 /adUnblock.
 /adv/*/banner/
@@ -557,6 +559,7 @@
 /adver_imgs/*
 /advert-serv.
 /advert/rota-
+/advertica-
 /advertisement?
 /advertiserv/*
 /advertiserv2/*
@@ -960,6 +963,7 @@
 /mediamondads.
 /meltyad/*
 /menu/ADS/*
+/mf.sethabillage.js
 /miniads/*
 /mnf_*x*.gif
 /mobilead300.
@@ -1113,6 +1117,7 @@
 /pub/pub-
 /pub/pub.gif
 /pub/pub_
+/pub/squares/*
 /pub/unibet/*
 /Pub200x250.
 /pub250.
@@ -1407,6 +1412,7 @@
 =publicite&
 =show_ads;
 =sponsored_links_
+=videoAd&
 =WebAdsLinks&
 =xadv-invid&
 ?action=VIEWAD&
@@ -2210,6 +2216,7 @@ debugger:$popup
 ||adverteasy.fr^$third-party
 ||adverti.fr^$third-party
 ||adverti.io^$third-party
+||advertica-cdn.com^$third-party
 ||advertica.ae^$third-party
 ||advertine.com^$third-party
 ||advertizementserving.com^$third-party
@@ -3373,6 +3380,7 @@ debugger:$popup
 ||y86qs9ct.xyz^$third-party
 ||yban.fr^$third-party
 ||yku0xk97.site^$third-party
+||yllix.com^$third-party
 ||ylx-1.com^$third-party
 ||ylx-2.com^$third-party
 ||ylx-3.com^$third-party
@@ -4884,6 +4892,7 @@ debugger:$popup
 ||madamecam.com^$popup,third-party
 ||makeitunder.com^$popup,third-party
 ||marsads.com^$popup,third-party
+||mavq.net^$popup,third-party
 ||maxidivx.com^$popup,third-party
 ||maxonclick.com^$popup,third-party
 ||mbsuitmsmt.com^$popup,third-party
@@ -4950,6 +4959,7 @@ debugger:$popup
 ||nextlandingads.com^$popup,third-party
 ||no-hide.com^$popup,third-party
 ||npmpecd.com^$popup,third-party
+||nurno.com^$popup,third-party
 ||occasic.com^$popup,third-party
 ||oclasrv.com^$popup,third-party
 ||offergo.net^$popup,third-party
@@ -5720,6 +5730,7 @@ $subdocument,third-party,domain=e-wok.tv|flashx.tv|gomovies.co|gomovies.es|letwa
 ||illiweb.com^*/partenaires/
 ||ilmepornohd.ro/i/banner/
 ||imagefacile.com^$image
+||imageshack.com^$domain=adyou.me
 ||img.grouponcdn.com/gpn/$image,third-party
 ||img.nuxit.com/banners/
 ||img6.bricozone.be/jquery-1.2.6.min.js
@@ -8277,6 +8288,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ||ovnis-direct.com/_media/img/medium/*banner-
 ||pafpaf.com/pubs/
 ||pafpaf.com/pubs/$popup
+||pagesjaunes-dz.com/pub/
 ||pagesjaunes.fr/js/pj_ad.js
 ||pagesjaunes.fr^*pub#position=
 ||parlonspiscine.com/pubs/
@@ -10890,7 +10902,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##a[href*="://www.ducksnetwork.com/"]
 ##a[href*="://www.duckssolutions.com/"]
 ##a[href*="://www.hentaiheroes.com/"]
-##a[href*="://yllix.com/publishers/"]
+##a[href*="://yllix.com/"]
 ##a[href*="=INSERT_RANDOM_NUMBER_HERE&"]
 ##a[href*="?ad_id="]
 ##a[href*="_728x90_bleach_adb"]
@@ -11295,7 +11307,6 @@ football.fr,sports.fr###hablinkzone
 annonces-dz.com###hb
 classement.pro###headbanner
 boursorama.com###header + #body > div:first-child > .visible-desktop
-g5u.pw,gsurl.in,gsurl.me###header + #container
 ezgif.com###header-infoblock
 mobiles-actus.com###header3
 autojdid.com###header72890
@@ -11856,6 +11867,7 @@ seasons.fr##.colsEditoMainMS
 allocine.fr##.coltop
 20minutes.fr##.communication
 tirage-gagnant.com##.compteBar
+g5u.pw,gsurl.in,gsurl.me##.container
 pagesjaunes.fr##.containerPdsSitesPartenaires
 strastv.com##.container_pubh_02
 largus.fr##.conteneur-sas
@@ -12908,14 +12920,17 @@ $subdocument,~third-party,domain=football365.fr|mercato365.com|rugby365.fr|sport
 $popup,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 .gif$image,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 /template/images/prom/*$domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
-/template/images/publ/*$domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
+/template/images/pub$domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 @@||ajax.googleapis.com/ajax/libs/$script,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 @@||maps.google.com^$script,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 @@||maps.googleapis.com^$script,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be###contentCntr + [id]
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be###leftCntr > div + [class]
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##.day > [class]
+heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##.slide
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##[class^="ad"]
+heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##[class^="prom"]
+heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##[class^="pub"]
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##a[class^="aff"]
 |http://$script,third-party,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
 |https://$script,third-party,domain=heures.be|hours.be|openingstijdengids.nl|openingsurengids.be
