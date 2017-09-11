@@ -1,8 +1,8 @@
-! Checksum: hnoYs+XVnN58NRYK4u3O9g
+! Checksum: FwtjJ8/2d0i2nhJqDpbjRA
 ! Title: English filter
 ! Description: EasyList + Adguard English filter. Filter list that specifically removes adverts on English language websites.
-! Version: 1.1.30.26
-! TimeUpdated: 2017-09-09T21:00:37.701+04:00
+! Version: 1.1.30.34
+! TimeUpdated: 2017-09-11T05:00:33.376+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#english
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -23,6 +23,13 @@
 !
 ! Section contains list of advertising networks
 !
+||ad.ettoday.net^
+||ad1.udn.com^
+||ad2.udn.com^
+||ad3.udn.com^
+||ad4.udn.com^
+||ad5.udn.com^
+||31a5610ce3a8a2.com^
 ||tds77.su^
 ||cfgr1.com^$third-party
 ||afgr2.com^$third-party
@@ -835,7 +842,7 @@ animekb.com,chia-anime.tv,alluc.ee,bitvid.sx,nowwatchtvlive.cc,youtubecomtomp3.c
 !
 !*****
 !* adf.ly, q.gs, j.gs, al.ly etc.
-@@/ad_top_$domain=pintient.com|microify.com|atominik.com|dl.android-zone.org|bluenik.com|riffhold.com|babblecase.com|kaitect.com|simizer.com|coginator.com|cogismith.com
+@@/ad_top_$domain=zo.ee|pintient.com|microify.com|atominik.com|dl.android-zone.org|bluenik.com|riffhold.com|babblecase.com|kaitect.com|simizer.com|coginator.com|cogismith.com
 ||al.ly/static/fuckadblock.min.js
 al.ly#$#.ads { position: absolute!important; left: -3000px!important; }
 @@||riffhold.com^$generichide
@@ -3316,6 +3323,10 @@ dnvod.tv##.clickbg[-ext-has="+*"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4652
 sockscap64.com#@#.adsbygoogle
 !
+ettoday.net##div[id^="abp"]
+ettoday.net##.etmall-shopping-guide
+||udn.com.tw/upf/*_banners/BD/$third-party
+udn.com##.mag_topic > a[href^="https://goo.gl/"][target="_blank"] > img[src*="_banners/BD/"]
 ||ffwap.com^$third-party
 ||sp96878.com^$third-party
 ||bycxsh.com^$third-party
@@ -4026,6 +4037,9 @@ beppegrillo.it##div[id^="google3"]
 !------------------------------ Korean -------------------------------
 !---------------------------------------------------------------------
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6302
+||hayan.tv/adp.htm$empty,important
+hayan.tv#$#iframe[src="/adp.htm"] { height: 0px!important; }
+hayan.tv###screen > #message ~ div[id][style^="position: absolute; left: 50%; bottom: 0px; text-align: center; z-index:"][style$="visibility: visible;"]
 @@||hayan.tv^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3982
 @@||wasabisyrup.com^$generichide
@@ -4505,7 +4519,7 @@ nhaccuatui.com##div[class^="adv_"]
 !*****
 !*****
 ! ExoClick (clickunder or/and ads)
-8muses.com,japanesefuck.com,tubedupe.com,porntube.com,doolls.org,topboard.org,youjizz.com,hipornvideo.com,imageweb.ws,planetsuzy.org,imagetwist.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
+nxgx.com,8muses.com,japanesefuck.com,tubedupe.com,porntube.com,doolls.org,topboard.org,youjizz.com,hipornvideo.com,imageweb.ws,planetsuzy.org,imagetwist.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
 !
 ! PopAds-a
 uplod.ws,uplod.so,flashxx.tv,pandamovie.net,vipleague.me,hdporn720.net,playpornx.net,hdporner720.com,newpct1.com,2ddl.ag,jkmk.net#%#Object.defineProperty(window, 'PopAds', { get: function() { return {}; } });
@@ -4569,7 +4583,7 @@ spankwire.com#%#Object.defineProperty(document, 'onclick', { get: function() { r
 watchseries-online.nl,btsone.cc#%#Object.defineProperty(window,'_drp', { get:function(){return {}; } });
 !
 ! go.oclasrv.com clickunder
-sawlive.tv,watchonlinemovies.com.pk,putlocker.io,xmovies8.net,cmovieshd.com,rapidvideo.com,fmovies.sc,seriesonline.io,putlockers.fm,krutor.org.pl,1movies.online,fmovies.io,123moviesfree.com,9anime.to,fastpiratebay.co.uk,gameofbay.org,mywatchseries.to,oploverz.in,piratebays.co.uk,pirateproxy.click,pirateproxy.wf,pirateproxy.yt#%#window.zfgloadedpopup = true;
+sawlive.tv,watchonlinemovies.com.pk,putlocker.io,xmovies8.net,cmovieshd.com,rapidvideo.com,fmovies.sc,seriesonline.io,putlockers.fm,krutor.org.pl,1movies.online,fmovies.io,123moviesfree.com,9anime.to,fastpiratebay.co.uk,gameofbay.org,mywatchseries.to,oploverz.in,piratebays.co.uk,pirateproxy.click,pirateproxy.wf,pirateproxy.yt,putlocker.sk#%#window.zfgloadedpopup = true;
 ! FastPops
 watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPops', '1'); }
 watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPopsExpire', new Date(new Date().setYear(2020))); }
@@ -5573,6 +5587,9 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 !
 ! https://forum.adguard.com/index.php?threads/24914/
 !
+kissmanga.com##div[style*="width:860px; height:250px;"]
+nxgx.com##.footer > div[style="width:100%;display:inline-block;text-align:center"]
+||nxgx.com/Scripts/fl12.js
 ||prepathon.com/embeds/vqa/*&utm_campaign=vqa_ads
 thevideo.me##.player-options-section > div[class="col-md-4 p-l-0"]
 makeuseof.com##.new-offers
@@ -5826,6 +5843,7 @@ latimes.com##.lb-advert-container
 saracatunga.bid###contenido > .close
 ||notkodi.science/468.html
 ||notkodi.science/adcric.html
+medicalnewstoday.com##.sticky_ad_container
 medicalnewstoday.com##.header_hr
 medicalnewstoday.com##.mnt.mrec
 medicalnewstoday.com###mnt_dlb1_container
@@ -8894,6 +8912,8 @@ pornhub.com#@#.sectionWrapper > div[class*=" "]:not([class="sectionTitle"]):not(
 protopage.com#%#(function(){var pageParams={};Object.defineProperty(window,"pageParams",{get:function(){return pageParams},set:function(){}});Object.defineProperty(pageParams,"dispAds",{get:function(){return false},set:function(){}});Object.defineProperty(pageParams,"attemptDisplayAdAtBottom",{get:function(){return false},set:function(){}})})();
 !#########################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/6676
+@@||isale.su/bitrix/*/adverts/
 ! Unblock Google jQuery library
 @@||ajax.googleapis.com/ajax/libs/jquery/$domain=daporn.com|imagefap.com|linkdrop.net|gelbooru.com|fmovies.is|fmovies.se
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6431
