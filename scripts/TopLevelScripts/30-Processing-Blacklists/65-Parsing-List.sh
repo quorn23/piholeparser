@@ -62,10 +62,12 @@ if
 [[ -z $GOTOENDPARSING ]]
 then
 printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
+echo "### $PBNAMEPRETTYSCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 HOWMANYLINESSTART=$(echo -e "`wc -l $BFILETEMP | cut -d " " -f 1`")
 bash $p
 HOWMANYLINES=$(echo -e "`wc -l $BTEMPFILE | cut -d " " -f 1`")
 ENDCOMMENT="$HOWMANYLINES Lines After $PBNAMEPRETTYSCRIPTTEXT"
+echo "$ENDCOMMENT" | sudo tee --append $RECENTRUN &>/dev/null
 
 { if
 [[ $HOWMANYLINES -eq 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
