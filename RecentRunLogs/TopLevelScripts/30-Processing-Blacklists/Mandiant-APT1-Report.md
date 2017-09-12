@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Mandiant-APT1-Report List Marked As Dead. Tue 12 Sep 01:27:21 EDT 2017

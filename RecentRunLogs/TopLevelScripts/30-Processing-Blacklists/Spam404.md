@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Spam404 List Marked As Dead. Tue 12 Sep 02:01:53 EDT 2017

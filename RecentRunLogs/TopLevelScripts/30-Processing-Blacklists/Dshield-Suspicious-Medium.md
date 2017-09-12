@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Dshield-Suspicious-Medium List Marked As Dead. Tue 12 Sep 00:40:23 EDT 2017

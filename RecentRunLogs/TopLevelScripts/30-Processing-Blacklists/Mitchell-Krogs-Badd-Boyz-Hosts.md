@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Mitchell-Krogs-Badd-Boyz-Hosts List Marked As Dead. Tue 12 Sep 01:34:15 EDT 2017

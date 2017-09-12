@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Lead-Generator List Marked As Dead. Tue 12 Sep 01:21:49 EDT 2017

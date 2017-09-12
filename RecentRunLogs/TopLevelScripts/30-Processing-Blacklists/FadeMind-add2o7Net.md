@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* FadeMind-add2o7Net List Marked As Dead. Tue 12 Sep 00:54:12 EDT 2017

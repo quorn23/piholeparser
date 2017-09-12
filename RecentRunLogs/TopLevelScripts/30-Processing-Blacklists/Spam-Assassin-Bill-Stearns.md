@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Spam-Assassin-Bill-Stearns List Marked As Dead. Tue 12 Sep 02:03:16 EDT 2017
