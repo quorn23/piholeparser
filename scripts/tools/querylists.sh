@@ -2,27 +2,8 @@
 ## This should help me find what parsed list contains a domain
 
 ## Variables
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
-
-## whiptail required
-if
-which whiptail >/dev/null;
-then
-:
-else
-printf "$yellow"  "Installing whiptail"
-apt-get install -y whiptail
-fi
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 DOMAINTOLOOKFOR=$(whiptail --inputbox "What Domain are you hunting for?" 10 80 "" 3>&1 1>&2 2>&3)
 echo ""
