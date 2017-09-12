@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Henning-VanRaumle-Youtube List Marked As Dead. Tue 12 Sep 01:09:23 EDT 2017
+* Henning-VanRaumle-Youtube List Unavailable To Download. Tue 12 Sep 09:31:49 EDT 2017
+## Checking If List Updated Online

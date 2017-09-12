@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* JABCreations List Marked As Dead. Tue 12 Sep 01:16:18 EDT 2017
+* JABCreations List Unavailable To Download. Tue 12 Sep 09:33:31 EDT 2017
+## Checking If List Updated Online

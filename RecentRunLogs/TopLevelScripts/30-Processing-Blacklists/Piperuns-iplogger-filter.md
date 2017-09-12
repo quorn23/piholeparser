@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Piperuns-iplogger-filter List Marked As Dead. Tue 12 Sep 01:39:47 EDT 2017
+* Piperuns-iplogger-filter List Unavailable To Download. Tue 12 Sep 09:40:06 EDT 2017
+## Checking If List Updated Online

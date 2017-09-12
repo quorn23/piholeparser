@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Samsung-SmartTV-Domains List Marked As Dead. Tue 12 Sep 01:54:59 EDT 2017
+* Samsung-SmartTV-Domains List Unavailable To Download. Tue 12 Sep 09:42:55 EDT 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Locky-Ransomware-C2-Domain-Blocklist List Marked As Dead. Tue 12 Sep 01:24:35 EDT 2017
+* Locky-Ransomware-C2-Domain-Blocklist List Unavailable To Download. Tue 12 Sep 09:35:41 EDT 2017
+## Checking If List Updated Online

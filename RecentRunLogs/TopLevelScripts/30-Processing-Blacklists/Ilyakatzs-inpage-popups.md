@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Ilyakatzs-inpage-popups List Marked As Dead. Tue 12 Sep 01:13:32 EDT 2017
+* Ilyakatzs-inpage-popups List Unavailable To Download. Tue 12 Sep 09:33:17 EDT 2017
+## Checking If List Updated Online

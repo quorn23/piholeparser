@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam404-Domain-Blacklist List Marked As Dead. Tue 12 Sep 02:00:31 EDT 2017
+* Spam404-Domain-Blacklist List Unavailable To Download. Tue 12 Sep 09:43:37 EDT 2017
+## Checking If List Updated Online

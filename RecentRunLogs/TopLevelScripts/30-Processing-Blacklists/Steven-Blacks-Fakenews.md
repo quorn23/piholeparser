@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Fakenews List Marked As Dead. Tue 12 Sep 02:04:39 EDT 2017
+* Steven-Blacks-Fakenews List Unavailable To Download. Tue 12 Sep 09:44:18 EDT 2017
+## Checking If List Updated Online

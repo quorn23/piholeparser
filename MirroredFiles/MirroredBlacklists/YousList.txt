@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: Hw7XmJw5pirJ7ejCa+pLwQ
+! Checksum: i2jwwpfh/jnDCa0yZgNNTg
 ! Version: 20170912
 
 ! Workaround for BlockAdBlock
@@ -83,6 +83,7 @@
 ##iframe[src^="http://ad.naver.com/adshow"]
 ##iframe[src^="http://ad.naver.com/fxshow"]
 ##iframe[src^="http://ad.owra.net/"]
+##iframe[src^="http://ad.phaserep.com/cgi-bin/PelicanC.dll"]
 ##iframe[src^="http://ad.pitta.ne.jp/ads/show/"]
 ##iframe[src^="http://ad.priel.co.kr/"]
 ##iframe[src^="http://ad.tpmn.co.kr/adReqSb.tpmn"]
@@ -125,6 +126,7 @@
 ##iframe[src^="http://agate.opap.co.kr/html/"]
 ##iframe[src^="http://aitg.widerplanet.com/"]
 ##iframe[src^="http://api.adns.contentlink.co.kr/adserver/delivery/iframe.php"]
+##iframe[src^="http://apis.piclick.me/v1/publish/banner/iframe"]
 ##iframe[src^="http://bayabar.com/adworking/"]
 ##iframe[src^="http://cadvv.heraldm.com/nbiz/"]
 ##iframe[src^="http://candy.ad9.kr/"]
@@ -298,11 +300,13 @@
 ||ad.openmatch.co.kr^
 ||ad.osen.co.kr^
 ||ad.owra.net^
+||ad.phaserep.com/cgi-bin/PelicanC.dll^
 ||ad.pickple.net^
 ||ad.pitta.ne.jp/ads/
 ||ad.priel.co.kr^
 ||ad.reople.co.kr^
 ||ad.tf.co.kr:8080/js.kti/
+||ad.tjtune.com/cgi-bin/PelicanC.dll^
 ||ad.touchwise.co.kr^
 ||ad.tpmn.co.kr/adReqSb.tpmn^
 ||ad.turn.com/server/ads.js^
@@ -434,6 +438,7 @@
 ||api.megamouth.kr/pucs.js^
 ||api.wiseclick.co.kr/api/web_directad/
 ||apis.naver.com/rmcnmv/rmcams/item/create/2010/SMR^$domain=m.tv.naver.com|tv.naver.com
+||apis.piclick.me/v1/publish/banner/iframe^
 ||as.dc.impact-ad.jp^
 ||asahicom.jp/ad/js/$domain=asahi.com
 ||asiae.co.kr/include/real_ad/
@@ -922,6 +927,7 @@
 ||newsworker.co.kr/adNdsoft/$domain=newsworker.co.kr
 ||newsworker.co.kr/bannerManager/$domain=newsworker.co.kr
 ||newsworker.co.kr/script/ad_flow1.js^$domain=newsworker.co.kr
+||newsworks.co.kr/bannerManager/inc/*.html^$domain=newsworks.co.kr
 ||nicovideo.cdn.nimg.jp/web/js/ads.js^$domain=nicovideo.jp
 ||nocutnews.co.kr/banner/2012/ad_right_*.asp^
 ||npian.com/nbox/ad*.swf^
@@ -1104,6 +1110,7 @@
 ||thepiratebay.org/static/ads/$domain=thepiratebay.org
 ||ti-center.co.kr^
 ||tl.mmnneo.com/neovcm.js^
+||topstarnews.net/html/default/html_tpl_mobile/ad/$domain=topstarnews.net
 ||torrentmade.com/data/zn_banner/
 ||torrentmade.com/js/bpopup/scripting.min.js^
 ||torrentmoa.com/addons/popup/js/popup_layer.js^
@@ -2239,6 +2246,10 @@ m.news1.kr##p.ads_article3
 m.news1.kr##p.ads_text_banner
 m.news1.kr##ul.text_ad_list
 m.newsworker.co.kr##section.advertisment
+m.newsworks.co.kr##div.body>center[style="margin:15px 0;"]
+m.newsworks.co.kr##div.body>div[style="float:right; padding:10px 0 15px 15px; width:200px; height:200px;"]
+m.newsworks.co.kr##div.body>div[style="height:60px !important"]
+m.newsworks.co.kr##section.advertisment
 m.nocutnews.co.kr##div#divContent>div[style="width:200px; height:200px;float:right; padding:5px 0 0 5px;"]
 m.nocutnews.co.kr##div.con_b>div.ct_box
 m.nocutnews.co.kr##div.view_ct>div[style="width:90%; padding-left:10px;"]
@@ -2439,6 +2450,9 @@ metroseoul.co.kr##div.ad-box
 metroseoul.co.kr##div.body-right-box>div[style="margin-bottom:15px; margin-top:15px;background-color: #eaeaea;"]
 metroseoul.co.kr##div.body-right-box>div[style="margin-bottom:15px;"]
 metroseoul.co.kr##div.sideADBox
+mhj21.com##div#contents_wrap_sub2>table[border="0"][cellpadding="0"][cellspacing="0"][width="100%"]>tbody>tr>td[align="center"][style="padding:50px 0 30px 0"]
+mhj21.com##div#contents_wrap_sub2>table[border="0"][cellpadding="0"][cellspacing="0"][width="100%"]>tbody>tr>td[style="padding-bottom:10px"]
+mhj21.com##div.bn
 minitoon.net##div.fixed-top
 minitoon.net##div.g_banner
 minitoon.net##div.m_banner
@@ -3085,6 +3099,7 @@ todown.net##div.at-content>div.container>div.row>div.contentArea>div[style="text
 todown.net##div.at-content>div.container>div.row>div.sideArea>div[style="width:100%; height:100;text-align:center; background:#f5f5f5;margin-bottom:5px;"]
 todown.net##div.at-content>div.container>div.row>div.sideArea>div[style="width:100%; height:250px; line-height:280px; text-align:center; background:#f5f5f5;margin-bottom:30px;"]
 todown.net##div.at-content>div.container>div.row>div.sideArea>div[style="width:100%; height:250px; line-height:280px; text-align:center; background:#f5f5f5;margin-bottom:5px;"]
+topstarnews.net##iframe[src^="http://www.topstarnews.net/html/default/html_tpl_mobile/ad/"]
 torrentcup.net,torrentdn.com,torrentdn.net,torrentkim.com,torrentkim.net,torrentkim1.net,torrentkim10.net,torrentkim5.net,torrentman.net##a[href^="/to_cheonseo.php"]
 torrentcup.net,torrentdn.com,torrentdn.net,torrentkim.com,torrentkim.net,torrentkim1.net,torrentkim10.net,torrentkim5.net,torrentman.net##a[href^="/to_chitos.php"]
 torrentcup.net,torrentdn.com,torrentdn.net,torrentkim.com,torrentkim.net,torrentkim1.net,torrentkim10.net,torrentkim5.net,torrentman.net##a[href^="/to_funpick.php"]

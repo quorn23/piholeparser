@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* RUAdListBitBlock List Marked As Dead. Tue 12 Sep 01:50:50 EDT 2017
+* RUAdListBitBlock List Already Marked As Dead. Tue 12 Sep 09:42:25 EDT 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* RUAdListBitBlock List Was An Empty File After Download. Tue 12 Sep 09:42:31 EDT 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* RUAdListBitBlock List Was Killed By The Parsing Process. It will be skipped in the future. Tue 12 Sep 09:42:32 EDT 2017

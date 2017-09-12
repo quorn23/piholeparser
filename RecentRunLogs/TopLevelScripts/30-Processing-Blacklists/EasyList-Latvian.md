@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Latvian List Marked As Dead. Tue 12 Sep 00:47:18 EDT 2017
+* EasyList-Latvian List Unavailable To Download. Tue 12 Sep 09:24:42 EDT 2017
+## Checking If List Updated Online

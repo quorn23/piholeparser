@@ -13,4 +13,32 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-addSpam List Marked As Dead. Tue 12 Sep 00:56:58 EDT 2017
+* FadeMind-addSpam List Unavailable To Download. Tue 12 Sep 09:27:59 EDT 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+## Attempting Creation Of Mirror File
+## Parsing List
+### Removing Comments
+153 Lines After Removing Comments
+### Removing Content Filtering
+153 Lines After Removing Content Filtering
+### Trimming HOSTS Format IP Addresses
+153 Lines After Trimming HOSTS Format IP Addresses
+### Removing Empty Space
+152 Lines After Removing Empty Space
+### Removing Invalid FQDN Characters
+152 Lines After Removing Invalid FQDN Characters
+### Converting All Text To Lower Case
+152 Lines After Converting All Text To Lower Case
+### Checking For Fully Qualified Domain Name Requirements
+152 Lines After Checking For Fully Qualified Domain Name Requirements
+### Reverse Searching For Invalid Top Level Domains
+152 Lines After Reverse Searching For Invalid Top Level Domains
+### Removing Duplicate Lines
+152 Lines After Removing Duplicate Lines
+## Checking Parsed File Size
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* GandJ-Hosts List Marked As Dead. Tue 12 Sep 01:05:15 EDT 2017
+* GandJ-Hosts List Unavailable To Download. Tue 12 Sep 09:31:15 EDT 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mayvs-Private-Adblock-Filters List Marked As Dead. Tue 12 Sep 01:30:07 EDT 2017
+* Mayvs-Private-Adblock-Filters List Unavailable To Download. Tue 12 Sep 09:37:51 EDT 2017
+## Checking If List Updated Online

@@ -8,17 +8,17 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
+* Finnish-AntiSocial
+* JABCreations
+* JoeWein
+* PLgeneral
+* Spam-Assassin-Bill-Stearns
 * Adblock-Filters-by-Gurudee
 * BLOGRAM-Analysis-Block-Filter-List-for-Japan
 * BLOGRAM-Basic-Filter-List-for-Japan
 * Dan-Pollocks-Hosts
 * Disconnect-Malvertising-Filter
 * DNS-BH-Malware-Domains
-* Finnish-AntiSocial
-* JABCreations
-* JoeWein
-* PLgeneral
-* Spam-Assassin-Bill-Stearns
 * Tofu-Filter
 
 ___________________________________________________________________

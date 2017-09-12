@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-addRisk List Marked As Dead. Tue 12 Sep 00:55:35 EDT 2017
+* FadeMind-addRisk List Unavailable To Download. Tue 12 Sep 09:27:49 EDT 2017
+## Checking If List Updated Online

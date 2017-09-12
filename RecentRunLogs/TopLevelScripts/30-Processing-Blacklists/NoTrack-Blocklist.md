@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* NoTrack-Blocklist List Marked As Dead. Tue 12 Sep 01:37:01 EDT 2017
+* NoTrack-Blocklist List Unavailable To Download. Tue 12 Sep 09:39:39 EDT 2017
+## Checking If List Updated Online

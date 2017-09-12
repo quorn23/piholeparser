@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Finnish-AntiSocial List Marked As Dead. Tue 12 Sep 01:03:52 EDT 2017
+* Finnish-AntiSocial List Unavailable To Download. Tue 12 Sep 09:31:09 EDT 2017
+## Checking If List Updated Online

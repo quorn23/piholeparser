@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Schacks-Adblock-Plus-Liste List Marked As Dead. Tue 12 Sep 01:57:45 EDT 2017
+* Schacks-Adblock-Plus-Liste List Unavailable To Download. Tue 12 Sep 09:43:16 EDT 2017
+## Checking If List Updated Online

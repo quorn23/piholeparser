@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Porn List Marked As Dead. Tue 12 Sep 02:10:11 EDT 2017
+* Steven-Blacks-Porn List Unavailable To Download. Tue 12 Sep 09:45:02 EDT 2017
+## Checking If List Updated Online

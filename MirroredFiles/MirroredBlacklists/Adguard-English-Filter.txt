@@ -1,8 +1,8 @@
-! Checksum: qHFuoWGNaQS2fc1/PxMjnQ
+! Checksum: mU8zHUwu+BF7fZuug9o3PA
 ! Title: English filter
 ! Description: EasyList + Adguard English filter. Filter list that specifically removes adverts on English language websites.
-! Version: 1.1.30.42
-! TimeUpdated: 2017-09-12T00:00:38.257+04:00
+! Version: 1.1.30.47
+! TimeUpdated: 2017-09-12T17:08:41.309+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#english
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -873,6 +873,9 @@ j.gs#@##bottom
 @@||j.gs/1market.php
 !*
 !*****
+! https://github.com/AdguardTeam/AdguardFilters/issues/6476
+@@||afdah.to/show-ad
+! https://github.com/AdguardTeam/AdguardFilters/issues/6459
 ! https://forum.adguard.com/index.php?threads/24960/
 @@||xmovies8.es/themes/*/ads.js?v=
 ! https://forum.adguard.com/index.php?threads/24937/
@@ -1421,7 +1424,7 @@ streamplay.to#@##banner_ad
 @@||vidoza.net/js/pop.js
 @@||vidoza.net/js/ads.js
 ! Graphiq owned sites https://forum.adguard.com/index.php?threads/planes-axlegeeks-com.21241/
-allpatents.com,armsrack.com,axlegeeks.com,careertrends.com,corporate.com,credio.com,findthebest.com,findthecompany.com,findthedata.com,findthehome.com,gearsuite.com,healthgrove.com,homeowl.com,insidegov.com,mooseroots.com,pickban.com,pikasaur.com,platform.com,pointafter.com,prettyfamous.com,softwareinsider.com,specout.com,startclass.com,underthelabel.com,weatherdb.com#%#(function(o,a){o(window,"FTBAds",{get:function(){return a},set:function(b){a=b;o(a,"ads",{value:!1})}})})(Object.defineProperty);
+allpatents.com,armsrack.com,axlegeeks.com,careertrends.com,corporate.com,credio.com,findthebest.com,findthecompany.com,findthedata.com,findthehome.com,gearsuite.com,graphiq.com,healthgrove.com,homeowl.com,insidegov.com,mooseroots.com,pickban.com,pikasaur.com,platform.com,pointafter.com,prettyfamous.com,softwareinsider.com,specout.com,startclass.com,underthelabel.com,weatherdb.com#%#(function(o,a){o(window,"FTBAds",{get:function(){return a},set:function(b){a=b;o(a,"ads",{value:!1})}})})(Object.defineProperty);
 ! https://forum.adguard.com/index.php?threads/21233/
 ||api.tinypass.com^$domain=dallasnews.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4844
@@ -2604,6 +2607,7 @@ oploverz.net#@##top_ad_game
 ! Ads replacement script (trafmag.com)
 alluc.ee###resultlist > div#resultitems[-ext-has="> div"]~iframe:not([src])
 !
+bitbt.org##div.ibox[-ext-has='a[href^="/download.php"][target="_blank"][rel="nofollow"] > img']
 pervclips.com##.cut_block > .block > .heading > h2:contains(Ad)
 katestube.com##.video-control[-ext-has="span.text_adv"]
 askvg.com###sidebarHome > p+p[-ext-contains="Advertisements"]
@@ -4606,7 +4610,7 @@ spankwire.com#%#Object.defineProperty(document, 'onclick', { get: function() { r
 watchseries-online.nl,btsone.cc#%#Object.defineProperty(window,'_drp', { get:function(){return {}; } });
 !
 ! go.oclasrv.com clickunder
-sawlive.tv,watchonlinemovies.com.pk,putlocker.io,xmovies8.net,cmovieshd.com,rapidvideo.com,fmovies.sc,seriesonline.io,putlockers.fm,krutor.org.pl,1movies.online,fmovies.io,123moviesfree.com,9anime.to,fastpiratebay.co.uk,gameofbay.org,mywatchseries.to,oploverz.in,piratebays.co.uk,pirateproxy.click,pirateproxy.wf,pirateproxy.yt,putlocker.sk,vidnode.net#%#window.zfgloadedpopup = true;
+movieonline.io,sawlive.tv,watchonlinemovies.com.pk,putlocker.io,xmovies8.net,cmovieshd.com,rapidvideo.com,fmovies.sc,seriesonline.io,putlockers.fm,krutor.org.pl,1movies.online,fmovies.io,123moviesfree.com,9anime.to,fastpiratebay.co.uk,gameofbay.org,mywatchseries.to,oploverz.in,piratebays.co.uk,pirateproxy.click,pirateproxy.wf,pirateproxy.yt,putlocker.sk,vidnode.net#%#window.zfgloadedpopup = true;
 ! FastPops
 watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPops', '1'); }
 watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPopsExpire', new Date(new Date().setYear(2020))); }
@@ -4614,6 +4618,14 @@ watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != '
 !*****
 !**********************************
 !
+! https://forum.adguard.com/index.php?threads/24980/
+animetycoon.org#%#AG_onLoad(function() { setTimeout(function() { document.getElementById("justmp4_close").click(); }, 300); });
+animetycoon.org#%#AG_onLoad(function() { setTimeout(function() { document.getElementById("uploadcrazy_close").click(); }, 1300); });
+! https://forum.adguard.com/index.php?threads/24981/
+buenaisla.net#%#AG_onLoad(function() { setTimeout(function() { crearRep(); $('#bannerRep').remove();}, 300); });
+! https://forum.adguard.com/index.php?threads/24982/
+pornovo.cm#%#Object.defineProperty(window, 'tQZr', { get: function() { return function(){}; } });
+pornovo.com#%#AG_onLoad(function() { setTimeout(function() {document.getElementById("p7").click();}, 300); });
 ! https://forum.adguard.com/index.php?threads/24952/
 putlocker.io#%#window.atob = function() { };
 ! xnxx.com - clickunder
@@ -5127,6 +5139,8 @@ zippymoviez.com#%#window.open = function() {};
 !-------------------
 !-------CSS---------
 !-------------------
+! https://forum.adguard.com/index.php?threads/24991/
+pcgamingwiki.com#$#.home-information-column { padding-top: 40px!important; }
 ! https://forum.adguard.com/index.php?threads/24936/
 putlocker.io#$#div[id^="MGWrap"] { position: absolute!important; left: -3000px!important; }
 ! https://forum.adguard.com/index.php?threads/24881/
@@ -5614,12 +5628,16 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 !
 ! https://forum.adguard.com/index.php?threads/24914/
 !
+bitbt.org##a[href^="/download.php"][target="_blank"][rel="nofollow"] > img
+tipucrack.com##center > a[href][rel="nofollow"][target="_blank"]
+||tipucrack.com/wp-content/uploads/*/button-download-animated.gif
+pathofexile.gamepedia.com###mobileatfmrec
 crackflare.com##center > a > img
 mp3jam.org##div[class="textwidget"] > a[rel="nofollow"] > img
 sha2sslchecker.com##.f-right img
 sinemapub.net##center > a[rel="nofollow"] > img
 putlocker8.net##div[style^="text-align: center;"] > a[rel="nofollow"]
-djcracx.com##center > a[rel="nofollow"] > imghttps://forum.adguard.com/index.php?threads/putlocker8-net-fake-buttons-ag-browser-extension.24944/
+djcracx.com##center > a[rel="nofollow"] > img
 ||thekickass.org/o.js
 ||thekickass.org/ultra/poor.js
 filefrogg.com##a[href^="http://wap4dollar.com/ad/"]
@@ -10245,6 +10263,7 @@ implbits.com#@#.banner_container
 !-----------------------------------------------------------
 !-------------------- Fixing Stealth Mode ------------------
 !-----------------------------------------------------------
+! turbo.az - website is broken [Stealth Mode - Referrer]
 ! https://forum.adguard.com/index.php?threads/http-tap-az-abnormal-traffic.24553/ [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2243
 @@||cdn.taboola.com/libtrc/*/loader.js$domain=cnet.com
@@ -17423,6 +17442,7 @@ _argus_ad_
 _assets/ads/
 _background_ad.
 _background_ad/
+_banner-ad.
 _banner_ad-
 _banner_ad.
 _banner_ad_
@@ -24730,9 +24750,12 @@ _popunder+$popup
 ###oanda_ads
 ###oas_Middle
 ###oas_Middle1
+###oas_Middle2
 ###oas_Right
 ###oas_Right1
 ###oas_Right2
+###oas_Section1
+###oas_Takeover
 ###oas_Top
 ###oas_Top1
 ###oas_asponsor
@@ -27328,6 +27351,7 @@ _popunder+$popup
 ##.ad-leaderboard-companion
 ##.ad-leaderboard-container
 ##.ad-leaderboard-marquee
+##.ad-leaderboard-middle
 ##.ad-leaderboard-splitter
 ##.ad-leaderboard-top
 ##.ad-leaderboard_river
@@ -33960,6 +33984,7 @@ _popunder+$popup
 ##.oas_ad
 ##.oas_add
 ##.oas_advertisement
+##.oas_desktop_banner
 ##.oas_sidebar_v7
 ##.oas_x20
 ##.oas_x21
@@ -58820,8 +58845,7 @@ autotrader.co.uk###oas-banner-2
 autotrader.co.uk###oas-banner-3
 masala.com###oas-mpu-left\<\/div\>
 masala.com###oas-mpu-right\<\/div\>
-comicbook.com###oas_Section1
-comicbook.com###oas_Top
+comicbook.com###oas_FC1
 moneycontrol.com###oas_bottom
 foreclosure.com###obFlyMain
 cbslocal.com###ob_paid_header
@@ -60569,7 +60593,7 @@ breathecast.com##.ad > div
 techrepublic.com,yahoo.com##.ad-active
 deviantart.com##.ad-blocking-makes-fella-confused
 alarabiya.net,atlanticfarmfocus.ca,burnsidenews.com,capebretonpost.com,cbncompass.ca,cornwallseawaynews.com,cumberlandnewsnow.com,dailybusinessbuzz.ca,digbycourier.ca,edmunds.com,flightaware.com,ganderbeacon.ca,gfwadvertiser.ca,haaretz.com,hantsjournal.ca,jerusalemonline.com,journalism.co.uk,journalpioneer.com,kingscountynews.ca,leaprate.com,lportepilot.ca,lubbockonline.com,memecdn.com,memecenter.com,metrolyrics.com,mjtimes.sk.ca,ngnews.ca,novanewsnow.com,orleansstar.ca,paherald.sk.ca,pcworld.in,reverso.net,revision3.com,sasknewsnow.com,soapoperadigest.com,southerngazette.ca,tasteofhome.com,thecoastguard.ca,theguardian.pe.ca,thehindu.com,thepacket.ca,thetelegram.com,thevanguard.ca,thewesternstar.com,trurodaily.com,twitpic.com,vinesbay.com,viralnova.com,westislandchronicle.com,westmountexaminer.com,where.ca,zerohedge.com##.ad-box
-6abc.com,9news.com.au,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com,ack.net,amestrib.com,autofocus.ca,barnstablepatriot.com,beautifuldecay.com,bizjournals.com,blueridgenow.com,boston.com,businessinsider.com.au,capecodtimes.com,columbiadailyherald.com,courier-tribune.com,cpuboss.com,dailycomet.com,dailycommercial.com,dailysun.co.za,dailytidings.com,desertdispatch.com,digg.com,dispatch.com,dnainfo.com,downforeveryoneorjustme.com,ecr.co.za,engineeringnews.co.za,examiner-enterprise.com,fayobserver.com,firehouse.com,fosters.com,foxbusiness.com,foxnews.com,funkidslive.com,gadsdentimes.com,gainesville.com,glamour.com,golf.com,goupstate.com,gpuboss.com,hbr.org,heatst.com,heralddemocrat.com,heraldtribune.com,houmatoday.com,hsvvoice.com,ign.com,isup.me,jacarandafm.com,jdnews.com,kinston.com,komando.com,lonokenews.net,macstories.net,mailtribune.com,miningweekly.com,mobilesyrup.com,moneysense.ca,mpnnow.com,myfitnesspal.com,naminum.com,nbcnews.com,newbernsj.com,news-journalonline.com,newschief.com,newsherald.com,newsrepublican.com,nwfdailynews.com,nzherald.co.nz,ocala.com,poconorecord.com,providencejournal.com,pulaskinews.net,radicalresearch.co.uk,recordnet.com,recordonline.com,refinery29.com,rollingstone.com,scroll.in,seacoastonline.com,shelbystar.com,slate.com,sltrib.com,southcoasttoday.com,ssdboss.com,stackexchange.com,starnewsonline.com,stockhouse.com,swtimes.com,telegram.com,the-dispatch.com,theaustralian.com.au,thehindu.com,theledger.com,themercury.com.au,thenewslens.com,thetimesnews.com,thrillist.com,tuscaloosanews.com,vanburencountydem.com,vice.com,vvdailypress.com,wickedlocal.com,xboxdvr.com,youtube.com,zerohedge.com##.ad-container
+6abc.com,9news.com.au,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com,ack.net,amestrib.com,autofocus.ca,barnstablepatriot.com,beautifuldecay.com,bizjournals.com,blueridgenow.com,boston.com,businessinsider.com.au,capecodtimes.com,columbiadailyherald.com,courier-tribune.com,cpuboss.com,dailycomet.com,dailycommercial.com,dailysun.co.za,dailytidings.com,desertdispatch.com,digg.com,dispatch.com,dnainfo.com,downforeveryoneorjustme.com,ecr.co.za,engineeringnews.co.za,examiner-enterprise.com,fayobserver.com,firehouse.com,fosters.com,foxbusiness.com,foxnews.com,funkidslive.com,gadsdentimes.com,gainesville.com,glamour.com,golf.com,goupstate.com,gpuboss.com,hbr.org,heatst.com,heralddemocrat.com,heraldtribune.com,houmatoday.com,hsvvoice.com,ign.com,isup.me,jacarandafm.com,jdnews.com,kinston.com,komando.com,lonokenews.net,macstories.net,mailtribune.com,miningweekly.com,mobilesyrup.com,moneysense.ca,mpnnow.com,myfitnesspal.com,naminum.com,nbcnews.com,newbernsj.com,news-journalonline.com,newschief.com,newsherald.com,newsrepublican.com,nwfdailynews.com,nzherald.co.nz,ocala.com,poconorecord.com,providencejournal.com,pulaskinews.net,radicalresearch.co.uk,recordnet.com,recordonline.com,refinery29.com,rollingstone.com,scroll.in,seacoastonline.com,shelbystar.com,slate.com,sltrib.com,southcoasttoday.com,ssdboss.com,stackexchange.com,starnewsonline.com,stockhouse.com,swtimes.com,telegram.com,the-dispatch.com,theaustralian.com.au,thehindu.com,theledger.com,thelocal.at,thelocal.ch,thelocal.de,thelocal.dk,thelocal.es,thelocal.fr,thelocal.it,thelocal.no,thelocal.se,themercury.com.au,thenewslens.com,thetimesnews.com,thrillist.com,tuscaloosanews.com,vanburencountydem.com,vice.com,vvdailypress.com,wickedlocal.com,xboxdvr.com,youtube.com,zerohedge.com##.ad-container
 wusa9.com##.ad-image
 foodandwine.com,health.com,hollywoodjournal.com,realsimple.com,southernliving.com,tmz.com,travelandleisure.com##.ad-title
 faithit.com##.ad-wrapper + .widget-area
@@ -62989,9 +63013,8 @@ nzherald.co.nz##.nzh-bigbanner
 nzherald.co.nz##.nzh-extendedbanner
 nzherald.co.nz##.nzme_ss
 mail.google.com##.oM
-counton2.com,suntimes.com##.oas
+comicbook.com,counton2.com,suntimes.com##.oas
 timesfreepress.com##.oas-instory
-popculture.com##.oas_desktop_banner
 adage.com##.oaswrapper
 cheezburger.com##.ob-widget-section
 dailydot.com##.ob_dual_right
@@ -64205,7 +64228,7 @@ nontondramaonline.co##.td-banner-wrap-fulles
 mobiletor.com##.td-footer-wrap
 ticgn.com,wtf1.co.uk##.td-footer-wrapper
 startlr.com##.td-g-rec
-sonorannews.com,thestonedsociety.com##.td-header-sp-recs
+sonorannews.com,thestonedsociety.com,weekendspecial.co.za##.td-header-sp-recs
 gixen.com##.td_bck3
 toronto.com##.td_featured
 treetorrent.com##.tdwb
@@ -67485,6 +67508,11 @@ kbb.com###gptAd3
 macdailynews.com###header-ads
 arnnet.com.au###leaderboard-bottom-ad
 kenkenpuzzle.com###leaderboard-container
+comicbook.com###oas_Middle1
+comicbook.com###oas_Middle2
+comicbook.com###oas_Middle3
+comicbook.com###oas_Section1
+comicbook.com###oas_Takeover
 ndtv.com###rhs_widget_container_id
 deadline.com###skin-ad-section
 ndtv.com###small_rec_adbox
@@ -67501,6 +67529,7 @@ livescience.com##.ad-slot
 uptobox.com##.ad-square
 credio.com,findthedata.com##.ad-text
 dailymail.co.uk##.adHolder
+comicbook.com##.ad_blk
 mashable.com,monova.org,unblocked.cam##.ad_container
 spin.com##.ad_desktop_placeholder
 upi.com##.ad_slot

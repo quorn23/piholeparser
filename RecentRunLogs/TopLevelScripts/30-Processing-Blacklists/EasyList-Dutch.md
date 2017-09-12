@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Dutch List Marked As Dead. Tue 12 Sep 00:43:09 EDT 2017
+* EasyList-Dutch List Unavailable To Download. Tue 12 Sep 09:22:20 EDT 2017
+## Checking If List Updated Online
