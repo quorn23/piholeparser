@@ -2,17 +2,8 @@
 ## This should show what lines are not making it through gravity.sh
 
 ## Variables
-script_dir=$(dirname $0)
-SCRIPTVARSDIR="$script_dir"/../scriptvars/
-STATICVARS="$SCRIPTVARSDIR"staticvariables.var
-if
-[[ -f $STATICVARS ]]
-then
-source $STATICVARS
-else
-echo "Static Vars File Missing, Exiting."
-exit
-fi
+SCRIPTDIRA=$(dirname $0)
+source "$SCRIPTDIRA"/foldervars.var
 
 ## Pihole vars
 PIHOLEDIR=/etc/pihole/
