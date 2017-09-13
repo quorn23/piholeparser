@@ -13,7 +13,6 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* HpHosts-EXP List Unavailable To Download. Tue 12 Sep 09:32:02 EDT 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List

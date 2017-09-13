@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mayvs-Private-Adblock-Filters List Unavailable To Download. Tue 12 Sep 09:37:51 EDT 2017
 ## Checking If List Updated Online

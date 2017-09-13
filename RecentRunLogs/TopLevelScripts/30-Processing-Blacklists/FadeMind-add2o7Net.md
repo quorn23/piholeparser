@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-add2o7Net List Unavailable To Download. Tue 12 Sep 09:27:40 EDT 2017
 ## Checking If List Updated Online

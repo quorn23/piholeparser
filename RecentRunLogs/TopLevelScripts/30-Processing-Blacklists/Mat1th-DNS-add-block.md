@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mat1th-DNS-add-block List Unavailable To Download. Tue 12 Sep 09:37:32 EDT 2017
 ## Checking If List Updated Online

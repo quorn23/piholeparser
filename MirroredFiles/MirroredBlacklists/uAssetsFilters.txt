@@ -1076,6 +1076,7 @@ carbuyer.co.uk##script:inject(abort-on-property-write.js, _sp_)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/216
 ! https://github.com/uBlockOrigin/uAssets/issues/225
+||hackintosh.zone/cdn-cgi/apps/head/*$xmlhttprequest,first-party
 @@||cdn.hackintosh.zone^$first-party,script,stylesheet
 @@||hackintosh.computer^$first-party,script,stylesheet
 ||doubleclick.net^$subdocument,redirect=noopframe,domain=hackintosh.computer|hackintosh.zone
@@ -1353,7 +1354,8 @@ australianfrequentflyer.com.au##script:inject(bab-defuser.js)
 putlockers.cc##script:inject(noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/260
-bicycling.com,menshealth.com,prevention.com,rodale.tv,rodalesorganiclife.com,rodalewellness.com,runnersworld.com,womenshealthmag.com##script:inject(setTimeout-defuser.js, showForm, 100)
+! https://github.com/uBlockOrigin/uAssets/issues/681
+bicycling.com,menshealth.com,prevention.com,rodalesorganiclife.com,runnersworld.com,womenshealthmag.com##script:inject(abort-on-property-read.js, adBlockPromise)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/239
 ! https://github.com/uBlockOrigin/uAssets/issues/401
@@ -1486,9 +1488,6 @@ thevideo.me##script:inject(abort-on-property-read.js, MarketGidJSON)
 ! https://github.com/uBlockOrigin/uAssets/issues/414
 ||bq.si/banner/$popunder
 bq.si##script:inject(window.name-defuser)
-
-! https://github.com/uBlockOrigin/uAssets/issues/415
-youtube-mp3.org##script:inject(abort-on-property-read.js, _as_bf)
 
 ! https://arstechnica.com/information-technology/2017/05/boston-globe-website-no-longer-lets-you-read-articles-in-private-mode/
 bostonglobe.com##.gip__modal
@@ -1743,7 +1742,7 @@ thepiratebay.*##script:inject(abort-on-property-read.js, _wm)
 hollaforums.com##.sidebar-rcs
 
 ! https://github.com/uBlockOrigin/uAssets/issues/518
-wallpapershome.com##script:inject(abort-on-property-read.js, canRunAds)
+wallpapershome.com,wallpapersite.com##script:inject(abort-on-property-read.js, canRunAds)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/522
 @@||supforums.com^$generichide
@@ -2124,8 +2123,11 @@ androidsage.com##script:inject(abort-on-property-write.js, blckad)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/680
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38135
-||cointraffic.io^$third-party
 ||ctnet2.in^
 ||koinser.in^
 ||lacerta.space^
 ||seyfert.space^
+
+! https://www.reddit.com/r/uBlockOrigin/comments/6zpavj/chrome_cant_block_iframe/
+! https://github.com/uBlockOrigin/uAssets/issues/683
+korrespondent.net,nnm-club.name,nnmclub.to##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)

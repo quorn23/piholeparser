@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Fakenews List Unavailable To Download. Tue 12 Sep 09:44:18 EDT 2017
 ## Checking If List Updated Online

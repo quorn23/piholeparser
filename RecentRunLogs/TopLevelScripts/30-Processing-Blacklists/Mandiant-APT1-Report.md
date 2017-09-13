@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mandiant-APT1-Report List Unavailable To Download. Tue 12 Sep 09:37:19 EDT 2017
 ## Checking If List Updated Online

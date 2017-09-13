@@ -13,32 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Metaphoricgiraffe-Privacy-Filters List Unavailable To Download. Tue 12 Sep 09:38:00 EDT 2017
 ## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-### Removing Comments
-140 Lines After Removing Comments
-### Removing Content Filtering
-140 Lines After Removing Content Filtering
-### Trimming HOSTS Format IP Addresses
-140 Lines After Trimming HOSTS Format IP Addresses
-### Removing Empty Space
-133 Lines After Removing Empty Space
-### Removing Invalid FQDN Characters
-18 Lines After Removing Invalid FQDN Characters
-### Converting All Text To Lower Case
-18 Lines After Converting All Text To Lower Case
-### Checking For Fully Qualified Domain Name Requirements
-18 Lines After Checking For Fully Qualified Domain Name Requirements
-### Reverse Searching For Invalid Top Level Domains
-18 Lines After Reverse Searching For Invalid Top Level Domains
-### Removing Duplicate Lines
-18 Lines After Removing Duplicate Lines
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars

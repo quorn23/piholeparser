@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Czech-Slovak List Unavailable To Download. Tue 12 Sep 09:22:12 EDT 2017
 ## Checking If List Updated Online

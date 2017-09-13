@@ -13,7 +13,6 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList List Unavailable To Download. Tue 12 Sep 09:26:17 EDT 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List

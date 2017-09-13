@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Henning-VanRaumle-Youtube List Unavailable To Download. Tue 12 Sep 09:31:49 EDT 2017
 ## Checking If List Updated Online

@@ -13,7 +13,6 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Dshield-Suspicious-Low List Unavailable To Download. Tue 12 Sep 09:19:22 EDT 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
@@ -21,23 +20,23 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ### Removing Comments
-3365 Lines After Removing Comments
+3381 Lines After Removing Comments
 ### Removing Content Filtering
-3365 Lines After Removing Content Filtering
+3381 Lines After Removing Content Filtering
 ### Trimming HOSTS Format IP Addresses
-3365 Lines After Trimming HOSTS Format IP Addresses
+3381 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-3365 Lines After Removing Empty Space
+3381 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
-3365 Lines After Removing Invalid FQDN Characters
+3381 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
-3365 Lines After Converting All Text To Lower Case
+3381 Lines After Converting All Text To Lower Case
 ### Checking For Fully Qualified Domain Name Requirements
-3356 Lines After Checking For Fully Qualified Domain Name Requirements
+3372 Lines After Checking For Fully Qualified Domain Name Requirements
 ### Reverse Searching For Invalid Top Level Domains
-3351 Lines After Reverse Searching For Invalid Top Level Domains
+3367 Lines After Reverse Searching For Invalid Top Level Domains
 ### Removing Duplicate Lines
-3351 Lines After Removing Duplicate Lines
+3367 Lines After Removing Duplicate Lines
 ## Checking Parsed File Size
 ## Attempting Creation Of Parsed List
 ## Calculating Parse Time

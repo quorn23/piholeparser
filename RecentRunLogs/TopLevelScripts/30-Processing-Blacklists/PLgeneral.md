@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* PLgeneral List Unavailable To Download. Tue 12 Sep 09:40:22 EDT 2017
 ## Checking If List Updated Online
