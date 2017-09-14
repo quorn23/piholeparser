@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Adware-Filters List Marked As Dead. Thu 14 Sep 00:27:45 EDT 2017

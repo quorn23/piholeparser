@@ -1,5 +1,5 @@
 ### Checking For Whitelist File.
-* Whitelist File removed Wed 13 Sep 00:20:38 EDT 2017
+* Whitelist File removed Thu 14 Sep 00:20:39 EDT 2017
 ### Pulling Domains From Lists.
 127 After Pulling Domains From Lists.
 ### Pulling Domains From TLD Lists.
@@ -62,10 +62,10 @@
 #### TargetsWeeklyAds
 3 In TargetsWeeklyAds
 #### UserSubmitted
-20 In UserSubmitted
+22 In UserSubmitted
 #### windows-xboxstore
 3 In windows-xboxstore
 #### youtube
 3 In youtube
 ### Deduplicating Merged List.
-183 After Deduplicating Merged List.
+185 After Deduplicating Merged List.
