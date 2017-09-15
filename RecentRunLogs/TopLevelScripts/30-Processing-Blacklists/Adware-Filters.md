@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Adware-Filters List Marked As Dead. Thu 14 Sep 00:27:45 EDT 2017
+* Adware-Filters List Unavailable To Download. Fri 15 Sep 00:20:56 EDT 2017
+## Checking If List Updated Online
