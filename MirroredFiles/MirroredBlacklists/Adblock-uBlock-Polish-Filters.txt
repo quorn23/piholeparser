@@ -3,15 +3,15 @@
 ! polskie filtry do Adblocka i uBlocka
 ! Collaborators: Adam W, Dominik, Wiesiek, Robert, Marek, buuuuuuu190, Caleb, Ryszard, Kruk, Weronika, Adam, xxcriticxx, maxoku, F4z, mathew85,Piter432, Adam K, Piotr S, Szymon D, Marek R, adreporter, kacper93, FadeMind, kerbenii, gzenio22, blocker999, FX54, hawkeye116477 
 ! Homepage: https://www.certyficate.it/
-! Last modified: 14 September 2017
+! Last modified: 16 September 2017
 ! Expires: 2 days
-! Version: 2017091407
+! Version: 2017091601
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na:  https://www.certyficate.it/polski-filtr-adblock/
-! v.2017091407 aktualizacja: czw, 14 wrzesnia 2017, 23:45:00
+! v.2017091601 aktualizacja: sob, 16 wrzesnia 2017, 00:15:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -230,6 +230,7 @@ pl###LinkArea\:gry
 ###main_advertisement
 ##.footer-ad
 pl##.onnetwork-video
+pl##a[href^="https://converti.se/click/"]
 !
 !
 !------------------------Specific element hiding rules------------------------!
@@ -374,6 +375,7 @@ cda.pl##.bolk-left
 cda.pl##.muimErPIa
 cda.pl##.muimerPIa
 cda.pl##a[class][target]:has(img[src*="premium"])
+cda.pl##.wraper-container
 cda-hd.pl##.s_left > [target="_blank"] > IMG[src^="http://cda-hd.pl/wp-content/uploads/201"]
 cenabiznesu.pl##.img-responsive
 centrumdruku3d.pl###attachment_4083 > div
@@ -569,6 +571,7 @@ forum.vwgolf.pl##A[style="position:absolute;bottom:0.4em;text-transform:uppercas
 forum.vwgolf.pl##DIV[style="padding:10px 15px 12px"]
 forum.elportal.pl##.scale-with-grid
 forum.atnel.pl##a[onclick^="countAdClick"]
+forum.szafa.pl##a[href^="//agrest.pl/"]
 forumrowerowe.org###a1ad
 forumrowerowe.org###post_id_
 fotka.com###brd_profil
@@ -632,6 +635,7 @@ gram.pl###billBoardAreaWrapper
 gram.pl###rrec
 gram.pl##.stripeBar
 gramynawynos.pl##.news_list:first-child
+gratka.pl##.nieSkacz
 groupon.pl###ls-in-app-messages
 grupa7j.pl##table[style*="img/bg-black.png"] > tbody > tr
 gry-online.pl###ws-cnt
@@ -871,7 +875,7 @@ mgsm.pl###sk_product_box_1_2533
 mgsm.pl##.doubleAdLargeRectangleContainer
 mgsm.pl##.floatLeft.width50.data-table
 mgsm.pl##.large-2 > object
-mgsm.pl##.text-center.padding-top10.columns.small-12.medium-12.large-12
+mgsm.pl##.text-center.padding-top10.columns.small-12.medium-7.large-6
 mgsm.pl##.columns.small-12.medium-8.large-8 > .text-center.padding-bottom10.padding-top10.columns.small-12
 mgsm.pl##TD[style="padding:0px;"]
 mgsm.pl##[id^="AdArea"]
@@ -926,6 +930,7 @@ morele.net##.ears-left
 morele.net##.ears-right
 morele.net##.hidden.citibank-popup
 moto.pl##.template-minimal
+motomi.pl##A > .img-responsive
 motobanda.pl##.special-block
 motocykl-online.pl##.bgWhite.container > .row > .left-rail > .article > .tools > .col-xs-12.ceneo-box-index
 motoryzacja.interia.pl##div#articleObjectSeeAlso1
@@ -1711,7 +1716,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||cloudfront.net/*$domain=allegro.pl
 ||contextad.pl/$script,domain=~contextad.pl
 ||converti.se/comparison/*$xmlhttprequest
-||converti.se/static/js/convertext.js$script
+||converti.se/convertext.js$script
 ||converti.se/recommendations.js$script
 ||corto.www.wp.pl^
 ||csr.onet.pl$script,xmlhttprequest
@@ -1823,7 +1828,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||media2.cinema-city.pl/pl/*.swf
 ||mediaexpert.pl/temp/filemanager_up/*tlo_$image
 ||microsms.pl/img/reklama$image
-||mgsm.pl/js/getSkapiec*.xhtml$xmlhttprequest,domain=www.mgsm.pl
+||mgsm.pl/js/get*.xhtml$xmlhttprequest,domain=www.mgsm.pl
 ||mma.pl/wp-content/uploads/20*/*/kapka-do-kapki.jpg$image
 ||mmania.pl/cdn/partner/$image
 ||mojaolesnica.pl/reklamy/
@@ -1928,6 +1933,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||static.orangebuddies.nl/image/banners/$image,domain=cashbackrabat.pl
 ||statics.tarsago.pl/$object-subrequest,domain=meczelive.tv|mecze24.pl
 ||static.biedronka.pl/*/background/$domain=www.biedronka.pl
+||static.wizaz.pl/system/kwc/promo/kwc_promo_box_*.html$subdocument
 ||stg.wp.pl$subdocument
 ||superfilm.pl/*source=admedia&model=pop$popup
 ||superfilm.pl/branding/$image,domain=superfilm.pl
@@ -2032,6 +2038,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 /^(http|https):\/\/www\.[a-z]{5,10}\.pl\/[a-z0-9_.%/]{1,}\/p[0-9]{2,3}\/[a-z0-9_]{10,}.(html|jpg)/$subdocument,image,domain=www.portel.pl
 /^(http|https):\/\/www.wp.pl\/[a-zA-Z0-9-_]{50,}/$popup,domain=www.wp.pl
 /^(http|https):\/\/www\.chip.\pl\/wp-content\/themes\/_chip\/[a-z]{4,6}\/[a-z]{4,5}-[0-9]{4,5}/$image,domain=chip.pl
+/^https:\/\/[a-z]{4,10}\.wp\.pl\/[a-zA-Z0-9_-]{200,}/$domain=profil.wp.pl
 !
 !
 !---------------------------------Whitelists----------------------------------!
@@ -2554,10 +2561,11 @@ wp.pl##body > div:nth-of-type(1)[style^="display: block;"]
 ||pushango.com^$script,domain=~pushango.com
 ||cdn.pushwoosh.com/webpush/*.js$script
 ||cdn.pushpushgo.com/scripts/$script
+||pushalert.co^
 ||pushengage.com/script.js$script
 ||pushify.com$script
 ||proxy.synerise.com/*/web-push/get-public-config
-||www.wp.pl/webpush/static/js/webpush.desktop.js$script
+||www.wp.pl/webpush/static/js/webpush.js$script
 bzwbk.pl###pushwoosh-pop
 pomponik.pl##.ppg__signin
 !
@@ -2583,11 +2591,20 @@ srkcast.com##[id^="table"]
 ||privatestream.tv/adl^
 !
 !
-!--------------------------WP element hide------------!
+!--------------------------WP Group element hide------------!
 kafeteria.pl##.scr-wallpaper
 kafeteria.pl##DIV > DIV[style*="width: 100%;"]
-komorkomania.pl##.article-wrapper > FIGURE.insert
-komorkomania.pl##FIGURE.insert > DIV[style*="max-width: 100%;"]
+komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##BODY > DIV[style*="max-width: 100%; "]
+komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##.article-wrapper > FIGURE.insert
+komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##FIGURE.insert > DIV[style*="max-width: 100%;"]
+o2.pl##DIV > DIV[style*="width: 100%"]
+open.fm###ADrail
+open.fm##.bnr-con2
+open.fm##A[target="_blank"] > IMG[style*="height: 100%;"]
+wawalove.pl,pytamy.pl,dzieci.pl##[id^="adv"]
+!
+!
+!--------------------------WP element hide------------!
 www.wp.pl##div[class]:matches-css(width: 300px):matches-css(height: 250px)
 www.wp.pl##div[class]:matches-css(width: 309px):matches-css(height: 182px)
 www.wp.pl##[class^="_"] > div[style^="display: block; min-height: 0px;"]
@@ -2605,10 +2622,10 @@ www.wp.pl##DIV[style="position: fixed; top: 0px; left: 0px; width: 100%; height:
 www.wp.pl##div[class^="_"]:matches-css(height: 2000px):matches-css(position: relative)
 www.wp.pl##div[class]:matches-css(max-width: 300px):matches-css(max-height: 250px)
 sportowefakty.wp.pl##.matchtable[data-st-area] + DIV
-!sportowefakty.wp.pl##DIV + ASIDE > DIV[style*="width: 300px; "]
 sportowefakty.wp.pl##P + DIV[style*="width: 300px;"]
 sportowefakty.wp.pl##.section__separator
 sportowefakty.wp.pl##DIV[data-st-area] + DIV[style*="width: 300px"]
+sportowefakty.wp.pl##.scr-wallpaper + DIV[style*="max-width: 100%; "]
 sportowefakty.wp.pl##A + DIV[style*="width: 300px"]
 sportowefakty.wp.pl##ASIDE.column > DIV[style*="max-width: 100%;"]
 !
