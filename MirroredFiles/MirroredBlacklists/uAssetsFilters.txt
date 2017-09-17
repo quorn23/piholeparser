@@ -1013,10 +1013,13 @@ thenextweb.com##html > body.is-canvas.tnw-canvas--opened .main:style(animation: 
 
 ! https://github.com/uBlockOrigin/uAssets/issues/191
 ! https://github.com/uBlockOrigin/uAssets/issues/440
+! https://github.com/uBlockOrigin/uAssets/issues/693
+italiashare.info##script:inject(abort-on-property-read.js, adblock)
 italiashare.info##script:inject(nowebrtc.js)
 @@||italiashare.info^$generichide
 @@||italiashare.info^$image,first-party
 italiashare.info###adblockplus
+italiashare.info###blockblockA
 
 ! https://github.com/gorhill/uBlock/issues/2154
 mio.to##script:inject(setTimeout-defuser.js, e=d(), 1000)
@@ -1442,6 +1445,8 @@ embeducaster.com##script:inject(abort-on-property-write.js, h9c0)
 myip.ms##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/400
+! https://github.com/uBlockOrigin/uAssets/issues/693
+wstream.video##script:inject(abort-current-inline-script.js, setTimeout, .myads)
 ||wstream.video/imgad/$image,redirect=2x2-transparent.png,first-party
 
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=52546
@@ -2082,10 +2087,6 @@ journaldev.com##script:inject(abort-on-property-write.js, KillAdBlock)
 ! https://www.reddit.com/r/uBlockOrigin/comments/6ww60b/looks_like_a_new_antiadblock_scripting_is_out/
 @@||parasitipedia.net^$generichide
 
-! https://github.com/uBlockOrigin/uAssets/issues/659
-||edgeno.de^$script,third-party,domain=~edgemesh.com
-/edgemesh.*.js$script,domain=~edgemesh.com|~edgeno.de
-
 ! "Sponsored stories" section spotted 1st-hand at:
 ! https://www.wired.com/2011/08/google-studying-re-ranking-search-results-using-1-button-data-but-its-touchy/
 wired.com##.sponsored-stories-component
@@ -2153,3 +2154,25 @@ hentai2read.com##a[href^="//www.nutaku.net/"]
 ! https://www.reddit.com/r/uBlockOrigin/comments/70enct/rulu_has_some_fun_ads/
 ||rulu.co/cdn-cgi/apps/head/$script
 ||pussl3.com^$script,domain=rulu.co
+
+! https://www.reddit.com/r/uBlockOrigin/comments/70ai5v/popups_at_zippyshare/
+zippyshare.com##script:inject(abort-current-inline-script.js, String.fromCharCode, decodeURIComponent)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/70eyk1/help_ads_on_website/
+kimcartoon.me##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
+kimcartoon.me##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+
+! https://forums.lanik.us/viewtopic.php?p=124271#p124271
+dailyuploads.net##script:inject(abort-current-inline-script.js, adbClick)
+dailyuploads.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+||dailyuploads.net/images/redbuttonx.png$image
+
+! Filters below will be removed once the filter list dark-patterns.txt is
+! well spread. Leave at the bottom.
+
+! https://github.com/uBlockOrigin/uAssets/issues/659
+||edgeno.de^$script,third-party,domain=~edgemesh.com
+/edgemesh.*.js$script,domain=~edgemesh.com|~edgeno.de
+
+! https://github.com/uBlockOrigin/uAssets/issues/690
+||coin-hive.com^$third-party

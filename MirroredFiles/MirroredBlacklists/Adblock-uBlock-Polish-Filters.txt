@@ -5,13 +5,13 @@
 ! Homepage: https://www.certyficate.it/
 ! Last modified: 16 September 2017
 ! Expires: 2 days
-! Version: 2017091601
+! Version: 2017091610
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na:  https://www.certyficate.it/polski-filtr-adblock/
-! v.2017091601 aktualizacja: sob, 16 wrzesnia 2017, 00:15:00
+! v.2017091610 aktualizacja: sob, 16 wrzesnia 2017, 23:45:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -624,6 +624,7 @@ gomoney.pl###aunit
 gomoney.pl###taw0
 gorlice24.pl##.owl-item[style="width: 413px;"]
 gorlice24.pl##.red_14
+gorzowianin.com##a[href*="gorzowianin.com/rotator"]
 gosc.pl###ReleasePromo
 gosc.pl##.fl-w100.webpart-wrap-advert
 gowork.pl##.__b-popup1__.b-modal
@@ -1959,6 +1960,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||v.wpimg.pl/$subdocument,domain=gwiazdy.wp.pl
 ||vider.pl/static/player/v*/vast.js$script
 ||videos-.jwpsrv.com/content/conversions/.mp4$xmlhttprequest,domain=innpoland.pl
+||viralseedmedia.com/$script,domain=vod-share.com
 ||visualrevenue.com^
 ||vixnixxer.com$script,third-party
 ||vshare.io/static/button.css$stylesheet
@@ -2038,7 +2040,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 /^(http|https):\/\/www\.[a-z]{5,10}\.pl\/[a-z0-9_.%/]{1,}\/p[0-9]{2,3}\/[a-z0-9_]{10,}.(html|jpg)/$subdocument,image,domain=www.portel.pl
 /^(http|https):\/\/www.wp.pl\/[a-zA-Z0-9-_]{50,}/$popup,domain=www.wp.pl
 /^(http|https):\/\/www\.chip.\pl\/wp-content\/themes\/_chip\/[a-z]{4,6}\/[a-z]{4,5}-[0-9]{4,5}/$image,domain=chip.pl
-/^https:\/\/[a-z]{4,10}\.wp\.pl\/[a-zA-Z0-9_-]{200,}/$domain=profil.wp.pl
+/^https:\/\/[a-z]{3,10}\.wp\.pl\/[a-zA-Z0-9_-]{200,}/$domain=profil.wp.pl|poczta.o2.pl
 !
 !
 !---------------------------------Whitelists----------------------------------!
@@ -2268,7 +2270,7 @@ zrabatowani.pl###popup-adblock-bottom
 !
 !
 !---------------------------------Anti Adblock Rules whitelist filters----------------------------------!
-@@/js/ads.js$script,domain=solarkurier.pl|satkurier.pl|saskakepa.waw.pl|e-krajna.pl|swiecie24.pl|zyciesokolowa.pl|ciechocinek.biz|napiprojekt.pl|uniejow.net.pl|nizanskie.info|pluznica.info|superchodziez.pl|tygodnik.pl|superchodziez.pl|ekutno.pl|naszbrzesc.pl|bydgoszcz24.pl|terazlipno.pl|saskakepa.waw.pl|gwe24.pl|dziwnekomiksy.pl|digi-tv.pl|chelsea24news.pl|wolomin24.info|splendo.pl|egorzow.pl|irembertow.pl|iminsk.pl|ikrakow.info|iskierniewice.pl|ikampinos.pl|e-wyszogrod.pl|ibielsk.pl|wterenie.pl|ciechanowinaczej.pl|wabrzezno-cwa.pl|infosiedlce.pl|rypin-cry.pl|golub-cgd.pl|iotwock.info|szczecinek.com|lipno-cli.pl|imokotow.pl|nolesnica.pl|itvpiaseczno.pl|histmag.org|lowcygier.pl
+@@/js/ads.js$script,domain=solarkurier.pl|satkurier.pl|saskakepa.waw.pl|e-krajna.pl|swiecie24.pl|zyciesokolowa.pl|ciechocinek.biz|napiprojekt.pl|uniejow.net.pl|nizanskie.info|pluznica.info|superchodziez.pl|tygodnik.pl|superchodziez.pl|ekutno.pl|naszbrzesc.pl|bydgoszcz24.pl|terazlipno.pl|saskakepa.waw.pl|gwe24.pl|dziwnekomiksy.pl|digi-tv.pl|chelsea24news.pl|wolomin24.info|splendo.pl|egorzow.pl|irembertow.pl|iminsk.pl|ikrakow.info|iskierniewice.pl|ikampinos.pl|e-wyszogrod.pl|ibielsk.pl|wterenie.pl|ciechanowinaczej.pl|wabrzezno-cwa.pl|infosiedlce.pl|rypin-cry.pl|golub-cgd.pl|iotwock.info|szczecinek.com|lipno-cli.pl|imokotow.pl|nolesnica.pl|itvpiaseczno.pl|histmag.org|lowcygier.pl|gorzowianin.com
 @@://*.*/pl/js/show_ads.js$script,domain=ki24.info|portalplock.pl|faktypilskie.pl|e-krajna.pl|swiecie24.pl|zyciesokolowa.pl|zyciesiedleckie.pl|koronowo.net.pl|ciechocinek.biz|swiecie.siecportali.pl|gniewkowo.eu|kolniak24.pl|itvszubin.pl|uniejow.net.pl|nizanskie.info|pluznica.info|superchodziez.pl|tygodnik.pl|superchodziez.pl|ekutno.pl|naszbrzesc.pl|bydgoszcz24.pl|terazlipno.pl|saskakepa.waw.pl|gwe24.pl
 @@/showad_.js$domain=flashx.tv
 @@ads$image,domain=rapidgrab.pl
@@ -2534,7 +2536,7 @@ wp.pl##body > div:nth-of-type(1)[style^="display: block;"]
 !
 !--------------------------Rules for pages with random adv scripts------------!
 /^http:\/\/((?!192\.168)(?!10\.)(?!172\.16)(?!172\.17)(?!172\.18)(?!172\.19)(?!172\.2)(?!172\.30)(?!172\.31)([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/[a-zA-Z0-9]{30,}/$script,popup,document
-/^(http|https):\/\/[a-zA-Z.]{10,}\.(com|bid)\/[a-zA-Z]{1,}\.\js/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|vidlox.tv|playerbox.net|alltube.tv|segos.es|efilmy.online|video.penny.ie|fileone.tv|serialeonline.pl|fili.tv|streamango.com|kinoline.pl|cda-hd.pl|nasze-kino.online|vidto.pl|raptu.com|rapidvideo.com|data-scheme|vidfile.net|sharevideo.pl|sharing-box.cloud||vidstream.xyz|dragon-ball-super.ga|openkatalog.ml|dragon-ball-super.ga|nasze-kino.tv|kino123.pl|boxfilm.pl
+/^(http|https):\/\/[a-zA-Z.]{10,}\.(com|bid)\/[a-zA-Z]{1,}\.\js/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|vidlox.tv|playerbox.net|alltube.tv|segos.es|efilmy.online|video.penny.ie|fileone.tv|serialeonline.pl|fili.tv|streamango.com|kinoline.pl|cda-hd.pl|nasze-kino.online|vidto.pl|raptu.com|rapidvideo.com|data-scheme|vidfile.net|sharevideo.pl|sharing-box.cloud||vidstream.xyz|dragon-ball-super.ga|openkatalog.ml|dragon-ball-super.ga|nasze-kino.tv|kino123.pl|boxfilm.pl|cloudupload.co
 /^http:\/\/[a-zA-Z0-9]{10,}\.cloudfront\.net\/[a-zA-Z0-9%?=]{10,}/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|alltube.tv|darmowa-telewizja.info|goldvod.tv
 /^(http|https):\/\/[a-z0-9]{8,30}\.[a-z]{2,11}\/[0-9]{3,10}/$xmlhttprequest,script,stylesheet,domain=streamin.to|raptu.com|flashx.tv|rapidvideo.com|fili.tv|cda-hd.pl|fileone.tv
 /^(http|https):\/\/[a-z0-9]{5,}\.com\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{5,}\.js/$script,domain=vidto.me|fili.tv|fileone.tv|alltube.tv|srkcast.com
@@ -2592,12 +2594,12 @@ srkcast.com##[id^="table"]
 !
 !
 !--------------------------WP Group element hide------------!
-kafeteria.pl##.scr-wallpaper
+kafeteria.pl,money.pl##.scr-wallpaper
 kafeteria.pl##DIV > DIV[style*="width: 100%;"]
 komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##BODY > DIV[style*="max-width: 100%; "]
 komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##.article-wrapper > FIGURE.insert
 komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##FIGURE.insert > DIV[style*="max-width: 100%;"]
-o2.pl##DIV > DIV[style*="width: 100%"]
+o2.pl##A[href*=".wp.pl/"][target="_blank"] > DIV[style^="background-color: rgb"]
 open.fm###ADrail
 open.fm##.bnr-con2
 open.fm##A[target="_blank"] > IMG[style*="height: 100%;"]
@@ -2605,6 +2607,8 @@ wawalove.pl,pytamy.pl,dzieci.pl##[id^="adv"]
 !
 !
 !--------------------------WP element hide------------!
+czat.wp.pl##[id*="adv"]
+pilot.wp.pl##.top-section
 www.wp.pl##div[class]:matches-css(width: 300px):matches-css(height: 250px)
 www.wp.pl##div[class]:matches-css(width: 309px):matches-css(height: 182px)
 www.wp.pl##[class^="_"] > div[style^="display: block; min-height: 0px;"]
@@ -2625,7 +2629,7 @@ sportowefakty.wp.pl##.matchtable[data-st-area] + DIV
 sportowefakty.wp.pl##P + DIV[style*="width: 300px;"]
 sportowefakty.wp.pl##.section__separator
 sportowefakty.wp.pl##DIV[data-st-area] + DIV[style*="width: 300px"]
-sportowefakty.wp.pl##.scr-wallpaper + DIV[style*="max-width: 100%; "]
+sportowefakty.wp.pl##.scr-wallpaper + DIV[style*="max-width: 100%"]
 sportowefakty.wp.pl##A + DIV[style*="width: 300px"]
 sportowefakty.wp.pl##ASIDE.column > DIV[style*="max-width: 100%;"]
 !
