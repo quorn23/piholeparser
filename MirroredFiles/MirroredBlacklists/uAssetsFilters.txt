@@ -1327,11 +1327,14 @@ transfermarkt.*##body > div[id]:has(a[href^="/intern/adblock"])
 ||sascdn.com^$important,script,domain=transfermarkt.de
 
 ! https://github.com/uBlockOrigin/uAssets/issues/348
+! https://github.com/uBlockOrigin/uAssets/issues/695
 shink.in##script:inject(abort-on-property-read.js, blockAdBlock)
 shink.in##script:inject(abort-on-property-read.js, jsPopunder)
 shink.in##script:inject(abort-on-property-read.js, RunAds)
 shink.in##script:inject(abort-on-property-write.js, _pop)
 shink.in##script:inject(abort-on-property-write.js, Fingerprint2)
+shink.in##[id*=ScriptRoot]
+shink.in##a[href*="adk2x"]
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=51946
 ||visitweb.com/js/ref.js$script,redirect=noopjs,domain=kissasian.ch|kissasian.com
@@ -2166,6 +2169,9 @@ kimcartoon.me##script:inject(abort-current-inline-script.js, MutationObserver, 6
 dailyuploads.net##script:inject(abort-current-inline-script.js, adbClick)
 dailyuploads.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ||dailyuploads.net/images/redbuttonx.png$image
+
+! https://github.com/uBlockOrigin/uAssets/issues/692
+yify-movies.to##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 
 ! Filters below will be removed once the filter list dark-patterns.txt is
 ! well spread. Leave at the bottom.
