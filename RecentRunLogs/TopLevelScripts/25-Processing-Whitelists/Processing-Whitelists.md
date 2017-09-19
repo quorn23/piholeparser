@@ -1,11 +1,11 @@
 ### Checking For Whitelist File.
-* Whitelist File removed Mon 18 Sep 00:20:40 EDT 2017
+* Whitelist File removed Tue 19 Sep 00:23:27 EDT 2017
 ### Pulling Domains From Lists.
-127 After Pulling Domains From Lists.
+125 After Pulling Domains From Lists.
 ### Pulling Domains From TLD Lists.
-130 After Pulling Domains From TLD Lists.
+128 After Pulling Domains From TLD Lists.
 ### Deduping List.
-37 After Deduping List.
+36 After Deduping List.
 ### Sorting and Deduping Individual Whitelists.
 #### appleappstore
 1 In appleappstore
