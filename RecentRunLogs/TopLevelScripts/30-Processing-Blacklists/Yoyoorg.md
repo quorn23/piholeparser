@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Yoyoorg List Marked As Dead. Tue 19 Sep 01:05:13 EDT 2017
+* Yoyoorg List Unavailable To Download. Wed 20 Sep 00:22:02 EDT 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* TorrentLocker-Ransomware-C2-Domain-Blocklist List Marked As Dead. Tue 19 Sep 01:01:07 EDT 2017
+* TorrentLocker-Ransomware-C2-Domain-Blocklist List Unavailable To Download. Wed 20 Sep 00:21:29 EDT 2017
+## Checking If List Updated Online

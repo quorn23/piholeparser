@@ -361,6 +361,8 @@ bloomberg.com###adBlockerContainer
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32144
 ||104.197.199.227^
 ||104.197.199.227^$popup
+! https://github.com/uBlockOrigin/uAssets/issues/699
+opensubtitles.org##script:inject(abort-current-inline-script.js, atob)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/68
 fullpremiums.com##script:inject(overlay-buster.js)
@@ -1292,6 +1294,8 @@ movie-blog.org##script:inject(abort-on-property-write.js, DCVU)
 9xbuddy.com,adf.ly,albumkings.org,ay.gy,bestfilmeshd.com,daclips.in,filescdn.com,filmuptobox.net,gomovies.es,gorillavid.in,hulkload.com,j.gs,jkanime.net,karanpc.com,microify.com,minecraft-forum.net,monova.org,opensubtitles.org,pintient.com,psarips.com,q.gs,security-links.com,solidfiles.com,stream2watch.cc,uploadrocket.net,uptobox.com,vidabc.com,zippyshare.com##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5ywxnd/anyone_know_how_to_block_this_ad/
+! https://forums.lanik.us/viewtopic.php?p=124411#p124411
+watchcartoononline.io##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
 watchcartoononline.io##script:inject(fuckadblock.js-3.2.0)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/319
@@ -1861,9 +1865,8 @@ ville-ideale.fr##script:inject(setTimeout-defuser.js, contrformpub, 10000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/558
 ! https://github.com/uBlockOrigin/uAssets/issues/578
-torrentz2.*##.HalfAcceptableAds
-torrentz2.*##.HalfRRAcceptableAds
-torrentz2.*##dl:if(> dd:has-text(/Advertisement|Promoted|Sponsored/))
+torrentz2.*##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+torrentz2.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/561
 limetorrents.cc##.torrentinfo tr:has(a[href*="//movie4u.cc/"])
@@ -2185,6 +2188,9 @@ fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me##script:inje
 fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me##script:inject(popads.net.js)
 fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me##a[href^="http://www.downloadplayer2.com/sportstreaming/"]
 fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me##a[href^="http://www.movie4all.co/VIPremium/index.html"]
+
+! https://github.com/uBlockOrigin/uAssets/pull/705
+trustedreviews.com##body > div#wrapper:style(padding-top: 0px !important;)
 
 ! Filters below will be removed once the filter list dark-patterns.txt is
 ! well spread. Leave at the bottom.

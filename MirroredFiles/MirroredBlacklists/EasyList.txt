@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 201709182122
+! Version: 201709191904
 ! Title: EasyList
-! Last modified: 18 Sep 2017 21:22 UTC
+! Last modified: 19 Sep 2017 19:04 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -14920,6 +14920,7 @@ _popunder+$popup
 ###side_ad_container_A
 ###side_ad_module
 ###side_ad_wrapper
+###side_adkit
 ###side_ads
 ###side_ads_by_google
 ###side_adv_2
@@ -17460,6 +17461,7 @@ _popunder+$popup
 ##.adAreaLC
 ##.adArticleBanner
 ##.adArticleBody
+##.adArticleBottomWrap
 ##.adArticleRecommend
 ##.adArticleSidetile
 ##.adArticleTopText
@@ -22673,6 +22675,7 @@ _popunder+$popup
 ##.insideStoryAd
 ##.inside_ad
 ##.inside_ad_box
+##.inslide-ad
 ##.instructionAdvHeadline
 ##.insurance-ad
 ##.intad
@@ -24847,6 +24850,7 @@ _popunder+$popup
 ##.sponsored-editorial
 ##.sponsored-features
 ##.sponsored-header
+##.sponsored-headlines
 ##.sponsored-headshop
 ##.sponsored-inmail
 ##.sponsored-inmail-legacy
@@ -37819,6 +37823,7 @@ a.upnorma.com^$webrtc
 ||news-whistleout.s3.amazonaws.com^$third-party
 ||news.fark.com^$third-party
 ||news.retire.ly^$third-party
+||news.smi2.ru^$third-party
 ||newware.net/home/banner$third-party
 ||newware.net/home/newware-sm.png$third-party
 ||nimblecommerce.com/widget.action?
@@ -40468,6 +40473,8 @@ a.upnorma.com^$webrtc
 ||foodingredientsfirst.com/content/banners/
 ||foodingredientsfirst.com/content/flash_loaders/loadlargetile.swf
 ||foodingredientsfirst.com/content/flash_loaders/loadskyscraper.swf
+||fool.com/pitcher/
+||fool.com^*/marketing/
 ||football-italia.net/imgs/moveyourmouse.gif
 ||footballshirtculture.com/images/e12b.jpg
 ||footballtradedirectory.com^*banner
@@ -51846,6 +51853,7 @@ inquirer.net##.fontgraysmall
 greatbritishlife.co.uk##.foot-banners
 radiozindagi.com##.foot_top
 donegaltv.ie,monitor.co.ug,nation.co.ke,thecitizen.co.tz##.footer
+healthcentral.com##.footer--promo
 ksstradio.com,spectator.co.uk##.footer-banner
 directorslive.com##.footer-banner-img
 935kday.com##.footer-banners
@@ -55309,6 +55317,7 @@ egigs.co.uk##a[href^="http://www.ticketswitch.com/cgi-bin/web_finder.exe"]
 mailinator.com,tundraheadquarters.com##a[href^="http://www.tkqlhce.com/"]
 limetor.net,limetorrents.cc,limetorrents.co,torrentdownloads.cc##a[href^="http://www.torrentindex.org/"]
 tri247.com##a[href^="http://www.tri247ads.com/"]
+cnn.com##a[href^="http://www.trulia.com/"]
 tsbmag.com##a[href^="http://www.tsbmag.com/wp-content/plugins/max-banner-ads-pro/"]
 tvduck.com##a[href^="http://www.tvduck.com/graboid.php"]
 tvduck.com##a[href^="http://www.tvduck.com/netflix.php"]
@@ -55371,6 +55380,7 @@ cryptocoinsnews.com##a[href^="https://www.anonibet.com/"]
 bitminter.com##a[href^="https://www.cloudbet.com/en/?af_token="]
 cnn.com##a[href^="https://www.cnnmoneytransfers.com/"]
 escapefromobesity.net##a[href^="https://www.dietdirect.com/rewardsref/index/refer/"]
+cnn.com##a[href^="https://www.fool.com/"]
 smallseotools.com##a[href^="https://www.grammarly.com"]
 ragezone.com##a[href^="https://www.leovegas.com/"]
 conservativereview.com##a[href^="https://www.levintv.com/?utm_source="]
@@ -55488,6 +55498,7 @@ thegatewaypundit.com##article > div > span:first-child
 thegatewaypundit.com##article > span + span
 slashdot.org##article[class*="sponsored"]
 xing.com##article[data-impression*="\"type\":\"ad\""]
+xing.com##article[data-tracking*="\"type\":\"ad"]
 xing.com##article[data-tracking*="\"type\":\"ad_"]
 conservativevideos.com##article[id^="post-"] + div > :first-child
 conservativevideos.com##aside > [id^="text-"].widget_text + div
@@ -58741,7 +58752,7 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@/wp-content/plugins/ad-inserter/includes/*$script,~third-party,domain=~gaytube.com|~pornhub.com|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~xtube.com|~youjizz.com|~youporn.com|~youporngay.com
 @@/wp-content/plugins/ad-inserter/js/ad-inserter.js$script,~third-party,domain=~gaytube.com|~pornhub.com|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~xtube.com|~youjizz.com|~youporn.com|~youporngay.com
 @@/wp-content/plugins/bwp-minify/min/?f=$script,stylesheet,~third-party,domain=~gaytube.com|~pornhub.com|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~xtube.com|~youjizz.com|~youporn.com|~youporngay.com
-@@blob:resource://$image
+@@|blob:resource://$image
 @@||192.168.$~third-party,xmlhttprequest,domain=~gaytube.com|~pornhub.com|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~xtube.com|~youjizz.com|~youporn.com|~youporngay.com
 @@||192.168.*/images/adv_$~third-party,domain=~gaytube.com|~pornhub.com|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~xtube.com|~youjizz.com|~youporn.com|~youporngay.com
 @@||196.30.218.174/admentor/sirius_sdo_top.htm$subdocument,domain=sharedata.co.za
@@ -59265,7 +59276,8 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||classistatic.com^*/banner-ads/
 @@||cleveland.com/static/common/js/ads/ads.js
 @@||clickbd.com^*/ads/$image,~third-party
-@@||clients*.google.com/adsense/*?key=
+@@||clients*.google.com/adsense/*?key=$domain=~calcalist.co.il|~gaytube.com|~mako.co.il|~pornhub.com|~redtube.com|~redtube.com.br|~tube8.com|~tube8.es|~tube8.fr|~walla.co.il|~xtube.com|~ynet.co.il|~youjizz.com|~youporn.com|~youporngay.com
+@@||cloudflare.com^*/videojs.ads.js$domain=radiojavan.com
 @@||cloudfront.net/_ads/$xmlhttprequest,domain=jobstreet.co.id|jobstreet.co.in|jobstreet.co.th|jobstreet.com|jobstreet.com.my|jobstreet.com.ph|jobstreet.com.sg|jobstreet.vn
 @@||cloudfront.net/ad/$xmlhttprequest,domain=lucidchart.com|lucidpress.com
 @@||cloudfront.net/ads/$domain=boreburn.com|dailymaverick.co.za|v3.co.uk|yibada.com
@@ -59609,6 +59621,7 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||glendalenewspress.com/hive/images/adv_
 @@||glnimages.s3.amazonaws.com/odw/ad$image,domain=odysseyware.com
 @@||globaltv.com/js/smdg_ads.js
+@@||glos.ac.uk/DataRepository/*/adv/adv_$image,domain=glos.ac.uk
 @@||gmfreeze.org/site_media//uploads/page_ad_images/$image
 @@||gmodules.com/ig/ifr?up_ad$domain=healthboards.com
 @@||gmx.com/images/outsource/application/mailclient/mailcom/resource/mailclient/flash/multiselection_upload/multiselectionupload-*.swf$object
@@ -63470,4 +63483,4 @@ www.google.com#@##videoads
 @@||tumblr.com^$popup,domain=pornhub.com
 @@||twitter.com^$popup,domain=pornhub.com
 @@||wmtrafficentry.com/cgi-bin/ewm.cgi/*_HeaderTab?$popup,domain=extremetube.com|spankwire.com
-! Checksum: nMM1OuKl78nWJOUkHL2+aQ
+! Checksum: 9eYEZFr5IceEhqeC1Vbz6Q
