@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D83 
+! Version D85 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -1014,6 +1014,7 @@ youtube.com##DIV[class*="-ads-"]
 @@.demdex.net/$script,domain=foxnews.com|globaltv.com
 @@.foxnews.com/$script,domain=foxnews.com
 @@.net/ad/$object-subrequest,domain=foxsports.com
+@@/beacon.min.js$domain=huffingtonpost.com
 @@/foxnews.$script,domain=foxnews.com
 @@/foxnewsplayer-$script,domain=foxnews.com
 @@/piwik.$script,domain=myuv.com
@@ -1037,9 +1038,9 @@ youtube.com##DIV[class*="-ads-"]
 @@||doubleclick.net/gpt/pubads_impl_$script,domain=csnchicago.com
 @@||doubleclick.net^$script,domain=foxnews.com
 @@||gigya.com/comments.
-@@||gigya.com^$domain=csnchicago.com|ctv.ca|ctvnews.ca|dailystar.co.uk|express.co.uk|pch.com|stuff.co.nz|threenow.co.nz
 @@||gigya.com^$~third-party,domain=cdns.au1.gigya.com
-@@||googletagservices.com^$script,domain=csnchicago.com|foxnews.com|threenow.co.nz|zdnet.com
+@@||gigya.com^$domain=csnchicago.com|ctv.ca|ctvnews.ca|dailystar.co.uk|express.co.uk|pch.com|stuff.co.nz|threenow.co.nz
+@@||googletagservices.com^$script,domain=csnchicago.com|foxnews.com|nytimes.com|threenow.co.nz|zdnet.com
 @@||ifmnwi.club^$xmlhttprequest,domain=cbsnews.com
 @@||img-fotki.yandex.ru^
 @@||imrworldwide.com/v60.js$domain=threenow.co.nz

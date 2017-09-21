@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist List Unavailable To Download. Wed 20 Sep 00:21:46 EDT 2017
 ## Checking If List Updated Online

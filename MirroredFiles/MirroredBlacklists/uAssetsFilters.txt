@@ -1291,7 +1291,8 @@ movie-blog.org##script:inject(abort-on-property-write.js, DCVU)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5yszvt/flashplayer_scam/
 ! https://forums.lanik.us/viewtopic.php?p=118390#p118390
-9xbuddy.com,adf.ly,albumkings.org,ay.gy,bestfilmeshd.com,daclips.in,filescdn.com,filmuptobox.net,gomovies.es,gorillavid.in,hulkload.com,j.gs,jkanime.net,karanpc.com,microify.com,minecraft-forum.net,monova.org,opensubtitles.org,pintient.com,psarips.com,q.gs,security-links.com,solidfiles.com,stream2watch.cc,uploadrocket.net,uptobox.com,vidabc.com,zippyshare.com##script:inject(abort-on-property-write.js, Fingerprint2)
+! https://www.reddit.com/r/uBlockOrigin/comments/71avqz/piratebay_found_a_new_method_to_bypass_ublock/
+9xbuddy.com,adf.ly,albumkings.org,ay.gy,bestfilmeshd.com,daclips.in,filescdn.com,filmuptobox.net,gomovies.es,gorillavid.in,hulkload.com,j.gs,jkanime.net,karanpc.com,microify.com,minecraft-forum.net,monova.org,opensubtitles.org,pintient.com,pirateproxy.*,psarips.com,q.gs,security-links.com,solidfiles.com,stream2watch.cc,thepiratebay.org,uploadrocket.net,uptobox.com,vidabc.com,zippyshare.com##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5ywxnd/anyone_know_how_to_block_this_ad/
 ! https://forums.lanik.us/viewtopic.php?p=124411#p124411
@@ -2192,6 +2193,9 @@ fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me##a[href^="ht
 ! https://github.com/uBlockOrigin/uAssets/pull/705
 trustedreviews.com##body > div#wrapper:style(padding-top: 0px !important;)
 
+! https://github.com/uBlockOrigin/uAssets/issues/704
+imgking.co,imgprime.com,newpornup.com##script:inject(abort-on-property-read.js, document.createElement)
+
 ! Filters below will be removed once the filter list dark-patterns.txt is
 ! well spread. Leave at the bottom.
 
@@ -2201,3 +2205,4 @@ trustedreviews.com##body > div#wrapper:style(padding-top: 0px !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/690
 ||coin-hive.com^$third-party
+||jsecoin.com^$third-party
