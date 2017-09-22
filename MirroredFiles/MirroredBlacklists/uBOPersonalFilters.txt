@@ -568,7 +568,6 @@ fmovies.*##.widget:nth-of-type(4)
 gorillavid.in,eztv.*,zippyshare.com##script:inject(abort-on-property-write.js, admvpu)
 scriptv2.js$domain=1337x.to
 1337x.to##.box-info-detail > div.torrent-detail+div[class]:not([class="manage-box"]):not([class^="torrent-"])
-||deadline.com^$inline-script
 ||8muses.com^$inline-script
 @@||8muses.com/comix/picture^$inline-script
 mywatchseries.to##.ad_300_300
@@ -870,7 +869,7 @@ thathashtagshow.com###respond
 thathashtagshow.com##.widget_recent_comments.widget
 ||thathashtagshow.com^$csp=script-src 'self'
 hollywoodreporter.com##.readmore
-||hollywoodreporter.com^$csp=script-src 'self' 'unsafe-inline' *.instagram.com platform.twitter.com *.twimg.com
+||hollywoodreporter.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.instagram.com platform.twitter.com *.twimg.com players.brightcove.net *.zencdn.net blob:
 techcrunch.com##.article-extra
 techcrunch.com##.demo-block.l-sidebar
 techcrunch.com##.nav-fb-messenger
@@ -892,7 +891,7 @@ deadline.com##.widget_deadline_by_numbers_widget.widget-container
 deadline.com##.tags
 deadline.com##.pmc-related-link
 deadline.com##.related-article
-||deadline.com^$csp=script-src 'self' platform.twitter.com *.twimg.com *.deadline.com
+||deadline.com^$csp=script-src 'self' platform.twitter.com *.twimg.com *.deadline.com *.wp.com 'unsafe-inline'
 ||torrentz2.eu^$csp=script-src 'self' 'unsafe-inline'
 ||thepiratebay.*^$csp=script-src 'self' 'unsafe-inline'
 ||ugbase.eu^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval'
@@ -1032,7 +1031,7 @@ howtogeek.com##.article-extras
 howtogeek.com##.third.footer-col
 ||howtogeek.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval'
 comicbook.com##.aligncenter
-||appshot.com^$domain=behind-the-scene
+||appspot.com^$domain=behind-the-scene
 /([0-9]{1,3}\.){3}[0-9]{1,3}/$popup,domain=briansarmiento.website|divxatope1.com|kissanime.ru|newpct.com|pelisplus.tv|rapidvideo.com|strikeout.co|torrentz2.eu,badfilter
 moviepilot.com###mc_embed_signup
 1337x.to##.bitcoin
@@ -1043,7 +1042,7 @@ kimcartoon.*,kisscartoon.*##.alert-info.alert
 kimcartoon.*,kisscartoon.*##.mb15.full
 kimcartoon.*,kisscartoon.*###btnShowComments
 torrentz2.eu,watchcartoonsonline.eu,kimcartoon.me##script:inject(abort-on-property-read.js, performance)
-||piguiqproxy.com^$xmlhttprequest,redirect=noopjs,domain=kimcartoon.me
+||piguiqproxy.com^$important
 @@||fastly.net/assets/$script,domain=gitlab.com
 ||thepiratebay.*/*/$inline-script,subdocument
 @@||screenrant.com^$elemhide

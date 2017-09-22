@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: /yANlue0gcKXQXA1LhUVXQ
-! Version: 20170920
+! Checksum: S4sR32ECweAkTiMktxUa0A
+! Version: 20170921
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -218,6 +218,7 @@
 ##iframe[src^="https://ads.adjust-net.jp/adserver/ads"]
 ##iframe[src^="https://creative.wwwpromoter.com/"]
 ##iframe[src^="https://mycdn.co/adServe/imgBanner"][src*="_image-banner.cib"]
+##iframe[src^="https://s.yimg.jp/images/listing/tool/yads/yads-iframe.html"]
 ##iframe[src^="https://search2.nuriclick.co.kr/banner.php"]
 ##iframe[src^="https://syndication.exdynsrv.com/ads-iframe-display.php"]
 ##iframe[src^="https://syndication.exoclick.com/ads-iframe-display.php"]
@@ -648,6 +649,7 @@
 ||fm1.jssearch.net/Farman^
 ||fm1.jssearch.net/lib/JSAP_SlideLibs_v1.js^
 ||fmkorea.com/_adpage/$domain=fmkorea.com
+||fmkorea.com/_loader/loader.php^$domain=fmkorea.com
 ||fnnews.com/control^
 ||fnnews.com/include2011/section/google.jsp^
 ||fow.tv/criteo_iframe_top_tv.php^$domain=fow.tv
@@ -807,11 +809,13 @@
 ||m.etnews.com/tools/refresh_script.html^$domain=m.etnews.com
 ||m.fmkorea.com/_adpage/$domain=m.fmkorea.com
 ||m.hankooki.com/ad/
+||m.humoruniv.com/banner/*.html^$domain=m.humoruniv.com
 ||m.humoruniv.com/cauly_iframe.html^$domain=m.humoruniv.com
 ||m.humoruniv.com/ddn_300x250.html^$domain=m.humoruniv.com
 ||m.humoruniv.com/facebook_iframe.html^$domain=m.humoruniv.com
 ||m.humoruniv.com/facebook_iframe_native.html^$domain=m.humoruniv.com
 ||m.humoruniv.com/microad_iframe_300x250.html^$domain=m.humoruniv.com
+||m.humoruniv.com/tad_iframe.html^$domain=m.humoruniv.com
 ||m.humoruniv.com/uad_iframe.html^$domain=m.humoruniv.com
 ||m.hungryapp.co.kr/bbs/js/jquery.blockUI.js^$domain=m.hungryapp.co.kr
 ||m.joyninfo.com/yna/yna_m_new.asp^
@@ -1012,6 +1016,7 @@
 ||s.atemda.com/Admeta.js^
 ||s.mixadvert.com/show_json/
 ||s.pubmine.com/adj/
+||s.yimg.jp/images/listing/tool/yads/yads-iframe.html^
 ||s1.daumcdn.net/svc/original/U03/commonjs/ddn/common/js/ad.min.js^
 ||sba.about.co.kr/SbaExpose.aspx^
 ||sba.about.co.kr/dbaExpose.aspx^
@@ -1180,6 +1185,7 @@
 ||y.one.impact-ad.jp/imp^
 ||yads.c.yimg.jp/yads.js^
 ||yads.yahoo.co.jp/tag^
+||yads.yjtag.yahoo.co.jp/tag^
 ||youtube.com/get_video_info?*el=adunit$domain=youtube.com
 ||ytn.co.kr/img/ad/
 ||ytn.co.kr/inc_banner/AdServerChange.php^
@@ -1329,6 +1335,7 @@ biz.khan.co.kr,news.khan.co.kr##div.ad_todayFocus
 biz.khan.co.kr,news.khan.co.kr##div.ad_top
 biz.khan.co.kr,news.khan.co.kr##div.ad_two
 biz.khan.co.kr,news.khan.co.kr##div.ad_two_top
+biz.khan.co.kr,news.khan.co.kr##div.article_bottom_ad
 bizn.khan.co.kr##div.topright_bn
 blackhatworld.com##div.ad_below_bottom_breadcrumb
 blackhatworld.com##div.ad_below_top_breadcrumb
@@ -1575,6 +1582,8 @@ edaily.co.kr##iframe[src^="/adview/"]
 electrek.co##div.tha4673a86
 embed.nicovideo.jp##div#overlayBanner
 embed.nicovideo.jp##iframe[src^="https://ads.nicovideo.jp/bannertext"]
+engadget.com##aside[role="banner"]
+engadget.com##div#right-ads-rail
 ent.joseilbo.com##div.adplus_banner
 ent.joseilbo.com##div.news_txt_banner
 ent.joseilbo.com##div.read_banner
@@ -1642,6 +1651,7 @@ flashscore.pl##div.adstextpad
 flashscore.pl##div.scrolling-banner-wrap
 flashscore.pl##li.banner
 fmkorea.com##div#banner3
+fmkorea.com##iframe[src^="//www.fmkorea.com/_loader/loader.php"]
 fmkorea.com##iframe[src^="/_adpage/"]
 fnnews.com##div#ad_body
 fnnews.com##div#bylineaAd1
@@ -1672,6 +1682,10 @@ foxnews.com##div.ad-unit
 foxnews.com##div.advert
 france2.fr##div#eShowPubTop
 france2.fr##div.adCtnt
+gadgethacks.com##aside.top-ad-anchor
+gadgethacks.com##aside.whtaph
+gadgethacks.com##aside.whtaph-rightbox
+gadgethacks.com##div#ad-top-lock
 gall.dcinside.com##div#zzbang_div
 gall.dcinside.com##div._BTN_AD_:not([id="dc_advertisement"]):not([id="list_right_ad"])
 gall.dcinside.com##span#zzbang_img
@@ -2147,7 +2161,9 @@ m.humoruniv.com##div#cauly_ad
 m.humoruniv.com##div#comment>ul>table>tbody>tr>td>div[style="display:block;width:320px;height:50px;overflow:hidden;"]
 m.humoruniv.com##div#ddn_ad
 m.humoruniv.com##div#uad_iframe
+m.humoruniv.com##iframe[src^="/banner/"]
 m.humoruniv.com##iframe[src^="/cauly_iframe.html"]
+m.humoruniv.com##iframe[src^="/tad_iframe.html"]
 m.humoruniv.com##iframe[src^="/uad_iframe.html"]
 m.humoruniv.com##iframe[src^="http://m.humoruniv.com/ddn_300x250.html"]
 m.humoruniv.com##iframe[src^="http://m.humoruniv.com/facebook_iframe.html"]
@@ -2183,6 +2199,7 @@ m.insight.co.kr##li.page-more-ad
 m.inven.co.kr##div#cauly_ad_area
 m.inven.co.kr##div#cauly_ad_area3
 m.inven.co.kr##div.mobileAdNs
+m.khan.co.kr##div.social_btm
 m.kin.naver.com##div#adContextMobile
 m.kin.naver.com##div#da_kin
 m.kin.naver.com##div#kin_common_banner
@@ -2632,7 +2649,6 @@ news.jtbc.joins.com##div.netizen_link_area
 news.jtbc.joins.com##div.right_banner250_area
 news.jtbc.joins.com##div.sponsor_link_combine
 news.jtbc.joins.com##div.wing_wrap
-news.khan.co.kr##div#topLeft
 news.kmib.co.kr##body>div[style="height:150px;margin:5px 0 0;"]
 news.kmib.co.kr##body>div[style="height:250px;margin:0px 0 0;"]
 news.kmib.co.kr##body>div[style="height:250px;margin:5px 0 0;"]

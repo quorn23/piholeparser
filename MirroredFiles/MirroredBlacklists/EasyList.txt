@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 201709201652
+! Version: 201709211937
 ! Title: EasyList
-! Last modified: 20 Sep 2017 16:52 UTC
+! Last modified: 21 Sep 2017 19:37 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -1654,7 +1654,7 @@
 /adflash.
 /adflashes/*
 /adfliction-
-/adflow.
+/adflow.$domain=~adflow.io
 /adfly/*
 /adfolder/*
 /adfootcenter.
@@ -3741,6 +3741,7 @@
 /channelblockads.
 /checkm8footer_
 /checkm8header_
+/china-ad.
 /chinaadclient.
 /chitika-ad?
 /chrome-ad.
@@ -7932,6 +7933,7 @@ _a468x60.
 .com/?adv=$popup
 .com/ads?$popup
 .engine?PlacementId=$popup
+/?a_aid=$popup
 /?placement=*&redirect$popup
 /?redirect&placement=$popup
 /?reef=$popup
@@ -9703,6 +9705,7 @@ _popunder+$popup
 ###ad_51
 ###ad_57
 ###ad_6
+###ad_7
 ###ad_700_90
 ###ad_700x430
 ###ad_728
@@ -9719,6 +9722,7 @@ _popunder+$popup
 ###ad_728x91
 ###ad_8
 ###ad_88x31
+###ad_9
 ###ad_940
 ###ad_984
 ###ad_990x90
@@ -26058,6 +26062,7 @@ _popunder+$popup
 ##a[href^="http://affiliates.score-affiliates.com/"]
 ##a[href^="http://aflrm.com/"]
 ##a[href^="http://amzn.to/"] > img[src^="data"]
+##a[href^="http://anonymous-net.com/"]
 ##a[href^="http://api.content.ad/"]
 ##a[href^="http://api.ringtonematcher.com/"]
 ##a[href^="http://at.atwola.com/"]
@@ -30617,6 +30622,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||purpleflag.net^$third-party
 ||puserving.com^$third-party
 ||push2check.com^$third-party
+||pussl10.com^$third-party
 ||pussl11.com^$third-party
 ||pussl4.com^$third-party
 ||putrr2.com^$third-party
@@ -31309,6 +31315,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||truex.com^$third-party
 ||trustx.org^$third-party
 ||trygen.co.uk^$third-party
+||trymynewspirit.com^$third-party
 ||trzi30ic.com^$third-party
 ||ttzmedia.com^$third-party
 ||tubberlo.com^$third-party
@@ -36736,6 +36743,7 @@ a.upnorma.com^$webrtc
 ||affiliatesmedia.sbobet.com^
 ||affiliation.filestube.com^$third-party
 ||affiliation.fotovista.com^
+||affiliationjs.s3.amazonaws.com^
 ||affutdmedia.com^$third-party
 ||afimg.liveperson.com^$third-party
 ||agenda.complex.com^
@@ -41414,6 +41422,7 @@ a.upnorma.com^$webrtc
 ||mediafire.re/popup.js
 ||mediafiretrend.com/ifx/ifx.php?
 ||mediafiretrend.com/turboflirt.gif
+||mediamanager.co.za/img/banners/
 ||mediamgr.ugo.com^
 ||mediaspanonline.com/images/buy-itunes.png
 ||mediaspanonline.com/inc.php?uri=/&bannerPositions=
@@ -43183,6 +43192,7 @@ a.upnorma.com^$webrtc
 ||wantitall.co.za/images/banners/
 ||wardsauto.com^*/pm_doubleclick/
 ||warriorforum.com/vbppb/
+||washingtonexaminer.com/house_creative.php
 ||washingtonpost.com/wp-srv/javascript/piggy-back-on-ads.js
 ||washpost.com^*/cmag_sponsor3.php?
 ||washtimes.com/js/dart.
@@ -44602,7 +44612,7 @@ $script,third-party,domain=171gifs.com|1proxy.de|2ddl.download|300mbfilms.co|300
 ||ww1.vidzi.tv^*.js|$domain=vidzi.tv
 ! TPB
 @@||thepiratebay.org/static/js/$script,domain=thepiratebay.org
-||thepiratebay.org^$script,domain=thepiratebay.org
+||thepiratebay.org^$script,subdocument,domain=thepiratebay.org
 ! watchseries-online.nl
 @@||watchseries-online.nl/app/wp-includes/js/$script,domain=watchseries-online.nl
 @@||watchseries-online.nl/wp-content/$script,domain=watchseries-online.nl
@@ -49995,6 +50005,7 @@ reminderfox.org###uniblueImg
 geekosystem.com###unit-area
 gossipcop.com,mediaite.com,themarysue.com###unit-footer
 styleite.com,thebraiser.com###unit-header
+gossipcop.com###unit-header-wrapper
 sportsgrid.com###unit-sidebar
 thebraiser.com###unit-sidebar-atf
 styleite.com,thebraiser.com###unit-sidebar-btf
@@ -50816,7 +50827,7 @@ oxforddictionaries.com##.banbox
 hancinema.net##.bandeau_contenu
 webscribble.com##.baner
 hypemixtapes.com##.baner600
-1001tracklists.com,4music.com,90min.com,964eagle.co.uk,adage.com,adradio.ae,ameinfo.com,angryduck.com,anyclip.com,aol.com,arcadebomb.com,autofocus.ca,autotrader.co.za,b-metro.co.zw,balls.ie,bayt.com,betterrecipes.com,bikechatforums.com,billboard.com,blackamericaweb.com,bored-bored.com,boxoffice.com,bukisa.com,cadplace.co.uk,caribvision.tv,cineuropa.org,cmo.com.au,cnn.com,cnnmobile.com,coryarcangel.com,daily-mail.co.zm,digitallook.com,dreamteamfc.com,dressuppink.com,echoroukonline.com,ecorporateoffices.com,elyricsworld.com,entrepreneur.com,esportsheaven.com,euobserver.com,eurochannel.com,everyday.com.kh,evilmilk.com,fantasyleague.com,fieldandstream.com,filenewz.com,fool.com,footballtradedirectory.com,forexpeacearmy.com,forum.dstv.com,freshbusinessthinking.com,freshtechweb.com,funpic.hu,gamebanshee.com,gamehouse.com,gamersbook.com,garfield.com,gatewaynews.co.za,gd.tuwien.ac.at,general-catalog.com,general-files.com,general-video.net,generalfil.es,ghananation.com,girlsocool.com,globaltimes.cn,gsprating.com,guardianonline.co.nz,healthsquare.com,hitfreegames.com,hotfrog.ca,hotfrog.co.nz,hotfrog.co.uk,hotfrog.co.za,hotfrog.com,hotfrog.com.au,hotfrog.com.my,hotfrog.ie,hotfrog.in,hotfrog.ph,hotfrog.sg,hotnewhiphop.com,howard.tv,htxt.co.za,humanipo.com,hyipexplorer.com,ibtimes.co.in,ibtimes.co.uk,iconfinder.com,iguide.to,imedicalapps.com,imnotobsessed.com,insidefutbol.com,internationalmeetingsreview.com,internetnews.com,iradio.ie,irishtimes.com,isohunt.to,isource.com,itreviews.com,japantimes.co.jp,jewishtimes.com,josepvinaixa.com,kbs.co.kr,keepcalm-o-matic.co.uk,ketknbc.com,kicknews.com,kijiji.ca,ktsm.com,leo.org,livescore.in,lmgtfy.com,locatetv.com,londonstockexchange.com,manolith.com,mariopiperni.com,mmosite.com,motherboard.tv,motortrend.com,moviezadda.com,mzhiphop.com,naij.com,nehandaradio.com,netmums.com,networkworld.com,nontonanime.org,nuttymp3.com,oceanup.com,oncyprus.com,oxforddictionaries.com,pdfmyurl.com,pharmatimes.com,pnet.co.za,postzambia.com,premierleague.com,priceviewer.com,proxyhttp.net,ptotoday.com,radiotoday.co.uk,radiotoday.ie,rapidlibrary.com,reference.com,residentadvisor.net,reversephonesearch.com.au,romereports.com,scientificamerican.com,semiaccurate.com,smartcarfinder.com,snakkle.com,soccer24.co.zw,sportsvibe.co.uk,starradionortheast.co.uk,subscene.com,sumodb.com,sweeting.org,techfrag.com,tennis.com,thebull.com.au,thefanhub.com,thefringepodcast.com,thehill.com,thehun.com,thesaurus.com,theskinnywebsite.com,thetriangle.org,time4tv.com,timeslive.co.za,tmi.me,torrent.cd,travelpulse.com,trutv.com,tvsquad.com,twirlit.com,umbrelladetective.com,universalmusic.com,ustream.tv,vice.com,victoriafalls24.com,viralnova.com,vnexpress.net,weather.gc.ca,weatheronline.co.uk,wego.com,whatsock.com,worldcrunch.com,xda-developers.com,yellowbook.com,zbigz.com##.banner
+1001tracklists.com,4music.com,90min.com,964eagle.co.uk,adage.com,adnkronos.com,adradio.ae,ameinfo.com,angryduck.com,anyclip.com,aol.com,arcadebomb.com,autofocus.ca,autotrader.co.za,b-metro.co.zw,balls.ie,bayt.com,betterrecipes.com,bikechatforums.com,billboard.com,blackamericaweb.com,bored-bored.com,boxoffice.com,bukisa.com,cadplace.co.uk,caribvision.tv,cineuropa.org,cmo.com.au,cnn.com,cnnmobile.com,coryarcangel.com,daily-mail.co.zm,digitallook.com,dreamteamfc.com,dressuppink.com,echoroukonline.com,ecorporateoffices.com,elyricsworld.com,entrepreneur.com,esportsheaven.com,euobserver.com,eurochannel.com,everyday.com.kh,evilmilk.com,fantasyleague.com,fieldandstream.com,filenewz.com,fool.com,footballtradedirectory.com,forexpeacearmy.com,forum.dstv.com,freshbusinessthinking.com,freshtechweb.com,funpic.hu,gamebanshee.com,gamehouse.com,gamersbook.com,garfield.com,gatewaynews.co.za,gd.tuwien.ac.at,general-catalog.com,general-files.com,general-video.net,generalfil.es,ghananation.com,girlsocool.com,globaltimes.cn,gsprating.com,guardianonline.co.nz,healthsquare.com,hitfreegames.com,hotfrog.ca,hotfrog.co.nz,hotfrog.co.uk,hotfrog.co.za,hotfrog.com,hotfrog.com.au,hotfrog.com.my,hotfrog.ie,hotfrog.in,hotfrog.ph,hotfrog.sg,hotnewhiphop.com,howard.tv,htxt.co.za,humanipo.com,hyipexplorer.com,ibtimes.co.in,ibtimes.co.uk,iconfinder.com,iguide.to,imedicalapps.com,imnotobsessed.com,insidefutbol.com,internationalmeetingsreview.com,internetnews.com,iradio.ie,irishtimes.com,isohunt.to,isource.com,itreviews.com,japantimes.co.jp,jewishtimes.com,josepvinaixa.com,kbs.co.kr,keepcalm-o-matic.co.uk,ketknbc.com,kicknews.com,kijiji.ca,ktsm.com,leo.org,livescore.in,lmgtfy.com,locatetv.com,londonstockexchange.com,manolith.com,mariopiperni.com,mmosite.com,motherboard.tv,motortrend.com,moviezadda.com,mzhiphop.com,naij.com,nehandaradio.com,netmums.com,networkworld.com,nontonanime.org,nuttymp3.com,oceanup.com,oncyprus.com,oxforddictionaries.com,pdfmyurl.com,pharmatimes.com,pnet.co.za,postzambia.com,premierleague.com,priceviewer.com,proxyhttp.net,ptotoday.com,radiotoday.co.uk,radiotoday.ie,rapidlibrary.com,reference.com,residentadvisor.net,reversephonesearch.com.au,romereports.com,scientificamerican.com,semiaccurate.com,smartcarfinder.com,snakkle.com,soccer24.co.zw,sportsvibe.co.uk,starradionortheast.co.uk,subscene.com,sumodb.com,sweeting.org,techfrag.com,tennis.com,thebull.com.au,thefanhub.com,thefringepodcast.com,thehill.com,thehun.com,thesaurus.com,theskinnywebsite.com,thetriangle.org,time4tv.com,timeslive.co.za,tmi.me,torrent.cd,travelpulse.com,trutv.com,tvsquad.com,twirlit.com,umbrelladetective.com,universalmusic.com,ustream.tv,vice.com,victoriafalls24.com,viralnova.com,vnexpress.net,weather.gc.ca,weatheronline.co.uk,wego.com,whatsock.com,worldcrunch.com,xda-developers.com,yellowbook.com,zbigz.com##.banner
 autotrader.co.uk##.banner--7th-position
 autotrader.co.uk##.banner--leaderboard
 autotrader.co.uk##.banner--skyscraper
@@ -51108,7 +51119,7 @@ christianpost.com,parentherald.com##.bn728
 ibtimes.co.uk,ibtimes.com##.bn_center_bottom_leaderboard_hd
 full-rls.net,nitrodl.com##.bnner
 demonoid.ooo,demonoid.ph,demonoid.pw##.bnnr_top
-electronicsfeed.com,gatorzone.com,intelligencer.ca,solidfiles.com##.bnr
+electronicsfeed.com,gatorzone.com,intelligencer.ca,mediamanager.co.za,solidfiles.com##.bnr
 euroweek.com##.bnr-top
 carnewschina.com,thetycho.com##.bnr728
 informer.com##.bnr_block
@@ -51765,6 +51776,7 @@ msnbc.msn.com,nbcnews.com##.eshopStory
 metacritic.com##.esite_list
 easyvoyage.co.uk##.esv-pub-300-250
 thecommonsenseshow.com##.et_pb_row
+adnkronos.com##.evidenceBox
 logupdateafrica.com##.expandable-banner
 miami.com##.expedia-widget
 nytimes.com##.expediaBooking
@@ -55226,6 +55238,7 @@ bingo-hunter.com##a[href^="http://www.bingo3x.com/main.php"]
 rghost.net##a[href^="http://www.binverse.com"]
 torrentfreak.tv##a[href^="http://www.binverse.com/offers/"]
 freebitco.in##a[href^="http://www.bitcoininsanity.com/affiliates/"]
+thepiratebay.org##a[href^="http://www.bitlord.me/share/"]
 bitlordsearch.com##a[href^="http://www.bitlordsearch.com/bl/fastdibl.php?"]
 freebitcoins.nx.tc,getbitcoins.nx.tc##a[href^="http://www.bitonplay.com/create?refCode="]
 biznews.com##a[href^="http://www.biznews.com/sponsored/"]
@@ -55368,7 +55381,7 @@ torlock.com,torrentfunk.com##a[href^="https://go.nordvpn.net/"]
 bitcoinmagazine.com##a[href^="https://godistributed.com/trade?"]
 9to5google.com,9to5mac.com,9to5toys.com,electrek.co,pcgamesn.com,thehackernews.com,tribuneonlineng.com##a[href^="https://goo.gl/"]
 userscdn.com##a[href^="https://hostdzire.com/billing/aff.php?"]
-jazzfm.com##a[href^="https://itunes.apple.com/"]
+capricornfm.co.za,jazzfm.com##a[href^="https://itunes.apple.com/"]
 facebook.com##a[href^="https://l.facebook.com/"][href*="%2526ad_id%"]
 landofbitcoin.com##a[href^="https://localbitcoins.com/?ch="]
 hardwareheaven.com##a[href^="https://looking.hardwareheaven.com/clickthrough.php?btsid="]
@@ -59757,7 +59770,7 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||imasdk.googleapis.com/flash/core/3.*/adsapi.swf$object-subrequest
 @@||imasdk.googleapis.com/flash/sdkloader/adsapi_3.swf$object-subrequest
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~spotify.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=allcatvideos.com|audiomack.com|bloomberg.com|cbc.ca|cbsnews.com|cbssports.com|cnet.com|complex.com|gamejolt.com|news.sky.com|play.ludigames.com|player.performgroup.com|rumble.com|snopes.com|thestreet.com|theverge.com|usatoday.com|video.foxbusiness.com|video.foxnews.com|vidyomani.com|yiv.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=allcatvideos.com|audiomack.com|bloomberg.com|cbc.ca|cbsnews.com|cbssports.com|cnet.com|complex.com|gamejolt.com|news.sky.com|play.ludigames.com|player.performgroup.com|powr.com|rumble.com|snopes.com|thestreet.com|theverge.com|usatoday.com|video.foxbusiness.com|video.foxnews.com|vidyomani.com|yiv.com
 @@||img-cdn.mediaplex.com^$image,domain=betfair.com
 @@||img.brickscout.com^$domain=brickscout.com
 @@||img.espngp.com/ads/$image,domain=espnf1.com
@@ -60278,6 +60291,8 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||req.tidaltv.com^$object-subrequest,domain=daisuki.net
 @@||reuters.tv/syndicatedPlayerChannel/$subdocument,domain=reuters.com
 @@||reuters.tv/syndicatedPlayerClient/js/advertisement.js$domain=reuters.com
+@@||revcontent.com/build/revpowrvideo.min.js$domain=powr.com
+@@||revcontent.com/video.js.php$script,domain=powr.com
 @@||revealads.appspot.com/revealads2/radioplayer.js$domain=talksport.co.uk
 @@||revit.eu/static/uploads/images/themes/banners/small-banner-$object-subrequest
 @@||revresda.com/event.ng/Type=click&$subdocument,domain=cheaptickets.com|orbitz.com
@@ -63495,4 +63510,4 @@ www.google.com#@##videoads
 @@||tumblr.com^$popup,domain=pornhub.com
 @@||twitter.com^$popup,domain=pornhub.com
 @@||wmtrafficentry.com/cgi-bin/ewm.cgi/*_HeaderTab?$popup,domain=extremetube.com|spankwire.com
-! Checksum: xLXjO39c4LFqT6n1TAyI6Q
+! Checksum: 44FtHrYDAsdrE/3qjVnfXQ
