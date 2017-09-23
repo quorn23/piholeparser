@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:14 2017/09/19
+! 最終更新 10:56 2017/09/23
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -872,7 +872,7 @@ $script,third-party,domain=jpidols.tv
 /s_code.$domain=~books.rakuten.co.jp|~dmm.co.jp|~hikaritv.net|~hotel.travel.rakuten.co.jp|~loppi.jp|~mora.jp|~mydocomo.com|~saisoncard.co.jp
 !yahooショッピング カートに入れるボタンが押せない
 ! playstation.com next押しても反応無し
-/s_code_*.js$domain=~dmm.co.jp|~adobe.com|~shopping.yahoo.co.jp|~saisoncard.co.jp|~locate.apple.com|~playstation.com
+/s_code_*.js$domain=~dmm.co.jp|~dmm.com|~adobe.com|~shopping.yahoo.co.jp|~saisoncard.co.jp|~locate.apple.com|~playstation.com
 /sextans.cgi?log
 /sfa.php
 /sfga.js
@@ -919,8 +919,7 @@ $script,third-party,domain=jpidols.tv
 ||afv.jp^$third-party
 ||al.l--l.jp^$third-party
 ||amung.us^$third-party
-||analytics.qlook.net^$third-party
-||analytics.edgesuite.net$third-party,domain=ustream.tv
+||analytics.$third-party,domain=ustream.tv
 ||ashia.to^$third-party
 ||auriq.com^$third-party
 ||awasete.com^$third-party
@@ -976,6 +975,7 @@ $script,third-party,domain=jpidols.tv
 ||inpros.net^$third-party
 ||japanmetrix.jp^$third-party
 ||jscount.com^$third-party
+||juicer.cc^$third-party
 ||just-now.net^$third-party
 ||kaffik.com^$third-party
 ||kantan-access.com^$third-party
@@ -1054,6 +1054,7 @@ $script,third-party,domain=jpidols.tv
 
 !---gaico
 ||bidswitch.net^$third-party
+||f-tra.com^$third-party
 ||hanaprop.com^$third-party
 ||mathtag.com^$third-party
 ||newrelic.com^$third-party
@@ -1664,7 +1665,8 @@ jump.2ch.net##div
 ||enquete.nicovideo.jp/static/
 ||nicovideo.jp/api/getad
 ||nicovideo.jp/js/lib/ads-
-||live.nicovideo.jp/img/nicolive/bnr_
+!ニコ生
+||nimg.jp/relive/playerbanner/
 !13.02.07 動画見れない 2015/05/14 解除
 !@@||ads.nicovideo.jp/assets/js/ads-
 !2015/08/29 ニコニコニュースコメント読み込めない
@@ -1924,6 +1926,11 @@ minnano-av.com##.type-fuzoku
 !bipブログ
 ||bipblog.com/js/amatop.js
 ||bipblog.com/aa/ABtest/
+
+!fig速
+||figsoku.net/rank/load.php?
+figsoku.net##.ama > .ssm:last-child
+figsoku.net##.gad
 
 !α波
 ||alfalfalfa.com/*.js|
