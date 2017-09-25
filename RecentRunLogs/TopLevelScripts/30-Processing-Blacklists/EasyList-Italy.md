@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Italy List Unavailable To Download. Sun 24 Sep 00:21:49 EDT 2017
 ## Checking If List Updated Online
