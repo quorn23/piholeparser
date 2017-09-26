@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: 2mMkDR3sIG8PVnxA3ci3KQ
-! Version: 201709210740
+! Checksum: 59QtpSDridT150RPEj1ilw
+! Version: 201709260450
 ! Title: Liste AR
 ! القائمة العربية لمانع الشرائط الإعلانية آدبلوك بلس
 ! Liste AR ~ Filtres arabes complémentaires à EasyList et à la Liste FR
@@ -60,6 +60,7 @@
 /bnr_300.
 /bnr_460.
 /bnr_728.
+/cdn-cgi/apps/head/*$script,domain=akoam.com
 /code/?pid=
 /e3lan.
 /e3lan/*
@@ -105,6 +106,7 @@ _arabycash.
 /afstrack.*?affid=$popup
 /clicks.*/afs/$popup
 /get/iad/*$popup
+/imp/*?scontext_b=$popup
 !
 !----------------------- Éléments génériques -----------------!
 ###AdDivUnderNews
@@ -207,12 +209,14 @@ _arabycash.
 ||affili.st^$third-party
 ||apanet.net^$third-party
 ||branchroughlend.info^$third-party
+||cashinme.com^$third-party
 ||deliverymodo.com^$third-party
 ||eclkspbn.com^$third-party
 ||erate.co.il^$third-party
 ||finishclueobscure.info^$third-party
 ||ilovemobi.com^$third-party
 ||interadv.net^$third-party
+||jubna.com^$third-party
 ||kimia.es^$third-party
 ||nurno.com^$third-party
 ||ornaki.com^$third-party
@@ -233,6 +237,7 @@ _arabycash.
 ||celebritypranky.com^$popup,third-party
 ||eclkspbn.com^$popup,third-party
 ||finishclueobscure.info^$popup,third-party
+||fullspeeddownload.com^$popup,third-party
 ||ilovemobi.com^$popup,third-party
 ||kimia.es^$popup,third-party
 ||licantrum.com^$popup,third-party
@@ -648,10 +653,8 @@ $websocket,domain=arawatch.tv|cera.online
 ||ps-0.com^$subdocument,third-party
 ||wirwaar.com^$subdocument,third-party
 ! akoam.com
-@@||akoam.com/cdn-cgi/pe/bag2?*akoam.com%2Fscripts%2Fsite%2Fjs%2Fjquery.js&$xmlhttprequest,domain=akoam.com
 |http://$script,third-party,xmlhttprequest,domain=akoam.com
 |https://$script,third-party,xmlhttprequest,domain=akoam.com
-||akoam.com/cdn-cgi/pe/bag2?
 ! egybest
 $popup,~third-party,domain=egy.best|egybest.co|egybest.com|egybest.net|egybest.site
 @@||cdn.egy.best/sc/$script,stylesheet,domain=egybest.site
@@ -722,13 +725,13 @@ $popup,~third-party,domain=egy.best|egybest.co|egybest.com|egybest.net|egybest.s
 |http://$script,third-party,xmlhttprequest,domain=1short.us
 |https://$script,third-party,xmlhttprequest,domain=1short.us
 ! amazonaws.com
-||amazonaws.com^$domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|kooralive.tv|okanime.com|series4watch.tv
+||amazonaws.com^$domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|kooralive.tv|kora-online.tv|okanime.com|series4watch.tv
 ! cloudfront.net
-||cloudfront.net^$domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|kooralive.tv|okanime.com|series4watch.tv
+||cloudfront.net^$domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|kooralive.tv|kora-online.tv|okanime.com|series4watch.tv
 ! popads
 /^https?:\/\/www\.[a-z]{8,12}\.com\/[a-z]{1,6}\.\js$/$script,domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|kooralive.tv|okanime.com|series4watch.tv
 ! popup & popunder
-$popup,domain=an-online.com|cima4up.tv
+$popup,domain=an-online.com|cima4up.tv|kora-online.tv
 ! images hosting
 ||cache.gametracker.com/server_info/148.251.92.28:27015/b_560_95_1.png
 ||d16.net/up/uploads/1478118841381.gif
