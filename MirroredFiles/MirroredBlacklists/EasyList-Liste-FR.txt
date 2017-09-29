@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: nxi73kTjooSDFaorEcCmGQ
-! Version: 201709280431
+! Checksum: fc9ESXpNQCal5JrergntJQ
+! Version: 201709290431
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -179,7 +179,6 @@
 .com/adpro.
 .com/bnrs/$subdocument
 .com/func.js|$script,~third-party
-.com/p?zoneId=*-$script,third-party
 .dz/ads/
 .dz/ads_
 .fr/*/ads/
@@ -834,6 +833,7 @@
 /effinity/banniere-
 /ejs_slidein.js
 /email_catcher/track.
+/embed/*.php?partner=$subdocument
 /embed/ads/*
 /embed/partner/*
 /emplacement-pub/*
@@ -1001,7 +1001,7 @@
 /our_all_pjs.
 /our_all_pjs_
 /out?zoneid=
-/p?zoneid=
+/p?zoneId=
 /p_tools/rotation.
 /p_under.
 /packcpm.
@@ -1399,6 +1399,7 @@
 ://msk.*/redir/
 ://na.ads.
 ://partner.$third-party,domain=~lopinion.fr|~viator.com|~viatorcom.de|~viatorcom.fr|~viatorcom.nl|~viatorcom.no|~viatorcom.se
+://play.*/red/?code=
 ://pop.$script,subdocument,third-party,xmlhttprequest
 ://promo.*?site_id=
 ://promo2.$third-party
@@ -1611,6 +1612,7 @@ _werbebanner_
 /cdn-cgi/pe/bag2?*clicmanager.net
 /cdn-cgi/pe/bag2?*clksite.com
 /cdn-cgi/pe/bag2?*codeonclick.com
+/cdn-cgi/pe/bag2?*cpaofferstat.com
 /cdn-cgi/pe/bag2?*cpmstar.com
 /cdn-cgi/pe/bag2?*crickwrite.com
 /cdn-cgi/pe/bag2?*dynsrvaba.com
@@ -2477,6 +2479,7 @@ debugger:$popup
 ||cougarmessenger.com^$third-party
 ||cound.info^$third-party
 ||cpabuild.com^$third-party
+||cpaofferstat.com^$third-party
 ||cpmwizard.com^$third-party
 ||cptefr.com^$third-party
 ||cpxmasters.com^$third-party
@@ -4110,6 +4113,7 @@ debugger:$popup
 ||nbriskerry.com^$third-party
 ||oscarlosun.com^$third-party
 ||ourinstance.info^$third-party
+||overely.com^$third-party
 ||paradition.com^$third-party
 ||phalata.info^$third-party
 ||quierest.com^$third-party
@@ -4134,6 +4138,7 @@ debugger:$popup
 ||yoursinfo.info^$third-party
 ! popunder
 ||acrossiblel.info^$third-party
+||auctional.info^$third-party
 ||buckilyg.info^$third-party
 ||cecrating.info^$third-party
 ||crisivelyt.info^$third-party
@@ -4530,8 +4535,13 @@ debugger:$popup
 ||newstat.net^$third-party
 ||static-dscn.net^$third-party
 ! Mining
+/coinhive/*
+/miner-ui.js
+/xminer.min.js
 ||coin-hive.com^$third-party
+||coinhive.com^$third-party
 ||jsecoin.com^$third-party
+||minemytraffic.com^$third-party
 !
 !-------------------- Annonceurs popup --------------------!
 !
@@ -6970,6 +6980,7 @@ he2eini7ka.com##div > [id^="player"] + div[id][style*="z-index:"]
 @@||ok.ru/videoembed/$subdocument,domain=protect-iframe.com
 @@||oload.tv/embed/$subdocument,domain=protect-iframe.com
 @@||openload.co/embed/$subdocument,domain=protect-iframe.com
+@@||rapidvideo.com/e/$subdocument,domain=protect-iframe.com
 @@||rapidvideo.com/embed/$subdocument,domain=protect-iframe.com
 @@||rutube.ru/play/embed/$subdocument,domain=protect-iframe.com
 @@||sendvid.com/embed/$subdocument,domain=protect-iframe.com
@@ -6986,8 +6997,8 @@ he2eini7ka.com##div > [id^="player"] + div[id][style*="z-index:"]
 @@||vshare.eu/embed-$subdocument,domain=protect-iframe.com
 @@||watchers.to/embed-$subdocument,domain=protect-iframe.com
 @@||www.iframe-secure.com/embed/$subdocument,domain=protect-iframe.com
-|http://$script,subdocument,third-party,xmlhttprequest,domain=protect-iframe.com
-|https://$script,subdocument,third-party,xmlhttprequest,domain=protect-iframe.com
+|http://$script,subdocument,third-party,xmlhttprequest,domain=piframe.tk|protect-iframe.com
+|https://$script,subdocument,third-party,xmlhttprequest,domain=piframe.tk|protect-iframe.com
 ! raptu.com
 @@||bambergerkennanchitinous.com/.adframesrc.|$script,domain=raptu.com
 @@||raptu.com^$generichide
@@ -7032,7 +7043,7 @@ he2eini7ka.com##div > [id^="player"] + div[id][style*="z-index:"]
 @@||google.com/recaptcha/$subdocument,domain=adshort.co
 |http://$script,subdocument,third-party,xmlhttprequest,domain=adshort.co
 ! adf.ly
-@@||redirect2719.ws/?$subdocument,domain=adf.ly|ay.gy|babblecase.com|download.replaymod.com|j.gs|kaitect.com|picocurl.com|pintient.com|q.gs|rd1.gamecopyworld.click
+@@||redirect2719.ws/?$subdocument,domain=adf.ly|ay.gy|babblecase.com|download.replaymod.com|go.awanpc.me|j.gs|kaitect.com|picocurl.com|pintient.com|q.gs|rd1.gamecopyworld.click
 ||cdn.adf.ly^$script,third-party,domain=~j.gs|~q.gs
 ||cdn.j.gs^$script,third-party,domain=~adf.ly|~q.gs
 ||cdn.q.gs^$script,third-party,domain=~adf.ly|~j.gs
@@ -7124,7 +7135,7 @@ $websocket,domain=clkme.me|cllkme.com|destyy.com|gestyy.com|jigbig.tk|newsfortru
 ||uploadbank.com^$subdocument,third-party
 ||vyper.io^$subdocument,third-party
 ! popup & popunder
-$popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|auroravid.to|ay.gy|babblecase.com|cash4files.com|cineiz.co|cloudtime.to|croco.site|dailyuploads.net|darkomplayer.com|download.replaymod.com|dragon-ball-super-streaming.com|drstickyfingers.com|dyo.gs|e-wok.tv|easyvid.org|estream.to|etmirror.com|etproxy.com|eztv.ag|faststream.in|file-upload.com|filescdn.com|filesonthe.net|filmstreamvk.biz|filmstreamvk.org|filmstreamvk.ws|flashx.tv|flowyourvideo.com|footstream.tv|freean.us|full-anime.com|full-film.me|full-serie.biz|full-serie.co|go.ad2upapp.com|gomovies.co|gomovies.es|goneviral.com|gorillavid.com|guadeloupe-paradise.fr|hornywood.tv|imgchili.net|j.gs|jkanime.net|k-streaming.com|k-vid.net|kaitect.com|kickass.cd|kingvid.tv|kvid.org|le-streaming.com|letwatch.to|letwatch.us|limetorrents.cc|linkbabes.com|linkbucks.com|media1fire.com|megaline.co|megawatch.net|miniurls.co|monova.org|mystream.la|mythewatchseries.com|nitroflare.com|notsmutty.com|nowvideo.ag|nowvideo.co|nowvideo.li|oload.tv|onlinevideoconverter.com|openload.co|opensubtitles.org|papstream.co|papstream.com|pelis24.tv|picocurl.com|pintient.com|poontown.net|pornovore.fr|powvideo.net|powvideo.xyz|protect-iframe.com|putstream.com|q.gs|qqc.co|rapidvideo.com|rapidvideo.cool|raptu.com|rd1.gamecopyworld.click|seriousdeals.net|shrvid.com|skstream.cc|skstream.co|skstream.ws|smutty.com|sokrostream.cc|sokrostream.ws|speedvid.net|streamango.com|streamay.ws|streamin.to|streaming-boruto.com|streaming-dragon-ball-super.com|streaming-hub.com|streamplay.club|streamplay.to|suspents.info|t411.as|t411.sh|theseblogs.com|theseforums.com|thevid.net|thevideo.me|thevideobee.to|tinylinks.co|tnabucks.com|torlock.com|torrentfunk.com|tout-sur-le-web.com|tvad.me|tvrush.eu|ultimedia.com|ultrafiles.net|uploadbb.co|uploaded.net|uploadocean.com|uploadrocket.net|uploads.to|uptobox.com|uptostream.com|urlbeat.net|userscloud.com|vid.ag|vidabc.com|vidbom.com|videowood.tv|vidgg.to|vidhos.com|vidlox.me|vidlox.tv|vidoza.net|vidshare.me|vidshare.us|vidstreaming.io|vidto.me|vidtodo.com|vidup.me|vidwatch3.me|vidzi.tv|vimple.me|vkpass.com|watchers.to|watchtvserieslive.org|watchvideo.us|watchvideo10.us|watchvideo11.us|watchvideo12.us|watchvideo13.us|watchvideo14.us|watchvideo15.us|watchvideo2.us|watchvideo5.us|watchvideo8.us|whackyvidz.com|wholecloud.net|xvidstage.com|yourbittorrent.com|yourporno.fr|yyv.co|zatnawqy.net|zippyshare.com|zone-telechargement.de|zone-telechargement.live|zytpirwai.net
+$popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|auroravid.to|ay.gy|babblecase.com|cash4files.com|cineiz.co|cloudtime.to|croco.site|dailyuploads.net|darkomplayer.com|download.replaymod.com|dragon-ball-super-streaming.com|drstickyfingers.com|dyo.gs|e-wok.tv|easyvid.org|estream.to|etmirror.com|etproxy.com|eztv.ag|faststream.in|file-upload.com|filescdn.com|filesonthe.net|filmstreamvk.biz|filmstreamvk.org|filmstreamvk.ws|flashx.tv|flowyourvideo.com|footstream.tv|freean.us|full-anime.com|full-film.me|full-serie.biz|full-serie.co|go.ad2upapp.com|gomovies.co|gomovies.es|goneviral.com|gorillavid.com|guadeloupe-paradise.fr|hornywood.tv|imgchili.net|j.gs|jkanime.net|k-streaming.com|k-vid.net|kaitect.com|kickass.cd|kingvid.tv|kvid.org|le-streaming.com|letwatch.to|letwatch.us|limetorrents.cc|linkbabes.com|linkbucks.com|media1fire.com|megaline.co|megawatch.net|miniurls.co|monova.org|mystream.la|mythewatchseries.com|nitroflare.com|notsmutty.com|nowvideo.ag|nowvideo.co|nowvideo.li|oload.tv|onlinevideoconverter.com|openload.co|opensubtitles.org|papstream.co|papstream.com|pelis24.tv|picocurl.com|piframe.tk|pintient.com|poontown.net|pornovore.fr|powvideo.net|powvideo.xyz|protect-iframe.com|putstream.com|q.gs|qqc.co|rapidvideo.com|rapidvideo.cool|raptu.com|rd1.gamecopyworld.click|seriousdeals.net|shrvid.com|skstream.cc|skstream.co|skstream.ws|smutty.com|sokrostream.cc|sokrostream.ws|speedvid.net|streamango.com|streamay.ws|streamin.to|streaming-boruto.com|streaming-dragon-ball-super.com|streaming-hub.com|streamplay.club|streamplay.to|suspents.info|t411.as|t411.sh|theseblogs.com|theseforums.com|thevid.net|thevideo.me|thevideobee.to|tinylinks.co|tnabucks.com|torlock.com|torrentfunk.com|tout-sur-le-web.com|tvad.me|tvrush.eu|ultimedia.com|ultrafiles.net|uploadbb.co|uploaded.net|uploadocean.com|uploadrocket.net|uploads.to|uptobox.com|uptostream.com|urlbeat.net|userscloud.com|vid.ag|vidabc.com|vidbom.com|videowood.tv|vidgg.to|vidhos.com|vidlox.me|vidlox.tv|vidoza.net|vidshare.me|vidshare.us|vidstreaming.io|vidto.me|vidtodo.com|vidup.me|vidwatch3.me|vidzi.tv|vimple.me|vkpass.com|watchers.to|watchtvserieslive.org|watchvideo.us|watchvideo10.us|watchvideo11.us|watchvideo12.us|watchvideo13.us|watchvideo14.us|watchvideo15.us|watchvideo2.us|watchvideo5.us|watchvideo8.us|whackyvidz.com|wholecloud.net|xvidstage.com|yourbittorrent.com|yourporno.fr|yyv.co|zatnawqy.net|zippyshare.com|zone-telechargement.de|zone-telechargement.live|zytpirwai.net
 ! images hosting
 ||bluesattv.net/gif.gif
 ||hostingpics.net/pics/*468x60.
@@ -10513,6 +10524,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|allanalpass.com|alluc.ee|any.gs|aur
 ##.mailPubHeader
 ##.map_fond_pub
 ##.marketing-container
+##.masonry__ad
 ##.masthead-overHeader
 ##.mb_video_syncad
 ##.mbanner-ad-wrapper
@@ -12651,6 +12663,7 @@ boursorama.com##[style="width: 1000px; margin: 0px auto; min-width: 0px; min-hei
 forumconstruire.com,forumpiscine.com##[style="width:350px;cursor:pointer;padding:15px"]
 hqq.tv,hqq.watch##[style^="width: 468px; height: 60px;"]
 lesoir.be##a > [width="300"][height="250"]
+piframe.tk,protect-iframe.com##a > div
 jeddl.co##a > font
 zone-telechargement.ws##a > h1
 basket-infos.com##a > img[alt^="Pub"]
@@ -13423,6 +13436,7 @@ _blockadblock_
 ||justgeek.fr^*/wp-content-uploads-
 ||larascasse.fr/forum/uploads/javascript_core/plugins_plugins.js
 ||maisonbrico.com/theme/min/$script
+||observalgerie.com/wp-content/uploads/$script
 ||photo.femmeactuelle.fr/js/jquery.min-
 ||planete-astronomie.com/tl_files/structure/anti-adblock.js
 ||rustica.fr/assets/min/$script
@@ -13438,7 +13452,7 @@ _blockadblock_
 @@/advertisement.js$script,domain=cdnfiles.e-wok.tv|chats-perdus.net|chiens-perdus.net|chine-informations.com|concours-du-net.com|debridnet.com|dramapassion.com|easybillets.com|evilox.com|files.newsnetz.ch|freets3.ovh|funeralforamanga.fr|gamersconnexion.com|jeux.fr|kelbillet.com|kpopfm.fr|maghrebspace.net|mega-exclue.com|streaming-french-dvdrip.com|streamwatching.fr|turfomania.fr|tuto4you.fr|undernews.fr|videozix.com|zonebourse.com
 @@/advertisement.js$script,~third-party,domain=cap-public.fr|coco.fr|crash-aerien.aero|crash-aerien.news|e-wok.tv|fiki.faucetfly.com|leveldown.fr|programme.tv|quoverbis.com|rustica.fr
 @@/advertising.js$script,domain=itespresso.fr|lagrosseradio.com|silicon.fr
-@@/static/image/ad_top_bg2.png?$image,~third-party,domain=adf.ly|ay.gy|babblecase.com|gamecopyworld.click|j.gs|kaitect.com|picocurl.com|pintient.com|q.gs|replaymod.com
+@@/static/image/ad_top_bg2.png?$image,~third-party,domain=adf.ly|ay.gy|babblecase.com|gamecopyworld.click|go.awanpc.me|j.gs|kaitect.com|picocurl.com|pintient.com|q.gs|replaymod.com
 @@||1max2sms.com/blogads.css
 @@||a.f1g.fr/build/2/adsense.js$script
 @@||ad.advertstream.com/adjs_r.php?$script,domain=forum.virtualdjing.com
@@ -13450,7 +13464,7 @@ _blockadblock_
 @@||afreesms.now.im/adblocker.js$script,domain=afreesms.com
 @@||assets.over-blog-kiwi.com/b/blog/bundles/overblogblogblog/js/ads.js$script,domain=mariage-franco-marocain.net
 @@||audipassion.com^*/jsLoader.js?adType=foobar
-@@||ay.gy/static/js/advert.js$script,domain=adf.ly|ay.gy|babblecase.com|download.replaymod.com|j.gs|kaitect.com|picocurl.com|pintient.com|q.gs|rd1.gamecopyworld.click
+@@||ay.gy/static/js/advert.js$script,domain=adf.ly|ay.gy|babblecase.com|download.replaymod.com|go.awanpc.me|j.gs|kaitect.com|picocurl.com|pintient.com|q.gs|rd1.gamecopyworld.click
 @@||badibadou.eu/*.js?auto=$script,third-party
 @@||c.ad6media.fr/l.js$domain=eternitygames.org|fan-de-cinema.com|fit.sh|programmes-cinema.com
 @@||cdscdn.com/Js/advertise.js$script

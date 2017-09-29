@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D87 
+! Version D88 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -284,7 +284,7 @@ images/ads/
 ||bc.yahoo.com^
 ||beap-bc.yahoo.com^
 ||beap.gemini.yahoo.com^
-||bet365.com/*affiliate=$popup
+||bebi.com^
 ||betrad.com^
 ||beyondd.co.nz^
 ||bidswitch.net^
@@ -730,6 +730,7 @@ images/ads/
 ||adsmarket.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||advertserve.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||alibaba.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest,third-party
+||bet365.com/*affiliate=$popup
 ||billaruze.net^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||clicksgear.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||coupontime.co^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
@@ -975,17 +976,20 @@ youtube.com###watch-channel-brand-div
 !
 ! Add on Domains (Element Hiding) >>>>>
 !
+aashpazi.com##DIV[id^="ad_300"]
 acidcow.com##DIV[style="float:none;margin:0px 0 0px 0;text-align:center;"]
 advfn.com##IFRAME[id$="widget"]
 all-free-download.com##DIV[class$="banner"]
 all-free-download.com##LI[id^="ads"]
 all-free-download.com,comicsalliance.com,dailymotion.com,krebsonsecurity.com##DIV[id$="banner"]
+animefreak.tv##DIV[class*="-filter"]
 animenewsnetwork.com##[class*="iab"]
 cnet.com,empireonline.com,laptopmag.com##DIV[id^="leader"]
 comingsoon.net,digitaltrends.com,medicalnewstoday.com,techradar.com##DIV[class*="leaderboard"]
 cosmopolitan.com##DIV[class^="leader"]
 csnchicago.com,reason.com,tomshardware.com##DIV[id$="leaderboard"]
 datpiff.com,freewarefiles.com,lucianne.com##[style="cursor: pointer;"]
+deviantart.com##DIV[class$="300x250"]
 eventcinemas.com.au,eventcinemas.co.nz,thedailysheeple.com##.ads
 horrornews.net##DIV[id*="cedato"]
 mangafox.me##DIV[style*="banners/"]
@@ -993,7 +997,7 @@ mirror.co.uk##.top-slot
 mlive.com,theyeshivaworld.com##DIV[class*="_ad_"]
 moneycontrol.com##DIV[class^="bot_"]
 movieweb.com,nerdist.com##DIV[class^="banner"]
-nzherald.co.nz##.ad-container
+deviantart.com,nzherald.co.nz##.ad-container
 pixabay.com##DIV[class*="sponsored"]
 salon.com##DIV[class*="-ad-"]
 slashfilm.com##DIV[id*="300x250"]

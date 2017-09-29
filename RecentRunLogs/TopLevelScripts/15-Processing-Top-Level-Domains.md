@@ -7,11 +7,11 @@ List Took 10 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Internet-Assigned-Numbers-Authority.md)
 
 ## Public-Suffix
-List Took 5 Seconds.
+List Took 4 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Public-Suffix.md)
 
 ## TLD-List
-List Took 9 Seconds.
+List Took 15 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/TLD-List.md)
 
 ____________________________________
