@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 10:56 2017/09/23
+! 最終更新 0:10 2017/10/01
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -2168,6 +2168,8 @@ video.fc2.com#@#[class*="_ad_"]:not(html):not(body)
 video.fc2.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
 	!左側
 video.fc2.com#@#[id*="_ad_"]:not(html):not(body)
+	!マンガ1p右にずれてしまう
+viewer.tonarinoyj.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 	!動画を再生すると消える
 	!2017/07/16:not([class*="vjs-ad-"])
 	!vlog.xuite.net#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
