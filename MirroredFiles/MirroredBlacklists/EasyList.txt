@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 201710010402
+! Version: 201710011643
 ! Title: EasyList
-! Last modified: 01 Oct 2017 04:02 UTC
+! Last modified: 01 Oct 2017 16:43 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -2608,7 +2608,7 @@
 /adsenceSearchTop.
 /adsEnd.
 /adsense-
-/adsense.$domain=~adsense.googleblog.com
+/adsense.$domain=~adsense.az|~adsense.googleblog.com
 /adsense/*
 /adsense1.
 /adsense2.
@@ -13761,6 +13761,7 @@ _popunder+$popup
 ###js-image-ad-mpu
 ###js-outbrain-ads-module
 ###js-outbrain-rightrail-ads-module
+###js-page-ad-top
 ###js-site-nav-ad-wrap
 ###js-story__ad-storyrec
 ###js-wide-ad
@@ -30494,6 +30495,7 @@ coingamez.com,mangaumaru.com,milfzr.com,pencurimovie.cc#@#div[id^="div-gpt-ad"]
 ||pllddc.com^$third-party
 ||plocap.com^$third-party
 ||plopx.com^$third-party
+||plufdsa.com^$third-party
 ||plugerr.com^$third-party
 ||plugs.co^$third-party
 ||plusfind.net^$third-party
@@ -44608,14 +44610,20 @@ $script,third-party,domain=123videos.tv|171gifs.com|1proxy.de|2ddl.download|2ddl
 |http://$script,third-party,xmlhttprequest,domain=jatttv.pw|speedplay.pw|speedplay.site|speedplay.us|speedplay1.pw|speedplay1.site|speedplay2.pw|speedplay2.site|speedplay3.pw|speedplayx.site|speedplayy.site
 |https://$script,third-party,xmlhttprequest,domain=jatttv.pw|speedplay.pw|speedplay.site|speedplay.us|speedplay1.pw|speedplay1.site|speedplay2.pw|speedplay2.site|speedplay3.pw|speedplayx.site|speedplayy.site
 ! speedtest.net
+@@/download?nocache=$xmlhttprequest,domain=speedtest.net
+@@/hello?nocache=$xmlhttprequest,domain=speedtest.net
+@@/upload?nocache=$xmlhttprequest,domain=speedtest.net
 @@||ads.ookla.com/www/test.js?$script,domain=speedtest.net
 @@||api.mapbox.com^$script,domain=speedtest.net
 @@||beta.speedtest.net^$script,xmlhttprequest,domain=speedtest.net
 @@||cdnst.net/javascript/speedtest-main.js$domain=speedtest.net
 @@||google.com/coop/$script,domain=speedtest.net
+@@||mapbox.com^$xmlhttprequest,domain=speedtest.net
 @@||speedtest.net/api/js/host-redirect$xmlhttprequest,domain=speedtest.net
 @@||speedtest.net/api/js/isp-rating.php$~third-party,xmlhttprequest
 @@||speedtest.net/api/js/servers$~third-party,xmlhttprequest
+@@||speedtest.net/global-index/public/site.bundle.js$script
+@@||speedtest.net/global-index/public/vendor.bundle.js$script
 @@||speedtest.net/globe_feed.php?$script,domain=speedtest.net
 @@||speedtest.net/javascript/extMouseWheel.js
 @@||speedtest.net/javascript/functions.js
@@ -44797,6 +44805,7 @@ $script,third-party,domain=123videos.tv|171gifs.com|1proxy.de|2ddl.download|2ddl
 @@||addnow.com/widget/addnow.js$script,domain=sportsmole.co.uk
 @@||airtv-assets.global.ssl.fastly.net^$domain=viralnova.com
 @@||ajax.cloudflare.com/cdn-cgi/nexp/$script,third-party
+@@||ajax.cloudflare.com/cdn-cgi/scripts/$script,third-party
 @@||ak.sail-horizon.com^$script,third-party,domain=activistpost.com|addictinginfo.com|alfonzorachel.com|allenbwest.com|allenwestrepublic.com|askmefast.com|breathecast.com|bulletsfirst.net|clashdaily.com|classicalite.com|comicallyincorrect.com|conservativebyte.com|conservativetribune.com|conservativevideos.com|cowboybyte.com|crossmap.com|dailyheadlines.net|dailysurge.com|dccrimestories.com|digitaljournal.com|eaglerising.com|enstarz.com|genfringe.com|girlsjustwannahaveguns.com|hellou.co.uk|hngn.com|infowars.com|instigatornews.com|joeforamerica.com|kdramastars.com|kpopstarz.com|latinpost.com|libertyunyielding.com|minutemennews.com|musictimes.com|naturalblaze.com|naturalnews.com|natureworldnews.com|newser.com|oddee.com|patriotoutdoornews.com|pitgrit.com|rantlifestyle.com|realfarmacy.com|redmaryland.com|rightwingnews.com|shark-tank.com|spectator.org|stevedeace.com|techtimes.com|theblacksphere.net|thefreethoughtproject.com|thegatewaypundit.com|themattwalshblog.com|thepoke.co.uk|valuewalk.comvcpost.com|victoriajackson.com|viralnova.com|viralthread.com
 @@||alloyentertainment.com/wp-content/plugins/$script,domain=vampirediaries.com
 @@||api-public.addthis.com/url/shares.json?$script,third-party,domain=activistpost.com|addictinginfo.com|alfonzorachel.com|allenbwest.com|allenwestrepublic.com|askmefast.com|breathecast.com|bulletsfirst.net|clashdaily.com|classicalite.com|comicallyincorrect.com|conservativebyte.com|conservativetribune.com|conservativevideos.com|cowboybyte.com|crossmap.com|dailyheadlines.net|dailysurge.com|dccrimestories.com|digitaljournal.com|eaglerising.com|enstarz.com|genfringe.com|girlsjustwannahaveguns.com|hellou.co.uk|hngn.com|infowars.com|instigatornews.com|joeforamerica.com|kdramastars.com|kpopstarz.com|latinpost.com|libertyunyielding.com|minutemennews.com|musictimes.com|naturalblaze.com|naturalnews.com|natureworldnews.com|newser.com|oddee.com|patriotoutdoornews.com|pitgrit.com|rantlifestyle.com|realfarmacy.com|redmaryland.com|shark-tank.com|spectator.org|stevedeace.com|techtimes.com|theblacksphere.net|thefreethoughtproject.com|thegatewaypundit.com|themattwalshblog.com|thepoke.co.uk|tinypic.com|valuewalk.comvcpost.com|victoriajackson.com|viralnova.com|viralthread.com
@@ -44921,6 +44930,7 @@ $script,third-party,domain=123videos.tv|171gifs.com|1proxy.de|2ddl.download|2ddl
 @@||video.foxnews.com^$script,third-party
 @@||vidible.tv/prod/$script,third-party
 @@||vimeocdn.com^$script,domain=headcramp.com
+@@||vjs.zencdn.net^$script,domain=traileraddict.com
 @@||wibbitz.com^*/embed.js$domain=breaking911.com
 @@||widget.clipix.com^$script,third-party
 @@||widget.spreaker.com^$script,third-party,xmlhttprequest,domain=westernjournalism.com
@@ -52226,6 +52236,7 @@ transfermarkt.co.uk##.hide-for-small[style="height: 273px; text-align: center; o
 theguardian.com##.hide-on-popup
 xtshare.com##.hideLink
 mobilesyrup.com##.hide_768
+speedtest.net##.high-placeholder
 torentilo.com##.highSpeed
 all-shares.com##.highSpeedResults
 siteslike.com##.highlighted
@@ -52851,7 +52862,7 @@ cnn.com##.mortgage-and-savings
 zillow.com##.mortgage-featured-partners
 radiosport.co.nz##.mos-sponsor
 anonymouse.org##.mouselayer
-primewire.org##.movie_info a[href^="/gohere.php?title="]
+primewire.ag,primewire.is,primewire.org##.movie_info a[href^="/gohere.php?title="]
 merdb.com##.movie_version a[style="font-size:15px;"]
 primewire.ag##.movie_version_link > [class][href^="/goto.php?title="]
 movie2k.tl##.moviedescription + br + div > a
@@ -55032,7 +55043,7 @@ vitorrent.net,vitorrent.tv##a[href^="/file.php?name"]
 torrent-dx.com##a[href^="/go.php?"]
 tinydl.eu##a[href^="/go.php?http://sharesuper.info"]
 yourbittorrent.com##a[href^="/go/"]
-primewire.org##a[href^="/gohere.php?link="]
+primewire.ag,primewire.is,primewire.org##a[href^="/gohere.php?link="]
 bts.ph##a[href^="/goto_.php?"]
 torrentz2.eu##a[href^="/inago_.php"]
 downloadhelper.net##a[href^="/liutilities.php"]
@@ -55364,6 +55375,7 @@ infowars.com##a[href^="http://www.midasresources.com/store/store.php?ref="]
 theringer.com##a[href^="http://www.millerlite.com/"]
 armorgames.com##a[href^="http://www.mmo123.co/"]
 movie2kto.ws##a[href^="http://www.movie2kto.ws/watchnow?"]
+gomovies.co##a[href^="http://www.movie4all.co/"]
 quicksilverscreen.com##a[href^="http://www.movies-for-free.net"]
 pixhost.org##a[href^="http://www.mydownloader.net/pr/"]
 2x4u.de##a[href^="http://www.myfreecams.com/?baf="]
@@ -55499,7 +55511,7 @@ primewire.ag,primewire.in,primewire.is##a[onclick*="'sponsor_host'"]
 gizmodo.in##a[onclick*="('http://www.gizmodo.in/gzdcrk/click.htm?"]
 file-upload.net,gofirstrow.eu##a[onclick*=".adsjudo.com"]
 m.youtube.com##a[onclick*="\"ping_url\":\"http://www.google.com/aclk?"]
-primewire.org##a[onclick*="_aff_link"]
+primewire.ag,primewire.is,primewire.org##a[onclick*="_aff_link"]
 monova.org##a[onclick*="clicked"]
 mensxp.com##a[onclick*="http://www.mensxp.com/mxlck/click.htm"]
 software182.com##a[onclick*="sharesuper.info"]
@@ -55673,6 +55685,7 @@ fullstuff.co##div > a[href][rel="nofollow"]
 businessinsider.in##div > a[onclick]
 thefreedictionary.com##div > a[rel="nofollow"][href]
 monova.org##div > a[style][href^="http://"]
+medicine.news,robotics.news##div > a[target="_blank"]
 softpedia.com##div > div + a[id]
 oddee.com##div > div + span + span
 monova.org##div > div > [target="_blank"]
@@ -57022,9 +57035,10 @@ lyricsmania.com##p[style="font-size:14px; text-align:center;"]
 history.ca##p[style="height:15px;"]
 midtownlunch.com##p[style="padding-bottom:295px"]
 talkarcades.com##p[style="text-align: center; font-weight: bold; font-size: 150%;"]
-primewire.org#?#.movie_version:-abp-has(span:-abp-contains(Promo Host))
-primewire.org#?#.movie_version:-abp-has(span:-abp-contains(Sponsor Host))
-primewire.org#?#A[href^="/gohere.php?link="]
+primewire.ag,primewire.is,primewire.org#?#.movie_version:-abp-has(span:-abp-contains(Promo Host))
+primewire.ag,primewire.is,primewire.org#?#.movie_version:-abp-has(span:-abp-contains(Sponsor Host))
+primewire.ag,primewire.is,primewire.org#?#a[href^="/gohere.php?link="]
+primewire.ag,primewire.is,primewire.org#?#a[onclick*="_aff_link"]
 forum.xda-developers.com##script + .postbit-wrapper[style]
 monova.org##script + [class] > [class]:first-child
 9to5mac.com##script + [class] > div[class]:first-child
@@ -59257,6 +59271,7 @@ pornhub.com##[-abp-properties='height: 300px; width: 315px;']
 @@||beatthebrochure.com/js/jquery.popunder.js
 @@||bebusiness.eu/js/adview.js
 @@||bellaliant.net^*/banners/ads/$image,~third-party
+@@||belwrite.com^$image,domain=streamcloud.eu
 @@||betar.gov.bd/wp-content/plugins/useful-banner-manager/
 @@||betar.gov.bd/wp-content/uploads/useful_banner_manager_banners/
 @@||betrad.com^*.gif$domain=grammarist.com
@@ -62840,7 +62855,7 @@ www.google.com#@##videoads
 @@||bizquest.com^*_img/_franchise/*_120x60.$image
 @@||breakingisraelnews.com/wp-content/uploads/*-300x250-
 @@||canada.com/news/*-300-250.gif
-@@||cbsistatic.com/img/*/300x250/$image
+@@||cbsistatic.com/img/*/300x250/$image,xmlhttprequest
 @@||cinemanow.com/images/banners/300x250/
 @@||consumerist-com.wpengine.netdna-cdn.com/assets/*300x250
 @@||crowdignite.com/img/upload/*300x250
@@ -63605,4 +63620,4 @@ www.google.com#@##videoads
 @@||tumblr.com^$popup,domain=pornhub.com
 @@||twitter.com^$popup,domain=pornhub.com
 @@||wmtrafficentry.com/cgi-bin/ewm.cgi/*_HeaderTab?$popup,domain=extremetube.com|spankwire.com
-! Checksum: NcorVx8Bfg35sTalL6pClg
+! Checksum: jxsG7HaKIrWiBLTmxKDt8g
