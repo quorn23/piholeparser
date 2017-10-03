@@ -1201,7 +1201,7 @@ usatoday.com##script:inject(abort-on-property-write.js, _sp_)
 ! https://github.com/uBlockOrigin/uAssets/issues/266
 alphr.com,autobytel.com,brigitte.de,cesoirtv.com,chip.de,erdbeerlounge.de,gamesradar.com,huffingtonpost.co.uk,huffingtonpost.com,moviefone.com,playboy.de,theweek.co.uk##script:inject(abort-on-property-write.js, _sp_)
 ! https://github.com/jspenguin2017/uBlockProtector/issues/367
-al.com,bento.de,cleveland.com,gutefrage.net,masslive.com,mlive.com,newyorkupstate.com,nj.com,nola.com,oregonlive.com,pennlive.com,radiotimes.com,silive.com,stern.de,syracuse.com##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
+20min.ch,al.com,bento.de,cleveland.com,gala.de,gutefrage.net,masslive.com,mlive.com,newyorkupstate.com,nj.com,nola.com,oregonlive.com,pennlive.com,radiotimes.com,silive.com,stern.de,syracuse.com##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
 
 ! https://forums.lanik.us/viewtopic.php?f=90&t=35106
 gamona.de,giga.de,kino.de,spielaffe.de,spieletipps.de##script:inject(abort-on-property-write.js, _sp_)
@@ -1270,10 +1270,14 @@ fullmatchesandshows.com,mediafire.com,newser.com,pornhub.com,rlslog.net,sciencew
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=48423
 ! https://www.reddit.com/r/uBlockOrigin/comments/6o9hax/ublockorigin_no_longer_works_on_gelbooru_as_of/
+! https://github.com/uBlockOrigin/uAssets/issues/603
+gelbooru.com##script:inject(popads-dummy.js)
 @@||gelbooru.com^$first-party,script
 gelbooru.com#@#span[class]:last-child > a img[src]
-! https://forums.lanik.us/viewtopic.php?p=117213#p117213
-||gelbooru.com^$inline-script
+! https://forums.lanik.us/viewtopic.php?p=125167#p125167
+@@||googleapis.com/*/jquery.min.js$script,domain=gelbooru.com
+! https://www.reddit.com/r/uBlockOrigin/comments/73qtym/gelbooru_blocking_image_results_on_searches_seems/dntajl1/
+@@||maxcdn.bootstrapcdn.com^$script,domain=gelbooru.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/302
 ! https://github.com/uBlockOrigin/uAssets/issues/369
@@ -2272,6 +2276,11 @@ smps.us##script:inject(bab-defuser.js)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/73kz4a/cloudfront_adverts_display/
 ||d25ezbwokoefx6.cloudfront.net^$script,redirect=noopjs,domain=trueachievements.com
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/624#issuecomment-333700969
+kisshentai.net##script:inject(abort-on-property-read.js, adblock)
+kisshentai.net##script:inject(abort-on-property-read.js, BetterJsPop)
+rapidvideo.com##script:inject(abort-current-inline-script.js, atob, tabunder)
 
 ! Filters below will be removed once the filter list dark-patterns.txt is
 ! well spread. Leave at the bottom.
