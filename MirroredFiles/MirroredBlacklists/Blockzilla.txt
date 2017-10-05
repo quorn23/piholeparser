@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D88 
+! Version D89 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -990,6 +990,7 @@ cosmopolitan.com##DIV[class^="leader"]
 csnchicago.com,reason.com,tomshardware.com##DIV[id$="leaderboard"]
 datpiff.com,freewarefiles.com,lucianne.com##[style="cursor: pointer;"]
 deviantart.com##DIV[class$="300x250"]
+deviantart.com,nzherald.co.nz,raiders.com##.ad-container
 eventcinemas.com.au,eventcinemas.co.nz,thedailysheeple.com##.ads
 horrornews.net##DIV[id*="cedato"]
 mangafox.me##DIV[style*="banners/"]
@@ -997,7 +998,6 @@ mirror.co.uk##.top-slot
 mlive.com,theyeshivaworld.com##DIV[class*="_ad_"]
 moneycontrol.com##DIV[class^="bot_"]
 movieweb.com,nerdist.com##DIV[class^="banner"]
-deviantart.com,nzherald.co.nz##.ad-container
 pixabay.com##DIV[class*="sponsored"]
 salon.com##DIV[class*="-ad-"]
 slashfilm.com##DIV[id*="300x250"]
@@ -1009,6 +1009,7 @@ wired.com##DIV[class*="banner"]
 yahoo.com##DIV[id*="-upsell-"]
 yahoo.com##LI[id^="ad-"]
 youtube.com##DIV[class*="-ads-"]
+youtube.com##YTD-PROMOTED-VIDEO-RENDERER
 !
 ! Exceptions (Website Functionality) >>>>>
 !
@@ -1018,8 +1019,8 @@ youtube.com##DIV[class*="-ads-"]
 @@.demdex.net/$script,domain=foxnews.com|globaltv.com
 @@.foxnews.com/$script,domain=foxnews.com
 @@.net/ad/$object-subrequest,domain=foxsports.com
-@@/beacon.min.js$domain=huffingtonpost.com
 @@/beacon.js$domain=sciencechannel.com
+@@/beacon.min.js$domain=huffingtonpost.com
 @@/foxnews.$script,domain=foxnews.com
 @@/foxnewsplayer-$script,domain=foxnews.com
 @@/piwik.$script,domain=myuv.com
@@ -1028,8 +1029,8 @@ youtube.com##DIV[class*="-ads-"]
 @@/track/*$media
 @@/tracking.$script,xmlhttprequest,domain=mlb.com
 @@/tracking/*$script,xmlhttprequest,domain=ctv.ca|ctvnews.ca|mlb.com
-@@_tracking.$script,domain=slideshare.net
 @@_tracker.$script,domain=huffingtonpost.de
+@@_tracking.$script,domain=slideshare.net
 @@||abclocal.go.com/combiner/*/js/analytics/
 @@||accounts.alibaba.com^
 @@||adobedtm.com/*/satelliteLib-$script,domain=aarp.org
@@ -1044,8 +1045,8 @@ youtube.com##DIV[class*="-ads-"]
 @@||doubleclick.net/gpt/pubads_impl_$script,domain=csnchicago.com
 @@||doubleclick.net^$script,domain=foxnews.com
 @@||gigya.com/comments.
-@@||gigya.com^$~third-party,domain=cdns.au1.gigya.com
 @@||gigya.com^$domain=csnchicago.com|ctv.ca|ctvnews.ca|dailystar.co.uk|express.co.uk|pch.com|stuff.co.nz|threenow.co.nz
+@@||gigya.com^$~third-party,domain=cdns.au1.gigya.com
 @@||googletagservices.com^$script,domain=csnchicago.com|foxnews.com|nytimes.com|threenow.co.nz|zdnet.com
 @@||ifmnwi.club^$xmlhttprequest,domain=cbsnews.com
 @@||img-fotki.yandex.ru^
