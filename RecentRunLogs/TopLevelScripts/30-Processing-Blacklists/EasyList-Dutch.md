@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* EasyList-Dutch List Marked As Dead. Fri 6 Oct 00:28:27 EDT 2017
