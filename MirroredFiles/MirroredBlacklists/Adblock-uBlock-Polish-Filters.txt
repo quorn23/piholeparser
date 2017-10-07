@@ -4,15 +4,15 @@
 ! Collaborators: Adam W, Dominik, Wiesiek, Robert, Marek, buuuuuuu190, Caleb, Ryszard, Kruk, Weronika, Adam, xxcriticxx, maxoku, F4z, mathew85,Piter432, Adam K, Piotr S, Szymon D, Marek R, adreporter, kacper93, FadeMind, kerbenii, gzenio22, blocker999, FX54, hawkeye116477 
 ! Homepage: https://www.certyficate.it/
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika 
-! Last modified: 5 October 2017
+! Last modified: 6 October 2017
 ! Expires: 2 days
-! Version: 2017100503
+! Version: 2017100610
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na:  https://www.certyficate.it/polski-filtr-adblock/
-! v.2017100503 aktualizacja: czw, 5 pazdziernika 2017, 21:35:00
+! v.2017100610 aktualizacja: ptk, 6 pazdziernika 2017, 22:15:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -83,7 +83,7 @@ streamin.to###rkm
 ##A[href*="k.tradedoubler.com/click"]
 poczta.interia.pl#@#[href*=".hit.gemius.pl"]
 motorolasolutions.com##.tealiumMo2TriggerButton
-/^https:\/\/[a-z]{3,10}.\wp\.pl\/[a-zA-Z0-9-_]{250,}/$image
+/^https:\/\/[a-z]{2,10}.\wp\.pl\/[a-zA-Z0-9-_.?=?&%]{250,}/$image
 !
 !
 !-----------------------Privacy filters block-----------------------!
@@ -117,6 +117,7 @@ motorolasolutions.com##.tealiumMo2TriggerButton
 ||sylaba.net^
 ||smpl.hit.ppdb.pl^
 ||daib.pl^
+||salesmanago.pl^$domain=~salesmanago.pl
 !
 !
 !------------------------General element hiding rules-------------------------!
@@ -219,7 +220,7 @@ pl/popup.js|$script
 ~lech.tv,~wtkplay.pl,~epoznan.pl##[class^="advertisement"]
 ~radekcholewinski.pl,~github.com##A[href$="/reklama"]
 ~katywroclawskie.pl,~rozklad-pkp.pl,~gwarant.czest.pl,~sukniaonline.pl##[src*="/banners/banner"]
-~tczewska.pl,~procamp.agency,~rp.pl,~sportowememy.pl##[id*="reklama"]
+~tczewska.pl,~procamp.agency,~rp.pl,~sportowememy.pl,~intercity.pl##[id*="reklama"]
 ~magdabek.pl,~superpharm.pl,~ceo.com.pl,~linuxiarze.pl,~wirtualny-wojownik.pl,~przerwanareklame.pl,~tvpolska.pl,~smiechawatv.pl,~break.pl,~radekcholewinski.pl,~prokonsumencki.pl,~sekurak.pl,~techmaniak.pl,~gsmmaniak.pl,~appmaniak.pl,~tabletmaniak.pl,~fotomaniak.pl,~mobimaniak.pl,~acermaniak.pl,~tvmaniak.pl,~3dmaniak.pl,~gizmaniak.pl,~luxmaniak.pl,~blogomaniak.pl,~activemaniak.pl,~agdmaniak.pl,~eskago.pl,~certyficate.it,~motogen.pl,~wikipedia.org,~motomio.pl,~semilac.pl,~e-otoczenie.pl,~wyborcza.pl,pl##[class*="reklama"]
 ~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,pl##[class^="ad-"]
 ~fakt.pl,pl##.trizer-bnr
@@ -235,6 +236,7 @@ pl###LinkArea\:gry
 ##.footer-ad
 pl##.onnetwork-video
 pl##a[href^="https://converti.se/click/"]
+##.advertisment-panel
 !
 !
 !------------------------Specific element hiding rules------------------------!
@@ -1052,6 +1054,7 @@ onet.pl##span.newsAdd
 onet.pl##.miniSlot:style(min-height: 0rem!important;margin-bottom: 0rem!important;)
 opinie.wp.pl##[style="pointer-events:none;"][class]
 open.fm###bnr-top
+open.fm##.bnr-player
 optyczne.pl##.double-billboard
 opolelubelskie.24wspolnota.pl##.visible-md.visible-lg.row
 originals24.pl##body > div:nth-of-type(3)
@@ -2583,7 +2586,6 @@ wp.pl##body > div:nth-of-type(1)[style^="display: block;"]
 ||push-ad.com$script
 ||pushcrew.com$script
 ||cdn.sendpulse.com$script
-||salesmanago.pl/api/push/$xmlhttprequest
 ||gstatic.com/firebasejs/*/firebase*.js$script
 ||youtubersi.pl/themes/default/js/notify.js$script
 ||savecart.pl/*/script.php$script
@@ -2695,6 +2697,10 @@ www.wp.pl##SECTION#section_celebrities > DIV[class]:first-child
 www.wp.pl##SECTION#section_mototech > DIV[class]:first-child
 www.wp.pl##DIV[class^="_3"] > DIV[class^="_3"] > DIV[class^="_"] > DIV[class]
 www.wp.pl##[class][src^="https://v.wpimg.pl/"][style="max-height: 25px;"]
+www.wp.pl###section_topnews > SPAN + DIV[class]
+~www.wp.pl,wp.pl##A[class][href*=".wp.pl/"] > IMG[class][src^="https://v.wpimg.pl/"]:last-child
+~www.wp.pl,wp.pl##[class^="_3"][data-reactid] + [class^="_3"][data-reactid] > DIV[class]
+~www.wp.pl,wp.pl##[class^="_"][data-reactid] > DIV[class^="_"][data-reactid] > DIV[class^="_"][data-reactid] + DIV[class^="_"][data-reactid] > DIV[class]
 ! niepotwierdzone
 !
 ! inne
@@ -2710,7 +2716,7 @@ sportowefakty.wp.pl##.section__separator
 sportowefakty.wp.pl##HEADER + DIV#matchtable + DIV[class]
 sportowefakty.wp.pl##ASIDE > DIV[class]:first-child
 sportowefakty.wp.pl##P + DIV[class]
-sportowefakty.wp.pl,money.pl##A[class][href*=".wp.pl/"] > IMG[class][src^="https://v.wpimg.pl/"]:last-child
+sportowefakty.wp.pl,money.pl,pudelek.pl##A[class][href*=".wp.pl/"] > IMG[class][src^="https://v.wpimg.pl/"]:last-child
 !
 !
 !--------------------------Pudelek/Pudelekx element hide------------!
@@ -2722,6 +2728,8 @@ pudelek.pl##DIV[class][data-utm_source][data-st-area] + DIV.m0 > DIV + DIV
 pudelek.pl##SCRIPT + DIV + DIV[class^="m"]
 pudelek.pl##LI > DIV[class]:first-child
 pudelek.pl##DIV + DIV.sidebar > DIV[class^="m"]
+pudelek.pl##DIV[data-st-area^="main-stream-"] + .mbb
+pudelek.pl##DIV[class^="sidebar-"] > [class^="mtb"]
 !
 !
 !--------------------------Money element hide------------!
@@ -2744,6 +2752,11 @@ biztok.money.pl##[style="margin-bottom: 10px"] > DIV[class]
 www.money.pl###ADrail > DIV > DIV[class]
 www.money.pl##P + DIV[style$="padding:10px 0"]
 www.money.pl##SCRIPT[src^="//money"] + DIV[class][style="text-align:center;"]
+manager.money.pl##.in > DIV[class]:first-child
+www.money.pl##.box:first-child + DIV[class]
+www.money.pl##[class^=" _bc_paragraph_"] + DIV[class]
+www.money.pl##DIV[class] > SPAN[class] + DIV[class]:last-child
+www.money.pl##P + DIV[class]
 !
 !
 !--------------------------WP blocking filters------------!
