@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: XO+flsWcOQW5VxOOUzot/Q
-! Version: 201710080431
+! Checksum: NGlNaMd+m9+AFFDhLwywIQ
+! Version: 201710090431
 ! Title: Fanboy's Annoyance List
-! Last modified: 08 Oct 2017 04:31 UTC
+! Last modified: 09 Oct 2017 04:31 UTC
 ! Expires: 4 days (update frequency)
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -328,11 +328,13 @@ _social_rss.
 -eu-cookies/$script
 -eucookie.
 -privacy-cookie-
+.consent-cookie.
 .cookie-law.$script
 .cookie-policy.
 .cookie_law.
 .cookieconsent.
 .cookiecuttr.
+.cookieinfo2.
 .cookielaw.js
 .cookienotice.
 .cookiepolicy.
@@ -497,6 +499,7 @@ _social_rss.
 /cookiepopup?
 /CookiePrompter-
 /CookieReportsDisclaimer.
+/cookies-banner
 /cookies-compliant.
 /cookies-directive.
 /cookies-disclaimer.
@@ -561,6 +564,7 @@ _social_rss.
 /eucookiesk.
 /eucookieslaw/*$script
 /EUCookieUtility.
+/eurocookie.
 /fp_cookie.
 /g4cookies.
 /GestionCookiesCNILPlugin/*
@@ -590,6 +594,7 @@ _social_rss.
 /newprivacypolicy.
 /ocgcookie?
 /plugin_cookie/*
+/plugins/cookie-muncher/*
 /plugins/CookieInfo/*
 /plugins/EuCookie/*
 /privacy-cookies.js
@@ -1716,6 +1721,7 @@ _site_cookie_
 /img/fb_
 /img/gplus_
 /img/instagram-
+/img/share-
 /img/share/*
 /img/share_
 /img/social-
@@ -2027,6 +2033,7 @@ _site_cookie_
 /share-icons/*
 /share-link-
 /share-media.
+/share-mobile.
 /share-myspace.
 /share-on-diaspora/*
 /share-pinterest-
@@ -3279,6 +3286,7 @@ _youtube_social_
 ##.alert-subscribe-small
 ##.ampz-icon-email
 ##.ampz_email
+##.android-smart-banner
 ##.anews-web-widget
 ##.aptureTMMBar
 ##.article-next-sticky
@@ -4647,6 +4655,7 @@ _youtube_social_
 ###CookieConsentDiv
 ###CookieContainer
 ###CookieDiv
+###CookieHead
 ###CookieInfo
 ###CookieInformation
 ###CookieLey
@@ -4683,6 +4692,7 @@ _youtube_social_
 ###GlobalCookieBanner
 ###IBTCookiePolicy
 ###KPN_cookie
+###NJI-EmeaCookie
 ###ObsCnil
 ###PaveCookies
 ###PersonalDataInfoBar
@@ -4881,6 +4891,7 @@ _youtube_social_
 ###cookie-fixed-layer
 ###cookie-gm-new
 ###cookie-header
+###cookie-header-container
 ###cookie-hint
 ###cookie-holder
 ###cookie-info
@@ -4984,6 +4995,7 @@ _youtube_social_
 ###cookieConsentForm
 ###cookieConsentNotice
 ###cookieConsentPrompt
+###cookieConsentWrap
 ###cookieContainer
 ###cookieControl
 ###cookieControlWrapper
@@ -5038,6 +5050,7 @@ _youtube_social_
 ###cookieNotice
 ###cookieNoticeContainer
 ###cookieNotification
+###cookieNotifierWrapper
 ###cookieOverlay
 ###cookiePanel
 ###cookieParisien
@@ -5236,6 +5249,7 @@ _youtube_social_
 ###cookies-policy-prompt
 ###cookies-policy-wrapper
 ###cookies-politics
+###cookies-popup
 ###cookies-privacy
 ###cookies-use-alert
 ###cookies-verify
@@ -5281,6 +5295,7 @@ _youtube_social_
 ###cookies_border
 ###cookies_box
 ###cookies_container
+###cookies_content
 ###cookies_div_main
 ###cookies_info
 ###cookies_message
@@ -5296,6 +5311,7 @@ _youtube_social_
 ###cookies_warning
 ###cookiesadv
 ###cookiesbar
+###cookiesck
 ###cookiesconcentbar
 ###cookiescontainer
 ###cookiescript_injected
@@ -5307,6 +5323,7 @@ _youtube_social_
 ###cookiesribbon
 ###cookiestatement
 ###cookiestrip
+###cookieswarning
 ###cookietext
 ###cookietop
 ###cookieu_header
@@ -5323,6 +5340,7 @@ _youtube_social_
 ###ctl00_CookieMessage1_divCookie
 ###ctl00_CookieMessage1_upCookie
 ###ctl00_Footer_rnCookies_popup
+###ctl00_cookieConsent_pnlCookie
 ###ctl00_cookie_panel
 ###ctl00_cookieconsent_ajaxPanel
 ###ctl00_ctl00_divCookiePolicyContainer
@@ -5434,6 +5452,7 @@ _youtube_social_
 ###headCookieAccept
 ###headband-cookie
 ###headband_cookies
+###header-cookie
 ###header-info-cookie
 ###headerCookieLaw
 ###headerCookies
@@ -5547,6 +5566,7 @@ _youtube_social_
 ###pCookieWarning
 ###p_ciInner
 ###page-advice-cookie
+###page-cookies-bar
 ###panel-cookie
 ###panel-cookie-usage
 ###panel-cookies
@@ -5578,10 +5598,12 @@ _youtube_social_
 ###privacy-bar
 ###privacy-cookieMessage
 ###privacy-message-bar
+###privacy-notice
 ###privacy-policy
 ###privacy-policy-notice
 ###privacy-policy-panel
 ###privacyBar
+###privacyHint
 ###privacyOuterContainer
 ###privacyPolicyBox
 ###privacyPolicyLayer
@@ -5594,6 +5616,7 @@ _youtube_social_
 ###privacypolicy
 ###private-policy
 ###pronamic_cookie_holder
+###ptCookieConsent
 ###qb_cookie_consent_main
 ###rb-cookie-container
 ###rbiCookiePolicy_pushDownBoxWrapper
@@ -5712,7 +5735,7 @@ _youtube_social_
 ##.CookieWarning
 ##.CookieWrapper
 ##.Cookie_bar
-##.Cookies
+##.Cookies:not(body)
 ##.CookiesBar
 ##.CookiesMessageContainer
 ##.EUCookie
@@ -5802,6 +5825,7 @@ _youtube_social_
 ##.capa_cookies
 ##.caption-cookie
 ##.cc-banner
+##.cc-container
 ##.cc-cookies
 ##.cc-fixed-bottom
 ##.cc-floating
@@ -5823,6 +5847,8 @@ _youtube_social_
 ##.consentBarWrapper
 ##.container-cookie-notice
 ##.container_cookies
+##.contentCookieBox
+##.content_cookies
 ##.coockie
 ##.coockie_banner
 ##.cookie-accept
@@ -5840,7 +5866,7 @@ _youtube_social_
 ##.cookie-barre
 ##.cookie-block
 ##.cookie-box
-##.cookie-check
+##.cookie-check:not(body)
 ##.cookie-choice
 ##.cookie-compliance
 ##.cookie-confirm
@@ -5880,6 +5906,7 @@ _youtube_social_
 ##.cookie-information
 ##.cookie-information-container
 ##.cookie-information-wrapper
+##.cookie-informer
 ##.cookie-inner
 ##.cookie-law
 ##.cookie-law-container
@@ -5900,7 +5927,7 @@ _youtube_social_
 ##.cookie-notice-container
 ##.cookie-notice-dialog
 ##.cookie-notice-wrapper
-##.cookie-notification
+##.cookie-notification:not(body)
 ##.cookie-notifier
 ##.cookie-notify
 ##.cookie-opt-in
@@ -5956,7 +5983,7 @@ _youtube_social_
 ##.cookieBan
 ##.cookieBanner
 ##.cookieBannerContainer
-##.cookieBar
+##.cookieBar:not(body)
 ##.cookieBarContainer
 ##.cookieBarReviewDesktop
 ##.cookieBox
@@ -5998,7 +6025,7 @@ _youtube_social_
 ##.cookiePolicyBannerOuter
 ##.cookiePolicyBnr
 ##.cookiePopUp
-##.cookiePopup
+##.cookiePopup:not(body)
 ##.cookiePopupContainer
 ##.cookiePrompt
 ##.cookieShowClass
@@ -6013,6 +6040,7 @@ _youtube_social_
 ##.cookieWrapper
 ##.cookieWrp
 ##.cookie__inner
+##.cookie__message-container
 ##.cookie__policy
 ##.cookie__show
 ##.cookie__wrapper
@@ -6063,11 +6091,13 @@ _youtube_social_
 ##.cookiedisclaimer
 ##.cookiediv
 ##.cookiefascia
+##.cookieheight
 ##.cookieinfo:not(body)
 ##.cookieinfobannerWrapper
 ##.cookieinfoholder
 ##.cookielabel
 ##.cookielaw-container
+##.cookielawpopup-container
 ##.cookieleiste
 ##.cookiemessage
 ##.cookiemonster
@@ -6091,6 +6121,7 @@ _youtube_social_
 ##.cookies-content
 ##.cookies-dialog
 ##.cookies-eu
+##.cookies-footer
 ##.cookies-info
 ##.cookies-info-static
 ##.cookies-legislation
@@ -6104,7 +6135,7 @@ _youtube_social_
 ##.cookies-notice-msg
 ##.cookies-notification
 ##.cookies-notify
-##.cookies-open
+##.cookies-open:not(body)
 ##.cookies-panel
 ##.cookies-policy
 ##.cookies-policy-popover-container
@@ -6229,6 +6260,7 @@ _youtube_social_
 ##.globalcookiepolicycontainer
 ##.gn-cookie-alert
 ##.gp-plugin-cookie-consent
+##.hLibCookieExpanded
 ##.head-cookie-container
 ##.header-cookie
 ##.header-cookie-content
@@ -6361,6 +6393,7 @@ _youtube_social_
 ##.ppr_priv_document_cookie_banner
 ##.preventAcceptance
 ##.privacy-alert
+##.privacy-banner
 ##.privacy-cookie
 ##.privacy-notice
 ##.privacy-overlay
@@ -6371,6 +6404,7 @@ _youtube_social_
 ##.privacycookie
 ##.qb-cookielaw-bar
 ##.radioplayer-anno
+##.rdm-daac-notice-template
 ##.react-cookie-banner
 ##.regional-cookie-warning
 ##.resultCookie
@@ -10080,6 +10114,7 @@ _youtube_social_
 ##.floating-youtube
 ##.floatingShare
 ##.floatingSocial
+##.floating_share_button
 ##.floating_share_container
 ##.floatredesSociales
 ##.flyout-facebook
@@ -11496,6 +11531,7 @@ _youtube_social_
 ##.newGigyaShare
 ##.newSharerButtons
 ##.newSocialButtons
+##.newSocialShareButtons
 ##.new_facebook_16
 ##.new_sharebar
 ##.new_sharebar_bookmark
@@ -15243,9 +15279,10 @@ _youtube_social_
 ||massrelevance.com^$third-party
 ||meebo.com^$third-party
 ||meerkatapp.co/btn/$third-party
+||milotree.com^$third-party
 ||networkedblogs.com^$third-party
 ||newsharecounts.com^$third-party
-||pinimg.com^$third-party,domain=~pinterest.com
+||pinimg.com^$third-party,domain=~pinterest.co.uk|~pinterest.com
 ||pinterest.com/images/$third-party
 ||pinterest.com/js/pinit_main.js$third-party
 ||pinterest.com/v1/urls/count.json$third-party
@@ -17124,6 +17161,7 @@ startupsmart.com.au##.advs
 alarabiya.net##.advt + .panel
 atheistrepublic.com##.af-form
 allbusiness.com,nofilmschool.com,psdisasters.com##.af-form-wrapper
+extremetech.com##.affiliate-text
 afp.com##.afp_contact_block_contact
 chriskresser.com##.after-post
 vaildaily.com##.aggregatorlinksbottom
@@ -17342,6 +17380,7 @@ latimes.com##.classifiedAdOne
 latimes.com##.classifiedAdThree
 latimes.com##.classifiedAdTwo
 canada.com##.classifieds
+twitter.com##.client_prompt
 wired.com##.cm-footer
 health.com##.cmAd400x50
 people.com##.cmad
@@ -18862,6 +18901,7 @@ lamag.com,texasmonthly.com##.article-subscription
 gaytimes.co.uk##.article__footer
 atavist.com##.atavist-mailchimp
 hopesandfears.com,osu.edu##.banner
+philly.com##.banner_small
 wired.co.uk##.bb-button
 catchnews.com##.bg-col-blue
 ibtimes.com##.block-ibtimes-newsletters
@@ -19055,8 +19095,9 @@ mashable.com##.subscribe-options
 medicaldaily.com##.subscribe-to
 optimumenergy.com##.subscribe_content
 myspace.com##.subscriber
+philly.com##.subscribetoday__wrap
 techshout.com##.subscribition
-healthboards.com,makeuseof.com,nymag.com,refinery29.com##.subscription
+healthboards.com,makeuseof.com,newsweek.com,nymag.com,refinery29.com##.subscription
 matadornetwork.com##.subscription_options
 fora.ie##.subscriptions
 thenation.com##.takeaction
@@ -19146,6 +19187,7 @@ channelregister.co.uk,theregister.co.uk###RegCCO
 postojnska-jama.eu###\5f iCD
 moneysavingexpert.com###alertBar
 channel4.com###all4gn-cookie-policy-notification
+ao.com###aoMessageHolder
 bing.com###b_notificationContainer
 uktv.co.uk###back-to-old-site
 cc.com###balaMainContainer
@@ -19164,16 +19206,17 @@ msn.com###conditionalbanner
 ft.com,heathrowexpress.com###consent
 eurosport.com###container-notifications
 decathlon.co.uk###container-screen
-add0n.com,aflite.co.uk,aon.com,atom42.co.uk,bakersmall.co.uk,bbvonline.net,boscolohotels.com,boxnation.com,flexerasoftware.com,fremantlemedia.com,iadvize.com,keyboardco.com,nspcc.org.uk,onenessscotland.org,priorygroup.com,rodacciai.fr,technutty.co.uk,tutsandtips.com,wheatley-group.com###cookie
+add0n.com,aflite.co.uk,aon.com,atom42.co.uk,bakersmall.co.uk,bbvonline.net,boscolohotels.com,boxnation.com,flexerasoftware.com,fremantlemedia.com,iadvize.com,keyboardco.com,nspcc.org.uk,onenessscotland.org,priorygroup.com,rodacciai.fr,technutty.co.uk,toomeymotorgroup.co.uk,tutsandtips.com,wheatley-group.com###cookie
 malaysiaairlines.com###cookie_policy_modal
-anpost.ie,emrf.eu,emunewz.net,feyenoord.com,forbiddenplanet.co.uk,fulltilt.com,homecinemachoice.com,inmobi.com,izikart.co.uk,jomast.co.uk,metbiocat.eu,phonearena.com,picload.org,pokernews.com,premiumcredit.co.uk,private.com,scl.org,studentski.net,tellows-au.com,tellows-fi.com,tellows-ng.com,tellows-tr.com,tellows.asia,tellows.at,tellows.be,tellows.co,tellows.co.nz,tellows.co.uk,tellows.co.za,tellows.com,tellows.com.br,tellows.cz,tellows.de,tellows.dk,tellows.es,tellows.fr,tellows.gr,tellows.hu,tellows.in,tellows.it,tellows.jp,tellows.mx,tellows.net,tellows.nl,tellows.org,tellows.pl,tellows.pt,tellows.ru,tellows.se,tellows.tw,the-tls.co.uk,tsb.co.uk###cookies
+anpost.ie,ayraviation.com,emrf.eu,emunewz.net,feyenoord.com,forbiddenplanet.co.uk,fulltilt.com,homecinemachoice.com,inmobi.com,izikart.co.uk,jomast.co.uk,metbiocat.eu,panfurware.com,phonearena.com,picload.org,pokernews.com,premiumcredit.co.uk,private.com,scl.org,studentski.net,tellows-au.com,tellows-fi.com,tellows-ng.com,tellows-tr.com,tellows.asia,tellows.at,tellows.be,tellows.co,tellows.co.nz,tellows.co.uk,tellows.co.za,tellows.com,tellows.com.br,tellows.cz,tellows.de,tellows.dk,tellows.es,tellows.fr,tellows.gr,tellows.hu,tellows.in,tellows.it,tellows.jp,tellows.mx,tellows.net,tellows.nl,tellows.org,tellows.pl,tellows.pt,tellows.ru,tellows.se,tellows.tw,the-tls.co.uk,tsb.co.uk###cookies
 dexigner.com###cwarn
 debenhams.com###debCNwrap
 tunngle.net###delirioBiscottoso
 moleskine.com###disclaimer
 goccl.co.uk###divMessage
 fool.co.uk###dogfish
-microsoft.com,visualstudio.com,xbox.com###epb
+shatter-box.com###elGuestTerms
+live.com,microsoft.com,office.com,skype.com,visualstudio.com,windows.com,xbox.com###epb
 complex.com###eucn
 tartybikes.co.uk###eureg
 tellows-au.com,tellows-fi.com,tellows-ng.com,tellows-tr.com,tellows.asia,tellows.at,tellows.be,tellows.co,tellows.co.nz,tellows.co.uk,tellows.co.za,tellows.com,tellows.com.br,tellows.cz,tellows.de,tellows.dk,tellows.es,tellows.fr,tellows.gr,tellows.hu,tellows.in,tellows.it,tellows.jp,tellows.mx,tellows.net,tellows.nl,tellows.org,tellows.pl,tellows.pt,tellows.ru,tellows.se,tellows.tw###floating-header
@@ -19196,6 +19239,7 @@ exemproject.eu###myModal
 nba.com###nba_tos
 aptoide.com###news
 co-opinsurance.co.uk###noticePanel
+cnn.com###notice_banner
 csl-computer.com###notification
 eastlondonradio.org.uk###notification-area
 youtube.com###notification-footer
@@ -19213,8 +19257,9 @@ nba.com###policy_wrapper
 vanguardsmoke.com###pop_wholes
 vanguardsmoke.com###pop_wholes_bg
 aquacard.co.uk###popup
+fonehouse.co.uk,metrofone.co.uk###popupDiv
 autoevolution.com###prajiturele
-fedex.com###privacy-notice
+keil.com###privacymodule
 elanco.com###ribbon
 investing.com###sideNotificationZone
 earthcp.com###site-overlay
@@ -19233,6 +19278,7 @@ freewebsitetemplates.com##.Notices
 landrover.co.uk##.NotificationBar
 huawei.com##.ReadPolicy
 bankid.com,costaclub.com,hattrick.org,kenweego.com,linkedin.com,lonelyplanet.com,nature.com,netweather.tv,norwegian.com,viewsoniceurope.com##.alert
+historicengland.org.uk##.alert-banner
 zombiearmy.com##.alert-box
 jotti.org##.alert-info
 autotask.com##.alertbar
@@ -19250,9 +19296,9 @@ drakecircus.com##.ccc-widget
 visit.brussels##.confirm
 cityoflondon.gov.uk##.container-floating-notifications
 bankofengland.co.uk##.container-notifications
-anglianwater.co.uk,ask.fm,calvertjournal.com,crazydomains.co.uk,hempel.co.uk,hempelyacht.com,leonorgreyl.com,liptonicetea.com,m64.info,mandarinoriental.com,modhoster.com,natwest.com,openmailbox.org,postoffice.co.uk,rbs.co.uk,roalddahl.com,rowenta.com,statusbrew.com,syntevo.com,team-mediaportal.com,virgin-atlantic.com##.cookie
+anglianwater.co.uk,ask.fm,calvertjournal.com,crazydomains.co.uk,hempel.co.uk,hempelyacht.com,leonorgreyl.com,liptonicetea.com,ludwig.guru,m64.info,mandarinoriental.com,modhoster.com,natwest.com,openmailbox.org,postoffice.co.uk,rbs.co.uk,roalddahl.com,rowenta.com,statusbrew.com,syntevo.com,team-mediaportal.com,virgin-atlantic.com##.cookie
 theatlantic.com##.cookie-disclaimer
-amnesty.org,asda.com,ashridge.org.uk,chemistdirect.co.uk,cineworld.co.uk,coinbase.com,consumeraffairs.org.uk,dur.ac.uk,graspop.be,mailjet.com,mindshareworld.com,pjon.org,royalparks.org.uk,tescomobile.ie,thenottingham.com,ukcisa.org.uk,umicore.com,unknownphone.com,uptodown.com,volvocars.com##.cookies
+amnesty.org,asda.com,ashridge.org.uk,chemistdirect.co.uk,cineworld.co.uk,coinbase.com,consumeraffairs.org.uk,dur.ac.uk,graspop.be,luxottica.com,mailjet.com,mindshareworld.com,pjon.org,royalparks.org.uk,tescomobile.ie,thenottingham.com,ukcisa.org.uk,umicore.com,unknownphone.com,uptodown.com,volvocars.com##.cookies
 videojug.com##.cp-alert-message
 dhl.com##.dhl-cgk
 ingwb.com##.dialog
@@ -19272,6 +19318,7 @@ downloadcrew.com##.ginger_banner
 ingwb.com##.glass
 mozilla.org##.global-notice
 office.com##.headPopup
+hivehome.com##.header-stacked-message
 bing.com##.hpn_top_container
 earthcp.com##.info
 livescore.com,livescore.eu,livescores.com##.info-msg
@@ -19321,7 +19368,6 @@ dlwflooring.com##.privacy-info
 vocativ.com,zumba.com##.privacy-policy
 bbc.co.uk##.pulse-banner
 abcnews.go.com##.push-me
-macleans.ca##.rdm-daac-notice-template
 layar.com##.remarketing-banner
 newstatesman.com##.site-footer
 last.fm##.site-message
@@ -20445,7 +20491,7 @@ softonic.com##.follow-twitter
 huffingtonpost.co.uk,huffingtonpost.com##.follow-us
 cnbc.com##.follow_us
 informer.com,tomshardware.com##.footer-follow
-history.com,livescience.com,newsarama.com,pcmag.com,spanishdict.com##.footer-social
+greenbaypressgazette.com,history.com,livescience.com,newsarama.com,pcmag.com,sctimes.com,spanishdict.com##.footer-social
 spiegel.de##.footer-social-media
 whattechsays.com##.footer-social-wrap
 laptopmag.com##.footerSocial
@@ -21575,6 +21621,7 @@ mediapart.fr#@#.cookie-warn
 bezeq.co.il#@#.cookieAlert
 morizon.pl,tweakers.net#@#.cookieBar
 moniteurautomobile.be#@#.cookieBox
+metia.com#@#.cookieNotice
 alergia-allegra.pl#@#.cookiePopup
 security.nl#@#.cookie_consent
 postnl.be#@#.cookie_wrapper

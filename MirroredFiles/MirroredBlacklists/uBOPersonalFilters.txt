@@ -74,7 +74,8 @@ lowendbox.com##a[href^="http://www.colocrossing.com"]
 arstechnica.com###article-footer-wrap
 solidfiles.com##.remove
 solidfiles.com##.buttons
-advertisement$script,important
+advertisement.js$script,important
+*/advertisement.js$script,first-party,important,redirect=noopjs
 microsofttranslator.com^$important
 skype.com^$important
 skypeassets.com^$important
@@ -139,7 +140,7 @@ hanime.tv##.z-spot.subsection.golden-saucer
 hanime.tv##.z-spot.golden-saucer
 hanime.tv##.flex-wrap.justify-center.flex-row.after-content
 hanime.tv##.col-md-2.visible-lg.visible-md.golden-saucer-bar
-hanime.tv##script:inject(abort-current-inline-script.js, BetterJsPop)
+hanime.tv##script:inject(bp.js)
 hanime.tv##.align-center.justify-center.flex-row.row:has-text(Discover)
 htvanime.com^$third-party
 speedtest.net##.no-shadow.ad-vertical-tower.ad-vertical-container
@@ -1075,6 +1076,7 @@ screenrant.com##H3:has-text(Related:)
 screenrant.com##H3:has-text(RELATED:)
 screenrant.com##H3:has-text(NEXT:)
 screenrant.com##H2:has-text(Page)
+screenrant.com##H4:has-text(Read More:)
 screenrant.com##.social-list
 screenrant.com##.li-premium-zone
 nukethefridge.com##.cb-related-posts-block
@@ -1083,6 +1085,7 @@ nukethefridge.com###cb-top-menu
 nukethefridge.com##.cb-slider-b
 nukethefridge.com##.cb-sidebar
 advertising.js$important,script
+*/advertising.js$script,first-party,important,redirect=noopjs
 batman-news.com##.network-bar-container
 batman-news.com##.wp_rp_wrap
 batman-news.com##.jp-relatedposts
@@ -1141,8 +1144,12 @@ howtogeek.com##iframe
 imdb.com###social-share-widget
 imdb.com##.aux-content-widget-2:has-text(Connect)
 imdb.com##.aux-content-widget-2:nth-of-type(6)
-*/ads.js$script,important,redirect=noopjs
+*/ads.js$script,first-party,important,redirect=noopjs
+*/*.ads.js$script,first-party,important,redirect=noopjs
 dailymail.co.uk##.facebook-like-static
 hanime.tv^$csp=script-src 'self' 'unsafe-inline' *.hanime.tv *.googleusercontent.com *.google.com *.algolia.net *.algolianet.com
+@@||hanime.tv/*.ads.js$badfilter
+fuckcomix.com##.widget_text.widget
+fuckcomix.com###page-footer
 
 $third-party,domain=kimcartoon.me|kissanime.ru|kissmanga.com|readcomiconline.to|hanime.tv|digit.in|indiatimes.com|space.com|torrentfreak.com|scribblrs.com|bulbagarden.net|torrentsgroup.com|quora.com|mcuexchange.com|checkmytrip.com|itechpost.com|watchfree.to|openload.co|gsmarena.com|myanimelist.net|vidup.me|trailer-track.com|mediafire.com|tomsguide.com|istream.is|pocketnow.com|freeadultcomix.com|streamflix.org|onhax.me|pornovau.com|diverxity.com|rule34hentai.net|sexolic.com|parentherald.com|9cartoon.me|birthmoviesdeath.com|animmex.com|cinemablend.com|wired.com|usatoday.com|8muses.com|thewindowsclub.com
