@@ -105,9 +105,6 @@ vg.no##script:contains(/^\s*?window\.__AB__/)
 voetbalzone.nl##script:contains(/^\s*?var\s+?init_ads/)
 
 # uabInject-related ads
-20min.ch#@#.wingadblock
-spiegel.de#@#.wrapad
-
 ! https://github.com/gorhill/uBlock/issues/1044#issuecomment-163725136
 ! https://github.com/uBlockOrigin/uAssets/issues/209
 ||adswithsalt.com/*/ad-loading.pic$image,redirect=3x2-transparent.png
@@ -505,8 +502,8 @@ thesimsresource.com##script:inject(thesimsresource.com.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/211
 ! https://github.com/uBlockOrigin/uAssets/issues/223
 ! https://github.com/uBlockOrigin/uAssets/issues/622
-||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=4players.de|brigitte.de|buffed.de|erdbeerlounge.de|gamesaktuell.de|gamezone.de|gamona.de|giga.de|golem.de|kicker.de|kino.de|pcgames.de|pcgameshardware.de|spielaffe.de|spieletipps.de|t-online.de|welt.de|videogameszone.de
-4players.de,brigitte.de,buffed.de,chip.de,erdbeerlounge.de,gamesaktuell.de,gamezone.de,gamona.de,giga.de,golem.de,kicker.de,kino.de,pcgames.de,pcgameshardware.de,spielaffe.de,spieletipps.de,t-online.de,videogameszone.de,welt.de##script:inject(golem.de.js)
+||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=4players.de|brigitte.de|buffed.de|erdbeerlounge.de|gamesaktuell.de|gamezone.de|gamona.de|giga.de|golem.de|kicker.de|kino.de|myspass.de|pcgames.de|pcgameshardware.de|spielaffe.de|spieletipps.de|t-online.de|welt.de|videogameszone.de
+4players.de,brigitte.de,buffed.de,chip.de,erdbeerlounge.de,gamesaktuell.de,gamezone.de,gamona.de,giga.de,golem.de,kicker.de,kino.de,myspass.de,pcgames.de,pcgameshardware.de,spielaffe.de,spieletipps.de,t-online.de,videogameszone.de,welt.de##script:inject(golem.de.js)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=45273&start=15#p156427
 dailycaller.com##[id^="outbrain_widget"]
@@ -623,8 +620,8 @@ facebook.com##.ego_section:has(a.adsCategoryTitleLink)
 facebook.com###stream_pagelet [id^="hyperfeed_story_id_"]:has(span._4dcu)
 ! https://github.com/uBlockOrigin/uAssets/issues/722
 facebook.com##.ego_column:has(a[href^="/campaign/landing"])
-facebook.com##div[id^="hyperfeed_story_id_"]:has(a:has-text(Chartered))
-facebook.com##div[id^="hyperfeed_story_id_"]:has(a:has-text(Sponsored))
+facebook.com##div[id^="hyperfeed_story_id_"]:if(a:has-text(Chartered))
+facebook.com##div[id^="hyperfeed_story_id_"]:if(a:has-text(Sponsored))
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32142
 ||ruiguozhi.cc^
@@ -1160,6 +1157,7 @@ androidcentral.com,connectedly.com,crackberry.com,imore.com,teslacentral.com,vrh
 ! https://github.com/uBlockOrigin/uAssets/issues/190#issuecomment-269949614
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38124
 ack.net,allkpop.com,audioholics.com,barnstablepatriot.com,britannica.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,radaronline.com,recordonline.com,sj-r.com,slickdeals.net,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,tuscaloosanews.com,uticaod.com,vvdailypress.com,wikia.com,womansworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
+xda-developers.com##script:inject(nowebrtc.js)
 ! https://www.reddit.com/r/uBlockOrigin/comments/6fvuo0/ads_leaking_through_on_drudge_report/
 drudgereport.com,mashable.com##script:inject(abort-on-property-read.js, ADONIS_BOOTSTRAP_STATS)
 
@@ -1349,13 +1347,10 @@ transfermarkt.*##body > div[id]:has(a[href^="/intern/adblock"])
 
 ! https://github.com/uBlockOrigin/uAssets/issues/348
 ! https://github.com/uBlockOrigin/uAssets/issues/695
-shink.in##script:inject(abort-on-property-read.js, blockAdBlock)
-shink.in##script:inject(abort-on-property-read.js, jsPopunder)
-shink.in##script:inject(abort-on-property-read.js, RunAds)
-shink.in##script:inject(abort-on-property-write.js, _pop)
-shink.in##script:inject(abort-on-property-write.js, Fingerprint2)
-shink.in##[id*=ScriptRoot]
-shink.in##a[href*="adk2x"]
+shink.me##script:inject(abort-current-inline-script.js, $, blockAdBlock)
+shink.me##script:inject(abort-on-property-read.js, jsPopunder)
+shink.me##script:inject(abort-on-property-write.js, Fingerprint2)
+shink.me##script:inject(popads.net.js)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=51946
 ||visitweb.com/js/ref.js$script,redirect=noopjs,domain=kissasian.ch|kissasian.com
@@ -2303,6 +2298,16 @@ sockshare.net##script:inject(abort-current-inline-script.js, String.fromCharCode
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/74tiik/stopping_popunder_load_new_page_ubo_on_sceperws/
 sceper.ws##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+
+! https://github.com/gorhill/uBlock/issues/3112
+ikshow.net##script:inject(abort-on-property-read.js, BetterJsPop)
+
+! https://github.com/gorhill/uBlock/issues/3114
+wunderground.com##script:inject(abort-on-property-write.js, _sp_)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=38489
+putlocker.sk##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+
 
 ! Filters below will be removed once the filter list dark-patterns.txt is
 ! well spread. Leave at the bottom.

@@ -4,15 +4,15 @@
 ! Collaborators: Adam W, Dominik, Wiesiek, Robert, Marek, buuuuuuu190, Caleb, Ryszard, Kruk, Weronika, Adam, xxcriticxx, maxoku, F4z, mathew85,Piter432, Adam K, Piotr S, Szymon D, Marek R, adreporter, kacper93, FadeMind, kerbenii, gzenio22, blocker999, FX54, hawkeye116477 
 ! Homepage: https://www.certyficate.it/
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika 
-! Last modified: 8 October 2017
+! Last modified: 9 October 2017
 ! Expires: 2 days
-! Version: 2017100806
+! Version: 2017100904
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na:  https://www.certyficate.it/polski-filtr-adblock/
-! v.2017100806 aktualizacja: nie, 8 pazdziernika 2017, 16:50:00
+! v.2017100904 aktualizacja: pon, 9 pazdziernika 2017, 20:00:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -83,7 +83,7 @@ streamin.to###rkm
 ##A[href*="k.tradedoubler.com/click"]
 poczta.interia.pl#@#[href*=".hit.gemius.pl"]
 motorolasolutions.com##.tealiumMo2TriggerButton
-/^https:\/\/[a-z]{2,10}.\wp\.pl\/[a-zA-Z0-9-_.?=?&%]{250,}/$image
+/^https:\/\/[a-z]{2,10}\.wp\.pl\/[a-zA-Z0-9-_.?=?&%]{250,}/$image
 !
 !
 !-----------------------Privacy filters block-----------------------!
@@ -629,6 +629,7 @@ gazetaprawna.pl##.tpl_ads_adexon.tpl_std_module
 gazetaprawna.pl##[style^="text-align:center; margin: 0 0 10px 0"]
 gazetaprawna.pl##a[href^="http://www.kyoceradocumentsolutions.pl/index/produkty/product/"]
 gazetaprawna.pl##.boxyPromoContainer
+gazetatrybunalska.pl##aside[id*="bns-corner-logo-"]
 gazetawroclawska.pl##.typBaner
 gazetawroclawska.pl##.promoBox
 gazetki-promocyjne.net.pl##.shadow-text
@@ -992,6 +993,7 @@ naekranie.pl##.sen-gal-sidebar-custom-content
 naekranie.pl##div[style="height: 5.3125rem !important;"]
 naekranie.pl##.inner-wrap > .post-content
 naekranie.pl##.adform
+naklo24.pl##.ban
 napisy24.pl##.custom_pozioma
 napisy24.pl##[id^="napisy24"]
 napisy24.pl##a[href^="http://www.allplayer.org/"]
@@ -1020,6 +1022,7 @@ nj24.pl###block--4
 nk.pl###content_banner > .ad_sandbox_wrapper
 nocoty.pl,aleseriale.pl###slider300Wrapper
 noizz.pl##.intext-ads-container
+noizz.pl##.adtop
 nokiahacking.pl##.nh_ads
 nowafarmacja.pl##[class^="bg-banner-wrapper"]
 nowagazeta.pl##.vc_row-has-fill
@@ -2452,6 +2455,7 @@ meczstudio.com##[class^="wb_Image"]
 meczstudio.com###bettv
 meczyki.pl##.box.alert-box
 meczyki.net.pl##.cool-stuff
+polska-telewizja-online.ayz.pl###footer-widgets > .container-inner > .group.pad
 sportsbox.pro##[style="position:absolute;width:100%;height:100%;top:0px;left:0px;"]
 sportsbox.pro##[style="position: relative; left: 0px; bottom: 40px"]
 sportpl.tv##[id^="middle-rek"]
@@ -2534,10 +2538,13 @@ wykop.pl##[id^="screening"]
 wykop.pl##[id^=banner_rectangle]
 wykop.pl###dyingLinksBox > .dying-links[hidden] ~ .dying-links:last-child:style(display:list-item !important)
 wykop.pl###dyingLinksBox > .dying-links[hidden] ~ .dying-links[style="display: list-item;"] ~ .dying-links:style(display: none !important)
-||imgwykop.pl/*/paylink_$image,domain=www.wykop.pl
+wykop.pl##[id^="banner_top_"]
+wykop.pl##.m-hide.screening
+||imgwykop.pl/*/*/paylink_$image,domain=www.wykop.pl
 ||wykop.pl/paylink/emiter/$image,domain=www.wykop.pl
 ||wykop.pl/tracker
-||s1.cdn03.imgwykop.pl/static/wykoppl/img/rect/$image
+!||s1.cdn03.imgwykop.pl/static/wykoppl/img/rect/$image
+||www.wykop.pl/img/campaign/$image,domain=www.wykop.pl
 !
 !
 !--------------------------Rules unblock protection------------!
@@ -2765,7 +2772,6 @@ manager.money.pl##.in > DIV[class]:first-child
 www.money.pl##.box:first-child + DIV[class]
 www.money.pl##[class^=" _bc_paragraph_"] + DIV[class]
 www.money.pl##DIV[class] > SPAN[class] + DIV[class]:last-child
-www.money.pl##P + DIV[class]
 !
 !
 !--------------------------WP blocking filters------------!
