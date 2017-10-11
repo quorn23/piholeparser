@@ -22,7 +22,7 @@
 
 #### Because people ask often:
 
-* I run this alongside several other things on a Raspberry Pi 3.
+* ~~I run this alongside several other things on a Raspberry Pi 3.~~
 * This is THE ONLY list I use, with nothing whitelisted.
 * Because of this, If there is something blocked that shouldn't be, my wife and I would know.
 
