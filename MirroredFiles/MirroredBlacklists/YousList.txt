@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: V3Q9Dg36i/7MG2WXjbKQ4w
-! Version: 20171002
+! Checksum: qocvsjL5bVg0kaAR7Nb7uA
+! Version: 20171011
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -48,6 +48,7 @@
 ##iframe[id^="google_ads_iframe_"]
 ##iframe[id^="nad_"]
 ##iframe[name="ifrad"]
+##iframe[src*="/NetInsight/"]
 ##iframe[src*="/RealMedia/ads/"]
 ##iframe[src^="//acdn.adnxs.com/ib/static/usersync/v3/async_usersync.html"]
 ##iframe[src^="//ad.vkoad.com/showads.php"]
@@ -79,7 +80,6 @@
 ##iframe[src^="http://ad.adixs.co.kr/"]
 ##iframe[src^="http://ad.adkova.com/media/"]
 ##iframe[src^="http://ad.atdmt.com/d/a.html"]
-##iframe[src^="http://ad.ezday.co.kr/NetInsight/"]
 ##iframe[src^="http://ad.ilikesponsorad.co.kr/"]
 ##iframe[src^="http://ad.mediafarm.co.kr/mad/"]
 ##iframe[src^="http://ad.mediatoday.co.kr/"]
@@ -90,13 +90,11 @@
 ##iframe[src^="http://ad.pitta.ne.jp/ads/show/"]
 ##iframe[src^="http://ad.priel.co.kr/"]
 ##iframe[src^="http://ad.tpmn.co.kr/adReqSb.tpmn"]
-##iframe[src^="http://ad.wowtv.co.kr/NetInsight/"]
 ##iframe[src^="http://ad.xc.nis.nitmus.com/"]
 ##iframe[src^="http://ad1.adenc.co.kr/media/"]
 ##iframe[src^="http://ad1.eventmanager.co.kr/"]
 ##iframe[src^="http://ad2.thisisgame.com/ad"]
 ##iframe[src^="http://adbiz.co.kr/"]
-##iframe[src^="http://adc.ohmynews.com/NetInsight/"]
 ##iframe[src^="http://adddn.adotsolution.com/contents/html5/"][src*="/adbay_inline_sdk/default.html"]
 ##iframe[src^="http://adex.ednplus.com/"]
 ##iframe[src^="http://adexpert.ad4989.co.kr/"]
@@ -105,7 +103,6 @@
 ##iframe[src^="http://adf.send.microad.jp/afr.php"]
 ##iframe[src^="http://adgrp1.ad4989.co.kr/cgi-bin/PelicanC.dll"]
 ##iframe[src^="http://adin.ad4980.kr/"]
-##iframe[src^="http://adkpf.newscloud.or.kr/NetInsight/"]
 ##iframe[src^="http://adn.inven.co.kr/"]
 ##iframe[src^="http://adpingpong.co.kr/"]
 ##iframe[src^="http://adpingpong1.co.kr/"]
@@ -148,12 +145,10 @@
 ##iframe[src^="http://dgate.joins.com/hc.aspx"]
 ##iframe[src^="http://display.ad.daum.net/imp"]
 ##iframe[src^="http://disqusads.com/ads-iframe/adsnative/"]
-##iframe[src^="http://ea.slrclub.com/NetInsight/"]
 ##iframe[src^="http://etc.gamechosun.co.kr/banner/"]
 ##iframe[src^="http://exttag.about.co.kr/cgi-bin/PelicanC.dll"]
 ##iframe[src^="http://file.osen.co.kr/web2/html/realclick_ad.html"]
 ##iframe[src^="http://fs.jtbc.joins.com/common/ui/ad/"]
-##iframe[src^="http://gm-adkpf.ncloud.or.kr/NetInsight/"]
 ##iframe[src^="http://hankyung.bohumplaza.com/_chann/"]
 ##iframe[src^="http://i.yimg.jp/images/listing/tool/yads/yads-iframe.html"]
 ##iframe[src^="http://ilikeview.com/aclk"]
@@ -235,7 +230,7 @@
 ##ins.daum_ddn_area
 
 ! URL filters
-*-adkpf.newscloud.or.kr/NetInsight/
+*/NetInsight/
 */RealMedia/ads/
 */about_*_shopbox.*
 */ad/realclick*.html^
@@ -252,6 +247,7 @@
 ||218.153.11.175^
 ||58.120.226.147^
 ||a.ligatus.com/?*t=js
+||a.teads.tv/page/*/tag^
 ||a.tribalfusion.com/displayAd.js^
 ||a.tribalfusion.com/j.ad^
 ||a.wyzmob.com^
@@ -294,7 +290,6 @@
 ||ad.daum.net^
 ||ad.doubleclick.net^$third-party
 ||ad.dt.co.kr^
-||ad.ezday.co.kr/NetInsight/
 ||ad.hankooki.com^
 ||ad.hankookilbo.com^
 ||ad.hooniad.com^
@@ -328,18 +323,18 @@
 ||ad.xc.nis.nitmus.com^
 ||ad.yieldmanager.com^
 ||ad1.adenc.co.kr/media/
+||ad1.adfarm1.adition.com/banner^
+||ad1.adfarm1.adition.com/js^
 ||ad1.eventmanager.co.kr^
 ||ad1.sportschosun.com^
 ||ad1.sportsseoul.com^
 ||ad2.thisisgame.com^
 ||adbiz.co.kr^
-||adc.ohmynews.com/NetInsight/
 ||adcdn.goo.ne.jp/images/js/smarttag-oshiete-osgoocon.js^
 ||adclickservice.com^
 ||adcode.rontar.com/rontar2_async.js^
 ||adcreative.hani.naver.net/ad^
 ||adcrm.co.kr/md/
-||addc.dcinside.com/NetInsight/
 ||adddn.adotsolution.com/contents/html5/*/adbay_inline_sdk/default.html^
 ||adddn.adotsolution.com/contents/sdk/js/tad.min.js^
 ||adddn.adotsolution.com/contents/sdk/js/tadcreative_mweb.min.js^
@@ -364,7 +359,6 @@
 ||adinc.co.kr^
 ||adixs-ad.co.kr/code.ems/
 ||adixs.net^
-||adkpf.newscloud.or.kr/NetInsight/
 ||adn.adneo.co.kr^
 ||adn.inven.co.kr^
 ||adn.nsmartad.com^
@@ -384,6 +378,7 @@
 ||ads.ad7942.co.kr/adx/data/NAONMP6060.js^
 ||ads.adjust-net.jp/adserver/ad/ads.js^
 ||ads.adjust-net.jp/adserver/ads^
+||ads.admaru.com/js/*.js^
 ||ads.contextweb.com/TagPublish/GetAd.aspx^
 ||ads.emetro.co.kr/www/delivery/ajs.php^
 ||ads.exdynsrv.com/ads.js^
@@ -414,7 +409,6 @@
 ||adspaces.ero-advertising.com/banads/view.php^
 ||adstract.adk2x.com/imp^
 ||adsvc2.wisenut.co.kr^
-||adsvr.kmib.co.kr/NetInsight/
 ||adtg.widerplanet.com^
 ||adtradradservices.com/adassets/*/adtradr-ad-tag-*.js^
 ||adv.imadrep.co.kr^
@@ -554,6 +548,7 @@
 ||cdn.teads.tv/media/format/v3/teads-format.min.js^
 ||cdn03.sndkorea.co.kr^
 ||cdn04.sndkorea.co.kr^
+||cdn1.smartadserver.com/diff/*/smartadasmi.js^
 ||cdnjs.cloudflare.com/ajax/libs/lazyad-loader/*/lazyad-loader.min.js^
 ||cdnprism.pandora.tv/_adv_img/prism_ad/
 ||cdnprisms.pandora.tv/_adv_img/prism_ad/
@@ -632,7 +627,6 @@
 ||dt.co.kr/js/top_ad.js^
 ||dyn.loolav.space/plyclosablebanner/pclosablebanner.min.js^
 ||e-cdn-files.deezer.com/ads/$domain=deezer.com
-||ea.slrclub.com/NetInsight/
 ||ebdr3.com/serve^
 ||economy.hankooki.com/ad/
 ||edaily.co.kr/adview/
@@ -658,6 +652,7 @@
 ||event.liveg.co.kr/banner/*.gif^
 ||event.mtoon.com/banner/*.gif^
 ||ex.mdtoday.co.kr^
+||ext.apbox.nbp-corp.com/*/adunit^
 ||exttag.about.co.kr/cgi-bin/PelicanC.dll^
 ||fam-ad.com/ad/js/fam-tagify.min.js^
 ||feed.4wnet.com/resources/scripts/jsAds-*.min.js^
@@ -685,7 +680,6 @@
 ||get.keywordsconnect.com^
 ||get2.keywordsconnect.com^
 ||gigglehd.com/banner/*.jpg^
-||gm-adkpf.ncloud.or.kr/NetInsight/
 ||go.ezoic.net/ezoic/epbfull5.js^
 ||go.onclasrv.com/apu.php^
 ||go.pub2srv.com/apu.php^
@@ -975,6 +969,7 @@
 ||onshowit.com/apu.php^
 ||op.mmnneo.com/banner.widget.asp^
 ||op.neoad.co.kr/adsearch*
+||open.oneplus.net/cloud/pushdata^
 ||openload.co/assets/js/script.*.js^
 ||openxjapan-d.openx.net/w/1.0/jstag^
 ||optimized-by.4wnetwork.com/simply_loader.js^
@@ -1034,6 +1029,7 @@
 ||s.pubmine.com/adj/
 ||s.yimg.jp/images/listing/tool/yads/yads-iframe.html^
 ||s1.daumcdn.net/svc/original/U03/commonjs/ddn/common/js/ad.min.js^
+||s3.buysellads.com/ac/bsa.js^
 ||sba.about.co.kr/SbaExpose.aspx^
 ||sba.about.co.kr/dbaExpose.aspx^
 ||sc2.appldp.com/publisher-show-ads.php^
@@ -1197,6 +1193,7 @@
 ||wowtv.co.kr/AD/
 ||wstatic.dcinside.com/ad/
 ||wstatic.dcinside.com/gallery/top/ad_top/
+||ww251.smartadserver.com/ac^
 ||x.jd.com/exsites^
 ||x.kinja-static.com/assets/packaged-js/dollars.*.js^
 ||xportsnews.hankyung.com/contents/upload/pds/2012/0425/1335335866605.jpg^
@@ -1214,6 +1211,7 @@
 ||zdnet.co.kr/pixel2/pixel_top.htm^
 
 ! Site element hiding rules
+11st.co.kr##div#newFooterAdArea
 1tcafe.com,2tcafe.com,tcafe.net,tcafe3.com,tcafe4.com,tcafeaa.com,tcafeby.com,tcafegg.com,tcafego.com,tcafeh.com,tcafek.com,tcafemm.com,tcafen.com,tcafeon.com,tcafex.com,tcafez.net##a[href^="http://smartfile.co.kr/"]
 1tcafe.com,2tcafe.com,tcafe.net,tcafe3.com,tcafe4.com,tcafeaa.com,tcafeby.com,tcafegg.com,tcafego.com,tcafeh.com,tcafek.com,tcafemm.com,tcafen.com,tcafeon.com,tcafex.com,tcafez.net##a[href^="http://t801.linkoooo.com/"]
 1tcafe.com,2tcafe.com,tcafe.net,tcafe3.com,tcafe4.com,tcafeaa.com,tcafeby.com,tcafegg.com,tcafego.com,tcafeh.com,tcafek.com,tcafemm.com,tcafen.com,tcafeon.com,tcafex.com,tcafez.net##div#divpop
@@ -1310,6 +1308,7 @@ bbs.ruliweb.com##div.nbp_container
 bfmtv.com##div.onf-ad
 bfmtv.com##div.pubbanner
 bgmstore.net##div.adBox
+bild.de##div.ad-mark
 biz.chosun.com##div#Google
 biz.chosun.com##div#TopBanner
 biz.chosun.com##div#ad1
@@ -1438,6 +1437,7 @@ clien.net##div.div-rs-under
 clien.net##div.header-banner
 clien.net##div.list-banner
 cnet.com##div[data-ad]
+cocoaengineering.com##div.wpcnt
 code.tutsplus.com##div.avert
 codeyarns.com##div.wpcnt
 comic.naver.com##div#addiv
@@ -1494,6 +1494,7 @@ ddanzi.com##div.bxbanner_single
 ddanzi.com##div.left_banner
 ddanzi.com##div.right_banner
 ddanzi.com##div.senseWrap
+deal.11st.co.kr##div.sponsor_link_wrap
 deezer.com##div#ads_banner_left
 deezer.com##div.ads
 deezer.com##section#ads_expand
@@ -1688,6 +1689,8 @@ focus.kr##div.g_area>div[style="width:314px;height:258px;background-color:white;
 focus.kr##div.header>div.wrap>div[style="position:absolute;right: 0px;bottom: 16px;width: 270px;height: 77px;background-color: white;z-index:10000"]
 fomos.kr##div#top_banner
 fomos.kr##div.banner_area
+fortune.com##div.ad-wrapper
+fortune.com##div.mobile-ad
 forums.macrumors.com##div.funbox
 fow.tv##div#top_pr
 fow.tv##div.div_main>div[style="padding:0 10px 30px 10px;"]
@@ -2515,6 +2518,7 @@ minitoon.net##div.s_banner
 mmboxru.net##div.banner
 mnews.joins.com##div.ad
 mnews.joins.com##div.ad_h100
+mnews.joins.com##div.ad_template
 mnews.joins.com##div.adlink
 mnews.jtbc.joins.com##div#player_bottom_ad
 mnews.jtbc.joins.com##div.ad_highlight_270
@@ -2658,7 +2662,7 @@ news.inews24.com##iframe[src^="http://inews24.com/news/ad_right.php"]
 news.inews24.com##iframe[src^="http://inews24.com/tools/adpresso/"]
 news.inews24.com##td.main_top_banner
 news.joins.com##div#criteo_network
-news.joins.com##div.ab_adtxt
+news.joins.com##div.ab_adtxt_wrap
 news.joins.com##div.ad
 news.joins.com##div.advertising
 news.joins.com##div[data-widget-type="Ad"]
@@ -3101,6 +3105,8 @@ suyongso.com##div.rd_ft>div[class^="bd_"][class*="_m"]
 suyongso.com##div.side_b1
 suyongso.com##div[class^="bd_"][class*="_m"][class$="_1"][style="position:relative;text-align:center;margin:-30px 0 10px;"]
 suyongso.com##div[class^="bd_"][class*="_m"][class$="_2"][style="position:relative;text-align:center;margin:-10px 0 5px;"]
+tczoa.info##a[href^="https://tczoa.info/widgets/okad/click.php"]
+tczoa.info##div.AD02
 techcrunch.com##div#acc-native-ad
 techcrunch.com##div.ad-300x250
 techcrunch.com##div.ad-cluster-container
@@ -3326,6 +3332,10 @@ web.humoruniv.com##div#CmAdView2
 web.humoruniv.com##div#ad_240
 web.humoruniv.com##div#ad_700
 web.humoruniv.com##div#ad_adture
+webupd8.org##div.post-inner>div[style="margin: 10px 0 20px 0"]:not([class])
+webupd8.org##iframe[id^="_mN_dy_"]
+webupd8.org##iframe[id^="_mN_gpt_"]
+webupd8.org##iframe[id^="_mN_main_"]
 whatis.techtarget.com##div.ad
 whatis.techtarget.com##div.ad-embedded
 whatis.techtarget.com##div.ad-wrapper

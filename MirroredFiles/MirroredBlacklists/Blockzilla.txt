@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version D90 
+! Version D93 
 ! Expires: 8 hours
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -90,6 +90,7 @@
 /adp/adp-
 /adpopover.
 /ads/*$image
+/ads4.
 /ads?
 /adsct?
 /adsense.
@@ -239,6 +240,7 @@ images/ads/
 ||adreadytractions.com^
 ||adrecover.com^
 ||adroll.com^
+||adrta.com^
 ||ads.
 ||ads1.
 ||adsbyisocket.com^
@@ -391,6 +393,7 @@ images/ads/
 ||fmpub.net^
 ||fng-ads.fox.com^
 ||fqtag.com^
+||freeskreen.com^
 ||game-advertising-online.com^
 ||gcw.mysavings.com^
 ||geo.yahoo.com^
@@ -734,6 +737,7 @@ images/ads/
 ||billaruze.net^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||clicksgear.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||coupontime.co^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
+||cpmstar.com^$popup
 ||directrev.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||doubleclick.net^$popup,image,media,object,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||explorads.com^$popup
@@ -768,12 +772,13 @@ images/ads/
 /img2/*$domain=jobs.ge
 /tag.$domain=slashdot.org
 _banner.$domain=youtube.com
-|blob:$domain=kissmanga.com|laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com
+|blob:$domain=kissmanga.com|laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com|watchcartoononline.io
 |http:$xmlhttprequest,third-party,domain=clipconverter.cc
 ||2mdn.net^$domain=foxnews.com|youtube.com
 ||a.*.com/$domain=gsmarena.com
 ||adobedtm.com^$domain=aarp.org|webmd.com
 ||adocean.pl^$domain=b92.net
+||cpmstar.com^$domain=watchcartoononline.io
 ||doubleclick.net^$domain=telegraph.co.uk|yahoo.com|youtube.com
 ||innovid.com^$domain=youtube.com
 ||stats.$domain=pandora.com|paypal.com
@@ -1037,6 +1042,7 @@ youtube.com##YTD-PROMOTED-VIDEO-RENDERER
 @@||analytics.$script,domain=threenow.co.nz
 @@||analytics.$xmlhttprequest,domain=washingtonpost.com
 @@||analytics.snidigital.com^
+@@||analytics.twitter.com/user/
 @@||api-maps.yandex.ru^
 @@||bcbits.com/download/track/
 @@||c.amazon-adsystem.$script,domain=player.performgroup.com
