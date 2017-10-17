@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 23:12 2017/10/03
+! 最終更新 15:24 2017/10/16
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -644,6 +644,7 @@ $script,third-party,domain=jpidols.tv
 ||alc.co.jp/content/js/mc.js?
 ||anitube.se/player/anitubeJWOverlay/
 ||antivirus-news.net/image/*_bnn*.png
+||artstation.com/p/c_assets/
 ||asg.to/ad/
 ||ashemaletube.com/ast/b/
 ||ashemaletube.com/ast/www/*.min.js?url=
@@ -657,6 +658,8 @@ $script,third-party,domain=jpidols.tv
 ||chem-station.com^*/adrotate-pro/
 ||chixi.jp/img.php?filename=b
 ||cinematoday.jp^*affiliate
+	!2017/10/16 不具合あるかも
+||cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js$domain=dlbooks.to
 ||cookpad.com/iframe/
 ||cosp.jp/images/spacer.gif
 ||diced.jp/webs/
@@ -1314,9 +1317,7 @@ coliss.com###sponsorsTop
 d.hatena.ne.jp###amazon
 d.hatena.ne.jp##.hotamazon-left
 dl8x.com##[class^="dx-banner-"]
-dropbooks.tv##.t_news
-!smh版
-dropbooks.tv###book_adbox_cookie
+dlbooks.to##[id^="div_fam_async_"] + div[style="margin-top: 0px;"]
 dtiblog.com###meerkat-wrap
 e-typing.ne.jp##[class^="ad"][class*="00"]
 e0166.blog89.fc2.com###side > .module:nth-of-type(3)
@@ -1997,7 +1998,7 @@ $domain=warotanikki.com,third-party
 
 !--------ホワイトリスト--------!
 	!動画シーク
-	!@@||2mdn.net/instream/html5/ima3.js$domain=tver.jp
+@@||2mdn.net/instream/html5/ima3.js$domain=tver.jp
 	!動画未練
 @@||ad.afreecatv.com/crossdomain.xml$domain=play.afreeca.com
 	!動画見れない
@@ -2066,6 +2067,8 @@ appget.com#@#[class$="_ad"]:not(html):not(body):not(.p_no_ad)
 appmk2.net#@#.advertisement
 	!動画見れない
 ashemaletube.com#@#[class$="-ads"]:not(html):not(body)
+	!プロフィール辺り
+cam4.com#@#[class$="-ads"]:not(html):not(body)
 	!top全部
 cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
 	!サイド 広告だから消しても良い気もする
@@ -2169,8 +2172,6 @@ video.fc2.com#@#[class*="_ad_"]:not(html):not(body)
 video.fc2.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
 	!左側
 video.fc2.com#@#[id*="_ad_"]:not(html):not(body)
-	!マンガ1p右にずれてしまう
-viewer.tonarinoyj.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 	!動画を再生すると消える
 	!2017/07/16:not([class*="vjs-ad-"])
 	!vlog.xuite.net#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
@@ -2194,6 +2195,7 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ||caprofitx.com^$third-party
 ||focas.jp^$third-party
 ||formulas.jp^$third-party
+||genieedmp.com^$third-party
 ||i-mobile.co.jp^$third-party
 ||lead-ad.jp^$third-party
 ||media-rep.com^$third-party
