@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version E01 
+! Version E13 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -30,6 +30,7 @@
 -stat/analytics/
 .1d/Ads/
 .adbutler-
+.adrotate.
 .ads.*/banner?
 .advertising.com/
 .com/_/tr.ashx?r=*&loc=
@@ -193,6 +194,7 @@
 AQB=1&ndh=
 _204?*_ad&$image,ping
 _300x250-
+_Banner_Ad_
 _ad_request.
 _ads&
 _ads.html
@@ -206,6 +208,7 @@ _tracking.
 banners/*.skin_
 images/ads/
 ||112.2o7.net^
+||1rx.io^$xmlhttprequest
 ||204st.us^
 ||247realmedia.com^
 ||2mdn.net/*.gif
@@ -302,6 +305,7 @@ images/ads/
 ||boomtrain.com^
 ||botscanner.com^
 ||bounceexchange.com^
+||broadstreetads.com^
 ||btrll.com^
 ||bttrack.com^
 ||btttag.com^
@@ -366,7 +370,6 @@ images/ads/
 ||dps-reach.com^
 ||drexel-systems.co^
 ||dw.com.com^
-||dynamicyield.com^
 ||ebz.io^
 ||edigitalsurvey.com^
 ||effectivemeasure.net^
@@ -461,6 +464,7 @@ images/ads/
 ||liondigitalserving.com/Tag.
 ||liqwid.net^
 ||liveramp.
+||lkqd.net^
 ||log.
 ||logentries.com^
 ||lognormal.net^
@@ -543,8 +547,10 @@ images/ads/
 ||postrelease.com^
 ||prizma.tv/get
 ||pro-market.net^
+||prorentisol.com^
 ||pubmine.com^
 ||puserving.com^
+||px.reactrmod.com^
 ||quantserve.com^
 ||qubitproducts.com^
 ||questionmarket.com^
@@ -628,6 +634,7 @@ images/ads/
 ||usabilla.com^
 ||userreport.com^
 ||vacwrite.com^
+||vertamedia.com^
 ||verymuchad.com^
 ||videostat.com^
 ||videotracker.
@@ -708,6 +715,7 @@ images/ads/
 ||outbrain.com^$third-party
 ||phantom.nudgespot.com^$third-party
 ||po.st/p?t=view&pub=$image,third-party
+||px.dynamicyield.com^$xmlhttprequest,third-party
 ||qualtrics.com^$third-party
 ||scribol.com^$third-party
 ||siteapps.com^$third-party
@@ -769,6 +777,7 @@ images/ads/
 !
 ! Add on Domains (Blocking) >>>>>
 !
+/ads/*$domain=herald-dispatch.com
 /banner/*$domain=flaticon.com
 /banners/*$domain=thedailysheeple.com
 /collect?$domain=calameo.com|wikihow.com
@@ -777,7 +786,6 @@ images/ads/
 _banner.$domain=youtube.com
 |blob:$domain=kissmanga.com|laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com|watchcartoononline.io
 |http:$xmlhttprequest,third-party,domain=clipconverter.cc
-||2mdn.net^$domain=foxnews.com|youtube.com
 ||a.*.com/$domain=gsmarena.com
 ||adobedtm.com^$domain=aarp.org|webmd.com
 ||adocean.pl^$domain=b92.net
@@ -786,6 +794,7 @@ _banner.$domain=youtube.com
 ||innovid.com^$domain=youtube.com
 ||stats.$domain=pandora.com|paypal.com
 ||t.*.com/$domain=cinemablend.com|paypal.com
+||t7.rbxcdn.com^$image,domain=roblox.com
 ||tags.$domain=news.com.au
 !
 ! Ad Element Hiding >>>>>
@@ -948,13 +957,16 @@ _banner.$domain=youtube.com
 ##.snarcy-ad
 ##.sponsor
 ##.sponsored_links
+##.top-ad-container
 ##.topAd
 ##.topBannerAd
 ##.verticalAdText
 ##.videoads
+##.w-ad-box
 ##.wall_ad
 ##.widget-ad
 ##.y7-advertisement
+##ASIDE[class*="_adrotate_"]
 ##A[href^="http://ad.doubleclick.net/"]
 ##A[href^="http://pubads.g.doubleclick.net/"]
 ##A[href^="http://www.ringtonematcher.com/"]
@@ -982,6 +994,8 @@ wikipedia.org###centralNotice
 yahoo.com##.Feedback
 youtube.com###video-masthead
 youtube.com###watch-channel-brand-div
+youtube.com##.promoted-videos
+youtube.com##YTD-PROMOTED-VIDEO-RENDERER
 !
 ! Add on Domains (Element Hiding) >>>>>
 !
@@ -1013,29 +1027,26 @@ salon.com##DIV[class*="-ad-"]
 slashfilm.com##DIV[id*="300x250"]
 smh.com.au,venturebeat.com,washingtonpost.com##DIV[class$="leaderboard"]
 stuff.co.nz##DIV[class*="_ad-"]
-twitter.com,wnd.com,youtube.com##DIV[class*="prom"]
 wikipedia.de##DIV[id^="banner"]
 wired.com##DIV[class*="banner"]
 wunderground.com##DIV[id*="banner"]
 yahoo.com##DIV[id*="-upsell-"]
 yahoo.com##LI[id^="ad-"]
 youtube.com##DIV[class*="-ads-"]
-youtube.com##YTD-PROMOTED-VIDEO-RENDERER
 !
 ! Exceptions (Website Functionality) >>>>>
 !
+@@.com/ad_img/$domain=twitter.com
 @@.com/ads/growth/aymt/multi_async_click/$domain=facebook.com
 @@.com/ads/growth/aymt/xout_survey/$domain=facebook.com
 @@.com/metrics/$script,domain=apple.com
-@@.demdex.net/$script,domain=foxnews.com|globaltv.com
-@@.foxnews.com/$script,domain=foxnews.com
+@@.demdex.net/$script,domain=globaltv.com
 @@.net/ad/$object-subrequest,domain=foxsports.com
+@@/ad1.$image,domain=embed.universaluclick.com
 @@/beacon.js$domain=sciencechannel.com
 @@/beacon.min.js$domain=huffingtonpost.com
-@@/foxnews.$script,domain=foxnews.com
-@@/foxnewsplayer-$script,domain=foxnews.com
 @@/piwik.$script,domain=myuv.com
-@@/pubads_$script,domain=foxnews.com|threenow.co.nz
+@@/pubads_$script,domain=threenow.co.nz
 @@/track.$domain=tnt.com
 @@/track/*$media
 @@/tracking.$script,xmlhttprequest,domain=mlb.com
@@ -1055,14 +1066,14 @@ youtube.com##YTD-PROMOTED-VIDEO-RENDERER
 @@||doubleclick.net/gampad/ads?gdfp%$object-subrequest,domain=cbsnews.com
 @@||doubleclick.net/gampad/ads?max%$object-subrequest,domain=cbsnews.com
 @@||doubleclick.net/gpt/pubads_impl_$script,domain=csnchicago.com
-@@||doubleclick.net^$script,domain=foxnews.com
 @@||gigya.com/comments.
 @@||gigya.com^$domain=csnchicago.com|ctv.ca|ctvnews.ca|dailystar.co.uk|express.co.uk|pch.com|stuff.co.nz|threenow.co.nz
 @@||gigya.com^$~third-party,domain=cdns.au1.gigya.com
-@@||googletagservices.com^$script,domain=csnchicago.com|foxnews.com|nytimes.com|threenow.co.nz|zdnet.com
+@@||googletagservices.com^$script,domain=csnchicago.com|nytimes.com|threenow.co.nz|zdnet.com
 @@||ifmnwi.club^$xmlhttprequest,domain=cbsnews.com
 @@||img-fotki.yandex.ru^
 @@||imrworldwide.com/v60.js$domain=threenow.co.nz
+@@||krxd.net^$script,domain=foxnews.com
 @@||logentries.com^$domain=player.hearstdigitalstudios.com
 @@||mixpanel.com^$domain=floorplanner.com
 @@||outbrain.com^$domain=wtae.com
