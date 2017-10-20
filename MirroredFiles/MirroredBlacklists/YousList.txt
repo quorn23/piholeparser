@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: Xykcmj78odm+CxJqM++UNg
-! Version: 20171017
+! Checksum: M1XPrKQeAtIBKWPa0x+7sg
+! Version: 20171020
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -231,10 +231,12 @@
 ##iframe[src^="https://search2.nuriclick.co.kr/banner.php"]
 ##iframe[src^="https://syndication.exdynsrv.com/ads-iframe-display.php"]
 ##iframe[src^="https://syndication.exoclick.com/ads-iframe-display.php"]
+##iframe[src^="https://www.mxttrf.com/ads"]
 ##ins.adsbygoogle
 ##ins.daum_ddn_area
 
 ! URL filters
+*-d.openx.net/w/1.0/acj^
 */NetInsight/
 */RealMedia/ads/
 */about_*_shopbox.*
@@ -294,6 +296,7 @@
 ||ad.altervista.org/js*.ad/
 ||ad.applead.co.kr^
 ||ad.atdmt.com/d/a.html^
+||ad.crwdcntrl.net^
 ||ad.daum.net^
 ||ad.doubleclick.net^$third-party
 ||ad.dt.co.kr^
@@ -352,6 +355,8 @@
 ||adexview.new-star.co.kr^
 ||adf.acrosspf.com/adifr/
 ||adf.send.microad.jp^
+||adfarm.mediaplex.com/ad/js/
+||adg.bzgint.com/pub/adg/config.js^
 ||adget.co.kr^
 ||adgrp1.ad4989.co.kr/cgi-bin/PelicanC.dll^
 ||adimage.hankookilbo.com^
@@ -389,6 +394,9 @@
 ||ads.admaru.com/js/*.js^
 ||ads.adverline.com/richmedias/prebid-*.min.js^
 ||ads.adverline.com/richmedias/tools/adnext_iframe.js^
+||ads.ayads.co/ajs.php^
+||ads.blogherads.com/bh/*/*/*/*/header.js^
+||ads.blogherads.com/static/blogherads.js^
 ||ads.contextweb.com/TagPublish/GetAd.aspx^
 ||ads.emetro.co.kr/www/delivery/ajs.php^
 ||ads.exdynsrv.com/ads.js^
@@ -414,7 +422,9 @@
 ||ads2.contentabc.com/ads^
 ||ads3.adinc.co.kr^
 ||adserve.postrelease.com/init.js^
+||adserver-us.adtech.advertising.com/pubapi/
 ||adserver.adtechus.com^
+||adserver.genesismediaus.com/ac^
 ||adserver.sbtrustmedia.com^
 ||adserver.uniqube.tv^
 ||adserver.viewgames.co.kr/adi/adiPage.php^
@@ -488,7 +498,9 @@
 ||bizon.kr/bizon_ad/
 ||bnhtml.com/invoke.js^
 ||bohumlife.edaily.co.kr/iframe_starin.html^
+||brightonclick.com/script/suurl.php^
 ||bs.serving-sys.com/BurstingPipe/adServer.bs^
+||busygirlblog.com/adserver/$domain=busygirlblog.com
 ||c.amazon-adsystem.com/aax2/amzn_ads.js^
 ||c.betrad.com/surly.js^
 ||c1.popads.net/pop.js^
@@ -545,6 +557,7 @@
 ||castbox.shopping.naver.com/index.nhn^
 ||ccisea-d.openx.net/w/1.0/jstag^
 ||cdn-fluct.sh.adingo.jp/f.js^
+||cdn-sic.33across.com/1/javascripts/sic.js^
 ||cdn.ad.maist.jp/ad/js/pjs.js^
 ||cdn.adgtw.orangeads.fr/build/oan_common-async-*.min.js^$domain=sports.orange.fr
 ||cdn.admixer.net/scriptlib/asm2.js^
@@ -556,6 +569,7 @@
 ||cdn.adstract.com/adstract/tags/xbanner/xbanner.js^
 ||cdn.c-team.jp/tags/dokojs/ad*.js^
 ||cdn.carbonads.com/carbon.js^
+||cdn.engine.spotscenered.info/Scripts/MediaScripts/p.js^
 ||cdn.gmossp-sp.jp/ads/loader.js^
 ||cdn.kixer.com/ad/load.js^
 ||cdn.optmd.com/V2/PSA/
@@ -588,6 +602,7 @@
 ||compass.adop.cc/RD/
 ||compass.adop.cc/assets/js/adop/adop.js^
 ||connect.facebook.net/en_US/fbadnw.js^
+||contextual.media.net/nmedianet.js^
 ||coolsoft.altervista.org/sites/all/themes/coolsoft/js/coolsoft.js^
 ||cpv.ad.naver.com/adshow^
 ||creative.speednetwork*.com/speednetwork*/tags/xbanner/xbanner.js^
@@ -603,6 +618,7 @@
 ||d.a1comm.co.kr^
 ||d.adroll.com^
 ||d.pixiv.org/show^
+||d1jikhx1ssl81z.cloudfront.net^
 ||d1swklt9res5jr.cloudfront.net/static/packed/mezzoADv*.js^
 ||d1swklt9res5jr.cloudfront.net/static/packed/tvple.ad.js^
 ||d3oep4gb91kpuv.cloudfront.net^
@@ -615,6 +631,7 @@
 ||danawa.com/NBP/powerLink.php^$domain=prod.danawa.com
 ||dcd.adotsolution.com/dcd/creative.skp^
 ||delivery.amessagewithabottle.com/www/delivery/ajs.php^
+||delivery.c.switchadhub.com/adserver/sat.js^
 ||deliverys.n2s.co.kr/afm.php^
 ||dev.ezadsystem.com/static/js/ezad-1.0.js^
 ||dgate.*/hc.aspx^
@@ -642,6 +659,8 @@
 ||dreamsearch.or.kr/servlet/nateMobileServlet^
 ||dreamsearch.or.kr/servlet/sadbn^
 ||dreamsearch.or.kr/servlet/shortCut^
+||drive2.ru/assets/*/pcode/adfox/header-bidding.js^$domain=drive2.ru
+||drive2.ru/assets/*/pcode/adfox/loader.js^$domain=drive2.ru
 ||dt.co.kr/js/top_ad.js^
 ||dyn.loolav.space/plyclosablebanner/pclosablebanner.min.js^
 ||e-cdn-files.deezer.com/ads/$domain=deezer.com
@@ -729,8 +748,10 @@
 ||i.ligatus.com/angular_front/tags/it/notizie/tags/angular-tag.js^
 ||i.yimg.jp/images/listing/tool/yads/uadf/yads_vimps-*.js^
 ||i.yimg.jp/images/listing/tool/yads/yads-iframe.html^
+||ib.3lift.com/ttj^
 ||ib.adnxs.com/async_usersync^
 ||ib.adnxs.com/jpt^
+||ib.adnxs.com/ttj^
 ||ichannela.com/ch/*adpost*
 ||iicdn.com/www/delivery/afr.php^
 ||ikoreadaily.co.kr/script/ikoreadaily_hns.js^$domain=ikoreadaily.co.kr
@@ -778,6 +799,7 @@
 ||inven.co.kr/common/lib/js/adns.js^
 ||ir-na.amazon-adsystem.com/s/ads-common.js^
 ||j.microad.net/js/compass.js^
+||jadserve.postrelease.com/t^
 ||jdaily.co.kr/frame/jad-bin.do^
 ||jjan.kr/adNdsoft/adWise*.html^
 ||jjan.kr/banner/ad_banner_*.html^
@@ -790,6 +812,7 @@
 ||jpmarket-d.openx.net/w/1.0/afr^
 ||js-goods.redtram.com/ticker_*.js^
 ||js-sec.indexww.com/ht/htw-gawker.js^
+||js.ad-score.com/score.min.js^
 ||js.ad-stir.com/js/adstir.js^
 ||js.ad4989.co.kr/etc/tjtune/float/common.js^
 ||js.ad4989.co.kr/etc/tjtune/float/float_common2.js^
@@ -907,6 +930,8 @@
 ||mtag.mman.kr/js.mezzo/
 ||munhwa.com/skin/inc_right/inc_denta_ad_iframe.html^
 ||mv.ad.naver.com/adshow^
+||mxttrf.com/ads^
+||mxttrf.com/js/show_ads_mxttrf.js^
 ||mycdn.co/adServe/imgBanner*/*_image-banner.cib^
 ||mydaily.co.kr/ad/ad_*.php^
 ||mydaily.co.kr/ad/center_ad*.php^
@@ -1008,14 +1033,19 @@
 ||ph.mediatoday.co.kr/adcontent/script/*.js^$domain=mediatoday.co.kr
 ||pinaya.center/addons/document_contents_blind_advertise/css/blind.min.css^$domain=pinaya.center
 ||pinaya.center/addons/document_contents_blind_advertise/js/blind.min.js^$domain=pinaya.center
+||pirateproxy.cam/static/*/ad-scroll.js^$domain=pirateproxy.cam
 ||pixel.adsafeprotected.com/jload^
 ||pl*.puhtml.com^
 ||plugin.2beon.co.kr^
 ||polltest.azurewebsites.net/Polls/Ads^
+||ppdxyz.info/script-2/license.ppdxyz.js^
+||ppdxyz.info/script-2/new_script.js^
 ||pq-direct.revsci.net/pql^
 ||prism.pandora.tv^
+||prm.*.*/js/ec_connectorDelivery.js^
 ||provider.hiadone.com/cgi-bin/conad_hi.fcgi/
 ||prwidgets.com^
+||ps.ns-cdn.com/dsatserving2/scripts/ns_vmtag.js^
 ||pub.adpnut.com^
 ||pubads.g.doubleclick.net^
 ||pubtags.addoor.net/lib/contags/contags.js^
@@ -1048,6 +1078,7 @@
 ||s*.algovid.com/player/gpv^
 ||s.atemda.com/Admeta.js^
 ||s.mixadvert.com/show_json/
+||s.ntv.io/serve/load.js^
 ||s.pubmine.com/adj/
 ||s.yimg.jp/images/listing/tool/yads/yads-iframe.html^
 ||s1.daumcdn.net/svc/original/U03/commonjs/ddn/common/js/ad.min.js^
@@ -1060,6 +1091,7 @@
 ||script.adsquare.co.kr/script/
 ||script.keywordlink.co.kr^
 ||scripts.chitika.net^
+||scripts.kiosked.com/loader/kiosked-loader.js^
 ||sdk.streamrail.com/player/sr.ads.js^
 ||search.n2s.co.kr/_n2s_adop_adinfo.php^
 ||search.n2s.co.kr/_n2s_rainbod_adinfo_js.php^
@@ -1151,6 +1183,7 @@
 ||story369.com/ad/$domain=story369.com
 ||sunnyworks.co.kr/data/SW*.html^
 ||sunnyworks.co.kr/data/js/
+||surgeprice.com/display/async/*/*/ariel.js^
 ||sweetgo.kr/adv/top.php^
 ||swf.adget.co.kr/ads/
 ||syndication.exdynsrv.com/ads-iframe-display.php^
@@ -1191,6 +1224,8 @@
 ||tvple.com/ab/PC-O-*^$domain=tvple.com
 ||ubh-d.openx.net/w/1.0/afr^
 ||ubh-d.openx.net/w/1.0/jstag^
+||udmserve.net/udm/img.fetch^
+||underdogmedia-d.openx.net/w/1.0/arj^
 ||unionpress.co.kr/news/html_tpl/pr_ad.php^
 ||unionpress.co.kr/news/master/banner/3d69ca2f12c09759924d8be0a89a4259^
 ||uplus.kr/cd/cdNavi/retreieveHtml3JS.dmd^
@@ -1223,6 +1258,7 @@
 ||wstatic.dcinside.com/gallery/top/ad_top/
 ||ww251.smartadserver.com/ac^
 ||ww3.vidzi.tv/*/*/*/*.js^$domain=vidzi.tv
+||www5.smartadserver.com/h/nshow^
 ||x.jd.com/exsites^
 ||x.kinja-static.com/assets/packaged-js/dollars.*.js^
 ||xportsnews.hankyung.com/contents/upload/pds/2012/0425/1335335866605.jpg^
@@ -1423,6 +1459,9 @@ boannews.com##iframe#bottom_banner
 boannews.com##iframe#main_banner_A
 boannews.com##iframe#main_banner_B
 boingboing.net##div#sidebar>div.ad
+br.ign.com##div#side_adkit
+br.ign.com##div.adkit
+br.ign.com##div.adkit_billboard
 breaknews.com##div#bn25
 breaknews.com##div.bn
 breaknews.com##div.center_bn
@@ -1432,6 +1471,10 @@ businessinsider.com##div.ad-subnav-container
 businessinsider.com##div.right-ad
 businessinsider.com##div[data-ad-container]
 businessweek.com##div#promo
+busygirlblog.com##div.ad
+busygirlblog.com##div.busyg-content
+busygirlblog.com##div.busyg-random
+busygirlblog.com##iframe[src^="http://busygirlblog.com/adserver/"]
 cafe.naver.com##div#ad-banner
 cafe.naver.com##table.searchad
 cdn-city.livere.com##ul.contents-list>li.tenping-title
@@ -1570,6 +1613,7 @@ dispatch.co.kr##span.header-ad
 dispatch.co.kr##span.innerNewsAD
 dkbnews.donga.com##div.aside_ad
 dkbnews.donga.com##div.boardAD01
+drive2.ru##div[id^="adfox_"]
 drmola.com##div.ad_aside1
 drmola.com##div.aside_ad
 drmola.com##div.fancybox-wrap
@@ -1700,6 +1744,8 @@ facebook.com##div.ego_unit
 facebook.com##div.ego_unit_container
 fastcodesign.com##div.ad-wrapper
 fastcodesign.com##div.post__article-top-ad-wrapper
+filmix.me##div.info-a
+filmix.me##div.info-b
 flashscore.pl##div.adscontent
 flashscore.pl##div.adsenvelope
 flashscore.pl##div.adstextpad
@@ -2370,6 +2416,7 @@ m.pann.nate.com##iframe[src^="http://networkad.nate.com/nate/mobile_pann.html"]
 m.podbbang.com##p.banner-podcast
 m.pressian.com##div.flick-container>div[style="clear:both; width:100%;background-color:#fff; padding:10px 0;"]
 m.pressian.com##div.flick-container>div[style="clear:both; width:100%;background-color:#fff; padding:8px 0;"]
+m.ruliweb.com##div.ad_header_wrapper
 m.ruliweb.com##div.ad_wrapper
 m.ruliweb.com##div.fixed_ad_wrapper
 m.ruliweb.com##div.mo_ad_main_ti_wrapper
@@ -2778,10 +2825,12 @@ news.nate.com##iframe#AdShopSearch
 news.nate.com##iframe#socialAD
 news.naver.com##div.article_body>table[width="252"][align="right"]
 news.naver.com##div.aside>div.da
+news.sbs.co.kr##amp-ad
 news.sbs.co.kr##div#all_vod_banner
 news.sbs.co.kr##div#sn_banner_article_bottom
 news.sbs.co.kr##div#sn_banner_side_bottom
 news.sbs.co.kr##div#sn_banner_side_top
+news.sbs.co.kr##div.ad-container
 news.sbs.co.kr##div.ad_area
 news.sbs.co.kr##div.ad_yonhap_area
 news.sbs.co.kr##div.w_article_ad
@@ -3192,6 +3241,7 @@ theblockchain.kr##div.rightBanner2
 theblockchain.kr##div.topBanner
 theblockchain.kr##div.viewArticle>div[style="margin-bottom:15px"]
 theguardian.com##div.ad-slot
+thehealthycookingcoach.com##div[id^="thehe-"]
 thenounproject.com##section.advertisement
 thepiratebay.org##div#sky-banner
 thepiratebay.org##div#sky-center
@@ -3342,6 +3392,7 @@ view.heraldm.com##div[id^="viewright_midad"]
 view.heraldm.com##div[id^="viewright_topad"]
 view.heraldm.com##iframe[id^="iframesrc_viewright_topad"]
 viewsnnews.com##aside.ads
+viralised.com##div.vlog_adsense_widget
 viva100.com##div#wrap>div[style="position: absolute; top:235px; left: -190px; width:160px; height:600px;"]
 viva100.com##div#wrap>div[style="position: absolute; top:235px; right: -190px; width:160px; height:600px;"]
 viva100.com##div.R_paper01
