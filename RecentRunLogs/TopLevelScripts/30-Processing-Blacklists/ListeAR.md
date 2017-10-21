@@ -13,7 +13,6 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ListeAR List Unavailable To Download. Fri 20 Oct 00:20:49 EDT 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
@@ -21,13 +20,13 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ### Removing Comments
-1702 Lines After Removing Comments
+1705 Lines After Removing Comments
 ### Removing Content Filtering
-1702 Lines After Removing Content Filtering
+1705 Lines After Removing Content Filtering
 ### Trimming HOSTS Format IP Addresses
-1702 Lines After Trimming HOSTS Format IP Addresses
+1705 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-1646 Lines After Removing Empty Space
+1649 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
 22 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
