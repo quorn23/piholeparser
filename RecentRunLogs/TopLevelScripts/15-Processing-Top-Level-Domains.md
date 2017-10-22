@@ -3,15 +3,15 @@
 ____________________________________
 # 
 ## Internet-Assigned-Numbers-Authority
-List Took 3 Seconds.
+List Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Internet-Assigned-Numbers-Authority.md)
 
 ## Public-Suffix
-List Took 4 Seconds.
+List Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Public-Suffix.md)
 
 ## TLD-List
-List Took 5 Seconds.
+List Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/TLD-List.md)
 
 ____________________________________
@@ -24,9 +24,9 @@ Old TLD Comparison Not Present.
 ### Formatting TLD List.
 4628 After Formatting TLD List.
 ### Removing Duplicatates From TLD List.
-1720 After Removing Duplicatates From TLD List.
+1733 After Removing Duplicatates From TLD List.
 ____________________________________
-1720 Valid TLD's Total.
+1733 Valid TLD's Total.
 ### Making Backup Copy of TLD List.
 ### Checking For New TLDs.
 * No New TLD's
