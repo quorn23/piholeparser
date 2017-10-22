@@ -1249,7 +1249,7 @@ fullmatchesandshows.com,mediafire.com,newser.com,pornhub.com,rlslog.net,sciencew
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=48423
 ! https://www.reddit.com/r/uBlockOrigin/comments/6o9hax/ublockorigin_no_longer_works_on_gelbooru_as_of/
 ! https://github.com/uBlockOrigin/uAssets/issues/603
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, exosrv)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, banner)
 gelbooru.com##script:inject(popads-dummy.js)
 @@||gelbooru.com^$first-party,script
 gelbooru.com#@#[style*="height:"][width]
@@ -2336,6 +2336,20 @@ mmorpg.com##.vhadb
 ||mylink.st^*.png#$image,redirect=3x2-transparent.png
 @@||mylink.st^$generichide
 mylink.st##a[href^="https://go.nordvpn.net/"]
+
+! https://github.com/reek/anti-adblock-killer/issues/3669
+cookiesflix.com##script:inject(addEventListener-defuser.js, load, adsense)
+
+! https://github.com/uBlockOrigin/uAssets/issues/775
+postimg.org##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+
+! https://github.com/uBlockOrigin/uAssets/issues/776
+blacklistednews.com,parentztalk.com,spiele-umsonst.de,toptenz.net##script:inject(abort-current-inline-script.js, atob, TextDecoder)
+footyroom.com##script:inject(abort-on-property-read.js, TextDecoder)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=37406
+sankakucomplex.com##script:inject(popads-dummy.js)
+@@||sankakucomplex.com^$generichide
 
 
 ! Filters below will be removed once the filter list dark-patterns.txt is
