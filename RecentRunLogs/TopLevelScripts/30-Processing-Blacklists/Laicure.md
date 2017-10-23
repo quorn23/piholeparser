@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Laicure List Unavailable To Download. Mon Oct 23 00:20:55 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* Laicure List Was An Empty File After Download. Sun Oct 22 21:36:27 UTC 2017
+* Laicure List Was An Empty File After Download. Mon Oct 23 00:20:56 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Laicure List Was Killed By The Parsing Process. It will be skipped in the future. Mon Oct 23 00:20:56 UTC 2017

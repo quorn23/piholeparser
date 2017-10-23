@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* SchuzaksUniversalFilter List Unavailable To Download. Mon Oct 23 00:21:44 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* SchuzaksUniversalFilter List Was An Empty File After Download. Sun Oct 22 22:07:58 UTC 2017
+* SchuzaksUniversalFilter List Was An Empty File After Download. Mon Oct 23 00:21:44 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* SchuzaksUniversalFilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon Oct 23 00:21:44 UTC 2017
