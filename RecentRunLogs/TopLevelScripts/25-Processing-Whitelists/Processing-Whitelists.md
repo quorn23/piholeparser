@@ -1,11 +1,11 @@
 ### Checking For Whitelist File.
-* Whitelist File removed Fri Oct 27 00:20:28 UTC 2017
+* Whitelist File removed Sat Oct 28 00:20:34 UTC 2017
 ### Pulling Domains From Lists.
-134 After Pulling Domains From Lists.
+257 After Pulling Domains From Lists.
 ### Pulling Domains From TLD Lists.
-137 After Pulling Domains From TLD Lists.
+260 After Pulling Domains From TLD Lists.
 ### Deduping List.
-40 After Deduping List.
+63 After Deduping List.
 ### Sorting and Deduping Individual Whitelists.
 #### Backupbitlockerrecoverykey
 1 In Backupbitlockerrecoverykey

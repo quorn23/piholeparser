@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: YokxBGNqZVhU8fde5rKXNQ
-! Version: 20171025
+! Checksum: FqgstqB5LyjKxH5rR//oQg
+! Version: 20171027
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -122,6 +122,7 @@
 ##iframe[src^="http://adsvc2.wisenut.co.kr/"]
 ##iframe[src^="http://adtg.widerplanet.com/"]
 ##iframe[src^="http://adv.imadrep.co.kr/"]
+##iframe[src^="http://adv.khan.co.kr/"]
 ##iframe[src^="http://adw.heraldm.com/"]
 ##iframe[src^="http://adx-exchange.toast.com/html/integration.html"]
 ##iframe[src^="http://adx.bibl.uk/ra/www/delivery/afr.php"]
@@ -446,6 +447,7 @@
 ||adtg.widerplanet.com^
 ||adtradradservices.com/adassets/*/adtradr-ad-tag-*.js^
 ||adv.imadrep.co.kr^
+||adv.khan.co.kr^
 ||adv.mediaharbor.co.kr/nad/
 ||adv.mediakeep.co.kr^
 ||adv.realclick.co.kr^
@@ -758,6 +760,8 @@
 ||hankyung.bohumplaza.com/_chann/
 ||hankyung.com/m/inc/fixed_mobile_ad_area_view.html^
 ||hb.vntsm.com/v2/live/hb.js^
+||health.chosun.com/js/2015/center_botbanner_2015s.js^$domain=health.chosun.com
+||health.chosun.com/js/2015/center_mtree_2015s.js^$domain=health.chosun.com
 ||hei.hankyung.com/js/ad/iconad_hankyung_heien.js^$domain=hei.hankyung.com
 ||hei.hankyung.com/js/ad/inspace_hankyung_hei.js^$domain=hei.hankyung.com
 ||hitomi.la/hitomi.js^$domain=hitomi.la
@@ -1179,6 +1183,7 @@
 ||sports.chosun.com/lphoto3.htm^
 ||sports.chosun.com/news/sports_chosun_hns.js^
 ||sports.hankooki.com/ad/$domain=eyenews.hankooki.com|sports.hankooki.com
+||sports.khan.co.kr/htdocs/ad/$domain=sports.khan.co.kr
 ||sportsseoul.com/js/jquery.topline.banner.js^$domain=sportsseoul.com
 ||srv.bebi.com/public/js/bebi_v1.js^
 ||ssp.adpies.com/ssp/request^
@@ -1919,6 +1924,9 @@ hankyung.com##div.fltAd
 hankyung.com##div.ft_ad
 hankyung.com##div.r_ad_rec300
 hankyung.com##iframe[src^="/m/inc/fixed_mobile_ad_area_view.html"]
+health.chosun.com##dd.rel_ad
+health.chosun.com##dd.rel_ad_first
+health.chosun.com##dd.rel_pd
 healthmedi.net##div.imagead-taskbar-anchor
 hellmoney.kr##div#shallwead_div
 hellmoney.kr##div.banner-view.widget
@@ -2376,6 +2384,13 @@ m.metroseoul.co.kr##div#ad_4
 m.metroseoul.co.kr##div.ad_box
 m.metroseoul.co.kr##div.middle_ad
 m.metroseoul.co.kr##div.right_ad
+m.mimint.co.kr##div#MimintTopBanner
+m.mimint.co.kr##div#MimintViewBoardListBanner
+m.mimint.co.kr##div#MimintViewBottomBanner
+m.mimint.co.kr##div#mobile_bottom
+m.mimint.co.kr##div#wp_adbn_root
+m.mimint.co.kr##div.ad
+m.mimint.co.kr##div.board_desc>table[style="border: 1px solid #ebebeb ;"]
 m.moneyweek.co.kr##div#ad_div_bottom
 m.mydaily.co.kr##body>div>div[style="background:#fff; padding-top:10px; border-bottom:1px solid #dddddd; border-top:1px solid #dddddd; margin:10px 0"]
 m.mydaily.co.kr##body>div>div[style="border-bottom:1px dashed #ccc; padding:10px;"]
@@ -2471,6 +2486,12 @@ m.sisainlive.com##div.aritcle_line_box>div[style="text-align:center; "]
 m.sisainlive.com##div.aritcle_line_box>div[style="width:100%; text-align:center"]
 m.sisapress.com##aside.menuBanner
 m.speconomy.com##div.advertisementItem
+m.sports.khan.co.kr##div#article_bottom_ad
+m.sports.khan.co.kr##div#mezzo_ad
+m.sports.khan.co.kr##div.ad_area
+m.sports.khan.co.kr##div.cont_image>div[style="margin:auto; width:600px;"]
+m.sports.khan.co.kr##div.pushADMiddle
+m.sports.khan.co.kr##div.social_btm
 m.sports.naver.com##div.home_ad_group
 m.sportsseoul.com##div#ad_61
 m.sportsseoul.com##div#ad_area_03
@@ -2630,6 +2651,10 @@ metroseoul.co.kr##div.sideADBox
 mhj21.com##div#contents_wrap_sub2>table[border="0"][cellpadding="0"][cellspacing="0"][width="100%"]>tbody>tr>td[align="center"][style="padding:50px 0 30px 0"]
 mhj21.com##div#contents_wrap_sub2>table[border="0"][cellpadding="0"][cellspacing="0"][width="100%"]>tbody>tr>td[style="padding-bottom:10px"]
 mhj21.com##div.bn
+mimint.co.kr##div#toast
+mimint.co.kr##div.board_view_pwlink
+mimint.co.kr##div.subTopBanner
+mimint.co.kr##div.view_list_add
 minitoon.net##div.fixed-top
 minitoon.net##div.g_banner
 minitoon.net##div.m_banner
@@ -3185,7 +3210,14 @@ sports.hankooki.com##div.wrap_over_72890
 sports.hankooki.com##iframe[src^="http://sports.hankooki.com/ad/"]
 sports.hankooki.com##span#AD_GISA_PHOTO_LINE
 sports.khan.co.kr##div#adbox
-sports.khan.co.kr##div[class="subAside view"]>iframe[src^="http://adv.khan.co.kr/"]
+sports.khan.co.kr##div.ad_hot_Issue
+sports.khan.co.kr##div.ad_interest_Info
+sports.khan.co.kr##div.ad_movFocus2
+sports.khan.co.kr##div.ad_popular_Info
+sports.khan.co.kr##div.ad_sunnyworks_line5
+sports.khan.co.kr##div.ad_top
+sports.khan.co.kr##div.article_bottom_ad
+sports.khan.co.kr##iframe[src^="http://sports.khan.co.kr/htdocs/ad/"]
 sports.media.daum.net##div#EXTENSIBLE_WING_WRAP
 sports.media.daum.net##div#RIGHT_SPACE_BANNER
 sports.media.daum.net##div#SponsorBarWrap
