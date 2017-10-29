@@ -13,6 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Airelles-Phishing-Hosts List Unavailable To Download. Sun Oct 29 00:20:51 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
+## Checking File Size
+* Airelles-Phishing-Hosts List Was An Empty File After Download. Sun Oct 29 00:20:51 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Airelles-Phishing-Hosts List Was Killed By The Parsing Process. It will be skipped in the future. Sun Oct 29 00:20:51 UTC 2017

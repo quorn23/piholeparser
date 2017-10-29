@@ -1237,7 +1237,7 @@ fullmatchesandshows.com,mediafire.com,newser.com,pornhub.com,rlslog.net,sciencew
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=48423
 ! https://www.reddit.com/r/uBlockOrigin/comments/6o9hax/ublockorigin_no_longer_works_on_gelbooru_as_of/
 ! https://github.com/uBlockOrigin/uAssets/issues/603
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, addZone)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout)
 gelbooru.com##script:inject(popads-dummy.js)
 @@||gelbooru.com^$first-party,script
 gelbooru.com#@#[style*="height:"][width]
@@ -1521,6 +1521,8 @@ hackinformer.com##.adsbygoogle:style(max-height: 1px !important;)
 ||timesofindia.indiatimes.com/ad-banner$image,redirect=3x2-transparent.png,domain=happytrips.com
 
 ! https://forums.lanik.us/viewtopic.php?p=117739#p117739
+! https://github.com/gorhill/uBlock/issues/3176
+rule34hentai.net##script:inject(abort-current-inline-script.js, atob, tabunder)
 rule34hentai.net##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/394#issuecomment-304461367
@@ -2379,3 +2381,16 @@ wired.com##.sponsored-stories-component
 ||doubleclick.net^$important,script,domain=wired.com
 wired.com##.advertisement__leaderboard
 wired.com##[id^="cns_ads_"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/790
+androidrepublic.org##script:inject(bab-defuser.js)
+||androidrepublic.org/*/AdblockDetector/*.js$script,important,first-party,redirect=noopjs
+||googlesyndication.com/pagead/js/adsbygoogle.js$script,important,domain=androidrepublic.org
+
+! https://github.com/uBlockOrigin/uAssets/issues/792
+@@||arenavision2017.ml^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/789
+@@||picload.org/image/$image,first-party
+picload.org##.stageAds
+picload.org###stageAds

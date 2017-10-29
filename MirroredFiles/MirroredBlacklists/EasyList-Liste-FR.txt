@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: z9WAUODiVu+Al7zYrLZZjg
-! Version: 201710280101
+! Checksum: jQ3yzeybkALtsdTTsGXSGA
+! Version: 201710290021
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -385,6 +385,7 @@
 /adaptvInfo.
 /adbet-
 /adbetnet.
+/adbkicker.
 /adblock.php
 /adblock_banners/*
 /adblockbanner/*
@@ -655,6 +656,7 @@
 /async?*&tid=
 /autopromo.*/async|$domain=~jeuxvideo.com
 /autopromotion.*/async|
+/ax/bnnr/*$script
 /b/ads/*
 /b2bad.
 /b728x90a.
@@ -983,6 +985,7 @@
 /infopop/infopop.$script
 /init/?siteId=*&loc=
 /InjectPopunderAd.
+/Inkorrect_ab/*
 /inread_
 /inside_ad.
 /interstitial-ads.
@@ -1269,7 +1272,7 @@
 /publicidades/*
 /publicidadsetup/*
 /publicit%c3%a9/*
-/publicite-$domain=~publicite-lepeut-dole.fr
+/publicite-$domain=~publicite-decor.fr|~publicite-lepeut-dole.fr
 /publicite.
 /publicite/*
 /publicite2.
@@ -1394,8 +1397,10 @@
 /Temp/Ads/*
 /textlink-ads.
 /thumb_banner_frame.
+/thumbbanner/helper.js
 /TiscaliAds.
 /toastr.$domain=plancul-paris.net
+/tool.infopop.
 /tool.popdhtml.
 /tools-euads.
 /tools/*&format=*&rand=$subdocument
@@ -3304,6 +3309,7 @@ debugger:$popup
 ||relateev.com^$third-party
 ||remerciez.com^$third-party
 ||rencontreroulette.com^$third-party
+||rencontreshard.com^$third-party
 ||rentacorner.com^$third-party
 ||replacingobservedlose.info^$third-party
 ||retagapp.com^$third-party
@@ -3317,6 +3323,7 @@ debugger:$popup
 ||rezo2pub.com^$third-party
 ||rf6oo9gq.online^$third-party
 ||rgbperf.com^$third-party
+||richaudience.com^$third-party
 ||ritogaga.com^$third-party
 ||roipub.com^$third-party
 ||rosseladvertising.be^$third-party
@@ -7130,8 +7137,8 @@ $subdocument,third-party,domain=adbull.me|e-wok.tv|flashx.tv|gomovies.co|gomovie
 |https://$script,stylesheet,third-party,xmlhttprequest,domain=ed-protect.org|ex-down.com|ex-down.net|ex-down.org|exdown.net|exdown.org|extreme-down.cc|extreme-down.co|extreme-down.in|extreme-down.me|extreme-down.one|extreme-down.org|extreme-down.pro|extreme-streaming.com|extreme-streaming.net|extreme-up.com
 ||extreme-down.pro^$popup,script,~third-party
 ! dl-protecte.org
-|http://$image,script,subdocument,third-party,xmlhttprequest,domain=|dl-protecte.com|dl-protecte.org|liens-telechargement.com|protect-lien.com|protect-zt.com|security-links.com
-|https://$image,script,subdocument,third-party,xmlhttprequest,domain=|dl-protecte.com|dl-protecte.org|liens-telechargement.com|protect-lien.com|protect-zt.com|security-links.com
+|http://$image,script,subdocument,third-party,xmlhttprequest,domain=dl-protecte.com|dl-protecte.org|liens-telechargement.com|protect-lien.com|protect-zt.com|security-links.com
+|https://$image,script,subdocument,third-party,xmlhttprequest,domain=dl-protecte.com|dl-protecte.org|liens-telechargement.com|protect-lien.com|protect-zt.com|security-links.com
 ||boncoin-annonce.com^$popup,domain=dl-protecte.com|dl-protecte.org|liens-telechargement.com|protect-lien.com|protect-zt.com|protecte-link.com|security-links.com
 ! streaming-kids.com
 |http://$script,third-party,xmlhttprequest,domain=streaming-kids.com
@@ -7416,7 +7423,10 @@ oload.info,oload.stream,oload.tv,openload.co,streamcherry.com##.vjs-modal-dialog
 @@||jacquieetmichel.net^*/lazy-common.$script,domain=jacquieetmichel.net|vosfemmes.com|voyeurfrance.net
 @@||jacquieetmicheltv.net^*/player-v2.$script,~third-party
 @@||jacquieetmicheltv2.net^*/player-v2.$script,~third-party
+@@||lavideodujourjetm.net/c/lazy-base.$script,~third-party
+@@||lavideodujourjetm.net^*/lazy-home.$script,~third-party
 @@||lavideodujourjetm.net^*/player-v2.$script,~third-party
+@@||pornovoisines.com^*/player-v2.$script,~third-party
 @@||tonpornodujour.com^*/player-v2.$script,~third-party
 @@||voyeurfrance.net^*/player-v2.$script,~third-party
 ||desinhibition.com^$script,subdocument
@@ -7424,6 +7434,7 @@ oload.info,oload.stream,oload.tv,openload.co,streamcherry.com##.vjs-modal-dialog
 ||jacquieetmicheltv.net^$script,subdocument
 ||jacquieetmicheltv2.net^$script,subdocument
 ||lavideodujourjetm.net^$script,subdocument
+||pornovoisines.com^$script,subdocument
 ||tonpornodujour.com^$script,subdocument
 ||voyeurfrance.net^$popup,~third-party
 ||voyeurfrance.net^$script,subdocument
@@ -10931,6 +10942,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##.adv120x600
 ##.adv300-topnews
 ##.adv350200
+##.adv728x90
 ##.advBackground
 ##.adv_big
 ##.adv_block
@@ -11041,6 +11053,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##.bottom-ad-desktop
 ##.bottom-ad-mob-tab
 ##.bottom-ad-normal
+##.bottom-adv
 ##.bottom-advertising
 ##.bottompub
 ##.breaking-ad
@@ -11736,6 +11749,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##[onclick*="friendlyduck.com/AF_"]
 ##[onclick*="http://www.affbuzzads.com/affiliate/"]
 ##[slot-id^="div-gpt-ad-"]
+##a > #bg-ad
 ##a[href$="?id=300x250"][target="_blank"] > img
 ##a[href$="?id=728x90"][target="_blank"] > img
 ##a[href*="%2Fapi%2Fmpup%2F"]
@@ -11850,6 +11864,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##a[href*="weborama.fr/fcgi-bin/"]
 ##a[href*="wow-partners.com/click.php"]
 ##a[href*="xiti.com/go.ad?"]
+##a[href="http://smarturl.it/warshipsint"]
 ##a[href^=".bcvc.mobi/"]
 ##a[href^=".php/ads/"]
 ##a[href^=".php/annonce/ads/"]
@@ -11925,6 +11940,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##a[href^="http://tool.acces-vod.com/"]
 ##a[href^="http://wct.link/"]
 ##a[href^="http://witalfieldt.com/"]
+##a[href^="http://wlx-secure.com/"]
 ##a[href^="http://www.affiliation-france.com/"]
 ##a[href^="http://www.allopass.com/"] > img
 ##a[href^="http://www.apk-download-free.com/"]
@@ -11963,6 +11979,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##a[href^="https://store.mspy.com/affiliate.php"] > img
 ##a[href^="https://traceless.me/lp/"]
 ##a[href^="https://www.g2a.com/r/"] > img
+##a[href^="https://www.le-vpn.com/clients/aff.php?"]
 ##a[onclick*="/adserver/iframe?"]
 ##a[onclick*="FriendlyDuck.com"]
 ##a[onclick^="CustomWLAdServer."]
@@ -12592,6 +12609,7 @@ frenchddl.com##.Usenet
 filmstreaming1.co##.a-el
 porn0sexe.com##.aRight
 pixhost.org##.above-image
+a10.com##.abspos
 driverscloud.com##.accueil_pubotherlan
 cotemaison.fr##.actu_pub
 lagazettedescommunes.com##.actus-case-pub
@@ -13403,6 +13421,7 @@ vfstreaminggratuit.com##[id^="floatlayer"]
 commentcamarche.net,free.fr,journaldesfemmes.com,orange.fr##[id^="lig_"]
 leparticulier.fr##[id^="loca_service_simulateur_"]
 voirfilms.info##[id^="mp3"]
+planet-series.co##[id^="news-id-"] a > [style]
 agate-france.com##[id^="pbad_"]
 dsih.fr,mylink.st##[id^="pub"]
 jeuxvideomoinschers.fr,tahiti-infos.com##[id^="pub_"]
@@ -13860,6 +13879,7 @@ lucariostream.eu##[-abp-properties='z-index: 999*;']
 macg.co##article > a[-abp-properties='*'] > img
 dzgeek.com#?#li + .postbit:-abp-has(img[src$="/avatars/partenaire.png"])
 facebook.com#?#div[id^="hyperfeed_story_id_"]:-abp-has(a:-abp-contains(Sponsorisé))
+facebook.com#?#div[id^="hyperfeed_story_id_"]:-abp-has(a[href="#"]:-abp-contains(Sponsorisé))
 forumconstruire.com#?#div.post_classic:-abp-has(.post_classic_pseudo:-abp-contains(Autopromo))
 forumpiscine.com#?#div[id][class^="postbox_forum_"]:-abp-has(.forum_pseudo_contener:-abp-contains(Autopromo))
 t411.si#?#.isItemDesk:-abp-has(a:-abp-contains(HADOPI))

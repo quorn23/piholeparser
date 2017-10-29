@@ -4,15 +4,15 @@
 ! Collaborators: Adam W, Dominik, Wiesiek, Robert, Marek, buuuuuuu190, Caleb, Ryszard, Kruk, Weronika, Adam, xxcriticxx, maxoku, F4z, mathew85,Piter432, Adam K, Piotr S, Szymon D, Marek R, adreporter, kacper93, FadeMind, kerbenii, gzenio22, blocker999, FX54, hawkeye116477 
 ! Homepage: https://www.certyficate.it/
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika 
-! Last modified: 22 October 2017
+! Last modified: 28 October 2017
 ! Expires: 2 days
-! Version: 2017102210
+! Version: 2017102801
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na:  https://www.certyficate.it/polski-filtr-adblock/
-! v.2017102210 aktualizacja: nie, 22 pazdziernika 2017, 19:30:00
+! v.2017102801 aktualizacja: sob, 28 pazdziernika 2017, 19:45:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -76,7 +76,7 @@ streamin.to###rkm
 !-----------------------Block pages-----------------------!
 ||vshare.io/sdm.php$xmlhttprequest
 ||vshare.io/watch_video.php$script
-/fake/fake.php$domain=alefilmy.com|cyberkino.pl
+/premium/player.php$domain=alefilmy.com|cyberkino.pl
 !
 !
 !-----------------------Privacy filters hide-----------------------!
@@ -87,10 +87,10 @@ motorolasolutions.com##.tealiumMo2TriggerButton
 !
 !
 !-----------------------Privacy filters block-----------------------!
-,xgemius.js$script
+!,xgemius.js$script
 .pl/*_ac=kropka-*
-/gemius/*$script,image
-/js/gemius.js$script
+!/gemius/*$script,image
+!/js/gemius.js$script
 ||adkontekst.pl$script,image
 ||adnxs.com^
 ||api.solvemedia.com/papi/action$popup
@@ -99,8 +99,8 @@ motorolasolutions.com##.tealiumMo2TriggerButton
 ||emisja.adsearch.pl/$xmlhttprequest
 ||entryhit.wp.pl^
 ||gcontent.services.tvn.pl^
-||gemius.pl^
-||hit.gemius.pl$script,image
+!||gemius.pl^
+!||hit.gemius.pl$script,image
 ||kozaczek.pl/stats.php$xmlhttprequest
 ||nsaudience.pl^
 ||pixel.solvemedia.com^
@@ -115,7 +115,7 @@ motorolasolutions.com##.tealiumMo2TriggerButton
 ||www.wp.pl/v*/log/view
 ||tealium.hs.llnwd.net/*/utui/js/*.js$script,domain=motorolasolutions.com
 ||sylaba.net^
-||smpl.hit.ppdb.pl^
+!||smpl.hit.ppdb.pl^
 ||daib.pl^
 ||salesmanago.pl^$domain=~salesmanago.pl
 !
@@ -125,7 +125,7 @@ motorolasolutions.com##.tealiumMo2TriggerButton
 ###a_d_billboard
 ###ad
 ###ad_gora_srodek
-###ads
+~de###ads
 ##ads-top-layer
 ###adtify-widget
 ###ceneo-placeholder-ceneo-12
@@ -173,7 +173,7 @@ motorolasolutions.com##.tealiumMo2TriggerButton
 ##[class^="ADbox"]
 ##[class^="adSrodek"]
 ##[class^="sponsorowany"]
-##[href*=".hit.gemius.pl"]
+!##[href*=".hit.gemius.pl"]
 ##[href*="://clickserve.dartsearch.net/link/click"]
 ##[href^="http://adserwer."]
 ##[href^="http://csr.onet.pl/eclk/clk"]
@@ -222,7 +222,7 @@ pl/popup.js|$script
 ~katywroclawskie.pl,~rozklad-pkp.pl,~gwarant.czest.pl,~sukniaonline.pl##[src*="/banners/banner"]
 ~tczewska.pl,~procamp.agency,~rp.pl,~sportowememy.pl,~intercity.pl##[id*="reklama"]
 ~magdabek.pl,~superpharm.pl,~ceo.com.pl,~linuxiarze.pl,~wirtualny-wojownik.pl,~przerwanareklame.pl,~tvpolska.pl,~smiechawatv.pl,~break.pl,~radekcholewinski.pl,~prokonsumencki.pl,~sekurak.pl,~techmaniak.pl,~gsmmaniak.pl,~appmaniak.pl,~tabletmaniak.pl,~fotomaniak.pl,~mobimaniak.pl,~acermaniak.pl,~tvmaniak.pl,~3dmaniak.pl,~gizmaniak.pl,~luxmaniak.pl,~blogomaniak.pl,~activemaniak.pl,~agdmaniak.pl,~eskago.pl,~certyficate.it,~motogen.pl,~wikipedia.org,~motomio.pl,~semilac.pl,~e-otoczenie.pl,~wyborcza.pl,pl##[class*="reklama"]
-~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,pl##[class^="ad-"]
+~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,~filmweb.pl,pl##[class^="ad-"]
 ~fakt.pl,pl##.trizer-bnr
 pl###widget-shop
 ##.rek_kontener
@@ -237,6 +237,7 @@ pl###LinkArea\:gry
 pl##.onnetwork-video
 pl##a[href^="https://converti.se/click/"]
 ##.advertisment-panel
+pl###pixad-box
 !
 !
 !------------------------Specific element hiding rules------------------------!
@@ -276,6 +277,10 @@ alltube.tv###ban-er
 alltube.tv###super-player
 alltube.tv###undermenu
 amigostv.net.pl###u785
+ampolska.net##.conntent > center
+ampolska.net###dwa_panel > center
+ampolska.net###trzy_panel
+ampolska.net##.ul_panel_bg:nth-of-type(4)
 android.com.pl##.big-banner
 android.com.pl##[id^="text-3"]
 androidpolska.pl###middle-box-adk
@@ -294,6 +299,8 @@ angielski.slowka.pl###acceptPopup
 angielski.slowka.pl###newsletterConfirm
 anglia.today##[href^="/redirect/ad/background/"]
 anglia4u.pl###gkSidebar
+animes.pl##.section-side > .mini-box:nth-of-type(2)
+animes.pl##.mini-title:nth-of-type(1) > p > a[href="#"]
 anyfiles.pl###SearchVideosLoadDiv > .media-list > .media > .thumbnail:not([title])
 anyfiles.pl###AllVideosLoadDiv > .media-list > .media > .thumbnail:not([title])
 anyfiles.pl##[class^="bp-wrapp"]
@@ -356,6 +363,8 @@ binary24.pl##[id^="black-studio-tinymce-"]
 binary24.pl##[id^="text-"]
 biotechnologia.pl##.ats_link
 bitcoin.pl,rightclick.pl##.custom
+bitcoin.edu.pl##.custom-html-widget.textwidget
+bitcoin-online.pl##.sp-module:nth-of-type(3) > .sp-module-content > .custom
 bithub.pl##.st-ad-region
 biznes.pl##.e_Box.analyses
 biznes.pl##.rightBoxR.boxPopComtR.cl
@@ -381,6 +390,11 @@ businessjournal.pl##[href^="http://"][target="_blank"] > IMG[src^="http://busine
 businesswomanlife.pl##[id^="slidero-box-"]
 businesswomanlife.pl##[id^="widget_sp_image"]
 btc-sms.eu##.banner
+cannabisnews.pl##[class^="cn-ad-"]
+cannabisnews.pl##.td-visible-desktop
+cannabisnews.pl##A[target="_blank"] > [src]
+cannabisnews.pl##[id^="snp-pop-"]
+cannabisnews.pl##.bld-el
 cadblog.pl##TD[bgcolor="#FFFFFF"]
 cardsplitter.pl##[target="_blank"] > IMG[src^="/images/loga/"][height="249"]
 cartests.net###td-outer-wrap > .td-header-wrap:style(margin-bottom: 0px!important;)
@@ -393,6 +407,7 @@ cda.pl##.muimErPIa
 cda.pl##.muimerPIa
 cda.pl##a[class][target]:has(img[src*="premium"])
 cda.pl##.wraper-container
+cda.pl##.f-img
 cda-hd.pl##.s_left > [target="_blank"] > IMG[src^="http://cda-hd.pl/wp-content/uploads/201"]
 cenabiznesu.pl##.img-responsive
 centrumdruku3d.pl###attachment_4083 > div
@@ -444,6 +459,7 @@ darkwarez.pl##DIV[style="position:relative;height:110px;overflow: hidden;"]
 darkwarez.pl##div[align="center"] > .copyright > table[border="0"]
 darmowe-torenty.pl##td:nth-of-type(2) > center:nth-of-type(1)
 datapremiery.pl##.column_center > [class*="mock"]
+dbpolska.net###trzy_panel
 ddtorun.pl,ddwloclawek.pl##.container.movedDiv
 ddtorun.pl,ddwloclawek.pl##.skodaAuto.box-margin.row
 ddtorun.pl,ddwloclawek.pl##[class^="a-d-v"]
@@ -479,6 +495,7 @@ dobreprogramy.pl##div#slide-menu > [id]:not([class]):not([style])
 dobreprogramy.pl##div[id="slide-menu"] > a[id][href="#"]
 dobreprogramy.pl##a[href*="campaign=baner"]
 dobreprogramy.pl###divPoweredBy
+dobreprogramy.pl##script:inject(abort-on-property-read.js, _0x373f)
 dodajzdjecie.funfootball.pl##.wp-image-9996
 dogry.pl##.pro-box
 dojrzalakobieta.pl###slider-with
@@ -538,6 +555,7 @@ eska.pl##.zpr_top_1
 eska.pl##A[style="display: block; height: 100%; width: 100%;"]
 eska.pl##[href*="bbelements.com/please/track/adClick/"]
 eswinoujscie.pl##.widget_text
+etransport.pl##iframe[src^="http://kampanie.etransport.pl"]
 euro.com.pl###image-banner
 euro.com.pl##.banners-header
 euro.com.pl##[id$="-ear"]
@@ -558,6 +576,8 @@ fakt.pl##.smallAd
 fakty.interia.pl##[id^="brendingIplv2_new_starter"]
 faktykaliskie.pl##[id^="advt-"]
 faktykonopne.pl##.aligncenter
+faktykonopne.pl##.td-visible-desktop > A > IMG:last-child
+faktykonopne.pl##ASIDE.widget_text.td_block_template_14.widget.widget_custom_html
 fandroid.com.pl##.g1-ads
 fangol.pl##[style="text-align:center;"]
 fantastyka.pl##.tapeta
@@ -567,7 +587,6 @@ fechallenge.com##.layout-right-brand
 fechallenge.com##[class$="partners"]
 filesdark.com##[href*="/adac.php"]
 films4free.pl##.M2U3OGQ4ZGY1
-filmweb.pl###clickUrl1
 filmweb.pl###flashcontent3
 filmweb.pl###pasekup
 filmweb.pl###skyBanner
@@ -729,6 +748,7 @@ icelandnews.is##.theiaStickySidebar
 ideagrafika.pl###adswidget7-quick-adsense
 ideas2action.pl##.o_inner
 iitv.pl##._video-link
+ikrotoszyn.pl##.partners2
 imagazine.pl###content > .posts-ad
 imagazine.pl###text-402422661
 indeed.com###related
@@ -769,6 +789,10 @@ itvpolska.pl##.wpb_content_element
 itvpolska.pl###text-25
 ittechblog.pl##.ext-link
 iv.pl##.text_align_center
+jablonka.info###gkTop1
+jablonka.info###gkSidebar > .nomargin.box
+jablonka.info###gkMainbodyTop > .box + .box
+jablonka.info###gk-newsletter-popup
 jaka-komorka.pl###ja-botsl1
 jaka-komorka.pl###ja-right2
 jbofilm.pl##BR + A[href^="http"] > IMG[src]
@@ -823,6 +847,7 @@ komorkomat.pl##.boxzilla-bottom-left-container
 komputerswiat.pl###\5f 479491471
 komputerswiat.pl##.sidebar_html_embed
 komputerswiat.pl##[style="width: 600px; height: 400px; margin: 20px auto;"]
+komputerswiat.pl##.intext:nth-of-type(17)
 koncertomania.pl##div#slide-out-newsletter
 koncertomania.pl###banner-side
 korkosfera.pl##div#copyright_ne
@@ -839,6 +864,8 @@ krs-pobierz.pl##A[target="_blank"] > IMG[src*="ban"]
 krytykapolityczna.pl##.commercial
 kulturaonline.pl###movieBox
 kupbilet.pl###t3393f
+kurier-bielski.cnm.pl##.box:nth-of-type(4)
+kurier-bielski.cnm.pl##.fullwidget > h3:nth-of-type(2)
 kurierlubelski.pl###adoceanadldghmiohjv
 kurierlubelski.pl###oponeo
 kurierlubelski.pl###sm-sg
@@ -873,6 +900,7 @@ lokalna24.pl##.top
 lokalna24.pl##.custom > p > span
 lols.pl###text-3
 lols.pl###text-4
+lolmania.pl##.g1-activated.g1-sticky-sidebar
 londynek.net###ldnk-abp
 londynek.net##.bannersZoneB1
 londynek.net##.jd-content-to-left.jd-content-3-2
@@ -913,11 +941,15 @@ malydziennik.pl##.desktop
 mamkomputer.info###text-17
 mamawdomu.pl###text-161
 mapa.szukacz.pl###popupContainer
+marihuana.info.pl###header-right-section, #text-5, #text-10, #text-11
 maximgroup.pl###banner-counter
 meczyki.pl##.bookie-ranks
 mediaexpert.pl## .js-promoClick
 mediaexpert.pl##[id*="ban_"]
 mediamarkt.pl##A[href^="http://www.mediamarkt.pl/ad.php"]
+medycznamarihuana.pl##.footer-ad-wrap
+medycznamarihuana.com##A[target="_blank"] > IMG[src*="medycznamarihuana.com/wp-content/uploads/"]
+medycznamarihuana.com##IMG[src*="/wp-content/uploads/baner_"]
 miedzyrzecz.biz###showimage
 memy.pl##.container > div[style="height:250px; width:970px; margin-bottom: 10px;"]
 memy.pl##.content-stream.view-meme > #news > .break-row.row
@@ -1027,6 +1059,8 @@ naekranie.pl##.sen-gal-sidebar-custom-content
 naekranie.pl##div[style="height: 5.3125rem !important;"]
 naekranie.pl##.inner-wrap > .post-content
 naekranie.pl##.adform
+naekranie.pl##div:if(>div:first-child:has-text(Reklama))
+naekranie.pl##.except-mobil
 naklo24.pl##.ban
 napisy24.pl##.custom_pozioma
 napisy24.pl##[id^="napisy24"]
@@ -1072,6 +1106,7 @@ nowy.tlen.pl##.shrink-none.mbox--main.mbox
 nudziara.pl##DIV[style="border: 1px solid #D8D0D0; padding: 5px 0px 5px 0px; width:705px;"]
 nysa24.pl###Mod348
 nysa24.pl,tvnakarte.eu###jm-header
+o.pl###wa, #s-rotator, #server-rectangle, #server-button
 o2.pl##.box-sidebar.box-sidebar-1
 o2.pl##.content-row.content-row-15.x-ecommerce
 o2.pl##div.popup-wrap
@@ -1093,11 +1128,11 @@ onet.pl##.miniSlot:style(min-height: 0rem!important;margin-bottom: 0rem!importan
 opinie.wp.pl##[style="pointer-events:none;"][class]
 open.fm###bnr-top
 open.fm##.bnr-player
-open.fm##A[class][href*=".wp.pl/"] > IMG[class][src^="https://v.wpimg.pl/"]
 optyczne.pl##.double-billboard
 opolak.pl,poznaniak.pl,szczeciniak.pl,toruniak.pl,szczeciniak.pl,warszawiak.pl,wroclawiak.pl,katowiczak.pl,bialostoczak.pl,kaliszak.pl,gdyniak.pl,gdanszczak.pl,czestochowiak.pl,bydgoszczak.pl,krakusik.pl##.empty-baner
 opolelubelskie.24wspolnota.pl##.visible-md.visible-lg.row
 originals24.pl##body > div:nth-of-type(3)
+ostrowiecnews.pl###text-4, #text-2 > .textwidget > p:nth-of-type(n+2), .text-center.hidden-print
 oswiecimonline.pl###rev_slider_4_1_wrapper
 oswiecimonline.pl##.commercial
 oswiecimonline.pl##.vc_empty_space
@@ -1113,7 +1148,9 @@ parenting.pl###floorBG
 parenting.pl##.a-ctn-d
 parenting.pl##.article__textbox
 parenting.pl##[class^="article__side__stickblock--"]
+pato.pl##a[href="http://nocnik.pl/"]
 patriot24.net##[style="display: block; width: 750px; height: 200px; margin: 0px auto;"]
+pccentre.pl##.box_orange.box.menu_r_hp:nth-of-type(5)
 pcformat.pl###ad_dol_srodek
 pclab.pl###a011
 pclab.pl###b028
@@ -1192,6 +1229,8 @@ poranny.pl###dfp-prawa1
 poranny.pl##.gry
 portal24h.pl###rt-content-bottom
 portal.abczdrowie.pl##.a-ctn-d
+portal.abczdrowie.pl##.article__textbox:style(position: absolute!important; left: -3000px!important;)
+portal.abczdrowie.pl##.article__side__stickblock:style(position: absolute!important; left: -3000px!important;)
 portalkomunalny.pl##.pasinfotxt.above
 portalplock.pl###fixme
 portalsremski.pl##div[class^="ban"]
@@ -1231,7 +1270,7 @@ pszczynska.pl,szajn.pl##.baner
 plotek.pl##[id^="frame-"]
 pudelek.tv,wp.tv,interaktywnie.com##[src^="http://adv.wp.pl"]
 pukawka.pl##.partnerzy
-purepc.pl##a[href*="://www.purepc.pl/redir"]
+purepc.pl##DIV > A[href^="http"][style^="display:block;"]
 pyszne.pl##.yd-banner
 pytamy.pl##.bx1
 pzl24.pl##.visible-md
@@ -1248,6 +1287,7 @@ radiobiper.info##[id^="widget_sp_image-"]
 radiofm-online.com###block-block-3
 radiokolor.pl##.boxAdvert
 radioplus.pl###bottom-ad
+radiosud.pl##[class^="banner"]
 radiowarszawa.com.pl##.wpb_single_image.wpb_content_element.vc_align_center
 radiovia.com.pl##.imageBox > P[style="text-align: center;"]
 radiotczew.pl##[target="_blank"] > .img-responsive
@@ -1282,6 +1322,7 @@ rmf.fm##.intad
 rmf24.pl##.sponsoredCont
 roksa.pl###content > span
 roksa.pl##SPAN[style="color:gray;padding-left:350px;"]
+rockman.com.pl##[id^="menu_banners"]
 romantycznyweekend.eu###article-finished
 rozatv.eu##[class^="custom"]
 rp.pl###adv_4
@@ -1329,8 +1370,10 @@ sklep.fipro.pl###tooltipmessage
 sklep.habys.pl###newsletterModal
 sklep.habys.pl##.modal-backdrop.fade.in
 sklep.habys.pl##.modal-content
+sklep-muzyczny.com.pl##a[href*="santanderconsumer.pl"]
 skok-rafineria.pl##[id^="fancybox-"]
 skokinarciarskie.pl##DIV[style="width: 750px; height: 200px; text-align: center; margin: auto; margin-top: 4px; margin-bottom: -4px;"]
+skript.pl##.skAds
 skrstrzelce.pl##.center_bottom
 slodkipomysl.pl##a[href="http://www.bestdumpsterdeals.com/"]
 slubice24.pl##[id^="baner-"]
@@ -1410,20 +1453,14 @@ sympatia.onet.pl###backdrop-container
 sympatia.onet.pl###close-frame
 szybkiefilmy.pl##[href^="http://2hx.pl/"]
 tabletowo.pl##[id^="text-"]
-!tabletowo.pl##[id^="rb_widget-1"]
-!tabletowo.pl###rb_widget-8
-!tabletowo.pl##.rekrek
 tabletowo.pl###main_header:style(margin-top: 0px!important;)
-!tabletowo.pl##.rektop
-!tabletowo.pl##.srodek
-!tabletowo.pl##.rb_widget_text.widget
-!tabletowo.pl##[alt="Konkurs: Biegnę z Wiko"]
-!tabletowo.pl##.widget:nth-of-type(1)
-!tabletowo.pl##.widget:nth-of-type(2)
-!tabletowo.pl##.sidebar > .widget:nth-of-type(3)
+tabletowo.pl##a[onclick*="eventAction: 'Klik'"][target="_blank"]
 tabletowo.pl##DIV[class*=rek]
 tabletowo.pl##.widget2:nth-of-type(2)
 tabletowo.pl##.widget2:nth-of-type(3)
+tabletowo.pl##[rel="nofollow"][target="_blank"]
+tabletowo.pl##a[href*="dhosting.pl"]
+tabletowo.pl##a[href*="goo.gl"]
 targeo.pl###Advertisement
 tarnow.in###text-21 > .post-header > .post-header
 tarnow.in##img[src][alt^="Baner"]
@@ -1485,6 +1522,7 @@ tustolica.pl##[id^="b_"]
 tv.rp.pl##.aiText
 tv-wschod.pl##section.container:style(padding-top: 0px!important;)
 tv-wschod.pl##.widget:style(margin: 10px -15px 0 0!important;)
+tvp.info##.banner
 tvjaslo.pl##.bx-viewport
 tvjaslo.pl###text-5
 tvgorzow.pl###testimonialrotatorwidget-5
@@ -1522,9 +1560,11 @@ uploaduj.net##.center-block
 uptimemadeeasy.com##.subscribep
 v10.pl##DIV[style="width: 100%; background-color: rgb(0, 0, 0); margin: 0px; position: fixed; bottom: 0px; left: 0px; padding: 0px; height: 15px; line-height: 15px; text-align: center; color: rgb(255, 255, 255); z-index: 1000; font-family: Arial,Helvetica,sans-serif; font-size: 10px;"]
 v10.pl##[id^="newsltr1_"]
+vape.pl##.sidebar-wrapper + .sidebar-wrapper
 valetudo.bialystok.pl##.darkness-popup
 vampirediaries.pl##[width="300"] + [width="20"] + TD[width="300"]
 video.anyfiles.pl##[style^="float: left; margin: 0px 2px 5px 3px; width: 315px; height: 260px; text-align: center; position: absolute;"]
+vbtpc.pl##.footer-banner
 videowood.tv###tbl1
 vidfile.net##.rek
 vinowisko.pl##[href^="http://adsearch.adkontekst.pl/_/ctr/"]
@@ -1535,6 +1575,9 @@ vorek.pl##.news > center:nth-of-type(1)
 voxfm.pl###global_belka
 vshare.io###pplay
 wachamksiazki.pl##.sr
+wakai.pl###text-html-widget-5
+wakai.pl##.youtube-widget
+wakai.pl###text-html-widget-6
 warszawawpigulce.pl##.code-block-5
 waszwilanow.pl##.td-banner-wrap-full
 waszwilanow.pl##[style="text-align: center;"]
@@ -1570,6 +1613,7 @@ wiocha.pl,showup.tv##A[href*="/click.php"]
 wirtualnemedia.pl###adv_bottom
 wirtualnemedia.pl###newsletter
 wirtualnemedia.pl##SPAN[style="color: #656971; font-size: 10px; font-weight: normal;"]
+wirtualnemedia.pl##a[href="http://www.wirtualnemedia.pl/praca/"]
 wizaz.pl###autoPromoBigBaner
 wizaz.pl###contentAfPromo
 wizaz.pl###forum-gad2
@@ -1733,11 +1777,14 @@ zaufanatrzeciastrona.pl##body > * > * > a[href]:not([href="//zaufanatrzeciastron
 zaufanatrzeciastrona.pl###sponsor3
 zebrra.tv##.sam-container
 zespolmi.pl##a[href^="https://prisonwarsonline.com/"]
+zielonanews.pl##A.gofollow > IMG
 zory.dlawas.pl##.in.fade.modal-backdrop
 zory.dlawas.pl##.modal-dialog
-zszywka.pl##A[style="display: block; position: fixed; bottom: 0px; box-sizing: border-box; width: 100%; background-color: rgb(129, 197, 78); background-image: none !important; background-repeat: no-repeat; background-attachment: scroll; background-clip: border-box; background-origin: padding-box; background-position: 20px 50%; background-size: auto auto; color: rgb(255, 255, 255); text-align: center; padding: 1em 150px; z-index: 1000; white-space: pre;"]
+zrabatowani.pl##.center-block.hidden-xs
+zszywka.pl##.pin-advert.pin
 zumi.pl###couponsBar
 zumi.pl###offersBar
+zumi.pl##.box.article
 zwierciadlo.pl###superTopWrapper
 zwierciadlo.pl##.srodtekstimg
 zycietoprzygoda.pl###ck_dsclr
@@ -1757,6 +1804,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||40ton.net/wp-content/uploads/*.gif$image
 ||40ton.net/wp-content/uploads/*.png$image
 ||4lomza.pl/banner/$image
+||4lomza.pl/i/tlo/$image
 ||a.ib.gazeta.pl^$image
 ||a1.advertine.com/w.js$script,domain=baje.pl
 ||ad.adview.pl/ad/
@@ -1774,6 +1822,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||alemiasto.pl/adds/
 ||allegrostatic.pl/showcaseService/static/images/placeholders/1200x400.png$image
 ||alltube.tv/adv/show-windows.php$script
+||animes.pl/jscripts/myadvertisements.js$script
 ||antygrupa.pl/adv/$subdocument,domain=antyweb.pl
 ||antyweb.pl/wp-content/themes/antyweb.autentika/horizon/
 ||antyweb.pl/wp-content/uploads/2017/03/horizon-cover.jpg$image
@@ -1920,6 +1969,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||media.zwielkopolski24.pl/img/banery/$image,domain=rawicz24.pl
 ||media2.cinema-city.pl/pl/*.swf
 ||mediaexpert.pl/temp/filemanager_up/*tlo_$image
+||medycznamarihuana.com/wp-content/uploads/*_330x250$image
 ||microsms.pl/img/reklama$image
 ||mgsm.pl/js/get*Ads.xhtml$xmlhttprequest,domain=www.mgsm.pl
 ||mma.pl/wp-content/uploads/20*/*/kapka-do-kapki.jpg$image
@@ -1946,6 +1996,8 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||nazwa.pl/video/$object-subrequest,media,domain=rmfon.pl
 ||naekranie.pl/wp-admin/admin-ajax.php?action=ne_tick
 ||naekranie.pl/wp-content/themes/naekranie/partials/$image
+||naekranie.pl/wp-content/themes/naekranie/templates/welcome_screen.mustache
+||naekranie.pl/wp-content/uploads/*/najlepsze-seriale-640x50.jpg$image
 ||news.targeo.pl/oarm.php$xmlhttprequest,domain=mapa.targeo.pl
 ||niebiescy.pl/bild/$image
 ||nhlpl.cdn.adglare.org/img/$image,domain=notebookcheck.pl
@@ -2059,6 +2111,8 @@ zycietoprzygoda.pl##[class^="tws_"]
 ||vixnixxer.com$script,third-party
 ||vshare.io/static/button.css$stylesheet
 ||vstrim.pl/images/*.gif$image,domain=vstrim.pl
+||xlkredyt.pl/js/widget-left.js$script
+||xml.enovatis.pl/mrdsl/content.php$subdocument
 ||wbj.pl/adv/
 ||wbj.pl/wp-content/plugins/adkingpro/js/adkingpro-functions.js$script
 ||weben1.com/scripts/generatewidget.js$script
@@ -2137,7 +2191,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 /^(http|https):\/\/www\.wp\.pl\/[a-zA-Z0-9-_]{50,}/$popup,domain=www.wp.pl
 /^(http|https):\/\/www\.chip\.pl\/wp-content\/themes\/_chip\/[a-z]{4,6}\/[a-z]{4,5}-[0-9]{4,5}/$image,domain=chip.pl
 /^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{200,}/$script,domain=profil.wp.pl|poczta.o2.pl|nowy.tlen.pl|poczta.wp.pl
-/^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{450,}/$script,domain=money.pl|autokult.pl|kafeteria.pl|portal.abczdrowie.pl|twojeip.wp.pl
+/^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{450,}/$script,domain=money.pl|autokult.pl|kafeteria.pl|portal.abczdrowie.pl|twojeip.wp.pl|czat.wp.pl|wawalove.pl|niewiarygodne.pl|komorkomania.pl|open.fm|pogoda.wp.pl|dladzieci.pl|ksiazki.wp.pl|kuchnia.wp.pl|dzieci.pl|gadzetomania.pl|sport.wp.pl|topnews.wp.pl|odkrywcy.pl|katalog.wp.pl|kultura.wp.pl
 !
 !
 !---------------------------------Whitelists----------------------------------!
@@ -2391,6 +2445,7 @@ zrabatowani.pl###popup-adblock-bottom
 @@||epiotrkow.pl/js/adv*.reklama*.js$script,domain=epiotrkow.pl
 @@||eskago.pl/html/js/ads*.js$script
 @@||eskago.pl/html/js/showads.js$script,domain=www.eskago.pl
+@@||filmweb.pl^$generichide
 @@||fm.tuba.pl^$xmlhttprequest,domain=fm.tuba.pl
 @@||fokus.tv/assets/js/ads.js$script,domain=fokus.tv
 @@||grupa7j.pl/joomla/images/my/gallery_advert/$image,domain=grupa7j.pl
@@ -2573,7 +2628,6 @@ xyz,mecz.tv,ipilka.info##[class$="_right"]
 !
 !
 !--------------------------Rules temporary blocking filters-------------!
-/:\/\/(?!bilety24)(?!forgeofempires)(?!techsterowniki)(?!railnation)(?!lowcyzombi)(?!centralagier)(?!infografika)(?!stworzonadosukcesu)(?!pilot)(?!biuropodrozy)(?!mistrzowiebezpieczenstwa)(?!prezentownik)(?!nowapoczta)(?!swiecsie)(?!swieta)(?!websocket)(?!liveblog)(?!relacje)(?!opinie)(?!zalacznik)(?!magazyn)(?!newsletter)(?!facet)(?!wyleczto)(?!kuchnia)(?!film)(?!moto)(?!gwiazdy)(?!teleshow)(?!finanse)(?!kobieta)(?!dom)(?!pogoda)(?!tech)(?!historia)(?!czat)(?!ksiazki)(?!gryonline)(?!hotele)(?!narty)(?!samoloty)(?!wycieczki)(?!hosting)(?!irlandia)(?!multikurs)(?!casino)(?!foto)(?!tech)(?!www)(?!stg)(?!doladowania)(?!fantasyliga)(?!funduszeue)(?!imperiumstylu)(?!kodyrabatowe)(?!alefolwark)(?!angielski)(?!arenamody)(?!beniamin)(?!bon)(?!bsg)(?!casino)(?!diety)(?!dlaprasy)(?!dlugi)(?!doladowania)(?!dom)(?!dysk)(?!ebiznes)(?!ebooki)(?!empire)(?!fantasyliga)(?!film)(?!fundusze)(?!ogloszenia)(?!orangekinoletnie)(?!rekrutacja)(?!rycerzeiksiezniczki)(?!speedwaymanager)(?!sportowefakty)(?!sportowybar)(?!talesofmagic)(?!ubezpieczenia)(?!warofdragons)(?!wiadomosci)(?!gazetki)(?!gry)(?!horoskop)(?!kalendarz)(?!katalog)(?!khanwars)(?!komiks)(?!konflikty)(?!kontakty)(?!korsarze)(?!kultura)(?!mini)(?!mmho)(?!mobilna)(?!morizon)(?!moto)(?!muzyka)(?!narty)(?!naryby)(?!onas)(?!orangekinoletnie)(?!piraci)(?!poczta)(?!pomoc)(?!praca)(?!profil)(?!programtv)(?!pytamy)(?!rekrutacja)(?!rss)(?!rtvagd)(?!rycerzeiksiezniczki)(?!smeet)(?!speedwaymanager)(?!szkola)(?!szukaj)(?!tech)(?!teleshow)(?!triviador)(?!turystyka)(?!twojeip)(?!ulubiency)(?!warodfragons)(?!wycieczki)(?!zdrowie)(?!zoomumba)(?!topnews)(?!erotyka)(?!dzieci)(?!fitness)(?!gielda)(?!finansomat)(?!biznes)(?!sport)[a-zA-Z0-9]{4,9}\.wp\.pl\/.{200,}/$script,important
 money.pl,o2.pl,portal.abczdrowie.pl,wp.pl,wp.tv##script:inject(abort-on-property-write.js, gafBodies)
 ||rek.www.wp.pl/pliki/*.js$script,important
 ||rek.www.wp.pl/display.js?$script,important,domain=www.pudelek.tv
@@ -2585,7 +2639,6 @@ money.pl,o2.pl,portal.abczdrowie.pl,wp.pl,wp.tv##script:inject(abort-on-property
 ||ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/splay/2017/03/xc_laser_400x400_2.jpg
 ||ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/splay/2017/03/xc_laser_300x700_2.jpg
 ||ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/spidersweb/2017/03/1200x300.jpg
-||v.wpimg.pl/YmMxNjJhOAliKgNFCAchQn9If11nWG5CJx0kBWVZaFt1THpHCyQQIh8nJQskHDYfYhkiAyUaOwwjExEBKwYtAj8nOQsmHS0COgERASUGMhg_CxEZOgc3HiIKJwQtN2BYfAB6WhUfKTI9Fz4YKx8wAiMdfEQ6Bj4=$image
 !
 !
 !--------------------------Rules wykop.pl-------------!
@@ -2629,6 +2682,7 @@ autocentrum.pl,demotywatory.pl,dziennik.pl,facetemjestem.pl,gala.pl,garnek.pl,gr
 ||dokumenty-office365.pl^
 ||xxx-tube-24.pl^
 ||coin-hive.com/lib/coinhive.min.js$script
+||coinhive.com^
 !
 !
 !--------------------------Rules for ublock, but can be use with adblock------------!
@@ -2744,30 +2798,28 @@ pogoda.wp.pl##A[href*=".wp.pl/"][target="_blank"] > DIV:last-child
 sportowefakty.wp.pl,money.pl##DIV + DIV[style*="max-width: 100%;"]
 !
 !main
-www.wp.pl##div[class]:matches-css(width: 309px):matches-css(height: 182px)
-www.wp.pl##div[class]:matches-css(max-width: 300px):matches-css(max-height: 250px)
+www.wp.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
 www.wp.pl##a[href^="http://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##[data-st-area="Mototech-prawa"] > div[class]
 www.wp.pl##[class^="_2"][data-st-area$="prawa"] > [class] + UL[class^="_3"] + [class^="_"]
 www.wp.pl###section_shopping > :nth-child(-n+4)
 www.wp.pl##[data-st-area="Gwiazdy-prawa"] > div > div
 www.wp.pl##[data-st-area="Stream"] > div > :nth-child(2) > :nth-child(2)
-www.wp.pl##[data-st-area="Wiadomosci"] > div > :nth-child(2) > div
-www.wp.pl##[data-st-area="Wiadomosci"] > div > :nth-child(5)
+www.wp.pl##DIV[style="position: relative; display: block;"] > DIV[style*="overflow: hidden; "]
 www.wp.pl##[data-st-area="Zakupy"] > :nth-child(n+2):nth-child(-n+3) > div > div
 www.wp.pl###section_topnews > DIV + DIV[class]
 www.wp.pl##SECTION#section_topnews > DIV[class]:first-child
 www.wp.pl##SECTION[class^="_3"] > DIV + DIV[class]
 www.wp.pl##[class][src^="https://v.wpimg.pl/"][style="max-height: 25px;"]
 www.wp.pl##[class^="_"][title][target="_blank"][data-st-clk^="\7b \"teaserId\":"]
-www.wp.pl###section_shopping > :nth-child(-n+4)
-www.wp.pl##[data-st-area="Zakupy"] > :nth-child(n+2):nth-child(-n+3) > div > div
 www.wp.pl##SECTION#section_celebrities > DIV[class]:first-child
 www.wp.pl##SECTION#section_mototech > DIV[class]:first-child
 www.wp.pl##SECTION#section_sport > DIV[class]:first-child
 www.wp.pl##SECTION#section_finances > DIV[class]:first-child
 www.wp.pl##SECTION#section_lifestyle > DIV[class]:first-child
 www.wp.pl##SCRIPT[src*=".wp.pl/"] + DIV[style$="z-index: 100000;"]
+www.wp.pl##[id^="sgwp_screening_"]
+www.wp.pl##DIV[class] > A[class][href*=".wp.pl/"] > DIV > [class][src^="https://v.wpimg.pl/"]
 !
 ! niepotwierdzone
 !www.wp.pl##SECTION[id="section_sport"][class^="_"] > DIV:first-child + DIV[class]
@@ -2813,12 +2865,10 @@ sportowefakty.wp.pl##P + DIV + DIV[class]
 sportowefakty.wp.pl##.section__separator
 sportowefakty.wp.pl##HEADER + DIV#matchtable + DIV[class]
 sportowefakty.wp.pl,money.pl,pudelek.pl##A[class][href*=".wp.pl/"] > IMG[class][src^="https://v.wpimg.pl/"]:last-child
-sportowefakty.wp.pl##ASIDE.column > DIV[class] + DIV[class] + DIV[class]
 sportowefakty.wp.pl##ASIDE.column > DIV[class] + DIV[class]
 !
 !
 !--------------------------Pudelek/Pudelekx element hide------------!
-pudelek.pl##[data-st-area="naglowek"] + .mtb10
 pudelek.pl##DIV.cb > DIV[class^="m"]
 pudelekx.pl##[id^="adv"]
 pudelek.pl##DIV.m0 > DIV + DIV + DIV[class]
@@ -2876,3 +2926,8 @@ filmweb.pl##script:inject(abort-on-property-write.js, sas)
 !
 !--------------------------Wordpress blocking filters------------!
 ||overwatch.pl/wp-content/uploads/20*/*/250x700*.png$image
+!
+!
+!--------------------------Wordpress element hide------------!
+cryptonews.pl###text-6, #text-5
+blogprezesa.pl,kryptowaluty.info.pl,litecoin.pl##.aligncenter

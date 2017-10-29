@@ -149,7 +149,6 @@ www.chosun.com###sec_health > .sec_sub > .sec_sub_ad
 /js/logger_inc.js
 /js/tgrape_cpm_for_onfos.js
 /log/nalogd.php^
-/logger.js
 /mail/ReplyMailOpen.jsp^
 /max-banner-ads-pro/
 /mint/?js
@@ -158,7 +157,6 @@ www.chosun.com###sec_health > .sec_sub > .sec_sub_ad
 /nalogd.js
 /neoems/sts/stsInsert.neo^
 /omniture.js
-/omniture/
 @@/omniture/$script,domain=goal.com
 /openads/adjs.php^
 /openads/adx.js
@@ -284,6 +282,7 @@ _realclick
 ||ad4980.kr^
 ||ad4989.co.kr^$third-party
 ||adalba.co.kr^$third-party
+||adbiz.co.kr
 ||adby.me^$third-party
 ||adc.dreamwiz.com^
 ||adcdn.247realmedia.co.kr/adimg/CDN/
@@ -1498,7 +1497,10 @@ ygosu.com##.ad700
 inven.co.kr###dhoAdTop
 inven.co.kr###webzineAdTop
 ||img.etnews.com/*/banner/
-
 ! 광고 둘러싸는 객체
-www.naver.com###veta_top
-www.naver.com###veta_branding
+naver.com##div[id^="veta_"]
+naver.com##div.section_rbn
+naver.com##div#news_cast:style(padding-top: 0px;)
+naver.com##div#shop_cast:style(margin-top: -30px;)
+naver.com##div.da
+naver.com##div.ad
