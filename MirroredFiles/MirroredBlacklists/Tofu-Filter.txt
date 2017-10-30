@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 20:57 2017/10/27
+! 最終更新 16:03 2017/10/29
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -2029,6 +2029,8 @@ $domain=warotanikki.com,third-party
 	! 動画見れない
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
 @@||nytimes.com^$elemhide
+	! 右側の勝率などの欄が非表示
+@@||opgg-static.akamaized.net/js3/tracker.js?*$domain=op.gg
 	!変なの出る
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sekai-kabuka.com
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=sekai-kabuka.com
@@ -2136,6 +2138,8 @@ my.gamecity.ne.jp#@#[id$="_ad"]:not(html):not(body)
 	!news24.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 	!GINZA コメント欄が消える
 www.nicovideo.jp#@#[class$="_ads"]:not(html):not(body)
+	!検索 ランキングの「宣伝」部分が消える
+www.nicovideo.jp#@#.ads
 	!ニコニコ広告部分
 live.nicovideo.jp,live2.nicovideo.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 live2.nicovideo.jp#@#[id*="-ad-"]:not(html):not(body)
