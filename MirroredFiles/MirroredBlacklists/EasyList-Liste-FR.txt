@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: afhjzZguxqY6QzJGktF+xg
-! Version: 201710300021
+! Checksum: J0fBolWGXf6QpIFjYJdNpw
+! Version: 201710310031
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -1166,6 +1166,7 @@
 /promo/*?id_affilie=
 /promo/bannieres/*
 /promo/gif_banners/*
+/promo/script_
 /promo/widget-*&refer_
 /promo/widget-*?ref=
 /promos/banners/*$third-party
@@ -1400,6 +1401,7 @@
 /tags/xdirect/*
 /tc_promo_functions.
 /Temp/Ads/*
+/text_publi_01.
 /textlink-ads.
 /thumb_banner_frame.
 /thumbbanner/helper.js
@@ -2130,7 +2132,8 @@ debugger:$popup
 ||download^*?caid=$popup,third-party
 ||gdn^*&campaign_id=$popup
 ||gdn^*&impid=$popup
-||gdn^*&redid=$popup
+||gdn^*&redi=$popup,third-party
+||gdn^*=redi$popup,third-party
 ||info^*==|$popup,third-party
 ||info^*watch?key=$popup,third-party
 ||life^*?sub=$popup
@@ -2603,6 +2606,7 @@ debugger:$popup
 ||captchme.net^$third-party
 ||caradisiac-publicite.com^$third-party
 ||caramec.com^$third-party
+||carasexe.com^$third-party
 ||carpediem.fr^$third-party
 ||cash-manager.biz^$third-party
 ||cashinme.com^$third-party
@@ -5922,7 +5926,6 @@ $subdocument,third-party,domain=adbull.me|e-wok.tv|flashx.tv|gomovies.co|gomovie
 ||adv.tf1.fr^
 ||adyou.me^$script,third-party
 ||afcontent.net^*/banners/
-||aff.travaux.com^$third-party
 ||affiliation.porn.fr^
 ||affiliationv4.porn.fr^
 ||agence-ecofin.com/mysimple/banners/
@@ -6182,7 +6185,6 @@ $subdocument,third-party,domain=adbull.me|e-wok.tv|flashx.tv|gomovies.co|gomovie
 ||dzoic.com/gfx/
 ||e-cig-factory.fr/shop/bannieres/
 ||e-media-concept.com/medias/
-||e-travaux.com/demande-devis-iframe?$third-party
 ||ea.numericable.fr^
 ||eamobile.com/*/dart_banner.
 ||eamobile.com/*/dart_skyscraper.
@@ -6331,8 +6333,6 @@ $subdocument,third-party,domain=adbull.me|e-wok.tv|flashx.tv|gomovies.co|gomovie
 ||icnsocial.com/open.js
 ||icpc.tv/banners/$domain=europeplusnet.info
 ||idem.com/medias/$third-party
-||ifr.123devis.com^$third-party
-||ifr.travaux.com^$third-party
 ||iframe.ly^$domain=korben.info
 ||iframe.ly^*%2Famzn.
 ||ifriends.net/Refer.dll?
@@ -6466,7 +6466,7 @@ $subdocument,third-party,domain=adbull.me|e-wok.tv|flashx.tv|gomovies.co|gomovie
 ||madamesimone.com/ban/$third-party
 ||magikmobile.com/iframe_$third-party
 ||maigris.com^$popup
-||maisonentravaux.fr^*/avoir-devis-travaux-gratuit.gif
+||maisonentravaux.fr/wp-content/uploads/2016/02/faire-devis-travaux-gratuit.gif
 ||maliwebnetcdn-*/wp-content/news/images/*banniere
 ||maliwebnetcdn-*/wp-content/news/images/*habillage
 ||maliwebnetcdn-*/wp-content/news/images/*pasta
@@ -8721,6 +8721,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ||lecture-en-ligne.com/*/pubs.php
 ||ledemondujeu.com/pubcoin
 ||ledevoir.com/documents/image/pub/
+||ledgerwallet.com/images/promo/
 ||lefigaro.fr/assets-components/partenaires/
 ||lefigaro.fr/com/bazachic/
 ||lefigaro.fr/com/cadre-emploi/
@@ -9176,6 +9177,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ||pyrenees-passion.info/WP_img_ban/
 ||pyrenees-team.com/graphics/baniere/logo.jpg
 ||qariya.info/adv/
+||qassa.fr/images/*/wallpaper/
 ||rabbitfinder.com/bannieres/
 ||rabbitfinder.com^$popup,~third-party
 ||radinmalinblog.com/wp-content/uploads/*/pub_
@@ -9447,7 +9449,6 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ||tracking.easyzic.com^
 ||tranquille-emile.com/wp-content/uploads/*/pub.jpg
 ||transactiondalgerie.com/images/banners/
-||travaux.com^*?under=$popup
 ||trefle.com/js/modules/su.*.js
 ||trekmag.com/media/habillage/
 ||tribunejuive.info/wp-content/plugins/smart-pop-up/
@@ -11763,12 +11764,14 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##[id^="ad_holder_text_"]
 ##[id^="ads_adnemo_"]
 ##[id^="block-xiti_oas-"]
+##[id^="bunyad_ads_widget-"]
 ##[id^="codeneric_ad_widget-"]
 ##[id^="criteoDivPave"]
 ##[id^="div-gpt-"] + [id^="ctr-"]
 ##[id^="lig_wrapper_ad_"]
 ##[id^="ligatus-"]
 ##[id^="ligatus_"]
+##[id^="pub-carasexe-"]
 ##[id^="pub_728x90_"]
 ##[id^="pub_dart_"]
 ##[id^="sas_"][style*="width: 300px; height: 250px;"]
@@ -11989,6 +11992,7 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##a[href^="http://www.movie4all.co/"]
 ##a[href^="http://www.pubdirecte.com/script/"]
 ##a[href^="http://www.questiondivine.com/?ctid="]
+##a[href^="http://www.rabbitfinder.com/refer."]
 ##a[href^="http://www.sexgangsters.com/?"]
 ##a[href^="http://www.shglegle.com/"]
 ##a[href^="http://www.tradeadexchange.com/"]
@@ -13275,6 +13279,7 @@ sports.fr##.service[data-link$="\", \"target\":\"_blank\" \7d "]
 lejournaldelamaison.fr,mariefrance.fr##.shoopingbox_products
 programme-tv.net##.shopping
 portail.free.fr##.shopping_carrousel_produit
+qassa.fr##.show-wallpaper-banner
 streamay.ws##.showitonplayer
 korben.info##.side a[href*="://bit.ly/"]
 gmx.fr##.sideadd
