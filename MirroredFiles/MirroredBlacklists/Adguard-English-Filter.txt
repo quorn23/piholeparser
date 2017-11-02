@@ -1,8 +1,8 @@
-! Checksum: twXx/SOknFxdhZIuRpf+BA
+! Checksum: 2XvbO6WEdKAve1afhh7j4A
 ! Title: English filter
 ! Description: EasyList + Adguard English filter. Filter list that specifically removes adverts on English language websites.
-! Version: 1.1.35.25
-! TimeUpdated: 2017-11-01T04:00:41.127+04:00
+! Version: 1.1.35.35
+! TimeUpdated: 2017-11-02T03:00:30.808+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#english
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -46,6 +46,9 @@
 ||jscdndel.com^$third-party
 ||rocks.io^$third-party
 !
+||vm.timeinabottle.pw^$third-party
+||mamydirect.com^$third-party
+||oiqheoiwgnqiweoj.bid^$popup
 ||adform.net^
 ||pto.awecr.com^$third-party
 ||aoredi.com^$third-party
@@ -785,6 +788,7 @@ koutube.com##.iframe_ads
 !
 ! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
 !
+||d28g1fhp6rn9w3.cloudfront.net^
 ||d3iz6lralvg77g.cloudfront.net^
 ||d2hluuq2g8gwrv.cloudfront.net^
 ||d2ghscazvn398x.cloudfront.net^
@@ -999,6 +1003,13 @@ j.gs#@##bottom
 !*
 !*****
 !
+! https://forum.adguard.com/index.php?threads/26453/
+@@||vpnsplit.com/ads/advertisement.js
+! https://forum.adguard.com/index.php?threads/26469/
+@@||download.themeslide.com/js/ads.js
+! https://forum.adguard.com/index.php?threads/26451/
+@@||estrenos10.com/assets/ads.js
+mil.ink#@#.adsbygoogle
 ! https://forum.adguard.com/index.php?threads/26437/
 !+ NOT_PLATFORM(windows, mac, android)
 @@||kingstheme.com/wp-content/plugins/idblog-core/js/fuckadblock.js
@@ -3878,6 +3889,7 @@ dnvod.tv##.clickbg[-ext-has="+*"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4652
 sockscap64.com#@#.adsbygoogle
 !
+||lzwla.top^$third-party
 ||sitemaji.com^$third-party
 ||uerzyr.cn^$third-party
 ||prazpf.cn^$third-party
@@ -5202,7 +5214,7 @@ vshare.eu#%#Object.defineProperty(window, 'popns', { get: function() { return {}
 !
 ! AdMaven
 xmovies8.es,1337x.to,unblocked.ink,albumkings.org,uploadocean.com,zippyshare.com,bigfile.to,flashxx.tv,imgcandy.net,uptobox.com,embed.nowvideo.sx,uptostream.com,flashx.tv,userscloud.com,imageweb.ws,salefiles.com,eztv.ag,extra.to,pornscum.com,pornsocket.com,depositfiles.com,depositfiles.org,dfiles.eu,dfiles.ru,pornve.com,yourbittorrent.com,nowvideo.ag,nowvideo.co,nowvideo.li,nowvideo.sx,nowvideo.to,karanpc.com,daclips.in,gorillavid.in,movpod.in,uplod.ws,psarips.com,freelive365.com,imgchili.net,porntrex.com,pornfay.com,hulkload.com,ddlvalley.cool,unblocked.onl,zone.telechargementz.tv,xmovies8.tv,imgclick.net,watchers.to,letwatch.to,bitvid.sx,deportesmax.com,gorillavid.com,daclips.com,speedvid.net,indishare.me,bdupload.info,vidlox.tv,img24.org,uploadrocket.net,sceper.ws,streamhub.live,prefiles.com,300mbfilms.co,yourporn.sexy,vidfile.net,anime-odcinki.pl,u2s.io,247hd.info,kingvid.tv,zippyaudio2.com,flashx.to,computerworm.net,extratorrent.cc,xmovies8.ru,clicknupload.link,suprafiles.co,lipstickalley.com,xmovies.to,streamflv.com,auroravid.to,watchvideo.us,uploading.site,coo5shaine.com,onhax.me,wholecloud.net,movpod.net,katfile.com,bestream.tv#%#Object.defineProperties(window,{admvpu:{get:function(){},set:function(a){if("function"==typeof a)throw Error();}},Fingerprint2:{get:function(){},set:function(){throw Error();}}});
-urle.co,tvsportslive.stream,9xbuddy.com,pasteca.sh,onlinehdmovies.org,peliculaxd.com,vidzella.me,thepiratebay.org,listentoyoutube.com,streamplay.gdn,powvideo.net,monova.org,gamesofpc.com,gameslords.com,filesharingz.ga,file.up09.com,cogismith.com,coginator.com,simizer.com,riffhold.com,kaitect.com,vizer.tv,jkanime.net,tugaflix.com,douploads.com,suprafiles.org,leakedearly.gdn,tusfiles.net,solidfiles.com,itdmusic.com,ebook-gratuit.co,cloudyfiles.org#%#Object.defineProperties(window,{admvpu:{get:function(){},set:function(a){if("function"==typeof a)throw Error();}},Fingerprint2:{get:function(){},set:function(){throw Error();}}});
+estrenos10.com,urle.co,tvsportslive.stream,9xbuddy.com,pasteca.sh,onlinehdmovies.org,peliculaxd.com,vidzella.me,thepiratebay.org,listentoyoutube.com,streamplay.gdn,powvideo.net,monova.org,gamesofpc.com,gameslords.com,filesharingz.ga,file.up09.com,cogismith.com,coginator.com,simizer.com,riffhold.com,kaitect.com,vizer.tv,jkanime.net,tugaflix.com,douploads.com,suprafiles.org,leakedearly.gdn,tusfiles.net,solidfiles.com,itdmusic.com,ebook-gratuit.co,cloudyfiles.org#%#Object.defineProperties(window,{admvpu:{get:function(){},set:function(a){if("function"==typeof a)throw Error();}},Fingerprint2:{get:function(){},set:function(){throw Error();}}});
 !
 ! Let Adguard test page know that we're here
 static.adguard.com#%#window.helloFromAdguard = 1;
@@ -5255,7 +5267,7 @@ spankwire.com#%#Object.defineProperty(document, 'onclick', { get: function() { r
 watchseries-online.nl,btsone.cc#%#Object.defineProperty(window,'_drp', { get:function(){return {}; } });
 !
 ! go.oclasrv.com clickunder
-clipconverter.cc,watchncum.biz,solarmoviefree.me,downace.com,app4free.ml,rule34hentai.net,cmovieshd.net,vezi-online.com,ewatchseries.to,genfb.com,solarmovie.today,solarmoviefree.net,solarmovie.st,sceper.ws,lavamovies.com,hdteenx.com,mp3red.me,xeimg.yt,xmoviesforyou.com,movieonline.io,sawlive.tv,watchonlinemovies.com.pk,putlocker.io,xmovies8.net,cmovieshd.com,rapidvideo.com,fmovies.sc,seriesonline.io,putlockers.fm,krutor.org.pl,1movies.online,fmovies.io,123moviesfree.com,9anime.to,fastpiratebay.co.uk,gameofbay.org,mywatchseries.to,oploverz.in,piratebays.co.uk,pirateproxy.click,pirateproxy.wf,pirateproxy.yt,putlocker.sk,vidnode.net#%#window.zfgloadedpopup = true;
+newpct1.com,clipconverter.cc,watchncum.biz,solarmoviefree.me,downace.com,app4free.ml,rule34hentai.net,cmovieshd.net,vezi-online.com,ewatchseries.to,genfb.com,solarmovie.today,solarmoviefree.net,solarmovie.st,sceper.ws,lavamovies.com,hdteenx.com,mp3red.me,xeimg.yt,xmoviesforyou.com,movieonline.io,sawlive.tv,watchonlinemovies.com.pk,putlocker.io,xmovies8.net,cmovieshd.com,rapidvideo.com,fmovies.sc,seriesonline.io,putlockers.fm,krutor.org.pl,1movies.online,fmovies.io,123moviesfree.com,9anime.to,fastpiratebay.co.uk,gameofbay.org,mywatchseries.to,oploverz.in,piratebays.co.uk,pirateproxy.click,pirateproxy.wf,pirateproxy.yt,putlocker.sk,vidnode.net#%#window.zfgloadedpopup = true;
 ! FastPops
 watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPops', '1'); }
 watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('InfNumFastPopsExpire', new Date(new Date().setYear(2020))); }
@@ -5263,6 +5275,8 @@ watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != '
 !*****
 !**********************************
 !
+! https://forum.adguard.com/index.php?threads/26454/
+oxo-nulled.info#%#AG_onLoad(function() { window.min_time = 1; });
 ! https://forum.adguard.com/index.php?threads/beemp3s-net.26211/
 mp3juice.tv,beemp3s.net,yt-to-mp3.com#%#Object.defineProperty(window,'adBlockBypassPopup',{value:function(){}});
 ! https://forum.adguard.com/index.php?threads/worldfree4u-ws.26193/
@@ -5811,6 +5825,8 @@ zippymoviez.com#%#window.open = function() {};
 !-------------------
 !-------CSS---------
 !-------------------
+! https://forum.adguard.com/index.php?threads/26451/
+mil.ink#$#.adsbygoogle { height: 1px!important; }
 ! https://forum.adguard.com/index.php?threads/downace-com.26194/
 downace.com#$#div.uk-margin-small-bottom > a[rel="nofollow"][style="display: inline-block !important;"] > img { position: absolute!important; left: -3000px!important; }
 downace.com#$#div.uk-text-center > a[rel="nofollow"] > img { position: absolute!important; left: -3000px!important; }
@@ -6356,6 +6372,23 @@ arstechnica.co.uk,arstechnica.com##.instream-wrap
 !
 !
 !
+3xtop.net##center > a[href^="https://t.co/"] > img
+inkthemes.com##.sidebar-banner
+clkmein.com##.advert
+clkmein.com##body > div[style^="height:90px;width:100%;"]
+timesofindia.indiatimes.com##.atfAdsLoading
+straitstimes.com##.group-brandinsider+div.sidebar-list.sbl-lt-blue
+winaero.com##.entry-content > div[style^="text-align:center;"][style$="font-weight:bold;"]
+||jumia.com/affiliate-program/banners/
+naijatechguide.com###custom_html-6
+||web.tmearn.com/ref-728.png
+||bestchange.com/images/banners/$third-party
+||api.dmcdn.net/all.js$domain=oxo-nulled.info
+ur.ly##div[style="text-align: center;"] > a > img
+||playerhd2.pw/js/adsensebase.js
+pornhd.com##.ad
+bro.adca.st###propis
+||images.futbolbase.us/*.html$domain=bro.adca.st
 gadgethacks.com##.whtaph
 lifehack.org##body .adsbygoogle
 lifehack.org##div[id^="div-dfp-ad"]
@@ -9834,7 +9867,7 @@ youtube.com##ytd-search-pyv-renderer
 ||clickadu.com/apu.php$empty,important
 ||cloudfront.net/AIVAI/*/AIV-Ad-
 ||cloudfront.net/client-embed/$domain=funhdtv.com
-||cloudfront.net^$domain=dancingastronaut.com|tvsportslive.stream|mixing.dj|twineer.com|onlinehdmovies.org|vidzella.me|gamesofpc.com|filesharingz.ga|uploadcrazy.net|file.up09.com|kaitect.com|adf.ly|ay.gy|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|babblecase.com|vizer.tv|tugaflix.com|douploads.com|suprafiles.org|leakedearly.gdn|itdmusic.com|cloudyfiles.org|1337x.to|extramovies.org|tugafree.net|prefiles.com|cloudyfiles.co|vidfile.net|anime-odcinki.pl|u2s.io|247hd.info|vidabc.com|flashx.to|kingvid.tv|vpornex.com|clicknupload.link|freehdsport.is|unblocked.lol|suprafiles.co|lipstickalley.com|streamflv.com|wizhdsports.is|playstream.club|divxme.com|revdownload.com|addic7ed.com|alivefoot.us|animeflv.net|apk4free.net|avxhome.in|avxhome.se|baiscopelk.com|daclips.com|extratorrent.cc|feliratozz.hu|filescdn.com|filescloud.co|filmikz.ch|goodvideohost.com|gorillavid.com|iwannawatch.to|javgo.me|javgo.pro|javgo.vip|katcr.co|katfile.com|keeplinks.eu|laliga-live.to|leporno.org|letwatch.us|max-deportv.info|mirrorcreator.com|multiup.org|newpct.com|newpct1.com|nhentai.net|nitroflare.com|onhax.me|openload.co|openload.io|piratebay.unlockproject.co|psarips.com|revclouds.com|rivosportt.info|sadeemapk.com|salefiles.com|sankakucomplex.com|sceper.ws|shink.in|speedvid.net|tormirror.bid|tusfiles.net|unblocked.onl|uploadocean.com|uploads.to|uplod.it|uplod.so|uplod.ws|uptostream.com|userscloud.com|watchers.to|wizhdsports.to|zone.telechargementz.tv
+||cloudfront.net^$domain=estrenos10.com|dancingastronaut.com|tvsportslive.stream|mixing.dj|twineer.com|onlinehdmovies.org|vidzella.me|gamesofpc.com|filesharingz.ga|uploadcrazy.net|file.up09.com|kaitect.com|adf.ly|ay.gy|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|babblecase.com|vizer.tv|tugaflix.com|douploads.com|suprafiles.org|leakedearly.gdn|itdmusic.com|cloudyfiles.org|1337x.to|extramovies.org|tugafree.net|prefiles.com|cloudyfiles.co|vidfile.net|anime-odcinki.pl|u2s.io|247hd.info|vidabc.com|flashx.to|kingvid.tv|vpornex.com|clicknupload.link|freehdsport.is|unblocked.lol|suprafiles.co|lipstickalley.com|streamflv.com|wizhdsports.is|playstream.club|divxme.com|revdownload.com|addic7ed.com|alivefoot.us|animeflv.net|apk4free.net|avxhome.in|avxhome.se|baiscopelk.com|daclips.com|extratorrent.cc|feliratozz.hu|filescdn.com|filescloud.co|filmikz.ch|goodvideohost.com|gorillavid.com|iwannawatch.to|javgo.me|javgo.pro|javgo.vip|katcr.co|katfile.com|keeplinks.eu|laliga-live.to|leporno.org|letwatch.us|max-deportv.info|mirrorcreator.com|multiup.org|newpct.com|newpct1.com|nhentai.net|nitroflare.com|onhax.me|openload.co|openload.io|piratebay.unlockproject.co|psarips.com|revclouds.com|rivosportt.info|sadeemapk.com|salefiles.com|sankakucomplex.com|sceper.ws|shink.in|speedvid.net|tormirror.bid|tusfiles.net|unblocked.onl|uploadocean.com|uploads.to|uplod.it|uplod.so|uplod.ws|uptostream.com|userscloud.com|watchers.to|wizhdsports.to|zone.telechargementz.tv
 ||cnn.com/cnnintl_adspaces/
 ||coderanch.com/forums/banner/
 ||commitstrip.com/hello.php
@@ -12309,7 +12342,7 @@ https://forum.adguard.com/index.php?threads/resolved-itv-com-windows.22200/
 .adtech_
 .adtooltip&
 .adv.cdn.
-.advert.$domain=~advert.ly|~advert.io
+.advert.$domain=~advert.io|~advert.ly
 .AdvertismentBottom.
 .advertmarket.
 .adwolf.
@@ -32108,6 +32141,8 @@ _popunder+$popup
 ##.am_ads
 ##.amazon_ad
 ##.amp-ad-container
+##.amp_ad_header
+##.amp_ad_wrapper
 ##.amsSparkleAdWrapper
 ##.anchor-ad-wrapper
 ##.anchorAd
@@ -37853,6 +37888,8 @@ _popunder+$popup
 ##[lazy-ad="lefttop_banner"]
 ##[onclick^="window.open('http://adultfriendfinder.com/search/"]
 ##a[data-obtrack^="http://paid.outbrain.com/network/redir?"]
+##a[data-oburl^="http://paid.outbrain.com/network/redir?"]
+##a[data-oburl^="https://paid.outbrain.com/network/redir?"]
 ##a[data-redirect^="http://click.plista.com/pets"]
 ##a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"]
 ##a[data-url^="http://paid.outbrain.com/network/redir?"]
@@ -56763,6 +56800,7 @@ bento.de##a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][t
 ||edomz.com/re.php?mid=$popup
 ||f-picture.net/Misc/JumpClick?$popup
 ||fashionsaga.com^$popup,domain=putlocker.is
+||fidget.twitch.tv^$popup,domain=twitch.tv
 ||filepost.com/default_popup.html$popup
 ||filmon.com^*&adn=$popup
 ||findgrid.com^$popup,domain=amaderforum.com
@@ -72268,6 +72306,7 @@ motherless.com##table[style*="max-width:"]
 @@||tv-kino.net/wp-content/themes/*/advertisement.js
 @@||tvnz.co.nz/*/advertisement.js
 @@||twinspires.com/php/$subdocument,~third-party
+@@||twitch.tv^$generichide
 @@||twitvid.com/mediaplayer_*.swf?
 @@||twofactorauth.org/img/$image,~third-party
 @@||twogag.com/comics/$image,~third-party
