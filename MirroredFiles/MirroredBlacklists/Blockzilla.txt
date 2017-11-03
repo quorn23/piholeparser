@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version E31 
+! Version E34 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -846,7 +846,6 @@ _banner.$domain=youtube.com
 ###bottomMPU
 ###bottom_ad_wrapper
 ###bottomads
-###gallery-sponsored-links_divID
 ###googleAds
 ###google_ads_frame1
 ###headerAd
@@ -864,15 +863,12 @@ _banner.$domain=youtube.com
 ###skyscraper
 ###smartBanner
 ###socialFocusContainer
-###sponsoredLinks
-###sponsoredlinks
 ###tads
 ###theAd
 ###tmgAds_mpu
 ###tmglBannerAd
 ###topMPU
 ###top_ad
-###yan-sponsored
 ##.Ad
 ##.Ad300x250
 ##.AdUnit
@@ -950,7 +946,6 @@ _banner.$domain=youtube.com
 ##.inline-ad
 ##.item-container-ad
 ##.js-adfliction-standard
-##.js-sponsored-photos
 ##.js-stream-ad
 ##.mapped-ad
 ##.marketing-ad
@@ -971,7 +966,6 @@ _banner.$domain=youtube.com
 ##.slot__ad
 ##.snarcy-ad
 ##.sponsor
-##.sponsored_links
 ##.top-ad-container
 ##.topAd
 ##.topBannerAd
@@ -1021,6 +1015,7 @@ advfn.com##IFRAME[id$="widget"]
 all-free-download.com##DIV[class$="banner"]
 all-free-download.com##LI[id^="ads"]
 all-free-download.com,comicsalliance.com,dailymotion.com,krebsonsecurity.com##DIV[id$="banner"]
+amazon.com##DIV[id^="sponsored"]
 animefreak.tv##DIV[class*="-filter"]
 animenewsnetwork.com##[class*="iab"]
 christianitytoday.com##.overlay
@@ -1031,6 +1026,8 @@ csnchicago.com,reason.com,tomshardware.com##DIV[id$="leaderboard"]
 datpiff.com,freewarefiles.com,lucianne.com##[style="cursor: pointer;"]
 deviantart.com##DIV[class$="300x250"]
 deviantart.com,nzherald.co.nz,raiders.com##.ad-container
+distractify.com##DIV[class*="AdInArticle"]
+distractify.com##DIV[class^="RightRail"]
 eventcinemas.com.au,eventcinemas.co.nz,thedailysheeple.com##.ads
 horrornews.net##DIV[id*="cedato"]
 mangafox.me##DIV[style*="banners/"]
@@ -1043,6 +1040,7 @@ salon.com##DIV[class*="-ad-"]
 slashfilm.com##DIV[id*="300x250"]
 smh.com.au,venturebeat.com,washingtonpost.com##DIV[class$="leaderboard"]
 stuff.co.nz##DIV[class*="_ad-"]
+tvguide.com##DIV[class*="popover"]
 wikipedia.de##DIV[id^="banner"]
 wired.com##DIV[class*="banner"]
 wunderground.com##DIV[id*="banner"]
