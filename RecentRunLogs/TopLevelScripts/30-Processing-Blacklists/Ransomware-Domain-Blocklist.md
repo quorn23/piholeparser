@@ -14,3 +14,7 @@ ____________________________________
 ## Checking File Header
 ## Determining Host Availability
 ## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Ransomware-Domain-Blocklist List Was An Empty File After Download. Mon Nov 6 01:10:53 UTC 2017
