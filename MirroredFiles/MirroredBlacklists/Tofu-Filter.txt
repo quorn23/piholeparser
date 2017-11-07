@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 16:03 2017/10/29
+! 最終更新 11:23 2017/11/06
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -495,6 +495,7 @@ _ads.php
 ||trafficforce.com^$third-party
 ||trafficstars.com^$third-party
 ||trw12.com^$third-party
+||tsyndicate.com^$third-party
 ||veohclick.net^$third-party
 ||video-people.com^$third-party
 ||videoegg.com^$third-party
@@ -1750,7 +1751,7 @@ dic.pixiv.net###amazon-aws-outer
 pixiv.net##.hover-item
 pixiv.net##._ui-tooltip[href^="https://booth.pm/ja/search/"]
 !検索プレミア
-pixiv.net##a[href*="/premium.php?ref=popular_d_body"]
+pixiv.net##.popular-introduction-overlay
 !jama--
 pixiv.net###pauser
 comic.pixiv.net##._dialog_overlay
@@ -2212,7 +2213,7 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ||trax-ad.jp^$third-party
 ||unitedblades.co.jp^$third-party
 ||yicha.jp^$third-party
-||zucks.net^$third-party
+||zucks.net$third-party
 
 ||amazonaws.com/ad-arata/$domain=fc2.com
 ||ad1-click.com^$domain=fc2.com
