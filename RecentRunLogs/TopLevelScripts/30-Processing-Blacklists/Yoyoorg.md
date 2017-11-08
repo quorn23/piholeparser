@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Yoyoorg List Unavailable To Download. Tue Nov 7 00:21:23 UTC 2017
 ## Checking If List Updated Online
