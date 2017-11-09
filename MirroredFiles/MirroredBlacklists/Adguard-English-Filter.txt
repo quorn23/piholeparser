@@ -1,8 +1,8 @@
-! Checksum: 5+RuXR3uMQlCL8nDk29OJQ
+! Checksum: 1gFhoCvoMOhAPyUp2icjxw
 ! Title: English filter
 ! Description: EasyList + Adguard English filter. Filter list that specifically removes adverts on English language websites.
-! Version: 1.1.35.81
-! TimeUpdated: 2017-11-08T04:00:33.899+04:00
+! Version: 1.1.35.91
+! TimeUpdated: 2017-11-09T04:00:38.223+04:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#english
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -28,6 +28,8 @@
 ! Section contains list of advertising networks
 !
 ! Block CoinHive
+! Another miners
+||papoto.com^$third-party
 ||afminer.com^$third-party
 ||azvjudwr.info^$third-party
 ||coinerra.com^$third-party
@@ -47,6 +49,7 @@
 ||rocks.io^$third-party
 ||party-vqgdyvoycc.now.sh^$third-party
 !
+||advetvy.info^$third-party
 ||bfe4e6d364be199.com^
 ||ca4ec6874a33a13.com^
 ||iytfczscguf.bid^$third-party
@@ -1017,6 +1020,12 @@ j.gs#@##bottom
 !*
 !*****
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/7382
+pornshare.org###adblockplus
+! https://forum.adguard.com/index.php?threads/last-fm-anti-adblock.16897/
+||static.doubleclick.net/instream/ad_status.js$domain=last.fm,empty,important
+! https://forum.adguard.com/index.php?threads/26715/
+@@||e-vdo.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7493
 @@||3rabshort.com/js/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7306
@@ -2220,10 +2229,6 @@ rumushitung.com#@##banner_ad
 @@||cdn.vidyomani.com/*/*ads*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3354
 @@||paybis.com/assets/*/responsive/*.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/3339
-delfi.ee#@#.adbanner
-delfi.ee#@#.bottomAdvert
-delfi.ee###ab-top-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3333
 @@||doridro.com^$generichide
 @@||doridro.com/forum/styles/FLATBOOTS/theme/images/logo.png
@@ -3481,6 +3486,10 @@ hayastantv.co#@#.afs_ads
 !---------------------------------------------------------------------
 !------------------------------ Azerbaijani --------------------------
 !---------------------------------------------------------------------
+cebhe.info##.sidebar > .box_outer:has(> div.widget > h3 > div.box_outer > div.widget > h3.widget_title:contains(Reklam))
+cebhe.info###soldakayan
+cebhe.info###sagdakayan
+cebhe.info##.adsgarden
 news.lent.az##.col-xs-12 > object[width="550"]
 ||news.lent.az/iframe/caspianecology/index.php
 ||qaynarinfo.az/theme/frontend/q/style/default/banner/
@@ -4710,6 +4719,26 @@ mlbpark.donga.com##div[class^="ad_con"]
 !---------------------------------------------------------------------
 !------------------------------ Latvian ------------------------------
 !---------------------------------------------------------------------
+! https://github.com/AdguardTeam/AdguardFilters/issues/3339
+delfi.ee#@#.adbanner
+delfi.ee#@#.bottomAdvert
+delfi.ee###ab-top-bar
+!
+||ap.delfi.ee^
+delfi.ee##div[class$="col-has-ad"] div[id^="dwidget"]
+delfi.ee##div[class$="col-has-ad"] table
+||ado.delfi.ee^
+delfi.ee##.pysipinnad--textlinks
+||delfi.ee/misc/cobancar/*.php$subdocument
+||delfi.lt/b?region=
+||delfi.lv/news_export$domain=~delfi.ee|~delfi.lv
+delfi.ee##a[href^="http://ap.delfi.ee/b?"]
+delfi.ee###city24_precom
+||delfi.lv/news_export/widget_creator.php$domain=reklama.vesti.lv
+delfi.ee##.cxense-news
+delfi.ee###section > div.aside
+delfi.ee###right
+digileht.epl.delfi.ee##.pagebreak-banner
 delfi.lt##iframe[src*="//track.adform.net/"]
 delfi.lt##iframe[src*="//www.alio.lt/"]
 ||alio.lt/info*.html$domain=delfi.lt
@@ -4743,6 +4772,7 @@ vesti.lv###subscribe-banner
 vesti.lv##.banner
 ||vesti.lv/www/imgget/imgjs.php?
 !
+@@||ado.delfi.ee/files/js/ado.js$script,domain=delfi.ee
 @@||delfi.ee/misc/crs/js/ads.js|$domain=delfi.ee
 !---------------------------------------------------------------------
 !------------------------------ Lithuanian ---------------------------
@@ -5248,7 +5278,7 @@ nhaccuatui.com##div[class^="adv_"]
 !*****
 !*****
 ! ExoClick (clickunder or/and ads)
-imgdawgknuttz.com,picshick.com,ftopx.com,mujeres-desnudas.com,alotporn.com,imghall.com,imgdone.com,imghost.top,petrovixxxjav.info,kawstimages.com,xyzimage.net,imgplaces.com,imageshtorm.com,xxxwebdlxxx.org,picshits.com,imgazel.info,enigmages.com,subrimages.com,imagerar.com,yoerotica.com,frprn.com,gelbooru.com,freeyesporn.com,imgpeak.com,4tube.com,motherless.com,pornwatchers.com,beeg.com,ashemaletv.com,rockjockcock.com,erowall.com,pentasex.io,free-sex-video.net,movierls.net,milffox.com,pixroute.com,img-central.com,ximagehost.org,newpornup.com,blobopics.biz,picbank.tk,streaming-porn.org,picfox.org,erohentai.net,imgic.ru,pussyspace.com,myreadingmanga.info,pictoa.com,imgsalem.com,xxximagetpb.org,18hentaionline.net,img24.org,xeimg.yt,pornleech.com,naughtyblog.org,nxgx.com,8muses.com,japanesefuck.com,tubedupe.com,porntube.com,doolls.org,topboard.org,youjizz.com,hipornvideo.com,imageweb.ws,planetsuzy.org,imagetwist.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
+pornorips.com,trans.firm.in,imgdawgknuttz.com,picshick.com,ftopx.com,mujeres-desnudas.com,alotporn.com,imghall.com,imgdone.com,imghost.top,petrovixxxjav.info,kawstimages.com,xyzimage.net,imgplaces.com,imageshtorm.com,xxxwebdlxxx.org,picshits.com,imgazel.info,enigmages.com,subrimages.com,imagerar.com,yoerotica.com,frprn.com,gelbooru.com,freeyesporn.com,imgpeak.com,4tube.com,motherless.com,pornwatchers.com,beeg.com,ashemaletv.com,rockjockcock.com,erowall.com,pentasex.io,free-sex-video.net,movierls.net,milffox.com,pixroute.com,img-central.com,ximagehost.org,newpornup.com,blobopics.biz,picbank.tk,streaming-porn.org,picfox.org,erohentai.net,imgic.ru,pussyspace.com,myreadingmanga.info,pictoa.com,imgsalem.com,xxximagetpb.org,18hentaionline.net,img24.org,xeimg.yt,pornleech.com,naughtyblog.org,nxgx.com,8muses.com,japanesefuck.com,tubedupe.com,porntube.com,doolls.org,topboard.org,youjizz.com,hipornvideo.com,imageweb.ws,planetsuzy.org,imagetwist.com#%#Object.defineProperty(window, 'ExoLoader', { get: function() { return; } });
 !
 ! PopAds-a
 uplod.ws,uplod.so,flashxx.tv,pandamovie.net,vipleague.me,hdporn720.net,playpornx.net,hdporner720.com,newpct1.com,2ddl.ag,jkmk.net#%#Object.defineProperty(window, 'PopAds', { get: function() { return {}; } });
@@ -5321,6 +5351,8 @@ watchfree.to,vidbull.com,streamin.to,primewire.ag#%#if (typeof localStorage != '
 !*****
 !**********************************
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/7381
+pornorips.com#%#Object.defineProperty(window, 'popunder', { get: function() { return {}; } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7485
 fap.to#%#Object.defineProperty(window, 'Buu', { get: function() { return; } });
 ! https://forum.adguard.com/index.php?threads/26590/
@@ -6441,6 +6473,23 @@ arstechnica.co.uk,arstechnica.com##.instream-wrap
 !+ NOT_PLATFORM(windows, mac, android)
 s.fap.to###main > center > div > div[class]
 !
+/^https?:\/\/zoomgirls\.net\/[a-z\d]+\.(js)$/$domain=zoomgirls.net
+||vqporn.com/*.php|
+vqporn.com##.sponsor
+vqporn.com##.bottom-adv
+vqporn.com##table.tg
+vqporn.com##.footer > div[class]:empty
+vqporn.com##.spot
+vqporn.com##body > .footer ~ div[class]:empty
+pornshare.org##a[href^="https://syndication.exosrv.com/"]
+||pornorips.com/wp-content/themes/PRs_resp/images/istripper/*.png
+pornorips.com##.widget_desktopgirls
+cyberscoop.com###welcomeadMask
+/protjs/*$domain=trans.firm.in
+||trans.firm.in/*.js
+nostami.com##.video-plugin-for-adv > div.flex-video+div.video-plugin-div.flex-video.widescreen
+mangafox.me##body > a[href][target="_blank"]
+||ur.ly/js/script.js
 makeuseof.com##div[id^="axdsense"]
 dir50.com##img[alt="ads"]
 camwhores.tv##body > div[style^="position: fixed; height: 50px; width: 50px;"]
@@ -8694,7 +8743,6 @@ tucows.com###cartouche
 fcore.eu,uppit.com###catfish
 kisscartoon.se###centerDivVideo ~ div[style^="margin: 0px auto;"][style$="position: relative;"]
 websporhd.net###chrome_pop
-delfi.ee###city24_precom
 streamlive.to###clickablelink
 lshstreams.com###close
 mystreans.com###close1
@@ -8860,7 +8908,6 @@ cam4.de.com###removeAdWrapper
 flightradar24.com###responsiveBottomPanel
 bitcoinzebra.com###rhsTopAd
 m.crn.com###ribbon_ad
-delfi.ee###right
 search.yahoo.com###right .dd.fst.lst > div.compTitle.fc-4th
 search.yahoo.com###right .dd.fst.lst[style^="background-color:#FFF"]
 mangafox.me###right-skyscraper
@@ -8877,7 +8924,6 @@ fulltvsports7.blogspot.com,fulltvsports7.blogspot.de###rsidebar-wrapper
 sawlive.tv###sawdiv
 winaero.com###secondary > #text-2:first-child
 sceper.ws###secondcol > div[id^="text-"][class="widget widget_text"]
-delfi.ee###section > div.aside
 vshare.io###sendif
 osxdaily.com###sharing_container
 pornexpanse.com###show_adv
@@ -9139,7 +9185,6 @@ t411.li##.content > div.block > p[align="center"] > a > img
 alphaporno.com##.content-provider > a[rel="nofollow"] > img
 my.earthlink.net##.contest-promo
 porn-bb.net##.copyright > center > a > img
-delfi.ee##.cxense-news
 putlocker-movies.is##.data > a[rel="nofollow"] > img
 world4ufree.ws##.ddbutt
 credio.com##.ddc-section-ad
@@ -9314,7 +9359,6 @@ armorgames.com##.promos
 hongkiat.com##.promote
 solidfiles.com##.promoted-dl
 pornjam.com##.publis-bottom
-delfi.ee##.pysipinnad--textlinks
 yts.ag##.rating-row.hidden-sm > a.fd
 yts.ag##.rating-row.hidden-sm > a[class^="button-green-download"][href="javascript:void(0);"]
 familyhandyman.com##.rd_mediakit
@@ -9501,7 +9545,6 @@ educationcanada.com##a[href^="http://64.150.180.102/banmanpro/"]
 getdebrid.com##a[href^="http://adf.ly/?id="]
 lotteryrandom.com##a[href^="http://ads.playukinternet.com/tracking.php"]
 filesharingtalk.com##a[href^="http://affiliate.astraweb.com/"]
-delfi.ee##a[href^="http://ap.delfi.ee/b?"]
 upload.so##a[href^="http://apkhub.net/"]
 sextfun.com##a[href^="http://app.oksrv.com"]
 tusfiles.net##a[href^="http://applicationgrabb.net/"]
@@ -9641,8 +9684,6 @@ extra.to##div[align="center"] > a[rel="nofollow"] > img
 activevoyeur.com##div[align="center"] > div[align="center"]:not([class])
 yourtv.com.au##div[class$="-icon--ad"]
 adminsub.net##div[class$="_ad"]
-delfi.ee##div[class$="col-has-ad"] div[id^="dwidget"]
-delfi.ee##div[class$="col-has-ad"] table
 yourtv.com.au##div[class$="fixed-ad"]
 worldsport.pro##div[class$="player_re"]
 k2deporte.xyz##div[class$="post-body entry-content"] > center
@@ -9898,7 +9939,6 @@ youtube.com##ytd-search-pyv-renderer
 ||a.onion.nu/www/images/torguard
 ||ad*.mac-torrent-download.net^
 ||ad.kaskus.co.id^
-||ado.delfi.ee^
 ||ads*.depositfiles.com^
 ||ads*.depositfiles.org^
 ||ads*.dfiles.eu^
@@ -9919,7 +9959,6 @@ youtube.com##ytd-search-pyv-renderer
 ||amazonaws.com/waframedia16.com^$third-party
 ||annuncivicini.altervista.org
 ||antiq-fetishes.net/terrabanner.gif
-||ap.delfi.ee^
 ||api.kostprice.com^$script,domain=gadgets.ndtv.com|gadgets360.com
 ||api.taboola.com/*/json/microsoftsolitairecollection/
 ||armorgames.com/foolish/
@@ -9989,10 +10028,6 @@ youtube.com##ytd-search-pyv-renderer
 ||d20flqux56m8w7.cloudfront.net^$domain=mixesdb.com
 ||d2gt9oovykfp1z.cloudfront.net/onhax.js
 ||deal.maabm.com^$domain=pornhd.com
-||delfi.ee/misc/cobancar/*.php$subdocument
-||delfi.lt/b?region=
-||delfi.lv/news_export$domain=~delfi.ee|~delfi.lv
-||delfi.lv/news_export/widget_creator.php$domain=reklama.vesti.lv
 ||dep.jscloud.org/min.js$domain=depositfiles.com|depositfiles.org|dfiles.eu|dfiles.ru
 ||digit-photo.com/images/produits/publicites/
 ||direct.hdzog.com/contents/lejpppwud/
@@ -10119,7 +10154,8 @@ lxax.com###parrot
 ||mediafree.co/pop*.js
 ||mediaindonesia.com/public/imgs/new/cbn.swf
 ||mediaresources.idiva.com/idivage/
-||mfcdn.net/store/mfbanners/$domain=mangafox.me
+||mfcdn.net/store/mfbanners/
+||lmfcdn.secure.footprint.net/store/mfbanners/
 ||mistressdestiny.com/forums/banner
 ||mixesdb.com/BP/iframe_7block.php
 ||motortrend.com/*/subAd2_tower.swf
@@ -11736,7 +11772,6 @@ implbits.com#@#.banner_container
 @@||tous-sports.tv/js/advertisement-AdBlock.js
 !
 @@||4dbl0ckd3t3ct0r.net/popunder2.js^$domain=oload.tv
-@@||ado.delfi.ee/files/js/ado.js$script,domain=delfi.ee
 @@||hitc.com^$generichide
 @@||myex.com/API/1/MYEX/$~third-party,xmlhttprequest
 !-------------------------------------------------------------------------------!
@@ -72912,6 +72947,7 @@ motherless.com##table[style*="max-width:"]
 @@||clashdaily.com^$generichide
 @@||cleodesktop.com^$generichide
 @@||clmbtech.com/ad/$script,domain=indiatimes.com
+@@||cloudflare.com/ajax/libs/fuckadblock/$script,domain=watchcartoononline.io
 @@||cloudfront.net*/ad$script,domain=cityam.com|robinwidget.com|space.com|techworld.com|theinquirer.net|tomshardware.co.uk|tomshardware.com
 @@||cloudfront.net/opentag-$script,domain=v3.co.uk
 @@||cloudfront.net^$image,domain=cityam.com|theinquirer.net|v3.co.uk
