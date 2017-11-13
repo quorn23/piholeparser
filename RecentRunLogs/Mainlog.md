@@ -1,30 +1,30 @@
-## Creating Main Recent Run Log. Sun Nov 12 00:20:02 UTC 2017
+## Creating Main Recent Run Log. Mon Nov 13 00:20:02 UTC 2017
 * Recent Run Log Recreated.
-## Checking For Dependencies Sun Nov 12 00:20:12 UTC 2017
+## Checking For Dependencies Mon Nov 13 00:20:12 UTC 2017
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/05-Checking-For-Dependencies.md)
 
-## Running Initial Tasks Sun Nov 12 00:20:12 UTC 2017
+## Running Initial Tasks Mon Nov 13 00:20:12 UTC 2017
 Process Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks.md)
 
-## Processing Top Level Domains Sun Nov 12 00:20:15 UTC 2017
-Process Took 20 Seconds.
+## Processing Top Level Domains Mon Nov 13 00:20:15 UTC 2017
+Process Took 48 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains.md)
 
-## Processing Whitelists Sun Nov 12 00:20:35 UTC 2017
+## Processing Whitelists Mon Nov 13 00:21:03 UTC 2017
 Process Took 2 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/25-Processing-Whitelists.md)
 
-## Processing Blacklists Sun Nov 12 00:20:37 UTC 2017
-Process Took 21 Minutes.
+## Processing Blacklists Mon Nov 13 00:21:05 UTC 2017
+Process Took 27 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 
-## Writing Additional Lists Sun Nov 12 00:41:55 UTC 2017
+## Writing Additional Lists Mon Nov 13 00:48:20 UTC 2017
 Process Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists.md)
 
-## Completing End Tasks Sun Nov 12 00:43:18 UTC 2017
+## Completing End Tasks Mon Nov 13 00:49:43 UTC 2017
 Process Took 2 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/90-Completing-End-Tasks.md)
 
