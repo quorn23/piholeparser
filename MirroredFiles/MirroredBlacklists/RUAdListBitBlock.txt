@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: +7rdGNLyhkfgAq3tacKD8g
-! Version: 201711120030
+! Checksum: FdJaoUX27jRIYxhqqm6N7A
+! Version: 201711140030
 ! Title: RU AdList: BitBlock
-! Last modified: 12 Nov 2017 00:30 UTC
+! Last modified: 14 Nov 2017 00:30 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -679,6 +679,7 @@ novayagazeta.ru##header + div[class] div[style^="position: relative"]
 aif.ru##iframe[src^="http://www.facebook."] + br + table[border="0"]
 hdkinomax.tv##legend
 bobfilm.club##noindex .bl2
+naruto-base.su#?##sidebar > .block:-abp-has(.title:-abp-contains(Мы в Вконтакте))
 4pna.com##table:first-child + br + .tborder[cellspacing="1"][cellpadding="6"][align="center"]
 !
 ! mail.ru
@@ -731,7 +732,6 @@ megogo.net##.megogo_view_share
 audioportal.su,baumanki.net,vsthouse.ru##.pluso
 liveinternet.ru##.rss.icon
 overclockers.ru##.scrollToTop
-e1.ru##.share42init
 fb.ru##.share_block
 rafkino.com,ria.ru##.social
 news.rambler.ru##.social-bottom.wide[data-prefix] > .social-bottom__item
@@ -739,12 +739,10 @@ news.rambler.ru##.social-subscribe
 news.rambler.ru##.socials
 news.rambler.ru##.subscribe__title
 porjati.net##.twitter-share-button
-e1.ru##.twitter-timeline
 kubik3.ru##.uSocial-Like
 joyreactor.cc,reactor.cc##.uhead_share
 cnews.ru,ph4.ru,ru-skript.ru##.ya-share2
 anistar.me,audioportal.su,cnews.ru,html-template.ru,overclockers.ru,rustreams.ru,vnx.su##.yashare-auto-init
-e1.ru##div[id^="vk_group"]
 2ip.ru,anistar.me,ria.ru,spec-komp.com##div[id^="vk_groups"]
 liveinternet.ru##div[id^="vk_like"]
 porjati.net##form[action="http://feedburner.google.com/fb/a/mailverify"]
@@ -821,6 +819,7 @@ _userbar_$image
 ||showbiz.ua/videofeed.js$third-party
 ||ua/lines/$image
 ||youtube.com/subscribe_widget^$third-party
+||zen.yandex.ru^
 ! *** ruadlist:bitblock/annoyance_general_hide.txt ***
 ###MCaddFrm
 ###METABAR_IFRAME
@@ -1174,7 +1173,7 @@ _userbar_$image
 /_relap.js$script,domain=mail.ru
 /alert.js$script,domain=news.mail.ru
 /chrome.php$script,domain=4torrentgames.net|torrent2games.net
-/js/vverh.js$script,domain=hdpicture.ru|hdreactor.info|hdreactor.org
+/js/vverh.js$script,domain=hdpicture.ru|hdreactor.club|hdreactor.info
 /logo/logo.gif$domain=pornolab.biz|pornolab.cc|pornolab.lib|pornolab.net
 /push.js$script,domain=mail.ru
 /upload/iblock/*background.png$domain=border-fan.ru|dad-fan.ru|freehat.cc|grif-fan.ru|lalapaluza.ru|simp-fan.ru|sp-fan.ru
@@ -1903,7 +1902,7 @@ shiza-project.com##ul[class*="transparent-btns"]
 ! - Сайты на движке TorrentPier -----------------------------------------------
 pirat.ca,rutracker.ru###latest_news
 free-torrent.org,free-torrents.org,game-torrent.info###latest_news > table[width="100%"]
-alltorrents.net,file-tracker.net,free-torrent.org,free-torrents.org,game-torrent.info,maintracker.org,pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net,rus-torrents.ru,rutracker.cr,rutracker.net,rutracker.nl,rutracker.org,rutracker.ru,sssr-rutracker.org,underverse.su###logo
+alltorrents.net,file-tracker.net,free-torrent.org,free-torrents.org,game-torrent.info,maintracker.org,pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net,rus-torrents.ru,rutracker.cr,rutracker.net,rutracker.nl,rutracker.org,rutracker.ru,sssr-rutracker.org,underverse.me,underverse.su###logo
 free-torrent.org,free-torrents.org,game-torrent.info###sidebar1
 wtracker.ru##.preview_lol
 free-torrent.org,free-torrents.org,game-torrent.info##.topmenu ~ table[id][width^="9"]
@@ -1944,6 +1943,10 @@ e.mail.ru##.message-sent__rb-main-container
 mail.ru##.news__styling
 auto.mail.ru##.p-horo-banner
 news.mail.ru##.rb-floating
+mail.ru##.s-linkedSearch .grid-top > .grid__container > div div[id][class]:has([href="//games.mail.ru"][target="_blank"])
+mail.ru##.s-linkedSearch a[href="//games.mail.ru"][target="_blank"]
+mail.ru##.s-linkedSearch a[href^="//minigames.mail.ru/"][target="_blank"]
+mail.ru##.s-linkedSearch a[href^="https://r.mail.ru/redir/"][title][class]
 health.mail.ru,news.mail.ru##.s-partners
 pogoda.mail.ru##.side-informer
 go.mail.ru##.smack-torg
@@ -2193,6 +2196,7 @@ kinokong.cc#@#.yashare-auto-init
 @@||trinixy.ru/engine/classes/min/index.php$script,domain=trinixy.ru
 @@||twitter.com/widgets.js|$domain=slon.ru
 @@||ucoz.net/src/social3.css$stylesheet,domain=wikimovies.ru
+@@||underverse.*/min/index.php*/js/share42.js$script,domain=underverse.me|underverse.su
 @@||vgtimes.ru/img/gplus.png|
 @@||via-midgard.info/min/?$domain=via-midgard.info
 @@||vk.com/images/btns.png$domain=app.tbn.ru
@@ -3727,6 +3731,7 @@ kinokopilka.pro#@#img[alt="Twitter"]
 /Sharetw.
 /shareTwitter.
 /shareWidgetBackgrounds.
+/shariff-sharing/*
 /sharing-buttons.
 /sharing/sprites/*
 /SharingBar/*
@@ -17942,6 +17947,7 @@ greenflag.com#@#.cookie-message
 uktv.co.uk#@#.cookie-notice
 hm.com,prosiebengames.de,stories.com#@#.cookie-notification
 hearst.co.uk#@#.cookie-policy
+unileverfoodsolutions.com.br#@#.cookie-wall
 mediapart.fr#@#.cookie-warn
 bezeq.co.il#@#.cookieAlert
 morizon.pl,tweakers.net#@#.cookieBar

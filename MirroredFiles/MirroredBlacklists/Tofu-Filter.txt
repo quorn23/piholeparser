@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 19:30 2017/11/09
+! 最終更新 22:45 2017/11/13
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -546,6 +546,7 @@ _ads.php
 !pornhub
 ||phncdn.com/www-static/js/ph-tracking.js?
 ||phncdn.com/www-static/js/htmlPauseRoll/
+pornhub.com##none
 !redtube
 ||redtube.com/_status/
 !xtube.com
@@ -2086,7 +2087,7 @@ cookpad.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
 cookpad.com#@#[id*="_ad_"]:not(html):not(body)
 	!top崩れる
 eiga.com#@#[id$="_ad"]:not(html):not(body)
-	!動画消える
+	!動画消える NGCだけ？ https://freshlive.tv/ngc/156675
 freshlive.tv#@#[class$="Ad"]:not(html):not(body)
 	!動画見れない
 gogoanime.to#@#[class$="-ads"]:not(html):not(body)
