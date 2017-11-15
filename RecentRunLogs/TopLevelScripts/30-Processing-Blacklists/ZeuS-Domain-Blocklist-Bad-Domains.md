@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* ZeuS-Domain-Blocklist-Bad-Domains List Marked As Dead. Wed Nov 15 03:18:59 UTC 2017

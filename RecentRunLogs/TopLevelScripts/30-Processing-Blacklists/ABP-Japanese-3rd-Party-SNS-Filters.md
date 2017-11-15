@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* ABP-Japanese-3rd-Party-SNS-Filters List Marked As Dead. Wed Nov 15 00:26:46 UTC 2017

@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* FadeMind-addSpam List Marked As Dead. Wed Nov 15 01:37:17 UTC 2017

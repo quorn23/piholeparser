@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Adblock-Korea List Marked As Dead. Wed Nov 15 00:38:58 UTC 2017

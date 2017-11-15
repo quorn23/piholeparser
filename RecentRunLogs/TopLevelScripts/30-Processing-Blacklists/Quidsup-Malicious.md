@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Quidsup-Malicious List Marked As Dead. Wed Nov 15 02:27:27 UTC 2017

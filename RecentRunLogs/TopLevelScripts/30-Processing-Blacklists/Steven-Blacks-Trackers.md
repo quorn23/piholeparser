@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Steven-Blacks-Trackers List Marked As Dead. Wed Nov 15 02:54:34 UTC 2017

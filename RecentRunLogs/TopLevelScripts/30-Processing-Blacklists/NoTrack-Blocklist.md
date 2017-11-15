@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* NoTrack-Blocklist List Marked As Dead. Wed Nov 15 02:15:15 UTC 2017

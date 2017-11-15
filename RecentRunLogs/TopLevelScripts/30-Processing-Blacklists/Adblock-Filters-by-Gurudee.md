@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Adblock-Filters-by-Gurudee List Marked As Dead. Wed Nov 15 00:36:16 UTC 2017

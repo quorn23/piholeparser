@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Adblock-Iran List Marked As Dead. Wed Nov 15 00:37:37 UTC 2017

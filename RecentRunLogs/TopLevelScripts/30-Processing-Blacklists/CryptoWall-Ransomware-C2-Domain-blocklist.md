@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* CryptoWall-Ransomware-C2-Domain-blocklist List Marked As Dead. Wed Nov 15 01:06:06 UTC 2017

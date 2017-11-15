@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* ABP-Japanese-Filters List Marked As Dead. Wed Nov 15 00:28:07 UTC 2017

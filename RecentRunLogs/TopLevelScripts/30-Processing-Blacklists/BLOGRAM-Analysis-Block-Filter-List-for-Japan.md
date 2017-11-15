@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* BLOGRAM-Analysis-Block-Filter-List-for-Japan List Marked As Dead. Wed Nov 15 00:52:32 UTC 2017

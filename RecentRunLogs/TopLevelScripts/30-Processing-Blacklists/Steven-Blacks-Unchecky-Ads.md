@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Steven-Blacks-Unchecky-Ads List Marked As Dead. Wed Nov 15 02:55:56 UTC 2017
