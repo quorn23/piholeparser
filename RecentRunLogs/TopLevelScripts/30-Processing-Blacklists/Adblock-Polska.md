@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Adblock-Polska List Marked As Dead. Wed Nov 15 00:41:41 UTC 2017
+* Adblock-Polska List Unavailable To Download. Thu Nov 16 00:23:47 UTC 2017
+## Checking If List Updated Online

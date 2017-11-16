@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Hant05080-Filters List Marked As Dead. Wed Nov 15 01:45:24 UTC 2017
+* Hant05080-Filters List Unavailable To Download. Thu Nov 16 00:29:54 UTC 2017
+## Checking If List Updated Online

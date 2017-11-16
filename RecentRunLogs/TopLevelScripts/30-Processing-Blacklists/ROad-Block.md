@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ROad-Block List Marked As Dead. Wed Nov 15 02:28:49 UTC 2017
+* ROad-Block List Unavailable To Download. Thu Nov 16 00:33:13 UTC 2017
+## Checking If List Updated Online

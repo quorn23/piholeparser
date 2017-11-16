@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* DNS-BH-Free-Web-Hosts List Marked As Dead. Wed Nov 15 01:07:27 UTC 2017
+* DNS-BH-Free-Web-Hosts List Unavailable To Download. Thu Nov 16 00:25:40 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Gambling List Marked As Dead. Wed Nov 15 02:47:48 UTC 2017
+* Steven-Blacks-Gambling List Unavailable To Download. Thu Nov 16 00:34:35 UTC 2017
+## Checking If List Updated Online

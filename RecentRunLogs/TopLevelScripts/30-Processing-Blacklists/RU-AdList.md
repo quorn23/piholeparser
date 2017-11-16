@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* RU-AdList List Marked As Dead. Wed Nov 15 02:30:10 UTC 2017
+* RU-AdList List Unavailable To Download. Thu Nov 16 00:33:17 UTC 2017
+## Checking If List Updated Online

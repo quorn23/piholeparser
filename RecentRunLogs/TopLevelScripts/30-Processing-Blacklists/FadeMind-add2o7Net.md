@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-add2o7Net List Marked As Dead. Wed Nov 15 01:34:34 UTC 2017
+* FadeMind-add2o7Net List Unavailable To Download. Thu Nov 16 00:28:46 UTC 2017
+## Checking If List Updated Online

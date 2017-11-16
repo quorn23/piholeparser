@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Metaphoricgiraffe-Privacy-Filters List Marked As Dead. Wed Nov 15 02:09:49 UTC 2017
+* Metaphoricgiraffe-Privacy-Filters List Unavailable To Download. Thu Nov 16 00:31:39 UTC 2017
+## Checking If List Updated Online

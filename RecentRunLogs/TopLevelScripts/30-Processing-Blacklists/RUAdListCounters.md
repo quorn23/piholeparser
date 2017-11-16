@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* RUAdListCounters List Marked As Dead. Wed Nov 15 02:32:53 UTC 2017
+* RUAdListCounters List Unavailable To Download. Thu Nov 16 00:33:55 UTC 2017
+## Checking If List Updated Online

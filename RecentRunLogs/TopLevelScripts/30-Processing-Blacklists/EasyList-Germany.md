@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Germany List Marked As Dead. Wed Nov 15 01:22:22 UTC 2017
+* EasyList-Germany List Unavailable To Download. Thu Nov 16 00:28:11 UTC 2017
+## Checking If List Updated Online

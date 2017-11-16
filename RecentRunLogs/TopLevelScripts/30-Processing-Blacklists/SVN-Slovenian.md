@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* SVN-Slovenian List Marked As Dead. Wed Nov 15 02:35:36 UTC 2017
+* SVN-Slovenian List Unavailable To Download. Thu Nov 16 00:34:04 UTC 2017
+## Checking If List Updated Online

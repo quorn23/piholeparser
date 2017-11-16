@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Yhonay-AntiPopAds List Marked As Dead. Wed Nov 15 03:14:55 UTC 2017
+* Yhonay-AntiPopAds List Unavailable To Download. Thu Nov 16 00:35:42 UTC 2017
+## Checking If List Updated Online

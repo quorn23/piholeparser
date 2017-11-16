@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Prebake-Obtrusive List Marked As Dead. Wed Nov 15 02:23:23 UTC 2017
+* Prebake-Obtrusive List Unavailable To Download. Thu Nov 16 00:33:01 UTC 2017
+## Checking If List Updated Online

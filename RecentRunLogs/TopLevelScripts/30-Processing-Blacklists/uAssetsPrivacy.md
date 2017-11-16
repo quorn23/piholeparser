@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uAssetsPrivacy List Marked As Dead. Wed Nov 15 03:21:42 UTC 2017
+* uAssetsPrivacy List Unavailable To Download. Thu Nov 16 00:36:46 UTC 2017
+## Checking If List Updated Online

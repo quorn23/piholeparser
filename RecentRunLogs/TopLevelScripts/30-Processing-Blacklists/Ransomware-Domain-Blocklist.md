@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Ransomware-Domain-Blocklist List Marked As Dead. Wed Nov 15 02:34:14 UTC 2017
+* Ransomware-Domain-Blocklist List Unavailable To Download. Thu Nov 16 00:34:00 UTC 2017
+## Checking If List Updated Online

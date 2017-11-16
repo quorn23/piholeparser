@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uBOPersonalFilters List Marked As Dead. Wed Nov 15 03:23:04 UTC 2017
+* uBOPersonalFilters List Unavailable To Download. Thu Nov 16 00:36:49 UTC 2017
+## Checking If List Updated Online

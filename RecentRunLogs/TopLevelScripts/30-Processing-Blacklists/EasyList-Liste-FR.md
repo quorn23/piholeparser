@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Liste-FR List Marked As Dead. Wed Nov 15 01:26:26 UTC 2017
+* EasyList-Liste-FR List Unavailable To Download. Thu Nov 16 00:28:25 UTC 2017
+## Checking If List Updated Online

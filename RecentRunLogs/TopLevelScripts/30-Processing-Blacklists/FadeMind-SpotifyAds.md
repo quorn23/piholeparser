@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-SpotifyAds List Marked As Dead. Wed Nov 15 01:33:12 UTC 2017
+* FadeMind-SpotifyAds List Unavailable To Download. Thu Nov 16 00:28:44 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Tyzbit List Marked As Dead. Wed Nov 15 03:09:29 UTC 2017
+* Tyzbit List Unavailable To Download. Thu Nov 16 00:35:32 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* AntiPubWeb List Marked As Dead. Wed Nov 15 00:48:28 UTC 2017
+* AntiPubWeb List Unavailable To Download. Thu Nov 16 00:24:47 UTC 2017
+## Checking If List Updated Online

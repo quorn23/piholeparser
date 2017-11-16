@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uBlockFiltersPlus List Marked As Dead. Wed Nov 15 03:24:25 UTC 2017
+* uBlockFiltersPlus List Unavailable To Download. Thu Nov 16 00:36:53 UTC 2017
+## Checking If List Updated Online

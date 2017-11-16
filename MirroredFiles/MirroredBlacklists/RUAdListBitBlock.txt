@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: FdJaoUX27jRIYxhqqm6N7A
-! Version: 201711140030
+! Checksum: oySAEJlu+D/ETQSufqDflw
+! Version: 201711160030
 ! Title: RU AdList: BitBlock
-! Last modified: 14 Nov 2017 00:30 UTC
+! Last modified: 16 Nov 2017 00:30 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -70,6 +70,7 @@ _vkontakte.png
 ||vk.com/images/upload.gif$domain=~kirmuseum.org|~vk.com
 ||vk.com/widget_community_messages.php$domain=~vk.com
 ! *** ruadlist:bitblock/social_general_hide.txt ***
+###ShareButton
 ###block_social_open
 ###com_vk
 ~facebook.com,~messenger.com###facebook
@@ -101,6 +102,7 @@ _vkontakte.png
 ##.likeandpay-bubble
 ##.likely
 ##.mrc__share
+~ok.ru##.od-share
 ##.odkl-klass
 ##.odkl-klass-s
 ##.odkl_share_stat
@@ -115,6 +117,7 @@ _vkontakte.png
 ~telegram.me,~telegram.org##.subscribe__telegram
 ##.twitter
 ##.vk-button
+~vk.com##.vk-share
 ##.vk-share-button
 ##.vk_box
 ##.vkontakte
@@ -303,7 +306,7 @@ hd720.biz###scroller
 ru-an.info###sgtabs
 satsis.info###share
 molodejj.ru###sharePanel
-kinohome.org###share_c
+kinohome.net,kinohome.org###share_c
 miped.ru###side_right > noindex
 tvcok.ru###sidebar > .left_ad_block
 wikianime.ru###sidebar > .section > .title[style^="margin-bottom"]
@@ -534,6 +537,7 @@ delfi.ua##.sbookmarks
 online-mult.net##.sh_pt
 1743.ru,bibliofond.ru,brovary.net.ua,glavcom.ua,govoritmoskva.ru,gts.tv,ntsk.ru,orki.ru,orsk.ru,syl.ru,ua-football.com,voxpopuli.kz##.share
 my.kaspersky.com##.share > :not(.share-link)
+replyua.net##.share-blc
 ru-an.info##.share-index
 kinogo-2016.net##.share-section
 rambler.ru##.share__list > *
@@ -1457,6 +1461,7 @@ trinixy.ru###pushOffer
 lifehacker.ru###pushOverlay
 ntv.ru###push_alert
 dtf.ru,tjournal.ru###push_subscribe
+appleinsider.ru###pushbanner
 zakon.kz###pushsw-prompt-widget
 vesti-ukr.com###radioblockholder
 tree.tv###registr_info
@@ -1504,7 +1509,7 @@ proufu.ru###top
 aliexpress.com###top-banner-container
 russian-fiancee.com###top_logo
 povarenok.ru###topcontainer > #header ~ * a[href*="/logo/"][target="_blank"] > img
-nnm-club.me,nnm-club.name,nnm-club.to,nnmclub.to,urod.ru###topcontrol
+nnm-club.name,nnm-club.to,nnmclub.to,urod.ru###topcontrol
 kriminal.tv###tvfooter
 overclockers.ru###uhi a[href][target="_blank"]
 lenta.ru###up
@@ -1658,6 +1663,7 @@ km.ru##.km_ref_adv_popup
 kinoafisha.info,kinoafisha.msk.ru,kinoafisha.spb.ru##.layer-notificationPopup
 geektimes.ru,habrahabr.ru##.layout__row_promo-blocks
 lib.rus.ec##.lb-pay__overlay
+lostfilm-online.ru##.left > .bb ~ *
 firepic.org##.left_news_col
 kinogo-online.com##.leftblok_contener > a[href^="http://kinogo-online.com/index.php"]
 vsekino.su##.lenta
@@ -1834,6 +1840,7 @@ svoimi-rykami.ru##body > div[class^="spu-"]
 exelab.ru##body > div[id^="bnr"]
 newdeaf-online.net##body > div[id^="panel"]
 tnt-online.ru##body > div[style^="position"]
+lostfilm-online.ru##body > div[style^="position: fixed"]
 lifter.com.ua##body > div[style^="position: fixed;"]
 rabota.ua##body > form > div[class^="ui-"]:not([id])
 gameguru.ru,kulina.ru,wotsite.net##body > noindex
@@ -1890,7 +1897,7 @@ goha.ru##span[id^="scrollto"]
 streamzone.org##span[style*="3.0em;"]
 russianpost.ru##table[width="816"] > tbody > tr:first-child + tr
 forums.overclockers.ru##td > #logo
-nnm-club.me,nnm-club.name,nnmclub.to##td.genmed[align="center"] > div[style] > noindex
+nnm-club.name,nnmclub.to##td.genmed[align="center"] > div[style] > noindex
 forums.overclockers.ru##td[style*="float:right; margin-right: 20px;"]
 chastnik-m.ru##td[valign="top"][id$="_place"]
 lkforum.ru##td[width="180"][align="right"]
@@ -18272,6 +18279,7 @@ facebook.com#@#.post-fb-like
 imgur.com#@#.post-share-panel
 reddit.com#@#.post-sharing
 guildwars2.com#@#.post-social
+worldfree4u.ws#@#.postShare
 vk.com#@#.post_share
 reddit.com#@#.reddit_button
 hootsuite.com#@#.retweet

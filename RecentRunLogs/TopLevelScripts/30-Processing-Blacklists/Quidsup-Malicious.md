@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Quidsup-Malicious List Marked As Dead. Wed Nov 15 02:27:27 UTC 2017
+* Quidsup-Malicious List Unavailable To Download. Thu Nov 16 00:33:10 UTC 2017
+## Checking If List Updated Online

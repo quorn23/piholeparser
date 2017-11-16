@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Dshield-Suspicious-High List Marked As Dead. Wed Nov 15 01:15:35 UTC 2017
+* Dshield-Suspicious-High List Unavailable To Download. Thu Nov 16 00:26:44 UTC 2017
+## Checking If List Updated Online

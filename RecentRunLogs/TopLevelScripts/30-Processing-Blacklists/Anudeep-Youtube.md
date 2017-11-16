@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Anudeep-Youtube List Marked As Dead. Wed Nov 15 00:49:49 UTC 2017
+* Anudeep-Youtube List Unavailable To Download. Thu Nov 16 00:24:50 UTC 2017
+## Checking If List Updated Online

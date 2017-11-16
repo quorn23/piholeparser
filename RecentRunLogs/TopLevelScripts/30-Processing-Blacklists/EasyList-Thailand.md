@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Thailand List Marked As Dead. Wed Nov 15 01:29:08 UTC 2017
+* EasyList-Thailand List Unavailable To Download. Thu Nov 16 00:28:35 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* CAMELEON-Hosts List Marked As Dead. Wed Nov 15 01:02:01 UTC 2017
+* CAMELEON-Hosts List Unavailable To Download. Thu Nov 16 00:25:20 UTC 2017
+## Checking If List Updated Online

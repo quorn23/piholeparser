@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Thoughtconverge-AdBlock-Filters List Marked As Dead. Wed Nov 15 03:02:43 UTC 2017
+* Thoughtconverge-AdBlock-Filters List Unavailable To Download. Thu Nov 16 00:35:10 UTC 2017
+## Checking If List Updated Online

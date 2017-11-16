@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* AdAway-Default-Blocklist List Marked As Dead. Wed Nov 15 00:34:54 UTC 2017
+* AdAway-Default-Blocklist List Unavailable To Download. Thu Nov 16 00:23:29 UTC 2017
+## Checking If List Updated Online

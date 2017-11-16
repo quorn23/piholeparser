@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist List Marked As Dead. Wed Nov 15 03:06:47 UTC 2017
+* TorrentLocker-Ransomware-Payment-Sites-Domain-Blocklist List Unavailable To Download. Thu Nov 16 00:35:25 UTC 2017
+## Checking If List Updated Online

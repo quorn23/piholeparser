@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Risky-Hosts List Marked As Dead. Wed Nov 15 02:53:13 UTC 2017
+* Steven-Blacks-Risky-Hosts List Unavailable To Download. Thu Nov 16 00:34:46 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Wiltteri List Marked As Dead. Wed Nov 15 03:10:51 UTC 2017
+* Wiltteri List Unavailable To Download. Thu Nov 16 00:35:34 UTC 2017
+## Checking If List Updated Online

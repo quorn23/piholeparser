@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* SatterlysAdblockPlusFilters List Marked As Dead. Wed Nov 15 02:38:18 UTC 2017
+* SatterlysAdblockPlusFilters List Unavailable To Download. Thu Nov 16 00:34:11 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* LatvianList List Marked As Dead. Wed Nov 15 01:57:36 UTC 2017
+* LatvianList List Unavailable To Download. Thu Nov 16 00:31:09 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Italy List Marked As Dead. Wed Nov 15 01:23:43 UTC 2017
+* EasyList-Italy List Unavailable To Download. Thu Nov 16 00:28:16 UTC 2017
+## Checking If List Updated Online

@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* KowabitBOD List Marked As Dead. Wed Nov 15 01:56:15 UTC 2017
+* KowabitBOD List Unavailable To Download. Thu Nov 16 00:31:04 UTC 2017
+## Checking If List Updated Online

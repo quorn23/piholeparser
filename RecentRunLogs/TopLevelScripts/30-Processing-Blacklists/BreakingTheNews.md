@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* BreakingTheNews List Marked As Dead. Wed Nov 15 00:59:19 UTC 2017
+* BreakingTheNews List Unavailable To Download. Thu Nov 16 00:25:13 UTC 2017
+## Checking If List Updated Online

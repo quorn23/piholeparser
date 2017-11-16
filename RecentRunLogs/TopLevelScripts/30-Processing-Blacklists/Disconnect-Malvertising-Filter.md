@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Disconnect-Malvertising-Filter List Marked As Dead. Wed Nov 15 01:12:53 UTC 2017
+* Disconnect-Malvertising-Filter List Unavailable To Download. Thu Nov 16 00:26:18 UTC 2017
+## Checking If List Updated Online

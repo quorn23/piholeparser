@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Michael-Trimms-Hosts List Marked As Dead. Wed Nov 15 02:11:10 UTC 2017
+* Michael-Trimms-Hosts List Unavailable To Download. Thu Nov 16 00:31:42 UTC 2017
+## Checking If List Updated Online

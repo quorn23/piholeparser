@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-Dead List Marked As Dead. Wed Nov 15 01:31:51 UTC 2017
+* FadeMind-Dead List Unavailable To Download. Thu Nov 16 00:28:41 UTC 2017
+## Checking If List Updated Online

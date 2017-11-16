@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Adblock-Filters-by-Gurudee List Marked As Dead. Wed Nov 15 00:36:16 UTC 2017
+* Adblock-Filters-by-Gurudee List Unavailable To Download. Thu Nov 16 00:23:32 UTC 2017
+## Checking If List Updated Online

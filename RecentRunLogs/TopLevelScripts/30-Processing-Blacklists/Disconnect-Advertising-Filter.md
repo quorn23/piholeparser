@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Disconnect-Advertising-Filter List Marked As Dead. Wed Nov 15 01:11:31 UTC 2017
+* Disconnect-Advertising-Filter List Unavailable To Download. Thu Nov 16 00:26:16 UTC 2017
+## Checking If List Updated Online

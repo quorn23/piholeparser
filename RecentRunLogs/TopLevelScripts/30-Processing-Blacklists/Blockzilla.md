@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Blockzilla List Marked As Dead. Wed Nov 15 00:57:57 UTC 2017
+* Blockzilla List Unavailable To Download. Thu Nov 16 00:25:11 UTC 2017
+## Checking If List Updated Online

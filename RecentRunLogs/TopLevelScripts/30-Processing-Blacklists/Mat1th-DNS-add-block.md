@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mat1th-DNS-add-block List Marked As Dead. Wed Nov 15 02:07:06 UTC 2017
+* Mat1th-DNS-add-block List Unavailable To Download. Thu Nov 16 00:31:33 UTC 2017
+## Checking If List Updated Online

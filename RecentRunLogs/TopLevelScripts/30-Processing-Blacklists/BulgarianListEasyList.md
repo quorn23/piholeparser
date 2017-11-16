@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* BulgarianListEasyList List Marked As Dead. Wed Nov 15 01:00:40 UTC 2017
+* BulgarianListEasyList List Unavailable To Download. Thu Nov 16 00:25:16 UTC 2017
+## Checking If List Updated Online
