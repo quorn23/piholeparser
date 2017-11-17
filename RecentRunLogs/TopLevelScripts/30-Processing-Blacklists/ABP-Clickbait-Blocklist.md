@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-Clickbait-Blocklist List Unavailable To Download. Thu Nov 16 00:22:47 UTC 2017
-## Checking If List Updated Online
+* ABP-Clickbait-Blocklist List Marked As Dead. Fri Nov 17 00:25:23 UTC 2017

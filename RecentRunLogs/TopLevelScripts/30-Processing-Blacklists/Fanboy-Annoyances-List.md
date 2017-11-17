@@ -13,7 +13,6 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Fanboy-Annoyances-List List Unavailable To Download. Thu Nov 16 00:28:55 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List

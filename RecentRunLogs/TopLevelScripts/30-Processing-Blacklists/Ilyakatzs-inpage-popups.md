@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Ilyakatzs-inpage-popups List Unavailable To Download. Thu Nov 16 00:30:26 UTC 2017
 ## Checking If List Updated Online

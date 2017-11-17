@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-Japanese-Paranoid-Filters List Unavailable To Download. Thu Nov 16 00:22:55 UTC 2017
-## Checking If List Updated Online
+* ABP-Japanese-Paranoid-Filters List Marked As Dead. Fri Nov 17 00:29:27 UTC 2017

@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* FadeMind-addSpam List Unavailable To Download. Thu Nov 16 00:28:52 UTC 2017
 ## Checking If List Updated Online

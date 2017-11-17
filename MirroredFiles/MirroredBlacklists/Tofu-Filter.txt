@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 22:45 2017/11/13
+! 最終更新 13:09 2017/11/16
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -2150,6 +2150,8 @@ www.nicovideo.jp#@#.ads
 	!ニコニコ広告部分
 live.nicovideo.jp,live2.nicovideo.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 live2.nicovideo.jp#@#[id*="-ad-"]:not(html):not(body)
+	!検索結果
+live.nicovideo.jp#@#[id$="-ad"]:not(html):not(body)
 	!タグ登録できない
 nijie.info#@#[id$="-ad"]:not(html):not(body)
 	! 動画見れない

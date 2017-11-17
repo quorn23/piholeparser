@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uBlockFiltersPlus List Unavailable To Download. Thu Nov 16 00:36:53 UTC 2017
 ## Checking If List Updated Online

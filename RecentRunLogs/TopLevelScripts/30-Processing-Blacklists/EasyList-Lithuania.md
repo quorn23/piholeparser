@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Lithuania List Unavailable To Download. Thu Nov 16 00:28:31 UTC 2017
 ## Checking If List Updated Online

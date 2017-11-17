@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* AakList List Unavailable To Download. Thu Nov 16 00:23:27 UTC 2017
 ## Checking If List Updated Online

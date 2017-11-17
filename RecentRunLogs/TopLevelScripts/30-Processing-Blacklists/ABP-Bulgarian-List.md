@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-Bulgarian-List List Unavailable To Download. Thu Nov 16 00:22:43 UTC 2017
-## Checking If List Updated Online
+* ABP-Bulgarian-List List Marked As Dead. Fri Nov 17 00:24:02 UTC 2017

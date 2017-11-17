@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uAssetsPrivacy List Unavailable To Download. Thu Nov 16 00:36:46 UTC 2017
 ## Checking If List Updated Online

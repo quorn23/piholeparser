@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* TorrentLocker-Ransomware-C2-Domain-Blocklist List Unavailable To Download. Thu Nov 16 00:35:20 UTC 2017
 ## Checking If List Updated Online

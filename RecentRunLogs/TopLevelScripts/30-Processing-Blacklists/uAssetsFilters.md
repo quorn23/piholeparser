@@ -13,7 +13,6 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uAssetsFilters List Unavailable To Download. Thu Nov 16 00:36:21 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
@@ -21,13 +20,13 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ### Removing Comments
-1711 Lines After Removing Comments
+1721 Lines After Removing Comments
 ### Removing Content Filtering
-1711 Lines After Removing Content Filtering
+1721 Lines After Removing Content Filtering
 ### Trimming HOSTS Format IP Addresses
-1711 Lines After Trimming HOSTS Format IP Addresses
+1721 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-746 Lines After Removing Empty Space
+751 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
 32 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case

@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABPindo List Unavailable To Download. Thu Nov 16 00:23:24 UTC 2017
-## Checking If List Updated Online
+* ABPindo List Marked As Dead. Fri Nov 17 00:32:09 UTC 2017
