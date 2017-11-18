@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-Clickbait-Blocklist List Marked As Dead. Fri Nov 17 00:25:23 UTC 2017
+* ABP-Clickbait-Blocklist List Already Marked As Dead. Sat Nov 18 00:25:42 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ABP-Clickbait-Blocklist List Was An Empty File After Download. Sat Nov 18 00:26:02 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ABP-Clickbait-Blocklist List Was Killed By The Parsing Process. It will be skipped in the future. Sat Nov 18 00:26:03 UTC 2017

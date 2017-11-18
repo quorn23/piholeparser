@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* AakList List Marked As Dead. Sat Nov 18 00:35:52 UTC 2017

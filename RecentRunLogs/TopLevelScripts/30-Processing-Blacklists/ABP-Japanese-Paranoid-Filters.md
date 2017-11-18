@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-Japanese-Paranoid-Filters List Marked As Dead. Fri Nov 17 00:29:27 UTC 2017
+* ABP-Japanese-Paranoid-Filters List Already Marked As Dead. Sat Nov 18 00:30:47 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ABP-Japanese-Paranoid-Filters List Was An Empty File After Download. Sat Nov 18 00:31:07 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ABP-Japanese-Paranoid-Filters List Was Killed By The Parsing Process. It will be skipped in the future. Sat Nov 18 00:31:07 UTC 2017

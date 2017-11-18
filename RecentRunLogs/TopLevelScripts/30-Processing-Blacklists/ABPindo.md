@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABPindo List Marked As Dead. Fri Nov 17 00:32:09 UTC 2017
+* ABPindo List Already Marked As Dead. Sat Nov 18 00:34:10 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ABPindo List Was An Empty File After Download. Sat Nov 18 00:34:30 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ABPindo List Was Killed By The Parsing Process. It will be skipped in the future. Sat Nov 18 00:34:31 UTC 2017

@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-X-Files List Marked As Dead. Fri Nov 17 00:30:48 UTC 2017
+* ABP-X-Files List Already Marked As Dead. Sat Nov 18 00:32:28 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ABP-X-Files List Was An Empty File After Download. Sat Nov 18 00:32:49 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ABP-X-Files List Was Killed By The Parsing Process. It will be skipped in the future. Sat Nov 18 00:32:49 UTC 2017

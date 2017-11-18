@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ABP-Japanese-3rd-Party-SNS-Filters List Marked As Dead. Fri Nov 17 00:26:44 UTC 2017
+* ABP-Japanese-3rd-Party-SNS-Filters List Already Marked As Dead. Sat Nov 18 00:27:24 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ABP-Japanese-3rd-Party-SNS-Filters List Was An Empty File After Download. Sat Nov 18 00:27:44 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ABP-Japanese-3rd-Party-SNS-Filters List Was Killed By The Parsing Process. It will be skipped in the future. Sat Nov 18 00:27:44 UTC 2017
