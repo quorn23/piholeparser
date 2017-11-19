@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Chad-Mayfield-Porn-Blocklist-Light List Marked As Dead. Sun Nov 19 00:55:29 UTC 2017

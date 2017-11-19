@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* AakList List Marked As Dead. Sat Nov 18 00:35:52 UTC 2017
+* AakList List Already Marked As Dead. Sun Nov 19 00:24:01 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* AakList List Was An Empty File After Download. Sun Nov 19 00:24:21 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* AakList List Was Killed By The Parsing Process. It will be skipped in the future. Sun Nov 19 00:24:21 UTC 2017
