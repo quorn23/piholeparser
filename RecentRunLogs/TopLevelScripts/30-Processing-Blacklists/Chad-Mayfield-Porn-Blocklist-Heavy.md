@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Chad-Mayfield-Porn-Blocklist-Heavy List Marked As Dead. Sun Nov 19 00:54:08 UTC 2017
+* Chad-Mayfield-Porn-Blocklist-Heavy List Already Marked As Dead. Mon Nov 20 00:59:33 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Chad-Mayfield-Porn-Blocklist-Heavy List Was An Empty File After Download. Mon Nov 20 00:59:54 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Chad-Mayfield-Porn-Blocklist-Heavy List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 00:59:54 UTC 2017

@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Dshield-Suspicious-High List Marked As Dead. Sun Nov 19 01:06:19 UTC 2017
+* Dshield-Suspicious-High List Already Marked As Dead. Mon Nov 20 01:14:48 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Dshield-Suspicious-High List Was An Empty File After Download. Mon Nov 20 01:15:08 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Dshield-Suspicious-High List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 01:15:08 UTC 2017

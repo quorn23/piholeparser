@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Ayucat-Powerful List Marked As Dead. Sun Nov 19 00:41:57 UTC 2017
+* Ayucat-Powerful List Already Marked As Dead. Mon Nov 20 00:44:19 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Ayucat-Powerful List Was An Empty File After Download. Mon Nov 20 00:44:40 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Ayucat-Powerful List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 00:44:40 UTC 2017

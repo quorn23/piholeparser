@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* EasyList-Lithuania List Marked As Dead. Mon Nov 20 01:29:42 UTC 2017

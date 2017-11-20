@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* AdAway-Default-Blocklist List Marked As Dead. Sun Nov 19 00:25:42 UTC 2017
+* AdAway-Default-Blocklist List Already Marked As Dead. Mon Nov 20 00:24:00 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* AdAway-Default-Blocklist List Was An Empty File After Download. Mon Nov 20 00:24:20 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* AdAway-Default-Blocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 00:24:20 UTC 2017

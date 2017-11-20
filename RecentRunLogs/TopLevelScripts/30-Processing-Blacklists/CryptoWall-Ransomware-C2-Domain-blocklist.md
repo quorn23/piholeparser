@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* CryptoWall-Ransomware-C2-Domain-blocklist List Marked As Dead. Sun Nov 19 00:56:51 UTC 2017
+* CryptoWall-Ransomware-C2-Domain-blocklist List Already Marked As Dead. Mon Nov 20 01:02:57 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* CryptoWall-Ransomware-C2-Domain-blocklist List Was An Empty File After Download. Mon Nov 20 01:03:17 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* CryptoWall-Ransomware-C2-Domain-blocklist List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 01:03:17 UTC 2017

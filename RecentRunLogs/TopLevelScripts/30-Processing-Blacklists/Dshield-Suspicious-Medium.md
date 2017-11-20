@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Dshield-Suspicious-Medium List Marked As Dead. Sun Nov 19 01:09:02 UTC 2017
+* Dshield-Suspicious-Medium List Already Marked As Dead. Mon Nov 20 01:18:11 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Dshield-Suspicious-Medium List Was An Empty File After Download. Mon Nov 20 01:18:31 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Dshield-Suspicious-Medium List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 01:18:31 UTC 2017

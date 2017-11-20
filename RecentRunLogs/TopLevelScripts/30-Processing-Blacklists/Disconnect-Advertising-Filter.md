@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Disconnect-Advertising-Filter List Marked As Dead. Sun Nov 19 01:02:15 UTC 2017
+* Disconnect-Advertising-Filter List Already Marked As Dead. Mon Nov 20 01:09:43 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Disconnect-Advertising-Filter List Was An Empty File After Download. Mon Nov 20 01:10:03 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Disconnect-Advertising-Filter List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 01:10:03 UTC 2017

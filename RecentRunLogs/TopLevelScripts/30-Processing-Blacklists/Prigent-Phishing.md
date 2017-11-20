@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Prigent-Phishing List Marked As Dead. Mon Nov 20 02:27:55 UTC 2017

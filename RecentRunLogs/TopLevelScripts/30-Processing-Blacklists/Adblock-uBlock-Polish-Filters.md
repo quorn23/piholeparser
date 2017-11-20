@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Adblock-uBlock-Polish-Filters List Marked As Dead. Sun Nov 19 00:35:11 UTC 2017
+* Adblock-uBlock-Polish-Filters List Already Marked As Dead. Mon Nov 20 00:35:51 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Adblock-uBlock-Polish-Filters List Was An Empty File After Download. Mon Nov 20 00:36:11 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Adblock-uBlock-Polish-Filters List Was Killed By The Parsing Process. It will be skipped in the future. Mon Nov 20 00:36:11 UTC 2017

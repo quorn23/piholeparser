@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* ListeAR List Marked As Dead. Mon Nov 20 02:02:11 UTC 2017
