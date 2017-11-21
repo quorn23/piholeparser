@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Greek-AdBlock-Filter List Marked As Dead. Mon Nov 20 01:45:56 UTC 2017
+* Greek-AdBlock-Filter List Already Marked As Dead. Tue Nov 21 00:46:00 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Greek-AdBlock-Filter List Was An Empty File After Download. Tue Nov 21 00:46:20 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Greek-AdBlock-Filter List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 00:46:21 UTC 2017

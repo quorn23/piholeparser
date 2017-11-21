@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* PeterLowes List Marked As Dead. Mon Nov 20 02:21:09 UTC 2017
+* PeterLowes List Already Marked As Dead. Tue Nov 21 01:30:02 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* PeterLowes List Was An Empty File After Download. Tue Nov 21 01:30:22 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* PeterLowes List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 01:30:22 UTC 2017

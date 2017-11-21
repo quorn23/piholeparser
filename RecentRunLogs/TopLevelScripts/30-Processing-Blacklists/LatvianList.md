@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* LatvianList List Marked As Dead. Mon Nov 20 01:59:29 UTC 2017
+* LatvianList List Already Marked As Dead. Tue Nov 21 01:02:56 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* LatvianList List Was An Empty File After Download. Tue Nov 21 01:03:17 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* LatvianList List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 01:03:17 UTC 2017

@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* JoeWein List Marked As Dead. Mon Nov 20 01:56:46 UTC 2017
+* JoeWein List Already Marked As Dead. Tue Nov 21 00:59:33 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* JoeWein List Was An Empty File After Download. Tue Nov 21 00:59:54 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* JoeWein List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 00:59:54 UTC 2017

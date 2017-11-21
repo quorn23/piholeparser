@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Lead-Generator List Marked As Dead. Mon Nov 20 02:00:50 UTC 2017
+* Lead-Generator List Already Marked As Dead. Tue Nov 21 01:04:38 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Lead-Generator List Was An Empty File After Download. Tue Nov 21 01:04:58 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Lead-Generator List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 01:04:58 UTC 2017

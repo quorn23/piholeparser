@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Ilyakatzs-inpage-popups List Marked As Dead. Mon Nov 20 01:51:21 UTC 2017
+* Ilyakatzs-inpage-popups List Already Marked As Dead. Tue Nov 21 00:52:47 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Ilyakatzs-inpage-popups List Was An Empty File After Download. Tue Nov 21 00:53:07 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Ilyakatzs-inpage-popups List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 00:53:07 UTC 2017

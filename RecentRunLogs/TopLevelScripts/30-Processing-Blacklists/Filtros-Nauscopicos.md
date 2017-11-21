@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Filtros-Nauscopicos List Marked As Dead. Mon Nov 20 01:41:53 UTC 2017
+* Filtros-Nauscopicos List Already Marked As Dead. Tue Nov 21 00:40:55 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Filtros-Nauscopicos List Was An Empty File After Download. Tue Nov 21 00:41:15 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Filtros-Nauscopicos List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 00:41:15 UTC 2017

@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Notracking-hostnames List Marked As Dead. Mon Nov 20 02:18:26 UTC 2017
+* Notracking-hostnames List Already Marked As Dead. Tue Nov 21 01:26:39 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Notracking-hostnames List Was An Empty File After Download. Tue Nov 21 01:26:59 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Notracking-hostnames List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 01:26:59 UTC 2017

@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList List Marked As Dead. Mon Nov 20 01:32:24 UTC 2017
+* EasyList List Already Marked As Dead. Tue Nov 21 00:29:04 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* EasyList List Was An Empty File After Download. Tue Nov 21 00:29:24 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* EasyList List Was Killed By The Parsing Process. It will be skipped in the future. Tue Nov 21 00:29:24 UTC 2017
