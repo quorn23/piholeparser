@@ -8,12 +8,6 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* Finnish-AntiSocial
-* JABCreations
-* JapaneseSiteAdblockFilterver2
-* JoeWein
-* Malware-URLs-Domains
-* PLgeneral
 * Spam-Assassin-Bill-Stearns
 * Tofu-Filter
 

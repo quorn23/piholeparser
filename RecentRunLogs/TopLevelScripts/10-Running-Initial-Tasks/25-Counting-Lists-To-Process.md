@@ -6,5 +6,5 @@ ____________________________________
 ### Checking For Big Source List File.
 * Old Multisource List Purged.
 ### Merging Sources.
-88 After Merging Sources.
-* 88 Lists To Be Processed.
+36 After Merging Sources.
+* 36 Lists To Be Processed.

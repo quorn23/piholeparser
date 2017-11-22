@@ -13,4 +13,32 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Hosts List Marked As Dead. Tue Nov 21 02:04:14 UTC 2017
+* Steven-Blacks-Hosts List Unavailable To Download. Wed Nov 22 00:29:37 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+## Attempting Creation Of Mirror File
+## Parsing List
+### Removing Comments
+184 Lines After Removing Comments
+### Removing Content Filtering
+184 Lines After Removing Content Filtering
+### Trimming HOSTS Format IP Addresses
+184 Lines After Trimming HOSTS Format IP Addresses
+### Removing Empty Space
+177 Lines After Removing Empty Space
+### Removing Invalid FQDN Characters
+177 Lines After Removing Invalid FQDN Characters
+### Converting All Text To Lower Case
+177 Lines After Converting All Text To Lower Case
+### Checking For Fully Qualified Domain Name Requirements
+177 Lines After Checking For Fully Qualified Domain Name Requirements
+### Reverse Searching For Invalid Top Level Domains
+176 Lines After Reverse Searching For Invalid Top Level Domains
+### Removing Duplicate Lines
+172 Lines After Removing Duplicate Lines
+## Checking Parsed File Size
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

@@ -13,4 +13,32 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam404 List Marked As Dead. Tue Nov 21 02:00:10 UTC 2017
+* Spam404 List Unavailable To Download. Wed Nov 22 00:29:06 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+## Attempting Creation Of Mirror File
+## Parsing List
+### Removing Comments
+5779 Lines After Removing Comments
+### Removing Content Filtering
+5779 Lines After Removing Content Filtering
+### Trimming HOSTS Format IP Addresses
+5779 Lines After Trimming HOSTS Format IP Addresses
+### Removing Empty Space
+5777 Lines After Removing Empty Space
+### Removing Invalid FQDN Characters
+5775 Lines After Removing Invalid FQDN Characters
+### Converting All Text To Lower Case
+5775 Lines After Converting All Text To Lower Case
+### Checking For Fully Qualified Domain Name Requirements
+5775 Lines After Checking For Fully Qualified Domain Name Requirements
+### Reverse Searching For Invalid Top Level Domains
+5775 Lines After Reverse Searching For Invalid Top Level Domains
+### Removing Duplicate Lines
+5775 Lines After Removing Duplicate Lines
+## Checking Parsed File Size
+## Attempting Creation Of Parsed List
+## Calculating Parse Time
+## Clearing Temp Vars

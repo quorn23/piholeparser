@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Shalla-Malicious List Marked As Dead. Tue Nov 21 01:56:06 UTC 2017
+* Shalla-Malicious List Unavailable To Download. Wed Nov 22 00:28:34 UTC 2017
+## Checking If List Updated Online
