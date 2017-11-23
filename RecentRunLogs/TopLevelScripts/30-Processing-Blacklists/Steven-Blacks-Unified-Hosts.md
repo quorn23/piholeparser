@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Unified-Hosts List Unavailable To Download. Wed Nov 22 00:30:14 UTC 2017
-## Checking If List Updated Online
+* Steven-Blacks-Unified-Hosts List Marked As Dead. Thu Nov 23 00:40:13 UTC 2017

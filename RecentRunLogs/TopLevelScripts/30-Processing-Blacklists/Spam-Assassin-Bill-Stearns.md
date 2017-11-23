@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam-Assassin-Bill-Stearns List Unavailable To Download. Wed Nov 22 00:28:37 UTC 2017
-## Checking If List Updated Online
+* Spam-Assassin-Bill-Stearns List Marked As Dead. Thu Nov 23 00:25:20 UTC 2017

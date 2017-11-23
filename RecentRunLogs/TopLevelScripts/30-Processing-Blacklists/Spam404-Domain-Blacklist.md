@@ -13,32 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam404-Domain-Blacklist List Unavailable To Download. Wed Nov 22 00:28:41 UTC 2017
-## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-### Removing Comments
-6473 Lines After Removing Comments
-### Removing Content Filtering
-6473 Lines After Removing Content Filtering
-### Trimming HOSTS Format IP Addresses
-6473 Lines After Trimming HOSTS Format IP Addresses
-### Removing Empty Space
-6159 Lines After Removing Empty Space
-### Removing Invalid FQDN Characters
-6159 Lines After Removing Invalid FQDN Characters
-### Converting All Text To Lower Case
-6159 Lines After Converting All Text To Lower Case
-### Checking For Fully Qualified Domain Name Requirements
-6159 Lines After Checking For Fully Qualified Domain Name Requirements
-### Reverse Searching For Invalid Top Level Domains
-6159 Lines After Reverse Searching For Invalid Top Level Domains
-### Removing Duplicate Lines
-6157 Lines After Removing Duplicate Lines
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars
+* Spam404-Domain-Blacklist List Marked As Dead. Thu Nov 23 00:26:41 UTC 2017

@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Thoughtconverge-AdBlock-Filters List Marked As Dead. Thu Nov 23 00:45:38 UTC 2017

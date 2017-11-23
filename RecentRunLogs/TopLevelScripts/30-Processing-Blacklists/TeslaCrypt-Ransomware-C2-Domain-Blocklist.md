@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* TeslaCrypt-Ransomware-C2-Domain-Blocklist List Marked As Dead. Thu Nov 23 00:42:56 UTC 2017

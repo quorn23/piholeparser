@@ -13,5 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Microsoft-Telemetry List Unavailable To Download. Wed Nov 22 00:30:02 UTC 2017
-## Checking If List Updated Online
+* Steven-Blacks-Microsoft-Telemetry List Marked As Dead. Thu Nov 23 00:33:27 UTC 2017

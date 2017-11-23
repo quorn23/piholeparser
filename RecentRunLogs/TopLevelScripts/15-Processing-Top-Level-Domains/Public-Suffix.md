@@ -12,7 +12,7 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking If List Updated Online
 ## Determining Download Attempt
-* Public-Suffix List Unavailable To Download. Attempted to use Mirror. Wed Nov 22 00:21:55 UTC 2017
+* Public-Suffix List Unavailable To Download. Attempted to use Mirror. Thu Nov 23 00:21:54 UTC 2017
 ## Attempting To Download List
 ## Checking File Size
 ## Attempting Creation Of Mirror File

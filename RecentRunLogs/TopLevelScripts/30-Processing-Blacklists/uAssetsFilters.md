@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* uAssetsFilters List Marked As Dead. Thu Nov 23 01:03:14 UTC 2017

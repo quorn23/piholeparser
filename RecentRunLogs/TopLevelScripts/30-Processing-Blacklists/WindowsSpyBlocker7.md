@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* WindowsSpyBlocker7 List Marked As Dead. Thu Nov 23 00:55:07 UTC 2017
