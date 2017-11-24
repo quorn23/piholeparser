@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ZeuS-Domain-Blocklist-Bad-Domains List Marked As Dead. Thu Nov 23 01:01:53 UTC 2017
+* ZeuS-Domain-Blocklist-Bad-Domains List Already Marked As Dead. Fri Nov 24 01:11:24 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ZeuS-Domain-Blocklist-Bad-Domains List Was An Empty File After Download. Fri Nov 24 01:11:45 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ZeuS-Domain-Blocklist-Bad-Domains List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 01:11:45 UTC 2017

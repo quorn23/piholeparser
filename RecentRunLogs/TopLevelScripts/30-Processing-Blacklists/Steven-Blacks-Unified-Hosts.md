@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Unified-Hosts List Marked As Dead. Thu Nov 23 00:40:13 UTC 2017
+* Steven-Blacks-Unified-Hosts List Already Marked As Dead. Fri Nov 24 00:44:18 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Steven-Blacks-Unified-Hosts List Was An Empty File After Download. Fri Nov 24 00:44:38 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Steven-Blacks-Unified-Hosts List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 00:44:38 UTC 2017

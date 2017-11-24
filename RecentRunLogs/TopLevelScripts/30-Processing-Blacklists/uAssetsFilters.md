@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uAssetsFilters List Marked As Dead. Thu Nov 23 01:03:14 UTC 2017
+* uAssetsFilters List Already Marked As Dead. Fri Nov 24 01:13:06 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* uAssetsFilters List Was An Empty File After Download. Fri Nov 24 01:13:26 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* uAssetsFilters List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 01:13:27 UTC 2017

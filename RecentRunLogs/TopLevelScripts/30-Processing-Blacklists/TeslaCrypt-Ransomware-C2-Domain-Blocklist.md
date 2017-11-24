@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* TeslaCrypt-Ransomware-C2-Domain-Blocklist List Marked As Dead. Thu Nov 23 00:42:56 UTC 2017
+* TeslaCrypt-Ransomware-C2-Domain-Blocklist List Already Marked As Dead. Fri Nov 24 00:47:41 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* TeslaCrypt-Ransomware-C2-Domain-Blocklist List Was An Empty File After Download. Fri Nov 24 00:48:01 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* TeslaCrypt-Ransomware-C2-Domain-Blocklist List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 00:48:01 UTC 2017

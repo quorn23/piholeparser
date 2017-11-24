@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* YousList List Marked As Dead. Thu Nov 23 00:59:10 UTC 2017
+* YousList List Already Marked As Dead. Fri Nov 24 01:08:00 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* YousList List Was An Empty File After Download. Fri Nov 24 01:08:21 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* YousList List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 01:08:21 UTC 2017

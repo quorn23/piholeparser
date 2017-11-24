@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam404 List Marked As Dead. Thu Nov 23 00:28:02 UTC 2017
+* Spam404 List Already Marked As Dead. Fri Nov 24 00:29:03 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Spam404 List Was An Empty File After Download. Fri Nov 24 00:29:23 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Spam404 List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 00:29:24 UTC 2017

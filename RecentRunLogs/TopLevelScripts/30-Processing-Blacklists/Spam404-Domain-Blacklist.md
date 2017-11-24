@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam404-Domain-Blacklist List Marked As Dead. Thu Nov 23 00:26:41 UTC 2017
+* Spam404-Domain-Blacklist List Already Marked As Dead. Fri Nov 24 00:27:22 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Spam404-Domain-Blacklist List Was An Empty File After Download. Fri Nov 24 00:27:42 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Spam404-Domain-Blacklist List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 00:27:42 UTC 2017

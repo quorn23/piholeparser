@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Steven-Blacks-Fakenews List Marked As Dead. Thu Nov 23 00:29:23 UTC 2017
+* Steven-Blacks-Fakenews List Already Marked As Dead. Fri Nov 24 00:30:45 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Steven-Blacks-Fakenews List Was An Empty File After Download. Fri Nov 24 00:31:05 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Steven-Blacks-Fakenews List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 00:31:05 UTC 2017

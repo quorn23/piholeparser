@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* WindowsSpyBlocker81 List Marked As Dead. Thu Nov 23 00:56:28 UTC 2017
+* WindowsSpyBlocker81 List Already Marked As Dead. Fri Nov 24 01:04:37 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* WindowsSpyBlocker81 List Was An Empty File After Download. Fri Nov 24 01:04:57 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* WindowsSpyBlocker81 List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 01:04:57 UTC 2017

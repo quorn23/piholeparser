@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* uBlockFiltersPlus List Marked As Dead. Thu Nov 23 01:07:18 UTC 2017
+* uBlockFiltersPlus List Already Marked As Dead. Fri Nov 24 01:18:11 UTC 2017
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* uBlockFiltersPlus List Was An Empty File After Download. Fri Nov 24 01:18:32 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* uBlockFiltersPlus List Was Killed By The Parsing Process. It will be skipped in the future. Fri Nov 24 01:18:32 UTC 2017
