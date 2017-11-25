@@ -8,8 +8,7 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* Spam-Assassin-Bill-Stearns
-* Tofu-Filter
+All Lists Use https.
 
 ___________________________________________________________________
 ### TLD Lists That Do NOT use https.

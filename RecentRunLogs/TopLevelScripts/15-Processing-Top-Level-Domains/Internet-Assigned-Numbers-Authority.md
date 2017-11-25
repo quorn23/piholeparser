@@ -12,7 +12,7 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking If List Updated Online
 ## Determining Download Attempt
-* Internet-Assigned-Numbers-Authority List Unavailable To Download. Attempted to use Mirror. Fri Nov 24 00:21:14 UTC 2017
+* Internet-Assigned-Numbers-Authority List Unavailable To Download. Attempted to use Mirror. Sat Nov 25 00:21:13 UTC 2017
 ## Attempting To Download List
 ## Checking File Size
 ## Attempting Creation Of Mirror File
