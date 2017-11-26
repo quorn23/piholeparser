@@ -12,7 +12,7 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking If List Updated Online
 ## Determining Download Attempt
-* TLD-List List Unavailable To Download. Attempted to use Mirror. Sat Nov 25 00:22:34 UTC 2017
+* TLD-List List Unavailable To Download. Attempted to use Mirror. Sun Nov 26 00:22:34 UTC 2017
 ## Attempting To Download List
 ## Checking File Size
 ## Attempting Creation Of Mirror File
