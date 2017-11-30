@@ -2,8 +2,8 @@
 
 ### Last Run Stats
 
-* Script Started Wed Nov 29 00:20:13 UTC 2017
-* Script Ended Wed Nov 29 00:20:28 UTC 2017
+* Script Started Thu Nov 30 00:20:13 UTC 2017
+* Script Ended Thu Nov 30 00:20:30 UTC 2017
 * [Script Took 0 Minutes To Filter 0 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 * The Edited AllParsed File is 0 MB And Contains 10 Domains.
 * Average Parsing Of unknown lines in unknown BlackLists was unknown Seconds.
