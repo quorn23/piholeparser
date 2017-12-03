@@ -14,7 +14,7 @@ ____________________________________
 ### Deduplicating Merged List.
 10 After Deduplicating Merged List.
 ____________________________________
-## Script.domains piholeparserinstall.sh piholeparserinstall.sh.md piholeparserinstall.sh.md.md piholeparserinstall.sh.md.md.md piholeparserinstall.sh.md.md.md.md piholeparserinstall.sh.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md.md
+## Script.domains piholeparserinstall.sh piholeparserinstall.sh.md piholeparserinstall.sh.md.md piholeparserinstall.sh.md.md.md piholeparserinstall.sh.md.md.md.md piholeparserinstall.sh.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md.md.md
 List Took 0 Seconds.
-[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Script.domains piholeparserinstall.sh piholeparserinstall.sh.md piholeparserinstall.sh.md.md piholeparserinstall.sh.md.md.md piholeparserinstall.sh.md.md.md.md piholeparserinstall.sh.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md.md.md)
+[Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists/Script.domains piholeparserinstall.sh piholeparserinstall.sh.md piholeparserinstall.sh.md.md piholeparserinstall.sh.md.md.md piholeparserinstall.sh.md.md.md.md piholeparserinstall.sh.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md.md piholeparserinstall.sh.md.md.md.md.md.md.md.md.md)
 
