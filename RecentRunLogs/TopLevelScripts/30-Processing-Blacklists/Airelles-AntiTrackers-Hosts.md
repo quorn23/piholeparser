@@ -13,6 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Airelles-AntiTrackers-Hosts List Unavailable To Download. Wed Dec 6 00:20:30 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
+## Checking File Size
+* Airelles-AntiTrackers-Hosts List Was An Empty File After Download. Wed Dec 6 00:20:31 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Airelles-AntiTrackers-Hosts List Was Killed By The Parsing Process. It will be skipped in the future. Wed Dec 6 00:20:31 UTC 2017

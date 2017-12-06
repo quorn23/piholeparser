@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Blackweb List Unavailable To Download. Wed Dec 6 00:20:36 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* Blackweb List Was An Empty File After Download. Tue Dec 5 01:40:40 UTC 2017
+* Blackweb List Was An Empty File After Download. Wed Dec 6 00:20:37 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Blackweb List Was Killed By The Parsing Process. It will be skipped in the future. Wed Dec 6 00:20:37 UTC 2017

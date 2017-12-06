@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* EasyList-Lithuania List Unavailable To Download. Wed Dec 6 00:20:39 UTC 2017
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* EasyList-Lithuania List Was An Empty File After Download. Tue Dec 5 01:56:14 UTC 2017
+* EasyList-Lithuania List Was An Empty File After Download. Wed Dec 6 00:20:40 UTC 2017
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* EasyList-Lithuania List Was Killed By The Parsing Process. It will be skipped in the future. Wed Dec 6 00:20:40 UTC 2017
