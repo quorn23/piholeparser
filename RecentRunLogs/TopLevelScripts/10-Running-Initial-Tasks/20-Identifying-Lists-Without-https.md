@@ -8,11 +8,6 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* Airelles-AntiMiscellaneous-Hosts
-* Airelles-AntiSex-Hosts
-* Airelles-AntiTrackers-Hosts
-* Airelles-Malware-Hosts
-* Airelles-Phishing-Hosts
 * Adblock-Filters-by-Gurudee
 * BLOGRAM-Analysis-Block-Filter-List-for-Japan
 * BLOGRAM-Basic-Filter-List-for-Japan

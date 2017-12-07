@@ -1,4 +1,4 @@
-[uBlock Origin 1.14.19.102]
+[uBlock Origin 1.14.21.101]
 ! Title: uBO-Personal-Filters
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
@@ -307,7 +307,7 @@ cdn-cgi/pe/bag2
 @@jwpcdn.com^$font
 wp-adblock-dedect$important
 fuckadblock.js
-readcomics.tv##.main-share
+readcomics.*##.main-share
 quora.com##.footer_alphabet
 quora.com##.ContentPageFeed
 cinemablend.com##.content_story_pages_playwire.partial
@@ -622,7 +622,7 @@ collider.com##.go90--widget
 collider.com##.relevancy-widget
 infinite-newsfeed
 collider.com^$csp=script-src 'self' *.collider.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com
-comicbook.com^$csp=script-src 'self' *.comicbook.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com
+comicbook.com^$csp=script-src 'self' *.comicbook.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com *.vidible.tv
 variety.com###leaderboard
 variety.com##.header-utilities
 variety.com##.subscribe-aside
@@ -939,7 +939,7 @@ readcomics.*##.pager-cnt:nth-of-type(5) > .row:nth-of-type(2) > .col-xs-12
 readcomics.*##.hrule
 readcomics.*##.nav-tabs.nav
 readcomics.*##a[href^="http://getcomics.info"]
-readcomics.*^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval'
+readcomics.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com fonts.gstatic.com
 @@||facebook.com/share/share_now_menu/$xmlhttprequest,domain=facebook.com,badfilter
 @@||facebook.com/share/share_now_menu/$domain=facebook.com,badfilter
 comicbook.com##.aligncenter:has-text(NEXT:)
@@ -1027,5 +1027,11 @@ exoclick.com^$important
 exosrv.com^$important
 facebook.com##[href*="ads"]
 bmovies.*##script:inject(abort-current-inline-script.js, atob, tabunder)
+animenewsnetwork.com##h3:has-text(rate episode)
+animenewsnetwork.com##p:has-text(Crunchyroll)
+@@||google.*/ads/$third-party,image,badfilter
+socialCounts^
+readcomics.*##script:inject(abort-current-inline-script.js, atob, decodeURIComponent)
+readcomics.*##.ads
 
 $third-party,script,domain=kimcartoon.me|comicbook.com|kissanime.ru|kissmanga.com|readcomiconline.to|torrentfreak.com|bulbagarden.net|quora.com|mcuexchange.com|watchfree.to|gsmarena.com|trailer-track.com|onhax.me|cinemablend.com|8muses.com

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Homepage: http://adblock.sk
 ! Title: Easylist Czech and Slovak filter list
-! Last change: 05/12/2017
+! Last change: 06/12/2017
 ! List maintainers: tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy
 ! GitHub repository: https://github.com/tomasko126/easylistczechandslovak
 ! GitHub contributors: https://github.com/tomasko126/easylistczechandslovak/graphs/contributors
@@ -170,6 +170,8 @@ _clickthru.swf?
 ||games.tiscali.cz/img/special/
 ||garaz.autorevue.cz/advantage.js
 ||geewa.ws/js/ad.
+||getAd$domain=idnes.cz
+||hcdukla.cz/adds/
 ||hd-forum.cz/images/banner/
 ||hd-forum.cz/images/sberbank.jpg
 ||heureka.cz/direct/bannery/
@@ -308,7 +310,7 @@ _clickthru.swf?
 ||szn.cz/*v_12/vd$domain=novinky.cz
 ||titulky.com/img/bn
 ||titulky.com/img/frtna2017/$image
-||titulky.com/js/fadb.js
+||titulky.com/js/fadba.js
 ||topkontakt.cz/banner/
 ||tryhard.cz/images/*/*fullbrand*.jpg
 ||uloz.to/bannery/
@@ -850,6 +852,8 @@ cztorrent.net###bnr_header
 cztorrent.net###bnr_middle
 cztorrent.net###hracky
 dama.cz,doupe.zive.cz,maminka.cz###adframe-shell
+denik.cz###denik-top-lista-bg
+denik.cz###sticky-above
 denik.cz##.rkl-top
 diablofans.cz###bottom_fixed_leaderboard
 diit.cz###b468x60 > ins > iframe
@@ -914,6 +918,7 @@ grunex.com##.banner-nbg-page
 grunex.com##.bg-linkA
 grunex.com##.bg-linkB
 grunex.com##.sda-system
+hcmotor.cz##div.container.partners
 hcplzen.cz###ads_top_box
 heureka.cz###banner-leaderboard
 heureka.cz###bottom
@@ -1087,8 +1092,7 @@ novinky.cz###head + #main + div:not(#footer)
 novinky.cz###komercni
 novinky.cz###menuBottom + div:not(#footer)
 novinky.cz###middleLdrBox
-novinky.cz###page > div:first-child > div:first-child:not(#head)
-novinky.cz###page iframe
+novinky.cz###page
 novinky.cz###rightBottColumn > hr:first-child + div:not(#jokeBox)
 novinky.cz###rightColumn
 novinky.cz###sectionBox + div
@@ -1229,7 +1233,7 @@ tipcars.com###loading
 tipcars.com##iframe[id*="TC"]
 tiscali.cz##.box-offer
 titulky.com###bnx300x300
-titulky.com###cboxOverlay
+titulky.com###cboxOverl
 titulky.com##A[onclick^="openAd"]
 tn.nova.cz##.right_box_promo_articles
 toggl.com##.AnnouncementBar__maximized.boxes__floating.AnnouncementBar__container
@@ -1431,4 +1435,4 @@ novinky.cz#?#div:-abp-has(> div.performax-logo)
 novinky.cz#?#div:-abp-has(> h1.packa)
 novinky.cz#?#div:-abp-has(> iframe[src*="mookie1.com"])
 novinky.cz#?#div:-abp-has(> script + h5[style*="position"])
-titulky.com#?##cboxWrapper:-abp-has(a#btn-close-adba)
+titulky.com#?##cboxWrapper:-abp-has(img[src="img/adbimg.png"])
