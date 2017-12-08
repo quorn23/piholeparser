@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: i/RGxrwPZKuKEl8WY1PjFA
-! Version: 201712070020
+! Checksum: TAXuqePBHXtKKxeIZfUtww
+! Version: 201712080020
 ! Title: RU AdList: BitBlock
-! Last modified: 07 Dec 2017 00:20 UTC
+! Last modified: 08 Dec 2017 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -529,6 +529,7 @@ radojuva.com.ua##.post-bodycopy > .bottomcontainerBox
 lifehacker.ru##.post-fake-social
 kino-dom.org##.post-like
 cassad.net##.post_sharing
+mediananny.com##.post_socials
 winreview.ru##.postmeta + noindex
 fanserials.tv##.promo-vk
 peka2.tv##.publication-shares_flex
@@ -680,6 +681,7 @@ tvfru.org##[onclick^="return uSocialLogin"]
 audioknigi.club##[title="Telegram @aknigiclub"]
 planetanovosti.com##[title="Vkontakte"]
 kommersant.ru##a[href][title="Поделиться"]
+app2top.ru##a[href^="https://t.me/"]
 toptracker.ru##a[onclick^="content_share"]
 qiq.ws##a[onclick^="return addSoc"]
 aimp.ru#?#b:-abp-contains(Присоединяйтесь к нам)
@@ -1149,7 +1151,7 @@ _userbar_$image
 ||puzyaka.ru/ub/
 ||qip.ru/images/sign/
 ||raptr.com/badge/
-||relap.io^$third-party,domain=~adme.ru|~comedyportal.me|~drive2.com|~drive2.ru|~fototips.ru|~inmyroom.ru|~izvestia.ru|~life.ru|~politexpert.net|~ria.ru|~znak.com
+||relap.io^$third-party,domain=~adme.ru|~comedyportal.me|~comedyportal1.xyz|~drive2.com|~drive2.ru|~fototips.ru|~inmyroom.ru|~izvestia.ru|~life.ru|~politexpert.net|~ria.ru|~znak.com
 ||rolki.ru/project/ubars/
 ||rostovmama.ru/components/com_line/
 ||ruler.autoserv.ru^
@@ -1463,6 +1465,7 @@ youtube.com###movie_player .html5-stop-propagation
 youtube.com###movie_player .ytp-cards-teaser
 youtube.com###movie_player .ytp-ce-element
 stulchik.net###myModal
+myfin.by###myfin_menu .left_bt
 4pda.ru###nav > ul a[href*="promo"]
 ihavebook.org###navbar-donate
 kinosvit.tv###news-partner
@@ -1515,7 +1518,7 @@ fox-fan.ru###shopVip
 good73.net###shoutbox
 xn--80acvefn6a4c.xn--p1ai,нашбийск.рф###sidebar > .theiaStickySidebar
 tapochek.net###sidebar1
-comedyportal.me###sidebar_r
+comedyportal.me,comedyportal1.xyz###sidebar_r
 mediananny.com###sideroll
 wikipedia.org###siteNotice
 womanadvice.ru###slideInUp
@@ -2101,7 +2104,9 @@ old.kurs.com.ua#@#.arrow_up
 kakprosto.ru#@#.article-social
 drive.ru#@#.article-social-container
 lenta.ru#@#.b-socials
+lenta.ru#@#.b-topic__socials
 change.org#@#.btn-fb
+app2top.ru#@#.btn-social
 lg.com#@#.cookie-check
 samsung.com#@#.cookie-notice
 samsung.com#@#.cookie-warning
@@ -2111,7 +2116,7 @@ change.org#@#.facebook-btn
 app.tbn.ru,geektimes.ru,habrahabr.ru,livejournal.com#@#.fb_iframe_widget
 joblib.ru#@#.feedback-button
 store.steampowered.com#@#.follow_btn
-ekabu.ru,tjournal.ru#@#.icon-facebook
+app2top.ru,ekabu.ru,tjournal.ru#@#.icon-facebook
 nnm2.com#@#.icon-facebook-official
 ekabu.ru,nnm2.com,rghost.ru#@#.icon-google
 tjournal.ru#@#.icon-gp
@@ -2120,6 +2125,7 @@ tjournal.ru#@#.icon-rss
 tjournal.ru#@#.icon-share
 tjournal.ru#@#.icon-tw
 ekabu.ru#@#.icon-twitter
+app2top.ru#@#.icon-vk
 nnm2.com#@#.icon-vkontakte
 bloknot-kamyshin.ru,bloknot-krasnodar.ru,bloknot-krasnoyarsk.ru,bloknot-lipetsk.ru,bloknot-moldova.md,bloknot-morozovsk.ru,bloknot-novocherkassk.ru,bloknot-rostov.ru,bloknot-shakhty.ru,bloknot-stavropol.ru,bloknot-taganrog.ru,bloknot-urupinsk.ru,bloknot-volgodonsk.ru,bloknot-volgograd.ru,bloknot-volzhsky.ru,bloknot-voronezh.ru,bloknot-yakutsk.ru,bloknot.ru,fotki.yandex.ru,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua#@#.icon_share
 fotki.yandex.ru#@#.js-share
@@ -6133,6 +6139,7 @@ _youtube_social_
 ###sharepost
 ###sharepost_willsong
 ###sharer
+###sharer-toggle
 ###sharerBar
 ###sharereceiver
 ###sharestrip
@@ -7765,6 +7772,7 @@ _youtube_social_
 ##.c-poll-share__text
 ##.c-share
 ##.c-sharefixed
+##.c-sharing--menu
 ##.c-social
 ##.c-social-box
 ##.c-social-share
@@ -8046,6 +8054,7 @@ _youtube_social_
 ##.element-sharethis
 ##.element-socialbookmarks
 ##.element-socials
+##.email-share
 ##.email-sharetool
 ##.end-social
 ##.entity-share-container__block--share
@@ -9161,6 +9170,7 @@ _youtube_social_
 ##.i-facebook
 ##.i-footer-social-links
 ##.i-googleplus
+##.i-linkedin
 ##.i-pinterest
 ##.i-share_overlay
 ##.i-social
@@ -17776,6 +17786,7 @@ _site_cookie_
 ###townside-cookiebar-outer
 ###trackCookieBar
 ###trackingCookie
+###trigCookie
 ###truste-banner
 ###ts_cookie_info
 ###tscookiebar
@@ -17885,6 +17896,7 @@ _site_cookie_
 ##.Navbar-cookieCompliance
 ##.O-CookieLaw
 ##.Page-cookies
+##.PartialCookieCompliance-hp
 ##.PortletGestionDesCookiesCNIL
 ##.PrivacyPolicyNotice
 ##.SLNotificationBar
@@ -19094,6 +19106,7 @@ _site_cookie_
 ##.btn-goto-top
 ##.btn-return-top
 ##.btn2top
+##.btnBackTop
 ##.btn_gototop
 ##.cScrollIndicatorContainer
 ##.dc-go-top
@@ -19105,6 +19118,7 @@ _site_cookie_
 ##.footer-backtotop
 ##.footer-button-top
 ##.footer-top-of-page
+##.footer__go-to-top
 ##.generate-back-to-top
 ##.glyphicon-arrow-up
 ##.go-to-top
@@ -19143,6 +19157,7 @@ _site_cookie_
 ##.scrollTop
 ##.scroll_top
 ##.scrolltop
+##.site-scroll-top
 ##.td-scroll-up
 ##.tm-totop-scroller
 ##.to-the-top
