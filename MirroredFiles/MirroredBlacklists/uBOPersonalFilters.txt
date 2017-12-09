@@ -474,7 +474,6 @@ thefappening.*###id-vidgeta-primary
 bmovies.*,9anime.*##center
 9anime.*##.a_d
 pornhub.com##.adlink2
-kissanime.*###adsIfrme7
 kissasian.com/*.aspx
 pornhub.com##script:inject(abort-on-property-read.js, open)
 @@twimg.com^$image,stylesheet
@@ -790,7 +789,7 @@ wikia.com##.article-video
 @@||googletagmanager.com/gtm.js?$domain=airasia.com|bhaskar.com|broadcom.com|computerworlduk.com|desigual.com|drumstick.com|ebuyer.com|elevationscu.com|gamepix.com|git-tower.com|google.com|itv.com|jobs.net|keygames.com|magicjack.com|moviefone.com|nestio.com|newsy.com|optus.com.au|rebtel.com|rockstargames.com|rollingstone.com|rozetka.com.ua|sixflags.com|support.amd.com|talktalk.co.uk|techradar.com|toto.co.jp|usmagazine.com,badfilter
 wibbitz.com^
 thewrap.com###mobile-sticky-bottom
-thewrap.com^$csp=script-src 'self' 'unsafe-inline' platform.twitter.com *.twimg.com platform.instagram.com *.thewrap.com *.jwpcdn.com
+thewrap.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' platform.twitter.com *.twimg.com platform.instagram.com *.thewrap.com *.jwpcdn.com
 forbes.com##.trending-expanded
 forbes.com##.circ-link
 forbes.com##.top-ad-container
@@ -1021,7 +1020,7 @@ wikia.com##.featured-video__wrapper
 @@||google.com/adsense/start/images/favicon.ico$badfilter
 @@||s.206ads.com/core.js$domain=androidauthority.com,badfilter
 rapidvideo.com##script:inject(addEventListener-defuser.js, load, ga)
-kissanime.*###adsIfrme8
+kissanime.*##.bigBarContainer div[id^="adsIfrme"]
 @@||exoclick.com/ad_track.js$badfilter
 exoclick.com^$important
 exosrv.com^$important
