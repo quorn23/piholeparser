@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201712090011
+! Version: 201712092223
 ! Title: EasyPrivacy
-! Last modified: 09 Dec 2017 00:11 UTC
+! Last modified: 09 Dec 2017 22:23 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -30,6 +30,7 @@
 -analitycs/metrica.
 -analytics-tagserver-
 -analytics/insight.
+-appanalytics-
 -asset-tag.
 -audience-science-pixel/
 -baynote.
@@ -671,6 +672,7 @@
 /beacon/vtn_loader.gif?
 /beacon?
 /beacon_async.
+/beacon_img?
 /beaconconfigs/*
 /beaconimg.php?
 /beacons?data=
@@ -1189,6 +1191,7 @@
 /event/rumdata?
 /event?&event=
 /event?auditLinkReceived=
+/event?eventType=
 /event?pmo=
 /event?stat_
 /event?t=*&__seed=
@@ -2276,6 +2279,7 @@
 /prum.
 /pstats.
 /pt.gif?type=
+/ptmd?t=
 /ptrack.
 /pub/as?_ri_=$image
 /pubimppixel/*
@@ -4470,6 +4474,7 @@ _mongo_stats/
 ||globase.com^$third-party
 ||globel.co.uk^$third-party
 ||globetrackr.com^$third-party
+||gnpge.com^$third-party
 ||go-mpulse.net^$third-party
 ||goaltraffic.com^$third-party
 ||godhat.com^$third-party
@@ -5624,6 +5629,7 @@ _mongo_stats/
 ||triggeredmessaging.com^$third-party
 ||triggertag.gorillanation.com^$third-party
 ||triggit.com^$third-party
+||triptease.io^$third-party
 ||trkjmp.com^$third-party
 ||trkn.us^$third-party
 ||trksrv44.com^$third-party
@@ -5869,6 +5875,20 @@ _mongo_stats/
 ||zroitracker.com^$third-party
 ||ztsrv.com^$third-party
 ! Mining
+.space^$third-party,websocket
+.space^*.wasm$third-party
+|http://api.*/lib/native.wasm$third-party
+|https://api.*/lib/native.wasm$third-party
+||1beb2a44.space^$third-party
+||300ca0d0.space^$third-party
+||310ca263.space^$third-party
+||320ca3f6.space^$third-party
+||330ca589.space^$third-party
+||340ca71c.space^$third-party
+||360caa42.space^$third-party
+||370cabd5.space^$third-party
+||3c0cb3b4.space^$third-party
+||3d0cb547.space^$third-party
 ||77.162.125.199^$third-party
 ||ad-miner.com^$third-party
 ||adminer.com^$third-party
@@ -5909,6 +5929,8 @@ _mongo_stats/
 ||listat.biz^$third-party
 ||lmodr.biz^$third-party
 ||mataharirama.xyz^$third-party
+||megabanners.cf^$third-party
+||megabanners.cf^$websocket
 ||minecrunch.co^$third-party
 ||minemytraffic.com^$third-party
 ||miner.pr0gramm.com^$third-party
@@ -6901,6 +6923,7 @@ _mongo_stats/
 ||akamai.net/chartbeat.
 ||akamai.net^*/a.visualrevenue.com/
 ||akamai.net^*/sitetracking/
+||akamaihd.net/javascripts/browserfp.
 ||akamaihd.net/push.gif?
 ||akamaihd.net^*.gif?d=
 ||akanoo.com/tracker/
@@ -8111,6 +8134,7 @@ _mongo_stats/
 ||px.reactrmod.com^
 ||px.spiceworks.com^
 ||px.topspin.net^
+||pxlgnpgecom-a.akamaihd.net^
 ||qlog.adap.tv^$object-subrequest
 ||qos.video.yimg.com^
 ||qq.com/heatmap/
@@ -9615,6 +9639,7 @@ _mongo_stats/
 ||atracktive.collegehumor.com^
 ||att.com/csct.gif?
 ||attachmate.com*/pv.aspx?
+||audible.*/uedata?
 ||audible.com^*/uedata/
 ||audit.macworld.co.uk^
 ||audit.pcadvisor.co.uk^
@@ -13082,7 +13107,7 @@ _mongo_stats/
 @@||mightyspring.com/static/js/beacon.js?$~third-party
 @@||milb.com/shared/scripts/bam.tracking.js
 @@||mixpanel.com/site_media/js/api/mixpanel.js$domain=blog.cloudflare.com
-@@||mixpanel.com/track/?data=$xmlhttprequest,domain=ads.twitter.com|change.org|greentoe.com|kickstarter.com|mint.com|nbc.com|thefrisky.com|vid.me
+@@||mixpanel.com/track/?data=$xmlhttprequest,domain=ads.twitter.com|change.org|greentoe.com|kickstarter.com|mint.com|nbc.com|thefrisky.com
 @@||mlb.com/b/ss/$image
 @@||mlb.com/scripts/stats/app/$script
 @@||mlb.com/shared/scripts/bam.tracking.js
@@ -13750,4 +13775,4 @@ _mongo_stats/
 @@||uaprom.net/image/blank.gif?$image
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: pnG525GKVCcnoRzO0cmszA
+! Checksum: 7VvuYAXH7UR9Q8WqhT7W6A
