@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: 2TXZ/Pk34qzGpAwBpAbA1Q
-! Version: 201712100021
+! Checksum: oVRfnsqA8Ybol+ae4f0Wsw
+! Version: 201712110021
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -111,6 +111,7 @@
 -728v90.
 -728x150-$subdocument
 -730x90.
+-866x120-$image
 -90x600-
 -90x728_
 -ad-bar/
@@ -1131,6 +1132,7 @@
 /nginad.
 /nmads_caf_
 /no-banner-$image
+/noblock.js
 /npop.js|
 /nugg.ad.
 /nugg.add.
@@ -2748,6 +2750,7 @@ debugger:$popup
 ||cavixoapp.com^$third-party
 ||cbshift.com^$third-party
 ||cclpub.com^$third-party
+||cdmedia.win^$third-party
 ||cdn.fail^$third-party
 ||cdn.nextperf.net^$third-party
 ||cdn.savage.nu^$third-party
@@ -3282,6 +3285,7 @@ debugger:$popup
 ||no-adblock.com^$third-party
 ||no-hide.com^$third-party
 ||noadirect.com^$third-party
+||noblock.pro^$third-party
 ||nols-pub.fr^$third-party
 ||non.li^$third-party
 ||nosyezhe.com^$third-party
@@ -5396,6 +5400,9 @@ debugger:$popup
 /web/miner.js
 /xminer.js
 /xminer.min.js
+/XMR-monero.js
+://*.space:8443/|$third-party,websocket
+://api.*.space/lib/native.wasm$third-party
 ||77.162.125.199^$third-party
 ||ad-miner.com^$third-party
 ||adminer.com^$third-party
@@ -5452,6 +5459,7 @@ debugger:$popup
 ||monerominer.rocks^$third-party
 ||moneroocean.stream^$third-party
 ||now.sh/*.wasm$third-party
+||openkatalog.com^$subdocument,~third-party
 ||papoto.com^$third-party
 ||podrltid.info^$third-party
 ||ppoi.org^$third-party
@@ -7716,6 +7724,7 @@ $subdocument,domain=manga-streaming.fr|mangastreaming.fr|mangastreaming.me
 @@||www.hdmyt.info/channel.php?file=$script,domain=beinsport-streaming.club|beinsport-streaming.com|beinsport-streaming.info|direct-foot.info|foot-live.info|footstream.tv|streaming-foot.club|streaming-foot.xyz|streaming-football.org|tous-sports.tv
 @@||www.hdmyt.info/player.php?file=$subdocument,domain=beinsport-streaming.club|beinsport-streaming.com|beinsport-streaming.info|direct-foot.info|foot-live.info|footstream.tv|streaming-foot.club|streaming-foot.xyz|streaming-football.org|tous-sports.tv
 @@||www.hdmyt.info/player.php?file=$subdocument,third-party,domain=beinsport-streaming.club|beinsport-streaming.com|beinsport-streaming.info|direct-foot.info|foot-live.info|footstream.tv|streaming-foot.club|streaming-foot.xyz|streaming-football.org|tous-sports.tv
+@@||www.streaming-foot.xyz/lecteur.php?id=$subdocument,third-party,domain=beinsport-streaming.club|beinsport-streaming.com|beinsport-streaming.info|direct-foot.info|foot-live.info|footstream.tv|streaming-foot.club|streaming-foot.xyz|streaming-football.org|tous-sports.tv
 |http://$image,popup,script,stylesheet,subdocument,third-party,xmlhttprequest,domain=beinsport-streaming.club|beinsport-streaming.com|beinsport-streaming.info|direct-foot.info|foot-live.info|footstream.tv|streaming-foot.club|streaming-foot.xyz|streaming-football.org|tous-sports.tv
 |https://$image,popup,script,stylesheet,subdocument,third-party,xmlhttprequest,domain=beinsport-streaming.club|beinsport-streaming.com|beinsport-streaming.info|direct-foot.info|foot-live.info|footstream.tv|streaming-foot.club|streaming-foot.xyz|streaming-football.org|tous-sports.tv
 ||beinsport-streaming.club^$subdocument,third-party
@@ -12125,8 +12134,12 @@ $popup,domain=0zz0.com|35.184.169.188|adf.ly|adshort.co|adshort.me|allanalpass.c
 ##.publicite_3
 ##.publicite_droite
 ##.publicite_gauche
+##.publicite_horizontale_well
+##.publicite_horizontale_wrapper
 ##.publicite_locale
+##.publicite_mobile_cache
 ##.publicite_r
+##.publicite_sidebar
 ##.publicite_sous_slider
 ##.publicite_text
 ##.publiciteac
@@ -14063,7 +14076,7 @@ voirfilms.ws##[id^="mp3"]
 planet-series.co##[id^="news-id-"] a > [style]
 agate-france.com##[id^="pbad_"]
 gamovideo.com##[id^="pu-"][style]
-dsih.fr,mylink.st##[id^="pub"]
+dsih.fr##[id^="pub"]
 jeuxvideomoinschers.fr,tahiti-infos.com##[id^="pub_"]
 movietube.live##[id^="video"] a
 filecrypt.cc##[onclick] img
@@ -14336,6 +14349,7 @@ loractu.fr##div.landing
 net-iris.fr##div[class$="promo-container"]
 booska-p.com##div[class][style^="background"]
 la-tendinite.fr##div[class^="snp-"]
+algeriepatriotique.com##div[class^="spu-"]
 msn.com##div[data-aop="stripe.autos.ad_ad"]
 msn.com##div[data-aop="stripe.health.ad_ad"]
 msn.com##div[data-aop^="stripe.shopping"]
@@ -14888,7 +14902,7 @@ _blockadblock_
 !
 @@.gif#$image,domain=sos-lettre.fr
 @@.jpg#$image,domain=4downfiles.org|alligatographe.blogspot.fr|dpstream.cc|lethal-weapon-streaming.eu|macgames-download.com|the-night-of-streaming.eu
-@@.png#$image,domain=4downfiles.org|dl-protecte.com|dl-protecte.org|dpstream.cc|ebookdz.com|leetgamerz.net|likeup.fr|mylink.st|planet-series.co|protect-lien.com|protect-zt.com|protecte-link.com|pxstream.tv|radio-en-direct.fr|savefile.co|security-links.com|softmaroc.org|stream4free.top|tout-debrid.net|tout-gratuit.be|up-4ever.com|zone-torrent.net
+@@.png#$image,domain=4downfiles.org|dl-protecte.com|dl-protecte.org|dpstream.cc|ebookdz.com|leetgamerz.net|likeup.fr|planet-series.co|protect-lien.com|protect-zt.com|protecte-link.com|pxstream.tv|radio-en-direct.fr|savefile.co|security-links.com|softmaroc.org|stream4free.top|tout-debrid.net|tout-gratuit.be|up-4ever.com|zone-torrent.net
 @@/adblock.js$script,domain=jeuxvideo.com|streaming-foot.me
 @@/adblock.js$script,~third-party,domain=jdubuzz.com|journaldugamer.com|journaldugeek.com|pixelistes.com
 @@/advertisement.js$script,domain=cdnfiles.e-wok.tv|chats-perdus.net|chiens-perdus.net|chine-informations.com|concours-du-net.com|debridnet.com|dramapassion.com|easybillets.com|evilox.com|files.newsnetz.ch|freets3.ovh|funeralforamanga.fr|gamersconnexion.com|jeux.fr|kelbillet.com|kpopfm.fr|maghrebspace.net|mega-exclue.com|streaming-french-dvdrip.com|streamwatching.fr|turfomania.fr|tuto4you.fr|undernews.fr|videozix.com|zonebourse.com
@@ -15002,7 +15016,6 @@ _blockadblock_
 @@||ls-streaming.com^$generichide
 @@||macgames-download.com^$generichide
 @@||mobinozer.com^$generichide
-@@||mylink.st^$generichide
 @@||onvasortir.com^$generichide
 @@||papystreaming-film.com^$generichide
 @@||partage-facile.com^$generichide
