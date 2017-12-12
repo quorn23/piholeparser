@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: NWl+/bX46gmU4kbbgfM6Qg
-! Version: 201712110020
+! Checksum: rM7f51FHUDLD/wLUdzoEzQ
+! Version: 201712120020
 ! Title: RU AdList: BitBlock
-! Last modified: 11 Dec 2017 00:20 UTC
+! Last modified: 12 Dec 2017 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -339,7 +339,7 @@ study.ru###tabs_soc_wrap
 evtifeev.com###text-14
 navkolokino.com###the_share
 track24.ru###trackingFormShare
-lookszone.ru###tt_social
+free-max.ru,lookszone.ru###tt_social
 klipzona.co###uSocial
 via-midgard.info###viiFaveBlock
 factorio.su,topmmo-games.ru###vk-comments
@@ -580,6 +580,7 @@ webkarapuz.ru##.soc-group-wrap
 brovary.net.ua##.soc-ico
 lifenews.ru,lifenews78.ru##.soc-likes
 championat.com##.soc-plugin
+dnepr.info##.soc-tabs-js
 intvua.com##.soc_block
 zbroya.info##.soc_buttons
 aif.ru##.soc_wid.clearfix
@@ -1604,6 +1605,7 @@ banki.ua##.b-fb-popup
 bigmir.net##.b-informer-social
 gagadget.com##.b-magicblock
 temaretik.com##.b-modal-aligner
+unn.com.ua##.b-notice-msg
 dirty.ru##.b-partner_material_container
 allsoft.ru##.b-popup-overlay_subscription
 vc.ru##.b-push-subscribe-wrapper
@@ -1881,7 +1883,9 @@ stranamam.ru##body > #rukodelie-wrapper
 kinovideo.tv##body > #text > table[width="100%"]
 rambler.ru##body > .b_promo
 live-rutor.org##body > .collapse
+unn.com.ua##body > .fancybox-opened
 securitylab.ru##body > .fancybox-overlay
+unn.com.ua##body > .fancybox-overlay:not(.fancybox-overlay-fixed)
 rbc.ru##body > .js-project-event
 megaserial.net##body > .lenta
 ntv.ru##body > .outtop
@@ -2271,6 +2275,7 @@ kinokong.cc#@#.yashare-auto-init
 @@||twitter.com/widgets.js|$domain=slon.ru
 @@||ucoz.net/src/social3.css$stylesheet,domain=wikimovies.ru
 @@||underverse.*/min/index.php*/js/share42.js$script,domain=underverse.me|underverse.su
+@@||unn.com.ua/images/social/*.gif$domain=unn.com.ua
 @@||vgtimes.ru/img/gplus.png|
 @@||via-midgard.info/min/?$domain=via-midgard.info
 @@||vk.com/images/btns.png$domain=app.tbn.ru
@@ -7330,6 +7335,7 @@ _youtube_social_
 ##.apsc-facebook-icon
 ##.apsc-icons-wrapper
 ##.apsc-twitter-icon
+##.apss-social-share
 ##.arq-lite-facebook
 ##.arq-lite-instagram
 ##.arq-lite-twitter
@@ -7698,6 +7704,7 @@ _youtube_social_
 ##.box-twitter-script
 ##.box1__footer-share-box
 ##.boxSocial
+##.box_ShareContent
 ##.box_social
 ##.boxsociale
 ##.bpro-social
@@ -8861,7 +8868,9 @@ _youtube_social_
 ##.footer-social-widgets
 ##.footer-social-wrap
 ##.footer-social__components
+##.footer-socialmedia
 ##.footer-socialmedia-share
+##.footer-socialmediaIcon
 ##.footer-socials
 ##.footer-tumblr
 ##.footer-tw
@@ -12019,6 +12028,7 @@ _youtube_social_
 ##.social-sharer
 ##.social-sharer-holder
 ##.social-shares
+##.social-sharethis-post
 ##.social-sharing
 ##.social-sharing-bar__li
 ##.social-sharing-bot
@@ -12304,6 +12314,7 @@ _youtube_social_
 ##.social_connect
 ##.social_container
 ##.social_containerx
+##.social_count
 ##.social_counts
 ##.social_digg
 ##.social_div
@@ -13541,6 +13552,7 @@ _youtube_social_
 ##.zocial-youtube
 ##.zss-follow-us
 ##AS24-SHARE-MENU
+##SHARE-BUTTON
 ##[alt="retweet"]
 ##[class^="social_button_"]
 ##[data-pin-href^="https://www.pinterest.com/pin/create/"]
@@ -13628,7 +13640,7 @@ _youtube_social_
 ##a[href^="http://bookmark.naver.com/post?ns="]
 ##a[href^="http://csp.cyworld.com/bi/bi_recommend_pop.php?url="]
 ##a[href^="http://del.icio.us/post?url="]
-##a[href^="http://digg.com/submit?url="]
+##a[href^="http://digg.com/submit?"]
 ##a[href^="http://facebook.com/sharer.php?"]
 ##a[href^="http://linkedin.com/shareArticle?"]
 ##a[href^="http://me2day.net/posts/new?new_post[body]="]
@@ -14492,6 +14504,7 @@ _youtube_social_
 /urban-airship-
 /w/index.php?title=*:bannercontroller
 /wp-content/plugins/popover/*$script
+/wp-content/plugins/rating-widget/*
 /wp-content/plugins/tab-slide/*
 /wp-content/plugins/thrive-leads/*$script
 /wp-content/plugins/vto_plus/*
@@ -19963,6 +19976,7 @@ _site_cookie_
 ||quote.fm/services/button/$third-party
 ||r42tag.com^$third-party
 ||rankdirectory.org^$third-party
+||rating-widget.com^$third-party
 ||readability.com/embed.js$third-party
 ||recommendedbookies.co.uk^$third-party
 ||reevoo.com^$third-party
@@ -20429,6 +20443,7 @@ thenewamerican.com#@#.itemSocialSharing
 sap.com#@#.j-social-actions
 sap.com#@#.j-social-button
 nbcnews.com#@#.js-share
+alternativeto.net#@#.like-box
 facebook.com,forum.albiononline.com#@#.likeButton
 modworkshop.net#@#.like_button
 linkedin.com,peerlyst.com#@#.linkedin.icon

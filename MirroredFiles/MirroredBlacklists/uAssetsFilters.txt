@@ -2907,3 +2907,44 @@ adlinkme.com##script:inject(abort-on-property-read.js, app_vars.force_disable_ad
 ! https://github.com/uBlockOrigin/uAssets/issues/965
 curs.io##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 curs.io##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/966
+mcfucker.com##script:inject(abort-on-property-write.js, t4PP)
+sponsor=$domain=mcfucker.com
+mcfucker.com##.vadv
+mcfucker.com##.c2p
+
+! https://github.com/uBlockOrigin/uAssets/issues/973
+imgprime.com##script:inject(abort-on-property-read.js, ExoLoader)
+||imgprime.com/*.php$script
+
+! https://github.com/uBlockOrigin/uAssets/issues/969
+imgshots.com##script:inject(popads.net.js)
+imgshots.com###introOverlayBg
+
+! https://github.com/uBlockOrigin/uAssets/issues/970
+xxxhost.me##script:inject(abort-current-inline-script.js, puShown , /doOpen|popundr/)
+
+! https://github.com/uBlockOrigin/uAssets/issues/971
+imgsin.com###overlayBg
+imgsin.com##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/972
+imagefruit.com##script:inject(popads.net.js)
+imagefruit.com###introOverlayBg
+
+! https://github.com/uBlockOrigin/uAssets/issues/968
+porn.com##script:inject(window.open-defuser.js)
+||porn.com/*system/*.gif
+porn.com##[class$=-zone]
+porn.com##.itemw.item
+
+! https://adblockplus.org/forum/viewtopic.php?f=10&t=54692
+serial49.com##script:inject(noeval.js)
+@@||serial49.com^$generichide
+
+! https://github.com/gorhill/uBlock/issues/3338
+7starhd.info##script:inject(abort-on-property-write.js, _pop)
+bdupload.info##script:inject(abort-current-inline-script.js, atob, tabunder)
+bdupload.info##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+bdupload.info##script:inject(abort-on-property-write.js, Fingerprint2)

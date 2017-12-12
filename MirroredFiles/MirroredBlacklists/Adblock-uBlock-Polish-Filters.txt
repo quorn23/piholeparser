@@ -4,15 +4,15 @@
 ! Collaborators: Adam W, Dominik, Wiesiek, Robert, Marek, buuuuuuu190, Caleb, Ryszard, Kruk, Weronika, Adam, xxcriticxx, maxoku, F4z, mathew85, Piter432, Adam K, Piotr S, Szymon D, Marek R, adreporter, kacper93, FadeMind, kerbenii, gzenio22, blocker999, FX54, hawkeye116477, gwarser, mat41997 
 ! Homepage: https://www.certyficate.it/
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika 
-! Last modified: 10 December 2017
+! Last modified: 11 December 2017
 ! Expires: 2 days
-! Version: 2017120107
+! Version: 2017121104
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/polski-filtr-adblock/
-! v.2017120107 aktualizacja: nie, 10 grudnia 2017, 14:45:00
+! v.2017121104 aktualizacja: pon, 11 grudnia 2017, 22:20:00
 !
 !
 !-----------------------General advert blocking filters-----------------------!
@@ -562,7 +562,7 @@ dobreprogramy.pl##div[id="slide-menu"] > a[id][href="#"]
 dobreprogramy.pl##a[href*="campaign=baner"]
 dobreprogramy.pl###divPoweredBy
 dobreprogramy.pl##body > *:matches-css(background-image: /data:image\/(gif|jpg|jpeg|png);base64,/):matches-css(position:fixed)
-dobreprogramy.pl##script:inject(abort-current-inline-script.js, document.onreadystatechange, document.body.insertBefore)
+!dobreprogramy.pl##script:inject(abort-current-inline-script.js, document.onreadystatechange, document.body.insertBefore)
 dodajzdjecie.funfootball.pl##.wp-image-9996
 dogry.pl##.pro-box
 dojrzalakobieta.pl###slider-with
@@ -730,7 +730,7 @@ frazpc.pl###imgnetshare
 fronda.pl###ecoeconomy
 fronda.pl##.small-info
 fronda.pl##.selfpromotion-ticker.pull-left
-futbol.pl,tylkonauka.pl##[id^="block-block-"]
+futbol.pl,tylkonauka.pl,zmianynaziemi.pl##[id^="block-block-"]
 futbol.pl##DIV[onmousedown="window.location.href='http://creativetravel.pl'"]
 gadzetomania.pl###exit-intent-modal
 gadzetomania.pl##.top-box--sponsored
@@ -1405,9 +1405,10 @@ portalplock.pl###fixme
 portalsremski.pl##div[class^="ban"]
 portaltatrzanski.com##.promo-baner
 postawnaswoim.pl,forum.tweaks.pl,androidhacksgames.com,mobilegameshack4u.com,zarabiam.com,solarkurier.pl,miniskrypt.hubaiitv.pl,swirtv.czo.pl,pewnapozyczka.pl,precyl.com,przeklej.org,club4you.pl,darmowetv.pl,forum.vwgolf.pl,szuman.eu,audiostereo.pl,ogloszenia.gazeta.ie,mods-kodi.pl,legio24.pl,sdcv.pl,jajamioasfalt.pl,dostawcy-internetu.pl,forum.bukmacherskie.com,nasze.fm,lovekrakow.pl,mh24.pl,faktykonopne.pl,lajfy.com,disco-polo.info,pokemon-go.pl,gazeta-wiesci.pl,polskaniepodlegla.pl,lpg-forum.pl,kuszotv.pl,meczelive.tv,tablety.pl,polskatimes.pl,gazetakrakowska.pl##center
-portel.pl##.divBaXLp
-portel.pl###klikLink
-portel.pl##.divB5
+portel.pl###klik_Link
+portel.pl##.div_BaXLpm
+portel.pl##.div_BaLp
+portel.pl##.div_BaXS
 pozytywniej.pl###advL
 ppe.pl###header > .clearfix.header_bg > a[href="http://www.ppe.pl/psx_extreme-2015-4.html"] > img[alt="PSX Extreme 212"]
 ppe.pl##.convertiser_comparison
@@ -2904,7 +2905,7 @@ wp.pl##body > div:nth-of-type(1)[style^="display: block;"]
 /^(http|https):\/\/[a-zA-Z.]{8,}\.(com|bid|info)\/[a-zA-Z]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|vidlox.tv|playerbox.net|alltube.tv|segos.es|efilmy.online|video.penny.ie|fileone.tv|serialeonline.pl|fili.tv|streamango.com|kinoline.pl|cda-hd.pl|nasze-kino.online|vidto.pl|raptu.com|rapidvideo.com|data-scheme|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|dragon-ball-super.ga|openkatalog.ml|dragon-ball-super.ga|nasze-kino.tv|kino123.pl|boxfilm.pl|cloudupload.co|allonline.pl|openload.co|cda-x.pl|dekoder.ws|abcast.net|darmowa-tv.pl|veecast.net|abcast.net|a-o.ninja|castto.me
 /^http:\/\/[a-zA-Z0-9]{10,}\.cloudfront\.net\/[a-zA-Z0-9%?=]{10,}/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|alltube.tv|darmowa-telewizja.info|goldvod.tv|darmowa-tv.pl
 /^(http|https):\/\/[a-z0-9]{8,30}\.[a-z]{2,11}\/[0-9]{3,10}/$xmlhttprequest,script,stylesheet,domain=streamin.to|raptu.com|flashx.tv|rapidvideo.com|fili.tv|cda-hd.pl|fileone.tv|animezone.pl
-/^(http|https):\/\/[a-z0-9]{5,}\.com\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{5,}\.js/$script,domain=vidto.me|fili.tv|fileone.tv|alltube.tv|srkcast.com|vidfile.net
+/^(http|https):\/\/[a-z0-9]{5,}\.com\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{5,}\.js/$script,domain=vidto.me|fili.tv|fileone.tv|alltube.tv|srkcast.com|vidfile.net|a-o.ninja
 /^http:\/\/[a-zA-Z0-9]{8,20}\.com\/analytics\/[0-9]{5,7}/$subdocument,script,popup
 /^(http|https):\/\/[a-z0-9]{5,}\.top\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{5,}\.js/$script
 /^(http|https):\/\/[a-zA-Z0-9.]{7,15}\.(com|net)\/[a-z]{3,5}\/[0-9]{5,8}/$subdocument,script,popup,domain=cda-hd.pl
@@ -3164,6 +3165,7 @@ zdrowyportal.org###text-8
 !
 !
 !--------------------------Bitcoin ------------!
-||openkatalog.com/*static*/$subdocument
+||subloader.cf/$subdocument
 ||coin-hive.com/lib/coinhive.min.js$script
 ||coinhive.com^
+||megabanners.cf^$third-party
