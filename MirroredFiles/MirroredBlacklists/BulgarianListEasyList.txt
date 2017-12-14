@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201712130001
+! Version: 201712132244
 ! Title: EasyPrivacy
-! Last modified: 13 Dec 2017 00:01 UTC
+! Last modified: 13 Dec 2017 22:44 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -171,6 +171,7 @@
 .gatracking.js
 .gif?ad=
 .gif?event=
+.gif?hit_
 .gif?Log=$~xmlhttprequest
 .gif?pixels=
 .Google.Tracker.js
@@ -599,6 +600,8 @@
 /at.gif?
 /atapixel.js
 /atatus.js
+/athena.gif?
+/athenastgbeacon.
 /atlas_track.
 /atrk.gif?
 /atrk.js
@@ -613,6 +616,7 @@
 /audiweb.js
 /audsci.js
 /autotag.
+/autotrack.js
 /AutoTracker.js
 /aux/collect?
 /avant_sfpc_
@@ -1540,6 +1544,7 @@
 /i?e=*&page=*&cookie=
 /i?redir=*&page=*&cookie=
 /i?siteid=
+/i?stm=*&refr=*&url=
 /ics/2/pview.gif?
 /id?d_visid_ver=
 /iframe.tracker.js
@@ -1611,6 +1616,7 @@
 /index.php?_m=livesupport*&referrer=
 /index.track?
 /indextools.js
+/indraeventsapi.
 /inetlog.ru/*
 /info/picksel/*
 /informerStat?
@@ -2888,6 +2894,7 @@
 /track_views.
 /track_visit.
 /track_visit?
+/track_yt_vids.
 /trackad.
 /trackAdHit.
 /trackalyze/*$script
@@ -4726,6 +4733,7 @@ _mongo_stats/
 ||kitcode.net^$third-party
 ||klert.com^$third-party
 ||klldabck.com^$third-party
+||km-sea.net^$third-party
 ||knowlead.io^$third-party
 ||knowledgevine.net^$third-party
 ||komtrack.com^$third-party
@@ -5889,6 +5897,8 @@ _mongo_stats/
 ||zroitracker.com^$third-party
 ||ztsrv.com^$third-party
 ! Mining
+.cf^$third-party,websocket
+.cf^*.wasm$third-party
 .space^$third-party,websocket
 .space^*.wasm$third-party
 ://api.*/lib/native.wasm$third-party
@@ -5922,6 +5932,7 @@ _mongo_stats/
 ||coinhive-manager.com^$third-party
 ||coinhive-proxy.party^$third-party
 ||coinhive.com^$third-party
+||coinhive.com^$third-party,websocket
 ||coinhiveproxy.com^$third-party
 ||coinlab.biz^$third-party
 ||coinminerz.com^$third-party
@@ -5966,6 +5977,8 @@ _mongo_stats/
 ||secumine.net^$third-party
 ||siteverification.online^$third-party
 ||siteverification.site^$third-party
+||subloader.cf^$third-party
+||subloader.cf^$third-party,websocket
 ||supportxmr.com^$third-party
 ||webmine.cz^$third-party
 ||xbasfbno.info^$third-party
@@ -7602,6 +7615,7 @@ _mongo_stats/
 ||fastcounter.bcentral.com^
 ||fastcounter.onlinehoster.net^
 ||fastly.net/collect?
+||fastly.net/i?
 ||fbpixel.network.exchange^
 ||feed.informer.com/fdstats
 ||feedblitz.com/imp?$third-party
@@ -8277,6 +8291,7 @@ _mongo_stats/
 ||soccer.ru/counter/
 ||socialreader.com^*?event=email_open^$image
 ||sohu.com/stat/
+||sohu.com^*/cookie?
 ||soundcloud.com^*/plays?referer=
 ||sourceforge.net/tracker/$~xmlhttprequest
 ||southafricahome.com/statsmodulev2/
@@ -8378,6 +8393,7 @@ _mongo_stats/
 ||statsdev.treesd.com^
 ||statsrv.451.com^
 ||statt-collect.herokuapp.com^
+||stg-data-collector.playbuzz.com^
 ||stileproject.com/vhtk/
 ||streamads.com/view?
 ||su.addthis.com^
@@ -8485,6 +8501,7 @@ _mongo_stats/
 ||track.bannedcelebs.com^
 ||track.cafemomstatic.com^
 ||track.captivate.ai^
+||track.contently.com^
 ||track.did-it.com^
 ||track.digitalriver.com^
 ||track.dzloans.com^
@@ -9262,6 +9279,8 @@ _mongo_stats/
 ! Norwegian
 ||engage-cdn.schibsted.media^
 ||webhit.snd.no^
+! Persian
+||analytics.aasaam.com^
 ! Polish
 ||analytics.greensender.pl^$third-party
 ||cafenews.pl/mpl/static/static.js?
@@ -13809,4 +13828,4 @@ _mongo_stats/
 @@||uaprom.net/image/blank.gif?$image
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: 4CZ+oFsKoyb6ss1wY9PPIg
+! Checksum: f4TAnSqt6XuP1od20qYlVA

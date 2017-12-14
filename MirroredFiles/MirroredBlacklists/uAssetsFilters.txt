@@ -136,6 +136,8 @@ skystreaming.net###fanback + style + div[id]
 ! https://github.com/jspenguin2017/uBlockProtector/issues/635
 gamepro.de,gamestar.de##script:inject(abort-on-property-write.js, uabInject)
 # To counter unnecessary exception filters
+||focus.de^$generichide,important
+||pcwelt.de^$generichide,important
 ||adnxs.com^$script,important,domain=metal-hammer.de|musikexpress.de|rollingstone.de
 ||pagead2.googlesyndication.com^$script,important,domain=autobild.de|metal-hammer.de|musikexpress.de|rollingstone.de
 ||sascdn.com^$script,important,domain=autobild.de|metal-hammer.de|musikexpress.de|rollingstone.de
@@ -2006,11 +2008,11 @@ fmovies.is##.ads
 serienstream.to##script:inject(abort-current-inline-script.js, document.readyState, /(?:\\x[0-9a-f]{2}){20}/)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6vid45/odd_unblockable_ads_on_watchcartoonsonlineeu/
-||watchcartoonsonline.eu^$csp=script-src 'unsafe-inline' 'unsafe-eval' data: *
-watchcartoonsonline.eu##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
-watchcartoonsonline.eu##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
-watchcartoonsonline.eu##header
-watchcartoonsonline.eu##[id*="ScriptRoot"]
+||watchcartoonsonline.*^$csp=script-src 'unsafe-inline' 'unsafe-eval' data: *
+watchcartoonsonline.*##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
+watchcartoonsonline.*##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+watchcartoonsonline.*##header
+watchcartoonsonline.*##[id*="ScriptRoot"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/645
 computerbild.de##a[data-downloader-url$="_CB-DL-Manager.exe"]
@@ -2300,6 +2302,9 @@ wabetainfo.com#@##adsense
 onitube.com##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
 @@||onitube.com^$generichide
 onitube.com###MGWrap130103
+! https://forums.lanik.us/viewtopic.php?p=129416#p129416
+onitube.com##script:inject(setTimeout-defuser.js)
+onitube.com##.mgbox
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38653
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se##script:inject(uabinject-defuser.js)
@@ -2960,3 +2965,64 @@ ddlfr.pw##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/976
 taroot-rangi.com##script:inject(abort-on-property-write.js, sc_adv_out)
+
+! https://github.com/uBlockOrigin/uAssets/issues/980
+pornwatchers.com##script:inject(abort-on-property-read.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/983
+sotemnovinhas.com##script:inject(fuckadblock.js-3.2.0)
+
+! https://github.com/uBlockOrigin/uAssets/issues/984
+@@||ondemandkorea.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/981
+porntube.com##script:inject(abort-on-property-read.js, ExoLoader)
+||porntube.com/*banner$image
+
+! https://github.com/uBlockOrigin/uAssets/issues/978
+katestube.com##script:inject(abort-on-property-read.js, BetterJsPop)
+
+! https://github.com/uBlockOrigin/uAssets/issues/979
+gotporn.com##script:inject(abort-on-property-read.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/986
+ddmix.net##script:inject(abort-on-property-write.js, miner)
+ddmix.net###publicidaddescarga1
+ddmix.net##a[href^="//s.click.aliexpress.com/"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/883#issuecomment-351542884
+qe.pe##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+qe.pe##script:inject(abort-on-property-read.js, open)
+
+! https://github.com/uBlockOrigin/uAssets/issues/883#issuecomment-351542884
+onlinebee.in##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+||ignitna.info^
+
+! https://github.com/uBlockOrigin/uAssets/issues/992
+mypapercraft.net##.blocker-notice
+mypapercraft.net##.blocker-overlay
+
+! https://github.com/uBlockOrigin/uAssets/issues/994
+@@||beelink.in^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/985
+||livesports.pw/adblock.js$script,first-party,redirect=fuckadblock.js-3.2.0
+@@||cinestrenostv.tv^$generichide
+||cinestrenostv.tv/*ad$image,redirect=1x1-transparent.gif
+||pop.verplusonline.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/989
+byetv.org##script:inject(popads.net.js)
+deportesmax.com##script:inject(abort-on-property-write.js, _pop)
+||vip.freelive365.com/adblocker.js$script,redirect=fuckadblock.js-3.2.0,domain=byetv.org
+@@deportesmax.com^$generichide
+||waframedia16.com^$script,domain=deportesmax.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/991
+69games.xxx##script:inject(window.open-defuser.js)
+69games.xxx##.side_flash
+69games.xxx##a[href^="/ads/"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/993
+@@||common-static.tunnl.com/player/js/ads.js$script,first-party
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=supergames.com|video-static.tunnl.com
