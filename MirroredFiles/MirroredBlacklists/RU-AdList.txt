@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: rMFUMIDxGDH91r9F0mq93Q
-! Version: 201712150020
+! Checksum: szd+9ED662ysSa7rNKNfog
+! Version: 201712160020
 ! Title: RU AdList
-! Last modified: 15 Dec 2017 00:20 UTC
+! Last modified: 16 Dec 2017 00:20 UTC
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
 ! Дополнительная региональная подписка RU AdList к подписке EasyList
@@ -1061,7 +1061,7 @@ by,ru,ua##.banner_box
 ##[onclick*="trklp.ru"]
 ##[src^="//am15.net/?"]
 ##a[data-href*="recreativ.ru"]
-##a[href*="&utm_medium=cpa"][target="_blank"]
+~semestr.ru##a[href*="&utm_medium=cpa"][target="_blank"]
 ##a[href*=".1liveinternet.ru"]
 ~converteam.online##a[href*=".converteam.online"]
 ##a[href*=".orgsales.ru"]
@@ -1341,6 +1341,7 @@ firstfisher.ru##div[class^="ad"] > noindex
 /468-80-
 /700x70_
 /8831_1.gif
+/?a=:&ids=*&r=$third-party,script
 /?get_code&template_uid=$third-party,script
 /?site=*admachina
 /?t=*&noadult=1&pid=$script
@@ -1516,6 +1517,7 @@ firstfisher.ru##div[class^="ad"] > noindex
 /js/popup.php?id=$third-party
 /js/rot.php?id=
 /js/slider.php?id=$third-party
+/js/v1.2/script.min.js|$third-party,script
 /js/vk.php?id=$script
 /jstbt.js|$third-party
 /kmabiz/*
@@ -2537,7 +2539,7 @@ _tizers.
 ||pro100news.ru^$third-party
 ||probestfilm.com^$third-party
 ||prodnepr.dp.ua/informermp.php
-||profi.ru^*/banner$third-party
+||profi.ru^*/banner$third-party,domain=~semestr.ru
 ||profit-partner.ru^$third-party
 ||profitwizard.net^
 ||profitwizard.ru^
@@ -3292,6 +3294,7 @@ _tizers.
 ||adblender.ru^$third-party
 ||adblockwhitelist097.com^$third-party
 ||adblockwhitelist098.com^$third-party
+||adbob.ru^$third-party
 ||adcamp.ru^$third-party
 ||adcountry.net^$third-party
 ||adderbullet.com^$third-party
@@ -8412,6 +8415,7 @@ uahunter.com.ua###rek-top
 glasscannon.ru###rek_bg
 notefood.ru,vkusneedoma.ru###rek_desktop_fixed
 truba.com###reklama_banner
+semestr.ru###reklamksForm > .well:last-child
 mamabook.com.ua###related
 zagonka.ru###removediv
 search.aviasales.ru###results_add_container .js-top-placement-ticket
@@ -9051,7 +9055,7 @@ videozal.club##.bad
 delo.ua,ntr-24.ru,sibinfo.su##.ban
 life170.ru##.ban-r
 life170.ru##.ban-r + .prodlist-links
-orenday.ru##.ban100
+orenday.ru,saltday.ru##.ban100
 scooter-remont.com##.ban2
 vsetv.com##.ban200
 igui.mobi##.ban240
@@ -10868,6 +10872,7 @@ slo.ru##[class^="adv_"]
 wot-news.com##[class^="adv_first"]
 sr-week.ru##[class^="advt"]
 torrents-game.net##[class^="amigo"]
+buzday.ru,orenday.ru,saltday.ru,sorochinskday.ru##[class^="baner"]
 goodgame.ru##[class^="banner"]
 autodmir.ru##[class^="block_tgb"]
 season.ru##[class^="bnnr_bx_"]
@@ -11009,7 +11014,7 @@ f1news.ru##a[class^="bg-robot-"]
 f1news.ru##a[class^="branding-"]
 menu.cc.ua,mycooking.pp.ua##a[href$=".htm"]
 creativportal.ru##a[href*=".creativportal.ru"]
-katushka.org##a[href*=".php"] > img[src*="static"]
+katushka.org##a[href*=".php"] img[src*="static"]
 pirate-party.ru,piratemedia.net##a[href*=".sim-networks.com/index.php?pid="]
 ctc-rnd.ru##a[href*=".space"]
 katushka.org##a[href*=".torrent"]
@@ -11085,7 +11090,7 @@ softpir.com##a[href*="azbukasofta.xyz"]
 beremennost.net##a[href*="babyitalia.ru"]
 alcogolizm.com,anekdot.ru,dwg.ru,maw.ru,ozersk74.ru,post-tracker.ru,seedoff.cc,seedoff.tv,zhacker.net##a[href*="banner"]
 htmlbook.ru##a[href*="banner"] > img
-backup.menu,beremennost.net,bigtorrent.org,buhgalter911.com,dedicated.menu,edunews.ru,electricalschool.info,fishki.net,forum-profit.ru,hosting.cafe,https.menu,kopilkaurokov.ru,license.menu,myfin.by,ogribax.ru,openssource.biz,oper.ru,palantinbest.ru,shared.menu,stalkermod.ru,torentor.co,uvelir.info,uvelir.net,vds.menu,vorozheya.org,yummyanime.com##a[href*="banner"][target="_blank"]
+backup.menu,beremennost.net,bigtorrent.org,buhgalter911.com,dedicated.menu,edunews.ru,electricalschool.info,fishki.net,forum-profit.ru,hosting.cafe,https.menu,kopilkaurokov.ru,kttc.ru,license.menu,myfin.by,ogribax.ru,openssource.biz,oper.ru,palantinbest.ru,shared.menu,stalkermod.ru,torentor.co,uvelir.info,uvelir.net,vds.menu,vorozheya.org,yummyanime.com##a[href*="banner"][target="_blank"]
 minecraft15.my1.ru##a[href*="barbarisnews.ru"]
 rgmechanics.ru##a[href*="bestchange.ru"]
 allsport-live.net,soccer365-1.xyz,soccer365.ru##a[href*="betfaq.ru"]
@@ -11899,6 +11904,7 @@ torrents-club.org##body > video
 all-tor.net,anti-block.org,big-tor.org,bit-tor.org,fast-bit.org,fast-tor.net,film-tor.org,free-tor.org,freedom-tor.org,hd-bit.org,kino-tor.org,mega-tor.org,mirror-rutor.org,multi-tor.org,new-ru.org,new-tor.org,no-block.org,open-tor.org,proxy-rutor.org,ru-bit.com,ru-free-tor.org,ru-tor.net,rus-tor.com,rutor.info,rutor.is,rutor.org,super-tor.net,top-tor.org,tor-bit.net,tor-ru.net,tor-ru.org,tor-unblock.org,vip-tor.org,x-bit.net,zerkalo-rutor.org##body object
 pikabu.ru##body style + *
 superhumor.ru,voffka.com##br + noindex
+bt.kubyshka.org#?#td > .forabg:-abp-has(dt:-abp-contains(Проверенный выгодный обменник!))
 cameleo.xyz#?#p.main:-abp-has([href*="bit.ly"])
 flamp.ru##cat-banner
 exnews.org##center + noindex
@@ -12041,7 +12047,7 @@ newbum.net##div[class^="ban"]
 aces.gg##div[class^="banaces"]
 xn--h1aafgbicfmhn.xn--p1ai,смотримкино.рф##div[class^="baner"]
 gorod.cn.ua##div[class^="bann_"]
-101.ru,999.md,animeonline.su,asiarussia.ru,avtoblog.org.ua,baby.ru,bezparazita.ru,botinok.porn,bountymax.ru,calend.ru,clubvolvo.ru,dnepr.info,dok-film.net,gametech.ru,gmod-fan.ru,goodhouse.ru,gorod48.ru,infobank.by,iplayer.fm,ipleer.fm,kamchatinfo.com,kino-kingdom.com,kinogo-net-2016.ru,kinokong.cc,kinozadrot.club,kuban24.tv,manga24.ru,mediaryazan.ru,moya-semya.ru,musicforums.ru,nlo-mir.ru,nn.ru,ntr-24.ru,nversia.ru,obozrevatel.com,onlineradiobox.com,ponedelnik.info,postovoy.net,samlab.ws,sovets.net,sovets24.ru,subscribe.ru,svxg.su,telegraf.in.ua,the-village.ru,trisosny.ru,trymobile.ru,tvzvezda.ru,ukrinform.ru,vdvsn.ru,vklybe.tv,vorle.ru,womanhit.ru,worldofmods.ru,zn.ua,zoon.ru##div[class^="banner"]
+101.ru,999.md,animeonline.su,asiarussia.ru,avtoblog.org.ua,baby.ru,bezparazita.ru,botinok.porn,bountymax.ru,buzday.ru,calend.ru,clubvolvo.ru,dnepr.info,dok-film.net,gametech.ru,gmod-fan.ru,goodhouse.ru,gorod48.ru,infobank.by,iplayer.fm,ipleer.fm,kamchatinfo.com,kino-kingdom.com,kinogo-net-2016.ru,kinokong.cc,kinozadrot.club,kuban24.tv,manga24.ru,mediaryazan.ru,moya-semya.ru,musicforums.ru,nlo-mir.ru,nn.ru,ntr-24.ru,nversia.ru,obozrevatel.com,onlineradiobox.com,orenday.ru,ponedelnik.info,postovoy.net,saltday.ru,samlab.ws,sorochinskday.ru,sovets.net,sovets24.ru,subscribe.ru,svxg.su,telegraf.in.ua,the-village.ru,trisosny.ru,trymobile.ru,tvzvezda.ru,ukrinform.ru,vdvsn.ru,vklybe.tv,vorle.ru,womanhit.ru,worldofmods.ru,zn.ua,zoon.ru##div[class^="banner"]
 deti.fm##div[class^="banner"]:not(#vk_groups)
 kaktutzhit.by##div[class^="banner"][class$="rightSide"] > .banner:nth-of-type(1)
 ura.news##div[class^="bannerPosition"]
@@ -12185,7 +12191,7 @@ driver.ru##div[id^="a"] > a[href][target="_blank"] > img
 indigomath.ru##div[id^="ad_id"]
 eg.ru##div[id^="ad_ph_"]
 imagenizr.net##div[id^="adblock-"]
-baby.ru,drive.ru,drive2.com,drive2.ru,ekabu.ru,hitfm.ru,inopressa.ru,matchtv.ru,news.sportbox.ru,playground.ru,seonews.ru,sport-express.ru,thequestion.ru##div[id^="adfox_"]
+baby.ru,drive.ru,drive2.com,drive2.ru,ekabu.ru,forum.ixbt.com,hitfm.ru,inopressa.ru,matchtv.ru,news.sportbox.ru,playground.ru,seonews.ru,sport-express.ru,thequestion.ru##div[id^="adfox_"]
 66.ru##div[id^="adlift_swf"]
 baginya.org,topmmo-games.ru##div[id^="admitad"]
 film.ru##div[id^="adriver_banner"]
@@ -12222,7 +12228,7 @@ newsroom.kh.ua##div[id^="block-nodeblock"]
 kharkov.info##div[id^="block-views-banner"]
 kharkov.info##div[id^="block-views-paid_place_slider-block"]
 alldonors.ru##div[id^="blockbann"]
-1torrent.net,2baksa.net,5litra.ru,720hd.club,abook.fm,ahs-online.net,ahs-online.xyz,allday2.com,allserial.tv,allsofts2009.ru,amovies.biz,anamvseravno.ru,aspekty.net,audioboo.ru,ava-avto.ru,bigbang-tv.net,bigbangtv.ru,bigbangtv.space,bigcinema.cc,bigkiev.com.ua,bo-em.com,bobfilm.club,br-ba.net,brodim.com,chop-online.com,comedy-portal.net,comedyportal.me,coollib.net,cvid.kiev.ua,cwer.me,cwer.ru,cwer.ws,dead-online.net,deviloff.net,dextv.net,dnevniki-vampira.net,dochronika.ru,dokpro.club,dokumentfilm.ru,dom2.pro,drevnie-online.net,dterod.com,electroandi.ru,emusic.me,ex-fs.com,facenews.ua,fanserials.tv,fargo-online.net,fast-torrent.org,fast-torrent.ru,fasttorrent.ru,favoritemovies.at.ua,filin.tv,film-torrent.ru,film4ik.tv,filmitorrent.org,filmix.me,filmon.in.ua,filmzguru.ru,firebit.net,fizrukoff.net,freebooks.site,freehd.com.ua,friends-online.tv,gidonlinehd.ru,hd-720.ucoz.ru,hdclub.org,hdfilms.tv,hdkinomax.tv,hdpicture.ru,hdreactor.info,hdrezka.ag,hdseason.ru,hdserials.tv,history.vn.ua,hlamer.ru,hronika.info,igra-prestoloff.cx,journal-off.info,kadu.ru,kino-1080.net,kino-dom.tv,kino-go.club,kino-hd.in,kino-hd720.net,kino-na-xati.com,kino-nada.net,kinoangel.club,kinoboevik.com,kinoclips.net,kinoclips.tv,kinogb.club,kinogo-2017-net.ru,kinogo-2017.com,kinogo-co-2016.ru,kinogo-net-co.ru,kinogo-net.me,kinogo-net.tv,kinogo-x.ru,kinogo.cc,kinogo.club,kinogo.com.ua,kinogo.eu,kinogo1.club,kinogoco.club,kinogol.com,kinogoonline.club,kinogou.club,kinograd.tv,kinoklad.net,kinokrad.club,kinomaxpro.com,kinoplen.ru,kinorai.net,kinorai.tv,kinosvit.tv,kinotan.ru,kinotrek.co,kinotwserial.ru,kinovo.cc,klipzona.club,knijky.ru,korp.tv,kp.ua,krutor.org,lawbook.online,lib.ink,lib.sale,linecinema.org,lostfilm-hd720.ru,lostfilm-online.ru,lostfilmhd.ru,maccentre.ru,math-helper.ru,megaserial.me,megaserial.net,megogo-hd.net,molodegka.xyz,moviestape.com,moviestape.net,mrutor.org,mskd-ru.net,multfilmy-dlya-ditey.org.ua,multikonline.ru,musico.cc,my-tfile.org,myvimir.ru,myzooplanet.ru,natural.edu-lib.net,navkolonas.com,new-team.org,new-tfile.org,newdeaf-online.net,newsua.one,nowa.cc,oko-planet.su,olga-online.com,onlainfilm.me,onlainfilm.ucoz.ua,onlfilmy.com,online-freebee.ru,online-kinopokaz.ru,online-knigi.com,onlinefilm-hd.com,ostfilm.org,ostfilm.tv,ostfilmtv.org,pgcity.net,planetatain.ru,plus-music.org,pod-kupolom.net,poiskm.co,rapidzona.com,real-vin.com,rosserial.net,ru-serial.com,rubooks.org,rulit.me,rusbitor.ru,russiapost.su,rustorka.com,rustorrents.info,rutorka.net,scibook.net,scicenter.online,scribble.su,seasonvar.cc,seasonvar.re,seasonvar.ru,seedoff.cc,seedoff.tv,seetv.tv,semestr.ru,serialbox.org,serialguru.ru,serialis.net,serialtime.net,serialytut.tv,sezon-hd.ru,show-online.tv,skidows.com,skycinema.cc,smotretfilm.online,smotri-filmi.co,smotri.pro,socportal.info,srubirubli.ru,sserial.net,strela-online.net,subject.com.ua,svatoff.net,swordmaster.org,tambovnet.org,tapochek.net,teledidar.tv,textbook.news,texts.news,tfile-music.org,tfile.cc,tfile.co,tfile.me,topasnew.org,topcinema.tv,torrent-soft.net,torrentline.net,tracker.hdclub.com.ua,tracktor.tv,trialeset.ru,tuchkatv.ru,tuchkatvsport.com,turboserial.net,turkcinema.tv,tushkan.club,tv-300.ru,tv-torrent.me,tvbook.tv,tvfru.org,tvgid.ua,tvseason.net,uahd.com.ua,uainfo.org,ukrefs.com.ua,ukrlit.net,ukrlit.vn.ua,uniongang.net,univeroff.net,uti-puti.com.ua,velikolepnyivek.com,verawatches.ru,videokub.club,videozal.club,vinnitsa.info,voroniny-online.pw,vuzlib.su,wow-show.ru,xn--80ahc0abogjs.com,yangteacher.ru,yc-tv.org,ymka.tv,youmult.net,youtubetv.com.ua,ytra.ru,zarlit.com,zfilm-hd.club,zfilm-hd.net,zhd.life,zserials.cc,zserials.tv,медпортал.com##div[id^="bn_"]
+1torrent.net,2baksa.net,5litra.ru,720hd.club,abook.fm,ahs-online.net,ahs-online.xyz,allday2.com,allserial.tv,allsofts2009.ru,amovies.biz,anamvseravno.ru,aspekty.net,audioboo.ru,ava-avto.ru,bigbang-tv.net,bigbangtv.ru,bigbangtv.space,bigcinema.cc,bigkiev.com.ua,bo-em.com,bobfilm.club,br-ba.net,brodim.com,chop-online.com,comedy-portal.net,comedyportal.me,coollib.net,cvid.kiev.ua,cwer.me,cwer.ru,cwer.ws,dead-online.net,deviloff.net,dextv.net,dnevniki-vampira.net,dochronika.ru,dokpro.club,dokumentfilm.ru,dom2.pro,drevnie-online.net,dterod.com,electroandi.ru,emusic.me,ex-fs.com,facenews.ua,fanserials.tv,fargo-online.net,fast-torrent.org,fast-torrent.ru,fasttorrent.ru,favoritemovies.at.ua,filin.tv,film-torrent.ru,film4ik.tv,filmitorrent.org,filmix.me,filmon.in.ua,filmzguru.ru,firebit.net,fizrukoff.net,freebooks.site,freehd.com.ua,friends-online.tv,gidonlinehd.ru,hd-720.ucoz.ru,hdclub.org,hdfilms.tv,hdkinomax.tv,hdpicture.ru,hdreactor.info,hdrezka.ag,hdseason.ru,hdserials.tv,history.vn.ua,hlamer.ru,hronika.info,igra-prestoloff.cx,journal-off.info,kadu.ru,kino-1080.net,kino-dom.tv,kino-go.club,kino-hd.in,kino-hd720.net,kino-na-xati.com,kino-nada.net,kinoangel.club,kinoboevik.com,kinoclips.net,kinoclips.tv,kinogb.club,kinogo-2017-net.ru,kinogo-2017.com,kinogo-co-2016.ru,kinogo-net-co.ru,kinogo-net.me,kinogo-net.tv,kinogo-x.ru,kinogo.cc,kinogo.club,kinogo.com.ua,kinogo.eu,kinogo1.club,kinogoco.club,kinogol.com,kinogoonline.club,kinogou.club,kinograd.tv,kinoklad.net,kinokrad.club,kinomaxpro.com,kinoplen.ru,kinorai.net,kinorai.tv,kinosvit.tv,kinotan.ru,kinotrek.co,kinotwserial.ru,kinovo.cc,klipzona.club,knijky.ru,korp.tv,kp.ua,krutor.org,lawbook.online,lib.ink,lib.sale,linecinema.org,lostfilm-hd720.ru,lostfilm-online.ru,lostfilmhd.ru,maccentre.ru,math-helper.ru,megaserial.me,megaserial.net,megogo-hd.net,molodegka.xyz,moviestape.com,moviestape.net,mrutor.org,mskd-ru.net,multfilmy-dlya-ditey.org.ua,multikonline.ru,musico.cc,my-tfile.org,myvimir.ru,myzooplanet.ru,natural.edu-lib.net,navkolonas.com,new-team.org,new-tfile.org,newdeaf-online.net,newsua.one,nowa.cc,oko-planet.su,olga-online.com,onlainfilm.me,onlainfilm.ucoz.ua,onlfilmy.com,online-freebee.ru,online-kinopokaz.ru,online-knigi.com,onlinefilm-hd.com,ostfilm.org,ostfilm.tv,ostfilmtv.org,pgcity.net,planetatain.ru,plus-music.org,pod-kupolom.net,poiskm.co,rapidzona.com,real-vin.com,rosserial.net,ru-serial.com,rubooks.org,rulit.me,rusbitor.ru,russiapost.su,rustorka.com,rustorrents.info,rutorka.net,scibook.net,scicenter.online,scribble.su,seasonvar.cc,seasonvar.re,seasonvar.ru,seedoff.cc,seedoff.tv,seetv.tv,semestr.ru,serialbox.org,serialguru.ru,serialis.net,serialtime.net,serialytut.tv,sezon-hd.ru,show-online.tv,skidows.com,skycinema.cc,smotretfilm.online,smotri-filmi.co,smotri.pro,socportal.info,srubirubli.ru,sserial.net,strela-online.net,subject.com.ua,svatoff.net,swordmaster.org,tambovnet.org,tapochek.net,teledidar.tv,textbook.news,texts.news,tfile-music.org,tfile.cc,tfile.co,tfile.me,topasnew.org,topcinema.tv,torrent-soft.net,torrentline.net,tracker.hdclub.com.ua,tracktor.tv,trialeset.ru,tuchkatv.ru,tuchkatvsport.com,turboserial.net,turkcinema.tv,tushkan.club,tv-300.ru,tv-torrent.me,tvbook.tv,tvcok.ru,tvfru.org,tvgid.ua,tvseason.net,uahd.com.ua,uainfo.org,ukrefs.com.ua,ukrlit.net,ukrlit.vn.ua,uniongang.net,univeroff.net,uti-puti.com.ua,velikolepnyivek.com,verawatches.ru,videokub.club,videozal.club,vinnitsa.info,voroniny-online.pw,vuzlib.su,wow-show.ru,xn--80ahc0abogjs.com,yangteacher.ru,yc-tv.org,ymka.tv,youmult.net,youtubetv.com.ua,ytra.ru,zarlit.com,zfilm-hd.club,zfilm-hd.net,zhd.life,zserials.cc,zserials.tv,медпортал.com##div[id^="bn_"]
 forum.rarib.ru##div[id^="bn_"][class^="bn_"]
 businessmens.ru##div[id^="bnr_"]
 livelib.ru##div[id^="bonifer"]
@@ -13230,7 +13236,7 @@ $websocket,domain=0day.kiev.ua|192.102.7.159|193.106.30.70|193.106.30.84|2000.ua
 /https?://(?!(mc\.yandex\.ru|www\.google-analytics\.com)/)/$third-party,script,subdocument,domain=massivmebel.by
 /hugo*.php$script,domain=enotbox.com|planeta51.com
 /images/background$image,domain=kinohd-online.com
-/images/banners/$domain=19rus.info|1tvnet.ru|33strausa.ru|agroxxi.ru|alfa-form.ru|aniplay.tv|antimuh.ru|archiportal-crimea.ru|arendator.ru|avtoblog.org.ua|biwork.ru|bryansktoday.ru|bvedomosti.ru|cars.ru|coil32.ru|csmania.ru|domain=19rus.info|dtpptz.ru|express-prigorod.ru|fermagid.ru|fitsport.ru|fuzz-magazine.ru|gamegpu.ru|gamemag.ru|hd-systems.com.ua|hv-info.ru|irr.ua|itexpert.org.ua|kaluga.ru|kamchatinfo.com|karelia.ru|kids.to-var.com|kinokrad-hd720.ru|km.ru|ko44.ru|manutd.ru|mebelminsk.by|media.nakanune.ru|medicalj.ru|memstatus.ru|mklat.lv|moscow-post.com|motoforum.ru|motovibor.ru|moya-semya.ru|mycity.by|nakanune.ru|nashdisk.ru|naurfo.ru|newgubakha.ru|newizv.ru|news.soundex.ru|ng.kz|ngregion.ru|numama.ru|ok-inform.ru|out-club.ru|planet-today.ru|poiskvps.ru|pretenziy.ru|rabota-kovrov.ru|rabota.kharkov.ua|rbc.ru|ria-m.tv|ridna.ua|rtr24.ru|ruslife.eu|sevastopol.su|shans.com.ua|skoda-club.org.ua|softsalad.ru|sostav.ua|sp.tomica.ru|starkosino.ru|tenstars.ru|trisosny.ru|uff.uz|valetudo.ru|vdv-kavkaz.ru|vjazhi.ru|vp-news.ru|vsatke.ru|xn--80adkt7ah.xn--p1ai|zrenue.com|zvid.org|город-кингисепп.рф
+/images/banners/$domain=19rus.info|1tvnet.ru|33strausa.ru|agroxxi.ru|alfa-form.ru|aniplay.tv|antimuh.ru|archiportal-crimea.ru|arendator.ru|avtoblog.org.ua|biwork.ru|bryansktoday.ru|buzday.ru|bvedomosti.ru|cars.ru|coil32.ru|csmania.ru|domain=19rus.info|dtpptz.ru|express-prigorod.ru|fermagid.ru|fitsport.ru|fuzz-magazine.ru|gamegpu.ru|gamemag.ru|hd-systems.com.ua|hv-info.ru|irr.ua|itexpert.org.ua|kaluga.ru|kamchatinfo.com|karelia.ru|kids.to-var.com|kinokrad-hd720.ru|km.ru|ko44.ru|manutd.ru|mebelminsk.by|media.nakanune.ru|medicalj.ru|memstatus.ru|mklat.lv|moscow-post.com|motoforum.ru|motovibor.ru|moya-semya.ru|mycity.by|nakanune.ru|nashdisk.ru|naurfo.ru|newgubakha.ru|newizv.ru|news.soundex.ru|ng.kz|ngregion.ru|numama.ru|ok-inform.ru|out-club.ru|planet-today.ru|poiskvps.ru|pretenziy.ru|rabota-kovrov.ru|rabota.kharkov.ua|rbc.ru|ria-m.tv|ridna.ua|rtr24.ru|ruslife.eu|sevastopol.su|shans.com.ua|skoda-club.org.ua|softsalad.ru|sostav.ua|sp.tomica.ru|starkosino.ru|tenstars.ru|trisosny.ru|uff.uz|valetudo.ru|vdv-kavkaz.ru|vjazhi.ru|vp-news.ru|vsatke.ru|xn--80adkt7ah.xn--p1ai|zrenue.com|zvid.org|город-кингисепп.рф
 /images/banners_$domain=agronews.ru|agrotv.ru
 /images/brand/*$domain=amuzic.ru|emuzic.ru|pikabu.ru
 /images/brandings/$image,domain=sc2tv.ru
@@ -13768,6 +13774,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||centoroy.okis.ru/files/*banner$image
 ||championat.com/branding.css
 ||championat.com/static/banner/
+||changer.com/graphics/12.png
 ||charter97.org/img/partners/
 ||check-host.net/images/ddos-guard$image
 ||chehov-vid.ru/wp-content/uploads/*banner$image
@@ -13900,7 +13907,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||dleshka.org/go/
 ||dlstatic.ru/panners/
 ||dlx2.24video.in/
-||dlx3.24video.adult/*.mp4|
+||dlx3.24video.adult*/000/
 ||dlx3.24video.in/
 ||dlx3.russian-porn.online/
 ||dnepr.info/*banner
@@ -14672,6 +14679,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||mebelminsk.by/assets/images/swf/
 ||media.aso.altapress.ru/
 ||media.kaifolog.ru$script,domain=kaifolog.ru
+||media.tvcok.ru/media/ibas/
 ||media.v102.ru/abs/
 ||media.v102.ru/players/advplayer$object-subrequest
 ||media1.noi.md/uploads/banner/
@@ -15359,6 +15367,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||safe.vk-saver.in.ua^$domain=vk-saver.in.ua
 ||sailor.rutracker21.ru/
 ||salex.ru/access.php?
+||saltday.ru/assets/files/
 ||samforum.ws^$subdocument
 ||samlab.ws/img/360/
 ||samods.ru/bg.jpg
@@ -15682,6 +15691,7 @@ ucoz.ru##a[href*="amigo.mail"][target="_blank"]
 ||turbobit.ru/pics/
 ||turizm.ru/banners2/200
 ||turkcinema.tv/uploads/static/
+||tvcok.ru/media/js/ext.js
 ||tvepisodeswatch.net/*.xml|$~third-party,xmlhttprequest
 ||tverigrad.ru^*.swf
 ||tvernews.ru/upload/information_system_$object
@@ -16097,7 +16107,7 @@ gismeteo.kz##div[id^="rek-gis-news"]
 ||static.criteo.net^$script,domain=gismeteo.ru
 !
 ! HDGO & Tushkan
-$third-party,script,xmlhttprequest,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1pf4hyy82.ru|0en53k306eu.ru|0l9ctootg5c2l.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0pqioensi5f3.ru|0u21l7vk6l0n.ru|0uxpf8oh4tc4.ru|0xyft5zh86o.ru|11n3ae4eh4pe.ru|150vafl777ke.ru|1d2g7pv530og.ru|1dunbkk57g5.ru|1mxhr8iyvdk.ru|1ohbvz02umt8r.ru|1p5kwlhizifo.ru|229upt6wf0jw.ru|248hg9eyg5ogp.ru|26rn66i2j1r5p.ru|26rn66i2jdsjhf.ru|27i2gr13ad7w.ru|27jcwq1yxp9w.ru|2k6qwatv7nb.ru|2l55tgzsn7te.ru|2lzvjndhpkkd.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|3fninsh6qegz3.ru|3nemvjfb2ekii.ru|3rnw8yoopch67.ru|3zjp83vb4sc.ru|41j40ho2pzpm.ru|4dd1lfuoz46o.ru|4pei5nbi8nblyb8.ru|4tb2n0klfdx1j.ru|4xb0nforwenk2.ru|54d4fcxvcv.ru|56n26i8p772.ru|5hsveizw797lp.ru|5ijepg6dxpv.ru|5jz9s9t3m5u5y.ru|5pd21e6dtl77.ru|65s4df2c1xxz.ru|66qzu9yt63xy.ru|67x3x8mb.ru|6allgpo0.ru|6nnt0lmhf219.ru|6skl0qwmd723.ru|6z6w7d0z07e.ru|7bjyh3fninsh.ru|7dy9m0xno645.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|7zpejtgmpf6p.ru|81yet6cm0vz.ru|84ef1z018zf41.ru|8785b7y1ohbvz0.ru|87gnvb3n41.ru|8xc4v3vb31.ru|8zdxa0zugv.xyz|8zt6dd99q88vn.ru|8zz5wlpo9gd4.ru|979ioegz2d.ru|99gn1l38j7sir.ru|9asd79ioeg.ru|9btgjln8rq17d.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|a8r7oi4dwers.ru|ad7w9xhkde.ru|apollostream.xyz|asjdjkdfsnmnsd.ru|ay2wvwro81.ru|b4sc0l9ctootg.ru|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bn791thiew.ru|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cizduccmmk9.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|couber.be|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|d99q88vn.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dehqn260atze.ru|dfg451dasd.ru|dhpkkdpqh6nl9.ru|dnsvideo.ru|dpnxbxbnfl4v.ru|dqvpqm0wdp5.ru|dw4jkya2302r.ru|e4eh4pei5nbi8n.ru|e5m280mv.ru|e872n77ckh4ba.ru|eg0o0kbpvk7.ru|ehd8n8lpdz5w.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fdfaoub02pk.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|ftbjb6xxoy4pe.ru|ftbuzk07zzlz.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|g5xvs7fruy5c4.ru|g8qa0g04nux9u7.ru|gf6k19n90b.ru|ggj8kvyghjvx.ru|ghjvxhzvhltpcd3z.ru|gjnemhv5n50o.ru|govideoget.ru|hdgo.cc|hdgo.cx|hdgoo.ru|hekenden.pw|hj56qykcniw.ru|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hr88cqpmto4.ru|hrenchik.pw|hu0mkcpw6lu.ru|hzvhltpcd3z.ru|i00dfpy9hjo5.ru|i90lg8r592p.ru|i9j1i7rmhp9.xyz|iframestream.ru|imiz0ti92rxje.ru|imwqmbi7.ru|imyq9y1eaj1v.ru|intcdnstream.ru|interstreamvideo.ru|iobikcvb1.ru|iom5xy1d1s.ru|jaskervideocdn.ru|jbswth1zqip.ru|jgkhfjkljfg.ru|jmtzrem30pqe.ru|jmysgikxqj6e8c.ru|jtim3v2oec3d.ru|julgm35lqadz.ru|jwjytpirjif5thr.ru|k306eu8zt6dd9.ru|k6daoqn8odd.ru|kc83odhud4mj.ru|km396z9t3.xyz|kozlodoev.info|krynlkhp7qq.ru|kwdv5gotvw30j7y0.ru|lar4ik.info|ldj9lhuec5c7l6.ru|livevideoproton.ru|m1kstrax.ru|m34byizi.ru|m3rnw8yoopch6.ru|m49tqul3tju1.ru|m5u5y3s2qjd.ru|magazin4ik.info|martinstreamvideo.ru|mbwl4jg0b4.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|my2n3wr3s5.ru|navg93dyidbk.xyz|nbcpmqqimw.ru|ndttvri8ulomg.ru|nof88j7dbx8o.ru|nv2zpjlc9gdzk.ru|nwsh5dhnwk.ru|o3kdu05yt94q.ru|o9vilkq1o0kh.ru|ohpjhophg.ru|olenevod.pw|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|oqurhra62emqk.ru|ox91grt6i0jq6.ru|p53jeazm4zpgs.ru|padl9dn2ukbq.ru|pandastream.ru|pccxvgbh41.ru|pifzxd886h.ru|pqm0w421.ru|protonstream.ru|protonstream3.ru|pwjrwg4482v2j.ru|q3ozx77bjyh.ru|q9ougc5j8da.ru|qitvkjruj2o8my.ru|qk9mpx2m4oo.ru|ql907mis9t7pt.ru|r2ugailo.ru|r4dou0qu5gi.ru|rkkryr3vmi1p.ru|ro97npadl9dn.ru|rq0vbl0mxq9.ru|rtwgebkbmf.ru|ru3gailo.ru|rug4ailo.ru|ruga5ilo.ru|ryh68785b7y.ru|s6bg89zvfj2x.ru|s7mk9wm9l.ru|sdw7lisl7r1vz.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stjtr5qokztdykk.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|szr0ye93gp10.ru|t1hrones.ru|t2hrones.ru|th3rones.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|thr4ones.ru|thro5nes.ru|tnj8rdfcaf3ef0l.ru|tvw30j7y027lj.ru|txj00pw4nq9.ru|ukbq4jwla5g.ru|un5en04shdhh.ru|ux3lwnbjez5.ru|uyzdl6a410wo.ru|vh2xo4w4t7jm.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vjwwbmtg6mv.ru|vk7d5kdjvlim5k.ru|vm2c37306.ru|vrzukwdv5go.ru|vs6pu5bk6ximp.ru|vs7fruy5c4u1q.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|vyghjvxhzvhlt.ru|w34sbr55mfu.ru|w9l5hd19w7i.ru|wacg6aeq2id.ru|wggj8kvygh.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|x748l4to1r5b.ru|xmradifo48e.ru|xpv88nmy2n3.ru|xws38mhwym.ru|y8l2po10ktnj.ru|ykknavg93.xyz|ykktzdk7e7q1.ru|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|z1smdbp5g5xv.ru|za053m7c5a.ru|zemlyanin.pw|zf5tcn4auwhy.ru|zf99fw27i.ru
+$third-party,script,xmlhttprequest,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1pf4hyy82.ru|0en53k306eu.ru|0l9ctootg5c2l.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0pqioensi5f3.ru|0u21l7vk6l0n.ru|0uxpf8oh4tc4.ru|0xyft5zh86o.ru|11n3ae4eh4pe.ru|150vafl777ke.ru|1d2g7pv530og.ru|1dunbkk57g5.ru|1mxhr8iyvdk.ru|1ohbvz02umt8r.ru|1p5kwlhizifo.ru|229upt6wf0jw.ru|248hg9eyg5ogp.ru|26rn66i2j1r5p.ru|26rn66i2jdsjhf.ru|27i2gr13ad7w.ru|27jcwq1yxp9w.ru|2k6qwatv7nb.ru|2l55tgzsn7te.ru|2lzvjndhpkkd.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|3fninsh6qegz3.ru|3nemvjfb2ekii.ru|3rnw8yoopch67.ru|3zjp83vb4sc.ru|41j40ho2pzpm.ru|4dd1lfuoz46o.ru|4pei5nbi8nblyb8.ru|4tb2n0klfdx1j.ru|4xb0nforwenk2.ru|54d4fcxvcv.ru|56n26i8p772.ru|5hsveizw797lp.ru|5ijepg6dxpv.ru|5jz9s9t3m5u5y.ru|5pd21e6dtl77.ru|65s4df2c1xxz.ru|66qzu9yt63xy.ru|67x3x8mb.ru|6allgpo0.ru|6nnt0lmhf219.ru|6skl0qwmd723.ru|6z6w7d0z07e.ru|7bjyh3fninsh.ru|7dy9m0xno645.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|7zpejtgmpf6p.ru|81yet6cm0vz.ru|84ef1z018zf41.ru|8785b7y1ohbvz0.ru|87gnvb3n41.ru|8xc4v3vb31.ru|8zdxa0zugv.xyz|8zt6dd99q88vn.ru|8zz5wlpo9gd4.ru|979ioegz2d.ru|99gn1l38j7sir.ru|9asd79ioeg.ru|9btgjln8rq17d.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|a8r7oi4dwers.ru|ad7w9xhkde.ru|apollostream.xyz|asjdjkdfsnmnsd.ru|ay2wvwro81.ru|b4sc0l9ctootg.ru|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bn791thiew.ru|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cizduccmmk9.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|couber.be|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|d99q88vn.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dehqn260atze.ru|dfg451dasd.ru|dhpkkdpqh6nl9.ru|dnsvideo.ru|dpnxbxbnfl4v.ru|dpqh6nl9836ir.ru|dqvpqm0wdp5.ru|dw4jkya2302r.ru|e4eh4pei5nbi8n.ru|e5m280mv.ru|e872n77ckh4ba.ru|eg0o0kbpvk7.ru|ehd8n8lpdz5w.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fdfaoub02pk.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|ftbjb6xxoy4pe.ru|ftbuzk07zzlz.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|g5xvs7fruy5c4.ru|g8qa0g04nux9u7.ru|gf6k19n90b.ru|ggj8kvyghjvx.ru|ghjvxhzvhltpcd3z.ru|gjnemhv5n50o.ru|govideoget.ru|hdgo.cc|hdgo.cx|hdgoo.ru|hekenden.pw|hj56qykcniw.ru|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hr88cqpmto4.ru|hrenchik.pw|hu0mkcpw6lu.ru|hzvhltpcd3z.ru|i00dfpy9hjo5.ru|i90lg8r592p.ru|i9j1i7rmhp9.xyz|iframestream.ru|imiz0ti92rxje.ru|imwqmbi7.ru|imyq9y1eaj1v.ru|intcdnstream.ru|interstreamvideo.ru|iobikcvb1.ru|iom5xy1d1s.ru|jaskervideocdn.ru|jbswth1zqip.ru|jgkhfjkljfg.ru|jmtzrem30pqe.ru|jmysgikxqj6e8c.ru|jtim3v2oec3d.ru|julgm35lqadz.ru|jwjytpirjif5thr.ru|k306eu8zt6dd9.ru|k6daoqn8odd.ru|kc83odhud4mj.ru|km396z9t3.xyz|kozlodoev.info|krynlkhp7qq.ru|kwdv5gotvw30j7y0.ru|lar4ik.info|ldj9lhuec5c7l6.ru|livevideoproton.ru|m1kstrax.ru|m34byizi.ru|m3rnw8yoopch6.ru|m49tqul3tju1.ru|m5u5y3s2qjd.ru|magazin4ik.info|martinstreamvideo.ru|mbwl4jg0b4.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|my2n3wr3s5.ru|navg93dyidbk.xyz|nbcpmqqimw.ru|ndttvri8ulomg.ru|nof88j7dbx8o.ru|nv2zpjlc9gdzk.ru|nwsh5dhnwk.ru|o3kdu05yt94q.ru|o9vilkq1o0kh.ru|ohpjhophg.ru|olenevod.pw|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|oqurhra62emqk.ru|ox91grt6i0jq6.ru|p53jeazm4zpgs.ru|padl9dn2ukbq.ru|pandastream.ru|pccxvgbh41.ru|pifzxd886h.ru|pqm0w421.ru|protonstream.ru|protonstream3.ru|pwjrwg4482v2j.ru|q3ozx77bjyh.ru|q9ougc5j8da.ru|qitvkjruj2o8my.ru|qk9mpx2m4oo.ru|ql907mis9t7pt.ru|r2ugailo.ru|r4dou0qu5gi.ru|rkkryr3vmi1p.ru|ro97npadl9dn.ru|rq0vbl0mxq9.ru|rtwgebkbmf.ru|ru3gailo.ru|rug4ailo.ru|ruga5ilo.ru|ryh68785b7y.ru|s6bg89zvfj2x.ru|s7mk9wm9l.ru|sdw7lisl7r1vz.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stjtr5qokztdykk.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|szr0ye93gp10.ru|t1hrones.ru|t2hrones.ru|th3rones.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|thr4ones.ru|thro5nes.ru|tnj8rdfcaf3ef0l.ru|tvw30j7y027lj.ru|txj00pw4nq9.ru|ukbq4jwla5g.ru|un5en04shdhh.ru|ux3lwnbjez5.ru|uyzdl6a410wo.ru|vh2xo4w4t7jm.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vjwwbmtg6mv.ru|vk7d5kdjvlim5k.ru|vm2c37306.ru|vrzukwdv5go.ru|vs6pu5bk6ximp.ru|vs7fruy5c4u1q.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|vyghjvxhzvhlt.ru|w34sbr55mfu.ru|w9l5hd19w7i.ru|wacg6aeq2id.ru|wggj8kvygh.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|x748l4to1r5b.ru|xmradifo48e.ru|xpv88nmy2n3.ru|xws38mhwym.ru|y8l2po10ktnj.ru|ykknavg93.xyz|ykktzdk7e7q1.ru|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|z1smdbp5g5xv.ru|za053m7c5a.ru|zemlyanin.pw|zf5tcn4auwhy.ru|zf99fw27i.ru
 @@||0uxpf8oh4tc4.ru/hdplayer/$script,domain=0uxpf8oh4tc4.ru
 @@||1.1p5kwlhizifo.ru/hdplayer/$script,domain=1p5kwlhizifo.ru
 @@||1.229upt6wf0jw.ru/hdplayer/$script,domain=229upt6wf0jw.ru
@@ -16162,6 +16172,7 @@ $third-party,script,xmlhttprequest,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1p
 @@||go.dehqn260atze.ru/hdplayer/$script,domain=dehqn260atze.ru
 @@||go.dhpkkdpqh6nl9.ru/hdplayer/$script,domain=dhpkkdpqh6nl9.ru
 @@||go.dpnxbxbnfl4v.ru/hdplayer/$script,domain=dpnxbxbnfl4v.ru
+@@||go.dpqh6nl9836ir.ru/hdplayer/$script,domain=dpqh6nl9836ir.ru
 @@||go.dw4jkya2302r.ru/hdplayer/$script,domain=dw4jkya2302r.ru
 @@||go.e4eh4pei5nbi8n.ru/hdplayer/$script,domain=e4eh4pei5nbi8n.ru
 @@||go.e872n77ckh4ba.ru/hdplayer/$script,domain=e872n77ckh4ba.ru
@@ -16224,7 +16235,7 @@ $third-party,script,xmlhttprequest,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1p
 @@||go.za053m7c5a.ru/hdplayer/$script,domain=za053m7c5a.ru
 @@||goo.9asd79ioeg.ru/hdplayer/$script,domain=9asd79ioeg.ru
 @@||goog.dd1lfuoz46o3.ru/hdplayer/$script,domain=dd1lfuoz46o3.ru
-@@||googleapis.com^$script,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1pf4hyy82.ru|0en53k306eu.ru|0l9ctootg5c2l.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0pqioensi5f3.ru|0u21l7vk6l0n.ru|0uxpf8oh4tc4.ru|0xyft5zh86o.ru|11n3ae4eh4pe.ru|150vafl777ke.ru|1d2g7pv530og.ru|1dunbkk57g5.ru|1mxhr8iyvdk.ru|1ohbvz02umt8r.ru|1p5kwlhizifo.ru|229upt6wf0jw.ru|248hg9eyg5ogp.ru|26rn66i2j1r5p.ru|26rn66i2jdsjhf.ru|27i2gr13ad7w.ru|27jcwq1yxp9w.ru|2k6qwatv7nb.ru|2l55tgzsn7te.ru|2lzvjndhpkkd.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|3fninsh6qegz3.ru|3nemvjfb2ekii.ru|3rnw8yoopch67.ru|3zjp83vb4sc.ru|41j40ho2pzpm.ru|4dd1lfuoz46o.ru|4pei5nbi8nblyb8.ru|4tb2n0klfdx1j.ru|4xb0nforwenk2.ru|54d4fcxvcv.ru|56n26i8p772.ru|5hsveizw797lp.ru|5ijepg6dxpv.ru|5jz9s9t3m5u5y.ru|5pd21e6dtl77.ru|65s4df2c1xxz.ru|66qzu9yt63xy.ru|67x3x8mb.ru|6allgpo0.ru|6nnt0lmhf219.ru|6skl0qwmd723.ru|6z6w7d0z07e.ru|7bjyh3fninsh.ru|7dy9m0xno645.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|7zpejtgmpf6p.ru|81yet6cm0vz.ru|84ef1z018zf41.ru|8785b7y1ohbvz0.ru|87gnvb3n41.ru|8xc4v3vb31.ru|8zdxa0zugv.xyz|8zt6dd99q88vn.ru|8zz5wlpo9gd4.ru|979ioegz2d.ru|99gn1l38j7sir.ru|9asd79ioeg.ru|9btgjln8rq17d.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|a8r7oi4dwers.ru|ad7w9xhkde.ru|apollostream.xyz|asjdjkdfsnmnsd.ru|ay2wvwro81.ru|b4sc0l9ctootg.ru|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bn791thiew.ru|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cizduccmmk9.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|couber.be|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|d99q88vn.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dehqn260atze.ru|dfg451dasd.ru|dhpkkdpqh6nl9.ru|dnsvideo.ru|dpnxbxbnfl4v.ru|dqvpqm0wdp5.ru|dw4jkya2302r.ru|e4eh4pei5nbi8n.ru|e5m280mv.ru|e872n77ckh4ba.ru|eg0o0kbpvk7.ru|ehd8n8lpdz5w.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fdfaoub02pk.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|ftbjb6xxoy4pe.ru|ftbuzk07zzlz.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|g5xvs7fruy5c4.ru|g8qa0g04nux9u7.ru|gf6k19n90b.ru|ggj8kvyghjvx.ru|ghjvxhzvhltpcd3z.ru|gjnemhv5n50o.ru|govideoget.ru|hdgo.cc|hdgo.cx|hdgoo.ru|hj56qykcniw.ru|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hr88cqpmto4.ru|hu0mkcpw6lu.ru|hzvhltpcd3z.ru|i00dfpy9hjo5.ru|i90lg8r592p.ru|i9j1i7rmhp9.xyz|iframestream.ru|imiz0ti92rxje.ru|imwqmbi7.ru|imyq9y1eaj1v.ru|intcdnstream.ru|interstreamvideo.ru|iobikcvb1.ru|iom5xy1d1s.ru|jaskervideocdn.ru|jbswth1zqip.ru|jgkhfjkljfg.ru|jmtzrem30pqe.ru|jmysgikxqj6e8c.ru|jtim3v2oec3d.ru|julgm35lqadz.ru|jwjytpirjif5thr.ru|k306eu8zt6dd9.ru|k6daoqn8odd.ru|kc83odhud4mj.ru|km396z9t3.xyz|krynlkhp7qq.ru|kwdv5gotvw30j7y0.ru|ldj9lhuec5c7l6.ru|livevideoproton.ru|m34byizi.ru|m3rnw8yoopch6.ru|m49tqul3tju1.ru|m5u5y3s2qjd.ru|martinstreamvideo.ru|mbwl4jg0b4.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|my2n3wr3s5.ru|navg93dyidbk.xyz|nbcpmqqimw.ru|ndttvri8ulomg.ru|nof88j7dbx8o.ru|nv2zpjlc9gdzk.ru|nwsh5dhnwk.ru|o3kdu05yt94q.ru|o9vilkq1o0kh.ru|ohpjhophg.ru|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|oqurhra62emqk.ru|ox91grt6i0jq6.ru|p53jeazm4zpgs.ru|padl9dn2ukbq.ru|pandastream.ru|pccxvgbh41.ru|pifzxd886h.ru|pqm0w421.ru|protonstream.ru|protonstream3.ru|pwjrwg4482v2j.ru|q3ozx77bjyh.ru|q9ougc5j8da.ru|qitvkjruj2o8my.ru|qk9mpx2m4oo.ru|ql907mis9t7pt.ru|r4dou0qu5gi.ru|rkkryr3vmi1p.ru|ro97npadl9dn.ru|rq0vbl0mxq9.ru|rtwgebkbmf.ru|ryh68785b7y.ru|s6bg89zvfj2x.ru|s7mk9wm9l.ru|sdw7lisl7r1vz.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stjtr5qokztdykk.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|szr0ye93gp10.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|tnj8rdfcaf3ef0l.ru|tvw30j7y027lj.ru|txj00pw4nq9.ru|ukbq4jwla5g.ru|un5en04shdhh.ru|ux3lwnbjez5.ru|uyzdl6a410wo.ru|vh2xo4w4t7jm.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vjwwbmtg6mv.ru|vk7d5kdjvlim5k.ru|vm2c37306.ru|vrzukwdv5go.ru|vs6pu5bk6ximp.ru|vs7fruy5c4u1q.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|vyghjvxhzvhlt.ru|w34sbr55mfu.ru|w9l5hd19w7i.ru|wacg6aeq2id.ru|wggj8kvygh.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|x748l4to1r5b.ru|xmradifo48e.ru|xpv88nmy2n3.ru|xws38mhwym.ru|y8l2po10ktnj.ru|ykknavg93.xyz|ykktzdk7e7q1.ru|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|z1smdbp5g5xv.ru|za053m7c5a.ru|zf5tcn4auwhy.ru|zf99fw27i.ru
+@@||googleapis.com^$script,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1pf4hyy82.ru|0en53k306eu.ru|0l9ctootg5c2l.ru|0mvedctwrpz.ru|0pe0650qxglv.ru|0pqioensi5f3.ru|0u21l7vk6l0n.ru|0uxpf8oh4tc4.ru|0xyft5zh86o.ru|11n3ae4eh4pe.ru|150vafl777ke.ru|1d2g7pv530og.ru|1dunbkk57g5.ru|1mxhr8iyvdk.ru|1ohbvz02umt8r.ru|1p5kwlhizifo.ru|229upt6wf0jw.ru|248hg9eyg5ogp.ru|26rn66i2j1r5p.ru|26rn66i2jdsjhf.ru|27i2gr13ad7w.ru|27jcwq1yxp9w.ru|2k6qwatv7nb.ru|2l55tgzsn7te.ru|2lzvjndhpkkd.ru|2q7m0n7qusl.ru|3dil5j8uy850.xyz|3fninsh6qegz3.ru|3nemvjfb2ekii.ru|3rnw8yoopch67.ru|3zjp83vb4sc.ru|41j40ho2pzpm.ru|4dd1lfuoz46o.ru|4pei5nbi8nblyb8.ru|4tb2n0klfdx1j.ru|4xb0nforwenk2.ru|54d4fcxvcv.ru|56n26i8p772.ru|5hsveizw797lp.ru|5ijepg6dxpv.ru|5jz9s9t3m5u5y.ru|5pd21e6dtl77.ru|65s4df2c1xxz.ru|66qzu9yt63xy.ru|67x3x8mb.ru|6allgpo0.ru|6nnt0lmhf219.ru|6skl0qwmd723.ru|6z6w7d0z07e.ru|7bjyh3fninsh.ru|7dy9m0xno645.ru|7j41uufvy7w7.ru|7rlws3i60e5a.ru|7zpejtgmpf6p.ru|81yet6cm0vz.ru|84ef1z018zf41.ru|8785b7y1ohbvz0.ru|87gnvb3n41.ru|8xc4v3vb31.ru|8zdxa0zugv.xyz|8zt6dd99q88vn.ru|8zz5wlpo9gd4.ru|979ioegz2d.ru|99gn1l38j7sir.ru|9asd79ioeg.ru|9btgjln8rq17d.ru|9lw745l3mmo.ru|9rn1r056ikwc.xyz|a410wo04i3ur.ru|a8r7oi4dwers.ru|ad7w9xhkde.ru|apollostream.xyz|asjdjkdfsnmnsd.ru|ay2wvwro81.ru|b4sc0l9ctootg.ru|ba47ua5x4yu.ru|bh9pcdyzdza.ru|bigmp4data.ru|bk1wyfzlu2.xyz|bn791thiew.ru|bou15pj2duyfx.ru|cdnprotonvideo.ru|cdyzdzap7r4.ru|cizduccmmk9.ru|cloud2stream.ru|cloudmp4video.ru|cloudstream1.ru|cloudvideo1.ru|couber.be|countvideodb.ru|cpy786cyvx04o.ru|ctufcv6vbmqb.ru|d99q88vn.ru|darkvideostream.ru|dd1lfuoz46o3.ru|dehqn260atze.ru|dfg451dasd.ru|dhpkkdpqh6nl9.ru|dnsvideo.ru|dpnxbxbnfl4v.ru|dpqh6nl9836ir.ru|dqvpqm0wdp5.ru|dw4jkya2302r.ru|e4eh4pei5nbi8n.ru|e5m280mv.ru|e872n77ckh4ba.ru|eg0o0kbpvk7.ru|ehd8n8lpdz5w.ru|etevf0oq0xt.ru|ewklhilcl3tl5.ru|fdfaoub02pk.ru|fgzf48opnq7a.ru|filecdnstreamvideo.ru|flvvideostream.ru|fmcwsvrrh88pa.ru|fortressvideo.ru|ftbjb6xxoy4pe.ru|ftbuzk07zzlz.ru|fwdxf98y2ntk9.ru|fygo5r6ki52n.ru|g5xvs7fruy5c4.ru|g8qa0g04nux9u7.ru|gf6k19n90b.ru|ggj8kvyghjvx.ru|ghjvxhzvhltpcd3z.ru|gjnemhv5n50o.ru|govideoget.ru|hdgo.cc|hdgo.cx|hdgoo.ru|hj56qykcniw.ru|hkksdf5l7cv1.online|hkksdf5l7cv1.xyz|hnuqtfhxraf.ru|hr7kiguyzdl6.ru|hr88cqpmto4.ru|hu0mkcpw6lu.ru|hzvhltpcd3z.ru|i00dfpy9hjo5.ru|i90lg8r592p.ru|i9j1i7rmhp9.xyz|iframestream.ru|imiz0ti92rxje.ru|imwqmbi7.ru|imyq9y1eaj1v.ru|intcdnstream.ru|interstreamvideo.ru|iobikcvb1.ru|iom5xy1d1s.ru|jaskervideocdn.ru|jbswth1zqip.ru|jgkhfjkljfg.ru|jmtzrem30pqe.ru|jmysgikxqj6e8c.ru|jtim3v2oec3d.ru|julgm35lqadz.ru|jwjytpirjif5thr.ru|k306eu8zt6dd9.ru|k6daoqn8odd.ru|kc83odhud4mj.ru|km396z9t3.xyz|krynlkhp7qq.ru|kwdv5gotvw30j7y0.ru|ldj9lhuec5c7l6.ru|livevideoproton.ru|m34byizi.ru|m3rnw8yoopch6.ru|m49tqul3tju1.ru|m5u5y3s2qjd.ru|martinstreamvideo.ru|mbwl4jg0b4.ru|mediadatastream.ru|mh1s7lhjn61h.ru|mp4videostream.ru|my2n3wr3s5.ru|navg93dyidbk.xyz|nbcpmqqimw.ru|ndttvri8ulomg.ru|nof88j7dbx8o.ru|nv2zpjlc9gdzk.ru|nwsh5dhnwk.ru|o3kdu05yt94q.ru|o9vilkq1o0kh.ru|ohpjhophg.ru|olfrm1do.ru|ondarkvideos.ru|onestreamget.ru|oqurhra62emqk.ru|ox91grt6i0jq6.ru|p53jeazm4zpgs.ru|padl9dn2ukbq.ru|pandastream.ru|pccxvgbh41.ru|pifzxd886h.ru|pqm0w421.ru|protonstream.ru|protonstream3.ru|pwjrwg4482v2j.ru|q3ozx77bjyh.ru|q9ougc5j8da.ru|qitvkjruj2o8my.ru|qk9mpx2m4oo.ru|ql907mis9t7pt.ru|r4dou0qu5gi.ru|rkkryr3vmi1p.ru|ro97npadl9dn.ru|rq0vbl0mxq9.ru|rtwgebkbmf.ru|ryh68785b7y.ru|s6bg89zvfj2x.ru|s7mk9wm9l.ru|sdw7lisl7r1vz.ru|serverbalancerstream.ru|servercdnstream.ru|servervideobalancer.ru|stjtr5qokztdykk.ru|stream1mp4.ru|streambalancer.ru|superpandacdn.ru|szr0ye93gp10.ru|theapollostream.ru|theframecdn.ru|theservervideo.ru|thevideobook.ru|thevideocom.ru|thevideosafe.ru|tnj8rdfcaf3ef0l.ru|tvw30j7y027lj.ru|txj00pw4nq9.ru|ukbq4jwla5g.ru|un5en04shdhh.ru|ux3lwnbjez5.ru|uyzdl6a410wo.ru|vh2xo4w4t7jm.ru|viddeostream.ru|videobox2.ru|videocontentsream.ru|videogetstream.ru|videoservercom.ru|vjwwbmtg6mv.ru|vk7d5kdjvlim5k.ru|vm2c37306.ru|vrzukwdv5go.ru|vs6pu5bk6ximp.ru|vs7fruy5c4u1q.ru|vtsitck957b2m8.ru|vvbz3lt2l3n5v.ru|vyghjvxhzvhlt.ru|w34sbr55mfu.ru|w9l5hd19w7i.ru|wacg6aeq2id.ru|wggj8kvygh.ru|worldvideodate.ru|wrpzu58gm41f.ru|wxztc45844ay.ru|x748l4to1r5b.ru|xmradifo48e.ru|xpv88nmy2n3.ru|xws38mhwym.ru|y8l2po10ktnj.ru|ykknavg93.xyz|ykktzdk7e7q1.ru|youstreamvideo.ru|youvideobook.ru|yyz52bekn.ru|z1smdbp5g5xv.ru|za053m7c5a.ru|zf5tcn4auwhy.ru|zf99fw27i.ru
 @@||gs.ggj8kvyghjvx.ru/hdplayer/$script,domain=ggj8kvyghjvx.ru
 @@||hd.3fninsh6qegz3.ru/hdplayer/$script,domain=3fninsh6qegz3.ru
 @@||hdgo.cx/hdplayer/$script,domain=hdgo.cx
@@ -16471,6 +16482,7 @@ $third-party,script,xmlhttprequest,domain=017psfgde76bn.ru|06wsto2hnxq4.ru|0av1p
 ||dfg451dasd.ru^$script
 ||dhpkkdpqh6nl9.ru^$script,xmlhttprequest
 ||dpnxbxbnfl4v.ru^$script
+||dpqh6nl9836ir.ru^$script,xmlhttprequest
 ||dq6el2bq12b.ru/vast$xmlhttprequest
 ||dqvpqm0wdp5.ru^$script
 ||dw4jkya2302r.ru^$script
@@ -16716,6 +16728,7 @@ mail.ru##.rb-video-widget
 mail.ru##.rectangle-banner
 mail.ru##.s-linkedSearch .grid-middle__content > .news ~ div[class]:empty + div[class]
 mail.ru##.s-linkedSearch .grid__container > .grid-top__rcol > :not(.games)
+mail.ru##.s-linkedSearch .well.notify
 mail.ru##.yadirect
 mail.ru##[class^="rb-million"]
 mail.ru##[data-view^="SlotView.mimic"]
@@ -18643,7 +18656,7 @@ otzovik.com#@##ad_footer
 pvpru.com#@##ad_global_above_footer
 track24.ru#@##ads-1
 sdelatotoplenie.ru,sopsport.org,xuk.ru#@##adsense
-fast-torrent.ru,fasttorrent.ru#@##adsense2
+fast-torrent.ru,fasttorrent.ru,tvcok.ru#@##adsense2
 101.ru,motogp-news.ru#@##advert-1
 tree.tv#@##adverts
 boylike.me,leporno.org#@##banner_ad
@@ -18651,6 +18664,7 @@ iphones.ru#@##sponsorText
 zhurnaly.biz#@#.ad-block
 otzovik.com#@#.ad-comment
 otzovik.com#@#.ad-panel
+otzovik.com#@#.ad-peg
 sports.ru,tribuna.com#@#.ad-placement
 api.kinomoov.org,uakino.net,uakino.tv#@#.ad_content
 blackdesert.su,echo.msk.ru,mail.ru,mk.ru,quantrum.me,revelationonlinedb.ru,seetv.tv,soccer365-1.xyz,soccer365.ru,track24.ru,vg672plpaer.ru#@#.ad_text
@@ -18688,7 +18702,6 @@ otzovik.com#@#.view_ad
 otzovik.com#@#.yaAds
 @@$xmlhttprequest,domain=player.3tv.im
 @@.dirty.ru/static/$domain=dirty.ru
-@@/(forum.ixbt.com/banners/)*\.[a-z]{2,3}$/$xmlhttprequest,domain=forum.ixbt.com
 @@/*marketgid.com/ws$websocket,domain=joyreactor.cc|pornreactor.cc|reactor.cc
 @@/^https?://ad\.3dnews\.ru/[^/]*/ajs.php\?zoneid=/$script,domain=3dnews.ru
 @@/adblock_detector.js$script,domain=forum.trainzup.net|oblozhki.net
@@ -18772,6 +18785,7 @@ otzovik.com#@#.yaAds
 @@||engine.rbc.medialand.ru/code?pid=*&gid=$script,domain=rbc.ru
 @@||et-code.ru/bens/vinos.js$script,domain=moviestape.com|smotri.com
 @@||example.com^$image,subdocument,domain=izzylaif.com
+@@||forum.ixbt.com/banners/adfox/$xmlhttprequest,domain=forum.ixbt.com
 @@||forum.ixbt.com/js/fotkidepo/baners//*.js|$script,domain=forum.ixbt.com
 @@||free-send.ru^$elemhide
 @@||freefotohelp.ru/css/inc/*.js|$script,domain=freefotohelp.ru
