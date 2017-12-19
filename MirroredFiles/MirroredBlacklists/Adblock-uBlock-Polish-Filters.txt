@@ -4,15 +4,15 @@
 ! Collaborators: Adam W, Dominik, Wiesiek, Robert, Marek, buuuuuuu190, Caleb, Ryszard, Kruk, Weronika, Adam, xxcriticxx, maxoku, F4z, mathew85, Piter432, Adam K, Piotr S, Szymon D, Marek R, adreporter, kacper93, FadeMind, kerbenii, gzenio22, blocker999, FX54, hawkeye116477, gwarser, mat41997 
 ! Homepage: https://www.certyficate.it/
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika 
-! Last modified: 17 December 2017
+! Last modified: 18 December 2017
 ! Expires: 2 days
-! Version: 2017121716
+! Version: 2017121804
 ! Contact: errors@certyficate.it
 ! Support: https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2017 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/polski-filtr-adblock/
-! v.2017121716 aktualizacja: nie, 17 grudnia 2017, 23:35:00
+! v.2017121804 aktualizacja: pon, 18 grudnia 2017, 21:25:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -221,7 +221,7 @@ pl/popup.js|$script
 ~komputerswiat.pl,anglia.today,dbnao.net,pl##.ad
 ~lech.tv,~wtkplay.pl,~epoznan.pl##[class^="advertisement"]
 ~wirtualnemedia.pl,~radekcholewinski.pl,~github.com##A[href$="/reklama"]
-~katywroclawskie.pl,~rozklad-pkp.pl,~gwarant.czest.pl,~sukniaonline.pl##[src*="/banners/banner"]
+~zso53.pl,~katywroclawskie.pl,~rozklad-pkp.pl,~gwarant.czest.pl,~sukniaonline.pl##[src*="/banners/banner"]
 ~wirtualnemedia.pl,~tczewska.pl,~procamp.agency,~rp.pl,~sportowememy.pl,~intercity.pl##[id*="reklama"]
 ~grafmag.pl,~magdabek.pl,~superpharm.pl,~ceo.com.pl,~linuxiarze.pl,~wirtualny-wojownik.pl,~przerwanareklame.pl,~tvpolska.pl,~smiechawatv.pl,~break.pl,~radekcholewinski.pl,~prokonsumencki.pl,~sekurak.pl,~techmaniak.pl,~gsmmaniak.pl,~appmaniak.pl,~tabletmaniak.pl,~fotomaniak.pl,~mobimaniak.pl,~acermaniak.pl,~tvmaniak.pl,~3dmaniak.pl,~gizmaniak.pl,~luxmaniak.pl,~blogomaniak.pl,~activemaniak.pl,~agdmaniak.pl,~eskago.pl,~certyficate.it,~motogen.pl,~wikipedia.org,~motomio.pl,~semilac.pl,~e-otoczenie.pl,~wyborcza.pl,pl##[class*="reklama"]
 ~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,~filmweb.pl,pl##[class^="ad-"]
@@ -2130,7 +2130,7 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 ||bham.pl/rek_images/$image
 ||bi.adview.pl/$stylesheet,script
 ||bielsko.biala.pl/userfiles/banery/$image,object
-||bitbay.net/$subdocument
+||bitbay.net/$subdocument,domain=~bitbay.net
 ||bithub.pl/polecamy/$image
 ||bit.ly/2$popup,domain=mmorpg.org.pl
 ||blogomaniak.pl/i/techmaniak-ceneo-sidebar$image
@@ -2516,7 +2516,7 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 /^(http|https):\/\/www\.chip\.pl\/wp-content\/themes\/_chip\/[a-z]{4,6}\/[a-z]{4,5}-[0-9]{4,5}/$image,domain=chip.pl
 /^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{200,}/$script,domain=profil.wp.pl|poczta.o2.pl|nowy.tlen.pl|poczta.wp.pl
 /^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{450,}/$script,domain=money.pl|autokult.pl|kafeteria.pl|portal.abczdrowie.pl|twojeip.wp.pl|czat.wp.pl|wawalove.pl|niewiarygodne.pl|komorkomania.pl|open.fm|pogoda.wp.pl|dladzieci.pl|ksiazki.wp.pl|kuchnia.wp.pl|dzieci.pl|gadzetomania.pl|sport.wp.pl|topnews.wp.pl|odkrywcy.pl|katalog.wp.pl|kultura.wp.pl|parenting.pl|fotoblogia.pl|bloog.pl|avent-ugrow.wp.pl|pudelek.pl|pudelekx.pl|nerwica.com|forum.abczdrowie.pl|pytamy.pl|www.o2.pl
-/^https:\/\/vstatic3\.cda\.pl\/v\/[a-zA-Z0-9_]{9,13}\.mp4/$media,object,domain=www.cda.pl
+/^https:\/\/vstatic3\.cda\.pl\/[a-z]\/[a-zA-Z0-9_]{9,13}\.mp4/$media,object,domain=www.cda.pl
 /^(http|https):\/\/www\.portel\.pl\/[a-z0-9]{3,10}\/[a-z0-9]{5,15}\.html/$subdocument,domain=www.portel.pl
 !
 !
@@ -3279,4 +3279,5 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 ||megabanners.cf^$third-party
 /^(https|http):\/\/[a-z]{4,15}\.[a-z]{2,2}\/[a-z/.?=]{15,100}proxy=wss:\/\/[a-z.?:0-9=]{10,50}:[0-9]{3,4}/$script
 /^(https|http):\/\/[a-z]{4,15}\.[a-z]{2,2}\/heywhatsupgirl\/[a-z-]{3,10}\//$subdocument
+/^https:\/\/[a-z]{6,10}\.[a-z]{2,5}\/[a-z.]{4,10}\js/$script,domain=vidoza.net
 !END#--------------------------END------------!

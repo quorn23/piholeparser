@@ -590,10 +590,8 @@ facebook.com##.ego_section:has(a.adsCategoryTitleLink)
 facebook.com###stream_pagelet [id^="hyperfeed_story_id_"]:has(span._4dcu)
 ! https://github.com/uBlockOrigin/uAssets/issues/722
 facebook.com##.ego_column:if(a[href^="/campaign/landing"])
-facebook.com##div[id^="hyperfeed_story_id_"]:if(a:has-text(Chartered))
-facebook.com##div[id^="hyperfeed_story_id_"]:if(a:has-text(Sponsored))
 ! https://forums.lanik.us/viewtopic.php?p=128997#p128997
-facebook.com##[id^="hyperfeed_story_id_"]:if([id^="feed_subtitle_"] a[href]:matches-css-after(content:/Sponsored/))
+facebook.com##[id^="hyperfeed_story_id_"]:if([id^="feed_subtitle_"] a[href]:matches-css-after(content:/Gesponsert|Sponsored/))
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32142
 ||ruiguozhi.cc^
@@ -1600,6 +1598,8 @@ elmundo.es##.disabled-vscroll:style(overflow: auto !important; position: initial
 ! Somehow, websocket requests are behind-the-scene with Firefox. Pending
 ! further investigation, this fixes the issue.
 ||4chan.org^$csp=connect-src https: http:
+! https://rbt.asia/g/thread/63902030/
+4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/467
 iwatchonline.cr,iwatchonline.eu##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -2652,8 +2652,8 @@ meulink.tk##script:inject(bab-defuser.js)
 ||player.ooyala.com/static/*ad$script,redirect=noopjs,domain=dugout.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/886 
-igram.im##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-igram.im##.more-igram
+gram.im##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+gram.im##.more-igram
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39258
 arconaitv.us##script:inject(abort-on-property-read.js, ab_detection)
@@ -3013,6 +3013,8 @@ katestube.com##script:inject(abort-on-property-read.js, BetterJsPop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/979
 gotporn.com##script:inject(abort-on-property-read.js, ExoLoader)
+||gotporn.com/*/exo-loader/*$script
+gotporn.com##a[href^="https://www.gotporn.com/click.php"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/986
 ddmix.net##script:inject(abort-on-property-write.js, miner)
@@ -3100,7 +3102,7 @@ uploaduj.net##.gba-ad-respo
 @@||googletagmanager.com/gtm.js$script,domain=uploaduj.net
 
 ! https://forums.lanik.us/viewtopic.php?p=129417#p129417
-||tatumsmolena.com^$domain=zdnet.fr
+||tatumsmolena.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1011
 amateurporn1.com##script:inject(abort-current-inline-script.js, ExoLoader)
@@ -3207,10 +3209,34 @@ divxtotal2.net##script:inject(abort-on-property-write.js, Fingerprint2)
 divxtotal2.net##script:inject(abort-on-property-read.js, BetterJsPop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1024
-games.baltimoresun.com,games.charlotteobserver.com,games.dailypress.com,games.express.co.uk,games.nydailynews.com,games.orlandosentinel.com,games.parade.com,games.reviewjournal.com,games.sandiegouniontribune.com,games.somersetlive.co.uk,games.sun-sentinel.com,puzzles.bestforpuzzles.com,puzzles.independent.co.uk,puzzles.standard.co.uk##script:inject(set-constant.js, Adv_ab, 0)
-@@||amsarkadium-a.akamaihd.net/assets/*/advertisements.js$script,domain=games.baltimoresun.com|games.charlotteobserver.com|games.dailypress.com|games.express.co.uk|games.nydailynews.com|games.orlandosentinel.com|games.parade.com|games.reviewjournal.com|games.sandiegouniontribune.com|games.somersetlive.co.uk|games.sun-sentinel.com|puzzles.bestforpuzzles.com|puzzles.independent.co.uk|puzzles.standard.co.uk
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games.baltimoresun.com|games.charlotteobserver.com|games.dailypress.com|games.express.co.uk|games.nydailynews.com|games.orlandosentinel.com|games.parade.com|games.reviewjournal.com|games.sandiegouniontribune.com|games.somersetlive.co.uk|games.sun-sentinel.com|puzzles.bestforpuzzles.com|puzzles.independent.co.uk|puzzles.standard.co.uk
+games.baltimoresun.com,games.charlotteobserver.com,games.chicagotribune.com,games.dailypress.com,games.express.co.uk,games.mcall.com,games.nydailynews.com,games.orlandosentinel.com,games.parade.com,games.reviewjournal.com,games.sandiegouniontribune.com,games.somersetlive.co.uk,games.sun-sentinel.com,puzzles.bestforpuzzles.com,puzzles.independent.co.uk,puzzles.standard.co.uk##script:inject(set-constant.js, Adv_ab, 0)
+@@||amsarkadium-a.akamaihd.net/assets/*/advertisements.js$script,domain=games.baltimoresun.com|games.charlotteobserver.com|games.chicagotribune.com|games.dailypress.com|games.express.co.uk|games.mcall.com|games.nydailynews.com|games.orlandosentinel.com|games.parade.com|games.reviewjournal.com|games.sandiegouniontribune.com|games.somersetlive.co.uk|games.sun-sentinel.com|puzzles.bestforpuzzles.com|puzzles.independent.co.uk|puzzles.standard.co.uk
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games.baltimoresun.com|games.charlotteobserver.com|games.chicagotribune.com|games.dailypress.com|games.express.co.uk|games.mcall.com|games.nydailynews.com|games.orlandosentinel.com|games.parade.com|games.reviewjournal.com|games.sandiegouniontribune.com|games.somersetlive.co.uk|games.sun-sentinel.com|puzzles.bestforpuzzles.com|puzzles.independent.co.uk|puzzles.standard.co.uk
+@@||games.chicagotribune.com/*/video-prebid.html$subdocument,first-party
+@@||games.mcall.com/*/video-prebid.html$subdocument,first-party
+@@||amsarkadium-a.akamaihd.net/*/prebid*.js$script,domain=games.chicagotribune.com|games.mcall.com
 
 ! https://github.com/reek/anti-adblock-killer/issues/2242
 hentaihaven.org##script:inject(abort-on-property-read.js, canRunAds)
 hentaihaven.org##script:inject(abort-on-property-read.js, popunder_record)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/7kg792/need_help_blocking_this_persistent_ad/
+nwanime.tv##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+vidstreaming.io,gsurl.me##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+||telllwrite.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/commit/91f936dbaeaa681fab4d9259a818458db2200e74#commitcomment-26342002
+/all-for-adsense/*
+
+! https://github.com/uBlockOrigin/uAssets/issues/1045
+ah-me.com##script:inject(abort-on-property-read.js, ExoLoader)
+ah-me.com##.allIMwindow
+ah-me.com##.movie-pop
+
+! https://github.com/uBlockOrigin/uAssets/issues/1046
+||hprofits.com^$domain=gogaytube.tv
+gogaytube.tv##.videojs-hero
+
+! https://github.com/uBlockOrigin/uAssets/issues/1047
+||anyfreeporn.com/d/*$inline-script,subdocument
+anyfreeporn.com##.rmedia
