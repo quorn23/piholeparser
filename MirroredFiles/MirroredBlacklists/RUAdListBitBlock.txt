@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: vUerVGwpx5CiJp8jBwvJwQ
-! Version: 201712240020
+! Checksum: 4UeVQfDknXWszKoZtf062Q
+! Version: 201712250020
 ! Title: RU AdList: BitBlock
-! Last modified: 24 Dec 2017 00:20 UTC
+! Last modified: 25 Dec 2017 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -2770,6 +2770,7 @@ prom.ua#@#img[alt="facebook"]
 /facebook_badge-
 /facebook_badge.
 /facebook_button
+/facebook_button.
 /facebook_follow.
 /facebook_footer.
 /facebook_header.
@@ -3693,6 +3694,7 @@ prom.ua#@#img[alt="facebook"]
 /reddit.png
 /reddit_16.
 /reddit_32.
+/reddit_button.
 /Reddit_Icon.
 /repost_bttn.
 /repostus_bttn_
@@ -4013,17 +4015,21 @@ prom.ua#@#img[alt="facebook"]
 /social/pinterest-
 /social/pinterest_
 /social/plus.
+/social/reddit_
 /social/share-
 /social/share_
 /social/shared/*
 /social/sprite-
 /social/su_
+/social/telergram_
 /social/top/*$~stylesheet
 /social/tumblr.
 /social/twitter-
 /social/twitter.$~xmlhttprequest
 /social/twitter_
+/social/viber_
 /social/vimeo.
+/social/whatsapp_
 /social1.
 /social2.
 /social3.
@@ -4238,6 +4244,7 @@ prom.ua#@#img[alt="facebook"]
 /technorati-icon.
 /technorati.png|$domain=~technorati.com
 /technorati_16.
+/telergram_button.
 /template/facebook_
 /template/twitter_
 /templates/*facebook.jpg
@@ -4400,6 +4407,7 @@ prom.ua#@#img[alt="facebook"]
 /twitter_bird_
 /twitter_bubble_
 /Twitter_button
+/twitter_button.
 /twitter_follow.
 /twitter_footer.
 /twitter_header.
@@ -4462,6 +4470,7 @@ prom.ua#@#img[alt="facebook"]
 /uploads/twitter-
 /uploads/youtube2.
 /utube-icon.
+/viber_button.
 /view_social_
 /viewboxTraffic_min.js
 /vimeo-48.
@@ -4472,6 +4481,7 @@ prom.ua#@#img[alt="facebook"]
 /vk_button.
 /vkontakte.png
 /vkontakte2_icon.
+/whatsapp_button.
 /whatsappblogger.js
 /widget/digg/*$~stylesheet
 /widget_add_this_
@@ -5141,6 +5151,8 @@ _youtube_social_
 ###dsp_ftr_social
 ###dvTwitter
 ###e_mailit_custom_position
+###ea-social-footer-links
+###ea-social-header-links
 ###ej-plugin-socialslideout
 ###embed-share-button
 ###entry-social-float
@@ -6156,6 +6168,7 @@ _youtube_social_
 ###share_gallery_box
 ###share_google
 ###share_hub_box
+###share_ico_c
 ###share_icons
 ###share_it
 ###share_link
@@ -6390,6 +6403,7 @@ _youtube_social_
 ###social-linkedin32x32
 ###social-links
 ###social-links-big
+###social-links-bottom
 ###social-links-facebook
 ###social-links-foot
 ###social-links-toggle
@@ -6543,6 +6557,7 @@ _youtube_social_
 ###socialInner
 ###socialInstagram
 ###socialLinks
+###socialLinksContainer
 ###socialLinksLeft
 ###socialLinksMainColumns
 ###socialLogos
@@ -8028,6 +8043,7 @@ _youtube_social_
 ##.component-facebook-like
 ##.component-social-feeds-v1
 ##.component-social-follow
+##.component-social-network-icons
 ##.component-social-share
 ##.connect-button-facebook
 ##.connect-button-gplus
@@ -8106,6 +8122,7 @@ _youtube_social_
 ##.custom-sharing-link
 ##.custom-soc
 ##.custom-social
+##.custom-social-buttons
 ##.custom-social-share-wrapper
 ##.custom-social-widgets
 ##.custom-tweet-button
@@ -8712,6 +8729,10 @@ _youtube_social_
 ##.flare-button-icon
 ##.flare-follow
 ##.flare-horizontal
+##.flaticon-facebook
+##.flaticon-facebook2
+##.flaticon-facebook3
+##.flaticon-linkedin1
 ##.flexi-social-connect
 ##.flickr_icon
 ##.float-share
@@ -8963,6 +8984,7 @@ _youtube_social_
 ##.footer-social-widgets
 ##.footer-social-wrap
 ##.footer-social__components
+##.footer-sociallink
 ##.footer-socialmedia
 ##.footer-socialmedia-share
 ##.footer-socialmediaIcon
@@ -9078,6 +9100,7 @@ _youtube_social_
 ##.g-plus-box
 ##.g-plusone
 ##.g-plusone-holder
+##.g1-drop-the-socials
 ##.g1-social-icons
 ##.g1-socials-item
 ##.g1-twitter
@@ -9733,6 +9756,7 @@ _youtube_social_
 ##.identity-fb-notice
 ##.ig-share-button
 ##.ig-socials-ball
+##.ihr-icon-social-instagram
 ##.ikonz-social
 ##.il-social-links
 ##.ilsb-share
@@ -9839,6 +9863,7 @@ _youtube_social_
 ##.j-social-actions
 ##.j-social-button
 ##.janrainEngagePublishShareBar
+##.janrainShareCountContainer
 ##.janrainSocialBar
 ##.janrainSocialPlaceholder
 ##.janrain_share
@@ -10849,6 +10874,7 @@ _youtube_social_
 ##.section-follow
 ##.section-sharebar
 ##.section-social
+##.section_footer-social-links
 ##.section_social_title
 ##.seda_share
 ##.selectionSharer
@@ -11828,6 +11854,7 @@ _youtube_social_
 ##.social-bookmark
 ##.social-bookmark-links
 ##.social-bookmarks
+##.social-bottom
 ##.social-botton
 ##.social-bottons
 ##.social-box
@@ -12067,6 +12094,7 @@ _youtube_social_
 ##.social-media-lhc-item
 ##.social-media-li
 ##.social-media-links
+##.social-media-list
 ##.social-media-module
 ##.social-media-nav
 ##.social-media-outer
@@ -12308,6 +12336,7 @@ _youtube_social_
 ##.socialFixed
 ##.socialFollow
 ##.socialFooter
+##.socialFooterIcon
 ##.socialFull
 ##.socialHeader
 ##.socialIcns
@@ -12808,6 +12837,7 @@ _youtube_social_
 ##.ssk-google-plus
 ##.ssk-linkedin
 ##.ssk-pinterest
+##.ssk-sharethis
 ##.ssk-twitter
 ##.ssk-vk
 ##.ssocial
@@ -13509,6 +13539,7 @@ _youtube_social_
 ##.widget_alloy_social
 ##.widget_anyusertwitterfeed
 ##.widget_be_widget_social_follow
+##.widget_better-social-counter
 ##.widget_bimber_widget_facebook_page
 ##.widget_cbs_follow_us_widget
 ##.widget_cbs_social_share_widget
@@ -13722,6 +13753,8 @@ _youtube_social_
 ##A[href^="//www.linkedin.com/shareArticle?"]
 ##SHARE-BUTTON
 ##[alt="retweet"]
+##[class*="socialLink"]
+##[class*="socialSection"]
 ##[class^="social_button_"]
 ##[data-pin-href^="https://www.pinterest.com/pin/create/"]
 ##[data-pin-log^="button_pinit"]
@@ -15276,6 +15309,7 @@ _site_cookie_
 ###taboola-div
 ###taboola-horizontal-toolbar
 ###taboola-horizontalx4-responsive
+###taboola-native-right-rail-thumbnails
 ###taboola-right-rail
 ###taboola-right-rail-text-right
 ###taboola-right-rail-thumbnails
@@ -16389,6 +16423,7 @@ _site_cookie_
 ##.js-nudger
 ##.js-popup-newsletter
 ##.js-sidebar-signup
+##.js_newsletter-btn--subscribe
 ##.klaviyo_flyout
 ##.listbuilder-popup-embedded
 ##.lon-newsletter-tout
@@ -16438,6 +16473,7 @@ _site_cookie_
 ##.newsletter-block
 ##.newsletter-bottom-article
 ##.newsletter-box
+##.newsletter-btn--mid-articles
 ##.newsletter-button
 ##.newsletter-call-to-action
 ##.newsletter-callout
@@ -16461,6 +16497,7 @@ _site_cookie_
 ##.newsletter-lightbox
 ##.newsletter-mini-banner
 ##.newsletter-mod
+##.newsletter-modal
 ##.newsletter-modal-overlay
 ##.newsletter-overlay
 ##.newsletter-overlay-footer
@@ -19839,6 +19876,7 @@ _site_cookie_
 ##.aviso-cookies
 ##.avisoCookies
 ##.avisocookies
+##.b-cookie
 ##.b-cookie-hint
 ##.b-cookies
 ##.b-notification-push__wrapper
@@ -22165,7 +22203,7 @@ _site_cookie_
 ! *** Fetched from: https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_whitelist_general_hide.txt ***
 billabong.com#@##NewsletterSignup
 autotrader.com#@##back-to-top
-nasa.gov#@##backToTop
+engie.fr,nasa.gov#@##backToTop
 rmf24.pl#@##backTop
 gcnlive.com,nasa.gov#@##backtotop
 roussillhotel.com#@##cookie-banner

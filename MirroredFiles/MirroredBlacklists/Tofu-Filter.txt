@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 15:05 2017/12/17
+! 最終更新 12:46 2017/12/24
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -2196,6 +2196,8 @@ sai-zen-sen.jp#@#[class*="-ad "]:not(html):not(body)
 sai-zen-sen.jp#@#[class$="-ad"]:not(html):not(body)
 	!変なの出る
 sekai-kabuka.com#@#.adsbygoogle
+	!検索結果 urlが消える
+startpage.com#@#[class^="ads_"]:not(html):not(body)
 	!anti adblock
 thisav.com#@#[id$="_ad"]:not(html):not(body)
 	!検索次へ
