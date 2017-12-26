@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201712242317
+! Version: 201712251727
 ! Title: EasyPrivacy
-! Last modified: 24 Dec 2017 23:17 UTC
+! Last modified: 25 Dec 2017 17:27 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -453,6 +453,7 @@
 /analytics-event-
 /analytics-ingress-
 /analytics-js.
+/analytics-ping.
 /analytics-plugin/*
 /analytics-post-
 /analytics-tag.
@@ -2108,6 +2109,7 @@
 /other-analitycs/*
 /ovstats.
 /ow_analytics.
+/owa.Analytics.
 /owa.tracker-combined-min.js
 /ox_stats.
 /oxtracker.
@@ -5921,13 +5923,10 @@ _mongo_stats/
 ||zroitracker.com^$third-party
 ||ztsrv.com^$third-party
 ! Mining
-.cf^$third-party,websocket
 .cf^*.wasm$third-party
 .space^$third-party,websocket
-.space^*.wasm$third-party
 /noblock.js
 ://api.*/lib/native.wasm$third-party
-://api.*/lib/native.wasm$third-party,websocket
 ||1beb2a44.space^$third-party
 ||300ca0d0.space^$third-party
 ||310ca263.space^$third-party
@@ -5948,6 +5947,8 @@ _mongo_stats/
 ||api.inwemo.com^$third-party
 ||authedmine.com^$third-party,domain=~coinhive.com
 ||azvjudwr.info^$third-party
+||bjorksta.men^$third-party
+||chainblock.science^$third-party
 ||cloudcoins.co^$third-party
 ||cnhv.co^$third-party
 ||coin-have.com^$third-party
@@ -5957,7 +5958,6 @@ _mongo_stats/
 ||coinhive-manager.com^$third-party
 ||coinhive-proxy.party^$third-party
 ||coinhive.com^$third-party
-||coinhive.com^$third-party,websocket
 ||coinhiveproxy.com^$third-party
 ||coinlab.biz^$third-party
 ||coinminerz.com^$third-party
@@ -5972,6 +5972,11 @@ _mongo_stats/
 ||deepc.cc^$third-party
 ||gus.host^$third-party
 ||hashforcash.us^$third-party
+||hashing.win^$third-party
+||hodlers.party^$third-party
+||hodling.faith^$third-party
+||hodling.party^$third-party
+||hodling.science^$third-party
 ||jroqvbvw.info^$third-party
 ||jsccnn.com^$third-party
 ||jscdndel.com^$third-party
@@ -5982,7 +5987,7 @@ _mongo_stats/
 ||lmodr.biz^$third-party
 ||mataharirama.xyz^$third-party
 ||megabanners.cf^$third-party
-||megabanners.cf^$websocket
+||mine.torrent.pw^$third-party
 ||minecrunch.co^$third-party
 ||minemytraffic.com^$third-party
 ||miner.pr0gramm.com^$third-party
@@ -6006,11 +6011,11 @@ _mongo_stats/
 ||siteverification.online^$third-party
 ||siteverification.site^$third-party
 ||subloader.cf^$third-party
-||subloader.cf^$third-party,websocket
 ||supportxmr.com^$third-party
 ||webmine.cz^$third-party
 ||wty46.com^$third-party
 ||xbasfbno.info^$third-party
+||ywtjdckysve.com^$third-party
 ! Admiral
 ||6ldu6qa.com^$third-party
 ||aheadday.com^$third-party
@@ -11230,6 +11235,7 @@ _mongo_stats/
 ||stats.firedrive.com^
 ||stats.harpercollins.com^
 ||stats.ibtimes.co.in^
+||stats.ibtimes.co.uk^
 ||stats.macmillanusa.com^
 ||stats.mehrnews.com^
 ||stats.nymag.com^
@@ -13441,6 +13447,7 @@ _mongo_stats/
 @@||ups.com/WebTracking/$xmlhttprequest
 @@||urlcheck.hulu.com/crossdomain.xml$object-subrequest
 @@||usps.com/m/js/tracking.js$domain=usps.com
+@@||usps.com^*/metrics.js$domain=usps.com
 @@||utm.alibaba.com/eventdriver/recommendEntry.do?$script
 @@||utm.arc.nasa.gov/common/css/
 @@||utm.arc.nasa.gov/common/js/common.js
@@ -13748,6 +13755,7 @@ _mongo_stats/
 @@||haaretz.co.il/logger/p.gif?$image,xmlhttprequest
 @@||mixpanel.com/track/?data=$xmlhttprequest,domain=eloan.co.il
 @@||mxpnl.com/libs/mixpanel-*.min.js$domain=eloan.co.il
+@@||player.bizportal.co.il/scripts/GoogleAnalytics.js$domain=bizportal.co.il
 @@||player.flix.co.il/scripts/GoogleAnalytics.js
 @@||stats.g.doubleclick.net/dc.js$domain=reshet.tv
 @@||tapuz.co.il/general/dotomi/statistics.js?$~third-party
@@ -13877,4 +13885,4 @@ _mongo_stats/
 @@||uaprom.net/image/blank.gif?$image
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: hEzhpvtcKvDB3AYa1Miq1A
+! Checksum: ctaw37rkUG+8O/kh0Rd1Lw
