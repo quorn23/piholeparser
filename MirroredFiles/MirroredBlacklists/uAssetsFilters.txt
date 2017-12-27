@@ -2762,6 +2762,7 @@ tv-porinternet.com##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/912
 tmearn.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+tmearn.com##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/919
 foxurl.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -2949,8 +2950,9 @@ extremetube.com,spankwire.com##script:inject(abort-on-property-write.js, ppAb)
 adlinkme.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/965
-curs.io,ecurs.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-curs.io,ecurs.co##script:inject(window.open-defuser.js)
+curs.io,ecurs.co,eurs.io##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+curs.io,ecurs.co,eurs.io##script:inject(window.open-defuser.js)
+eurs.io##a[href*="inclk.com"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/966
 mcfucker.com##script:inject(abort-on-property-write.js, t4PP)
@@ -3474,3 +3476,50 @@ realgfporn.com##script:inject(popads-dummy.js)
 realgfporn.com###fixedBanner
 realgfporn.com##.overlay-banner
 realgfporn.com##.video-overlay
+
+! https://github.com/uBlockOrigin/uAssets/issues/1116
+flowyourvideo.com##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1120
+@@||shyav.com^$generichide
+shyav.com##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1121
+zmovs.com##script:inject(window.open-defuser.js)
+zmovs.com##script:inject(abort-on-property-read.js, ALoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1122
+picturelol.com###rang2
+picturelol.com##script:inject(abort-on-property-read.js, ExoLoader)
+picturelol.com##script:inject(abort-on-property-read.js, raSettings)
+picturelol.com##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1123
+imgspice.com##script:inject(window.open-defuser.js)
+imgspice.com##script:inject(abort-on-property-read.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1124
+@@||mrtechmyth.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1128
+@@||mitly.us^$generichide
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=mitly.us
+||mitly.us/*ad$image,redirect=2x2-transparent.png
+about:blank$popup,domain=mitly.us
+
+! https://github.com/uBlockOrigin/uAssets/issues/1127
+minkly.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1129
+zlshorte.net##script:inject(abort-on-property-read.js, open)
+zlshorte.net##script:inject(abort-on-property-write.js, Fingerprint2)
+zlshorte.net##.banner-inner
+about:blank$popup,domain=zlshorte.net
+
+! https://github.com/uBlockOrigin/uAssets/issues/1126
+shortelink.co###capaclick
+shortelink.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1125
+jzrputtbut.net##script:inject(addEventListener-defuser.js, click, popunder)
+jzrputtbut.net##script:inject(setTimeout-defuser (), 50)
