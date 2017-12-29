@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: immPalpoSNuVeorqfKaUhA
-! Version: 201712280020
+! Checksum: fbwlqBNEKkQRuRR46GT6MA
+! Version: 201712290020
 ! Title: RU AdList: BitBlock
-! Last modified: 28 Dec 2017 00:20 UTC
+! Last modified: 29 Dec 2017 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1901,6 +1901,7 @@ nur.kz##aside.groups--vk
 ntv.ru##body > #bg250
 computerworld.ru,osp.ru##body > #bottom-bar
 ren.tv##body > #box-view-wrapper
+translate.google.com,translate.google.com.ua,translate.google.ru,translate.google.se##body > #gb[style="min-width: 750px;"] > .gb_g
 segodnya.ua##body > #overlay
 stranamam.ru##body > #rukodelie-wrapper
 kinovideo.tv##body > #text > table[width="100%"]
@@ -1965,6 +1966,7 @@ psy-music.ru##div[style*="tranceshop.ru"]
 ixbt.com##div[style] > script[src="//ixbt.com/js/ad_wrapper.js"] + div[style="text-align: right"]
 boxrec.com##div[style^="position:relative;top:-2px;color:#888"]
 azbooki.ru,engisys.ru,zip1000.ru##html > div[style^="color: rgb"]
+4pda.ru##html[xmlns] > body > div[id^="r"] > div[id^="r"][href]
 allboxing.ru##iframe[src*="ad.allboxing.ru"]
 samlab.ws##iframe[src*="money.yandex.ru/embed/donate"]
 chastnik-m.ru##img[alt="баннер"]
@@ -2547,6 +2549,7 @@ prom.ua#@#img[alt="facebook"]
 /45x45xtwitter-ico.
 /_sharrre.php?
 /a2a_share_
+/actionsnshare/*
 /add-mymsn2.
 /addthis-stumble.
 /addthis.png$domain=~addthis.com
@@ -3658,12 +3661,14 @@ prom.ua#@#img[alt="facebook"]
 /plugins/sexybookmarks/*$~stylesheet
 /plugins/share-social/*$~stylesheet
 /plugins/sharebar/*$~script,~stylesheet
+/plugins/simple-share-buttons-adder/*
 /plugins/simple-social-sharing-widgets-icons/*$~stylesheet
 /plugins/slide-in/*$script
 /plugins/sociable-$~stylesheet
 /plugins/sociable/*$~stylesheet
 /plugins/social-$~stylesheet
 /plugins/socialbox/*
+/plugins/socialfans-counter/*
 /plugins/socialgrid/*$~stylesheet
 /plugins/StickySocialBar/*
 /plugins/subscribe-connect-follow-widget/*$~stylesheet
@@ -3777,6 +3782,7 @@ prom.ua#@#img[alt="facebook"]
 /share2/*$~stylesheet
 /share42.js
 /share42_
+/share_28x13.
 /share_bebo.
 /share_blogger.
 /share_btn.
@@ -4852,8 +4858,10 @@ _youtube_social_
 ###aFbLikeBottom
 ###aa_header_shares
 ###about-edition-social
+###act_share_global_par
 ###action-share
 ###actionShare
+###actionsnshare
 ###acx-social-icons-widget-2
 ###adbl-social-container
 ###adbl-social-icons
@@ -6251,6 +6259,7 @@ _youtube_social_
 ###sharer-toggle
 ###sharerBar
 ###sharereceiver
+###shareside
 ###sharestrip
 ###sharestrip_bottom
 ###sharesumo
@@ -8779,6 +8788,7 @@ _youtube_social_
 ##.floatredesSociales
 ##.flodes-puff__social-media-list
 ##.fluid-share-cameraroll-view
+##.fly-social-icos
 ##.flyout-facebook
 ##.fn-social-followus
 ##.fnb-social
@@ -9635,6 +9645,7 @@ _youtube_social_
 ##.icon-plusone
 ##.icon-plusone-mini
 ##.icon-pocket
+##.icon-post-share
 ##.icon-reddit
 ##.icon-reddit2
 ##.icon-s-facebook
@@ -9965,6 +9976,7 @@ _youtube_social_
 ##.ksm-post-facebook
 ##.ksm-post-twitter
 ##.ktz-sharedpost
+##.lancio-sharebar
 ##.landing-feed--story-shares
 ##.landing-share-right-widget
 ##.large-share-bar
@@ -10371,6 +10383,7 @@ _youtube_social_
 ##.navSocial
 ##.navSocial-list-item
 ##.nav__item--social
+##.nav__share
 ##.nav__social-button
 ##.nav_facebook
 ##.nav_menu_social
@@ -11393,6 +11406,7 @@ _youtube_social_
 ##.share_v2
 ##.share_ver
 ##.share_vid
+##.share_w
 ##.share_widget
 ##.share_widgets
 ##.share_with_friends
@@ -11688,6 +11702,7 @@ _youtube_social_
 ##.simpleShare
 ##.simple_socialmedia
 ##.simplesocial
+##.single-aside-social-wrap
 ##.single-fb-share
 ##.single-meta-sharing
 ##.single-post-sharing-button
@@ -14976,6 +14991,7 @@ _subscribe_button
 /cookies-notification.
 /cookies-overlay.
 /cookies-policy-
+/cookies-policy.js
 /cookies-policy/*
 /cookies/popup.
 /cookies_acceptance.
@@ -17597,7 +17613,7 @@ _site_cookie_
 ###cookie-btn
 ###cookie-button-banner
 ###cookie-cc
-###cookie-check
+###cookie-check:not(body)
 ###cookie-checker
 ###cookie-choice
 ###cookie-choice-info
@@ -21701,6 +21717,7 @@ _site_cookie_
 ###jump-to-top
 ###ktz-backtotop
 ###mainToTopAnchor
+###menu-back-to-top
 ###move-to-top
 ###onTop3
 ###return-to-top
@@ -21717,7 +21734,9 @@ _site_cookie_
 ###scroll_totop
 ###scrolltotop_button
 ###scrollup
+###site-scroll-top
 ###sticky-back-to-top
+###tab-to-top
 ###to-the-top
 ###to-top
 ###toTop
@@ -21758,6 +21777,8 @@ _site_cookie_
 ##.btn-go-top
 ##.btn-goto-top
 ##.btn-return-top
+##.btn-scroll-to-top
+##.btn-scroll-to-top-container
 ##.btn-scroll-up
 ##.btn2top
 ##.btnBackTop
@@ -21796,6 +21817,7 @@ _site_cookie_
 ##.js-persistent-nav-top
 ##.js-scroll-to-top
 ##.link_to_top
+##.menu-back-to-top
 ##.mh-back-to-top
 ##.mk-go-top
 ##.mod-totop
@@ -21816,6 +21838,7 @@ _site_cookie_
 ##.scroll2top
 ##.scrollToTop
 ##.scrollToTopButton
+##.scrollToTopText
 ##.scrollTo_top
 ##.scrollTop
 ##.scroll_top
@@ -22007,11 +22030,14 @@ _site_cookie_
 ||getsmily.com^$third-party
 ||githubbadge.appspot.com^$third-party
 ||go.pardot.com^$subdocument,third-party
+||goemotify.com^$third-party
 ||google.com/uds/?file=orkut&
 ||goroost.com^$third-party
 ||gravity.com^$third-party
+||gravityrd-services.com^$third-party
 ||grazeit.com^$third-party
 ||groupon.com^*/affiliate_widget/$third-party
+||grvmedia.com^$third-party
 ||healthgrades.com^$third-party
 ||hellobar.com^$third-party
 ||hnbutton.appspot.com^$third-party
@@ -22066,6 +22092,7 @@ _site_cookie_
 ||moreshare.com^$third-party
 ||mozo.com.au/widgets/$third-party
 ||my.leadpages.net^$third-party
+||myeffecto.com^$third-party
 ||myvoicenation.com^$third-party
 ||newsgator.com^$third-party
 ||newsletter.outbrain.com^$third-party
@@ -22267,6 +22294,7 @@ thefirefly.com#@#.block-subscribe
 azcentral.com#@#.close-wrap > .close-overlay
 facebook.com#@#.connect_widget
 boursorama.com#@#.cookie-banner
+xxxlshop.de#@#.cookie-bar
 lg.com#@#.cookie-check
 greenflag.com#@#.cookie-message
 uktv.co.uk#@#.cookie-notice
@@ -22400,7 +22428,8 @@ answers.microsoft.com#@##SocialIcons
 google.com#@##\5f __plus_0
 google.com#@##\5f __plusone_0
 beautifulplanet4u.com#@##advancedsocialwidget
-lanik.us#@##button_twitter
+api.oneall.com#@##button_facebook
+api.oneall.com,lanik.us#@##button_twitter
 digg.com#@##digg-widget
 digg.com#@##digg_module
 digg.com#@##digg_upcoming_content
@@ -22586,7 +22615,7 @@ sap.com#@#.j-social-button
 nbcnews.com#@#.js-share
 alternativeto.net#@#.like-box
 facebook.com,forum.albiononline.com#@#.likeButton
-modworkshop.net#@#.like_button
+fimfiction.net,modworkshop.net#@#.like_button
 linkedin.com,peerlyst.com#@#.linkedin.icon
 pan.baidu.com#@#.list-share
 theverge.com#@#.m-article__share-buttons

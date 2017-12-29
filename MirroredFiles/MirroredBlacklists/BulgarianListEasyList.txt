@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201712271841
+! Version: 201712281953
 ! Title: EasyPrivacy
-! Last modified: 27 Dec 2017 18:41 UTC
+! Last modified: 28 Dec 2017 19:53 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -319,6 +319,7 @@
 /activetrackphp.php?
 /activity-track/?
 /activity.gif?
+/ad-iptracer.
 /ad_1_trans.
 /ad_imp.
 /adam.js
@@ -709,6 +710,7 @@
 /BKVTrack.js
 /blank.gif?*%
 /blank.gif?*&
+/block/pixel?
 /blockstat?
 /blog/traffic/?
 /blogsectiontracking.
@@ -1234,6 +1236,7 @@
 /exittracker.
 /exittraffic.
 /expcount/*
+/extBnr.gif?
 /extendedAnalytics.
 /external-promo-metrics.
 /external-tracking.
@@ -1654,6 +1657,7 @@
 /iplookup.php
 /iporganictrack.
 /ips-invite.iperceptions.com/*
+/iptracer.
 /iqtm.js
 /istat.aspx?
 /ists.tag?
@@ -2317,6 +2321,7 @@
 /pushlog.
 /pv.gif?url
 /pv.txt?
+/pv/new?
 /pv?place=
 /pv?token=
 /pv_count.
@@ -3478,7 +3483,9 @@
 ://sett.*/log.js
 ://sp.*/xyz?$image
 ://tracking.*/beacon/
+;1x1inv=
 ;manifest-analytics.js
+;sz=1x1;ord=
 =&cs_Referer=
 =ATAtracker&
 =get_preroll_cookie&
@@ -6493,6 +6500,8 @@ _mongo_stats/
 ||dotmetrics.net^$third-party
 ||xclaimwords.net^$third-party
 ! Czech
+||analights.com^$third-party
+||dopc.cz^$third-party
 ||ibillboard.com^$third-party
 ||itop.cz^$third-party
 ||lookit.cz^$third-party
@@ -6502,6 +6511,7 @@ _mongo_stats/
 ||performax.cz^$third-party
 ||pocitadlo.cz^$third-party
 ||programmatic.cz^$third-party
+||semnicneposilejte.cz^$third-party
 ! Danish
 ||agillic.eu^$third-party
 ||andersenit.dk^$third-party
@@ -9173,7 +9183,9 @@ _mongo_stats/
 ! Croatian
 ||tracking.vid4u.org^
 ! Czech
+||bnr.alza.cz^
 ||counter.cnw.cz^
+||fimg-resp.seznam.cz^
 ||h.imedia.cz^
 ||hit.skrz.cz^
 ||i.imedia.cz^
@@ -9861,6 +9873,7 @@ _mongo_stats/
 ||broadbandchoices.co.uk/track.js
 ||broadwayworld.com/regionalbug.cfm?
 ||brobible.com/?ACT
+||bulb.76.my^
 ||bulgari.com/bulgari/wireframe_script/BulgariGa.js
 ||business.com/images2/anal.gif?
 ||businessinsider.com/tracker.js
@@ -10806,6 +10819,7 @@ _mongo_stats/
 ||novatech.co.uk^*/tracking?
 ||novell.com^*/metrics.js
 ||novinite.com/tz.php
+||nst.com.my/statistic/
 ||nydailynews.com/tracker.js
 ||nydailynews.com^*/tracker.js
 ||nymag.com/js/2/metrony
@@ -11321,6 +11335,7 @@ _mongo_stats/
 ||t.eharmony.com^
 ||t.hulu.com/beacon/
 ||t.kck.st^
+||t.my.jobs^
 ||t.paypal.com^
 ||t.vimeo.com^
 ||t.wayfair.com^
@@ -12439,6 +12454,7 @@ _mongo_stats/
 ! Czech
 ||kbmg.cz/tracker.js
 ||o2.cz^*-ga_o2cz_bundle.js?
+||stat.novinky.cz^
 ! Dutch
 ||klik.nrc.nl/ping?
 ||logs.ggweb.nl^
@@ -13028,6 +13044,7 @@ _mongo_stats/
 @@||dw.cbsi.com/anonc.js$domain=cnet.com|gamespot.com|giantbomb.com
 @@||dw.cbsi.com/js/dw.js$domain=cnet.com
 @@||dw.com.com/js/dw.js$domain=cbsnews.com|cnet.com|gamespot.com|tv.com
+@@||e2e-comms.pearson.com/osbrowserchecker/prd/thirdPartyCookie.html?$subdocument,domain=pearsonmylabandmastering.com
 @@||ec.atdmt.com/b/$domain=starwoodhotels.com
 @@||ecostream.tv/js/ecos.js
 @@||edgedatg.com/aws/apps/datg/web-player-unity/*/AppMeasurement.js$domain=abc.go.com
@@ -13323,6 +13340,7 @@ _mongo_stats/
 @@||popeater.com/traffic/?$script,domain=popeater.com
 @@||popmoney.com^*/jquery.analytics.js
 @@||pp-serve.newsinc.com^*/unitsdata.js?$domain=timesfreepress.com
+@@||primevideo.com/watchlist/ajax/addRemove.html/$xmlhttprequest,domain=primevideo.com
 @@||productads.hlserve.com^$script,domain=argos.co.uk
 @@||propelmedia.com/resources/images/load.gif
 @@||ps.w.org/google-analytics-dashboard-for-wp/assets/
@@ -13815,6 +13833,7 @@ _mongo_stats/
 @@||gemius.pl/gstream.js
 @@||kropka.onet.pl^*/onet.js$domain=tvnwarszawa.pl
 @@||ninja.onap.io/ninja-cee.js$domain=olx.pl
+@@||olx.pl^*/js/tracking/ninja.js$domain=olx.pl
 @@||stat24.com/crossdomain.xml$domain=ipla.tv
 @@||wp.pl^*/dot.gif?$xmlhttprequest,domain=open.fm|wp.tv
 ! Portuguese
@@ -13891,4 +13910,4 @@ _mongo_stats/
 @@||uaprom.net/image/blank.gif?$image
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: TvPMF8T22Hlc2pRqNYXXeg
+! Checksum: 6hw7g9nENdgqmX072ehxjw

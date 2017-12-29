@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Homepage: http://adblock.sk
 ! Title: Easylist Czech and Slovak filter list
-! Last change: 06/12/2017
+! Last change: 28/12/2017
 ! List maintainers: tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy
 ! GitHub repository: https://github.com/tomasko126/easylistczechandslovak
 ! GitHub contributors: https://github.com/tomasko126/easylistczechandslovak/graphs/contributors
@@ -172,6 +172,7 @@ _clickthru.swf?
 ||geewa.ws/js/ad.
 ||getAd$domain=idnes.cz
 ||hcdukla.cz/adds/
+||hcmotor.cz/adds/
 ||hd-forum.cz/images/banner/
 ||hd-forum.cz/images/sberbank.jpg
 ||heureka.cz/direct/bannery/
@@ -545,7 +546,6 @@ _clickthru.swf?
 @@||api.play-backend.iprima.cz/ad/banner/_adsense_/_adserver/
 @@||autotube.cz/ui/player/ad.php
 @@||bbelements.com/bb/bb_one$domain=hrej.cz
-@@||bbelements.com/bb/bb_one2n.js$domain=titulky.com
 @@||bibloo.cz^$xmlhttprequest
 @@||blesk.cz/js/*/player/videoad.swf$domain=synotliga.isport.blesk.cz
 @@||blesk.cz/js/*adocean.js$domain=synotliga.isport.blesk.cz
@@ -937,6 +937,7 @@ i-navody.cz###slider
 idnes.cz###fix-block-1 > div:first-child:not(#art-video)
 idnes.cz###fix-block-2 > div:first-child[style*="display"]
 idnes.cz###main > table[style*="display"]
+idnes.cz###main > tale
 idnes.cz###tipsport-art
 idnes.cz##[id^='bmone2n']
 idnes.cz##[id^='r98']
@@ -1009,7 +1010,7 @@ lui-magazine.cz##.bannergroup
 lupa.cz###jobs-kurzy
 lupa.cz###jobs-prace
 lupa.cz###speed-promo
-lupa.cz##[class*="advert"]
+lupa.cz##[class*="advert"]:not(body)
 lupa.cz##[data-adp="leaderboard"]
 lupa.cz##[data-adp^="side-"]
 lupa.cz##[id*="Adform"]
@@ -1132,6 +1133,7 @@ onetv.cz###movingAdRight
 onetv.cz##.ad.centered
 onlajny.com###banner-top-four
 onlajny.com###sportObchodBanner
+onlajny.com###tip-game-holder
 onlajny.com##div.bannerHolderZapasRight
 onlajny.com##tr.advert
 onlajny.com##tr.multimedia:not(.gfy)
@@ -1436,4 +1438,4 @@ novinky.cz#?#div:-abp-has(> div.performax-logo)
 novinky.cz#?#div:-abp-has(> h1.packa)
 novinky.cz#?#div:-abp-has(> iframe[src*="mookie1.com"])
 novinky.cz#?#div:-abp-has(> script + h5[style*="position"])
-titulky.com##div[style^="opacity"] + div#colorbox:-abp-has(a[href*="precti-si-vip-napovedu"])
+titulky.com##div[style^="opacity"] + div#colorbox:-abp-has(a[href*="colorbox.close"])
