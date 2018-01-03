@@ -927,7 +927,7 @@ cnn.com##.OUTBRAIN
 ! TODO: might be obsolete, find out eventually
 1337x.to##script:inject(abort-on-property-write.js, Fingerprint2)
 ! https://github.com/uBlockOrigin/uAssets/issues/635
-1337x.to##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
+1337x.to##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.pops2.popunderCondition)
 ! https://github.com/gorhill/uBlock/issues/3347
 1337x.to##script:inject(abort-current-inline-script.js, parseInt, MarketGidJSON)
 
@@ -1381,12 +1381,15 @@ plantaobrasil.net##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/383
 vidzi.tv##script:inject(abort-on-property-read.js, head)
-vidzi.tv##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
+vidzi.tv##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.pops2.popunderCondition)
 vidzi.tv##script:inject(nowebrtc.js)
 ! https://forums.lanik.us/viewtopic.php?p=117549#p117549
 ||ww1.vidzi.tv^
 ||ww2.vidzi.tv^
 ||ww3.vidzi.tv^
+! https://github.com/uBlockOrigin/uAssets/issues/1149
+vidzi.tv##script:inject(window.open-defuser.js)
+vidzi.tv##a[href="https://vidzi.tv/download.html"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/183
 exrapidleech.info##script:inject(bab-defuser.js)
@@ -2456,6 +2459,7 @@ onhax.me##script:inject(abort-on-property-write.js, Fingerprint2)
 onhax.me##[id*=prom]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/804
+||amazon-adsystem.com/*/apstag.js$script,redirect=noopjs,domain=history.com
 ||mssl.fwmrm.net/*/AdManager.js$script,redirect=noopjs,domain=history.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/811
@@ -2475,6 +2479,8 @@ cooking.nytimes.com##html:style(height: auto !important; overflow: auto !importa
 mp4upload.com##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 mp4upload.com##script:inject(popads-dummy.js)
 ||adc.stream.moe^$script
+||c.stream.moe^$script
+@@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=mp4upload.com
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=37976
 userupload.net##script:inject(abort-current-inline-script.js, document.getElementById, adblockinfo)
@@ -3632,3 +3638,28 @@ dejure.org##script:inject(set-constant.js, a_allowed, true)
 pornsocket.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 pornsocket.com##script:inject(set-constant.js, _site_ads_ns, true)
 ||adspaces.ero-advertising.com/adspace/*$script,redirect=noopjs,domain=pornsocket.com
+
+! http://forum.chip.de/rund-um-online/werbeterror-spendenaufruf-pic-upload-de-microsoft-alarm-u-google-benachr-1879678.html
+pic-upload.de##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! nxxporn anti adb
+nxxporn.com##script:inject(set-constant.js, blockAdBlock, false)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39513
+r4dm.com##script:inject(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1154
+@@||biography.com^$generichide
+@@||mssl.fwmrm.net/p/aetn_live/AdManager.js$script,domain=player.watch.aetnd.com
+@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=player.watch.aetnd.com
+biography.com##.m-header-ad
+biography.com##.m-sidebar-ad--slot
+biography.com##.m-in-content-ad-row
+biography.com##.m-fixedbottom-ad
+biography.com##.l-content-recommendation
+
+! https://twitter.com/tj_fogarty/status/948169965546430464
+limerickleader.ie###abr_purchase_div
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/780
+lkky.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
