@@ -2399,7 +2399,7 @@ allpar.com,antonymsfor.com,bobshideout.com,cheezburger.com,colourlovers.com,dail
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38744
 ! https://github.com/uBlockOrigin/uAssets/issues/810
 ! https://github.com/uBlockOrigin/uAssets/issues/855
-abandonedspaces.com,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips.in,gorillavid.in,movpod.in,netzwelt.de,parentztalk.com,powerofpositivity.com,spiele-umsonst.de,talkwithstranger.com,toptenz.net,vidmax.com,worldation.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
+abandonedspaces.com,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips.in,eternallifestyle.com,gorillavid.in,greeningz.com,hyperactivz.com,moviepredators.com,movpod.in,netzwelt.de,parentztalk.com,powerofpositivity.com,presidentmommy.com,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,toptenz.net,vidmax.com,worldation.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
 footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39280&p=129024#p129024
 readcomics.website##script:inject(abort-on-property-write.js, decodeURIComponent)
@@ -3701,3 +3701,25 @@ adpop.me##script:inject(addEventListener-defuser.js, click, trigger)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1165
 vier.be##script:inject(abort-on-property-write.js, _sp_)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1167
+@@||destyy.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1168
+jkmk.net##script:inject(abort-on-property-read.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1169
+||verliga.net/canales/adblock.js$script,redirect=fuckadblock.js-3.2.0,first-party
+||verliga.net^*pub$subdocument
+
+! https://github.com/uBlockOrigin/uAssets/issues/1170
+downace.com##script:inject(nowebrtc.js)
+downace.com##script:inject(abort-on-property-write.js, u0EE)
+downace.com##a[href^="https://9xmovie.co/download/"]
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/785
+przegladsportowy.pl##script:inject(abort-current-inline-script.js, $onet, adblock-detect)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1172
+java-forum.org##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+java-forum.org###messageList > li.message:has-text(Anzeige)

@@ -3,7 +3,6 @@
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
 
-gowatchfreemovies.to##iframe[src*="download.php"]
 gowatchfreemovies.to##.sl_wrap
 gowatchfreemovies.to##.comment_box
 gowatchfreemovies.to##.below_player
@@ -552,7 +551,7 @@ facebook.com##._5pcr._7xp
 @@||d3ujids68p6xmq.cloudfront.net^$script,domain=beta.speedtest.net,badfilter
 screenrant.com##.title-section
 screenrant.com##.related-thumbs.thumb-list
-gowatchfreemovies.to##script:inject(rdo.js, UAParser, noopFunc)
+gowatchfreemovies.to##script:inject(abort-current-inline-script.js, addEventListener, IsAdblockRequest)
 facebook.com##._3j6k
 mega.nz##.ads-left-block
 mega.nz##.ads-right-block
@@ -1037,5 +1036,7 @@ amazon-adsystem.com^$important
 @@gowatchfreemovies.to^$elemhide
 gowatchfreemovies.to##.adv_box
 gowatchfreemovies.to##.page_content > div:has-text(VPN)
+gowatchfreemovies.to##.tweet
+9anime.*,bmovies.*,fmovies.*,solarmoviex.*,putlockertv.*##script:inject(abort-current-inline-script.js, document.write, wwwpromoter.com)
 
 $third-party,script,domain=kimcartoon.me|comicbook.com|kissanime.ru|kissmanga.com|readcomiconline.to|torrentfreak.com|bulbagarden.net|quora.com|mcuexchange.com|gowatchfreemovies.to|gsmarena.com|trailer-track.com|onhax.me|cinemablend.com|8muses.com

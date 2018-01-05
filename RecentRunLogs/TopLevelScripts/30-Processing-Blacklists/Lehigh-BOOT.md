@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Lehigh-BOOT List Unavailable To Download. Fri Jan 5 00:21:08 UTC 2018
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* Lehigh-BOOT List Was An Empty File After Download. Thu Jan 4 14:13:48 UTC 2018
+* Lehigh-BOOT List Was An Empty File After Download. Fri Jan 5 00:21:08 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Lehigh-BOOT List Was Killed By The Parsing Process. It will be skipped in the future. Fri Jan 5 00:21:08 UTC 2018
