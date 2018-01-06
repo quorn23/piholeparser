@@ -216,7 +216,7 @@ armorgames.com,mmohuts.com,newgrounds.com,onrpg.com,silvergames.com##a[href*="mm
 
 # https://twitter.com/DThibaut67/status/707624770653843456
 ! https://forums.lanik.us/viewtopic.php?f=90&t=28654
-||sport1.de*/my_ad_integration.js$script,redirect=noopjs,domain=sport1.de
+||adnxs.com/*/sport1.js$script,redirect=noopjs,domain=sport1.de
 
 # https://twitter.com/FabienTipon/status/711877626638503936
 @@||f1g.fr/*/adsense.js$script
@@ -1469,9 +1469,11 @@ golovbukh.ua##body:style(overflow: auto !important;)
 ! https://github.com/uBlockOrigin/uAssets/issues/636
 ! https://github.com/uBlockOrigin/uAssets/issues/799
 ! https://forums.lanik.us/viewtopic.php?p=128461#p128461
+! https://github.com/uBlockOrigin/uAssets/issues/1177
 tvad.me##script:inject(abort-on-property-read.js, app.adblockPop)
-tvad.me,thevideo.io,thevideo.me,thevideo.us##script:inject(popads-dummy.js)
-thevideo.io,thevideo.us##script:inject(abort-on-property-read.js, popHandler.init)
+tvad.me,thevideo.ch,thevideo.io,thevideo.me,thevideo.us##script:inject(popads-dummy.js)
+thevideo.ch##script:inject(abort-current-inline-script.js, lm2, autoThreads)
+thevideo.ch,thevideo.io,thevideo.us##script:inject(abort-on-property-read.js, popHandler.init)
 thevideo.io,thevideo.us##script:inject(window.open-defuser.js)
 thevideo.me,thevideo.us##script:inject(abort-current-inline-script.js, app.config.adblock_domain)
 thevideo.me,thevideo.us##script:inject(abort-on-property-read.js, app.main.adblock)
@@ -2705,6 +2707,8 @@ linkkawy.com###exestylepopupdiv
 ! https://github.com/uBlockOrigin/uAssets/issues/886 
 gram.im##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 gram.im##.more-igram
+igram.im##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+igram.im##.more-igram
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39258
 arconaitv.us##script:inject(abort-on-property-read.js, ab_detection)
@@ -3723,3 +3727,23 @@ przegladsportowy.pl##script:inject(abort-current-inline-script.js, $onet, adbloc
 ! https://github.com/uBlockOrigin/uAssets/issues/1172
 java-forum.org##script:inject(setTimeout-defuser.js, nextFunction, 2000)
 java-forum.org###messageList > li.message:has-text(Anzeige)
+
+! https://github.com/gorhill/uBlock/issues/3403
+kaztorka.org##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+##[id*=Composite]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1175
+cut-urls.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+cut-urls.com##script:inject(abort-on-property-write.js, K4kk)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1176
+flashx.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+flashx.tv##script:inject(abort-on-property-write.js, Fingerprint2)
+flashx.tv##script:inject(nowebrtc.js)
+flashx.tv##script:inject(window.open-defuser.js)
+@@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=flashx.tv
+@@||flashx.tv/counter.cgi$script,first-party
+@@||flashx1.tv/js/showad*.js$script,domain=flashx.tv
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/786
+gadzetomania.pl##script:inject(abort-on-property-write.js, __serviceAbModal)

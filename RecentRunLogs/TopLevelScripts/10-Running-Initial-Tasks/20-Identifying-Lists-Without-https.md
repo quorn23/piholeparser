@@ -8,16 +8,6 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* Airelles-AntiAdvertisements-Hosts
-* Airelles-AntiMiscellaneous-Hosts
-* Airelles-AntiSex-Hosts
-* Airelles-AntiTrackers-Hosts
-* Airelles-Malware-Hosts
-* Airelles-Phishing-Hosts
-* Lehigh-BOOT
-* LehighEDUDomains
-* SchuzaksUniversalFilter
-* SecureMecca
 * Adblock-Filters-by-Gurudee
 * BLOGRAM-Analysis-Block-Filter-List-for-Japan
 * BLOGRAM-Basic-Filter-List-for-Japan
