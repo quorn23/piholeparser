@@ -1,4 +1,4 @@
-[uBlock Origin 1.14.23.12]
+[uBlock Origin 1.14.23.14]
 ! Title: uBO-Personal-Filters
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
@@ -35,6 +35,7 @@ forbes.com##.undefined-expanded
 heroichollywood.com##.adbox-long
 heroichollywood.com##.adbox-sidebar
 heroichollywood.com##.sidebar
+heroichollywood.com^$csp=script-src 'self' 'unsafe-inline' heroichollywood.b-cdn.net platform.twitter.com *.twimg.com platform.instagram.com
 cinemablend.com##.StoryContent2
 cinemablend.com##.twitter-share-button
 cinemablend.com##a[href="#discuss"]
@@ -625,23 +626,6 @@ promo$script
 pornhub.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.phncdn.com
 wikia.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.nocookie.net *.youtube.com *.ytimg.com
 reddit.com^$csp=script-src 'self' *.redditstatic.com 'unsafe-inline' 'unsafe-eval'
-ghacks.net###snippet-box
-ghacks.net###post-author
-ghacks.net##hr
-ghacks.net###breadcrumbs
-ghacks.net###respond
-ghacks.net##.nav-prev
-ghacks.net##.post-entries
-ghacks.net##strong:has-text(share)
-ghacks.net##.tags
-ghacks.net###sidebar
-ghacks.net##.entry > div:has-text(/Advertisement|Read/)
-ghacks.net##.entry > h3:has-text(/Related|RELATED/)
-ghacks.net##div:nth-of-type(3):has-text(Advertisement)
-ghacks.net##.entry > ul:has(a[href*='https://www.ghacks.net/'])
-ghacks.net##.entry > p:has-text(/Tip:|Now You:/)
-ghacks.net##.post-comments
-ghacks.net^$csp=script-src 'self' 'unsafe-inline'
 youtube.com###movie-upsell-card
 youtube.com##.yt-lockup-movie-vertical-poster.yt-lockup-tile.yt-lockup
 cnn.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: *.cnn.com  *.turner.com *.cnn.io
@@ -1037,8 +1021,21 @@ amazon-adsystem.com^$important
 gowatchfreemovies.to##.adv_box
 gowatchfreemovies.to##.page_content > div:has-text(VPN)
 gowatchfreemovies.to##.tweet
+gowatchfreemovies.to##.twitter-follow-button
 9anime.*,bmovies.*,fmovies.*,solarmoviex.*,putlockertv.*##script:inject(abort-current-inline-script.js, document.write, wwwpromoter.com)
 9anime.*##.crop.widget
 @@||ajax.cloudflare.com/cdn-cgi/scripts/$third-party,script,badfilter
+ghacks.net##.ghacks_share_widget.widget
+ghacks.net##.ghacks_this_day.widget
+ghacks.net##.ghacks_popular.widget
+ghacks.net##.ghacks_last_updated.widget
+ghacks.net##.border--top--gray
+ghacks.net###snippet-box
+ghacks.net###respond
+ghacks.net##.user-content > p:has-text(/Tip:|Now You:/)
+ghacks.net##.user-content > ul:has(a[href^='https://www.ghacks.net/'])
+ghacks.net##p:nth-of-type(4) > strong
+ghacks.net^$csp=script-src 'self' 'unsafe-inline'
+@@ghacks.net^$elemhide
 
 $third-party,script,domain=kimcartoon.me|comicbook.com|kissanime.ru|kissmanga.com|readcomiconline.to|torrentfreak.com|bulbagarden.net|quora.com|mcuexchange.com|gowatchfreemovies.to|gsmarena.com|trailer-track.com|onhax.me|cinemablend.com|8muses.com
