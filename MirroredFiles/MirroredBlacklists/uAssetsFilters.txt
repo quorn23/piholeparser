@@ -1640,7 +1640,7 @@ elmundo.es##.disabled-vscroll:style(overflow: auto !important; position: initial
 ! further investigation, this fixes the issue.
 ||4chan.org^$csp=connect-src https: http:
 ! https://rbt.asia/g/thread/63902030/
-4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
+4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/467
 iwatchonline.cr,iwatchonline.eu##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -2059,7 +2059,7 @@ fmovies.is##.ads
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38997
 ! https://github.com/jspenguin2017/uBlockProtector/issues/781
 9anime.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-9anime.*##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
+9anime.*##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 @@||9anime.*^$generichide
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=9anime.is
 9anime.*##.myass
@@ -3934,3 +3934,87 @@ coshink.co##script:inject(setTimeout-defuser.js, checkAdblockUser, 1000)
 ! https://github.com/uBlockOrigin/uAssets/issues/1213
 ||s2block.com^
 git.tc##script:inject(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1214
+4downfiles.org##script:inject(setTimeout-defuser.js, nextFunction, 250)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1216
+imggold.org##script:inject(abort-on-property-write.js, _pop)
+imggold.org##script:inject(noeval.js)
+imggold.org##script:inject(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1217
+imgsay.com##script:inject(abort-on-property-read.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1218
+imgtornado.com##script:inject(abort-on-property-read.js, ExoLoader)
+imgtornado.com##script:inject(noeval.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1219
+hotimage.uk##script:inject(abort-on-property-read.js, ExoLoader.addZone)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1220
+imgrock.info##script:inject(abort-on-property-read.js, jsPopunder)
+imgrock.info##script:inject(abort-on-property-write.js, Fingerprint2)
+imgrock.info##script:inject(window.open-defuser.js)
+||imgrock.co/i/*$image,important,domain=imgrock.info
+@@||imgrock.co/js/jquery*.js$script,domain=imgrock.info
+@@||imgrock.co/js/xupload.js$script,domain=imgrock.info
+imgrock.info##A[href$=".html"][rel="nofollow norefferer noopener"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1222
+0day.kiev.ua##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+0day.kiev.ua##script:inject(abort-on-property-read.js, _mgq)
+0day.kiev.ua##[id*="Composite"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1223
+sexytrunk.com##script:inject(abort-current-inline-script.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1224
+planetsuzy.org##script:inject(set-constant.js, __ads, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1226
+||lubetube.com/cdn-cgi/apps/head/$script
+
+! https://github.com/uBlockOrigin/uAssets/issues/1227
+zrozz.com##script:inject(set-constant.js, adblock, false)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1228
+empflix.com##script:inject(abort-on-property-write.js, popzone)
+empflix.com##script:inject(window.open-defuser.js)
+empflix.com##script:inject(abort-on-property-read.js, ALoader)
+empflix.com##.padAdvx
+
+! https://github.com/uBlockOrigin/uAssets/issues/1229
+hotclips24.com##script:inject(abort-on-property-write.js, ExoLoader)
+hotclips24.com##script:inject(popads-dummy.js)
+hotclips24.com###playerOverlay
+
+! https://github.com/uBlockOrigin/uAssets/issues/1230
+pornclipsxxx.com##script:inject(abort-on-property-write.js, ExoLoader)
+pornclipsxxx.com##script:inject(popads-dummy.js)
+pornclipsxxx.com###playerOverlay
+
+! https://github.com/uBlockOrigin/uAssets/issues/1231
+fantasti.cc##script:inject(abort-on-property-write.js, ExoLoader)
+fantasti.cc##script:inject(noeval.js)
+||gmyze.com^
+||spankmasters.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1232
+xxxkingtube.com##script:inject(abort-on-property-write.js, ExoLoader)
+xxxkingtube.com##script:inject(popads-dummy.js)
+xxxkingtube.com###playerOverlay
+
+! https://github.com/uBlockOrigin/uAssets/issues/1233
+pornomovies.com##script:inject(abort-on-property-write.js, ExoLoader)
+pornomovies.com##script:inject(popads-dummy.js)
+pornomovies.com##.overlay-ggf
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39628
+bilasport.com##script:inject(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1234
+animeflv.net##script:inject(window.open-defuser.js)
+animeflv.net##a[href*="watch?key"]
+||ssraju3n.com^
