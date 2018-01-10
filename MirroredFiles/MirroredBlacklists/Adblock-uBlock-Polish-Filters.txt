@@ -5,9 +5,9 @@
 ! Homepage: https://www.certyficate.it
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika
 ! Works best with EasyList - be sure to subscribe it as well!
-! Last modified: 7 January 2018
+! Last modified: 10 January 2018
 ! Expires: 1 day
-! Version: 2018010703
+! Version: 2018011001
 ! Support: 
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -15,7 +15,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://certyficate.it/adblock
-! v.2018010703 aktualizacja: nie, 7 stycznia 2018, 20:00:00
+! v.2018011001 aktualizacja: sr, 10 stycznia 2018, 00:35:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -50,6 +50,7 @@ pl##a[href*="/adserwer/"]
 .pl/img/ad/
 pl/*/rodzinnawycieczka/$image,domain=wp.pl
 .pl/wp-content/banners/
+/rotator.php$subdocument,domain=minecraftpolska.net|q4.pl
 .*sales*.pl/offers/$image
 /screening/*$domain=telepolis.pl,image
 /scripts/click.php$popup
@@ -372,7 +373,8 @@ besty.pl##SPAN[style=" display: block;margin-bottom: 10px; font-size: 13px;color
 bez-cenzury24.pl##[div^="ips-popup"]
 bezprawnik.pl##.col-xs-12.hidden-xs
 bezprawnik.pl##.play_iframe
-bezprawnik.pl##.show-for-large.columns
+bezprawnik.pl##.margin-bottom40.sidebar
+bezprawnik.pl##.margin-bottom40.headline
 bezuzyteczna.pl##[style="width:700px;height:200px;"]
 bezuzyteczna.pl,zumi.pl##[class^="special"]
 bham.pl###ba
@@ -382,6 +384,7 @@ bia24.pl##[class^="iframee-R"]
 biedronka.pl##.app-link
 biedronka.pl##.position10x1
 biedronka.pl##.position9x1
+bieganieuskrzydla.pl##.c-advertaisment
 bielski24.pl###JtfRightBox
 bielskiedrogi.pl###block-block-11
 bielskiedrogi.pl###block-views-reklamy-block-2
@@ -639,6 +642,7 @@ eostroleka.pl##.modul-lewa > div:nth-of-type(8)
 eostroleka.pl##.modul-lewa > div:nth-of-type(9)
 eostroleka.pl##.modul-lewa > div:nth-of-type(12)
 eostroleka.pl##.modul-lewa > div:nth-of-type(13)
+eostroleka.pl##body > div:nth-of-type(1)
 epainfo.pl##DIV.g-single > IMG
 epainfo.pl##.td_block_text_with_title
 epainfo.pl,vipmultimedia.pl##A.gofollow > IMG
@@ -650,6 +654,9 @@ erocentrum.pl##.panel
 erp-view.pl##.jpanelHandle, .artbannersplus_blank, .panel_box2
 esanok.pl###sidebarl > h2:nth-of-type(1)
 esanok.pl###sidebarl > ul:nth-of-type(1)
+esanok.pl###sidebarl > div:nth-of-type(1)
+esanok.pl###content > div:nth-of-type(4)
+esanok.pl###content > div:nth-of-type(9)
 eska.pl##A[style="display: block; height: 100%; width: 100%;"]
 eska.pl##.banner-750.fontregular
 eska.pl##.center.t2.color13
@@ -670,6 +677,7 @@ evertiq.pl##[id^="bnr"]
 e-widuchowa.pl##.bgad
 expresselblag.pl##.all-services
 expressilustrowany.pl###scoopshot
+etransport.pl##small
 ezamosc.pl##.bannergroupvertical
 f1wm.pl##[id^="bans_"]
 fabrykasypialni.pl###mebloo
@@ -726,6 +734,7 @@ forum.elportal.pl##.scale-with-grid
 forumfajerwerki.pl##.message, .bbc_center
 forumfajerwerki.pl###index_stats > p
 forum.fedora.pl###document_modal
+forumfs.pl###inner-body-with-sidebar > center
 forum.fordclubpolska.org##center:nth-of-type(2)
 forum.gniezno.com.pl##.naglowek_re_grupa1
 forum.gniezno.com.pl##.stopka_re
@@ -1411,6 +1420,7 @@ pecetowicz.pl##.ipsPos_center
 pekao.com.pl###PX45189
 pepper.pl##.nav-banner
 perepele.pl##A > IMG.ccm-image-block
+perfumik.pl###popup_start
 piekary.pl##.mfp-content
 piekary.pl##.mfp-ready
 pielegniarki.info.pl###gsk
@@ -1847,7 +1857,7 @@ troman.pl##DIV[style="max-width: 970px; padding: 5px; background: #000; margin: 
 trybawaryjny.pl###bottom-bar
 trybi.pl##.bannerInner
 trybi.pl###main_content_section > div[style=" text-align: center; height: 260px;"]
-trybunaczestochowska.pl###popmake-14375, #text-2
+trybunaczestochowska.pl###text-2
 tryton.com.pl##[id^="banner"]
 turek.net.pl##.BanerP
 turystyka.wp.pl###b_container
@@ -2349,6 +2359,7 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 ||lublin112.pl/ads-content/$subdocument
 ||lubliniak.com.pl/images/re/$image
 ||lubliniec.net/kampania_reklamowa/$subdocument
+||kampanie.etransport.pl/$image,domain=etransport.pl
 ||magazyngitarzysta.pl/images/banners/tlo*.jpg$image
 ||meczenazywo.pl/imghttps/tapeta$image
 ||media2.cinema-city.pl/pl/*.swf
@@ -2431,7 +2442,6 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 ||ppwidget.skapiec.pl/widget/$script
 ||prl24.co.uk/res/rotate/$image
 ||q4.pl/media/20/*.gif$image
-||q4.pl/rotacja/billboard/rotator.php$subdocument
 ||racjonalista.pl/img/strony/$image
 ||radioduch.pl/up_files/oferta/$image
 ||rajdy.autoklub.pl/banner/$image
@@ -2498,6 +2508,7 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 ||track.omgpl.com/bs/
 ||tractors.pl/banner*.png$image
 ||triathlonpoland.tv/vast.xml$xmlhttprequest
+||trybunaczestochowska.pl/wp-content/plugins/popup-maker/assets/js/site.min.js
 ||tugazeta.pl/reklamy_new/
 ||tvgry.pl/images/tapeta_reklama/$image
 ||tvnights.pl/assets/img/bg/$image
@@ -2564,7 +2575,6 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 ||www.piszanin.pl/img/img_bannery/$image
 ||www.pokertexas.pl/uploads/pics/$image
 ||www.portalprzemyski.pl/wp-content/re/
-||www.portel.pl^$subdocument,~third-party
 ||www.powiatsuski24.pl/banners/$image
 ||www.prostozopolskiego.pl/rekl/$image
 ||www.purepc.pl/e404.php$image,domain=www.purepc.pl
@@ -2598,14 +2608,14 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 !11#---------------------------------Multi Regex----------------------------------!
 /:\/\/[a-zA-Z0-9]{3,9}\.quartic\.pl\/Ad\//$script
 /^(http|https):\/\/www\.chip\.pl\/wp-content\/themes\/_chip\/[a-z]{4,6}\/[a-z]{4,5}-[0-9]{4,5}/$image,domain=chip.pl
-!/^(http|https):\/\/www\.portel\.pl\/(?!oglimg)(?!images)[-a-z0-9A-Z_%$&+=]{1,200}\/[a-z0-9A-Z]{2,200}\.(html|jpg)/$subdocument,image,domain=www.portel.pl
+/^(http|https):\/\/www\.portel\.pl\/[-a-z0-9A-Z_%$&+=[\]]{1,200}\/[a-z0-9A-Z/]{2,200}\.(html|jpg)/$subdocument,domain=www.portel.pl
 /^(http|https):\/\/www\.wp\.pl\/[a-zA-Z0-9-_]{50,}/$popup,domain=www.wp.pl
 /^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{200,}/$script,domain=profil.wp.pl|poczta.o2.pl|nowy.tlen.pl|poczta.wp.pl
 /^https:\/\/[a-z]{2,14}\.wp\.pl\/[a-zA-Z0-9_-]{450,}/$script,domain=money.pl|autokult.pl|kafeteria.pl|portal.abczdrowie.pl|twojeip.wp.pl|czat.wp.pl|wawalove.pl|niewiarygodne.pl|komorkomania.pl|open.fm|pogoda.wp.pl|dladzieci.pl|dzieci.pl|gadzetomania.pl|sport.wp.pl|topnews.wp.pl|odkrywcy.pl|katalog.wp.pl|kultura.wp.pl|parenting.pl|fotoblogia.pl|bloog.pl|avent-ugrow.wp.pl|pudelek.pl|pudelekx.pl|nerwica.com|forum.abczdrowie.pl|pytamy.pl|www.o2.pl|ranking.abczdrowie.pl
 /^https:\/\/eku24.net\/images\/slajdy\/(?!zyczenia)[a-z]{3,10}\/[a-zA-Z0-9_-]{10,50}\.jpg/$image
 !/^https:\/\/vstatic3\.cda\.pl\/[a-z0-9]\/[a-z0-9]\/[a-zA-Z0-9_]{9,13}\.mp4/$media,object,domain=www.cda.pl
-/:\/\/(?!wawalove)(?!bilety24)(?!forgeofempires)(?!techsterowniki)(?!railnation)(?!lowcyzombi)(?!centralagier)(?!infografika)(?!stworzonadosukcesu)(?!pilot)(?!biuropodrozy)(?!mistrzowiebezpieczenstwa)(?!prezentownik)(?!nowapoczta)(?!swiecsie)(?!swieta)(?!websocket)(?!liveblog)(?!relacje)(?!opinie)(?!zalacznik)(?!magazyn)(?!newsletter)(?!rodzinnawycieczka)(?!doladowania)(?!fantasyliga)(?!funduszeue)(?!imperiumstylu)(?!kodyrabatowe)(?!ogloszenia)(?!orangekinoletnie)(?!rekrutacja)(?!rycerzeiksiezniczki)(?!speedwaymanager)(?!sportowefakty)(?!sportowybar)(?!talesofmagic)(?!ubezpieczenia)(?!warofdragons)(?!wiadomosci)[a-zA-Z0-9]{10,}\.wp\.pl\//
-/:\/\/(?!wawalove)(?!bilety24)(?!forgeofempires)(?!techsterowniki)(?!railnation)(?!lowcyzombi)(?!centralagier)(?!infografika)(?!stworzonadosukcesu)(?!pilot)(?!biuropodrozy)(?!prezentownik)(?!nowapoczta)(?!swiecsie)(?!swieta)(?!websocket)(?!liveblog)(?!relacje)(?!opinie)(?!zalacznik)(?!magazyn)(?!newsletter)(?!facet)(?!wyleczto)(?!kuchnia)(?!film)(?!moto)(?!gwiazdy)(?!teleshow)(?!finanse)(?!kobieta)(?!dom)(?!pogoda)(?!tech)(?!historia)(?!czat)(?!ksiazki)(?!gryonline)(?!hotele)(?!narty)(?!samoloty)(?!wycieczki)(?!hosting)(?!irlandia)(?!multikurs)(?!casino)(?!foto)(?!tech)(?!www)(?!stg)(?!doladowania)(?!fantasyliga)(?!funduszeue)(?!imperiumstylu)(?!kodyrabatowe)(?!alefolwark)(?!angielski)(?!arenamody)(?!beniamin)(?!bon)(?!bsg)(?!casino)(?!diety)(?!dlaprasy)(?!dlugi)(?!doladowania)(?!dom)(?!dysk)(?!ebiznes)(?!ebooki)(?!empire)(?!fantasyliga)(?!film)(?!fundusze)(?!ogloszenia)(?!orangekinoletnie)(?!rekrutacja)(?!rycerzeiksiezniczki)(?!speedwaymanager)(?!sportowefakty)(?!sportowybar)(?!talesofmagic)(?!ubezpieczenia)(?!warofdragons)(?!wiadomosci)(?!gazetki)(?!gry)(?!horoskop)(?!kalendarz)(?!katalog)(?!khanwars)(?!komiks)(?!konflikty)(?!kontakty)(?!korsarze)(?!kultura)(?!mini)(?!mmho)(?!mobilna)(?!morizon)(?!moto)(?!muzyka)(?!narty)(?!naryby)(?!onas)(?!orangekinoletnie)(?!piraci)(?!poczta)(?!pomoc)(?!praca)(?!profil)(?!programtv)(?!pytamy)(?!rekrutacja)(?!rss)(?!rtvagd)(?!rycerzeiksiezniczki)(?!smeet)(?!speedwaymanager)(?!szkola)(?!szukaj)(?!tech)(?!teleshow)(?!triviador)(?!turystyka)(?!twojeip)(?!ulubiency)(?!warodfragons)(?!wycieczki)(?!zdrowie)(?!zoomumba)(?!topnews)(?!erotyka)(?!dzieci)(?!fitness)(?!gielda)(?!finansomat)(?!biznes)(?!sport)[a-zA-Z0-9]{4,9}\.wp\.pl\//$script
+/:\/\/(?!nowyprofil)(?!wawalove)(?!bilety24)(?!forgeofempires)(?!techsterowniki)(?!railnation)(?!lowcyzombi)(?!centralagier)(?!infografika)(?!stworzonadosukcesu)(?!pilot)(?!biuropodrozy)(?!mistrzowiebezpieczenstwa)(?!prezentownik)(?!nowapoczta)(?!swiecsie)(?!swieta)(?!websocket)(?!liveblog)(?!relacje)(?!opinie)(?!zalacznik)(?!magazyn)(?!newsletter)(?!rodzinnawycieczka)(?!doladowania)(?!fantasyliga)(?!funduszeue)(?!imperiumstylu)(?!kodyrabatowe)(?!ogloszenia)(?!orangekinoletnie)(?!rekrutacja)(?!rycerzeiksiezniczki)(?!speedwaymanager)(?!sportowefakty)(?!sportowybar)(?!talesofmagic)(?!ubezpieczenia)(?!warofdragons)(?!wiadomosci)[a-zA-Z0-9]{10,}\.wp\.pl\//
+/:\/\/(?!nowyprofil)(?!wawalove)(?!bilety24)(?!forgeofempires)(?!techsterowniki)(?!railnation)(?!lowcyzombi)(?!centralagier)(?!infografika)(?!stworzonadosukcesu)(?!pilot)(?!biuropodrozy)(?!prezentownik)(?!nowapoczta)(?!swiecsie)(?!swieta)(?!websocket)(?!liveblog)(?!relacje)(?!opinie)(?!zalacznik)(?!magazyn)(?!newsletter)(?!facet)(?!wyleczto)(?!kuchnia)(?!film)(?!moto)(?!gwiazdy)(?!teleshow)(?!finanse)(?!kobieta)(?!dom)(?!pogoda)(?!tech)(?!historia)(?!czat)(?!ksiazki)(?!gryonline)(?!hotele)(?!narty)(?!samoloty)(?!wycieczki)(?!hosting)(?!irlandia)(?!multikurs)(?!casino)(?!foto)(?!tech)(?!www)(?!stg)(?!doladowania)(?!fantasyliga)(?!funduszeue)(?!imperiumstylu)(?!kodyrabatowe)(?!alefolwark)(?!angielski)(?!arenamody)(?!beniamin)(?!bon)(?!bsg)(?!casino)(?!diety)(?!dlaprasy)(?!dlugi)(?!doladowania)(?!dom)(?!dysk)(?!ebiznes)(?!ebooki)(?!empire)(?!fantasyliga)(?!film)(?!fundusze)(?!ogloszenia)(?!orangekinoletnie)(?!rekrutacja)(?!rycerzeiksiezniczki)(?!speedwaymanager)(?!sportowefakty)(?!sportowybar)(?!talesofmagic)(?!ubezpieczenia)(?!warofdragons)(?!wiadomosci)(?!gazetki)(?!gry)(?!horoskop)(?!kalendarz)(?!katalog)(?!khanwars)(?!komiks)(?!konflikty)(?!kontakty)(?!korsarze)(?!kultura)(?!mini)(?!mmho)(?!mobilna)(?!morizon)(?!moto)(?!muzyka)(?!narty)(?!naryby)(?!onas)(?!orangekinoletnie)(?!piraci)(?!poczta)(?!pomoc)(?!praca)(?!profil)(?!programtv)(?!pytamy)(?!rekrutacja)(?!rss)(?!rtvagd)(?!rycerzeiksiezniczki)(?!smeet)(?!speedwaymanager)(?!szkola)(?!szukaj)(?!tech)(?!teleshow)(?!triviador)(?!turystyka)(?!twojeip)(?!ulubiency)(?!warodfragons)(?!wycieczki)(?!zdrowie)(?!zoomumba)(?!topnews)(?!erotyka)(?!dzieci)(?!fitness)(?!gielda)(?!finansomat)(?!biznes)(?!sport)[a-zA-Z0-9]{4,9}\.wp\.pl\//$script
 !
 !12#---------------------------------Whitelists----------------------------------!
 @@||admin.brightcove.com$domain=ekstraklasa.tv|itvn.pl|player.pl|ttv.pl|tvn.pl|tvn24.pl|tvn24bis.pl|tvn7.pl|tvnplayer.pl|tvnstyle.pl|tvnturbo.pl
@@ -2771,6 +2781,7 @@ maxkino.pl##.btn-warning.btn-block.btn
 medianarodowe.com###overlay
 megawrzuta.pl###popup-1
 memorizer.pl##.adblockInfo
+minecraftpolska.net#@##reklama
 mmorpg.org.pl,parezja.pl##.adsbygoogle
 nadajemy.pl###abp_info
 niezalezna.pl##script:inject(noeval.js)
@@ -3105,7 +3116,7 @@ wp.pl##body > div:nth-of-type(1)[style^="display: block;"]
 /^(http|https):\/\/[a-z.-]{5,30}\/client\?party/$script,domain=openkatalog.com
 /^(http|https):\/\/[a-zA-Z0-9]{5,10}\.[a-z]{2,10}\/[a-zA-Z0-9?_=&-.%]{50,70}/$subdocument,script,popup,domain=filmtu.pl|dekoder.ws|darmowa-tv.pl|cda-x.pl
 /^(http|https):\/\/[a-zA-Z0-9]{5,15}\.(com|net)\/[a-z]{4,10}\/[0-9a-z.?=%A-Z-&]{60,100}/$script,popup,domain=dekoder.ws|veecast.net|darmowa-tv.pl
-/^(http|https):\/\/[a-zA-Z.]{8,}\.(com|bid|info)\/[a-zA-Z]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|vidlox.tv|playerbox.net|alltube.tv|segos.es|efilmy.online|video.penny.ie|fileone.tv|serialeonline.pl|fili.tv|streamango.com|kinoline.pl|nasze-kino.online|vidto.pl|raptu.com|rapidvideo.com|data-scheme|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|dragon-ball-super.ga|openkatalog.ml|dragon-ball-super.ga|nasze-kino.tv|kino123.pl|boxfilm.pl|cloudupload.co|allonline.pl|openload.co|cda-x.pl|dekoder.ws|abcast.net|darmowa-tv.pl|veecast.net|abcast.net|a-o.ninja|castto.me|centrum-dramy.pl|hentai-online.pl|centrum-mangi.ninja
+/^(http|https):\/\/[a-zA-Z.]{8,}\.(com|bid|info)\/[a-zA-Z]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|nitro.to|vidlox.tv|playerbox.net|alltube.tv|segos.es|efilmy.online|video.penny.ie|fileone.tv|serialeonline.pl|fili.tv|streamango.com|kinoline.pl|nasze-kino.online|vidto.pl|raptu.com|rapidvideo.com|data-scheme|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|dragon-ball-super.ga|openkatalog.ml|dragon-ball-super.ga|nasze-kino.tv|kino123.pl|boxfilm.pl|cloudupload.co|allonline.pl|openload.co|cda-x.pl|dekoder.ws|abcast.net|darmowa-tv.pl|veecast.net|abcast.net|a-o.ninja|castto.me|centrum-dramy.pl|hentai-online.pl|centrum-mangi.ninja|openkatalog.com
 /^(http|https):\/\/(?!youtube)[a-zA-Z0-9.]{5,20}\.com\/watch\?key=/$popup
 /^http:\/\/p[0-9]{6,10}\.[a-z]{5,10}\.com\/itab\/[a-z?=A-Z_0-9&]{10,}Zippyshare\.com[a-z0-9A-Z%.'-]{5,}/$popup
 /wp-content/plugins/wp-words-links-change/*$script,domain=businesstraveller.pl
@@ -3187,6 +3198,7 @@ sportowefakty.wp.pl,money.pl##DIV + DIV[style*="max-width: 100%;"]
 !main
 ~www.wp.pl,wp.pl##[class^="css-"]
 www.wp.pl##.css-ofebmy
+www.wp.pl##.css-7cz9vf
 www.wp.pl##a[href^="http://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##[data-st-area="Mototech-prawa"] > div[class]
 www.wp.pl##[class^="_2"][data-st-area$="prawa"] > [class] + UL[class^="_3"] + [class^="_"]
@@ -3344,8 +3356,8 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 ||coin-have.com^
 ||megabanners.cf^$third-party
 ||openkatalog.com/static/$subdocument
-||lcx.pl^$domain=vidoza.github.io
-||vidoza.github.io/javascript/*.wasm$xmlhttprequest
+||lcx.pl^
+||vidoza*.github.io/*/*.wasm
 /^(https|http):\/\/[a-z.]{4,15}\.[a-z]{2,2}\/[a-z/.?=-]{1,100}wss:\/\/[a-z.?:0-9=]{6,50}/$script
 /^(https|http):\/\/[a-z]{4,15}\.[a-z]{2,2}\/heywhatsupgirl\/[a-z-]{3,10}\//$subdocument
 /^https:\/\/[a-z]{6,10}\.[a-z]{2,5}\/[a-z.]{4,10}\js/$script,domain=vidoza.net
