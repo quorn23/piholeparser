@@ -977,6 +977,7 @@ thenextweb.com##html > body.is-canvas.tnw-canvas--opened .main:style(animation: 
 ! https://github.com/uBlockOrigin/uAssets/issues/693
 ! https://github.com/reek/anti-adblock-killer/issues/3817
 italiashare.life##script:inject(abort-on-property-read.js, adblock)
+italiashare.life##script:inject(abort-on-property-read.js, admrlPreviewEngage)
 italiashare.life##script:inject(bab-defuser.js)
 italiashare.life##script:inject(nowebrtc.js)
 italiashare.life##script:inject(setTimeout-defuser.js, nextFunction, 2000)
@@ -985,6 +986,7 @@ italiashare.life##script:inject(setTimeout-defuser.js, nextFunction, 2000)
 italiashare.life###adblockplus
 italiashare.life###blockblockA
 italiashare.life###admitad-cookie-check-popup
+$script,domain=italiashare.life,third-party
 
 ! https://github.com/gorhill/uBlock/issues/2154
 mio.to##script:inject(setTimeout-defuser.js, e=d(), 1000)
@@ -1717,6 +1719,7 @@ receive-sms-online.info##script:inject(abort-on-property-read.js, ga.length)
 ||gainskins.com^$subdocument,domain=hltv.org
 ||geo3.hltv.org/*.php$xmlhttprequest,first-party
 ||hltv.org/img/static/egbranking$image
+||static.hltv.org/*images/retina2/*$image,first-party
 @@||static.hltv.org/images/*/AD.gif$image
 hltv.org##.gtSmartphone-only:if(>div.section-header:first-child:has-text(Fantasy games))
 hltv.org##body:style(background: #e5e7ea !important;)
@@ -3260,6 +3263,7 @@ imojado.org##script:inject(bab-defuser.js)
 ||freeapkgame.net/wp-content/themes/nyeo-final/js/bypasskiller.js$script,redirect=fuckadblock.js-3.2.0
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1031
+uskip.me##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 uskip.me##script:inject(abort-on-property-read.js, RunAds)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1032
@@ -3340,6 +3344,8 @@ avgle.com##script:inject(abort-on-property-write.js, Fingerprint2)
 ||avgle.com/images/av/
 avgle.com##a[href^="http://www.poweredbyliquidfire.mobi/redirect"]
 avgle.com###blocked-if
+avgle.com###aoverlay
+@@||ads.exosrv.com^$script,domain=avgle.com
 
 ! https://forums.lanik.us/viewtopic.php?p=129648#p129648
 @@||mdsrwdassets-a.akamaihd.net^$xmlhttprequest,script,other,domain=telecinco.es|cuatro.com
@@ -3701,6 +3707,7 @@ lkky.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1159
 pornhd.com##script:inject(abort-on-property-read.js, hasAdBlock)
+pornhd.com##script:inject(popads-dummy.js)
 pornhd.com##.zone.phdZone
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1160
@@ -4162,3 +4169,37 @@ linkrex.net##script:inject(abort-on-property-write.js, __htapop)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/809
 @@||urlex.org^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1269
+@@||minecraftpolska.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1270
+leecher.xyz##script:inject(abort-on-property-read.js, jQuery.adblock)
+leecher.xyz##a[href="https://bytes.id"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1271
+publicleech.xyz##script:inject(bab-defuser.js)
+publicleech.xyz##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1272
+batshort.com##script:inject(abort-on-property-write.js, _pop)
+batshort.com##script:inject(abort-on-property-write.js, Fingerprint2)
+batshort.com##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1274
+shrtfly.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+shrtfly.net##script:inject(abort-on-property-read.js, open)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1273
+oke.io##script:inject(abort-on-property-read.js, open)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/7pyzt3/lots_of_ads_on_gogoanime/
+gogoanime.io##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1276
+ourl.io##script:inject(abort-on-property-write.js, _pop)
+ourl.io##script:inject(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1277
+cpmlink.net##script:inject(abort-on-property-write.js, _pop)
+cpmlink.net##iframe[src="about:blank"]
