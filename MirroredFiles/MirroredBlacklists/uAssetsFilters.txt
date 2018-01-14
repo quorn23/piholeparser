@@ -2036,6 +2036,9 @@ hdfilme.tv##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousem
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6tek9j/how_to_block_popups_in_ublockorigin_on_this_site/
 myreadingmanga.info##script:inject(popads.net.js)
+@@||myreadingmanga.disqus.com^$script
+myreadingmanga.info##img[src$=".gif"]
+myreadingmanga.info##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/620
 alibaba.com##.m-product-item:has-text(Sponsored Listing)
@@ -3346,6 +3349,7 @@ avgle.com##a[href^="http://www.poweredbyliquidfire.mobi/redirect"]
 avgle.com###blocked-if
 avgle.com###aoverlay
 @@||ads.exosrv.com^$script,domain=avgle.com
+avgle.com##script:inject(abort-on-property-read.js, isEmbed)
 
 ! https://forums.lanik.us/viewtopic.php?p=129648#p129648
 @@||mdsrwdassets-a.akamaihd.net^$xmlhttprequest,script,other,domain=telecinco.es|cuatro.com
@@ -4035,7 +4039,6 @@ pornomovies.com##.overlay-ggf
 bilasport.com##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1234
-animeflv.net##script:inject(window.open-defuser.js)
 animeflv.net##a[href*="watch?key"]
 ||ssraju3n.com^
 
@@ -4203,3 +4206,15 @@ ourl.io##script:inject(nowebrtc.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1277
 cpmlink.net##script:inject(abort-on-property-write.js, _pop)
 cpmlink.net##iframe[src="about:blank"]
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/811
+win4cut.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/easylist/easylist/issues/834
+@@||animetake1.pro^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1282
+sunporno.com##script:inject(abort-current-inline-script.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1283
+hotgirlclub.com##script:inject(abort-current-inline-script.js, ExoLoader)
