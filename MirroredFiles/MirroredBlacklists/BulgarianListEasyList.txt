@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201801140011
+! Version: 201801142304
 ! Title: EasyPrivacy
-! Last modified: 14 Jan 2018 00:11 UTC
+! Last modified: 14 Jan 2018 23:04 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -429,6 +429,7 @@
 /akamai_analytics_
 /AkamaiAnalytics.
 /AkamaiTrackingPixel.
+/alexa.aspx?site=
 /alllinksclicktracker.js
 /alog.min.js
 /alvenda_remarketing_
@@ -1087,6 +1088,7 @@
 /detective.gif?
 /dfp-gpt.
 /Diagnostics?hit=
+/didna-pixel-
 /disp_cnt.
 /dispatch.fcgi?
 /divolte.js
@@ -3656,7 +3658,7 @@ http://utm.$domain=~utm.md|~utoronto.ca
 /xminer.min.js
 /xmr.js
 /xmr.min.js
-?proxy=wss://$script,websocket
+?proxy*=wss://$script,websocket
 ! Adblock tracking
 -logabpstatus.
 /adb.policy.js
@@ -4282,6 +4284,7 @@ _mongo_stats/
 ||displaymarketplace.com^$third-party
 ||distiltag.com^$third-party
 ||distralytics.com^$third-party
+||districtm.io^$third-party
 ||djers.com^$third-party
 ||dlrowehtfodne.com^$third-party
 ||dmanalytics1.com^$third-party
@@ -5946,10 +5949,13 @@ _mongo_stats/
 ||zroitracker.com^$third-party
 ||ztsrv.com^$third-party
 ! Mining
+.accountant^$third-party,websocket
 .bid^$third-party,websocket
 .cf^$third-party,websocket
 .club^$third-party,websocket
+.cricket^$third-party,websocket
 .date^$third-party,websocket
+.download^$third-party,websocket
 .faith^$third-party,websocket
 .fun^$third-party,websocket
 .ga^$third-party,websocket
@@ -5957,13 +5963,18 @@ _mongo_stats/
 .ml^$third-party,websocket
 .party^$third-party,websocket
 .pro^$third-party,websocket
+.racing^$third-party,websocket
+.review^$third-party,websocket
 .rocks^$third-party,websocket
 .science^$third-party,websocket
 .site^$third-party,websocket
 .space^$third-party,websocket
 .stream^$third-party,websocket
+.trade^$third-party,websocket
+.webcam^$third-party,websocket
 .win^$third-party,websocket
 .xyz^$third-party,websocket
+/bootstrap.wasm$third-party
 /cn.wasm$third-party
 /helper.wasm$third-party
 /lib/cn.wasm$third-party
@@ -5996,6 +6007,7 @@ _mongo_stats/
 ||bablace.com^$third-party
 ||baiduccdn1.com^$third-party
 ||befirstcdn.com^$third-party
+||berserkpl.net.pl^$websocket
 ||biberukalap.com^$third-party
 ||bjorksta.men^$third-party
 ||c0i8h8ac7e.bid^$third-party
@@ -6085,11 +6097,13 @@ _mongo_stats/
 ||secumine.net^$third-party
 ||siteverification.online^$third-party
 ||siteverification.site^$third-party
+||smectapop12.pl^$third-party
 ||sparnove.com^$third-party
 ||static-cnt.bid^$third-party
 ||statistic.date^$third-party
 ||subloader.cf^$third-party
 ||supportxmr.com^$third-party
+||ue696vbd9l.bid^$third-party
 ||usa.cc^$third-party
 ||vcfs6ip5h6.bid^$third-party
 ||webassembly.stream^$third-party
@@ -13974,4 +13988,4 @@ _mongo_stats/
 @@||uaprom.net/image/blank.gif?$image
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: ELHCU3d61EhVnYNHlqkEqg
+! Checksum: 8mtlDG+Ak9SJ/HGU6lSwOg
