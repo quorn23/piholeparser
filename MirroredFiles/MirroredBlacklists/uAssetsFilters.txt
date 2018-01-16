@@ -190,8 +190,9 @@ streamango.com##script:inject(abort-on-property-read.js, BetterJsPop)
 streamango.com##script:inject(window.open-defuser.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=27505
+! https://github.com/uBlockOrigin/uAssets/issues/1292
 kissanime.*##script:inject(kissanime-defuser.js)
-kissanime.co##script:inject(set-constant.js, check_adblock, true)
+kissanime.ac,kissanime.co##script:inject(set-constant.js, check_adblock, true)
 ! To cancel https://hg.adblockplus.org/easylist/rev/589a2a8c87d4
 .to/ads/$important,subdocument,domain=kissanime.ru|kissanime.to
 
@@ -2292,6 +2293,7 @@ divxatope1.com,newpct1.com##script:inject(abort-on-property-read.js, R1PPPP.J)
 newpct1.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ! https://github.com/uBlockOrigin/uAssets/commit/a6c77af4afb45800d4fd7c268a2a5eab5a64daf3#commitcomment-24611606
 divxatope1.com,newpct1.com,torrentlocura.com,torrentrapid.com,tumejortorrent.com##script:inject(window.open-defuser.js)
+divxatope1.com##A[href$=".html"][rel="nofollow norefferer noopener"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/723
 xmoviesforyou.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
@@ -2585,7 +2587,8 @@ business-standard.com##script:inject(abort-current-inline-script.js, $, blockThi
 powerthesaurus.org##script:inject(abort-on-property-write.js, ad_abblock_ad)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/846
-myegy.tv##script:inject(abort-current-inline-script.js, A, popunders)
+! https://github.com/jspenguin2017/uBlockProtector/issues/816
+myegy.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 myegy.tv##script:inject(abort-on-property-write.js, H7WWWW)
 ||adscpm.site^$third-party
 ! Popups triggered by popads
@@ -3793,12 +3796,16 @@ cut-urls.com##script:inject(abort-current-inline-script.js, decodeURI, decodeURI
 cut-urls.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1176
-flashx.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-flashx.tv##script:inject(abort-on-property-write.js, Fingerprint2)
-flashx.tv##script:inject(nowebrtc.js)
-flashx.tv##script:inject(window.open-defuser.js)
+! https://github.com/uBlockOrigin/uAssets/issues/1291
+flashx.to,flashx.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+flashx.to,flashx.tv##script:inject(abort-on-property-write.js, Fingerprint2)
+flashx.to,flashx.tv##script:inject(nowebrtc.js)
+flashx.to,flashx.tv##script:inject(window.open-defuser.js)
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=flashx.tv
+@@||fastcontentdelivery.com/js/showad*.js$script,domain=flashx.to
+@@||flashx.to/counter.cgi$script,first-party
 @@||flashx.tv/counter.cgi$script,first-party
+@@||flashx1.tv/js/*ad*.js$script,domain=flashx.to
 @@||flashx1.tv/js/showad*.js$script,domain=flashx.tv
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/786
@@ -4267,3 +4274,58 @@ btdb.to##script:inject(popads-dummy.js)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/815
 @@||alts4free.com^$generichide
+alts4free.com##script:inject(noeval.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1290
+vivads.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+vivads.net##script:inject(abort-on-property-read.js, open)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1293
+@@||stadium-live.biz^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1294
+tecnofullpc.com##script:inject(abort-on-property-write.js, KillAdBlock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1299
+freeviewmovies.com##script:inject(abort-on-property-write.js, encodeURIComponent)
+freeviewmovies.com###pause-container
+
+! https://github.com/uBlockOrigin/uAssets/issues/1298
+badjojo.com##script:inject(abort-on-property-write.js, encodeURIComponent)
+pornhost.com##script:inject(abort-on-property-read.js, raConf)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1300
+eroprofile.com##script:inject(abort-current-inline-script.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1301
+feet9.com##script:inject(abort-on-property-read.js, __ADX_URL_U)
+||feet9.com/*.gif$image
+feet9.com###player-bouton
+
+! https://github.com/uBlockOrigin/uAssets/issues/1302
+euon.io##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+euon.io##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1303
+@@||sehatlega.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1305
+@@||appdrop.net^$generichide
+appdrop.net##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1304
+locopelis.com##script:inject(abort-on-property-read.js, popTimes)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1306
+macupload.net##script:inject(abort-current-inline-script.js, document.getElementById, remove)
+macupload.net##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1297
+absoluporn.com##script:inject(abort-current-inline-script.js, ExoLoader)
+@@||chaturbate.com/*embed$subdocument,domain=absoluporn.com
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/818
+@@||tabtter.jp^$generichide
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/820
+darkcomet.net##script:inject(abort-on-property-write.js, KillAdBlock)

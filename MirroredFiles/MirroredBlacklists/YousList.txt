@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: kEcub1y2yArAErsliFos+Q
-! Version: 20180112
+! Checksum: U1d/HIuZGJ6N09CeK5jGEw
+! Version: 20180115
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -112,6 +112,7 @@
 ##iframe[src^="http://ads.ecoadproject.co.kr/"]
 ##iframe[src^="http://ads.mangouni.com/mad/"]
 ##iframe[src^="http://ads.mncmedia.co.kr/"]
+##iframe[src^="http://ads.mobitree.co.kr/cgi-bin/PelicanC.dll"]
 ##iframe[src^="http://ads.priel.co.kr/cgi-bin/PelicanC.dll"]
 ##iframe[src^="http://ads.pubmatic.com/AdServer/js/showad.js"]
 ##iframe[src^="http://ads.pubmatic.com/AdServer/js/user_sync.html"]
@@ -133,6 +134,7 @@
 ##iframe[src^="http://api.adns.contentlink.co.kr/adserver/delivery/iframe.php"]
 ##iframe[src^="http://apis.piclick.me/v1/publish/banner/iframe"]
 ##iframe[src^="http://bayabar.com/adworking/"]
+##iframe[src^="http://c6.daisy6.com/v1/adreq"]
 ##iframe[src^="http://cadvv.heraldm.com/nbiz/"]
 ##iframe[src^="http://candy.ad9.kr/"]
 ##iframe[src^="http://care-health.co.kr/"]
@@ -426,6 +428,7 @@
 ||ads.gamemeca.com^
 ||ads.mangouni.com/mad/
 ||ads.mncmedia.co.kr^
+||ads.mobitree.co.kr/cgi-bin/PelicanC.dll^
 ||ads.nicovideo.jp/api/OxBannerService/getAdvertisements.jsonp^$domain=embed.nicovideo.jp|nicovideo.jp
 ||ads.nicovideo.jp/bannertext^$domain=embed.nicovideo.jp|nicovideo.jp
 ||ads.priel.co.kr/cgi-bin/PelicanC.dll^
@@ -542,6 +545,7 @@
 ||c.amazon-adsystem.com/aax2/apstag.js^
 ||c.betrad.com/surly.js^
 ||c1.popads.net/pop.js^
+||c6.daisy6.com/v1/adreq^
 ||cache.ssend.microad.jp/js/adfunnel-sp-load.js^
 ||cad.donga.com/DKBNEWS/dkb_view_right_adin_*.js^$domain=dkbnews.donga.com
 ||cad.donga.com/DKBNEWS/dkb_view_right_banner_*.js^$domain=dkbnews.donga.com
@@ -1908,6 +1912,15 @@ foxnews.com##div.ad-unit
 foxnews.com##div.advert
 france2.fr##div#eShowPubTop
 france2.fr##div.adCtnt
+g-enews.com##div#sliding_adop
+g-enews.com##div#sliding_adopP
+g-enews.com##div.daisy
+g-enews.com##div.lbanner
+g-enews.com##div.rbanner
+g-enews.com##div.v_ad01
+g-enews.com##div.v_ad02
+g-enews.com##div.vcon_wrap>div.vcon>div>div[style="padding-left:10px;text-align:left;font-size:16px;line-height:25px;margin-bottom:10px;margin-top:10px;"]
+g-enews.com##div.vcon_wrap>div.vcon>div[style="margin:20px 10px;height:250px;clear:both"]
 gadgethacks.com##aside.top-ad-anchor
 gadgethacks.com##aside.whtaph
 gadgethacks.com##aside.whtaph-rightbox
@@ -2410,6 +2423,9 @@ m.focus.kr##div.ad-box
 m.focus.kr##div.adv_bottom
 m.focus.kr##div.fixed_ad
 m.focus.kr##iframe[id^="adv_banner"]
+m.g-enews.com##a[href^="/extcont/adclick.php"]
+m.g-enews.com##div.ad1d
+m.g-enews.com##div.ad2d
 m.game.xportsnews.com##div.in_200_200
 m.gamechosun.co.kr##body>div[style="overflow:hidden;width:100%;height:0;padding-bottom:16%;"]
 m.gamechosun.co.kr##div.ad_com_bener
@@ -3516,9 +3532,7 @@ thisisgame.com##div.article-subpart>div[style="text-align:center; padding-top:20
 thisisgame.com##div.banner
 thisisgame.com##div.mid-ad-part
 thisisgame.com##div[id^="ad_layer"]
-time.com##aside.right-rail__container--ad
-time.com##div#section-sub-ad
-time.com##div.left-rail-ad__wrapper
+time.com##div.ad-wrapper
 tip.daum.net##div#viewBottomAdWrapper
 tistory.com##div.ad250
 tistory.com##div.ad250_outter
