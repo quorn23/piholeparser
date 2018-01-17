@@ -2242,6 +2242,7 @@ arenabg.ch,yifymovies.to##script:inject(addEventListener-defuser.js, /^(click|mo
 
 ! https://github.com/uBlockOrigin/uAssets/issues/703
 ! https://github.com/uBlockOrigin/uAssets/issues/795
+emty.space,livecamtv.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me,realcam.me,realtimetv.me,seelive.me,strikeout.co##script:inject(bab-defuser.js)
 fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me,strikeout.co,vipleague.*##script:inject(abort-on-property-read.js, L4UU.R3)
 fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me,strikeout.co,vipleague.*##script:inject(abort-on-property-write.js, adcashMacros)
 fbstreams.me,mlbstream.me,nbastreams.me,nflstreams.me,nhlstreams.me,vipleague.*##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -2513,7 +2514,7 @@ onhax.me##script:inject(abort-on-property-write.js, Fingerprint2)
 onhax.me##[id*=prom]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/804
-||amazon-adsystem.com/*/apstag.js$script,redirect=noopjs,domain=history.com
+||amazon-adsystem.com/*/apstag.js$script,redirect=noopjs,domain=aetv.com|history.com
 ||mssl.fwmrm.net/*/AdManager.js$script,redirect=noopjs,domain=history.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/811
@@ -4271,6 +4272,7 @@ malekal.com##script:inject(abort-on-property-read.js, anOptions)
 
 ! https://github.com/easylist/easylist/issues/839
 btdb.to##script:inject(popads-dummy.js)
+btdb.to##script:inject(nowebrtc.js)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/815
 @@||alts4free.com^$generichide
@@ -4329,3 +4331,6 @@ absoluporn.com##script:inject(abort-current-inline-script.js, ExoLoader)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/820
 darkcomet.net##script:inject(abort-on-property-write.js, KillAdBlock)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/813
+sg-siken.com##script:inject(setTimeout-defuser.js, adsbygoogle)
