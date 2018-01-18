@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201801162227
+! Version: 201801172024
 ! Title: EasyPrivacy
-! Last modified: 16 Jan 2018 22:27 UTC
+! Last modified: 17 Jan 2018 20:24 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -2909,6 +2909,7 @@
 /track/site/*
 /track/track-
 /track/track.php?
+/track/usage.
 /track/view/*
 /track/visitors/?
 /track/visits/?
@@ -5965,6 +5966,7 @@ _mongo_stats/
 .download^$third-party,websocket
 .faith^$third-party,websocket
 .fun^$third-party,websocket
+.ga/*.wasm
 .ga^$third-party,websocket
 .men^$third-party,websocket
 .ml^$third-party,websocket
@@ -5977,14 +5979,17 @@ _mongo_stats/
 .site^$third-party,websocket
 .space^$third-party,websocket
 .stream^$third-party,websocket
+.tk^$third-party,websocket
 .trade^$third-party,websocket
 .webcam^$third-party,websocket
 .win^$third-party,websocket
 .xyz^$third-party,websocket
 /bootstrap.wasm$third-party
 /cn.wasm$third-party
+/hash.wasm
 /helper.wasm$third-party
 /lib/cn.wasm$third-party
+/nano.wasm
 /noblock.js
 ://api.*/lib/native.wasm$third-party
 ||1beb2a44.space^$third-party
@@ -6048,6 +6053,7 @@ _mongo_stats/
 ||deepc.cc^$third-party
 ||dle-news.pw^$third-party
 ||dovinate.top^$third-party
+||fastcast.nz^$third-party
 ||fge9vbrzwt.bid^$third-party
 ||flu.cc^$third-party
 ||g-content.bid^$third-party
@@ -6098,6 +6104,7 @@ _mongo_stats/
 ||okeyletsgo.ml^$third-party
 ||onlinereserchstatistics.online^$third-party
 ||papoto.com^$third-party
+||playerassets.info^$third-party
 ||podrltid.info^$third-party
 ||ppoi.org^$third-party
 ||projectpoi.com^$third-party
@@ -6121,6 +6128,9 @@ _mongo_stats/
 ||subloader.cf^$third-party
 ||supportxmr.com^$third-party
 ||thatresha.com^$third-party
+||tokyodrift.ga^$third-party
+||tracker.openwebtorrent.com^$third-party
+||tracker.webtorrent.io^$third-party
 ||ue696vbd9l.bid^$third-party
 ||usa.cc^$third-party
 ||vcfs6ip5h6.bid^$third-party
@@ -6128,6 +6138,8 @@ _mongo_stats/
 ||webassembly.stream^$third-party
 ||webmine.cz^$third-party
 ||webmine.pro^$third-party
+||webminepool.com^$third-party
+||webminepool.tk^$third-party
 ||wsp.marketgid.com^$third-party
 ||wty46.com^$third-party
 ||xbasfbno.info^$third-party
@@ -6961,7 +6973,6 @@ _mongo_stats/
 ||estadisticasgratis.es^$third-party
 ||hit.copesa.cl^$third-party
 ||hits.e.cl^$third-party
-||inbenta.com^$third-party
 ||intrastats.com^$third-party
 ||mabaya.com^$third-party
 ||micodigo.com^$third-party
@@ -11927,6 +11938,7 @@ _mongo_stats/
 .info^$script,third-party,domain=oload.info|oload.tv|openload.co|streamango.com|streamcherry.com
 ||2giga.link^*/hive.js
 ||gus.host/coins.js
+||hive.tubetitties.com^
 ||rawgit.com/Pocketart/$script,third-party
 ||reactor.cc^*.wasm
 ! Preliminarily blocking Omniture s_code tracking scripts (versions H.25 - H.25.2) due to breakage (https://adblockplus.org/forum/viewtopic.php?f=10&t=11378)
@@ -14024,4 +14036,4 @@ _mongo_stats/
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: KbXs5IhA/qwE/AnZNZC2RA
+! Checksum: 2ZmD+QONh+A4FqiQ1YIM8g

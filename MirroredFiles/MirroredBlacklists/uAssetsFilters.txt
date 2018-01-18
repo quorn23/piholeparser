@@ -1124,7 +1124,8 @@ androidcentral.com,connectedly.com,crackberry.com,imore.com,teslacentral.com,vrh
 
 ! https://github.com/uBlockOrigin/uAssets/issues/190#issuecomment-269949614
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38124
-ack.net,allkpop.com,audioholics.com,barnstablepatriot.com,boredpanda.com,britannica.com,brobible.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,cougarboard.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,eternallysunny.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,liquipedia.net,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,ocala.com,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,radaronline.com,recordonline.com,salon.com,sj-r.com,slickdeals.net,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,tuscaloosanews.com,uproxx.com,uticaod.com,vvdailypress.com,wikia.com,womansworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
+! https://www.reddit.com/r/uBlockOrigin/comments/7r408x/something_interfered_with_this_website_loading/
+ack.net,allkpop.com,audioholics.com,barnstablepatriot.com,boredpanda.com,britannica.com,brobible.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,cougarboard.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,eternallysunny.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,liquipedia.net,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,ocala.com,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,radaronline.com,recordonline.com,salon.com,sj-r.com,slickdeals.net,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,tuscaloosanews.com,uproxx.com,uticaod.com,vvdailypress.com,wikia.com,womansworld.com,wuxiaworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
 xda-developers.com##script:inject(nowebrtc.js)
 ! https://www.reddit.com/r/uBlockOrigin/comments/6fvuo0/ads_leaking_through_on_drudge_report/
 drudgereport.com,mashable.com##script:inject(abort-on-property-read.js, ADONIS_BOOTSTRAP_STATS)
@@ -2510,8 +2511,9 @@ picload.org###stageAds
 biqle.ru##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/797
-onhax.me##script:inject(abort-on-property-write.js, Fingerprint2)
-onhax.me##[id*=prom]
+onhax.me,onhax.net##script:inject(abort-on-property-write.js, Fingerprint2)
+@@||onhax.net^$generichide
+onhax.me,onhax.net##[id*=prom]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/804
 ||amazon-adsystem.com/*/apstag.js$script,redirect=noopjs,domain=aetv.com|history.com
@@ -2724,8 +2726,8 @@ palimas.tv##.ad-ind
 ||appliancesforhome.top/wp-content/*/ad$script,first-party,redirect=fuckadblock.js-3.2.0
 
 ! https://github.com/reek/anti-adblock-killer/issues/3791
-mangahosts.com##script:inject(abort-current-inline-script.js, eval, AdBlock)
-mangahosts.com##script:inject(setTimeout-defuser.js, testDisplay, 3000)
+mangahost.cc##script:inject(bab-defuser.js)
+mangahost.cc##script:inject(setTimeout-defuser.js, testDisplay, 3000)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=54641
 journalstar.com##script:inject(abort-current-inline-script.js, document.createElement, m80fg)
@@ -4334,3 +4336,32 @@ darkcomet.net##script:inject(abort-on-property-write.js, KillAdBlock)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/813
 sg-siken.com##script:inject(setTimeout-defuser.js, adsbygoogle)
+
+! https://github.com/reek/anti-adblock-killer/issues/3859
+atlasweb.net##script:inject(abort-on-property-read.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1309
+short.pe##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39694
+xrares.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+xrares.com##script:inject(popads-dummy.js)
+xrares.com###anuevo
+xrares.com##.nvheader
+
+! https://github.com/uBlockOrigin/uAssets/issues/1311
+/wp-content/plugins/agreeable-button/*
+
+! https://github.com/uBlockOrigin/uAssets/issues/1310
+cutbit.io##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+cutbit.io##script:inject(addEventListener-defuser.js, click, trigger)
+||cutbit.io^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.gstatic.com
+||chikhanos.info^$script
+
+! https://github.com/uBlockOrigin/uAssets/issues/1312
+viewdrama.com##script:inject(nowebrtc.js)
+viewdrama.com##script:inject(set-constant.js, allow_ads, true)
+
+! https://forums.lanik.us/viewtopic.php?p=130943#p130943
+eues.io##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+eues.io##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
