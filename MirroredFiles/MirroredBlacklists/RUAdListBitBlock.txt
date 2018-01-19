@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: /n1icmiUCMc/pASI4bhdkA
-! Version: 201801180020
+! Checksum: VIVvi5jXzozkU/SUK4eUOA
+! Version: 201801190020
 ! Title: RU AdList: BitBlock
-! Last modified: 18 Jan 2018 00:20 UTC
+! Last modified: 19 Jan 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -229,6 +229,7 @@ _vkontakte.png
 ||rfpro.ru/images/icons/bookmark/
 ||rueconomics.ru/assets/*/likes.
 ||s-msn.com/br/*/socialbuttonutility.js
+||tchkcdn.com/www/social-widgets/
 ||telegrafcom.api.oneall.com/socialize/
 ||thevista.ru/*/img/soc/
 ||twitter.com/widgets.js$domain=hdrezka.tv
@@ -701,6 +702,8 @@ lostfilm.info#?#.right:-abp-contains(Поделиться)
 bobfilm.club##noindex .bl2
 naruto-base.su#?##sidebar > .block:-abp-has(.title:-abp-contains(Мы в Вконтакте))
 4pna.com##table:first-child + br + .tborder[cellspacing="1"][cellpadding="6"][align="center"]
+tochka.net#?#.b_header > h3:-abp-contains(В СОЦИАЛЬНЫХ СЕТЯХ)
+tochka.net#?#.b_header > h3:-abp-contains(в социальных сетях)
 !
 ! mail.ru
 maps.mail.ru###mm_share
@@ -842,7 +845,7 @@ _userbar_$image
 ||showbiz.ua/videofeed.js$third-party
 ||ua/lines/$image
 ||youtube.com/subscribe_widget^$third-party
-||zen.yandex.ru^
+||zen.yandex.ru^$third-party
 ! *** ruadlist:bitblock/annoyance_general_hide.txt ***
 ###MCaddFrm
 ###METABAR_IFRAME
@@ -854,6 +857,7 @@ _userbar_$image
 ###gsr > div > #pushdown
 ###gt-community-promo
 ###pushdown.pdp-psy
+###wbounce-modal
 ###zenmate-widget
 ##.CookieNotifyWidget__wrapper
 ##.adb-plashka
@@ -976,6 +980,7 @@ _userbar_$image
 ||cnews.ru/inc/$subdocument
 ||coingecko.com^$third-party
 ||crossss.com^$third-party
+||exchange.informer.ua^$third-party
 ||export.gad.org.ua^
 ||feed.ntdtv.ru^$third-party
 ||fxclub.org^$third-party
@@ -1144,7 +1149,7 @@ _userbar_$image
 ||puzyaka.ru/ub/
 ||qip.ru/images/sign/
 ||raptr.com/badge/
-||relap.io^$third-party,domain=~adme.ru|~comedyportal.me|~comedyportal1.xyz|~drive2.com|~drive2.ru|~fototips.ru|~inmyroom.ru|~izvestia.ru|~life.ru|~newstube.ru|~politexpert.net|~ria.ru|~znak.com
+||relap.io^$third-party,domain=~adme.ru|~comedyportal.net|~comedyportal1.xyz|~drive2.com|~drive2.ru|~fototips.ru|~inmyroom.ru|~izvestia.ru|~life.ru|~newstube.ru|~politexpert.net|~ria.ru|~znak.com
 ||rolki.ru/project/ubars/
 ||rostovmama.ru/components/com_line/
 ||ruler.autoserv.ru^
@@ -1529,7 +1534,7 @@ fox-fan.ru###shopVip
 good73.net###shoutbox
 xn--80acvefn6a4c.xn--p1ai,нашбийск.рф###sidebar > .theiaStickySidebar
 tapochek.net###sidebar1
-comedyportal.me,comedyportal1.xyz###sidebar_r
+comedyportal.net,comedyportal1.xyz###sidebar_r
 mediananny.com###sideroll
 wikipedia.org###siteNotice
 womanadvice.ru###slideInUp
@@ -12729,6 +12734,7 @@ _youtube_social_
 ##.social_buttons_top
 ##.social_buttons_top_nav
 ##.social_butts
+##.social_callouts
 ##.social_collumn_container
 ##.social_connect
 ##.social_container
@@ -16435,6 +16441,7 @@ _site_cookie_
 ###singlesignup
 ###sleek-subscribe
 ###slidead-popup
+###ssnewsletter
 ###sssubscribe-wrapper
 ###st-email-signup
 ###subscribe-button
