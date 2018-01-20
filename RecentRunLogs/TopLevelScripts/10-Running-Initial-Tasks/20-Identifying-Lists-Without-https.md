@@ -8,7 +8,6 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* PLgeneral
 * Adblock-Filters-by-Gurudee
 * BLOGRAM-Analysis-Block-Filter-List-for-Japan
 * BLOGRAM-Basic-Filter-List-for-Japan
@@ -20,6 +19,7 @@ ___________________________________________________________________
 * JapaneseSiteAdblockFilterver2
 * JoeWein
 * Malware-URLs-Domains
+* PLgeneral
 * Spam-Assassin-Bill-Stearns
 * Tofu-Filter
 

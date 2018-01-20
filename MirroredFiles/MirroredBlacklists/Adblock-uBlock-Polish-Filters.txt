@@ -5,9 +5,9 @@
 ! Homepage: https://www.certyficate.it
 ! Uzywanie polskich filtrow jest jednoznaczne ze świadomością co do ich zawartosci (co blokują itp.) a twórcy nie ponoszą odpowiedzialności za niewiedze uzytkownika
 ! Works best with EasyList - be sure to subscribe it as well!
-! Last modified: 18 January 2018
+! Last modified: 20 January 2018
 ! Expires: 1 day
-! Version: 2018011804
+! Version: 2018012003
 ! Support: 
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -15,7 +15,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://certyficate.it/adblock
-! v.2018011804 aktualizacja: czw, 18 stycznia 2018, 20:15:00
+! v.2018012003 aktualizacja: sob, 20 stycznia 2018, 01:00:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -170,7 +170,7 @@ poczta.interia.pl#@#[href*=".hit.gemius.pl"]
 ##.cookemessagecloseico
 ~de###ads
 ##div#skapiec_ad
-~dizibox.com,~2dehands.be##[id^="adv-"]
+~milionczesci.pl,~dizibox.com,~2dehands.be##[id^="adv-"]
 ~przegladsportowy.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,pl##[id^="crt-"]
 ~fakt.pl,pl##.trizer-bnr
 ##.footer-ad
@@ -206,7 +206,7 @@ poczta.interia.pl#@#[href*=".hit.gemius.pl"]
 ##.ipsAdvertisement
 ~joemonster.org##[id^="commentAd"]
 ##.jqmOverlay
-~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,anglia.today,dbnao.net,pl##.ad
+~astrosalus.pl,~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,anglia.today,dbnao.net,pl##.ad
 ~lech.tv,~wtkplay.pl,~epoznan.pl##[class^="advertisement"]
 ###like-us-adblock-modal
 ###main_advertisement
@@ -2153,6 +2153,7 @@ www.turek.net.pl##span.color-grey.font-size-10
 www.uniejow.net.pl###baner
 www.wakacje.pl##.adZoneCont
 www.wiocha.pl###rectcont
+www.worms.fora.pl,www.qus.fora.pl##[id^="optS-"]
 wyborcza.biz###clpp_wyborczabiz
 wyborcza.biz,wyborcza.pl,gazeta.pl###pianoMediaBoxModal
 wyborcza.pl##[class^="mod-generic"][class*="la-http\:\/\/wyborcza\.pl\/"]
@@ -3412,7 +3413,7 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 /^(http|https):\/\/[a-zA-Z0-9]{5,10}\.[a-z]{2,2}\/[a-z]{5,20}\/[a-z-]{3,10}\//$subdocument,domain=a-o.ninja|centrum-dramy.pl|love-drama.pl|vidfile.net
 /^https:\/\/[a-z]{6,10}\.[a-z]{2,5}\/[a-z.]{4,10}\js/$script,domain=vidoza.net
 /^(http|https):\/\/[a-z0-9.]{8,30}\.[a-z]{2,11}\/[a-z]{3,7}\/[a-z0-9]{5,25}\.(wasm|js)/$xmlhttprequest,script,domain=alltube.tv
-/(http|https):\/\/[a-z0-9.-]{5,40}\.[a-z]{2,10}\/[a-z0-9A-Z]{1,5}\/$/$subdocument,domain=alltube.tv
+/(http|https):\/\/[a-z0-9.-]{5,40}\.[a-z0-9.-]{5,40}\.[a-z]{0,10}\/[\w/]{0,100}$/$subdocument,domain=alltube.tv
 !
 !38#--------------------------Dobreprogramy WL ------------!
 dobreprogramy.pl#@#.pub_300x250

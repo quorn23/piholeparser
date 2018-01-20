@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201801172024
+! Version: 201801200008
 ! Title: EasyPrivacy
-! Last modified: 17 Jan 2018 20:24 UTC
+! Last modified: 20 Jan 2018 00:08 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -3670,6 +3670,7 @@ http://utm.$domain=~utm.md|~utoronto.ca
 /adb.policy.js
 /adblock?action=
 /wp-admin/admin-ajax.php?action=adblockvisitor$~third-party
+/ws_client?zone=gen$websocket
 _adblock_stat.
 _mongo_stats/
 ! CDN-based filters
@@ -4224,7 +4225,6 @@ _mongo_stats/
 ||crosspixel.net^$third-party
 ||crosswalkmail.com^$third-party
 ||crowdscience.com^$third-party
-||crowdskout.com^$third-party
 ||crowdtwist.com^$third-party
 ||crsspxl.com^$third-party
 ||crwdcntrl.net^$third-party
@@ -5285,6 +5285,7 @@ _mongo_stats/
 ||relead.com^$third-party
 ||reliablecounter.com^$third-party
 ||relmaxtop.com^$third-party
+||remarketingpixel.com^$third-party
 ||remarketstats.com^$third-party
 ||rep0pkgr.com^$third-party
 ||report-uri.io^$third-party
@@ -5984,6 +5985,7 @@ _mongo_stats/
 .webcam^$third-party,websocket
 .win^$third-party,websocket
 .xyz^$third-party,websocket
+.zone^$third-party,websocket
 /bootstrap.wasm$third-party
 /cn.wasm$third-party
 /hash.wasm
@@ -6025,6 +6027,7 @@ _mongo_stats/
 ||bjorksta.men^$third-party
 ||bowithow.com^$third-party
 ||c0i8h8ac7e.bid^$third-party
+||candid.zone^$third-party
 ||cdnfile.xyz^$third-party
 ||chainblock.science^$third-party
 ||clod.pw^$third-party
@@ -7544,6 +7547,9 @@ _mongo_stats/
 ||creativecdn.com/tags?
 ||crm-vwg.com/tracker/
 ||crowdfactory.com/tracker/
+||crowdskout.com/analytics.js
+||crowdskout.com/skout.js
+||crowdskout.com^*/page-view
 ||csi.gstatic.com^
 ||csp-collector.appspot.com^
 ||ct.eid.co.nz^$third-party
@@ -9098,7 +9104,6 @@ _mongo_stats/
 ||stats.av.de^
 ||stats.blogoscoop.net^
 ||stats.clickforknowledge.com^
-||stats.computecmedia.de^
 ||stats.digital-natives.de^
 ||stats.fittkaumaass.de^
 ||stats.frankfurterneuepresse.de^
@@ -11935,6 +11940,7 @@ _mongo_stats/
 ||zylom.com^*/tracking_spotlight.js
 ||zytpirwai.net/track/
 ! Mining
+$websocket,xmlhttprequest,domain=lewd.ninja|love-drama.pl|vidfile.net
 .info^$script,third-party,domain=oload.info|oload.tv|openload.co|streamango.com|streamcherry.com
 ||2giga.link^*/hive.js
 ||gus.host/coins.js
@@ -12948,11 +12954,11 @@ _mongo_stats/
 @@/cdn-cgi/pe/bag2?*skimlinks.js$domain=droid-life.com
 @@/cdn-cgi/pe/bag2?*static.getclicky.com%2Fjs$domain=amazingpics.net
 @@/cdn-cgi/pe/bag2?*yieldbot.intent.js$domain=droid-life.com
-@@/wp-content/mu-plugins/google-analytics-for-wordpress/*$~third-party
-@@/wp-content/mu-plugins/google-analytics-premium/*$~third-party
-@@/wp-content/plugins/google-analytics-dashboard-for-wp/*$~third-party
-@@/wp-content/plugins/google-analytics-for-wordpress/*$~third-party
-@@/wp-content/plugins/google-analytics-premium/*$~third-party
+@@/wp-content/mu-plugins/google-analytics-for-wordpress/*$script,stylesheet,~third-party
+@@/wp-content/mu-plugins/google-analytics-premium/*$script,stylesheet,~third-party
+@@/wp-content/plugins/google-analytics-dashboard-for-wp/*$script,stylesheet,~third-party
+@@/wp-content/plugins/google-analytics-for-wordpress/*$script,stylesheet,~third-party
+@@/wp-content/plugins/google-analytics-premium/*$script,stylesheet,~third-party
 @@||1dmp.io/pixel.gif$image,domain=overclockers.co.uk
 @@||247sports.com/site/minify.js?*/scripts/stats/$script
 @@||4game.com^*/yandex-metrika.js
@@ -12974,6 +12980,7 @@ _mongo_stats/
 @@||adobetag.com^*/sitecatalyst.js$domain=hbf.com.au|seattlepi.com|tv.com
 @@||adobetag.com^*/sitecatalystnew.js$domain=playstation.com
 @@||adobetag.com^*s_code.js$domain=fnac.com
+@@||adp.com^*/heatmap.js
 @@||aflac.com/js/wt_capi.js
 @@||airfordable.com^*/angulartics-google-analytics.min.js$domain=airfordable.com
 @@||akamai.net^*/omniture.jsp$script,domain=walmart.com
@@ -13128,7 +13135,6 @@ _mongo_stats/
 @@||criteo.investorroom.com^$domain=criteo.investorroom.com
 @@||crowdscience.com/max-$script,domain=everydayhealth.com
 @@||crowdscience.com/start-$script,domain=everydayhealth.com
-@@||crowdskout.com/form/$third-party,xmlhttprequest
 @@||cschat.ebay.com^*/scripts/log.js
 @@||csdata1.com/data/js/$domain=acehardware.com
 @@||csid.com/wp-content/plugins/bwp-minify/min/?*/google-analyticator/$script
@@ -13418,6 +13424,7 @@ _mongo_stats/
 @@||nytimes.com^*/wtinit.js
 @@||oakley.com^*/tealium.js
 @@||odcdn.com^*/cm.js
+@@||office365.com^*/owa.Analytics.js$script
 @@||officeworks.com.au^*/site-tracker.js
 @@||oktacdn.com/assets/js/*/mixpanel-$script
 @@||omtrdc.net/crossdomain.xml$domain=crackle.com
@@ -13493,7 +13500,6 @@ _mongo_stats/
 @@||rockingsoccer.com/js/match_stats.js
 @@||rs.mail.ru/crossdomain.xml$object-subrequest,domain=vk.com
 @@||ru4.com/wsb/$script,domain=chase.com
-@@||s.crowdskout.com^*/embed.js?$script,third-party
 @@||s.skimresources.com^$script,domain=slate.com
 @@||s.youtube.com/api/stats/playback?$image,object-subrequest
 @@||safelinkwireless.com/enrollment/*/GoogleAnalytics.js
@@ -14036,4 +14042,4 @@ _mongo_stats/
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: 2ZmD+QONh+A4FqiQ1YIM8g
+! Checksum: ADD55MFma7rd2fAiW888VQ
