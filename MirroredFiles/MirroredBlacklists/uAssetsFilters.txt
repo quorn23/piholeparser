@@ -984,18 +984,19 @@ thenextweb.com##html > body.is-canvas.tnw-canvas--opened .main:style(animation: 
 ! https://github.com/uBlockOrigin/uAssets/issues/440
 ! https://github.com/uBlockOrigin/uAssets/issues/693
 ! https://github.com/reek/anti-adblock-killer/issues/3817
-italiashare.life##script:inject(abort-on-property-read.js, adblock)
-italiashare.life##script:inject(abort-on-property-read.js, admrlPreviewEngage)
-italiashare.life##script:inject(bab-defuser.js)
-italiashare.life##script:inject(nowebrtc.js)
-italiashare.life##script:inject(setTimeout-defuser.js, nextFunction, 2000)
-@@||italiashare.life^$generichide
-@@||italiashare.life^$image,first-party
-italiashare.life###adblockplus
-italiashare.life###blockblockA
-italiashare.life###admitad-cookie-check-popup
-*$script,domain=italiashare.life,third-party
-italiashare.life##script:inject(abort-on-property-write.js, BlockAdBlock)
+! https://github.com/uBlockOrigin/uAssets/issues/1333
+italiashare.*##script:inject(abort-on-property-read.js, adblock)
+italiashare.*##script:inject(abort-on-property-read.js, admrlPreviewEngage)
+italiashare.*##script:inject(bab-defuser.js)
+italiashare.*##script:inject(nowebrtc.js)
+italiashare.life*script:inject(setTimeout-defuser.js, nextFunction, 2000)
+@@||italiashare.*^$generichide
+@@||italiashare.*^$image,first-party
+italiashare.*###adblockplus
+italiashare.*###blockblockA
+italiashare.*###admitad-cookie-check-popup
+*$script,domain=italiashare.life|italiashare.net,third-party
+italiashare.*##script:inject(abort-on-property-write.js, BlockAdBlock)
 
 ! https://github.com/gorhill/uBlock/issues/2154
 mio.to##script:inject(setTimeout-defuser.js, e=d(), 1000)
@@ -1358,7 +1359,9 @@ rockfile.eu##.adsbygoogle:style(height: 1px !important; overflow-y: hidden !impo
 coshurl.co##script:inject(setTimeout-defuser.js, checkAdblockUser)
 
 ! https://www.reddit.com/r/ublock/comments/5mbam8/blockadblock/
+! https://forums.lanik.us/viewtopic.php?p=131132#p131132
 australianfrequentflyer.com.au##script:inject(bab-defuser.js)
+australianfrequentflyer.com.au##script:inject(abort-on-property-write.js, AdBlockDetectorWorkaround)
 
 ! https://github.com/gorhill/uBlock/issues/2527
 putlockers.cc##script:inject(noeval.js)
@@ -2092,9 +2095,7 @@ cloudwebcopy.com##script:inject(bab-defuser.js)
 bleepingcomputer.com##LI:has(.nl_spons)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6vc7l5/fmoviesis_website_will_not_allow_ublock_need_help/
-fmovies.*,vidnode.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-@@||fmovies.is^$generichide
-fmovies.is##.ads
+vidnode.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6v63qv/need_help_to_block_an_antiadblock_website/
 ! https://github.com/uBlockOrigin/uAssets/issues/605
@@ -3650,6 +3651,7 @@ jzrputtbut.net##script:inject(setTimeout-defuser (), 50)
 dwatchseries.to##script:inject(abort-on-property-write.js, upManager)
 
 ! https://forums.lanik.us/viewtopic.php?p=130030#p130030
+mexashare.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=mexashare.com 
 ||mexashare.com^*.png#$image,domain=mexashare.com,redirect=2x2-transparent.png
 
@@ -4091,9 +4093,9 @@ akorto.eu##script:inject(abort-on-property-read.js, app_vars.force_disable_adblo
 akorto.eu##script:inject(abort-on-property-write.js, _pop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1238
-urlcero.us##script:inject(abort-on-property-read.js, open)
-urlcero.us##script:inject(bab-defuser.js)
-urlcero.us##script:inject(setTimeout-defuser.js, checkAdblockUser, 1000)
+urlcero.*##script:inject(abort-on-property-read.js, open)
+urlcero.*##script:inject(bab-defuser.js)
+urlcero.*##script:inject(setTimeout-defuser.js, checkAdblockUser, 1000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1239
 minkly.us##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -4430,3 +4432,16 @@ orgyxxxhub.com###advobj
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1324
 repelis.net##script:inject(abort-on-property-read.js, popTimes)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/824
+twik.pw##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+twik.pw##script:inject(addEventListener-defuser.js, click, trigger)
+twik.pw##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1342
+123link.pw##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+123link.pw##script:inject(abort-on-property-read.js, jQuery.adblock)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/7run3r/ublock_origin_extra_not_blocking_an_adblock/
+australianfrequentflyer.com.au##script:inject(abort-on-property-write.js, AdBlockDetectorWorkaround)
+@@||ausbt.com.au^$generichide
