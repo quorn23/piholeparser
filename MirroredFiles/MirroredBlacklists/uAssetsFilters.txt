@@ -991,7 +991,6 @@ italiashare.*##script:inject(abort-on-property-read.js, adblock)
 italiashare.*##script:inject(abort-on-property-read.js, admrlPreviewEngage)
 italiashare.*##script:inject(bab-defuser.js)
 italiashare.*##script:inject(nowebrtc.js)
-italiashare.life*script:inject(setTimeout-defuser.js, nextFunction, 2000)
 @@||italiashare.*^$generichide
 @@||italiashare.*^$image,first-party
 italiashare.*###adblockplus
@@ -1249,24 +1248,18 @@ fullmatchesandshows.com,mediafire.com,newser.com,pornhub.com,rlslog.net,sciencew
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=48423
 ! https://www.reddit.com/r/uBlockOrigin/comments/6o9hax/ublockorigin_no_longer_works_on_gelbooru_as_of/
 ! https://github.com/uBlockOrigin/uAssets/issues/603
-! https://github.com/uBlockOrigin/uAssets/issues/1145
+! https://forums.lanik.us/viewtopic.php?f=64&t=31945
 gelbooru.com##script:inject(abort-current-inline-script.js, ExoDetector)
-gelbooru.com##script:inject(abort-on-property-read.js, fuckingnormieswryyyyyy)
+||exosrv.com^$script,redirect=noopjs,domain=gelbooru.com
 |https://$script,domain=gelbooru.com,badfilter
+@@||gelbooru.com^$generichide
 gelbooru.com##script:inject(popads-dummy.js)
 gelbooru.com##a[href^="https://gelbooru.com/redirect.php"]
 gelbooru.com##a[href^="https://media.r18.com/"]
 gelbooru.com#@#[style*="height:"][width]
 gelbooru.com#@#[style*="width:"][height]
+gelbooru.com#@#iframe[width]
 gelbooru.com#@#span[class]:last-child > a img[src]
-! https://forums.lanik.us/viewtopic.php?p=125167#p125167
-@@||googleapis.com/*/jquery.min.js$script,domain=gelbooru.com
-! https://www.reddit.com/r/uBlockOrigin/comments/73qtym/gelbooru_blocking_image_results_on_searches_seems/dntajl1/
-@@||maxcdn.bootstrapcdn.com^$script,domain=gelbooru.com
-! https://github.com/uBlockOrigin/uAssets/issues/1066
-gelbooru.com##script:inject(abort-on-property-read.js, fuckingnormieswryyy.AddZone)
-||gelbooru.com/*.php|
-||gelbooru.com/script/try.js
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1081
 rule34.xxx##script:inject(abort-on-property-read.js, TestVar)
@@ -1592,8 +1585,7 @@ securityweek.com###simplemodal-overlay
 
 ! https://github.com/uBlockOrigin/uAssets/issues/442
 ! Until these are committed into EasyList France
-@@||louccrossc.com^$domain=tf1.fr
-@@||foilpolyth.com^$domain=tf1.fr
+@@||static.mytf1.tf1.fr/assets/js/build/lib/ads_scripts/adscript.js$script
 
 ! https://twitter.com/PaulChaloner/status/872744830195163138
 wwg.com##.adhesion-block
@@ -2654,7 +2646,7 @@ filebebo.com##script:inject(abort-current-inline-script.js, keys, adblockinfo)
 ||pussl20.com^$script,third-party
 ||pussl21.com^$script,third-party
 ||pussl22.com^$script,third-party
-||pussl22.com^$script,third-party
+||pussl23.com^$script,third-party
 ||pussl24.com^$script,third-party
 ||pussl25.com^$script,third-party
 ||pussl26.com^$script,third-party
@@ -2837,8 +2829,10 @@ urle.co##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/909
 adbilty.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+adbilty.me##script:inject(abort-on-property-read.js, open)
 adbilty.me##script:inject(abort-on-property-write.js, Fingerprint2)
 adbilty.me##script:inject(abort-on-property-write.js, K4kk)
+adbilty.me##script:inject(abort-on-property-write.js, _pop)
 @@||adbilty.me^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/910
@@ -3647,8 +3641,9 @@ zlshorte.net##.banner-inner
 about:blank$popup,domain=zlshorte.net
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1126
-shortelink.co###capaclick
 shortelink.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+shortelink.co##script:inject(abort-on-property-write.js, _pop)
+shortelink.co###capaclick
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1125
 jzrputtbut.net##script:inject(addEventListener-defuser.js, click, popunder)
@@ -4515,11 +4510,78 @@ pornscum.com##script:inject(abort-current-inline-script.js, atob, tabunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1379
 maxdeportv.net##script:inject(addEventListener-defuser.js, load, 2000)
-||earnco.in^$subdocument,domain=maxdeportv.net
+||earnco.in^$third-party
 ||max-deportv.com/arriba2.html$subdocument,domain=maxdeportv.net
+! https://forums.lanik.us/viewtopic.php?f=62&t=39786
+bonstreams.net##script:inject(popads-dummy.js)
+bro.adca.st##script:inject(abort-on-property-write.js, opened)
 bro.adca.st##.close
+bro.adca.st##.mask
 bro.adca.st##.pepin
 bro.adca.st##.raulito
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1380
 programinadresi.com##script:inject(abort-on-property-read.js, adBlock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1384
+pururin.io##script:inject(abort-on-property-write.js, BetterJsPop)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1390
+coinarge.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+coinarge.com##script:inject(abort-on-property-read.js, delegateTarget)
+@@||web.industrybrains.com/js/ads/async/show.js$script,domain=coinarge.com
+@@||web.industrybrains.com/impsc.php$domain=coinarge.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/1385
+icutit.ca##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1386
+uclick.in##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+uclick.in##script:inject(abort-current-inline-script.js, atob, tabunder)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1388
+retoix.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+||retoix.com/AD*.gif$image
+
+! https://github.com/uBlockOrigin/uAssets/issues/1396
+tl.tc##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1395
+@@||adslash.me^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1391
+artocoin.com##script:inject(abort-current-inline-script.js, atob)
+artocoin.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1389
+man2link.com##script:inject(setTimeout-defuser.js, checkAdblockUser)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1394
+linkshorts.info##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+linkshorts.info##script:inject(addEventListener-defuser.js, click, trigger)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1393
+skipad.bid##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1392
+dz4link.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+dz4link.com##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1397
+goshrt.xyz##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+goshrt.xyz##script:inject(addEventListener-defuser.js, click, trigger)
+||ad2upapp.com^
+
+! https://github.com/uBlockOrigin/uAssets/issues/1387
+payshorturl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39797
+@@||300mbfilms.org^$generichide
+*.jpg#$image,redirect=2x2-transparent.png,domain=300mbfilms.org
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=32110
+pixhost.org##script:inject(abort-on-property-read.js, ShowIt)
+pixhost.org##script:inject(abort-on-property-write.js, readyADN)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39442
+azvideo.net##script:inject(setTimeout-defuser.js, nextFunction, 2000)
