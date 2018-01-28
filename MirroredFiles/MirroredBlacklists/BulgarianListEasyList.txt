@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201801270001
+! Version: 201801272326
 ! Title: EasyPrivacy
-! Last modified: 27 Jan 2018 00:01 UTC
+! Last modified: 27 Jan 2018 23:26 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -755,6 +755,7 @@
 /buffermetrics/*
 /bugcounter.php?
 /BuiltRegister.aspx?upt=
+/bundle/analytics.
 /bundles/cm.js|
 /bundles/tracciamento?
 /buzz_stats.
@@ -3641,6 +3642,8 @@ http://utm.$domain=~utm.md|~utoronto.ca
 ! Mining
 .ga/*.wasm
 /aj-crypto-miner/*
+/ajcm-inject.
+/ajcryptominer/*
 /bootstrap.wasm$third-party
 /c-hive.js
 /c.wasm
@@ -3654,6 +3657,7 @@ http://utm.$domain=~utm.md|~utoronto.ca
 /cryptonight-worker.js
 /cryptonight.wasm
 /deepMiner.js
+/deepMiner.min.js
 /hash.wasm
 /helper.wasm$third-party
 /inject.js?key=$script
@@ -5984,6 +5988,7 @@ _mongo_stats/
 .gq^$third-party,websocket
 .men^$third-party,websocket
 .ml^$third-party,websocket
+.ovh^$third-party,websocket
 .party^$third-party,websocket
 .pro^$third-party,websocket
 .racing^$third-party,websocket
@@ -6014,8 +6019,10 @@ _mongo_stats/
 ||77.162.125.199^$third-party
 ||abc.pema.cl^third-party
 ||ad-miner.com^$third-party
+||adless.io^$third-party
 ||adminer.com^$third-party
 ||afminer.com^$third-party
+||ajplugins.com^$third-party
 ||aleinvest.xyz^$third-party
 ||alemoney.xyz^$third-party
 ||altpool.pro^$third-party
@@ -6055,9 +6062,11 @@ _mongo_stats/
 ||cookiescript.info^$third-party
 ||crypto-coins.club^$third-party
 ||crypto-loot.com^$third-party
+||crypto-webminer.com^$third-party
 ||cryptobara.com^$third-party
 ||cryptoloot.pro^$third-party
 ||cryptomine.pro^$third-party
+||cryptonoter.com^$third-party
 ||csgocpu.com^$third-party
 ||deepc.cc^$third-party
 ||dle-news.pw^$third-party
@@ -6066,7 +6075,9 @@ _mongo_stats/
 ||fge9vbrzwt.bid^$third-party
 ||flare-analytics.com^$third-party
 ||flu.cc^$third-party
+||freecontent.bid^$third-party
 ||g-content.bid^$third-party
+||github.io/*.wasm$third-party
 ||goredirect.party^$third-party
 ||gridiogrid.com^$third-party
 ||gus.host^$third-party
@@ -11950,10 +11961,13 @@ _mongo_stats/
 ||zylom.com^*/tracking_spotlight.js
 ||zytpirwai.net/track/
 ! Mining
-$websocket,xmlhttprequest,domain=300mbfilms.co|a-o.ninja|lewd.ninja|love-drama.pl|oload.info|oload.tv|openload.co|powvideo.net|streamango.com|streamcherry.com|vidfile.net
+$websocket,xmlhttprequest,domain=300mbfilms.co|a-o.ninja|ajplugins.com|fileone.tv|lewd.ninja|love-drama.pl|oload.info|oload.tv|openload.co|powvideo.net|streamango.com|streamcherry.com|vidfile.net
 ||2giga.link^*/hive.js
+||cryweb.github.io^
+||crywebber.github.io^
 ||gus.host/coins.js
 ||hive.tubetitties.com^
+||miner.nablabee.com^
 ||rawgit.com/Pocketart/$script,third-party
 ||reactor.cc^*.wasm
 ||vidfile.net^$third-party,websocket,xmlhttprequest
@@ -12964,6 +12978,7 @@ $websocket,xmlhttprequest,domain=300mbfilms.co|a-o.ninja|lewd.ninja|love-drama.p
 @@/cdn-cgi/pe/bag2?*skimlinks.js$domain=droid-life.com
 @@/cdn-cgi/pe/bag2?*static.getclicky.com%2Fjs$domain=amazingpics.net
 @@/cdn-cgi/pe/bag2?*yieldbot.intent.js$domain=droid-life.com
+@@/cgi-bin/counter_module?action=list_models$subdocument,~third-party
 @@/wp-content/mu-plugins/google-analytics-for-wordpress/*$script,stylesheet,~third-party
 @@/wp-content/mu-plugins/google-analytics-premium/*$script,stylesheet,~third-party
 @@/wp-content/plugins/google-analytics-dashboard-for-wp/*$script,stylesheet,~third-party
@@ -14055,4 +14070,4 @@ $websocket,xmlhttprequest,domain=300mbfilms.co|a-o.ninja|lewd.ninja|love-drama.p
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: I5mTEWQmNEUayfpCVKN9kw
+! Checksum: 8eImvXXmjYIJZWzK4cJpaQ

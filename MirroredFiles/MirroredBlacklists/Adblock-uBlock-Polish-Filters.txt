@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 26 January 2018
+! Last modified: 27 January 2018
 ! Expires: 1 day
-! Version: 2018012602
+! Version: 2018012704
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://certyficate.it/adblock
-! v.2018012602 aktualizacja: ptk, 26 stycznia 2018, 10:15:00
+! v.2018012704 aktualizacja: sob, 27 stycznia 2018, 20:45:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -819,7 +819,7 @@ gloria.tv##A[href^="/advertisement/"]
 gloria.tv##footer
 glos24.pl##IMG[src^="/files/adv/"]
 glosgminny.pl###text-30
-gloswielkopolski.pl##.partner
+gloswielkopolski.pl,mybboard.pl##.partner
 glucholazyonline.com.pl##.flexbannergrouphidden-phone
 goal.pl,ligapolska.pl##object
 goldenline.pl###adv_top
@@ -1265,6 +1265,7 @@ moto.pl##.template-minimal
 motoryzacja.interia.pl##div#articleObjectSeeAlso1
 movie-box.pl##.banner_1
 mpcforum.pl##.gamehag
+mpcforum.pl##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(5)
 mpolska24.pl##.mpRek
 msfera.pl##.whatsnew.col
 msg.org.pl##[src^="/bannery/"]
@@ -1277,7 +1278,7 @@ muzyka.dziennik.pl##.widget-headertext-area
 muzyka.interia.pl###news1
 muzykazreklam.tv##.adfullwideblock
 mvbezlimitu.pl##.E0MTE
-mybboard.pl##a[href^="https://pbpfinanse.pl/redirect.php"]
+mybboard.pl###posts > a[href^="https://"] > IMG
 myhome.pl##.must-login-box.f-login-wrapper
 mylomza.pl##.deepest.box-2
 mylomza.pl##.topblock
@@ -1327,8 +1328,9 @@ nczas.com##A[target="_self"] > .vc_single_image-img:last-child
 ndie.pl##DIV + A > IMG[style="width:100%;"]
 newsbook.pl##.blocker.jquery-modal
 newsbook.pl###popup
-newsbook.pl##.td-pb-border-top.td_uid_114_5a5b5087cd3d0_rand.td_block_text_with_title.td_block_wrap
+newsbook.pl##.td-pb-border-top.td_uid_114_5a5b5087cd3d0_rand
 newsbook.pl##.wpb_content_element.wpb_text_column
+newsbook.pl##.td-pb-border-top.td_uid_114_5a6c6003c98c7_rand
 newseria.pl##.container > .banner-nagl
 newsf24.pl##.box
 nf.pl##.footer-container.ban-main-centering-container
@@ -2037,6 +2039,7 @@ wiadomoscihandlowe.pl##.center.cleardiv.row
 wiadomoscihandlowe.pl##.link-baner.li
 wiara.pl##[class*="advert"]
 windowsmania.pl##[id^="yui-gen"] > [class^="post"]
+wimieprawdy.pl##.cke-resize
 wiocha.pl###ad4sc
 wiocha.pl,alltube.tv,repostuj.pl,jeja.pl##[href*="tracking.linktogame.com/"]
 wiocha.pl##DIV[style="margin:0 auto; max-width:702px;min-height:450px;max-height:550px;overflow:hidden;"]
@@ -2910,6 +2913,7 @@ astroweb.pl##script:inject(abort-on-property-read.js, checkAds)
 /wp-content/plugins/wp-adblock-dedect/dedect.js$script
 /\/wp-content\/uploads\/[a-zA-Z]{8,}\/[a-zA-Z]{8,}\.js/$script,domain=fandroid.com.pl|crazynauka.pl|legiobiznes.pl
 ||wp.hit.gemius.pl/gdejs/xgde.js$script,redirect=noopjs,domain=pilot.wp.pl
+||xperiasite.pl/public/js/antyadblock.js$script
 !
 !16#---------------------------------Anti Adblock Rules whitelist filters----------------------------------!
 @@/adframe.js$script,domain=kobieceporady.pl
@@ -3434,10 +3438,11 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 /^(http|https):\/\/(?!www.speedvid)(?!streamcherry.com)(?!vshare)(?!vidoza)(?!openload)(?!www.youtube)(?!streamango)(?!www.rapidvideo)[a-zA-Z0-9\W]{5,10}.[a-z]{2,20}\/[\w\W\d]{5,20}\/[a-z]{5,20}\//$subdocument,domain=a-o.ninja|centrum-dramy.pl|love-drama.pl|vidfile.net
 /^(http|https):\/\/[a-z\W]{6,15}\.[a-z]{2,5}\/[a-z.]{4,10}\.js/$script,domain=vidoza.net|fileone.tv
 /^(http|https):\/\/[a-z0-9.]{8,30}\.[a-z]{2,11}\/[a-z]{3,7}\/[a-z0-9]{5,25}\.(wasm|js)/$xmlhttprequest,script,domain=alltube.tv
-!/(http|https):\/\/(?!alltube)(?!www.speedvid)(?!streamcherry.com)(?!vshare)(?!vidoza)(?!openload)(?!www.youtube)(?!streamango)(?!www.rapidvideo)(?!embed.nowvideo)(?!video.anyfiles)(?!vidto)[a-z0-9.-]{5,40}\.[a-z]{0,10}\/[\w\d\W]{0,100}$/$subdocument,domain=alltube.tv
+/(http|https):\/\/(?!alltube)(?!www.speedvid)(?!streamcherry.com)(?!vshare)(?!vidoza)(?!openload)(?!www.youtube)(?!streamango)(?!www.rapidvideo)(?!embed.nowvideo)(?!video.anyfiles)(?!vidto)[a-z0-9.-]{5,40}\.[a-z]{0,10}\/[\w\d\W]{0,100}$/$subdocument,domain=alltube.tv
 !
 !38#--------------------------Bitcoin whitelist ------------!
-!@@||cda.pl/*/*$subdocument,domain=alltube.tv
+@@||cda.pl/*/*$subdocument,domain=alltube.tv
+@@||anyfiles.pl/$subdocument,domain=alltube.tv
 !
 !39#--------------------------Dobreprogramy WL ------------!
 dobreprogramy.pl,interia.pl#@#.pub_300x250
