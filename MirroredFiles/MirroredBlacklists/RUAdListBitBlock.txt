@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: EyVB+m3dRMHh8QFOOfj2YQ
-! Version: 201801270020
+! Checksum: 6ui4U/1dnHMZ62Wsk3UMHg
+! Version: 201801290020
 ! Title: RU AdList: BitBlock
-! Last modified: 27 Jan 2018 00:20 UTC
+! Last modified: 29 Jan 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -48,6 +48,7 @@
 /odnaknopka/*
 /odnoklassniki/*$domain=~ok.ru|~orangeapps.ru
 /odnoklassniki_icon_
+/player/bg_picture_telegram
 /plugins/addzakl/*
 /plugins/russocialknopki-
 /share/static/b-share-
@@ -482,7 +483,6 @@ bigbangtv.space##.logo > table
 arigus.tv##.m_soc
 sportfm.ru##.main-title ~ .row > .col-4 > .wd
 vm.ru##.may9mes
-fanserials.tv##.mb-40
 adultmult.tv##.menusection > a[href][target="_blank"]
 mega-track.org,megatrack.info##.messageList > .tabs
 apparat.cc##.metaTable-inner
@@ -522,7 +522,7 @@ kino-dom.org##.post-like
 cassad.net##.post_sharing
 mediananny.com##.post_socials
 winreview.ru##.postmeta + noindex
-fanserials.tv##.promo-vk
+fanserials.org##.promo-telegram
 peka2.tv##.publication-shares_flex
 nya.sh##.q > .bottom
 thequestion.ru##.question-share
@@ -580,7 +580,7 @@ aif.ru##.soc_wid.clearfix
 adultmult.tv##.socbut
 livecars.ru,livesport.ru##.socbut_v_r > div
 mediaryazan.ru##.socbuttons
-bestfm.ru,hi-news.ru,nashe.ru,radiojazzfm.ru,radioultra.ru,rockfm.ru,s-info.ru,ua.today##.social
+bestfm.ru,hi-news.ru,nashe.ru,radiojazzfm.ru,radioultra.ru,rockfm.ru,s-info.ru,simpsonsua.com.ua,ua.today##.social
 ukrlib.com.ua##.social-box-item
 1tv.ru##.social-buttons-compact
 stmods.ru##.social-container
@@ -642,7 +642,6 @@ onlinemultfilmy.ru##.vk-mini
 mega-mult.ru##.vk-osn
 sletat.ru##.vk-widget
 kinoafisha.info,kinoafisha.msk.ru,kinoafisha.spb.ru##.vkGroup
-fanserials.tv##.vk_widget
 pesni-tut.com##.vkcomms
 neboleem.net##.vkgr
 neboleem.net##.vkgs
@@ -1582,14 +1581,12 @@ povarenok.ru###web-push-sub
 spletnik.ru###webpush
 riafan.ru###yandex_widget_one
 rueconomics.ru###yawidgettext
-auto.ru##.IndexStoBanner
 meduza.io##.Material-materialTopBar
 meduza.io##.Material-subscribe
 superjob.ua##.NewMainDefaultFooter_right
 cnews.ru##.NewsBody > .video.img-block
 meduza.io##.NewsMaterial-banner
 instagram.com##.ResponsiveBlock div:not([style]):not(:first-of-type)
-auto.ru##.StoBanner
 softportal.com##.TblRLCLR td > center > a[href] > img
 softportal.com##.TblTopBanCLR a[href="http://www.softportal.com/yabrowser.html"]
 audi-club.ru,bmwclub.ru##.XenAdvShop
@@ -1706,7 +1703,6 @@ domato.ru##.footer-content > div[style^="position: fixed;"]
 kufar.by##.footer__scroll
 yodnews.ru##.footer_panel_links
 trudbox.com.ua##.form-group > .popover-yellow > .popover
-auto.ru##.fotorama__nav--thumbs > :not([class*="fotorama"])
 anistar.me##.frends-list-site
 adme.ru##.fresh-separator
 seasonvar.cc##.full-news > table:nth-of-type(2)
@@ -1763,7 +1759,6 @@ mastergrad.com##.master-compitition
 sports.ru##.material-list__item[data-control="Common.AnalyticsWatch"]
 liveinternet.ru##.mediametrics
 kinosklad.net##.message-block-player
-fanserials.tv##.mg-modal
 coolhouses.ru##.mini_others_bar
 sport-express.ru##.ml_5.clearfix.f_left
 slavyanskaya-kultura.ru##.mod_inshop_front
@@ -1830,7 +1825,6 @@ mjusli.ru##.scrollingDisabled > div:not([id]):not([class])[style*="background-co
 islam-today.ru,rg-mechanics.org##.scrollup
 sport-express.ru##.secondscreen_popup
 avito.ru##.sendout
-fanserials.tv##.serial-box-promo
 znanija.com##.sg-overlay
 softking.ru##.share
 slavyanskaya-kultura.ru##.shop-latest
@@ -1845,7 +1839,6 @@ gamelendi.ru##.snow
 news.rambler.ru##.social__subscribe
 europaplustv.com##.spec-box[onclick*="europaplustv.com"]
 3dnews.ru##.spec-proj-btn
-auto.ru##.specials-sales-wrap
 goodgame.ru##.sponsors.footer-block
 buhonline.ru##.sticker
 bigpicture.ru##.sticky-bar
@@ -1887,7 +1880,7 @@ kaifolog.ru##.yandexh,.yandexh + .atextbox
 livesport.ru##.zz_cars_twin
 mbclub.ru##[alt="Клубный сервис"]
 semestr.ru##[alt="Рынок студенческих работ на заказ"]
-auto.ru##[class^="promo-listing"]
+auto.ru##[class*="special"][class$="-sales"]
 2gis.ru##[data-module="promoTooltip"]
 sxnarod.com##[href$="?act=acquaintance"] > img[src^="/image/"]
 gidonline.eu,gidonline.in##[id^="iivk"]
@@ -1950,6 +1943,7 @@ kak-prosto.net##br + br
 kinogo-net-2017.ru##center > span[style="color: #ff3300;"]
 xuk.mobi##div > .center > noindex
 obozrevatel.com##div[class$="__right"] .player-box__content
+auto.ru##div[class*="StoBanner"]
 1tv.ru##div[class*="promo"][class$="place"]
 gdekluet.ru##div[class*="ui-widget"]
 4pda.ru##div[class="adbox"][id]
@@ -1961,6 +1955,7 @@ footboom.com##div[class^="b-betting"]
 kinogb.club##div[class^="bilet"]
 google.com,google.com.ua,google.ru##div[class^="gb_"] > div[aria-label="promo"]
 google.com,google.com.ua,google.ru##div[class^="gb_"] > div[style="behavior:url(#default#userData)"]
+auto.ru##div[class^="promo-listing"]
 kinogo1.club##div[class^="rek_top"]
 newinform.com##div[class^="ya-widget-modal"]
 kritika24.ru##div[id*="fialet_link"]
@@ -2160,6 +2155,7 @@ sandisk.com#@##consent_blackbar
 help.instagram.com#@##facebook
 mts.ru#@##facebook_button
 pressa-online.com#@##fbContainer
+nannicskin.ru#@##gotop
 gifovina.ru#@##shareBox
 volnafm.com#@##social
 chess-samara.ru#@##social_new
@@ -10090,8 +10086,10 @@ _youtube_social_
 ##.js-share-button-container
 ##.js-share-button-twitter
 ##.js-share-count
+##.js-share-facebook
 ##.js-share-more
 ##.js-share-pinterest
+##.js-share-to-facebook
 ##.js-sharecount
 ##.js-social-bar
 ##.js-social-facebook
@@ -11174,6 +11172,7 @@ _youtube_social_
 ##.share-btn-container
 ##.share-btn-lnks
 ##.share-btns
+##.share-btns-contain
 ##.share-bttn
 ##.share-button
 ##.share-button--email
@@ -11198,6 +11197,7 @@ _youtube_social_
 ##.share-butts
 ##.share-circle
 ##.share-component
+##.share-contain
 ##.share-container
 ##.share-controls
 ##.share-controls__container
@@ -12618,6 +12618,7 @@ _youtube_social_
 ##.socialConnect
 ##.socialContacts
 ##.socialContainer
+##.socialContainerDesktop
 ##.socialContainerWrap
 ##.socialCount
 ##.socialFBContainer
@@ -17114,6 +17115,7 @@ _site_cookie_
 ##.subscribe-button
 ##.subscribe-callout
 ##.subscribe-connect
+##.subscribe-form
 ##.subscribe-module
 ##.subscribe-newletter
 ##.subscribe-newsl
