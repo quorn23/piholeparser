@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 20:31 2018/01/03
+! 最終更新 22:20 2018/01/29
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -582,6 +582,8 @@ xhamster.com##.avdo.fr
 ||xvideos.com/in.php?
 !popup
 ||www.xvideos.com/video$xmlhttprequest
+!コメント見る用
+@@||www.xvideos.com/video-get-comments/
 !外部プレイヤー用
 ||flashservice.xvideos.com/embedframe/$xmlhttprequest
 
@@ -592,6 +594,20 @@ xvideos.com##.sponsor-popup
 !-----------openload.co
 ||cloudflare.com/cdn-cgi/nexp/$domain=openload.co
 ||openload.co/assets/js/license.5.js
+
+!-----------avgle.com
+||pussl48.com^
+||avgle.com/images/av/b.mp4
+||avgle.com/images.php
+||avgle.com/avideos.js
+
+@@||ads.exosrv.com/ads.js$domain=avgle.com
+@@||exosrv.com/ads-iframe-display.php?callback=$domain=avgle.com
+
+avgle.com##[src*="addthis.com"] + SCRIPT + DIV[style="overflow: hidden !important;margin-top:-20px;"]
+avgle.com###player_3x2_container
+avgle.com##.vjs-poster
+avgle.com###aoverlay
 
 !-----------pron.tv
 ||ox2.pron.tv^$domain=pron.tv

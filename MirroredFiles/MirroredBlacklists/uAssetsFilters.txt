@@ -489,8 +489,9 @@ thesimsresource.com##script:inject(thesimsresource.com.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/223
 ! https://github.com/uBlockOrigin/uAssets/issues/622
 ! https://github.com/uBlockOrigin/uAssets/issues/753
-||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=4players.de|brigitte.de|buffed.de|erdbeerlounge.de|gamesaktuell.de|gamezone.de|gamona.de|giga.de|gmx.net|golem.de|kicker.de|kino.de|myspass.de|pcgames.de|pcgameshardware.de|spielaffe.de|spieletipps.de|t-online.de|thrashermagazine.com|web.de|welt.de|videogameszone.de
-4players.de,brigitte.de,buffed.de,chip.de,erdbeerlounge.de,gamesaktuell.de,gamezone.de,gamona.de,giga.de,gmx.net,golem.de,kicker.de,kino.de,myspass.de,pcgames.de,pcgameshardware.de,spielaffe.de,spieletipps.de,t-online.de,thrashermagazine.com,videogameszone.de,web.de,welt.de##script:inject(golem.de.js)
+! https://github.com/uBlockOrigin/uAssets/issues/1404
+||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=4players.de|brigitte.de|buffed.de|erdbeerlounge.de|gamesaktuell.de|gamezone.de|gamona.de|giga.de|gmx.net|golem.de|kicker.de|kino.de|myspass.de|pcgames.de|pcgameshardware.de|spiegel.de|spielaffe.de|spieletipps.de|t-online.de|thrashermagazine.com|web.de|welt.de|videogameszone.de
+4players.de,brigitte.de,buffed.de,chip.de,erdbeerlounge.de,gamesaktuell.de,gamezone.de,gamona.de,giga.de,gmx.net,golem.de,kicker.de,kino.de,myspass.de,pcgames.de,pcgameshardware.de,spiegel.de,spielaffe.de,spieletipps.de,t-online.de,thrashermagazine.com,videogameszone.de,web.de,welt.de##script:inject(golem.de.js)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=45273&start=15#p156427
 dailycaller.com##[id^="outbrain_widget"]
@@ -2480,7 +2481,7 @@ pasteca.sh##script:inject(abort-on-property-write.js, Fingerprint2)
 pasteca.sh##script:inject(abort-on-property-write.js, _pop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/781
-||addkt.com/slader_exdetail.js$script,redirect=noopjs,domain=slader.com
+||addkt.com/slader$script,redirect=noopjs,domain=slader.com
 slader.com##.ad.inner
 slader.com##.ads-to-hide
 slader.com##section.solutions-list.loading:style(height: auto !important;)
@@ -4520,6 +4521,7 @@ pornscum.com##script:inject(abort-current-inline-script.js, atob, tabunder)
 maxdeportv.net##script:inject(addEventListener-defuser.js, load, 2000)
 ||earnco.in^$third-party
 ||max-deportv.com/arriba2.html$subdocument,domain=maxdeportv.net
+@@||deportesmax.info^$generichide
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39786
 bonstreams.net##script:inject(popads-dummy.js)
 bro.adca.st##script:inject(abort-on-property-write.js, opened)
@@ -4527,6 +4529,10 @@ bro.adca.st##.close
 bro.adca.st##.mask
 bro.adca.st##.pepin
 bro.adca.st##.raulito
+bro.adca.st##.xclo
+bro.adca.st##.xpepinx
+bro.adca.st##.xraulitox
+vipracing.tv##.in-video-adds.row
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1380
 programinadresi.com##script:inject(abort-on-property-read.js, adBlock)
@@ -4613,3 +4619,25 @@ next-episode.net##script:inject(abort-on-property-write.js, tryCheckA3)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1402
 movie4k.is##script:inject(abort-on-property-read.js, urlToShow)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39824
+||beinsports.com/*/adbw/
+
+! https://www.reddit.com/r/uBlockOrigin/comments/7ttwdv/cant_figure_how_to_block_5movies_dialogue_popup/
+5movies.to##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
+5movies.to##script:inject(popads.net.js)
+5movies.to##[id*="MarketGidWrap"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1405
+zupload.me##script:inject(abort-on-property-write.js, Fingerprint2)
+zupload.me##script:inject(window.open-defuser.js)
+zupload.me##a[href="https://www.9xyoutube.com"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1406
+indishare.me##script:inject(abort-on-property-write.js, Fingerprint2)
+||defpush.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1407
+clicknupload.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=clicknupload.org
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=clicknupload.org
