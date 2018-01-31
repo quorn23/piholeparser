@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: mGFOhtgw9sE/YWlFAHqQDA
-! Version: 201801300020
+! Checksum: F/28KvdaHHdHDUBhqM6mVA
+! Version: 201801310030
 ! Title: RU AdList: BitBlock
-! Last modified: 30 Jan 2018 00:20 UTC
+! Last modified: 31 Jan 2018 00:30 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -373,8 +373,10 @@ tut.by##.b-articleshare
 tjournal.ru##.b-footer__social
 sports.ru##.b-forced-registration
 sibdepo.ru##.b-icons-social
+disk.yandex.ru##.b-item-upload__actions > .b-item-upload__share
 mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.b-mail-domik__social
 podrobnosti.ua##.b-news-share
+disk.yandex.ru##.b-popup-share__content [data-click-action="share.resource"]
 sobaka.ru##.b-post-view__share
 hdrezka.ag##.b-post__social_holder
 utro.ru##.b-repost
@@ -629,6 +631,7 @@ pornreactor.cc##.uhead_share
 totori.ru##.ulogin_block
 fishki.net##.undertopic > .imgmiddle
 korrespondent.net##.unipopup
+prk.city##.uptolike-div
 rambler.ru##.v-favsites
 zserials.tv##.video_sharing
 vesti.ru##.video_top_inner
@@ -665,6 +668,7 @@ livecars.ru,livesport.ru##.z_tag_vk
 kopilkasovetov.com##.zoom-social-icons-widget
 europaplus.ru##:not(.authorization) > .social
 all-episodes.net##[button="share"]
+disk.yandex.ru##[data-click-action="export-social.dialog-open"]
 novayagazeta.ru##[data-code] > footer > ul
 mobnovelty.ru##[id^="vk_group"]
 factorio.su##[id^="vkapi_"]
@@ -1456,6 +1460,7 @@ kinogo-hd.net###go_top
 overclockers.ru###header > table > tbody > tr > td[style]
 master-css.com###header1 > h2 > span
 alexfilm.cc###headerProxy
+9111.ru###headerTopAsk
 hidemyass.com###hma-survey-button
 kinokong.net###hotnewsline
 7dneyleta.ru###html-header
@@ -1530,6 +1535,7 @@ klipzona.club###right-side a[href="/register"]
 3dnews.ru###right-sidebar > #youtube-chunk-wrapper
 bugaga.ru###right_col
 fast-torrent.ru,fasttorrent.ru###rightmenu > .fix-width div[id^="bn_"] ~ p
+9111.ru###robot_chat
 demotivators.to###rtc
 gazeta.ru###sbContainer
 my-hit.org###scrollUp
@@ -2080,6 +2086,7 @@ mail.ru#?#body > #grid .grid-top > .grid__container > div div[id][class]:-abp-ha
 ! - Yandex -
 music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.ads-block__no-ads
 music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.ads-block__no-ads *
+music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.bar .bar-below
 music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.bar__addition-link
 music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.bar_new-pay-under .bar__new-pay
 yandex.by,yandex.kz,yandex.ru,yandex.ua##.desk-notif > div[class*="desk-notif-card_stickers"]
@@ -2147,6 +2154,7 @@ myshows.me##.likewiki.plateHint
 firebit.net##.main-indent > :not(.header):not(.content)
 @@/advertise.js$script,domain=geektimes.ru|habrahabr.ru
 adultmanga.ru,doramatv.ru,findanime.ru,grouple.co,librebook.ru,readmanga.me##a[href="http://grouple.co/page/adblock"]
+simpsonsua.com.ua##div[id^="turn_off_please"]
 !
 ! - Исключения ----------------------------------------------------------------
 ! *** ruadlist:bitblock/whitelist.txt ***
@@ -16949,6 +16957,7 @@ _site_cookie_
 ##.newsletter-simple
 ##.newsletter-social
 ##.newsletter-social-wrapper
+##.newsletter-su-mod
 ##.newsletter-subscribe
 ##.newsletter-subscribe-container
 ##.newsletter-subscribe-widget
@@ -24549,7 +24558,7 @@ _site_cookie_
 ||powerjobs.com^$third-party
 ||pressly.com^$third-party
 ||primetag.net^$third-party
-||printfriendly.com^$third-party
+||printfriendly.com^$image,third-party
 ||privy.com^$third-party
 ||promoshq.wildfireapp.com^$third-party
 ||promotion.monster.com^$third-party
@@ -25219,6 +25228,7 @@ cbsnews.com#@#.std-social
 streetsblog.org,thinkprogress.org#@#.sticky-share
 stumbleupon.com#@#.stumble-button
 amazon.co.uk,amazon.com,amazon.com.au,amazon.de,amazon.fr,gitlab.com,reddit.com,twitch.tv#@#.subscribe-button
+fewo-direkt.de#@#.subscribe-container
 first-class-and-more.de,geekgamer.tv#@#.subscribe-widget
 chinadaily.com.cn#@#.twBox
 twitter.com#@#.tweet-btn
