@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 31 January 2018
+! Last modified: 1 February 2018
 ! Expires: 1 day
-! Version: 2018013101
+! Version: 2018020105
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://certyficate.it/adblock
-! v.2018013101 aktualizacja: sr, 31 stycznia 2018, 19:25:00
+! v.2018020105 aktualizacja: czw, 1 luty 2018, 21:45:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -1161,6 +1161,8 @@ mamywsieci.pl###block-block-20--2
 mapa.szukacz.pl###popupContainer
 marihuana.info.pl###header-right-section, #text-5, #text-10, #text-11
 marihuanamedyczna.com##.x-content-dock.right.x-content-dock-on
+maritime.com.pl##table:nth-of-type(4) > tbody > tr:nth-of-type(1)
+maritime.com.pl##table:nth-of-type(4) > tbody > tr:nth-of-type(4)
 marketingibiznes.pl##.img-ov
 maximgroup.pl###banner-counter
 mazury.info.pl##A[href^="https://"] > IMG
@@ -1187,7 +1189,7 @@ memy.pl##.side-stream > div[style="height:600px; width:300px;"]
 menshealth.pl##.billboard.mh-advert
 menshealth.pl###mh-halfpage-advert-2
 menstream.pl###artykul > .ad_box.ac
-meritum.gda.pl##A[target="_top"] > IMG
+meritum.gda.pl##a[href="http://serwis-laptopy.pl"]
 meteo.pl##.project-title.control-wrapper
 meteoprog.pl##.reclama
 meteovista.pl##.leaderboard
@@ -1440,6 +1442,7 @@ ozoneo.pl##.paralax
 paczamy.pl###trumpet_message
 pan-doradca.pl##.sky-left
 panelradiowy.pl##[id^="slider"]
+paranormalne.pl##.nopad:nth-of-type(5) > .block_wrap.category_block:nth-of-type(1)
 parenting.pl##.a-ctn-d
 parenting.pl##.article__textbox
 parenting.pl##[class^="article__side__stickblock--"]
@@ -1856,6 +1859,7 @@ swiatbaterii.pl##DIV[id^="cbox"]
 swiat-gier.com###paczkomaty_icon
 swiatmotocykli.pl##ARTICLE[class*="_ecommerce"]
 swiatseriali.pl##[class^="introjs-"]
+swiato-podglad.pl##.post-books-list
 swidniczka.com,walbrzyszek.com##[style="text-align:center;padding-bottom:15px;"]
 swieta.wp.pl##a[href^="http://www.mediaexpert.pl/"]
 swieta.wp.pl##.article--enteries
@@ -2344,7 +2348,7 @@ zywiecinfo.pl##.promoted.wow.fadeIn
 ||businessclick.*/$script
 ||cda.pl/CDA/01_cda_bananki_$image
 ||cda.pl/player.php
-||cda.pl/*.php*ads
+||cda.pl/*.php*adb
 ||cda.pl/xml.php?type=*adblock
 ||cdn.dtxngr.com/$script
 ||cdn.gallery/pic/assets/uploads/files/*-kafelek.jpg$image,domain=szczecinek.com
@@ -3380,6 +3384,7 @@ www.money.pl##DIV[style$=" z-index: auto;"] > DIV[class]
 ~www.money.pl,~praca.money.pl,money.pl##DIV[class] + DIV[id] > DIV[class]:first-child
 www.money.pl##P + DIV[style$="padding:10px 0"]
 www.money.pl##SCRIPT[src^="//money"] + DIV[class][style="text-align:center;"]
+www.money.pl##div:nth-of-type(1) > .news > .news__items > .item:nth-of-type(1)
 !
 !34#--------------------------Easylist Bugs -----------!
 filmweb.pl##script:inject(abort-on-property-write.js, sas)
@@ -3475,6 +3480,8 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 /^(http|https):\/\/[a-z0-9.]{8,30}\.[a-z]{2,11}\/[a-z]{3,7}\/[a-z0-9]{5,25}\.(wasm|js)/$xmlhttprequest,script,domain=alltube.tv
 /(http|https):\/\/(?!alltube)(?!www.speedvid)(?!streamcherry.com)(?!vshare)(?!vidoza)(?!openload)(?!www.youtube)(?!streamango)(?!www.rapidvideo)(?!embed.nowvideo)(?!video.anyfiles)(?!vidto)[a-z0-9.-]{5,40}\.[a-z]{0,10}\/[\w\d\W]{0,100}$/$subdocument,domain=alltube.tv
 /^(http|https):\/\/[a-z]{5,10}\.[a-z]{2,3}\/[\w\W]{50,80}/$subdocument,domain=heja.tv
+/^wss:\/\/[\W\w]{5,15}\.[a-z]{2,4}:[0-9]{3,4}\//$websocket,domain=fileone.tv
+/^(http|https):\/\/[a-z.]{5,15}\.[a-z]{2,4}\/[a-z]{3,3}\/conf\?[a-z0-9\W]{10,50}/$xmlhttprequest,domain=fileone.tv
 !
 !38#--------------------------Bitcoin whitelist ------------!
 @@||cda.pl/*/*$subdocument,domain=alltube.tv
