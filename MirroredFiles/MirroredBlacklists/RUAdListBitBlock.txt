@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: aGXJRxR8k1XroWrnDY4Twg
-! Version: 201802020020
+! Checksum: cTVvdMA+uH+D+9PqTBxAnQ
+! Version: 201802030020
 ! Title: RU AdList: BitBlock
-! Last modified: 02 Feb 2018 00:20 UTC
+! Last modified: 03 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1820,6 +1820,7 @@ onliner.by##.push-notification
 championat.com##.push-popup
 anews.com##.push-subscribe
 mk.ru##.push-suggest
+advetime.ru##.randomtext_widget
 kinoplanet.net##.rating-box-color
 c-s.net.ua##.reg_mess_bg
 allboxing.ru##.region-ad-top
@@ -1900,6 +1901,8 @@ iguides.ru##[id^="post_message_"] ~ div
 povarenok.ru##[onclick="closeDailyRecipesPopup()"],.dayrecipes_p
 torrentiko.net##a[class^="scroll_"]
 sibnet.ru##a[href*="/delivery/ck.php"][target="_blank"]
+advetime.ru##a[href*="adveshop.com"]
+advetime.ru##a[href*="advetime.ru/go/"]
 dota2.ru##a[href*="branding"][target="_blank"]
 echo.msk.ru##a[href*="echoban.ru/delivery/ck.php"]
 goha.ru##a[href*="funpay.ru"]
@@ -1940,6 +1943,7 @@ chastnik-m.ru##body > a[href*="block=bg"]
 want2vote.com##body > a[href][target="_blank"]
 tapochek.net##body > button[style^="position: absolute;"]
 avito.ru##body > div[class*="banner-container"]
+rbc.ru##body > div[class*="push"]
 forbes.ru##body > div[class^="push_"]
 svoimi-rykami.ru##body > div[class^="spu-"]
 exelab.ru##body > div[id^="bnr"]
@@ -1987,7 +1991,6 @@ livejournal.com##div[lj-widget-promo]
 muz.ru##div[style*="400px;"][style$="240px;"]
 okna.ua##div[style*="height: 80px"],div[style*="height:80px"]
 psy-music.ru##div[style*="tranceshop.ru"]
-ixbt.com##div[style] > script[src="//ixbt.com/js/ad_wrapper.js"] + div[style="text-align: right"]
 boxrec.com##div[style^="position:relative;top:-2px;color:#888"]
 azbooki.ru,engisys.ru,zip1000.ru##html > div[style^="color: rgb"]
 4pda.ru##html[xmlns] > body > div[id^="r"] > div[id^="r"][href]
@@ -6923,6 +6926,7 @@ _youtube_social_
 ###socialz
 ###sociobar1
 ###socmed_buttons
+###socmed_container
 ###socmediaBar
 ###spArticleFunctionSocial
 ###spSocialBookmark
@@ -8992,6 +8996,7 @@ _youtube_social_
 ##.follow-us-links
 ##.follow-us-on-module
 ##.follow-us-on-twitter
+##.follow-us-panel
 ##.follow-us-right-sidebar
 ##.follow-us-twitter
 ##.follow-us-widget
@@ -10028,6 +10033,7 @@ _youtube_social_
 ##.ipsfocus_sGoogle
 ##.ipsfocus_sTwitter
 ##.ipsfocus_social
+##.is-Social
 ##.is-social
 ##.ishare
 ##.ism_box_facebook
@@ -10073,6 +10079,7 @@ _youtube_social_
 ##.janrainSocialBar
 ##.janrainSocialPlaceholder
 ##.janrain_share
+##.jetpack-social-navigation
 ##.jetpack-social-widget-item
 ##.jetpack_widget_social_icons
 ##.jiathis_style
@@ -12363,6 +12370,7 @@ _youtube_social_
 ##.social-listing
 ##.social-login
 ##.social-media
+##.social-media--container
 ##.social-media-16x16
 ##.social-media-bar
 ##.social-media-bar-fixed
@@ -16604,6 +16612,7 @@ _site_cookie_
 ##.InlineNewsletter
 ##.NewsLetterForMobile
 ##.NewsLetterLeftSide
+##.Newsletter-Overlay
 ##.NewsletterBanner
 ##.NewsletterColumn
 ##.NewsletterSignup
@@ -17113,6 +17122,7 @@ _site_cookie_
 ##.signup-form--header
 ##.signup-tout
 ##.signup-with-checkboxes
+##.signup1
 ##.signup_slider
 ##.site-masthead-subscribe-wrap
 ##.skinny-sign-up
