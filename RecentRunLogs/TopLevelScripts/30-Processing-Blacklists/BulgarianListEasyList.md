@@ -28,15 +28,15 @@ ____________________________________
 ### Removing Empty Space
 12718 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
-2177 Lines After Removing Invalid FQDN Characters
+2176 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
-2177 Lines After Converting All Text To Lower Case
+2176 Lines After Converting All Text To Lower Case
 ### Checking For Fully Qualified Domain Name Requirements
-2162 Lines After Checking For Fully Qualified Domain Name Requirements
+2161 Lines After Checking For Fully Qualified Domain Name Requirements
 ### Reverse Searching For Invalid Top Level Domains
-2149 Lines After Reverse Searching For Invalid Top Level Domains
+2148 Lines After Reverse Searching For Invalid Top Level Domains
 ### Removing Duplicate Lines
-2149 Lines After Removing Duplicate Lines
+2148 Lines After Removing Duplicate Lines
 ## Checking Parsed File Size
 ## Attempting Creation Of Parsed List
 ## Calculating Parse Time
