@@ -959,7 +959,8 @@ cnn.com##.OUTBRAIN
 ! TODO: might be obsolete, find out eventually
 1337x.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ! https://github.com/uBlockOrigin/uAssets/issues/635
-1337x.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.pops2.popunderCondition)
+1337x.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
+1337x.*##script:inject(setInterval-defuser.js, system.popunder, 500)
 ! https://github.com/gorhill/uBlock/issues/3347
 1337x.*##script:inject(abort-current-inline-script.js, parseInt, MarketGidJSON)
 1337x.*##script:inject(abort-on-property-read.js, _0x3ad7)
@@ -1020,6 +1021,7 @@ italiashare.*##script:inject(abort-on-property-write.js, BlockAdBlock)
 italiashare.net##script:inject(abort-on-property-write.js, checkAds)
 */ad*$script,redirect=noopjs,domain=italiashare.net
 italiashare.net##script:inject(noeval.js)
+italiashare.net##script:inject(set-constant.js, adBlock, true)
 
 ! https://github.com/gorhill/uBlock/issues/2154
 mio.to##script:inject(setTimeout-defuser.js, e=d(), 1000)
@@ -1259,8 +1261,9 @@ auto-motor-und-sport.de,womenshealth.de##script:inject(abort-on-property-write.j
 ! https://www.reddit.com/r/uBlockOrigin/comments/5w0phj/massive_amount_of_popup_not_getting_blocked_since/
 ! https://github.com/uBlockOrigin/uAssets/issues/299
 ! https://github.com/uBlockOrigin/uAssets/issues/846
-ddlvalley.cool,zippyshare.com##script:inject(noeval.js)
-rarbg.is,rarbg.to,rarbgmirror.xyz,rarbgproxy.org##script:inject(abort-on-property-read.js, _wm3)
+zippyshare.com##script:inject(noeval.js)
+rarbg.is,rarbg.to,rarbgmirror.xyz,rarbgproxy.org##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
+rarbgproxy.org##script:inject(window.open-defuser.js)
 fullmatchesandshows.com,mediafire.com,newser.com,pornhub.com,rlslog.net,scienceworldreport.com,streamcloud.eu,tinypic.com##script:inject(abort-on-property-write.js, UAParser)
 
 ! https://github.com/gorhill/uBlock/issues/2417
@@ -2487,6 +2490,7 @@ abandonedspaces.com,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips
 footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39280&p=129024#p129024
 readcomics.website##script:inject(abort-on-property-write.js, decodeURIComponent)
+readcomics.website##script:inject(abort-on-property-write.js, Fingerprint2)
 ||jojilabola.com^
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=37406
@@ -3465,7 +3469,6 @@ cutwin.com,cutwin.pro##script:inject(abort-on-property-write.js, adss)
 geturlpr.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://forums.lanik.us/viewtopic.php?p=129726#p129726
-1337x.st##script:inject(abort-on-property-write.js, Fingerprint2)
 ||qdistand.com^
 1337x.st##[href*=".php"]
 
@@ -4904,9 +4907,7 @@ cmacapps.com##script:inject(bab-defuser.js)
 hanime.tv##script:inject(abort-current-inline-script.js, BetterJsPop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1480
-*.png#$image,redirect=2x2-transparent.png,domain=mimaletadepeliculas.blogspot.com.ar
-@@||mimaletadepeliculas.blogspot.com.ar^$generichide
-mimaletadepeliculas.blogspot.com.ar##[id*=ScriptRoot]
+mimaletadepeliculas.*##script:inject(addEventListener-defuser.js, load, advertising)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1486
 cinestrenostv.tv##script:inject(addEventListener-defuser.js, load, 2000)
@@ -4941,3 +4942,16 @@ gratismas.org##script:inject(bab-defuser.js)
 adshorte.com##script:inject(abort-on-property-write.js, Fingerprint2)
 ||dailymotion.com^$subdocument,domain=adshorte.com
 ||megapeliculas.net^$subdocument,domain=adshorte.com
+
+! https://github.com/uBlockOrigin/uAssets/pull/1506
+pcworld.com###amazon-bottom-widget
+
+! https://github.com/uBlockOrigin/uAssets/pull/1507
+thedailywtf.com##.article-body > div:has(a[href*="utm_medium"])
+
+! https://github.com/uBlockOrigin/uAssets/issues/1492
+mako.co.il##script:inject(nowebrtc.js)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/847
+nmn900.com##script:inject(abort-on-property-read.js, nmn900ads)
+nmn900.com##a[href^="https://www.pinbo.es/anuncios"]
