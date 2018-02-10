@@ -1022,6 +1022,7 @@ italiashare.net##script:inject(abort-on-property-write.js, checkAds)
 */ad*$script,redirect=noopjs,domain=italiashare.net
 italiashare.net##script:inject(noeval.js)
 italiashare.net##script:inject(set-constant.js, adBlock, true)
+italiashare.net##script:inject(abort-current-inline-script.js, adblockblock, adblocktest)
 
 ! https://github.com/gorhill/uBlock/issues/2154
 mio.to##script:inject(setTimeout-defuser.js, e=d(), 1000)
@@ -1400,8 +1401,8 @@ bicycling.com,menshealth.com,prevention.com,rodalesorganiclife.com,runnersworld.
 ! https://forums.lanik.us/viewtopic.php?f=62&p=131001#p131001
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39105
 ! https://github.com/jspenguin2017/uBlockProtector/issues/846
-chicagoreader.com##script:inject(abort-current-inline-script.js, setTimeout, admrlPreviewEngage)
-10news.com,broadwayworld.com,cultofmac.com,gmenhq.com,insidenova.com,itavisen.no,leitesculinaria.com,metalinjection.net,metalsucks.net,onmsft.com,post-gazette.com,practicalpainmanagement.com,sanfoundry.com,sporcle.com,stylecaster.com,thedenverchannel.com,viraliq.com##script:inject(addEventListener-defuser.js, p5, onpropertychange)
+! https://github.com/jspenguin2017/uBlockProtector/issues/854
+10news.com,broadwayworld.com,cultofmac.com,dailyknicks.com,gmenhq.com,insidenova.com,itavisen.no,leitesculinaria.com,metalinjection.net,metalsucks.net,onmsft.com,post-gazette.com,practicalpainmanagement.com,sanfoundry.com,sporcle.com,stylecaster.com,thedenverchannel.com,viraliq.com##script:inject(addEventListener-defuser.js, p5, onpropertychange)
 ! https://github.com/uBlockOrigin/uAssets/issues/618#issuecomment-333248119
 ! https://forums.lanik.us/viewtopic.php?p=117475#p117475
 ! https://github.com/uBlockOrigin/uAssets/issues/852
@@ -4955,3 +4956,20 @@ mako.co.il##script:inject(nowebrtc.js)
 ! https://github.com/jspenguin2017/uBlockProtector/issues/847
 nmn900.com##script:inject(abort-on-property-read.js, nmn900ads)
 nmn900.com##a[href^="https://www.pinbo.es/anuncios"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1512
+oturl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+oturl.com###myModal
+oturl.com##script:inject(nano-setInterval-booster.js)
+@@||dz4up.com/themes/flow/frontend_assets/js/advertisement.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1514
+pornobae.com##script:inject(abort-current-inline-script.js, ExoLoader)
+imgdigs.com##script:inject(abort-current-inline-script.js, ExoLoader)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1517
+! https://github.com/uBlockOrigin/uAssets/issues/1518
+! https://github.com/uBlockOrigin/uAssets/issues/1519
+! https://github.com/uBlockOrigin/uAssets/issues/1520
+cut-link.me,digacortador.com,geturls.me,vhb.io##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+cut-link.me,digacortador.com,geturls.me,vhb.io##script:inject(nano-setInterval-booster.js)
