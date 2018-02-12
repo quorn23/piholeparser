@@ -194,6 +194,8 @@ oload.info,oload.stream,oload.tv,openload.co,streamango.com##script:inject(openl
 openload.co##script:inject(window.open-defuser.js)
 streamango.com##script:inject(abort-on-property-read.js, BetterJsPop)
 streamango.com##script:inject(window.open-defuser.js)
+! https://forums.lanik.us/viewtopic.php?f=64&p=132254
+@@||oloadcdn.net/subtitle/*$xmlhttprequest,domain=openload.co
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=27505
 ! https://github.com/uBlockOrigin/uAssets/issues/1292
@@ -4977,7 +4979,7 @@ cut-link.me,digacortador.com,geturls.me,vhb.io##script:inject(abort-on-property-
 cut-link.me,digacortador.com,geturls.me,vhb.io##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/850
-@@||eurosport.com^$generichide
+@@*$generichide,domain=eurosport.bg|eurosport.co.uk|eurosport.com|eurosport.cz|eurosport.de|eurosport.dk|eurosport.fi|eurosport.fr|eurosport.hu|eurosport.nl|eurosport.no|eurosport.pl|eurosport.pt|eurosport.ro|eurosport.rs|eurosport.ru|eurosport.se
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1522
 befap.com##script:inject(abort-on-property-read.js, ExoLoader)
@@ -4994,3 +4996,14 @@ hiapphere.com##script:inject(abort-on-property-read.js, _d)
 @@||dl.go4up.com/ads.js$script,first-party
 ||dl.go4up.com/*/dbuttoned.png$image
 go4up.com##img[src="https://cache.go4up.com/assets/img/abutoned.gif"]
+
+! https://www.reddit.com/r/uBlockOrigin/comments/7wpk97/cant_block_ad_at_the_bottom_of_readcomiconline/
+readcomiconline.to##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+readcomiconline.to##.divCloseBut
+
+! https://github.com/uBlockOrigin/uAssets/issues/1526
+arbwarez.com##script:inject(abort-on-property-read.js, $tieE3)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1527
+@@||hdliveextra-a.akamaihd.net/*/config/ads.js$script,domain=nbcolympics.com
+@@||stream.nbcolympics.com/assets/page/general/ads.js$script,first-party

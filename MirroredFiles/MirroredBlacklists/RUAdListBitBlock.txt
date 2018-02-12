@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 0Mf0pV2gMaSJH4+2k4GdBA
-! Version: 201802110020
+! Checksum: cdP/zyiHJXHsNr2mLw8lEg
+! Version: 201802120020
 ! Title: RU AdList: BitBlock
-! Last modified: 11 Feb 2018 00:20 UTC
+! Last modified: 12 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -997,7 +997,7 @@ _userbar_$image
 ||cnews.ru/inc/$subdocument
 ||coingecko.com^$third-party
 ||crossss.com^$third-party
-||exchange.informer.ua^$third-party
+||exchange.informer.ua^$third-party,domain=~korrespondent.net
 ||export.gad.org.ua^
 ||feed.ntdtv.ru^$third-party
 ||fxclub.org^$third-party
@@ -2708,10 +2708,12 @@ prom.ua#@#img[alt="facebook"]
 /buttons/flickr.gif
 /buttons/google.
 /buttons/identica.gif
+/Buttons/Instagram.
 /buttons/linkedin.
 /buttons/repostus_
 /buttons/share/*
 /buttons/share_
+/Buttons/Snapchat_
 /buttons/social-
 /buttons/social_
 /buttons/socials.
@@ -4361,6 +4363,7 @@ prom.ua#@#img[alt="facebook"]
 /top_social.
 /top_social_
 /touch/share-
+/tripadvisorbutton.
 /tube32.
 /tumbler-icon-
 /tumblr-25x25.
@@ -7511,6 +7514,7 @@ _youtube_social_
 ##.addtoany
 ##.addtoany_list
 ##.addtoany_share_save
+##.addtoany_share_save_container
 ##.adfacebook
 ##.adh-mobile-share
 ##.adi-share
@@ -8747,6 +8751,7 @@ _youtube_social_
 ##.fb-like2
 ##.fb-likebox
 ##.fb-link
+##.fb-messenger--collapse
 ##.fb-msg
 ##.fb-outer
 ##.fb-page
@@ -9060,6 +9065,7 @@ _youtube_social_
 ##.followYouTube
 ##.followYoutube
 ##.follow__item
+##.follow__list
 ##.follow_author_twitter
 ##.follow_block
 ##.follow_box
@@ -9151,12 +9157,14 @@ _youtube_social_
 ##.footer-links-social
 ##.footer-logos--social
 ##.footer-main-bottom-social
+##.footer-main__socials
 ##.footer-nav-connect
 ##.footer-nav-social
 ##.footer-pin
 ##.footer-pinterest-icon
 ##.footer-quote-share
 ##.footer-secondary-social
+##.footer-section-social
 ##.footer-share
 ##.footer-share-bar-social
 ##.footer-share-bar-social-link
@@ -10186,8 +10194,10 @@ _youtube_social_
 ##.jwdock[style^="display: block;"]
 ##.jwsharethis
 ##.kento-social-share
+##.keystone-social-author
 ##.kindleWidget
 ##.klasSideSocialLinks
+##.klicked-see-first
 ##.kmd_social_widget
 ##.kodda_social_link
 ##.ksm-post-facebook
@@ -10456,6 +10466,7 @@ _youtube_social_
 ##.menu-link-twitter
 ##.menu-name-menu-social-links
 ##.menu-share
+##.menu-social-buttons-container
 ##.menu-social-container
 ##.menu-social-gplus
 ##.menu-social-instagram
@@ -10735,6 +10746,7 @@ _youtube_social_
 ##.p-button-social
 ##.p-share-icon
 ##.padded-footer-connect
+##.page-controls-share
 ##.page-fb-like
 ##.page-footer__social-link
 ##.page-footer_social
@@ -10880,6 +10892,7 @@ _youtube_social_
 ##.poll-social-icons
 ##.popySocial
 ##.post--share
+##.post--side-menu--social
 ##.post-actions-share
 ##.post-actions-shares
 ##.post-fb
@@ -10890,6 +10903,9 @@ _youtube_social_
 ##.post-header_social-row
 ##.post-meta-share
 ##.post-meta-social
+##.post-meta__option--fb
+##.post-meta__option--gplus
+##.post-meta__option--twitter
 ##.post-meta__sharing
 ##.post-on-social-media
 ##.post-share
@@ -12124,6 +12140,7 @@ _youtube_social_
 ##.socFbShare
 ##.socFollowMod
 ##.socIcon
+##.socNetButton
 ##.socRight
 ##.socShare
 ##.socWidget
@@ -12465,6 +12482,7 @@ _youtube_social_
 ##.social-networks
 ##.social-networks-2
 ##.social-networks-bayside
+##.social-networks-container
 ##.social-networks-footer
 ##.social-networks__badges
 ##.social-networks__item
@@ -13380,6 +13398,7 @@ _youtube_social_
 ##.td-icon-googleplus
 ##.td-icon-instagram
 ##.td-post-sharing
+##.td-post-sharing-bottom
 ##.td-social-icon-wrap
 ##.td-social-sharing
 ##.td-social-wrap
@@ -14109,6 +14128,7 @@ _youtube_social_
 ##.wx-social-share-story-pinterest
 ##.wx-social-share-story-twitter
 ##.wx-social-share-story-wrapper
+##.wz-footer-sidebar__social
 ##.x-facebook
 ##.x-item-share-wrapper
 ##.x-social-facebook
@@ -14152,6 +14172,7 @@ _youtube_social_
 ##.youtube_subscribe_module
 ##.yt-social-sharing
 ##.yt_icon
+##.ytsub-wrapper
 ##.yui3-socialbutton-content
 ##.z-share-belt
 ##.zalo-share-button
@@ -15025,6 +15046,7 @@ _youtube_social_
 /newsletter-mapping/*
 /newsletter-pattern.
 /newsletter-signup.
+/newsletterbutton.
 /newslettericon2.
 /newslettersignup.
 /NewsletterSubscription.
@@ -16548,6 +16570,8 @@ _site_cookie_
 ###nksub_sidebar
 ###nlSignUpMorning
 ###nl_signup_rr
+###nletter1
+###nletter2
 ###nm-subscribe-box
 ###nm-subscribe-wrapper
 ###nmSignUpContainer
@@ -16615,6 +16639,7 @@ _site_cookie_
 ###ssnewsletter
 ###sssubscribe-wrapper
 ###st-email-signup
+###subscribe-block-bottom
 ###subscribe-button
 ###subscribe-index-div
 ###subscribe-like
@@ -16694,6 +16719,7 @@ _site_cookie_
 ##.article-footer__subscribe
 ##.article-gutter-signup
 ##.article-news-letter
+##.article-newsletter
 ##.article-newsletter-signup
 ##.article-page__mobile-newsletter
 ##.article-sidebar-newsletter
@@ -16855,6 +16881,7 @@ _site_cookie_
 ##.footer-social-email
 ##.footer-subscrabe-box
 ##.footer-subscribe
+##.footer__newsletter
 ##.footer__newsletter-form
 ##.footer_box_newsletter
 ##.footer_form_newsletter
@@ -17069,6 +17096,7 @@ _site_cookie_
 ##.newsletterWidget
 ##.newsletter__callout
 ##.newsletter__headline
+##.newsletter__wrapper
 ##.newsletter_bar
 ##.newsletter_bg
 ##.newsletter_block
@@ -17190,6 +17218,7 @@ _site_cookie_
 ##.site-masthead-subscribe-wrap
 ##.skinny-sign-up
 ##.skinny-signup
+##.slide-in--newsletter
 ##.slidedown-newsletter
 ##.small-newsletter
 ##.social-link-mail
@@ -17217,6 +17246,7 @@ _site_cookie_
 ##.subscribe-popover
 ##.subscribe-popup
 ##.subscribe-popup-fade
+##.subscribe-promo
 ##.subscribe-prompt-overlay
 ##.subscribe-right
 ##.subscribe-solo-container
@@ -17258,6 +17288,7 @@ _site_cookie_
 ##.traqli-subscribe
 ##.trib_newsletter
 ##.tsq_sailthru_newsletter_widget
+##.tve-leads-lightbox
 ##.ui-front.newsletter-signup-overlay
 ##.ui-home-newsletter
 ##.ui-newsletter
@@ -20229,6 +20260,7 @@ _site_cookie_
 ###eu_notice_content
 ###eu_user_consent_policy_container
 ###eubanner
+###eucc
 ###euck-note
 ###eucl_panel
 ###eucookie
@@ -24362,6 +24394,7 @@ _site_cookie_
 ###scrolltotop_button
 ###scrollup
 ###site-scroll-top
+###spnGoTop
 ###sticky-back-to-top
 ###tab-to-top
 ###to-the-top
@@ -24880,6 +24913,7 @@ _site_cookie_
 ||widgets.tapiture.com^$third-party
 ||widgetsplus.com^$third-party
 ||wisepops.com^$third-party
+||wishpond.com^$third-party
 ||wonderpush.com^$third-party
 ||woobox.com^$third-party
 ||ws.audioscrobbler.com^$third-party,domain=~last.fm|~lastfm.de|~lastfm.ru|~play.google.com|~spotify.com
