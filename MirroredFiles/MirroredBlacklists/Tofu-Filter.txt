@@ -2,10 +2,10 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 0:13 2018/01/31
+! 最終更新 14:17 2018/02/12
 !
 !--------通販サイト--------!
-amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~mail.google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
+amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
 ||amiami.jp^$third-party
 ||amiami.com^$third-party
 ||animemerchant.com^$third-party
@@ -156,6 +156,7 @@ _ads.php
 !||adnico.jp^$third-party
 !||advision-adnw.jp^$third-party
 !||click-plus.net^$third-party
+!||cocoad.jp^$third-party
 !下にも
 !他あり||gsspcln.jp^
 !||medi-8.net^$third-party
@@ -288,7 +289,8 @@ _ads.php
 ||gmodmp.jp^$third-party
 ||googleadservices.com^$third-party
 ||iid-network.jp^$third-party
-||impact-ad.jp^$third-party
+	!tjapan.jp 画像
+||impact-ad.jp^$third-party,domain=~tjapan.jp
 ||infocart.jp^$third-party
 ||infolinks.com^$third-party
 ||infotop.$third-party
@@ -597,14 +599,13 @@ xvideos.com##.sponsor-popup
 
 !-----------avgle.com
 ||pussl48.com^
-||avgle.com/images/av/b.mp4
 ||avgle.com/images.php
 ||avgle.com/avideos.js
 
+	!anti adblock
 @@||ads.exosrv.com/ads.js$domain=avgle.com
 @@||exosrv.com/ads-iframe-display.php?callback=$domain=avgle.com
 
-avgle.com##[src*="addthis.com"] + SCRIPT + DIV[style="overflow: hidden !important;margin-top:-20px;"]
 avgle.com###player_3x2_container
 avgle.com##.vjs-poster
 avgle.com###aoverlay
@@ -647,6 +648,7 @@ heavy-r.com##.hd-ban
 @@||gelbooru.com/ads.js
 
 $script,third-party,domain=jpidols.tv
+/kok/*$domain=movie.eroterest.net
 |http://$subdocument,third-party,domain=adf.ly
 |http://$script,third-party,domain=youtube-mp3.org
 ||youtube-mp3.org^$subdocument,domain=youtube-mp3.org
@@ -2030,10 +2032,13 @@ pirori2ch.com##.box162
 $domain=warotanikki.com,third-party
 @@||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e982913d31/cloudflare.min.js$domain=warotanikki.com
 @@||youtube.com/embed/*$domain=warotanikki.com
+
 !1000
 1000mg.jp##.main
 1000mg.jp##.title
 1000mg.jp###text-3
+
+burusoku-vip.com##.article-body-more > DIV:last-child
 
 !--------ホワイトリスト--------!
 	!動画シーク
@@ -2069,9 +2074,6 @@ $domain=warotanikki.com,third-party
 @@||nytimes.com^$elemhide
 	! 右側の勝率などの欄が非表示
 @@||opgg-static.akamaized.net/js3/tracker.js?*$domain=op.gg
-	!変なの出る
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sekai-kabuka.com
-@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=sekai-kabuka.com
 	!ポイント貯めるサイト
 @@||pointi.jp^$elemhide
 @@||pointservice.com^$elemhide
@@ -2128,10 +2130,8 @@ eiga.com#@#[id$="_ad"]:not(html):not(body)
 freshlive.tv#@#[class$="Ad"]:not(html):not(body)
 	!動画見れない
 gogoanime.to#@#[class$="-ads"]:not(html):not(body)
-	!編集画面にて終日のチェックボックスが消える
-calendar.google.com#@#[id$="-ad"]:not(html):not(body)
-	!予定が消える
-calendar.google.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
+	!通知設定辺り
+calendar.google.com#@#[class$="Ad"]:not(html):not(body)
 	!ヘッダー 検索バー
 news.google.com#@#[class$="Ad"]:not(html):not(body)
 	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
@@ -2249,6 +2249,18 @@ wiimk2.net#@#.advertisement
 www.paw.hi-ho.ne.jp#@#[class^="ad_"]:not(html):not(body)
 	!top
 youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
+
+
+!-------------------anti adblock-------------------------!
+	!変なの出る
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sekai-kabuka.com
+@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=sekai-kabuka.com
+	!anti adblock
+@@||9ketsuki.info^$elemhide
+@@||battlecats-db.com^$elemhide
+@@||pagead2.googlesyndication.com/pagead/$domain=9ketsuki.info|battlecats-db.com
+	!503を返す
+k05.biz,z0i.net#@#.adsbygoogle
 
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party

@@ -1224,10 +1224,6 @@ download.mokeedev.com##script:inject(setTimeout-defuser.js, alert-danger-enabled
 ! https://github.com/uBlockOrigin/uAssets/issues/278
 pocketnow.com##script:inject(abort-on-property-read.js, InstallTrigger)
 
-! https://github.com/uBlockOrigin/uAssets/issues/282
-cpu-world.com##script:inject(abort-on-property-read.js, CW_AB)
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$important,script,domain=cpu-world.com
-
 ! https://github.com/uBlockOrigin/uAssets/issues/240
 ||myadcash.com/video_landing/js/*.js$script,redirect=noopjs,domain=multiup.eu|multiup.org
 ||leadzutw.com^$third-party
@@ -1585,8 +1581,10 @@ randomarchive.com##script:inject(bab-defuser.js)
 @@||hackinformer.com^$generichide
 hackinformer.com##.adsbygoogle:style(max-height: 1px !important;)
 
+! https://github.com/uBlockOrigin/uAssets/issues/282
 ! https://github.com/uBlockOrigin/uAssets/issues/418
-||googlesyndication.com/pagead/js/adsbygoogle.js$important,script,redirect=googlesyndication.com/adsbygoogle.js,domain=wowtoken.info
+||googlesyndication.com/pagead/js/adsbygoogle.js$important,script,redirect=googlesyndication.com/adsbygoogle.js,domain=cpu-world.com|wowtoken.info
+@@||wowtoken.info^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/422
 ||timesofindia.indiatimes.com/ad-banner$image,redirect=3x2-transparent.png,domain=happytrips.com
@@ -4329,7 +4327,6 @@ magnetdl.com##script:inject(window.open-defuser.js)
 magnetdl.com##a[href="/site/vpn/"]
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/812
-tejikarao.kodaisi.net##script:inject(set-constant.js, AlobaidiDetectAdBlock, true)
 tejikarao.kodaisi.net##script:inject(abort-on-property-write.js, KillAdBlock)
 
 ! katcr tabunder
@@ -5007,3 +5004,32 @@ arbwarez.com##script:inject(abort-on-property-read.js, $tieE3)
 ! https://github.com/uBlockOrigin/uAssets/issues/1527
 @@||hdliveextra-a.akamaihd.net/*/config/ads.js$script,domain=nbcolympics.com
 @@||stream.nbcolympics.com/assets/page/general/ads.js$script,first-party
+
+! https://github.com/NanoAdblocker/NanoDefender/issues/24#issuecomment-364821024
+wp-time.com##a[href^="https://goo.gl/"]:has(img)
+wp-time.com###pop-ad-wrap
+
+! https://github.com/uBlockOrigin/uAssets/issues/1528
+linksocean.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+linksocean.net##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1531
+@@||peugeotclub.eu^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1530
+||amgload.net$xmlhttprequest,domain=animestreams.tv
+||piguiqproxy.com$xmlhttprequest,domain=animestreams.tv
+animestreams.tv##.spu-bg
+animestreams.tv##.spu-box
+! Firefox specific fix
+animestreams.tv##^script:has-text(3f87b0eaddd)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1529
+bc.vc##script:inject(window.open-defuser.js)
+*$subdocument,third-party,domain=bc.vc
+||bc.vc/mload.gif$image
+||smrtrdrct.top^$third-party
+@@||google.com^$subdocument,domain=bc.vc
+
+! https://github.com/NanoAdblocker/NanoDefender/issues/24
+@@/wp-content/plugins/detect-adblock/js/ads.js$script,first-party
