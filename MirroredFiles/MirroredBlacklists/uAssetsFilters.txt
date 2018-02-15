@@ -148,7 +148,7 @@ gamepro.de,gamestar.de##script:inject(abort-on-property-write.js, uabInject)
 
 # Yavli ads
 ! https://www.reddit.com/r/uBlockOrigin/comments/7cgb7h/pjmediacom_has_a_right_sidebar_that_is_labeled/
-100percentfedup.com,activistpost.com,addictinginfo.*,alfonzorachel.com,allenbwest.com,allenwestrepublic.com,allthingsvegas.com,barbwire.com,bestfunnyjokes4u.com,bighealthreport.com,bugout.news,bulletsfirst.net,buzzlamp.com,celebrity-gossip.net,cheatsheet.com,clashdaily.com,collapse.news,comicallyincorrect.com,conservativetribune.com,constitution.com,craigjames.com,creepybasement.com,cyberwar.news,dailyheadlines.net,dailysurge.com,damnlol.com,deneenborelli.com,eaglerising.com,evil.news,faithit.com,fitnessconnoisseur.com,foreverymom.com,freedom.news,freedomdaily.com,freedomforce.com,freedomoutpost.com,glitch.news,godfatherpolitics.com,gopocalypse.org,guardianlv.com,guns.news,hautereport.com,hispolitica.com,ifyouonlynews.com,instigatornews.com,janmorganmedia.com,joeforamerica.com,juicerhead.com,justdiy.com,keepandbear.com,knowledgedish.com,lastresistance.com,legalinsurrection.com,liberty.news,libertyunyielding.com,lidblog.com,millionpictures.co,moneyversed.com,natural.news,naturalblaze.com,naturalsociety.com,opednews.com,patriotoutdoornews.com,pjmedia.com,politicaloutcast.com,politichicks.com,practicallyviral.com,profitconfidential.com,quirlycues.com,realmomsrealreviews.com,redhotchacha.com,redmaryland.com,reverbpress.com,reviveusa.com,shark-tank.com,shedthoselbs.com,slender.news,sonsoflibertymedia.com,stupid.news,techconsumer.com,technobuffalo.com,theblacksphere.net,theboredmind.com,thegatewaypundit.com,thelastlineofdefense.org,themattwalshblog.com,thepoke.co.uk,therealside.com,tosavealife.com,twisted.news,usherald.com,videogamesblogger.com,viralnova.com,visiontoamerica.com,wakingtimes.com,westernjournalism.com,wnd.com,xtribune.com,youngcons.com##script:inject(abort-current-inline-script.js, setTimeout, MBoxAdMain)
+100percentfedup.com,activistpost.com,addictinginfo.*,alfonzorachel.com,allenbwest.com,allenwestrepublic.com,allthingsvegas.com,barbwire.com,bestfunnyjokes4u.com,bighealthreport.com,bugout.news,bulletsfirst.net,buzzlamp.com,celebrity-gossip.net,cheatsheet.com,clashdaily.com,collapse.news,comicallyincorrect.com,conservativetribune.com,constitution.com,craigjames.com,creepybasement.com,cyberwar.news,dailyheadlines.net,dailysurge.com,damnlol.com,deneenborelli.com,eaglerising.com,evil.news,faithit.com,fitnessconnoisseur.com,foreverymom.com,freedom.news,freedomdaily.com,freedomforce.com,freedomoutpost.com,glitch.news,godfatherpolitics.com,gopocalypse.org,guardianlv.com,guns.news,hautereport.com,hispolitica.com,ifyouonlynews.com,instigatornews.com,janmorganmedia.com,joeforamerica.com,juicerhead.com,justdiy.com,keepandbear.com,knowledgedish.com,lastresistance.com,legalinsurrection.com,liberty.news,libertyunyielding.com,lidblog.com,millionpictures.co,moneyversed.com,natural.news,naturalblaze.com,naturalsociety.com,opednews.com,patriotoutdoornews.com,pjmedia.com,politicaloutcast.com,politichicks.com,practicallyviral.com,profitconfidential.com,quirlycues.com,realmomsrealreviews.com,redhotchacha.com,redmaryland.com,reverbpress.com,reviveusa.com,shark-tank.com,shedthoselbs.com,slender.news,sonsoflibertymedia.com,stupid.news,techconsumer.com,technobuffalo.com,theblacksphere.net,theboredmind.com,thegatewaypundit.com,thelastlineofdefense.org,themattwalshblog.com,thepoke.co.uk,therealside.com,tosavealife.com,twisted.news,usherald.com,videogamesblogger.com,viralnova.com,visiontoamerica.com,wakingtimes.com,westernjournalism.com,wnd.com,xtribune.com,youngcons.com##script:inject(abort-current-inline-script.js, setTimeout, oio.start)
 @@||wpengine.netdna-cdn.com^$image,domain=100percentfedup.com|clashdaily.com|constitution.com|eaglerising.com|freedomdaily.com|freedomoutpost.com|hispolitica.com
 @@||galaxant.com^$image,domain=viralnova.com
 ! Found during routine check to verify above filters still work.
@@ -2237,7 +2237,10 @@ androidsage.com##script:inject(abort-on-property-write.js, blckad)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6zpavj/chrome_cant_block_iframe/
 ! https://github.com/uBlockOrigin/uAssets/issues/683
-korrespondent.net,nnm-club.name,nnmclub.to##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+! https://github.com/gorhill/uBlock/issues/3515
+korrespondent.net,nnm-club.me,nnm-club.name,nnmclub.to##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+nnm-club.me##[id*=Composite]
+nnm-club.me##.request
 
 ! https://github.com/uBlockOrigin/uAssets/issues/686
 urlcloud.us##script:inject(bab-defuser.js)
@@ -2437,7 +2440,8 @@ ultrahorny.com###hideads
 ! https://www.reddit.com/r/uBlockOrigin/comments/75zmyk/ublock_not_blocking_grammarly_ads_on_citation/
 ! https://github.com/uBlockOrigin/uAssets/issues/806
 bibme.org,citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, canRunAds)
-bibme.org,citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, SBMGlobal.run.gramCallback)
+bibme.org##script:inject(abort-on-property-read.js, SBMGlobal.run.pcCallback)
+citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, SBMGlobal.run.gramCallback)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/763
 hdrezka.ag##script:inject(abort-current-inline-script.js, parseInt, decodeURIComponent)
@@ -2484,7 +2488,7 @@ postimg.org##script:inject(abort-current-inline-script.js, MutationObserver, 676
 ! https://github.com/uBlockOrigin/uAssets/issues/259
 ! https://github.com/uBlockOrigin/uAssets/issues/394
 ! https://github.com/uBlockOrigin/uAssets/issues/592
-101greatgoals.com,allthetests.com,ancient-origins.net,biology-online.org,calcalist.co.il,convert-me.com,diffen.com,eurweb.com,globes.co.il,grammarist.com,jerusalemonline.com,nysun.com,reshet.tv,roadracerunner.com,textsfromlastnight.com,trifind.com,walla.co.il,x17online.com,yad2.co.il,ynet.co.il,yocore.com##script:inject(abort-on-property-write.js, upManager)
+101greatgoals.com,allthetests.com,ancient-origins.net,biology-online.org,calcalist.co.il,convert-me.com,globes.co.il,grammarist.com,jerusalemonline.com,nysun.com,reshet.tv,roadracerunner.com,textsfromlastnight.com,trifind.com,walla.co.il,x17online.com,yad2.co.il,ynet.co.il,yocore.com##script:inject(abort-on-property-write.js, upManager)
 ! https://github.com/uBlockOrigin/uAssets/issues/628
 ! https://www.reddit.com/r/uBlockOrigin/comments/6yqyni/help_persistent_trending_articles_ads_on_website/
 allpar.com,antonymsfor.com,bobshideout.com,cheezburger.com,colourlovers.com,daily-stuff.com,dietlast.com,downsub.com,ebaumsworld.com,emathhelp.net,genfb.com,getinmybelly.com,grammar.net,igvnews.co.uk,jspuzzles.com,kshowonline.com,nnettle.com,smartchoiceshealthyliving.com,spellcheck.net,spellweb.com,sportspickle.com,tbc.tetrisfb.com,techowiz.com,tetrisfriends.com,the4thofficial.net,thesaurus.net,tworeddots.com,usherald.com,virtualjerusalem.com##script:inject(abort-current-inline-script.js, btoa, upManager)
@@ -2493,7 +2497,7 @@ allpar.com,antonymsfor.com,bobshideout.com,cheezburger.com,colourlovers.com,dail
 ! https://github.com/uBlockOrigin/uAssets/issues/810
 ! https://github.com/uBlockOrigin/uAssets/issues/855
 abandonedspaces.com,asheepnomore.net,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips.in,eternallifestyle.com,fullmatchesandshows.com,gorillavid.in,greeningz.com,hyperactivz.com,kiwireport.com,moviepredators.com,movpod.in,netzwelt.de,parentztalk.com,powerofpositivity.com,presidentmommy.com,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,toptenz.net,travelfuntu.com,vidmax.com,wnd.com,worldation.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
-footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
+diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ||jojilabola.com^
 ||rizotina.com^
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39280&p=129024#p129024
@@ -4316,6 +4320,7 @@ win4cut.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adb
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1282
 sunporno.com##script:inject(abort-current-inline-script.js, ExoLoader)
+sunporno.com##script:inject(abort-on-property-write.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1283
 hotgirlclub.com##script:inject(abort-current-inline-script.js, ExoLoader)
@@ -4991,7 +4996,7 @@ tubemania.org##script:inject(window.open-defuser.js)
 hiapphere.com##script:inject(abort-on-property-read.js, _d)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/857
-@@||dl.go4up.com/ads.js$script,first-party
+@@||dl.go4up.com/$script,first-party
 ||dl.go4up.com/*/dbuttoned.png$image
 go4up.com##img[src="https://cache.go4up.com/assets/img/abutoned.gif"]
 
@@ -5050,3 +5055,13 @@ cut4links.com##script:inject(abort-on-property-read.js, app_vars.force_disable_a
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1536
 telolet.in##script:inject(abort-current-inline-script.js, addEventListener, DivTopAd)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1538
+cumlouder.com##script:inject(abort-on-property-write.js, ExoLoader)
+cumlouder.com##.promo
+cumlouder.com###promocion_bottom
+cumlouder.com##.p-bottom
+cumlouder.com##.widget_bnrs
+
+! https://github.com/uBlockOrigin/uAssets/issues/1539
+@@||thestar.co.uk^$generichide
