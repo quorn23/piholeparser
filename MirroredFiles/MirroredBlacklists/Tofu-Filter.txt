@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 20:08 2018/02/14
+! 最終更新 19:59 2018/02/16
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -494,13 +494,16 @@ _ads.php
 ||sexart.com^$third-party
 ||slendastic.com^$third-party
 ||speednetwork14.com^$third-party
+||superfastcdn.com^$third-party
 ||teads.tv^$third-party
 ||toponclick.com^$third-party
+||tradeadexchange.com^$third-party
 ||trafficfactory.biz^$third-party
 ||trafficforce.com^$third-party
 ||trafficstars.com^$third-party
 ||trw12.com^$third-party
 ||tsyndicate.com^$third-party
+||velocecdn.com^$third-party
 ||veohclick.net^$third-party
 ||video-people.com^$third-party
 ||videoegg.com^$third-party
@@ -531,6 +534,7 @@ _ads.php
 ||gunosy.com/adnet/
 ||idea-unlimited.com/adsimg/
 ||imagefreak*.com^
+||javhd.com/sb/$third-party
 ||mgstage.com/afscript/
 ||mkd777.net/pd/
 ||open2ch.net/image/banner/
@@ -768,12 +772,15 @@ $script,third-party,domain=jpidols.tv
 ||relart.fresheye.com^
 ||ribbon.to/alpc.js
 ||sanspo.com^*/adsence_
+||savevideo.me/ads-fallback/
 ||sea-saw.com^$domain=2dbook.com
 ||seesaa.jp/frame/
 ||share-videos.se/js/pjs.js
 ||shopping.sponichi.co.jp/scripts/sannex_banner_auction.js
 ||tatituteto.net/images/banner/
 ||thisav.com/index.js
+||thisav.com/player/video-js-banner/
+||xywdvhd.com^$domain=thisav.com
 ||tokyo-porn-tube.com/media/player/ads_
 ||tsumanne.net/amz/
 ||tsumanne.net/rakutensearch.php?
@@ -2048,7 +2055,7 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 	!動画見れない
 	!http://www.tbs.co.jp/muryou-douga/
 @@||ad.auditude.com/adserver/$xmlhttprequest,domain=tver.jp|www.tbs.co.jp
-	!ブログ巻き込み全消し
+	!全消し 2018/02/16様子見
 @@||ad.pr.ameba.jp/tpc/
 @@||ad-link.jp*/index.php?
 @@||bc.geocities.yahoo.co.jp/js/bbs/
@@ -2301,7 +2308,6 @@ youporn.com##script:contains(ChromePopMouseDownHandler)
 redtube.com##script:contains(var rAb=)
 redtube.com##script:contains(tj_ads)
 pornhub.com##script:contains(tj_ads)
-thisav.com##script:contains(jsPopunder)
 tube8.*##script:contains(adblock)
 txxx.com##script:contains(ad_sub)
 xhamster.com##script:contains(dataPopUnder)

@@ -169,6 +169,9 @@ extremetube.com,pornhub.com,primewire.*,redtube.*,spankwire.com,tube8.*,youporn.
 */blockadblock.$script,redirect=fuckadblock.js-3.2.0
 # https://adblockplus.org/forum/viewtopic.php?f=2&t=43762
 ||leporno.org/english.js$script,redirect=fuckadblock.js-3.2.0,first-party
+! https://github.com/uBlockOrigin/uAssets/issues/1551
+! https://github.com/uBlockOrigin/uAssets/issues/1554
+*/wp-adblock-$script,redirect=fuckadblock.js-3.2.0
 
 # https://github.com/gorhill/uBlock/issues/1136
 ||dailymotion.com/ac/video/$image,first-party,redirect=2x2-transparent.png
@@ -1217,7 +1220,7 @@ codeproject.com##script:inject(abort-on-property-read.js, retrievalService)
 speedtest.net##script:inject(abort-on-property-read.js, _sp_)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/273
-cwtv.com##script:inject(abort-on-property-write.js, wallConfig)
+cwtv.com##script:inject(noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/280
 ||download.mokeedev.com/js/jquery-common.js.*$first-party,script,redirect=fuckadblock.js-3.2.0
@@ -3703,6 +3706,7 @@ shortelink.co###capaclick
 jzrputtbut.net##script:inject(addEventListener-defuser.js, click, popunder)
 jzrputtbut.net##script:inject(setTimeout-defuser (), 50)
 *$subdocument,domain=olgkzlwln.net
+*$subdocument,domain=zmgyogmgghuc.net
 ||jzrputtbut.net^*?name=$popup
 
 ! https://forums.lanik.us/viewtopic.php?p=129948#p129948
@@ -5085,3 +5089,31 @@ cutw.me##script:inject(nano-setInterval-booster.js)
 
 ! mejortorrent.com popups
 mejortorrent.com##script:inject(abort-on-property-write.js, getScript)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1549
+xfreehd.com##.nvheader > span:has-text(Advertisement)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1550
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication.com/adsbygoogle.js,domain=downloadfullfree.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/1553
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=mynbc5.com
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39995
+iwatchgot.com,iwatchseries.online,watchamericandad.net,watcharcheronline.com,watcharresteddevelopment.com,watchcheersonline.com,watchcommunity.online,watchdoctorwhoonline.com,watcheverybodylovesraymond.com,watchfamilyguy.cc,watchfearthewalkingdead.net,watchfriendsonline.net,watchhowimetyourmother.com,watchitsalwayssunnyinphiladelphia.com,watchkingofthehill.com,watchparksandrecreation.net,watchprisonbreakonline.com,watchpsychonline.net,watchscrubsonline.com,watchseinfeld.com,watchsmallvilleonline.net,watchsouthpark.cc,watchsupernaturalonline.cc,watchthesopranos.com,watchthexfiles.com##script:inject(bab-defuser.js)
+embedtvseries.com###banner
+
+! https://github.com/gorhill/uBlock/issues/3522
+liga.net##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+
+! https://github.com/uBlockOrigin/uAssets/issues/911#issuecomment-366335870
+adsrt.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+||adsrt.com^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.gstatic.com
+adsrt.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1555
+linclik.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1556
+eg4link.me##script:inject(nano-setInterval-booster.js)
+eg4link.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)

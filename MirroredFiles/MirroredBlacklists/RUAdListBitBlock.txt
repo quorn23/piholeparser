@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: a7LCiYDi83ZgrwWCDFHG7w
-! Version: 201802160020
+! Checksum: g26wYXyawAbZOef+VUgEAQ
+! Version: 201802170020
 ! Title: RU AdList: BitBlock
-! Last modified: 16 Feb 2018 00:20 UTC
+! Last modified: 17 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -774,7 +774,6 @@ ria.ru##.header_social
 drive2.ru##.js-share:not(#id) > *
 megogo.net##.megogo_view_share
 audioportal.su,baumanki.net,vsthouse.ru##.pluso
-liveinternet.ru##.rss.icon
 rafkino.com,ria.ru##.social
 news.rambler.ru##.social-bottom.wide[data-prefix] > .social-bottom__item
 news.rambler.ru##.social-subscribe
@@ -786,7 +785,6 @@ joyreactor.cc,reactor.cc##.uhead_share
 cnews.ru,nabazare.blogspot.ru,ph4.ru,raskraska.com,ru-skript.ru,spam-club.blogspot.com,spam-club.blogspot.ru##.ya-share2
 anistar.me,audioportal.su,audioskazki.net,cnews.ru,html-template.ru,rustreams.ru,vnx.su##.yashare-auto-init
 2ip.ru,anistar.me,raskraska.com,ria.ru,spec-komp.com##div[id^="vk_groups"]
-liveinternet.ru##div[id^="vk_like"]
 porjati.net##form[action="http://feedburner.google.com/fb/a/mailverify"]
 !
 ! - Мусор на сайтах (огромные логотипы, информеры, флэш и прочее) -------------
@@ -1445,8 +1443,10 @@ thequestion.ru###content > .informer
 moya-planeta.ru###content > .white_header_text
 3dnews.ru###content-column > .white.margin-bottom.margin-top
 7ya.ru###content_container > div[class*="specprojects"]
+old.overclockers.ru###contentplace > [class^="decoblock"]
 eva.ru###cookie-agreement
 livelib.ru###cookies-agree
+old.overclockers.ru###crosssites > p
 forums.overclockers.ru###datebar
 pcportal.org###ddew_ovnova
 megafon.ru###divBanner > a[href*=".megafon.ru/"]
@@ -1497,6 +1497,7 @@ forums.warforge.ru###logostrip
 fullgames.ru###main > noindex
 tapochek.net###main_content_wrap > center
 libst.ru###main_slider
+old.overclockers.ru###mainplace > table > tbody > tr:first-child
 youtube.com###masthead-positioner > #ticker-content
 kp.ru###mc-screen-subscribe
 livemaster.ru###mobile-app-banner-hand
@@ -1514,6 +1515,7 @@ fox-fan.ru###noVip
 rambler.ru###notification.r__distribution-fixed-banner
 friday.ru,russian.rt.com###offers
 kinodema.com###okno[href]
+overclockers.ru###otherPageContent > .ui > .column > .divided
 autoclub-cerato.ru###outer_forum
 lockerz.com###overlay
 forum.awd.ru###page-body > p:nth-child(-n+3)
@@ -1608,6 +1610,7 @@ meduza.io##.Material-subscribe
 superjob.ua##.NewMainDefaultFooter_right
 cnews.ru##.NewsBody > .video.img-block
 meduza.io##.NewsMaterial-banner
+auto.ru##.PromoVinModal__modal
 instagram.com##.ResponsiveBlock div:not([style]):not(:first-of-type)
 softportal.com##.TblRLCLR td > center > a[href] > img
 softportal.com##.TblTopBanCLR a[href="http://www.softportal.com/yabrowser.html"]
@@ -1687,6 +1690,7 @@ sports.ru##.c-read-also
 kino-sayt.net##.cap
 auto.ru##.card-notifications-lazy
 avito.ru##.catalog-promo
+epidemz.co##.centertext > #dle-content ~ div[style^="color"]
 cafe.imgradio.ru,chilla.imgradio.ru,deti.imgradio.ru,fresh.imgradio.ru,funk.imgradio.ru,radio.megaradio.pro,radio.ruhit.pro,retrohit.pro,rurock.imgradio.ru##.cevher
 kinonews.ru##.clearfix.insight > div[style^="border-left"] > div[style="width:1000px;margin:0 auto;"]
 ixbt.video##.clickable_zone
@@ -1716,6 +1720,10 @@ politexpert.net##.favorite-wr
 kinopoisk.ru##.feature_promo
 fb.ru##.featured_article
 drive.ru##.feedsub
+old.overclockers.ru##.fifty-fifty-left > .decoblock_rnd1
+old.overclockers.ru##.fifty-fifty-left > .decoblock_rnd1 + .decoblock-content
+old.overclockers.ru##.fifty-fifty-right .decoblock_rnd1 ~ .decoblock_rnd1
+old.overclockers.ru##.fifty-fifty-right .decoblock_rnd1 ~ .decoblock_rnd1 + .decoblock-content
 cont.ws##.fill
 hotline.ua##.finance-target
 nalog.ru##.fixed_shortcut_vc
@@ -1745,6 +1753,7 @@ inforesist.org##.hidden-sm.hidden-xs > .navbar-right
 overclockers.ru##.hostkey
 club-lexus.ru##.i-adv
 rbc.ru##.indicators_vert__container > .indicators_vert__group
+bobyfilms.net##.info_banner
 yvision.kz##.info_slide
 qiwi.com##.infoblock > [data-helper-banner]
 kinoprofi.su##.infoblock-bottom
@@ -2027,11 +2036,13 @@ stopgame.ru##img[width="240"][height="400"]
 sfw.org.ua##img[width="350"][alt*="userbar"]
 meduza.io#?#.PageSection > .PageBlock:-abp-has(.MaterialTag:-abp-contains(партнерский материал))
 cnews.ru##noindex > .event_list
+overclockers.ru#?##otherPageContent > .ui > .column:-abp-has(.divided)
 benzin-price.ru##p:first-child + p > table[align="center"]
 goha.ru##span[id^="scrollto"]
 streamzone.org##span[style*="3.0em;"]
 russianpost.ru##table[width="816"] > tbody > tr:first-child + tr
 forums.overclockers.ru##td > #logo
+old.overclockers.ru##td#rightplace
 forums.overclockers.ru##td[style*="float:right; margin-right: 20px;"]
 chastnik-m.ru##td[valign="top"][id$="_place"]
 lkforum.ru##td[width="180"][align="right"]
@@ -7358,6 +7369,9 @@ _youtube_social_
 ##.SocialKit
 ##.SocialLiksFooter
 ##.SocialLiksHeader
+##.SocialLinks
+##.SocialLinks--footer
+##.SocialLinks-linkContainer
 ##.SocialList
 ##.SocialList-component
 ##.SocialList-item
@@ -7366,6 +7380,7 @@ _youtube_social_
 ##.SocialMediaIcons
 ##.SocialMediaLinks
 ##.SocialMediaShareButton
+##.SocialNetwork
 ##.SocialPluginsWidget
 ##.SocialRing_Widget
 ##.SocialRow
@@ -9496,6 +9511,7 @@ _youtube_social_
 ##.gui-btn-sm-twitter
 ##.gui-btn-sm-youtube
 ##.guides16-social-top
+##.h-c-social
 ##.h-do-share
 ##.h-share
 ##.haber-sosyal
@@ -16704,6 +16720,8 @@ _site_cookie_
 ##.NewsLetterLeftSide
 ##.Newsletter-Overlay
 ##.NewsletterBanner
+##.NewsletterBox
+##.NewsletterBox--footer
 ##.NewsletterColumn
 ##.NewsletterSignup
 ##.NewsletterSubscription
@@ -16939,6 +16957,7 @@ _site_cookie_
 ##.js-custom-push-notifications
 ##.js-email-widget
 ##.js-form-newsletter
+##.js-magazineSubscriptionPopin
 ##.js-newsletter
 ##.js-newsletter-sign-up-form
 ##.js-newsletter-signup
@@ -25038,7 +25057,7 @@ reddit.com#@#img[alt="submit to reddit"]
 @@||adfoc.us/*/interstitial.js$~third-party
 @@||alicdn.com/js/*/ws-cookie.js$script
 @@||aliunicorn.com^*/cookie-info.js
-@@||amazonaws.com/downloads.mailchimp.com/js/mc-validate.js$domain=cnn.com|cover-up.com|eskuvo-kiallitas-osz.hu|fairprice.co.za|genuine-people.com|justrunlah.com|monetarywatch.com|nikopik.com|nowfoods.com|nyt.fi|propublica.org|sanbs.org.za|thegolfnewsnet.com|truenutrition.com
+@@||amazonaws.com/downloads.mailchimp.com/js/mc-validate.js$domain=cnn.com|cover-up.com|eskuvo-kiallitas-osz.hu|fairprice.co.za|genuine-people.com|justrunlah.com|makewarnotlove.com|monetarywatch.com|nikopik.com|nowfoods.com|nyt.fi|propublica.org|sanbs.org.za|thegolfnewsnet.com|truenutrition.com
 @@||amazonaws.com^*/feedback-v2.js?$domain=avgthreatlabs.com
 @@||barclays.co.uk/js/cookiepolicy.js
 @@||bestof.s3.amazonaws.com/twitter.png$domain=makeuseof.com
@@ -25802,6 +25821,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||hd-trailers.net/images/youtube.png
 @@||hopper.com/static2/w2/images/google-$domain=hopper.com
 @@||hotflick.net^*-social-$image
+@@||hotflicknet.s3.amazonaws.com^*-social-$image
 @@||hrwiki.org^*/youtube.png
 @@||huffpost.com/assets/js.php?*-pinterest.js
 @@||huffpost.com/images/social-profile/lightbox/snn_lightbox_close.png
