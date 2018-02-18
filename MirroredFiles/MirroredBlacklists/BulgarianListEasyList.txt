@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201802170005
+! Version: 201802180012
 ! Title: EasyPrivacy
-! Last modified: 17 Feb 2018 00:05 UTC
+! Last modified: 18 Feb 2018 00:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -573,7 +573,6 @@
 /api/lt/ref?
 /api/pageview?
 /api/pixel?
-/api/radar/*
 /api/stat?
 /api/tracking/*
 /api/v1/stat?
@@ -936,6 +935,7 @@
 /CntRpt.aspx?
 /cnvtr.js
 /cnwk.1d/*/apex.js
+/coAnalytics.
 /CofinaHits.
 /cognitive_match/*
 /collect/kf?
@@ -1809,6 +1809,7 @@
 /log/jserr.php
 /log/log.php?
 /log/p.gif?
+/log/pageview
 /log/report/*
 /log/web?
 /log2.php?
@@ -2998,10 +2999,12 @@
 /trackimps?
 /tracking-active/*
 /tracking-ad/*
+/tracking-aws.
 /tracking-cookie.
 /tracking-hits.
 /tracking-info.gif?
 /tracking-init.
+/tracking-jquery-shim.
 /tracking-pixel.
 /tracking-pixel/*
 /tracking-portlet/*
@@ -4403,6 +4406,7 @@ _mongo_stats/
 ||enquisite.com^$third-party
 ||ensighten.com^$third-party
 ||enticelabs.com^$third-party
+||ep4p.com^$third-party
 ||eperfectdata.com^$third-party
 ||epilot.com^$third-party
 ||epiodata.com^$third-party
@@ -4489,6 +4493,7 @@ _mongo_stats/
 ||flashadengine.com^$third-party
 ||flashgamestats.com^$third-party
 ||flcounter.com^$third-party
+||flix360.com^$third-party
 ||flixfacts.co.uk^$third-party
 ||flixsyndication.net^$third-party
 ||flowstats.net^$third-party
@@ -4993,6 +4998,7 @@ _mongo_stats/
 ||msgtag.com^$third-party
 ||msparktrk.com^$third-party
 ||mstracker.net^$third-party
+||mstrlytcs.com^$third-party
 ||mtracking.com^$third-party
 ||mtrics.cdc.gov^$third-party
 ||mucocutaneousmyrmecophaga.com^$third-party
@@ -5367,6 +5373,7 @@ _mongo_stats/
 ||rrimpl.com^$third-party
 ||rs0.co.uk^$third-party
 ||rs6.net^$third-party
+||rstg.io^$third-party
 ||rsvpgenius.com^$third-party
 ||rtb123.com^$third-party
 ||rtbauction.com^$third-party
@@ -5959,6 +5966,7 @@ _mongo_stats/
 ||xyztraffic.com^$third-party
 ||y-track.com^$third-party
 ||yamanoha.com^$third-party
+||yandex-metrica.ru^$third-party
 ||yaudience.com^$third-party
 ||ybotvisit.com^$third-party
 ||ycctrk.co.uk^$third-party
@@ -6019,7 +6027,7 @@ _mongo_stats/
 .trade^$third-party,websocket
 .webcam^$third-party,websocket
 .win^$third-party,websocket
-.xyz^$third-party,websocket,domain=~webtorrent.io
+.xyz^$third-party,websocket,domain=~btorrent.xyz|~webtorrent.io
 .zone^$third-party,websocket
 ||1beb2a44.space^$third-party
 ||1q2w3.fun^$third-party
@@ -6226,6 +6234,7 @@ _mongo_stats/
 ||sparechange.io^$third-party
 ||sparnove.com^$third-party
 ||static-cnt.bid^$third-party
+||staticsfs.host^$third-party
 ||statistic.date^$third-party
 ||subloader.cf^$third-party
 ||supportxmr.com^$third-party
@@ -9090,6 +9099,7 @@ _mongo_stats/
 ||zoomtv.me^*?pixel=
 ||zoover.co.uk/tracking/
 ||zope.net^*/ghs_wa.js
+||zvsuhljiha-a.akamaihd.net^
 ! -----------------International third-party tracking services-----------------!
 ! *** easylist:easyprivacy/easyprivacy_thirdparty_international.txt ***
 ! German
@@ -9848,7 +9858,7 @@ _mongo_stats/
 ||airbnb.*/tracking/
 ||airfrance.com/s/?tcs=
 ||airspacemag.com/g/g/button/
-||akamai.net^$script,domain=newscientist.com
+||akamai.net^$script,domain=argos.co.uk|newscientist.com|upwork.com
 ||akamai.net^*/button.clickability.com/
 ||akamaihd.net/pixelkabam/
 ||alarabiya.net/track_content_
@@ -9890,6 +9900,7 @@ _mongo_stats/
 ||amy.gs/track/
 ||analysis.focalprice.com^
 ||analytic.imlive.com^
+||analytics.247sports.com^
 ||analytics.adfreetime.com^
 ||analytics.archive.org^
 ||analytics.bloomberg.com^
@@ -10199,6 +10210,7 @@ _mongo_stats/
 ||cnt.vivatube.com^
 ||codecguide.com/stats.js
 ||codeweblog.com/js/count.js
+||coherentpath.com/tracker/
 ||collarity.com/ucs/tracker.js
 ||collect.sas.com^
 ||collect2.sas.com^
@@ -11348,6 +11360,7 @@ _mongo_stats/
 ||satellite-tv-guides.com/stat/
 ||sayac.hurriyettv.com^
 ||sb.vevo.com^
+||scdn.co/build/js/tracking-
 ||sciencedaily.com/blank.htm
 ||sciencedaily.com/cache.php?
 ||scluster3.cliphunter.com^
@@ -11405,6 +11418,7 @@ _mongo_stats/
 ||sixpack.udimg.com^
 ||sky.com^*/hightrafficsurveycode.js
 ||sky.com^*/incomeGeneratingDevicesExpanding.js
+||sky.com^*/metrics/
 ||skype.com^*/inclient/
 ||skype.com^*/track_channel.js
 ||skypeassets.com/i/js/jquery/tracking.js
@@ -11413,6 +11427,7 @@ _mongo_stats/
 ||skyrock.net/img/pix.gif
 ||skyrock.net/js/stats_blog.js
 ||skyrock.net/stats/
+||slack.com/beacon/
 ||slack.com/clog/track/
 ||slacker.com/beacon/page/$image
 ||slashdot.org/images/js.gif?$image
@@ -11452,6 +11467,7 @@ _mongo_stats/
 ||sporcle.com/adn/yaktrack.php?
 ||sportingnews.com/px/
 ||sportsmole.co.uk/track*.gif?
+||spotify.com^*/metric
 ||spotlight.accuweather.com^
 ||spreaker.com^*/statistics/
 ||squidoo.com/track/
@@ -11679,6 +11695,7 @@ _mongo_stats/
 ||track.webgains.com^
 ||track.websiteceo.com^
 ||track.wildblue.com^
+||track.workablemetro.com^
 ||track.zalando.
 ||track.zomato.com^
 ||tracker.anandtech.com^
@@ -11899,6 +11916,7 @@ _mongo_stats/
 ||webcamgalore.com/aslog.js
 ||webcollage.net/apps/el?
 ||webcrawler.com/__kl.gif
+||webengage.sky.com^$xmlhttprequest
 ||webjam.com/Actions/Hit.jam?
 ||weblog.strawberrynet.com^
 ||weblogger01.data.disney.com^
@@ -11957,6 +11975,7 @@ _mongo_stats/
 ||xbox.com^*/vortex_tracking.js
 ||xda-cdn.com/analytics.js
 ||xda-developers.com/ping.php
+||xfinity.com/event/
 ||xhamster.com/ajax.php?act=track_event
 ||xhamster.com/embed.log/
 ||xhcdn.com/js/track.min.js?
@@ -12048,7 +12067,7 @@ _mongo_stats/
 ||zylom.com^*/tracking_spotlight.js
 ||zytpirwai.net/track/
 ! Mining
-$websocket,xmlhttprequest,domain=300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.tv|dekoder.ws|estream.to|fileone.tv|jkanime.net|kinokrad.co|leitor.net|lewd.ninja|love-drama.pl|movie4k.is|oload.info|oload.tv|powvideo.net|shrink-service.it|streamango.com|streamcherry.com|vidfile.net
+$websocket,domain=300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.tv|dekoder.ws|estream.to|fileone.tv|gofile.io|hq-porns.com|jkanime.net|kinokrad.co|leitor.net|lewd.ninja|love-drama.pl|movie4k.is|oload.info|oload.tv|powvideo.net|shrink-service.it|streamango.com|streamcherry.com|vidfile.net
 ||2giga.link^*/hive.js
 ||browsealoud.com/plus/scripts/$script
 ||cryweb.github.io^
@@ -14165,4 +14184,4 @@ $websocket,xmlhttprequest,domain=300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.c
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: gjNQ51acZ1+AtogWyjflSA
+! Checksum: 6dmhzK7sGsWhdWkzE0/xoQ

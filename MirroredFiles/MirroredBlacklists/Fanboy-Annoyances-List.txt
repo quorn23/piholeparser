@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: aB0TInkn5lt3o2JwqqgLWA
-! Version: 201802170021
+! Checksum: FIHOHqGCQ7bNTZtBvsDfjA
+! Version: 201802180021
 ! Title: Fanboy's Annoyance List
-! Last modified: 17 Feb 2018 00:21 UTC
+! Last modified: 18 Feb 2018 00:21 UTC
 ! Expires: 4 days (update frequency)
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -3080,7 +3080,7 @@ _socialfancysliders/
 _SocialIcon_
 _socialicons.
 _sociallinks.
-_socialmedia_
+_socialmedia_$~script
 _socialmediabox_
 _socialmedias2.
 _socials_icons.
@@ -4039,6 +4039,7 @@ _youtube_social_
 ###newsletter-flag
 ###newsletter-floating
 ###newsletter-footer
+###newsletter-form-container
 ###newsletter-form-footer
 ###newsletter-form-nonrail
 ###newsletter-header
@@ -4181,6 +4182,8 @@ _youtube_social_
 ###right-slidead-popup
 ###rightNavNewsletter
 ###sailthru-basic-newsletter-form
+###sam-newsletter-form
+###sam-newsletter-signup
 ###sb-sidebar-newsletter-sign-up
 ###sc-email-widget-container
 ###sdac_subscribe_widget-3
@@ -13551,6 +13554,7 @@ _youtube_social_
 ###shareToolTop
 ###shareTop
 ###shareTopBtn
+###shareTotal
 ###shareTxt
 ###shareV
 ###shareV_w
@@ -14544,6 +14548,7 @@ _youtube_social_
 ##.FollowButton
 ##.FollowByEmail
 ##.FollowUs
+##.Footer-socialButtons
 ##.FooterSocial
 ##.Footer__Facebook
 ##.Footer__Twitter
@@ -16425,6 +16430,7 @@ _youtube_social_
 ##.footer--social-link
 ##.footer-GlobalSocialIcons
 ##.footer-bottom-social
+##.footer-component__social-icons
 ##.footer-connect
 ##.footer-connect-links
 ##.footer-content-social
@@ -17762,6 +17768,7 @@ _youtube_social_
 ##.menu-article-share
 ##.menu-facebook
 ##.menu-fb
+##.menu-footer-social-container
 ##.menu-header-social-container
 ##.menu-item-follow
 ##.menu-item-type-social
@@ -18877,6 +18884,7 @@ _youtube_social_
 ##.shareText
 ##.shareThis
 ##.shareThisArticle
+##.shareThisHeaderBox
 ##.shareThisPost
 ##.shareThisShare
 ##.shareThisWrapper
@@ -19102,11 +19110,14 @@ _youtube_social_
 ##.sharer_buttons
 ##.sharerich-wrapper
 ##.sharertitle
+##.shares--floating
+##.shares--subbuzz
 ##.shares-comment
 ##.shares-horizontal
 ##.shares-top
 ##.shares-vertical
 ##.sharesWrapper
+##.shares__item
 ##.shares_icon
 ##.shares_tally
 ##.shareseo_liked
@@ -22088,6 +22099,7 @@ _youtube_social_
 ||intern.forskning.no^$third-party
 ||internetdefenseleague.org^$third-party
 ||invite.linescale.com^$third-party
+||irpush.com^$third-party
 ||iubenda.com^$third-party
 ||izooto.com^$third-party
 ||jeeng.com^$third-party
@@ -26137,6 +26149,8 @@ bloombergquint.com##.banner-link
 philly.com##.banner_small
 wired.co.uk##.bb-button
 catchnews.com##.bg-col-blue
+hcanews.com##.bgClick1
+hcanews.com##.bgClick2
 ibtimes.com##.block-ibtimes-newsletters
 thebaffler.com##.boxzilla-container
 the-line-up.com##.branded
@@ -26198,6 +26212,7 @@ whyy.org##.flexible-content--newsletter
 irishtimes.com##.floating_tab
 newsweek.com,thewirecutter.com##.follow
 haaretz.com##.footer-ruler
+rd.com##.footer-widgets-3
 indeed.com##.footerJaPromoBubble
 pbs.org##.footer__follow
 mygaming.co.za##.form-container
@@ -26226,6 +26241,7 @@ stylelist.com##.home-newsletter
 factmag.com##.home-social-area
 politico.com##.homepage-section-blast-sign-up
 guernicamag.com##.homing_wrapper
+hcanews.com##.house300x90
 thedailymeal.com##.hp-tdm-newsletters-wrapper
 competitor.com##.icontact
 maxim.com##.img-responsive
@@ -26242,7 +26258,6 @@ newatlas.com##.jqmOverlay
 cloudcomputingadmin.com,insideaws.com,isaserver.org,msexchange.org,virtualizationadmin.com,windowsecurity.com##.jquery-modal.blocker
 digg.com##.js--promo-bottom
 countrylife.co.uk##.keystone-newsletter-class
-nme.com##.keystone-widget
 lifeslittlemysteries.com##.llm_newsletter
 minds.com##.m-modal-bg
 sbnation.com##.m-nba-newsletter
@@ -26334,6 +26349,7 @@ forward.com##.recommend-box
 bracknellnews.co.uk##.redesign-cta
 motherjones.com##.region-connect
 iai.tv##.register-reminder-wrapper
+hcanews.com##.registerNavText
 bildderfrau.de##.remodal-overlay[style="display: block;"]
 usnews.com##.reveal-modal
 mindbodygreen.com,sidereel.com,usnews.com,wellandgood.com##.reveal-modal-bg
@@ -26597,6 +26613,7 @@ freewebsitetemplates.com##.Notices
 landrover.co.uk##.NotificationBar
 huawei.com##.ReadPolicy
 cnn.com##.TermsOfService__component
+cnn.com##._2dc7d020
 ahlulbayt.tv,bankid.com,costaclub.com,hattrick.org,kenweego.com,linkedin.com,lonelyplanet.com,nature.com,netweather.tv,norwegian.com,theonlinesurgery.co.uk,viewsonic.com,viewsoniceurope.com##.alert
 historicengland.org.uk##.alert-banner
 zombiearmy.com##.alert-box
@@ -26765,6 +26782,7 @@ history.com###email_flyout
 cityam.com###footer-newsletter-mobile
 theatlantic.com###footer-newsletter-signup
 livescience.com###inContentEmail
+nme.com###keystone-newsletter-4
 softonic.com###message-cookie
 cinemablend.com###newsletter-background
 menshealth.com,runnersworld.com,womenshealthmag.com###newsletter-block
@@ -27938,6 +27956,7 @@ news-leader.com##.inline-share-btn-facebook
 usatoday.com##.inline-share-btn-linkedin
 usatoday.com##.inline-share-btn-twitter
 infowars.com##.inline-social
+nme.com##.keystone-social-author
 clashdaily.com##.large-share-bar-container
 indiatimes.com##.leftsocial
 desertsun.com##.lf-social-bookmarks
@@ -27945,6 +27964,7 @@ softonic.com##.list-share
 computerworld.com.au,cso.com.au##.lo-header_social
 techworld.com.au##.lo-header_social_icon
 desertsun.com##.longform-share-wrapper
+nme.com##.menu-social-container
 gizmodo.com,gizmodo.com.au,kotaku.com,kotaku.com.au,lifehacker.com,lifehacker.com.au##.meta__social
 mashable.com##.microcontent-shares
 androidcentral.com,crackberry.com,imore.com,windowscentral.com##.mn_mbn_share
@@ -29585,7 +29605,9 @@ nvidia.pl#@#.subscribe-text
 first-class-and-more.de,geekgamer.tv#@#.subscribe-widget
 chinadaily.com.cn#@#.twBox
 twitter.com#@#.tweet-btn
+twitter.com#@#.tweet-btn-container
 twitter.com#@#.tweet-button
+twitter.com#@#.tweetbox
 abroadunderhood.ru,socket.io,twitter.com#@#.tweets
 bitbucket.org,geekli.st,plug.dj,twitter.com#@#.twitter-button
 flightradar24.com#@#.twitter-feed
@@ -29797,6 +29819,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||akamaihd.net/media/client/Components/FollowButton*.js$domain=rdio.com
 @@||akamaihd.net/media/client/Components/ShareButton*.js$domain=rdio.com
 @@||akamaihd.net/r/tedcdnpf-a.akamaihd.net/images/playlists/social_$image,domain=ted.com
+@@||akamaihd.net^$xmlhttprequest,domain=history.com
 @@||akamaihd.net^*/instagram_$domain=instagram.com
 @@||alienwarearena.com/bundles/spoutlet/js/SocialShare.min.js
 @@||aliunicorn.com/js/*/show-facebook.js$domain=aliexpress.com
@@ -29990,6 +30013,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||handmadebydominos.com^*/socialShare.js
 @@||haveibeenpwned.com/Content/Images/PwnedLogos/LinkedIn.svg
 @@||hd-trailers.net/images/youtube.png
+@@||history.com^*_SocialMedia_$image
 @@||hopper.com/static2/w2/images/google-$domain=hopper.com
 @@||hotflick.net^*-social-$image
 @@||hotflicknet.s3.amazonaws.com^*-social-$image
@@ -30258,6 +30282,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||vk.me/js/al/sharebox.js
 @@||wappalyzer.com/sites/default/files/icons/$image
 @@||wat.*/assets/images/common/fbsubscribe.jpg
+@@||watch.aetnd.com^*_SocialMedia_$image
 @@||weather.com/cssRollup?
 @@||weather.com/jsRollup?
 @@||weser-kurier.de/stellen/riot-utils/joined.js?*/socialshareprivacy/
