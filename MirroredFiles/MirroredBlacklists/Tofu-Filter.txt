@@ -101,6 +101,7 @@ _ads.php
 /adsense_
 /adServe/*
 /adserver/*
+/adservice.
 /adshow?
 /advertise.
 /advertise/*
@@ -145,6 +146,7 @@ _ads.php
 	!/ajs.php?
 	!/apu.php?
 	!.php?zoneid=
+	!||genieesspv.jp^$third-party
 	!||clipconverter.cc/www/d/
 	!||phncdn.com/iframe
 	!||d.pixiv.org^
@@ -281,7 +283,6 @@ _ads.php
 ||fun9.net^$third-party
 ||fwmrm.net^$third-party
 ||fxjapan-inc.biz^$third-party
-||genieesspv.jp^$third-party
 ||gsspat.jp^$third-party
 ||gl-cash.com^$third-party
 ||glam.com^$third-party
@@ -712,8 +713,8 @@ $script,third-party,domain=jpidols.tv
 ||google.com/uds/api/ads/
 ||gotporn.com/desktop/js/popunder-
 ||gotporn.com/main/js/exo-loader/
+	||tsyndicate.com/iframes2/*$domain=gotporn.com
 ||gum.dlbooks.to^$domain=dlbooks.to
-||tsyndicate.com/iframes2/*$domain=gotporn.com
 ||grupo.jp/ad_loader/$domain=pitamo.jp
 ||hentai-foundry.com/themes/default/js/activebar.js
 ||himado.in/player_ad.php
@@ -755,9 +756,9 @@ $script,third-party,domain=jpidols.tv
 ||new-akiba.com/images/banner/
 ||new-akiba.com/images/dlsite/
 ||new-akiba.com/special/
+	||ura-akiba.jp^$subdocument
 ||nhentai.net/api/
 ||nuvidp.com^$domain=nuvid.com
-||ura-akiba.jp^$subdocument
 ||nijie.info/banner/
 ||nijie.info/dmm/
 ||news-postseven.com/script/inner_banner.js
@@ -780,7 +781,9 @@ $script,third-party,domain=jpidols.tv
 ||tatituteto.net/images/banner/
 ||thisav.com/index.js
 ||thisav.com/player/video-js-banner/
-||xywdvhd.com^$domain=thisav.com
+	||xywdvhd.com^$domain=thisav.com
+||toukoucity.to/js/digi
+	||adultcity.to/img/digi/dmmt$domain=toukoucity.to
 ||tokyo-porn-tube.com/media/player/ads_
 ||tsumanne.net/amz/
 ||tsumanne.net/rakutensearch.php?
@@ -1976,6 +1979,8 @@ minnano-av.com##.type-fuzoku
 !bipブログ
 ||bipblog.com/js/amatop.js
 ||bipblog.com/aa/ABtest/
+bipblog.com###TopAmazon
+bipblog.com###BottomAmazon
 
 !fig速
 ||figsoku.net/rank/load.php?

@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: XgjBnxoGNlKifaUPoMuLcQ
-! Version: 201802040020
+! Checksum: CVHC7nQfMe+Plc1v4OAPWg
+! Version: 201802200020
 ! Title: Liste AR
 ! القائمة العربية لمانع الشرائط الإعلانية آدبلوك بلس
 ! Liste AR ~ Filtres arabes complémentaires à EasyList et à la Liste FR
@@ -238,6 +238,8 @@ _New_Ads.
 ##[class^="ad-location_post"]
 ##[href*="ad2games.com/"]
 ##[id^="ads300_600-widget-"]
+##a[data-ads-placement-id]
+##a[data-ads-placement-type]
 ##a[href*=".hao123.com/?tn="] > img
 ##a[href*="/?track=ad:"]
 ##a[href*="adintop.com/outgoing/click.php?"]
@@ -250,7 +252,7 @@ _New_Ads.
 ##a[href^="http://www.fusebux.com/index.php?r="] > img
 ##a[href^="http://www.probux.com/?rh="] > img
 ##a[href^="http://www.sotmasr.com/announcements/"]
-##a[href^="http://www.superadexchange.com/script/preurl.php?r="]
+##a[href^="http://www.superadexchange.com/"]
 ##a[href^="http://xat.com/"]
 ##a[href^="https://khamsat.com/?r="] > img
 ##img[alt="إعلان"][height="60"]
@@ -1347,6 +1349,7 @@ about:$popup,domain=akoam.com
 ||mwadah.com/images/mwadahhost.swf
 ||mwlaty.com/$subdocument,domain=f3al.com
 ||myegy.to/ad/$popup
+||myegy.tv/files/js/worker.js
 ||mysite.ma/KHALID.js
 ||nadorcity.com/docs/imaipub.gif
 ||nadorcity.com/docs/kitra3.jpg
@@ -1688,6 +1691,7 @@ ylla.net##.catbunmini
 bokra.net##.catsBanner
 hawamer.com##.centerBanner
 alweeam.com.sa##.content-banner
+tadawlacademy.com##.cpro-form-container
 tadawlacademy.com##.cpro-onload
 masrawy.com,yallakora.com##.dealsoffer
 myegy.tv,novriko.com##.disclaimer
@@ -2011,7 +2015,6 @@ eldjoumhouria.dz#@#.top_small_ad
 !
 @@.png#$image,domain=elmoslsal.com|farescd.com|sigma4pc.com|up.media1fire.com
 @@/advertisement.js$script,domain=animestarz.com|embratoria.com|imbratoria.info|zee3rb.com
-@@|https://openload.co/assets/js/script.222.js|$script
 @@||arabcut.com/js/ads.js$script,~third-party
 @@||cdn.vidyomani.com^*/showads.js$script,domain=vidyomani.com
 @@||jeddahbikers.com/templates/js/adframe.js|$script,~third-party
@@ -2031,7 +2034,6 @@ soft4sat.net#@#.e3lan
 @@||kooralive.tv^$generichide
 @@||kora-star.com^$generichide
 @@||mohamedovic.com^$generichide
-@@||myegy.tv^$generichide
 @@||novriko.com^$generichide
 @@||sigma4pc.com^$generichide
 @@||sumeronline.com^$generichide

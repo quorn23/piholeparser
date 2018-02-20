@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: NqIVcVTqDe38nOPlfehzYA
-! Version: 201802190020
+! Checksum: gV0L9aB4uouDFTru3OY+jg
+! Version: 201802200020
 ! Title: RU AdList: BitBlock
-! Last modified: 19 Feb 2018 00:20 UTC
+! Last modified: 20 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -4086,6 +4086,7 @@ prom.ua#@#img[alt="facebook"]
 /social-networking/*
 /social-overlay-
 /social-pinterest-
+/social-plugin/*
 /social-profiles-widget/*$~stylesheet
 /social-proof-
 /social-search-
@@ -5097,6 +5098,7 @@ _youtube_social_
 ###block-custom_blocks-facebook_twitter_widgets
 ###block-ex_article-article_facebook_block
 ###block-ex_article-homepage_facebook_block
+###block-followus
 ###block-footer-footer-social
 ###block-menu-menu-connect-with-us
 ###block-menu-menu-connect-with-us--2
@@ -5113,6 +5115,7 @@ _youtube_social_
 ###block-rww_twitter-on_twitter
 ###block-sharethis-sharethis-block
 ###block-sharing-links
+###block-simpleshare
 ###block-social
 ###block-social_badges-0
 ###block-social_badges-1
@@ -5126,6 +5129,7 @@ _youtube_social_
 ###blog-social
 ###blog_social
 ###bloggerspiceFBpop
+###body_ContentModule_ctl00_ucArticleTemplated_acContainer_pnlSocialMedia
 ###bookmarks-share
 ###bottom-menu-social-icons
 ###bottom-share
@@ -7193,6 +7197,7 @@ _youtube_social_
 ###vk_recommended
 ###vk_right
 ###vkpopup
+###vkshare0
 ###votvShare_top
 ###vps_share_box
 ###vps_share_fade
@@ -7331,6 +7336,7 @@ _youtube_social_
 ##.PostPicture__pinterest-button
 ##.PremiumObitShare
 ##.QUISocialList
+##.RadSocialShare
 ##.SL_Share
 ##.SOCIAL
 ##.SUD_socail_links
@@ -7933,9 +7939,11 @@ _youtube_social_
 ##.block-fb_like
 ##.block-follow-social
 ##.block-follow-tni
+##.block-followus
 ##.block-ibtmedia-social
 ##.block-idg_twitter
 ##.block-share__item
+##.block-simple-share
 ##.block-social
 ##.block-social-header
 ##.block-social-share
@@ -8493,6 +8501,7 @@ _youtube_social_
 ##.element-socialbookmarks
 ##.element-socials
 ##.email-share
+##.email-share-link
 ##.email-sharetool
 ##.end-social
 ##.entity-share-container__block--share
@@ -10369,6 +10378,9 @@ _youtube_social_
 ##.list-socials
 ##.listTrailerShare
 ##.list_share
+##.listing-share
+##.listing-share-email
+##.listing-share-item
 ##.listing-share2
 ##.listing_icon_social
 ##.lit-guides-social
@@ -11599,6 +11611,7 @@ _youtube_social_
 ##.shareLinks
 ##.shareList
 ##.shareListBox
+##.shareListing
 ##.shareMSN
 ##.shareMe
 ##.shareMeSingle
@@ -12522,6 +12535,7 @@ _youtube_social_
 ##.social-media-page-wrap
 ##.social-media-pages
 ##.social-media-profiles
+##.social-media-service-module
 ##.social-media-share
 ##.social-media-share-buttons
 ##.social-media-sharer
@@ -12612,6 +12626,8 @@ _youtube_social_
 ##.social-share-flat
 ##.social-share-google
 ##.social-share-icons
+##.social-share-link
+##.social-share-links
 ##.social-share-list
 ##.social-share-menu
 ##.social-share-options
@@ -12847,6 +12863,7 @@ _youtube_social_
 ##.socialNetworking
 ##.socialNetworks
 ##.socialNew
+##.socialOptionsTop
 ##.socialPageLinks
 ##.socialPanel
 ##.socialPinterest
@@ -14328,6 +14345,7 @@ _youtube_social_
 ##a[href="http://www.simplesharebuttons.com"]
 ##a[href="https://www.tumblr.com/share/"]
 ##a[href^="//pinterest.com/pin/create/button/?"]
+##a[href^="//twitter.com/intent/tweet/?"]
 ##a[href^="//www.reddit.com/submit?"]
 ##a[href^="http://blip.pl/dashboard?body="]
 ##a[href^="http://bookmark.naver.com/post?ns="]
@@ -14972,6 +14990,7 @@ _youtube_social_
 /altClickToSearch.
 /app-banner/*$xmlhttprequest
 /arscode-ninja-popups/*$~stylesheet
+/back-to-top.
 /backtotop.
 /base/rss-
 /bloc_newsletter.
@@ -15022,6 +15041,7 @@ _youtube_social_
 /follow/rss-
 /follow/YouTube-
 /follow_rss.
+/footer-newsletter.
 /footer-rss-
 /footer-social.
 /footer/rss-
@@ -15234,6 +15254,7 @@ _youtube_social_
 /wp-content/plugins/tab-slide/*
 /wp-content/plugins/thrive-leads/*$script
 /wp-content/plugins/vto_plus/*
+/wp-snow-effect/*
 /wysija-newsletters/*
 /yammer_16.
 =newsLetterRegistrationBlock&
@@ -15347,6 +15368,7 @@ _subscribe_button
 /Cookie-popup-
 /cookie-popup.
 /cookie-prompt.
+/cookie-reglement.
 /cookie-richtlinie.
 /cookie-terms.
 /cookie-warning.
@@ -15481,6 +15503,7 @@ _subscribe_button
 /cookiesConsent.
 /cookiescontrol-
 /cookiesdisclaimer.
+/cookieser.
 /CookieSettingsManager?
 /cookieslegal.
 /cookiesLegales.
@@ -15662,6 +15685,7 @@ _site_cookie_
 ###dice_jobs
 ###dsq-reactions
 ###ec-popup-modal[style="display:block"]
+###eh-module-newsletter-smart
 ###embtv-static-ribbon-bottom
 ###endpage-box
 ###envato-widget
@@ -15761,6 +15785,7 @@ _site_cookie_
 ###privacypopup
 ###promotion-floater
 ###pushwoosh-pop
+###react_wrapper_edition_newsletter_signup
 ###read-next-modal
 ###read-next-overlay
 ###readMoreSlider
@@ -15862,6 +15887,7 @@ _site_cookie_
 ###webpush_modal
 ###welcome-popup-box
 ###welcome-popup-overlay
+###widget_detail_postlinks
 ###wnb-bar
 ###wpfront-notification-bar-spacer
 ###wpl-likebox
@@ -15929,6 +15955,7 @@ _site_cookie_
 ##.dsq-h3-reactions
 ##.dsv_video_bar
 ##.e-icon-rss
+##.eh-module-newsletter
 ##.enews-widget
 ##.engagementStory_container
 ##.ep-icon-rss2
@@ -16041,6 +16068,7 @@ _site_cookie_
 ##.newsletter-popup-wrapper
 ##.newsletter-right-col
 ##.newsletter-sticky
+##.newsletter_callout
 ##.next-prev-navigation
 ##.nextStoryFly
 ##.next_news_item_pop_out
@@ -20237,6 +20265,7 @@ _site_cookie_
 ###elGuestTerms
 ###elqOptInBannerDiv
 ###elux-cookie-consent
+###emc2pdc-disclaimer
 ###emea-cookie
 ###emea-cookie-msg
 ###emobile-cookies-notice
@@ -20717,6 +20746,7 @@ _site_cookie_
 ###kt-cookies
 ###kuki-opozorilo
 ###kukiuorning
+###kukiz
 ###kw-cookie-policy
 ###lapiech_cookies_field
 ###lawEU
@@ -21825,6 +21855,7 @@ _site_cookie_
 ##.acceptcookies
 ##.acceptmycookie-bar
 ##.accessibility-bar-cookies
+##.accetta-container
 ##.accetta_cookie
 ##.accettacookie
 ##.accettazioneCookies
@@ -22053,6 +22084,7 @@ _site_cookie_
 ##.c-cookie-bar
 ##.c-cookie-block
 ##.c-cookie-consent
+##.c-cookie-disclaimer
 ##.c-cookie-message
 ##.c-cookie-notice
 ##.c-cookie-notification
@@ -22638,7 +22670,7 @@ _site_cookie_
 ##.cookieHint
 ##.cookieHinweis
 ##.cookieHolder
-##.cookieInfo
+##.cookieInfo:not(body)
 ##.cookieInfoBox
 ##.cookieInfoWrapper
 ##.cookieInformation
@@ -22890,6 +22922,7 @@ _site_cookie_
 ##.cookieconsent-dialog
 ##.cookieconsent-popup
 ##.cookieconsentbar
+##.cookiecontainer
 ##.cookiecontrol
 ##.cookiecutter
 ##.cookied
@@ -23426,6 +23459,7 @@ _site_cookie_
 ##.extra-cookies-popup
 ##.eyg-cookie-policy-msg
 ##.f-eu-cookies
+##.fa-cookie
 ##.fasciaCookie
 ##.fbPageBanner
 ##.fbar-cookie-policy
@@ -23477,6 +23511,7 @@ _site_cookie_
 ##.g-cookiebar
 ##.ga-ui-cookiebar
 ##.gaCookieConsent
+##.gaicoMessage
 ##.gb-cookie-consent
 ##.gb-gnb__notice-bar
 ##.gb_g.gb_rc.gb_sc
@@ -24036,6 +24071,7 @@ _site_cookie_
 ##.pxl_cookie_bar
 ##.q-legal-notification
 ##.q-silent-consent
+##.q_cookies
 ##.qa-cookie-notice
 ##.qb-cookielaw-bar
 ##.qp-cookies-alert
@@ -24439,6 +24475,7 @@ _site_cookie_
 ###g1-back-to-top
 ###go-to-top
 ###goDownFooter
+###goToTop
 ###goTop
 ###goTopFooter
 ###gotoTop
@@ -24490,6 +24527,7 @@ _site_cookie_
 ##.TopGoTop
 ##.arrow_up
 ##.article-back-to-top
+##.article-return-to-top
 ##.axScrollToTop
 ##.b-back-to-top
 ##.b-footer__btn_up
@@ -24525,6 +24563,7 @@ _site_cookie_
 ##.btn2top
 ##.btnBackTop
 ##.btn_gototop
+##.button-back-top
 ##.cScrollIndicatorContainer
 ##.category-page__back-to-top--button
 ##.ct-js-btnScrollUp
@@ -24545,7 +24584,9 @@ _site_cookie_
 ##.generate-back-to-top
 ##.glyphicon-arrow-up
 ##.go-to-top
+##.go-to-top-arrow
 ##.go-top
+##.go-top2
 ##.go2top
 ##.goTop
 ##.go__up
@@ -24591,6 +24632,7 @@ _site_cookie_
 ##.scrollTop
 ##.scroll_top
 ##.scrolltop
+##.sh-back-to-top
 ##.shunno-top
 ##.site-scroll-top
 ##.sm-page-scroll-to-top
@@ -24606,6 +24648,7 @@ _site_cookie_
 ##.top-of-page
 ##.top-of-page-link
 ##.topofpage
+##.tothetop
 ##.totop
 ##.totop_button
 ##.ui-fixed-panel-go-top
@@ -25874,8 +25917,8 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||gstatic.com/*/notifications/logo/google-plus-$image,domain=google.com
 @@||gstatic.com/chrome/webstore/images/share_$domain=google.com
 @@||gstatic.com/productsearch/static/social/$domain=google.com
-@@||gstatic.com^*/gplus*.png$domain=google.com
 @@||gstatic.com^*/images/google-$domain=google.com
+@@||gstatic.com^*/social/$image,domain=google.com
 @@||gu-byline-data.appspot.com/api/twitter/lookup?$domain=theguardian.com
 @@||handmadebydominos.com^*/socialShare.js
 @@||haveibeenpwned.com/Content/Images/PwnedLogos/LinkedIn.svg

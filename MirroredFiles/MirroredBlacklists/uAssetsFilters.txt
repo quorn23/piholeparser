@@ -231,6 +231,7 @@ armorgames.com,mmohuts.com,newgrounds.com,onrpg.com,silvergames.com##a[href*="mm
 # https://twitter.com/DThibaut67/status/707624770653843456
 ! https://forums.lanik.us/viewtopic.php?f=90&t=28654
 ||adnxs.com/*/sport1.js$script,redirect=noopjs,domain=sport1.de
+||acdn.adnxs.com/as/1h/pages/sport1_mediathek.js$script,redirect=noopjs,domain=sport1.de
 
 # https://twitter.com/FabienTipon/status/711877626638503936
 @@||f1g.fr/*/adsense.js$script
@@ -2248,6 +2249,9 @@ nnm-club.me##.request
 ! https://github.com/uBlockOrigin/uAssets/issues/686
 urlcloud.us##script:inject(bab-defuser.js)
 @@||urlcloud.us^*ad$script,first-party
+! https://github.com/uBlockOrigin/uAssets/issues/1570
+urlcloud.us##script:inject(abort-on-property-write.js, Fingerprint2)
+urlcloud.us##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/688
 spaste.com##script:inject(fuckadblock.js-3.2.0)
@@ -2271,6 +2275,8 @@ zippyshare.com##script:inject(abort-current-inline-script.js, String.fromCharCod
 ! https://www.reddit.com/r/uBlockOrigin/comments/70eyk1/help_ads_on_website/
 watchcartoononline.com##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
 watchcartoononline.com##script:inject(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+watchcartoononline.com##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+
 kimcartoon.me##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 kimcartoon.me##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 kimcartoon.me##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -2501,7 +2507,7 @@ allpar.com,antonymsfor.com,bobshideout.com,cheezburger.com,colourlovers.com,dail
 ! https://github.com/uBlockOrigin/uAssets/issues/855
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40014
 abandonedspaces.com,asheepnomore.net,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips.in,debka.com,eternallifestyle.com,fullmatchesandshows.com,gorillavid.in,greeningz.com,hyperactivz.com,kiwireport.com,moviepredators.com,movpod.in,netzwelt.de,parentztalk.com,powerofpositivity.com,presidentmommy.com,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,toptenz.net,travelfuntu.com,vidmax.com,wnd.com,worldation.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
-diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
+dailygalaxy.com,diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,nowtheendbegins.com,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ||jojilabola.com^
 ||rizotina.com^
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39280&p=129024#p129024
@@ -5170,3 +5176,11 @@ marvelousga.com##script:inject(abort-current-inline-script.js, $, openNewWindow)
 ! https://forums.lanik.us/viewtopic.php?p=132672#p132672
 1movies.to##script:inject(abort-current-inline-script.js, atob, encodeURIComponent)
 1movies.to###no_po_share
+
+! https://github.com/uBlockOrigin/uAssets/issues/1568
+tinypaste.cc##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+tinypaste.cc##script:inject(abort-on-property-write.js, Fingerprint2)
+@@||tinypaste.cc^$generichide
+
+! https://www.reddit.com/r/uBlockOrigin/comments/7ym7u3/cant_block_these_popup_ads/
+bs.to##script:inject(abort-on-property-read.js, _0x6658)
