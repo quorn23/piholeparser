@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: n14ha5jvuDsNe/21j3i6VA
-! Version: 201802220020
+! Checksum: 0ee7XEnh5biFr/zcIJZZOA
+! Version: 201802230020
 ! Title: RU AdList: BitBlock
-! Last modified: 22 Feb 2018 00:20 UTC
+! Last modified: 23 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -473,6 +473,7 @@ goal-time.net##.jbzoo-likes
 smotri-filmi.co##.jiji
 goblin-online.ru##.jllikeproSharesContayner
 kinogb.club##.jobbut
+drive2.ru##.js-share:not(#id) > *
 km.ru##.km-shares
 tverigrad.ru##.l-pad.row > .hidden-xs
 chernomorets.odessa.ua##.left-widget
@@ -682,6 +683,7 @@ kopilkasovetov.com##.zoom-social-icons-widget
 1plus1tv.tv,ave-brasil.ru,latino-serialo.tv,latinochka.ru,loveserial.net,mundo-latino.ru#?#span:-abp-contains(Поделитесь фильмом с друзьями в соцсетях)
 1plus1tv.tv,ave-brasil.ru,latino-serialo.tv,latinochka.ru,loveserial.net,mundo-latino.ru#?#span:-abp-contains(Понравилось видео?)
 europaplus.ru##:not(.authorization) > .social
+ok.ru##:not([title^="Войти через"]) > .social-icon
 disk.yandex.ru##[data-click-action="export-social.dialog-open"]
 novayagazeta.ru##[data-code] > footer > ul
 overclockers.ru##[data-tab="commentsVK"]
@@ -765,7 +767,6 @@ ru-skript.ru###vk_groups
 news.rambler.ru##.article__paragraph + .j-social.social-bottom
 ria.ru##.b-sharebar
 alexstuff.ru##.buttons_share
-drive2.ru##.c-share
 vsthouse.ru##.content-padding > font[color="Grey"]
 hdkinoteatr.com##.dpad.share
 news.rambler.ru,porjati.net##.fb-like
@@ -773,7 +774,6 @@ news.rambler.ru,rusprofile.ru##.footer-social
 cnews.ru##.friend_fb
 news.rambler.ru##.grid > .socials + .teaser.region
 ria.ru##.header_social
-drive2.ru##.js-share:not(#id) > *
 megogo.net##.megogo_view_share
 audioportal.su,baumanki.net,vsthouse.ru##.pluso
 rafkino.com,ria.ru##.social
@@ -1247,6 +1247,7 @@ _userbar_$image
 ||avito.st/s/avito/components/banners/
 ||banki.ru^*/corner-popup-subscribe-widget/
 ||beeline.ru/pb_500x460.
+||biblprog.org.ua/images/1547/
 ||bnr.pleer.ru/
 ||cbox.*/box/$third-party
 ||cdn.online-life.club/templates/online-life-new/images/*fff
@@ -1685,8 +1686,6 @@ tsn.ua##.browser_extension
 kinozz.film##.btn_r
 bobfilm.club,kinoangel.club##.btn_rec
 kinotochka.club##.btn_reg
-drive2.com,drive2.ru##.c-block[data-metrika="recomm"]
-drive2.com,drive2.ru##.c-block__fake-gap
 sports.ru##.c-read-also
 kino-sayt.net##.cap
 auto.ru##.card-notifications-lazy
@@ -1718,6 +1717,7 @@ favoritemovies.at.ua##.eText > .top
 flickr.com##.facade-of-protection-neue
 utro.ru##.facebook__box,.mask
 politexpert.net##.favorite-wr
+biblprog.org.ua##.fdr
 kinopoisk.ru##.feature_promo
 fb.ru##.featured_article
 drive.ru##.feedsub
@@ -1900,7 +1900,7 @@ efxi.ru##.titleblock
 film.ru##.top_button
 varlamov.ru##.topbanner
 izvestia.ru##.topline
-drive2.ru##.totop
+drive2.com,drive2.ru##.totop
 pochta.ru##.tracking-card--banner
 psy-music.ru##.turq.psyLeftMenu.psySideBarPanel
 aliexpress.com##.ui-mask
@@ -2008,11 +2008,10 @@ google.com,google.com.ua,google.ru##div[class^="gb_"] > div[aria-label="promo"]
 google.com,google.com.ua,google.ru##div[class^="gb_"] > div[style="behavior:url(#default#userData)"]
 kinogo1.club##div[class^="rek_top"]
 newinform.com##div[class^="ya-widget-modal"]
+drive2.com,drive2.ru##div[data-adkind="drivedirect"]
 kritika24.ru##div[id*="fialet_link"]
 fotostrana.ru##div[id*="reklama"]
 online.anidub.com##div[id][class]:not([style]) > div[id][class]:empty
-drive2.com,drive2.ru##div[id][style="min-height: 250px;"]
-drive2.com,drive2.ru##div[id][style^="min-height: calc"]
 allboxing.ru##div[id^="ad_block"]
 pickupforum.ru##div[id^="app-popup"]
 2ip.ru##div[id^="div-gpt-ad-"]
@@ -2028,6 +2027,7 @@ muz.ru##div[style*="400px;"][style$="240px;"]
 okna.ua##div[style*="height: 80px"],div[style*="height:80px"]
 psy-music.ru##div[style*="tranceshop.ru"]
 boxrec.com##div[style^="position:relative;top:-2px;color:#888"]
+drive2.com,drive2.ru#?#.c-block--content:-abp-has(.o-group--justify > .c-com-dv-label)
 azbooki.ru,engisys.ru,zip1000.ru##html > div[style^="color: rgb"]
 4pda.ru##html[xmlns] > body > div[id^="r"] > div[id^="r"][href]
 allboxing.ru##iframe[src*="ad.allboxing.ru"]
@@ -2070,6 +2070,7 @@ mail.ru###layout\:rightcol > .games
 mail.ru###logo > .logo__extension
 mail.ru###mailbox-container ~ #projects
 mail.ru###news\:games > .news__tabpicture
+mail.ru###portal-headline > #extension-bubble
 mail.ru###set-homepage
 mail.ru###slidotype\:switcher
 mail.ru##.adv-rb-block
@@ -2277,6 +2278,7 @@ mts.ru#@#.social-box
 bitly.com,livelib.ru#@#.social-btn
 lifehacker.ru#@#.social-buttons
 hd720.biz#@#.social-fb
+ok.ru#@#.social-icon
 codeguida.com#@#.social-item
 kinogo-2016.net,kinotochka.net#@#.social-likes
 4pda.ru#@#.social-link
@@ -2404,6 +2406,7 @@ kinokong.cc#@#.yashare-auto-init
 @@||worldofwarships.ru^*/community_icons/
 @@||ws.audioscrobbler.com^$domain=player.vas3k.ru|tvoeradio.org
 @@||yapx.ru/img/social/third-party$~third-party
+@@||yarobleirc.ru/bitrix/templates/yarobleirc/js/twitterFetcher_min.js$script,domain=yarobleirc.ru
 @@||yastatic.net/mail/socialavatars/$image,domain=mail.yandex.by|mail.yandex.kz|mail.yandex.ru|mail.yandex.ua
 @@||yastatic.net/share$script,domain=auto.ru
 @@||yastatic.net/share/share.js
@@ -7452,6 +7455,7 @@ _youtube_social_
 ##._Sharing__
 ##._socialF
 ##._wrapShares
+##.a-btn-facebook
 ##.a-footer-share
 ##.a-footer__share
 ##.a-header__share
@@ -10218,6 +10222,7 @@ _youtube_social_
 ##.js-share-popup
 ##.js-share-to-facebook
 ##.js-sharecount
+##.js-shares_btn
 ##.js-social-bar
 ##.js-social-facebook
 ##.js-social-instagram
@@ -11735,6 +11740,7 @@ _youtube_social_
 ##.share_links
 ##.share_list
 ##.share_nav
+##.share_ok
 ##.share_panel
 ##.share_pinterest
 ##.share_post
@@ -11746,6 +11752,7 @@ _youtube_social_
 ##.share_sm
 ##.share_small
 ##.share_social
+##.share_square
 ##.share_story
 ##.share_stumbleupon
 ##.share_this
@@ -11770,6 +11777,7 @@ _youtube_social_
 ##.share_v2
 ##.share_ver
 ##.share_vid
+##.share_vk
 ##.share_w
 ##.share_widget
 ##.share_widgets
@@ -11838,6 +11846,7 @@ _youtube_social_
 ##.sharelinkcont
 ##.sharelinkedin
 ##.sharelinks
+##.sharelist__item
 ##.sharelizers
 ##.sharembed
 ##.sharemedia
@@ -15054,6 +15063,7 @@ _youtube_social_
 /footer/rss.
 /getnetworkwidget?
 /github_icon.
+/goToTop.
 /header-rss.
 /headsoc.
 /horizon/recommend?
@@ -20689,6 +20699,7 @@ _site_cookie_
 ###js-TosPrivacy
 ###js-band-cookies
 ###js-cnil--alert
+###js-cookie-alert
 ###js-cookie-box
 ###js-cookie-consent
 ###js-cookie-consent-bar
@@ -23737,6 +23748,7 @@ _site_cookie_
 ##.layer_cookie
 ##.legal-cookie
 ##.legal-cookie-wrapper
+##.legal-info__alert-cookie
 ##.legal-message-wrapper
 ##.legal_cookie_block
 ##.legaladvice
@@ -24413,6 +24425,7 @@ _site_cookie_
 ##cookies-hint
 ##cookies-popup
 ##cookiless-div
+##div[class^="cookie-banner"]
 ##div[data-module="cookie_banner"]
 ##div[data-widget="cookie-bar"]
 ##div[element-structure-cookiemonster]
@@ -24595,6 +24608,7 @@ _site_cookie_
 ##.go-top
 ##.go-top2
 ##.go2top
+##.goToTop
 ##.goTop
 ##.go__up
 ##.go_to_top
@@ -24862,6 +24876,7 @@ _site_cookie_
 ||intern.forskning.no^$third-party
 ||internetdefenseleague.org^$third-party
 ||invite.linescale.com^$third-party
+||iopushtech.com^$third-party
 ||irpush.com^$third-party
 ||iubenda.com^$third-party
 ||izooto.com^$third-party
