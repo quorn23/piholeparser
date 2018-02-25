@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 19:59 2018/02/16
+! 最終更新 20:51 2018/02/24
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -35,10 +35,9 @@ amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.c
 ||zero-animation.net^$third-party
 !-------ここまで-------!
 
-||gendama.jp^$third-party
-||hapitas.jp^$third-party
-||lifemile.jp^$third-party
-||warau.jp^$third-party
+||d2swpuhpwp3khd.cloudfront.net^
+!share-videos.se
+!tokyomotion.net
 
 
 !----------------------------広告----------------------------!
@@ -201,9 +200,9 @@ _ads.php
 ||a8.net^$third-party
 ||access-lab.com^$third-party
 ||accesstrade.net^$third-party
-||af-110.com^$third-party
 ||ad-v.jp/adam/$third-party
 ||ad-v.jp/data/$third-party
+||ad-vortex.com^$third-party
 ||adap.tv^$third-party
 ||adapf.com^$third-party
 ||adbrite.com^$third-party
@@ -342,10 +341,12 @@ _ads.php
 ||pagoda301.com^$third-party
 ||peer39.net^$third-party
 ||pgmediaserve.com^$third-party
+||pompass.net^$third-party
 ||pop6.com^$third-party
 ||ppc-direct.com^$third-party
 ||primecaster.net^$third-party
 ||proparm.jp^$third-party
+||quant.jp^$third-party
 ||r-ad.ne.jp^$third-party
 ||rakuword.com^$third-party
 ||rentracks.jp^$third-party
@@ -684,6 +685,7 @@ $script,third-party,domain=jpidols.tv
 ||atas.io^$domain=toukoucity.to
 ||blog.seesaa.jp/js/banner.js
 ||blog.seesaa.jp/js/insert-ad.min.js
+||blog.seesaa.jp/js/insert-ad-legacy.min.js
 ||blog.with2.net/ad_frame.php?
 ||blogos.com/pc/js/kotzen.ad_fixed.js?
 ||chaberi.com/html/br/
@@ -700,6 +702,7 @@ $script,third-party,domain=jpidols.tv
 ||dlbooks.to/img/special/ab.js
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
+||egone.org/js/amazon_
 ||exploader.net/images/nls/
 	! 2017/07/16 動画見れないらしいがこれで見れるらしい
 ||fod.fujitv.co.jp/pc/image/wbhjfr/
@@ -783,6 +786,7 @@ $script,third-party,domain=jpidols.tv
 ||thisav.com/index.js
 ||thisav.com/player/video-js-banner/
 	||xywdvhd.com^$domain=thisav.com
+||tokyomotion.net/media/videojs/js/anyhtm.js
 ||toukoucity.to/js/digi
 ||toukoucity.to/siteimg/digi/dmmt$domain=toukoucity.to
 ||tokyo-porn-tube.com/media/player/ads_
@@ -1336,7 +1340,6 @@ $script,third-party,domain=jpidols.tv
 141tube.com###adultwarningmask
 2ch.vet###search_results ~ center > [href^="http://line.me/"] ~ [href^="https://"]
 2ch.vet##.thead-dark
-adbkm.com###adVortexVideoOn_iframe
 adultlog.net,btblog.jp##.story_box:first-child
 adultlog.net,btblog.jp##td.inside
 asageifuzoku.com###search
@@ -1372,7 +1375,6 @@ e-typing.ne.jp##[class^="ad"][class*="00"]
 e0166.blog89.fc2.com###side > .module:nth-of-type(3)
 easter.ne.jp##div[align="center"] > br:first-child
 easter.ne.jp##div[align="center"] > table[width="700"][cellspacing="0"][cellpadding="1"][border="0"]
-egone.org##a[href*="amazon.co.jp"]
 exploader.net###nls
 favolog.org###side > div:first-child
 freesoft.tvbok.com###left_box3
@@ -1550,6 +1552,7 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 !------------dmm-------------!
 ||dmm.ad-s.org^$third-party
 ||dmm.afisapo.com^$third-party
+||dmm-rank.com^$third-party
 ##a[href*="dmm.ad-s.org"]
 
 !------------futaba-------------!
@@ -1664,6 +1667,7 @@ recipe.rakuten.co.jp##.subContentsLink
 ###meerkat-contents
 ||counter2.blog.livedoor.com/c?ro=1&act=rss
 ||livedoor.jp/js/c2.js
+||t.blog.livedoor.jp^
 
 !------------excite------------!
 ||excite.co.jp/jp/ad/
@@ -1859,13 +1863,11 @@ video.fc2.com###side_menu >.side_menu_block:not(:nth-last-of-type(2)):not(:last-
 
 !------------ameba------------!
 ||ameba.jp/ad/
-||ameba.jp/adcross/pub/js/adLoader-
 ||ameba.jp/adwords/adwords.js
+||ameba.jp/ameblo/pc/js/bigfooter-
 ||ameba.jp/analytics/
 ||ameba.jp/blog/xml/mk_data/official/
 ameblo.jp##a[alt0="BlogAffiliate"]
-||act.ameba.jp^
-||vc.ameba.jp^
 
 !------------nikkei------------!
 ||nikkei.com/fh/showad_
@@ -1882,6 +1884,7 @@ natgeo.nikkeibp.co.jp##.sideSubscriptionBanner
 
 
 !------------youtube------------!
+||google.co.jp/pagead/
 ||youtube.com^*=adunit&
 ||youtube.com/get_midroll_
 ||youtube.com/yts/jsbin/www-pagead-id-
@@ -2053,13 +2056,18 @@ pirori2ch.com##.box162
 $domain=warotanikki.com,third-party
 @@||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e982913d31/cloudflare.min.js$domain=warotanikki.com
 @@||youtube.com/embed/*$domain=warotanikki.com
+warotanikki.com##.external[rel="nofollow"]
 
 !1000
 1000mg.jp##.main
 1000mg.jp##.title
 1000mg.jp###text-3
 
+!ぶる速
 burusoku-vip.com##.article-body-more > DIV:last-child
+
+!キニ速
+||blog.livedoor.jp/kinisoku/$subdocument
 
 !--------ホワイトリスト--------!
 	!動画シーク
@@ -2069,8 +2077,6 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 	!動画見れない
 	!http://www.tbs.co.jp/muryou-douga/
 @@||ad.auditude.com/adserver/$xmlhttprequest,domain=tver.jp|www.tbs.co.jp
-	!全消し 2018/02/16様子見
-@@||ad.pr.ameba.jp/tpc/
 @@||ad-link.jp*/index.php?
 @@||bc.geocities.yahoo.co.jp/js/bbs/
 @@||bing.com/fd/ls/*$ping
