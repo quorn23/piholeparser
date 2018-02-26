@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 20:51 2018/02/24
+! 最終更新 12:53 2018/02/25
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
@@ -873,6 +873,7 @@ $script,third-party,domain=jpidols.tv
 /ga_social_tracking.js
 /gaAddons.js
 /gaAddons-
+/gatrack.
 /generate_204
 /getlog.
 /getlog?
@@ -1020,6 +1021,7 @@ $script,third-party,domain=jpidols.tv
 ||i2i.jp^$third-party
 ||i2idata.com^$third-party
 ||i2iserv.com^$third-party
+||im-apps.net^$third-party
 ||imrworldwide.com^$third-party
 ||infoscan.jp^$third-party
 ||inpros.net^$third-party
@@ -1064,7 +1066,6 @@ $script,third-party,domain=jpidols.tv
 ||revsci.net^$third-party
 ||rfihub.com^$third-party
 ||rlcdn.com^$third-party
-||rtoaster.jp^$third-party$domain=~3ple.jp
 ||scorecardresearch.com^$third-party
 ||searchforce.net^$third-party
 ||seo-stats.$third-party
@@ -1127,6 +1128,7 @@ $script,third-party,domain=jpidols.tv
 ||deqwas.net^
 ||disqus.com/stats.html
 ||dw-eu.com.com^
+||googletagmanager.com/gtm.js?$third-party
 ||gpr.hu/pr.pr?
 ||itgear.jp*/ax.js
 ||just-now.net/a?k=
@@ -1156,6 +1158,7 @@ $script,third-party,domain=jpidols.tv
 ||bing.com/fd/ls/
 ||blog.ocn.ne.jp/ac.php
 ||blogos.com/common/js/kotzen.analytics.js?
+||bunshun.jp/oo/
 ||c.bing.com^
 ||c.microsoft.com^
 ||cnn.co.jp/js/aclick.js
@@ -1164,6 +1167,8 @@ $script,third-party,domain=jpidols.tv
 ||counter-hosting.*/counter.php?
 ||diamond.jp/oo/
 ||etoyota.net/include/js/measurementBeacon.js
+||facebook.com*/impression.php
+||facebook.com/xti.php?
 ||fresheye.com^*/js/v
 ||fresheye.com/s.gif
 ||fujitv.co.jp^*/rtx/
@@ -1190,6 +1195,8 @@ $script,third-party,domain=jpidols.tv
 ||stats.wordpress.com^
 ||toyokeizai.net/oo/
 ||tv-asahi.co.jp/common/js/analysis*.js
+||twitter.com/i/jot
+||twitter.com/oct.js
 ||wikimedia.org/geoiplookup
 ||zokugo-dict.com^*/ac.js
 
@@ -1320,9 +1327,9 @@ $script,third-party,domain=jpidols.tv
 ##.plugin-freearea a[href*="dmm.co"]
 ##.sidewrapper a[href*="dmm.co.jp"]
 !----dlsite
-~dlsite.net##.plugin-freearea a[href*="dlsite.co"]
-~dlsite.net##.sidewrapper a[href*="dlsite.co"]
-~dlsite.net##a[href^="http://www.dlsite.com/"][href*="http%3A%2F%2Fwww.dlsite.com%2F"]
+~dlsite.com,~dlsite.net##.plugin-freearea a[href*="dlsite.co"]
+~dlsite.com,~dlsite.net##.sidewrapper a[href*="dlsite.co"]
+~dlsite.com,~dlsite.net##a[href^="http://www.dlsite.com/"][href*="http%3A%2F%2Fwww.dlsite.com%2F"]
 !----楽天
 ##.plugin-freearea a[href*="afl.rakuten.co.jp"]
 ##.sidewrapper a[href*="afl.rakuten.co.jp"]
@@ -1425,6 +1432,7 @@ jp-xvideos.info##[style="width:750px;margin: 0 auto; overflow:hidden;"] + div + 
 jp-xvideos.info##.movie_list.clearfix + .movie_list.clearfix
 jpidols.tv##body > b
 jugem.jp##.UBH_new
+jyouhouya3.net##A[href*="amazon.co"]
 kakaku.com###listingPr
 kakaku.com###yAuctionBox
 kakaku.com##.listPR
@@ -1831,6 +1839,8 @@ novel.pixiv.net##.info.related-books
 ||fc2.com/image/banner/
 ||fc2.com/js/blog/headbar_ad_load.js?
 ||fc2.com/share/image/banner_
+	!動画内画像広告
+||fc2.com/video/adimage/ad01.png
 ||vip.chps-api.fc2.com/apis/footer/
 ||video.fc2.com/ad_video_info.php?
 ||video.fc2.com^$subdocument
@@ -1889,6 +1899,8 @@ natgeo.nikkeibp.co.jp##.sideSubscriptionBanner
 ||youtube.com/get_midroll_
 ||youtube.com/yts/jsbin/www-pagead-id-
 
+||youtube.com^*/log_event?
+||youtube.com^*/log_interaction?
 ||youtube.com/player_204?
 ||youtube.com/ptracking?
 ||s.youtube.com^
@@ -2095,11 +2107,16 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 @@||linkbucks.com/scripts/intermissionLink.
 	! https://downdetector.jp/shougai/ocn/mappu map消える
 @@||maps.gstatic.com/maps-api-v3/api/js/19/13/intl/ja_ALL/adsense.js
-	! あちこち 面倒だから大サービスで全部許可 例：スケジュール
+	! あちこち 面倒だから全部許可 例：スケジュール
 	! https://www.mlb.com/rangers/schedule/
 @@||mlb.com^$elemhide
 	! 動画見れない
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
+	!検索関係
+@@||ntv.co.jp/ad-navi/ga/$domain=ntv.co.jp
+	@@||google-analytics.com/ga.js$domain=ntv.co.jp
+	@@||cxense.com^$domain=ntv.co.jp
+	!全般
 @@||nytimes.com^$elemhide
 	! 右側の勝率などの欄が非表示
 @@||opgg-static.akamaized.net/js3/tracker.js?*$domain=op.gg
@@ -2109,6 +2126,9 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 	!動画見れ
 @@||popads.net/pop.js$domain=jav4.me
 @@||rd.yahoo.co.jp/jpr_sports/sumo_pickup/$image,domain=sports.yahoo.co.jp
+	!申し込みランキング
+@@||rtoaster.jp/Rtoaster.js$domain=3ple.jp
+@@||rt.rtoaster.jp^$domain=3ple.jp
 	!動画見れない
 @@||share-videos.se^$elemhide
 	!TOP 総合ランキング

@@ -4054,9 +4054,12 @@ gozonasports.me###adsdiv
 vidup.me##script:inject(abort-on-property-read.js, miner)
 vidup.me##script:inject(popads-dummy.js)
 $websocket,domain=vidup.me
+https://github.com/uBlockOrigin/uAssets/issues/1620
+vidup.me^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.facebook.com *.facebook.net
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1197
 magesy.be###adblockplus
+majesy.com##.dark.jquery-adi
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1205
 dir50.net##script:inject(bab-defuser.js)
@@ -4713,6 +4716,9 @@ movie4k.is##script:inject(abort-on-property-read.js, urlToShow)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39824
 ||beinsports.com/*/adbw/
+! https://forums.lanik.us/viewtopic.php?f=64&t=40070
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=beinsports.com
+beinsports.com##[id^=div-gpt-ad]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7ttwdv/cant_figure_how_to_block_5movies_dialogue_popup/
 5movies.to##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
@@ -5346,3 +5352,47 @@ jurl.io##script:inject(nowebrtc.js)
 stream2watch.org##script:inject(abort-on-property-write.js, Fingerprint2)
 wizhdsports.fi##script:inject(nowebrtc.js)
 ||d3q33rbmdkxzj.cloudfront.net^
+
+! https://github.com/uBlockOrigin/uAssets/issues/1618
+cnnamador.com##script:inject(noeval.js)
+cnnamador.com##.banner
+||cnnamador.com/player/float.php
+cnnamador.com##.is-ad-visible
+||cnnamador.com/contents/other/player/*.mp4$media
+cnnamador.com##script:inject(abort-on-property-write.js, adv_pre_duration)
+cnnamador.com##script:inject(abort-on-property-write.js, adv_post_duration)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1619
+flashx.sx##script:inject(popads-dummy.js)
+flashx.sx##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+flashx.sx##script:inject(popads.net.js)
+flashx.sx##a[href^="https://adsrvmedia.adk2x.com/"]
+
+! https://adblockplus.org/forum/viewtopic.php?p=174439#p174439
+kissasian.info##script:inject(set-constant.js, blockAdBlock, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1621
+mspik.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+mspik.com##script:inject(addEventListener-defuser.js, click, trigger)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1429
+goldshorten.com##script:inject(addEventListener-defuser.js, click, trigger)
+goldshorten.com##script:inject(abort-on-property-write.js, PopUP)
+goldshorten.com##script:inject(nano-setInterval-booster.js)
+goldshorten.com##.banner-inner
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=35634
+itdmusic.site##script:inject(abort-on-property-write.js, _pop)
+itdmusic.site##script:inject(abort-on-property-write.js, Fingerprint2)
+itdmusic.site##script:inject(popads-dummy.js)
+@@||itdmusic.site^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/pull/1623
+dirpy.com##a[href*="bit.ly"]
+dirpy.com###dirpy-news
+
+! https://github.com/uBlockOrigin/uAssets/pull/1624
+123movies.cafe##script:inject(popads.net.js)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/863
+nod32key.xyz##script:inject(bab-defuser.js)
