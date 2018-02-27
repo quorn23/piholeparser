@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: rVOTWk1rPprz2qyy6SdPYw
-! Version: 201802260020
+! Checksum: 2gxXVk2wMdnigVxD1xaToQ
+! Version: 201802270020
 ! Title: RU AdList: BitBlock
-! Last modified: 26 Feb 2018 00:20 UTC
+! Last modified: 27 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -667,6 +667,7 @@ kherson.net.ua##.wBtn.rss
 megaresheba.ru##.warnBox
 kaifolog.ru##.whitesocial
 rbcdaily.ru##.widget-fb-slave__inner
+russkiiyazyk.ru##.widget_custom_html
 ain.ua##.widget_like
 theins.ru##.widget_smt_widget
 anidub.com##.widget_vkapi
@@ -725,8 +726,8 @@ laradiofm.ru#?#.rc:-abp-contains(Мы ВКонтакте)
 hdkinomax.tv##legend
 lostfilm.info#?#.right:-abp-contains(Поделиться)
 bobfilm.club##noindex .bl2
-overclockers.ru#?#.right-content-wrap:-abp-has([class]:not(.pip-soci) > #vkRoot)
-overclockers.ru#?#.right-content-wrap:-abp-has([class]:not(.pip-soci) > .faceLink)
+overclockers.ru#?#.column > .ui:-abp-has([class]:not(.pip-soci) > #vkRoot)
+overclockers.ru#?#.column > .ui:-abp-has([class]:not(.pip-soci) > .faceLink)
 naruto-base.su#?##sidebar > .block:-abp-has(.title:-abp-contains(Мы в Вконтакте))
 4pna.com##table:first-child + br + .tborder[cellspacing="1"][cellpadding="6"][align="center"]
 velikolepnyivek.com##td[width="180"][valign="top"] *
@@ -1720,7 +1721,6 @@ utro.ru##.facebook__box,.mask
 politexpert.net##.favorite-wr
 biblprog.org.ua##.fdr
 kinopoisk.ru##.feature_promo
-fb.ru##.featured_article
 drive.ru##.feedsub
 old.overclockers.ru##.fifty-fifty-left > .decoblock_rnd1
 old.overclockers.ru##.fifty-fifty-left > .decoblock_rnd1 + .decoblock-content
@@ -1761,7 +1761,6 @@ qiwi.com##.infoblock > [data-helper-banner]
 kinoprofi.su##.infoblock-bottom
 kanobu.ru##.informer-container
 job.ru##.insider-opt-in-notification
-syl.ru##.intext
 vc.ru##.island--vacancies_entry
 myzuka.fm##.isloading-overlay
 3dnews.ru##.isspecial.sidebar-chunk
@@ -1873,7 +1872,6 @@ animevost.org##.shortstoryContent > a[href="https://vk.com/animevostorg"]
 freakenergy.ru##.sidebar > div > noindex
 3dnews.ru##.sidebar-chunk > a[href^="/asus_rog"]
 torrent-club.net##.sidebar-primary
-syl.ru##.sideblock
 topgir.com.ua##.singing
 minfin.com.ua##.skySanta
 gamelendi.ru##.snow
@@ -15013,6 +15011,7 @@ _youtube_social_
 /32-rss.
 /32x32-rss.
 /32x32rss.
+/?spu_action=*spu_load&
 /addthis_subscribe.
 /addtogoogle.
 /addtomyyahoo4.
@@ -21933,6 +21932,13 @@ _site_cookie_
 ##.alertCookiesCnil
 ##.alertPolicyCookies
 ##.alertViePrivee
+##.alert[data-behaviour="cookie-banner"]
+##.alert[data-cookie="banner-cookie"]
+##.alert[data-name="eu_biscuits"]
+##.alert[data-ng-if="showCookieDisclaimer"]
+##.alert[ng-if="cookieAlert"]
+##.alert[ng-if="showCookieDisclaimer"]
+##.alert[ng-show*="cookiePopup"]
 ##.alert__cookie
 ##.alert_cookie
 ##.alert_cookies
@@ -23906,6 +23912,18 @@ _site_cookie_
 ##.next-cookie-banner
 ##.nf-cookies
 ##.ng-cookie-footer
+##.ng-isolate-scope[data-cookie-message]
+##.ng-scope[data-cookie-policy-directive]
+##.ng-scope[data-ng-controller="CookieSignController"]
+##.ng-scope[data-ng-show="showCookieBanner"]
+##.ng-scope[ng-controller="CookiesAcceptCtrl"]
+##.ng-scope[ng-controller="CookiesConsentCtrl"]
+##.ng-scope[ng-controller="cookie"]
+##.ng-scope[ng-controller="cookieCtrl"]
+##.ng-scope[ng-controller="cookieLawCtrl"]
+##.ng-scope[ng-if*="hasAcceptedCookies"]
+##.ng-scope[ng-if*="isCookiesAccepted"]
+##.ng-scope[ng-if="showCookieInfo"]
 ##.nk-cookie-alert
 ##.nkmcookiealert
 ##.nl-cookie-bar
@@ -23930,13 +23948,19 @@ _site_cookie_
 ##.notification--cookie-alert
 ##.notification--cookies
 ##.notification-bar--cookie
+##.notification-bar[data-id="cookiedisclaimer"]
 ##.notification-cookie
 ##.notification-cookie-policy
 ##.notification-cookie__wrapper
 ##.notification-cookies
+##.notification-layout[ng-class="cookie-bar"]
+##.notificationBar[data-notification-cookiepolicy]
+##.notification[data-cookie-name*="AcceptCookies"]
+##.notification[data-notification="accept-cookies"]
 ##.notification__content-cookie
 ##.notification__item--cookie
 ##.notification_cookie
+##.notification_wrap[data-cookie-notification]
 ##.notificationpopup
 ##.notify--cookie
 ##.notify-cookie
@@ -24420,6 +24444,17 @@ _site_cookie_
 ##COOKIE-ALERT
 ##COOKIE-NOTICE
 ##COOKIE-WARNING
+##[aria-describedby="cookie-information"]
+##[aria-describedby="dialog-eu-cookie-law"]
+##[aria-labelledby="ui-dialog-title-cookiebox"]
+##[data-cookie="uso-accept-cookies"]
+##[data-key="cookies-warning"]
+##[data-name="cookieNotice"]
+##[data-notification="CookiePolicyAgreement"]
+##[data-react-class="EUCookieBanner"]
+##[data-test="cookie-banner"]
+##[data-type="cookie-addsense"]
+##[data-veci="cookies-policy"]
 ##accept-cookie-box
 ##acidjs-xcookie-consent
 ##adcookies
@@ -24444,11 +24479,25 @@ _site_cookie_
 ##cookies-hint
 ##cookies-popup
 ##cookiless-div
+##div[class*="cookieBarContainer"]
 ##div[class^="cookie-banner"]
+##div[data-automation="cookies-banner"]
+##div[data-component="cookie-policy"]
+##div[data-container-acceptcookies]
+##div[data-cookie-name="header_cookie_policy"]
+##div[data-cookie-warning]
+##div[data-cookie="on"]
+##div[data-id="cookieBar"]
+##div[data-is-cookieinfo]
 ##div[data-module="cookie_banner"]
+##div[data-pov-accept-cookies-message]
+##div[data-testid="cookie-disclaimer"]
 ##div[data-widget="cookie-bar"]
+##div[data-wzb="CookieNotification"]
 ##div[element-structure-cookiemonster]
+##div[id="cm:cookieWrapper"]
 ##div[id^="n-cookies"]
+##div[js-cookies]
 ##ea-truste-consent-bar
 ##eo-cookie-bar
 ##g-cookie-policy
@@ -25446,7 +25495,7 @@ airbnb.cat,airbnb.com,airbnb.de,theoldreader.com,unieuro.it#@#.icon-google-plus
 register.thisis.co.uk#@#.icon-google-plus-sign
 comicbook.com#@#.icon-googleplus
 aitnews.com,secure.allocine.fr,yourstory.com#@#.icon-gplus
-gleam.io#@#.icon-instagram
+flattr.com,gleam.io#@#.icon-instagram
 fora.ie#@#.icon-linkedin
 rottentomatoes.com#@#.icon-rss
 football.fr,owncloud.org,theoldreader.com#@#.icon-share
@@ -26224,6 +26273,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||ups.com/assets/resources/images/social.png$domain=ups.com
 @@||upwork.com^*/logo-pinterest.svg
 @@||utdstc.com/icons/$image,domain=uptodown.com
+@@||valentlau.com.au/wp-content/plugins/*/jquery.sharrre.min.js$domain=valentlau.com.au
 @@||vice.com/images/*-social-media-$image
 @@||vidiload.com/media/banners/fblike.png$domain=vidiload.com
 @@||viewbug.com^*/fb_button.png
