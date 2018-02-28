@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 2gxXVk2wMdnigVxD1xaToQ
-! Version: 201802270020
+! Checksum: kyxk84eXmmqwZ5N598y/iQ
+! Version: 201802280020
 ! Title: RU AdList: BitBlock
-! Last modified: 27 Feb 2018 00:20 UTC
+! Last modified: 28 Feb 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -72,7 +72,7 @@ _vkontakte.png
 ! *** ruadlist:bitblock/social_general_hide.txt ***
 ###block_social_open
 ###com_vk
-~facebook.com,~messenger.com###facebook
+~facebook.com,~messenger.com,~whatsapp.com###facebook
 ###odnaknopka
 ###recent-disqus-comments
 ###social
@@ -268,6 +268,8 @@ animevost.org###buttonLike
 imtw.ru###content > .noad1
 fit4brain.com###dgd_scrollbox-7840
 homenet.beeline.ru###ed-0_toolbar_3
+riafan.ru###enter_ok
+riafan.ru###enter_vk_holder
 ria.ru###facebook-userbar
 newsinfo.ru###facebox
 homenet.beeline.ru###fast-reply_toolbar_3
@@ -1801,6 +1803,7 @@ slavyanskaya-kultura.ru##.mod_inshop_front
 stranamam.ru##.n-main-menu-extra-down a[href*="/logo/"][target="_blank"] > img
 stranamam.ru##.n-main-menu-parent > .ptichka
 takprosto.cc##.navbar-brand
+forums.overclockers.ru##.needblock
 tvfru.org##.netrek
 tree.tv##.new_back_link
 rbc.ru##.news-feed__list > a[href*="spec&utm_campaign"]
@@ -2045,12 +2048,12 @@ streamzone.org##span[style*="3.0em;"]
 russianpost.ru##table[width="816"] > tbody > tr:first-child + tr
 forums.overclockers.ru##td > #logo
 old.overclockers.ru##td#rightplace
-forums.overclockers.ru##td[style*="float:right; margin-right: 20px;"]
 chastnik-m.ru##td[valign="top"][id$="_place"]
 lkforum.ru##td[width="180"][align="right"]
 thequestion.ru##theq-question-recommend
 forexsystemsru.com##tr > .sidebar
 vz.ru##tr > td#main ~ #vdelimiter
+forums.overclockers.ru##tr > td[valign="top"][width="100%"] ~ td[style^="max-width"]
 benzclub.ru##tr > td[valign="top"][width="245"]
 shiza-project.com##ul[class*="transparent-btns"]
 !
@@ -4883,6 +4886,8 @@ _youtube_channel.
 _youtube_icon.
 _youtube_small.
 _youtube_social_
+! jquery bpopup
+/jquery.bpopup.$script,domain=telechargerunevideo.com
 ! https://www.wpvideolock.com/
 /wp-content/plugins/videolock/*$script
 ! *** Fetched from: https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_social_general_hide.txt ***
@@ -6585,6 +6590,7 @@ _youtube_social_
 ###social-links-toggle
 ###social-links-top
 ###social-links-twitter
+###social-list
 ###social-loop
 ###social-louis
 ###social-media
@@ -14368,6 +14374,7 @@ _youtube_social_
 ##a[href="http://www.delicious.com/save"]
 ##a[href="http://www.facebook.com/sharer.php"]
 ##a[href="http://www.simplesharebuttons.com"]
+##a[href="https://twitter.com/home/?status="]
 ##a[href="https://www.tumblr.com/share/"]
 ##a[href^="//pinterest.com/pin/create/button/?"]
 ##a[href^="//twitter.com/intent/tweet/?"]
@@ -17185,6 +17192,7 @@ _site_cookie_
 ##.newsletter-signup-inarticle-container
 ##.newsletter-signup-mod
 ##.newsletter-signup-module
+##.newsletter-signup-primary
 ##.newsletter-signup-sidebar
 ##.newsletter-signup-wrap
 ##.newsletter-simple
@@ -24724,6 +24732,7 @@ _site_cookie_
 ##.sh-back-to-top
 ##.shunno-top
 ##.site-scroll-top
+##.slideToTop
 ##.sm-page-scroll-to-top
 ##.sublink_back_top
 ##.td-scroll-up
@@ -25311,6 +25320,7 @@ reddit.com#@#img[alt="submit to reddit"]
 @@||sail-horizon.com/scout/*.js?$domain=theblaze.com
 @@||sky.com/scripts/sky_component_cookie_notice.js$script
 @@||static.bbci.co.uk/modules/*/sharetools.js$domain=bbc.co.uk
+@@||static.lci.fr/assets/scripts/modules/outbrain.js?$script,~third-party
 @@||statictapcdn-a.akamaihd.net^$domain=tapiture.com
 @@||surveygizmo.com^*_output$script,domain=motorsport.com
 @@||taboola.com/libtrc/*-Release.js$domain=entrepreneur.com
@@ -25403,6 +25413,7 @@ onbeing.org#@#.addthisbuttons
 beautifulplanet4u.com#@#.advanced-social-widget
 kino-vorschau.com#@#.arqam-widget-counter
 banki.ru,neowin.net#@#.article-share
+niedziela.pl#@#.article-social-btn
 nbcnews.com#@#.article_share
 opposingviews.com#@#.block-socialmedia
 kcrw.com#@#.bottom-social
@@ -25643,6 +25654,7 @@ wykop.pl#@#.social-list
 getyounity.com,howdoyou.do#@#.social-login
 technorati.com#@#.social-media
 f-secure.com#@#.social-media-buttons
+schuermann.eu#@#.social-media-list
 nvidia.pl#@#.social-newsletter
 linkis.com#@#.social-panel
 techspot.com#@#.social-popup
@@ -26105,6 +26117,7 @@ fark.com,marketplace.firefox.com,vvhp.net#@#img[title="YouTube"]
 @@||nutshell.com/media/images-landing/integration-logo-$~third-party
 @@||nyt.com^*/sharetools.js$domain=nytimes.com
 @@||nytimes.com^*/sharetools.js
+@@||ocdn.eu^*/fb_logo.png$image,domain=forbes.pl
 @@||ogdownloaderapk.com/images/og-youtube.png
 @@||oklivetv.com/wp-content/plugins/facebook-page-promoter-lightbox/$script
 @@||onesecond.designly.com/img/*.gif$~third-party
