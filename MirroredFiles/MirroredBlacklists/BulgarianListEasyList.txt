@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201802280010
+! Version: 201802282339
 ! Title: EasyPrivacy
-! Last modified: 28 Feb 2018 00:10 UTC
+! Last modified: 28 Feb 2018 23:39 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -262,7 +262,6 @@
 .webmetrics.js
 .webstats.
 /!crd_prm!.
-/$file/analytics.
 //feedproxy.*/~r/*$image
 /0.png?ver=
 /0pixel.php?
@@ -460,6 +459,7 @@
 /analyticReportingAS3.$domain=~miniclip.com
 /analytics-assets/*
 /analytics-beacon-
+/analytics-cdn.
 /analytics-dotcom/*
 /analytics-event-
 /analytics-ingress-
@@ -480,6 +480,7 @@
 /analytics.google.js
 /analytics.html?
 /analytics.init.js
+/analytics.js/v1/*
 /analytics.min.
 /analytics.php.
 /analytics.php?
@@ -1105,6 +1106,7 @@
 /dfp-gpt.
 /Diagnostics?hit=
 /didna-pixel-
+/digitalice_tag.js
 /disp_cnt.
 /dispatch.fcgi?
 /diva-analytics.js
@@ -1121,6 +1123,7 @@
 /dmtracking2.
 /DNATracking.
 /dni_reporting.js
+/doctracking.
 /doIperceptionsRegulator.
 /dolWebAnalytics.
 /domcount.
@@ -3350,6 +3353,7 @@
 /vtracker.
 /vTracker_
 /vuukle-analytics.
+/vwFiles/analytics/*
 /vztrack.gif?
 /vzTracker/*
 /wa01.gif?log=
@@ -4403,6 +4407,7 @@ _mongo_stats/
 ||dynatrace.com^$third-party
 ||dynatracesaas.com^$third-party
 ||dyntrk.com^$third-party
+||e-goi.com^$third-party
 ||e-pagerank.net^$third-party
 ||e-referrer.com^$third-party
 ||e-webtrack.net^$third-party
@@ -5067,6 +5072,7 @@ _mongo_stats/
 ||myvisualiq.net^$third-party
 ||mywebstats.com.au^$third-party
 ||mywebstats.org^$third-party
+||n74s9.com^$third-party
 ||naayna.com^$third-party
 ||naj.sk^$third-party
 ||nakanohito.jp^$third-party
@@ -6503,6 +6509,7 @@ _mongo_stats/
 ||gratisbacklink.de^$third-party
 ||greatviews.de^$third-party
 ||grfz.de^$third-party
+||healte.de^$third-party
 ||hiddencounter.de^$third-party
 ||hitmaster.de^$third-party
 ||hot-count.com^$third-party
@@ -6930,6 +6937,7 @@ _mongo_stats/
 ! Japanese
 ||admatrix.jp^$third-party
 ||aid-ad.jp^$third-party
+||amoad.com^$third-party
 ||analyticsip.net^$third-party
 ||bb-analytics.jp^$third-party
 ||beanscattering.jp^$third-party
@@ -6960,9 +6968,11 @@ _mongo_stats/
 ||owldata.com^$third-party
 ||pagoda56.com^$third-party
 ||polymorphicads.jp^$third-party
+||r-ad.ne.jp^$third-party
 ||research-artisan.com^$third-party
 ||rtoaster.jp^$third-party
 ||sibulla.com^$third-party
+||smartnews-ads.com^$third-party
 ||socdm.com^$third-party
 ||tgknt.com^$third-party
 ||trackfeed.com^$third-party
@@ -7415,6 +7425,7 @@ _mongo_stats/
 ||analytics.performable.com^
 ||analytics.photorank.me^
 ||analytics.piksel.com^
+||analytics.prezly.com^
 ||analytics.prod.aws.ecnext.net^
 ||analytics.r17.com^
 ||analytics.radiatemedia.com^
@@ -8679,6 +8690,7 @@ _mongo_stats/
 ||spot.im/api/tracker/
 ||spread.ly^*/statistics.php
 ||ssl-images-amazon.com/images/*/common/1x1._*.gif$domain=~amazon.com
+||st.cdnco.us^
 ||stat.boredomtherapy.com^
 ||stat.easydate.biz^
 ||stat.ed.cupidplc.com^
@@ -9364,6 +9376,7 @@ _mongo_stats/
 ||analytics.freespee.com^
 ||analytics.grupogodo.com^
 ||analytics.ladmedia.fr^
+||audience.acpm.fr^
 ||bbtrack.net^$third-party
 ||blogoutils.com/online-$third-party
 ||blogrankings.com/img_$third-party
@@ -10552,6 +10565,7 @@ _mongo_stats/
 ||fishki.net/counter/
 ||fishki.net/informer1/
 ||flashget.org/cow_$script
+||flickr.com/beacon/
 ||flickr.com/beacon_client_api_timings.gne
 ||flickr.com/beacon_page_timings.gne
 ||fling.com/zeftour/t_i.php?
@@ -11707,6 +11721,7 @@ _mongo_stats/
 ||ted.metro.co.uk^
 ||ted1.metro.co.uk^
 ||telegraph.co.uk^*/tmglmultitrackselector.js
+||telemetry.tradingview.com^
 ||tesco.com/cgi-bin3/buyrate?type=
 ||tfl.gov.uk/tfl-global/scripts/stats-config.js
 ||tfl.gov.uk/tfl-global/scripts/stats.js
@@ -12939,6 +12954,8 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|ddmix.net|dekoder.ws|pow
 ||tsite.jp/static/analytics/
 ||visit.geocities.jp^
 ||yahoo.co.jp/b?p=
+||yahoo.co.jp/s?s=
+||yjtag.yahoo.co.jp^
 ! Korean
 ||211.106.66.62^*/statistics/$domain=yonhapnews.co.kr
 ||chosun.com/hitlog/
@@ -13977,6 +13994,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|ddmix.net|dekoder.ws|pow
 @@||ad.de.doubleclick.net/imp;$object-subrequest,domain=rtl-now.rtl.de|rtl2now.rtl2.de|rtlnitronow.de|superrtlnow.de|voxnow.de
 @@||adclear.teufel.de^*/acv?*&ms=http$image,domain=gewinnspiele.freenet.de
 @@||addicted-sports.com/piwik/piwik.js
+@@||adobedtm.com^*/satelliteLib-$script,domain=sbb.ch
 @@||alternate.de/js/emos2.js
 @@||analytics.edgesuite.net/html5/akamaihtml5-min.js?$domain=ardmediathek.de
 @@||belboon.de/adtracking/$subdocument,domain=gutscheindoktor.de|preis-vergleich.tv|preismafia.com
@@ -14296,4 +14314,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|ddmix.net|dekoder.ws|pow
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: UbdIFOJTjxlOkKN55L+RfQ
+! Checksum: YZUdz3ymtya+QpHhEgwvMg

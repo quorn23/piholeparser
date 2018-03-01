@@ -1916,12 +1916,13 @@ speedvid.net##script:inject(abort-on-property-write.js, _pop)
 speedvid.net##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/549
+! https://forums.lanik.us/viewtopic.php?f=64&t=40089
 streamplay.*##script:inject(abort-on-property-read.js, miner)
 streamplay.*##script:inject(abort-on-property-write.js, Fingerprint2)
+streamplay.*##script:inject(window.open-defuser.js)
 @@||streamplay.to/js/pop$script,first-party
 ##a[href*="://3wr110.xyz/"]
 @@||mydarewatch.com^$generichide
-streamplay.*##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/553
 *$csp=script-src 'self' * 'unsafe-inline' data:,domain=acidcow.com|www.bolde.com|breaking911.com|convertcase.net|convertfiles.com|financemagnates.com|gostica.com|heraldweekly.com|neonnettle.com|powerpyx.com|schoolholidayseurope.eu|tamilo.com|tfln.co|thecomeback.com|truthfeed.com
@@ -2040,10 +2041,11 @@ torrentz.to##tr:if(> td:has-text(Sponsored))
 
 ! https://github.com/uBlockOrigin/uAssets/issues/602
 ! https://www.reddit.com/r/uBlockOrigin/comments/6wqwct/help_cant_block_ads_on_allucee/
-alluc.ee##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+! https://github.com/gorhill/uBlock/issues/3553
+alluc.ee##^script:has-text(676574456c656d656e747342795461674e616d65)
 ||alluc.ee^*/exo/$script
-alluc.ee##.clickable:has(img[src*="/icoad."])
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=alluc.ee
+alluc.ee##.clickable:has(img[src*="/icoad."])
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6qq40e/popups_in_httpsdropapkcom/
 dropapk.com##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -5064,7 +5066,7 @@ hiapphere.com##script:inject(abort-on-property-read.js, _d)
 ||dl.go4up.com/*/dbuttoned.png$image
 go4up.com##img[src="https://cache.go4up.com/assets/img/abutoned.gif"]
 ! https://github.com/uBlockOrigin/uAssets/issues/1583
-go4up.com##script:inject(set-constant.js, _0x9f3f, true)
+go4up.com##script:inject(set-constant.js, _0xd348, true)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7wpk97/cant_block_ad_at_the_bottom_of_readcomiconline/
 readcomiconline.to##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
@@ -5441,3 +5443,22 @@ katfile.com##script:inject(set-constant.js, adblock, false)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1637
 @@||fwmrm.net/ad/$script,xmlhttprequest,domain=nieuws.vtm.be|player.medialaancdn.be
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/867
+ethereum.cpucap.com##script:inject(set-constant.js, ADSController, true)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/868
+freeopenvpn.org##script:inject(set-constant.js, adBlock, false)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1638
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=nowwatchtvlive.net
+nowwatchtvlive.net##^script:has-text(676574456c656d656e747342795461674e616d65)
+nowwatchtvlive.net##script:inject(popads-dummy.js)
+whostreams.net##script:inject(popads-dummy.js)
+||nowwatchtvlive.net/matomyads728x90.php$subdocument
+
+! https://github.com/uBlockOrigin/uAssets/issues/1639
+||static.vocento.com/dab/*.js
+
+! https://github.com/uBlockOrigin/uAssets/issues/1640
+tubeload.tv##script:inject(setTimeout-defuser.js, window.location.href, 300)
