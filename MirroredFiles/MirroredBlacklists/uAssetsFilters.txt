@@ -1140,7 +1140,8 @@ wikia.com##script:inject(abort-on-property-write.js, _sp_)
 ! https://github.com/uBlockOrigin/uAssets/issues/997
 ! https://github.com/uBlockOrigin/uAssets/issues/1153
 ! https://github.com/uBlockOrigin/uAssets/issues/1194
-123movies.net,2ddl.*,arabseed.tv,buzzfil.net,clicknupload.org,ddlvalley.me,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,letmewatchthis.ac,mac-torrents.com,mkvcage.com,openload.ch,pdf-giant.com,pelispedia.co,pelispedia.tv,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,streamfilmzzz.com,streamzzz.online,thevideobee.to,torrentz2.*,tny.ec,uploading.site,uptobox.com,watchers.to,yts.ag,yts.gs,yts.am##script:inject(nowebrtc.js)
+! https://forums.lanik.us/viewtopic.php?f=62&t=38315
+123movies.net,2ddl.*,arabseed.tv,buzzfil.net,clicknupload.org,convertinmp4.com,ddlvalley.me,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,letmewatchthis.ac,mac-torrents.com,mkvcage.com,openload.ch,pdf-giant.com,pelispedia.co,pelispedia.tv,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,streamfilmzzz.com,streamzzz.online,thevideobee.to,torrentz2.*,tny.ec,uploading.site,uptobox.com,watchers.to,yts.ag,yts.gs,yts.am##script:inject(nowebrtc.js)
 
 ! https://twitter.com/BabbyForDays/status/870399439365578752
 mobile.twitter.com##main section ._1_KafmK5--src-app-containers-RichTimeline-cell:has(:scope > div > div > div > div > .YunaQoc2--src-app-components-PromotedIndicator-icon)
@@ -1208,6 +1209,7 @@ stern.de##script:inject(abort-on-property-write.js, exportz)
 ! https://github.com/uBlockOrigin/uAssets/issues/266
 alphr.com,autobytel.com,brigitte.de,cesoirtv.com,chip.de,erdbeerlounge.de,gamesradar.com,huffingtonpost.co.uk,huffingtonpost.com,moviefone.com,playboy.de,usatoday.com##script:inject(abort-on-property-write.js, _sp_)
 faz.net##script:inject(abort-current-inline-script.js, $, _sp_._networkListenerData)
+focus.de,spiegel.de##script:inject(abort-on-property-read.js, _sp_.mms.startMsg)
 ! https://github.com/jspenguin2017/uBlockProtector/issues/367
 ! https://github.com/uBlockOrigin/uAssets/issues/701
 ! https://github.com/uBlockOrigin/uAssets/issues/848
@@ -5372,9 +5374,13 @@ cnnamador.com##script:inject(abort-on-property-write.js, adv_pre_duration)
 cnnamador.com##script:inject(abort-on-property-write.js, adv_post_duration)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1619
-flashx.sx##script:inject(popads-dummy.js)
+! https://github.com/NanoAdblocker/NanoFilters/issues/35
 flashx.sx##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+flashx.sx##script:inject(abort-on-property-write.js, Fingerprint2)
+flashx.sx##script:inject(nowebrtc.js)
+flashx.sx##script:inject(popads-dummy.js)
 flashx.sx##script:inject(popads.net.js)
+flashx.sx##script:inject(window.open-defuser.js)
 flashx.sx##a[href^="https://adsrvmedia.adk2x.com/"]
 
 ! https://adblockplus.org/forum/viewtopic.php?p=174439#p174439
@@ -5462,3 +5468,22 @@ whostreams.net##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1640
 tubeload.tv##script:inject(setTimeout-defuser.js, window.location.href, 300)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/80sgak/antiadblock_coding_help/
+||repo.xarold.com/*/survival.min.js$script,first-party,redirect=fuckadblock.js-3.2.0
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40101&p=133246#p133238
+ksbw.com##script:inject(setTimeout-defuser.js, [native code], 500)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=ksbw.com	
+
+! https://github.com/uBlockOrigin/uAssets/issues/1641
+||spiegel.de/*/messaging-V8-40.js$script,redirect=noopjs,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1642
+||focus.de/src/js/spmsg$script,redirect=noopjs,first-party
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40097
+animesorion.tv##script:inject(popads-dummy.js)
+animesorion.tv###yb_mm
+animesorion.tv###yb_bb
+animesorion.tv##.rlAvisoAdulto
