@@ -1209,7 +1209,7 @@ stern.de##script:inject(abort-on-property-write.js, exportz)
 ! https://github.com/uBlockOrigin/uAssets/issues/266
 alphr.com,autobytel.com,brigitte.de,cesoirtv.com,chip.de,erdbeerlounge.de,gamesradar.com,huffingtonpost.co.uk,huffingtonpost.com,moviefone.com,playboy.de,usatoday.com##script:inject(abort-on-property-write.js, _sp_)
 faz.net##script:inject(abort-current-inline-script.js, $, _sp_._networkListenerData)
-focus.de,spiegel.de##script:inject(abort-on-property-read.js, _sp_.mms.startMsg)
+eltern.de,essen-und-trinken.de,focus.de,spiegel.de##script:inject(abort-on-property-read.js, _sp_.mms.startMsg)
 ! https://github.com/jspenguin2017/uBlockProtector/issues/367
 ! https://github.com/uBlockOrigin/uAssets/issues/701
 ! https://github.com/uBlockOrigin/uAssets/issues/848
@@ -2231,8 +2231,10 @@ allboxing.ru##^script:has-text(676574456c656d656e747342795461674e616d65)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=allboxing.ru
 
 ! https://github.com/uBlockOrigin/uAssets/issues/673
+! https://github.com/uBlockOrigin/uAssets/issues/1646
 @@||video-download.co^$generichide
 @@||loadercdn.io^$domain=video-download.co
+@@||video-download.co/*/advertisement.js$xmlhttprequest,first-party
 
 ! https://www.youtube.com/watch?v=t6oyXKqB2vY
 blackspigot.com##script:inject(abort-on-property-write.js, AdBlockDetectorWorkaround)
@@ -4004,6 +4006,7 @@ imgmonkey.com##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1189
 1fichier.com##script:inject(nowebrtc.js)
+||1fichier.com^$csp=script-src 'self' 'unsafe-inline' data:
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1190
 pornodeblack.com##script:inject(window.open-defuser.js)
@@ -5227,7 +5230,10 @@ marvelousga.com##script:inject(abort-current-inline-script.js, $, openNewWindow)
 720pizle.com###reklamarkaplan
 
 ! https://forums.lanik.us/viewtopic.php?p=132672#p132672
+! https://www.reddit.com/r/uBlockOrigin/comments/81am26/anyone_has_any_idea_on_how_to_block_1movie/
 1movies.to##script:inject(abort-current-inline-script.js, atob, encodeURIComponent)
+1movies.to##script:inject(window.open-defuser.js)
+||loadshare.org/custom/*/1m_video.mp4$media,domain=1movies.to
 1movies.to###no_po_share
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1568
@@ -5487,3 +5493,6 @@ animesorion.tv##script:inject(popads-dummy.js)
 animesorion.tv###yb_mm
 animesorion.tv###yb_bb
 animesorion.tv##.rlAvisoAdulto
+
+! https://github.com/uBlockOrigin/uAssets/issues/1644
+@@||ariva.de^$generichide

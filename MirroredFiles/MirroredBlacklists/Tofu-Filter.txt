@@ -193,6 +193,7 @@ _ads.php
 ||ads.
 
 -ad.com^$third-party
+-ad.net^$third-party
 	!サイド辺り
 -ads.com^$third-party,domain=~cookpad.com
 !||da-ads.com^$third-party
@@ -328,6 +329,7 @@ _ads.php
 ||mttag.com^$third-party
 ||musicgate.$third-party
 ||my-affiliate.com^$third-party
+||next-channel.com^$third-party
 ||nsk-sys.com^$third-party
 ||octopuspop.com^$third-party
 ||omany.tv^$third-party
@@ -483,6 +485,7 @@ _ads.php
 ||madadsmedia.com^$third-party
 ||mgid.com^$third-party
 ||nex8.net^$third-party
+||nxcount.com^$third-party
 ||oclaserver.com^$third-party
 ||oclasrv.com^$third-party
 ||onclickads.net^$third-party
@@ -1276,6 +1279,7 @@ $script,third-party,domain=jpidols.tv
 ##[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ##[class*="_ad_"]:not(html):not(body)
 
+##[class^="google-2ad-"]
 ##[style*="width:728px;"][style*="height:90px;"]
 
 ##a[href*="http://ad."]
@@ -1285,6 +1289,7 @@ $script,third-party,domain=jpidols.tv
 ##a[href*="ac.ebis.ne.jp/tr_set.php?"]
 ##a[href*="accesstrade.net/at/"]
 ##a[href*="accesstrade.net/sp/"]
+##a[href*="ad-feed.com"]
 ##a[href*="adservicesnet.info"]
 ##a[href*="adsp.jp"]
 ##a[href*="adrcf.com"]
@@ -1346,6 +1351,7 @@ $script,third-party,domain=jpidols.tv
 !艦これスタートボタン
 ~dmm.com##a[href^="http://ad.dmm.com/ad/p/r?"]
 ##.plugin-freearea a[href*="dmm.co"]
+###sidebar a[href*="dmm.co.jp"]
 ##.sidewrapper a[href*="dmm.co.jp"]
 !----dlsite
 ~dlsite.com,~dlsite.net##.plugin-freearea a[href*="dlsite.co"]
@@ -1422,6 +1428,7 @@ google.com,google.co.jp###\5f Ltg
 www.google.co.jp##TABLE[cellpadding="0"][style="border: 1px solid #369"]
 gpara.com##[class*="rank_best_box"]
 hentai-foundry.com##main > center
+hentai-only.com##.force-foreground.alert.alert-link.alert-dismissible
 imagis.jp,costype.net##.topadv
 imgbako.com##[href="../index.php"] + br + table > tbody > tr > td[width="300"]
 futalog.com##[href="../index.php"] + br + table > tbody > tr > td[width="305"]
@@ -1585,6 +1592,7 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 ||dmm-rank.com^$third-party
 
 ||dmm.co.jp/dmmad/
+||dmm.co.jp/images/affiliate_banner/
 ||dmm.com/af/
 	!ブログパーツ
 ||dmm.com/ranking?adid=
@@ -1706,6 +1714,7 @@ recipe.rakuten.co.jp##.subContentsLink
 ||livedoor.jp/js/c2.js
 ||t.blog.livedoor.jp^
 
+
 !------------excite------------!
 ||excite.co.jp/jp/ad/
 ||excite.co.jp/jp/ox/
@@ -1772,7 +1781,7 @@ jump.2ch.net##div
 !金枠銀枠
 @@||res.nimg.jp/js/ads.js?
 !ニコニ広告全般
-@@||uad.nicovideo.jp^$elemhide
+@@||uad.nicovideo.jp^$generichide
 
 nicovideo.jp##.TagkeyArticleBox
 !検索結果一番下
@@ -1812,6 +1821,7 @@ amazon.co.jp###nav-swmslot
 ||amzlsh.com^$third-party
 ||amzrm.com^$third-party
 ||drk7.jp^$third-party
+||pritre.com^$third-party
 ||ranklet.come.cc^$third-party
 ||solty.biz^$third-party
 ||yasui-kamo.com^$third-party
@@ -1961,7 +1971,6 @@ youtube.com##.pyv-afc-ads-inner
 !------------sinobi------------!
 ||adm.shinobi.jp^
 ||asumi.shinobi.jp^
-||st.shinobi.jp/img/services/admaxdsp/static/javascripts/trac.js
 ###ninja-hp-inactive
 ###ninja-hp-inactive-footer
 ##.tdftad
@@ -1977,7 +1986,8 @@ youtube.com##.pyv-afc-ads-inner
 ||bar1.shinobi.jp^
 ||omt.shinobi.jp^
 ||analysis.shinobi.jp/ninja_ar/
-||ba1.shinobi.jp/s/
+||ba1.shinobi.jp^
+||vis1.shinobi.jp^
 ||vis1.shinobi.jp/js/
 ||vis1.shinobi.jp/jsr/
 
@@ -2018,7 +2028,7 @@ minnano-av.com##.type-fuzoku
 ||so-net.ne.jp/search/javascripts/research/research.js
 ||webryblog.biglobe.ne.jp/searchbox.js
 ||webryblog.biglobe.ne.jp/searchengine.js
-
+||yimg.jp/images/search/slink/popup/pc/1.0.0/js/popsearch.min.js
 
 !ニコニコ風ヘッダー
 !||nicoblomaga.jp^$third-party,script
@@ -2110,6 +2120,11 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 !キニ速
 ||blog.livedoor.jp/kinisoku/$subdocument
 
+!　？？？？  http://beelzeboulxxx.com/
+||blog.livelog.biz/script/js/maob_sp.js
+
+
+
 !--------ホワイトリスト--------!
 	!動画シーク
 @@||2mdn.net/instream/html5/ima3.js$domain=tver.jp
@@ -2138,7 +2153,7 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 @@||maps.gstatic.com/maps-api-v3/api/js/19/13/intl/ja_ALL/adsense.js
 	! あちこち 面倒だから全部許可 例：スケジュール
 	! https://www.mlb.com/rangers/schedule/
-@@||mlb.com^$elemhide
+@@||mlb.com^$generichide
 	! 動画見れない
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
 	!検索関係
@@ -2146,12 +2161,12 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 	@@||google-analytics.com/ga.js$domain=ntv.co.jp
 	@@||cxense.com^$domain=ntv.co.jp
 	!全般
-@@||nytimes.com^$elemhide
+@@||nytimes.com^$generichide
 	! 右側の勝率などの欄が非表示
 @@||opgg-static.akamaized.net/js3/tracker.js?*$domain=op.gg
 	!ポイント貯めるサイト
-@@||pointi.jp^$elemhide
-@@||pointservice.com^$elemhide
+@@||pointi.jp^$generichide
+@@||pointservice.com^$generichide
 	!動画見れ
 @@||popads.net/pop.js$domain=jav4.me
 @@||rd.yahoo.co.jp/jpr_sports/sumo_pickup/$image,domain=sports.yahoo.co.jp
@@ -2159,7 +2174,7 @@ burusoku-vip.com##.article-body-more > DIV:last-child
 @@||rtoaster.jp/Rtoaster.js$domain=3ple.jp
 @@||rt.rtoaster.jp^$domain=3ple.jp
 	!動画見れない
-@@||share-videos.se^$elemhide
+@@||share-videos.se^$generichide
 	!TOP 総合ランキング
 @@||smp.sankei.co.jp/js/analytics/skd.Analysis.js
 	!antiadblock
@@ -2218,6 +2233,8 @@ gyazo.com#@#[class$="-ad"]:not(html):not(body)
 koepota.jp#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
 	! 気象警報・注意報（表形式）が消える
 jma.go.jp#@#.adv
+	! 検索結果
+hentai-only.com#@#[id$="-ads"]:not(html):not(body)
 	! http://www.htb.co.jp/onigiri/index.html
 htb.co.jp#@##advertisement
 	!記事本文
@@ -2334,14 +2351,15 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sekai-kabuka.com
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=sekai-kabuka.com
 	!anti adblock
-@@||9ketsuki.info^$elemhide
-@@||battlecats-db.com^$elemhide
+@@||9ketsuki.info^$generichide
+@@||battlecats-db.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/$domain=9ketsuki.info|battlecats-db.com
 	!503を返す
 k05.biz,z0i.net#@#.adsbygoogle
 
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party
+||adcrops.net^$third-party
 ||adfurikun.jp^$third-party
 ||adsee.jp^$third-party
 ||alistcloud.com^$third-party
@@ -2353,6 +2371,7 @@ k05.biz,z0i.net#@#.adsbygoogle
 ||formulas.jp^$third-party
 ||genieedmp.com^$third-party
 ||i-mobile.co.jp^$third-party
+||ktai.pw^$third-party
 ||lead-ad.jp^$third-party
 ||media-rep.com^$third-party
 ||moba8.net^$third-party
@@ -2360,6 +2379,7 @@ k05.biz,z0i.net#@#.adsbygoogle
 ||speead.jp^$third-party
 ||trax-ad.jp^$third-party
 ||unitedblades.co.jp^$third-party
+||user.in.net^$third-party
 ||yicha.jp^$third-party
 ||zucks.net$third-party
 
