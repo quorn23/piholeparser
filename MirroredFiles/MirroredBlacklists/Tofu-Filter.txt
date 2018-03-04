@@ -178,6 +178,7 @@ _ads.php
 .fr/ads/
 .gs/ads/
 .jp/ad/$domain=~gakushuin.ac.jp
+.jp/ad_
 .jp/ads/
 .net/ad/$domain=~big-up.style
 .net/ads/$domain=~itest.2ch.net
@@ -201,6 +202,7 @@ _ads.php
 ||a8.net^$third-party
 ||access-lab.com^$third-party
 ||accesstrade.net^$third-party
+||ad-feed.com^$third-party
 ||ad-v.jp/adam/$third-party
 ||ad-v.jp/data/$third-party
 ||ad-vortex.com^$third-party
@@ -280,6 +282,7 @@ _ads.php
 ||find-a.jp^$third-party
 ||fmpub.net^$third-party
 ||fout.jp^$third-party
+||free-video-movie.com^$third-party
 ||fun9.net^$third-party
 ||fwmrm.net^$third-party
 ||fxjapan-inc.biz^$third-party
@@ -326,6 +329,7 @@ _ads.php
 ||mediaplex.com^$third-party
 ||moshimo.com^$third-party
 ||motionlink.jp^$third-party
+||mtburn.com^$third-party
 ||mttag.com^$third-party
 ||musicgate.$third-party
 ||my-affiliate.com^$third-party
@@ -353,6 +357,7 @@ _ads.php
 ||rakuword.com^$third-party
 ||rentracks.jp^$third-party
 ||rightsnetwork.net^$third-party
+||rossoad.com^$third-party
 ||roy-union.com^$third-party
 ||roy-union.org^$third-party
 ||rssad.jp^$third-party
@@ -724,6 +729,8 @@ $script,third-party,domain=jpidols.tv
 ||dlbooks.to/img/special/ab.js
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
+||eegg.dip.jp/iframe/
+||eegg.dip.jp/js/
 ||egone.org/js/amazon_
 ||exploader.net/images/nls/
 	! 2017/07/16 動画見れないらしいがこれで見れるらしい
@@ -731,6 +738,7 @@ $script,third-party,domain=jpidols.tv
 ||fod.fujitv.co.jp/mz/*
 ||free-video-movie.com^$domain=2dbook.com
 ||gamespark.jp/feature/advertising/
+||gehasoku.com/JS/newama.js
 ||getchu.com/mbanner/$~image
 ||gigazine.net/pw/p.js
 ||gnst.jp/c/atb/segment.js$domain=gnavi.co.jp
@@ -1066,6 +1074,7 @@ $script,third-party,domain=jpidols.tv
 ||nakanohito.jp^$third-party
 ||ninki.net^$third-party
 ||noface.jp^$third-party
+||nowvisitors.com^$third-party
 ||omtrdc.net^$third-party
 ||oole-analytics.com^$third-party
 ||openstat.net^$third-party
@@ -1149,6 +1158,7 @@ $script,third-party,domain=jpidols.tv
 ||b.grvcdn.com^
 ||blogtool.jp/log/a.js
 ||blogtoy.net/add_log?
+||blozoo.info/js/inouttool/blogparts.js
 ||deqwas.net^
 ||disqus.com/stats.html
 ||dw-eu.com.com^
@@ -1161,6 +1171,7 @@ $script,third-party,domain=jpidols.tv
 ||l--l.jp/in.cgi?
 ||sea.pakapeko.com^
 ||seg.sharethis.com^
+||shblog.jp/analysis/
 ||stats.wp.com^
 ||suteki-tool.com/al
 ||suteki-tool.com/pr
@@ -1279,7 +1290,7 @@ $script,third-party,domain=jpidols.tv
 ##[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 ##[class*="_ad_"]:not(html):not(body)
 
-##[class^="google-2ad-"]
+##[class^="google-2ad"]
 ##[style*="width:728px;"][style*="height:90px;"]
 
 ##a[href*="http://ad."]
@@ -1327,6 +1338,7 @@ $script,third-party,domain=jpidols.tv
 
 !----amazon
 ##.plugin-freearea a[href*="amazon.co.jp"]
+##.plugin-freearea1 a[href*="amazon.co.jp"]
 ##.sidewrapper a[href*="amazon.co.jp"]
 ##.side a[href*="amazon.co.jp"]
 ###side a[href*="amazon.co.jp"]
@@ -1709,6 +1721,11 @@ recipe.rakuten.co.jp##.subContentsLink
 ||unthem.com^$third-party
 ||gsspcln.jp^
 
+||coppedex.com^
+||multiquicks.net^
+
+||blog.livelog.biz/script/js/package/
+
 ###meerkat-contents
 ||counter2.blog.livedoor.com/c?ro=1&act=rss
 ||livedoor.jp/js/c2.js
@@ -1812,6 +1829,7 @@ amazon.co.jp###nav-swmslot
 /amazonjs/*
 /amazonjs.
 
+/amazon.js
 /bestsellers_
 /tinywidget.min.js
 ||amaprop.net^$third-party
@@ -1969,6 +1987,7 @@ youtube.com##.pyv-afc-ads-inner
 ||dtiblog.com/hist_count.php
 
 !------------sinobi------------!
+||adc.shinobi.jp^
 ||adm.shinobi.jp^
 ||asumi.shinobi.jp^
 ###ninja-hp-inactive
@@ -2085,6 +2104,7 @@ hamusoku.com##.amazon
 esuteru.com##a[href^="http://www.amazon.co.jp"]
 
 !働くモノ http://workingnews.blog117.fc2.com/
+||fc2.com/w/o/r/workingnews/meerkat_side_double_js2.js
 workingnews.blog117.fc2.com##.amatable_wrap
 workingnews.blog117.fc2.com##div.boxright
 workingnews.blog117.fc2.com##tr[align="left"] > td[align="left"]
@@ -2113,9 +2133,6 @@ warotanikki.com##.external[rel="nofollow"]
 1000mg.jp##.main
 1000mg.jp##.title
 1000mg.jp###text-3
-
-!ぶる速
-burusoku-vip.com##.article-body-more > DIV:last-child
 
 !キニ速
 ||blog.livedoor.jp/kinisoku/$subdocument
@@ -2381,6 +2398,7 @@ k05.biz,z0i.net#@#.adsbygoogle
 ||unitedblades.co.jp^$third-party
 ||user.in.net^$third-party
 ||yicha.jp^$third-party
+||z-profit.com^$third-party
 ||zucks.net$third-party
 
 ||amazonaws.com/ad-arata/$domain=fc2.com
