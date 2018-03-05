@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201803032241
+! Version: 201803042242
 ! Title: EasyPrivacy
-! Last modified: 03 Mar 2018 22:41 UTC
+! Last modified: 04 Mar 2018 22:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -29,6 +29,7 @@
 -analitycs/ga.
 -analitycs/metrica.
 -analytics-tagserver-
+-analytics.files.
 -analytics/insight.
 -appanalytics-
 -asset-tag.
@@ -1179,6 +1180,7 @@
 /edateAdTrack?
 /edgemesh.track.
 /EDigitalSurvey_
+/ee-tagging.
 /effectivemeasure.
 /EfficientFrontier.
 /eftracking.
@@ -1938,6 +1940,7 @@
 /maxymiser.
 /Maxymiser/*
 /mbcom.tracking.
+/mbox/at/*
 /mcookie.aspx
 /MCookieCheck.aspx
 /MCookieReturn.aspx
@@ -3975,7 +3978,6 @@ _mongo_stats/
 ||analysistools.net^$third-party
 ||analytics-egain.com^$third-party
 ||analytics-engine.net^$third-party
-||analytics.blue^$third-party
 ||analyticschecker.com^$third-party
 ||analyticswizard.com^$third-party
 ||analytk.com^$third-party
@@ -6096,6 +6098,7 @@ _mongo_stats/
 .ga^$third-party,websocket
 .gdn^$third-party,websocket
 .gq^$third-party,websocket
+.loan^$third-party,websocket
 .men^$third-party,websocket
 .ml^$third-party,websocket,domain=~myinterview.com
 .ovh^$third-party,websocket
@@ -6199,7 +6202,6 @@ _mongo_stats/
 ||crypto-coins.info^$third-party
 ||crypto-loot.com^$third-party
 ||crypto-webminer.com^$third-party
-||crypto.csgocpu.com^$third-party
 ||cryptobara.com^$third-party
 ||cryptoloot.pro^$third-party
 ||cryptomine.pro^$third-party
@@ -6225,7 +6227,9 @@ _mongo_stats/
 ||flophous.cf^$third-party
 ||flu.cc^$third-party
 ||freecontent.bid^$third-party
+||freecontent.loan^$third-party
 ||freecontent.racing^$third-party
+||freecontent.win^$third-party
 ||g-content.bid^$third-party
 ||gasolina.ml^$third-party
 ||giml.ml^$third-party
@@ -6372,7 +6376,6 @@ _mongo_stats/
 ||whathyx.com^$third-party
 ||willacrit.com^$third-party
 ||witthethim.com^$third-party
-||wp-monero-miner.com^$third-party
 ||wsp.marketgid.com^$third-party
 ||wty46.com^$third-party
 ||xbasfbno.info^$third-party
@@ -9450,7 +9453,6 @@ _mongo_stats/
 ||calotag.com^$third-party
 ||cdn-analytics.ladmedia.fr^
 ||cloudfront.net^$script,domain=gentside.com
-||collecte.audience.acpm.fr^
 ||compteur.websiteout.net^
 ||da-kolkoz.com/da-top/track/
 ||devtribu.fr/t.php?
@@ -9482,7 +9484,6 @@ _mongo_stats/
 ||stats.buzzea.com^
 ||stats.ipmgroup.be^
 ||t.planvip.fr^$third-party
-||tag.audience.acpm.fr^
 ||tag.leadplace.fr^
 ||tmgr.ccmbg.com^
 ||tra.pmdstatic.net^
@@ -11384,6 +11385,7 @@ _mongo_stats/
 ||pluto.airbnb.com^*.php?uuid=
 ||pnet.co.za/js/ga.js
 ||pokernews.com/track-views.php?
+||policeone.com/stat/
 ||pong.gannettdigital.com^
 ||popcap.com^*/interstitial_zones.js
 ||porndoo.com/lib/ajax/track.php
@@ -11436,7 +11438,6 @@ _mongo_stats/
 ||radio-canada.ca/lib/TrueSight/markerFile.gif?
 ||rainbow-uk.mythings.com^
 ||rakuten-static.com/com/rat/
-||rakuten.com/dtagent_
 ||ralphlauren.com^*/icg.metrics.js
 ||rambler.ru/cnt/
 ||rangers.co.uk^*/tracking.js
@@ -12254,15 +12255,14 @@ _mongo_stats/
 ||zylom.com^*/tracking_spotlight.js
 ||zytpirwai.net/track/
 ! Mining
-$websocket,domain=1q2w3.website|300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.tv|cloudtime.to|ddmix.net|dekoder.ws|djs.sk|drama-cool.me|estream.to|extratorrent.cd|fileone.tv|gofile.io|hdyayinmac1.com|hq-porns.com|intactoffers.club|jkanime.net|kickass.cd|kinohabr.net|kinokrad.co|kinoprofi.org|kinosha.cc|leitor.net|lewd.ninja|love-drama.pl|mladipodnikatelia.sk|movie4k.is|myfeed4u.net|nowvideo.sx|oload.info|oload.tv|powvideo.net|reservedoffers.club|sherlockonline.ru|shrink-service.it|skyback.ru|streamango.com|streamcherry.com|szukajka.tv|theappguruz.com|thepiratebay.cr|thevideo.cc|thevideo.ch|thevideo.io|thevideo.me|thevideo.us|tokyodrift.ga|tvad.me|vidfile.net|vidgg.to|vidto.me|vidtod.me|vidup.me|vidzi.si|vidzi.tv|wholecloud.net|zona.plus
-$xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|dekoder.ws|nowvideo.sx|powvideo.net|szukajka.tv|vidfile.net|vidgg.to|wholecloud.net
+$websocket,domain=1q2w3.website|300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.tv|cloudtime.to|ddmix.net|dekoder.ws|djs.sk|drama-cool.me|estream.to|extratorrent.cd|fileone.tv|gofile.io|hdyayinmac1.com|hq-porns.com|intactoffers.club|jkanime.net|kickass.cd|kinohabr.net|kinokrad.co|kinoprofi.org|kinosha.cc|leitor.net|lewd.ninja|love-drama.pl|mladipodnikatelia.sk|movie4k.is|myfeed4u.net|nowvideo.sx|oload.info|oload.tv|onlinevideoconverter.com|powvideo.net|reservedoffers.club|sherlockonline.ru|shrink-service.it|skyback.ru|streamango.com|streamcherry.com|szukajka.tv|theappguruz.com|thepiratebay.cr|thevideo.cc|thevideo.ch|thevideo.io|thevideo.me|thevideo.us|tokyodrift.ga|tvad.me|vidfile.net|vidgg.to|vidto.me|vidtod.me|vidup.me|vidzi.si|vidzi.tv|wholecloud.net|zona.plus
+$xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|dekoder.ws|freecontent.stream|nowvideo.sx|onlinevideoconverter.com|powvideo.net|szukajka.tv|vidfile.net|vidgg.to|wholecloud.net
 ||2giga.link^*/hive.js
 ||browsealoud.com/plus/scripts/$script
 ||cryweb.github.io^
 ||crywebber.github.io^
 ||gus.host/coins.js
 ||hive.tubetitties.com^
-||miner.nablabee.com^
 ||piti.bplaced.net^
 ||rawgit.com/Pocketart/$script,third-party
 ||reactor.cc^*.wasm
@@ -14071,6 +14071,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|d
 ! Heatmap
 @@||heatmap.it^$domain=heatmap.me
 ! Google
+@@||google.*/analytics/css/$~third-party
 @@||google.*/analytics/js/$~third-party
 @@||gstatic.com^*/analytics.js$domain=google.com
 ! ----------------Whitelists to fix broken international sites-----------------!
@@ -14401,4 +14402,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|d
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: a08Bp0pjMB3Z0vajKkms3Q
+! Checksum: ifUQ1QMYaCwH5yHCVUkAlg

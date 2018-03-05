@@ -194,8 +194,10 @@ forbes.com##script:inject(forbes-defuser.js)
 ! https://github.com/gorhill/uBlock/issues/1194
 ! https://github.com/uBlockOrigin/uAssets/issues/853
 ! https://github.com/uBlockOrigin/uAssets/issues/1284
-oload.info,oload.stream,oload.tv,openload.co,streamango.com##script:inject(openload.co.js)
-oload.stream,openload.co##script:inject(window.open-defuser.js)
+! https://github.com/jspenguin2017/uBlockProtector/issues/870
+oload.site##script:inject(nano-setInterval-booster.js)
+oload.info,oload.site,oload.stream,oload.tv,openload.co,streamango.com##script:inject(openload.co.js)
+oload.site,oload.stream,openload.co##script:inject(window.open-defuser.js)
 streamango.com##script:inject(abort-on-property-read.js, BetterJsPop)
 streamango.com##script:inject(window.open-defuser.js)
 ! https://forums.lanik.us/viewtopic.php?f=64&p=132254
@@ -485,8 +487,8 @@ thesimsresource.com##script:inject(thesimsresource.com.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/622
 ! https://github.com/uBlockOrigin/uAssets/issues/753
 ! https://github.com/uBlockOrigin/uAssets/issues/1404
-||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=4players.de|brigitte.de|buffed.de|erdbeerlounge.de|gamesaktuell.de|gamezone.de|gamona.de|giga.de|gmx.net|golem.de|kicker.de|kino.de|myspass.de|pcgames.de|pcgameshardware.de|spiegel.de|spielaffe.de|spieletipps.de|t-online.de|thrashermagazine.com|web.de|welt.de|videogameszone.de
-4players.de,brigitte.de,buffed.de,chip.de,erdbeerlounge.de,gamesaktuell.de,gamezone.de,gamona.de,giga.de,gmx.net,golem.de,kicker.de,kino.de,myspass.de,pcgames.de,pcgameshardware.de,spiegel.de,spielaffe.de,spieletipps.de,t-online.de,thrashermagazine.com,videogameszone.de,web.de,welt.de##script:inject(golem.de.js)
+||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=4players.de|brigitte.de|buffed.de|erdbeerlounge.de|gamesaktuell.de|gamezone.de|gamona.de|giga.de|gmx.net|golem.de|kicker.de|kino.de|myspass.de|pcgames.de|pcgameshardware.de|spiegel.de|spiegel.tv|spielaffe.de|spieletipps.de|t-online.de|thrashermagazine.com|web.de|welt.de|videogameszone.de
+4players.de,brigitte.de,buffed.de,chip.de,erdbeerlounge.de,gamesaktuell.de,gamezone.de,gamona.de,giga.de,gmx.net,golem.de,kicker.de,kino.de,myspass.de,pcgames.de,pcgameshardware.de,spiegel.de,spiegel.tv,spielaffe.de,spieletipps.de,t-online.de,thrashermagazine.com,videogameszone.de,web.de,welt.de##script:inject(golem.de.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1426
 chip.de##script:inject(setTimeout-defuser.js, (), 15000)
 
@@ -2120,6 +2122,8 @@ bleepingcomputer.com##LI:has(.nl_spons)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6vc7l5/fmoviesis_website_will_not_allow_ublock_need_help/
 vidnode.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+! https://github.com/jspenguin2017/uBlockProtector/issues/871#issuecomment-370237545
+mcloud.to###jwa
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6v63qv/need_help_to_block_an_antiadblock_website/
 ! https://github.com/uBlockOrigin/uAssets/issues/605
@@ -5412,9 +5416,6 @@ mp3skull-tube.net##script:inject(addEventListener-defuser.js, click, trigger)
 ! https://github.com/uBlockOrigin/uAssets/issues/1626
 @@||win10.vn^$generichide
 
-! https://github.com/uBlockOrigin/uAssets/issues/1627
-@@||mercurynews.com^$generichide
-
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40078
 ||damoh.vgtv.no/*$media,redirect=noopmp3-0.1s,domain=vgtv.no
 
@@ -5515,3 +5516,26 @@ gannikus.com##.sam_pro_place_widget
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1655
 @@||yourlifeupdated.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1627
+! https://github.com/uBlockOrigin/uAssets/issues/1650
+mercurynews.com##script:inject(set-constant.js, dfmCanRunAds, true)
+@@||mercurynews.com^$generichide
+/wp-content/client-mu-plugins/src/Paywall/static/js/connext-paywall-analytics.min.js
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40124
+vsco.co##.page-wrap > section:has-text(Download the free)
+
+! https://github.com/uBlockOrigin/uAssets/pull/1659
+! popups
+||bt-scene.cc^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.google-analytics.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/1660
+bemad.es,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,radioset.es##script:inject(abort-on-property-write.js, adsInfoClient)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/874
+smarturlref.net##script:inject(addEventListener-defuser.js, load, 2000)
+smarturlref.net##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/873
+@@||bittube.me/*/js/ads2.js$xmlhttprequest,first-party
