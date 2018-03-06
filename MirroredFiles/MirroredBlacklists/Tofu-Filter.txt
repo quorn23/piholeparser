@@ -82,6 +82,7 @@ _ad.php?
 /ad4.
 /adframe.
 /adframe/*
+?adid=
 /adparser.js
 /adparts/*
 !動画見れない css
@@ -203,6 +204,7 @@ _ads.php
 ||access-lab.com^$third-party
 ||accesstrade.net^$third-party
 ||ad-feed.com^$third-party
+||ad-management.biz^$third-party
 ||ad-v.jp/adam/$third-party
 ||ad-v.jp/data/$third-party
 ||ad-vortex.com^$third-party
@@ -545,6 +547,7 @@ _ads.php
 ||auone-net.jp/~$image,third-party
 ||bbchat.tv^*/bannar/
 ||bitflyer.jp/Images/Affiliate/
+||coincheck.com/images/affiliates/
 ||dietnavi.com/pc/banner/
 ||googlesyndication.com/pagead/
 ||gunosy.com/adnet/
@@ -1316,8 +1319,10 @@ $script,third-party,domain=jpidols.tv
 ##a[href*="cyber-ad01.com"]
 ##a[href*="dgpot.com"][href*="affiliate_banner_id"]
 ##a[href*="direct7.net"]
-##a[href*="getchu.com/mbanner/php/clickBanner.php?"]
+##s[href*="free-video-movie.com"]
 ##a[href*="game-news.biz"]
+##a[href*="getchu.com/mbanner/php/clickBanner.php?"]
+##a[href*="grassw.com"]
 ##a[href*="liveads.jp/cc.php?"]
 ##a[href*="mmaaxx.com"][href*="?affid="]
 ##a[href*="motionlink.jp/clk.php?"]
@@ -1337,6 +1342,7 @@ $script,third-party,domain=jpidols.tv
 ##a[href^="http://rd.ane.yahoo.co.jp/"]
 
 !----amazon
+##.column-inner-2 a[href*="amazon.co.jp"]
 ##.plugin-freearea a[href*="amazon.co.jp"]
 ##.plugin-freearea1 a[href*="amazon.co.jp"]
 ##.sidewrapper a[href*="amazon.co.jp"]
@@ -1607,7 +1613,7 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 ||dmm.co.jp/images/affiliate_banner/
 ||dmm.com/af/
 	!ブログパーツ
-||dmm.com/ranking?adid=
+||dmm.com/photo/blog-parts/*&affiliate_id=
 ##a[href*="dmm.ad-s.org"]
 
 !------------futaba-------------!
@@ -2140,7 +2146,17 @@ warotanikki.com##.external[rel="nofollow"]
 !　？？？？  http://beelzeboulxxx.com/
 ||blog.livelog.biz/script/js/maob_sp.js
 
+/js/cm_anpop.js
+/js/cm_rank_widget.js
 
+! http://blog.livedoor.jp/darkm/
+	! http://blog.livelog.biz/script/js/hrz_sp01.js
+	! http://blog.livelog.biz/script/js/hrz_sp02.js
+	! http://blog.livelog.biz/script/js/hrz_sp03.js
+||blog.livelog.biz/script/js/hrz_sp
+
+! http://brow2ing.doorblog.jp/
+||blog.livelog.biz/script/js/bbb_sp01.js
 
 !--------ホワイトリスト--------!
 	!動画シーク
@@ -2393,6 +2409,7 @@ k05.biz,z0i.net#@#.adsbygoogle
 ||media-rep.com^$third-party
 ||moba8.net^$third-party
 ||nend.net^$third-party
+||smartad-analytics.info^$third-party
 ||speead.jp^$third-party
 ||trax-ad.jp^$third-party
 ||unitedblades.co.jp^$third-party

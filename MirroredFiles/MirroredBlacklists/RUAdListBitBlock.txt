@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: eQFCKGXblfxZpDyKXynoWw
-! Version: 201803050020
+! Checksum: OMGoqMU5UrnMRbShG1kNBw
+! Version: 201803060030
 ! Title: RU AdList: BitBlock
-! Last modified: 05 Mar 2018 00:20 UTC
+! Last modified: 06 Mar 2018 00:30 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -523,6 +523,7 @@ novostionline.net##.ok_group
 get-tune.cc,mp3cc.com,mp3cc.org##.oneradioblock-share_block
 iplayer.info##.onesongblock-end
 svxg.su##.oxle.cenzo
+riotpixels.com##.page-info > .relative-buttons
 sovsport.md,sovsport.ru##.page-socials-popup-wrapper
 championat.com##.page__block > .js-has-sharing.js-social-sharing
 filmpro.ru##.page_rcol > div[style*="background:#fff;"]
@@ -2048,6 +2049,7 @@ meduza.io#?#.PageSection > .PageBlock:-abp-has(.MaterialTag:-abp-contains(пар
 cnews.ru##noindex > .event_list
 overclockers.ru#?##otherPageContent > .ui > .column:-abp-has(.divided)
 benzin-price.ru##p:first-child + p > table[align="center"]
+forums.overclockers.ru#?##pagecontent > .tablebg:-abp-has(.profile:has-text(Партнер))
 goha.ru##span[id^="scrollto"]
 streamzone.org##span[style*="3.0em;"]
 vz.ru##table[width="100%"] > tbody > tr > td > div:not([id]):not([class]):not([style])
@@ -2179,6 +2181,9 @@ metrika.yandex.by,metrika.yandex.kz,metrika.yandex.ru,metrika.yandex.ua##body > 
 yandex.by,yandex.kz,yandex.ru,yandex.ua##body > .serp-user__promo-popup
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua,pogoda.yandex.by,pogoda.yandex.kz,pogoda.yandex.ru,pogoda.yandex.ua##body > div[style*="padding-top: 36px;"]
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua,pogoda.yandex.by,pogoda.yandex.kz,pogoda.yandex.ru,pogoda.yandex.ua##body > iframe[src]
+yandex.by,yandex.kz,yandex.ru,yandex.ua##body[class*="b-page_domik"] .desk-notif-card ~ .desk-notif-card
+yandex.by,yandex.kz,yandex.ru,yandex.ua##body[class*="b-page_domik"] .media-event-promo
+yandex.by,yandex.kz,yandex.ru,yandex.ua##body[class*="b-page_domik"] .stream-promo-popup
 yandex.by,yandex.kz,yandex.ru,yandex.ua##body[class*="b-page_domik"] div[class*="media-grid"][class*="media-content"]
 yandex.ru##body[class*="map_ready"] .home-panel-content-view__body > :not(.home-panel-content-view__menu)
 yandex.by,yandex.kz,yandex.ru,yandex.ua##div[aria-label="Реклама"]
@@ -2249,6 +2254,7 @@ ekabu.ru#@#.icon-twitter
 app2top.ru#@#.icon-vk
 mynnm.ru#@#.icon-vkontakte
 bloknot-kamyshin.ru,bloknot-krasnodar.ru,bloknot-krasnoyarsk.ru,bloknot-lipetsk.ru,bloknot-moldova.md,bloknot-morozovsk.ru,bloknot-novocherkassk.ru,bloknot-rostov.ru,bloknot-shakhty.ru,bloknot-stavropol.ru,bloknot-taganrog.ru,bloknot-urupinsk.ru,bloknot-volgodonsk.ru,bloknot-volgograd.ru,bloknot-volzhsky.ru,bloknot-voronezh.ru,bloknot-yakutsk.ru,bloknot.ru,fotki.yandex.ru,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua#@#.icon_share
+comss.ru#@#.j-facebook
 fotki.yandex.ru#@#.js-share
 lenta.ru#@#.js-topic__socials
 sports.ru#@#.link-fb
@@ -2327,6 +2333,7 @@ coub.com#@#.viewer__sharing__items
 @@||apis.google.com/js/platform.js$domain=lifehacker.ru
 @@||auth.66.ru^$image,domain=auth.66.ru
 @@||auth.properm.ru^$image,domain=auth.properm.ru
+@@||auth.riotpixels.com/*/sprite-social-$domain=auth.riotpixels.com
 @@||auth.tbn.ru^*/google-icon.
 @@||auth.tbn.ru^*/images/facebook-
 @@||auth.tbn.ru^*/images/twitter-
@@ -2626,8 +2633,13 @@ prom.ua#@#img[alt="facebook"]
 .facebookLikePopUp.
 .fbshare.js
 .pluckCount.
+.share.dossierheader.
+.share.lead.
+.share.utils.
 .shareaholic-
 .sharebar.js
+.sharecount.
+.sharing.js
 .social.png
 .sociallocker.
 /16x16-delicious.
@@ -3906,6 +3918,7 @@ prom.ua#@#img[alt="facebook"]
 /share2-
 /share2.png
 /share2/*$~stylesheet
+/share4.
 /share42.js
 /share42_
 /share_28x13.
@@ -3951,6 +3964,7 @@ prom.ua#@#img[alt="facebook"]
 /shareamex/*
 /shareArrow.
 /sharebar.$~script,~stylesheet
+/shareBar/*
 /sharebariconfacebook_
 /sharebaricongoogle_
 /sharebariconinstagram_
@@ -4659,6 +4673,7 @@ prom.ua#@#img[alt="facebook"]
 /wp-images/twitter.png
 /wp-social-toolbar/*
 /wpsocial.
+/xshare_
 /xsocial-icons.
 /xsocial_sprites_
 /yahoo_16.
@@ -5176,6 +5191,7 @@ _youtube_social_
 ###box-social-buttons
 ###box-socialmedia
 ###box-twitter
+###boxOKnotizie
 ###box_social
 ###box_social_bookmarks
 ###boxes-box-cng_social_media_fa_small
@@ -7684,6 +7700,7 @@ _youtube_social_
 ##.art_shr_top
 ##.artcl-social-media
 ##.article--share
+##.article--sharebutton
 ##.article--social
 ##.article-bottom-share
 ##.article-bottom-sharing
@@ -8157,6 +8174,7 @@ _youtube_social_
 ##.btnTwitter
 ##.btnTwitterConnect
 ##.btnTwt
+##.btn__share
 ##.btn_delicious
 ##.btn_digg
 ##.btn_fb
@@ -8231,6 +8249,7 @@ _youtube_social_
 ##.c-poll-share__social
 ##.c-poll-share__text
 ##.c-share
+##.c-sharebar
 ##.c-sharefixed
 ##.c-sharing--menu
 ##.c-social
@@ -8339,6 +8358,9 @@ _youtube_social_
 ##.component-social-follow
 ##.component-social-network-icons
 ##.component-social-share
+##.condividi
+##.condividi-addthis
+##.condividi_su
 ##.connect-button-facebook
 ##.connect-button-gplus
 ##.connect-button-instagram
@@ -8563,6 +8585,7 @@ _youtube_social_
 ##.email-share
 ##.email-share-link
 ##.email-sharetool
+##.embed-social-buttons
 ##.end-social
 ##.entity-share-container__block--share
 ##.entry-bottom-share
@@ -9834,6 +9857,8 @@ _youtube_social_
 ##.icn_youtube
 ##.ico--instagram
 ##.ico--youtube
+##.ico-Instagram
+##.ico-RSS
 ##.ico-facebook
 ##.ico-facebook-1
 ##.ico-facebook-circle
@@ -9974,6 +9999,10 @@ _youtube_social_
 ##.icon-meneame
 ##.icon-mixcloud
 ##.icon-odnoklassniki
+##.icon-p-facebook-m
+##.icon-p-gplus-m
+##.icon-p-linkedin-m
+##.icon-p-twitter-m
 ##.icon-pinterest
 ##.icon-pinterest-alt
 ##.icon-pinterest-circle
@@ -10251,6 +10280,8 @@ _youtube_social_
 ##.itw-dropdown-share-box
 ##.iyc-views-SocialNetworksBox
 ##.j-article-share
+##.j-facebook
+##.j-gplus
 ##.j-header-follow-us
 ##.j-player-social-header
 ##.j-share-button-container
@@ -10258,6 +10289,7 @@ _youtube_social_
 ##.j-social
 ##.j-social-actions
 ##.j-social-button
+##.j-twitter
 ##.janrainEngagePublishShareBar
 ##.janrainShareCountContainer
 ##.janrainSocialBar
@@ -10491,6 +10523,7 @@ _youtube_social_
 ##.longform__share
 ##.longform_header_share
 ##.longread-share
+##.look-social
 ##.lp_share
 ##.lr-social-box
 ##.ls-social-links
@@ -11756,6 +11789,7 @@ _youtube_social_
 ##.shareTitle
 ##.shareToSocial
 ##.shareTool
+##.shareToolBar
 ##.shareTools
 ##.shareToolsItem
 ##.shareToolsItemEmail
@@ -11992,6 +12026,7 @@ _youtube_social_
 ##.shares_icon
 ##.shares_tally
 ##.shareseo_liked
+##.sharesocial
 ##.sharesocials
 ##.sharetags
 ##.sharetastic
@@ -12118,6 +12153,7 @@ _youtube_social_
 ##.show_facebook_widget
 ##.show_social
 ##.showing-shares
+##.showsocial
 ##.showthread-social
 ##.shr-bookmarks
 ##.shr-btn-scl2
@@ -12814,6 +12850,7 @@ _youtube_social_
 ##.social-strip
 ##.social-strip-medium
 ##.social-strip-wrapper
+##.social-stripe
 ##.social-stroke-icon
 ##.social-stub
 ##.social-stuff
@@ -13412,6 +13449,8 @@ _youtube_social_
 ##.sprite-twitter
 ##.sprite-twitter_16
 ##.sprite-youtube
+##.sprite_condividi_facebook_button
+##.sprite_condividi_twitter_button
 ##.sprite_facebook
 ##.sprite_google
 ##.sprite_pinterest
@@ -13611,6 +13650,7 @@ _youtube_social_
 ##.talk-sharing__other
 ##.talk-sharing__twitter
 ##.talksShareSpan
+##.tasti-social-top
 ##.tbt_social
 ##.tcsn_widget_social_network
 ##.td-float-sharing
@@ -14057,6 +14097,10 @@ _youtube_social_
 ##.vbseo_share
 ##.vc_box_social_colored
 ##.vc_box_social_white
+##.vc_container_social
+##.vc_social_fixed_footer
+##.vc_social_icons
+##.vc_social_icons_btn
 ##.vce-share-bar
 ##.vce-share-items
 ##.vcrSocial
@@ -14689,6 +14733,7 @@ _youtube_social_
 ##div[class^="ShareButtons_"]
 ##div[class^="SocialTool"]
 ##div[class^="follow-links-"]
+##div[class^="j-share-"]
 ##div[class^="style__socialIcons"]
 ##div[data-jsonurl^="/nfl-assets/data/twitter/"]
 ##div[id^="digg-widget-"]
@@ -24927,6 +24972,8 @@ _site_cookie_
 ##.top-of-page
 ##.top-of-page-link
 ##.topofpage
+##.torna-su
+##.tornasu
 ##.tothetop
 ##.totop
 ##.totop_button
