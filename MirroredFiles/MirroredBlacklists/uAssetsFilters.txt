@@ -610,6 +610,7 @@ facebook.com##.ego_column:if(a[href^="/campaign/landing"])
 ! https://forums.lanik.us/viewtopic.php?p=128997#p128997
 facebook.com##[id^="hyperfeed_story_id_"]:if([id^="feed_subtitle_"] a[href]:matches-css-after(content:/Gesponsert|Sponsored|Sponsrad/))
 facebook.com##div[data-testid="fbfeed_story"]:if(a[href*="[is_sponsored]"])
+facebook.com##.ego_section:if(a[href^="/ad_campaign"])
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32142
 ||ruiguozhi.cc^
@@ -1149,7 +1150,7 @@ androidcentral.com,connectedly.com,crackberry.com,imore.com,teslacentral.com,vrh
 ! https://github.com/uBlockOrigin/uAssets/issues/190#issuecomment-269949614
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38124
 ! https://www.reddit.com/r/uBlockOrigin/comments/7r408x/something_interfered_with_this_website_loading/
-ack.net,allkpop.com,ancient.eu,audioholics.com,barnstablepatriot.com,boredpanda.com,britannica.com,brobible.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,cougarboard.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,eternallysunny.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,liquipedia.net,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,medicalnewstoday.com,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,ocala.com,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,radaronline.com,recordonline.com,salon.com,sj-r.com,slickdeals.net,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,trakt.tv,tuscaloosanews.com,uproxx.com,uticaod.com,vvdailypress.com,wikia.com,winchristmas.co.uk,womansworld.com,wuxiaworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
+ack.net,allkpop.com,ancient.eu,audioholics.com,barnstablepatriot.com,boredpanda.com,britannica.com,brobible.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,cougarboard.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,eternallysunny.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,liquipedia.net,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,medicalnewstoday.com,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,ocala.com,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,radaronline.com,recordonline.com,royalroadl.com,salon.com,sj-r.com,slickdeals.net,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,trakt.tv,tuscaloosanews.com,uproxx.com,uticaod.com,vvdailypress.com,wikia.com,winchristmas.co.uk,womansworld.com,wuxiaworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
 xda-developers.com##script:inject(nowebrtc.js)
 ! https://www.reddit.com/r/uBlockOrigin/comments/6fvuo0/ads_leaking_through_on_drudge_report/
 drudgereport.com,mashable.com##script:inject(abort-on-property-read.js, ADONIS_BOOTSTRAP_STATS)
@@ -1237,6 +1238,7 @@ quora.com##.upper_content:has(.promoted_href)
 quora.com##.upper_content:has(.promoted_hlink)
 quora.com##.upper_content:has(.promoted_hyperlink)
 quora.com##.upper_content:has-text(Promoted)
+quora.com##.upper_content:has(.advertiser_url)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -3956,7 +3958,7 @@ videos.porndig.com##.pop_parent
 ! https://github.com/uBlockOrigin/uAssets/issues/1183
 xxvids.net##a[href^="https://t.frtyi.com/"]
 ||imglnka.com^
-xvideos.com##script:inject(abort-on-property-write.js, openpop)
+xvideos.com##script:inject(window.open-defuser.js)
 xvideos.com##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1185
@@ -5572,3 +5574,9 @@ generacionretro.net##script:inject(addEventListener-defuser.js, load, 2000)
 ! https://github.com/uBlockOrigin/uAssets/issues/1673
 divxtotal.co##script:inject(abort-on-property-write.js, Fingerprint2)
 divxtotal.co##script:inject(popads-dummy.js)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/39
+arlinadzgn.com,idntheme.com##script:inject(abort-on-property-write.js, hidekeep)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/876
+ma-x.org##script:inject(abort-on-property-write.js, KillAdBlock)

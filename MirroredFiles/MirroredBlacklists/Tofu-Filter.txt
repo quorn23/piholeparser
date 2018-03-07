@@ -1319,10 +1319,8 @@ $script,third-party,domain=jpidols.tv
 ##a[href*="cyber-ad01.com"]
 ##a[href*="dgpot.com"][href*="affiliate_banner_id"]
 ##a[href*="direct7.net"]
-##s[href*="free-video-movie.com"]
 ##a[href*="game-news.biz"]
 ##a[href*="getchu.com/mbanner/php/clickBanner.php?"]
-##a[href*="grassw.com"]
 ##a[href*="liveads.jp/cc.php?"]
 ##a[href*="mmaaxx.com"][href*="?affid="]
 ##a[href*="motionlink.jp/clk.php?"]
@@ -2090,6 +2088,8 @@ kanasoku.info##.cent_top
 blog.livedoor.jp##[src="http://blog.livedoor.jp/goldennews/settings/ad.js"] + script + #header + #wrapper > #main-column > .kiziue > a[href*="amazon.co.jp"]
 
 !二徹 http://neetetsu.com/
+|http://$third-party,domain=neetetsu.com,~stylesheet
+@@||blogimg.jp/neetetsu84-newslog2ch/imgs/$domain=neetetsu.com
 ||neetetsu.com/RSS/
 neetetsu.com##.sidebody2 img
 neetetsu.com##.head_rss + br + center > table
@@ -2139,6 +2139,8 @@ warotanikki.com##.external[rel="nofollow"]
 1000mg.jp##.main
 1000mg.jp##.title
 1000mg.jp###text-3
+||jpserver.biz^$third-party
+||smartaccess.biz^$third-party
 
 !キニ速
 ||blog.livedoor.jp/kinisoku/$subdocument
@@ -2157,6 +2159,10 @@ warotanikki.com##.external[rel="nofollow"]
 
 ! http://brow2ing.doorblog.jp/
 ||blog.livelog.biz/script/js/bbb_sp01.js
+
+##s[href*="free-video-movie.com"]
+##a[href*="grassw.com"]
+
 
 !--------ホワイトリスト--------!
 	!動画シーク
