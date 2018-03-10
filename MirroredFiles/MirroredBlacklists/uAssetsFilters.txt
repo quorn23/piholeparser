@@ -2520,7 +2520,8 @@ allpar.com,antonymsfor.com,bobshideout.com,cheezburger.com,colourlovers.com,dail
 ! https://github.com/uBlockOrigin/uAssets/issues/810
 ! https://github.com/uBlockOrigin/uAssets/issues/855
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40014
-abandonedspaces.com,asheepnomore.net,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips.in,debka.com,eternallifestyle.com,ffxivguild.com,fullmatchesandshows.com,gorillavid.in,greeningz.com,healthyfocus.org,hyperactivz.com,kiwireport.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,parentztalk.com,pensandpatron.com,powerofpositivity.com,presidentmommy.com,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,theamericanmirror.com,toptenz.net,travelfuntu.com,vidmax.com,wnd.com,worldation.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
+! https://forums.lanik.us/viewtopic.php?f=62&t=40168
+abandonedspaces.com,asheepnomore.net,blacklistednews.com,broadwayworld.com,clashdaily.com,daclips.in,debka.com,eternallifestyle.com,ffxivguild.com,fullmatchesandshows.com,gorillavid.in,greeningz.com,healthyfocus.org,hyperactivz.com,kiwireport.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,parentztalk.com,pensandpatron.com,powerofpositivity.com,presidentmommy.com,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,theamericanmirror.com,timesofisrael.com,toptenz.net,travelfuntu.com,vidmax.com,wnd.com,worldation.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
 dailygalaxy.com,diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,nowtheendbegins.com,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ||jojilabola.com^
 ||rizotina.com^
@@ -2774,9 +2775,7 @@ yourporn.sexy##script:inject(abort-on-property-write.js, Fingerprint2)
 yourporn.sexy##script:inject(noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1197
-@@||magesy.be^$generichide
-@@||magesy.com^$generichide
-@@||magesy.eu^$generichide
+@@*$generichide,domain=magesy.be|magesy.eu|magesy.club|magesy.info|magesy.website
 magesy.*##script:inject(abort-current-inline-script.js, adBlockDetected)
 ||magesy.*/cdn-cgi/apps/head/*$script,first-party
 magesy.*###adblockplus
@@ -2792,7 +2791,9 @@ linx.cloud##script:inject(abort-current-inline-script.js, MutationObserver, 6765
 linx.cloud##script:inject(abort-on-property-read.js, document.createElement)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/874
+! https://github.com/uBlockOrigin/uAssets/issues/1683
 ||identi.li/cacho/license*.js$script,first-party
+||musicatorrents.com/*/license.js$script,domain=identi.li
 
 ! https://github.com/reek/anti-adblock-killer/issues/3787
 anitoonstv.com##script:inject(abort-on-property-write.js, cicklow_XcVCCW)
@@ -3763,6 +3764,7 @@ jzrputtbut.net##script:inject(setTimeout-defuser (), 50)
 ! https://www.reddit.com/r/uBlockOrigin/comments/7sv0ku/help_blocking_this_type_of_ad/
 dwatchseries.to##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 dwatchseries.to##script:inject(abort-on-property-write.js, upManager)
+dwatchseries.to##script:inject(abort-on-property-write.js, decodeURIComponent)
 
 ! https://forums.lanik.us/viewtopic.php?p=130030#p130030
 mexashare.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
@@ -4774,8 +4776,8 @@ genbird.com##script:inject(addEventListener-defuser.js, load, advertisement)
 @@||fwmrm.net/ad/$script,domain=dplay.dk
 ||dniadops-a.akamaihd.net/video-assets/*.mp4$media,domain=dplay.dk
 
-! https://github.com/jspenguin2017/uBlockProtector/issues/833
-updato.com##script:inject(setTimeout-defuser.js, document.querySelector, 2000)
+! https://github.com/uBlockOrigin/uAssets/issues/1687
+updato.com##script:inject(setTimeout-defuser.js, document.querySelector, 5000)
 
 ! https://github.com/easylist/easylist/commit/8b6e6544f04b3ded98fbd70bd832dfcc4e61db52#commitcomment-27222476
 damimage.com,dimtus.com,imagedecode.com,imageteam.org##script:inject(abort-current-inline-script.js, loadTool, popping)
@@ -5605,3 +5607,6 @@ minecraft-forum.net##script:inject(set-constant.js, ab, false)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/82y5kn/how_to_block_this_nagger/
 radioaficion.com##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40167
+waybig.com##script:inject(abort-on-property-read.js, BetterJsPop)
