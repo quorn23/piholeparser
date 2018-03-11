@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: JL9xSU+fxyLMP14AKjpZ1Q
-! Version: 201803100020
+! Checksum: /lc8csEnEe1mqVfDsxj8Hg
+! Version: 201803110020
 ! Title: RU AdList: BitBlock
-! Last modified: 10 Mar 2018 00:20 UTC
+! Last modified: 11 Mar 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -55,7 +55,7 @@
 /share32.
 /share42-
 /share42/*
-/social-likes.$domain=~animalreader.ru|~bigcinemahd.net|~bobfilm.tv|~catalog.onliner.by|~filmytut.online|~hdkinoclub.com|~ikinogo.net|~kino-1080.net|~kino24x7.com|kinoboss.me|~kinogo-2016-net.ru|~kinogo-2017-net.ru|~kinogo-net-2017.ru|~kinogo-net-co.ru|~kinogo-onlaine.net|~kinogo-online.online|~kinogoonline.club|~kinoklad.net|~kinokrik.net|~kinozubr.net|~m24.ru|~mobnovelty.ru|~postila.ru|~smotretfilm.online|~westernfilm.ru
+/social-likes.$domain=~animalreader.ru|~bigcinemahd.net|~bobfilm.tv|~catalog.onliner.by|~filmytut.online|~hdkinoclub.com|~ikinogo.net|~kino-1080.net|~kino24x7.com|kinoboss.me|~kinogo-2016-net.ru|~kinogo-2017-net.ru|~kinogo-net-2017.ru|~kinogo-net-co.ru|~kinogo-onlaine.net|~kinogo-online.online|~kinoklad.net|~kinokrik.net|~kinozubr.net|~m24.ru|~mobnovelty.ru|~postila.ru|~smotretfilm.online|~westernfilm.ru
 /social-likes/*
 /sprite4-a67f741843ffc4220554c34bd01bb0bb.png
 /vkontakte_icon_
@@ -874,6 +874,8 @@ _userbar_$image
 ||jumpoutpopup.ru^$third-party
 ||kriloff.ru^$third-party
 ||lakiff.ru^$third-party
+||likemore-fe.go.mail.ru^$third-party,domain=~life.ru|~lifehacker.ru
+||likemore-go.imgsmail.ru^$third-party,domain=~life.ru|~lifehacker.ru
 ||line.*.$third-party
 ||log2.ru^$third-party
 ||mytopf.com^$third-party
@@ -1143,8 +1145,6 @@ _userbar_$image
 ||kilat.ru^$third-party
 ||kinoafisha.ua/informer/$third-party
 ||kinoafisha.ua/widget/$third-party
-||likemore-fe.go.mail.ru^$third-party,domain=~life.ru
-||likemore-go.imgsmail.ru^$third-party,domain=~life.ru
 ||lilypie.com^$third-party
 ||line4auto.ru^$third-party
 ||lineek.net^$third-party
@@ -1334,7 +1334,6 @@ _userbar_$image
 ||kinobanda.net^*/images/heder.swf
 ||kinogo.*/kinogo.prm*.js
 ||kinogo.life/images/norek.$image
-||kinogoonline.club/uploads/smotret-onlayn-kinogo.jpg
 ||kinokrad.co/templates/ntpl/*/subscribe.
 ||kommersant.ru/contentflex/js/subscriptions.js
 ||kp.ru/html/push/
@@ -1810,6 +1809,7 @@ liveinternet.ru##.mediametrics
 kinosklad.net##.message-block-player
 coolhouses.ru##.mini_others_bar
 sport-express.ru##.ml_5.clearfix.f_left
+forum.ixbt.com##.mobb
 slavyanskaya-kultura.ru##.mod_inshop_front
 stranamam.ru##.n-main-menu-extra-down a[href*="/logo/"][target="_blank"] > img
 stranamam.ru##.n-main-menu-parent > .ptichka
@@ -2240,8 +2240,9 @@ drive.ru#@#.article-social-container
 lenta.ru#@#.b-socials
 lenta.ru#@#.b-topic__socials
 relax-fm.ru#@#.back-top
-change.org#@#.btn-fb
-app2top.ru#@#.btn-social
+change.org,fotostrana.ru#@#.btn-fb
+fotostrana.ru#@#.btn-gp
+app2top.ru,fotostrana.ru#@#.btn-social
 samsung.com#@#.cookie-notice
 likemetr.ru#@#.fa-share-alt
 animakura.ru,bt-test.ru,cherryplayer.com,ekabu.ru,legrand-shop.com.ua,loginza.ru,online-mult.net,soccer.ru,soccer0010.com,tvfru.net#@#.facebook
@@ -2357,6 +2358,7 @@ coub.com#@#.viewer__sharing__items
 @@||connect.mail.ru/proxy?resource=getLoginStatus&
 @@||connect.ok.ru^$third-party,domain=postila.ru
 @@||coop-land.ru/engine/modules/light_chat/$domain=coop-land.ru
+@@||crazypanda.ru^*/js/social-$domain=crazypanda.ru
 @@||ddestiny.ru/static/*/icon_social.png?$domain=ddestiny.ru
 @@||delfi.lv/news_export/widget_creator.php$domain=delfi.lv
 @@||delo.ua/skin/img/share/0.gif|
@@ -2368,6 +2370,7 @@ coub.com#@#.viewer__sharing__items
 @@||f1.mozillamessaging.com/share/panel/$document
 @@||facebook.com/plugins/like_box.php$subdocument,domain=overclockers.ru
 @@||feed.mikle.com/widget/?$subdocument,domain=inforesist.org
+@@||fotocdn.net^*/social-icons.png$domain=fotostrana.ru
 @@||gamak.tv/static/player5.5/$stylesheet,xmlhttprequest,domain=gamak.tv
 @@||gametech.ru/resources/img/partner_buttons/twitter.$domain=gametech.ru
 @@||ghame.ru/wp-content/plugins/social-icons/$domain=ghame.ru
@@ -3169,6 +3172,7 @@ prom.ua#@#img[alt="facebook"]
 /googlepin.
 /googleplus-
 /googleplus.png
+/googleplus.svg
 /googleplus40.png
 /googleplus45.
 /googleplus?
@@ -3570,6 +3574,7 @@ prom.ua#@#img[alt="facebook"]
 /img/fb_
 /img/gplus_
 /img/instagram-
+/img/instragram.
 /img/share-
 /img/share/*
 /img/share_
@@ -3999,6 +4004,7 @@ prom.ua#@#img[alt="facebook"]
 /sharefrom/*
 /ShareG+.
 /shareIcons.$~stylesheet
+/shareit.png
 /ShareOnMySpace/*
 /sharepage-
 /sharePost/*
@@ -4209,6 +4215,7 @@ prom.ua#@#img[alt="facebook"]
 /social_apple
 /social_badges/*
 /social_badges_
+/social_balloon-
 /social_black/*
 /social_bookmark_icons/*
 /social_bookmarking.
@@ -14504,6 +14511,7 @@ _youtube_social_
 ##[title="Become a Fan on Facebook"]
 ##[title="CONNECT WITH US ON FACEBOOK"]
 ##[title="Click to share this post on Twitter"]
+##[title="Digg This Post"]
 ##[title="Digg it!"]
 ##[title="FOLLOW US ON TWITTER"]
 ##[title="Facebook-like"]
@@ -14549,6 +14557,7 @@ _youtube_social_
 ##[title="Share with Fark"]
 ##[title="Share with Stumble Upon"]
 ##[title="Share with Twitter"]
+##[title="Stumble This Post"]
 ##[title="Submit this post on newsvine.com."]
 ##[title="Submit this post on reddit.com."]
 ##[title="Submit to Digg"]
@@ -14664,6 +14673,7 @@ _youtube_social_
 ##a[href^="https://www.xing.com/spi/shares/"]
 ##a[href^="whatsapp://send?text="]
 ##a[name="sharethis"]
+##a[onclick^="doSocialShare"]
 ##a[onclick^="window.open('http://www.blogger.com/blog-this.g?"]
 ##a[rel="share-on-facebook"]
 ##a[rel="share-on-twitter"]
@@ -14754,6 +14764,7 @@ _youtube_social_
 ##a[title="follow us on Pinterest"]
 ##a[title="follow us on Twitter"]
 ##a[title="follow us on facebook"]
+##a[title="linkedin"]
 ##a[title="qq"]
 ##a[title="share on Facebook"]
 ##a[title="share on Twitter"]
@@ -20611,6 +20622,7 @@ _site_cookie_
 ###euCookieWarning
 ###euCookieWrapper
 ###euCookies
+###euCookiesLawBar
 ###euCookiesQuestion
 ###euCookiesZone
 ###euLaw-alert
@@ -22890,6 +22902,7 @@ _site_cookie_
 ##.cookie-wrapper
 ##.cookie-wrn-wrapper
 ##.cookie.jb
+##.cookie.notification
 ##.cookie24_banner-wrapper
 ##.cookieAcc
 ##.cookieAccept
@@ -25533,6 +25546,7 @@ getuikit.com#@#.uk-alert
 twellow.com#@#a[href="http://www.twellow.com/"]
 reddit.com#@#img[alt="submit to reddit"]
 ! *** Fetched from: https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_whitelist.txt ***
+@@/cookie*/jquery.cookie.js$script,~third-party
 @@/cookie_law/plugin.js$script,~third-party
 @@/rutorrent/plugins/rss/*$image,~third-party
 @@/zig_cookiepolicybar/*/CookieBar.js$script,~third-party
@@ -25764,7 +25778,7 @@ twitter.com#@#.follow-bar
 twitter.com#@#.follow-btn
 500px.com,academia.edu,peerlyst.com,stream.me,tumblr.com,twitch.tv,twitter.com,xing.com,zhihu.com#@#.follow-button
 medium.com#@#.follow-label
-twitter.com#@#.follow-text
+mixcloud.com,twitter.com#@#.follow-text
 linkedin.com#@#.follow-widget
 norisbank.de#@#.followBox
 weibo.com#@#.follow_box
@@ -25862,7 +25876,7 @@ tumblr.com#@#.share-item
 recite.com#@#.share-left
 askubuntu.com,baidu.com,broadcast.app.net,imgur.com,mammothhq.com,mathoverflow.net,openstreetmap.org,serverfault.com,stackapps.com,stackexchange.com,stackoverflow.com,superuser.com,yandex.com,yandex.com.tr,yandex.ru,yandex.ua#@#.share-link
 pornhub.com#@#.share-link-container
-channelnewsasia.com,imgur.com,komorkomania.pl#@#.share-links
+autokult.pl,channelnewsasia.com,fotoblogia.pl,imgur.com,komorkomania.pl#@#.share-links
 channelnewsasia.com,recite.com#@#.share-list
 disqus.com,google.com,tumblr.com#@#.share-menu
 flickr.com#@#.share-options
@@ -25933,7 +25947,7 @@ speedtest.net,udemy.com,washingtonexaminer.com#@#.social-icon
 deathandtaxesmag.com,spin.com,stereogum.com,vibe.com,viewbug.com#@#.social-icons
 accountkiller.com#@#.social-image
 asos.com,metservice.com#@#.social-link
-airbnb.cat,airbnb.com,airbnb.de,deathfromabove1979.com,komorkomania.pl,squarespace.com,time.com#@#.social-links
+airbnb.cat,airbnb.com,airbnb.de,autokult.pl,deathfromabove1979.com,fotoblogia.pl,komorkomania.pl,squarespace.com,time.com#@#.social-links
 wykop.pl#@#.social-list
 getyounity.com,howdoyou.do#@#.social-login
 technorati.com#@#.social-media
@@ -26015,8 +26029,10 @@ youtube.com#@#.youtube_subscribe_module
 twitter.com#@#[alt="retweet"]
 addthis.com#@#[href="http://www.addthis.com/bookmark.php"]
 reddit.com#@#[href^="http://reddit.com/submit"]
+digg.com#@#[title="Digg This Post"]
 youtube.com#@#[title="Share to Facebook"]
 flickr.com#@#[title="Share via email"]
+stumbleupon.com#@#[title="Stumble This Post"]
 reddit.com#@#[title="submit to redit"]
 facebook.com#@#a[href*="facebook.com/sharer/sharer.php?"]
 delicious.com#@#a[href="http://delicious.com/save"]
@@ -26057,9 +26073,9 @@ encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.c
 allestörungen.de,encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,kingswiki.com,linkedin.com,wikipedia.org#@#a[title="LinkedIn"]
 pinterest.com,wikipedia.org#@#a[title="Pin it!"]
 encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,kingswiki.com,wikipedia.org#@#a[title="Pinterest"]
-wikipedia.org#@#a[title="Tumblr"]
-accounts.codemasters.com,allestörungen.de,encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,jetpack.wordpress.com,kingswiki.com,live.com,maxthon.com,megabus.com,opendatacity.de,outlook.com,twitter.com,wikipedia.org,youtube.com#@#a[title="Twitter"]
-allestörungen.de,encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,maxthon.com,opendatacity.de,pcgameshardware.de,wikipedia.org#@#a[title="Youtube"]
+flattr.com,wikipedia.org#@#a[title="Tumblr"]
+accounts.codemasters.com,allestörungen.de,encyclopediadramatica.se,flattr.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,jetpack.wordpress.com,kingswiki.com,live.com,maxthon.com,megabus.com,opendatacity.de,outlook.com,twitter.com,wikipedia.org,youtube.com#@#a[title="Twitter"]
+allestörungen.de,encyclopediadramatica.se,flattr.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,maxthon.com,opendatacity.de,pcgameshardware.de,wikipedia.org#@#a[title="Youtube"]
 aliexpress.com,github.com,github.io,wikipedia.org#@#a[title="facebook"]
 digg.com#@#div[id^="digg-widget-"]
 a2zapk.com,disqus.com,eff.org,facebook.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,hockeyapp.net,incgamers.com,last.fm,lastfm.com.br,lastfm.com.tr,lastfm.de,lastfm.es,lastfm.fr,lastfm.it,lastfm.jp,lastfm.pl,lastfm.ru,lastfm.se,ludins.fr,maxthon.com,microsoft.com,opendatacity.de,playboy.com,sky.com,t3n.de,thoughtcatalog.com,twitter.com,udacity.com,vvhp.net,whatthetech.com,wikipedia.org#@#img[alt="Facebook"]
