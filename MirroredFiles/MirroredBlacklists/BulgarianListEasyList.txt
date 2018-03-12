@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201803092341
+! Version: 201803112342
 ! Title: EasyPrivacy
-! Last modified: 09 Mar 2018 23:41 UTC
+! Last modified: 11 Mar 2018 23:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -1438,6 +1438,7 @@
 /geoipAPI.js?
 /geomap.js?
 /geov2.js
+/get-tracking-data
 /get?affid=$script
 /get_browser_info.
 /get_cdns?$third-party,xmlhttprequest
@@ -6175,6 +6176,8 @@ _mongo_stats/
 ||candid.zone^$third-party
 ||cdn-jquery.host^$third-party
 ||cdnfile.xyz^$third-party
+||cfcdist.loan^$third-party
+||cfcnet.top^$third-party
 ||chainblock.science^$third-party
 ||chmproxy.bid^$third-party
 ||clickwith.bid^$third-party
@@ -6212,6 +6215,7 @@ _mongo_stats/
 ||cryptomine.pro^$third-party
 ||cryptonoter.com^$third-party
 ||csgocpu.com^$third-party
+||datasecu.download^$third-party
 ||deepc.cc^$third-party
 ||depttake.ga^$third-party
 ||devphp.org.ua^$third-party
@@ -6235,6 +6239,7 @@ _mongo_stats/
 ||freecontent.loan^$third-party
 ||freecontent.racing^$third-party
 ||freecontent.win^$third-party
+||freshrefresher.com^$third-party
 ||g-content.bid^$third-party
 ||gasolina.ml^$third-party
 ||giml.ml^$third-party
@@ -6266,6 +6271,7 @@ _mongo_stats/
 ||insdrbot.com^$third-party
 ||interestingz.pw^$third-party
 ||investhash.com^$third-party
+||jquery-cdn.download^$third-party
 ||jquery-uim.download^$third-party
 ||jroqvbvw.info^$third-party
 ||jsccnn.com^$third-party
@@ -9172,6 +9178,7 @@ _mongo_stats/
 ||vk.com/rtrg?
 ||vk.com/videostats.php
 ||vmixcore.com/vmixcore/playlog?
+||vmweb.net/identity.min.js
 ||vooxe.com/analytics.js
 ||voss.collegehumor.com^
 ||voxmedia.com/beacon-min.js
@@ -11046,6 +11053,7 @@ _mongo_stats/
 ||log.thevideo.me^
 ||log.vdn.apps.cntv.cn^
 ||log.wat.tv^
+||log.webnovel.com^
 ||log1.24liveplus.com^
 ||logdev.openload.co^
 ||logger-*.dailymotion.com^
@@ -12265,8 +12273,12 @@ _mongo_stats/
 ||zylom.com^*/tracking_spotlight.js
 ||zytpirwai.net/track/
 ! Mining
-$websocket,domain=1q2w3.website|300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.tv|cloudtime.to|ddmix.net|dekoder.ws|djs.sk|drama-cool.me|estream.to|extratorrent.cd|fileone.tv|gofile.io|hdyayinmac1.com|hq-porns.com|intactoffers.club|jkanime.net|kickass.cd|kinohabr.net|kinokrad.co|kinoprofi.org|kinosha.cc|leitor.net|lewd.ninja|love-drama.pl|mladipodnikatelia.sk|movie4k.is|myfeed4u.net|nowvideo.sx|oload.info|oload.tv|onlinevideoconverter.com|powvideo.net|reservedoffers.club|sherlockonline.ru|shrink-service.it|skyback.ru|streamango.com|streamcherry.com|szukajka.tv|theappguruz.com|thepiratebay.cr|thevideo.cc|thevideo.ch|thevideo.io|thevideo.me|thevideo.us|tokyodrift.ga|tvad.me|vidfile.net|vidgg.to|vidto.me|vidtod.me|vidup.me|vidzi.si|vidzi.tv|wholecloud.net|zona.plus
-$xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|dekoder.ws|freecontent.stream|nowvideo.sx|onlinevideoconverter.com|powvideo.net|szukajka.tv|vidfile.net|vidgg.to|wholecloud.net
+$websocket,domain=1q2w3.website|300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.tv|cloudtime.to|ddmix.net|dekoder.ws|djs.sk|drama-cool.me|estream.to|extratorrent.cd|fileone.tv|gofile.io|hdyayinmac1.com|hq-porns.com|intactoffers.club|jkanime.net|kickass.cd|kinohabr.net|kinokrad.co|kinoprofi.org|kinosha.cc|leitor.net|lewd.ninja|love-drama.pl|mladipodnikatelia.sk|movie4k.is|myfeed4u.net|nowvideo.sx|oload.info|oload.tv|onlinevideoconverter.com|powvideo.net|reservedoffers.club|sherlockonline.ru|shrink-service.it|skyback.ru|streamango.com|streamcherry.com|streamplay.top|szukajka.tv|theappguruz.com|thepiratebay.cr|thevideo.cc|thevideo.ch|thevideo.io|thevideo.me|thevideo.us|tokyodrift.ga|tomtop.com|tvad.me|vidfile.net|vidgg.to|vidto.me|vidtod.me|vidup.me|vidzi.si|vidzi.tv|wholecloud.net|zona.plus
+$xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|dekoder.ws|freecontent.stream|nowvideo.sx|onlinevideoconverter.com|powvideo.net|streamplay.top|szukajka.tv|tainies.online|tomtop.com|vidfile.net|vidgg.to|wholecloud.net
+! Temp blocks (2 reports of github being used for miners)
+||github.io^$third-party,websocket,domain=~github.com
+||github.io^$third-party,xmlhttprequest,domain=~github.com
+! 
 ||2giga.link^*/hive.js
 ||browsealoud.com/plus/scripts/$script
 ||cryweb.github.io^
@@ -14051,6 +14063,9 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|d
 @@||zynga.com/current/iframe/track.php?$domain=apps.facebook.com
 ! Mining-related whitelists
 @@||alltube.tv/jsverify.php$~third-party,xmlhttprequest
+@@||onlinevideoconverter.com/webservice|$~third-party,xmlhttprequest
+@@||szukajka.tv/jsverify.php$~third-party,xmlhttprequest
+@@||szukajka.tv/szukaj|$~third-party,xmlhttprequest
 ! Chrome bug (Endless loading causing site to crash https://forums.lanik.us/viewtopic.php?f=64&t=25152)
 @@||aplus.com/p.gif?$~third-party
 ! Preliminarily whitelisting Omniture s_code tracking pixels (script versions H.25 - H.25.2) due to breakage (https://adblockplus.org/forum/viewtopic.php?f=10&t=11378) if blocking the script causes issues
@@ -14415,4 +14430,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.tv|auroravid.to|ddmix.net|d
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: YAe1KSU2UonN65hP2Znj5Q
+! Checksum: hLjWQrxgWh9CU/SUNlWIZg

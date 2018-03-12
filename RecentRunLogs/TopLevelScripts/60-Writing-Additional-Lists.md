@@ -2,15 +2,15 @@
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 ____________________________________
 # 
-## Compiling Combined List Sun Mar 11 00:35:01 UTC 2018
+## Compiling Combined List Mon Mar 12 00:35:45 UTC 2018
 Process Took 11 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists/60-Compiling-Combined-List.md)
 
-## Compiling Edited Combined List Sun Mar 11 00:35:12 UTC 2018
-Process Took 10 Seconds.
+## Compiling Edited Combined List Mon Mar 12 00:35:56 UTC 2018
+Process Took 11 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists/70-Compiling-Edited-Combined-List.md)
 
-## Compiling Country Code Lists Sun Mar 11 00:35:22 UTC 2018
+## Compiling Country Code Lists Mon Mar 12 00:36:07 UTC 2018
 Process Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists/75-Compiling-Country-Code-Lists.md)
 

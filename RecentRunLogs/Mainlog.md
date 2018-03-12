@@ -1,30 +1,30 @@
-## Creating Main Recent Run Log. Sun Mar 11 00:20:03 UTC 2018
+## Creating Main Recent Run Log. Mon Mar 12 00:20:04 UTC 2018
 * Recent Run Log Recreated.
-## Checking For Dependencies Sun Mar 11 00:20:13 UTC 2018
-Process Took 0 Seconds.
+## Checking For Dependencies Mon Mar 12 00:20:14 UTC 2018
+Process Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/05-Checking-For-Dependencies.md)
 
-## Running Initial Tasks Sun Mar 11 00:20:13 UTC 2018
+## Running Initial Tasks Mon Mar 12 00:20:15 UTC 2018
 Process Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks.md)
 
-## Processing Top Level Domains Sun Mar 11 00:20:16 UTC 2018
-Process Took 4 Seconds.
+## Processing Top Level Domains Mon Mar 12 00:20:18 UTC 2018
+Process Took 5 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains.md)
 
-## Processing Whitelists Sun Mar 11 00:20:20 UTC 2018
-Process Took 3 Seconds.
+## Processing Whitelists Mon Mar 12 00:20:23 UTC 2018
+Process Took 2 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/25-Processing-Whitelists.md)
 
-## Processing Blacklists Sun Mar 11 00:20:23 UTC 2018
-Process Took 14 Minutes.
+## Processing Blacklists Mon Mar 12 00:20:25 UTC 2018
+Process Took 15 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 
-## Writing Additional Lists Sun Mar 11 00:35:01 UTC 2018
+## Writing Additional Lists Mon Mar 12 00:35:45 UTC 2018
 Process Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists.md)
 
-## Completing End Tasks Sun Mar 11 00:36:30 UTC 2018
+## Completing End Tasks Mon Mar 12 00:37:18 UTC 2018
 Process Took 2 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/90-Completing-End-Tasks.md)
 
