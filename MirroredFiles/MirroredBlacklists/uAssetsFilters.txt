@@ -448,7 +448,6 @@ al.ly,ally.sh##[id^=aswift]
 @@||ops.prismamediadigital.com/js/advertisement.js$xmlhttprequest,domain=programme-tv.net
 
 ! https://www.reddit.com/r/dataisbeautiful/comments/4t4d16/chart_shows_why_pharma_companies_are_fighting/d5ejqc0
-washingtonpost.com###bottom-furniture
 washingtonpost.com##html:style(height: initial !important; overflow: auto !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/357
@@ -1312,7 +1311,9 @@ movie-blog.org##script:inject(abort-on-property-write.js, DCVU)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5ywxnd/anyone_know_how_to_block_this_ad/
 ! https://forums.lanik.us/viewtopic.php?p=124411#p124411
-watchcartoononline.io##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+watchcartoononline.io##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=watchcartoononline.io
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=watchcartoononline.io
 watchcartoononline.io##script:inject(fuckadblock.js-3.2.0)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/319
@@ -2308,7 +2309,7 @@ arenabg.ch,yifymovies.to##script:inject(addEventListener-defuser.js, /^(click|mo
 ! https://github.com/uBlockOrigin/uAssets/issues/703
 ! https://github.com/uBlockOrigin/uAssets/issues/795
 emty.space,livecamtv.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,realcam.me,realtimetv.me,seelive.me,strikeout.co##script:inject(bab-defuser.js)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(abort-on-property-read.js, L4UU.R3)
+fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(abort-on-property-write.js, adcashMacros)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,vipleague.*##script:inject(abort-on-property-write.js, Fingerprint2)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(nowebrtc.js)
@@ -3669,8 +3670,8 @@ bonertube.com##.overlay-ggf
 @@||futbolchile.net^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1102
-uplod.cc##script:inject(abort-current-inline-script.js, document.getElementById, adblockinfo)
-uplod.cc##.btn-dl-plus
+uplod.*##script:inject(abort-current-inline-script.js, document.getElementById, adblockinfo)
+uplod.*##.btn-dl-plus
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1098
 @@||lukkr.com^$generichide
@@ -5656,3 +5657,10 @@ pronpic.org##script:inject(abort-current-inline-script.js, $, AdBlock)
 pronpic.org##script:inject(abort-on-property-read.js, document.createEvent)
 pronpic.org##script:inject(abort-on-property-read.js, VisitWeb)
 pronpic.org##script:inject(abort-on-property-write.js, ShowAdbblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1700
+dl-android.com##script:inject(nowebrtc.js)
+dl-android.com##.btnDownload
+
+! https://github.com/uBlockOrigin/uAssets/issues/1702
+@@||proiezionidiborsa.it^$generichide
