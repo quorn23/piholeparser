@@ -1124,11 +1124,6 @@ wikia.com##script:inject(abort-on-property-write.js, _sp_)
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38315
 123movies.net,2ddl.*,arabseed.tv,buzzfil.net,clicknupload.org,convertinmp4.com,ddlvalley.me,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,letmewatchthis.ac,mac-torrents.com,mkvcage.com,openload.ch,pdf-giant.com,pelispedia.co,pelispedia.tv,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,streamfilmzzz.com,streamzzz.online,thevideobee.to,torrentz2.*,tny.ec,uploading.site,uptobox.com,watchers.to,watchonline.to,yts.ag,yts.gs,yts.am##script:inject(nowebrtc.js)
 
-! https://twitter.com/BabbyForDays/status/870399439365578752
-mobile.twitter.com##main section ._1_KafmK5--src-app-containers-RichTimeline-cell:has(:scope > div > div > div > div > .YunaQoc2--src-app-components-PromotedIndicator-icon)
-! https://twitter.com/BabbyForDays/status/870620336227733504
-mobile.twitter.com##._1_KafmK5:has(svg.YunaQoc2)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/243
 blastingnews.com###blasting-modal-login-ad-block
 blastingnews.com##.modal-backdrop-login-ad-block
@@ -4365,7 +4360,7 @@ shrtfly.*##script:inject(abort-on-property-read.js, open)
 oke.io##script:inject(abort-on-property-read.js, open)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7pyzt3/lots_of_ads_on_gogoanime/
-gogoanime.io##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+gogoanime.io,gogoanime.se##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1276
 ourl.io##script:inject(abort-on-property-write.js, _pop)
@@ -4840,6 +4835,9 @@ bro.adca.st##script:inject(abort-current-inline-script.js, runningPop, isInArray
 ||livesports.pw/*adblock.js$script,redirect=fuckadblock.js-3.2.0
 livesports.pw##script:inject(abort-on-property-write.js, Fingerprint2)
 ||test.verplusonline.com/$subdocument
+! https://github.com/uBlockOrigin/uAssets/issues/1425#issuecomment-373231208
+tvcanales.cf##script:inject(popads-dummy.js)
+||tvcanales.cf/player/adblocker.js$script,first-party,redirect=fuckadblock.js-3.2.0
 
 ! https://github.com/reek/anti-adblock-killer/issues/3882
 mangaindo.web.id##script:inject(abort-on-property-read.js, anOptions)
@@ -5241,8 +5239,14 @@ marvelousga.com##script:inject(abort-current-inline-script.js, $, openNewWindow)
 ! https://www.reddit.com/r/uBlockOrigin/comments/81am26/anyone_has_any_idea_on_how_to_block_1movie/
 1movies.to##script:inject(abort-current-inline-script.js, atob, encodeURIComponent)
 1movies.to##script:inject(window.open-defuser.js)
-||loadshare.org/custom/*/1m_video.mp4$media,domain=1movies.to
-1movies.to###no_po_share
+||loadshare.org/custom/*/1m_video.mp4$media,domain=1movies.se|1movies.to
+1movies.se,1movies.to###no_po_share
+! https://github.com/uBlockOrigin/uAssets/issues/1718
+1movies.se##script:inject(abort-on-property-write.js, Fingerprint2)
+1movies.se##^script:has-text(3f87b0eaddd)
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=1movies.se
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=1movies.se
+1movies.se###a_wrap
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1568
 tinypaste.cc##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
@@ -5699,3 +5703,23 @@ chyoa.com##.chyoa-adzone
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/46
 sourceforge.net##script:inject(nano-setTimeout-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1705
+@@||seekingalpha.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1714
+mobile.twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert/)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40228#p133884
+||popularmechanics.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.hearstapps.com *.hearst.io *.hdmtools.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/1717
+animezone.pl##script:inject(nowebrtc.js)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/84l63s/filter_to_block_popunders_on_cliupconvertercc/
+clipconverter.cc##script:inject(abort-current-inline-script.js, atob, tabunder)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/84oyc9/cant_block_admixernets_ads/
+112.ua##^script:has-text(3f87b0eaddd)
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=112.ua
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=112.ua
