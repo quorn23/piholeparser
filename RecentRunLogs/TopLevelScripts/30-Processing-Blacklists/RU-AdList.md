@@ -26,11 +26,11 @@ ____________________________________
 ### Trimming HOSTS Format IP Addresses
 18193 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-16467 Lines After Removing Empty Space
+16465 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
-2140 Lines After Removing Invalid FQDN Characters
+2139 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
-2140 Lines After Converting All Text To Lower Case
+2139 Lines After Converting All Text To Lower Case
 ### Checking For Fully Qualified Domain Name Requirements
 2132 Lines After Checking For Fully Qualified Domain Name Requirements
 ### Reverse Searching For Invalid Top Level Domains
