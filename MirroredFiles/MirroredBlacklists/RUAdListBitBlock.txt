@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: ahv/WhLpXIEsA+Tb6s/XdA
-! Version: 201803180020
+! Checksum: tKfdMKTQ2CBVb0RJA+NQDA
+! Version: 201803190020
 ! Title: RU AdList: BitBlock
-! Last modified: 18 Mar 2018 00:20 UTC
+! Last modified: 19 Mar 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -882,8 +882,8 @@ _userbar_$image
 ||jumpoutpopup.ru^$third-party
 ||kriloff.ru^$third-party
 ||lakiff.ru^$third-party
-||likemore-fe.go.mail.ru^$third-party,domain=~life.ru|~lifehacker.ru
-||likemore-go.imgsmail.ru^$third-party,domain=~life.ru|~lifehacker.ru
+||likemore-fe.go.mail.ru^$third-party,domain=~life.ru|~lifehacker.ru|~tut.by
+||likemore-go.imgsmail.ru^$third-party,domain=~life.ru|~lifehacker.ru|~tut.by
 ||line.*.$third-party
 ||log2.ru^$third-party
 ||mytopf.com^$third-party
@@ -1311,6 +1311,7 @@ _userbar_$image
 ||forum.adguard.com/styles/custom/adguard/logo.$image,domain=forum.adguard.com
 ||forum.ixbt.com/rc_data.js
 ||forumkiev.com/flesh/
+||forums.goha.ru/c02/*.js
 ||forums.overclockers.ru^*/logo_forum.gif
 ||fotki.yandex.ru/get/*/wind-hide.
 ||free-torrents.org/forum/radio/
@@ -1324,8 +1325,6 @@ _userbar_$image
 ||gidonline.club/im/bannertvk.jpg
 ||gidonline.in/wp-content/themes/gidonline/js/jsbox$script
 ||gismeteo.*/static/ny/
-||goha.ru/c60*.js
-||goha.ru/jsonp/block_post_banners/
 ||gorodche.ru/misc/popinfo/
 ||gramma.ru/include/dcpy.js
 ||habrahabr.ru/hauusbx/toplink/
@@ -1466,7 +1465,6 @@ iz.ru###block-ticker-page
 tvrain.ru###block_partner_material
 notfilm.ru###bot_panel
 cat-a-cat.net###cat
-boxrec.com###colSmall
 online-life.club###container > .pull-left
 thequestion.ru###content > .informer
 moya-planeta.ru###content > .white_header_text
@@ -1559,6 +1557,7 @@ club-nobles.ru###pleerr
 kp.ru###popapSubscribe
 anti-malware.ru###popup
 riafan.ru###popupNews
+fishki.net###post > .other-post-list
 rutube.ru###pre-header-pad
 mind.ua###progressBar
 nsportal.ru###promo--card
@@ -2053,7 +2052,6 @@ livejournal.com##div[lj-widget-promo]
 muz.ru##div[style*="400px;"][style$="240px;"]
 okna.ua##div[style*="height: 80px"],div[style*="height:80px"]
 psy-music.ru##div[style*="tranceshop.ru"]
-boxrec.com##div[style^="position:relative;top:-2px;color:#888"]
 drive2.com,drive2.ru#?#.c-block--content:-abp-has(.o-group--justify > .c-com-dv-label)
 azbooki.ru,engisys.ru,zip1000.ru##html > div[style^="color: rgb"]
 4pda.ru##html[xmlns] > body > div[id^="r"] > div[id^="r"][href]
@@ -6136,6 +6134,8 @@ _youtube_social_
 ###playerShare
 ###plug-facebook
 ###plug-twitter
+###pm-vc-share
+###pm-vc-share-content
 ###pmFacebook
 ###popShare1
 ###popShare2
@@ -9741,6 +9741,7 @@ _youtube_social_
 ##.header-right-social
 ##.header-section-social
 ##.header-share-facebook
+##.header-share-social
 ##.header-share-title
 ##.header-share-twitter
 ##.header-shares
@@ -14832,6 +14833,7 @@ _youtube_social_
 ##div[class^="SocialTool"]
 ##div[class^="follow-links-"]
 ##div[class^="j-share-"]
+##div[class^="social_box_post_"]
 ##div[class^="style__socialIcons"]
 ##div[data-jsonurl^="/nfl-assets/data/twitter/"]
 ##div[id^="digg-widget-"]
@@ -14947,6 +14949,7 @@ _youtube_social_
 ##img[alt="Zu Twitter senden"]
 ##img[alt="add to delicious"]
 ##img[alt="facebook"]
+##img[alt="facebook-box"]
 ##img[alt="follow on facebook"]
 ##img[alt="follow us in feedly"]
 ##img[alt="follow with twitter"]
@@ -15492,6 +15495,7 @@ _youtube_social_
 /rss.png
 /rss/atom_parser_
 /rss/feed_widget/*
+/rss/syndication2.
 /rss1.png
 /rss2.gif
 /rss2.png
