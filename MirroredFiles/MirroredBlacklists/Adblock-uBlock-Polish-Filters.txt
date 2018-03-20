@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 17 March 2018
+! Last modified: 19 March 2018
 ! Expires: 1 day
-! Version: 2018031704
+! Version: 2018031904
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018031704 aktualizacja: sob, 17 marca 2018, 17:35:00
+! v.2018031904 aktualizacja: pon, 19 marca 2018, 21:30:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -180,6 +180,7 @@ poczta.interia.pl#@#[href*=".hit.gemius.pl"]
 ##.zalando-ad
 ##.zalando-placeholder
 ##A[href*="/emisja.contentstream.pl/_/ctr/"]
+##a[href*="://tracking.linktogame.com/aff_c"]
 ##IMG[alt="Reklama"]
 ##IMG[src^="http://www.audiostereo.pl/banery/"]
 ##IMG[title^="Sponsorowan"]
@@ -257,16 +258,17 @@ pl###ads
 ~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,pl##.ppa-slot
 ~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,pl##.sliderads
 ~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,pl##.widget-ads-content
-!~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~brd24.pl,~grafmag.pl,~magdabek.pl,~superpharm.pl,~ceo.com.pl,~linuxiarze.pl,~wirtualny-wojownik.pl,~przerwanareklame.pl,~tvpolska.pl,~smiechawatv.pl,~break.pl,~radekcholewinski.pl,~prokonsumencki.pl,~sekurak.pl,~techmaniak.pl,~gsmmaniak.pl,~appmaniak.pl,~tabletmaniak.pl,~fotomaniak.pl,~mobimaniak.pl,~acermaniak.pl,~tvmaniak.pl,~3dmaniak.pl,~gizmaniak.pl,~luxmaniak.pl,~blogomaniak.pl,~activemaniak.pl,~agdmaniak.pl,~eskago.pl,~motogen.pl,~motomio.pl,~semilac.pl,~e-otoczenie.pl,~wyborcza.pl,~spidersweb.pl,~motormag.pl,pl,~subiektywnieofinansach.pl,~online-tv.pl,~ziemiadrawska.pl##[class*="reklama"]
+24tp.pl##[class*="reklama"]
 ~przegladsportowy.pl,~playpuls.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~gry-online.pl,~tv6.com.pl,~trojmiasto.pl,~otomoto.pl,pl##[class$="-ads"]
 ~przegladsportowy.pl,~playpuls.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~gry-online.pl,~tv6.com.pl,~trojmiasto.pl,~otomoto.pl,pl##[class*="cg-template"]
 ~timeanddate.com,~sanalmarket.com.tr###ad
 ~uk,~elton.com.ua,~alexbranding.com,~unitheme.net,~konsoleigry.pl,~megadyskont.pl##[class^="adv-"]
 ~wuxiaworld.com,~uzywane.com,~przegladsportowy.pl,~crunchyroll.com,~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,~filmweb.pl,pl##[class^="ad-"]
 ~wirtualnemedia.pl,~radekcholewinski.pl,~github.com##A[href$="/reklama"]
-!~wirtualnemedia.pl,~tczewska.pl,~procamp.agency,~rp.pl,~sportowememy.pl,~intercity.pl##[id*="reklama"]
 ~zso53.pl,~katywroclawskie.pl,~rozklad-pkp.pl,~gwarant.czest.pl,~sukniaonline.pl##[src*="/banners/banner"]
 ##[id^="ad_box"]
+popkiller.pl##[class*="reklamy"]
+mclista.pl##[id*="reklama"]
 !
 !9#------------------------Specific element hiding rules------------------------!
 24gliwice.pl#@##adsense
@@ -354,6 +356,7 @@ anyfiles.pl###SearchVideosLoadDiv > .media-list > .media > .thumbnail:not([title
 a-o.ninja##cite
 apynews.pl##.featured-advert
 astratex.pl##[class^="bFix"]
+astropolis.pl##.jesion_image_topic_top
 audiostereo.pl###container > .sidebar_ranking
 audiostereo.pl###index_stats
 audiostereo.pl###ips_Posts > .right
@@ -372,6 +375,7 @@ autodoradca.pl##.banner-top
 autofascynacje.pl##IMG.image-style-bdvert
 auto.pl###intertext1 > .text-center.col-all-max
 auto-swiat.pl,biala24.pl,trodatreleases.com##.banner
+autotrader.pl##.link-search
 atssi.pl###views_slideshow_cycle_teaser_section_baner_reklamowy-block
 bajkitv.pl###watch
 baltic.info.pl##IMG[style="display: block; margin-left: auto; margin-right: auto;"]
@@ -691,6 +695,7 @@ e-kg.pl##.bannergroup
 e-kg.pl##DIV[style="text-align: center;"]
 e-kg.pl###jm-banner
 e-kg.pl##.rstboxes
+e-hip.pl##[id^="mce-"]
 ekinomaniak.tv##IFRAME + A > IMG[src][alt]
 ekologia.pl###pasaz-wid
 eku24.net###gkBottom3
@@ -738,6 +743,7 @@ esanok.pl###sidebarl > div:nth-of-type(1)
 esanok.pl###content > div:nth-of-type(4)
 esanok.pl###content > div:nth-of-type(9)
 esanok.pl##.entry2 > div:nth-of-type(2)
+eslupsk.pl##.box_unison-slide
 eska.pl##A[style="display: block; height: 100%; width: 100%;"]
 eska.pl##.banner-750.fontregular
 eska.pl##.center.t2.color13
@@ -886,7 +892,8 @@ gazeta.pl##.mod_sponsoredArticle
 gazeta.pl##.opacity.page-sections > .photos_loaded.box_games.page-section.html > .slices-container.container-fluid
 gazeta.pl##.photos_loaded.box_bargains.page-section.html > .slices-container.container-fluid
 gazeta.pl##.type_default
-gazeta-mosina.pl##.mod-blank.module
+gazeta-mosina.pl##.mod-blank.modulegazeta-olawa.pl##.bf-advertisement-code
+gazeta-olawa.pl##.vc_col-sm-12.vc_column_container.wpb_column.olawa4 > .vc_column-inner > .wpb_wrapper > .vc_row-fluid.vc_inner.wpb_row.vc_row
 gazetapolska.pl##DIV[style="float: left;width:980px;"]
 gazetapolska.pl##DIV[style="float: left; padding-bottom: 10px; padding-top: 10px; width: 300px"]
 gazetapolska.pl###sg1
@@ -914,6 +921,7 @@ gieldaigospodarka.pl##.footer-widget-area > .col-md-4:nth-of-type(2)
 gizchina.com.pl##.vw-content-sidebar, .bannerfull
 glamrap.pl###footmod
 glamrap.pl##[onclick*="Reklama"][target="_blank"] > IMG
+glokalna.pl###wpbanner-14454
 globtroter.pl##a[href^="http://track.omgpl.com/"] > .img-responsive
 glogow-info.pl##TD[onclick^="window.location.href="]
 glogow-info.pl###maincol-broad-800 > center
@@ -1021,6 +1029,7 @@ icelandnews.is##.theiaStickySidebar
 ideagrafika.pl###adswidget7-quick-adsense
 ideas2action.pl##.o_inner
 iitvx.pl##._video-link
+igostyn.pl,ikalisz.pl,iostrowwlkp.pl,ijarocin.pl,ipleszew.pl##.partners2
 ikamien.pl###ads, .adsSpecial
 iknurow.pl##A[onclick*="_blank"] > IMG
 iknurow.pl###text-97 > .textwidget
@@ -1127,6 +1136,7 @@ jysk.promoceny.pl###mbImage
 jysk.promoceny.pl###mbOverlay
 kamienskie.info##.ads-subpage
 kantorbitcoin.pl##.mom-e3lan
+kawerna.pl###Mod138, #ja-header
 katalogi.pl###post_id_
 katalogsmakow.pl##.cOuterBlock-5
 katowicedzis.pl###g-sidebar > .g-grid
@@ -1228,8 +1238,12 @@ lfc.pl###center > .box:nth-of-type(1)
 ling.pl###arboBig
 linkpolonia.com##.credit-prize-box.credit-prize-box-small
 linktopoland.com##[id^="advertise-row"]
+lipno-cli.pl###__cmcmedia_upid_6, .fl.w250:nth-of-type(1), .fl.w250:nth-of-type(2), .fl.w250:nth-of-type(3), .fl.w250:nth-of-type(4)
 linuxhelp.in###fan-exit
 linuxiarze.pl##a[href="http://linuxiarze.pl/reklama/#baner"]
+listaserwerowmc.pl###header.page_middle > A
+listaserwerowmc.pl###page_aw
+listaserwerowmc.pl###promotion
 litosci.pl###video-ad-preroll
 live.com##.popupOuterCellLeft
 lm.pl##.belka_z_banerami
@@ -1273,7 +1287,7 @@ lublin112.pl###side_ad_widget-2
 lubsko.pl##.tp-banner-container
 lubsko.pl##.view-mode-bez_spo_eczn
 lukow24.pl###banerki
-lukow24.pl##.sponsor
+lukow24.pl,cybersport.pl##.sponsor
 lulek.tv##.x > div
 lwowecki.info##.banner_box_frame
 lwypolnocy.pl##.DnnModule-922.DnnModule-DNN_HTML.DnnModule
@@ -1330,6 +1344,7 @@ mgsm.pl##hr
 mgsm.pl##.hr
 mgsm.pl##[id^="AdArea"]
 mgsm.pl##.karta-widget-prices
+mgsm.pl##.is-at-top.is-anchored.sticky.text-center.show-for-large.columns.large-12
 mh24.pl###cboxOverlay
 mh24.pl###colorbox
 mh24.pl,jaw.pl##[id^="text-"]
@@ -1349,7 +1364,7 @@ mikrokontroler.pl##TD[style*="background-image: url(\"http://mikrokontroler.pl/"
 mikrokontroler.pl###text-3
 mikrokontroler.pl,24legnica.pl###text-5
 milanos.pl#?#.post:-abp-contains(reklama)
-minecraft-list.pl##.promocontainer
+minecraft-list.pl##.pleaserinonoblokerino_container
 mistrzowie.org##a[href^="http://pewex.pl/"]
 mistrzowie.org##[href*="utm_source=mistrzowie&utm_medium=banner&utm_campaign=pewexserwisy_mistrzowie"]
 mistrzowie.org###services_box
@@ -1447,7 +1462,6 @@ mysqlperformanceblog.com##.insightera-bar-widget.insightera-bar
 nacjonalista.pl##DIV[align="center"]
 nacjonalista.pl##.napis
 naekranie.pl##.adform
-!naekranie.pl###adocean-screening-layer > Div[class^="s"]
 naekranie.pl##DIV[class] > DIV[class][style*="overflow: hidden"]
 naekranie.pl##.belka-w-tekscie
 naekranie.pl##div[style="height: 5.3125rem !important;"]
@@ -1465,6 +1479,7 @@ naekranie.pl##DIV[class][style$=" margin: auto;"] > [class][style$="overflow: hi
 naekranie.pl##A[target="_blank"] DIV[style*="background: url"]
 naekranie.pl###welcome_screen-header
 naekranie.pl##A[class][href^="https://naekranie.pl/"][target="_blank"]
+naekranie.pl##.p7e0d9222
 naklo24.pl##.ban
 nakolei.pl##.textwidget > A[target="_blank"]
 na-luzie.net##a[href^="http://trafisz.com/"]
@@ -1739,7 +1754,7 @@ portalplock.pl###fixme
 portalsamorzadowy.pl##.box-1 > .left
 portalsremski.pl##div[class^="ban"]
 portaltatrzanski.com##.promo-baner
-postawnaswoim.pl,forum.tweaks.pl,androidhacksgames.com,mobilegameshack4u.com,zarabiam.com,solarkurier.pl,miniskrypt.hubaiitv.pl,swirtv.czo.pl,pewnapozyczka.pl,precyl.com,przeklej.org,club4you.pl,darmowetv.pl,forum.vwgolf.pl,szuman.eu,audiostereo.pl,ogloszenia.gazeta.ie,mods-kodi.pl,legio24.pl,sdcv.pl,jajamioasfalt.pl,dostawcy-internetu.pl,forum.bukmacherskie.com,nasze.fm,lovekrakow.pl,mh24.pl,faktykonopne.pl,lajfy.com,disco-polo.info,pokemon-go.pl,gazeta-wiesci.pl,polskaniepodlegla.pl,lpg-forum.pl,kuszotv.pl,meczelive.tv,tablety.pl,polskatimes.pl,gazetakrakowska.pl,nacjonalista.pl,ostrowiecnews.pl,medianarodowe.com,prawy.pl,hobby-elektronika.eu##center
+postawnaswoim.pl,forum.tweaks.pl,androidhacksgames.com,mobilegameshack4u.com,zarabiam.com,solarkurier.pl,miniskrypt.hubaiitv.pl,swirtv.czo.pl,pewnapozyczka.pl,precyl.com,przeklej.org,club4you.pl,darmowetv.pl,forum.vwgolf.pl,szuman.eu,audiostereo.pl,ogloszenia.gazeta.ie,mods-kodi.pl,legio24.pl,sdcv.pl,jajamioasfalt.pl,dostawcy-internetu.pl,forum.bukmacherskie.com,nasze.fm,lovekrakow.pl,mh24.pl,faktykonopne.pl,lajfy.com,disco-polo.info,pokemon-go.pl,gazeta-wiesci.pl,polskaniepodlegla.pl,lpg-forum.pl,kuszotv.pl,meczelive.tv,tablety.pl,polskatimes.pl,gazetakrakowska.pl,nacjonalista.pl,ostrowiecnews.pl,medianarodowe.com,prawy.pl,hobby-elektronika.eu,lowiczanin.info##center
 potplayerclub.pl##.potpl-adlabel
 powiatowa.info###jm-header-mod > .jm-module:nth-of-type(2) > .jm-module-in
 powiatowa.info###jm-left > div > .jm-module:nth-of-type(1)
@@ -1799,6 +1814,7 @@ przegladsportowy.pl##A > .lazy:last-child
 przegladsportowy.pl##[id$="_ARTICLE_TOP"]
 przegladsportowy.pl###region-item20927
 przegladsportowy.pl###region-item21626
+przekrojlokalny.pl##.banner_zone
 przepisy.pl##.promobanner-container
 przyslijprzepis.pl###tracdelight-slide-btn
 przewodnicywedkarscy.pl###sidebar > p
@@ -1817,7 +1833,7 @@ pzl24.pl,magazyngitarzysta.pl##.visible-md
 pzn.pl###EditoPopup\$Panel133
 pzpm.org.pl###powiadomiony
 q4.pl###\33 DIV
-q4.pl,chinytolubie.pl,filmyfantastyczne.pl,dts24.pl,mragowo24.info,przemysl.info.pl,eluban.pl,wien.info,tkn24.pl,resellernews.pl,independenttrader.pl,scie24.pl,ogrodinfo.pl,zakliczyninfo.pl,kk24.pl,gieldykryptowalut.pl,odkryjbitcoin.pl,stacja7.pl,kryptoholik.pl,cashowsky.pl,historyk.eu,marihuanamedyczna.com,pcworld.pl,esanok.pl,lovekrakow.pl,swiatdronow.pl,glosgminny.pl,damitv.pl,przyjaznawarszawa.pl,ecoportal.com.pl,zd24.pl,historiasportu.info,wszczecinie.pl,forum-bron.pl,zielonydziennik.pl,mieszkaniectargowka.pl,centrumdruku3d.pl,bielski24.pl,applemobile.pl,sprawnypo40.pl,forum.dopalamy.com,cyfrowypolsatnews.pl,olsztyn.com.pl,wpolityce.pl,nasztomaszow.pl,bielskiedrogi.pl,prokapitalizm.pl,agrokapital.pl,wieliczkacity.pl,fronda.pl,krytykapolityczna.pl,zycieczestochowy.pl,aferyprawa.eu,radomnews.pl,miasto.koszalin.pl,echopowiatu.pl,24jgora.pl,elka.pl,tv28.pl,chojna24.pl,nasz-glos.com,zyciepabianic.pl,zawiercianskie.pl,wsus.pl,wronieckibazar.pl,vetopedia.pl,tustolica.pl,trawka.org,tarnobrzeskie.eu,targeo.pl,stressfree.pl,sportslaski.pl,roztocze.net,powiatowa.info,portalhodowcy.pl,podkarpackahistoria.pl,ostrowiecnews.pl,odkryjpomorze.pl,obcasypodlasia.pl,naszwodzislaw.com,naszraciborz.pl,modelwork.pl,legalnybukmacher.com,korso.pl,jaw.pl,goralpoleca.pl,gieldaklasykow.pl,fresh-market.pl,elubaczow.com,dziennikzwiazkowy.com,cire.pl,cgm.pl,barlinek24.pl,anywhere.pl,angolia.co.uk,cksport.pl,kociesprawy.pl,iknurow.pl,victoriapila.com,wcipy.pl,tarnowiak.pl,polacywewloszech.com,aktyw14.net,legionisci.com,opinieouczelniach.pl,tygodnikzamojski.pl,czasnadmorze.pl,goryonline.com,kibice.net,swiatogloszen.net.pl,wloclawek.info.pl,futbolfejs.pl,rdn.pl,gloskoninski.pl,strzelecopolski.pl,polskieradio.com,podajdalej.info.pl,belchatow.bai.pl,miastokolobrzeg.pl,stomil.olsztyn.pl,polskaniepodlegla.pl,tsk24.pl,wschodnik.pl,tvnfakty.pl,kronikatygodnia.pl,szkolasen.com,lowiczanin.info,exspace.pl,urodaizdrowie.pl,forum-norwegia.pl,chillitorun.pl,kuriergarwolinski.pl,weseleforum.pl,inwestycje-rzeszow.pl,wirtualnygarwolin.pl,nowemiasto.com.pl,motofaktor.pl,strazacki.pl,bezdroza.pl,twojeradio.fm,wpr24.pl,sanatoria.com.pl,sadownictwo.com.pl,lubliniec.info,gwarek.com.pl,calisia.pl,dsw.doba.pl,laczynaspasja.pl,klubowa.pl,businesswomanlife.pl,krasnik24.pl,lubelska.tv,forum.haszysz.com,ipragapoludnie.pl,itvm.pl,comperia.pl,kawiarniany.pl,plportal.pl,kurierzamojski.pl,roosevelta81.pl,bham.pl,pasja-informatyki.pl,tabletowo.pl,szczecinek.com,40ton.net,komputery-kalwaria.pl,mediasystem-tdi.pl,codziennikmlawski.pl,portalpszczelarski.pl,rzesport.pl,rutatour.pl,supernowosci24.pl,cyfrowaekonomia.pl,jazzarium.pl,czecho.pl,magazynvip.pl,wht.pl,gtasite.net,ciechanowinaczej.pl,wrzesnia.info.pl,zw.pl,homemag.pl,reporterzy.info,lubiehrubie.pl,salaterka.pl,extraswiecie.pl,mojejaworzno.pl,pozytywniej.pl,open.fm,animeholik.pl,inthecage.pl,pfm.pl,kuchenny.com.pl,e-kolo.pl,lowcaburzwielun.pl.tl##A[target="_blank"] > IMG
+q4.pl,chinytolubie.pl,filmyfantastyczne.pl,dts24.pl,mragowo24.info,przemysl.info.pl,eluban.pl,wien.info,tkn24.pl,resellernews.pl,independenttrader.pl,scie24.pl,ogrodinfo.pl,zakliczyninfo.pl,kk24.pl,gieldykryptowalut.pl,odkryjbitcoin.pl,stacja7.pl,kryptoholik.pl,cashowsky.pl,historyk.eu,marihuanamedyczna.com,pcworld.pl,esanok.pl,lovekrakow.pl,swiatdronow.pl,glosgminny.pl,damitv.pl,przyjaznawarszawa.pl,ecoportal.com.pl,zd24.pl,historiasportu.info,wszczecinie.pl,forum-bron.pl,zielonydziennik.pl,mieszkaniectargowka.pl,centrumdruku3d.pl,bielski24.pl,applemobile.pl,sprawnypo40.pl,forum.dopalamy.com,cyfrowypolsatnews.pl,olsztyn.com.pl,wpolityce.pl,nasztomaszow.pl,bielskiedrogi.pl,prokapitalizm.pl,agrokapital.pl,wieliczkacity.pl,fronda.pl,krytykapolityczna.pl,zycieczestochowy.pl,aferyprawa.eu,radomnews.pl,miasto.koszalin.pl,echopowiatu.pl,24jgora.pl,elka.pl,tv28.pl,chojna24.pl,nasz-glos.com,zyciepabianic.pl,zawiercianskie.pl,wsus.pl,wronieckibazar.pl,vetopedia.pl,tustolica.pl,trawka.org,tarnobrzeskie.eu,targeo.pl,stressfree.pl,sportslaski.pl,roztocze.net,powiatowa.info,portalhodowcy.pl,podkarpackahistoria.pl,ostrowiecnews.pl,odkryjpomorze.pl,obcasypodlasia.pl,naszwodzislaw.com,naszraciborz.pl,modelwork.pl,legalnybukmacher.com,korso.pl,jaw.pl,goralpoleca.pl,gieldaklasykow.pl,fresh-market.pl,elubaczow.com,dziennikzwiazkowy.com,cire.pl,cgm.pl,barlinek24.pl,anywhere.pl,angolia.co.uk,cksport.pl,kociesprawy.pl,iknurow.pl,victoriapila.com,wcipy.pl,tarnowiak.pl,polacywewloszech.com,aktyw14.net,legionisci.com,opinieouczelniach.pl,tygodnikzamojski.pl,czasnadmorze.pl,goryonline.com,kibice.net,swiatogloszen.net.pl,wloclawek.info.pl,futbolfejs.pl,rdn.pl,gloskoninski.pl,strzelecopolski.pl,polskieradio.com,podajdalej.info.pl,belchatow.bai.pl,miastokolobrzeg.pl,stomil.olsztyn.pl,polskaniepodlegla.pl,tsk24.pl,wschodnik.pl,tvnfakty.pl,kronikatygodnia.pl,szkolasen.com,lowiczanin.info,exspace.pl,urodaizdrowie.pl,forum-norwegia.pl,chillitorun.pl,kuriergarwolinski.pl,weseleforum.pl,inwestycje-rzeszow.pl,wirtualnygarwolin.pl,nowemiasto.com.pl,motofaktor.pl,strazacki.pl,bezdroza.pl,twojeradio.fm,wpr24.pl,sanatoria.com.pl,sadownictwo.com.pl,lubliniec.info,gwarek.com.pl,calisia.pl,dsw.doba.pl,laczynaspasja.pl,klubowa.pl,businesswomanlife.pl,krasnik24.pl,lubelska.tv,forum.haszysz.com,ipragapoludnie.pl,itvm.pl,comperia.pl,kawiarniany.pl,plportal.pl,kurierzamojski.pl,roosevelta81.pl,bham.pl,pasja-informatyki.pl,tabletowo.pl,szczecinek.com,40ton.net,komputery-kalwaria.pl,mediasystem-tdi.pl,codziennikmlawski.pl,portalpszczelarski.pl,rzesport.pl,rutatour.pl,supernowosci24.pl,cyfrowaekonomia.pl,jazzarium.pl,czecho.pl,magazynvip.pl,wht.pl,gtasite.net,ciechanowinaczej.pl,wrzesnia.info.pl,zw.pl,homemag.pl,reporterzy.info,lubiehrubie.pl,salaterka.pl,extraswiecie.pl,mojejaworzno.pl,pozytywniej.pl,open.fm,animeholik.pl,inthecage.pl,pfm.pl,kuchenny.com.pl,e-kolo.pl,lowcaburzwielun.pl.tl,glokalna.pl,igostyn.pl,ikalisz.pl,iostrowwlkp.pl,ijarocin.pl,ipleszew.pl##A[target="_blank"] > IMG
 q4.pl##TD[bgcolor="#f0f0f0"]
 q4.pl##TD[valign="middle"]
 racjonalista.tv###execphp-2
@@ -1948,7 +1964,6 @@ silesia.fm##.e3lan-top
 silesia.fm##.sidebar
 sitemag.pl##.td-all-devices
 sitemag.pl##.td-header-sp-recs
-skijumping.pl##.news > center:nth-of-type(1)
 skijumping.pl##P + DIV[style="text-align:center;"]
 skiny.pl##A[href="http://www.radioparty.pl"]
 sklep.fipro.pl###tooltipmessage
@@ -1964,6 +1979,7 @@ skok-rafineria.pl##[id^="fancybox-"]
 skomp.pl###imCel7_02
 skript.pl##.skAds
 skript.pl###ipsLayout_contentWrapper > .adsbygoogle
+skript.pl##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(1)
 skrstrzelce.pl##.center_bottom
 sky-land.pl###left2
 slodkipomysl.pl##a[href="http://www.bestdumpsterdeals.com/"]
@@ -2238,6 +2254,7 @@ uploaduj.com##.guestMessage
 uploaduj.com##.UwOWM2OT
 uploaduj.net##.center-block
 uptimemadeeasy.com##.subscribep
+urbnews.pl##.sb-widget:nth-of-type(5), .sb-widget:nth-of-type(6)
 v10.pl##DIV[style="width: 100%; background-color: rgb(0, 0, 0); margin: 0px; position: fixed; bottom: 0px; left: 0px; padding: 0px; height: 15px; line-height: 15px; text-align: center; color: rgb(255, 255, 255); z-index: 1000; font-family: Arial,Helvetica,sans-serif; font-size: 10px;"]
 v10.pl##[id^="newsltr1_"]
 valetudo.bialystok.pl##.darkness-popup
@@ -2268,6 +2285,7 @@ walbrzych24.com##[id^="promo"]
 warszawawpigulce.pl##.code-block-5
 warszawskagazeta.pl###section-id-1504866636717
 warszawskagazeta.pl###sppb-addon-1511188176589
+waszdzienpodniu.pl##iframe[src^="slider"]
 waszwilanow.pl,itvm.pl##.td-banner-wrap-full
 waszwilanow.pl##[style="text-align: center;"]
 wavepc.pl##.wavep-widget
@@ -2344,6 +2362,7 @@ wspomnijbliskich.pl###sponsor_title
 wterenie.pl,szczecinek.com##.fl.w1000
 wterenie.pl##.row:nth-of-type(9) > .fl.w500
 wtkplay.pl##[id^="adsys_"]
+wyspiarzniebieski.pl##[class^="Comm336"]
 www2.payback.pl##class[id^="all-app-"]
 www2.payback.pl##class[id^="werewolf-"]
 www2.payback.pl###header-spacer
@@ -2446,6 +2465,10 @@ www.theillest.pl,estillmag.com##a[href^="http://bit.ly/"]
 www.turek.net.pl##[class*="banner"]
 www.turek.net.pl##.l-head-advertisement.row
 www.turek.net.pl##span.color-grey.font-size-10
+www.tygodnikkepinski.pl##.trigo-position-homepage.trigo-module:nth-of-type(2)
+www.tygodnikkepinski.pl##.trigo-position-rightSide.trigo-module:nth-of-type(3)
+www.tygodnikkepinski.pl##.trigo-position-homepage.trigo-module:nth-of-type(4)
+www.tygodnikkepinski.pl##.trigo-position-homepage.trigo-module:nth-of-type(6)
 www.uniejow.net.pl###baner
 www.wakacje.pl##.adZoneCont
 www.wiocha.pl###rectcont
@@ -2571,6 +2594,7 @@ zywiecinfo.pl##.promoted
 ||api-content-generator.gazeta.pl/content-generator/published/frame/generate?frameId=
 ||apps5.space/$script
 ||aptekacentrum.lublin.pl/images/*1920x1080.jpg$image
+||autotrader.pl/Resources/Images/credit-agricole/$image
 ||avanti24.pl/pub/ips/$subdocument
 ||avanti.fashion/pub/ips/$subdocument
 ||baje.pl/rotator/show.php
@@ -2586,7 +2610,6 @@ zywiecinfo.pl##.promoted
 ||brand.ad/^
 ||businessclick.*/$script
 ||gwiazdybasketu.pl/iframe/$subdocument
-||cda.pl/CDA/01_cda_bananki_$image
 ||cda.pl/player.php
 ||cda.pl/*.php*?*ab
 ||cdn.dtxngr.com/$script
@@ -3663,14 +3686,14 @@ www.money.pl###ADrail > DIV > DIV[class]
 www.money.pl##.article-set + DIV[style^="background"]
 www.money.pl##.box:first-child + DIV[class]
 www.money.pl##[class^=" _bc_paragraph_"] + DIV[class]
-www.money.pl##DIV[class] > SPAN[class] + DIV[class]:last-child
 www.money.pl##DIV[style*=" overflow: hidden; "]
 www.money.pl##DIV[style$=" z-index: auto;"] > DIV[class]
 ~www.money.pl,~praca.money.pl,money.pl##DIV[class] + DIV[id] > DIV[class]:first-child
 www.money.pl##P + DIV[style$="padding:10px 0"]
 www.money.pl##SCRIPT[src^="//money"] + DIV[class][style="text-align:center;"]
 www.money.pl##div:nth-of-type(1) > .news > .news__items > .item:nth-of-type(1)
-www.money.pl##DIV[class][style="display: block;"]
+!www.money.pl##DIV[class][style="display: block;"]
+money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
 !
 !36#--------------------------Easylist Bugs -----------!
 @@/index.php?url=$xmlhttprequest,domain=alltube.pl|alltube.tv
@@ -3735,11 +3758,12 @@ rytmklawiatury.pl,chelmno.com.pl###text-19
 slupca.pl##.a-76.g-single > div
 smartage.pl###media_image-3
 smartage.pl,wronieckibazar.pl,mobirank.pl,historykon.pl###custom_html-2
+stacja-tluszcz.pl###text-35
 strefakodera.pl##.col.widget:nth-of-type(2) > .widgetHeader
 technologiczna.pl##.alignnone
 technowinki24.pl###black-studio-tinymce-2
 tomaszowski.com.pl###text-15
-toyotaklub.org.pl###text-6
+toyotaklub.org.pl,wiadomoscipodgorze.pl###text-6
 trybunaczestochowska.pl###text-4, #text-6, #text-9, #text-11
 trybunaczestochowska.pl##body > div:nth-of-type(1) > center
 trybunaczestochowska.pl###foot-leader
@@ -3750,6 +3774,7 @@ tygodnikprzeglad.pl##.widget-9.last.widget
 witanet.net##.top-footer-wrap.clearfix
 wolna-polska.pl###text-39
 wszystkookotach.pl##.simple-image
+www.ziemiakepinska.pl###text-19, #text-18
 zarabiajprzez24.pl###media_image-3
 zawiercianskie.pl###rommeled_image-19
 zdrowyportal.org,swiatoze.pl###text-10

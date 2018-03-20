@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: tKfdMKTQ2CBVb0RJA+NQDA
-! Version: 201803190020
+! Checksum: I5SwKhZZXqXnqFKixhj7BQ
+! Version: 201803200020
 ! Title: RU AdList: BitBlock
-! Last modified: 19 Mar 2018 00:20 UTC
+! Last modified: 20 Mar 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -448,7 +448,6 @@ subscribe.ru##.footer_socs
 hdmulti.net##.footersoc
 freerutor.me##.fr_leftpanel > .fr_fulldkom
 kinopoisk.ru##.friends_search_right
-fb.ru##.fsb
 hd720.biz##.fstory-share-video
 hi-tech.ua,koolinar.ru##.goodshare
 livemaster.ru##.grid-210
@@ -1466,6 +1465,7 @@ tvrain.ru###block_partner_material
 notfilm.ru###bot_panel
 cat-a-cat.net###cat
 online-life.club###container > .pull-left
+fb.ru###content .js-tracker
 thequestion.ru###content > .informer
 moya-planeta.ru###content > .white_header_text
 3dnews.ru###content-column > .white.margin-bottom.margin-top
@@ -1782,6 +1782,8 @@ qiwi.com##.infoblock > [data-helper-banner]
 kinoprofi.su##.infoblock-bottom
 kanobu.ru##.informer-container
 job.ru##.insider-opt-in-notification
+syl.ru##.intext
+fb.ru##.is-fixed.deed
 vc.ru##.island--vacancies_entry
 myzuka.fm##.isloading-overlay
 3dnews.ru##.isspecial.sidebar-chunk
@@ -1863,6 +1865,7 @@ lifehacker.ru##.pre-logo > a[href][target="_blank"]
 2ip.ru##.pre-wrapper-ad
 obozrevatel.com##.privasypolicy-info
 moya-planeta.ru##.products_list_full
+geektimes.ru,habrahabr.ru##.promo-block
 auto.ru##.promo-max
 auto.ru##.promo-vin-modal_js_inited
 ntv.ru##.promoblock
@@ -2107,6 +2110,7 @@ e.mail.ru##.b-announcement_promo
 my.mail.ru##.b-column-right__block-apps
 games.mail.ru##.b-header__stripe
 games.mail.ru##.b-poster_aab
+otvet.mail.ru##.block-portal-footer > div[id^="mailru"]
 torg.mail.ru##.block-target_horizontal
 sport.mail.ru##.block_sect.shadow
 hi-tech.mail.ru##.cols__column_sidebar .rb
@@ -2381,6 +2385,7 @@ coub.com#@#.viewer__sharing__items
 @@||doranime.net/templates/doranime*/loginme/img/$image,domain=doranime.net
 @@||drweb.com^*/bg_btn_google.png|
 @@||eg.ru/public/images/fb-close-btn.png$image,domain=eg.ru
+@@||embed.playbuzz.com^$domain=overclockers.ru
 @@||eway.in.ua/images/google-$domain=eway.in.ua
 @@||ewix.ru/mchat/$domain=ewix.ru
 @@||f1.mozillamessaging.com/share/panel/$document
@@ -2397,6 +2402,7 @@ coub.com#@#.viewer__sharing__items
 @@||hentai.anime-share.ru/engine/classes/min$domain=hentai.anime-share.ru
 @@||id.rambler.ru/public-icons/*.svg$image,domain=comments.rambler.ru
 @@||imasdk.googleapis.com/js/sdkloader$script,domain=gamak.tv
+@@||img.playbuzz.com/$image,domain=overclockers.ru
 @@||imgsmail.ru/p/js/s_cookie.js
 @@||informers.orakul.ua^$image,domain=aspekty.net
 @@||informers.sinoptik.ua^$third-party
@@ -2419,7 +2425,9 @@ coub.com#@#.viewer__sharing__items
 @@||odnoklassniki.ru/share/odkl_share.js$domain=altapress.ru|mreporter.ru
 @@||odnoklassniki.ru^$domain=nevosoft.ru
 @@||platform.twitter.com^$image,script,stylesheet,subdocument,domain=mail.ru
+@@||playbuzz.com/GameReport/$xmlhttprequest,domain=overclockers.ru
 @@||postila.ru/themes/classic/images/buttons/$domain=postila.ru
+@@||res-format-story.playbuzz.com/$domain=overclockers.ru
 @@||rublacklist.net/wp-content/themes/rublacklist/images/$domain=rublacklist.net
 @@||savevideo.me/images/services/$image,domain=savevideo.me
 @@||sberometer.ru/images/google-play.$image,domain=sberometer.ru
@@ -3982,6 +3990,7 @@ prom.ua#@#img[alt="facebook"]
 /share_linkedin_
 /share_myspace.
 /share_pinterest-
+/share_popup.
 /share_reddit-
 /share_rss.
 /share_save_
@@ -5149,6 +5158,7 @@ _youtube_social_
 ###badges-share-block
 ###band_social
 ###banner-social
+###bar-social
 ###base64-share-facebook
 ###base64-share-google
 ###base64-share-twitter
@@ -7793,6 +7803,7 @@ _youtube_social_
 ##.article-shares-stub
 ##.article-sharing
 ##.article-sharing-actions
+##.article-sharing-nav
 ##.article-sharing-top
 ##.article-side-share
 ##.article-sidebar-action-facebook
@@ -10049,6 +10060,7 @@ _youtube_social_
 ##.icon-linkedin-sign
 ##.icon-linkedin-square
 ##.icon-linkedin-squared
+##.icon-linkedin2
 ##.icon-linkedin_box
 ##.icon-list--social
 ##.icon-logo-facebook
@@ -12294,6 +12306,7 @@ _youtube_social_
 ##.sidebarsharer
 ##.sidebarsocial
 ##.sidebartwitter
+##.sidefacebook
 ##.sideshares-slidein
 ##.sidesocial
 ##.sign-up-follow
@@ -14685,6 +14698,7 @@ _youtube_social_
 ##a[href^="http://www.twitter.com/share?"]
 ##a[href^="http://www.wykop.pl/dodaj?url="]
 ##a[href^="http://yozm.daum.net/api/popup/prePost?sourceid="]
+##a[href^="https://bufferapp.com/add?url="]
 ##a[href^="https://facebook.com/share.php?u="]
 ##a[href^="https://facebook.com/sharer.php?"]
 ##a[href^="https://pinterest.com/pin/create/"]
@@ -15996,7 +16010,7 @@ _site_cookie_
 ###ctl00_mainContent_lblSharingLink
 ###dd_ajax_float
 ###dealSaverWidget
-###dennis-newsletter-newsletter-form
+###dennis-\er-newsletter-form
 ###dice_jobs
 ###dsq-reactions
 ###ec-popup-modal[style="display:block"]
@@ -16383,9 +16397,12 @@ _site_cookie_
 ##.module--next-story-slideout
 ##.module-gallery-zergnet
 ##.moduletable_icons
+##.mom-newsletter
+##.momizat-news_letter
 ##.moreCouponsSocial
 ##.msc-rss
 ##.navigation_social
+##.newsletter-inner
 ##.newsletter-popup-wrapper
 ##.newsletter-right-col
 ##.newsletter-sticky
@@ -16474,6 +16491,7 @@ _site_cookie_
 ##.s_rss
 ##.sailthruRecommendation
 ##.scribol
+##.section-newsletters
 ##.section_taboola_alireaussi
 ##.share-after-content-email
 ##.share-button-email
@@ -25367,6 +25385,7 @@ _site_cookie_
 ||optnmstr.com^$third-party
 ||page2rss.com^$third-party
 ||parse.ly^$third-party
+||partner.dw.com^$third-party
 ||pinddeals.com^$third-party
 ||pippity.com^$third-party
 ||plaxo.com^$third-party
