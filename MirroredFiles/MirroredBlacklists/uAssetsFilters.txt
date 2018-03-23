@@ -1240,6 +1240,7 @@ quora.com##.upper_content:has(.promoted_hlink)
 quora.com##.upper_content:has(.promoted_hyperlink)
 quora.com##.upper_content:has-text(Promoted)
 quora.com##.upper_content:has(.advertiser_url)
+quora.com##.content_container:has(.featured_text_wrapper)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -5848,3 +5849,14 @@ ad5.pw##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40283
 ||damoh.tv2.no^$media,redirect=noopmp3-0.1s,domain=tv2.no
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/888
+@@||coinad.com/ads/show/show.php$subdocument,domain=moonbit.co.in|moondoge.co.in|moonliteco.in
+moonbit.co.in##.hide-xs:style(visibility: collapse !important)
+moonbit.co.in,moondoge.co.in,moonliteco.in###advert-space > iframe:style(visibility: collapse !important)
+moondoge.co.in,moonliteco.in##.captchaAd:style(visibility: collapse !important)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40286
+@@||bestarticles.me^$generichide
+@@||tellycolors.me^$generichide
+bestarticles.me,tellycolors.me##.adsbygoogle
