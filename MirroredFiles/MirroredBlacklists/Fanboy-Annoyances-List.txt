@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: LAt830F2pqgJTsK2zzD4aA
-! Version: 201803230021
+! Checksum: 6aIHrsTFG2H1hjBnllAU9g
+! Version: 201803240021
 ! Title: Fanboy's Annoyance List
-! Last modified: 23 Mar 2018 00:21 UTC
+! Last modified: 24 Mar 2018 00:21 UTC
 ! Expires: 4 days (update frequency)
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -33,6 +33,7 @@
 /addthis_subscribe.
 /addtogoogle.
 /addtomyyahoo4.
+/alerte_tracking.
 /altClickToSearch.
 /app-banner/*$xmlhttprequest
 /arscode-ninja-popups/*$~stylesheet
@@ -390,6 +391,7 @@ _subscribe_button
 /cipr-cookie-opt-out/*
 /cnil-cookies_
 /cnil.js
+/cnil_banner.
 /coCookiesDisclaimer.
 /cookie-accept.js
 /cookie-alert.
@@ -3395,6 +3397,7 @@ _youtube_social_
 ###subscribe-widget-bottom
 ###subscribe-widget-top
 ###subscribeForSidebar
+###subscribe_newsletter
 ###sumotest-badge
 ###survey_overlay
 ###taboola-autosized-1r
@@ -3474,6 +3477,7 @@ _youtube_social_
 ##.bing-unit
 ##.bing_tabContent
 ##.bk-subscribe
+##.bloc-newsletter
 ##.block-dennis-newsletter-popup
 ##.block-simplenews
 ##.bookmark_services
@@ -3649,6 +3653,7 @@ _youtube_social_
 ##.overlay-content-arrows
 ##.overlay-content-promotion
 ##.paginator-x
+##.pane-ft-common-newsletter-externe
 ##.partage_reseaux_sociaux
 ##.pb-f-subscription-pencil-ad
 ##.permalink-add-this
@@ -4689,6 +4694,7 @@ _youtube_social_
 ##.newsletter-form-border
 ##.newsletter-frame
 ##.newsletter-icon-footer
+##.newsletter-inline
 ##.newsletter-inline-unit
 ##.newsletter-interstitial
 ##.newsletter-lightbox
@@ -7898,6 +7904,7 @@ _youtube_social_
 ###eu-cookie-policy
 ###eu-cookie-policy-banner-wrapper
 ###eu-cookie-stuff
+###eu-cookie-warning-banner
 ###eu-cookie-warning-div
 ###eu-cookie-wrap
 ###eu-cookielaw
@@ -14025,6 +14032,7 @@ _youtube_social_
 ###social-bar
 ###social-bar-bottom
 ###social-bar-top
+###social-block
 ###social-block-wrapper
 ###social-bookmark-container
 ###social-bookmarks-menu
@@ -15467,6 +15475,7 @@ _youtube_social_
 ##.bl_socialbox
 ##.bl_tweets
 ##.blip-follow-us
+##.bloc-share
 ##.bloc_float_share
 ##.bloc_social
 ##.block-altsocial
@@ -15479,6 +15488,7 @@ _youtube_social_
 ##.block-followus
 ##.block-ibtmedia-social
 ##.block-idg_twitter
+##.block-share-large
 ##.block-share__item
 ##.block-simple-share
 ##.block-social
@@ -15817,6 +15827,7 @@ _youtube_social_
 ##.commentShare
 ##.comment_share
 ##.comment_share_link
+##.comments-and-share
 ##.comments-share
 ##.comments-social
 ##.comments__likes
@@ -16525,6 +16536,7 @@ _youtube_social_
 ##.film-social
 ##.film_share
 ##.fin_page_sharing
+##.find-on-facebook
 ##.findusGooglePlus
 ##.findusPinterest
 ##.findusYouTube
@@ -17584,6 +17596,8 @@ _youtube_social_
 ##.icon-youtube-play-2
 ##.icon-youtube-sign
 ##.icon-youtube-white
+##.icon.Gplus
+##.icon.RSS
 ##.icon2-facebook
 ##.icon2-linkedin
 ##.icon2-twitter
@@ -17799,6 +17813,7 @@ _youtube_social_
 ##.js-block-fb
 ##.js-custom-pinterest-button
 ##.js-fbshare-btn
+##.js-fig-tools__share
 ##.js-follow-user
 ##.js-followState
 ##.js-gig-social-bar
@@ -18749,6 +18764,7 @@ _youtube_social_
 ##.report-process-share
 ##.reporter-social-buttons
 ##.reseaux-sociaux
+##.reseaux-sociaux-list
 ##.resoc-fb
 ##.resp-sharing-button
 ##.resultShare
@@ -18854,6 +18870,7 @@ _youtube_social_
 ##.scShareText
 ##.sc_sns
 ##.scpin-detector
+##.scrbbl-post-opts-wrap-share
 ##.scrbbl-tb-share-actions
 ##.scroll-nav-social-item
 ##.scroll-triggered-box
@@ -19151,6 +19168,7 @@ _youtube_social_
 ##.share-this-post
 ##.share-this-static
 ##.share-this-tip
+##.share-tick
 ##.share-title
 ##.share-to-whatsapp-wrapper
 ##.share-toggle
@@ -19598,6 +19616,7 @@ _youtube_social_
 ##.sharing-options
 ##.sharing-social
 ##.sharing-tool
+##.sharing-tool-wrapper
 ##.sharing-tools
 ##.sharing-top-float
 ##.sharing-twitter
@@ -20773,6 +20792,7 @@ _youtube_social_
 ##.socialakamai
 ##.socialarea
 ##.socialb
+##.socialb_tg
 ##.socialbadge
 ##.socialbar
 ##.socialbar-wrap-bottom
@@ -21138,6 +21158,7 @@ _youtube_social_
 ##.svg-icon-facebook
 ##.svg-icon-instagram
 ##.svg-icon-twitter
+##.svg-instagram
 ##.svg-shareicon
 ##.svg-social
 ##.svg-twitter
@@ -29162,6 +29183,8 @@ dofus.com##.ak-notification-list-footer
 rtl.fr##.article-mail-form
 carrelages4000.fr##.ays-front-message
 orange.be##.b2c-global-footer-container
+ouest-france.fr##.btn-scroll
+liberation.fr##.campagne-opt-in
 cuisineaz.com##.cazLightbox
 ddb.fr,pmu.fr##.cnil
 aso.fr,letour.fr##.confidentialite
@@ -29187,8 +29210,9 @@ silicon.fr##.nav-next
 silicon.fr##.nav-previous
 ogaming.tv##.navbar-fixed-bottom
 fourchette-et-bikini.fr##.newsBloc
-cuisineetvinsdefrance.com,leparisien.fr,phonandroid.com##.newsletter
+cuisineetvinsdefrance.com,francetvinfo.fr,leparisien.fr,phonandroid.com##.newsletter
 lepoint.fr##.newsletter-form
+la-croix.com##.next
 zepass.com##.notification
 landrover.ch##.notificationBars
 nouvelobs.com##.obs-article-boutils
@@ -29199,6 +29223,7 @@ minutebuzz.com##.popinNl
 e-leclerc.com##.popover
 metairie.fr##.popup-notification
 korben.info##.post-subscribe
+la-croix.com##.prev
 stihl.fr##.privacyTop
 ##.recocliv2
 tourhebdo.com##.resocs
@@ -29365,7 +29390,7 @@ ilfattoquotidiano.it##.side-arrow
 ilpost.it##.subscribe
 la7.it##.tgla7-condividi
 ##.theeclbox
-borse.it,evomagazine.it,guidafisco.it##.top
+borse.it,corrieredellosport.it,evomagazine.it,guidafisco.it,tuttosport.com##.top
 ingdirect.it##.topalertbanner
 peugeot.it##.toplink
 email.it##script + div[style^="background: #000000;"]
@@ -29641,10 +29666,12 @@ sfr.fr###social
 leforem.be###suivi
 gentside.com##.action
 leparisien.fr##.barrePartage
+lesechos.fr##.bloc-suiveznous
 ##.blocSociaux
 sportetstyle.fr##.bttw
 rtl.be##.bulle_nombre
 rtl.be##.count
+la-croix.com##.email-icon
 buzzfil.com,clubic.com,ladepeche.fr,lci.tf1.fr,lesoir.be,liberation.fr,loi1901.com,pebkac.fr,programme-tv.net,silicon.fr##.facebook
 franceantilles.fr,rtl.fr##.fb
 radins.com##.fbMin
@@ -29655,18 +29682,19 @@ rtbf.be##.footer-main__site-links
 rtl.fr##.gg
 lci.tf1.fr,liberation.fr,loi1901.com,silicon.fr##.google
 franceantilles.fr,ladepeche.fr,programme-tv.net##.gplus
+sudouest.fr##.header-social
 rtl.fr##.ld
 tameteo.com##.liCompartir
 viedemerde.fr##.likebox
 marmiton.org##.m_content_recette_share
 marmiton.org##.m_suivez_nous_btn
 tempsreel.nouvelobs.com##.obs-galerie-bp-share
-lemonde.fr##.partage
+europe1.fr,lemonde.fr##.partage
 jeuxvideo.fr,jeuxvideopc.com##.pictos
 leparisien.fr##.plusRecommande
-autoline-eu.fr,autoline.be,autoline.lu,buzzmoica.fr,gamekult.com,nieuwsblad.be##.share
+autoline-eu.fr,autoline.be,autoline.lu,buzzmoica.fr,francetvinfo.fr,gamekult.com,la-croix.com,nieuwsblad.be##.share
 rtl.fr##.shared-logo
-20minutes.fr,buyindz.com,gamergen.com,journaldugeek.com,korben.info,ladepeche.fr,lorientlejour.com,methodelafayfemme.fr,petitfute.com,sudouest.fr##.social
+20minutes.fr,buyindz.com,europe1.fr,gamergen.com,journaldugeek.com,korben.info,ladepeche.fr,lorientlejour.com,methodelafayfemme.fr,petitfute.com,sudouest.fr##.social
 fr.msn.com##.stbp-tbl
 telerama.fr##.t12-user-resoc
 franceantilles.fr,rtl.fr##.tw

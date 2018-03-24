@@ -1678,6 +1678,7 @@ programme-tv.net##script:inject(setTimeout-defuser.js, checkPub, 6000)
 
 ! https://forums.lanik.us/viewtopic.php?p=119671#p119671
 xhamster.com##script:inject(abort-on-property-write.js, dataPopUnder)
+xhamster.com##script:inject(addEventListener-defuser.js, popstate, backUrl)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/462
 idnes.cz##script:inject(abort-on-property-write.js, bmone2n)
@@ -4247,6 +4248,8 @@ kanqite.com##script:inject(abort-on-property-read.js, open)
 ! https://www.reddit.com/r/uBlockOrigin/comments/8247ib/adblock_detected_vercanalestvcom/
 ||vergol.com/*adblock.js$script,redirect=fuckadblock.js-3.2.0
 @@||vergol.com/*/ads.js$script,first-party
+verliga.net##script:inject(nowebrtc.js)
+@@||vergol.com/player/ads.js$script,domain=verliga.net
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1243
 ||superligatv.com/adblocks.js$script,redirect=fuckadblock.js-3.2.0
@@ -4387,7 +4390,9 @@ ourl.io##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1277
 cpmlink.net##script:inject(abort-on-property-write.js, _pop)
+cpmlink.net##script:inject(nowebrtc.js)
 cpmlink.net##iframe[src="about:blank"]
+||hitcpm.com^$third-party
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/811
 win4cut.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -5587,6 +5592,7 @@ bittorrentstart.com,btscene.com,btscene.org,btsproxy.com,btstor.cc##div > a[clas
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1660
 bemad.es,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,radioset.es##script:inject(abort-on-property-write.js, adsInfoClient)
+bemad.es,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,radioset.es##script:inject(addEventListener-defuser.js, load, hasAdblock)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/874
 smarturlref.net##script:inject(addEventListener-defuser.js, load, 2000)
@@ -5860,3 +5866,54 @@ moondoge.co.in,moonliteco.in##.captchaAd:style(visibility: collapse !important)
 @@||bestarticles.me^$generichide
 @@||tellycolors.me^$generichide
 bestarticles.me,tellycolors.me##.adsbygoogle
+
+! https://github.com/NanoAdblocker/NanoFilters/commit/f711954f407c43329b5d242a7516a5a38c3bee4e#commitcomment-28218753
+revealname.com##script:inject(set-constant.js, $.fx.off, true)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/891
+makeuseof.com##script:inject(setTimeout-defuser.js, document.body.classList.add, 100)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1763
+||linkskeeper.in^$csp=script-src 'self' 'unsafe-eval' 'unsafe-inline' data: *.statcounter.com *.google-analytics.com
+linkskeeper.in##script:inject(nano-setInterval-booster.js)
+||comegarage.com^
+
+! https://github.com/uBlockOrigin/uAssets/issues/1764
+||d-h.st^$csp=script-src 'self' 'unsafe-eval' 'unsafe-inline' data: *.jquery.com *.google-analytics.com *.addthis.com *.google.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/1768
+alphaporno.com##script:inject(popads-dummy.js)
+alphaporno.com##script:inject(abort-on-property-read.js, ExoLoader)
+||alphaporno.com/*.php
+
+! https://github.com/uBlockOrigin/uAssets/issues/1769
+@@||eddirasa.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1771
+advocate.com##script:inject(addEventListener-defuser.js, p5, onpropertychange)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1773
+@@||saikoanimes.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1775
+@@||lequipe.fr^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1772
+shesfreaky.com##script:inject(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1767
+||pornoid.com^$csp=script-src 'self' 'unsafe-inline' data:
+pornoid.com##script:inject(abort-on-property-write.js, relateds_url_click)
+?zoneId=*&sponsor$subdocument
+
+! https://github.com/uBlockOrigin/uAssets/issues/1766
+tomahawktake.com##script:inject(addEventListener-defuser.js, p5, onpropertychange)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1770
+||fcportables.com^$inline-script
+
+! https://github.com/uBlockOrigin/uAssets/issues/1774
+porntube.com##script:inject(abort-on-property-read.js, ExoLoader)
+||porntube.com/*.php$script
+porntube.com##.relatedContainer
+porntube.com##.hidden-md-down.related-kodplayer
