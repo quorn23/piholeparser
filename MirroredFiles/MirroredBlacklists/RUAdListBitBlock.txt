@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: jZJgM1EugZX+BbWGw7eahg
-! Version: 201803240020
+! Checksum: qrL1JicBMJsLNi00GLPjEw
+! Version: 201803250020
 ! Title: RU AdList: BitBlock
-! Last modified: 24 Mar 2018 00:20 UTC
+! Last modified: 25 Mar 2018 00:20 UTC
 ! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1497,7 +1497,7 @@ anime-rus.ru###getreg
 hdserials.tv###gkHeader
 autovisio.com.ua###globallasttd > div[class$="-block"] + div[style^="padding:250px"]
 ukr.net###go-top
-4pda.ru###go_1
+4pda.ru###go_1 > :not(p):not(h4):not(.globalmesscontent)
 kinogo-hd.net###go_top
 master-css.com###header1 > h2 > span
 alexfilm.cc###headerProxy
@@ -1506,7 +1506,6 @@ hidemyass.com###hma-survey-button
 7dneyleta.ru###html-header
 agronews.ru,agrotv.ru,vpsite.ru###informer
 miformat.info###inner-content > #sidebar
-4pda.ru###ipbwrapper > .globalmesswrap
 forum.sibnet.ru###ipbwrapper > table > tbody > tr > td[style="width: 240px;"]
 hotline.ua###js-fq-popup
 pinu.com.ua,real-vin.com,xsport.ua###kinotvukrnet
@@ -1534,7 +1533,6 @@ youtube.com###movie_player .ytp-cards-teaser
 youtube.com###movie_player .ytp-ce-element
 stulchik.net###myModal
 myfin.by###myfin_menu .left_bt
-4pda.ru###nav > ul a[href*="promo"]
 ihavebook.org###navbar-donate
 kinosvit.tv###news-partner
 fox-fan.ru###noVip
@@ -2059,7 +2057,6 @@ okna.ua##div[style*="height: 80px"],div[style*="height:80px"]
 psy-music.ru##div[style*="tranceshop.ru"]
 drive2.com,drive2.ru#?#.c-block--content:-abp-has(.o-group--justify > .c-com-dv-label)
 azbooki.ru,engisys.ru,zip1000.ru##html > div[style^="color: rgb"]
-4pda.ru##html[xmlns] > body > div[id^="r"] > div[id^="r"][href]
 allboxing.ru##iframe[src*="ad.allboxing.ru"]
 samlab.ws##iframe[src*="money.yandex.ru/embed/donate"]
 chastnik-m.ru##img[alt="баннер"]
@@ -2337,7 +2334,6 @@ adultmanga.ru,allhentai.ru,doramatv.ru,ekabu.ru,findanime.ru,grouple.co,libreboo
 coub.com#@#.viewer__sharing
 coub.com#@#.viewer__sharing__item
 coub.com#@#.viewer__sharing__items
-video.khl.ru#@#.vjs-share
 66.ru,auth.properm.ru,ekabu.ru,loginza.ru,online-mult.net,soccer.ru,soccer0010.com,tvfru.net#@#.vkontakte
 @@/auth-form-social-icons.js$script,domain=banki.ru
 @@/btns.png$domain=antivirus.ua
@@ -3610,9 +3606,11 @@ prom.ua#@#img[alt="facebook"]
 /img/social/*$image
 /img/social_
 /img/tumblr-
+/img/tw.
 /img/twitter-
 /img/twitter.
 /img/twitter_
+/img/vk.
 /imgs/facebook.
 /imgs/twitter.
 /in-icon.
@@ -4371,9 +4369,12 @@ prom.ua#@#img[alt="facebook"]
 /socialplugins/*
 /socialpod-
 /socials.png
+/socials/facebook-
 /socials/flipboard-
 /socials/instagram-
 /socials/pinterest-
+/socials/vk-
+/socials/you_tube.
 /socials_new.
 /socialshare-
 /socialShare.
@@ -9323,6 +9324,7 @@ _youtube_social_
 ##.fontawesome-google-plus
 ##.fontawesome-twitter
 ##.foo-linkedin
+##.foot-info__socials
 ##.foot-share
 ##.foot-soc-fb
 ##.foot-soc-list
@@ -9449,6 +9451,7 @@ _youtube_social_
 ##.footerSocials
 ##.footerYouTube
 ##.footer_NewsletterSocialIcon
+##.footer__content-social
 ##.footer__list--social
 ##.footer__sharethrough
 ##.footer__social
@@ -26139,6 +26142,7 @@ pinterest.com#@#.twitterWrapper
 twitter.com#@#.twtr-widget
 si.com#@#.ui-share-component
 research.gigaom.com#@#.vertical-social
+video.khl.ru#@#.vjs-share
 minutebuzz.com#@#.wrapper-share
 hootsuite.com#@#.x-facebook
 kinogo-720.net#@#.ya-share2
