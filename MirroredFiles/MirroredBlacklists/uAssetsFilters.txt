@@ -2655,7 +2655,10 @@ streaming-foot.club##script:inject(nowebrtc.js)
 hdmyt.info,playerhd2.pw,streaming-foot.club##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/833
+! https://github.com/uBlockOrigin/uAssets/issues/1819
+otakustream.tv##script:inject(abort-current-inline-script.js, atob, tabunder)
 otakustream.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+otakustream.tv###outer
 
 ! https://forums.lanik.us/viewtopic.php?p=127624#p127624
 bmovies.to##script:inject(abort-current-inline-script.js, parseInt, tabunder)
@@ -3838,6 +3841,7 @@ onlinemschool.com###oms_left_block
 gamekings.tv##script:inject(set-constant.js, canRunAds, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1143
+bro.adca.st##script:inject(window.open-defuser.js)
 ||assets.bro.adca.st/rectangular.html
 ||assets.bro.adca.st/debug.js
 ||assets.bro.adca.st/cuadrado.html
@@ -3954,12 +3958,13 @@ kaztorka.org##[id*=Composite]
 cut-urls.com##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 cut-urls.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
-! https://github.com/uBlockOrigin/uAssets/issues/1176
-! https://github.com/uBlockOrigin/uAssets/issues/1291
-flashx.to,flashx.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-flashx.to,flashx.tv##script:inject(abort-on-property-write.js, Fingerprint2)
-flashx.to,flashx.tv##script:inject(nowebrtc.js)
-flashx.to,flashx.tv##script:inject(window.open-defuser.js)
+flashx.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+flashx.*##script:inject(abort-on-property-write.js, Fingerprint2)
+flashx.*##script:inject(popads-dummy.js)
+flashx.*##script:inject(popads.net.js)
+flashx.*##script:inject(window.open-defuser.js)
+flashx.*##script:inject(nowebrtc.js)
+flashx.*##a[href^="https://adsrvmedia.adk2x.com/"]
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=flashx.tv
 @@||fastcontentdelivery.com/js/showad*.js$script,domain=flashx.to
 @@||flashx.to/counter.cgi$script,first-party
@@ -4668,7 +4673,6 @@ pornscum.com##script:inject(abort-current-inline-script.js, atob, tabunder)
 ! https://github.com/uBlockOrigin/uAssets/issues/1379
 maxdeportv.net##script:inject(addEventListener-defuser.js, load, 2000)
 ||earnco.in^$third-party
-||max-deportv.com/arriba2.html$subdocument,domain=maxdeportv.net
 @@||deportesmax.info^$generichide
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39786
 bonstreams.net##script:inject(popads-dummy.js)
@@ -5433,16 +5437,6 @@ cnnamador.com##.is-ad-visible
 cnnamador.com##script:inject(abort-on-property-write.js, adv_pre_duration)
 cnnamador.com##script:inject(abort-on-property-write.js, adv_post_duration)
 
-! https://github.com/uBlockOrigin/uAssets/issues/1619
-! https://github.com/NanoAdblocker/NanoFilters/issues/35
-flashx.sx##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-flashx.sx##script:inject(abort-on-property-write.js, Fingerprint2)
-flashx.sx##script:inject(nowebrtc.js)
-flashx.sx##script:inject(popads-dummy.js)
-flashx.sx##script:inject(popads.net.js)
-flashx.sx##script:inject(window.open-defuser.js)
-flashx.sx##a[href^="https://adsrvmedia.adk2x.com/"]
-
 ! https://adblockplus.org/forum/viewtopic.php?p=174439#p174439
 kissasian.info##script:inject(set-constant.js, blockAdBlock, true)
 
@@ -5559,6 +5553,7 @@ cloudtime.to##script:inject(abort-on-property-write.js, adcashMacros)
 nowvideo.sx,wholecloud.net##script:inject(nowebrtc.js)
 ||querylead.com^
 ||webma.space^
+haxmaps.com##script:inject(abort-current-inline-script.js, ab1, ab2)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/81mhzf/asianvote_adblock_detected/
 asianvote.com##script:inject(abort-on-property-write.js, anti_adblock)
@@ -5967,11 +5962,100 @@ comunidadgzone.es##script:inject(setTimeout-defuser.js, nextFunction, 2000)
 ! https://github.com/uBlockOrigin/uAssets/issues/1797
 tubous.com##script:inject(abort-current-inline-script.js, $, nasl)
 tubous.com##script:inject(abort-on-property-read.js, ExoLoader)
-||tubous.fuckandcdn.com/tubous/tubousstatic/ads/*$subdocument,domain=tubous.com
-tubous.com###allIMwindow
+||fuckandcdn.com/*/ads/
+||fuckandcdn.com/*/frms/
+tubous.com##.allIM
 tubous.com###good_money
+tubous.com##a.DarkBg
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/893
 kickassanime.ru##^script:has-text(3f87b0eaddd)
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=kickassanime.ru
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=kickassanime.ru
+
+! https://github.com/NanoAdblocker/NanoCore/issues/142
+vizer.tv##script:inject(abort-on-property-write.js, Fingerprint2)
+vizer.tv##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
+vizer.tv##script:inject(setInterval-defuser.js, system.popunder, 500)
+@@||vizer.tv^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1800
+apurogol.net##script:inject(abort-on-property-write.js, smrtSB)
+
+! https://forums.lanik.us/viewtopic.php?p=134331#p134331
+revdownload.com##script:inject(abort-on-property-read.js, __bdExecutedScripts)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1802
+@@||jpopsingles.eu^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1803
+shortify.pw##script:inject(abort-current-inline-script.js, document.getElementById, adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1804
+@@||freecoursesonline.us^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1805
+@@||asianovel.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1807
+@@||seomafia.net^$generichide
+@@||seomafia.net/stylesheets/ads.css$stylesheet,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1814
+globaldjmix.com##script:inject(set-constant.js, canRun, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1809
+estrenos10.com##^script:has-text(676574456c656d656e747342795461674e616d65)
+estrenos10.com##script:inject(setInterval-defuser.js, disable_ads, 15000)
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=estrenos10.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/1813
+@@||dupedornot.com^$generichide
+dupedornot.com##script:inject(abort-current-inline-script.js, $, haveVisited)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1815
+@@||fileoops.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1810
+pelisplus.tv##script:inject(abort-on-property-write.js, smrtSP)
+pelisplus.tv##[class^=smartadtags]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1816
+hardsextube.com##script:inject(abort-on-property-read.js, ExoLoader)
+hardsextube.com##.featured-wrap
+
+! https://github.com/uBlockOrigin/uAssets/issues/1806
+pornshare.org##script:inject(abort-current-inline-script.js, document.getElementById, undefined)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1808
+gr8forte.org##script:inject(setTimeout-defuser.js, ad-check, 500)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1811
+dwindly.io##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+dwindly.io##script:inject(nano-setInterval-booster.js, , 100)
+dwindly.io##script:inject(window.open-defuser.js, , lh5lg)
+dwindly.io##a.adBtn
+||lh5lg.top^$popunder
+
+! https://github.com/uBlockOrigin/uAssets/issues/1812
+||firstonetv.net/src/*$xmlhttprequest,first-party,important
+||firstonetv.net/ucount.php$xmlhttprequest,first-party,important
+@@||firstonetv.net^$xmlhttprequest,first-party
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/50
+adca.st##script:inject(window.open-defuser.js)
+deportesmax.info##script:inject(abort-on-property-write.js, Fingerprint2)
+||max-deportv.com/arriba2.html$subdocument
+||max-deportv.com/lateral.html$subdocument
+||netdna-cdn.com^$subdocument,domain=bro.adca.st
+deportesmax.info###adsdiv
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/894
+@@||whiskyprices.co.uk^$generichide
+whiskyprices.co.uk##.blocker
+
+! https://www.reddit.com/r/uBlockOrigin/comments/87bseo/httpnyafilmerbz/
+nyafilmer.bz##^script:has-text(3f87b0eaddd)
+jawcloud.co,nyafilmer.bz##script:inject(popads-dummy.js)
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=nyafilmer.bz
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=nyafilmer.bz
