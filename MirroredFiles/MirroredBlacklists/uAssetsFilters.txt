@@ -961,8 +961,8 @@ cnn.com##.OUTBRAIN
 1337x.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ! https://github.com/uBlockOrigin/uAssets/issues/635
 ! https://www.reddit.com/r/uBlockOrigin/comments/81hcu5/1337xto_annoying_popup/
-1337x.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|)/, popunder)
-1337x.*##script:inject(setInterval-defuser.js, (), 500)
+1337x.*,x1337x.ws##script:inject(addEventListener-defuser.js, /^(click|mousedown|)/, popunder)
+1337x.*,x1337x.ws##script:inject(setInterval-defuser.js, (), 500)
 1337x.*##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2#issuecomment-253926602
@@ -3244,7 +3244,7 @@ sotemnovinhas.com##script:inject(fuckadblock.js-3.2.0)
 @@||ondemandkorea.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/981
-porntube.com##script:inject(abort-on-property-read.js, ExoLoader)
+porntube.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
 ||porntube.com/*banner$image
 
 ! https://github.com/uBlockOrigin/uAssets/issues/978
@@ -3330,6 +3330,8 @@ arawatch.online##a[href="https://vidfast.co"]
 hdeuropix.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ||antivirustoolext.com^
 ||tooladblockerext.com^
+||hdeuropix.io/css/ad-hover.png$image
+hdeuropix.io###MyImageId
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1002
 newpct.com##script:inject(nowebrtc.js)
@@ -3763,6 +3765,8 @@ imgspice.com##script:inject(abort-on-property-read.js, ExoLoader)
 @@||mrtechmyth.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1128
+mitly.us##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+mitly.us##script:inject(nano-setInterval-booster.js)
 @@||mitly.us^$generichide
 ||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=mitly.us
 ||mitly.us/*ad$image,redirect=2x2-transparent.png
@@ -4675,15 +4679,19 @@ maxdeportv.net##script:inject(addEventListener-defuser.js, load, 2000)
 ||earnco.in^$third-party
 @@||deportesmax.info^$generichide
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39786
+! https://github.com/NanoAdblocker/NanoFilters/issues/50
 bonstreams.net##script:inject(popads-dummy.js)
 bro.adca.st##script:inject(abort-on-property-write.js, opened)
 bro.adca.st##.close
+bro.adca.st##.load-more
 bro.adca.st##.mask
+bro.adca.st##.myiframe
 bro.adca.st##.pepin
 bro.adca.st##.raulito
 bro.adca.st##.xclo
 bro.adca.st##.xpepinx
 bro.adca.st##.xraulitox
+bro.adca.st###markup
 vipracing.tv##.in-video-adds.row
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1380
@@ -5237,8 +5245,9 @@ liga.net##^script:has-text(676574456c656d656e747342795461674e616d65)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/911#issuecomment-366335870
 adsrt.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-||adsrt.com^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.gstatic.com
+adsrt.com##script:inject(abort-on-property-write.js, Fingerprint2)
 adsrt.com##script:inject(nano-setInterval-booster.js)
+||adsrt.com^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.gstatic.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1555
 linclik.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -5839,7 +5848,9 @@ kuturl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adbl
 kuturl.com##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1750
+! https://github.com/uBlockOrigin/uAssets/issues/1820
 ||damoh.chip.de/*$media,redirect=noopmp3-0.1s,domain=chip.de
+chip.de##script:inject(setInterval-defuser.js, fireEvent, 500)
 
 ! https://forums.lanik.us/viewtopic.php?f=90&t=40270
 hd-streams.org##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -5918,6 +5929,9 @@ pornoid.com##script:inject(abort-on-property-write.js, relateds_url_click)
 ||porntube.com/*.php$script
 porntube.com##.relatedContainer
 porntube.com##.hidden-md-down.related-kodplayer
+! https://github.com/uBlockOrigin/uAssets/issues/1821
+porntube.com##script:inject(set-constant.js, adsEnabled, true)
+||porntube.com/api/iframe/$subdocument
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40297
 vijf.be##script:inject(abort-on-property-read.js, _sp_.mms.startMsg)
@@ -6051,11 +6065,34 @@ deportesmax.info##script:inject(abort-on-property-write.js, Fingerprint2)
 deportesmax.info###adsdiv
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/894
-@@||whiskyprices.co.uk^$generichide
-whiskyprices.co.uk##.blocker
+@@*$generichide,domain=whiskypreisvergleich.de|whiskyprices.co.uk|whiskyprijzen.be|whiskyprijzen.nl|whiskyprix.be|whiskyprix.fr
+whiskypreisvergleich.de,whiskyprices.co.uk,whiskyprijzen.be,whiskyprijzen.nl,whiskyprix.be,whiskyprix.fr##.blocker
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/87bseo/httpnyafilmerbz/
 nyafilmer.bz##^script:has-text(3f87b0eaddd)
 jawcloud.co,nyafilmer.bz##script:inject(popads-dummy.js)
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=nyafilmer.bz
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=nyafilmer.bz
+
+! https://github.com/uBlockOrigin/uAssets/issues/1787
+inn.co.il,walla.co.il##script:inject(abort-on-property-read.js, TextDecoder)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/87h7ve/block_adblock_on_gofobocom_keeps_getting_through/
+@@||gofobo.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1823
+jellynote.com##script:inject(setTimeout-defuser.js, byepopup, 5000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1824
+kisscosplay.moe##script:inject(setTimeout-defuser.js, nextFunction, 250)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1826
+povwideo.net##script:inject(abort-on-property-write.js, Fingerprint2)
+povwideo.net##script:inject(window.open-defuser.js)
+||go.pub2srv.com/apu.php$script,redirect=noopjs
+
+! https://github.com/uBlockOrigin/uAssets/issues/1827
+pcbolsa.com##script:inject(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1828
+minecraftraffle.com##script:inject(abort-current-inline-script.js, awm, location)
