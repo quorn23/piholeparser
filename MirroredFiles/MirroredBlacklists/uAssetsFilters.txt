@@ -2272,6 +2272,9 @@ urlcloud.us##script:inject(bab-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1570
 urlcloud.us##script:inject(abort-on-property-write.js, Fingerprint2)
 urlcloud.us##script:inject(nano-setInterval-booster.js)
+||urlcloud.us^$csp=script-src 'self' 'unsafe-inline' data: *.gstatic.com *.google-analytics.com *.google.com
+urlcloud.us##script:inject(window.open-defuser.js)
+urlcloud.us##A[href$=".html"][rel="nofollow norefferer noopener"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/688
 spaste.com##script:inject(fuckadblock.js-3.2.0)
@@ -3219,10 +3222,14 @@ serial49.com##script:inject(noeval.js)
 @@||serial49.com^$generichide
 
 ! https://github.com/gorhill/uBlock/issues/3338
+! https://github.com/uBlockOrigin/uAssets/issues/1835
 7starhd.info##script:inject(abort-on-property-write.js, _pop)
 bdupload.info##script:inject(abort-current-inline-script.js, atob, tabunder)
+bdupload.info##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 bdupload.info##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 bdupload.info##script:inject(abort-on-property-write.js, Fingerprint2)
+bdupload.info##script:inject(nano-setTimeout-booster.js)
+||solihullah.info^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/974
 pilot.wp.pl##script:inject(set-constant.js, PWA_adbd, 0)
@@ -4800,6 +4807,7 @@ zupload.me##a[href="https://www.9xyoutube.com"]
 indishare.me##script:inject(abort-on-property-write.js, Fingerprint2)
 ||dwf6crl4raal7.cloudfront.net^$script,third-party
 ||defpush.com^$third-party
+||indishare.me^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google-analytics.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1407
 clicknupload.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
@@ -5004,7 +5012,7 @@ adshort.pro##script:inject(popads.net.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1497
 ! https://github.com/uBlockOrigin/uAssets/issues/1521
 ! https://github.com/uBlockOrigin/uAssets/issues/1731
-123link.co,123link.io,123link.press,123link.top,22o.co,3rabshort.com,adbilty.me,adbull.me,adcoin.me,adlinkme.com,admove.co,adpop.me,adshort.co,adshort.im,adshorte.com,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bc.vc,bilink.xyz,bit-url.com,bitcoadz.pw,bits.yt,btc.ms,cimi.website,clik.pw,coin.mg,coinb.ink,coinlink.co,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-earn.com,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,earn-guide.com,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,foxurl.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linkrex.net,linksh.top,linkurl.org,lkcash.net,lkky.co,lyon.kim,madurls.com,megaurl.in,met.bz,meulink.tk,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,psl.*,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,teqani-plus.com,tmearn.com,tny.ec,tui.click,twik.pw,u2s.io,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,veneapp.com,vivads.net,wi.cr,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##script:inject(nano-setInterval-booster.js)
+123link.co,123link.io,123link.press,123link.top,22o.co,3rabshort.com,adbilty.me,adbull.me,adcoin.me,adlinkme.com,admove.co,adpop.me,adshort.co,adshort.im,adshorte.com,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bc.vc,bilink.xyz,bit-url.com,bitcoadz.pw,bits.yt,btc.ms,cimi.website,clik.pw,coin.mg,coinb.ink,coinlink.co,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-earn.com,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,earn-guide.com,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,foxurl.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linkrex.net,linksh.top,linkurl.org,lkcash.net,lkky.co,lyon.kim,madurls.com,megaurl.in,met.bz,meulink.tk,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,psl.*,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,so.gd,teqani-plus.com,tmearn.com,tny.ec,tui.click,twik.pw,u2s.io,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,veneapp.com,vivads.net,wi.cr,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##script:inject(nano-setInterval-booster.js)
 globalbesthosting.com,goldescargas.com,katfile.com,shortify.pw,srt.am,userupload.net##script:inject(nano-setTimeout-booster.js)
 imgrock.info##script:inject(nano-setTimeout-booster.js, /.?/, 4000)
 ! https://github.com/uBlockOrigin/uAssets/issues/1481
@@ -5851,6 +5859,7 @@ kuturl.com##script:inject(nano-setInterval-booster.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1820
 ||damoh.chip.de/*$media,redirect=noopmp3-0.1s,domain=chip.de
 chip.de##script:inject(setInterval-defuser.js, fireEvent, 500)
+||damoh.curloc.com^$media,redirect=noopmp4-1s,domain=chip.de
 
 ! https://forums.lanik.us/viewtopic.php?f=90&t=40270
 hd-streams.org##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -6096,3 +6105,35 @@ pcbolsa.com##script:inject(abort-on-property-write.js, adBlockDetected)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1828
 minecraftraffle.com##script:inject(abort-current-inline-script.js, awm, location)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/885
+@@||akamaihd.net/*/ads.js$script,domain=golfchannel.com
+@@||stream.golfchannel.com/*/ads.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1830
+||downloadpirate.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: disqus.com *.disqus.com disquscdn.com *.disquscdn.com *.solvemedia.com
+downloadpirate.com##A[href$=".html"][rel="nofollow norefferer noopener"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1833
+reddit.com##.size-compact.Post:has([class*=promoted])
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40330
+toyoheadquarters.com##script:inject(abort-current-inline-script.js, AdBlockDetectorWorkaround)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1831
+*$subdocument,domain=so.gd,third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1836
+csonline2.net##script:inject(bab-defuser.js)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40332#p134448
+etztorrents.org##script:inject(abort-current-inline-script.js, atob, tabunder)
+etztorrents.org##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+etztorrents.org##A[href$=".html"][rel="nofollow norefferer noopener"]
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/52
+insidemarketing.it##script:inject(abort-on-property-read.js, adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1835
+9xupload.me,desiupload.info,upgrand.net,uploadbaz.net##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+desiupload.info,upgrand.net,uploadbaz.net##script:inject(nano-setTimeout-booster.js)
