@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201803292339
+! Version: 201803310020
 ! Title: EasyPrivacy
-! Last modified: 29 Mar 2018 23:39 UTC
+! Last modified: 31 Mar 2018 00:20 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -2810,6 +2810,7 @@
 /stats/imr.
 /stats/init.
 /stats/log.
+/stats/lookup?
 /stats/lp.min.
 /stats/mark?
 /stats/metrica.
@@ -5840,7 +5841,6 @@ _mongo_stats/
 ||trackset.com^$third-party
 ||tracksy.com^$third-party
 ||tracktrk.net^$third-party
-||trackuity.com^$third-party
 ||trackvoluum.com^$third-party
 ||trackword.biz^$third-party
 ||trackyourstats.com^$third-party
@@ -6255,6 +6255,8 @@ _mongo_stats/
 ||cryptomine.pro^$third-party
 ||cryptonoter.com^$third-party
 ||csgocpu.com^$third-party
+||darking05.tk^$third-party
+||darking07.tk^$third-party
 ||datasecu.download^$third-party
 ||deepc.cc^$third-party
 ||depttake.ga^$third-party
@@ -6285,7 +6287,7 @@ _mongo_stats/
 ||gasolina.ml^$third-party
 ||giml.ml^$third-party
 ||github.io/*.wasm$third-party
-||github.io^$third-party,websocket
+||github.io^$subdocument,third-party,websocket
 ||googleanalytcs.com^$third-party
 ||goredirect.party^$third-party
 ||greengaming.de^$third-party
@@ -6315,6 +6317,7 @@ _mongo_stats/
 ||intactoffers.club^$third-party
 ||interestingz.pw^$third-party
 ||investhash.com^$third-party
+||jqcdn.download^$third-party
 ||jquery-cdn.download^$third-party
 ||jquery-uim.download^$third-party
 ||jroqvbvw.info^$third-party
@@ -8205,6 +8208,7 @@ _mongo_stats/
 ||godaddy.com/js/gdwebbeacon.js
 ||google.com/insights/$script,third-party
 ||googleapis.com/aam.js
+||googleapis.com/ivc.js
 ||googleapis.com^*/gen_204?
 ||googlecode.com^*/tracker.js
 ||googletagmanager.com/ns.html?$third-party
@@ -10347,6 +10351,7 @@ _mongo_stats/
 ||booking.com/js_tracking?
 ||booking.com/logo?
 ||boston.com/upixel/
+||box.com/gen204?
 ||brandrepublic.com/session-img/
 ||branica.com/counter.php?
 ||brazzerscontent.com/atlas/
@@ -12347,6 +12352,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||rawgit.com/Pocketart/$script,third-party
 ||reactor.cc^*.wasm
 ||shrink-service.it/js/cM.js
+||sickrage.ca^$script
 ||stackpathdns.com/assets/javascript/cr.js
 ||streamplay.*.wasm$websocket,xmlhttprequest
 ||vidfile.net^$third-party,websocket,xmlhttprequest
@@ -14286,6 +14292,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||sosh.fr^*/wtinit.js
 @@||stat.prsmedia.fr/tag/stat.js$domain=bienpublic.com
 @@||static.lci.fr/assets/scripts/common/tracker.js?$script,~third-party
+@@||tf1.fr/assets/js/build/lib/smarttag.js$domain=tf1.fr
 @@||tf1.fr/assets/js/build/lib/xiti.js$domain=tf1.fr
 @@||tv5.org/cms/javascript/*/sitestat.js
 @@||tv5monde.com/cms/javascript/*/sitestat.js
@@ -14397,6 +14404,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ! Indonesian
 @@||detik.com/urchin.js
 ! Japanese
+@@||analytics.edgekey.net/html5/akamaihtml5-min.js$domain=nhk.or.jp
 @@||chancro.jp/assets/lib/googleanalytics-$script
 ! Korean
 @@||naver.net/wcslog.js$domain=m.tv.naver.com
@@ -14450,6 +14458,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||itv.1tv.ru/stat.php?
 @@||k12-company.ru^*/statistics.js$script
 @@||labrc.pw/advstats/$xmlhttprequest
+@@||lk.ug.mts.ru/app/vendor/angular-google-analytics.min.js
 @@||matchid.adfox.yandex.ru/?url=$script,domain=ctc.ru
 @@||megafon.ru/static/?files=*/tealeaf.js
 @@||player.fc-zenit.ru/msi/geoip?$xmlhttprequest
@@ -14496,4 +14505,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: oPO2bEir+AsZRbLdVi8rOA
+! Checksum: l/D0DV+2uwtRpg75ZuUVNw
