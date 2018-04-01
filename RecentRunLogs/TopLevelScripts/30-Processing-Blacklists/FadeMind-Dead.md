@@ -14,3 +14,28 @@ ____________________________________
 ## Checking File Header
 ## Determining Host Availability
 ## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+## Attempting Creation Of Mirror File
+## Parsing List
+### Removing Comments
+114 Lines After Removing Comments
+### Removing Content Filtering
+114 Lines After Removing Content Filtering
+### Trimming HOSTS Format IP Addresses
+114 Lines After Trimming HOSTS Format IP Addresses
+### Removing Empty Space
+114 Lines After Removing Empty Space
+### Removing Invalid FQDN Characters
+114 Lines After Removing Invalid FQDN Characters
+### Converting All Text To Lower Case
+114 Lines After Converting All Text To Lower Case
+### Checking For Fully Qualified Domain Name Requirements
+0 Lines After Checking For Fully Qualified Domain Name Requirements
+### Reverse Searching For Invalid Top Level Domains
+0 Lines After Reverse Searching For Invalid Top Level Domains
+### Removing Duplicate Lines
+0 Lines After Removing Duplicate Lines
+## Checking Parsed File Size
+* FadeMind-Dead List Was Killed By The Parsing Process. It will be skipped in the future. Sun Apr 1 00:26:28 UTC 2018
