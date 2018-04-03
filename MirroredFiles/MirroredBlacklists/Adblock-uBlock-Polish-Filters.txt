@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 1 April 2018
+! Last modified: 2 April 2018
 ! Expires: 1 day
-! Version: 2018040105
+! Version: 2018040208
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018040105 aktualizacja: nie, 1 kwietnia 2018, 22:05:00
+! v.2018040208 aktualizacja: pon, 2 kwietnia 2018, 23:05:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -31,7 +31,6 @@
 ##a[href*="techmaniak.pl/www/gact/ckk.php"]
 _baner/980x200
 /_baner/*$domain=www.ipon.pl|tygodnikzamojski.pl
-/images/banner
 /banery/*110x90
 /banery/*750x100
 /banery/*750x200
@@ -285,10 +284,9 @@ popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 mclista.pl,bialystokonline.pl##[id*="reklama"]
 !
 !9#------------------------Specific element hiding rules------------------------!
-24gliwice.pl#@##adsense
 24gliwice.pl##a[href^="http://www.24gliwice.pl/r/counter-baners.php"]
 24gliwice.pl##.vce-sticky
-24jgora.pl##.banrek
+24jgora.pl##.banrek, #reklama-top_new, .block.r_art
 24jgora.pl##IMG[src^="http://www.24jgora.pl/kampanie/"]
 24jgora.pl##.linia_4.clear
 24legnica.pl###text-4
@@ -366,8 +364,9 @@ anyfiles.pl###AllVideosLoadDiv > .media-list > .media > .thumbnail:not([title])
 anyfiles.pl##[class^="bp-wrapp"]
 anyfiles.pl##[id^="adsbox_"]
 anyfiles.pl###SearchVideosLoadDiv > .media-list > .media > .thumbnail:not([title])
-a-o.ninja###t_384218 > .panelHolder
-a-o.ninja##.region-content.region > p
+a-o.ninja##.region-content.region > center
+a-o.ninja##.content > center
+a-o.ninja##.textwidget > center
 apynews.pl##.featured-advert
 astratex.pl##[class^="bFix"]
 astropolis.pl##.jesion_image_topic_top
@@ -1454,6 +1453,8 @@ mojaolesnica.pl##DIV[style*="width: 966px; margin-top: 12px; margin-bottom: 15px
 mojapogoda.com###lower_header_right_area
 mojapogoda.com###upper_header
 mojeauto.pl###ma-top-layer
+moje-gniezno.pl##.headUnderMain.center.mobHide + .center
+moje-gniezno.pl##DIV[style^="position:relative;margin:0 auto;display:inline-block;width:"]
 mojlask.pl###text-2 > .textwidget
 mojlask.pl##[id*="ad_widget"]
 money.pl##A[href*="://direct.money.pl/o/salechannel.php"]
@@ -1521,7 +1522,7 @@ naekranie.pl##div>a>div[style*="background: url"]
 naekranie.pl##div[data-id="313"]
 naekranie.pl##DIV[class][style$=" margin: auto;"] > [class][style$="overflow: hidden; position: relative;"]
 naekranie.pl##A[target="_blank"] DIV[style*="background: url"]
-naekranie.pl###welcome_screen-header
+naekranie.pl##[class*="welcome_screen-"]
 naekranie.pl##A[class][href^="https://naekranie.pl/"][target="_blank"]
 naekranie.pl##.p7e0d9222
 naklo24.pl##.ban
@@ -2065,11 +2066,12 @@ sokolka.tv###jm-content-top
 speedtest.pl##div[style^="width: 1068px; height: 470px; margin: 20px auto"]
 speedtest.pl##.ha2, .ba3
 spidersweb.pl##iframe[src*="ads"]
-spidersweb.pl##.sonybg, .menu-item.bplogo
+spidersweb.pl##.sonybg
 spidersweb.pl##.box-visual
 spidersweb.pl##.category-color-bg.archive-header
 spidersweb.pl##a[href^="https://www.audi.pl/"]
 spidersweb.pl##.sticky
+spidersweb.pl##.show-for-large.columns.large-9 > nav > ul > li:nth-of-type(9)
 spigot.pl##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(1)
 spiz.pl,roksa.pl##.c
 spliff.pl###gkRight > .box
@@ -3180,8 +3182,10 @@ spottedlublin.pl#@#.share-container
 wpworld.pl,windowsowo.pl#@##adBanner
 !
 !14#---------------------------------Anti Adblock Rules element hide----------------------------------!
+##.scrolled.infoBlock
 12zawodnik.pl##.ads-checker-msg
 24opole.pl#@#.ad
+24gliwice.pl,wyborkierowcow.pl#@##adsense
 ##.adblock-alt
 ##.adblock-placeholder
 a-o.ninja##h4
@@ -3238,6 +3242,7 @@ katowickisport.pl#@##pixad-box
 katowickisport.pl#@##advertisments
 katowickisport.pl#@##adnp
 kursbootstrap.pl##.alert-dismissible.alert-success.alert
+leaseplan.pl#@#.afs_ads
 lech.tv#@#.advertising_banner
 lubimyczytac.pl###kociak
 maxkino.pl##.btn-warning.btn-block.btn
@@ -3250,6 +3255,7 @@ minecraftpolska.net,pracawgdansku.com.pl#@#[id*="reklama"]
 minecraftpolska.net,pracawgdansku.com.pl#@##reklama
 mmorpg.org.pl,parezja.pl##.adsbygoogle
 nadajemy.pl###abp_info
+ocen-piwo.pl###osiemnascielat > div > h2:nth-of-type(2)
 przegladsportowy.pl,onet.pl,vod.pl,businessinsider.com.pl,komputerswiat.pl,plejada.pl,komorkomania.pl,noizz.pl,auto-swiat.pl#@#.trizer-bnr
 parezja.pl,demotywatory.pl###adblock_info
 pikio.pl##.adBlockDetectModal, .swal2-fade
@@ -3266,7 +3272,6 @@ przewodnikduchowy.pl##.col-md-8 > div:nth-of-type(2)
 pssite.com,ps3forum.pl###abl
 purepc.pl#@#[class*="reklama"]
 pzkosz.pl##.aside-ad-block
-##.scrolled.infoBlock
 senda.pl#@#.advert_box
 stylunio.pl##.blocked-info
 sucharry.pl###adb
@@ -3386,6 +3391,7 @@ zw.pl###abpnotzw
 @@||video.gazeta.pl/cdn/ads/ad/banner/_adsense_/_adserver/_adview_.ad.json$xmlhttprequest,domain=video.gazeta.pl
 @@||vod.pl^$generichide
 @@||webshark.pl/adserver/*advertise_check=1$script,domain=vider.info
+@@||wp.pl/do/*/dotn$image,domain=pilot.wp.pl
 @@||wpimg.pl/*/wpjslib-prebid.js$script
 @@||wtkplay.pl/javascript/ads.js$script
 @@||www.advert.com/advert$domain=moviesroom.pl
@@ -3623,7 +3629,8 @@ o2.pl,gadzetomania.pl##A[href*=".wp.pl/"][target="_blank"] > IMG[class][src^="ht
 open.fm##A[class][href*=".wp.pl/"] IMG[class][src^="https://v.wpimg.pl/"]
 open.fm###ADrail
 open.fm##.bnr-con2
-open.fm##.bnr-player
+open.fm###openfm-player > DIV[class] > DIV[class]
+open.fm##.bnr-player-right
 portal.abczdrowie.pl##.article__textbox
 portal.abczdrowie.pl##A[target="_blank"] > IMG[src^="https://v.wpimg.pl/"]
 portal.abczdrowie.pl##[class^="article__side__stickblock-"]
@@ -3638,6 +3645,7 @@ wp.tv##.y9xe8qn
 ||wpkoszyk.wp.pl/api/koszyk$xmlhttprequest
 ||xml.enovatis.pl/mrdsl/json.php$xmlhttprequest,domain=turystyka.wp.pl
 ||v.wpimg.pl/$media,redirect=noopmp3-0.1s,domain=wp.pl|~www.wp.pl
+||v.wpimg.pl/$image,domain=money.pl|open.fm
 !
 !33#--------------------------WP element hide------------!
 pilot.wp.pl##SCRIPT + DIV.row
@@ -3686,6 +3694,7 @@ www.wp.pl##DIV[class] > A[class][href*=".wp.pl/"] > DIV > [class][src^="https://
 !www.wp.pl###section_topnews > div:nth-of-type(1)
 www.wp.pl##.sc-kjoXOD
 www.wp.pl###newsfeed-player-column[class^="_3"] > DIV[class^="sc-"]
+www.wp.pl##SECTION#section_topnews > DIV[data-reactid="80"] > DIV[class] + DIV[class]
 !
 ! niepotrzebne ?
 www.wp.pl##[data-st-area="Stream"] > div > :nth-child(2) > :nth-child(2)
@@ -3759,7 +3768,6 @@ www.money.pl##DIV[style$=" z-index: auto;"] > DIV[class]
 www.money.pl##P + DIV[style$="padding:10px 0"]
 www.money.pl##SCRIPT[src^="//money"] + DIV[class][style="text-align:center;"]
 www.money.pl##div:nth-of-type(1) > .news > .news__items > .item:nth-of-type(1)
-!www.money.pl##DIV[class][style="display: block;"]
 money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
 !
 !36#--------------------------Easylist Bugs -----------!
