@@ -2313,8 +2313,6 @@ kimcartoon.me##script:inject(abort-on-property-write.js, Fingerprint2)
 kimcartoon.me##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 kimcartoon.me##script:inject(setInterval-defuser.js, (), 500)
 kimcartoon.me##^script:has-text(this[atob)
-||acloudimages.com^$script,domain=kimcartoon.me
-||d3q33rbmdkxzj.cloudfront.net^$image,domain=kimcartoon.me
 ||fghtem.com^$xmlhttprequest,redirect=nooptext,domain=kimcartoon.me
 @@||kimcartoon.io/js/ads.js$script,first-party
 
@@ -6267,3 +6265,38 @@ matly.me##.bidv
 ! https://github.com/uBlockOrigin/uAssets/issues/1871
 loadurl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 loadurl.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1870
+idsly.bid##script:inject(nano-setInterval-booster.js)
+idsly.bid##script:inject(setTimeout-defuser.js, getComputedStyle, 250)
+idsly.bid##.col-md-3
+idsly.bid##img[src="https://idsly.bid/download3.png"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1874
+@@||sltrib.com/*/scripts/utils/ads/ads.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1875
+patrika.com##script:inject(set-constant.js, canRunAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1878
+@@||agarserv.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1884
+@@||tecknity.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1885
+@@||pornbimbo.com^$generichide
+pornbimbo.com##.bottom-adv
+
+! https://github.com/uBlockOrigin/uAssets/issues/1880
+@@||daciaclub.cz^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1883
+filechoco.net##script:inject(noeval.js)
+/pu-placer.js
+
+! https://github.com/uBlockOrigin/uAssets/issues/1887
+vipserversat.com##script:inject(setTimeout-defuser.js, nextFunction, 250)
+vipserversat.*##script:inject(window.open-defuser.js)
+vipserversat.*###fbox-background
+vipserversat.com###open-fb

@@ -1,5 +1,5 @@
 ### Checking For Whitelist File.
-* Whitelist File removed Tue Apr 3 00:20:21 UTC 2018
+* Whitelist File removed Wed Apr 4 00:20:24 UTC 2018
 ### Pulling Domains From Lists.
 128 After Pulling Domains From Lists.
 ### Pulling Domains From TLD Lists.
