@@ -969,9 +969,10 @@ cnn.com##.OUTBRAIN
 1337x.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ! https://github.com/uBlockOrigin/uAssets/issues/635
 ! https://www.reddit.com/r/uBlockOrigin/comments/81hcu5/1337xto_annoying_popup/
-1337x.*,x1337x.ws##script:inject(addEventListener-defuser.js, /^(click|mousedown|)/, popunder)
-1337x.*,x1337x.ws##script:inject(setInterval-defuser.js, (), 500)
+1337x.*,x1337x.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|)/, popunder)
+1337x.*,x1337x.*##script:inject(setInterval-defuser.js, (), 500)
 1337x.*##script:inject(window.open-defuser.js)
+x1337x.eu##.mgbox
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2#issuecomment-253926602
 coreimg.net##script:inject(noeval.js)
@@ -3135,6 +3136,7 @@ mountainbike.es##script:inject(abort-current-inline-script.js, mpAdblockOpts, bl
 
 ! https://github.com/uBlockOrigin/uAssets/issues/948
 platinmods.com##script:inject(abort-on-property-write.js, AdBlockDetectorWorkaround)
+platinmods.com##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/949
 whentai.com##script:inject(abort-on-property-read.js, canRunAds)
@@ -3361,7 +3363,10 @@ newpct.com##script:inject(window.open-defuser.js)
 newpct.com##A[href$=".html"][rel="nofollow norefferer noopener"]
 ! https://github.com/uBlockOrigin/uAssets/issues/1002#issuecomment-369038123
 descargas2020.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+descargas2020.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 descargas2020.com##script:inject(abort-on-property-write.js, _pop)
+descargas2020.com##script:inject(abort-on-property-write.js, Fingerprint2)
+descargas2020.com##script:inject(addEventListener-defuser.js, mousedown, (b){u()})
 descargas2020.com##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1004
@@ -4763,6 +4768,7 @@ skipad.bid##script:inject(abort-on-property-read.js, app_vars.force_disable_adbl
 ! https://github.com/uBlockOrigin/uAssets/issues/1392
 dz4link.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 dz4link.com##script:inject(abort-on-property-write.js, Fingerprint2)
+||mediapeartree.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1397
 goshrt.xyz##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -5031,7 +5037,7 @@ adshort.pro##script:inject(popads.net.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1497
 ! https://github.com/uBlockOrigin/uAssets/issues/1521
 ! https://github.com/uBlockOrigin/uAssets/issues/1731
-123link.co,123link.io,123link.press,123link.top,22o.co,3rabshort.*,adbilty.me,adbull.me,adcoin.me,adlinkme.com,admove.co,adpop.me,adshort.co,adshort.im,adshorte.com,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bc.vc,bilink.xyz,bit-url.com,bitcoadz.pw,bits.yt,btc.ms,cimi.website,clik.pw,coin.mg,coinb.ink,coinlink.co,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-earn.com,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,earn-guide.com,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,foxurl.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linkrex.net,linksh.top,linkurl.org,lkcash.net,lkky.co,lyon.kim,madurls.com,megaurl.in,met.bz,meulink.tk,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,psl.*,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,so.gd,teqani-plus.com,tmearn.com,tny.ec,tui.click,twik.pw,u2s.io,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,veneapp.com,vivads.net,wi.cr,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##script:inject(nano-setInterval-booster.js)
+123link.co,123link.io,123link.press,123link.top,22o.co,3rabshort.*,adbilty.me,adbull.me,adcoin.me,adlinkme.com,admove.co,adpop.me,adshort.co,adshort.im,adshorte.com,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bc.vc,bilink.xyz,bit-url.com,bitcoadz.pw,bits.yt,btc.ms,cimi.website,clik.pw,coin.mg,coinb.ink,coinlink.co,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-earn.com,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,earn-guide.com,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,foxurl.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,lkky.co,lyon.kim,madurls.com,megaurl.in,met.bz,meulink.tk,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,psl.*,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,so.gd,teqani-plus.com,tmearn.com,tny.ec,tui.click,twik.pw,u2s.io,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,veneapp.com,vivads.net,wi.cr,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##script:inject(nano-setInterval-booster.js)
 globalbesthosting.com,goldescargas.com,katfile.com,shortify.pw,srt.am,userupload.net##script:inject(nano-setTimeout-booster.js)
 imgrock.info##script:inject(nano-setTimeout-booster.js, /.?/, 4000)
 ! https://github.com/uBlockOrigin/uAssets/issues/1481
@@ -6300,3 +6306,23 @@ vipserversat.com##script:inject(setTimeout-defuser.js, nextFunction, 250)
 vipserversat.*##script:inject(window.open-defuser.js)
 vipserversat.*###fbox-background
 vipserversat.com###open-fb
+
+! https://www.reddit.com/r/Buffalo/comments/89dzra/buffalo_news_paywall_x2/dwqze26/
+buffalonews.com##script:inject(set-constant.js, mab, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1890
+momondo.com##script:inject(window.open-defuser.js)
+momondo.com##[onclick*="inline.ad"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/1891
+haaretz.com##script:inject(abort-current-inline-script.js, $, AdBlockUtil)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/900
+nulledpk.com##.onp-sl-content:style(display: block !important;)
+nulledpk.com##.onp-sl-social-locker
+
+! https://www.reddit.com/r/uBlockOrigin/comments/89qlyu/how_do_i_figure_out_what_type_of_adblocker_this_is/
+@@||d33wubrfki0l68.cloudfront.net/*/js/ads.js$script,domain=dlmbeta.netlify.com
+
+! https://www.reddit.com/r/uBlockOrigin/comments/89tfkf/how_do_i_stop_we_see_youre_using_an_ad_blocker/
+miaminewtimes.com##script:inject(set-constant.js, VMG.Components.Adblock, false)
