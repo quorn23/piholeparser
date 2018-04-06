@@ -4554,6 +4554,8 @@ atlasweb.net##script:inject(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1309
 short.pe##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+short.pe##script:inject(abort-on-property-write.js, adcashMacros)
+||short.pe^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.gstatic.com *.google-analytics.com *.google.com *.solvemedia.com *.scorecardresearch.com *.googletagmanager.com *.googletagservices.com
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39694
 xrares.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
@@ -5130,10 +5132,11 @@ nmn900.com##script:inject(abort-on-property-read.js, nmn900ads)
 nmn900.com##a[href^="https://www.pinbo.es/anuncios"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1512
+oturl.com##script:inject(abort-on-property-read.js, _0x1ee4)
 oturl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-oturl.com###myModal
-oturl.com##script:inject(nano-setInterval-booster.js)
+||omoukkkj.stream^$third-party
 @@||dz4up.com/themes/flow/frontend_assets/js/advertisement.js$script,first-party
+oturl.com###myModal
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1514
 pornobae.com##script:inject(abort-current-inline-script.js, ExoLoader)
@@ -6326,3 +6329,12 @@ nulledpk.com##.onp-sl-social-locker
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/89tfkf/how_do_i_stop_we_see_youre_using_an_ad_blocker/
 miaminewtimes.com##script:inject(set-constant.js, VMG.Components.Adblock, false)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40386
+@@||n4mo.org/advert.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1892
+avoiderrors.net##script:inject(setTimeout-defuser.js, google_jobrunner, 10000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1894
+lovepedia.net##script:inject(bab-defuser.js)

@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 7gXEUBN64fN5fkh10xsv9w
-! Version: 201804050020
+! Checksum: MOjMgKjfUD6w+fK7aFsN5Q
+! Version: 201804060020
 ! Title: RU AdList: BitBlock
-! Last modified: 05 Apr 2018 00:20 UTC
+! Last modified: 06 Apr 2018 00:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1825,6 +1825,7 @@ gazeta.ru##.m_fixed.video_iframe, .m_fixed.video_iframe ~ .closebtn
 segodnya.ua##.mailing-popup
 ren.tv##.main-with-sidebar > div[class="block block-block"]
 overclockers.ru##.main-wrap > .grid.ui > .container-block.column.wide.sixteen
+bdf.ms##.mainContent > div[style^="outline"]
 chatovod.ru##.mainPage > .clients
 etc-com.ru##.mainbanner
 3dnews.ru##.margin-top.ad
@@ -1855,6 +1856,7 @@ nag.ru##.openxtop
 fainaidea.com##.orakul-azure-block
 sports.ru##.overlay[data-control="Common.Overlay"]
 playground.ru##.page-notification
+bdf.ms##.pageContent > div[style^="outline"]
 www.qrz.ru##.partners_box
 pleer.ru##.pie.mainBlock[style^="margin-bottom: 15px"]:not([class*="search"])
 overclockers.ru##.pip-main-top
@@ -3622,6 +3624,7 @@ prom.ua#@#img[alt="facebook"]
 /img/gplus_
 /img/instagram-
 /img/instragram.
+/img/rss.
 /img/share-
 /img/share/*
 /img/share_
@@ -6675,6 +6678,7 @@ _youtube_social_
 ###social-cta
 ###social-digest
 ###social-dropdown-anchor
+###social-email
 ###social-engage
 ###social-facebook
 ###social-fb
@@ -7941,6 +7945,7 @@ _youtube_social_
 ##.asicon-google-plus
 ##.asicon-twitter
 ##.aside-social
+##.aside-social__widget__wrapper
 ##.aside-socials
 ##.asideWithSharebar
 ##.asset-inline-share-tools
@@ -8348,6 +8353,10 @@ _youtube_social_
 ##.c-poll-share__text
 ##.c-share
 ##.c-sharebar
+##.c-sharebtn
+##.c-sharebtn__facebook
+##.c-sharebtn__googleplus
+##.c-sharebtn__twitter
 ##.c-sharefixed
 ##.c-sharing--menu
 ##.c-social
@@ -10672,6 +10681,7 @@ _youtube_social_
 ##.lst-shrpst
 ##.lst-social
 ##.lst_social
+##.lt_nav-share
 ##.lx-share-tools
 ##.m-article-share
 ##.m-article-share__link
@@ -10883,6 +10893,7 @@ _youtube_social_
 ##.module-default-social
 ##.module-follow
 ##.module-follow-us
+##.module-share
 ##.module-share-tools
 ##.module-shared
 ##.module-social-share-icons
@@ -11085,6 +11096,7 @@ _youtube_social_
 ##.overlay_facebook
 ##.ow-social-icons
 ##.p-button-social
+##.p-footer-rssLink
 ##.p-share-icon
 ##.padded-footer-connect
 ##.page-controls-share
@@ -12511,10 +12523,12 @@ _youtube_social_
 ##.soc-insta
 ##.soc-instagram
 ##.soc-link
+##.soc-linked
 ##.soc-links
 ##.soc-media
 ##.soc-media-sharing
 ##.soc-menu
+##.soc-pint
 ##.soc-pinterest
 ##.soc-share
 ##.soc-share-cont
@@ -13329,6 +13343,7 @@ _youtube_social_
 ##.social_googleplus
 ##.social_h_nets
 ##.social_header
+##.social_header_icons
 ##.social_holder
 ##.social_i_30x30
 ##.social_ico_box
@@ -13563,6 +13578,7 @@ _youtube_social_
 ##.socialsider
 ##.socialstuff
 ##.socialtab
+##.socialtab_container
 ##.socialtags
 ##.socialtools
 ##.socialtoolstext
@@ -14285,6 +14301,7 @@ _youtube_social_
 ##.vc_box_social_white
 ##.vc_container_social
 ##.vc_social_button_cont
+##.vc_social_buttons
 ##.vc_social_fixed_footer
 ##.vc_social_icons
 ##.vc_social_icons_btn
@@ -14837,6 +14854,7 @@ _youtube_social_
 ##a[onclick^="window.open('http://twitter.com/home?status="]
 ##a[onclick^="window.open('http://www.blogger.com/blog-this.g?"]
 ##a[onclick^="window.open('http://www.facebook.com/sharer.php?"]
+##a[onclick^="window.open('https://www.facebook.com/sharer/sharer.php?"]
 ##a[rel="share-on-facebook"]
 ##a[rel="share-on-twitter"]
 ##a[title="Add to Facebook"]
@@ -14934,6 +14952,7 @@ _youtube_social_
 ##a[title="ВКонтакте"]
 ##button[aria-label="Toggle social share buttons"]
 ##button[title="Share"]
+##div[button="share"]
 ##div[class^="ArticleShareLinks_"]
 ##div[class^="FooterSocialLinks"]
 ##div[class^="ShareButtons_"]
@@ -16189,6 +16208,8 @@ _site_cookie_
 ###my_web_push_app_box_confirm
 ###network_floaty_icons
 ###newsletter-top-banner
+###newsletter_signup_ft
+###newsletter_signup_sb
 ###newswhip-widget
 ###next-flyin
 ###nlSliderSignup
@@ -16352,6 +16373,8 @@ _site_cookie_
 ##.article-next-sticky
 ##.article__subscribe
 ##.articles-recirculation
+##.aside__newsletter--footer__wrapper
+##.aside__newsletter__wrapper
 ##.at_nwletters
 ##.avia-post-nav
 ##.background-email-popup
@@ -16614,6 +16637,7 @@ _site_cookie_
 ##.sidebar-subscribe
 ##.sidebar-subscribe-box-wrapper
 ##.sidebar-tile-subscribe
+##.single-post-newsletter
 ##.single_like_box
 ##.singlepost-like
 ##.slide-in-wg
@@ -25030,6 +25054,7 @@ _site_cookie_
 ###WidgetScrollToTop
 ###arrow_to_site_top
 ###auto-top-link
+###back-to-the-top
 ###back-to-top
 ###back-to-top-icon
 ###back-to-top-scroll
@@ -25052,6 +25077,7 @@ _site_cookie_
 ###fl-to-top
 ###footer-back-to-top
 ###g1-back-to-top
+###gh-bt
 ###gkTopLink
 ###go-to-top
 ###goDownFooter
@@ -26221,7 +26247,7 @@ listenonrepeat.com#@#.ssk-facebook
 cbsnews.com#@#.std-social
 streetsblog.org,thinkprogress.org#@#.sticky-share
 stumbleupon.com#@#.stumble-button
-amazon.co.uk,amazon.com,amazon.com.au,amazon.de,amazon.fr,gitlab.com,reddit.com,twitch.tv#@#.subscribe-button
+amazon.co.uk,amazon.com,amazon.com.au,amazon.de,amazon.fr,gitlab.com,reddit.com,twitch.tv,xhamster.com#@#.subscribe-button
 fewo-direkt.de,nvidia.pl#@#.subscribe-container
 nvidia.pl#@#.subscribe-text
 first-class-and-more.de,geekgamer.tv#@#.subscribe-widget
@@ -26295,24 +26321,25 @@ google.com#@#a[href^="https://www.google.com/bookmarks/mark?"]
 linkedin.com#@#a[href^="https://www.linkedin.com/cws/share?"]
 reddit.com#@#a[href^="https://www.reddit.com/submit?"]
 stumbleupon.com#@#a[href^="https://www.stumbleupon.com/submit?"]
-accounts.codemasters.com,allestörungen.de,encyclopediadramatica.se,facebook.com,foodit.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,inmotionhosting.com,jetpack.wordpress.com,kingswiki.com,ludins.fr,maxthon.com,megabus.com,opendatacity.de,pcgames.de,theoldreader.com,twitter.com,wikipedia.org,youtube.com#@#a[title="Facebook"]
+accounts.codemasters.com,allestörungen.de,clubbingtv.com,encyclopediadramatica.se,facebook.com,foodit.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,inmotionhosting.com,jetpack.wordpress.com,kingswiki.com,ludins.fr,maxthon.com,megabus.com,opendatacity.de,pcgames.de,theoldreader.com,twitter.com,wikipedia.org,youtube.com#@#a[title="Facebook"]
 encyclopediadramatica.se,github.com,google.co.nz,google.co.uk,google.com,google.com.au,google.de,kingswiki.com,wikipedia.org#@#a[title="Google Plus"]
 encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,kingswiki.com,wikipedia.org,youtube.com#@#a[title="Google+"]
 allestörungen.de,encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,kingswiki.com,linkedin.com,wikipedia.org#@#a[title="LinkedIn"]
 pinterest.com,wikipedia.org#@#a[title="Pin it!"]
 encyclopediadramatica.se,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,kingswiki.com,wikipedia.org#@#a[title="Pinterest"]
 flattr.com,wikipedia.org#@#a[title="Tumblr"]
-accounts.codemasters.com,allestörungen.de,encyclopediadramatica.se,flattr.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,jaruzel.com,jetpack.wordpress.com,kingswiki.com,live.com,maxthon.com,megabus.com,opendatacity.de,outlook.com,twitter.com,wikipedia.org,youtube.com#@#a[title="Twitter"]
+accounts.codemasters.com,allestörungen.de,clubbingtv.com,encyclopediadramatica.se,flattr.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,jaruzel.com,jetpack.wordpress.com,kingswiki.com,live.com,maxthon.com,megabus.com,opendatacity.de,outlook.com,twitter.com,wikipedia.org,youtube.com#@#a[title="Twitter"]
 allestörungen.de,encyclopediadramatica.se,flattr.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,maxthon.com,opendatacity.de,pcgameshardware.de,wikipedia.org#@#a[title="Youtube"]
 aliexpress.com,github.com,github.io,wikipedia.org#@#a[title="facebook"]
 digg.com#@#div[id^="digg-widget-"]
-a2zapk.com,disqus.com,eff.org,facebook.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,hockeyapp.net,incgamers.com,last.fm,lastfm.com.br,lastfm.com.tr,lastfm.de,lastfm.es,lastfm.fr,lastfm.it,lastfm.jp,lastfm.pl,lastfm.ru,lastfm.se,ludins.fr,maxthon.com,microsoft.com,opendatacity.de,playboy.com,sky.com,t3n.de,thoughtcatalog.com,twitter.com,udacity.com,vvhp.net,whatthetech.com,wikipedia.org#@#img[alt="Facebook"]
+a2zapk.com,clubbingtv.com,disqus.com,eff.org,facebook.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,hockeyapp.net,incgamers.com,last.fm,lastfm.com.br,lastfm.com.tr,lastfm.de,lastfm.es,lastfm.fr,lastfm.it,lastfm.jp,lastfm.pl,lastfm.ru,lastfm.se,ludins.fr,maxthon.com,microsoft.com,opendatacity.de,playboy.com,sky.com,t3n.de,thoughtcatalog.com,twitter.com,udacity.com,vvhp.net,whatthetech.com,wikipedia.org#@#img[alt="Facebook"]
 github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,vvhp.net,wikipedia.org,xkcd.com,youtube.com#@#img[alt="Google+"]
 a2zapk.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,vvhp.net,whatculture.com,wikipedia.org#@#img[alt="Instagram"]
 a2zapk.com,eff.org,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,linkedin.com,wikipedia.org#@#img[alt="LinkedIn"]
-breakoutlist.com,eff.org,facebook.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,microsoft.com,rantlifestyle.com,wikipedia.org#@#img[alt="Pinterest"]
+clubbingtv.com#@#img[alt="Linkedin"]
+authy.com,breakoutlist.com,eff.org,facebook.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,microsoft.com,rantlifestyle.com,wikipedia.org#@#img[alt="Pinterest"]
 acceptableads.org,battleforthenet.com,breakoutlist.com,easyicon.net,github.io,microsoft.com,rantlifestyle.com,wikipedia.org#@#img[alt="Reddit"]
-a2zapk.com,battleforthenet.com,breakoutlist.com,disqus.com,eff.org,github.io,gitlab.com,google.co.nz,google.co.uk,google.com,google.com.au,google.de,hackerone.com,incgamers.com,maxthon.com,microsoft.com,opendatacity.de,thoughtcatalog.com,twitter.com,vvhp.net,whatculture.com,whatthetech.com,wikipedia.org#@#img[alt="Twitter"]
+a2zapk.com,battleforthenet.com,breakoutlist.com,clubbingtv.com,disqus.com,eff.org,github.io,gitlab.com,google.co.nz,google.co.uk,google.com,google.com.au,google.de,hackerone.com,incgamers.com,maxthon.com,microsoft.com,opendatacity.de,thoughtcatalog.com,twitter.com,vvhp.net,whatculture.com,whatthetech.com,wikipedia.org#@#img[alt="Twitter"]
 mezzacotta.net,theverge.com,twitter.com,wikipedia.org#@#img[alt="Vine"]
 a2zapk.com,maxthon.com,opendatacity.de,whatculture.com,wikipedia.org#@#img[alt="Youtube"]
 facebook.com,github.io,megabus.com,theguardian.com,uservoice.com,wikipedia.org#@#img[alt="facebook"]
@@ -26393,6 +26420,13 @@ fark.com,github.io,marketplace.firefox.com,vvhp.net,wikipedia.org#@#img[title="Y
 @@||assets.pinterest.com/js/pinit.js$domain=rafflecopter.com
 @@||assets.pinterest.com/pidget.html$domain=rafflecopter.com
 @@||auth.opera.com/css/img/icons-social.png
+@@||authy.com/wp-content/themes/authy/assets/images/icons/footer-facebook.svg
+@@||authy.com/wp-content/themes/authy/assets/images/icons/footer-linkedin.svg
+@@||authy.com/wp-content/themes/authy/assets/images/icons/footer-twitter.svg
+@@||authy.com/wp-content/themes/authy/assets/images/icons/google-authenticator.svg
+@@||authy.com/wp-content/uploads/dezeen_twitter-bird.gif
+@@||authy.com/wp-content/uploads/facebook.png
+@@||authy.com/wp-content/uploads/Pinterest-logo.png
 @@||autorepairconnect.com/static/images/from_facebook.png$domain=autorepairconnect.com
 @@||avgthreatlabs.com^*/facebook-logo.png
 @@||azurewebsites.net/Plugins/ExternalAuth.Facebook/Content/images/facebook-signing.png
@@ -26442,6 +26476,7 @@ fark.com,github.io,marketplace.firefox.com,vvhp.net,wikipedia.org#@#img[title="Y
 @@||cloudfront.net^*/images/gplus-icon.png$domain=bitbucket.org
 @@||cloudfront.net^*/signin_with_facebook.png
 @@||cloudfront.net^*/social-buttons.png$domain=socialreader.com
+@@||clubbingtv.com/module/opensocialconnect/static/image/linkedin.png
 @@||clubs.nfl.com/nfl-assets/js/social-buttons.js
 @@||cnn.com/cnnnext/*-social-$image
 @@||comcastnets.net/thyme/img/button-login-facebook.png$domain=eonline.com
