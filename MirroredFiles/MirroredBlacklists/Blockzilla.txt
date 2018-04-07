@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version E78 
+! Version E82 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -744,6 +744,7 @@ images/ads/
 ||qualtrics.com^$third-party
 ||scribol.com^$third-party
 ||siteapps.com^$third-party
+||smartasset.com/embed/$third-party
 ||snapengage.com^$image,third-party
 ||stats.$third-party
 ||syndication.twitter.com^$third-party
@@ -756,6 +757,7 @@ images/ads/
 ! $popup >>>>>
 !
 &popunder=$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
+&utm_campaign=$popup,third-party
 /banner/*$popup
 /popunder.$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||4dsply.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
@@ -812,6 +814,7 @@ images/ads/
 /pagead/*$domain=youtube.com
 /pagead2.$domain=youtube.com
 /tag.$domain=slashdot.org
+/widgets/*$domain=kiplinger.com
 _ads.$domain=dailymail.co.uk
 _banner.$domain=youtube.com
 |blob:$domain=kissmanga.com|laptopmag.com|mensfitness.com|merriam-webster.com|tomshardware.com|topix.com|watchcartoononline.io
@@ -938,6 +941,7 @@ _banner.$domain=youtube.com
 ##.adsense-block
 ##.adslot
 ##.adtop
+##.adunit
 ##.adunit_rectangle
 ##.advert
 ##.advertise
@@ -1050,7 +1054,8 @@ animefreak.tv##DIV[class*="-filter"]
 animenewsnetwork.com##[class*="iab"]
 christianitytoday.com##.overlay
 cnet.com,empireonline.com,laptopmag.com##DIV[id^="leader"]
-comingsoon.net,digitaltrends.com,indiewire.com,lifewire.com,medicalnewstoday.com,techradar.com##DIV[class*="leaderboard"]
+cnn.com##[class*="promotions"]
+comingsoon.net,digitaltrends.com,indiewire.com,lifewire.com,medicalnewstoday.com,prevention.com,techradar.com##DIV[class*="leaderboard"]
 cosmopolitan.com##DIV[class^="leader"]
 csnchicago.com,reason.com,tomshardware.com##DIV[id$="leaderboard"]
 datpiff.com,freewarefiles.com,lucianne.com##[style="cursor: pointer;"]
@@ -1061,6 +1066,7 @@ distractify.com##DIV[class^="RightRail"]
 eventcinemas.com.au,eventcinemas.co.nz,thedailysheeple.com##.ads
 greatist.com,slashfilm.com##DIV[id*="300x250"]
 horrornews.net##DIV[id*="cedato"]
+kiplinger.com##[class*="advert"]
 mangafox.me##DIV[style*="banners/"]
 mirror.co.uk##.top-slot
 mlive.com,theyeshivaworld.com##DIV[class*="_ad_"]
@@ -1099,7 +1105,7 @@ youtube.com##DIV[class*="-ads-"]
 @@/track/*$media,subdocument
 @@/tracker/*$script,domain=taobao.com
 @@/tracking.$script,xmlhttprequest,domain=mlb.com
-@@/tracking/*$script,xmlhttprequest,domain=ctv.ca|ctvnews.ca|mlb.com
+@@/tracking/*$script,xmlhttprequest,domain=ctv.ca|ctvnews.ca|inpost.pl|mlb.com
 @@/trackingCode.$script,domain=oakley.com
 @@_tracker.$script,domain=huffingtonpost.de
 @@_tracking.$script,domain=kohls.com|slideshare.net
@@ -1111,7 +1117,6 @@ youtube.com##DIV[class*="-ads-"]
 @@||analytics.snidigital.com^
 @@||analytics.twitter.com/user/
 @@||api-maps.yandex.ru^
-@@||api-shipx-pl.*/tracking/
 @@||bcbits.com/download/track/
 @@||c.amazon-adsystem.$script,domain=player.performgroup.com
 @@||cdn.turner.com/ads/$script,domain=cnn.com

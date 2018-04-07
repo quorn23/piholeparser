@@ -416,6 +416,8 @@ pornhub.com##script:inject(csp.js, img-src 'self' *; media-src 'self' *)
 ! https://forums.lanik.us/viewtopic.php?p=120148#p120148
 youjizz.com##script:inject(abort-on-property-write.js, nb)
 @@||yjcontentdelivery.com^$script,domain=youjizz.com
+youjizz.com##script:inject(noeval.js)
+youjizz.com###desktopFooterPr
 
 ! https://github.com/uBlockOrigin/uAssets/issues/78
 ! https://www.wilderssecurity.com/threads/ublock-a-lean-and-fast-blocker.365273/page-103#post-2648643
@@ -936,6 +938,9 @@ mmorpg.org.pl##script:inject(fuckadblock.js-3.2.0)
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32878
 freethesaurus.com,thefreedictionary.com##div:has(:scope > a:not([href*="/"]) > img:not([src*="/"]))
 freethesaurus.com,thefreedictionary.com##script:inject(setTimeout-defuser.js, warn)
+! https://github.com/uBlockOrigin/uAssets/issues/1896
+freethesaurus.com,thefreedictionary.com##script:inject(abort-on-property-read.js, adc)
+freethesaurus.com,thefreedictionary.com##div[class][id]:if-not(*):has-text(/^$/)
 ! To counter exception filters
 ||pagead2.googlesyndication.com^$script,important,domain=thefreedictionary.com
 
@@ -1210,7 +1215,7 @@ eltern.de,essen-und-trinken.de,focus.de,spiegel.de##script:inject(abort-on-prope
 ! https://github.com/NanoAdblocker/NanoFilters/issues/12
 ! https://github.com/uBlockOrigin/uAssets/issues/1442
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40162
-20min.ch,al.com,autoexpress.co.uk,bento.de,bikeradar.com,cleveland.com,cyclingnews.com,digitalspy.com,eurogamer.de,eurogamer.es,eurogamer.net,eurogamer.pt,finanzfrage.net,ft.com,gala.de,gesundheitsfrage.net,gutefrage.net,ligainsider.de,masslive.com,metabomb.net,mlive.com,muthead.com,newyorkupstate.com,ngin-mobility.com,nj.com,nola.com,oregonlive.com,pcgamer.com,pennlive.com,radiotimes.com,silive.com,stern.de,syracuse.com,theweek.co.uk##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
+20min.ch,al.com,autoexpress.co.uk,bento.de,bikeradar.com,cleveland.com,cyclingnews.com,digitalspy.com,eurogamer.de,eurogamer.es,eurogamer.net,eurogamer.pt,finanzfrage.net,ft.com,gala.de,gesundheitsfrage.net,gutefrage.net,ligainsider.de,livingathome.de,masslive.com,metabomb.net,mlive.com,muthead.com,newyorkupstate.com,ngin-mobility.com,nj.com,nola.com,oregonlive.com,pcgamer.com,pennlive.com,radiotimes.com,silive.com,stern.de,syracuse.com,theweek.co.uk##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
 ! https://forums.lanik.us/viewtopic.php?f=90&t=35106
 gamona.de,giga.de,kino.de,spielaffe.de,spieletipps.de##script:inject(abort-on-property-write.js, _sp_)
 ! https://github.com/uBlockOrigin/uAssets/issues/271
@@ -2474,6 +2479,8 @@ putlockers.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 putlockers.*##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 putlockers.*##script:inject(nowebrtc.js)
 entervideo.net##script:inject(window.open-defuser.js)
+! https://forums.lanik.us/viewtopic.php?f=62&t=40397
+putlockertv.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38536
 10fastfingers.com##script:inject(abort-current-inline-script.js, document.createElement, decodeURIComponent)
@@ -2851,8 +2858,9 @@ palimas.tv##.ad-ind
 ||appliancesforhome.top/wp-content/*/ad$script,first-party,redirect=fuckadblock.js-3.2.0
 
 ! https://github.com/reek/anti-adblock-killer/issues/3791
-mangahost.cc##script:inject(bab-defuser.js)
-mangahost.cc##script:inject(setTimeout-defuser.js, testDisplay, 3000)
+! https://github.com/reek/anti-adblock-killer/issues/3970
+mangahost.cc,mangahostbr.com##script:inject(bab-defuser.js)
+mangahost.cc,mangahostbr.com##script:inject(setTimeout-defuser.js, testDisplay, 3000)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=54641
 journalstar.com##script:inject(abort-current-inline-script.js, document.createElement, m80fg)
@@ -6338,3 +6346,12 @@ avoiderrors.net##script:inject(setTimeout-defuser.js, google_jobrunner, 10000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1894
 lovepedia.net##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1895
+slate.com##script:inject(setTimeout-defuser.js, isAbEnabled, 1000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1897
+@@||anime-extremo.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1898
+anime-rebornx.*##script:inject(bab-defuser.js)
