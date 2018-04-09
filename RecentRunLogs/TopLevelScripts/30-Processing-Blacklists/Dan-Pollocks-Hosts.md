@@ -32,11 +32,11 @@ ____________________________________
 ### Converting All Text To Lower Case
 13410 Lines After Converting All Text To Lower Case
 ### Checking For Fully Qualified Domain Name Requirements
-13388 Lines After Checking For Fully Qualified Domain Name Requirements
+13389 Lines After Checking For Fully Qualified Domain Name Requirements
 ### Reverse Searching For Invalid Top Level Domains
-13385 Lines After Reverse Searching For Invalid Top Level Domains
+13386 Lines After Reverse Searching For Invalid Top Level Domains
 ### Removing Duplicate Lines
-13378 Lines After Removing Duplicate Lines
+13379 Lines After Removing Duplicate Lines
 ## Checking Parsed File Size
 ## Attempting Creation Of Parsed List
 ## Calculating Parse Time
