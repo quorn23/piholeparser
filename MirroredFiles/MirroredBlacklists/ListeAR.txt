@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: 6OMpYm94OvnLQYrWbZ4vXA
-! Version: 201804100020
+! Checksum: 4xXYfG+ircGXkg+wcXZDKQ
+! Version: 201804110020
 ! Title: Liste AR
 ! القائمة العربية لمانع الشرائط الإعلانية آدبلوك بلس
 ! Liste AR ~ Filtres arabes complémentaires à EasyList et à la Liste FR
@@ -47,6 +47,7 @@
 /adedinfo/*
 /adfuel-
 /adfuel/*
+/ads-125.
 /ads/*/banners_
 /ads/box3.
 /adsph2/*
@@ -115,6 +116,7 @@
 ://go.*/afu.
 ://partners.*/widget/$third-party
 =openx&aid=
+?text=Ads_
 _990x100.
 _adunit_
 _arabycash.
@@ -202,6 +204,12 @@ _New_Ads.
 ##.fixedMpu
 ##.hidden_pub
 ##.i3lan
+##.la-ads-a-wide
+##.la-ads-b-rec
+##.la-ads-b-wide
+##.la-ads-title
+##.la-mob-ads-250x250
+##.la-mob-ads-320x100
 ##.label-ads
 ##.leftadsag
 ##.logoAdv
@@ -246,6 +254,7 @@ _New_Ads.
 ##a[href*="booraq.org"]
 ##a[href*="dubizzle.com/ar/?utm_source="]
 ##a[href^="http://arabyads.go2cloud.org/"]
+##a[href^="http://c.jumia.io/?"] > img
 ##a[href^="http://clicks.pipaffiliates.com/"] > img
 ##a[href^="http://drivercardusa.info/"]
 ##a[href^="http://www.bluehost.com/track/"] > img
@@ -270,6 +279,7 @@ _New_Ads.
 ||adv0.com^$third-party
 ||advertica-cdn.com^$third-party,domain=~advertica.ae
 ||advertica.ae^$third-party
+||adzbux.com^$third-party
 ||adzouktech.com^$third-party
 ||affili.st^$third-party
 ||apanet.net^$third-party
@@ -283,6 +293,7 @@ _New_Ads.
 ||erate.co.il^$third-party
 ||finishclueobscure.info^$third-party
 ||fortvision.com^$third-party
+||globalrotator.com^$third-party
 ||idsly.com^$third-party
 ||ilovemobi.com^$third-party
 ||interadv.net^$third-party
@@ -296,10 +307,12 @@ _New_Ads.
 ||projectagora.net^$third-party
 ||prstatics.com^$third-party
 ||qoo.sh^$third-party
+||randomadz.com^$third-party
 ||revdepo.com^$third-party
 ||richnative.com^$third-party
 ||softwarepiset.com^$third-party
 ||teeet.net^$third-party
+||themadvlad.com^$third-party
 ||trinylium.com^$third-party
 ||windailyprizes.info^$third-party
 ||yakiyo.club^$third-party
@@ -466,6 +479,7 @@ $websocket,domain=arawatch.tv|cera.online|cera.video|mazika2day.com|wifi4games.c
 ||dirlaffaire.net/souq/files/$third-party
 ||diwanee.net/?ref=
 ||dohaup.com/up/2010-05-07/dohaup_206097194.gif
+||dollarclix.com/images/banners/
 ||dowerly.com^$image,third-party
 ||downloadha.com/shop/
 ||dramacafe.tv/Adblock_
@@ -816,7 +830,7 @@ $popup,~third-party,domain=egy.best|egybest.co|egybest.com|egybest.net|egybest.s
 ! popads
 /^https?:\/\/www\.[a-z]{8,14}\.(bid|club|co|com|me)\/[a-z]{1,12}\.js$/$script,domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|honadrama.me|kooralive.tv|okanime.com|series4watch.tv
 ! popup & popunder
-$popup,domain=an-online.com|cima4up.tv|kora-online.tv
+$popup,domain=an-online.com|cima4up.tv|kora-online.tv|mes001.blogspot.com
 about:$popup,domain=akoam.com
 ! images hosting
 ||c.top4top.net/p_7010u9u81.gif

@@ -1286,6 +1286,8 @@ auto-motor-und-sport.de,caravaning.de,womenshealth.de##script:inject(abort-on-pr
 ! https://github.com/uBlockOrigin/uAssets/issues/299
 ! https://github.com/uBlockOrigin/uAssets/issues/846
 zippyshare.com##script:inject(noeval.js)
+rarbg.unblockall.org##script:inject(abort-on-property-read.js, __htapop)
+rarbg.bypassed.org##script:inject(abort-on-property-write.js, Fingerprint2)
 rarbg.bypassed.org,rarbg.is,rarbg.to,rarbg.unblockall.org,rarbg.unblocked.kim,rarbgaccess.org,rarbgmirror.*,rarbgproxy.*,rarbgunblock.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 rarbg.bypassed.org,rarbg.is,rarbg.to,rarbg.unblockall.org,rarbg.unblocked.kim,rarbgaccess.org,rarbgmirror.*,rarbgproxy.*,rarbgunblock.*##script:inject(setInterval-defuser.js, system.popunder, 500)
 rarbgproxy.org##script:inject(window.open-defuser.js)
@@ -5024,6 +5026,7 @@ apkmirrorfull.com##script:inject(popads-dummy.js)
 ! nbc anti adb https://forums.lanik.us/viewtopic.php?p=131769#p131769
 @@||doubleclick.net^$image,domain=nbc.com
 @@||googlesyndication.com^$image,domain=nbc.com
+nbc.com##script:inject(set-constant.js, canRunAds, true)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39865
 watcheng.tv##script:inject(popads-dummy.js)
@@ -6465,3 +6468,53 @@ niagotch.com##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1741
 theralphretort.com##script:inject(abort-on-property-write.js, adBlockDetected)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40436
+||ads.puhutv.com/i.jpg$image,redirect=2x2-transparent.png
+
+! https://github.com/uBlockOrigin/uAssets/issues/1926
+benjaminphamchannel.com##script:inject(addEventListener-defuser.js, load, 2000)
+
+! https://forums.lanik.us/viewtopic.php?f=90&t=40441
+@@||widget.spoods.io/loader.js$script,domain=winfuture.de
+
+! https://forums.lanik.us/viewtopic.php?f=96&t=40440
+@@||hdblog.it^$generichide
+hdblog.it#@#.item_compra
+hdblog.it#@#.box_flame
+hdblog.it#@#.box_grampa_shadow
+hdblog.it##.item_prod
+
+! https://github.com/uBlockOrigin/uAssets/issues/1927
+clk.press##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+clk.press##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1928
+clicksfly.xyz##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+clicksfly.xyz##script:inject(nano-setInterval-booster.js)
+
+! https://forums.lanik.us/viewtopic.php?p=134968#p134968
+@@||hdmotori.it^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1929
+cliver.tv##script:inject(abort-on-property-write.js, smrtSB)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1931
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=zonarutoppuden.com
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=zonarutoppuden.com
+zonarutoppuden.com##^script:has-text(3f87b0eaddd)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1932
+megawarez.org##script:inject(abort-on-property-write.js, smrtSB)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1933
+@@||solowarez.org^$generichide
+solowarez.org##script:inject(noeval.js)
+solowarez.org##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1930
+peliculasio.com##script:inject(abort-on-property-write.js, smrtSB)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1935
+hentai2w.com##script:inject(set-constant.js, ads, 1)
+hentai2w.com###playerOverlay
