@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: 4xXYfG+ircGXkg+wcXZDKQ
-! Version: 201804110020
+! Checksum: uBpw8gek8GmVpIoXuRORTA
+! Version: 201804130220
 ! Title: Liste AR
 ! القائمة العربية لمانع الشرائط الإعلانية آدبلوك بلس
 ! Liste AR ~ Filtres arabes complémentaires à EasyList et à la Liste FR
@@ -50,6 +50,7 @@
 /ads-125.
 /ads/*/banners_
 /ads/box3.
+/adsbar.
 /adsph2/*
 /adss.gif
 /adsvideos.
@@ -88,6 +89,7 @@
 /files/adv/*
 /flash_adver_
 /floating_window_with_tabs.
+/forex160-600.
 /hosein/ads/*
 /i3lan-1.
 /i3lan-2.
@@ -111,11 +113,13 @@
 /show_i.php?b=$subdocument,third-party
 /slider.*&pub=
 /tabliq/banner/*
+/ufxaffiliates.js
 /vb/open.js
 800x100.gif?
 ://go.*/afu.
 ://partners.*/widget/$third-party
 =openx&aid=
+?mod=shofBanner&zone=
 ?text=Ads_
 _990x100.
 _adunit_
@@ -154,6 +158,8 @@ _New_Ads.
 ##.ad-id_
 ##.ad-lft
 ##.ad-location_
+##.ad-post-bottom
+##.ad-post-top
 ##.ad-rt
 ##.ad-type_adsense
 ##.ad-type_code
@@ -169,6 +175,7 @@ _New_Ads.
 ##.ads-desktop__wrap
 ##.ads-mobile
 ##.ads-mobile__wrap
+##.ads-posting
 ##.ads-under-data
 ##.ads-under-data__main
 ##.ads-under-header
@@ -338,6 +345,9 @@ _New_Ads.
 ||mobyetrafmsmt.com^$popup,third-party
 ||newpoptab.com^$popup,third-party
 ||newtab-tv.com^$popup,third-party
+||omasatra.com^$popup,third-party
+||onclickbright.com^$popup,third-party
+||onclickmega.com^$popup,third-party
 ||partners.xm.com^$popup,third-party
 ||pipaffiliates.com^$popup,third-party
 ||pipeschannels.com^$popup,third-party
@@ -526,6 +536,7 @@ $websocket,domain=arawatch.tv|cera.online|cera.video|mazika2day.com|wifi4games.c
 ||gamepower7.com/forum/banner.swf
 ||gamezek.com/img.png
 ||geek4arab.net/banner/
+||getsurl.com/images/banners/
 ||ghawyakhbar.com/img/$third-party
 ||ghawyakhbar.com/img/sky-doo.gif
 ||giclub.tv/index.php?action=$image
@@ -716,6 +727,7 @@ $websocket,domain=arawatch.tv|cera.online|cera.video|mazika2day.com|wifi4games.c
 ||xuscacamusca.se/js/adsj.js
 ||yamli.com/static/gam_iframe.htm?
 ||yellowpages.com.ps/search_bricks/ps_search_bricks_300X130.php
+||yimg.com^*/www.blueridgehobbies.com/images/Misc/ClickHereAnimated.gif
 ||ymoviez.com/yallamoviez.js
 ||yourjavascript.com^$domain=aflam2you.com|animop.net
 ||yourjavascript.com^*/add-url.js
@@ -778,6 +790,10 @@ $popup,~third-party,domain=egy.best|egybest.co|egybest.com|egybest.net|egybest.s
 @@||ajax.googleapis.com/ajax/libs/$script,domain=arabictorrent.net
 |http://$script,third-party,xmlhttprequest,domain=arabictorrent.net
 |https://$script,third-party,xmlhttprequest,domain=arabictorrent.net
+! micano4u.org
+@@||ajax.googleapis.com/ajax/libs/$script,domain=micano4u.org
+|http://$script,third-party,xmlhttprequest,domain=micano4u.org
+|https://$script,third-party,xmlhttprequest,domain=micano4u.org
 ! anyanime.com
 |http://$script,third-party,domain=anyanime.com
 |https://$script,third-party,domain=anyanime.com
@@ -788,6 +804,12 @@ $popup,~third-party,domain=egy.best|egybest.co|egybest.com|egybest.net|egybest.s
 @@||ajax.googleapis.com/ajax/libs/$script,domain=arablionz.tv
 |http://$script,third-party,xmlhttprequest,domain=arablionz.tv
 |https://$script,third-party,xmlhttprequest,domain=arablionz.tv
+! almotamayeztech.com
+@@||ajax.googleapis.com/ajax/libs/$script,domain=almotamayeztech.com
+@@||cdn.jsdelivr.net^$script,domain=almotamayeztech.com
+@@||cdnjs.cloudflare.com/ajax/libs/$script,domain=almotamayeztech.com
+|http://$script,third-party,xmlhttprequest,domain=almotamayeztech.com
+|https://$script,third-party,xmlhttprequest,domain=almotamayeztech.com
 ! myegy.tv
 |http://$script,third-party,xmlhttprequest,domain=myegy.tv|novriko.com
 |https://$script,third-party,xmlhttprequest,domain=myegy.tv|novriko.com
@@ -830,9 +852,12 @@ $popup,~third-party,domain=egy.best|egybest.co|egybest.com|egybest.net|egybest.s
 ! popads
 /^https?:\/\/www\.[a-z]{8,14}\.(bid|club|co|com|me)\/[a-z]{1,12}\.js$/$script,domain=aflam2you.com|alm5leb.com|an-online.com|animestarz.com|arabseed.com|as2tv.com|cima4u.tv|cimaflash.tv|elmoslsal.com|faselhd.com|filmey.tv|goodalot.tv|honadrama.me|kooralive.tv|okanime.com|series4watch.tv
 ! popup & popunder
-$popup,domain=an-online.com|cima4up.tv|kora-online.tv|mes001.blogspot.com
+$popup,domain=33sk.tv|3sk.tv|an-online.com|cima4up.tv|kora-online.tv|mes001.blogspot.com
 about:$popup,domain=akoam.com
 ! images hosting
+||1.bp.blogspot.com/-nYiKKCsYZYA/UYC0Sz6rNJI/AAAAAAAABa8/NbpXEX2To9E/s190/1366357856041.gif
+||2.bp.blogspot.com/-nnyVkQenS2Q/WQzrMwft9ZI/AAAAAAAAPBA/LsMNg9yXCxwKS_Jyq4vAacyVMHosCiz5QCLcB/s1600/0a1dc23b-5850-4780-9f2b-4c471535b250.png
+||3.bp.blogspot.com/-XkoIP8wm2AA/WQzpnB9xVyI/AAAAAAAAPA0/dSMq5tHdSl4nzXh-6u0svd2GJSRsLmGXgCLcB/s1600/250ARAB.png
 ||c.top4top.net/p_7010u9u81.gif
 ||cache.gametracker.com/server_info/148.251.92.28:27015/b_560_95_1.png
 ||d16.net/up/uploads/1478118841381.gif
@@ -859,6 +884,7 @@ about:$popup,domain=akoam.com
 ||imagizer.imageshack.us/a/img923/6140/4amCK1.png
 ||img15.hostingpics.net/pics/554573Howtotravelforfree.png
 ||img41.glitterfy.com/13115/glitterfy-flpbk3115925990241.gif
+||lh3.googleusercontent.com/proxy/-fJYWeIRkoKi0a5ObYKmXk7P3uXiaW0R92QTmYgmK9whLDHRtbFnAf9UHSH9cuWvzrR2Pg
 ||m5zn.com/newuploads/2016/04/17/gif//m5zn_2fa1d4e8cd1dec3.gif
 ||m5zn.com/newuploads/2016/08/13/gif//m5zn_9bf95e7a4f4121f.gif
 ||m5zn.com/newuploads/2016/10/23/gif//m5zn_6f6856f91648625.gif
@@ -884,7 +910,9 @@ about:$popup,domain=akoam.com
 ||up.star7arab.com/file/2016/10/400800109.gif
 ||up.star7arab.com/file/2017/04/54432151.gif
 ||www10.0zz0.com/2015/04/15/04/632112270.gif
+||www13.0zz0.com/2011/09/30/00/153160107.gif
 ||www2.0zz0.com/2013/06/17/12/275620708.gif
+||www5.0zz0.com/2013/11/16/09/527996020.png
 ||www5.0zz0.com/2014/05/13/20/127338436.gif
 ||www8.0zz0.com/2015/04/15/04/869130160.gif
 ||www9.0zz0.com/2015/04/15/04/195483282.gif
@@ -904,7 +932,6 @@ about:$popup,domain=akoam.com
 ||202020.net/ratteb/all/banner.png
 ||202020.net/ratteb/asd/
 ||222z.net/banners/
-||24caratksa.com^$popup,domain=syrcafe.com
 ||3aram.com/exshow2.js
 ||3asfh.net/vb/js.php
 ||3asq.com/img/uploads/13560751771.swf?
@@ -963,7 +990,7 @@ about:$popup,domain=akoam.com
 ||al-zin.com/up/uploads/13544017121.gif
 ||al-zin.com/up/uploads/13557545631.jpg
 ||al-zin.com/up/uploads/13600111111.gif
-||al-zin.com^$popup,domain=al-zin.com|syrcafe.com
+||al-zin.com^$popup,domain=al-zin.com
 ||al3ab4kids.com/*ads.js
 ||al3ab4kids.com/test*.php
 ||al5aatr.com^*/banner_
@@ -1204,6 +1231,7 @@ about:$popup,domain=akoam.com
 ||eqla3.com/if/code*.htm
 ||f3al.com/open27.js
 ||f3al.com/vb/aerowindow/
+||facebook.com/nansy.sbry1$popup,domain=dtyds.blogspot.com
 ||fannannsat.com/vb/images/00.gif
 ||fannannsat.com/vb/images/000.gif
 ||fannannsat.com/vb/images/0000.gif
@@ -1232,14 +1260,12 @@ about:$popup,domain=akoam.com
 ||fx-dz.com^*/_12304210421772.gif
 ||fx-dz.com^*/banner01300250.jpg
 ||fx-dz.com^*/banner0270090.jpg
-||g7a.com^$popup,domain=str-ly.com
 ||games-off.com^$popup,domain=3rbup.com
 ||geek4arab.com^*/banner/
 ||gem-flash.com^*/banners1.php?
 ||giniko.com/images/banner/
 ||goo.gl^$popup,domain=abotlal.com|arabasma.com|arabseed.com|arabseed.tv|cima4u.tv|dev-point.com|mazika2day.com
 ||google.com/url?^$popup,domain=ya3ale.com
-||googleusercontent.com^*/mastercard.gif$domain=myalge.net
 ||googlna.com^*/bnar.swf
 ||gornalak.com/alexa.gif
 ||gornalak.com/pop.js
@@ -1274,7 +1300,6 @@ about:$popup,domain=akoam.com
 ||jsoftj.com/games-folder/zTkW1_jsoftj.com.png
 ||kafrsakr.com/images/alexa_site.gif
 ||kalemaro.com/dezndev*.js
-||kashta.net^$subdocument,domain=syrcafe.net
 ||kech24.com/photo/pharmacie_de_garde_marrakech.gif
 ||khaleejcal.com^*/banners/
 ||khutabaa.com/myfiles/images/banners/
@@ -1290,7 +1315,6 @@ about:$popup,domain=akoam.com
 ||ktaby.com/bunner/
 ||ktaby.com/open.js
 ||ktaby.com/vb/open/
-||kuwait1.co^$subdocument,domain=syrcafe.co
 ||l7en.com/javascript/main.js
 ||l7en.com/ps/new/$script
 ||lahbabi.ma//home/code-widjet.html
@@ -1480,6 +1504,9 @@ about:$popup,domain=akoam.com
 ||shatelarab.com^*/banners/
 ||shattalarab.net/*/images/avd.png
 ||shbool-sat.com/vb/traidnt/bnr.gif
+||shof.co.il/Public/image/*1140x140.
+||shof.co.il/Public/image/*banner
+||shof.co.il/Public/image/*cube
 ||shofonline.org/megapop.js
 ||silkroad4arab.com/banner/
 ||skauu.com^$subdocument,domain=3mri-qtr.com
@@ -1494,22 +1521,11 @@ about:$popup,domain=akoam.com
 ||stat.arabstoday.net/images/alpharooms.jpg
 ||stat.arabstoday.net/images/pizza.jpg
 ||stat.arabstoday.net/images/weather-ad.png
-||str-ly.com/open*.js
+||static.hugedomains.com/images/$third-party
 ||support-ar.com^*/support-adv/
 ||swalif.com/banner/
 ||sweetarabs.com/asset/img/320.gif
 ||syaanh.net/images/*.gif
-||syrcafe.co/vb/aerowindow/
-||syrcafe.co/wal*.js
-||syrcafe.com/ra03a.js
-||syrcafe.com/ufxaffiliates.js
-||syrcafe.net/images/900forex.png
-||syrcafe.net/images/forex160-600.png
-||syrcafe.net/images/ufx.jpg
-||syrcafe.net/vb/aerowindow/
-||syrcafe.net/vb/download.gif
-||syrcafe.net/vb/forex99.jpg
-||syria-news.com/adsbar.
 ||t555t.com/uploads/13586252371.gif
 ||ta7a.com/mnfz-
 ||ta7a.com/open.htm
@@ -1617,7 +1633,6 @@ zony.tv###impo_overlay
 imovie-time.com###invideo_wrapper
 iq-vb.net###layer1
 contactcars.com###leaderBoard
-7s5.net###light[style="position: absolute; left: 9px; top: 31px; display: block;"]
 alwatannews.net###lnkMainAdver3
 educdz.com###main-header-content
 baitkebeer.com###makingdifferentpopup
@@ -1707,7 +1722,6 @@ marocemploi.net##.bg_link
 bokra.net##.big-banner
 bokra.net##.bigStrip
 wmuae.net##.binsaad
-7s5.net##.black_overlay[style="display: block;"]
 bacdz.org##.blogroll
 efa.com.eg##.body_sponsors
 forum.tariqallah.net##.bodyline > #fa_ticker_block
@@ -1783,7 +1797,6 @@ rassoulallah.info##.right_column
 ylla.net##.rightside_banner
 swalif.net##.sab-adPlace
 korabia.com##.sayingOutOfContent
-syrcafe.co##.semoo
 alaan.tv##.show-specificimg1
 kol7agh.com##.show_left_left_google
 el3ab.com##.showcase
@@ -1845,7 +1858,6 @@ arabictorrent.net##a[href="/dwl"]
 baitkebeer.com##a[href="http://adf.ly/O9EKG"]
 th3professional.com##a[href="http://ar.ouamer.com/"]
 kalemaro.com##a[href="http://bit.ly/14I2rw3"]
-str-ly.com##a[href="http://games.str-ly.com/"]
 ta7a.com##a[href="http://www.adamahospital.com/ar/"]
 baitkebeer.com##a[href="http://www.arabawe.com/"]
 animop.net##a[href="http://www.b3lok.com"]
@@ -1866,7 +1878,6 @@ retag4.com##a[href^="bnnr.php?"]
 2v22.net,arabeteam.com,satvb-team.com##a[href^="bnnr.php?do="]
 mothhelah.com##a[href^="code,banner,"]
 arabs-up.com##a[href^="go.php?"]
-syrcafe.com##a[href^="http://24caratksa.com/"]
 zi-m.com##a[href^="http://af.gamepower7.com/"]
 almesryoon.com,tvegy.com##a[href^="http://ar.hao123.com/?tn="]
 animop.net,arbcinema.com,ktaby.com##a[href^="http://bit.ly/"]
@@ -1903,14 +1914,16 @@ mtwer.com##a[onclick^="_gaq.push(['_trackEvent', 'Outgoing',"]
 akoam.com##a[rel][style]
 elheddaf.com##a[style*="url(/data/pub/)"]
 elheddaf.com##a[style="width:100%; height:850px; display:block; background:#000 url(/data/pub/pub.jpg) no-repeat center top; position: relative;"]
-6arbyat.com,add-anime.net,aflam.io,arabe-media.com,egy.best,el7l.co,el7l.tv,myegy.tv,novriko.com##a[style]
+33sk.tv,3sk.tv,6arbyat.com,add-anime.net,aflam.io,arabe-media.com,egy.best,el7l.co,el7l.tv,myegy.tv,novriko.com##a[style]
 sat-vb.com##a[target="_blanck"] > img
 gulf-up.com##a[target="_blank"] > img
 aliahmedali.com##a[target="_blank"] > img[width="235"][height="60"]
 misrlinks.com##a[target="_blank"][href*="to-"]
 alrealclub.com##a[title^="ينتهي في"]
 aswaqcity.com##div#vbseo_vhtml_0
-top555games.com##div[class^="adshp"]
+shof.co.il##div[class*="banner"]
+shof.co.il##div[class*="bnr"]
+shof.co.il##div[class*="cube"]
 mexat.com##div[class^="banner"]
 alqabas.com.kw##div[id^="azk"]
 masrytube.com##div[id^="bannerfloat"]
