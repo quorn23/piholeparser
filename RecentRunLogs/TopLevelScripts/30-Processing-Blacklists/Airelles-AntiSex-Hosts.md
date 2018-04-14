@@ -13,6 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Airelles-AntiSex-Hosts List Unavailable To Download. Sat Apr 14 00:20:37 UTC 2018
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
+## Checking File Size
+* Airelles-AntiSex-Hosts List Was An Empty File After Download. Sat Apr 14 00:20:37 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Airelles-AntiSex-Hosts List Was Killed By The Parsing Process. It will be skipped in the future. Sat Apr 14 00:20:37 UTC 2018

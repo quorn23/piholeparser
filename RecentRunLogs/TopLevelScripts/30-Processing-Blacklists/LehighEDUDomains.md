@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* LehighEDUDomains List Unavailable To Download. Sat Apr 14 00:21:35 UTC 2018
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* LehighEDUDomains List Was An Empty File After Download. Fri Apr 13 03:03:07 UTC 2018
+* LehighEDUDomains List Was An Empty File After Download. Sat Apr 14 00:21:36 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* LehighEDUDomains List Was Killed By The Parsing Process. It will be skipped in the future. Sat Apr 14 00:21:36 UTC 2018
