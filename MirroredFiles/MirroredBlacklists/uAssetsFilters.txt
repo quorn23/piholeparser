@@ -1175,7 +1175,8 @@ androidcentral.com,connectedly.com,crackberry.com,imore.com,teslacentral.com,vrh
 ! https://github.com/uBlockOrigin/uAssets/issues/190#issuecomment-269949614
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38124
 ! https://www.reddit.com/r/uBlockOrigin/comments/7r408x/something_interfered_with_this_website_loading/
-ack.net,allkpop.com,ancient.eu,audioholics.com,barnstablepatriot.com,boredpanda.com,britannica.com,brobible.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,cougarboard.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,eternallysunny.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,liquipedia.net,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,medicalnewstoday.com,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,ocala.com,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,radaronline.com,recordonline.com,royalroadl.com,salon.com,sj-r.com,slickdeals.net,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,trakt.tv,tuscaloosanews.com,uproxx.com,uticaod.com,vvdailypress.com,wikia.com,winchristmas.co.uk,womansworld.com,wuxiaworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
+! https://github.com/uBlockOrigin/uAssets/issues/1968
+ack.net,allkpop.com,ancient.eu,audioholics.com,barnstablepatriot.com,boredpanda.com,britannica.com,brobible.com,businessnewsdaily.com,cantonrep.com,capecodtimes.com,champion.gg,cheeseheadtv.com,closerweekly.com,collegehumor.com,columbiatribune.com,cougarboard.com,csgolounge.com,destructoid.com,dispatch.com,dorkly.com,dota2lounge.com,enterprisenews.com,eternallysunny.com,fayobserver.com,fhm.com,firstforwomen.com,flexonline.com,gainesville.com,gastongazette.com,geekzone.co.nz,ghacks.net,goerie.com,gosunoob.com,goupstate.com,gsmarena.com,healthline.com,heraldtribune.com,houmatoday.com,intouchweekly.com,investopedia.com,j-14.com,kiplinger.com,laptopmag.com,lifeandstylemag.com,liquipedia.net,listverse.com,lolcounter.com,m-magazine.com,madamenoire.com,maketecheasier.com,medicalnewstoday.com,medievalists.net,mensfitness.com,metrowestdailynews.com,moneyversed.com,muscleandfitness.com,news-journalonline.com,newsarama.com,nintendoeverything.com,nwfdailynews.com,nydailynews.com,ocala.com,oraridiapertura24.it,phonearena.com,pjstar.com,poconorecord.com,probuilds.net,providencejournal.com,providr.com,radaronline.com,recordonline.com,royalroadl.com,salon.com,sj-r.com,slickdeals.net,snopes.com,soapoperadigest.com,solomid.net,space.com,starnewsonline.com,teamliquid.net,telegram.com,theberry.com,theboneonline.com,thechive.com,theledger.com,thepoliticalinsider.com,tmn.today,tomsguide.com,topix.com,trakt.tv,tuscaloosanews.com,uproxx.com,uticaod.com,vvdailypress.com,wikia.com,winchristmas.co.uk,womansworld.com,wuxiaworld.com,xda-developers.com##script:inject(abort-on-property-write.js, adonisHash)
 xda-developers.com##script:inject(nowebrtc.js)
 ! https://www.reddit.com/r/uBlockOrigin/comments/6fvuo0/ads_leaking_through_on_drudge_report/
 drudgereport.com,mashable.com##script:inject(abort-on-property-read.js, ADONIS_BOOTSTRAP_STATS)
@@ -1247,8 +1248,10 @@ pocketnow.com##script:inject(abort-on-property-read.js, InstallTrigger)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/240
 ||myadcash.com/video_landing/js/*.js$script,redirect=noopjs,domain=multiup.eu|multiup.org
+||howfun.org^$domain=multiup.eu|multiup.org
 ||leadzutw.com^$third-party
 ||smilewanted.com^$third-party
+multiup.*##.text-center.success.well
 
 ! https://twitter.com/cudeso/status/827505057570643968
 howtogeek.com##.thecontent > div:has(a[href^="http://www.jdoqocy.com/click-"])
@@ -1529,6 +1532,7 @@ myip.ms##script:inject(bab-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/693
 wstream.video##script:inject(abort-current-inline-script.js, setTimeout, .myads)
 ||wstream.video/imgad/$image,redirect=2x2-transparent.png,first-party
+wstream.video##div[onclick^="window.open"]
 
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=52546
 9cartoon.me,animeflv.co,animeflv.me##script:inject(setTimeout-defuser.js, #player, 5000)
@@ -2197,6 +2201,7 @@ serienstream.to##script:inject(abort-current-inline-script.js, document.readySta
 ||watchcartoonsonline.*^$csp=script-src 'unsafe-inline' 'unsafe-eval' data: *
 watchcartoonsonline.*##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
 watchcartoonsonline.*##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
+watchcartoonsonline.*##script:inject(set-constant.js, check_adblock, true)
 watchcartoonsonline.*##header
 watchcartoonsonline.*##[id*="ScriptRoot"]
 
@@ -2331,13 +2336,13 @@ zippyshare.com##script:inject(abort-current-inline-script.js, String.fromCharCod
 watchcartoononline.com##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
 watchcartoononline.com##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 watchcartoononline.com##a[href*="/1.0/go"]
-kimcartoon.me##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-kimcartoon.me##script:inject(abort-on-property-write.js, Fingerprint2)
-kimcartoon.me##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
-kimcartoon.me##script:inject(setInterval-defuser.js, (), 500)
-kimcartoon.me##^script:has-text(this[atob)
+kimcartoon.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+kimcartoon.*##script:inject(abort-on-property-write.js, Fingerprint2)
+kimcartoon.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
+kimcartoon.*##script:inject(set-constant.js, check_adblock, true)
+kimcartoon.*##script:inject(setInterval-defuser.js, (), 500)
+kimcartoon.*##^script:has-text(this[atob)
 ||fghtem.com^$xmlhttprequest,redirect=nooptext,domain=kimcartoon.me
-@@||kimcartoon.io/js/ads.js$script,first-party
 
 ! https://forums.lanik.us/viewtopic.php?p=124271#p124271
 dailyuploads.*##script:inject(abort-current-inline-script.js, document.getElementById, adblockinfo)
@@ -2894,7 +2899,7 @@ srt.am##script:inject(abort-on-property-read.js, RunAds)
 srt.am##script:inject(abort-on-property-write.js, _pop)
 srt.am##script:inject(abort-on-property-write.js, Fingerprint2)
 ! AdFly
-activeation.com,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,bitigee.com,bluenik.com,brisktopia.com,casualient.com,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##script:inject(adfly-defuser.js)
+activeation.com,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,bitigee.com,bluenik.com,brisktopia.com,casualient.com,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##script:inject(adfly-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1009#issuecomment-352160776
 ! https://github.com/jspenguin2017/uBlockProtector/issues/791
 ! https://github.com/jspenguin2017/uBlockProtector/issues/792
@@ -3400,6 +3405,7 @@ descargas2020.com##script:inject(abort-on-property-write.js, _pop)
 descargas2020.com##script:inject(abort-on-property-write.js, Fingerprint2)
 descargas2020.com##script:inject(addEventListener-defuser.js, mousedown, (b){u()})
 descargas2020.com##script:inject(window.open-defuser.js)
+descargas2020.com##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1004
 redditgirls.com##script:inject(abort-on-property-read.js, canRunAds)
@@ -6588,3 +6594,32 @@ desmaxgo.com##script:inject(abort-on-property-write.js, smrtSB)
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40469
 @@||google.com^*recaptcha/$subdocument
+
+! https://github.com/uBlockOrigin/uAssets/issues/1957
+sharecool.us##script:inject(addEventListener-defuser.js, load, nextFunction)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1958
+@@||androidescomplicado.*$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1959
+filmesonlinegratis.com##script:inject(abort-on-property-write.js, smrtSB)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1965
+freepornvideo.sex,teenpornvideo.xxx##script:inject(abort-on-property-read.js, ExoLoader.serve)
+freepornvideo.sex##noindex
+teenpornvideo.xxx##.aside-spots
+teenpornvideo.xxx##.bottom-spots
+
+! https://github.com/uBlockOrigin/uAssets/issues/1964
+fbdown.net##script:inject(set-constant.js, harshblock, false)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1963
+tubsexer.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+tubsexer.com###pre-1adv
+tubsexer.com##.table
+
+! https://github.com/uBlockOrigin/uAssets/issues/1969
+yourlust.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+yourlust.com##script:inject(popads-dummy.js)
+yourlust.com##.banner_right
+yourlust.com##iframe[src="/im/footer.html"]

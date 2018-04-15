@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201804130056
+! Version: 201804150012
 ! Title: EasyPrivacy
-! Last modified: 13 Apr 2018 00:56 UTC
+! Last modified: 15 Apr 2018 00:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -1919,6 +1919,7 @@
 /logger?d=
 /logger?description=
 /logging-code.
+/logging/log-
 /logging/pixel?
 /Logging?dv=
 /logging_requests.
@@ -2126,6 +2127,7 @@
 /no-impression.gif?
 /np?log=
 /npssurvey.
+/nsimpression/*
 /nStat/*
 /ntpagetag-
 /ntpagetag.
@@ -2411,6 +2413,7 @@
 /pv.gif?url
 /pv.txt?
 /pv/new?
+/pv?fe=*&elg=
 /pv?place=
 /pv?token=
 /pv_count.
@@ -2629,6 +2632,7 @@
 /serve/mtrcs_
 /server.php?request=track&output=
 /server/detect.php?
+/service/track?
 /services/analytics/*
 /services/counter/*
 /services/counters/*
@@ -5247,6 +5251,7 @@ _mongo_stats/
 ||offerpoint.net^$third-party
 ||offerstrategy.com^$third-party
 ||ogt.jp^$third-party
+||ogxatekkyzr.com^$third-party
 ||ohmystats.com^$third-party
 ||oidah.com^$third-party
 ||ojrq.net^$third-party
@@ -7965,6 +7970,7 @@ _mongo_stats/
 ||d1clfvuu2240eh.cloudfront.net^
 ||d1clufhfw8sswh.cloudfront.net^
 ||d1cr9zxt7u0sgu.cloudfront.net^
+||d1f1eryiqyjs0r.cloudfront.net^*/track.
 ||d1gp8joe0evc8s.cloudfront.net^
 ||d1ivexoxmp59q7.cloudfront.net^*/live.js
 ||d1ksyxj9xozc2j.cloudfront.net^
@@ -8093,6 +8099,7 @@ _mongo_stats/
 ||dw.cbsi.com^
 ||dw.cbsimg.net^
 ||dw.com.com^
+||dxwgpw0lkcum5.cloudfront.net^
 ||dymlo6ffhj97l.cloudfront.net^
 ||dzmxze7hxwn6b.cloudfront.net^
 ||dzxxxg6ij9u99.cloudfront.net^
@@ -10182,6 +10189,7 @@ _mongo_stats/
 ||amazon.com/gp/forum/email/tracking?
 ||amazon.com/gp/yourstore/recs/
 ||amazon.com^*/amazon-clicks/
+||amazon.com^*/events/
 ||amazon.com^*/vap-metrics/
 ||amazonaws.com/beacon/vtpixpc.gif?
 ||amazonaws.com^*/pzyche.js
@@ -10773,9 +10781,7 @@ _mongo_stats/
 ||flipkart.com/bbeacon.php?
 ||flixist.com/img2.phtml
 ||flixster.com^*/pixels?
-||fls-eu.amazon.co.uk^
-||fls-eu.amazon.com^
-||fls-na.amazon.ca^
+||fls-*.amazon.
 ||flybmi.com/livetrack/
 ||flyjazz.ca/ow_ga.js
 ||fncstatic.com/static/all/js/geo.js
@@ -12611,7 +12617,6 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||fc.vodafone.de^
 ||feed-reader.net/tracking.php
 ||fireball.de/statistikframe.asp?
-||fls-eu.amazon.de^
 ||fr-online.de/analytics/
 ||ftd.de^*/track.php?
 ||g.silicon.de^
@@ -12811,7 +12816,6 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||elr.sfr.fr^
 ||eultech.fnac.com^
 ||flake.formr.io/sp.js
-||fls-eu.amazon.fr^
 ||g.itespresso.fr^
 ||grazia.fr/ea.js
 ||gstat.orange.fr^
@@ -12924,7 +12928,6 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||eclick.baidu.com^
 ||fang.com/stats/
 ||firefoxchina.cn/*/trac.js
-||fls-cn.amazon.cn^
 ||ftchinese.com/js/log.js
 ||funshion.com/interface/
 ||hdslb.com/images/isptrack.js
@@ -13110,7 +13113,6 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||click.tv.repubblica.it^
 ||deagostinipassion.it/collezioni/analytics.js
 ||emng.libero.it^
-||fls-eu.amazon.it^
 ||g.techweekeurope.it^
 ||gazzetta.it^*/stats.php?
 ||getscreensaver.it/statistiche/
@@ -13155,7 +13157,6 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||carview.co.jp/include_api/log/
 ||dmm.com/analytics/
 ||dmm.com^*/dmm.tracking.
-||fls-fe.amazon.co.jp^
 ||fujitv.co.jp/pc/space.gif?
 ||goo.ne.jp^*/vltracedmd.js
 ||i2i.jp/bin/
@@ -13298,7 +13299,6 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||esmas.com/scripts/esmas_stats.js
 ||estadisticas.lanacion.com.ar^
 ||estadonline.publiguias.cl^
-||fls-eu.amazon.es^
 ||g.siliconweek.es^
 ||hits.antena3.com^
 ||lavozdegalicia.es/apw.js
@@ -14497,6 +14497,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||afisha.ru/proxy/videonetworkproxy.ashx?$xmlhttprequest
 @@||boxberry.ru/bitrix/templates/main.adaptive/js/tracking.js
 @@||boxberry.ru/tracking.service/
+@@||crazypanda.ru/m/js/social-$script,domain=crazypanda.ru
 @@||criteo.net/js/ld/publishertag.js$domain=novayagazeta.ru
 @@||dict.rambler.ru/fcgi-bin/$xmlhttprequest,domain=rambler.ru
 @@||google-analytics.com/analytics.js$domain=nabortu.ru|poiskstroek.ru
@@ -14553,4 +14554,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: mrmDwPhH5/VcSQ78XMd9Lw
+! Checksum: 4HUGwmS165zvD8aY7AcovA
