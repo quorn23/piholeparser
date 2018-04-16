@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: cRIZr+roSx/wh+JpblDqKQ
-! Version: 201804150020
+! Checksum: 9LRexylRShMFgGPD+4MRcg
+! Version: 201804160030
 ! Title: RU AdList: BitBlock
-! Last modified: 15 Apr 2018 00:20 UTC
+! Last modified: 16 Apr 2018 00:30 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1926,6 +1926,7 @@ znanija.com##.sg-overlay
 softking.ru##.share
 slavyanskaya-kultura.ru##.shop-latest
 animevost.org##.shortstoryContent > a[href="https://vk.com/animevostorg"]
+sharkgame.ru##.sidebar
 freakenergy.ru##.sidebar > div > noindex
 3dnews.ru##.sidebar-chunk > a[href^="/asus_rog"]
 torrent-club.net##.sidebar-primary
@@ -1977,6 +1978,8 @@ relizua.com##.yabfull
 inforeactor.ru##.yandex-widget
 kaifolog.ru##.yandexh,.yandexh + .atextbox
 livesport.ru##.zz_cars_twin
+4pda.ru#?#div:-abp-has(> div:not([id]):not([class])[style="position: absolute; left: 0px; top: 0px; visibility: hidden;"])
+4pda.ru#?#div:-abp-has(> h2:-abp-contains(AppPromo))
 mbclub.ru##[alt="Клубный сервис"]
 semestr.ru##[alt="Рынок студенческих работ на заказ"]
 auto.ru##[class*="special"][class$="-sales"]
@@ -2059,6 +2062,7 @@ gdekluet.ru##div[class*="ui-widget"]
 www.goha.ru##div[class] > .adv_title + div[class]
 4pda.ru##div[class][id] > iframe[src*="banner"]
 google.com,google.com.ua,google.ru##div[class][jsaction^="dismiss_warmup"]
+auto.ru##div[class^="Index"][class$="Banner"]
 mail.rambler.ru##div[class^="Review-"][data-events="feedback"]
 footboom.com##div[class^="b-betting"]
 kinogb.cc##div[class^="bilet"]
@@ -2086,6 +2090,8 @@ livejournal.com##div[lj-widget-promo]
 muz.ru##div[style*="400px;"][style$="240px;"]
 okna.ua##div[style*="height: 80px"],div[style*="height:80px"]
 psy-music.ru##div[style*="tranceshop.ru"]
+4pda.ru##div[style="opacity: 0;"]
+4pda.ru##div[style="position: fixed; width: 252px; top: 50px; opacity: 0;"]
 drive2.com,drive2.ru#?#.c-block--content:-abp-has(.o-group--justify > .c-com-dv-label)
 driveroff.net,samlab.ws#?#center:-abp-has(iframe[src*="money.yandex.ru"])
 forums.overclockers.ru#?#table > tbody > tr:-abp-has(> .profile:-abp-contains(Партнер))
@@ -2113,6 +2119,7 @@ sports.ru#?#article.piwikTrackContent:-abp-has(a[href^="https://trbna.co/"])
 sports.ru#?#article.piwikTrackContent:-abp-has(span:-abp-contains(Спецпроект))
 vz.ru##table[width="100%"] > tbody > tr > td > div:not([id]):not([class]):not([style])
 russianpost.ru##table[width="816"] > tbody > tr:first-child + tr
+4pda.ru##tbody > tr[valign="top"] > td[width="20%"] + td[class]
 forums.overclockers.ru##td > #logo
 chastnik-m.ru##td[valign="top"][id$="_place"]
 lkforum.ru##td[width="180"][align="right"]
@@ -4976,6 +4983,7 @@ _sharebutton.
 _ShareIcons.
 _sharelinks_
 _slideshare.
+_small_share.
 _sns_me2day.
 _sns_twitter.
 _social-google+
@@ -6312,6 +6320,7 @@ _youtube_social_
 ###rs_twitter
 ###rs_youtube
 ###rshare
+###rt_social
 ###rww-fb-like
 ###sCfacebook
 ###sCgoogleplus
@@ -8630,6 +8639,7 @@ _youtube_social_
 ##.custom_block_sociallinks_beta
 ##.custom_fb_button
 ##.custom_share
+##.custom_social
 ##.custombtnsociaux
 ##.customfollow-us
 ##.customsocial
@@ -9318,6 +9328,7 @@ _youtube_social_
 ##.follow-author-mini
 ##.follow-bar
 ##.follow-bar-wrapper
+##.follow-block
 ##.follow-btn
 ##.follow-button
 ##.follow-button-facebook
@@ -9365,6 +9376,7 @@ _youtube_social_
 ##.follow-the-atlantic
 ##.follow-top
 ##.follow-tumblr
+##.follow-tw
 ##.follow-twitter
 ##.follow-twt
 ##.follow-us
@@ -9393,6 +9405,7 @@ _youtube_social_
 ##.follow-wrapper
 ##.follow-yahoo
 ##.follow-youtube
+##.follow-yt
 ##.followBox
 ##.followButtons
 ##.followFacebook
@@ -9654,6 +9667,7 @@ _youtube_social_
 ##.ftr-social
 ##.ftr-social-links
 ##.ftr__follow
+##.ftr_social_links
 ##.full_share_container
 ##.full_social
 ##.fuse_social_icons_links
@@ -9713,6 +9727,7 @@ _youtube_social_
 ##.genericon-twitter
 ##.genericon-youtube
 ##.genesis-simple-share-juice
+##.gensharelinks
 ##.get-social
 ##.getfaceBook
 ##.getshare-button
@@ -13473,6 +13488,7 @@ _youtube_social_
 ##.social_links_wrapper
 ##.social_list
 ##.social_logos
+##.social_m_a
 ##.social_media
 ##.social_media_block
 ##.social_media_btns
@@ -13522,6 +13538,7 @@ _youtube_social_
 ##.social_share_privacy_area
 ##.social_share_table
 ##.social_share_tw
+##.social_sharer
 ##.social_shares
 ##.social_sharing
 ##.social_sharing_module
@@ -14433,6 +14450,7 @@ _youtube_social_
 ##.video-details__show-buttons-cta-youtube
 ##.video-page-social
 ##.video-share
+##.video-share-b
 ##.video-share-tools
 ##.videoShare
 ##.videoShareBox
@@ -15955,6 +15973,7 @@ _subscribe_button
 /cookie_consent.
 /cookie_consent/*
 /cookie_consent_
+/cookie_header.
 /cookie_hint.
 /cookie_info.css
 /cookie_info.js
@@ -16328,6 +16347,7 @@ _site_cookie_
 ###my_web_push_app_box_confirm
 ###network_floaty_icons
 ###newsletter-top-banner
+###newsletter_holder
 ###newsletter_signup_ft
 ###newsletter_signup_sb
 ###newswhip-widget
@@ -16659,6 +16679,7 @@ _site_cookie_
 ##.newsletter-right-col
 ##.newsletter-sticky
 ##.newsletter-subscription-module
+##.newsletterContainer
 ##.newsletter_callout
 ##.next-prev-navigation
 ##.nextStoryFly
@@ -17328,7 +17349,6 @@ _site_cookie_
 ###signUpPromoFooter
 ###signup-box-rr
 ###signup-in-sidebar-newsletter
-###signupForm
 ###signupToggle
 ###signup_interstitial
 ###signup_interstitial_overlay
@@ -18264,6 +18284,7 @@ _site_cookie_
 ###DivIdealCookLight
 ###Divcookie
 ###EBCookies
+###EC-CookieLaw-Notification
 ###ECScookiepanel
 ###EPDirectiveInfo
 ###EP_cookiesPopup
@@ -24038,6 +24059,7 @@ _site_cookie_
 ##.dni-notifications_cookie-notification
 ##.dnt-using-cookies
 ##.dom-content--eu-banner
+##.dot-cc-wrapper
 ##.doyoulikecookies
 ##.dr-cookie-info-box
 ##.drawer-cookies
@@ -25229,6 +25251,7 @@ _site_cookie_
 ###js-back-to-top
 ###jsn-gotoplink
 ###jump-to-top
+###jwDisqusBackToTop
 ###ktz-backtotop
 ###mainToTopAnchor
 ###menu-back-to-top
@@ -25344,6 +25367,8 @@ _site_cookie_
 ##.go__up
 ##.go_to_top
 ##.go_up
+##.goto-top
+##.goto-top-container
 ##.gototop
 ##.goup-container
 ##.is-totop
@@ -25420,6 +25445,7 @@ _site_cookie_
 ##.ui-fixed-panel-go-top
 ##.ui-go-top
 ##.upbtn
+##.vw-scroll-to-top
 ##.w-toplink
 ##.wp-to-top
 ##.yjscroll
@@ -25430,6 +25456,7 @@ _site_cookie_
 ##a[title="Back To Top"]
 ##a[title="Back to Top"]
 ##a[title="Back to top of page"]
+##a[title="Go To Top"]
 ##a[title="Scorri in cima"]
 ##a[title="Scroll To Top"]
 ##a[title="Scroll to Top"]
@@ -25443,6 +25470,7 @@ _site_cookie_
 ##div[title="Vai in cima"]
 ##img[alt="Scroll to top"]
 ##img[alt="go to Top"]
+##li[class*="_back-2-top_"]
 ! ziprecruiter.com widget
 ###zipsearch_container
 ##.zr_alerts_widget_container
@@ -25875,7 +25903,6 @@ cnn.com#@##outbrain_widget_0
 mozilla.org,usps.com#@##privacy-policy
 finanzen100.de#@##scroll-top
 thehunt.com#@##signup-popup
-vivaldi.net#@##signupForm
 vivoplay.net#@##subscriptionModal
 blaklader.uk,chansluts.com#@##to-the-top
 radiogra.pl#@##to-top
@@ -26353,6 +26380,7 @@ deathandtaxesmag.com,hostinger.ae,hostinger.com.br,hostinger.com.ua,hostinger.fr
 ok.ru,speedtest.net,udemy.com,washingtonexaminer.com#@#.social-icon
 deathandtaxesmag.com,spin.com,stereogum.com,vibe.com,viewbug.com#@#.social-icons
 accountkiller.com#@#.social-image
+paperblog.com#@#.social-inline
 asos.com,metservice.com#@#.social-link
 airbnb.cat,airbnb.com,airbnb.de,autokult.pl,deathfromabove1979.com,fotoblogia.pl,komorkomania.pl,squarespace.com,time.com#@#.social-links
 wykop.pl#@#.social-list
