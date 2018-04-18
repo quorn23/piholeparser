@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201804160021
+! Version: 201804180013
 ! Title: EasyPrivacy
-! Last modified: 16 Apr 2018 00:21 UTC
+! Last modified: 18 Apr 2018 00:13 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -1795,6 +1795,7 @@
 /kaiseki/track.php?
 /kaizentrack/*
 /kalturaevent?
+/KAStatsWriter/*
 /keen-tracker.
 /keen-tracking-
 /keen.min.js
@@ -1828,6 +1829,7 @@
 /library_analytics.
 /libs/tracker.js
 /lingabot.
+/link-tracker-
 /link_track.
 /link_tracking/*
 /linkcountdata/*
@@ -2094,6 +2096,7 @@
 /neustar.beacon.
 /new.cnt.aspx?
 /newlog.php?
+/newrelic.$domain=~newrelic.com
 /newscount/*
 /newSophus/*
 /newsstat/*
@@ -2711,6 +2714,7 @@
 /smetrics.*/b/ss/*
 /snowman.gif?p=
 /snowplow.js$script,third-party
+/snowplow/*$script
 /social_tracking.
 /socialButtonTracker.
 /SocialTrack_
@@ -3523,6 +3527,7 @@
 /wrapper/quantcast.swf
 /Wrappers?cmd=
 /WRb.js
+/writeKAStats/*
 /writelog.
 /WritePartnerCookie?$third-party
 /writrak.
@@ -4705,6 +4710,7 @@ _mongo_stats/
 ||geistm.com^$third-party
 ||gemius.pl^$third-party
 ||gemtrackers.com^$third-party
+||geni.us^$third-party
 ||genieesspv.jp^$third-party
 ||geobytes.com^$third-party
 ||geoplugin.net^$third-party
@@ -6238,6 +6244,7 @@ _mongo_stats/
 ||appsha5.space^$third-party
 ||aqqgli3vle.bid^$third-party
 ||assetscdn.stream^$third-party
+||aster18prx.nl^$third-party
 ||authedmine.com^$third-party,domain=~coinhive.com
 ||authedmine.eu^$third-party
 ||averoconnector.com^$third-party
@@ -8559,6 +8566,7 @@ _mongo_stats/
 ||mqs.ioam.de^
 ||msecnd.net/jscripts/HA-$script
 ||msecnd.net/scripts/a/ai.0.js
+||msecnd.net/scripts/jsll-
 ||mtrcs.samba.tv^
 ||mts.mansion.com^$third-party
 ||mtvnservices.com/aria/uuid.html
@@ -12405,6 +12413,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||piti.bplaced.net^
 ||shrink-service.it/js/cM.js
 ||stackpathdns.com/assets/javascript/cr.js
+||stream.vidzi.tv^$xmlhttprequest
 ||video.videos.vidto.me^
 ||worker.salon.com^
 ! Preliminarily blocking Omniture s_code tracking scripts (versions H.25 - H.25.2) due to breakage (https://adblockplus.org/forum/viewtopic.php?f=10&t=11378)
@@ -14077,8 +14086,10 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||tracker.mattel.com^$domain=barbie.com
 @@||tracking.unrealengine.com/tracking.js
 @@||trackjs.com^$~third-party
+@@||travix.com/searchoptions?affiliate=$xmlhttprequest
 @@||trc.taboola.com/*/log/3/available|$subdocument,domain=globes.co.il
 @@||trc.taboolasyndication.com^$domain=bloomberg.com|breitbart.com|breitbart.tv|nme.com|slatev.com
+@@||trellocdn.com/dist/newrelic.$script,domain=trello.com
 @@||trustedreviews.com^*/google/analytics.js
 @@||trutv.com/ui/scripts/coffee/modules/analytics/click-tracker.js$script
 @@||turner.com/cnn/*/video/chartbeat.js$domain=cnn.com
@@ -14088,6 +14099,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||uefa.com^*/chartbeat-trending-carousel.js
 @@||ultimedia.com/js/common/jquery.gatracker.js
 @@||unifi.me/mootools/classes/*-tracking
+@@||unisys.com^*/track.gif$image,~third-party
 @@||unity3d.com/profiles/unity3d/themes/unity/images/services/analytics/$image,~third-party
 @@||ups.com/*/WebTracking/track&dcs
 @@||ups.com/WebTracking/$xmlhttprequest
@@ -14249,6 +14261,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||getgoods.de^*/emstrack.js
 @@||giga.de/wp-content/plugins/econa-stats/log/video-views/log.php?id=$object-subrequest
 @@||gls.de^*/emos2.js
+@@||google-analytics.com/analytics.js$domain=schweizerfleisch.ch
 @@||google-analytics.com/siteopt.js?$domain=chip.de
 @@||googletagmanager.com/gtm.js?$domain=bunte.de|finanzen.net
 @@||hach.de^*/emstrack.js
@@ -14324,7 +14337,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||easypari.fr^*/sitestat.js
 @@||estat.com/js/$script,domain=francetvsport.fr
 @@||evidal.fr/scripts/stats/evidal/s_code.js
-@@||google-analytics.com/analytics.js$domain=infoconso-multimedia.fr
+@@||google-analytics.com/analytics.js$domain=infoconso-multimedia.fr|viandesuisse.ch
 @@||hello.distribeo.com/atconnect/*?duration=$script,domain=laposte.fr
 @@||leboncoin.fr/js/xiti.js
 @@||lesinrocks.com/min/?f=*/chartbeat.js
@@ -14436,6 +14449,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||codicefl.shinystat.com/cgi-bin/getserver.cgi?$script,domain=3bmeteo.com|quotidiano.net|radioitalia.it
 @@||codicefl.shinystat.com/cgi-bin/getswf.cgi?*PolymediaShow$object-subrequest,domain=corriereadriatico.it|ilgazzettino.it|ilmattino.it|ilmessaggero.it|leggo.it|quotidianodipuglia.it
 @@||ensighten.com^*/Bootstrap.js$domain=williamhill.it
+@@||google-analytics.com/analytics.js$domain=carnesvizzera.ch
 @@||googletagmanager.com/gtm.js?$domain=la7.it
 @@||imrworldwide.com/novms/*/ggcm*.js$domain=la7.it|sky.it|video.corriere.it
 @@||imrworldwide.com/v60.js$domain=corriereadriatico.it|ilgazzettino.it|ilmattino.it|ilmessaggero.it|leggo.it|quotidianodipuglia.it
@@ -14556,4 +14570,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: oZSk2KNgITtDAQlbkcJ7AA
+! Checksum: 2ED700dSG5mf3ZJ+FGqKQw
