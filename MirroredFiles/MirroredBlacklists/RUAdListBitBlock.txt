@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: p1ZHKQk/6aIwdTF9TsZOKw
-! Version: 201804180030
+! Checksum: HCk5wS9FLVVZNNMjJl/nBw
+! Version: 201804190030
 ! Title: RU AdList: BitBlock
-! Last modified: 18 Apr 2018 00:30 UTC
+! Last modified: 19 Apr 2018 00:30 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -246,8 +246,6 @@ _vkontakte.png
 ||weacom.ru/static/presentations/telegram/
 ||webagent.mail.ru^
 ||yandex.st/share/$domain=adultmult.tv
-!
-! Исправления после genericblock
 ! *** ruadlist:bitblock/social_specific_hide.txt ***
 securitylab.ru###BottomSocial
 porno-comics.ru###RSS-L
@@ -392,7 +390,7 @@ mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.b-mail-domik__soci
 podrobnosti.ua##.b-news-share
 disk.yandex.ru##.b-popup-share__content [data-click-action="share.resource"]
 sobaka.ru##.b-post-view__share
-hdrezka.ag##.b-post__social_holder
+hdrezka.ag,hdrezka.club,hdrezka.name##.b-post__social_holder > div
 utro.ru##.b-repost
 sobaka.ru##.b-share-items
 afisha.ru##.b-share-list
@@ -722,7 +720,7 @@ audioknigi.club##[title="Telegram @aknigiclub"]
 planetanovosti.com##[title="Vkontakte"]
 kommersant.ru##a[href][title="Поделиться"]
 livecars.ru,livesport.ru##a[href^="https://share.yandex.ru/"]
-app2top.ru,mk.ru,myslo.ru,privatfinance.com##a[href^="https://t.me/"]
+app2top.ru,livesport.ws,mk.ru,myslo.ru,privatfinance.com##a[href^="https://t.me/"]
 hdpicture.ru,hdreactor.club##a[href^="https://www.facebook.com/"]
 toptracker.ru##a[onclick^="content_share"]
 qiq.ws##a[onclick^="return addSoc"]
@@ -818,6 +816,7 @@ woman365.ru##.main__content-share-btns
 woman365.ru##.mc-share-toggle
 megogo.net##.megogo_view_share
 audioportal.su,baumanki.net,vsthouse.ru##.pluso
+animedub.ru##.share-box
 rafkino.com,ria.ru##.social
 gtavicecity.ru##.social-block
 news.rambler.ru##.social-bottom.wide[data-prefix] > .social-bottom__item
@@ -1493,6 +1492,7 @@ moya-planeta.ru###content > .white_header_text
 7ya.ru###content_container > div[class*="specprojects"]
 eva.ru###cookie-agreement
 livelib.ru###cookies-agree
+vk.com###cookies_policy_wrap
 forums.overclockers.ru###datebar
 pcportal.org###ddew_ovnova
 megafon.ru###divBanner > a[href*=".megafon.ru/"]
@@ -1899,7 +1899,7 @@ ntv.ru##.promoblock
 domru.ru##.promslider
 pravoved.ru##.prvd-form
 pravoved.ru##.prvd-qp-popup-container
-hdrezka.ag##.pull-left[class*="b-tophead_"]
+hdrezka.ag,hdrezka.club,hdrezka.name##.pull-left[class*="b-tophead_"]
 tsn.ua##.push-message
 onliner.by##.push-notification
 championat.com##.push-popup
@@ -5308,6 +5308,7 @@ _youtube_social_
 ###block-social_badges-0
 ###block-social_badges-1
 ###block-sociallinks
+###block-socialmenu
 ###block-views-bulletin-tweets-block
 ###block-views-twitter-block
 ###blog-follow
@@ -14582,6 +14583,7 @@ _youtube_social_
 ##.widget_facebookactivityfeed
 ##.widget_fans_widget
 ##.widget_fb_like
+##.widget_fb_page
 ##.widget_follow
 ##.widget_follow_box
 ##.widget_follow_button_widget
@@ -19079,6 +19081,7 @@ _site_cookie_
 ###cookie-bar-module
 ###cookie-bar-prompt
 ###cookie-bar-warning
+###cookie-bar-wrapper
 ###cookie-barBe
 ###cookie-bar__wrapper
 ###cookie-barbody
@@ -20736,6 +20739,7 @@ _site_cookie_
 ###custom-header-cookie
 ###cw-cookieInfo
 ###d-cookiesWarning
+###d-cookiesWarningAdsLayout
 ###dCookies
 ###datenschutz_info
 ###dcc_cookieMessageContainer
@@ -23076,6 +23080,7 @@ _site_cookie_
 ##.cookie-info-strip
 ##.cookie-info-text
 ##.cookie-info-wrapper
+##.cookie-infobar
 ##.cookie-infobox-wrp
 ##.cookie-inform
 ##.cookie-information
@@ -25550,7 +25555,6 @@ _site_cookie_
 ||btn.createsend1.com^$third-party
 ||bufferapp.com/js/button.js$third-party
 ||bumpin.com^$third-party
-||buttons.contactme.com^$third-party
 ||buzz-stats.com^$third-party
 ||carambo.la^$third-party
 ||care2.com/petitions/$third-party,domain=~thepetitionsite.com
@@ -26147,6 +26151,7 @@ adme.ru#@#.article-social
 niedziela.pl#@#.article-social-btn
 nbcnews.com#@#.article_share
 thetoc.gr#@#.authorSocial
+mos.ru#@#.b-social
 opposingviews.com#@#.block-socialmedia
 kcrw.com#@#.bottom-social
 accounts.pixiv.net,adespresso.com,airbnb.cat,airbnb.com,airbnb.de,airbnb.it,aplus.com,appspot.com,chess.com,crowdin.net,dailymotion.com,deezer.com,eventim.de,foodit.com,help.getadblock.com,magine.com,meetme.com,nexoneu.com,nrj.fr,setlist.fm,spotify.com,swappa.com,thegamebusters.it,theoldreader.com,younow.com#@#.btn-facebook
@@ -26875,6 +26880,7 @@ fark.com,github.io,marketplace.firefox.com,vvhp.net,wikipedia.org#@#img[title="Y
 @@||nutshell.com/media/images-landing/integration-logo-$~third-party
 @@||nyt.com^*/sharetools.js$domain=nytimes.com
 @@||nytimes.com^*/sharetools.js
+@@||oauth20.mos.ru^$image
 @@||ocdn.eu^*/fb_logo.png$image,domain=forbes.pl
 @@||ogdownloaderapk.com/images/og-youtube.png
 @@||oklivetv.com/wp-content/plugins/facebook-page-promoter-lightbox/$script
