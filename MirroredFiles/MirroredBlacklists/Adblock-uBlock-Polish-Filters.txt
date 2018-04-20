@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 18 April 2018
+! Last modified: 19 April 2018
 ! Expires: 1 day
-! Version: 2018041811
+! Version: 2018041906
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018041811 aktualizacja: sr, 18 kwietnia 2018, 22:35:00
+! v.2018041906 aktualizacja: czw, 19 kwietnia 2018, 23:00:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -247,7 +247,7 @@ pl##.reklama-rectangle
 ##[id^="ad_box"]
 popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 mclista.pl,bialystokonline.pl,ewgt.com.pl##[id*="reklama"]
-~sloworegionu.pl,~4active.eu,~valida.pl,~foodprint.pl##.banneritem
+~m3esolutions.com,~sloworegionu.pl,~4active.eu,~valida.pl,~foodprint.pl##.banneritem
 !
 !9#------------------------Specific element hiding rules------------------------!
 24gliwice.pl##a[href^="http://www.24gliwice.pl/r/counter-baners.php"]
@@ -424,7 +424,7 @@ bithub.pl##.st-ad-region
 biznes2biznes.com##DIV[style="width:200px;float:right;display:block;margin-left:-5px;"]
 biznes2biznes.com##[id^="stickynote"]
 biznesalert.pl##A[target="_blank"] > IMG.img-responsive
-biznesalert.pl##.banner-overlay
+biznesalert.pl##.banner-overlay, .container > div:nth-of-type(10)
 biznesforum.pl##div[style="border-left:1px solid #cccccc;border-right:1px solid #cccccc;padding:0px;"]:not([id])
 biznesnafali.pl,biznestuba.pl##[target="_blank"] > .vc_single_image-img.attachment-full
 biznes.pl##.e_Box.analyses
@@ -576,6 +576,7 @@ cs-nabani.pl##.__xXpartnerzy
 csone.eu##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(2)
 csone.eu##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(1)
 csopole.eu##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(6)
+cssetti.pl##h4:nth-of-type(2), #AsideAds
 cyber-sport.us##[id^="rekk"]
 cyfrowypolsatnews.pl##.panel:nth-of-type(10)
 cyfrowypolsatnews.pl##.panel:nth-of-type(9)
@@ -836,7 +837,7 @@ forbot.pl##.bodyline > div:nth-of-type(3)
 foreca.pl###topbanner
 forex-nawigator.biz###pasek_dol
 forsal.pl##.tpl_ads_adsense
-forsapl.info##iframe
+forsapl.info,mecze24.pl##iframe
 forum-kulturystyka.pl###plan-forum-flow
 forum.cs-4frags.pl##.ipsBox.ipsWidget_vertical.ipsWidget:nth-of-type(4)
 forum.android.com.pl##.ipsResponsive_block.ipsResponsive_hideTablet.ipsResponsive_hidePhone
@@ -912,6 +913,7 @@ gazeta-mosina.pl##.mod-blank.module
 gazeta-olawa.pl##.bf-advertisement-code
 gazeta-mlawska.pl##.clear.box_tekstowy_mainpage:nth-of-type(4)
 gazeta-olawa.pl##.vc_col-sm-12.vc_column_container.wpb_column.olawa4 > .vc_column-inner > .wpb_wrapper > .vc_row-fluid.vc_inner.wpb_row.vc_row
+gazeta-wiesci.pl###text-11, #text-8, #text-12, #text-10
 gazetapolska.pl##DIV[style="float: left;width:980px;"]
 gazetapolska.pl##DIV[style="float: left; padding-bottom: 10px; padding-top: 10px; width: 300px"]
 gazetapolska.pl###sg1
@@ -1358,6 +1360,7 @@ mamkomputer.info,smartage.pl###text-17
 mamopracuj.pl##.bannery
 mamywsieci.pl###block-block-1
 mamywsieci.pl###block-block-20--2
+manjaro.pl##.ABD_display
 mapa.szukacz.pl###popupContainer
 marihuana.info.pl###header-right-section, #text-5, #text-10, #text-11
 marihuanamedyczna.com##.x-content-dock.right.x-content-dock-on
@@ -1422,6 +1425,7 @@ mikrokontroler.pl###text-3, .mb30.red.title-bg-line.title-border, #text-8, .mb30
 mikrokontroler.pl,24legnica.pl###text-5
 milanos.pl#?#.post:-abp-contains(reklama)
 minecraft-list.pl##.pleaserinonoblokerino_container
+minecraft.org.pl##.stone-module.well-sm.well:nth-of-type(4)
 mistrzowie.org##a[href^="http://pewex.pl/"]
 mistrzowie.org##[href*="utm_source=mistrzowie&utm_medium=banner&utm_campaign=pewexserwisy_mistrzowie"]
 mistrzowie.org###services_box
@@ -3014,7 +3018,7 @@ zywiecinfo.pl##.promoted
 ||turinfo.pl/zdjecia/*.gif$image
 ||tvgry.pl/images/tapeta_reklama/$image
 ||tvnights.pl/assets/img/bg/$image
-||tvp.pl/video/vod/reklamy/$domain=sport.tvp.pl
+||tvp.pl/video/vod/reklamy/$domain=tvp.pl
 ||tvsat-sklep.com/baner/$image,domain=portal.dvhk.to
 ||tvwlodawa.pl/wp-content/uploads/*/*/logo-$image
 ||twojahistoria.pl/uploads/20*/*/*-bg.jpg$image
@@ -3030,7 +3034,7 @@ zywiecinfo.pl##.promoted
 ||vixnixxer.com$script,third-party
 ||vshare.io/static/button.css$stylesheet
 ||v.wpimg.pl/$subdocument,domain=gwiazdy.wp.pl
-||v.wpimg.pl^$media,domain=pilot.wp.pl
+||v.wpimg.pl^$media,domain=pilot.wp.pl|open.fm
 ||wbj.pl/adv/
 ||wbj.pl/wp-content/plugins/adkingpro/js/adkingpro-functions.js$script
 ||web-rynek.pl/baners/
@@ -3174,9 +3178,9 @@ zywiecinfo.pl##.promoted
 @@||lulektv.app.insyscd.net/Content/player/insysplayer/adTest.png$image,domain=lulektv.app.insyscd.net
 @@||katowickisport.pl^$generichide
 @@||miniminiplus.pl^$generichide
-@@||myao.adocean.pl/ad.xml?*$domain=sport.tvp.pl
-@@||myao.adocean.pl/__/ad.xml?*$domain=sport.tvp.pl
-@@||myao.adocean.pl/_*/ad.xml$xmlhttprequest,domain=sport.tvp.pl
+!@@||myao.adocean.pl/ad.xml?*$domain=sport.tvp.pl
+!@@||myao.adocean.pl/__/ad.xml?*$domain=sport.tvp.pl
+@@||myao.adocean.pl/_*/ad.xml$xmlhttprequest,domain=tvp.pl
 @@||myao.adocean.pl^$xmlhttprequest,domain=tvpstream.vod.tvp.pl
 @@||naekranie.pl/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-download-tracker.js$script,~third-party
 @@||optimus.pl/temp/adrotator_miniatury/$image
@@ -3381,13 +3385,13 @@ zw.pl###abpnotzw
 @@/.*ad*/$image,domain=www.pcworld.pl
 @@/ads.js$script,domain=a-o.ninja
 @@/popunder*.js$script,domain=a-o.ninja
-@@/^(https|http):\/\/a-o\.ninja\/[\w\W]{30,200}\.js/$script
+@@/^(https|http):\/\/a-o\.ninja\/[0-9a-zA-z-]{10,200}\.js/$script
 @@ads$image,domain=rapidgrab.pl
 @@/adsense.js$script,domain=biznesforum.pl|optyczne.pl|a-o.ninja
 @@/ads.reklama.728x90$script,stylesheet,domain=zmianaczasu.info|antonimy.net|odmiana.net|definicja.net|krzyzowka.net|humoris.pl
 @@/advertisement*.js$script,domain=meczyki.pl|autocentrum.pl|tokfm.pl|trojmiasto.pl|superfilm.pl|a-o.ninja
 @@/showads.js$script,domain=www.eskago.pl|czasdzieci.pl|towideo.pl
-@@||a-o.ninja/a-ad-400.js$script
+@@||a-o.ninja/*-ad-*.js$script
 @@||4free.waw.pl^$generichide
 @@||adv.wp.pl/adverts$xmlhttprequest,domain=pilot.wp.pl
 @@||adv.wp.pl/RM/Box/*/inline-videostar.js$script,domain=pilot.wp.pl
@@ -3506,9 +3510,11 @@ mecze24.pl##.module-analyses.module
 mecze24.pl##.module-facts.module
 mecze24.pl##.module-review_box.module
 mecze24.pl##header > div > [class^="mea1ec"]
+mecze24.pl###p-subheader > [class^="m"] > ol
 meczelive.tv##a[href*="adsrv.eacdn.com"]
 meczelive.tv##a[href^="http://goo.gl/"]
 meczelive.tv###dropin
+meczelive.tv,mecze24.pl##a[href*="/bukmacher/r/"]
 meczenazywo.pl##A[href^="/bukmacher/r/"]
 meczenazywo.pl##a[href^="https://affmore.com/click/"]
 meczenazywo.pl##a[href^="https://www.meczenazywo.pl/bukmacher/r/"]

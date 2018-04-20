@@ -1048,8 +1048,16 @@ oxforddictionaries.com##.banbox-mini
 ! caused by `EasyList`
 @@||hltv.org/gallery/view/overlay/*$xmlhttprequest,first-party
 @@||player.twitch.tv^$subdocument,domain=hltv.org
+@@||hltv.org/forums/reply$xmlhttprequest,domain=hltv.org
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8czb3t/fullstorycom_blocked/
 ||fullstory.com^$badfilter
 ||fullstory.com^$third-party
 ||fullstory.com/s/fs.js$script
+
+! https://github.com/uBlockOrigin/uAssets/issues/2020
+@@||blogspot.com/$image,domain=kissmanga.com
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=40518
+||sumologic.com^$third-party,badfilter
+||sumologic.com^$third-party,domain=~sumologic.net

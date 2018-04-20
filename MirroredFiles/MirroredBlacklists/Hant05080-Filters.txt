@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: Filters by hant0508
-! Version: 3.9.9
+! Version: 3.9.11
 ! Homepage: https://github.com/hant0508/uBlock-filters
 
 ! Recommended to use with:
@@ -516,6 +516,7 @@ zismo.biz##^script:has-text(http://zismone.ru/2549.js?v=123")
 320kbit.net##.bg > .tpi.ProfileCanopy--large.ProfileCanopy--withNav.ProfileCanopy
 3dnews.ru###earAds
 3dyuriki.com###wsidebar-top
+4pda.ru##body > [id] > [class] > div > div:has(> a > img:not([class])):has(div)
 5ballov.qip.ru###content > .right_sidebar > .h_block.panel
 720pizle.com##[id^="reklam"]
 8nog.com##.results.error1 > div:nth-of-type(1)
@@ -1302,10 +1303,14 @@ wolframalpha.com###sidebar
 wolframalpha.com###spons-bound
 wolframalpha.com###sponsor-ad
 wsturbo.net##.fullstory.base > noindex > center
+www.yandex.ru##.ti__Gn > div:has(div > div:matches-css(background-image: /^url\("https://yastatic.net/www/_//))
 x-torrent.pro##.amigo
 x17online.com##div[id$="externalcontainer"][style]
 xatab-repack.net##.block:has(.b_in > div > a[rel] > img)
 xn-----7kcabveaaviuytidmy7lk.xn--p1ai##.module:has(.adsbygoogle)
+xn--i1abbnckbmcl9fb.xn--p1ai###myCarousel
+xn--i1abbnckbmcl9fb.xn--p1ai##.offOnMobile.no-print
+xn--i1abbnckbmcl9fb.xn--p1ai##[src^="/img/adv/"]
 yandex.ru##.distro_shown_yes
 za.pinterest.com###desktopWrapper > div > div > div > div[data-test-giftwrap]
 zakharenkova.ru##.adsbyfffs
