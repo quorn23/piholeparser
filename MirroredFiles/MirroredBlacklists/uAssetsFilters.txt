@@ -1156,7 +1156,7 @@ wikia.com##script:inject(abort-on-property-write.js, _sp_)
 ! https://github.com/uBlockOrigin/uAssets/issues/1153
 ! https://github.com/uBlockOrigin/uAssets/issues/1194
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38315
-123movies.net,2ddl.*,arabseed.tv,buzzfil.net,clicknupload.org,convertinmp4.com,ddlvalley.me,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,letmewatchthis.ac,mac-torrents.com,mkvcage.com,openload.ch,pdf-giant.com,pelispedia.*,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,streamfilmzzz.com,streamzzz.online,thevideobee.to,torrentz2.*,tny.ec,tomadivx.org,uploading.site,uptobox.com,watchers.to,watchonline.to,yts.ag,yts.gs,yts.am,zooqle.com##script:inject(nowebrtc.js)
+123movies.net,2ddl.*,allitebooks.com,arabseed.tv,buzzfil.net,clicknupload.org,convertinmp4.com,ddlvalley.me,dramamate.com,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,letmewatchthis.ac,mac-torrents.com,mkvcage.com,movie4k.org,oceanoffgames.com,openload.ch,pdf-giant.com,pelispedia.*,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,streamfilmzzz.com,streamzzz.online,thevideobee.to,torrentz.to,torrentz2.*,tny.ec,tomadivx.org,uploading.site,uptobox.com,watchers.to,watchonline.to,yts.ag,yts.gs,yts.am,zooqle.com##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/243
 blastingnews.com###blasting-modal-login-ad-block
@@ -1359,6 +1359,7 @@ watchcartoononline.*##script:inject(abort-on-property-read.js, BB_ind)
 watchcartoononline.io##script:inject(fuckadblock.js-3.2.0)
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=watchcartoononline.io
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=watchcartoononline.io
+watchcartoononline.*##script:inject(noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/319
 fdesouche.com##script:inject(bab-defuser.js)
@@ -2993,6 +2994,7 @@ hclips.com##iframe[src="javascript:false"]
 ! https://github.com/uBlockOrigin/uAssets/issues/907
 clik.pw##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 clik.pw##script:inject(nowebrtc.js)
+clik.pw##A[href$=".html"][rel="nofollow norefferer noopener"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/908
 urle.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -5969,7 +5971,7 @@ broadwayworld.com##a[href^="https://ad.doubleclick.net/ddm/"]
 op.gg##script:inject(abort-on-property-write.js, lifeOnwer)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/85mgro/%C2%B5block_doesnt_block_ads_on_this_site/
-birdsandblooms.com,collegehumor.com,dorkly.com,dryscalpgone.com,familyhandyman.com,gentlemansgazette.com,hotbeautyhealth.com,ketoconnect.net,macwelt.de,mjsbigblog.com,printablecrush.com,psychologyjunkie.com,skinnyms.com,sportauto.fr,thecelticblog.com,thelovenerds.com,thisisfutbol.com##script:inject(abort-current-inline-script.js, btoa, BOOTLOADER_LOADED)
+birdsandblooms.com,collegehumor.com,dorkly.com,dryscalpgone.com,familyhandyman.com,gentlemansgazette.com,hotbeautyhealth.com,ketoconnect.net,macwelt.de,mjsbigblog.com,pcwelt.de,printablecrush.com,psychologyjunkie.com,skinnyms.com,sportauto.fr,thecelticblog.com,thelovenerds.com,thisisfutbol.com##script:inject(abort-current-inline-script.js, btoa, BOOTLOADER_LOADED)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1748
 kuturl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -6839,3 +6841,12 @@ akorto.com##script:inject(nano-setInterval-booster.js)
 @@||artikeltekno.com^$generichide
 artikeltekno.com###topbanner
 artikeltekno.com##.top_banner
+
+! https://github.com/uBlockOrigin/uAssets/issues/2048
+@@||gifswithsound.eu^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40103
+foxsports.com.au##script:inject(abort-on-property-write.js, XMLHttpRequest.prototype.realSend)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/911
+zlounge.co##script:inject(bab-defuser.js)
