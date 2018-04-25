@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: trusMnKcvHFsJVnlsML76g
-! Version: 201804240020
+! Checksum: MI7aBFcLhAbVz0uqjyZ8LA
+! Version: 201804250020
 ! Title: RU AdList: BitBlock
-! Last modified: 24 Apr 2018 00:20 UTC
+! Last modified: 25 Apr 2018 00:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -266,6 +266,7 @@ ntv.ru###btmsocialize
 rutv.ru###btns
 ipicture.ru###buton
 animevost.org###buttonLike
+tverigrad.ru###center_column ~ .hidden-sm
 imtw.ru###content > .noad1
 fit4brain.com###dgd_scrollbox-7840
 homenet.beeline.ru###ed-0_toolbar_3
@@ -753,6 +754,8 @@ povarenok.ru##div[style^="background:url(/i/okbg.jpg)"]
 povarenok.ru##div[style^="background:url(/i/vkbg.gif)"]
 filmix.me#?#.share:-abp-has([class])
 ctv7.ru##footer .btn_soc
+geektimes.com,habr.com#?#.default-block_sidebar:-abp-has(> .sidebar-block > #facebook_like_box)
+geektimes.com,habr.com#?#.default-block_sidebar:-abp-has(> .sidebar-block > #vk_groups)
 novayagazeta.ru##header + div[class] div[style^="position: relative"]
 aif.ru##iframe[src^="http://www.facebook."] + br + table[border="0"]
 laradiofm.ru#?#.rc:-abp-contains(Мы ВКонтакте)
@@ -1351,7 +1354,6 @@ _userbar_$image
 ||gismeteo.*/static/ny/
 ||gorodche.ru/misc/popinfo/
 ||gramma.ru/include/dcpy.js
-||habrahabr.ru/hauusbx/toplink/
 ||hawaii-kirillovka.com/misc/js/please.js
 ||hdzona.com/forum/logo.jpg
 ||hidemyass.com/assets/js/cerabox/
@@ -1429,6 +1431,7 @@ _userbar_$image
 ||smotri.com/xml/channels_
 ||snippets.mozilla.com^
 ||sociaplus.com^$third-party,domain=~www.yves-rocher.ru
+||special.habrahabr.ru/api/toplink/
 ||static.hotjar.com^$domain=kopilkasovetov.com
 ||static.newsru.*/img/bg.gif
 ||telvanil.ru^$third-party
@@ -1726,6 +1729,7 @@ online-life.club##.block_titlebig
 fanserials.co##.blocking-subscribe
 bookmate.com##.bm-document-meta-apps
 bookmate.com##.bm-document-readers
+geektimes.com,habr.com##.bmenu_inner
 aniplay.tv##.bottom-panel
 frontend.1worldonline.com##.bottomPanel > .project
 buhonline.ru##.bottomPopup
@@ -1752,7 +1756,7 @@ prostotech.com##.comments > .content_adv
 ukr.net##.commercial-kinoafisha-block
 slavyanskaya-kultura.ru##.containerban
 anti-malware.ru##.content > #slidebox
-geektimes.ru,habrahabr.ru##.content-list > .content-list__item_post:not([id^="post"])
+geektimes.com,habr.com##.content-list > .content-list__item_post:not([id^="post"])
 anistar.me##.content-right > .news-list:last-of-type
 delfi.lv##.cookie.notification-widget
 kufar.by##.cookie_type_active
@@ -1826,7 +1830,7 @@ gastronom.ru##.js-bother
 e1.ru##.js-push-type
 km.ru##.km_ref_adv_popup
 kinoafisha.info,kinoafisha.msk.ru,kinoafisha.spb.ru##.layer-notificationPopup
-geektimes.ru,habrahabr.ru##.layout__row_promo-blocks
+geektimes.com,habr.com##.layout__row_promo-blocks
 lib.rus.ec##.lb-pay__overlay
 lostfilm-online.ru##.left > .bb ~ *
 firepic.org##.left_news_col
@@ -1896,7 +1900,7 @@ lifehacker.ru##.pre-logo > a[href][target="_blank"]
 2ip.ru##.pre-wrapper-ad
 obozrevatel.com##.privasypolicy-info
 moya-planeta.ru##.products_list_full
-geektimes.ru,habrahabr.ru##.promo-block
+geektimes.com,habr.com##.promo-block
 auto.ru##.promo-max
 auto.ru##.promo-vin-modal_js_inited
 ntv.ru##.promoblock
@@ -1946,8 +1950,9 @@ m24.ru##.stickyJoinUs
 livejournal.com##.stories__promo
 ubr.ua##.story-nav
 gamemag.ru##.sub-alphabet
-it-tehnik.ru,liga.net##.subscribe
+it-tehnik.ru,liga.net,tverigrad.ru##.subscribe
 chita.ru##.subscribe-form
+russian.rt.com##.subscribe-layout
 1plus1.ua##.subscribe-popup__section
 expert.ru##.subscribe_banner_fixed
 dfiles.ru##.subscribe_offer_banner
@@ -1957,6 +1962,7 @@ seasonvar.ru##.svnotify
 66.ru,gorodche.ru##.t-i-agree
 molodostivivat.ru##.textwidget > a[href][target="_blank"]
 efxi.ru##.titleblock
+tmfeed.ru##.tm-megaposts-links
 film.ru##.top_button
 varlamov.ru##.topbanner
 izvestia.ru##.topline
@@ -2279,11 +2285,11 @@ yandex.by,yandex.kz,yandex.ru,yandex.ua#?#body[class*="b-page_domik"] div[class*
 pastebin.com###abrpm
 statcounter.com###side-banner
 uniondht.org##.colorAdmin
-geektimes.ru,habrahabr.ru##.dfp-slot
+geektimes.com,habr.com##.dfp-slot
 pr-cy.ru##.hidden-xs
 myshows.me##.likewiki.plateHint
 firebit.net##.main-indent > :not(.header):not(.content)
-@@/advertise.js$script,domain=geektimes.ru|habrahabr.ru
+@@/advertise.js$script,domain=geektimes.com|habr.com
 adultmanga.ru,doramatv.ru,findanime.ru,grouple.co,librebook.ru,readmanga.me##a[href="http://grouple.co/page/adblock"]
 simpsonsua.com.ua##div[id^="turn_off_please"]
 !
@@ -2315,7 +2321,7 @@ samsung.com#@#.cookie-notice
 likemetr.ru#@#.fa-share-alt
 animakura.ru,bt-test.ru,cherryplayer.com,ekabu.ru,legrand-shop.com.ua,loginza.ru,online-mult.net,soccer.ru,soccer0010.com,tvfru.net#@#.facebook
 change.org#@#.facebook-btn
-app.tbn.ru,geektimes.ru,habrahabr.ru,livejournal.com#@#.fb_iframe_widget
+app.tbn.ru,livejournal.com#@#.fb_iframe_widget
 joblib.ru#@#.feedback-button
 store.steampowered.com#@#.follow_btn
 adme.ru#@#.gallery-social
@@ -2918,6 +2924,7 @@ prom.ua#@#img[alt="facebook"]
 /delicious_small.
 /design/social_
 /design/socials.
+/designimages/Social-
 /Devart_Icon.
 /digg-46.
 /digg-icon.
@@ -4064,6 +4071,7 @@ prom.ua#@#img[alt="facebook"]
 /share2-
 /share2.png
 /share2/*$~stylesheet
+/share24.
 /share4.
 /share42.js
 /share42_
@@ -4490,6 +4498,7 @@ prom.ua#@#img[alt="facebook"]
 /socials_new.
 /socialshare-
 /socialShare.
+/socialshare/*
 /socialshare2.
 /socialshare_
 /socialShareCount.
@@ -5462,6 +5471,7 @@ _youtube_social_
 ###ctl00_wordpressLink
 ###ctl00_youtubeLink
 ###ctn-social
+###custom-social
 ###custom-tweet-button
 ###custom_share
 ###customtwitter
@@ -6513,6 +6523,7 @@ _youtube_social_
 ###shareSideContainer
 ###shareSidebarHolder
 ###shareSocial
+###shareStrip
 ###shareTab
 ###shareTags
 ###shareThis
@@ -6554,6 +6565,7 @@ _youtube_social_
 ###share_email_desktopSocialBar
 ###share_facebook
 ###share_facebook2
+###share_facebook_trigger
 ###share_fb
 ###share_feed
 ###share_footer
@@ -6587,6 +6599,7 @@ _youtube_social_
 ###share_tw
 ###share_twitter
 ###share_twitter-share_desktopSocialBar
+###share_twitter_trigger
 ###share_wrap
 ###share_wrapper
 ###shareaholic-bar
@@ -7121,6 +7134,7 @@ _youtube_social_
 ###social_share_wrapper
 ###social_sharing
 ###social_side
+###social_side_links
 ###social_sidebar
 ###social_sidebar_container
 ###social_slider
@@ -7948,6 +7962,7 @@ _youtube_social_
 ##.article-share-count-container
 ##.article-share-link-items
 ##.article-share-list
+##.article-share-sheet
 ##.article-share-slider
 ##.article-share-tools
 ##.article-share-top
@@ -8167,6 +8182,7 @@ _youtube_social_
 ##.bb-social-link
 ##.bc_social_icons
 ##.bd-social
+##.bd-socialicon
 ##.bdaia-social-io
 ##.bdaia-social-links
 ##.bdaia-widget-facebook
@@ -8398,8 +8414,10 @@ _youtube_social_
 ##.btn__share
 ##.btn_delicious
 ##.btn_digg
+##.btn_facebook
 ##.btn_fb
 ##.btn_furl
+##.btn_google
 ##.btn_share
 ##.btn_social
 ##.btn_technorati
@@ -8636,6 +8654,7 @@ _youtube_social_
 ##.content__share--header
 ##.contentshare
 ##.convosharebuttons
+##.copyright-socials
 ##.core-share
 ##.cosmo-social
 ##.count-facebook
@@ -9509,6 +9528,7 @@ _youtube_social_
 ##.foot-soc-list
 ##.foot-soc-twit
 ##.foot-social
+##.foot-socials
 ##.foot-twit
 ##.footSocIcons
 ##.footSocial
@@ -9609,6 +9629,7 @@ _youtube_social_
 ##.footer-socialmedia-share
 ##.footer-socialmediaIcon
 ##.footer-socials
+##.footer-socials-section
 ##.footer-tumblr
 ##.footer-tw
 ##.footer-tw-icon
@@ -9942,6 +9963,7 @@ _youtube_social_
 ##.header-google-plus
 ##.header-icon-instagram
 ##.header-item-social
+##.header-main-socs
 ##.header-nav-social
 ##.header-nav-social-facebook
 ##.header-nav-social-instagram
@@ -10560,6 +10582,7 @@ _youtube_social_
 ##.itemSocialMedia
 ##.itemSocialSharing
 ##.itemTwitter
+##.item_share_gplus
 ##.items-share
 ##.itemview-share
 ##.itp-social-buttons-box
@@ -11009,6 +11032,7 @@ _youtube_social_
 ##.minimal-nav__social
 ##.minimalshare
 ##.minitwitter-widget
+##.mk-header-social
 ##.mkd-blog-single-share
 ##.mkd-share-link
 ##.mks_social_widget
@@ -11135,6 +11159,7 @@ _youtube_social_
 ##.nav_facebook
 ##.nav_menu_social
 ##.nav_pinterest
+##.nav_share
 ##.nav_twitter
 ##.navbar-item-gplus-icon
 ##.navbar-item-social-icon
@@ -11494,6 +11519,7 @@ _youtube_social_
 ##.product-social-icon-wrapper
 ##.product-social-media
 ##.project-activity-twitter
+##.promo-carousel-social
 ##.promo-linkedin
 ##.promote-facebook
 ##.promote-twitter
@@ -11676,6 +11702,8 @@ _youtube_social_
 ##.scrbbl-post-opts-wrap-share
 ##.scrbbl-tb-share-actions
 ##.scroll-nav-social-item
+##.scroll-navigation-facebook
+##.scroll-navigation-twitter
 ##.scroll-triggered-box
 ##.scsb_facebook
 ##.scsb_share
@@ -12181,6 +12209,7 @@ _youtube_social_
 ##.share_count
 ##.share_cta
 ##.share_digg
+##.share_email_article
 ##.share_entry
 ##.share_facebook
 ##.share_fb
@@ -12808,6 +12837,7 @@ _youtube_social_
 ##.social-button-group
 ##.social-button-row
 ##.social-button-small
+##.social-button__wrapper
 ##.social-buttons
 ##.social-buttons-bottom
 ##.social-buttons-contact
@@ -12829,6 +12859,9 @@ _youtube_social_
 ##.social-channels
 ##.social-circle-icon
 ##.social-circles
+##.social-circles-facebook
+##.social-circles-instagram
+##.social-circles-twitter
 ##.social-clipped-fb
 ##.social-clipped-tw
 ##.social-col
@@ -12888,6 +12921,7 @@ _youtube_social_
 ##.social-footer
 ##.social-footer-block
 ##.social-footer-icon
+##.social-footer-wrap
 ##.social-foursquare
 ##.social-google
 ##.social-google-link
@@ -13062,6 +13096,7 @@ _youtube_social_
 ##.social-media-widget-icon-bar
 ##.social-medias
 ##.social-menu
+##.social-menu-btn-bottom
 ##.social-menu-span
 ##.social-mod
 ##.social-modal
@@ -13500,6 +13535,7 @@ _youtube_social_
 ##.social_count
 ##.social_counts
 ##.social_data
+##.social_di
 ##.social_digg
 ##.social_div
 ##.social_facebook
@@ -14063,6 +14099,7 @@ _youtube_social_
 ##.theme-icon-facebook
 ##.theme-icon-pinterest
 ##.theme-icon-twitter
+##.theshare
 ##.thesocialbar
 ##.thesocialbarform
 ##.thesocialbartext
@@ -14114,6 +14151,7 @@ _youtube_social_
 ##.top-social-item
 ##.top-social-links
 ##.top-socialbar
+##.top-socials
 ##.top-subscribe-facebook
 ##.top-subscribe-instagram
 ##.top-subscribe-pinterest
@@ -15714,6 +15752,7 @@ _youtube_social_
 /icon_16_rss.
 /icon_emailblog.
 /icon_emailrss.
+/icon_gototop.
 /icon_hatena.
 /icon_mail.
 /icon_mixi.
@@ -16852,6 +16891,7 @@ _site_cookie_
 ##.s_rss
 ##.sailthruRecommendation
 ##.scribol
+##.scroll-navigation-subscribe
 ##.section-newsletters
 ##.section_taboola_alireaussi
 ##.share-after-content-email
@@ -16969,6 +17009,7 @@ _site_cookie_
 ##.widget_mybloglog
 ##.widget_newslet_subs
 ##.widget_psmag_mailsocial
+##.widget_pushpad_widget
 ##.widget_rss_links
 ##.widget_rssiconwidget
 ##.widget_sailthru_scout_understory_widget
@@ -18649,9 +18690,11 @@ _site_cookie_
 ###amccookies-bar
 ###amcookieapproval
 ###amp-user-cookie
+###amp-user-notification-cookies
 ###amp-user-notification-privacy
 ###analytics_cookie
 ###andytimes_privacy_div
+###announcement-eu-cookie
 ###announcementeCookies
 ###anunt_cookies
 ###ao-CookiePolicy
@@ -21471,6 +21514,7 @@ _site_cookie_
 ###js-cookielaw-alert
 ###js-cookieloi
 ###js-cookies-info
+###js-cookies-msg-hide
 ###js-cookies-notification
 ###js-cookies-stripe
 ###js-ext-cookie
@@ -22715,6 +22759,7 @@ _site_cookie_
 ##.am-cookiebar
 ##.amz-cookies-notice
 ##.animate-cookie-message
+##.announcement-eu-cookie
 ##.ap-cookiesalert-container
 ##.approve-cookies
 ##.approve-cookies-header
@@ -25341,6 +25386,7 @@ _site_cookie_
 ###bktotopbtn
 ###bt-scroll-top
 ###btn-scroll-up
+###button-to-top
 ###category-page-back-to-top
 ###cb-to-top
 ###dynamic-to-top
@@ -25373,6 +25419,7 @@ _site_cookie_
 ###mkd-back-to-top
 ###move-to-top
 ###navBackToTop
+###nino-scrollToTop
 ###onTop3
 ###return-to-top
 ###sbttBacktotop
@@ -25400,6 +25447,7 @@ _site_cookie_
 ###toTopLink
 ###to_top
 ###to_top_scrollup
+###totop-scroller
 ###totopBtn
 ###tweScrollTop
 ###uix_jumpToFixed
@@ -25459,6 +25507,7 @@ _site_cookie_
 ##.ct-totop
 ##.dc-go-top
 ##.dmtop
+##.dvt-go-top
 ##.enigma_scrollup
 ##.et_pb_scroll_top
 ##.f-footer__btn_up
@@ -25561,6 +25610,7 @@ _site_cookie_
 ##.tothetop
 ##.totop
 ##.totop_button
+##.txt_back_top
 ##.ui-backtotop
 ##.ui-fixed-panel-go-top
 ##.ui-go-top
@@ -25571,6 +25621,7 @@ _site_cookie_
 ##.yjscroll
 ##.z-navigation-footer_backToTop
 ##[app="back-to-top-button"]
+##a[class^="bd-backtotop-"]
 ##a[data-bind="toTopButton"]
 ##a[href="#back-to-top"]
 ##a[href="#top-of-page"]
