@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* 280blocker-For-Japanese-Mobile-Site List Unavailable To Download. Thu Apr 26 00:20:26 UTC 2018
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* 280blocker-For-Japanese-Mobile-Site List Was An Empty File After Download. Wed Apr 25 18:01:56 UTC 2018
+* 280blocker-For-Japanese-Mobile-Site List Was An Empty File After Download. Thu Apr 26 00:20:27 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* 280blocker-For-Japanese-Mobile-Site List Was Killed By The Parsing Process. It will be skipped in the future. Thu Apr 26 00:20:27 UTC 2018

@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* SecureMecca List Marked As Dead. Wed Apr 25 20:30:43 UTC 2018
+* SecureMecca List Already Marked As Dead. Thu Apr 26 00:21:41 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* SecureMecca List Was An Empty File After Download. Thu Apr 26 00:21:41 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* SecureMecca List Was Killed By The Parsing Process. It will be skipped in the future. Thu Apr 26 00:21:42 UTC 2018
