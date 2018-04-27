@@ -17,22 +17,22 @@ if
 ls $BLACKDOMAINSALL &> /dev/null;
 then
 
-  for f in $BLACKDOMAINSALL
-  do
-  BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-  echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
-  printf "$cyan"  "Processing $BASEFILENAME"
+for f in $BLACKDOMAINSALL
+do
+BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$cyan"  "Processing $BASEFILENAME"
 
-  timestamp=$(echo `date`)
-  cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEA
-  cat $TEMPFILEA >> $BLACKLISTTEMP
-  HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
-  echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
-  printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
-  rm $f
-  mv $TEMPFILEA $f
-  echo ""
-  done
+timestamp=$(echo `date`)
+cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEA
+cat $TEMPFILEA >> $BLACKLISTTEMP
+HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
+rm $f
+mv $TEMPFILEA $f
+echo ""
+done
 
 else
 echo "No Blacklists available."
