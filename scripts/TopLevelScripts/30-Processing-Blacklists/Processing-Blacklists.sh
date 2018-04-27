@@ -124,10 +124,6 @@ echo ""
 
 BLACKLISTSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
 
-else
-echo "No Blacklists available."
-fi
-
 for p in $BLACKLISTSSCRIPTSALL
 do
 
@@ -208,3 +204,7 @@ echo "" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## End of File Loop
 done
+
+else
+echo "No Blacklists available."
+fi
