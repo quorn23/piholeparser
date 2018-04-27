@@ -1,6 +1,6 @@
 [Return To Repository](https://github.com/deathbybandaid/piholeparser/)
-[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
-[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
+[Return To Main](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/Mainlog.md)
+[Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/TopLevelScripts/30-Processing-Blacklists.md)
 ____________________________________
 # RU-AdList
 ## Setting Temporary Parsing Variables
@@ -20,13 +20,13 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ### Removing Comments
-18384 Lines After Removing Comments
+18385 Lines After Removing Comments
 ### Removing Content Filtering
-18384 Lines After Removing Content Filtering
+18385 Lines After Removing Content Filtering
 ### Trimming HOSTS Format IP Addresses
-18384 Lines After Trimming HOSTS Format IP Addresses
+18385 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-16650 Lines After Removing Empty Space
+16651 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
 2145 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
