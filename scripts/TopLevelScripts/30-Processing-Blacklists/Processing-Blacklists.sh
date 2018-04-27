@@ -34,10 +34,6 @@ mv $TEMPFILEA $f
 echo ""
 done
 
-else
-echo "No Blacklists available."
-fi
-
 SCRIPTTEXT="Deduplicating Merged List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
@@ -64,6 +60,10 @@ then
 printf "$magenta"    "Devmode Parsing Skip Enabled."
 echo "Devmode Parsing Skip Enabled." | sudo tee --append $RECENTRUN &>/dev/null
 exit
+fi
+
+else
+echo "No Blacklists available."
 fi
 
 ## Process Every .lst file within the List Directories
