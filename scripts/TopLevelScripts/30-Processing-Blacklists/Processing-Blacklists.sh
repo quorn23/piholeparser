@@ -13,10 +13,6 @@ printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
-if
-ls $BLACKDOMAINSALL &> /dev/null;
-then
-
 for f in $BLACKDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
@@ -205,6 +201,3 @@ echo "" | sudo tee --append $RECENTRUN &>/dev/null
 ## End of File Loop
 done
 
-else
-echo "No Blacklists available."
-fi
