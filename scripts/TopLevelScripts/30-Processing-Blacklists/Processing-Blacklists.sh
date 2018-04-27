@@ -34,9 +34,14 @@ mv $TEMPFILEA $f
 echo ""
 done
 
+else
+echo "No Blacklists available."
+fi
+
 SCRIPTTEXT="Deduplicating Merged List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+
 if
 [[ -f $BLACKLISTTEMP ]]
 then
@@ -62,6 +67,9 @@ exit
 fi
 
 ## Process Every .lst file within the List Directories
+if
+ls $BLACKLSTALL &> /dev/null;
+then
 for f in $BLACKLSTALL
 do
 
@@ -204,7 +212,6 @@ echo "" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## End of File Loop
 done
-
 else
 echo "No Blacklists available."
 fi
