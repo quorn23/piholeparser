@@ -3,5 +3,18 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # 68-Looking-At-What-Did-Not-Pass-TLD-Test
-* 0 Lines After Deduping. 
+* 13 Lines After Deduping. 
 ____________________________________________________
+* -geoip.js
+* -scroll-tracker.js
+* -xtcore.js
+* _chartbeat.js
+* _directtrack.js
+* _effectivemeasure_tag.js
+* _gatrack.js
+* _i2a.js
+* _nedstat.js
+* _nielsen.js
+* _pixelmap.js
+* _quantcast.swf
+* _web_stat.js
