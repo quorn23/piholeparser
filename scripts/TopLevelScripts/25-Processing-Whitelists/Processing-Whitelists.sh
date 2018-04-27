@@ -39,7 +39,12 @@ echo ""
 SCRIPTTEXT="Pulling Domains From Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-for f in $BLACKLSTALL
+
+if
+ls $WHITELSTALL &> /dev/null;
+then
+
+for f in $WHITELSTALL
 do
 
 source=`cat $f`
@@ -56,27 +61,9 @@ HOWMANYLINES=$(echo -e "`wc -l $WHITESCRIPTDOMAINS | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 echo ""
-
-SCRIPTTEXT="Pulling Domains From TLD Lists."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-for f in $TLDLSTALL
-do
-
-source=`cat $f`
-
-SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
-if
-[[ -n $SOURCEDOMAIN ]]
-then
-echo "$SOURCEDOMAIN" | tee --append $WHITESCRIPTDOMAINS &>/dev/null
+else
+echo "No Whitelists Present."
 fi
-
-done
-HOWMANYLINES=$(echo -e "`wc -l $WHITESCRIPTDOMAINS | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-echo ""
 
 SCRIPTTEXT="Deduping List."
 printf "$cyan"    "$SCRIPTTEXT"
@@ -99,6 +86,8 @@ SCRIPTTEXT="Sorting and Deduping Individual Whitelists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
+
+
 for f in $WHITEDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
