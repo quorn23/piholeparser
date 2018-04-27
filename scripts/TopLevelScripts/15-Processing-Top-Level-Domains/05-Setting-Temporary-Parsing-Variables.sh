@@ -6,9 +6,6 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 ## Download URL
-if
-ls $FILEBEINGPROCESSED &> /dev/null;
-then
 source="$(echo `cat $FILEBEINGPROCESSED`)"
 echo "source="$source"" | tee --append $TEMPPARSEVARS &>/dev/null
 
@@ -27,6 +24,3 @@ BFILETEMP="$TEMPDIR""$BASEFILENAME".filetemp.txt
 echo "BFILETEMP="$BFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 BORIGINALFILETEMP="$TEMPDIR""$BASEFILENAME".original.txt
 echo "BORIGINALFILETEMP="$BORIGINALFILETEMP"" | tee --append $TEMPPARSEVARS &>/dev/null
-else
-echo "No TLD file."
-fi
