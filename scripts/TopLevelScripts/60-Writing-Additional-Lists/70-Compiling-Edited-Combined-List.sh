@@ -55,8 +55,19 @@ if
 [[ -z $MISSINGWHITE ]]
 then
 printf "$yellow"  "Removing whitelist Domains."
-#gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP >> $TEMPFILE
 grep -Fvxf $WHITELISTTEMP $FILETEMP >> $TEMPFILE
+rm $FILETEMP
+mv $TEMPFILE $FILETEMP
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
+echo ""
+fi
+
+## RE-Remove Whitelist Domains
+if
+[[ -z $MISSINGWHITE ]]
+then
+printf "$yellow"  "Re-Removing whitelist Domains."
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP >> $TEMPFILE
 rm $FILETEMP
 mv $TEMPFILE $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
