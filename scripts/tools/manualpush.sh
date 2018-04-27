@@ -13,4 +13,4 @@ git -C $REPODIR pull
 git -C $REPODIR remote set-url origin $GITWHERETOPUSH
 git -C $REPODIR add .
 git -C $REPODIR commit -m "$WHYYOUDODIS"
-git -C $REPODIR push -u origin master
+git -C $REPODIR push -u origin $REPOBRANCH
