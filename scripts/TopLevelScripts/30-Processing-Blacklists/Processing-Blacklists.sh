@@ -12,6 +12,11 @@ SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
+
+if
+ls $BLACKDOMAINSALL &> /dev/null;
+then
+
 for f in $BLACKDOMAINSALL
 do
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
@@ -118,6 +123,10 @@ printf "$green"    "Processing $BASEFILENAME List."
 echo "" 
 
 BLACKLISTSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
+
+else
+echo "No Blacklists available."
+fi
 
 for p in $BLACKLISTSSCRIPTSALL
 do
