@@ -1,5 +1,5 @@
 ### Checking For Whitelist File.
-* Whitelist File removed Fri Apr 27 00:20:21 UTC 2018
+* Whitelist File removed Fri Apr 27 17:39:34 UTC 2018
 ### Pulling Domains From Lists.
 132 After Pulling Domains From Lists.
 ### Pulling Domains From TLD Lists.
@@ -30,7 +30,7 @@
 #### TargetsWeeklyAds
 3 In TargetsWeeklyAds
 #### UserSubmitted
-22 In UserSubmitted
+51 In UserSubmitted
 #### appleappstore
 1 In appleappstore
 #### dropbox
@@ -68,4 +68,4 @@
 #### youtube
 5 In youtube
 ### Deduplicating Merged List.
-187 After Deduplicating Merged List.
+216 After Deduplicating Merged List.
