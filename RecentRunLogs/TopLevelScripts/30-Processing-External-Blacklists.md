@@ -3,10 +3,10 @@
 ____________________________________
 # 
 ## AakList
-List Took 25 Seconds.
+List Took 2 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/TopLevelScripts/30-Processing-External-Blacklists/AakList.md)
 
 ## Mother-of-All-ADBLOCKING
-List Took 55 Seconds.
+List Took 6 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/TopLevelScripts/30-Processing-External-Blacklists/Mother-of-All-ADBLOCKING.md)
 
