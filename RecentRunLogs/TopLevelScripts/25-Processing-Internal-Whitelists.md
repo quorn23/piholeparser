@@ -3,7 +3,7 @@
 ____________________________________
 # 
 ### Checking For Script Whitelist File.
-* Script Whitelist File not there, not removing. Sat Apr 28 23:33:34 UTC 2018
+* Script Whitelist File not there, not removing. Sat Apr 28 23:37:31 UTC 2018
 ### Pulling Domains From Individual Lists.
 1 In Backupbitlockerrecoverykey
 1 In BildDE
@@ -12,7 +12,6 @@ ____________________________________
 2 In Jackbox
 1 In MicrosoftOffice
 5 In MicrosoftWebPages
-0 In Script
 11 In Skype
 1 In Spotify
 3 In TargetsWeeklyAds
