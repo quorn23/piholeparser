@@ -1,18 +1,11 @@
 #!/bin/bash
-## This is the Parsing Process
+## This sets up blacklisting for domains in .lst files
 
 ## Variables
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
 RECENTRUNBANDAID="$RECENTRUN"
-
-#!/bin/bash
-## This sets up blacklisting for domains in .lst files
-
-## Variables
-SCRIPTDIRA=$(dirname $0)
-source "$SCRIPTDIRA"/foldervars.var
 
 ## Quick File Check
 timestamp=$(echo `date`)

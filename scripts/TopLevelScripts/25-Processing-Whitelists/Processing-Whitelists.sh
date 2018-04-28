@@ -1,18 +1,11 @@
 #!/bin/bash
-## This is the Parsing Process
+## This sets up whitelisting for domains in .lst files
 
 ## Variables
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/../foldervars.var
 
 RECENTRUNBANDAID="$RECENTRUN"
-
-#!/bin/bash
-## This sets up whitelisting for domains in .lst files
-
-## Variables
-SCRIPTDIRA=$(dirname $0)
-source "$SCRIPTDIRA"/foldervars.var
 
 ## Quick File Check
 timestamp=$(echo `date`)
@@ -87,6 +80,9 @@ printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
+if
+ls $WHITELSTALL &> /dev/null;
+then
 
 for f in $WHITEDOMAINSALL
 do
@@ -104,6 +100,10 @@ rm $f
 mv $TEMPFILEA $f
 echo ""
 done
+
+else
+echo "No Whitelists Present."
+fi
 
 SCRIPTTEXT="Deduplicating Merged List."
 printf "$cyan"    "$SCRIPTTEXT"
