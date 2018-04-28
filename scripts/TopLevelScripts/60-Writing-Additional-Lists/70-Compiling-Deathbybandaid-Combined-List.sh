@@ -5,6 +5,8 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
+DOMAINTOLOOKFOR="bigzipfiles.facebook.com"
+
 WHATITIS="All Parsed List (edited)"
 timestamp=$(echo `date`)
 if
@@ -56,6 +58,12 @@ cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $TEMPFILE
 echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after deduping"
 rm $FILETEMP
 echo ""
+
+if 
+grep -q $DOMAINTOLOOKFOR "$WHITELISTTEMP"
+then
+echo "$DOMAINTOLOOKFOR in whitelist"
+fi
 
 ## Remove Whitelist Domains
 if
