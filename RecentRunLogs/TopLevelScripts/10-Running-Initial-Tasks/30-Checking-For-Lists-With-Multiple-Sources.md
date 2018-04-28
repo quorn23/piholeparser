@@ -3,6 +3,5 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks.md)
 ____________________________________
 # 
-No Lists to Process.
 _________________________________________
 All Lists Only Have One Source.
