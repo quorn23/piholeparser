@@ -50,7 +50,7 @@ mv $TEMPFILEA $f
 ## Add to Script.domains
 cat $f >> $WHITELISTTEMP
 
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 
