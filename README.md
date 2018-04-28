@@ -2,12 +2,12 @@
 
 ### Last Run Stats
 
-* Script Started Sat Apr 28 22:24:20 UTC 2018
-* Script Ended Sat Apr 28 22:24:28 UTC 2018
+* Script Started Sat Apr 28 22:27:21 UTC 2018
+* Script Ended Sat Apr 28 22:27:32 UTC 2018
 * [Script Took 0 Minutes To Filter 0 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/Mainlog.md)
 * Error Calculating Size of AllParsed File.
 * Average Parsing Of unknown lines in unknown BlackLists was unknown Seconds.
-* 0 Valid Top Level Domains. No New TLD's.
+* 1588 Valid Top Level Domains. No New TLD's.
 * [No Lists That Do NOT Use https](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks/20-Identifying-Lists-Without-https.md)
 
 ### This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
