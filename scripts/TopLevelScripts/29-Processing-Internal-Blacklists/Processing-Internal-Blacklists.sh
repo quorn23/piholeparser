@@ -34,10 +34,10 @@ printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
 if
-ls $BLACKLSTALL &> /dev/null;
+ls $BLACKDOMAINSALL &> /dev/null;
 then
 
-for f in $BLACKLSTALL
+for f in $BLACKDOMAINSALL
 do
 
 source=`cat $f`
@@ -81,7 +81,7 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
 if
-ls $BLACKLSTALL &> /dev/null;
+ls $BLACKDOMAINSALL &> /dev/null;
 then
 
 for f in $BLACKDOMAINSALL
