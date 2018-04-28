@@ -14,7 +14,7 @@ fi
 
 ## Logo
 if
-[[ -f $AVATARSCRIPT && "$REPOBRANCH" == "master"]]
+[[ -f $AVATARSCRIPT && "$REPOBRANCH" = "master"]]
 then
 bash $AVATARSCRIPT
 else
