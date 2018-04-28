@@ -56,11 +56,22 @@ printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
 
 done
 
+else
+echo "No Individual Whitelists Present."
+touch $WHITELISTTEMP
+fi
+
 ## Total Whitelist
+if
+[[ -f $WHITELISTTEMP ]]
+then
 echo ""
 HOWMANYLINES=$(echo -e "`wc -l $WHITELISTTEMP | cut -d " " -f 1`")
 echo "$HOWMANYLINES To Whitelist" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES To Whitelist"
+else
+touch $WHITELISTTEMP
+fi
 
 ## Dedupe merge
 SCRIPTTEXT="Deduplicating Merged List."
