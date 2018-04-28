@@ -63,6 +63,9 @@ if
 then
 printf "$yellow"  "Removing whitelist Domains."
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE >> $FILETEMP
+#grep -Fvxf $WHITELISTTEMP $TEMPFILE >> $FILETEMP
+#comm -23 $TEMPFILE <(sort $WHITELISTTEMP) > $FILETEMP
+rm $TEMPFILE
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 fi
