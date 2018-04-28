@@ -2,8 +2,8 @@
 
 ### Last Run Stats
 
-* Script Started Sat Apr 28 22:01:46 UTC 2018
-* Script Ended Sat Apr 28 22:01:49 UTC 2018
+* Script Started Sat Apr 28 22:03:57 UTC 2018
+* Script Ended Sat Apr 28 22:04:00 UTC 2018
 * [Script Took 0 Minutes To Filter 0 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/Mainlog.md)
 * Error Calculating Size of AllParsed File.
 * Average Parsing Of unknown lines in unknown BlackLists was unknown Seconds.
