@@ -10,26 +10,26 @@ RECENTRUNBANDAID="$RECENTRUN"
 ## Quick File Check
 timestamp=$(echo `date`)
 
-SCRIPTTEXT="Checking For Whitelist File."
+SCRIPTTEXT="Checking For Script Whitelist File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $WHITESCRIPTDOMAINS ]]
 then
-printf "$red"  "Removing Whitelist File."
+printf "$red"  "Removing Script Whitelist File."
 echo ""
 rm $WHITESCRIPTDOMAINS
 touch $WHITESCRIPTDOMAINS
 echo "* Whitelist File removed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-printf "$cyan"  "Whitelist File not there. Not Removing."
+printf "$cyan"  "Script Whitelist File not there. Not Removing."
 echo ""
 touch $WHITESCRIPTDOMAINS
-echo "* Whitelist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Script Whitelist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 echo ""
 
-SCRIPTTEXT="Pulling Domains From Lists."
+SCRIPTTEXT="Pulling Domains From Individual Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
@@ -58,7 +58,7 @@ else
 echo "No Whitelists Present."
 fi
 
-SCRIPTTEXT="Deduping List."
+SCRIPTTEXT="Deduping Merge of Individual Whitelists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
@@ -102,7 +102,7 @@ echo ""
 done
 
 else
-echo "No Whitelists Present."
+echo "No Individual Whitelists Present."
 fi
 
 SCRIPTTEXT="Deduplicating Merged List."
