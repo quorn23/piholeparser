@@ -2,11 +2,11 @@
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/dev-nomerge/RecentRunLogs/Mainlog.md)
 ____________________________________
 # 
-### Checking For Whitelist File.
-* Whitelist File removed Sat Apr 28 21:46:48 UTC 2018
-### Pulling Domains From Lists.
-### Deduping List.
-0 After Deduping List.
+### Checking For Script Whitelist File.
+* Whitelist File removed Sat Apr 28 21:49:43 UTC 2018
+### Pulling Domains From Individual Lists.
+### Deduping Merge of Individual Whitelists.
+0 After Deduping Merge of Individual Whitelists.
 ### Sorting and Deduping Individual Whitelists.
 ### Deduplicating Merged List.
 0 After Deduplicating Merged List.
