@@ -66,14 +66,16 @@ grep -Fvxf $WHITELISTTEMP $TEMPFILE >> $FILETEMP
 rm $TEMPFILE
 gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP >> $TEMPFILE
 rm $FILETEMP
-echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after whitelist"
+comm -23 $TEMPFILE <(sort $WHITELISTTEMP) > $FILETEMP
+rm $TEMPFILE
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 fi
 
 if
-[[ -f $TEMPFILE ]]
+[[ -f $FILETEMP ]]
 then
-EDITEDALLPARSEDSIZEBYTES=$(stat -c%s "$TEMPFILE")
+EDITEDALLPARSEDSIZEBYTES=$(stat -c%s "$FILETEMP")
 EDITEDALLPARSEDSIZEKB=`expr $EDITEDALLPARSEDSIZEBYTES / 1024`
 EDITEDALLPARSEDSIZEMB=`expr $EDITEDALLPARSEDSIZEBYTES / 1024 / 1024`
 echo "EDITEDALLPARSEDSIZEMB="$EDITEDALLPARSEDSIZEMB"" | tee --append $TEMPVARS &>/dev/null
@@ -96,7 +98,7 @@ fi
 if
 [[ "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-EDITEDALLPARSEDHOWMANYLINES=$(echo -e "`wc -l $TEMPFILE | cut -d " " -f 1`")
+EDITEDALLPARSEDHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
 printf "$yellow"  "$EDITEDALLPARSEDHOWMANYLINES Lines After Compiling."
 echo "EDITEDALLPARSEDHOWMANYLINES="$EDITEDALLPARSEDHOWMANYLINES"" | tee --append $TEMPVARS &>/dev/null
 fi
@@ -114,16 +116,16 @@ if
 then
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $COMBINEDBLACKLISTSDBB
+mv $FILETEMP $COMBINEDBLACKLISTSDBB
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 echo "* Allparsedlist list was too large to host on github. $EDITEDALLPARSEDSIZEMB bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $TEMPFILE $COMBINEDBLACKLISTSDBB
+mv $FILETEMP $COMBINEDBLACKLISTSDBB
 elif
-[[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $TEMPFILE ]]
+[[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $FILETEMP ]]
 then
-mv $TEMPFILE $COMBINEDBLACKLISTSDBB
+mv $FILETEMP $COMBINEDBLACKLISTSDBB
 printf "$yellow"  "Big List Edited Created Successfully."
 fi
