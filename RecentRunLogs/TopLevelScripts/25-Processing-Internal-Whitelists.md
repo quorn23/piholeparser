@@ -3,7 +3,7 @@
 ____________________________________
 # 
 ### Checking For Script Whitelist File.
-* Whitelist File removed Sat Apr 28 23:05:01 UTC 2018
+* Whitelist File removed Sat Apr 28 23:10:12 UTC 2018
 ### Pulling Domains From Individual Lists.
 0 After Pulling Domains From Individual Lists.
 ### Deduping Merge of Individual Whitelists.
