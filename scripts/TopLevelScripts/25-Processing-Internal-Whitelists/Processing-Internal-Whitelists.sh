@@ -34,12 +34,10 @@ printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
 if
-ls $WHITELSTALL &> /dev/null;
+ls $WHITEDOMAINSALL &> /dev/null;
 then
-echo "No Whitelists Present."
-else
 
-for f in $WHITELSTALL
+for f in $WHITEDOMAINSALL
 do
 
 source=`cat $f`
@@ -56,7 +54,8 @@ HOWMANYLINES=$(echo -e "`wc -l $WHITESCRIPTDOMAINS | cut -d " " -f 1`")
 echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
 echo ""
-
+else
+echo "No Whitelists Present."
 fi
 
 SCRIPTTEXT="Deduping Merge of Individual Whitelists."
@@ -82,7 +81,7 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
 if
-ls $WHITELSTALL &> /dev/null;
+ls $WHITEDOMAINSALL &> /dev/null;
 then
 
 for f in $WHITEDOMAINSALL
