@@ -3,7 +3,7 @@
 ____________________________________
 # 
 ### Checking For Script Blacklist File.
-* Blacklist File removed Sat Apr 28 21:23:17 UTC 2018
+* Blacklist File removed Sat Apr 28 21:46:48 UTC 2018
 ### Pulling Domains From Individual Lists.
 ### Deduping Merge of Individual Blacklists.
 0 After Deduping Merge of Individual Blacklists.

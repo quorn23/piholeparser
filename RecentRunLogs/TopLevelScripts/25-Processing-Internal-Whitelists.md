@@ -3,7 +3,7 @@
 ____________________________________
 # 
 ### Checking For Whitelist File.
-* Whitelist File removed Sat Apr 28 21:23:17 UTC 2018
+* Whitelist File removed Sat Apr 28 21:46:48 UTC 2018
 ### Pulling Domains From Lists.
 ### Deduping List.
 0 After Deduping List.
