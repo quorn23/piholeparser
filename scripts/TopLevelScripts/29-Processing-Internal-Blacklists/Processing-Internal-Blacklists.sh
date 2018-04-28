@@ -14,17 +14,17 @@ SCRIPTTEXT="Checking For Script Blacklist File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
-[[ -f $BLACKSCRIPTDOMAINS ]]
+[[ -f $BLACKLISTTEMP ]]
 then
 printf "$red"  "Removing Script Blacklist File."
 echo ""
-rm $BLACKSCRIPTDOMAINS
-touch $BLACKSCRIPTDOMAINS
+rm $BLACKLISTTEMP
+touch $BLACKLISTTEMP
 echo "* Blacklist File removed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 printf "$cyan"  "Script Blacklist File not there. Not Removing."
 echo ""
-touch $BLACKSCRIPTDOMAINS
+touch $BLACKLISTTEMP
 echo "* Script Blacklist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 echo ""
@@ -33,52 +33,6 @@ SCRIPTTEXT="Pulling Domains From Individual Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
-if
-ls $BLACKDOMAINSALL &> /dev/null;
-then
-
-for f in $BLACKDOMAINSALL
-do
-
-source=`cat $f`
-
-SOURCEDOMAIN=`echo $source | awk -F/ '{print $3}'`
-if
-[[ -n $SOURCEDOMAIN ]]
-then
-echo "$SOURCEDOMAIN" | tee --append $BLACKSCRIPTDOMAINS &>/dev/null
-fi
-
-done
-HOWMANYLINES=$(echo -e "`wc -l $BLACKSCRIPTDOMAINS | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-echo ""
-else
-echo "No Blacklists Present."
-fi
-
-SCRIPTTEXT="Deduping Merge of Individual Blacklists."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-if
-[[ -f $BLACKSCRIPTDOMAINS ]]
-then
-cat -s $BLACKSCRIPTDOMAINS | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEH
-rm $BLACKSCRIPTDOMAINS
-mv $TEMPFILEH $BLACKSCRIPTDOMAINS
-else
-touch $BLACKSCRIPTDOMAINS
-fi
-HOWMANYLINES=$(echo -e "`wc -l $BLACKSCRIPTDOMAINS | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-
-
-SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
 
 if
 ls $BLACKDOMAINSALL &> /dev/null;
@@ -86,25 +40,40 @@ then
 
 for f in $BLACKDOMAINSALL
 do
+
 BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$cyan"  "Processing $BASEFILENAME"
 
-timestamp=$(echo `date`)
+## Dedupe and Sort
 cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEA
-cat $TEMPFILEA >> $BLACKLISTTEMP
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
+mv $TEMPFILEA $f
+
+## Add to Script.domains
+cat $f >> $BLACKLISTTEMP
+
+HOWMANYLINES=$(echo -e "`wc -l $f | cut -d " " -f 1`")
 echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
 printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
-rm $f
-mv $TEMPFILEA $f
-echo ""
+
 done
 
 else
 echo "No Individual Blacklists Present."
+touch $BLACKLISTTEMP
 fi
 
+## Total Blacklist
+if
+[[ -f $BLACKLISTTEMP ]]
+then
+echo ""
+HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1`")
+echo "$HOWMANYLINES To Blacklist" | sudo tee --append $RECENTRUN &>/dev/null
+printf "$yellow"  "$HOWMANYLINES To Blacklist"
+else
+touch $BLACKLISTTEMP
+fi
+
+## Dedupe merge
 SCRIPTTEXT="Deduplicating Merged List."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
