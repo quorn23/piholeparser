@@ -10,26 +10,26 @@ RECENTRUNBANDAID="$RECENTRUN"
 ## Quick File Check
 timestamp=$(echo `date`)
 
-SCRIPTTEXT="Checking For Blacklist File."
+SCRIPTTEXT="Checking For Script Blacklist File."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 [[ -f $BLACKSCRIPTDOMAINS ]]
 then
-printf "$red"  "Removing Blacklist File."
+printf "$red"  "Removing Script Blacklist File."
 echo ""
 rm $BLACKSCRIPTDOMAINS
 touch $BLACKSCRIPTDOMAINS
 echo "* Blacklist File removed $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
-printf "$cyan"  "Blacklist File not there. Not Removing."
+printf "$cyan"  "Script Blacklist File not there. Not Removing."
 echo ""
 touch $BLACKSCRIPTDOMAINS
-echo "* Blacklist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
+echo "* Script Blacklist File not there, not removing. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 echo ""
 
-SCRIPTTEXT="Pulling Domains From Lists."
+SCRIPTTEXT="Pulling Domains From Individual Lists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 
@@ -58,7 +58,7 @@ else
 echo "No Blacklists Present."
 fi
 
-SCRIPTTEXT="Deduping List."
+SCRIPTTEXT="Deduping Merge of Individual Blacklists."
 printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
@@ -102,7 +102,7 @@ echo ""
 done
 
 else
-echo "No Blacklists Present."
+echo "No Individual Blacklists Present."
 fi
 
 SCRIPTTEXT="Deduplicating Merged List."
