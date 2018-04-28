@@ -8,68 +8,11 @@ source "$SCRIPTDIRA"/../foldervars.var
 RECENTRUNBANDAID="$RECENTRUN"
 ONEUPBANDAID="$SCRIPTBASEFOLDERNAME"
 
-SCRIPTTEXT="Sorting and Deduping Individual Blacklists."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-echo ""
-
-if
-ls $BLACKDOMAINSALL &> /dev/null;
-then
-
-for f in $BLACKDOMAINSALL
-do
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-echo "#### $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$cyan"  "Processing $BASEFILENAME"
-
-timestamp=$(echo `date`)
-cat -s $f | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILEA
-cat $TEMPFILEA >> $BLACKLISTTEMP
-HOWMANYLINES=$(echo -e "`wc -l $TEMPFILEA | cut -d " " -f 1`")
-echo "$HOWMANYLINES In $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES In $BASEFILENAME"
-rm $f
-mv $TEMPFILEA $f
-echo ""
-done
-
-SCRIPTTEXT="Deduplicating Merged List."
-printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-
-if
-[[ -f $BLACKLISTTEMP ]]
-then
-cat -s $BLACKLISTTEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' > $TEMPFILER
-rm $BLACKLISTTEMP
-mv $TEMPFILER $BLACKLISTTEMP
-else
-touch $BLACKLISTTEMP
-fi
-HOWMANYLINES=$(echo -e "`wc -l $BLACKLISTTEMP | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "$HOWMANYLINES After $SCRIPTTEXT"
-
-echo "____________________________________" | tee --append $RECENTRUN &>/dev/null
-
-## This is a way to skip parsing
-if
-[[ -n $FULLSKIPPARSING ]]
-then
-printf "$magenta"    "Devmode Parsing Skip Enabled."
-echo "Devmode Parsing Skip Enabled." | sudo tee --append $RECENTRUN &>/dev/null
-exit
-fi
-
-else
-echo "No Blacklists available."
-fi
-
 ## Process Every .lst file within the List Directories
 if
 ls $BLACKLSTALL &> /dev/null;
 then
+
 for f in $BLACKLSTALL
 do
 
@@ -212,6 +155,7 @@ echo "" | sudo tee --append $RECENTRUN &>/dev/null
 
 ## End of File Loop
 done
+
 else
 echo "No Blacklists available."
 fi
