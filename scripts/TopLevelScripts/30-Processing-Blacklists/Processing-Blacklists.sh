@@ -87,6 +87,9 @@ printf "$cyan"    "$SCRIPTTEXT"
 echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 echo ""
 
+if
+ls $BLACKLSTALL &> /dev/null;
+then
 
 for f in $BLACKDOMAINSALL
 do
@@ -104,6 +107,10 @@ rm $f
 mv $TEMPFILEA $f
 echo ""
 done
+
+else
+echo "No Blacklists Present."
+fi
 
 SCRIPTTEXT="Deduplicating Merged List."
 printf "$cyan"    "$SCRIPTTEXT"
