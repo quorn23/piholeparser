@@ -36,6 +36,14 @@ echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
 if
 ls $WHITELSTALL &> /dev/null;
 then
+echo "yes"
+else
+echo "no"
+fi
+
+if
+ls $WHITELSTALL &> /dev/null;
+then
 
 for f in $WHITELSTALL
 do
