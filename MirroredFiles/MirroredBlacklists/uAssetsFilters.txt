@@ -700,10 +700,16 @@ foreignpolicy.com###TB_window
 foreignpolicy.com##body:style(overflow: auto !important;)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=33031
+! https://github.com/uBlockOrigin/uAssets/issues/2106
 userscloud.com##script:inject(abort-on-property-write.js, Fingerprint2)
 userscloud.com##script:inject(abort-on-property-write.js, open)
+userscloud.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+userscloud.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+userscloud.com##script:inject(remove-attr.js, onclick)
 @@||userscloud.com^$generichide
+||userscloud.com/sw.js$script
 ||pix.sr/images/banner
+||free-cloud-storage.com^$popup
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=32278
 jpost.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
@@ -6980,3 +6986,8 @@ vipbox.live##a[href^="https://s3.amazonaws.com/"]
 ! https://github.com/uBlockOrigin/uAssets/issues/2104
 wkyc.com##script:inject(abort-current-inline-script.js, btoa)
 wkyc.com##.grid__sticky-column_side_left
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/915
+crackllc.com##.onp-sl-content:style(display: block !important;)
+crackllc.com##.onp-sl-social-locker
+crackllc.com##a[href^="https://dartfolior.info/"]

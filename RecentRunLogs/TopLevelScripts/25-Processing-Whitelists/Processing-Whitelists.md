@@ -1,5 +1,5 @@
 ### Checking For Whitelist File.
-* Whitelist File removed Fri Apr 27 19:19:47 UTC 2018
+* Whitelist File removed Sat Apr 28 00:20:27 UTC 2018
 ### Pulling Domains From Lists.
 132 After Pulling Domains From Lists.
 ### Pulling Domains From TLD Lists.
@@ -22,7 +22,7 @@
 #### MicrosoftWebPages
 5 In MicrosoftWebPages
 #### Script
-49 In Script
+40 In Script
 #### Skype
 11 In Skype
 #### Spotify
@@ -68,4 +68,4 @@
 #### youtube
 5 In youtube
 ### Deduplicating Merged List.
-216 After Deduplicating Merged List.
+207 After Deduplicating Merged List.
