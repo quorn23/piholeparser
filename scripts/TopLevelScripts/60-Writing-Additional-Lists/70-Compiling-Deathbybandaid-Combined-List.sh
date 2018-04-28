@@ -62,12 +62,7 @@ if
 [[ -z $MISSINGWHITE ]]
 then
 printf "$yellow"  "Removing whitelist Domains."
-grep -Fvxf $WHITELISTTEMP $TEMPFILE >> $FILETEMP
-rm $TEMPFILE
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $FILETEMP >> $TEMPFILE
-rm $FILETEMP
-comm -23 $TEMPFILE <(sort $WHITELISTTEMP) > $FILETEMP
-rm $TEMPFILE
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE >> $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 fi
@@ -92,7 +87,7 @@ printf "$yellow"  "Size of $BASEFILENAME = $EDITEDALLPARSEDSIZEKB KB."
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -eq 0 && "$EDITEDALLPARSEDSIZEKB" -eq 0 && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-printf "$yellow"  "Size of $BASEFILENAME = $EDITEDALLPARSEDSIZEBYTES Bytes."
+printf "$yellow"  "Size of List = $EDITEDALLPARSEDSIZEBYTES Bytes."
 fi
 
 if
