@@ -134,8 +134,9 @@ elif
 [[ "$EDITEDALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
+rm $FILETEMP
+touch $COMBINEDBLACKLISTSDBB
 echo "* Allparsedlist list was too large to host on github. $EDITEDALLPARSEDSIZEMB bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $FILETEMP $COMBINEDBLACKLISTSDBB
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $FILETEMP ]]
 then
