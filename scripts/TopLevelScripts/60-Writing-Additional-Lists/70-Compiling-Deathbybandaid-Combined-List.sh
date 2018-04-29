@@ -78,6 +78,12 @@ echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 fi
 
+if 
+grep -q $DOMAINTOLOOKFOR "$FILETEMP"
+then
+echo "$DOMAINTOLOOKFOR in dbblist"
+fi
+
 if
 [[ -f $FILETEMP ]]
 then
