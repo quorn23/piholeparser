@@ -19,8 +19,16 @@ fi
 if
 [[ ! -f $COMBINEDBLACKLISTS ]]
 then
-printf "$red"  "Big List File Missing."
+printf "$red"  "Big Black List File Missing."
 touch $COMBINEDBLACKLISTS
+fi
+
+## Check if white list is present
+if
+[[ ! -f $COMBINEDWHITELISTS ]]
+then
+printf "$red"  "Big White List File Missing."
+touch $COMBINEDWHITELISTS
 fi
 
 printf "$cyan"  "Generating All Parsed List (edited)."
