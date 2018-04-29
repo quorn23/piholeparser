@@ -5,6 +5,14 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
+## Check if combined list is present
+if
+[[ ! -f $COMBINEDBLACKLISTSDBB ]]
+then
+printf "$red"  "DBB List File Missing."
+touch $COMBINEDBLACKLISTSDBB
+fi
+
 ## Process Every .clist file within CountryCode List Directory
 if
 ls $COUNTRYCODESTLDALL &> /dev/null;
