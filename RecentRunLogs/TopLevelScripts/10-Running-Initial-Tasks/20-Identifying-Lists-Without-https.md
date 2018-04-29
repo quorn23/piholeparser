@@ -8,7 +8,21 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-All Lists Use https.
+* Adblock-Filters-by-Gurudee
+* BLOGRAM-Analysis-Block-Filter-List-for-Japan
+* BLOGRAM-Basic-Filter-List-for-Japan
+* DNS-BH-Malware-Domains
+* Dan-Pollocks-Hosts
+* Disconnect-Malvertising-Filter
+* Finnish-AntiSocial
+* JABCreations
+* JapaneseSiteAdblockFilterver2
+* JoeWein
+* Malware-URLs-Domains
+* PLgeneral
+* Spam-Assassin-Bill-Stearns
+* The-Hosts-File-Project
+* Tofu-Filter
 
 ___________________________________________________________________
 ### TLD Lists That Do NOT use https.
