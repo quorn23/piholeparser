@@ -17,6 +17,14 @@ else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
+if
+[[ ! -f $BLACKLISTTEMP ]]
+then
+printf "$red"  "Blacklist File Missing."
+MISSINGBLACK=true
+fi
+
+
 ## Combine Small lists
 printf "$yellow"  "Merging Individual Lists."
 if
