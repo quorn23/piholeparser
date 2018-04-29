@@ -24,7 +24,6 @@ printf "$red"  "Blacklist File Missing."
 MISSINGBLACK=true
 fi
 
-
 ## Combine Small lists
 printf "$yellow"  "Merging Individual Lists."
 if
@@ -38,6 +37,20 @@ touch $TEMPFILE
 INDIVIDUALMERGEFAILED=true
 fi
 echo ""
+
+## Add Script.domains
+if
+[[ -z $MISSINGBLACK ]]
+then
+printf "$yellow"  "Adding Blacklist Domains."
+cat $BLACKLISTTEMP $TEMPFILE >> $FILETEMP
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after blacklist"
+rm $TEMPFILE
+mv $FILETEMP $TEMPFILE
+echo ""
+else
+cp $COMBINEDBLACKLISTS $FILETEMP
+fi
 
 ## Duplicate Removal
 if
