@@ -28,6 +28,8 @@ echo ""
 echo ""
 
 echo "Checking Big Lists"
+echo""
+
 if 
 grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
