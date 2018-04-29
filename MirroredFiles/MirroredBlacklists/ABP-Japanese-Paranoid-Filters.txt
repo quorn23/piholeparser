@@ -1,11 +1,11 @@
 [Adblock Plus 2.8.2]
-! Checksum: CWLT/hhLkPUB3ce/AH7vNA
+! Checksum: 4S7wB9HSTOOeak114ZaoXw
 ! Homepage: https://github.com/k2jp/abp-japanese-filters/
 ! Title: ABP Japanese Paranoid filters (ONLY FOR Japanese and experienced users: READ Support Policy)
 ! Expires: 6 hours
-! Version: 201801102127
+! Version: 201804111805
 !
-! Last modified: 2018-01-10 21:27 JST(UTC+0900)
+! Last modified: 2018-04-11 18:05 JST(UTC+0900)
 ! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
 ! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
 ! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -3821,10 +3821,6 @@ itpro.nikkeibp.co.jp##a[href*="/article/Active"]
 twitter.com##.stream-items > .stream-item > [data-relevance-type="popular"]
 ! ----- twitter.com an inserted popular tweet in the middle of search result page ----- END -----
 
-! ===== twitter.com 「◯◯さんがいいねしました」 tweets inserted into the timeline, May 25, 2017 ===== START =====
-twitter.com##.stream-items > [data-suggestion-json*="ActivityTweet"]
-! ----- twitter.com 「◯◯さんがいいねしました」 tweets inserted into the timeline, May 25, 2017 ----- END -----
-
 ! ===== twitter.com Hide [an unnecessary pinned tweet](https://twitter.com/kiritori_dw_a_t/status/835736248341811200) ===== START =====
 twitter.com###stream-item-tweet-835736248341811200
 ! ----- twitter.com Hide [an unnecessary pinned tweet](https://twitter.com/kiritori_dw_a_t/status/835736248341811200) ----- END -----
@@ -3870,7 +3866,6 @@ www.yahoo.co.jp###local
 ?geo=$third-party
 ://geo.$object,script,subdocument
 ://geo.$third-party
-||ip-api.$third-party
 ! ----- geolocation ----- END -----
 
 ! ===== Link generator ===== START =====

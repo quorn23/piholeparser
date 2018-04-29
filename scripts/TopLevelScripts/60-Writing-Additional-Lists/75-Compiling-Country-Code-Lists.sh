@@ -6,6 +6,10 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 ## Process Every .clist file within CountryCode List Directory
+if
+ls $COUNTRYCODESTLDALL &> /dev/null;
+then
+
 for f in $COUNTRYCODESTLDALL
 do
 
@@ -65,3 +69,7 @@ fi
 
 ## End File loop
 done
+
+else
+echo "No Country Code Presets Present."
+fi

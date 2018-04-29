@@ -8,6 +8,9 @@ source "$SCRIPTDIRA"/../foldervars.var
 RECENTRUNBANDAID="$RECENTRUN"
 ONEUPBANDAID="$SCRIPTBASEFOLDERNAME"
 
+if
+ls $TLDLSTALL &> /dev/null;
+then
 for f in $TLDLSTALL
 do
 
@@ -112,6 +115,9 @@ printf "$orange" "$DIVIDERBARB"
 echo ""
 
 done
+else
+echo "No TLD lists present."
+fi
 
 RECENTRUN="$RECENTRUNBANDAID"
 

@@ -6,6 +6,9 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 ## Process Every .lst file within the List Directories
+if
+ls $BLACKLSTALL &> /dev/null;
+then
 for f in $BLACKLSTALL
 do
 
@@ -21,6 +24,10 @@ echo "* $BASEFILENAME Has $HOWMANYLINES sources. $timestamp" | tee --append $MOR
 fi
 
 done
+else
+printf "$green"   "No Lists to Process."
+echo "No Lists to Process." | tee --append $RECENTRUN &>/dev/null
+fi
 
 if 
 [[ -f $MORETHANONESOURCE ]]

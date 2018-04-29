@@ -6,8 +6,8 @@
 ! Licence: CC-BY, see http://creativecommons.org/licenses/by/4.0/
 ! Title: hufilter
 ! Expires: 16 hours
-! Version: 201801101536
-! Checksum: W6ix67hYIc4t2hBrAiDQEA
+! Version: 201804171537
+! Checksum: iUCdmohKUaFdTToIKcysuw
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Magyar Adblock Plus szurolista
 ! 
@@ -22,34 +22,6 @@
 ! A szuro hasznalata a feltetelek automatikus elfogadasat jelenti.
 ! By using the filter you automatically accept the terms of use.
 !
-!
-! szabaly optimalizalas / rule optimization
-!
-! -   RTFM - http://adblockplus.org/en/filters
-! -   Redundancy checker: https://arestwo.org/famlam/redundantRuleChecker.html
-!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!
-!          Koszonet a kozremukodoknek / thanks for the contributors
-!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!
-!
-! Erdos Arpad 
-! hdc
-! Keresztfalvi Bela 
-! S. L.
-! Kovi
-! Bortnya'k Roland
-! zamiere
-! Famlam
-! Ares2
-! Kovacs Attila
-!
-! +A Github-on a commit log-ban szereplok
-!
-! ... es nevtelenseget kero kozremukodok  /
-! ... and contributrors who wish to remain unnamed
 !
 
 !##################### END 0000-header.txt ##################### 
@@ -317,15 +289,15 @@ gyakorikerdesek.hu/pic/bannerek/
 !
 itcafe.hu##body > a[href*="http://itshinspirationboard.com"]
 itcafe.hu##body > a[href="http://iknowit.hu"]
+itcafe.hu##body > a[href="http://huomdgde.hit.gemius.pl/hitredir/id=1_1L0uue.HvLCkhtq89oI6Pej8MiTI9ou00xDGK2ufz.e7/fastid=mkrengjaevepzhnpjhboammvvxlj/stparam=rpkmjujnuv/url=https://www.meetup.com/Onjaro-Autokat-Budapesten-Self-Driving-Cars-in-Budapest/events/249593503/"]
 itcafe.hu##a[href^="https://track.adform.net/C/"]
+itcafe.hu##a[href="http://huomdgde.hit.gemius.pl/hitredir/id=1_1L0uue.HvLCkhtq89oI6Pej8MiTI9ou00xDGK2ufz.e7/fastid=dakgyragclmmtjjioeptifpgbnjo/stparam=peftntejdz/url=https://www.meetup.com/Onjaro-Autokat-Budapesten-Self-Driving-Cars-in-Budapest/events/249593503/"]
 https://itcafe.hu/dl/cnt/2017-05/3701
 https://itcafe.hu/dl/cnt/2017-05/3703
 https://itcafe.hu/dl/cnt/2017-10/3816
 https://itcafe.hu/dl/cnt/2017-11/3890
-!
-https://itcafe.hu/dl/sp/
-!
-itcafe.hu/muvelet/hozzaferes
+https://itcafe.hu/dl/cnt/2018-04/4005
+https://itcafe.hu/dl/cnt/2018-04/4007
 !
 itcafe.hu##a[href="http://www.laptop.hu"]
 itcafe.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):has(a[href="http://www.laptop.hu"])
@@ -337,20 +309,12 @@ itcafe.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="cen
 itcafe.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.adverticum.net"])
 itcafe.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.doubleclick.net"])
 itcafe.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(iframe[src*="m2mzona.hu/ads"])
-itcafe.hu##div:not([id="page"]):not([id="head"]):not([id="shadow"]):not([id="main"]):not([id="navi"]):not([id="menu"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"])
-!
-itcafe.hu##:xpath(//div[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]])
-itcafe.hu##:xpath(//div[div[p[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]]]])
 !
 itcafe.hu##:xpath(//div[h4[text()="Hirdetés"]]/div[img[@src!="/dl/cnt/2017-11/3885/image.png"]])
 !
 itcafe.hu##h4:has-text(Hirdetés)
 itcafe.hu##div[id="right"] > div:has(div):has(h4):has-text(Hirdetés)
 !
-itcafe.hu##.anyagok:has(h4):has-text(Friss! Olvastad már?)
-itcafe.hu##.anyagok:has(h4):has-text(Olvastad már, amihez hozzászólsz?)
-!
-itcafe.hu##:xpath(//li[a[@href="http://veletech.hu"]])
 itcafe.hu##div[class="partners"]
 itcafe.hu###thanks > .nohead.hlist
 !
@@ -363,9 +327,6 @@ https://itcafe.hu/ajanlo/lapcsalad.html
 ||itcafe.hu/dl/cnt/2017-11/3879/image.jpg$image
 ||itcafe.hu/design/sp/autoalkatreszek24_300x60.png$image
 ||itcafe.hu/design/sp/autoalkatreszonline24_300x60.png$image
-!
-itcafe.hu##a[href="http://veletech.hu"]
-itcafe.hu##a[href="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"]
 !
 itcafe.hu##[class*="box ad"]
 itcafe.hu##[class*="boxad"]
@@ -436,7 +397,8 @@ startlap.hu##[id*="banner"]
 startlap.hu##[id*="peelgame"]
 startlap.hu##[class*="adsense"]
 startlap.hu##[class*="Adv"]
-startlap.hu##[class*="banner"]
+! GH issue #115
+!startlap.hu##[class*="banner"]
 startlap.hu##[class*="peelgame"]
 startlap.hu##[class^="adact"]
 startlap.hu##[id*="Advert"]
@@ -678,8 +640,6 @@ https://logout.hu/dl/cnt/2017-05/3703/
 !
 https://logout.hu/dl/sp/
 !
-logout.hu/muvelet/hozzaferes
-!
 logout.hu##a[href="http://www.laptop.hu"]
 logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):has(a[href="http://www.laptop.hu"])
 logout.hu##a[href="http://www.autoalkatreszek24.hu/"]
@@ -687,10 +647,6 @@ logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="cen
 logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.adverticum.net"])
 logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.doubleclick.net"])
 logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(iframe[src*="m2mzona.hu/ads"])
-logout.hu##div:not([id="page"]):not([id="head"]):not([id="shadow"]):not([id="main"]):not([id="navi"]):not([id="menu"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"])
-!
-logout.hu##:xpath(//div[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]])
-logout.hu##:xpath(//div[div[p[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]]]])
 !
 logout.hu##:xpath(//div[h4[text()="Hirdetés"]]/div[img[@src!="/dl/cnt/2017-11/3885/image.png"]])
 !
@@ -701,25 +657,15 @@ logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="cen
 !
 logout.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="right"]):has(iframe[src="https://logout.hu/ajanlo/lapcsalad.html"])
 !
-logout.hu##.anyagok:has(h4):has-text(Friss! Olvastad már?)
-logout.hu##.anyagok:has(h4):has-text(Olvastad már, amihez hozzászólsz?)
-!
-logout.hu##:xpath(//li[a[@href="http://veletech.hu"]])
 logout.hu##div[class="partners"]
 logout.hu###thanks > .nohead.hlist
 !
 https://logout.hu/ajanlo/lapcsalad.html
 !
-logout.hu##:xpath(//div[div[img[contains(@src, 'dl/cnt/2017-11/3885/image.png')]]])
-logout.hu##img[src="/dl/cnt/2017-11/3885/image.png"]
-!
 ||logout.hu/dl/cnt/2017-04/3663/image.jpg$image
 ||logout.hu/dl/cnt/2017-11/3879/image.jpg$image
 ||logout.hu/design/sp/autoalkatreszek24_300x60.png$image
 ||logout.hu/design/sp/autoalkatreszonline24_300x60.png$image
-!
-logout.hu##a[href="http://veletech.hu"]
-logout.hu##a[href="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"]
 !
 logout.hu##[class*="adbox"]
 logout.hu##[class*="xabre"]
@@ -811,10 +757,16 @@ prohardver.hu##body > a[href="https://tinyurl.com/yb8247wf"]
 prohardver.hu##body > a[href*="http://itshinspirationboard.com"]
 prohardver.hu##body > a[href="http://oaziscomputer.hu/kategoria/111/uj-dell-s-szeria"]
 prohardver.hu##body > a[href="http://iknowit.hu"]
+prohardver.hu##body > a[href="http://oaziscomputer.hu/kategoria/81/intuos-pro"]
+prohardver.hu##body > a[href="http://huomdgde.hit.gemius.pl/hitredir/id=1_1L0uue.HvLCkhtq89oI6Pej8MiTI9ou00xDGK2ufz.e7/fastid=emvodjccbsiunkldnertgjbayskc/stparam=ybqpdmhlek/url=https://www.meetup.com/Onjaro-Autokat-Budapesten-Self-Driving-Cars-in-Budapest/events/249593503/"]
+prohardver.hu##body > a[href="http://huomdgde.hit.gemius.pl/hitredir/id=1_1L0uue.HvLCkhtq89oI6Pej8MiTI9ou00xDGK2ufz.e7/fastid=dakgyragclmmtjjioeptifpgbnjo/stparam=peftntejdz/url=https://www.meetup.com/Onjaro-Autokat-Budapesten-Self-Driving-Cars-in-Budapest/events/249593503/"]
 prohardver.hu##a[href^="https://track.adform.net/C/"]
 prohardver.hu##a[href^="https://www.javachallenge.hu/"]
 prohardver.hu##a[href="http://www.laptop.hu/laptop"]
 prohardver.hu##a[href="http://www.lg.com/hu/monitorok/lg-34UC89G"]
+prohardver.hu##a[href^="http://codingcup.hu/"]
+prohardver.hu##a[href^="http://www.conticup.hu/?utm_source=prohardver&utm_medium=banner"]
+prohardver.hu##a[href^="http://www.itechchallenge.hu/?utm_source=prohardver&utm_medium=banner"]
 https://prohardver.hu/dl/cnt/2016-11/3547
 https://prohardver.hu/dl/cnt/2016-11/3542
 https://prohardver.hu/dl/cnt/2017-02/3626
@@ -841,6 +793,7 @@ https://prohardver.hu/dl/cnt/2017-10/3804
 https://prohardver.hu/dl/cnt/2017-10/3816
 https://prohardver.hu/dl/cnt/2017-10/3839
 https://prohardver.hu/dl/cnt/2017-11/3626
+https://prohardver.hu/dl/cnt/2017-11/3729
 https://prohardver.hu/dl/cnt/2017-11/3802
 https://prohardver.hu/dl/cnt/2017-11/3866
 https://prohardver.hu/dl/cnt/2017-11/3867
@@ -848,10 +801,11 @@ https://prohardver.hu/dl/cnt/2017-11/3868
 https://prohardver.hu/dl/cnt/2017-11/3890
 https://prohardver.hu/dl/cnt/2017-11/3903
 https://prohardver.hu/dl/cnt/2017-11/3905
+https://prohardver.hu/dl/cnt/2018-04/3993
+https://prohardver.hu/dl/cnt/2018-04/4005
+https://prohardver.hu/dl/cnt/2018-04/4006
 !
 https://prohardver.hu/dl/sp/
-!
-prohardver.hu/muvelet/hozzaferes
 !
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):has(script[src*="https://bs.serving-sys.com/BurstingPipe"])
 !prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):has(a[href="http://www.lg.com/hu/projektorok"])
@@ -860,14 +814,9 @@ prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id=
 !prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):has(a[href="https://tinyurl.com/yb8247wf"])
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):has(a[href="https://www.javachallenge.hu/?utm_source=prohardver&utm_medium=banner"])
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):has(a[href="http://itshinspirationboard.com"])
-prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):has(a[href="https://prohardver.hu/nyeremenyjatek/3_napos_villamjatek_fodij_egy_zyxel_nas.html"])
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.adverticum.net"])
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.doubleclick.net"])
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(iframe[src*="m2mzona.hu/ads"])
-prohardver.hu##div:not([id="page"]):not([id="head"]):not([id="shadow"]):not([id="main"]):not([id="navi"]):not([id="menu"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"])
-!
-prohardver.hu##:xpath(//div[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]])
-prohardver.hu##:xpath(//div[div[p[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]]]])
 !
 prohardver.hu##:xpath(//div[h4[text()="Hirdetés"]]/div[img[@src!="/dl/cnt/2017-11/3885/image.png"]])
 !
@@ -880,15 +829,11 @@ prohardver.hu##h1 > a[href="http://www.netgo.hu"]
 prohardver.hu##p:has-text(Amikor a szoftver illeszkedik a meglévő üzleti folyamatokhoz.)
 prohardver.hu##div[id="center"] > div:has(div):has(a):has-text(Mostantól bármely bank ügyfelének elérhető a mobilfizetés élménye.)
 !
-prohardver.hu##.anyagok:has(h4):has-text(Friss! Olvastad már?)
-prohardver.hu##.anyagok:has(h4):has-text(Olvastad már, amihez hozzászólsz?)
-!
 prohardver.hu##a[href="http://www.laptop.hu"]
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):has(a[href="http://www.laptop.hu"])
 prohardver.hu##a[href="http://www.autoalkatreszek24.hu/"]
 prohardver.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):has(a[href="http://www.autoalkatreszek24.hu/"])
 !
-prohardver.hu##:xpath(//li[a[@href="http://veletech.hu"]])
 prohardver.hu##div[class="partners"]
 prohardver.hu###thanks > .nohead.hlist
 !
@@ -900,11 +845,12 @@ https://prohardver.hu/ajanlo/lapcsalad.html
 ||prohardver.hu/dl/cnt/2017-04/3663/image.jpg$image
 ||prohardver.hu/dl/cnt/2017-04/3664/image.jpg$image
 ||prohardver.hu/dl/cnt/2017-11/3879/image.jpg$image
+||prohardver.hu/dl/cnt/2018-03/3979/image.jpg$image
+||prohardver.hu/dl/cnt/2018-03/3969/image.jpg$image
+||prohardver.hu/dl/cnt/2018-03/3968/image.jpg$image
+||prohardver.hu/dl/cnt/2018-03/144224/foramax_banner.thumb.jpg$image
 ||prohardver.hu/design/sp/autoalkatreszek24_300x60.png$image
 ||prohardver.hu/design/sp/autoalkatreszonline24_300x60.png$image
-!
-prohardver.hu##a[href="http://veletech.hu"]
-prohardver.hu##a[href="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"]
 !
 !prohardver.hu###center > .cntcol > .cikk.anyag > .cntatc.defcnt > div
 !prohardver.hu###center > .cntcol > .hir.anyag > .cntnew.defcnt > div
@@ -962,6 +908,9 @@ mobilarena.hu##body > a[href="http://www.htc.com/hu/go/buy-htc-u11/"]
 mobilarena.hu##body > a[href="https://www.nokia.com/hu_hu/phones/nokia-8"]
 mobilarena.hu##body > a[href="https://www.speedshop.hu/black-friday-2017-hbfday.html"]
 mobilarena.hu##body > a[href="https://www.speedshop.hu/adventi-akciok-a-speedshopnal-hADVENT.html"]
+mobilarena.hu##body > a[href="https://www.allviewmobile.com/hu/"]
+mobilarena.hu##body > a[href="http://www.veletech.hu"]
+mobilarena.hu##a[href="http://firstphone.hu/hu-hu/huaweip20/"]
 mobilarena.hu##a[href^="http://www.gearbest.com/m-promotion-active-317.html"]
 https://mobilarena.hu/dl/cnt/2016-06/2251
 https://mobilarena.hu/dl/cnt/2016-06/2252
@@ -980,28 +929,22 @@ https://mobilarena.hu/dl/cnt/2017-11/3880
 https://mobilarena.hu/dl/cnt/2017-11/3894
 https://mobilarena.hu/dl/cnt/2017-12/3911
 https://mobilarena.hu/dl/cnt/2017-12/3915
+https://mobilarena.hu/dl/cnt/2018-04/3990
+https://mobilarena.hu/dl/cnt/2018-04/3997
 !
 https://mobilarena.hu/dl/sp/
 https://mobilarena.hu/dl/pr/
-!
-mobilarena.hu/muvelet/hozzaferes
 !
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):has(script[src*="https://bs.serving-sys.com/BurstingPipe"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):not([id="foot"]):has(a[href="http://www.xprotector.hu"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"])::has(a[href="https://simple.hu/szolgaltatasok/Simple-kartya-Mobilfizetes/"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"])::has(a[href="http://www.xiaomi.hu/?utm_source=mobilarena&utm_medium=banner&utm_campaign=forum-full-page-ad-xiaomi-hu"])
-mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):has(a[href="https://prohardver.hu/nyeremenyjatek/3_napos_villamjatek_fodij_egy_zyxel_nas.html"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):has(a[href*="https://www.speedshop.hu"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.adverticum.net"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.doubleclick.net"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="htc.com"])
-mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="head"]):not([id="navi"]):not([id="center"]):has(a[href*="https://www.tomtop.com"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(iframe[src*="m2mzona.hu/ads"])
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="https://www.nokia.com/hu_hu/phones/nokia-8"])
-mobilarena.hu##div:not([id="page"]):not([id="head"]):not([id="shadow"]):not([id="main"]):not([id="navi"]):not([id="menu"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"])
-!
-mobilarena.hu##:xpath(//div[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]])
-mobilarena.hu##:xpath(//div[div[p[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]]]])
 !
 mobilarena.hu##:xpath(//div[h4[text()="Hirdetés"]]/div[img[@src!="/dl/cnt/2017-11/3885/image.png"]])
 !
@@ -1010,15 +953,11 @@ mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id=
 mobilarena.hu##h4:has-text(Hirdetés)
 mobilarena.hu##div[id="right"] > div:has(div):has(h4):has-text(Hirdetés)
 !
-mobilarena.hu##.anyagok:has(h4):has-text(Friss! Olvastad már?)
-mobilarena.hu##.anyagok:has(h4):has-text(Olvastad már, amihez hozzászólsz?)
-!
 mobilarena.hu##a[href="http://www.laptop.hu"]
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):has(a[href="http://www.laptop.hu"])
 mobilarena.hu##a[href="http://www.autoalkatreszek24.hu/"]
 mobilarena.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([itemprop="articleBody"]):not([class="anyag cikk"]):not([class="defcnt taj"]):has(a[href="http://www.autoalkatreszek24.hu/"])
 !
-mobilarena.hu##:xpath(//li[a[@href="http://veletech.hu"]])
 mobilarena.hu##div[class="partners"]
 mobilarena.hu###thanks > .nohead.hlist
 !
@@ -1031,9 +970,6 @@ https://mobilarena.hu/ajanlo/lapcsalad.html
 ||mobilarena.hu/dl/cnt/2017-11/3879/image.jpg$image
 ||mobilarena.hu/design/sp/autoalkatreszek24_300x60.png$image
 ||mobilarena.hu/design/sp/autoalkatreszonline24_300x60.png$image
-!
-mobilarena.hu##a[href="http://veletech.hu"]
-mobilarena.hu##a[href="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"]
 !
 !||mobilarena.hu/design/*szponzor*.*
 !||mobilarena.hu/design/sp/forum-*.*
@@ -1437,8 +1373,6 @@ https://gamepod.hu/dl/cnt/2017-10/3837/
 !
 https://gamepod.hu/dl/sp/
 !
-gamepod.hu/muvelet/hozzaferes
-!
 gamepod.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="head"]):not([id="navi"]):not([id="center"]):has(a[href*="https://576kb.hu"])
 !
 gamepod.hu##a[href="http://www.laptop.hu"]
@@ -1450,20 +1384,11 @@ gamepod.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="ce
 gamepod.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.adverticum.net"])
 gamepod.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(script[src*="ad.doubleclick.net"])
 gamepod.hu##div:not([id="page"]):not([id="shadow"]):not([id="main"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(iframe[src*="m2mzona.hu/ads"])
-gamepod.hu##div:not([id="page"]):not([id="head"]):not([id="shadow"]):not([id="main"]):not([id="navi"]):not([id="menu"]):not([id="center"]):not([id="right"]):not([class="cntcolumn"]):not([class="anyag hir"]):not([class="anyag cikk"]):not([itemprop="articleBody"]):has(a[href*="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"])
-!
-gamepod.hu##:xpath(//div[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]])
-gamepod.hu##:xpath(//div[div[p[a[contains(@href, 'prohardver.hu/nyeremenyjatek')]]]])
 !
 gamepod.hu##:xpath(//div[h4[text()="Hirdetés"]]/div[img[@src!="/dl/cnt/2017-11/3885/image.png"]])
 !
 gamepod.hu##h4:has-text(Hirdetés)
 gamepod.hu##div[id="right"] > div:has(div):has(h4):has-text(Hirdetés)
-!
-gamepod.hu##.anyagok:has(h4):has-text(Friss! Olvastad már?)
-gamepod.hu##.anyagok:has(h4):has-text(Olvastad már, amihez hozzászólsz?)
-!
-gamepod.hu##:xpath(//li[a[@href="http://veletech.hu"]])
 gamepod.hu##div[class="partners"]
 gamepod.hu###thanks > .nohead.hlist
 !
@@ -1476,9 +1401,6 @@ https://gamepod.hu/ajanlo/lapcsalad.html
 ||gamepod.hu/dl/cnt/2017-11/3879/image.jpg$image
 ||gamepod.hu/design/sp/autoalkatreszek24_300x60.png$image
 ||gamepod.hu/design/sp/autoalkatreszonline24_300x60.png$image
-!
-gamepod.hu##a[href="http://veletech.hu"]
-gamepod.hu##a[href="https://prohardver.hu/nyeremenyjatek/oazis_computer-prohardver_nyeremenyjatek_fodij_egy.html"]
 !
 gamepod.hu##[class*="xabre"]
 !
@@ -1511,6 +1433,10 @@ pcworld.hu##.ad.box
 pcworld.hu##.ad-article-end.ad
 pcworld.hu##.ad-header-after.ad.container
 !
+hir-24.eu###text-3
+!
+tenyek24.eu###text-4
+!
 hir444.blogspot.com###header-blog
 hir444.blogspot.com###HTML1
 hir444.blogspot.com###HTML5
@@ -1525,11 +1451,6 @@ https://fototrend.hu/design/hatter.jpg
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##.spleft
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##.spright
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##body > style
-prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[@id="center" and @style]/div[@class="cntcolumn" and @style]/div[@class="anyag" and @style]/div/p[a]/parent::div/parent::div/parent::div/parent::div)
-prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[@id="center" and @style]/div[@class="cntcolumn" and @style]/div[@class="anyag" and @style]/div[@class="defcnt" and @style]/p[a]/parent::div/parent::div/parent::div/parent::div)
-prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[@id="center" and @style]/div[@class="cntcolumn" and @style]/div[@class="anyag" and @style]/div[@class="defcnt cntnew" and @style]/p[a]/parent::div/parent::div/parent::div/parent::div)
-prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[@id="center" and @style]/div[@class="cntcolumn" and @style]/div/div[@style]/p[a]/parent::div/parent::div/parent::div/parent::div)
-prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[@id="center" and @style]/div[@style]/div/div[@style]/p[a]/parent::div/parent::div/parent::div/parent::div)
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[script[contains(@src, 'bs.serving-sys.com')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'bs.serving-sys.com')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, 'bs.serving-sys.com')]]])
@@ -1542,16 +1463,32 @@ prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, 'm2mzona.hu/ads')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'm2mzona.hu/ads')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, 'm2mzona.hu/ads')]]])
-prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[img[contains(@src, 'muvelet/hozzaferes/kapcsolodas')]])
+!prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[img[contains(@src, 'muvelet/hozzaferes/kapcsolodas')]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[ins[script[contains(@src, 'googletagservices.com')]]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, 'dl/cnt/2017-04/3664/image.jpg')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'lg.com/hu/monitorok/lg-34UC79G')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'lg.com/hu/monitorok/lg-34UC89G')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, 'dl/cnt/2017-11/3802/image.gif')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[script[contains(., 'www.netgo.hu/karrier')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'http://oaziscomputer.hu/kategoria/111/uj-dell-s-szeria')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'http://iknowit.hu')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'https://bank360.hu')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[@class="defcnt cntatc"]/p[@align="center"]/a[contains(@href, 'http://www.cedrus.hu/')]/img[contains(@src, 'dl/sp/cedrus.png')]/parent::a/parent::p)
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[script[contains(@src, 'track.adform.net')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[script[contains(@src, 'cdn.doubleverify.com')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[a[contains(@href, 'hit.gemius.pl')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2017-12/3930/image.gif')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-03/3969/image.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-03/3968/image.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/pr/3977.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-03/3979/image.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-04/3990/image.gif')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-04/3994/image.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-04/3996/image.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-04/3997/image.gif')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[img[contains(@src, '/dl/cnt/2018-04/3998/image.jpg')]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//div[div[p[a[contains(@href, 'https://www.xprotector.hu/tipus/magneses-tartok/')]]]])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##:xpath(//p[a[img[contains(@src, '/dl/cnt/2018-03/144224/foramax_banner.thumb.jpg')]]])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##a[href^="https://bank360.hu"]
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##a[href="http://www.cedrus.hu/"]
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##a[href="http://www.pcx.hu/"]
@@ -1562,6 +1499,7 @@ prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##a[href="http://www.c
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu##a[href="http://www.mobildigital.hu"]
 !
 ||iho.hu/img/banner/*
+||iho.hu/img/flash/*
 !
 !##################### END 0100-websites.txt ##################### 
 !##################### 0200-singlerules.txt ##################### 
@@ -1798,44 +1736,6 @@ zene.hu##DIV[class="etarget"]
 ||webtraffic.hu/banner/
 
 !##################### END 0200-singlerules.txt ##################### 
-!##################### 0300-restrictedsites.txt ##################### 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Felnott / meghivasos / fizetos oldalak                                 !
-! A szabaly bekuldoje vallalja erte teljes felelosseget                  !
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-ncore.cc##DIV[id="fej_csik_felso"]
-ncore.cc##A[href*="2coal.com"]
-||ncore.cc/temp/*.swf
-||ncore.cc/images/warning.png
-b.office42.hu^$domain=ncore.cc
-ncore.cc##.banner
-ncore.cc###bf1445940949335 > div > div
-ncore.cc###main_tartalom > center:nth-of-type(1) > div
-ncore.cc###main_tartalom > center:nth-of-type(2) > div
-ncore.cc###ape-container
-ncore.cc###main_tartalom a[href*="bekerdezo"]
-ncore.cc###bekerdezo-ad
-ncore.cc###hessteg
-ncore.cc##.hessteg-ad-block.news_block_right
-!
-!
-||microbit.eu/banners/
-!
-utorrent.hu##[id="dgd_scrollbox-1926"]
-utorrent.hu##[class="art-footer clearfix"]
-!
-estone.cc###container
-estone.cc###kozep_hatter:nth-of-type(12)
-||estone.cc/pic/bannerek/$image
-!
-!
-teracod.net##[href*="rosszlanyok.hu"]
-
-
-
-!##################### END 0300-restrictedsites.txt ##################### 
 !##################### 0400-other.txt ##################### 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!          Trackerek, külföldi reklámszerverek vegyesen              !!!
@@ -1937,8 +1837,10 @@ openspeedtest.com##script:contains(testadblock)
 ||audtd.com^$third-party
 ||avatraffic.com^
 ||banner.aqua.hu^$third-party
+||bannerflow.com^$third-party
 ||bannerserver.hu$subdocument
 ||bannerserver.hu^
+||bbelements.com^$third-party
 ||bedia.hu/banners/
 ||best-top.hu/banner.php*
 ||betfair.com^$third-party
@@ -2024,6 +1926,7 @@ openspeedtest.com##script:contains(testadblock)
 ||sumome.com^$third-party
 ||syndication.globaltraffico.com^
 ||syndication.trafficreps.com^
+||szv.lsdev.hu
 ||targetix.net^$third-party
 ||track.calithornia.com^
 ||track.rtb-media.me^

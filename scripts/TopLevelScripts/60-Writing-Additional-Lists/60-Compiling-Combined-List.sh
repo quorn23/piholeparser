@@ -62,7 +62,7 @@ printf "$yellow"  "Size of $BASEFILENAME = $ALLPARSEDSIZEKB KB."
 elif
 [[ "$ALLPARSEDSIZEMB" -eq 0 && "$ALLPARSEDSIZEKB" -eq 0 && "$ALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-printf "$yellow"  "Size of $BASEFILENAME = $ALLPARSEDSIZEBYTES Bytes."
+printf "$yellow"  "Size of List = $ALLPARSEDSIZEBYTES Bytes."
 fi
 
 if

@@ -1,21 +1,21 @@
 [Adblock Plus 2.0]
-! Checksum: KjjPVVMK//F3u1U1/KLWWg
+! Checksum: mpt6aRM8sja/y1p20zLmiQ
 ! Title: Latvian List
 ! Homepage: https://notabug.org/latvian-list/adblock-latvian
 ! Expires: 4 days
-! Version: 201712041928
-! Last modified: 2017-12-04 19:28 UTC
+! Version: 201803251555
+! Last modified: 2018-03-25 15:55 UTC
 ! Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 !
 ! Lūdzu paziņojiet par nebloķētām reklāmām vai problēmām
-! pa e-pastu (latvian-list@googlegroups.com)
-! vai forumā (https://forums.lanik.us/viewforum.php?f=99)
+! pa e-pastu ( latvian-list@googlegroups.com )
+! vai forumā ( https://forums.lanik.us/viewforum.php?f=99 )
 !
 ! -------------- Generic ad blocking filters ---------------
 !
 .lv/ads/
 .lv/banners/
-.lv/images/banners/
+.lv/images/banners/$third-party
 .lv/img/banners/
 !
 ! ------------- 1st party ad blocking filters --------------
@@ -60,8 +60,8 @@
 ||hop.lv^*/banneri/
 ||iaptieka.lv/atteli/apmaina/
 ||intim.lv/res/banners/
-||kasjauns.lv/objs/shops/
 ||kurpirkt.lv/ba/
+||kurpirkt.lv/img/ieskaties2.png
 ||latauto.tvnet.lv/infoblock
 ||leta.lv/img/*/info_banneris_
 ||leta.lv^*/preview_banner
@@ -97,6 +97,7 @@
 ||sexparty.lv/uploads/vip/
 ||signe.lv/userfiles/image/main%20page%20banners/
 ||simpsoni.lv/rtr/
+||sportazinas.com/wp-content/uploads/*.gif
 ||sudzibas.lv/baneris_
 ||tavacena.lv/images/ltc/
 ||tele2.lv^*_popup_
@@ -111,6 +112,7 @@
 !
 ! ------------- 3rd party ad blocking filters --------------
 !
+||1188.lv^$third-party
 ||1shop.lv/i/ban/
 ||a.alicdn.com^*300x250.$third-party
 ||a.draugiem.lv^
@@ -202,7 +204,7 @@
 @@||fwmrm.net/p/MTG_Brightcove_HTML5/AdManager.js$script,domain=tvplay.skaties.lv
 @@||h.itvnet.lv^*/adjs/adjs/ads.js$script,domain=tvnet.lv
 @@||lsm.lv/public/scripts/ads.js$script,~third-party
-@@||openx.kasjauns.lv/www/delivery/spcjs.php$domain=kasjauns.lv
+@@||ltv.lsm.lv/scripts/ads.js$script
 @@||playapi.mtgx.tv/v3/adinfo$xmlhttprequest
 @@||tvplay.skaties.lv/ad$xmlhttprequest
 @@||varianti.lv/ads/load_ad_images/$xmlhttprequest,~third-party
@@ -304,15 +306,14 @@ intim.lv##div[style="margin: 8px 0px; cursor: hand;"]
 ir.lv###abonbanner
 izklaide.delfi.lv###rightTop
 izklaide.delfi.lv##.iepazisanas
-kasjauns.lv###left
-kasjauns.lv###top_banner_container
-kasjauns.lv##.oxbanner
-kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border-bottom: 1px dotted #C1C1C1; margin-bottom: 3px;"]
-kasjauns.lv##div[style="overflow:hidden; width:277px; height:70px; border: 1px solid #C1C1C1; margin-bottom: 3px;"]
-kasjauns.lv##li[style=" line-height:1.5em;"]
+jauns.lv##.ad-dfp
+jauns.lv##.shop-list
 kurpirkt.lv###leja_scroll
+kurpirkt.lv###top_ba_pos
 kurpirkt.lv##.campaignblock1
 kurpirkt.lv##.campaignblock2
+kurpirkt.lv##.labsblock1
+kurpirkt.lv##.labsblock2
 kurpirkt.lv##.producttd[style="border:solid 1px #448c26;background:#fafafa;"]
 la.lv##.side-banner
 lattelecom.lv##[id^="fixme_"]
@@ -401,3 +402,7 @@ zip.lv##.zip_spotlight.main_td
 !
 varianti.lv#@##ad_table
 varianti.lv#@#.single_ad
+!
+! -------------- uBO extended syntax filters ---------------
+!
+!#include latvian-ubo.txt

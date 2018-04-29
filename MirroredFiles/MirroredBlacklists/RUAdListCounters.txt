@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: Pu9bsj8omnIl0W84Ax5XHg
-! Version: 201803290030
+! Checksum: OPHRD4N/6UEiVTl3NTgXdw
+! Version: 201804290120
 ! Title: RU AdList: Counters
-! Last modified: 29 Mar 2018 00:30 UTC
-! Expires: 5 days (подписка обновляется автоматически каждые 5 дней)
+! Last modified: 29 Apr 2018 01:20 UTC
+! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
 ! Дополнительный список фильтров RU Adlist: Counters (ruadlist.googlecode.com)
@@ -39,6 +39,7 @@
 @@||mc.yandex.ru/metrika/watch_visor.js$script,domain=zebratelecom.ru
 @@||mc.yandex.ru/webvisor^$domain=overclockers.ru
 @@||megafon.ru/static/?files=*/piwik.$domain=megafon.ru
+@@||notifications.onliner.by/counters?_=$xmlhttprequest,domain=onliner.by
 @@||oblenergo.odessa.ua/wp-content/plugins/oblenergo/assets/js/plugins/counter/$script,domain=oblenergo.odessa.ua
 @@||pics.wikireality.ru/upload/
 @@||polemika.com.ua/content/counter|$xmlhttprequest,domain=polemika.com.ua
@@ -57,21 +58,12 @@
 @@||magna.ru/xml_out/?*://top.rbc.ru/$domain=top.rbc.ru
 !
 ! = Частные фильтры ===========================================================
-!
+@@||browserleaks.com^$generichide
 militaryreview.su##.bbanerr
-yakusubstudio.home-forum.com,yakusubstudio.ru##.contbaner
 segodnya.ua##.counters
-4pda.ru##[class][style="display:block!important"] > [class][style="display:block!important"]
-4pda.ru##a[rel="nofollow"][href][target="_blank"] > img[src][height="90"][alt]
-4pda.ru##aside > div[class][style="display:block!important"] > a[style="display:block!important"][target="_blank"]
-4pda.ru##aside > div[class][style="display:block!important"] > iframe[src*="banner"]
-4pda.ru##tbody > tr[valign="top"] > td[width="20%"] + td[class]
+yakusubstudio.home-forum.com,yakusubstudio.ru##.contbaner
+||browserleaks.com/js/proxy_ab.js
 ||google-analytics.com^$domain=checkadblock.ru
-!
-! = Исправления после genericblock ============================================
-!
-||google-analytics.com^$domain=smexo.tv
-||mc.yandex.ru^$domain=smexo.tv
 !
 ! = Общие фильтры (блокировка по маске) ==================================================
 .com/a.gif?
@@ -246,6 +238,7 @@ segodnya.ua##.counters
 ||cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js$domain=~kodik.cc
 ||chartbeat.com^$third-party
 ||chatov.net/img.php?id=
+||checkmygeo.com^$third-party
 ||checkru.net^$third-party
 ||circle.am/service/?
 ||clickaider.com^$third-party
