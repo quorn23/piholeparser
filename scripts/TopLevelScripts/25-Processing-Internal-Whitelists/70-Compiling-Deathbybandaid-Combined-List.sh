@@ -8,19 +8,19 @@ source "$SCRIPTDIRA"/foldervars.var
 WHATITIS="All Parsed List (edited)"
 timestamp=$(echo `date`)
 if
-[[ -f $COMBINEDBLACKLISTSDBB ]]
+[[ -f $COMBINEDWHITELISTSDBB ]]
 then
-rm $COMBINEDBLACKLISTSDBB
+rm $COMBINEDWHITELISTSDBB
 echo "* $WHATITIS Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 else
 echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 if
-[[ ! -f $BLACKLISTTEMP ]]
+[[ ! -f $WHITELISTTEMP ]]
 then
-printf "$red"  "Blacklist File Missing."
-MISSINGBLACK=true
+printf "$red"  "Whitelist File Missing."
+MISSINGWHITE=true
 fi
 if
 [[ ! -f $WHITELISTTEMP ]]
@@ -29,29 +29,29 @@ printf "$red"  "Whitelist File Missing."
 MISSINGWHITE=true
 fi
 if
-[[ ! -f $COMBINEDBLACKLISTS ]]
+[[ ! -f $COMBINEDWHITELISTS ]]
 then
 printf "$red"  "Big List File Missing."
-touch $COMBINEDBLACKLISTS
+touch $COMBINEDWHITELISTS
 fi
 
 printf "$cyan"  "Generating All Parsed List (edited)."
 echo ""
 
-## Add Blacklist Domains
+## Add Whitelist Domains
 if
-[[ -z $MISSINGBLACK ]]
+[[ -z $MISSINGWHITE ]]
 then
-printf "$yellow"  "Adding Blacklist Domains."
-cat $BLACKLISTTEMP $COMBINEDBLACKLISTS >> $FILETEMP
-echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after blacklist"
+printf "$yellow"  "Adding WHITElist Domains."
+cat $WHITELISTTEMP $COMBINEDWHITELISTS >> $FILETEMP
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 else
-cp $COMBINEDBLACKLISTS $FILETEMP
+cp $COMBINEDWHITELISTS $FILETEMP
 fi
 
 ## Dedupe
-printf "$yellow"  "Removing Duplicate Blacklist Entries."
+printf "$yellow"  "Removing Duplicate Whitelist Entries."
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $TEMPFILE
 echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after deduping"
 rm $FILETEMP
@@ -101,10 +101,10 @@ echo "EDITEDALLPARSEDHOWMANYLINES="$EDITEDALLPARSEDHOWMANYLINES"" | tee --append
 fi
 
 if
-[[ -f $COMBINEDBLACKLISTSDBB && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
+[[ -f $COMBINEDWHITELISTSDBB && "$EDITEDALLPARSEDSIZEBYTES" -gt 0 ]]
 then
-printf "$green"  "Old COMBINEDBLACKLISTSDBB File Removed."
-rm $COMBINEDBLACKLISTSDBB
+printf "$green"  "Old COMBINEDWHITELISTSDBB File Removed."
+rm $COMBINEDWHITELISTSDBB
 fi
 
 ## Github has a 100mb limit, and empty files are useless
@@ -113,17 +113,17 @@ if
 then
 printf "$red"     "File Empty"
 echo "* Allparsedlist list was an empty file $timestamp" | tee --append $RECENTRUN &>/dev/null
-mv $FILETEMP $COMBINEDBLACKLISTSDBB
+mv $FILETEMP $COMBINEDWHITELISTSDBB
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -ge "$GITHUBLIMITMB" ]]
 then
 printf "$red"     "Parsed File Too Large For Github. Deleting."
 rm $FILETEMP
-touch $COMBINEDBLACKLISTSDBB
+touch $COMBINEDWHITELISTSDBB
 echo "* Allparsedlist list was too large to host on github. $EDITEDALLPARSEDSIZEMB bytes $timestamp" | tee --append $RECENTRUN &>/dev/null
 elif
 [[ "$EDITEDALLPARSEDSIZEMB" -lt "$GITHUBLIMITMB" && -f $FILETEMP ]]
 then
-mv $FILETEMP $COMBINEDBLACKLISTSDBB
+mv $FILETEMP $COMBINEDWHITELISTSDBB
 printf "$yellow"  "Big List Edited Created Successfully."
 fi
