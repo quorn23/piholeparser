@@ -17,18 +17,6 @@ echo "* $WHATITIS Not Removed. $timestamp" | tee --append $RECENTRUN &>/dev/null
 fi
 
 if
-[[ ! -f $BLACKLISTTEMP ]]
-then
-printf "$red"  "Blacklist File Missing."
-MISSINGBLACK=true
-fi
-if
-[[ ! -f $WHITELISTTEMP ]]
-then
-printf "$red"  "Whitelist File Missing."
-MISSINGWHITE=true
-fi
-if
 [[ ! -f $COMBINEDBLACKLISTS ]]
 then
 printf "$red"  "Big List File Missing."
@@ -38,33 +26,13 @@ fi
 printf "$cyan"  "Generating All Parsed List (edited)."
 echo ""
 
-## Add Blacklist Domains
-if
-[[ -z $MISSINGBLACK ]]
-then
-printf "$yellow"  "Adding Blacklist Domains."
-cat $BLACKLISTTEMP $COMBINEDBLACKLISTS >> $FILETEMP
-echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after blacklist"
-echo ""
-else
-cp $COMBINEDBLACKLISTS $FILETEMP
-fi
-
-## Dedupe
-printf "$yellow"  "Removing Duplicate Blacklist Entries."
-cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $TEMPFILE
-echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after deduping"
-rm $FILETEMP
-echo ""
-
 ## Remove Whitelist Domains
 if
-[[ -z $MISSINGWHITE ]]
+[[ -f $COMBINEDWHITELISTS  ]]
 then
 printf "$yellow"  "Removing whitelist Domains."
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $WHITELISTTEMP $TEMPFILE >> $FILETEMP
-#grep -Fvxf $WHITELISTTEMP $TEMPFILE >> $FILETEMP
-rm $TEMPFILE
+gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
+#grep -Fvxf $COMBINEDWHITELISTS $TEMPFILE >> $FILETEMP
 echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 fi
