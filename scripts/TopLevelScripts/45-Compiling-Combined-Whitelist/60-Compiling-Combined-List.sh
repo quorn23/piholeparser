@@ -38,6 +38,20 @@ INDIVIDUALMERGEFAILED=true
 fi
 echo ""
 
+## Add Script.domains
+if
+[[ -z $MISSINGWHITE ]]
+then
+printf "$yellow"  "Adding Whitelist Domains."
+cat $WHITELISTTEMP $TEMPFILE >> $FILETEMP
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
+rm $TEMPFILE
+mv $FILETEMP $TEMPFILE
+echo ""
+else
+cp $COMBINEDWHITELISTS $FILETEMP
+fi
+
 ## Duplicate Removal
 if
 [[ -z $INDIVIDUALMERGEFAILED ]]
