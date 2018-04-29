@@ -6001,7 +6001,8 @@ broadwayworld.com##a[href^="https://ad.doubleclick.net/ddm/"]
 op.gg##script:inject(abort-on-property-write.js, lifeOnwer)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/85mgro/%C2%B5block_doesnt_block_ads_on_this_site/
-autojournal.fr,autoplus.fr,birdsandblooms.com,collegehumor.com,dorkly.com,dryscalpgone.com,familyhandyman.com,gentlemansgazette.com,hotbeautyhealth.com,ketoconnect.net,macwelt.de,mjsbigblog.com,pcwelt.de,printablecrush.com,psychologyjunkie.com,skinnyms.com,sportauto.fr,thecelticblog.com,thelovenerds.com,thisisfutbol.com##script:inject(abort-current-inline-script.js, btoa, BOOTLOADER_LOADED)
+autojournal.fr,autoplus.fr,birdsandblooms.com,collegehumor.com,dorkly.com,dryscalpgone.com,eclypsia.com,familyhandyman.com,gentlemansgazette.com,hotbeautyhealth.com,ketoconnect.net,macwelt.de,mjsbigblog.com,pcwelt.de,printablecrush.com,psychologyjunkie.com,skinnyms.com,sportauto.fr,thecelticblog.com,thelovenerds.com,thisisfutbol.com##script:inject(abort-current-inline-script.js, btoa, BOOTLOADER_LOADED)
+||deoi3kwqhv0d5.cloudfront.net^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1748
 kuturl.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7030,8 +7031,6 @@ tfc.tv##script:inject(abort-on-property-write.js, adBlockDetected)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2116
 @@||pluspremieres.us^$generichide
-<<<<<<< HEAD
-=======
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2119
 cwin.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7046,4 +7045,13 @@ ms4link.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adb
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2122
 hotcopper.com.au##script:inject(abort-current-inline-script.js, $, blockAds)
->>>>>>> 5663f879d78e01c11917a5bdb8d4b6c5ccab8928
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40623
+uploadbr.com##script:inject(abort-current-inline-script.js, document.getElementById, adblockinfo)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40624
+@@||xmp3.xyz^$generichide
+xmp3.xyz##script:inject(abort-current-inline-script.js, atob, tabunder)
+xmp3.xyz##script:inject(noeval.js)
+xmp3.xyz##script:inject(abort-on-property-write.js, smrtSP)
+||xmp3.xyz^$csp=child-src 'self' *.onesignal.com *.facebook.com
