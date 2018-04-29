@@ -31,11 +31,21 @@ echo "Checking Big Lists"
 if 
 grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
-echo "Found on Big List (Normal)"
+echo "Found on Big BlackList"
 echo "`grep $DOMAINTOLOOKFOR $COMBINEDBLACKLISTS`"
 echo ""
 else
-echo "Not Found on Big List (Normal)"
+echo "Not Found on Big BlackList"
+fi
+
+if 
+grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
+then
+echo "Found on Big WhiteList"
+echo "`grep $DOMAINTOLOOKFOR $COMBINEDWHITELISTS`"
+echo ""
+else
+echo "Not Found on Big WhiteList"
 fi
 
 if 
