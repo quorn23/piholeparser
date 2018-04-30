@@ -53,7 +53,7 @@ fi
 
 ## Duplicate Removal
 if
-[[ -z $INDIVIDUALMERGEFAILED ]]
+[[ -f $FILETEMP ]]
 then
 printf "$yellow"  "Removing duplicates."
 cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $TEMPFILE
