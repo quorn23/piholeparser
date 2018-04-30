@@ -44,9 +44,8 @@ if
 then
 printf "$yellow"  "Adding Whitelist Domains."
 cat $WHITELISTTEMP $TEMPFILE >> $FILETEMP
-echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 rm $TEMPFILE
-mv $FILETEMP $TEMPFILE
+echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
 echo ""
 else
 cp $COMBINEDWHITELISTS $FILETEMP
@@ -57,9 +56,9 @@ if
 [[ -z $INDIVIDUALMERGEFAILED ]]
 then
 printf "$yellow"  "Removing duplicates."
-cat -s $TEMPFILE | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $FILETEMP
-echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after deduping"
-mv $FILETEMP $TEMPFILE
+cat -s $FILETEMP | sort -u | gawk '{if (++dup[$0] == 1) print $0;}' >> $TEMPFILE
+echo -e "`wc -l $TEMPFILE | cut -d " " -f 1` lines after deduping"
+rm $FILETEMP
 echo ""
 fi
 
