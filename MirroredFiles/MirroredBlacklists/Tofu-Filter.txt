@@ -2,10 +2,10 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 21:06 2018/03/01
+! 最終更新 18:51 2018/04/30
 !
 !--------通販サイト--------!
-amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net
+amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
 ||amiami.jp^$third-party
 ||amiami.com^$third-party
 ||animemerchant.com^$third-party
@@ -1670,6 +1670,9 @@ tok2.com###tok2_footer
 ||yimg.jp/images/*300_60$domain=blogs.yahoo.co.jp
 ||yimg.jp/images/blog/smartphone/v2/img/bnr_
 
+!top枠が残る 2018/04/30
+yahoo.co.jp###brandpanel
+
 !GYAOとか動画前広告
 ||adserver-apne.tidaltv.com
 
@@ -2093,6 +2096,7 @@ blog.livedoor.jp##[src="http://blog.livedoor.jp/goldennews/settings/ad.js"] + sc
 ||neetetsu.com/RSS/
 neetetsu.com##.sidebody2 img
 neetetsu.com##.head_rss + br + center > table
+neetetsu.com##.article-over
 
 !ニュー速日P
 blog.livedoor.jp##[data-text$=":ニュー速VIPブログ"] + SCRIPT + .blogbody > #article_amazon_links
@@ -2181,6 +2185,8 @@ warotanikki.com##.external[rel="nofollow"]
 @@||doubleclick.net/gampad/ads?$xmlhttprequest,domain=tver.jp|video.tv-tokyo.co.jp
 @@||fwmrm.net^*/AdManager.swf?
 @@||fwmrm.net/crossdomain.xml$object_subrequest
+	!カード画像
+@@||hs-exp.jp/ads/*/*.png$domain=hs-exp.jp
 @@||image.www.rakuten.co.jp/com/js/d/
 	!画像とか
 @@||images-na.ssl-images-amazon.com^$domain=imdb.com

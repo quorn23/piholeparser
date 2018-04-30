@@ -1,11 +1,6 @@
 [Adblock Plus 2.0]
-<<<<<<< HEAD
-! Checksum: ORsbDc7y1jf9rmYy0Bvtmg
-! Version: 201804290012
-=======
-! Checksum: WFwJUQj6cNdRSYIEO7P23g
-! Version: 201804290052
->>>>>>> 5663f879d78e01c11917a5bdb8d4b6c5ccab8928
+! Checksum: +zfFnVa988KEI5hZLzGRLQ
+! Version: 201804301202
 ! Title: Liste FR
 ! Liste FR ~ Filtres francophones complémentaires à EasyList
 ! Expires: 1 days
@@ -63,12 +58,15 @@
 &id_adv=
 &id_site=*&ref=*&width=*&height=*&m_url=$subdocument
 &include_ads=
+&iteratorId=*&clientKey=
+&iteratorId=*&zone=
 &lr_adtype=
 &maxAdCountsPerInterval=
 &page_url=*&advertiser=
 &pdvId=
 &pid=*&tid=*&status=
 &placement=*&ad=
+&placement=*&partner_id=
 &playadw=
 &pop_under=
 &popundersPerIP=
@@ -154,7 +152,9 @@
 -async-ads.
 -ban.468.php
 -banner-125x125.
+-banner-300.
 -banner-300x250.
+-banner-728.
 -Banner-Ad_
 -banner250-
 -banner300-
@@ -269,6 +269,7 @@
 .php?*&size=*&synergie=
 .php?*&sub_zoneid=
 .php?*&synergie=*&size=
+.php?*=adSlot
 .php?ads&
 .php?aid=*_ban=
 .php?aid=pause_
@@ -536,6 +537,7 @@
 /adperf.
 /adpj-result/*
 /adplayerX.
+/adplexity-
 /adplexmedia.
 /adpops.
 /adpopsfx.
@@ -550,6 +552,7 @@
 /adrulesets/*
 /Ads*/banner_
 /ads-1-
+/ads-125.
 /ads-2-
 /ads-2017/*
 /ads-3-
@@ -646,6 +649,7 @@
 /ads700.
 /ads728x90.
 /ads888/*
+/ads?*&autosize=
 /ads?idc=
 /ads?key=
 /ads?p=
@@ -719,6 +723,7 @@
 /adsw1.
 /adtechv2_
 /adtictac.
+/adtube.
 /adtube.$script,subdocument
 /adUnblock.
 /adv/*/banner/
@@ -840,6 +845,7 @@
 /bann468X60.
 /banner-ads
 /banner-ads.
+/banner-publi-lateral.
 /Banner-Tag-
 /banner.control.
 /banner.outer.
@@ -1019,6 +1025,7 @@
 /crt_adb.js
 /cshoppingbox.
 /csi_ad_
+/custom/ads.
 /customdata/banner/*
 /custompopup.php?
 /dacash.
@@ -1355,6 +1362,7 @@
 /pdv/popup_
 /peaceandlove.php?zone
 /peelrotateur/*
+/persadpub/*
 /phantomPopunder.
 /phpbb_ads/*
 /player.*?adSetCode=
@@ -1686,6 +1694,7 @@
 /src/adv_
 /srv.php?size=300x250
 /srv.php?size=315x300
+/static-ads.
 /static/*/ads/
 /static/t/b.js
 /stickyads|
@@ -1708,6 +1717,7 @@
 /tc_promo_functions.
 /Temp/Ads/*
 /text_publi_01.
+/text_publi_02.
 /textlink-ads.
 /thirstyaffiliates/*
 /thumb_banner_frame.
@@ -1726,6 +1736,7 @@
 /twitter-ads.
 /txt_publi_vert.
 /underpopup.
+/update.adsvertisement.
 /upld/ads/*
 /upload/ad/*
 /upload/adv/*
@@ -2032,6 +2043,7 @@ _article_ads-
 _b468x60.
 _b728x90.
 _ban-300x250.
+_banner-300x150.
 _banner_46860.
 _banner_pub.
 _bannerad2-
@@ -2056,6 +2068,7 @@ _id=*&nads=
 _iframe300x200.
 _iframe300x600.
 _iframe728x90.
+_inc_banner.php?id=
 _infopop/infopop-
 _jx.ads/
 _liens_sponsorises.
@@ -2438,6 +2451,7 @@ _frontend_loader.$script
 /propeller_$popup
 /proxy.php?*/site_id/*$popup
 /pu2redirector.$popup
+/pub2/redirect.$popup
 /puopen.php?$popup
 /random.php$popup
 /reactads.$popup
@@ -3656,6 +3670,7 @@ debugger:$popup
 ||mumbai-invest.email^$third-party
 ||musclerku.com^$third-party
 ||mxttrf.com^$third-party
+||mybad.fr^$third-party
 ||mybankai.net^$third-party
 ||mybestsky.com^$third-party
 ||mycadads.info^$third-party
@@ -3694,6 +3709,7 @@ debugger:$popup
 ||naruto-gaiden.com^$third-party
 ||natchit.com^$third-party
 ||natcho2016.website^$third-party
+||nativeads.com^$third-party
 ||natoms.com^$third-party
 ||naughtymessenger.com^$third-party
 ||navitrades.com^$third-party
@@ -5865,15 +5881,25 @@ debugger:$popup
 ||xoredi.com^
 ||xxlargepop.com^
 ||yoredi.com^
-! BT
+! BT contentza.com
+/web-clients/bootloaders/*/bootloader.js
+||ahtarzr.ovh^
+||amazonaws.com/static.contentza.com/widgets
 ||bxkblkok.com^
+||contentza.com^$third-party
 ||cwxiazwt.com^
+||czxzpabxb.ovh^
 ||ecdglplsmzxcergaqx.com^
+||ejxmyng.ovh^
 ||elyrvxljunilzq.com^
 ||gbiqlm.com^
 ||hsnoamgzlksidfliivb.com^
 ||kmnjdcrcfhu.com^
 ||lmsxuo.com^
+||lzmlwmp.ovh^
+||msdhydaxm.ovh^
+||mynativeplatform.com^
+||ovhnnz.ovh^
 ||pbmvz.com^
 ||prggbqxuj.com^
 ||pxcwdyasdsumdsxjnn.com^
@@ -5888,18 +5914,6 @@ debugger:$popup
 ||wziftlp.com^
 ||xnkmmbfpyokevaxsjtky.com^
 ||ygfbto.com^
-! contentza.com
-/web-clients.*/web-clients/bootloaders/*/bootloader.js
-||ahtarzr.ovh^
-||amazonaws.com/static.contentza.com/widgets-v2.js
-||amazonaws.com/static.contentza.com/widgets.js
-||contentza.com^$third-party
-||czxzpabxb.ovh^
-||ejxmyng.ovh^
-||lzmlwmp.ovh^
-||msdhydaxm.ovh^
-||mynativeplatform.com^
-||ovhnnz.ovh^
 ||zvpuoitt.ovh^
 ||zyerwgu.ovh^
 ! Mining
@@ -6877,6 +6891,7 @@ debugger:$popup
 ||mumbai-invest.email^$popup,third-party
 ||mxpopad.com^$popup,third-party
 ||mxttrf.com^$popup,third-party
+||mybad.fr^$popup,third-party
 ||mybankai.net^$popup,third-party
 ||mycamptrack.com^$popup,third-party
 ||myfreesoftwarehub.com^$popup,third-party
@@ -6895,6 +6910,8 @@ debugger:$popup
 ||natchit.com^$popup,third-party
 ||natcho2016.website^$popup,third-party
 ||native.com^$popup,third-party
+||nativeads.com^$popup,third-party
+||nativexml.com^$popup,third-party
 ||nbeatrk.com^$popup,third-party
 ||neigh.info^$popup,third-party
 ||never-break.com^$popup,third-party
@@ -8590,9 +8607,6 @@ http://images.futbolbase.us/peponi2.html
 ! dpstream.net
 |http://$script,stylesheet,third-party,xmlhttprequest,domain=dpstream.net
 |https://$script,stylesheet,third-party,xmlhttprequest,domain=dpstream.net
-! lenouveaudetective.com
-|http://$script,third-party,domain=lenouveaudetective.com
-|https://$script,third-party,domain=lenouveaudetective.com
 ! voirfilms.com
 @@||ajax.googleapis.com/ajax/libs/$script,domain=voirfilms.ws
 @@||cdnjs.cloudflare.com/ajax/libs/$script,domain=voirfilms.ws
@@ -11446,6 +11460,7 @@ $popup,domain=0zz0.com|35.184.169.188|3movs.com|abcast.net|adca.st|adf.ly|adshor
 ||d145tbca0156xf.cloudfront.net^
 ||d14nx4uiqzwnqt.cloudfront.net^
 ||d14p8nzdvd75ly.cloudfront.net^
+||d158nafix8anfs.cloudfront.net^
 ||d15cjcet1djbmv.cloudfront.net^
 ||d160mt023h8h3d.cloudfront.net^
 ||d162nnmwf9bggr.cloudfront.net^
@@ -11589,6 +11604,7 @@ $popup,domain=0zz0.com|35.184.169.188|3movs.com|abcast.net|adca.st|adf.ly|adshor
 ||d33dsfwui17p31.cloudfront.net^
 ||d33z8jzg2xbwjp.cloudfront.net^
 ||d34cznyf2woj3o.cloudfront.net^
+||d34tnov8neex5n.cloudfront.net^
 ||d3591q3cwzbtxd.cloudfront.net^
 ||d35gxjm3e9wg7v.cloudfront.net^
 ||d35r45qhjmgs3g.cloudfront.net^
@@ -14798,7 +14814,7 @@ syskb.com##.bandeaupub
 cdmail.fr##.bandeauvert
 iphone4.fr,jeux-mmorpg.com##.baner
 orientation-chabab.com##.bann
-2conv.com,afrik-foot.com,afrik.com,afrikeco.com,btdb.to,french-stream.co,glenatbd.com,hdnumerique.com,kpopfm.fr,manga-news.com,medialot.fr,mesbagages.com,orientation-chabab.com,showx.tech,telquel.ma,textnow.com,trimag.fr,up02.net,up05.pro,ventsdouest.com,video-2-cul.com##.banner
+2conv.com,afrik-foot.com,afrik.com,afrikeco.com,btdb.to,flvto.biz,french-stream.co,glenatbd.com,hdnumerique.com,kpopfm.fr,manga-news.com,medialot.fr,mesbagages.com,orientation-chabab.com,showx.tech,telquel.ma,textnow.com,trimag.fr,up02.net,up05.pro,ventsdouest.com,video-2-cul.com##.banner
 batiactu.com##.banner-background
 golem13.fr##.banner-halfpage
 lareclame.fr##.banner-url
