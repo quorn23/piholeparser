@@ -2,9 +2,9 @@
 
 ### Last Run Stats
 
-* Script Started Mon Apr 30 02:45:21 UTC 2018
-* Script Ended Mon Apr 30 02:56:50 UTC 2018
-* [Script Took 11 Minutes To Filter 129 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
+* Script Started Mon Apr 30 03:14:40 UTC 2018
+* Script Ended Mon Apr 30 03:34:13 UTC 2018
+* [Script Took 19 Minutes To Filter 129 Lists. See Log Here.](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 * The Edited AllParsed File is 51 MB And Contains 2189678 Domains.
 * Average Parsing Of unknown lines in unknown BlackLists was unknown Seconds.
 * 1588 Valid Top Level Domains. No New TLD's.
