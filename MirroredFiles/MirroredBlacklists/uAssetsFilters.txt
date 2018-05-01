@@ -6212,8 +6212,7 @@ dwindly.io##a.adBtn
 ||lh5lg.top^$popunder
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1812
-||firstonetv.net/src/*$xmlhttprequest,first-party,important
-||firstonetv.net/ucount.php$xmlhttprequest,first-party,important
+! https://github.com/uBlockOrigin/uAssets/issues/2141
 @@||firstonetv.net^$xmlhttprequest,first-party
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/50
@@ -6364,6 +6363,7 @@ eporner.com##script:inject(abort-on-property-read.js, ExoLoader)
 ! https://forums.lanik.us/viewtopic.php?p=134829#p134829
 @@*$generichide,domain=arenavision.in|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk
 arenavision.*,arenavision2017.cf,arenavision2018.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+arenavision2018.*##script:inject(bab-defuser.js)
 arenavision.*,arenavision2017.cf,arenavision2018.*##script:inject(window.open-defuser.js)
 ||imgpfx.arenavision.
 
@@ -7061,3 +7061,56 @@ xmp3.xyz##script:inject(abort-on-property-write.js, smrtSP)
 @@||jcbtechno.com^$generichide
 jcbtechno.com##.adsbygoogle
 jcbtechno.com##a[href^="https://www.anrdoezrs.net/"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/2132
+kenhtao.net##script:inject(abort-on-property-read.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2131
+@@||movieforhd.com^$generichide
+movieforhd.com##.module_home_ads
+
+! https://github.com/uBlockOrigin/uAssets/issues/2134
+@@||gamecode.win^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2136
+@@||vipervenom.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2135
+@@||gotceleb.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2133
+@@||azdictionary.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2140
+@@||trekbbs.com^$generichide
+trekbbs.com##div[style^="width:970px"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/2139
+@@||popcornflix.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2138
+@@||btcsmile.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2142
+hdbox.ws##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2128
+||piguiqproxy.com^$xmlhttprequest,domain=chia-anime.tv
+||chia-anime.tv/thebox.php$subdocument,first-party
+chia-anime.tv##script:inject(abort-on-property-read.js, document.styleSheets)
+chia-anime.tv##script:inject(nano-setTimeout-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2129
+mp4mania.xyz##script:inject(abort-on-property-read.js, zoneNativeSett)
+mp4mania.xyz##script:inject(setTimeout-defuser.js, _creatBait)
+@@||cloudflare.com/ajax/libs/fuckadblock/*$script,domain=mp4mania.xyz
+
+! https://github.com/uBlockOrigin/uAssets/issues/2130
+@@||benkhouya.com/ads.js$script,domain=anonymousemail.me
+
+! https://github.com/uBlockOrigin/uAssets/issues/2137
+timeforbitco.in##script:inject(set-constant.js, adBlock, false)
+@@||timeforbitco.in^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2143
+inmanga.com##script:inject(abort-current-inline-script.js, setTimeout, manageAntiBlock)
