@@ -2556,6 +2556,8 @@ ultrahorny.com###hideads
 bibme.org,citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, canRunAds)
 bibme.org##script:inject(abort-on-property-read.js, SBMGlobal.run.pcCallback)
 citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, SBMGlobal.run.gramCallback)
+! https://github.com/uBlockOrigin/uAssets/issues/2155
+bibme.org,citationmachine.net##script:inject(addEventListener-defuser.js, load, (!o))
 
 ! https://github.com/uBlockOrigin/uAssets/issues/763
 hdrezka.ag##script:inject(abort-current-inline-script.js, parseInt, decodeURIComponent)
@@ -4863,10 +4865,6 @@ icutit.ca##iframe[src^="https://www.youtube.com/"]
 uclick.in##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 uclick.in##script:inject(abort-current-inline-script.js, atob, tabunder)
 
-! https://github.com/uBlockOrigin/uAssets/issues/1388
-retoix.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-||retoix.com/AD*.gif$image
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1396
 tl.tc##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
@@ -5382,6 +5380,7 @@ cutw.me##script:inject(nano-setInterval-booster.js)
 
 ! mejortorrent.com popups
 mejortorrent.com##script:inject(abort-on-property-write.js, getScript)
+mejortorrent.com##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1549
 xfreehd.com##.nvheader > span:has-text(Advertisement)
@@ -5464,8 +5463,9 @@ tinypaste.cc##script:inject(abort-current-inline-script.js, decodeURI, decodeURI
 tinypaste.cc##script:inject(abort-on-property-write.js, Fingerprint2)
 @@||tinypaste.cc^$generichide
 
-! https://www.reddit.com/r/uBlockOrigin/comments/7ym7u3/cant_block_these_popup_ads/
-bs.to##script:inject(abort-on-property-read.js, _0x6658)
+! https://github.com/uBlockOrigin/uAssets/issues/2165
+bs.to##script:inject(abort-current-inline-script.js, _0xd05a)
+bs.to##script:inject(addEventListener-defuser.js, click, 0x)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7ys9hz/nsfw_how_do_you_get_rid_of_those_dancing_girls/
 hentaigo.com##script:inject(abort-on-property-read.js, loadTool)
@@ -7150,3 +7150,29 @@ ad4msan.com##script:inject(setTimeout-defuser.js, getComputedStyle, 250)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2154
 japscan.*##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2158
+3bst.co##script:inject(abort-on-property-read.js,app_vars.force_disable_adblock)
+3bst.co##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2159
+watchearn.me##script:inject(abort-on-property-read.js,app_vars.force_disable_adblock)
+watchearn.me##script:inject(nano-setInterval-booster.js)
+||youtube.com/embed/$subdocument,domain=link.watchearn.me
+
+! https://github.com/uBlockOrigin/uAssets/issues/2160
+wezo.me##script:inject(abort-on-property-read.js,app_vars.force_disable_adblock)
+wezo.me##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2161
+arabdollar.com##script:inject(abort-on-property-read.js,app_vars.force_disable_adblock)
+arabdollar.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2162
+urls-short.com##script:inject(abort-on-property-read.js,app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2163
+pes-patch.com##script:inject(bab-defuser.js)
+
+! https://github.com/reek/anti-adblock-killer/issues/4022
+autovisie.nl##script:inject(set-constant.js, canRunAds, 0)
