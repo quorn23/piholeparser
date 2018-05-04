@@ -4,8 +4,11 @@
 ____________________________________
 # 
 ### Finding The most recently modified Parsing Script File.
-* The Most Recently Updated Parsing Script is 20-Removing-Comments.sh
+* The Most Recently Updated Parsing Script is 95-Confirming-Valid-Domains.idea
 ### Checking For Time Anchor File.
 Time Anchor File Present.
 ### Comparing Time.
-Parsing Method Has Not Changed.
+Parsing Method Has Changed.
+### Resetting For a Re-Parse.
+* Resetting Parsed Lists For Reprocessing
+### Updating Time Anchor File.

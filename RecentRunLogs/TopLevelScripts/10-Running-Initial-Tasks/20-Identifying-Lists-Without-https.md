@@ -15,6 +15,7 @@ ___________________________________________________________________
 * Dan-Pollocks-Hosts
 * Disconnect-Malvertising-Filter
 * Finnish-AntiSocial
+* JABCreations
 * JapaneseSiteAdblockFilterver2
 * JoeWein
 * Malware-URLs-Domains
