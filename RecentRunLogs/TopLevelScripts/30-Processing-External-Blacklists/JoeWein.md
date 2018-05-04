@@ -20,23 +20,23 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ### Removing Comments
-140785 Lines After Removing Comments
+140829 Lines After Removing Comments
 ### Removing Content Filtering
-140785 Lines After Removing Content Filtering
+140829 Lines After Removing Content Filtering
 ### Trimming HOSTS Format IP Addresses
-140785 Lines After Trimming HOSTS Format IP Addresses
+140829 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-140785 Lines After Removing Empty Space
+140829 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
-79066 Lines After Removing Invalid FQDN Characters
+79104 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
-79066 Lines After Converting All Text To Lower Case
+79104 Lines After Converting All Text To Lower Case
 ### Checking For Fully Qualified Domain Name Requirements
-79042 Lines After Checking For Fully Qualified Domain Name Requirements
+79080 Lines After Checking For Fully Qualified Domain Name Requirements
 ### Reverse Searching For Invalid Top Level Domains
-76158 Lines After Reverse Searching For Invalid Top Level Domains
+76196 Lines After Reverse Searching For Invalid Top Level Domains
 ### Removing Duplicate Lines
-76158 Lines After Removing Duplicate Lines
+76196 Lines After Removing Duplicate Lines
 ## Checking Parsed File Size
 ## Attempting Creation Of Parsed List
 ## Calculating Parse Time

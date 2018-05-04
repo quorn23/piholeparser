@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: b66EPq2M+/jOnrLdiuZs1w
-! Version: 201805030020
+! Checksum: yloqQoYxCGZZ5zU8QDBddA
+! Version: 201805040020
 ! Title: RU AdList: BitBlock
-! Last modified: 03 May 2018 00:20 UTC
+! Last modified: 04 May 2018 00:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -805,7 +805,6 @@ gorodche.ru###socials
 kubik3.ru###uSocial
 anistar.me,html-template.ru,rustreams.ru###vk_comments
 ru-skript.ru###vk_groups
-fast-torrent.ru,fasttorrent.ru,veleto.ru##.addthis_toolbox
 drive2.ru##.article .js-share
 news.rambler.ru##.article__paragraph + .j-social.social-bottom
 ria.ru##.b-sharebar
@@ -1504,6 +1503,7 @@ vk.com###cookies_policy_wrap
 forums.overclockers.ru###datebar
 pcportal.org###ddew_ovnova
 megafon.ru###divBanner > a[href*=".megafon.ru/"]
+www.zakon.kz###dle-content > [class] > span:-abp-contains(/./)
 hd720kino.ru###dle-content > center > p
 kinogo-net.co###dle-content > p[style="color:orange"]
 lols.ru###dle-content td[style="padding-left:20px;"] > noindex
@@ -1563,6 +1563,7 @@ myfin.by###myfin_menu .left_bt
 ihavebook.org###navbar-donate
 kinosvit.tv###news-partner
 fox-fan.ru###noVip
+forumodua.com###notices > ol > li:not(:first-child)
 rambler.ru###notification.r__distribution-fixed-banner
 friday.ru,russian.rt.com###offers
 kinodema.com###okno[href]
@@ -1578,7 +1579,6 @@ facebook.com###pagelet_growth_expanding_cta
 webmoney.ru###panel > .with_bg.video
 chernomorets.odessa.ua###partners
 allforpeople.net###pichead
-2ch.hk###plashque
 youtube.com###player .ytp-pause-overlay
 club-nobles.ru###pleerr
 kp.ru###popapSubscribe
@@ -1602,7 +1602,6 @@ rg.ru###rgb_subs-ads_three
 klipzona.club###right-side a[href="/register"]
 3dnews.ru###right-sidebar > #youtube-chunk-wrapper
 bugaga.ru###right_col
-fast-torrent.ru,fasttorrent.ru,veleto.ru###rightmenu > .fix-width div[id^="bn_"] ~ p
 9111.ru###robot_chat
 demotivators.to###rtc
 gazeta.ru###sbContainer
@@ -1731,6 +1730,7 @@ fanserials.pro##.blocking-subscribe
 bookmate.com##.bm-document-meta-apps
 bookmate.com##.bm-document-readers
 geektimes.com,habr.com##.bmenu_inner
+2ch.hk##.board-banner
 aniplay.tv##.bottom-panel
 frontend.1worldonline.com##.bottomPanel > .project
 buhonline.ru##.bottomPopup
@@ -1918,6 +1918,7 @@ anews.com##.push-subscribe
 mk.ru##.push-suggest
 advetime.ru##.randomtext_widget
 kinoplanet.net##.rating-box-color
+www.zakon.kz##.reading_now
 c-s.net.ua##.reg_mess_bg
 allboxing.ru##.region-ad-top
 ren.tv##.region-sidebar > :not(#block-views-blog-block-autor)
@@ -2080,6 +2081,7 @@ www.goha.ru##div[class] > .adv_title + div[class]
 google.com,google.com.ua,google.ru##div[class][jsaction^="dismiss_warmup"]
 auto.ru##div[class^="Index"][class$="Banner"]
 mail.rambler.ru##div[class^="Review-"][data-events="feedback"]
+forumodua.com##div[class^="ad_inform_message"]
 footboom.com##div[class^="b-betting"]
 google.com,google.com.ua,google.ru##div[class^="gb_"] > div[aria-label="promo"]
 google.com,google.com.ua,google.ru##div[class^="gb_"] > div[style="behavior:url(#default#userData)"]
@@ -2514,6 +2516,7 @@ myshared.ru#@#.ya-share2_inited
 @@||vk.com/share.php?$third-party,domain=postila.ru
 @@||vk.com/widget_comments.php^$domain=iomedia.ru
 @@||vk.com/widget_community.php$domain=iomedia.ru|jcross-world.ru
+@@||vkontakte.ru/js/api/$domain=arudex.com
 @@||vkontakte.ru/js/api/openapi.js$domain=app.tbn.ru|g2a.com|tree.tv
 @@||vkontakte.ru/js/api/share.js$script,domain=smotri.com|vinnitsa.info
 @@||volnorez.com/templates/default/images/footer$image,domain=volnorez.com
@@ -3548,6 +3551,9 @@ prom.ua#@#img[alt="facebook"]
 /icon_youtube.
 /icon_youtube_
 /iconbig-twitter-
+/icone_fb.
+/icone_tw.
+/icone_yt.
 /iconFacebook-
 /iconFacebook.
 /iconGooglePlus.
@@ -4263,6 +4269,8 @@ prom.ua#@#img[alt="facebook"]
 /social-instagram-
 /social-instagram.
 /social-like-
+/social-likes-
+/social-likes_
 /social-links-
 /social-locker/*$script
 /social-logos.
@@ -6841,6 +6849,7 @@ _youtube_social_
 ###social-list
 ###social-loop
 ###social-louis
+###social-lyrics
 ###social-media
 ###social-media-activity
 ###social-media-bar
@@ -10603,6 +10612,7 @@ _youtube_social_
 ##.itemSocialSharing
 ##.itemTwitter
 ##.item_share_gplus
+##.item_share_inline
 ##.items-share
 ##.itemview-share
 ##.itp-social-buttons-box
@@ -13382,6 +13392,7 @@ _youtube_social_
 ##.socialFacebook
 ##.socialFeed
 ##.socialFext
+##.socialFixOuter
 ##.socialFixed
 ##.socialFollow
 ##.socialFooter
