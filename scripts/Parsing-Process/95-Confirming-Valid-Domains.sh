@@ -9,13 +9,12 @@ printf "$yellow"  "This Process Normally Takes Longer Than The Others."
 
 for source in `cat $BFILETEMP`;
 do
-SOURCEIPFETCH=`ping -c 1 $source | gawk -F'[()]' '/PING/{print $2}'` &>/dev/null
-SOURCEIP=`echo $SOURCEIPFETCH`
-if
-[[ -n $SOURCEIP ]]
+
+if ping -c 1 -W 1 $source &> /dev/null
 then
 echo "$source" | tee --append $BTEMPFILE &>/dev/null
 fi
+
 done
 
 if
