@@ -3,8 +3,5 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # 68-Looking-At-What-Did-Not-Pass-TLD-Test
-* 3 Lines After Deduping. 
+* 0 Lines After Deduping. 
 ____________________________________________________
-* _banner.gif
-* rambler.ru.yn-direct
-* xn----ctblib1bagjll.xn--p1ai
