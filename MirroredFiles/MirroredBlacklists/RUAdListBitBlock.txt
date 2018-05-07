@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: HxkA9zq2WzCsAkP/8P2R3g
-! Version: 201805060020
+! Checksum: es4GWucJCuu3DROiNbulSg
+! Version: 201805070030
 ! Title: RU AdList: BitBlock
-! Last modified: 06 May 2018 00:20 UTC
+! Last modified: 07 May 2018 00:30 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -838,7 +838,7 @@ porjati.net##.twitter-share-button
 kubik3.ru##.uSocial-Like
 joyreactor.cc,reactor.cc##.uhead_share
 24smi.org,cnews.ru,forexpf.ru,nabazare.blogspot.ru,ph4.ru,raskraska.com,ru-skript.ru,spam-club.blogspot.com,spam-club.blogspot.ru,torrentom.com##.ya-share2
-anistar.me,audioportal.su,audioskazki.net,cnews.ru,html-template.ru,rustreams.ru,seasonvar.ru,vnx.su##.yashare-auto-init
+anistar.me,audioportal.su,audioskazki.net,cnews.ru,html-template.ru,rustreams.ru,vnx.su##.yashare-auto-init
 2ip.ru,anistar.me,gtavicecity.ru,mk.ru,raskraska.com,ria.ru,spec-komp.com##div[id^="vk_groups"]
 porjati.net##form[action="http://feedburner.google.com/fb/a/mailverify"]
 torrentom.com##td > .block_table_right ~ table
@@ -1818,7 +1818,6 @@ job.ru##.insider-opt-in-notification
 syl.ru##.intext
 fb.ru##.is-fixed.deed
 vc.ru##.island--vacancies_entry
-myzuka.fm##.isloading-overlay
 3dnews.ru##.isspecial.sidebar-chunk
 1tv.ru##.itv-push-suggest
 news.rambler.ru##.j-subscribe.subscribe
@@ -3655,6 +3654,7 @@ prom.ua#@#img[alt="facebook"]
 /images/pinterest-$domain=~pinterest.com
 /images/Pinterest_$domain=~pinterest.com
 /images/reddit-
+/images/share-
 /images/share.
 /images/share/*
 /images/share_
@@ -4065,6 +4065,7 @@ prom.ua#@#img[alt="facebook"]
 /share-twitter-
 /share-twitter.
 /share-twitter1a.
+/share-weibo.
 /share.json?
 /share.php?buttons=
 /share.png
@@ -4222,6 +4223,9 @@ prom.ua#@#img[alt="facebook"]
 /sn_facebook_
 /sn_plurk_
 /sn_share_
+/snsbiglogo.
+/snslogo.
+/snslogo_
 /soc-fb.
 /soc-icons.
 /soc-lj2.
@@ -5018,6 +5022,7 @@ _pinteresticon.
 _rssicon.
 _share_bt.
 _share_buttons.
+_share_buttons/
 _share_google.
 _share_icon.
 _share_icon_
@@ -5064,6 +5069,7 @@ _social_instagram.
 _social_linked_
 _social_media_icons_
 _social_pinterest.
+_social_share_
 _social_shares.
 _social_small.
 _social_sprite.
@@ -5186,6 +5192,7 @@ _youtube_social_
 ###Social-Left
 ###Social-Sidebar
 ###SocialBookmarksContainer
+###SocialContainer
 ###SocialIconIcon
 ###SocialIcons
 ###SocialLinks
@@ -5357,6 +5364,7 @@ _youtube_social_
 ###block-neweurope-vertical-social
 ###block-pi_social-links
 ###block-rww_twitter-on_twitter
+###block-scmedia-social-share-buttons-social-share-buttons
 ###block-sharethis-sharethis-block
 ###block-sharing-links
 ###block-simpleshare
@@ -6160,6 +6168,7 @@ _youtube_social_
 ###m_social_networks
 ###main-article-social
 ###main-social
+###mainShare
 ###mainlist_social_stuff
 ###mainshare
 ###mainsitesocial
@@ -6241,6 +6250,7 @@ _youtube_social_
 ###nav-fb-link
 ###nav-fbook
 ###nav-gplus
+###nav-shareScreen-trigger
 ###nav-twitter
 ###navFSocialUL
 ###navFacebook
@@ -6540,6 +6550,7 @@ _youtube_social_
 ###shareLinkToolBar
 ###shareLinks
 ###shareMenu
+###shareOptionMore
 ###shareOverlay
 ###sharePageButtons
 ###sharePinterest
@@ -7989,6 +8000,7 @@ _youtube_social_
 ##.article-selection-shares
 ##.article-share
 ##.article-share-actions
+##.article-share-amount
 ##.article-share-area
 ##.article-share-bar
 ##.article-share-block
@@ -7999,6 +8011,7 @@ _youtube_social_
 ##.article-share-container
 ##.article-share-count
 ##.article-share-count-container
+##.article-share-icon
 ##.article-share-link-items
 ##.article-share-list
 ##.article-share-outer
@@ -8069,6 +8082,7 @@ _youtube_social_
 ##.articleSocialMedia
 ##.articleSocialNetwork
 ##.articleToolbarShare
+##.article__details__share
 ##.article__fb-like
 ##.article__fb-share
 ##.article__footer-share-title
@@ -8286,6 +8300,7 @@ _youtube_social_
 ##.block-menu-menu-social
 ##.block-mini-social-media
 ##.block-minisocialsharingblock
+##.block-scmedia-social-share-buttons
 ##.block-share-large
 ##.block-share__item
 ##.block-simple-share
@@ -8582,9 +8597,14 @@ _youtube_social_
 ##.catfish--social
 ##.cb-google-follow-widget
 ##.cb-in-article-social-button
+##.cb-social-fb
+##.cb-social-gplus
 ##.cb-social-icons-extra
 ##.cb-social-media-widget
+##.cb-social-pinterest
 ##.cb-social-sharing
+##.cb-social-twitter
+##.cb-social-ytbe
 ##.cb_share_block
 ##.ccm_social__box
 ##.ccm_social_buttons
@@ -9519,6 +9539,7 @@ _youtube_social_
 ##.follow-widget-instagram
 ##.follow-widget-twitter
 ##.follow-widget-youtube
+##.follow-widgets-wrap
 ##.follow-wrap
 ##.follow-wrapper
 ##.follow-yahoo
@@ -9573,7 +9594,9 @@ _youtube_social_
 ##.followus-static
 ##.followus_net
 ##.followus_social
+##.followusbx
 ##.followuson
+##.followustxt
 ##.fondo_social
 ##.fontawesome-facebook
 ##.fontawesome-google-plus
@@ -9751,6 +9774,7 @@ _youtube_social_
 ##.format-social-buttons
 ##.forum-share
 ##.fotSocial
+##.fotterSocialNet
 ##.fourSq-widget
 ##.fpbiz_share
 ##.fq-like-panel
@@ -10067,6 +10091,7 @@ _youtube_social_
 ##.headerSocialLinks
 ##.header__sharing-item
 ##.header__social-accounts
+##.header__social-button
 ##.header__social-buttons
 ##.header__social-icons
 ##.header__social-media
@@ -10183,6 +10208,7 @@ _youtube_social_
 ##.ic_fb
 ##.ic_googleplus
 ##.ic_share
+##.ic_shr
 ##.ic_socials
 ##.ic_tw
 ##.ic_twitter
@@ -11004,6 +11030,7 @@ _youtube_social_
 ##.mainFooterBottomFacebook
 ##.mainFooterBottomSlideshare
 ##.mainListingSocial
+##.mainShare
 ##.mainSocial-Content
 ##.mainVerticalArticleSharingLinks
 ##.main__header--social
@@ -11227,6 +11254,7 @@ _youtube_social_
 ##.nav-logo__social
 ##.nav-primary-bottom-socialLinks
 ##.nav-share
+##.nav-share-btn
 ##.nav-share-count
 ##.nav-soc-but
 ##.nav-social
@@ -11599,6 +11627,7 @@ _youtube_social_
 ##.pri-share
 ##.primary-share-buttons
 ##.primary-social-buttons
+##.print-share
 ##.prl-header-social
 ##.prodShareBlock
 ##.product-share-v3
@@ -11614,6 +11643,7 @@ _youtube_social_
 ##.psd-sharebar
 ##.psd-sharebar-icon
 ##.pst-share
+##.pt-share
 ##.pterest
 ##.pub-page-share-tools
 ##.public-share
@@ -11807,6 +11837,7 @@ _youtube_social_
 ##.sdc-site-share
 ##.search-social
 ##.search-social-icons
+##.secArtShare
 ##.sec_share
 ##.second-social-block
 ##.secondarySahre
@@ -12209,6 +12240,8 @@ _youtube_social_
 ##.shareNarrow
 ##.shareNav
 ##.shareNews
+##.shareOption
+##.shareOption-wrap
 ##.sharePad
 ##.sharePage
 ##.sharePanel
@@ -13312,6 +13345,7 @@ _youtube_social_
 ##.social-sharing-button
 ##.social-sharing-buttons
 ##.social-sharing-item
+##.social-sharing-top
 ##.social-sharing-v2
 ##.social-sharing-vertical
 ##.social-sharing-zone
@@ -13519,6 +13553,7 @@ _youtube_social_
 ##.socialNav
 ##.socialNavButtons
 ##.socialNetContainer
+##.socialNetIcons
 ##.socialNetwork--shares
 ##.socialNetwork-container
 ##.socialNetworkBox
@@ -14062,6 +14097,7 @@ _youtube_social_
 ##.stickysocial
 ##.storifycon-share
 ##.story-action-share
+##.story-article__body__left__social-share
 ##.story-col-share
 ##.story-footer-social
 ##.story-kapitel-socials
@@ -14101,6 +14137,7 @@ _youtube_social_
 ##.stumble_button
 ##.stumble_icon
 ##.stumblebutton
+##.stumbleupon-share
 ##.stumbleupon_button
 ##.stumbleupon_icon
 ##.stumbleuponwidth
@@ -14716,6 +14753,7 @@ _youtube_social_
 ##.w2bslikebox
 ##.w_social_link
 ##.walrus_social_buttons
+##.wb-share
 ##.wbtz-share-btn
 ##.wccfSocial
 ##.wcs-facebook
@@ -15789,6 +15827,8 @@ _youtube_social_
 /btn-feedback.
 /btn-rss-
 /btn-rss.
+/btn_back2top.
+/btn_back2top_
 /btnGigpark.
 /btnMobile.
 /btnRSS.
@@ -25513,6 +25553,7 @@ _site_cookie_
 ##div[style="min-width: 750px;"] > .gb_wb
 ! Scroll to top
 ###BackToTop
+###Imgback2top
 ###ScrollToTopContainer
 ###WidgetScrollToTop
 ###arrow_to_site_top
@@ -25778,10 +25819,12 @@ _site_cookie_
 ##a[data-bind="toTopButton"]
 ##a[href="#back-to-top"]
 ##a[href="#top-of-page"]
+##a[onclick="go_on_top();"]
 ##a[title="Back To Top"]
 ##a[title="Back to Top"]
 ##a[title="Back to top of page"]
 ##a[title="Go To Top"]
+##a[title="Go on top"]
 ##a[title="Scorri in cima"]
 ##a[title="Scroll To Top"]
 ##a[title="Scroll to Top"]

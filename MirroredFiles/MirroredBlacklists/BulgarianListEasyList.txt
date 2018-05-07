@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201805060017
+! Version: 201805062350
 ! Title: EasyPrivacy
-! Last modified: 06 May 2018 00:17 UTC
+! Last modified: 06 May 2018 23:50 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -29,6 +29,7 @@
 -analitycs/ga.
 -analitycs/metrica.
 -analytics-tagserver-
+-analytics-wi.
 -analytics.files.
 -analytics/insight.
 -appanalytics-
@@ -468,11 +469,13 @@
 /analytics-event-
 /analytics-ingress-
 /analytics-js.
+/analytics-js/*
 /analytics-ping.
 /analytics-plugin/*
 /analytics-post-
 /analytics-tag.
 /analytics-v1.
+/analytics.*/i?stm=
 /analytics.ad.
 /analytics.ashx
 /analytics.asmx
@@ -1621,6 +1624,7 @@
 /i?redir=*&page=*&cookie=
 /i?siteid=
 /i?stm=*&refr=*&url=
+/i?stm=*&ue_px=
 /icf-analytics.js
 /ics/2/pview.gif?
 /id?d_visid_ver=
@@ -2410,6 +2414,7 @@
 /pro-ping.php?
 /probance_tracker.
 /process.php?ut=*&rf=
+/prod-analytics.
 /prodtracker?
 /profile_tracker.
 /promo_tracking/*
@@ -2458,6 +2463,7 @@
 /pxlspamanalyst-
 /pxtrk.gif
 /pzn/proxysignature
+/qlitics.js
 /qtracker-
 /QualtricsSurvey.
 /quant.js
@@ -5462,6 +5468,7 @@ _mongo_stats/
 ||qbop.com^$third-party
 ||qdtracking.com^$third-party
 ||qlfsat.co.uk^$third-party
+||qlitics.com^$third-party
 ||qoijertneio.com^$third-party
 ||qsstats.com^$third-party
 ||quantcount.com^$third-party
@@ -8818,8 +8825,11 @@ _mongo_stats/
 ||px.spiceworks.com^
 ||px.topspin.net^
 ||pxlgnpgecom-a.akamaihd.net^
+||qcloud.com/report.go?
 ||qlog.adap.tv^$object-subrequest
 ||qos.video.yimg.com^
+||qq.com/code.cgi?
+||qq.com/dataimport/
 ||qq.com/heatmap/
 ||qq.com/ping.js?
 ||qq.com/stats?
@@ -14756,4 +14766,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: XhU+N4gLdAe/++vlhdlI6w
+! Checksum: JXCz+aHTU0Js83wmHayN0w
