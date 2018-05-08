@@ -1335,6 +1335,7 @@ gelbooru.com#@#[style*="width:"][height]
 gelbooru.com#@#iframe[width]
 gelbooru.com#@#span[class]:last-child > a img[src]
 gelbooru.com#@##paginator
+gelbooru.com#@#center > a[href]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1081
 realbooru.com,rule34.xxx##script:inject(abort-on-property-read.js, TesTVar)
@@ -1562,9 +1563,9 @@ wstream.video##div[onclick^="window.open"]
 ! https://www.reddit.com/r/uBlockOrigin/comments/6ty9xz/tvtropes_is_blocking_with_options_to_buy_an_ad/
 ! https://www.reddit.com/r/uBlockOrigin/comments/7pctg0/how_can_i_view_a_certain_website_without_having/
 ! https://www.reddit.com/r/uBlockOrigin/comments/7uro6c/accuweathercom_asking_you_to_buy_an_ad_removal/
-accuweather.com,androidpolice.com,beliefnet.com,billingsgazette.com,bismarcktribune.com,businessinsider.com,champions.co,comicbook.com,eurogamer.net,givemesport.com,grubstreet.com,hotair.com,jg-tc.com,lacrossetribune.com,madison.com,magicvalley.com,missoulian.com,moviepilot.com,napavalleyregister.com,notalwaysright.com,nowloading.co,pantagraph.com,parkers.co.uk,patheos.com,popculture.com,poststar.com,qctimes.com,rapidcityjournal.com,rawstory.com,stltoday.com,thesouthern.com,thestudentroom.co.uk,townhall.com,trendblog.net,trib.com,tucson.com,tvtropes.org,twitchy.com,watoday.com.au,wwg.com##script:inject(abort-on-property-read.js, stop)
+accuweather.com,androidpolice.com,beliefnet.com,billingsgazette.com,bismarcktribune.com,businessinsider.com,champions.co,comicbook.com,eurogamer.net,givemesport.com,grubstreet.com,hotair.com,jg-tc.com,lacrossetribune.com,madison.com,magicvalley.com,missoulian.com,moviepilot.com,napavalleyregister.com,nationalpost.com,notalwaysright.com,nowloading.co,pantagraph.com,parkers.co.uk,patheos.com,popculture.com,poststar.com,qctimes.com,rapidcityjournal.com,rawstory.com,stltoday.com,thesouthern.com,thestudentroom.co.uk,townhall.com,trendblog.net,trib.com,tucson.com,tvtropes.org,twitchy.com,watoday.com.au,wwg.com##script:inject(abort-on-property-read.js, stop)
 ||0mme.com^$script,domain=comicbook.com|popculture.com
-||1emn.com^$script,domain=hotair.com|lacrossetribune.com|moviepilot.com|notalwaysright.com
+||1emn.com^$script,domain=hotair.com|lacrossetribune.com|moviepilot.com|nationalpost.com|notalwaysright.com
 ||1enm.com^$script,domain=champions.co|pantagraph.com|parkers.co.uk
 ||2enm.com^$domain=androidpolice.com|beliefnet.com|trib.com
 ||8d1f.com^$script,domain=napavalleyregister.com|rapidcityjournal.com|rawstory.com|tvtropes.org|watoday.com.au
@@ -1728,7 +1729,6 @@ bouncebreak.com##script:inject(popads.net.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/458
 ||latimes.com^$generichide,important
-||nationalpost.com^$generichide,important
 ||pagead2.googlesyndication.com^$script,important,domain=latimes.com
 ||ntv.io^$script,important,domain=latimes.com
 ||openx.net^$script,important,domain=latimes.com
@@ -2373,6 +2373,7 @@ kimcartoon.*##script:inject(set-constant.js, check_adblock, true)
 kimcartoon.*##script:inject(setInterval-defuser.js, (), 500)
 kimcartoon.*##^script:has-text(this[atob)
 ||fghtem.com^$xmlhttprequest,redirect=nooptext,domain=kimcartoon.me
+kimcartoon.*##.kcAds
 
 ! https://forums.lanik.us/viewtopic.php?p=124271#p124271
 dailyuploads.*##script:inject(abort-current-inline-script.js, document.getElementById, adblockinfo)
@@ -5017,10 +5018,6 @@ pornqd.com##a[href*="redirect"]
 ! https://github.com/uBlockOrigin/uAssets/issues/1422
 @@||streamxxx.tv^$generichide
 
-! https://forums.lanik.us/viewtopic.php?f=62&t=39845
-svd.se##script:inject(abort-on-property-write.js, SvD)
-svd.se##[id^=AdWrapperInner]
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1423
 ||livesports.pw//adblock.js$script,redirect=fuckadblock.js-3.2.0
 
@@ -5371,6 +5368,11 @@ nme.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
 nme.com##^script:has-text(adblock-nuke-message)
 nme.com##.advert:style(z-index: -999999 !important;)
 nme.com###wrapper:style(padding-top: 0 !important;)
+! add sites using the same ad reinsertion script
+amateurphotographer.co.uk,countrylife.co.uk,lifedeathprizes.com,look.co.uk,mbr.co.uk,rugbyworld.com,shootinguk.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
+amateurphotographer.co.uk,countrylife.co.uk,lifedeathprizes.com,look.co.uk,mbr.co.uk,rugbyworld.com,shootinguk.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com##^script:has-text(adblock-nuke-message)
+look.co.uk##body > div#wrapper:style(padding-top: 0px !important;)
+womanandhome.com##.header-advert-wrapper
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1537
 @@||rustica.fr/assets/js/advertisement$script,first-party
@@ -7225,7 +7227,6 @@ vidto.se##script:inject(window.open-defuser.js)
 ##a[href*="/open?refer"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2172
-||tabunder.com^$third-party
 @@||sitiosywebs.com/adframe.js$script,first-party
 @@||xddgratis.com/adframe.js$script,first-party
 cinedoblego.com##.accordion .sub-menu:style(display: block !important)
@@ -7300,3 +7301,41 @@ peliculas-mp4.com##script:inject(setTimeout-defuser.js, (), undefined)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/926
 @@||anime-update*.*^$generichide
+@@||animedao*.*^$generichide
+@@||animetake*.*^$generichide
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8hgrg9/blocking_deals_on_kinja_sites_gizmodo_kotaku/
+avclub.com,deadspin.com,earther.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,thetakeout.com,theroot.com##article[id^="post_"]:has(.meta__network)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2200
+cmacapps.com,techsini.com##script:inject(abort-current-inline-script.js, jQuery, Adblocker)
+||basepush.com^
+||fortpush.com^
+
+! https://github.com/uBlockOrigin/uAssets/issues/2202
+@@||itdunya.pk^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2203
+pichodescargas.com##script:inject(set-constant.js, blockAdBlock, noopFunc)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2204
+@@||worldfreeware.com^$generichide
+worldfreeware.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+||luckypushh.com^
+
+! https://github.com/uBlockOrigin/uAssets/issues/2205
+@@||ceplik.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2207
+@@||tibiabr.com^$generichide
+tibiabr.com##div[id^="div-gpt-ad"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/2208
+@@||dompl3.info^$generichide
+dompl3.info##script:inject(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2206
+||springserve.com/vast/*einthusan$xmlhttprequest,redirect=nooptext,domain=imasdk.googleapis.com
+!#if env_firefox
+@@||springserve.com/vast/*einthusan$xmlhttprequest,domain=imasdk.googleapis.com
+!#endif

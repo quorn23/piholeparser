@@ -26,17 +26,17 @@ ____________________________________
 ### Trimming HOSTS Format IP Addresses
 1310 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-1222 Lines After Removing Empty Space
+1221 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
-10 Lines After Removing Invalid FQDN Characters
+11 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case
-10 Lines After Converting All Text To Lower Case
+11 Lines After Converting All Text To Lower Case
 ### Checking For Fully Qualified Domain Name Requirements
-10 Lines After Checking For Fully Qualified Domain Name Requirements
+11 Lines After Checking For Fully Qualified Domain Name Requirements
 ### Reverse Searching For Invalid Top Level Domains
-10 Lines After Reverse Searching For Invalid Top Level Domains
+11 Lines After Reverse Searching For Invalid Top Level Domains
 ### Removing Duplicate Lines
-10 Lines After Removing Duplicate Lines
+11 Lines After Removing Duplicate Lines
 ## Checking Parsed File Size
 ## Attempting Creation Of Parsed List
 ## Calculating Parse Time
