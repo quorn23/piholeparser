@@ -2016,7 +2016,7 @@ torrentfunk.com##script:inject(abort-on-property-write.js, Fingerprint2)
 torrentfunk.com##.content td:has(a[href*=".pl4y.download/"])
 
 ! https://github.com/uBlockOrigin/uAssets/issues/565
-ville-ideale.fr##script:inject(setTimeout-defuser.js, contrformpub, 10000)
+ville-ideale.fr##script:inject(setTimeout-defuser.js, contrformpub, 5000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/558
 ! https://github.com/uBlockOrigin/uAssets/issues/578
@@ -2177,6 +2177,7 @@ alibaba.com##.m-product-item:has-text(Sponsored Listing)
 ! https://github.com/uBlockOrigin/uAssets/issues/506
 ||msn.com/advertisement.ad.js$script,first-party,important
 ||aolcdn.com/ads/adswrappermsni.js$script,domain=msn.com,important
+msn.com##^script:has-text(/i10C/i)
 
 ! https://github.com/reek/anti-adblock-killer/issues/3492
 newser.com##script:inject(abort-on-property-read.js, checkAds)
@@ -2209,9 +2210,7 @@ mcloud.to###jwa
 ! https://github.com/jspenguin2017/uBlockProtector/issues/781
 ! https://github.com/uBlockOrigin/uAssets/issues/2084#issuecomment-385204003
 9anime.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-9anime.*##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
-9anime.is##script:inject(setTimeout-defuser.js, o(), 1)
-9anime.is##script:inject(setTimeout-defuser.js, Pu.call, 1)
+9anime.*##script:inject(abort-on-property-read.js, BBRaven)
 @@||9anime.*^$generichide
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=9anime.is
 9anime.*###sidebar > .text-center.crop.widget:style(height: 5px !important)
@@ -4084,7 +4083,9 @@ kaztorka.org##[id*=Composite]
 ! https://github.com/uBlockOrigin/uAssets/issues/1175
 cut-urls.com##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 cut-urls.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
 ! https://github.com/uBlockOrigin/uAssets/issues/1291
+! https://github.com/uBlockOrigin/uAssets/issues/2233
 flashx.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 flashx.*##script:inject(abort-on-property-read.js, y0b8W)
 flashx.*##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -4096,9 +4097,7 @@ flashx.*##script:inject(window.open-defuser.js)
 flashx.*##a[href^="https://adsrvmedia.adk2x.com/"]
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=flashx.tv
 @@||fastcontentdelivery.com/js/showad*.js$script,domain=flashx.to
-@@||flashx.to/counter.cgi$script,first-party
-@@||flashx.tv/counter.cgi$script,first-party
-@@||flashx.ws/counter.cgi$script,first-party
+@@||flashx.*/counter.cgi$script,first-party
 @@||flashx1.tv/js/*ad*.js$script,domain=flashx.to
 @@||flashx1.tv/js/showad*.js$script,domain=flashx.tv
 flashx.*##A[href$=".html"][rel="nofollow norefferer noopener"]
@@ -5913,6 +5912,7 @@ dl-android.com##.btnDownload
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40207
 ||ziurim.eu^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.facebook.net *.facebook.com *.google-analytics.com *.googletagmanager.com *.google.com
+ziurim.eu##script:inject(abort-current-inline-script.js, atob, tabunder)
 ziurim.eu##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1706
@@ -6671,9 +6671,8 @@ clipwatching.com##script:inject(set-constant.js, adblock, false)
 updato.com##script:inject(setTimeout-defuser.js, updato-overlay, 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1946
+animeland.tv##script:inject(abort-on-property-read.js, BBRaven)
 animeland.tv##script:inject(nowebrtc.js)
-animeland.tv##script:inject(setTimeout-defuser.js, o(), 1)
-animeland.tv##script:inject(setTimeout-defuser.js, Pu.call, 1)
 animeland.tv##^script:has-text(676574456c656d656e747342795461674e616d65)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=animeland.tv
 
@@ -7397,8 +7396,8 @@ geistlink.com##script:inject(abort-on-property-read.js, app_vars.force_disable_a
 geistlink.com##script:inject(nano-setInterval-booster.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40704&p=136397#p136373
-@@||pornspark.com/player/player_ads.$subdocument,first-party
 pornspark.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+pornspark.com##script:inject(setTimeout-defuser.js, textContent, 600)
 pornspark.com##[href*=".php"]
 ||tubecorporate.com^$third-party
 
@@ -7412,3 +7411,24 @@ savetodrive.net##script:inject(setTimeout-defuser.js, isAdsBlocked, 2000)
 gsul.me##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 gsul.me##script:inject(nano-setInterval-booster.js)
 gsul.me##^script:has-text(decodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2231
+mp4cloud.net##script:inject(set-constant.js, detector_active, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2232
+seriesblanco.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2234
+@@||wallpaperenginefree.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2235
+@@||mixmods.com.br^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2236
+nuevos-mu.ucoz.com##script:inject(addEventListener-defuser.js, load, 2000)
+at.ua,ucoz.com,ucoz.net,ucoz.ru,ucoz.ua##script:inject(abort-current-inline-script.js, atob, tabunder)
+
+! https://forums.lanik.us/viewtopic.php?p=136424#p136424
+libertaddigital.com##script:inject(set-constant.js, publd.ads_blocked, false)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=storage.oraclecloud.com
+@@||storage.oraclecloud.com/*/smartclip-services/sc_player/$script,first-party

@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version E91 
+! Version E95 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -770,7 +770,6 @@ images/ads/
 ! $popup >>>>>
 !
 &popunder=$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
-&utm_campaign=$popup,third-party
 /banner/*$popup
 /popunder.$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
 ||4dsply.com^$popup,image,media,object,object-subrequest,other,ping,script,stylesheet,subdocument,websocket,xmlhttprequest
@@ -1067,6 +1066,7 @@ all-free-download.com,comicsalliance.com,dailymotion.com,krebsonsecurity.com##DI
 amazon.com##DIV[id^="sponsored"]
 animefreak.tv##DIV[class*="-filter"]
 animenewsnetwork.com##[class*="iab"]
+channelnewsasia.com,kiplinger.com##[class*="advert"]
 christianitytoday.com##.overlay
 cnet.com,empireonline.com,laptopmag.com##DIV[id^="leader"]
 cnn.com##[class*="promotions"]
@@ -1081,7 +1081,6 @@ distractify.com##DIV[class^="RightRail"]
 eventcinemas.com.au,eventcinemas.co.nz,thedailysheeple.com##.ads
 greatist.com,slashfilm.com##DIV[id*="300x250"]
 horrornews.net##DIV[id*="cedato"]
-kiplinger.com##[class*="advert"]
 mangafox.me##DIV[style*="banners/"]
 mirror.co.uk##.top-slot
 mlive.com,theyeshivaworld.com##DIV[class*="_ad_"]
@@ -1106,7 +1105,7 @@ youtube.com##DIV[class*="-ads-"]
 @@.com/ads/growth/aymt/multi_async_click/$domain=facebook.com
 @@.com/ads/growth/aymt/xout_survey/$domain=facebook.com
 @@.com/metrics/$script,domain=apple.com
-@@.demdex.net/$script,domain=globaltv.com
+@@.demdex.net/$script,domain=foxnews.com|globaltv.com
 @@.net/ad/$object-subrequest,domain=foxsports.com
 @@.net/ad/$script,domain=zone.msn.com
 @@/ad1.$image,domain=embed.universaluclick.com
@@ -1160,6 +1159,7 @@ youtube.com##DIV[class*="-ads-"]
 @@||stats.$domain=csnchicago.com|stats.com|wetter.info
 @@||ticketm.net/*/tm_internal_tracker.js
 @@||use.typekit.net^$script,font
+@@||yandex.ru^$xmlhttprequest,domain=yastatic.net
 bikeexchange.com.au,bikeexchange.co.nz,bikeexchange.com,bikeexchange.de,bikeexchange.be,bikeexchange.nl,bikeexchange.co.uk,bikeexchange.ie,bikeexchange.com.co,oakley.com#@#.advert
 cardgames.io,check24.de#@#DIV[id*="-ads"]
 cdkeys.com#@#DIV[class^="box-ad"]
