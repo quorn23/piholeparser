@@ -1,19 +1,9 @@
-[uBlock Origin 1.16.5.1]
+[uBlock Origin 1.16.5.100]
 ! Title: uBO-Personal-Filters
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
 
 2mdn.net^$important
-screenrant.com##.info-wrap
-screenrant.com##.load-wrap.ajaxLoader
-screenrant.com##.switch.share-switch
-cbr.com,screenrant.com##.video-block-related-article.video-block
-screenrant.com##.video-disclaimer
-screenrant.com##.email.icon
-screenrant.com##.comment.icon
-screenrant.com##.plus.icon
-screenrant.com##a[href="#comments"]
-screenrant.com##.desktop.comments
 disqus.com^$important
 doubleclick.net^$important
 pornhub.com###under-player-comments
@@ -70,7 +60,7 @@ pornhub.com##.clear.hd.jisfhp0w2u
 taboola.com^$important
 screenrant.com##.video-block-main.video-block
 .net##.no-shadow.ad-vertical-tower.ad-vertical-container
-$websocket,domain=~mega.nz|~speedtest.net
+$websocket,domain=~mega.nz|~speedtest.net|~mewe.com
 googletagmanager.com^$important
 milfzr.com,blockadblock.com,onhax.me##script:inject(bab-defuser.js)
 comicbook.com##a[href^="http://amzn.to/"]
@@ -132,8 +122,6 @@ istream.*##.amazonDeals
 /track
 ugbase.eu###shoutbox
 ugbase.eu##.red_alert
-screenrant.com##.controler
-screenrant.com##.section-feature.side-featude-wrapper
 youtube.com##.ytp-ce-covering-overlay
 wikia.com###WikiaRailWrapper
 gsmarena.com###subHeader
@@ -142,7 +130,6 @@ androidauthority.com##.load-infinite.loading
 istream.*##.buttons.dmcaLink
 ads-$script
 wikia.com###WikiaBar
-screenrant.com##.desktop-vertical.video-block-with-playlist
 mozilla.org###site-nonfx
 snowstorm$script
 snow$script
@@ -179,7 +166,6 @@ imdb.com##.footer-grid-wrapper.container
 imdb.com###sidebar
 ||$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval',domain=windowscentral.com|androidcentral.com
 ||youtube.com^$csp=default-src 'self' 'unsafe-inline' blob: data: *.ggpht.com *.googlevideo.com *.ytimg.com fonts.googleapis.com fonts.gstatic.com *.googleusercontent.com
-speedtest.net##.alert-container
 xhamster.com###supportAds
 pubmedia.js
 wp-content/uploads/$script
@@ -251,7 +237,7 @@ dwatchseries.to###header-2
 ads$script,domain=~imdb.com
 torrentz2.eu##a[href^="/"]:has-text(Download Direct)
 istream.*##.button
-chip.*,speedtest.net##script:inject(rdo.js, _sp_, noopFunc)
+chip.*##script:inject(rdo.js, _sp_, noopFunc)
 contributor.google.com/scripts/
 androidcentral.com,windowscentral.com##.mn_mbn_share
 gyazo.com##.image-infos
@@ -277,8 +263,7 @@ log_event
 kisshentai.*##a[href="#"]
 kisshentai.*###show_id
 ||kisshentai.net^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: myanimelist.cdn-dena.com i.imgur.com *.rapidvideo.com *.playercdn.net openload.co oload.stream *.oloadcdn.net streamcherry.com *.fruithosted.net
-doubleclick^$script,important
-kimcartoon.me###disqus_thread
+doubleclick^$script,important.me###disqus_thread
 ||androidcentral.com/sites/androidcentral.com/files/advagg_js/$script,badfilter
 connect.facebook.net^$script,important
 @@||lightboxcdn.com^$script,domain=androidcentral.com|crackberry.com|imore.com|windowscentral.com,badfilter
@@ -296,16 +281,8 @@ pastebin.com##.promo-bar
 speedtest.net##.eot-mini-survey
 cbr.com##.quiz.browse-content
 cbr.com##.video.browse-content
-screenrant.com##.quiz.browse-content
-screenrant.com##.video.browse-content
-screenrant.com##.related.browse-content
-screenrant.com###tags-anchor
-speedtest.net##.result-item-share.result-item
 backend_ptc.php
 frontend_ptc.js
-screenrant.com##.wrap-pad.article > .thumbs-wrapper
-screenrant.com##.quiz-share-btn.quiz-action-btn
-beta.speedtest.net##a[href^="http://www.speedtest.net/"]
 youtube.com##.yt-uix-expander-collapsed.live-chat-expander.yt-uix-expander
 kimcartoon.me##.w-right
 kimcartoon.me###hideAds
@@ -319,9 +296,6 @@ pornhub.com##.kzpcaw
 ||thepiratebay.org/*.php?$badfilter
 kimcartoon.*##.videoAdClose
 facebook.com##._5pcr._7xp
-@@||d3ujids68p6xmq.cloudfront.net^$script,domain=beta.speedtest.net,badfilter
-screenrant.com##.title-section
-screenrant.com##.related-thumbs.thumb-list
 facebook.com##._3j6k
 mega.nz##.ads-left-block
 mega.nz##.ads-right-block
@@ -342,8 +316,6 @@ github.com/_private/browser/errors
 messenger.com/ajax/bz
 noadblock.js
 kimcartoon.*##.kcAds
-screenrant.com,cbr.com##.header-premium-zone
-screenrant.com,cbr.com##.premium-promo
 ||fmovies.is^$first-party,popup,badfilter
 howtogeek.com###purch_Y_R_1_1
 howtogeek.com###purch_Y_L_0_1
@@ -364,7 +336,6 @@ twitter.com#@#.message-drawer.dialog, #react-root > div[data-reactroot] > div:la
 mega.nz##.red.download-button.button
 hollywoodreporter.com##.leaderboard-wrapper
 temp_share_folder
-||screenrant.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.srcdn.com platform.twitter.com *.instagram.com *.twimg.com *.imgur.com embed.redditmedia.com cdn.embedly.com
 ||speedtest.net^$csp=script-src 'self' 'unsafe-inline' data: *.speedtest.net *.cdnst.net;img-src 'self' *.cdnst.net 
 ||cbr.com^$csp=script-src 'self' 'unsafe-inline' platform.twitter.com *.twimg.com platform.instagram.com *.imgur.com embed.redditmedia.com cdn.embedly.com
 outlook.live.com##a[href^="http://"]
@@ -409,7 +380,6 @@ myanimelist.net##.icon-block-small.js-sns-icon-container
 ||oload.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: cdnjs.cloudflare.com  *.oloadcdn.net fonts.googleapis.com *.google.com fonts.gstatic.com
 |http:$third-party,popup,domain=fmovies.is,badfilter
 myanimelist.net##.js-sns-icon-container
-screenrant.com,cbr.com##.injected-video-by-load
 forbes.com##.collapse-sharing-login.slash-background.article-sidebar.article-top-navigation
 forbes.com##.ng-scope.video_placeholder
 ||forbes.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.forbesimg.com *.forbes.com platform.twitter.com *.twimg.com
@@ -484,7 +454,7 @@ kimcartoon.*###btnShowComments
 thepiratebay.*/*/$inline-script,subdocument
 @@screenrant.com^$elemhide
 screenrant.com##.ad-zone-container
-||kimcartoon.me^$csp=default-src 'self' 'unsafe-eval' 'unsafe-inline' data: *.zencdn.net *.rapidvideo.com *.playercdn.net openload.co *.oloadcdn.net streamango.com *.fruithosted.net www.google.com *.gstatic.com i.imgur.com;media-src *
+||kimcartoon.me^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.zencdn.net *.rapidvideo.com *.playercdn.net openload.co *.oloadcdn.net streamango.com *.fruithosted.net www.google.com *.gstatic.com i.imgur.com;media-src *
 screenrant.com##.twitter.icon
 @@cbr.com^$elemhide
 cbr.com##.sharing-option
@@ -498,8 +468,6 @@ comicbook.com##.channel.contentgroup:has-text(WorldWide Gaming)
 comicbook.com##.leftrail.sidebar > section:has-text(Follow Us)
 @@||embed.tawk.to^$script,domain=andrija-i-andjelka.com|clik.pw|debrideco.com|streamlord.com,badfilter
 screenrant.com##H6:has-text(Follow)
-screenrant.com##.social-list
-screenrant.com##.li-premium-zone
 */advertising.js$script,important,redirect=noopjs
 facebook.com##._5pcr:has-text(/People you may know|Connect with Facebook/)
 kirtuclub.com##a[href^="http://sexdug.com/"]
@@ -606,13 +574,11 @@ kissanime.*##.rightBox:has-text(Like me)
 boxofficemojo.com###Player_82160f42-9620-4d0a-b79a-18b1abd853fb
 bmovies.*,fmovies.*##.col-lg-12:has-text(blockbuster)
 bmovies.*,fmovies.*##.footerdesc
-cbr.com##.article-content > p:has-text(/RELATED:|REVIEW:/)
 adbd^
 bulbagarden.net###bottomframelower
-bmovies.*,fmovies.*,9anime.*,solarmoviex.*,putlockertv.*##.pa
 xmlrpc.php^
 ||flixanity.*^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' ajax.googleapis.com
-milfzr.com,dwatchseries.to,fmovies.*,bmovies.*,solarmoviex.*,putlockertv.*##script:inject(abort-current-inline-script.js, atob, tabunder)
+milfzr.com,dwatchseries.to,bmovies.*,solarmoviex.*,putlockertv.*##script:inject(abort-current-inline-script.js, atob, tabunder)
 rapidvideo.com###top350b
 rapidvideo.com###premiumad
 rapidvideo.com###top350
@@ -633,7 +599,6 @@ animenewsnetwork.com###infinite-scroll-outlet
 ||1337x.*^$csp=script-src 'self' 'unsafe-inline'
 uservoice.js$script
 typekit.net^
-screenrant.com,cbr.com##.featured-text
 wikia.com##.featured-video__wrapper
 @@||ox-d.bannertrack.net/auid=$badfilter
 @@||google.com/adsense/start/images/favicon.ico$badfilter
@@ -673,7 +638,7 @@ kimcartoon.me###videoAd
 9anime.*##.share
 crwdcntrl.net^$important
 amazon-adsystem.com^$important
-bmovies.*,fmovies.*,solarmoviex.*,putlockertv.*##script:inject(dwrite.js, /wwwpromoter.com|300x250/)
+bmovies.*,fmovies.*,solarmoviex.*,putlockertv.*##script:inject(dwrite.js, 300x250)
 @@||ajax.cloudflare.com/cdn-cgi/scripts/$third-party,script,badfilter
 ghacks.net##.ghacks_share_widget.widget
 ghacks.net##.ghacks_this_day.widget
@@ -687,10 +652,7 @@ ghacks.net##.user-content > ul:has(a[href^='https://www.ghacks.net/'])
 ghacks.net##p:nth-of-type(4) > strong
 ||ghacks.net^$csp=script-src 'self' 'unsafe-inline'
 @@ghacks.net^$elemhide
-cbr.com,screenrant.com##a[href*="amazon.com"]
-speedtest.net##a[href*="legacy.speedtest.net"]
 kimcartoon.*##div[style*="width: 300px; height: 250px; float: left;"]
-kimcartoon.*###M253206ScriptRootC193365
 openload.co/r3/f^
 facebook.com###page_tv_show_playlists
 facebook.com###page_tv_show_extra_clips
@@ -712,11 +674,10 @@ sw.js$script
 check.googlezip.net/generate_204^
 ghacks.net##.ghacks-ad
 speedtest.net##.top-placeholder.pure-u-1
-screenrant.com,xvideos.com##script:inject(rdo.js, console, noopFunc)
+xvideos.com##script:inject(rdo.js, console, noopFunc)
 androidcentral.com##script:inject(noeval-if.js, atob)
 @@/wp-content/plugins/detect-adblock/js/ads.js$script,first-party,badfilter
 @@/wp-content/plugins/google-analytics-for-wordpress/$first-party,script,badfilter
-cbr.com##p > strong:has-text(READ)
 pornhub.com#@#script:inject(csp.js, img-src 'self' *; media-src 'self' *)
 @@*$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com|xhamster.com|youporn.com
 comicbook.com##.mid-content-comment
@@ -724,7 +685,7 @@ comicbook.com##.article-footer-comments
 /^((?!(^https?):\/\/(vidfile\.net|(www\.)?youtube\.com|openload\.co|docs\.google\.com|video\.sibnet\.ru|oload\.stream|streamango\.com|vidlox\.tv|(www\.)?rapidvideo\.com|tune\.pk|(www\.)?dailymotion\.com|estream\.to|ebd\.cda\.pl|gamedor\.usermd\.net)\/).)*$/$subdocument,domain=a-o.ninja|centrum-dramy.pl|love-drama.pl|vidfile.net,badfilter
 /^((?!(^https?):\/\/(ajax\.googleapis\.com|cdnjs\.cloudflare\.com|vk\.com)\/).)*$/$script,third-party,domain=kinokrad.co,badfilter
 flixanity.*/*/somethingfun.js$script
-||mcloud.to^$csp=default-src 'self' 'unsafe-inline' *.mcloud.to *.fmovies.se ajax.googleapis.com ssl.p.jwpcdn.com blob: fonts.googleapis.com fonts.gstatic.com
+||mcloud.to^$csp=default-src 'self' 'unsafe-inline' blob: *.mcloud.to *.fmovies.se ajax.googleapis.com ssl.p.jwpcdn.com fonts.googleapis.com fonts.gstatic.com
 putlockertv.*##.col-md-7
 comicbook.com##.urgent-module
 |https://$third-party,stylesheet,domain=fmovies.is|fmovies.se|fmovies.to,badfilter
@@ -770,7 +731,6 @@ hanime.tv##div:nth-of-type(1) > .mb-5.htv-carousel-container.lazy
 @@/adframe.js$script,badfilter
 syndication.twitter.com
 @@/script/ad.js$script,badfilter
-/9anime\..*\/[0-9a-zA-Z]{20,25}/$script
 |http*://$third-party,image,domain=123movies-proxy.ru|123movies.cz|123movies.gs|123movies.is|123movies.live|123movies.net|123movies.net.ru|123movies.ru|123movies.vc|123moviesfree.com|123movieshd.net|123movieshd.tv|9cartoon.me|animehaven.to|auroravid.to|ay8ou8ohth.com|bitvid.sx|btdb.in|btdb.to|clipconverter.cc|cloudtime.to|cmovieshd.com|divxme.com|downloadming.tv|dropapk.com|flyordie.com|fmovies.se|fmovies.to|full-pcsoftware.com|halacima.net|hdmusic99.in|hdtv-rls.com|kannadamovies.biz|kissanime.ru|kissmanga.com|livetvcafe.net|movdivx.com|mp3clan.one|nowvideo.li|nowvideo.sx|nowvideo.to|oogh8ot0el.com|otakustream.tv|otorrents.com|pocketnow.com|putlocker.co|solarmovie.sc|speedvid.net|stream2watch.org|suprafiles.co|thepiratebay.cd|userscloud.com|vidto.me|vidtudu.com|vidzi.tv|wholecloud.net,badfilter
 |http*://$third-party,stylesheet,domain=9anime.is,badfilter
 @@||rapidvideo.com/e^$third-party,badfilter
@@ -795,3 +755,23 @@ milfzr.com###actions
 admin-ajax.php^
 @@/js/advertisement-$script,badfilter
 adnxs.com^$important
+/http*.:\/\/.*[?|=|&|%|#|+].*/$popup,domain=0123movies.com|1337x.to|1movies.to|9anime.is|a-o.ninja|adsrt.com|ahlamtv.com|akvideo.stream|allmyvideos.netakvideo.stream|animeflv.net|animeid.io|asianvote.com|avgle.com|bittorrent.am|bmovies.to|clipconverter.cc|cloudtime.to|cruzing.xyz|dropapk.com|embed.nowvideo.sx|embed.videoweed.es|escdn.co|estream.to|extreme-board.com|eztv.ag|fastbay.net|fileone.tv|flash-x.tv|flashsx.tv|flashx.cc|flashx.me|flashx.run|flashx.sx|flashx.to|flashx.tv|flashx.ws|flashx1.tv|flashxx.tv|fmovies.is|fmovies.se|fmovies.to|fruithosted.net|fruitstreams.com|gogoanime.io|gorillavid.in|gowatchfreemovies.to|grammarist.com|ikwilthepiratebay.org|imagebam.com|imagefruit.com|imageporter.com|imagerar.com|img24.org|imgadult.com|imgbox.com|imgdrive.net|imgshots.com|imgsin.com|imgspice.com|imgtaxi.com|imgvip.net|imgwallet.com|indoxxi.tv|jkanime.net|katcr.host|katcr.party|kickass.cd|kickass.gg|kissasian.ch|kisscartoon.ac|lavamovies.se|m4ufree.com|m4ufree.tv|masterani.me|megaup.net|moecdn.io|monova.org|movie4k.is|mp3indirdur.mobi|myreadingmanga.info|mywebtv.info|newser.com|nosteam.ro|nowvideo.sx|oload.site|oload.stream|oload.xyz|oloadcdn.net|onhax.me|onlinevideoconverter.com|openload.co|openloadmovies.tv|opentpb.com|otakustream.tv|piratebayblocked.com|pirateproxy.sh|pirateproxy.website|playercdn.net|pornparadise.org|povwideo.net|powvideo.net|proxydl.cf|putlockertv.se|putlockertv.to|rapidvideo.com|rarbgproxy.org|readcomiconline.to|repelis.net|rule34hentai.net|seehd.pl|sendvid.com|sexuria.com|solarmoviesc.com|speedvid.net|sportp2p.com|stream.moe|stream2watch.org|streamango.com|streamcherry.com|streamplay.to|streamshunter.tv|suprafiles.org|telepisodes.co|thehiddenbay.fi|thehiddenbay.ws|thekat.nz|thepiratebay.red|thepiratebay.rocks|thepirateproxy.ws|theproxybay.me|thevideo.cc|thevideo.ch|thevideo.me|thevideo.website|torrentz.to|tpb.zone|tpbmirror.ga|tpbship.org|uktpbmirror.pw|unblocker.cc|unblocktpb.pro|userscloud.com|vidgg.to|vidlox.me|vidlox.tv|vidoza.net|vidto.me|vidtod.me|vidtudu.com|vidup.me|vidz7.com|vidzi.tv|vipleague.mobi|vodlock.co|watchcartoononline.com|watchonline.to|watchonlinemovies.com.pk|wholecloud.net|youwatch.org|yts.am,badfilter
+screenrant.com##.nav-social-list
+screenrant.com###js-tp-menu-btn
+screenrant.com##.footer-brands
+screenrant.com##.footer-social-list
+screenrant.com##.w-sharing
+screenrant.com##.art-body-sharing
+screenrant.com##.article-tags
+screenrant.com##.w-fb-like
+screenrant.com##.premium-promo
+screenrant.com##.next-btn
+screenrant.com##.article-related
+screenrant.com##.w-injected-featured
+||screenrant.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.srcdn.com platform.twitter.com *.instagram.com *.twimg.com *.imgur.com embed.redditmedia.com cdn.embedly.com www.facebook.com www.youtube.com *.ytimg.com fonts.googleapis.com fonts.gstatic.com
+nosteam.ro##script:inject(window.open-defuser.js)
+quora.com##div[class*="PromptsList"]
+/\.(watchcartoononline|9anime|memecenter).*\/.*[(&|=|%|\/|?)]/$image,badfilter
+9anime.is/*/jwplayer.js$important
+translate.google.com##.gt-hats
+9anime.*,fmovies.*,solarmoviex.*,putlockertv.*##script:inject(eclick.js, .cover)

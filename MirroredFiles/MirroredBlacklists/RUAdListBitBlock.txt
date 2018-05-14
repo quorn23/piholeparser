@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: qthwOwCtUA16e1PwzNauGg
-! Version: 201805100020
+! Checksum: 9s36KA0fNoEinKubO7IO1A
+! Version: 201805140220
 ! Title: RU AdList: BitBlock
-! Last modified: 10 May 2018 00:20 UTC
+! Last modified: 14 May 2018 02:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -657,7 +657,7 @@ ru.msn.com##.stbp-tbl
 seasonvar.cc##.sv-social
 ekabu.ru##.t-social-container_top
 kino-teatr.ua##.tab-widget-multy
-fanserials.pro##.telegram
+fanserials.info##.telegram
 tverigrad.ru##.telegram_info
 vesti-ukr.com##.title-rubric-social
 vesti-ukr.com##.title-rubric-social ~ .content-main-right
@@ -716,6 +716,7 @@ hlamer.ru,kadu.ru##:not(#dialog-content-sub) > .social-icons
 livemaster.ru##:not(.auth-social-item) > a[title="Facebook"]
 livemaster.ru##:not(.auth-social-item) > a[title="Twitter"]
 livemaster.ru##:not(.auth-social-item) > a[title="ВКонтакте"]
+pikabu.ru##:not(.auth__footer) > .social-icon
 europaplus.ru##:not(.authorization) > .social
 ok.ru##:not([title^="Войти через"]) > .social-icon
 disk.yandex.ru##[data-click-action="export-social.dialog-open"]
@@ -1029,6 +1030,7 @@ _userbar_$image
 ||upcallback.com^$third-party
 ||uptocall.com^$third-party
 ||venyoo.ru^$third-party
+||vn.beeline.ru/com.broadsoft.xsi-actions/$third-party
 ||web.redhelper.ru^$third-party
 ||webim.ru^$third-party
 ||whitesaas.com^$third-party
@@ -1340,7 +1342,7 @@ _userbar_$image
 ||forum.adguard.com/styles/custom/adguard/logo.$image,domain=forum.adguard.com
 ||forum.ixbt.com/rc_data.js
 ||forumkiev.com/flesh/
-||forums.goha.ru/c02/*.js
+||forums.goha.ru/c20/*.js
 ||forums.overclockers.ru^*/logo_forum.gif
 ||fotki.yandex.ru/get/*/wind-hide.
 ||free-torrents.org/forum/radio/
@@ -1723,13 +1725,14 @@ get-styles.ru##.banner-up
 echo.msk.ru##.bannerBlock
 kritika24.ru##.bannervtekste
 experts-exchange.com##.bffr_trusted
+vesti-yamal.ru##.bgBanner
 catcut.net##.bl_all_rek
 2ip.ru##.bla_bla_car
 news.ngs.ru##.block-wday
 ixbt.com##.block__recommend
 relizua.com##.block_cont > noindex
 online-life.club##.block_titlebig
-fanserials.pro##.blocking-subscribe
+fanserials.info##.blocking-subscribe
 bookmate.com##.bm-document-meta-apps
 bookmate.com##.bm-document-readers
 geektimes.com,habr.com##.bmenu_inner
@@ -1995,7 +1998,9 @@ relizua.com##.yabfull
 inforeactor.ru##.yandex-widget
 kaifolog.ru##.yandexh,.yandexh + .atextbox
 livesport.ru##.zz_cars_twin
-4pda.ru#?#div:-abp-has(> h2:-abp-contains(/^Ap.Promo$/))
+4pda.ru#?#body[itemscope] *:-abp-has(> a[rel="nofollow"][href][target="_blank"] ~ * img[src])
+4pda.ru#?#body[itemscope] div[class]:-abp-has(> h2 ~ script[type][data-name] + script)
+4pda.ru#?#body[itemscope] div[class]:-abp-has(> iframe[src] ~ * img[src])
 mbclub.ru##[alt="Клубный сервис"]
 semestr.ru##[alt="Рынок студенческих работ на заказ"]
 auto.ru##[class*="special"][class$="-sales"]
@@ -2074,8 +2079,6 @@ auto.ru##div[class*="StoBanner"]
 kinogb.mobi##div[class*="bilet"]
 1tv.ru##div[class*="promo"][class$="place"]
 gdekluet.ru##div[class*="ui-widget"]
-4pda.ru##div[class="adbox"][id]
-4pda.ru##div[class][id] > iframe[src*="banner"]
 google.com,google.com.ua,google.ru##div[class][jsaction^="dismiss_warmup"]
 auto.ru##div[class^="Index"][class$="Banner"]
 mail.rambler.ru##div[class^="Review-"][data-events="feedback"]
@@ -2105,8 +2108,6 @@ livejournal.com##div[lj-widget-promo]
 muz.ru##div[style*="400px;"][style$="240px;"]
 okna.ua##div[style*="height: 80px"],div[style*="height:80px"]
 psy-music.ru##div[style*="tranceshop.ru"]
-4pda.ru##div[style="opacity: 0;"]
-4pda.ru##div[style="position: fixed; width: 252px; top: 50px; opacity: 0;"]
 drive2.com,drive2.ru#?#.c-block--content:-abp-has(.o-group--justify > .c-com-dv-label)
 driveroff.net,samlab.ws#?#center:-abp-has(iframe[src*="money.yandex.ru"])
 forums.overclockers.ru#?#table > tbody > tr:-abp-has(> [class^="profile"]:-abp-contains(/Партнер|Реклама/))
@@ -2383,7 +2384,7 @@ gov.ru,mts.ru#@#.social-box
 bitly.com,livelib.ru#@#.social-btn
 lifehacker.ru#@#.social-buttons
 hd720.biz#@#.social-fb
-ok.ru#@#.social-icon
+ok.ru,pikabu.ru#@#.social-icon
 hlamer.ru,kadu.ru#@#.social-icons
 codeguida.com#@#.social-item
 kinogo-2016.net#@#.social-likes
@@ -3166,6 +3167,7 @@ prom.ua#@#img[alt="facebook"]
 /follow-us.$~stylesheet
 /follow-widget-
 /follow-widget.
+/follow-with-google-
 /follow-youtube.
 /follow/Facebook-
 /follow/Google+
@@ -3552,6 +3554,7 @@ prom.ua#@#img[alt="facebook"]
 /icon_twt.
 /icon_youtube.
 /icon_youtube_
+/icona-social.
 /iconbig-twitter-
 /icone_fb.
 /icone_tw.
@@ -4100,6 +4103,7 @@ prom.ua#@#img[alt="facebook"]
 /share_button?
 /share_button_
 /share_buttons-
+/share_buttons_
 /share_byline_
 /share_count.
 /share_delicious.
@@ -4951,6 +4955,7 @@ _facebook_main.
 _facebook_small.
 _facebook_social_
 _facebook_white.
+_facebookbadge.
 _FacebookIcon.
 _facebooklogo.
 _FaceBookSlider/$~stylesheet
@@ -5719,6 +5724,7 @@ _youtube_social_
 ###fbLikeButton
 ###fbLikeSendtwitter_menu
 ###fbLikebox
+###fbOnscroll
 ###fbPanel
 ###fbPopUp
 ###fbPopupBG
@@ -5768,6 +5774,7 @@ _youtube_social_
 ###fbpromo_pop
 ###fbrecommend
 ###fbshare
+###fbshare_container
 ###fbshre
 ###fbslidebox
 ###fbsticker
@@ -8918,6 +8925,9 @@ _youtube_social_
 ##.element-sharethis
 ##.element-socialbookmarks
 ##.element-socials
+##.elementor-social-icon
+##.elementor-social-icons-wrapper
+##.elementor-widget-social-icons
 ##.email-share
 ##.email-share-link
 ##.email-sharetool
@@ -9191,6 +9201,13 @@ _youtube_social_
 ##.facewrapper
 ##.fan-follow-promo
 ##.fasteasysocialsharing
+##.fastsocialshare-share-fbl
+##.fastsocialshare-share-fbsh
+##.fastsocialshare-share-gone
+##.fastsocialshare-share-lin
+##.fastsocialshare-share-tw
+##.fastsocialshare_clearer
+##.fastsocialshare_container
 ##.favicon-facebook
 ##.favicon-tumblr
 ##.favicon-twitter
@@ -9331,6 +9348,7 @@ _youtube_social_
 ##.fb_wrap
 ##.fbbigshare
 ##.fbbox
+##.fbbox-wrapper
 ##.fbbutton
 ##.fbfanpage
 ##.fbfollow
@@ -9748,6 +9766,7 @@ _youtube_social_
 ##.footer__social-links
 ##.footer__social-list
 ##.footer__social-media
+##.footer__social-menu
 ##.footer__socialButtons
 ##.footer__socialIcon
 ##.footer__socialNetwork
@@ -11807,6 +11826,7 @@ _youtube_social_
 ##.saboxplugin-socials
 ##.safirShare
 ##.sb-blog-follow-wrap
+##.sb-likeshare
 ##.sb-social-counter
 ##.sb-social-counter-widget
 ##.sbCount
@@ -13314,6 +13334,7 @@ _youtube_social_
 ##.social-share-bar
 ##.social-share-block
 ##.social-share-bottom
+##.social-share-box
 ##.social-share-btn
 ##.social-share-btns
 ##.social-share-button
@@ -15056,6 +15077,7 @@ _youtube_social_
 ##A[href^="//www.linkedin.com/shareArticle?"]
 ##A[onclick^="popUp=window.open('http://linkedin.com/shareArticle?"]
 ##FACEBOOK-SHARE-BUTTON
+##MY-SHARE-BUTTON
 ##SHARE-BUTTON
 ##SOCIAL-SHARING
 ##TWITTER-SHARE-BUTTON
@@ -15082,20 +15104,6 @@ _youtube_social_
 ##[title="FOLLOW US ON TWITTER"]
 ##[title="Facebook-like"]
 ##[title="Find us on Facebook"]
-##[title="Follow On Twitter"]
-##[title="Follow Us On Digg"]
-##[title="Follow Us On Facebook"]
-##[title="Follow Us On Twitter"]
-##[title="Follow Us on Twitter"]
-##[title="Follow me on Twitter"]
-##[title="Follow on Twitter"]
-##[title="Follow us on Facebook"]
-##[title="Follow us on Twitter!"]
-##[title="Follow us on Twitter"]
-##[title="Follow us on YouTube"]
-##[title="Follow us on Youtube"]
-##[title="Follow us on twitter!"]
-##[title="Follow us on twitter"]
 ##[title="Get Posts On Facebook Wall"]
 ##[title="Join us on Twitter"]
 ##[title="Like this article?  Submit it to your favourite social bookmarking site!"]
@@ -15108,24 +15116,7 @@ _youtube_social_
 ##[title="Post to Twitter"]
 ##[title="Post to del.icio.us"]
 ##[title="Reddit!"]
-##[title="Share on Facebook"]
-##[title="Share on Facebook."]
-##[title="Share on LinkedIn"]
-##[title="Share on Linkedin"]
-##[title="Share on Tumblr"]
-##[title="Share on Twitter"]
-##[title="Share this article!"]
-##[title="Share this story"]
 ##[title="Share to Facebook"]:not(.wpel-icon-right)
-##[title="Share via Facebook"]
-##[title="Share with Digg"]
-##[title="Share with Facebook"]
-##[title="Share with Fark"]
-##[title="Share with Stumble Upon"]
-##[title="Share with Twitter"]
-##[title="Stumble This Post"]
-##[title="Submit this post on newsvine.com."]
-##[title="Submit this post on reddit.com."]
 ##[title="Submit to Digg"]
 ##[title="Subscribe by Facebook"]
 ##[title="Subscribe by Twitter"]
@@ -15133,29 +15124,44 @@ _youtube_social_
 ##[title="Tweet This"]
 ##[title="Yahoo! Buzz"]
 ##[title="submit to redit"]
+##[title^="Follow On Twitter"]
+##[title^="Follow Us On "]
+##[title^="Follow Us on "]
+##[title^="Follow me on "]
+##[title^="Follow on Twitter"]
+##[title^="Follow us on "]
+##[title^="Share on Facebook"]
+##[title^="Share on LinkedIn"]
+##[title^="Share on Linkedin"]
+##[title^="Share on Tumblr"]
+##[title^="Share on Twitter"]
+##[title^="Share this article!"]
+##[title^="Share this story"]
+##[title^="Share via Facebook"]
+##[title^="Share with Digg"]
+##[title^="Share with Facebook"]
+##[title^="Share with Fark"]
+##[title^="Share with Stumble Upon"]
+##[title^="Share with Twitter"]
+##[title^="Stumble This Post"]
+##[title^="Submit this post on "]
 ##a[alt="Follow Us on Twitter"]
 ##a[alt="follow us on twitter"]
 ##a[data-tm-ref-type-id="Follow-on-Facebook"]
 ##a[data-tm-ref-type-id="Follow-on-YouTube"]
 ##a[href*="facebook.com/sharer/sharer.php?"]
-##a[href="http://del.icio.us/post"]
-##a[href="http://delicious.com/save"]
-##a[href="http://twitter.com/share"]
-##a[href="http://www.addtoany.com/share_save"]
-##a[href="http://www.delicious.com/save"]
-##a[href="http://www.facebook.com/sharer.php"]
-##a[href="http://www.simplesharebuttons.com"]
-##a[href="https://twitter.com/home/?status="]
-##a[href="https://www.tumblr.com/share/"]
 ##a[href^="//pinterest.com/pin/create/button/?"]
 ##a[href^="//twitter.com/intent/tweet/?"]
 ##a[href^="//vk.com/share.php?url="]
 ##a[href^="//www.reddit.com/submit?"]
+##a[href^="/gp/socialmedia/share/"]
 ##a[href^="http://add.my.yahoo.com/content?"]
 ##a[href^="http://blip.pl/dashboard?body="]
 ##a[href^="http://bookmark.naver.com/post?ns="]
 ##a[href^="http://csp.cyworld.com/bi/bi_recommend_pop.php?url="]
+##a[href^="http://del.icio.us/post"]
 ##a[href^="http://del.icio.us/post?url="]
+##a[href^="http://delicious.com/save"]
 ##a[href^="http://digg.com/submit?"]
 ##a[href^="http://facebook.com/sharer.php?"]
 ##a[href^="http://line.me/R/msg/text/"]
@@ -15178,11 +15184,14 @@ _youtube_social_
 ##a[href^="http://twitter.com/intent/tweet"]
 ##a[href^="http://twitter.com/intent/tweet/?"]
 ##a[href^="http://twitter.com/intent/tweet?"]
+##a[href^="http://twitter.com/share"]
 ##a[href^="http://twitter.com/share?"]
 ##a[href^="http://twitthis.com/twit?url"]
 ##a[href^="http://twtkr.com/index.php?status="]
 ##a[href^="http://vk.com/share.php?url="]
 ##a[href^="http://vkontakte.ru/share.php?"]
+##a[href^="http://www.addtoany.com/share_save"]
+##a[href^="http://www.delicious.com/save"]
 ##a[href^="http://www.digg.com/submit?"]
 ##a[href^="http://www.facebook.com/dialog/feed?"]
 ##a[href^="http://www.facebook.com/share.php"]
@@ -15198,6 +15207,7 @@ _youtube_social_
 ##a[href^="http://www.plurk.com/?qualifier=shares&"]
 ##a[href^="http://www.reddit.com/submit"]
 ##a[href^="http://www.sharethis.com/share/?publisher="]
+##a[href^="http://www.simplesharebuttons.com"]
 ##a[href^="http://www.stumbleupon.com/submit?"]
 ##a[href^="http://www.tumblr.com/share/"]
 ##a[href^="http://www.tumblr.com/share?"]
@@ -15238,6 +15248,7 @@ _youtube_social_
 ##a[href^="https://www.pinterest.com/pin/create/link/"]
 ##a[href^="https://www.reddit.com/submit?"]
 ##a[href^="https://www.stumbleupon.com/submit?url="]
+##a[href^="https://www.tumblr.com/share/"]
 ##a[href^="https://www.tumblr.com/widgets/share/"]
 ##a[href^="https://www.twitter.com/share?"]
 ##a[href^="https://www.xing-share.com/app/user?"]
@@ -15257,52 +15268,15 @@ _youtube_social_
 ##a[onclick^="window.open('https://www.facebook.com/sharer/sharer.php?"]
 ##a[rel="share-on-facebook"]
 ##a[rel="share-on-twitter"]
-##a[title="Add to Facebook"]
-##a[title="Become a Fan on Facebook!"]
-##a[title="Become a fan on Facebook"]
 ##a[title="Become our Friend on MySpace!"]
 ##a[title="Bookmark on Google History Bookmarks"]
 ##a[title="Bookmark on Yahoo!"]
 ##a[title="Bookmark on del.icio.us"]
 ##a[title="Condividi su Facebook"]
-##a[title="Connect with us on Facebook"]
-##a[title="Connect with us on Google+"]
-##a[title="Connect with us on Twitter"]
-##a[title="Connect with us on Youtube"]
 ##a[title="Facebook"]
-##a[title="Fan us on Facebook"]
-##a[title="Find Us on Facebook"]
-##a[title="Follow Me on Pinterest"]
-##a[title="Follow Us on Facebook"]
-##a[title="Follow Us on Google+"]
-##a[title="Follow Us on Pinterest"]
-##a[title="Follow Us on Youtube"]
-##a[title="Follow me on  Facebook"]
-##a[title="Follow on Google Plus"]
-##a[title="Follow our Boards on Pinterest"]
-##a[title="Follow us on Facebook!"]
-##a[title="Follow us on Google Plus"]
-##a[title="Follow us on Google"]
-##a[title="Follow us on Google+"]
-##a[title="Follow us on Houzz"]
-##a[title="Follow us on Instagram"]
-##a[title="Follow us on Instagram."]
-##a[title="Follow us on Linked In"]
-##a[title="Follow us on LinkedIn"]
-##a[title="Follow us on Pinterest"]
-##a[title="Follow us on Scoop.it"]
-##a[title="Follow us on Tumblr"]
-##a[title="Follow us on twitter."]
 ##a[title="Google +"]
 ##a[title="Google Plus"]
 ##a[title="Google+"]
-##a[title="Join Us on Facebook"]
-##a[title="Join our Twitter army"]
-##a[title="Join us Facebook"]
-##a[title="Join us on Facebook"]
-##a[title="Join us on LinkedIn"]
-##a[title="Join us on Linkedin"]
-##a[title="Like us on Facebook."]
 ##a[title="LinkedIn"]
 ##a[title="Pin It"]
 ##a[title="Pin it!"]
@@ -15310,23 +15284,6 @@ _youtube_social_
 ##a[title="Post this story to Facebook"]
 ##a[title="Save On Delicious"]
 ##a[title="Send an this via email/e-card"]
-##a[title="Share a link on Facebook"]
-##a[title="Share a link on Googlei+"]
-##a[title="Share a link on Twitter"]
-##a[title="Share on Google Plus"]
-##a[title="Share on Google+"]
-##a[title="Share on Pinterest"]
-##a[title="Share on Reddit"]
-##a[title="Share on Whatsapp"]
-##a[title="Share this article"]
-##a[title="Share this page on Facebook"]
-##a[title="Share this page on facebook"]
-##a[title="Share this photo via Flipboard"]
-##a[title="Share this to Technorati"]
-##a[title="Share via Twitter"]
-##a[title="Share via facebook"]
-##a[title="Subscribe to our YouTube Channel"]
-##a[title="Subscribe to us on YouTube."]
 ##a[title="Tumblr"]
 ##a[title="Tweet this article"]
 ##a[title="Tweet this"]
@@ -15338,27 +15295,83 @@ _youtube_social_
 ##a[title="Watch our videos on Youtube"]
 ##a[title="Youtube"]
 ##a[title="facebook"]
-##a[title="follow us on Facebok"]
-##a[title="follow us on G+"]
-##a[title="follow us on Google+"]
-##a[title="follow us on Pinterest"]
-##a[title="follow us on Twitter"]
-##a[title="follow us on facebook"]
 ##a[title="linkedin"]
 ##a[title="qq"]
-##a[title="share on Facebook"]
-##a[title="share on Twitter"]
 ##a[title="twitter"]
 ##a[title="ВКонтакте"]
+##a[title^="Add to Facebook"]
+##a[title^="Become a Fan on Facebook!"]
+##a[title^="Become a fan on Facebook"]
+##a[title^="Connect with us on Facebook"]
+##a[title^="Connect with us on Google"]
+##a[title^="Connect with us on Twitter"]
+##a[title^="Connect with us on Youtube"]
+##a[title^="Fan us on Facebook"]
+##a[title^="Find Us on Facebook"]
+##a[title^="Follow Me on Pinterest"]
+##a[title^="Follow Us on Facebook"]
+##a[title^="Follow Us on Google"]
+##a[title^="Follow Us on Pinterest"]
+##a[title^="Follow Us on Youtube"]
+##a[title^="Follow me on  Facebook"]
+##a[title^="Follow on Google Plus"]
+##a[title^="Follow our Boards on Pinterest"]
+##a[title^="Follow us on Facebook!"]
+##a[title^="Follow us on Google Plus"]
+##a[title^="Follow us on Google"]
+##a[title^="Follow us on Houzz"]
+##a[title^="Follow us on Instagram"]
+##a[title^="Follow us on Linked In"]
+##a[title^="Follow us on LinkedIn"]
+##a[title^="Follow us on Pinterest"]
+##a[title^="Follow us on Scoop.it"]
+##a[title^="Follow us on Tumblr"]
+##a[title^="Follow us on twitter"]
+##a[title^="Join Us on Facebook"]
+##a[title^="Join our Twitter army"]
+##a[title^="Join us Facebook"]
+##a[title^="Join us on Facebook"]
+##a[title^="Join us on LinkedIn"]
+##a[title^="Join us on Linkedin"]
+##a[title^="Like us on Facebook"]
+##a[title^="Share a link on Facebook"]
+##a[title^="Share a link on Google"]
+##a[title^="Share a link on Twitter"]
+##a[title^="Share on Google"]
+##a[title^="Share on Pinterest"]
+##a[title^="Share on Reddit"]
+##a[title^="Share on Whatsapp"]
+##a[title^="Share this article"]
+##a[title^="Share this page on Facebook"]
+##a[title^="Share this page on facebook"]
+##a[title^="Share this photo via Flipboard"]
+##a[title^="Share this to Technorati"]
+##a[title^="Share via Twitter"]
+##a[title^="Share via facebook"]
+##a[title^="Subscribe to our YouTube Channel"]
+##a[title^="Subscribe to us on YouTube"]
+##a[title^="follow us on Facebok"]
+##a[title^="follow us on G+"]
+##a[title^="follow us on Google"]
+##a[title^="follow us on Pinterest"]
+##a[title^="follow us on Twitter"]
+##a[title^="follow us on facebook"]
+##a[title^="share on Facebook"]
+##a[title^="share on Twitter"]
 ##button[aria-label="Toggle social share buttons"]
 ##button[title="Share"]
 ##div[button="share"]
+##div[class$="_social_icons_widget"]
 ##div[class^="ArticleShareLinks_"]
 ##div[class^="FooterSocialLinks"]
 ##div[class^="ShareButtons_"]
 ##div[class^="SocialTool"]
+##div[class^="article__shared_bar"]
 ##div[class^="follow-links-"]
 ##div[class^="j-share-"]
+##div[class^="numberShares_"]
+##div[class^="shareBar_"]
+##div[class^="shareButton_"]
 ##div[class^="social_box_post_"]
 ##div[class^="style__socialIcons"]
 ##div[data-jsonurl^="/nfl-assets/data/twitter/"]
@@ -15399,31 +15412,6 @@ _youtube_social_
 ##img[alt="Fan us on facebook"]
 ##img[alt="Find us on Facebook"]
 ##img[alt="Flickr"]
-##img[alt="Follow Me On Twitter!"]
-##img[alt="Follow Me on Pinterest"]
-##img[alt="Follow Us On FaceBook"]
-##img[alt="Follow Us On Twitter"]
-##img[alt="Follow Us on Facebook"]
-##img[alt="Follow Us on Pinterest"]
-##img[alt="Follow Us on Twitter"]
-##img[alt="Follow on Bloglovin"]
-##img[alt="Follow updates via Twitter"]
-##img[alt="Follow us at Twitter"]
-##img[alt="Follow us at Youtube"]
-##img[alt="Follow us on Facebook!"]
-##img[alt="Follow us on Facebook"]
-##img[alt="Follow us on Google Plus!"]
-##img[alt="Follow us on Google Plus"]
-##img[alt="Follow us on Google+"]
-##img[alt="Follow us on LinkedIn"]
-##img[alt="Follow us on Pinterest"]
-##img[alt="Follow us on Twitter!"]
-##img[alt="Follow us on Twitter"]
-##img[alt="Follow us on YouTube"]
-##img[alt="Follow us to FacBook.com"]
-##img[alt="Follow us to StumbleUpon.com"]
-##img[alt="Follow us to Twitter.com"]
-##img[alt="Follow us to Youtube.com"]
 ##img[alt="Google +"]
 ##img[alt="Google+"]
 ##img[alt="Google-plus"]
@@ -15438,23 +15426,6 @@ _youtube_social_
 ##img[alt="Linkedin"]
 ##img[alt="Pinterest"]
 ##img[alt="Reddit"]
-##img[alt="Share This"]
-##img[alt="Share on Delicious"]
-##img[alt="Share on Digg"]
-##img[alt="Share on Facebook"]
-##img[alt="Share on Google Plus"]
-##img[alt="Share on Google+"]
-##img[alt="Share on MySpace"]
-##img[alt="Share on Reddit"]
-##img[alt="Share on StumbleUpon"]
-##img[alt="Share on Twitter"]
-##img[alt="Share on Weibo"]
-##img[alt="Share this page on Facebook"]
-##img[alt="Share this to Delicious"]
-##img[alt="Share this to Yahoo"]
-##img[alt="Share this"]
-##img[alt="Share with LinkedIn"]
-##img[alt="Share/Bookmark"]
 ##img[alt="Social Buttons"]
 ##img[alt="SocialTwist Tell-a-Friend"]
 ##img[alt="Stay connected on Twitter"]
@@ -15492,6 +15463,45 @@ _youtube_social_
 ##img[alt="share on Reddit"]
 ##img[alt="submit to reddit"]
 ##img[alt="twitter"]
+##img[alt^="Follow Me On Twitter!"]
+##img[alt^="Follow Me on Pinterest"]
+##img[alt^="Follow Us On FaceBook"]
+##img[alt^="Follow Us On Twitter"]
+##img[alt^="Follow Us on Facebook"]
+##img[alt^="Follow Us on Pinterest"]
+##img[alt^="Follow Us on Twitter"]
+##img[alt^="Follow on Bloglovin"]
+##img[alt^="Follow updates via Twitter"]
+##img[alt^="Follow us at Twitter"]
+##img[alt^="Follow us at Youtube"]
+##img[alt^="Follow us on Facebook"]
+##img[alt^="Follow us on Google Plus"]
+##img[alt^="Follow us on Google+"]
+##img[alt^="Follow us on LinkedIn"]
+##img[alt^="Follow us on Pinterest"]
+##img[alt^="Follow us on Twitter"]
+##img[alt^="Follow us on YouTube"]
+##img[alt^="Follow us to FacBook.com"]
+##img[alt^="Follow us to StumbleUpon.com"]
+##img[alt^="Follow us to Twitter.com"]
+##img[alt^="Follow us to Youtube.com"]
+##img[alt^="Share This"]
+##img[alt^="Share on Delicious"]
+##img[alt^="Share on Digg"]
+##img[alt^="Share on Facebook"]
+##img[alt^="Share on Google Plus"]
+##img[alt^="Share on Google+"]
+##img[alt^="Share on MySpace"]
+##img[alt^="Share on Reddit"]
+##img[alt^="Share on StumbleUpon"]
+##img[alt^="Share on Twitter"]
+##img[alt^="Share on Weibo"]
+##img[alt^="Share this page on Facebook"]
+##img[alt^="Share this to Delicious"]
+##img[alt^="Share this to Yahoo"]
+##img[alt^="Share this"]
+##img[alt^="Share with LinkedIn"]
+##img[alt^="Share/Bookmark"]
 ##img[title="Connect with us on Google+"]
 ##img[title="Facebook"]
 ##img[title="Find us on Google+"]
@@ -15837,6 +15847,7 @@ _youtube_social_
 /altClickToSearch.
 /app-banner/*$xmlhttprequest
 /arscode-ninja-popups/*$~stylesheet
+/at_newsletter.
 /back-to-top.
 /back_to_top.
 /backtotop.
@@ -15983,6 +15994,7 @@ _youtube_social_
 /navicon_feeds.
 /newsgator.gif
 /newsletter-app.
+/newsletter-box-
 /newsletter-forms.
 /newsletter-hover/*
 /newsletter-icon.
@@ -15992,6 +16004,8 @@ _youtube_social_
 /newsletter-promo-
 /newsletter-signup.
 /newsletter-subscription-
+/newsletter_arrow.
+/newsletter_icona.
 /newsletterbutton.
 /newslettericon2.
 /newslettersignup.
@@ -16091,6 +16105,7 @@ _youtube_social_
 /sailthru/*
 /sc_rss.
 /scroll-top-and-bottom/*
+/scrolltotop/*
 /sendtofriend.gif
 /share-email.
 /sharebar.
@@ -16196,6 +16211,7 @@ _subscribe_button
 /accept-cookie.
 /accept-cookies.
 /acceptCookies.
+/agreeCookie.
 /alertcookie.
 /alertcookies.
 /amCookieApproval.
@@ -16399,6 +16415,7 @@ _subscribe_button
 /cookiewarning.
 /cookiewarning?
 /cookiewet.
+/disagreeCookie.
 /divascookies_
 /dotbandeaucookie/*
 /ecookie_check/*
@@ -16647,6 +16664,7 @@ _site_cookie_
 ###mvp-prev-next-wrap
 ###my_web_push_app_box_confirm
 ###network_floaty_icons
+###newsletter-banner-bottom
 ###newsletter-form-holder
 ###newsletter-popup-left
 ###newsletter-signup-form
@@ -16772,10 +16790,12 @@ _site_cookie_
 ###taboola-widget-wrapper
 ###taboola_wrapper
 ###thehill-blocks-signup-form
+###titolo-newsletter
 ###toolboxDiv1
 ###top_social_rss
 ###topjobssidebar
 ###tw_ico
+###uatu-recommendations
 ###unb-bar
 ###upprev_box
 ###uservoice-feedback
@@ -17938,6 +17958,7 @@ _site_cookie_
 ##.footer-subscribe
 ##.footer__newsletter
 ##.footer__newsletter-form
+##.footer__subscribe
 ##.footer_box_newsletter
 ##.footer_form_newsletter
 ##.footer_subscribe
@@ -17964,6 +17985,8 @@ _site_cookie_
 ##.header__social--email
 ##.hp-wdt-newsltr
 ##.hz-newsletter
+##.ibnewsletter-embedded
+##.ibnewsletter-popup
 ##.ibnewsletter-wrapper
 ##.ic-alert-email-newsletter-signup
 ##.icoNewsletterBig
@@ -18407,6 +18430,8 @@ _site_cookie_
 ##.wwd-subscribe-now-banner-background
 ##.yt-mailchimp-subscription-form-widget
 ##div[class*="NewsletterSubscribe_"]
+##div[class^="NewsletterForm_"]
+##div[class^="NewsletterPopup_"]
 ##img[title="Subscribe to our daily email"]
 ! nlgate Newsletter
 ###nlgate
@@ -22718,6 +22743,7 @@ _site_cookie_
 ##.CNIL
 ##.COOKIECONSENT_BANDEAU
 ##.COOKIENOTICE
+##.COOKIE_BOX
 ##.COOKIE_PRIVACY_CONT
 ##.COOKIE_USAGE_ACCEPT
 ##.CTcookie-container
@@ -23694,6 +23720,7 @@ _site_cookie_
 ##.cookieCnilCustom
 ##.cookieCnilMakheia
 ##.cookieCompliance
+##.cookieCon
 ##.cookieConcent
 ##.cookieConfirmation
 ##.cookieConsent
@@ -24583,6 +24610,7 @@ _site_cookie_
 ##.gb-gnb__notice-bar
 ##.gb_g.gb_rc.gb_sc
 ##.gdl-cookie-dialog
+##.gdpr-privacy-banner
 ##.general-cookie-notification
 ##.ghost-cookiebar
 ##.gigyaNotify
@@ -25520,6 +25548,7 @@ _site_cookie_
 ##cookiless-div
 ##div[class*="cookieBarContainer"]
 ##div[class^="cookie-banner"]
+##div[class^="cookiesAlert_"]
 ##div[data-automation="cookies-banner"]
 ##div[data-component="cookie-policy"]
 ##div[data-container-acceptcookies]
@@ -25738,6 +25767,7 @@ _site_cookie_
 ##.footer__nav-to-top
 ##.g1-back-to-top
 ##.g1-back-to-top-on
+##.gantry-totop-wrapper
 ##.generate-back-to-top
 ##.glyphicon-arrow-up
 ##.go-to-top
@@ -25781,6 +25811,7 @@ _site_cookie_
 ##.qc-back-to-top
 ##.rh-footer-back-to-top
 ##.rlx-back-top
+##.rtp-back-to-top
 ##.s5_scrolltotop
 ##.scroll-back-to-top-wrapper
 ##.scroll-to-top
@@ -25790,6 +25821,8 @@ _site_cookie_
 ##.scroll-top
 ##.scroll-top-inner
 ##.scroll-top-wrapper
+##.scroll-up-button
+##.scroll-up-button-wrapper
 ##.scroll2top
 ##.scrollToTop
 ##.scrollToTopButton
@@ -25807,6 +25840,8 @@ _site_cookie_
 ##.slideToTop
 ##.sm-page-scroll-to-top
 ##.sticky-back-to-top
+##.stt-gototop
+##.stt-top
 ##.sublink_back_top
 ##.td-scroll-up
 ##.tdr-backtop
@@ -25856,11 +25891,13 @@ _site_cookie_
 ##a[title="Scroll to Top"]
 ##a[title="Scroll to top"]
 ##a[title="Torna su"]
+##button[class^="footer_to_top_"]
 ##button[title="Back to the top of this page"]
 ##button[title="Go to top"]
 ##div[title="Back to Top"]
 ##div[title="Scroll Back to Top"]
 ##div[title="Scroll To Top"]
+##div[title="Scroll to Top"]
 ##div[title="Scroll to bottom of page"]
 ##div[title="Vai in cima"]
 ##img[alt="Scroll to top"]
@@ -26174,6 +26211,7 @@ _site_cookie_
 ||screenpopper.com^$third-party
 ||scribol.com^$third-party
 ||scripts.mailfire.io^$third-party
+||scrolltotop.com^$third-party
 ||secretrune.com^$third-party
 ||sendpulse.com^$third-party
 ||senzari.com^$third-party
@@ -26234,6 +26272,7 @@ _site_cookie_
 ||vrp.outbrain.com^$third-party
 ||vrt.outbrain.com^$third-party
 ||wahwahnetworks.com^$third-party
+||webpu.sh^$third-party
 ||weebly.com/*_signup.php$third-party
 ||weworkremotely.com^$third-party
 ||widget.adviceiq.com^$third-party
@@ -26260,6 +26299,7 @@ _site_cookie_
 ||wonderpush.com^$third-party
 ||woobox.com^$third-party
 ||ws.audioscrobbler.com^$third-party,domain=~last.fm|~lastfm.de|~lastfm.ru|~play.google.com|~spotify.com
+||xtremepush.com^$third-party
 ||yimg.com/uq/syndication/
 ||youappi.com/widget/$third-party
 ||youtube.com/v/*autoplay$third-party,domain=7chan.org|boards.4chan.org
@@ -26702,7 +26742,7 @@ belgafiles.com,dakine.com,linkedin.com,way2sms.com#@#.share-box
 bitly.com,framestr.com#@#.share-btn
 kcrw.com,vimeo.com#@#.share-button
 bandcamp.com,bleacherreport.com,distractify.com,thedodo.com#@#.share-buttons
-analyticsindiamag.com,awarenessact.com,bbcccnn.com.ua,chatsports.com,comicbook.com,dogs-magazin.de,gamerisle.org,gen-pop.com,gfycat.com,livetheorganicdream.com,popsugar.com,popsugar.com.au,professorshouse.com,sensationrock.net#@#.share-container
+analyticsindiamag.com,awarenessact.com,bbcccnn.com.ua,chatsports.com,comicbook.com,dogs-magazin.de,foodtank.com,gamerisle.org,gen-pop.com,gfycat.com,livetheorganicdream.com,popsugar.com,popsugar.com.au,professorshouse.com,sensationrock.net#@#.share-container
 mediafire.com#@#.share-facebook
 bild.de#@#.share-fb
 alwaysdata.net#@#.share-group
@@ -26765,7 +26805,7 @@ gry-online.pl#@#.social-16
 dallascowboys.com,golem.de,patriots.com,top.de#@#.social-bar
 funnyordie.com#@#.social-bar-container
 wat.tv#@#.social-block
-chillitorun.pl#@#.social-bottom
+chillitorun.pl,rta24.eu#@#.social-bottom
 bitbucket.org,foodit.com,paypal.com,tvspielfilm.de#@#.social-box
 buzzerie.com,gog.com,poradnikprzedsiebiorcy.pl,udemy.com#@#.social-btn
 chess.com#@#.social-btns
@@ -26926,14 +26966,14 @@ allestörungen.de,encyclopediadramatica.se,flattr.com,github.com,github.io,googl
 aliexpress.com,github.com,github.io,wikipedia.org#@#a[title="facebook"]
 smugmug.com#@#button[title="Share"]
 digg.com#@#div[id^="digg-widget-"]
-a2zapk.com,clubbingtv.com,disqus.com,eff.org,facebook.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,hockeyapp.net,incgamers.com,last.fm,lastfm.com.br,lastfm.com.tr,lastfm.de,lastfm.es,lastfm.fr,lastfm.it,lastfm.jp,lastfm.pl,lastfm.ru,lastfm.se,ludins.fr,maxthon.com,microsoft.com,opendatacity.de,playboy.com,sky.com,t3n.de,thoughtcatalog.com,twitter.com,udacity.com,vvhp.net,whatthetech.com,wikipedia.org#@#img[alt="Facebook"]
+a2zapk.com,authy.com,clubbingtv.com,disqus.com,eff.org,facebook.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,heise.de,hockeyapp.net,incgamers.com,last.fm,lastfm.com.br,lastfm.com.tr,lastfm.de,lastfm.es,lastfm.fr,lastfm.it,lastfm.jp,lastfm.pl,lastfm.ru,lastfm.se,ludins.fr,maxthon.com,microsoft.com,opendatacity.de,playboy.com,sky.com,t3n.de,thoughtcatalog.com,twitter.com,udacity.com,vvhp.net,whatthetech.com,wikipedia.org#@#img[alt="Facebook"]
 github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,vvhp.net,wikipedia.org,xkcd.com,youtube.com#@#img[alt="Google+"]
 a2zapk.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,vvhp.net,whatculture.com,wikipedia.org#@#img[alt="Instagram"]
 a2zapk.com,eff.org,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,linkedin.com,wikipedia.org#@#img[alt="LinkedIn"]
 clubbingtv.com#@#img[alt="Linkedin"]
 authy.com,breakoutlist.com,eff.org,facebook.com,github.com,github.io,google.co.nz,google.co.uk,google.com,google.com.au,google.de,microsoft.com,rantlifestyle.com,wikipedia.org#@#img[alt="Pinterest"]
 acceptableads.org,battleforthenet.com,breakoutlist.com,easyicon.net,github.com,github.io,microsoft.com,rantlifestyle.com,wikipedia.org#@#img[alt="Reddit"]
-a2zapk.com,battleforthenet.com,breakoutlist.com,clubbingtv.com,disqus.com,eff.org,github.com,github.io,gitlab.com,google.co.nz,google.co.uk,google.com,google.com.au,google.de,hackerone.com,incgamers.com,maxthon.com,microsoft.com,opendatacity.de,thoughtcatalog.com,twitter.com,vvhp.net,whatculture.com,whatthetech.com,wikipedia.org#@#img[alt="Twitter"]
+a2zapk.com,authy.com,battleforthenet.com,breakoutlist.com,clubbingtv.com,disqus.com,eff.org,github.com,github.io,gitlab.com,google.co.nz,google.co.uk,google.com,google.com.au,google.de,hackerone.com,incgamers.com,maxthon.com,microsoft.com,opendatacity.de,thoughtcatalog.com,twitter.com,vvhp.net,whatculture.com,whatthetech.com,wikipedia.org#@#img[alt="Twitter"]
 github.com,mezzacotta.net,theverge.com,twitter.com,wikipedia.org#@#img[alt="Vine"]
 a2zapk.com,github.com,maxthon.com,opendatacity.de,whatculture.com,wikipedia.org#@#img[alt="Youtube"]
 facebook.com,github.com,github.io,megabus.com,theguardian.com,uservoice.com,wikipedia.org#@#img[alt="facebook"]
@@ -27418,6 +27458,7 @@ fark.com,github.com,github.io,marketplace.firefox.com,vvhp.net,wikipedia.org#@#i
 @@||syndication.twitter.com/tweets.json?*&callback=$script
 @@||syndication.twitter.com/tweets.json?callback=$script
 @@||t3n.de/news/wp-content/uploads/*/social_media_
+@@||tabletowo.pl/wp-content/uploads/$image
 @@||techfrag.com/wp-content/uploads/*/youtube-$image
 @@||techspot.com/images/login-$image
 @@||tegna-tv.com^*/googleplus-user-account.js

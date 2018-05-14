@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: entKifofcfpzgfiyrgaDYA
-! Version: 20180508
+! Checksum: UTbSGMqdo6s63yAEEbRZ7w
+! Version: 20180512
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -62,7 +62,7 @@
 ##iframe[src^="//ad.vkoad.com/showads.php"]
 ##iframe[src^="//adclickservice.com"]
 ##iframe[src^="//ads.acrosspf.com/adinfo.ad"]
-##iframe[src^="//ads.acrosspf.com/opf/original.html"]
+##iframe[src^="//ads.acrosspf.com/opf/"]
 ##iframe[src^="//ads.exdynsrv.com/iframe.php"]
 ##iframe[src^="//ads.exoclick.com/iframe.php"]
 ##iframe[src^="//adspaces.ero-advertising.com/banads/view.php"]
@@ -178,6 +178,7 @@
 ##iframe[src^="http://joy-adstore.co.kr/ad/"]
 ##iframe[src^="http://js.hnscom.com/etc/hns/hnsIframe_"][src$=".html"]
 ##iframe[src^="http://jtpress.kr/ShareMaxBanner"][src*=".php"]
+##iframe[src^="http://kn.acrosspf.com/delivery.ad"]
 ##iframe[src^="http://life.chosun.com/dhtm//rightBner.html"]
 ##iframe[src^="http://longkeyone.co.kr/"]
 ##iframe[src^="http://m.11st.co.kr/MW/html/allianceAd/"]
@@ -390,6 +391,7 @@
 ||adexview.neoebiz.co.kr^
 ||adexview.new-star.co.kr^
 ||adf.acrosspf.com/adifr/
+||adf.acrosspf.com/js/acrossadx.js^
 ||adf.send.microad.jp^
 ||adfarm.mediaplex.com/ad/js/
 ||adg.bzgint.com/pub/adg/config.js^
@@ -423,7 +425,7 @@
 ||ads-optima.com/www/delivery/ajs.php^
 ||ads.acrosspf.com/adinfo.ad^
 ||ads.acrosspf.com/js/acrossadx.js^
-||ads.acrosspf.com/opf/original.html^
+||ads.acrosspf.com/opf/
 ||ads.ad7942.co.kr/adx/data/NAONMP6060.js^
 ||ads.adjust-net.jp/adserver/ad/ads.js^
 ||ads.adjust-net.jp/adserver/ads^
@@ -664,7 +666,7 @@
 ||cdn04.sndkorea.co.kr^
 ||cdn1.smartadserver.com/diff/*/smartadasmi.js^
 ||cdnjs.cloudflare.com/ajax/libs/lazyad-loader/*/lazyad-loader.min.js^
-||cdnprism.pandora.tv/_adv_img/prism_ad/
+||cdnprism.pandora.tv/_adv_img/prism_ad/$domain=~news1.kr
 ||cdnprisms.pandora.tv/_adv_img/prism_ad/
 ||celeb.nann.co.kr^
 ||cine21.com/misc/iframe/ad_netinsight/$domain=cine21.com
@@ -899,6 +901,7 @@
 ||img.asiatoday.co.kr/adver/
 ||img.dt.co.kr/unse/
 ||img.luukku.com/st/static/javascripts/external-js/ad-layout/$domain=luukku.com
+||img.newspim.com/banner/$domain=newspim.com
 ||img.sbs.co.kr/news/ad/delay_redirect_mobile.html^
 ||img.sportsseoul.com/ad/
 ||img.tvchosun.com/test/ad/$domain=news.tvchosun.com
@@ -963,6 +966,7 @@
 ||keyword.ad4989.co.kr^
 ||khan.co.kr/ad/
 ||kmib.co.kr/cp/realclick/
+||kn.acrosspf.com/delivery.ad^
 ||kookje.co.kr/news2011/sephtml/main_mediclub6.htm^$domain=kookje.co.kr
 ||kookje.co.kr/service/banner/$domain=kookje.co.kr
 ||koreadaily.com/_ui/ad/$domain=koreadaily.com
@@ -1019,6 +1023,7 @@
 ||m.zbn.donga.com/banner/ad_cauly_hotnews.asp^$domain=m.zbn.donga.com
 ||m1.daumcdn.net/adtc/js/mobilead.js^
 ||mainclc.com/*/*/*/*.js^
+||marketingking.co.kr/pr/ad.js^
 ||maxmovie.com/banner/img/lotte630x88.jpg^
 ||mbn.mk.co.kr/pages/ad/
 ||medi8.genieesspv.jp/yie/ld/jsk^
@@ -2868,6 +2873,7 @@ m.sportschosun.com##div[itemprop="articleBody"]>div[style="width:210px;height:20
 m.sportschosun.com##iframe[src^="news_text_ad01.htm"]
 m.sportsseoul.com##div#ad_61
 m.sportsseoul.com##div#ad_area_03
+m.sportsseoul.com##div#article-ad-area
 m.sportsseoul.com##div#container>div[style="background-color:#fff; width:100%;"]
 m.sportsseoul.com##div#container>div[style="margin-top:5px;background-color:#fff; width:100%;"]
 m.sportsseoul.com##div#container>div[style="margin-top:5px;background-color:#fff; width:100%;height:110px;overflow:hidden;"]
@@ -3095,6 +3101,9 @@ moneyweek.co.kr##div#adsentop
 moneyweek.co.kr##div#aside>div.ad_banner
 moneyweek.co.kr##div.related>div[style="position:absolute; top:0; right:0px; width:200px; height:200px;"]
 mosen.mt.co.kr##div[id^="adList"]
+moviedang.com##div#popup
+moviedang.com##div#side_ads
+moviedang.com##div#side_ads_bottom_right
 mp3cc.com##div#footerBanner
 mp3cc.com##div#headerBanner
 mp3cc.com##div#stickyblock
@@ -3300,7 +3309,10 @@ news.nate.com##div.socialAD
 news.nate.com##iframe#AdCommerce
 news.nate.com##iframe#AdShopSearch
 news.nate.com##iframe#socialAD
+news.naver.com##div#doubleDA
+news.naver.com##div#rightDoubleDA
 news.naver.com##div.article_body>table[align="right"][border="0"][cellpadding="0"][cellspacing="0"][width="307"]
+news.naver.com##div.rightBottomDouble
 news.sbs.co.kr##div#all_vod_banner
 news.sbs.co.kr##div#sn_banner_article_bottom
 news.sbs.co.kr##div#sn_banner_side_bottom
@@ -3364,13 +3376,9 @@ newsis.com##iframe[src^="/ad/view_banner.html"]
 newsis.com##li#detail2-11
 newsis.com##span#header_left_ad
 newsis.com##span#header_right_ad
-newspim.com##body>div[style="position:absolute; top:170px; z-index:1000; margin-left:500px; left:50%;"]
-newspim.com##body>div[style="position:absolute; top:180px; z-index:1000; margin-left:-620px; left:50%;"]
-newspim.com##body>div[style="position:absolute; top:780px; z-index:1000; margin-left:500px; left:50%;"]
-newspim.com##body>div[style="width:120px; height:600px;position:absolute; top:790px; z-index:1000; margin-left:-620px; left:50%;"]
-newspim.com##div#newscenter_wrap2>div[style="width:300px; height:250px; margin-left:25px; float:left;"]
-newspim.com##div#newscenter_wrap2>div[style="width:300px; height:250px; margin-right:25px; float:right;"]
-newspim.com##div#topview_allwrap>div[style="text-align:center; float:left; width:100%;"]
+newspim.com##aside.side_wrap>div[style="width:300px; height:128px; background-color:#777; color:#fff; margin-bottom:10px"]
+newspim.com##aside.side_wrap>div[style="width:300px; height:200px; background-color:#777; color:#fff; margin-bottom:10px"]
+newspim.com##div.bodynews>div[style="margin-bottom: 20px; border: 1px solid white; text-align: center;"]
 newsway.co.kr##div.ad
 newsway.co.kr##div[itemprop="articleBody"]>div[style="width:250px; height:250px;float:right; margin:5px 5px 0;"]
 newsway.co.kr##ul.text_ad
@@ -3708,8 +3716,13 @@ sportsseoul.com##div#ad_read_top
 sportsseoul.com##div#article_viewWrap>div[id^="ad_"]
 sportsseoul.com##div#article_viewWrap>div[style="width:100%;height:90px;"]
 sportsseoul.com##div#aside>div[id^="ad_"]
+sportsseoul.com##div#aside>div[style="height:250px;"]
+sportsseoul.com##div#aside>div[style="padding:0;width:248px;height:248px;"]
 sportsseoul.com##div#pop_ad
+sportsseoul.com##div#selectionWrap>div[style="width:740px;margin-bottom:10px;"]
 sportsseoul.com##div#vod_banner
+sportsseoul.com##div.article_newsWrap>div[style="position: relative; height: 90px; overflow: hidden; display: block;"]
+sportsseoul.com##div.article_newsWrap>div[style="position: relative; height: 90px; overflow: hidden;"]
 sportsseoul.com##div.mask_div
 spotvnews.co.kr##p.adcontrol41_box
 ssundays7.tistory.com##div.article>div[style="TEXT-ALIGN: center"]
