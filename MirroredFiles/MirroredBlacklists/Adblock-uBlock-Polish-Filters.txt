@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 13 May 2018
+! Last modified: 15 May 2018
 ! Expires: 1 day
-! Version: 2018051301
+! Version: 2018051502
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018051301 aktualizacja: nie, 13 maja 2018, 14:35:00
+! v.2018051502 aktualizacja: wt, 15 maja 2018, 13:45:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -147,7 +147,7 @@ vshare.io###sendif
 ##[class^="sponsorowany"]
 ##.cookemessagecloseico
 ##div#skapiec_ad
-~docer.pl,pl##[id*="ad-container"]
+~zaq2.pl,~docer.pl,pl##[id*="ad-container"]
 ~fakt.pl,pl##.trizer-bnr
 ##.footer-ad
 ###goback
@@ -249,7 +249,7 @@ popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 ~wirtualnemedia.pl,~radekcholewinski.pl,~github.com##A[href$="/reklama"]
 /wp-content/uploads/*/baner$image,domain=lubanski.eu|miastoiludzie.pl|eksmagazyn.pl|infokatowice.pl|mma.pl|tvwlodawa.pl
 ~wtkplay.pl,~epoznan.pl,pl##[class^="advertisement"]
-~wuxiaworld.com,~uzywane.com,~przegladsportowy.pl,~crunchyroll.com,~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,~filmweb.pl,pl##[class^="ad-"]
+~kbb.com,~wuxiaworld.com,~uzywane.com,~przegladsportowy.pl,~crunchyroll.com,~nationalgeographic.com,~wpolityce.pl,~box.com,~hardcorowo.pl,~gumtree.com,~hulu.com,com,~filmweb.pl,pl##[class^="ad-"]
 ##.zalando-ad
 ##.zalando-placeholder
 ~zso53.pl,~katywroclawskie.pl,~rozklad-pkp.pl,~gwarant.czest.pl,~sukniaonline.pl##[src*="/banners/banner"]
@@ -1974,7 +1974,7 @@ prv.pl###prvAliasFrame2:style(height:calc(100vh - 10px)!important;)
 przedszkola.edu.pl##.sidebar__widget:nth-of-type(2)
 przegladkoninski.pl##[id*="advertise"]
 przegladoponiarski.pl##.banners
-przegladpiaseczynski.pl###Mod134, #Mod137, #Mod138, #Mod140, #Mod141, #Mod142, #Mod1433
+przegladpiaseczynski.pl###Mod134, #Mod137, #Mod138, #Mod140, #Mod141, #Mod142, #Mod143
 przegladsportowy.pl##A > .lazy:last-child
 przegladsportowy.pl##[id$="_ARTICLE_TOP"]
 przegladsportowy.pl###region-item20927
@@ -3285,7 +3285,6 @@ zywiecinfo.pl##.promoted
 @@||everafterhigh.com/Static/js/ga-script.js$script
 @@||exs.pl^$domain=wpolityce.pl|wio.waw.pl
 @@||fakt.pl^$generichide
-@@||gemius.pl^$domain=www.gemius.pl
 @@||google-analytics.com$domain=certyficate.it|liptonicetea.com|filmweb.pl|shinden.pl
 @@||googletagmanager.com/gtag/$script,domain=certyficate.it
 @@||googletagmanager.com/gtm.js$script,domain=www.emag.pl|benchmark.pl
@@ -3574,6 +3573,7 @@ zw.pl###abpnotzw
 @@||vod.pl^$generichide
 @@||webcamera.pl^$generichide
 @@||webshark.pl/adserver/*advertise_check=1$script,domain=vider.info
+@@||webshark.pl/adsrv/*main.js$script,domain=zaq2.pl
 @@||wpimg.pl/*/wpjslib-prebid.js$script
 @@||wp.pl/do/*/dotn$image,domain=pilot.wp.pl
 @@||wtkplay.pl/javascript/ads.js$script
@@ -3840,7 +3840,7 @@ wp.tv##.y9xe8qn
 !32#--------------------------WP element block------------!
 ||i.wp.pl/*/stg/wpjslib-nojq.js$script,domain=www.dobreprogramy.pl
 ||v.wpimg.pl/$image,domain=money.pl|open.fm|autokult.pl
-||v.wpimg.pl/$media,redirect=noopmp3-0.1s,domain=wp.pl|~www.wp.pl|autokult.pl|parenting.pl|echirurgia.pl|money.pl
+||v.wpimg.pl/$media,redirect=noopmp3-0.1s,domain=wp.pl|~www.wp.pl|autokult.pl|parenting.pl|echirurgia.pl|money.pl|o2.pl|portal.abczdrowie.pl
 ||wpkoszyk.wp.pl/api/koszyk$xmlhttprequest
 ||xml.enovatis.pl/mrdsl/json.php$xmlhttprequest,domain=turystyka.wp.pl
 !
