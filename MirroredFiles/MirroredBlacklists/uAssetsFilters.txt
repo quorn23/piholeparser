@@ -2225,14 +2225,13 @@ mcloud.to###jwa
 ! https://github.com/jspenguin2017/uBlockProtector/issues/781
 ! https://github.com/uBlockOrigin/uAssets/issues/2084#issuecomment-385204003
 9anime.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-9anime.*##script:inject(abort-on-property-read.js, BBRaven)
 @@||9anime.*^$generichide
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=9anime.is
 9anime.*###sidebar > .text-center.crop.widget:style(height: 5px !important)
 9anime.*##.myass
 9anime.*##.pa
 9anime.*###playerad
-||9anime.is/*callback
+||9anime.is/$script
 
 ! https://github.com/uBlockOrigin/uAssets/pull/643
 serienstream.to##script:inject(abort-current-inline-script.js, document.readyState, /(?:\\x[0-9a-f]{2}){20}/)
@@ -2405,12 +2404,13 @@ arenabg.ch,yifymovies.to##script:inject(addEventListener-defuser.js, /^(click|mo
 ! https://github.com/uBlockOrigin/uAssets/issues/795
 emty.space,livecamtv.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,realcam.me,realtimetv.me,seelive.me,strikeout.co##script:inject(bab-defuser.js)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+fbstream.io,mlbstream.io,nbastream.io,nflstream.io,rugbystream.me,soccerstream.me,tennisstream.me##script:inject(abort-on-property-write.js, _0x5bed)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(abort-on-property-write.js, adcashMacros)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,vipleague.*##script:inject(abort-on-property-write.js, Fingerprint2)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(nowebrtc.js)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script:inject(popads.net.js)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##a[href^="http://streamsign.me/"]
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##a[href^="http://www.movie4all.co/"]
+fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##a[href*="/www.movie4all.co/"]
+fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,soccerstream.me,strikeout.co,tennisstream.me,vipleague.*##a[href*="/www.top-games.me/"]
 mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co##script:inject(abort-current-inline-script.js, $, uBlock)
 vipleague.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 livecamtv.me,realcam.me,seelive.me##script:inject(abort-on-property-write.js, _pop)
@@ -2418,7 +2418,6 @@ fbstreams.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vi
 livecamtv.me,realcam.me,seelive.me##style + [id][style]
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39344
 mlbstream.io##script:inject(abort-current-inline-script.js, decodeURI, atob)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,rugbystream.me,soccerstream.me,tennisstream.me##script:inject(abort-on-property-write.js, _0x5bed)
 ||amadagasca.com^
 
 ! https://github.com/uBlockOrigin/uAssets/pull/705
@@ -3946,6 +3945,9 @@ jzrputtbut.net,olgkzlwln.net,zbqhfbetlmni.net##script:inject(addEventListener-de
 dwatchseries.to##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 dwatchseries.to##script:inject(abort-on-property-write.js, upManager)
 dwatchseries.to##script:inject(abort-on-property-write.js, decodeURIComponent)
+dwatchseries.to##script:inject(window.open-defuser.js)
+dwatchseries.to##.notify
+dwatchseries.to##.shd_button
 
 ! https://forums.lanik.us/viewtopic.php?p=130030#p130030
 mexashare.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
@@ -5011,7 +5013,7 @@ clicknupload.org##script:inject(abort-current-inline-script.js, String.fromCharC
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=clicknupload.org
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1411
-reevown.com##script:inject(setTimeout-defuser.js, newBody, 1000)
+reevown.com##script:inject(setTimeout-defuser.js, newBody)
 reevown.com##script:inject(bab-defuser.js)
 @@||reevown.com^$generichide
 
@@ -6984,6 +6986,7 @@ animesync.tv##script:inject(abort-current-inline-script.js, document.getElementB
 
 ! https://forums.lanik.us/viewtopic.php?p=135590#p135590
 gnula.nu##script:inject(abort-current-inline-script.js, atob, tabunder)
+gnula.nu##script:inject(abort-current-inline-script.js, decodeURI, zfgloadedpopup)
 gnula.nu##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ||best-cdn.pl^
 ||netflare.info^
@@ -7696,3 +7699,26 @@ coinfaucet.io,freecardano.com,freenem.com##script:inject(nowebrtc.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/2308
 porntopic.com##script:inject(abort-current-inline-script.js, atob, tabunder)
 @@||porntopic.com/player/player_ads.html$subdocument,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2310
+@@||cloudstorageoptions.com^$generichide
+cloudstorageoptions.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/2300
+cbc.ca##script:inject(abort-on-property-write.js, XMLHttpRequest.prototype.realSend)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2311
+pluspremieres.us##script:inject(abort-current-inline-script.js, $, adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2313
+sitioswebmexi.com##script:inject(nano-setInterval-booster.js)
+sitioswebmexi.com##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2312
+@@||coinad.com/ads/show/show.php$subdocument,domain=bitfun.co|moonbitcoin.cash
+@@||mellowads.com/view/*$subdocument,domain=bitfun.co|moonbitcoin.cash
+bitfun.co,moonbitcoin.cash###flexContentAdFrame:style(visibility: collapse !important)
+moonbitcoin.cash###slideIn
+
+! https://github.com/uBlockOrigin/uAssets/issues/2316
+@@||dcurbanmom.com/ads.js$script,first-party
