@@ -99,9 +99,6 @@ deviantart.com##.dp-ad-chrome.dp-ad-visible
 jeu.info###page [class^="banniere-"]
 hentaifr.net,jeu.info,tuxboard.com,xstory-fr.com##script:inject(goyavelab-defuser.js)
 
-# This prevents spurious redirections
-washingtonpost.com##script:inject(wpredirect-defuser.js)
-
 # uabInject-related ads
 ! https://github.com/gorhill/uBlock/issues/1044#issuecomment-163725136
 ! https://github.com/uBlockOrigin/uAssets/issues/209
@@ -479,6 +476,8 @@ al.ly,ally.sh##[id^=aswift]
 @@||ops.prismamediadigital.com/js/advertisement.js$xmlhttprequest,domain=programme-tv.net
 
 ! https://www.reddit.com/r/dataisbeautiful/comments/4t4d16/chart_shows_why_pharma_companies_are_fighting/d5ejqc0
+! https://github.com/uBlockOrigin/uAssets/issues/2317
+washingtonpost.com##script:inject(abort-current-inline-script.js, InstallTrigger, _0x)
 washingtonpost.com##html:style(height: initial !important; overflow: auto !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/357
@@ -2600,6 +2599,7 @@ onitube.com###MGWrap130103
 ! https://forums.lanik.us/viewtopic.php?p=129416#p129416
 onitube.com##script:inject(abort-on-property-read.js, miner)
 onitube.com##script:inject(setTimeout-defuser.js, newBody)
+finalservers.net##script:inject(setInterval-defuser.js, visibility, 1000)
 /cdn-cgi/pe/bag2?r[]=*.mgid.com
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38653
@@ -5209,7 +5209,7 @@ adshort.pro##script:inject(popads.net.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1497
 ! https://github.com/uBlockOrigin/uAssets/issues/1521
 ! https://github.com/uBlockOrigin/uAssets/issues/1731
-123link.co,123link.io,123link.press,123link.top,22o.co,3rabshort.*,adbilty.me,adbull.me,adcoin.me,adlinkme.com,admove.co,adpop.me,adshort.co,adshort.im,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bilink.xyz,bit-url.com,bitcoadz.pw,btc.ms,cimi.website,coin.mg,coinb.ink,coinlink.co,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-earn.com,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,lkky.co,madurls.com,megaurl.in,met.bz,meulink.tk,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,psl.*,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,shst.co,so.gd,teqani-plus.com,tny.ec,twik.pw,u2s.io,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,vivads.net,wi.cr,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##script:inject(nano-setInterval-booster.js)
+123link.co,123link.io,123link.press,123link.top,22o.co,3rabshort.*,adbilty.me,adbull.me,adcoin.me,adlinkme.com,admove.co,adshort.co,adshort.im,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bilink.xyz,bit-url.com,bitcoadz.pw,btc.ms,cimi.website,coin.mg,coinb.ink,coinlink.co,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-earn.com,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,lkky.co,madurls.com,megaurl.in,met.bz,meulink.tk,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,psl.*,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,shst.co,so.gd,teqani-plus.com,tny.ec,twik.pw,u2s.io,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,vivads.net,wi.cr,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##script:inject(nano-setInterval-booster.js)
 globalbesthosting.com,goldescargas.com,katfile.com,shortify.pw,srt.am,userupload.net##script:inject(nano-setTimeout-booster.js)
 imgrock.info##script:inject(nano-setTimeout-booster.js, /.?/, 4000)
 ! https://github.com/uBlockOrigin/uAssets/issues/1481
@@ -5957,8 +5957,10 @@ ziurim.eu##script:inject(abort-current-inline-script.js, decodeURI, decodeURICom
 img.yt##script:inject(abort-on-property-read.js, ExoLoader)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/883
+! https://github.com/jspenguin2017/uBlockProtector/issues/940
 ccbluex.net##script:inject(nano-setTimeout-booster.js)
 ccbluex.net##script:inject(set-constant.js, adsBool, true)
+ccbluex.net##script:inject(set-constant.js, passed, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1708
 thewebflash.com##script:inject(setTimeout-defuser.js, Adblock, 20)
@@ -7722,3 +7724,33 @@ moonbitcoin.cash###slideIn
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2316
 @@||dcurbanmom.com/ads.js$script,first-party
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40798
+! https://forums.lanik.us/viewtopic.php?f=62&t=40799
+yify-torrent.xyz,ytsyify.com##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2319
+!#if !env_firefox
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=segodnya.ua
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=segodnya.ua
+!#endif
+
+! https://github.com/uBlockOrigin/uAssets/issues/2320
+freemcserver.net##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2322
+up-4.net##script:inject(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2323
+royurls.bid##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+royurls.bid##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2324
+shorterlink.trade##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+shorterlink.trade##script:inject(nano-setInterval-booster.js)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40809
+@@||getfreesmsnumber.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2325
+@@||cdn-surfline.com/*/ads.js$script,domain=surfline.com
