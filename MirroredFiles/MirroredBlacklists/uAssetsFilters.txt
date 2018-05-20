@@ -864,11 +864,6 @@ animmex.*##script:inject(bab-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/234
 dictionary.com,thesaurus.com##script:inject(abort-on-property-write.js, _sp_)
 
-! https://forums.lanik.us/viewtopic.php?f=62&t=32886
-! https://github.com/reek/anti-adblock-killer/issues/4032
-dallasnews.com##script:inject(setTimeout-defuser.js, j(), 3000)
-||npttech.com/advertising.js$important,script,redirect=noopjs,domain=dallasnews.com
-
 ! https://www.reddit.com/r/technology/comments/53olb5/users_lash_out_as_adblock_plus_opens_the_door_to/
 livemint.com###div_storyContent:style(display: block !important;)
 livemint.com###div_adblock
@@ -5016,6 +5011,7 @@ clicknupload.org##script:inject(abort-current-inline-script.js, String.fromCharC
 reevown.com##script:inject(setTimeout-defuser.js, newBody)
 reevown.com##script:inject(bab-defuser.js)
 @@||reevown.com^$generichide
+@@||reevown.com^$script,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1412
 shaanig.se##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -6517,7 +6513,8 @@ vipserversat.*###fbox-background
 vipserversat.com###open-fb
 
 ! https://www.reddit.com/r/Buffalo/comments/89dzra/buffalo_news_paywall_x2/dwqze26/
-buffalonews.com##script:inject(set-constant.js, mab, true)
+! https://github.com/uBlockOrigin/uAssets/issues/2330
+@@||api.bntech.io^$script,domain=buffalonews.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1890
 momondo.com##script:inject(window.open-defuser.js)
@@ -7661,10 +7658,11 @@ poedb.tw##script:inject(abort-current-inline-script.js, document.getElementById,
 uploadkadeh.com##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2283
-@@||stream.cr$stylesheet,domain=stream.cr
-@@||stream.cr/$script,first-party
-@@||gomovies.technology/adServe/$domain=stream.cr
-@@||search.stream.cr/core/adServe/banners/iFBanners.js$xmlhttprequest,domain=stream.cr
+@@/adserve-$domain=stream.cr|gomovies.technology
+@@/adServe/*$domain=stream.cr|gomovies.technology
+@@||stream.cr^$subdocument,domain=stream.cr
+@@||streamcr.com/ad*/$xmlhttprequest,domain=search.stream.cr
+search.stream.cr###iFrameResizer0
 
 ! https://github.com/NanoAdblocker/NanoCore/issues/166
 cine.to##script:inject(abort-on-property-read.js, _0x68fb)
@@ -7751,6 +7749,28 @@ shorterlink.trade##script:inject(nano-setInterval-booster.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40809
 @@||getfreesmsnumber.com^$generichide
+@@||smslisten.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2325
 @@||cdn-surfline.com/*/ads.js$script,domain=surfline.com
+
+! popups http://assia.tv/live/betsport/?lang=rs
+assia.tv##script:inject(set-constant.js, ClickUnder, noopFunc)
+
+! http://cricfree.sc/update/skysportsmix.php (using webtv.ws server) popups
+webtv.ws##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2327
+dallasnews.com##script:inject(setTimeout-defuser.js, initializeCourier, 3000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2328
+comment-tech.com##script:inject(abort-on-property-read.js, anOptions)
+*/mts_ad_sense/*$script
+
+! https://github.com/uBlockOrigin/uAssets/issues/2329
+nulledteam.com##script:inject(setInterval-defuser.js, visibility, 1000)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40812
+turbobit.net##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+turbobit.net##script:inject(abort-on-property-read.js, open)
+turbobit.net##script:inject(popads-dummy.js)
