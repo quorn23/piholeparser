@@ -240,7 +240,7 @@ kisscartoon.*##script:inject(setInterval-defuser.js, (), 500)
 
 # https://forums.lanik.us/viewtopic.php?f=64&t=27908
 # https://github.com/gorhill/uBlock/issues/1354
-animes-mangas-ddl.com,automobile-catalog.com,best-movies.info,bnonews.com,crazymeds.us,d-h.st,hulkusc.com,ip-address.org,lustich.de,macappdownload.com,megapanda.net,nplay.com,playlivenewz.com,sadeempc.com,upload.so,uploadshub.com,userscdn.com,yourvideohost.com##script:inject(bab-defuser.js)
+androidaba.com,animes-mangas-ddl.com,automobile-catalog.com,best-movies.info,bnonews.com,crazymeds.us,d-h.st,davinsurance.com,futeboltv.com,hulkusc.com,ip-address.org,lustich.de,macappdownload.com,megapanda.net,mixtapemonkey.com,nplay.com,playlivenewz.com,reqlinks.net,sadeempc.com,streamlord.com,studylecturenotes.com,teachertube.com,upload.so,uploadshub.com,userscdn.com,yourvideohost.com##script:inject(bab-defuser.js)
 
 # https://adblockplus.org/forum/viewtopic.php?f=2&t=41860
 filmstreaming-hd.com,gaara-fr.com,gaytube.com,gum-gum-streaming.com,hentaifr.net,hentaihaven.org,narutoshippudenvf.com,thebadbuzz.com,tuxboard.com,xstory-fr.com##script:inject(phenv-defuser.js)
@@ -2226,6 +2226,7 @@ mcloud.to###jwa
 9anime.*##.pa
 9anime.*###playerad
 ||9anime.is/$script
+9anime.*##script:inject(setTimeout-defuser.js, (), undefined)
 
 ! https://github.com/uBlockOrigin/uAssets/pull/643
 serienstream.to##script:inject(abort-current-inline-script.js, document.readyState, /(?:\\x[0-9a-f]{2}){20}/)
@@ -2687,8 +2688,9 @@ wired.com##script:inject(setTimeout-defuser.js, Bait)
 wired.com##.sponsored-stories-component
 ! wired.com: more EasyList's exception filters to counter
 ||doubleclick.net^$important,script,domain=wired.com
-wired.com##.advertisement__leaderboard
 wired.com##[id^="cns_ads_"]
+wired.com##[class^=adv]
+wired.com##.failsafe-desktop
 
 ! https://github.com/uBlockOrigin/uAssets/issues/790
 androidrepublic.org##script:inject(bab-defuser.js)
@@ -4032,13 +4034,14 @@ r4dm.com##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1154
 @@||biography.com^$generichide
-@@||mssl.fwmrm.net/p/aetn_live/AdManager.js$script,domain=player.watch.aetnd.com
-@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=player.watch.aetnd.com
+||amazon-adsystem.com/*/apstag.js$script,redirect=noopjs,domain=player.biography.com
+||mssl.fwmrm.net/*/AdManager.js$script,redirect=noopjs,domain=player.biography.com
 biography.com##.m-header-ad
 biography.com##.m-sidebar-ad--slot
 biography.com##.m-in-content-ad-row
 biography.com##.m-fixedbottom-ad
 biography.com##.l-content-recommendation
+biography.com#@#.square-advertisment-module-second-column
 
 ! https://twitter.com/tj_fogarty/status/948169965546430464
 limerickleader.ie###abr_purchase_div
@@ -7762,6 +7765,7 @@ webtv.ws##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2327
 dallasnews.com##script:inject(setTimeout-defuser.js, initializeCourier, 3000)
+@@||courier-js.dallasnews.com^$script,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2328
 comment-tech.com##script:inject(abort-on-property-read.js, anOptions)
@@ -7774,3 +7778,16 @@ nulledteam.com##script:inject(setInterval-defuser.js, visibility, 1000)
 turbobit.net##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 turbobit.net##script:inject(abort-on-property-read.js, open)
 turbobit.net##script:inject(popads-dummy.js)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40461
+mangapanda.com##script:inject(abort-on-property-read.js, BBRaven)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/80
+@@||bigspeeds.com/*/advertisement.js$script,first-party
+
+! https://forums.lanik.us/viewtopic.php?p=136716#p136716
+link.tl##script:inject(abort-on-property-read.js, _0xbeb9)
+link.tl##script:inject(nano-setInterval-booster.js, , 1800)
+||link.tl/interstitial/*$subdocument,first-party
+||link.tl/splash/*$script,first-party
+||jetinteraktif.com^$image,domain=link.tl
