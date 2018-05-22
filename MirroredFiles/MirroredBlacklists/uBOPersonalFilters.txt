@@ -1,4 +1,4 @@
-[uBlock Origin 1.16.7.2]
+[uBlock Origin 1.16.7b4]
 ! Title: uBO Personal Filters
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
@@ -325,7 +325,7 @@ howtogeek.com##.social-follows > .top-bar
 |https:$third-party,popup,domain=fmovies.is,badfilter
 infinite-newsfeed
 ||collider.com^$csp=script-src 'self' *.collider.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com
-||comicbook.com^$csp=script-src 'self' *.comicbook.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com
+||comicbook.com^$csp=default-src 'self' *.comicbook.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com fonts.googleapis.com fonts.gstatic.com
 variety.com###leaderboard
 variety.com##.header-utilities
 variety.com##.subscribe-aside
@@ -776,7 +776,7 @@ translate.google.com##.gt-hats
 */advertisement.js$xmlhttprequest,redirect=nooptext,important
 @@/advert.js$script,badfilter
 openload.co##script:inject(eclick.js, #videooverlay)
-kimcartoon.me##script:inject(abort-current-inline-script.js, atob, 00ivc)
+kimcartoon.me,readcomiconline.to##script:inject(abort-current-inline-script.js, atob, 00ivc)
 kimcartoon.me###divComments
 kimcartoon.me###disqus_thread
 kimcartoon.me##div[id*="ScriptRoot"]
@@ -786,7 +786,6 @@ cxresources^$script
 player_ads.html^$important
 mellowads.com^$important
 check.googlezip.net^$other
-9anime.is/*.js$script
 google.com/adsense$important
 ad.foxnetworks.com$important
 ads.twitter.com$important
@@ -796,3 +795,7 @@ adnetasia.com^$important
 bannertrack.net^$important
 ||finalservers.net^$csp=script-src 'self' 'unsafe-eval' *.finalservers.net
 @@/fuckadblock.$script,badfilter
+||twitter.com^$important,third-party,domain=~screenrant.com|~cbr.com|~heroichollywood.com|~collider.com|~movieweb.com|~deadline.com|~comicbook.com|~thewrap.com|~hollywoodreporter.com|~comingsoon.net
+gravatar.com^$important
+gitlab.com##.gke-promo-banner
+||streamango.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.streamango.com *.fruithosted.net cdnjs.cloudflare.com

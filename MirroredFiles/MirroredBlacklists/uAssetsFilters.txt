@@ -2221,12 +2221,12 @@ mcloud.to###jwa
 9anime.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 @@||9anime.*^$generichide
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=9anime.is
-9anime.*###sidebar > .text-center.crop.widget:style(height: 5px !important)
-9anime.*##.myass
-9anime.*##.pa
-9anime.*###playerad
+@@||trends.revcontent.com/serve.js.php$script,domain=9anime.is
+9anime.is##.content > .widget.crop.text-center:style(position: absolute!important; left: -3000px!important;)
+9anime.is##.widget.crop:style(position: absolute!important; left: -3000px!important;)
+9anime.*###sidebar > .text-center.crop.widget:style(height: 6px !important)
 ||9anime.is/$script
-9anime.*##script:inject(setTimeout-defuser.js, (), undefined)
+9anime.*##script:inject(setTimeout-defuser.js, return, 2000)
 
 ! https://github.com/uBlockOrigin/uAssets/pull/643
 serienstream.to##script:inject(abort-current-inline-script.js, document.readyState, /(?:\\x[0-9a-f]{2}){20}/)
@@ -2375,7 +2375,7 @@ watchcartoononline.com##script:inject(setTimeout-defuser.js, Pu.call, 1)
 watchcartoononline.com##^script:has-text(3f87b0eaddd)
 watchcartoononline.com##a[href*="/1.0/go"]
 kimcartoon.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-kimcartoon.*##script:inject(abort-on-property-read.js, BBRaven)
+kimcartoon.*##script:inject(abort-on-property-read.js, Element.prototype.insertAdjacentElement)
 kimcartoon.*##script:inject(abort-on-property-write.js, Fingerprint2)
 kimcartoon.*##script:inject(addEventListener-defuser.js, /^(click|mousedown|mousemove|touchstart|touchend|touchmove)/, system.popunder)
 kimcartoon.*##script:inject(set-constant.js, check_adblock, true)
@@ -5345,7 +5345,7 @@ go4up.com##script:inject(set-constant.js, _0xd348, true)
 readcomiconline.to##^script:has-text(this[atob)
 ||fghtem.com^$xmlhttprequest,redirect=nooptext,domain=readcomiconline.to
 readcomiconline.to##.divCloseBut
-readcomiconline.to##script:inject(abort-on-property-read.js, BBRaven)
+readcomiconline.to##script:inject(abort-on-property-read.js, Element.prototype.insertAdjacentElement)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1526
 arbwarez.com##script:inject(set-constant.js, $tieE3, true)
@@ -6718,12 +6718,13 @@ clipwatching.com##script:inject(set-constant.js, adblock, false)
 updato.com##script:inject(setTimeout-defuser.js, updato-overlay, 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1946
-animeland.tv##script:inject(abort-on-property-read.js, BBRaven)
+animeland.tv##script:inject(abort-on-property-read.js, Element.prototype.insertAdjacentElement)
 animeland.tv##script:inject(nowebrtc.js)
 animeland.tv##^script:has-text(676574456c656d656e747342795461674e616d65)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=animeland.tv
 ! ! adding sites using the same script
-animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##script:inject(abort-on-property-read.js, BBRaven)
+animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,toonget.net,toonova.net##script:inject(abort-on-property-read.js, Element.prototype.insertAdjacentElement)
+mangareader.net##script:inject(abort-on-property-read.js, BBRaven)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1949
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=offidocs.com
@@ -7791,3 +7792,30 @@ link.tl##script:inject(nano-setInterval-booster.js, , 1800)
 ||link.tl/interstitial/*$subdocument,first-party
 ||link.tl/splash/*$script,first-party
 ||jetinteraktif.com^$image,domain=link.tl
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40825
+premiumzen.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+premiumzen.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2335
+nzbstars.com##script:inject(set-constant.js, adsBlocked, noopFunc)
+||nzbstars.com/images/*.gif$image
+
+! https://github.com/uBlockOrigin/uAssets/issues/2336
+@@||geomedia.gala100.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2338
+@@||muhendisimaaslari.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2339
+cash4url.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+cash4url.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2340
+freemegalinks.com##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2342
+frkn64modding.com##script:inject(abort-on-property-read.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2337
+cutsmile.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)

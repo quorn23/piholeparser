@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201805210001
+! Version: 201805220012
 ! Title: EasyPrivacy
-! Last modified: 21 May 2018 00:01 UTC
+! Last modified: 22 May 2018 00:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -485,6 +485,7 @@
 /Analytics.aspx?
 /analytics.bundled.js
 /analytics.compressed.js
+/analytics.config.js
 /analytics.do
 /analytics.gif?
 /analytics.google.js
@@ -516,6 +517,7 @@
 /analytics/hmac-
 /analytics/idg_
 /analytics/js/*
+/analytics/liferay-
 /analytics/mbox.js
 /analytics/mouse_
 /analytics/newrelic_
@@ -724,6 +726,7 @@
 /betamax_tracker.gif?
 /betamax_tracker.js
 /better-analytics/*
+/bf.gif?ac=
 /bg_j.gif?
 /bglog.gif?
 /bh_counter.js
@@ -945,6 +948,7 @@
 /clientlibs/ga.js
 /clientstat?
 /clk?utmwv=
+/cls_report?
 /cls_rpt.gif?
 /cm-xtgreat?
 /cm.gif?
@@ -964,6 +968,7 @@
 /cnt.php?rf=
 /cnt/cnt.php?
 /cnt/start.php?
+/cntlog/*
 /cntpixel.
 /CntRpt.aspx?
 /cnvtr.js
@@ -1111,6 +1116,7 @@
 /data.do?session_
 /data/collect/*$xmlhttprequest
 /datacapture/track
+/datacollectcode?
 /dc-storm-track.
 /dc-storm.js
 /dc-storm/aff.
@@ -1120,6 +1126,7 @@
 /dcstorm-track.
 /dcstorm.js
 /dcstorm/track.
+/dctk.js
 /DecideDNATrackingCode-
 /delivery/lg.
 /delstats/*
@@ -1770,6 +1777,7 @@
 /jquery.trackstar.
 /jquery.unica.
 /JqueryEtracker.
+/js-tag-manager/*
 /js/analitics.
 /js/analitycs_
 /js/analytics.
@@ -1847,6 +1855,7 @@
 /library/svy/broker.js
 /library_analytics.
 /libs/tracker.js
+/liferay-analytics-
 /lingabot.
 /link-tracker-
 /link_track.
@@ -2180,6 +2189,7 @@
 /om_tracking_
 /omega?ad_
 /omega?tceRow_
+/omgpixel.
 /omnidiggthis|
 /omnipagetrack.
 /omniture.do;$image
@@ -2430,6 +2440,7 @@
 /profile_tracker.
 /promo_tracking/*
 /promos/pixels?
+/propagate_cookie.
 /prum.
 /pstats.
 /pt.gif?type=
@@ -2684,6 +2695,7 @@
 /sessioncam.recorder.js
 /sessioncam/*
 /set-cookie.gif?
+/set_cookie.php?
 /set_tracking.js
 /SETCOOKAFF.
 /setcooki.
@@ -2723,6 +2735,7 @@
 /siteAnalytics.
 /siteanalytics_
 /sitecatalist.js
+/sitecatalyst/tracking.
 /sitecounter/counter.
 /sitecrm.js
 /sitecrm2.js
@@ -2810,6 +2823,7 @@
 /stat?SiteID=
 /stat?track=
 /stat_callback.
+/stat_click.
 /stat_js.asp?
 /stat_page.
 /stat_page2.
@@ -3062,7 +3076,7 @@
 /track?name=
 /track?referer=
 /track_clicks_
-/track_event.php?
+/track_event.
 /track_in_overwatch.gif?
 /track_js/?
 /track_metric/*
@@ -3618,6 +3632,7 @@
 /xtrack.png?
 /xtroi.js
 /xy.gif?
+/yad_sortab_cetlog.js
 /yahoo-beacon.js
 /yahoo_marketing.js
 /yahooBeacon.
@@ -7268,6 +7283,7 @@ _mongo_stats/
 ||bigmining.com^$third-party
 ||blogranking.net^$third-party
 ||ca-mpr.jp^$third-party
+||cetlog.jp^$third-party
 ||cosmi.io^$third-party
 ||d-markets.net^$third-party
 ||deteql.net^$third-party
@@ -7912,6 +7928,7 @@ _mongo_stats/
 ||browserscope.org/user/beacon/
 ||bs.yandex.ru^
 ||btn.clickability.com^
+||btrace.video.qq.com^
 ||bufferapp.com/wf/open?upn=$third-party
 ||bumpin.com^*/analytics.html
 ||business.sharedcount.com^$third-party
@@ -8913,6 +8930,7 @@ _mongo_stats/
 ||qlog.adap.tv^$object-subrequest
 ||qos.video.yimg.com^
 ||qq.com/code.cgi?
+||qq.com/collect?
 ||qq.com/dataimport/
 ||qq.com/heatmap/
 ||qq.com/ping.js?
@@ -9369,6 +9387,7 @@ _mongo_stats/
 ||trafficfuelpixel.s3-us-west-2.amazonaws.com^
 ||trakksocial.googlecode.com^$third-party
 ||traq.li/tracker/
+||travel-assets.com/datacapture/
 ||travpan.com/out/$third-party
 ||trax.dirxion.com^
 ||tredir.go.com/capmon/GetDE?$third-party
@@ -10635,6 +10654,7 @@ _mongo_stats/
 ||cd.musicmass.com^
 ||cdnstats.tube8.com^
 ||cellstores.com/tracking/
+||cem.hotelsapi.io^
 ||cert.org/images/1pxinv.gif
 ||cfr.org/js/ga.*js
 ||cgi.nch.com.au^*&referrer
@@ -10702,6 +10722,7 @@ _mongo_stats/
 ||collector.githubapp.com^
 ||collector.ksax.com^
 ||collector.kstptv5.com^
+||collector.prod.expedia.com^
 ||collector.shopstream.co^
 ||collector.shorte.st^
 ||collector.statowl.com^
@@ -11141,6 +11162,7 @@ _mongo_stats/
 ||howtogeek.com/public/stats.php
 ||hp.com^*/bootstrap/metrics.js
 ||hrblock.com/includes/pixel/
+||hrum.hotelsapi.io^
 ||hsn.com/code/pix.aspx
 ||hubpages.com/c/*.gif?
 ||huffingtonpost.*/vanity/?
@@ -11274,6 +11296,8 @@ _mongo_stats/
 ||justanswer.com/browsercheck/
 ||justanswer.com/ja_services/processes/log.asmx/
 ||kalahari.net/includes/swatag.js
+||kayak.*/gtm/
+||kayak.*/px/
 ||kayak.com/k/redirect/tracking?
 ||kelkoo.co.uk/kk_track?
 ||kelkoo.co.uk^*/tracker/
@@ -12267,6 +12291,7 @@ _mongo_stats/
 ||tinyupload.com^*/ct_adkontekst.js
 ||tivo.com/__ssobj/track?
 ||tk.kargo.com^
+||tkpi.delta.com^
 ||tmagazine.com/js/track_
 ||tools.ranker.com^
 ||top.wn.com^
@@ -13242,7 +13267,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||js.soufunimg.com/count/
 ||jscss.kdslife.com/club/html/count/PChome_Count.js
 ||ku6.com/ku6.gif?
-||l.qq.com^
+||l.qq.com^$~object-subrequest,~xmlhttprequest
 ||le.com/op/
 ||letv.com/op?
 ||log*.ku6.com^
@@ -13326,6 +13351,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 ||tinglog.baidu.com^
 ||titan24.com/scripts/stats.js
 ||tmall.com/add?
+||tongji.mafengwo.cn^
 ||tongji2.vip.duba.net/__infoc.gif?
 ||top.baidu.com/js/nsclick.js
 ||toutiao.com^*/user_log/
@@ -14787,6 +14813,7 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||google-analytics.com/analytics.js$domain=tv3play.no
 ! Polish
 @@||adobedtm.com^*/satelliteLib-$script,domain=laredoute.pl
+@@||akamaized.net^*/tracking/ninja.js$domain=olx.pl
 @@||gemius.pl/gstream.js
 @@||kropka.onet.pl^*/onet.js$domain=tvnwarszawa.pl
 @@||login.ingbank.pl^*/satelliteLib-$script
@@ -14878,4 +14905,4 @@ $xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: UzJHlhIpy6X2wfsR3pxSrA
+! Checksum: TRqADMQNQbfZ6hjFBnybNA
