@@ -20,13 +20,13 @@ ____________________________________
 ## Attempting Creation Of Mirror File
 ## Parsing List
 ### Removing Comments
-62333 Lines After Removing Comments
+62371 Lines After Removing Comments
 ### Removing Content Filtering
-62332 Lines After Removing Content Filtering
+62370 Lines After Removing Content Filtering
 ### Trimming HOSTS Format IP Addresses
-62332 Lines After Trimming HOSTS Format IP Addresses
+62370 Lines After Trimming HOSTS Format IP Addresses
 ### Removing Empty Space
-58086 Lines After Removing Empty Space
+58116 Lines After Removing Empty Space
 ### Removing Invalid FQDN Characters
 938 Lines After Removing Invalid FQDN Characters
 ### Converting All Text To Lower Case

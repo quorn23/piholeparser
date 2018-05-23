@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: zBjheeIZJlQ6oyqhL8benA
-! Version: 201805220030
+! Checksum: A8KqHoZ7XaJU6X9kw4sYNA
+! Version: 201805230030
 ! Title: RU AdList: BitBlock
-! Last modified: 22 May 2018 00:30 UTC
+! Last modified: 23 May 2018 00:30 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -2919,6 +2919,7 @@ prom.ua#@#img[alt="facebook"]
 /context-social.
 /crowdbooster-
 /crowdbooster_
+/css/social-
 /custom-share.
 /customSocialBar/*$~stylesheet
 /data/twitter/*
@@ -4280,6 +4281,7 @@ prom.ua#@#img[alt="facebook"]
 /social-google.
 /social-header.
 /social-icon-$~font
+/social-icon.
 /social-icon/*
 /social-icons-
 /social-icons.
@@ -5054,6 +5056,7 @@ _slideshare.
 _small_share.
 _sns_me2day.
 _sns_twitter.
+_soc_rss.
 _social-google+
 _social-media_
 _social-sprite.
@@ -5509,6 +5512,7 @@ _youtube_social_
 ###ctSocialShare
 ###ctl00_DescriptionBlock_lblTwitter
 ###ctl00_GoogleLink
+###ctl00_cphMainContent_ContentBloc_ctl00_pnlSocialShare
 ###ctl00_ctl00_ConMainBody_ConMainBody_Share1_socialSharing
 ###ctl00_facebookLink
 ###ctl00_linkedinLink
@@ -6249,6 +6253,7 @@ _youtube_social_
 ###mobile-share-boxbottom
 ###mobile-share-button
 ###mobile-social
+###mobileShare
 ###mobileShareBottom
 ###mobileShareTop
 ###mod-socialhub
@@ -7763,6 +7768,7 @@ _youtube_social_
 ##.SocialMediaShareButton
 ##.SocialNetwork
 ##.SocialPluginsWidget
+##.SocialRibbon
 ##.SocialRing_Widget
 ##.SocialRow
 ##.SocialSection
@@ -10188,6 +10194,7 @@ _youtube_social_
 ##.hf--twitter
 ##.hh-facebook
 ##.hh-googleplus
+##.hh-social-links
 ##.hh-socialmedia
 ##.hh-twitter
 ##.hidden-nav-share
@@ -10270,6 +10277,7 @@ _youtube_social_
 ##.ic_socials
 ##.ic_tw
 ##.ic_twitter
+##.icf--share
 ##.icn-addthis
 ##.icn-facebook
 ##.icn-fb
@@ -11264,6 +11272,7 @@ _youtube_social_
 ##.momizat-twitter
 ##.moreShare
 ##.moreShareIcons
+##.more_btn_soc
 ##.moretweetsmsg
 ##.motherboard-widget-social
 ##.motogpSocial
@@ -11420,6 +11429,7 @@ _youtube_social_
 ##.nw-sharing-buttons
 ##.nw-social-container
 ##.nypr-social-icons
+##.o-HeaderFresh__m-SocialLinks
 ##.o-Header__m-SocialLinks
 ##.o-PinterestEmbed
 ##.o-btn--share
@@ -11747,6 +11757,8 @@ _youtube_social_
 ##.rawhtml_twitter_widget
 ##.rc-fb-widget
 ##.rcshare
+##.rd_mobile_social
+##.rd_social_container
 ##.rde-share-popup
 ##.rdsocial
 ##.rdy_share
@@ -11932,6 +11944,7 @@ _youtube_social_
 ##.sfollow_fb
 ##.sfollow_tw
 ##.sg-facebook-btn
+##.sg-social
 ##.sg-twitter-btn
 ##.sg-twitter-share
 ##.sh-btn-fb
@@ -13665,6 +13678,7 @@ _youtube_social_
 ##.socialShare
 ##.socialShareBar
 ##.socialShareButtons-container
+##.socialShareFooter
 ##.socialShareLinks
 ##.socialSharing
 ##.socialSharingBar
@@ -14233,6 +14247,7 @@ _youtube_social_
 ##.stumbleupon_icon
 ##.stumbleuponwidth
 ##.stwitter
+##.subShare
 ##.sub_buzz_share
 ##.sub_fb
 ##.sub_gplus
@@ -14717,6 +14732,7 @@ _youtube_social_
 ##.unspoken-getconnected
 ##.up-next--share
 ##.uplayer-social-button-container
+##.upperpanel__social
 ##.upsell-facebook
 ##.uptl_container-share
 ##.us-footer__social
@@ -15137,6 +15153,7 @@ _youtube_social_
 ##SHARE-BUTTON
 ##SOCIAL-SHARING
 ##TWITTER-SHARE-BUTTON
+##[alt="Like us on Facebook"]
 ##[alt="retweet"]
 ##[class*="socialLink"]
 ##[class*="socialSection"]
@@ -16045,6 +16062,7 @@ _youtube_social_
 /mailchimp-iframe/*
 /mobile-welcome-overlay/*$script
 /mobile_top_icon.
+/modal-newsletter.
 /modals/newsletters/*
 /modules/sharetools/*$script
 /myyahoo.gif
@@ -16165,6 +16183,7 @@ _youtube_social_
 /sailthru/*
 /sc_rss.
 /scroll-top-and-bottom/*
+/scroll_top.
 /scrolltotop/*
 /sendtofriend.gif
 /share-email.
@@ -16192,10 +16211,12 @@ _youtube_social_
 /surveyShower.
 /taboola-iframe/*
 /taboola.js
+/taboola_header.
 /tapatalkdetect.
 /tellafriend32.
 /template/rss_
 /thedaywefightback.js
+/toaster-newsletter.
 /transparent-pixel.
 /upnext.js
 /upprev.js
@@ -16361,6 +16382,7 @@ _subscribe_button
 /cookie_notification-
 /cookie_notifier/*
 /cookie_policy.
+/cookie_policy/*
 /cookie_policy_
 /cookie_solution/*
 /cookie_sticky_
@@ -16729,6 +16751,7 @@ _site_cookie_
 ###mvp-prev-next-wrap
 ###my_web_push_app_box_confirm
 ###network_floaty_icons
+###newsLetterSignUp
 ###newsletter-banner-bottom
 ###newsletter-form-holder
 ###newsletter-popup-left
@@ -17079,6 +17102,7 @@ _site_cookie_
 ##.newsletter-popup-wrapper
 ##.newsletter-popups
 ##.newsletter-right-col
+##.newsletter-signup-content-widget
 ##.newsletter-signup-link
 ##.newsletter-sticky
 ##.newsletter-subscription-module
@@ -22452,6 +22476,7 @@ _site_cookie_
 ###sfh-cookies-info
 ###sg-cookies-wrapper-outside
 ###sgCookiesPolicyBar
+###sg_cookie_consent_message
 ###sgs_cookie
 ###shop-cookie
 ###shopillaxcookielaw-wrapper
@@ -25621,6 +25646,7 @@ _site_cookie_
 ##cookies-popup
 ##cookiless-div
 ##div[class*="cookieBarContainer"]
+##div[class^="CookieBanner-"]
 ##div[class^="cookie-banner"]
 ##div[class^="cookiesAlert_"]
 ##div[data-automation="cookies-banner"]
@@ -25707,6 +25733,7 @@ _site_cookie_
 ###backtotoplink
 ###bktotopbtn
 ###bt-scroll-top
+###btn-back-top
 ###btn-scroll-up
 ###button-to-top
 ###category-page-back-to-top
@@ -25862,8 +25889,10 @@ _site_cookie_
 ##.go_up
 ##.goto-top
 ##.goto-top-container
+##.gotop_btn
 ##.gototop
 ##.goup-container
+##.hh-button-scroll-top__wrapper
 ##.icon-back-to-top
 ##.ins-backtotop
 ##.is-totop
@@ -25958,6 +25987,7 @@ _site_cookie_
 ##[app="back-to-top-button"]
 ##a[class^="bd-backtotop-"]
 ##a[data-bind="toTopButton"]
+##a[data-scroll-to-anchor="top"]
 ##a[href="#back-to-top"]
 ##a[href="#top-of-page"]
 ##a[onclick="go_on_top();"]
