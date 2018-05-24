@@ -2223,8 +2223,9 @@ mcloud.to###jwa
 9anime.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 @@||9anime.*^$generichide
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=9anime.is
-@@||trends.revcontent.com/serve.js.php$script,domain=9anime.is
-9anime.is##.rc-item-wrapper
+@@||trends.revcontent.com/serve.js.php$script,domain=9anime.is|9anime.ru
+9anime.*#@#.rc-item-wrapper
+9anime.*##.rc-item-wrapper:style(visibility: collapse !important)
 9anime.*###sidebar > .text-center.crop.widget:style(height: 6px !important)
 ||9anime.is/$script
 9anime.*##script:inject(setTimeout-defuser.js, return, 2000)
@@ -7658,6 +7659,7 @@ uploadkadeh.com##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2283
 ! https://github.com/uBlockOrigin/uAssets/issues/2349
+search.stream.cr##script:inject(abort-current-inline-script.js, $, _0x)
 stream.cr##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 ||search.stream.cr/core/webfonts.js$script
 ||mycdn.co^$third-party
@@ -7849,3 +7851,21 @@ yfilmy.sk##[href*="/PartnerRedirectAction.do"]
 ! https://forums.lanik.us/viewtopic.php?f=62&t=35089#p131529
 arabloads.net##script:inject(abort-current-inline-script.js, atob, tabunder)
 arabloads.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+
+! https://forums.lanik.us/viewtopic.php?f=96&t=40712
+@@||accordo.it/js/advert.js$first-party
+accordo.it###bglink
+||assets.accordo.it/cloud-assets/x/sfondi/
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40849
+mkvcage.ws##script:inject(abort-on-property-read.js, encodeURIComponent)
+
+! https://github.com/uBlockOrigin/uBlock-issues/issues/48
+kino-hd1080.ru##script:inject(abort-on-property-read.js, performance)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/79
+bitcoinspinner.io##script:inject(bab-defuser.js)
+@@||bitcoinspinner.io/themes/*/ads.js$xmlhttprequest,first-party
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8lmjam/please_help_me_bypass_the_adblock_detection_on/
+dreamdth.com##script:inject(set-constant.js, adBlockDetected, false)
