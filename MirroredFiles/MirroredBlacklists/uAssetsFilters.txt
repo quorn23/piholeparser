@@ -237,6 +237,8 @@ kisscartoon.*##script:inject(noeval.js)
 kisscartoon.*##script:inject(setInterval-defuser.js, (), 500)
 ! https://forums.lanik.us/viewtopic.php?p=119974#p119974
 @@||kisscartoon.*^$script,first-party
+! https://github.com/uBlockOrigin/uAssets/issues/2363
+kisscartoon.*###upgrade_pop
 
 # https://forums.lanik.us/viewtopic.php?f=64&t=27908
 # https://github.com/gorhill/uBlock/issues/1354
@@ -479,6 +481,7 @@ al.ly,ally.sh##[id^=aswift]
 ! https://github.com/uBlockOrigin/uAssets/issues/2317
 washingtonpost.com##script:inject(abort-current-inline-script.js, InstallTrigger, _0x)
 washingtonpost.com##html:style(height: initial !important; overflow: auto !important;)
+washingtonpost.com##.adblocker-root
 
 ! https://github.com/uBlockOrigin/uAssets/issues/357
 yandex.*##.serp-item:if(:scope > div.organic div.organic__subtitle:matches-css-after(content: /[Рр]еклама/))
@@ -1125,6 +1128,8 @@ hackintosh.computer,hackintosh.zone##script:inject(addEventListener-defuser.js, 
 ||googlesyndication.com^$script,important,redirect=noopjs,domain=hackintosh.computer|hackintosh.zone
 ||amazon-adsystem.com^$script,redirect=noopjs,domain=hackintosh.computer|hackintosh.zone
 ||pubmatic.com^$script,redirect=noopjs,domain=hackintosh.computer|hackintosh.zone
+@@||google-analytics.com/analytics.js$script,domain=hackintosh.zone
+@@||googletagmanager.com/gtag/js$script,domain=hackintosh.zone
 
 ! As of 2016-12-04, spotted use on http://www.vox.com/
 ! `0emn.com` belongs to Google Inc., created in October.
@@ -1471,7 +1476,7 @@ bicycling.com,menshealth.com,prevention.com,rodalesorganiclife.com,runnersworld.
 ! https://github.com/uBlockOrigin/uAssets/issues/618#issuecomment-333248119
 ! https://forums.lanik.us/viewtopic.php?p=117475#p117475
 ! https://github.com/uBlockOrigin/uAssets/issues/852
-androidcentral.com,crackberry.com,imore.com,windowscentral.com##script:inject(abort-current-inline-script.js, setTimeout, admrl)
+androidcentral.com,crackberry.com,imore.com,windowscentral.com##script:inject(abort-current-inline-script.js, Date.now, adBlocker)
 ||doubleclick.net^$script,redirect=noopjs,domain=androidcentral.com|crackberry.com|imore.com|windowscentral.com
 ||androidcentral.com/sites/androidcentral.com/files/advagg_js/$script,badfilter
 ||crackberry.com/sites/crackberry.com/files/advagg_js/$script,badfilter
@@ -1481,7 +1486,7 @@ androidcentral.com,crackberry.com,imore.com,windowscentral.com##script:inject(ab
 ! https://www.wilderssecurity.com/threads/ublock-a-lean-and-fast-blocker.365273/page-107#post-2668597
 ! https://www.wilderssecurity.com/threads/ublock-a-lean-and-fast-blocker.365273/page-126#post-2719661
 ! https://github.com/uBlockOrigin/uAssets/issues/1493
-thewindowsclub.com##script:inject(abort-current-inline-script.js, setTimeout, admrl)
+thewindowsclub.com##script:inject(abort-current-inline-script.js, Date.now, adBlocker)
 @@||google.com/*/search/*$script,domain=thewindowsclub.com
 
 ! https://www.wilderssecurity.com/threads/ublock-a-lean-and-fast-blocker.365273/page-107#post-2668814
@@ -2962,7 +2967,7 @@ srt.am##script:inject(abort-on-property-read.js, RunAds)
 srt.am##script:inject(abort-on-property-write.js, _pop)
 srt.am##script:inject(abort-on-property-write.js, Fingerprint2)
 ! AdFly
-activeation.com,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,bitigee.com,bluenik.com,brisktopia.com,casualient.com,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##script:inject(adfly-defuser.js)
+activeation.com,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,bitigee.com,bluenik.com,brisktopia.com,casualient.com,clearload.bid,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##script:inject(adfly-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1009#issuecomment-352160776
 ! https://github.com/jspenguin2017/uBlockProtector/issues/791
 ! https://github.com/jspenguin2017/uBlockProtector/issues/792
@@ -7700,6 +7705,7 @@ medbooksvn.donlot.in##[src$=".gif"]
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40787
 coinfaucet.io##script:inject(abort-current-inline-script.js, atob, tabunder)
 coinfaucet.io,freecardano.com,freenem.com##script:inject(nowebrtc.js)
+coinfaucet.io##script:inject(abort-current-inline-script.js, decodeURI, zfgloadedpopup)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2308
 porntopic.com##script:inject(abort-current-inline-script.js, atob, tabunder)
@@ -7869,3 +7875,30 @@ bitcoinspinner.io##script:inject(bab-defuser.js)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8lmjam/please_help_me_bypass_the_adblock_detection_on/
 dreamdth.com##script:inject(set-constant.js, adBlockDetected, false)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40852
+seatguru.com##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2358
+javcare.com##script:inject(setTimeout-defuser.js, (), 7000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2359
+vixenless.com##script:inject(abort-current-inline-script.js, azar, redirect)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2361
+megaxtreme.net,zoogirls.org##script:inject(abort-on-property-write.js, Fingerprint2)
+megaxtreme.net##script:inject(abort-current-inline-script.js, clickObject, redirect)
+zoogirls.org##script:inject(bab-defuser.js)
+zoogirls.org##script:inject(noeval.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2362
+camwhores.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+camwhores.tv##script:inject(abort-on-property-read.js, _wm)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2364
+bestialitytaboo.tv,bestialitysextaboo.com,mujeresdesnudas.club##script:inject(abort-current-inline-script.js, $, azar)
+bestialitysexanimals.com,bestialporn.com,mujeresdesnudas.club,mynakedwife.video##script:inject(abort-on-property-read.js, open)
+videoszoofiliahd.com##script:inject(addEventListener-defuser.js, mousedown, popunder)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2365
+fapdig.com##script:inject(popads-dummy.js)
