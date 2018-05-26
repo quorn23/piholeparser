@@ -122,6 +122,8 @@ ovh.strim.io#@##tweets
 # https://github.com/chrisaljoudi/uBlock/issues/602
 # To counter `/ads.css` in EasyList
 @@||css.washingtonpost.com/*/ads.css$stylesheet,~third-party
+! https://github.com/uBlockOrigin/uAssets/issues/2317#issuecomment-391911664
+@@||washingtonpost.com/wp-stat/analytics/*.js$script,domain=subscribe.washingtonpost.com
 
 # https://twitter.com/yo_0/status/559748330390323200
 # To counter `||clickbank.com^` in Dan Pollock's, Peter Lowe's
@@ -1135,3 +1137,14 @@ avclub.com,deadspin.com,earther.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.
 ! https://github.com/uBlockOrigin/uAssets/issues/2357
 @@||pandora.com/web-version/*_comscore.$script,first-party
 @@||pandora.com/web-version/*_googleAnalytics.$script,first-party
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=40856
+@@||static.criteo.net/js/ld/ld.js$script,domain=coches.net
+
+! https://www.reddit.com/r/belgium/comments/8lv8uw/anyone_else_experiencing_issues_on_vrt_websites/
+@@||cdn.vuplay.co.uk/stats/*/AppMeasurement.js$script,domain=vrt.be
+@@||cdn.vuplay.co.uk/stats/*/VisitorAPI.js$script,domain=vrt.be
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=40478
+@@||flightapi.travix.com/flight$xmlhttprequest,domain=cheaptickets.nl|vayama.com
+
