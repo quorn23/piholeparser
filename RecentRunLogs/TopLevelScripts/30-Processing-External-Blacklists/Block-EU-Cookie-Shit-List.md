@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Block-EU-Cookie-Shit-List List Marked As Dead. Sun May 27 00:55:50 UTC 2018

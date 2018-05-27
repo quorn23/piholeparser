@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Adblock-YouTube-Ads List Marked As Dead. Sun May 27 00:42:17 UTC 2018

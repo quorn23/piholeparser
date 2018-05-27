@@ -13,31 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-### Removing Comments
-12611 Lines After Removing Comments
-### Removing Content Filtering
-12611 Lines After Removing Content Filtering
-### Trimming HOSTS Format IP Addresses
-12611 Lines After Trimming HOSTS Format IP Addresses
-### Removing Empty Space
-12611 Lines After Removing Empty Space
-### Removing Invalid FQDN Characters
-12611 Lines After Removing Invalid FQDN Characters
-### Converting All Text To Lower Case
-12611 Lines After Converting All Text To Lower Case
-### Checking For Fully Qualified Domain Name Requirements
-12611 Lines After Checking For Fully Qualified Domain Name Requirements
-### Reverse Searching For Invalid Top Level Domains
-12611 Lines After Reverse Searching For Invalid Top Level Domains
-### Removing Duplicate Lines
-12611 Lines After Removing Duplicate Lines
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars
+* NoTrack-Blocklist List Marked As Dead. Sun May 27 02:06:16 UTC 2018

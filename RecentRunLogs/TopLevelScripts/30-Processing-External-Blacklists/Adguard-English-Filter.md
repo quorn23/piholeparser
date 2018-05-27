@@ -13,31 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-### Removing Comments
-62549 Lines After Removing Comments
-### Removing Content Filtering
-62548 Lines After Removing Content Filtering
-### Trimming HOSTS Format IP Addresses
-62548 Lines After Trimming HOSTS Format IP Addresses
-### Removing Empty Space
-58274 Lines After Removing Empty Space
-### Removing Invalid FQDN Characters
-938 Lines After Removing Invalid FQDN Characters
-### Converting All Text To Lower Case
-938 Lines After Converting All Text To Lower Case
-### Checking For Fully Qualified Domain Name Requirements
-1 Lines After Checking For Fully Qualified Domain Name Requirements
-### Reverse Searching For Invalid Top Level Domains
-1 Lines After Reverse Searching For Invalid Top Level Domains
-### Removing Duplicate Lines
-1 Lines After Removing Duplicate Lines
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars
+* Adguard-English-Filter List Marked As Dead. Sun May 27 00:44:59 UTC 2018

@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Greek-AdBlock-Filter List Marked As Dead. Sun May 27 01:36:28 UTC 2018

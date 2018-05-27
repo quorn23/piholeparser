@@ -13,31 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-### Removing Comments
-142110 Lines After Removing Comments
-### Removing Content Filtering
-142110 Lines After Removing Content Filtering
-### Trimming HOSTS Format IP Addresses
-142110 Lines After Trimming HOSTS Format IP Addresses
-### Removing Empty Space
-142110 Lines After Removing Empty Space
-### Removing Invalid FQDN Characters
-79439 Lines After Removing Invalid FQDN Characters
-### Converting All Text To Lower Case
-79439 Lines After Converting All Text To Lower Case
-### Checking For Fully Qualified Domain Name Requirements
-79415 Lines After Checking For Fully Qualified Domain Name Requirements
-### Reverse Searching For Invalid Top Level Domains
-76509 Lines After Reverse Searching For Invalid Top Level Domains
-### Removing Duplicate Lines
-76509 Lines After Removing Duplicate Lines
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars
+* JoeWein List Marked As Dead. Sun May 27 01:45:57 UTC 2018

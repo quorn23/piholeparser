@@ -13,31 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
-## Determining Download Attempt
-## Attempting To Download List
-## Checking File Size
-## Attempting Creation Of Mirror File
-## Parsing List
-### Removing Comments
-5783 Lines After Removing Comments
-### Removing Content Filtering
-5782 Lines After Removing Content Filtering
-### Trimming HOSTS Format IP Addresses
-5782 Lines After Trimming HOSTS Format IP Addresses
-### Removing Empty Space
-2441 Lines After Removing Empty Space
-### Removing Invalid FQDN Characters
-88 Lines After Removing Invalid FQDN Characters
-### Converting All Text To Lower Case
-88 Lines After Converting All Text To Lower Case
-### Checking For Fully Qualified Domain Name Requirements
-86 Lines After Checking For Fully Qualified Domain Name Requirements
-### Reverse Searching For Invalid Top Level Domains
-86 Lines After Reverse Searching For Invalid Top Level Domains
-### Removing Duplicate Lines
-86 Lines After Removing Duplicate Lines
-## Checking Parsed File Size
-## Attempting Creation Of Parsed List
-## Calculating Parse Time
-## Clearing Temp Vars
+* uAssetsFilters List Marked As Dead. Sun May 27 03:11:17 UTC 2018

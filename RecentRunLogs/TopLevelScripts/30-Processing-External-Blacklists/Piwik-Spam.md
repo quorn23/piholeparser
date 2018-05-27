@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Piwik-Spam List Marked As Dead. Sun May 27 02:11:41 UTC 2018

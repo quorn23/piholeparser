@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Michael-Trimms-Hosts List Marked As Dead. Sun May 27 02:02:12 UTC 2018

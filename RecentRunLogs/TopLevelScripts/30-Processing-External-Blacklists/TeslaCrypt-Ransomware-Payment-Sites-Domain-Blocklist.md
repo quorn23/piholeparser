@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* TeslaCrypt-Ransomware-Payment-Sites-Domain-Blocklist List Marked As Dead. Sun May 27 02:50:58 UTC 2018
