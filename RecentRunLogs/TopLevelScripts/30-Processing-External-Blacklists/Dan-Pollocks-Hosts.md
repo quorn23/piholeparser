@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Dan-Pollocks-Hosts List Marked As Dead. Sun May 27 01:09:22 UTC 2018
+* Dan-Pollocks-Hosts List Already Marked As Dead. Mon May 28 01:20:57 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Dan-Pollocks-Hosts List Was An Empty File After Download. Mon May 28 01:21:17 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Dan-Pollocks-Hosts List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 01:21:17 UTC 2018

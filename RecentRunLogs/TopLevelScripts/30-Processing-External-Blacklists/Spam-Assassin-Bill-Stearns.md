@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Spam-Assassin-Bill-Stearns List Marked As Dead. Sun May 27 02:33:22 UTC 2018
+* Spam-Assassin-Bill-Stearns List Already Marked As Dead. Mon May 28 03:05:58 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Spam-Assassin-Bill-Stearns List Was An Empty File After Download. Mon May 28 03:06:18 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Spam-Assassin-Bill-Stearns List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 03:06:19 UTC 2018

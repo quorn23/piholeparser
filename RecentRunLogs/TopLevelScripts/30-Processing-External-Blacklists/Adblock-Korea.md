@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Adblock-Korea List Marked As Dead. Sun May 27 00:38:13 UTC 2018
+* Adblock-Korea List Already Marked As Dead. Mon May 28 00:41:59 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Adblock-Korea List Was An Empty File After Download. Mon May 28 00:42:19 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Adblock-Korea List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 00:42:19 UTC 2018

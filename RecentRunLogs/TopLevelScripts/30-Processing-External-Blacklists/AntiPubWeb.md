@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* AntiPubWeb List Marked As Dead. Sun May 27 00:47:42 UTC 2018
+* AntiPubWeb List Already Marked As Dead. Mon May 28 00:53:50 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* AntiPubWeb List Was An Empty File After Download. Mon May 28 00:54:10 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* AntiPubWeb List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 00:54:10 UTC 2018

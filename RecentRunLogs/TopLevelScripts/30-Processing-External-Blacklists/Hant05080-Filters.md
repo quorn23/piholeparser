@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Hant05080-Filters List Marked As Dead. Sun May 27 01:37:49 UTC 2018
+* Hant05080-Filters List Already Marked As Dead. Mon May 28 01:56:31 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Hant05080-Filters List Was An Empty File After Download. Mon May 28 01:56:52 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Hant05080-Filters List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 01:56:52 UTC 2018

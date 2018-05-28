@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* SVN-Slovenian List Marked As Dead. Sun May 27 02:26:35 UTC 2018
+* SVN-Slovenian List Already Marked As Dead. Mon May 28 02:57:30 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* SVN-Slovenian List Was An Empty File After Download. Mon May 28 02:57:50 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* SVN-Slovenian List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 02:57:51 UTC 2018

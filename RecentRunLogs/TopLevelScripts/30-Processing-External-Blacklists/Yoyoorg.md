@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Yoyoorg List Marked As Dead. Sun May 27 03:08:35 UTC 2018
+* Yoyoorg List Already Marked As Dead. Mon May 28 03:50:01 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Yoyoorg List Was An Empty File After Download. Mon May 28 03:50:21 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Yoyoorg List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 03:50:22 UTC 2018

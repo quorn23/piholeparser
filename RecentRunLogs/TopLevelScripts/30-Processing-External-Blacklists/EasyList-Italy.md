@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Italy List Marked As Dead. Sun May 27 01:22:55 UTC 2018
+* EasyList-Italy List Already Marked As Dead. Mon May 28 01:37:53 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* EasyList-Italy List Was An Empty File After Download. Mon May 28 01:38:13 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* EasyList-Italy List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 01:38:13 UTC 2018

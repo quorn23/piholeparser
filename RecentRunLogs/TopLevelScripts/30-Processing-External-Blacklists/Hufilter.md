@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Hufilter List Marked As Dead. Sun May 27 01:40:32 UTC 2018
+* Hufilter List Already Marked As Dead. Mon May 28 01:59:55 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Hufilter List Was An Empty File After Download. Mon May 28 02:00:15 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Hufilter List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 02:00:15 UTC 2018

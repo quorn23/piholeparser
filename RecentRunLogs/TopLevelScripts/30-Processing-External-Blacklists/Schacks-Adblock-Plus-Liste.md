@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Schacks-Adblock-Plus-Liste List Marked As Dead. Sun May 27 02:30:39 UTC 2018
+* Schacks-Adblock-Plus-Liste List Already Marked As Dead. Mon May 28 03:02:35 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Schacks-Adblock-Plus-Liste List Was An Empty File After Download. Mon May 28 03:02:55 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Schacks-Adblock-Plus-Liste List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 03:02:55 UTC 2018

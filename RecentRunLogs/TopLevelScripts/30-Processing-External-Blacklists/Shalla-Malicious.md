@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Shalla-Malicious List Marked As Dead. Sun May 27 02:32:00 UTC 2018
+* Shalla-Malicious List Already Marked As Dead. Mon May 28 03:04:17 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Shalla-Malicious List Was An Empty File After Download. Mon May 28 03:04:37 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Shalla-Malicious List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 03:04:37 UTC 2018

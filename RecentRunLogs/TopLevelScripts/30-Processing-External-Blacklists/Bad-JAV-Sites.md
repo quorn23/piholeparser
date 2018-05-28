@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Bad-JAV-Sites List Marked As Dead. Sun May 27 00:54:28 UTC 2018
+* Bad-JAV-Sites List Already Marked As Dead. Mon May 28 01:02:19 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Bad-JAV-Sites List Was An Empty File After Download. Mon May 28 01:02:39 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Bad-JAV-Sites List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 01:02:39 UTC 2018

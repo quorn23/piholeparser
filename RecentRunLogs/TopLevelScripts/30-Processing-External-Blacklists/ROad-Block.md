@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ROad-Block List Marked As Dead. Sun May 27 02:19:49 UTC 2018
+* ROad-Block List Already Marked As Dead. Mon May 28 02:49:02 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* ROad-Block List Was An Empty File After Download. Mon May 28 02:49:22 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* ROad-Block List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 02:49:22 UTC 2018

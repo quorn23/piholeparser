@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* PLgeneral List Marked As Dead. Sun May 27 02:08:59 UTC 2018
+* PLgeneral List Already Marked As Dead. Mon May 28 02:35:29 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* PLgeneral List Was An Empty File After Download. Mon May 28 02:35:49 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* PLgeneral List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 02:35:49 UTC 2018

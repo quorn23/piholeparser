@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Adware-Filters List Marked As Dead. Sun May 27 00:46:21 UTC 2018
+* Adware-Filters List Already Marked As Dead. Mon May 28 00:52:08 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Adware-Filters List Was An Empty File After Download. Mon May 28 00:52:29 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Adware-Filters List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 00:52:29 UTC 2018

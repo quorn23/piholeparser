@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mayvs-Private-Adblock-Filters List Marked As Dead. Sun May 27 01:59:30 UTC 2018
+* Mayvs-Private-Adblock-Filters List Already Marked As Dead. Mon May 28 02:23:38 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* Mayvs-Private-Adblock-Filters List Was An Empty File After Download. Mon May 28 02:23:58 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Mayvs-Private-Adblock-Filters List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 02:23:58 UTC 2018

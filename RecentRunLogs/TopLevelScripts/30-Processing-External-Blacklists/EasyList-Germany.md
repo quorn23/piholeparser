@@ -13,4 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* EasyList-Germany List Marked As Dead. Sun May 27 01:21:34 UTC 2018
+* EasyList-Germany List Already Marked As Dead. Mon May 28 01:36:11 UTC 2018
+## Checking If List Updated Online
+## Determining Download Attempt
+## Attempting To Download List
+## Checking File Size
+* EasyList-Germany List Was An Empty File After Download. Mon May 28 01:36:31 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* EasyList-Germany List Was Killed By The Parsing Process. It will be skipped in the future. Mon May 28 01:36:32 UTC 2018
