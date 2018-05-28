@@ -22,7 +22,7 @@ echo "Deathbybandaid Logo Missing."
 fi
 
 ## Check internet connection
-if ping -q -w 1 -c 1 8.8.8.8 > /dev/null;
+if ping -q -w 5 -c 3 8.8.8.8 > /dev/null;
 then
 echo "Internet Connection Success!"
 else
