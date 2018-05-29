@@ -1,4 +1,4 @@
-[uBlock Origin 1.16.7b4]
+[uBlock Origin 1.16.9b0]
 ! Title: uBO Personal Filters
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
@@ -336,7 +336,7 @@ mega.nz##.red.download-button.button
 hollywoodreporter.com##.leaderboard-wrapper
 temp_share_folder
 ||speedtest.net^$csp=script-src 'self' 'unsafe-inline' data: *.speedtest.net *.cdnst.net;img-src 'self' *.cdnst.net 
-||cbr.com^$csp=script-src 'self' 'unsafe-inline' platform.twitter.com *.twimg.com platform.instagram.com *.imgur.com embed.redditmedia.com cdn.embedly.com
+||cbr.com^$csp=default-src 'self' 'unsafe-inline' *.cbrimages.com www.youtube.com *.ytimg.com platform.twitter.com www.twitter.com *.twimg.com platform.instagram.com www.instagram.com *.imgur.com embed.redditmedia.com cdn.embedly.com fonts.googleapis.com fonts.gstatic.com
 outlook.live.com##a[href^="http://"]
 promo$script
 ||pornhub.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.phncdn.com *.pornhub.com fonts.googleapis.com fonts.gstatic.com translate.googleapis.com *.nsimg.net *.rncdn3.com
@@ -788,10 +788,10 @@ player_ads.html^$important
 mellowads.com^$important
 check.googlezip.net^$other
 google.com/adsense$important
-ad.foxnetworks.com$important
-ads.twitter.com$important
-yahoo.com$third-party,important
-doubleclickbygoogle.com$important
+ad.foxnetworks.com^$important
+ads.twitter.com^$important
+yahoo.com^$third-party,important
+doubleclickbygoogle.com^$important
 adnetasia.com^$important
 bannertrack.net^$important
 ||finalservers.net^$csp=script-src 'self' 'unsafe-eval' *.finalservers.net
@@ -806,3 +806,6 @@ reddit.com/chat^
 masterani.me##.campaign.column.wide.sixteen
 ||masterani.me^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.masterani.me fonts.googleapis.com fonts.gstatic.com www.youtube.com *.ytimg.com cdnjs.cloudflare.com streamango.com *.fruithosted.com openload.co *.oloadcdn.net *.rapidvideo.com *.playercdn.net stream.moe mp4upload.com tiwi.kiwi
 ping^
+revcontent.com^$important
+cbr.com##.premium-promo
+cbr.com##.header-premium-zone
