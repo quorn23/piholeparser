@@ -1,4 +1,4 @@
-[uBlock Origin 1.16.9b0]
+[uBlock Origin 1.16.9b1]
 ! Title: uBO Personal Filters
 ! Author: uBlock-user
 ! Expires: 1 day (update frequency)
@@ -264,7 +264,7 @@ kisshentai.*###show_id
 ||kisshentai.net^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: myanimelist.cdn-dena.com i.imgur.com *.rapidvideo.com *.playercdn.net openload.co oload.stream *.oloadcdn.net streamcherry.com *.fruithosted.net
 doubleclick^$script,important.me###disqus_thread
 ||androidcentral.com/sites/androidcentral.com/files/advagg_js/$script,badfilter
-connect.facebook.net^$script,important
+connect.facebook.net^$script
 @@||lightboxcdn.com^$script,domain=androidcentral.com|crackberry.com|imore.com|windowscentral.com,badfilter
 @@||passport.mobilenations.com^$script,domain=androidcentral.com|crackberry.com|imore.com|windowscentral.com,badfilter
 @@||platform.twitter.com^$script,domain=9anime.to,badfilter
@@ -767,7 +767,7 @@ screenrant.com##.premium-promo
 screenrant.com##.next-btn
 screenrant.com##.article-related
 screenrant.com##.w-injected-featured
-||screenrant.com^$csp=default-src 'self' 'unsafe-inline' data: 'unsafe-eval' *.srcdn.com twitter.com platform.twitter.com ajax.googleapis.com *.instagram.com *.twimg.com *.imgur.com embed.redditmedia.com cdn.embedly.com www.facebook.com www.youtube.com *.ytimg.com fonts.googleapis.com fonts.gstatic.com
+||screenrant.com^$csp=default-src 'self' 'unsafe-inline' data: 'unsafe-eval' *.srcdn.com twitter.com platform.twitter.com ajax.googleapis.com www.instagram.com *.twimg.com *.imgur.com embed.redditmedia.com cdn.embedly.com *.facebook.com www.youtube.com *.ytimg.com fonts.googleapis.com fonts.gstatic.com
 nosteam.ro##script:inject(window.open-defuser.js)
 quora.com##div[class*="PromptsList"]
 /\.(watchcartoononline|9anime|memecenter).*\/.*[(&|=|%|\/|?)]/$image,badfilter
@@ -809,3 +809,5 @@ ping^
 revcontent.com^$important
 cbr.com##.premium-promo
 cbr.com##.header-premium-zone
+but.to^$important
+clksite.com^$important
