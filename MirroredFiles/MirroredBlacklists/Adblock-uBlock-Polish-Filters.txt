@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 29 May 2018
+! Last modified: 30 May 2018
 ! Expires: 1 day
-! Version: 2018052903
+! Version: 2018053003
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018052903 aktualizacja: wt, 29 maja 2018, 13:50:00
+! v.2018053003 aktualizacja: sr, 30 maja 2018, 13:40:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -336,6 +336,7 @@ anyfiles.pl##[class^="bp-wrapp"]
 anyfiles.pl##[id^="adsbox_"]
 anyfiles.pl###SearchVideosLoadDiv > .media-list > .media > .thumbnail:not([title])
 apynews.pl##.featured-advert
+astar.czest.pl###astar
 astratex.pl##[class^="bFix"]
 astronomia24.com###side-border-right > .panel:nth-of-type(6)
 astropolis.pl##.jesion_image_topic_top
@@ -850,7 +851,7 @@ fili.tv,fili.cc###links > ul:nth-of-type(1)
 films4free.pl##.M2U3OGQ4ZGY1
 filmpolski.pl##.obrazek_bez_ramki
 filmweb.pl##[id*="iframe"]
-filmweb.pl###iframe, .clickArea, .screening-content, .topBillboard, .BILLBOARD, [id^="sad_"], .clickableAdBG, #screening, [id$="_ifame"], [id^="sas_"], div[class] > [href*="/click"], [src$=".html"], #skyBanner
+filmweb.pl###iframe, .clickArea, .screening-content, .topBillboard, .BILLBOARD, [id^="sad_"], .clickableAdBG, #screening, [id$="_ifame"], [id^="sas_"], div[class] > [href*="/click"], [src$=".html"]
 fishing-mart.com.pl##td:nth-of-type(6) > .norm11:nth-of-type(4)
 flarrow.pl##[class^="td_block_wrap td_block_text_with_title td_uid_"]
 flarrow.pl#?#.td_block_wrap:-abp-has(.td-pulldown-size:-abp-contains(Reklama))
@@ -4093,7 +4094,7 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 /^(http|https):\/\/[a-z.]{5,15}\.[a-z]{2,4}\/[a-z]{3,3}\/conf\?[a-z0-9\W]{10,50}/$xmlhttprequest,domain=fileone.tv
 /^(http|https):\/\/[a-z\W]{6,15}\.[a-z]{2,5}\/[a-z.]{4,10}\.js/$script,domain=vidoza.net|fileone.tv
 /^(http|https):\/\/(?!www.speedvid)(?!streamcherry.com)(?!vshare)(?!vidoza)(?!openload)(?!www.youtube)(?!streamango)(?!www.rapidvideo)[a-zA-Z0-9\W]{5,10}.[a-z]{2,20}\/(?!anime)[\w\W\d]{5,20}\/[a-z]{5,20}\//$subdocument,domain=a-o.ninja|centrum-dramy.pl|love-drama.pl|vidfile.net|hentai-online.pl|centrum-mangi.ninja
-/^(https|http):\/\/[a-z.]{4,15}\.[a-z]{2,2}\/[a-z/.?=-]{1,100}(wss|proxy)[a-z.?:0-9=]{6,50}/$script
+!/^(https|http):\/\/[a-z.]{4,15}\.[a-z]{2,2}\/[a-z/.?=-]{1,100}(wss|proxy)[a-z.?:0-9=]{6,50}/$script
 ||lcx.pl^
 ||megabanners.cf^$third-party
 ||n.serialeonline.pl^$subdocument
