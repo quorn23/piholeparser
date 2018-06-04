@@ -5427,10 +5427,10 @@ nme.com##^script:has-text(H="function"==typeof)
 nme.com##.advert:style(z-index: -999999 !important;)
 nme.com###wrapper:style(padding-top: 0 !important;)
 ! add sites using the same ad reinsertion script
-amateurphotographer.co.uk,celebsnow.co.uk,countrylife.co.uk,idealhome.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,theguardian.com,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
-amateurphotographer.co.uk,celebsnow.co.uk,countrylife.co.uk,idealhome.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,theguardian.com,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##^script:has-text(H="function"==typeof)
+amateurphotographer.co.uk,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
+amateurphotographer.co.uk,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##^script:has-text(H="function"==typeof)
 idealhome.co.uk,look.co.uk,marieclaire.co.uk##body > div#wrapper:style(padding-top: 0px !important;)
-womanandhome.com##.header-advert-wrapper
+goodtoknow.co.uk,womanandhome.com##.header-advert-wrapper
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1537
 @@||rustica.fr/assets/js/advertisement$script,first-party
@@ -8144,3 +8144,20 @@ comptoir-hardware.com##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2449
 a2zapk.com##script:inject(set-constant.js, ads, true)
+
+! https://github.com/reek/anti-adblock-killer/issues/4071
+o2tvseries.com##script:inject(abort-on-property-write.js, adBlockDetected)
+o2tvseries.com##script:inject(addEventListener-defuser.js, /^(click|mousedown|)/, _0x)
+o2tvseries.com##script:inject(nowebrtc.js)
+o2tvseries.com##script:inject(setInterval-defuser.js, (), 500)
+||putrr8.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2452
+watchtheoffice.online##script:inject(abort-on-property-write.js, _pop)
+watchtheoffice.online##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2454
+cellmapper.net##script:inject(set-constant.js, adTestPass, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2455
+tvtropes.org##script:inject(abort-on-property-read.js, Uint8Array)
