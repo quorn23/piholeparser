@@ -3,22 +3,22 @@
 ____________________________________
 # 
 ## Public-Suffix
-List Took 3 Seconds.
+List Took 2 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/Public-Suffix.md)
 
 ## TLD-List
-List Took 1 Seconds.
+List Took 2 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains/TLD-List.md)
 
 ____________________________________
 ### Checking For Old TLD File.
 * Old TLD List Not Present.
 ### Merging Individual TLD Lists.
-14237 After Merging Individual TLD Lists.
+14238 After Merging Individual TLD Lists.
 ### Removing Old TEMP TLD If Present.
 Old TLD Comparison Not Present.
 ### Formatting TLD List.
-3117 After Formatting TLD List.
+3118 After Formatting TLD List.
 ### Removing Duplicatates From TLD List.
 1588 After Removing Duplicatates From TLD List.
 ____________________________________
