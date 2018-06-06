@@ -7922,6 +7922,8 @@ zoogirls.org##script:inject(noeval.js)
 camwhores.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 camwhores.tv##script:inject(abort-on-property-read.js, _wm)
 camwhores.tv##script:inject(abort-on-property-read.js, loadTool)
+||camsoda1.com/promos/iframe/*$subdocument,domain=camwhores.tv
+||lite-iframe.stripcdn.com^$subdocument,domain=camwhores.tv
 camwhores.tv##.row-models
 camwhores.tv###list_videos_friends
 
@@ -8202,3 +8204,25 @@ spankwire.com##script:inject(abort-on-property-read.js, exbl)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8odwtr/how_to_deal_with_sites_that_detect_ublock_origin/
 yesmangasbr.com##script:inject(setTimeout-defuser.js, testDisplay, 3000)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/942
+@@||my5.tv^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2474
+femefun.com##script:inject(abort-on-property-write.js, __htapop)
+femefun.com##script:inject(noeval.js)
+@@||namesakeoscilloscopemarquis.com^*/ads.js$domain=~tvil.me,badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/2468
+gamepedia.com##script:inject(abort-current-inline-script.js, Array.prototype.filter, Instart)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2478
+pluspremieres.io##script:inject(setTimeout-defuser.js, adblock, 1200)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2461
+anon-v.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
+anon-v.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2476
+dnews.dn.ua##script:inject(abort-current-inline-script.js, atob, /\/\*\w{40}\*\/$/)
+||dnews.dn.ua/*banner
