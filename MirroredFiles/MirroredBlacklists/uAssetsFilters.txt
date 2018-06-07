@@ -483,6 +483,8 @@ al.ly,ally.sh##[id^=aswift]
 ! https://github.com/uBlockOrigin/uAssets/issues/2317
 washingtonpost.com##script:inject(abort-current-inline-script.js, InstallTrigger, _0x)
 washingtonpost.com##.adblocker-root
+! https://bugzilla.mozilla.org/show_bug.cgi?id=1466730
+washingtonpost.com##html:style(overflow: auto !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/357
 yandex.*##.serp-item:if(:scope > div.organic div.organic__subtitle:matches-css-after(content: /[Рр]еклама/))
@@ -2243,7 +2245,7 @@ mcloud.to###jwa
 9anime.*###sidebar > .text-center.crop.widget:style(height: 6px !important)
 ||9anime.is/$script
 9anime.*##script:inject(setTimeout-defuser.js, return, 2000)
-9anime.*##script:inject(abort-on-property-read.js, crypto)
+9anime.*##script:inject(abort-on-property-read.js, Buffer)
 
 ! https://github.com/uBlockOrigin/uAssets/pull/643
 serienstream.to##script:inject(abort-current-inline-script.js, document.readyState, /(?:\\x[0-9a-f]{2}){20}/)
@@ -2391,7 +2393,7 @@ watchcartoononline.com##script:inject(setTimeout-defuser.js, Pu.call, 1)
 watchcartoononline.com##^script:has-text(3f87b0eaddd)
 watchcartoononline.com##a[href*="/1.0/go"]
 kimcartoon.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-kimcartoon.*##script:inject(abort-on-property-read.js, crypto)
+kimcartoon.*##script:inject(abort-on-property-read.js, Buffer)
 kimcartoon.*##script:inject(abort-on-property-write.js, Fingerprint2)
 kimcartoon.*##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 kimcartoon.*##script:inject(set-constant.js, check_adblock, true)
@@ -2651,7 +2653,7 @@ allpar.com,antonymsfor.com,cheezburger.com,colourlovers.com,daily-stuff.com,diet
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40237&p=133935#p133934
 ! https://github.com/uBlockOrigin/uAssets/issues/1856
 ! https://github.com/uBlockOrigin/uAssets/issues/2072
-abandonedspaces.com,activistpost.com,allthetests.com,almasdarnews.com,asheepnomore.net,blacklistednews.com,blog-rct.com,bobshideout.com,brain-sharper.com,broadwayworld.com,clashdaily.com,daclips.in,dailygalaxy.com,debka.com,eternallifestyle.com,ffxivguild.com,freebeacon.com,fullmatchesandshows.com,geekycamel.com,getinmybelly.com,gorillavid.in,grammarist.com,greeningz.com,healthyfocus.org,hiphopearly.com,hiphoplately.com,humansarefree.com,hyperactivz.com,jerusalemonline.com,kiwireport.com,miniplay.com,monagiza.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,nysun.com,parentztalk.com,pensandpatron.com,popmatters.com,powerofpositivity.com,presidentmommy.com,readarsenal.com,readliverpoolfc.com,readmng.com,seneweb.com,soundreview.org,spellchecker.net,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,textsfromlastnight.com,theamericanmirror.com,thecelticblog.com,thehornnews.com,timesofisrael.com,topbestalternatives.com,toptenz.net,travelfuntu.com,tworeddots.com,vidmax.com,virtualjerusalem.com,walterfootball.com,wnd.com,worldation.com,youtubeonrepeat.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
+abandonedspaces.com,activistpost.com,allthetests.com,almasdarnews.com,asheepnomore.net,blacklistednews.com,blog-rct.com,bobshideout.com,brain-sharper.com,broadwayworld.com,clashdaily.com,daclips.in,dailygalaxy.com,debka.com,eternallifestyle.com,ffxivguild.com,freebeacon.com,fullmatchesandshows.com,geekycamel.com,getinmybelly.com,gorillavid.in,graduatez.com,grammarist.com,greeningz.com,healthyfocus.org,hiphopearly.com,hiphoplately.com,humansarefree.com,hyperactivz.com,jerusalemonline.com,kiwireport.com,ludokado.com,miniplay.com,monagiza.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,noteabley.com,nysun.com,parentztalk.com,pensandpatron.com,popmatters.com,powerofpositivity.com,presidentmommy.com,readarsenal.com,readlightnovel.org,readliverpoolfc.com,readmng.com,seneweb.com,sobusygirls.fr,soundreview.org,spellchecker.net,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,textsfromlastnight.com,theamericanmirror.com,thecelticblog.com,thehornnews.com,timesofisrael.com,topbestalternatives.com,toptenz.net,travelfuntu.com,tworeddots.com,vidmax.com,virtualjerusalem.com,walterfootball.com,wnd.com,worldation.com,yepi.com,youtubeonrepeat.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
 convert-me.com,dailygalaxy.com,diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,nowtheendbegins.com,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ||akrazappi.com^
 ||gordipucha.com^
@@ -2841,7 +2843,9 @@ yts.am##script:inject(abort-current-inline-script.js, atob, tabunder)
 yts.am##script:inject(abort-on-property-write.js, adcashMacros)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=4&t=54579
+! https://github.com/jspenguin2017/uBlockProtector/issues/949
 filebebo.com##script:inject(abort-current-inline-script.js, keys, adblockinfo)
+filebebo.com##script:inject(nano-setTimeout-booster.js)
 ||adpixo.com^$third-party
 ! pussl-domains
 ||pussl2.com^$script,third-party
@@ -4415,6 +4419,7 @@ bilasport.com##script:inject(popads-dummy.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1234
 ! https://www.reddit.com/r/uBlockOrigin/comments/8ikcyk/new_ads_in_httpsanimeflvnet/
 animeflv.net##script:inject(abort-on-property-read.js, BBRaven)
+animeflv.net##script:inject(set-constant.js, loadingAds, true)
 animeflv.net##a[href*="watch?key"]
 ||ssraju3n.com^
 
@@ -4583,7 +4588,7 @@ oke.io##script:inject(abort-on-property-read.js, open)
 ! https://github.com/uBlockOrigin/uAssets/issues/2256
 gogoanime.*##script:inject(setTimeout-defuser.js, o(), 1)
 gogoanime.io,gogoanime.se##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
-gogoanime.*##script:inject(abort-on-property-read.js, BBRaven)
+gogoanime.*##script:inject(abort-on-property-read.js, Buffer)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1276
 ourl.io##script:inject(abort-on-property-write.js, _pop)
@@ -5361,7 +5366,7 @@ go4up.com##script:inject(set-constant.js, _0xd348, true)
 ! https://www.reddit.com/r/uBlockOrigin/comments/7wpk97/cant_block_ad_at_the_bottom_of_readcomiconline/
 ! https://forums.lanik.us/viewtopic.php?p=136688#p136688
 readcomiconline.to##^script:has-text(this[atob)
-readcomiconline.to##script:inject(abort-on-property-read.js, crypto)
+readcomiconline.to##script:inject(abort-on-property-read.js, Buffer)
 ||fghtem.com^$xmlhttprequest,redirect=nooptext,domain=readcomiconline.to
 ||readcomiconline.to/widgets/exo$subdocument,first-party
 readcomiconline.to##.divCloseBut
@@ -6736,12 +6741,12 @@ clipwatching.com##script:inject(set-constant.js, adblock, false)
 updato.com##script:inject(setTimeout-defuser.js, updato-overlay, 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1946
-animeland.tv##script:inject(abort-on-property-read.js, crypto)
+animeland.tv##script:inject(abort-on-property-read.js, Buffer)
 animeland.tv##script:inject(nowebrtc.js)
 animeland.tv##^script:has-text(676574456c656d656e747342795461674e616d65)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=animeland.tv
 ! ! adding sites using the same script
-animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,memecenter.com,toonget.net,toonova.net##script:inject(abort-on-property-read.js, crypto)
+animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,memecenter.com,toonget.net,toonova.net##script:inject(abort-on-property-read.js, Buffer)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1949
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=offidocs.com
@@ -7815,7 +7820,7 @@ turbobit.net##script:inject(abort-on-property-read.js, open)
 turbobit.net##script:inject(popads-dummy.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40461
-mangapanda.com##script:inject(abort-on-property-read.js, crypto)
+mangapanda.com##script:inject(abort-on-property-read.js, Buffer)
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/80
 @@||bigspeeds.com/*/advertisement.js$script,first-party
@@ -7939,6 +7944,7 @@ beastwomans.com,bestialitytaboo.tv,bestialporn.net,bestialzoo.*,fakingszoo.com,h
 ! https://github.com/uBlockOrigin/uAssets/issues/2364#issuecomment-393353226
 pornfay.com,pornscum.com,pornspark.com,porntopic.com##script:inject(abort-on-property-read.js, loadTool)
 ||grtyb.com^$third-party
+||irtyf.com^
 ||ochko.biz^$domain=asiananimaltube.org
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2365
@@ -8178,7 +8184,7 @@ tvtropes.org##script:inject(abort-on-property-read.js, Uint8Array)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8obvtx/started_getting_some_odd_behavior_on/
 igg-games.com##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
-igg-games.com##script:inject(abort-on-property-read.js, crypto)
+igg-games.com##script:inject(abort-on-property-read.js, Buffer)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2456
 javwhores.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
@@ -8226,3 +8232,43 @@ anon-v.com##script:inject(abort-current-inline-script.js, atob, tabunder)
 ! https://github.com/uBlockOrigin/uAssets/issues/2476
 dnews.dn.ua##script:inject(abort-current-inline-script.js, atob, /\/\*\w{40}\*\/$/)
 ||dnews.dn.ua/*banner
+
+! https://github.com/uBlockOrigin/uAssets/issues/2480
+cartoonporno.xxx##script:inject(abort-on-property-read.js, prPuShown)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2481
+@@||solvettube.com^$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2472
+softgateon.herokuapp.com##script:inject(set-constant.js, gadb, false)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2482
+youporn.com##.ad-bottom-text
+youporn.com##.ad-remove
+youporn.com##ads
+youporn.com###adblock_1
+youporn.com##script:inject(abort-on-property-read.js, zone_2547)
+youporn.com##script:inject(abort-on-property-read.js, AdDelivery.prototype.requestTrafficJunkyAds)
+youporn.com##script:inject(abort-on-property-write.js, rAb)
+
+! anti adb https://www.tvserial.it/the-generi-serie-tv-sky-maccio-capatonda-video/
+@@||tvserial.it^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2483
+escuchalas.com##^script:has-text(3f87b0)
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=escuchalas.com
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=escuchalas.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2485
+pravda.com.ua##script:inject(abort-on-property-write.js, stop.bind)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2484#issuecomment-395174594
+foumovies.com,full4movies.co,hdpopcorns.com,moviescouch.info,moviescounter.co,mydownloadtube.to,rdxhd.me,123movies.ph,700mbdownload.org##script:inject(abort-on-property-write.js, decodeURIComponent)
+123movies.ph##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
+moviescounterhd.com,moviefishers.org##script:inject(abort-on-property-write.js, encodeURIComponent)
+freemoviedownloads6.com,fullywatchonline.com,mkvcinemas.tech,myvidmate.net##script:inject(abort-current-inline-script.js, atob, decodeURIComponent)
+thevideobee.to##script:inject(popads-dummy.js)
+moviefishers.org##script:inject(abort-on-property-write.js, Fingerprint2)
+gomostream.com##.adtimes
+/watchbutton11.png$image
+/download11.png$image
