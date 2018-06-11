@@ -5422,7 +5422,8 @@ bc.vc##script:inject(window.open-defuser.js)
 data-raid-recovery-link.com##script:inject(setTimeout-defuser.js, _creatBait)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/752
-wolframclient.net##script:inject(setTimeout-defuser.js, detected, 0)
+! https://github.com/uBlockOrigin/uAssets/issues/2531
+@@||wolframclient.net^$generichide
 
 ! https://github.com/reek/anti-adblock-killer/issues/3904
 salon.com##script:inject(set-constant.js, adblock, false)
@@ -8355,8 +8356,10 @@ springfieldspringfield.co.uk##script:inject(setTimeout-defuser.js, ads, 750)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2517
 @@||cinemamkv.net^$generichide
+cinemamkv.net##script:inject(abort-on-property-read.js, go_get_url)
 cinemamkv.net##script:inject(nowebrtc.js)
 cinemamkv.net##script:inject(set-constant.js, _ocads, noopFunc)
+cinemamkv.net##[href^="https://trav4life.site/"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2511
 @@||emploislongueuil.com^$generichide
@@ -8377,3 +8380,36 @@ catcuturl.tk##script:inject(addEventListener-defuser.js, click, trigger)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2515
 @@||porngun.net^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=96&t=40989
+@@||ialweb.it^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2521
+@@||leakforums.co^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2522
+@@||jav911.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2523
+@@||themes24x7.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2524
+airlive.net##script:inject(abort-on-property-read.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2525
+@@||xda-developers-forum.*^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2526
+jokerfansub.com##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2527
+mp3fy.com##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2528
+fanoffifa.com##script:inject(addEventListener-defuser.js, load, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2529
+ebookmed.*##script:inject(addEventListener-defuser.js, load, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2530
+@@||filmpornoita.net/advertisement.js$script,first-party
