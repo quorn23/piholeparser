@@ -2362,7 +2362,7 @@ androidsage.com##script:inject(abort-on-property-write.js, blckad)
 ! https://github.com/gorhill/uBlock/issues/3515
 ! https://github.com/uBlockOrigin/uAssets/issues/2436
 korrespondent.net##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
-tapochek.net##script:inject(abort-current-inline-script.js, atob, null,f)
+tapochek.net##script:inject(abort-current-inline-script.js, atob, void)
 tapochek.net##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 foxi.tv,nnm-club.me,nnm-club.name,nnmclub.to,tapochek.net##^script:has-text(KGZ1bmN0)
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=foxi.tv|tapochek.net
@@ -2646,7 +2646,7 @@ cookiesflix.com##script:inject(addEventListener-defuser.js, load, adsense)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/775
 ! https://github.com/uBlockOrigin/uAssets/issues/2520#issuecomment-396112781
-postimg.*##script:inject(abort-current-inline-script.js, atob, null,f)
+postimg.*##script:inject(abort-current-inline-script.js, atob, void)
 
 ! Uponit
 ! https://github.com/uBlockOrigin/uAssets/issues/259
@@ -2665,7 +2665,7 @@ allpar.com,antonymsfor.com,cheezburger.com,colourlovers.com,daily-stuff.com,diet
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40237&p=133935#p133934
 ! https://github.com/uBlockOrigin/uAssets/issues/1856
 ! https://github.com/uBlockOrigin/uAssets/issues/2072
-abandonedspaces.com,activistpost.com,allthetests.com,almasdarnews.com,asheepnomore.net,blacklistednews.com,blog-rct.com,bobshideout.com,brain-sharper.com,broadwayworld.com,clashdaily.com,daclips.in,dailygalaxy.com,debka.com,eternallifestyle.com,ffxivguild.com,freebeacon.com,fullmatchesandshows.com,geekycamel.com,getinmybelly.com,gorillavid.in,graduatez.com,grammarist.com,greeningz.com,healthyfocus.org,hiphopearly.com,hiphoplately.com,humansarefree.com,hyperactivz.com,jerusalemonline.com,kiwireport.com,ludokado.com,miniplay.com,monagiza.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,noteabley.com,nysun.com,parentztalk.com,pensandpatron.com,popmatters.com,powerofpositivity.com,presidentmommy.com,readarsenal.com,readlightnovel.org,readliverpoolfc.com,readmng.com,seneweb.com,sobusygirls.fr,soundreview.org,spellchecker.net,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,textsfromlastnight.com,theamericanmirror.com,thecelticblog.com,thehornnews.com,timesofisrael.com,topbestalternatives.com,toptenz.net,travelfuntu.com,tworeddots.com,vidmax.com,virtualjerusalem.com,walterfootball.com,wnd.com,worldation.com,yepi.com,youtubeonrepeat.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
+abandonedspaces.com,activistpost.com,allthetests.com,almasdarnews.com,asheepnomore.net,blacklistednews.com,blog-rct.com,bobshideout.com,brain-sharper.com,broadwayworld.com,clashdaily.com,daclips.in,dailygalaxy.com,debka.com,eternallifestyle.com,ffxivguild.com,freebeacon.com,fullmatchesandshows.com,geekycamel.com,getinmybelly.com,gorillavid.in,graduatez.com,grammarist.com,greeningz.com,healthyfocus.org,hiphopearly.com,hiphoplately.com,humansarefree.com,hyperactivz.com,israelnationalnews.com,jerusalemonline.com,kiwireport.com,ludokado.com,miniplay.com,monagiza.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,noteabley.com,nysun.com,parentztalk.com,pensandpatron.com,popmatters.com,powerofpositivity.com,presidentmommy.com,readarsenal.com,readlightnovel.org,readliverpoolfc.com,readmng.com,seneweb.com,sobusygirls.fr,soundreview.org,spellchecker.net,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,textsfromlastnight.com,theamericanmirror.com,thecelticblog.com,thehornnews.com,timesofisrael.com,topbestalternatives.com,toptenz.net,travelfuntu.com,tworeddots.com,vidmax.com,virtualjerusalem.com,walterfootball.com,wnd.com,worldation.com,yepi.com,youtubeonrepeat.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
 convert-me.com,dailygalaxy.com,diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,nowtheendbegins.com,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ||akrazappi.com^
 ||gordipucha.com^
@@ -5928,9 +5928,9 @@ waybig.com##script:inject(abort-on-property-read.js, BetterJsPop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1689
 ! https://github.com/uBlockOrigin/uAssets/issues/1953
-animeflv.ru##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
-animeflv.ru##script:inject(addEventListener-defuser.js, mousedown, clientX)
+animeflv.ru##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 animeflv.ru##script:inject(setInterval-defuser.js, (), 500)
+||animeflv.ru^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.facebook.com *.google-analytics.com *.gstatic.com *.facebook.net *.disquscdn.com https://disqus.com *.disqus.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1690
 jkanime.net##script:inject(abort-on-property-write.js, adcashMacros)
@@ -5954,7 +5954,8 @@ shortli.net##script:inject(addEventListener-defuser.js, click, trigger)
 shortli.net##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1697
-@@||hyperdebrid.download^$generichide
+! https://github.com/NanoAdblocker/NanoFilters/issues/103
+@@||hyperdebrid.*^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1694
 vodlock.co##script:inject(popads-dummy.js)
@@ -7612,7 +7613,7 @@ ddlvalley.*##script:inject(abort-on-property-write.js, Fingerprint2)
 speedtest.net##script:inject(set-constant.js, isBlocked, false)
 
 ! https://forums.lanik.us/viewtopic.php?p=136580#p136580
-seehd.pl##script:inject(addEventListener-defuser.js, mousedown, clientX)
+seehd.pl##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 seehd.pl##script:inject(setInterval-defuser.js, (), 500)
 seehd.pl##script:inject(window.open-defuser.js)
 
@@ -8160,7 +8161,7 @@ download.hr##script:inject(set-constant.js, detector_active, true)
 sportsvideo.net##+js(abort-on-property-read.js, adblockDetector)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&p=137465
-subsmovies.nl##script:inject(abort-current-inline-script.js, atob, null,f)
+subsmovies.nl##script:inject(abort-current-inline-script.js, atob, void)
 subsmovies.nl##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 subsmovies.nl##script:inject(abort-on-property-write.js, Fingerprint2)
 subsmovies.nl##^script:has-text(13a60edeb)
@@ -8353,7 +8354,7 @@ hulkshare.com##script:inject(setInterval-defuser.js, adblockerModal, 1000)
 @@||proxydocker.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2505
-kickassanime.io##script:inject(abort-current-inline-script.js, atob, null,f)
+kickassanime.io##script:inject(abort-current-inline-script.js, atob, void)
 kickassanime.io##^script:has-text(13a60edeb)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2507
@@ -8462,3 +8463,32 @@ pornokeep.com##script:inject(abort-on-property-read.js, Aloader.serve)
 pornokeep.com##script:inject(abort-current-inline-script.js, $, anyclick)
 pornokeep.com##.advin
 pornokeep.com###invideo_2
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/98
+@@||sbs.com.au^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2543
+itsourtree.com##script:inject(abort-current-inline-script.js, document.getElementById, blocker)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2542
+||reshet.tv//third-party/dfp/dfp$first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2545
+gamestorrent.co##script:inject(set-constant.js, Object.defineProperty, noopFunc)
+gamestorrent.co##script:inject(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2544
+oldsluthardcore.com##script:inject(abort-on-property-write.js, ExoLoader)
+oldsluthardcore.com##.play
+oldsluthardcore.com##.a_all
+
+! https://github.com/uBlockOrigin/uAssets/issues/2547
+neko-miku.com##script:inject(addEventListener-defuser.js, load, nextFunction)
+
+! http://www.subtorrents.io/series/the-durrells/ popups
+subtorrents.io##script:inject(nowebrtc.js)
+subtorrents.io##script:inject(noeval.js)
+subtorrents.io##script:inject(popads-dummy.js)
+
+! https://eztvtorrent.com/the-durrells-2016/ popups
+eztvtorrent.com##script:inject(abort-on-property-write.js, Fingerprint2)
