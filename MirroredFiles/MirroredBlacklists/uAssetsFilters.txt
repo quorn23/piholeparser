@@ -4653,6 +4653,8 @@ katcr.stream##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ||katcr.stream/images/download.jpg$image
 ||katcr.stream/images/watch.jpg$image
 ||katcr.host^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.gstatic.com *.jquery.com *.google-analytics.com
+katcrs.download##script:inject(abort-on-property-write.js, Fingerprint2)
+katcrs.download##script:inject(nowebrtc.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=91&t=39679
 malekal.com##script:inject(abort-on-property-read.js, anOptions)
@@ -4787,9 +4789,6 @@ rockfile.co##script:inject(abort-on-property-read.js, HTMLScriptElement)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1320
 gturls.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-
-! https://github.com/uBlockOrigin/uAssets/issues/1322
-subtorrents.net##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1323
 ||movie4kto.st^$csp=script-src 'self' 'unsafe-inline' data: *.googleapis.com
@@ -5153,7 +5152,7 @@ adlpu.com##.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/1437
 ! https://github.com/uBlockOrigin/uAssets/issues/1438
 ! https://github.com/uBlockOrigin/uAssets/issues/1439
-adcut.link,adlink4y.com,dzurls.com,egyptoz.net,goldshorten.com,mycut.me,pureurls.com,rb7url.com,surls.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+adcut.link,adlink4y.com,dzurls.com,egyptoz.net,mycut.me,pureurls.com,rb7url.com,surls.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1430
 @@||loks.us^$generichide
@@ -7159,7 +7158,6 @@ tfc.tv##script:inject(abort-on-property-write.js, adBlockDetected)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2119
 cwin.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-cwin.me##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2120
 dlik.win##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7805,7 +7803,6 @@ up-4.net##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2323
 royurls.bid##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-royurls.bid##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2324
 shorterlink.trade##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -8485,10 +8482,16 @@ oldsluthardcore.com##.a_all
 ! https://github.com/uBlockOrigin/uAssets/issues/2547
 neko-miku.com##script:inject(addEventListener-defuser.js, load, nextFunction)
 
+! https://github.com/uBlockOrigin/uAssets/issues/1322
 ! http://www.subtorrents.io/series/the-durrells/ popups
-subtorrents.io##script:inject(nowebrtc.js)
-subtorrents.io##script:inject(noeval.js)
-subtorrents.io##script:inject(popads-dummy.js)
+subtorrents.*##script:inject(nowebrtc.js)
+subtorrents.*##script:inject(noeval.js)
+subtorrents.*##script:inject(popads-dummy.js)
 
 ! https://eztvtorrent.com/the-durrells-2016/ popups
 eztvtorrent.com##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2549
+anilinkz.to##.advid.james
+anilinkz.to###jade
+anilinkz.to##script:inject(set-constant.js, daganKwarta, true)
