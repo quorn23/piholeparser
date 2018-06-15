@@ -1309,6 +1309,9 @@ quora.com##[id*=content_wrapper]:has-text(ad by)
 quora.com##[id*=content_wrapper]:has-text(promo)
 quora.com##[rel="nofollow noopener"]
 quora.com##div:has-text(/^ad by/)
+quora.com##[rel*="noopener"]
+quora.com##[rel*="nofollow"]
+quora.com##div:has-text(/^ad/)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -2601,9 +2604,10 @@ ultrahorny.com###hideads
 ! https://github.com/uBlockOrigin/uAssets/issues/806
 bibme.org,citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, canRunAds)
 bibme.org##script:inject(abort-on-property-read.js, SBMGlobal.run.pcCallback)
-citationmachine.net,easybib.com##script:inject(abort-on-property-read.js, SBMGlobal.run.gramCallback)
+citationmachine.net,citethisforme.com,easybib.com##script:inject(abort-on-property-read.js, SBMGlobal.run.gramCallback)
+citethisforme.com##.sbm-ad
 ! https://github.com/uBlockOrigin/uAssets/issues/2155
-bibme.org,citationmachine.net##script:inject(addEventListener-defuser.js, load, (!o))
+bibme.org,citationmachine.net,citethisforme.com##script:inject(addEventListener-defuser.js, load, (!o))
 
 ! https://github.com/uBlockOrigin/uAssets/issues/763
 hdrezka.ag##script:inject(abort-current-inline-script.js, parseInt, decodeURIComponent)
@@ -2853,6 +2857,7 @@ aofsoru.com##script:inject(abort-current-inline-script.js, addEventListener, dis
 ! https://github.com/uBlockOrigin/uAssets/issues/2100
 yts.am##script:inject(abort-current-inline-script.js, atob, tabunder)
 yts.am##script:inject(abort-on-property-write.js, adcashMacros)
+yts.am##script:inject(abort-current-inline-script.js, decodeURI, atob)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=4&t=54579
 ! https://github.com/jspenguin2017/uBlockProtector/issues/949
@@ -5152,7 +5157,7 @@ adlpu.com##.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/1437
 ! https://github.com/uBlockOrigin/uAssets/issues/1438
 ! https://github.com/uBlockOrigin/uAssets/issues/1439
-adcut.link,adlink4y.com,dzurls.com,egyptoz.net,mycut.me,pureurls.com,rb7url.com,surls.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+adcut.link,adlink4y.com,dzurls.com,egyptoz.net,goldshorten.com,mycut.me,pureurls.com,rb7url.com,surls.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1430
 @@||loks.us^$generichide
@@ -5381,8 +5386,11 @@ go4up.com##script:inject(set-constant.js, _0xd348, true)
 ! https://forums.lanik.us/viewtopic.php?p=136688#p136688
 readcomiconline.to##^script:has-text(this[atob)
 readcomiconline.to##script:inject(abort-on-property-write.js, callExo)
+readcomiconline.to##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 readcomiconline.to##script:inject(set-constant.js, Math.random, trueFunc)
 readcomiconline.to##script:inject(set-constant.js, Object.defineProperty, noopFunc)
+readcomiconline.to##script:inject(setInterval-defuser.js, (), 500)
+readcomiconline.to##script:inject(setTimeout-defuser.js, callExo)
 ||fghtem.com^$xmlhttprequest,redirect=nooptext,domain=readcomiconline.to
 ||readcomiconline.to/widgets/exo$subdocument,first-party
 readcomiconline.to##.divCloseBut
@@ -5717,7 +5725,6 @@ mspik.com##script:inject(addEventListener-defuser.js, click, trigger)
 ! https://github.com/uBlockOrigin/uAssets/issues/1429
 goldshorten.com##script:inject(addEventListener-defuser.js, click, trigger)
 goldshorten.com##script:inject(abort-on-property-write.js, PopUP)
-goldshorten.com##script:inject(nano-setInterval-booster.js)
 goldshorten.com##.banner-inner
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=35634
@@ -6398,10 +6405,12 @@ insidemarketing.it##script:inject(abort-on-property-read.js, adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1835
 300mbfree4u.org,9xupload.me,desiupload.info,upgrand.net,uploadbaz.net,world4ufree.to##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+9xupload.me,uploadbaz.net##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+desiupload.*##script:inject(abort-on-property-write.js, decodeURIComponent)
+9xupload.me##script:inject(setInterval-defuser.js, (), 500)
 desiupload.*,upgrand.net,uploadbaz.net##script:inject(nano-setTimeout-booster.js)
 300mbfree4u.org##.code-block
 world4ufree.to##a[href*="/redirect"]
-desiupload.*##script:inject(abort-on-property-write.js, decodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1839
 vermangasporno.com##script:inject(popads-dummy.js)
@@ -7790,10 +7799,7 @@ moonbitcoin.cash###slideIn
 yify-torrent.xyz,ytsyify.com##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2319
-!#if !env_firefox
-||amgload.net^$xmlhttprequest,redirect=nooptext,domain=segodnya.ua
-||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=segodnya.ua
-!#endif
+segodnya.ua##script:inject(abort-current-inline-script.js, atob, void)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2320
 freemcserver.net##script:inject(bab-defuser.js)
@@ -8294,7 +8300,7 @@ gofilms4u.net,hubfiles.ws,watchvideo17.us##script:inject(abort-current-inline-sc
 moviescounterhd.com,moviefishers.org##script:inject(abort-on-property-write.js, encodeURIComponent)
 freemoviedownloads6.com,fullywatchonline.com,mkvcinemas.tech,myvidmate.net##script:inject(abort-current-inline-script.js, atob, decodeURIComponent)
 thevideobee.to##script:inject(popads-dummy.js)
-moviefishers.org,moviescouch.info##script:inject(abort-on-property-write.js, Fingerprint2)
+moviefishers.org,moviescouch.info,movizland.org,prozik.net##script:inject(abort-on-property-write.js, Fingerprint2)
 ||moviescouch.info/sw.js$script
 gomostream.com##.adtimes
 /watchbutton11.png$image
@@ -8403,7 +8409,7 @@ catcuturl.tk##script:inject(addEventListener-defuser.js, click, trigger)
 @@||themes24x7.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2524
-airlive.net##script:inject(abort-on-property-read.js, anOptions)
+afrischolarships.com,airlive.net,audiovision.de,bestfreeseotools.in,bigfreegiveaway.com,blaulichtreport-saarland.de,businessforyouand.me,candys-world.com,celebplace.de,coderexample.com,coollinked.com,dailynexus.com,dealsfinders.blog,deephouselounge.com,dl-wordpress.com,givemefiles.xyz,hdlatestwallpaper.com,ikindlebooks.com,insideretail.com.au,internetretailing.com.au,koptalk.com,lendbrand.com,msguides.com,nextdeparture.ca,ribbelmonster.de,smitedatamining.com,sourcecodesite.com,techstext.com,thinkscopes.com,truthinsideofyou.org,wdflat.com,wincamp.org,wranglernetwork.com,zsxtube.com##script:inject(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2525
 @@||xda-developers-forum.*^$generichide
@@ -8495,3 +8501,47 @@ eztvtorrent.com##script:inject(abort-on-property-write.js, Fingerprint2)
 anilinkz.to##.advid.james
 anilinkz.to###jade
 anilinkz.to##script:inject(set-constant.js, daganKwarta, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2554
+@@||safeloadfile.*^$generichide
+@@||asus-zenfone.com^$generichide
+@@||gem-flash.com^$generichide
+@@||safelink99.ga^$generichide
+@@||fw27.xyz^$generichide
+@@||isite.tw^$generichide
+@@||tulatur.ru^$generichide
+thefirmwareclub.com##script:inject(abort-on-property-write.js, ai_adb_overlay)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2555
+fuckmonstercock.com##script:inject(abort-current-inline-script.js, $, anyclick)
+fuckmonstercock.com##script:inject(abort-on-property-read.js, Aloader.serve)
+fuckmonstercock.com##.znaipn
+fuckmonstercock.com##.ztkady
+
+! https://github.com/uBlockOrigin/uAssets/issues/2556
+phpbb3bbcodes.com##script:inject(abort-current-inline-script.js, $, Adblocker)
+@@||phpbb3bbcodes.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2558
+msms4.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2560
+megalatinatube.com##script:inject(abort-on-property-read.js, Aloader.serve)
+megalatinatube.com##script:inject(abort-current-inline-script.js, $, anyclick)
+megalatinatube.com###invideo_2
+megalatinatube.com##.player__ads
+megalatinatube.com##.ads
+
+! https://github.com/uBlockOrigin/uAssets/issues/2557
+lordpremium.*##script:inject(addEventListener-defuser.js, load, nextFunction)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2559
+tranny.one##script:inject(abort-on-property-read.js, ExoLoader.serve)
+tranny.one##script:inject(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2561
+bigtitswishes.com##script:inject(abort-current-inline-script.js, $, anyclick)
+bigtitswishes.com##script:inject(abort-on-property-read.js, Aloader.serve)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2562
+pornhost.com##script:inject(abort-on-property-write.js, encodeURIComponent)
