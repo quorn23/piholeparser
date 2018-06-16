@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version E99 
+! Version F01 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -845,6 +845,7 @@ _banner.$domain=youtube.com
 ||a.*.com/$domain=gsmarena.com
 ||adobedtm.com^$domain=aarp.org|webmd.com
 ||adocean.pl^$domain=b92.net
+||azureedge.net^$domain=readmng.com
 ||cpmstar.com^$domain=animeland.tv|watchcartoononline.io
 ||doubleclick.net^$domain=telegraph.co.uk|yahoo.com|youtube.com
 ||innovid.com^$domain=youtube.com
@@ -929,6 +930,7 @@ _banner.$domain=youtube.com
 ##.ad-banner
 ##.ad-banner-leaderboard
 ##.ad-content
+##.ad-content-top
 ##.ad-div
 ##.ad-embedded
 ##.ad-engage
@@ -1011,6 +1013,7 @@ _banner.$domain=youtube.com
 ##.item-container-ad
 ##.js-adfliction-standard
 ##.js-stream-ad
+##.leaderboard-ad
 ##.mapped-ad
 ##.marketing-ad
 ##.masthead-ad
@@ -1032,6 +1035,7 @@ _banner.$domain=youtube.com
 ##.slot__ad
 ##.snarcy-ad
 ##.sponsor
+##.square_ad
 ##.top-ad-container
 ##.topAd
 ##.topBannerAd
@@ -1141,7 +1145,7 @@ youtube.com##DIV[class*="-ads-"]
 @@/track/*$media,subdocument
 @@/tracker/*$script,domain=taobao.com
 @@/tracking.$script,xmlhttprequest,domain=mlb.com
-@@/tracking/*$script,xmlhttprequest,domain=ctv.ca|ctvnews.ca|inpost.pl|mlb.com
+@@/tracking/*$script,xmlhttprequest,domain=ctv.ca|ctvnews.ca|inpost.pl|mlb.com|olx.ua
 @@/trackingCode.$script,domain=oakley.com
 @@/webtrends.$script,domain=mabanque.bnpparibas
 @@_tracker.$script,domain=huffingtonpost.de
