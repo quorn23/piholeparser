@@ -5,10 +5,9 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $MIRROREDFILE ]]
+if [[ -f $MIRROREDFILE ]]
 then
-printf "$green"  "Mirror File Currently Available."
+  printf "$green"  "Mirror File Currently Available."
 else
-printf "$red"  "Mirror File Currently Unavailable."
+  printf "$red"  "Mirror File Currently Unavailable."
 fi
