@@ -42,7 +42,7 @@ then
 
     BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
     echo "BASEFILENAME="$BASEFILENAME"" | tee --append $TEMPPARSEVARS &>/dev/null
-    echo "## $BASEFILENAME" | sudo tee --append $RECENTRUN &>/dev/null
+    echo "## $BASEFILENAME" | tee --append $RECENTRUN &>/dev/null
 
     BREPOLOGDIRECTORY="$TOPLEVELSCRIPTSLOGSDIR""$SCRIPTBASEFOLDERNAME"/
     if [[ ! -d $BREPOLOGDIRECTORY ]]
@@ -63,10 +63,10 @@ then
     echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
     echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
     echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
-    echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
+    echo "# $BASEFILENAME" | tee --append $BREPOLOG &>/dev/null
 
     printf "$green"    "Processing $BASEFILENAME List."
-    echo "" 
+    echo ""
 
     WHITELISTSSCRIPTSALL="$COMPLETEFOLDERPATH"/[0-9]*.sh
 
@@ -85,7 +85,7 @@ then
       if [[ -z $FULLSKIPPARSING && -f $FILEBEINGPROCESSED ]]
       then
         printf "$cyan"  "$PBNAMEPRETTYSCRIPTTEXT"
-        echo "## $PBNAMEPRETTYSCRIPTTEXT" | sudo tee --append $BREPOLOG &>/dev/null
+        echo "## $PBNAMEPRETTYSCRIPTTEXT" | tee --append $BREPOLOG &>/dev/null
         bash $p
         echo ""
       fi
@@ -136,9 +136,9 @@ then
 
     RECENTRUN="$RECENTRUNBANDAID"
 
-    echo "List Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
-    echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
-    echo "" | sudo tee --append $RECENTRUN &>/dev/null
+    echo "List Took $LOOPTIMEDIFF" | tee --append $RECENTRUN &>/dev/null
+    echo "$TAGTHEREPOLOG" | tee --append $RECENTRUN &>/dev/null
+    echo "" | tee --append $RECENTRUN &>/dev/null
 
   ## End of File Loop
   done
