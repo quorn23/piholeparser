@@ -79,7 +79,10 @@ fi
 ## What version?
 if [[ -z $PREVIOUSINSTALL ]]
 then
-  cp /etc/"$REPONAME"/scriptvars/"$REPONAME".var /etc/"$REPONAME".var
+  if [[ ! -f /etc/"$REPONAME".var]]
+  then
+    cp /etc/"$REPONAME"/scriptvars/"$REPONAME".var /etc/"$REPONAME".var
+  fi
   if (whiptail --title ""$REPONAME"" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What Version of "$REPONAME" to install?" 10 80) 
   then
     echo "version=local" | tee --append /etc/"$REPONAME".var
