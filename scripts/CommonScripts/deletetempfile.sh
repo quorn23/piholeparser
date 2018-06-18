@@ -6,25 +6,22 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 CHECKME=$TEMPCLEANUPONE
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
-echo ""
+  rm $CHECKME
+  echo ""
 fi
 
 CHECKME=$COMPRESSEDTEMPSEVEN
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
-echo ""
+  rm $CHECKME
+  echo ""
 fi
 
 CHECKME=$COMPRESSEDTEMPTAR
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
-echo ""
+  rm $CHECKME
+  echo ""
 fi
