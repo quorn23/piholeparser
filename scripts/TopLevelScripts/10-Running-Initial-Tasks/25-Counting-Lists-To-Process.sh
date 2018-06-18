@@ -7,38 +7,35 @@ source "$SCRIPTDIRA"/foldervars.var
 
 SCRIPTTEXT="Checking For Big Source List File."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-if
-[[ -f $COMBINEDBLACKLISTSSOURCE ]]
+echo "### $SCRIPTTEXT" | tee --append $RECENTRUN &>/dev/null
+if [[ -f $COMBINEDBLACKLISTSSOURCE ]]
 then
-rm $COMBINEDBLACKLISTSSOURCE
-printf "$red"    "Purging Old Source List."
-echo "* Old Multisource List Purged." | tee --append $RECENTRUN &>/dev/null
+  rm $COMBINEDBLACKLISTSSOURCE
+  printf "$red"    "Purging Old Source List."
+  echo "* Old Multisource List Purged." | tee --append $RECENTRUN &>/dev/null
 fi
 echo ""
 
 SCRIPTTEXT="Merging Sources."
 printf "$cyan"    "$SCRIPTTEXT"
-echo "### $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "### $SCRIPTTEXT" | tee --append $RECENTRUN &>/dev/null
 CHECKME=$BLACKLSTALL
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-cat $BLACKLSTALL | sort | sed '/^$/d' >> $COMBINEDBLACKLISTSSOURCE
+  cat $BLACKLSTALL | sort | sed '/^$/d' >> $COMBINEDBLACKLISTSSOURCE
 else
-touch $COMBINEDBLACKLISTSSOURCE
+  touch $COMBINEDBLACKLISTSSOURCE
 fi
 HOWMANYLINES=$(echo -e "`wc -l $COMBINEDBLACKLISTSSOURCE | cut -d " " -f 1`")
-echo "$HOWMANYLINES After $SCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+echo "$HOWMANYLINES After $SCRIPTTEXT" | tee --append $RECENTRUN &>/dev/null
 echo ""
 
 ## Math Time
-if
-[[ -f $COMBINEDBLACKLISTSSOURCE ]]
+if [[ -f $COMBINEDBLACKLISTSSOURCE ]]
 then
-HOWMANYSOURCELISTS=$(echo -e "`wc -l $COMBINEDBLACKLISTSSOURCE | cut -d " " -f 1`")
+  HOWMANYSOURCELISTS=$(echo -e "`wc -l $COMBINEDBLACKLISTSSOURCE | cut -d " " -f 1`")
 else
-HOWMANYSOURCELISTS="unknown amount"
+  HOWMANYSOURCELISTS="unknown amount"
 fi
 HOWMANYSOURCE="$HOWMANYSOURCELISTS"
 
