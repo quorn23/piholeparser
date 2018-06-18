@@ -39,7 +39,7 @@ then
 fi
 
 ## Remove Prior install
-if [[ -z $PREVIOUSINSTALL ]]
+if [[ -n $PREVIOUSINSTALL ]]
 then
   if (whiptail --title "$REPONAME" --yes-button "Remove beore install" --no-button "Abort" --yesno "$REPONAME is already installed?" 10 80) 
   then
@@ -62,7 +62,7 @@ else
 fi
 
 ## Save a pervious config?
-if [[ -z $PREVIOUSINSTALL ]]
+if [[ -n $PREVIOUSINSTALL ]]
 then
   if (whiptail --title ""$REPONAME"" --yes-button "keep config" --no-button "create new config" --yesno "Keep a previous config?" 10 80) 
   then
