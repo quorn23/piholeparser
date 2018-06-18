@@ -7,14 +7,12 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $BFILETEMP ]]
+if [[ -f $BFILETEMP ]]
 then
-cat $BFILETEMP | sed '/[][`~!@#$%^&*()=+{}\";:?/><,|]/d; /'\''/d' > $BTEMPFILE
+  cat $BFILETEMP | sed '/[][`~!@#$%^&*()=+{}\";:?/><,|]/d; /'\''/d' > $BTEMPFILE
 fi
 
-if
-[[ -f $BFILETEMP ]]
+if [[ -f $BFILETEMP ]]
 then
-rm $BFILETEMP
+  rm $BFILETEMP
 fi
