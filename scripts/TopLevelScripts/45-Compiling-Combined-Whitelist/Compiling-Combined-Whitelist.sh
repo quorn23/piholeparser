@@ -49,7 +49,7 @@ do
   echo "$MAINRECENTRUNLOGMDGITTAG" | tee --append $BREPOLOG &>/dev/null
   echo "$TAGTHEUPONEREPOLOG" | tee --append $BREPOLOG &>/dev/null
   echo "____________________________________" | tee --append $BREPOLOG &>/dev/null
-  echo "# $BASEFILENAME" | sudo tee --append $BREPOLOG &>/dev/null
+  echo "# $BASEFILENAME" | tee --append $BREPOLOG &>/dev/null
 
   ## Clear Temp Before
   if [[ -f $DELETETEMPFILE ]]
@@ -83,8 +83,8 @@ do
     LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
   fi
 
-  echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
-  echo "$TAGTHEREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+  echo "Process Took $LOOPTIMEDIFF" | tee --append $RECENTRUN &>/dev/null
+  echo "$TAGTHEREPOLOG" | tee --append $RECENTRUN &>/dev/null
   echo "" | tee --append $RECENTRUN
   printf "$orange" "$DIVIDERBARB"
   echo ""
