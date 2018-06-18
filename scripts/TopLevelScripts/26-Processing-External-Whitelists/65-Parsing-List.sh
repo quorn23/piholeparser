@@ -10,116 +10,101 @@ STARTPARSESTAMP=$(date +"%s")
 echo "STARTPARSESTAMP="$STARTPARSESTAMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Cheap error handling
-if
-[[ -f $WFILETEMP ]]
+if [[ -f $WFILETEMP ]]
 then
-rm $WFILETEMP
+  rm $WFILETEMP
 fi
-if
-[[ -f $WTEMPFILE ]]
+if [[ -f $WTEMPFILE ]]
 then
-rm $WTEMPFILE
+  rm $WTEMPFILE
 fi
 
 ## Transition File for Processing
-if
-[[ -f $WORIGINALFILETEMP ]]
+if [[ -f $WORIGINALFILETEMP ]]
 then
-cp $WORIGINALFILETEMP $WFILETEMP
+  cp $WORIGINALFILETEMP $WFILETEMP
 fi
 
-if
-[[ ! -f $WFILETEMP ]]
+if [[ ! -f $WFILETEMP ]]
 then
-touch $WFILETEMP
+  touch $WFILETEMP
 fi
 
 HOWMANYLINES=$(echo -e "`wc -l $WFILETEMP | cut -d " " -f 1`")
-if
-[[ $HOWMANYLINES -eq 0 ]]
+if [[ $HOWMANYLINES -eq 0 ]]
 then
-GOTOENDPARSING=true
-echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
+  GOTOENDPARSING=true
+  echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
 fi
 
 ## Start File Loop
 ## For .sh files In The actualparsing scripts Directory
 echo ""
-for p in $PARSINGPROCESSSCRIPTSALL
-do
+  for p in $PARSINGPROCESSSCRIPTSALL
+  do
 
-PWASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
-PWASEFILENAMEDASHNUM=$(echo $PWASEFILENAME | sed 's/[0-9\-]/ /g')
-PWNAMEPRETTYSCRIPTTEXT=$(echo $PWASEFILENAMEDASHNUM)
+  PWASEFILENAME=$(echo `basename $p | cut -f 1 -d '.'`)
+  PWASEFILENAMEDASHNUM=$(echo $PWASEFILENAME | sed 's/[0-9\-]/ /g')
+  PWNAMEPRETTYSCRIPTTEXT=$(echo $PWASEFILENAMEDASHNUM)
 
-if
-[[ -f $TEMPPARSEVARS ]]
-then
-source $TEMPPARSEVARS
-fi
+  if [[ -f $TEMPPARSEVARS ]]
+  then
+    source $TEMPPARSEVARS
+  fi
 
-if
-[[ -z $GOTOENDPARSING ]]
-then
-printf "$cyan"  "$PWNAMEPRETTYSCRIPTTEXT"
-echo "### $PWNAMEPRETTYSCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
-HOWMANYLINESSTART=$(echo -e "`wc -l $WFILETEMP | cut -d " " -f 1`")
-bash $p
-HOWMANYLINES=$(echo -e "`wc -l $WTEMPFILE | cut -d " " -f 1`")
-ENDCOMMENT="$HOWMANYLINES Lines After $PWNAMEPRETTYSCRIPTTEXT"
-echo "$ENDCOMMENT" | sudo tee --append $RECENTRUN &>/dev/null
+  if [[ -z $GOTOENDPARSING ]]
+  then
+    printf "$cyan"  "$PWNAMEPRETTYSCRIPTTEXT"
+    echo "### $PWNAMEPRETTYSCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+    HOWMANYLINESSTART=$(echo -e "`wc -l $WFILETEMP | cut -d " " -f 1`")
+    bash $p
+    HOWMANYLINES=$(echo -e "`wc -l $WTEMPFILE | cut -d " " -f 1`")
+    ENDCOMMENT="$HOWMANYLINES Lines After $PWNAMEPRETTYSCRIPTTEXT"
+    echo "$ENDCOMMENT" | sudo tee --append $RECENTRUN &>/dev/null
 
-{ if
-[[ $HOWMANYLINES -eq 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
-then
-printf "$red"  "$ENDCOMMENT List File Now Empty."
-GOTOENDPARSING=true
-echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
-elif
-[[ $HOWMANYLINES -gt 0 && $HOWMANYLINES -eq $HOWMANYLINESSTART ]]
-then
-printf "$yellow"    "$ENDCOMMENT"
-elif
-[[ $HOWMANYLINES -gt 0 && $HOWMANYLINES -lt $HOWMANYLINESSTART ]]
-then
-printf "$green"    "$ENDCOMMENT"
-fi }
+    if [[ $HOWMANYLINES -eq 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
+    then
+      printf "$red"  "$ENDCOMMENT List File Now Empty."
+      GOTOENDPARSING=true
+      echo "GOTOENDPARSING="$GOTOENDPARSING"" | tee --append $TEMPPARSEVARS &>/dev/null
+    elif [[ $HOWMANYLINES -gt 0 && $HOWMANYLINES -eq $HOWMANYLINESSTART ]]
+    then
+      printf "$yellow"    "$ENDCOMMENT"
+    elif [[ $HOWMANYLINES -gt 0 && $HOWMANYLINES -lt $HOWMANYLINESSTART ]]
+    then
+      printf "$green"    "$ENDCOMMENT"
+    fi
 
-mv $WTEMPFILE $WFILETEMP
-echo ""
-fi
+    mv $WTEMPFILE $WFILETEMP
+    echo ""
+  fi
 
-done
+  done
 
 ## End Time
 ENDPARSESTAMP=$(date +"%s")
 echo "ENDPARSESTAMP="$ENDPARSESTAMP"" | tee --append $TEMPPARSEVARS &>/dev/null
 
 ## Prepare for next step
-if
-[[ -f $WFILETEMP ]]
+if [[ -f $WFILETEMP ]]
 then
-HOWMANYLINES=$(echo -e "`wc -l $WFILETEMP | cut -d " " -f 1`")
-{ if
-[[ $HOWMANYLINES -eq 0 ]]
-then
-PARSINGEMPTIEDFILE=true
-echo "PARSINGEMPTIEDFILE="$PARSINGEMPTIEDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
-elif
-[[ $HOWMANYLINES -ge 1 ]]
-then
-cp $WFILETEMP $WPARSEDFILETEMP
-fi }
+  HOWMANYLINES=$(echo -e "`wc -l $WFILETEMP | cut -d " " -f 1`")
+  if [[ $HOWMANYLINES -eq 0 ]]
+  then
+    PARSINGEMPTIEDFILE=true
+    echo "PARSINGEMPTIEDFILE="$PARSINGEMPTIEDFILE"" | tee --append $TEMPPARSEVARS &>/dev/null
+  elif [[ $HOWMANYLINES -ge 1 ]]
+  then
+    cp $WFILETEMP $WPARSEDFILETEMP
+  fi
 fi
 
 ## Cheap error handling
-if
-[[ -f $WFILETEMP ]]
+if [[ -f $WFILETEMP ]]
 then
-rm $WFILETEMP
+  rm $WFILETEMP
 fi
-if
-[[ -f $WTEMPFILE ]]
+if [[ -f $WTEMPFILE ]]
 then
-rm $WTEMPFILE
+  rm $WTEMPFILE
 fi
