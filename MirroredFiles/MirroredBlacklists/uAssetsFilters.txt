@@ -1309,8 +1309,6 @@ quora.com##[id*=content_wrapper]:has-text(ad by)
 quora.com##[id*=content_wrapper]:has-text(promo)
 quora.com##[rel="nofollow noopener"]
 quora.com##div:has-text(/^ad by/)
-quora.com##[rel*="noopener"]
-quora.com##[rel*="nofollow"]
 quora.com##div:has-text(/^ad/)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
@@ -2216,6 +2214,8 @@ alibaba.com##.m-product-item:has-text(Sponsored Listing)
 ||msn.com/advertisement.ad.js$script,first-party,important
 ||aolcdn.com/ads/adswrappermsni.js$script,domain=msn.com,important
 msn.com##^script:has-text(/i10C/i)
+msn.com##.nativeadasideplaceholder
+msn.com##.nativeadserversidecontentmodule
 
 ! https://github.com/reek/anti-adblock-killer/issues/3492
 newser.com##script:inject(abort-on-property-read.js, checkAds)
@@ -7125,6 +7125,8 @@ shrt10.com##script:inject(nano-setInterval-booster.js)
 fxporn69.*##script:inject(addEventListener-defuser.js, click, exopop)
 fxporn69.*##script:inject(set-constant.js, adblock, noopFunc)
 fxporn69.*##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+@@||stream.porntv69.com/*/advertisement.js$script,first-party
+porntv69.com##.banner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2103
 vipbox.live##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -8697,3 +8699,35 @@ gobigtitsporn.com###invideo_data
 voyeurxxxfree.com##script:inject(abort-on-property-read.js, Aloader.serve)
 voyeurxxxfree.com##script:inject(abort-current-inline-script.js, $, anyclick)
 voyeurxxxfree.com###invideo_data
+
+! https://github.com/uBlockOrigin/uAssets/issues/2593
+@@||visioncloud.rocks/ads/*$script,first-party
+
+! https://github.com/reek/anti-adblock-killer/issues/4094
+hexafile.net##script:inject(setTimeout-defuser.js, nextFunction, 250)
+
+! https://forums.lanik.us/viewtopic.php?p=137876#p137876
+lebensmittelpraxis.de##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2596
+sanangelolive.com##script:inject(abort-on-property-read.js, Date.now)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8rl9c0/is_it_me_or_are_most_websites_beginning_to_block/e0tfevo/
+mundokodi.com##script:inject(abort-on-property-read.js, anOptions)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8rnrsa
+||hdliveextra-a.akamaihd.net/HD/scripts/*/config/ads.js$script,domain=telemundodeportes.com,redirect=noopjs
+telemundodeportes.com##script:inject(set-constant.js, adBlockEnabled, false)
+@@||v.fwmrm.net/ad/$xmlhttprequest,domain=telemundodeportes.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2598
+@@||jagobd.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2599
+likn.xyz##script:inject(nano-setInterval-booster.js)
+likn.xyz##script:inject(abort-on-property-read.js, blockAdBlock)
+likn.xyz##script:inject(abort-on-property-write.js, Fingerprint2)
+likn.xyz##script:inject(abort-on-property-write.js, _pop)
+sloomp.space##script:inject(popads-dummy.js)
+sloomp.space##script:inject(addEventListener-defuser.js, click)
+sloomp.space##script:inject(window.open-defuser.js)
