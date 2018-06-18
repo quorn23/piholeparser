@@ -5,14 +5,12 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $BFILETEMP ]]
+if [[ -f $BFILETEMP ]]
 then
-cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^\./d; /\.$/d; /^.\{,255\}$/!d;/^-/ d' > $BTEMPFILE
+  cat $BFILETEMP | sed '/[a-z]/!d; /[.]/!d; /[a-z]$/!d; /^\./d; /\.$/d; /^.\{,255\}$/!d;/^-/ d' > $BTEMPFILE
 fi
 
-if
-[[ -f $BFILETEMP ]]
+if [[ -f $BFILETEMP ]]
 then
-rm $BFILETEMP
+  rm $BFILETEMP
 fi
