@@ -68,7 +68,10 @@ then
   then
     echo "keeping old config"
   else
-    rm /etc/"$REPONAME".var
+    if [[-f /etc/"$REPONAME".var]]
+    then
+      rm /etc/"$REPONAME".var
+    fi
     unset PREVIOUSINSTALL
   fi
 fi
