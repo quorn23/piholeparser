@@ -11,10 +11,9 @@ source "$SCRIPTDIRA"/foldervars.var
 
 echo "Cleaning Mirror Directory"
 CHECKME=$MIRROREDBLACKLISTSSUBALL
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
@@ -24,10 +23,9 @@ echo ""
 
 echo "Cleaning Parsed Directory"
 CHECKME=$PARSEDBLACKLISTSSUBALL
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
@@ -37,10 +35,9 @@ echo ""
 
 echo "Cleaning Parsedall Directory"
 CHECKME=$COMBINEDBLACKLISTSSUBALL
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
@@ -50,10 +47,9 @@ echo ""
 
 echo "Cleaning Parsedall List"
 CHECKME=$COMBINEDBLACKLISTSSOURCE
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
@@ -64,9 +60,9 @@ echo ""
 echo "Cleaning Country Codes Directory"
 CHECKME=$COUNTRYCODESLISTSSUBALL
 if
-ls $CHECKME &> /dev/null;
+  ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
@@ -78,14 +74,14 @@ echo ""
 echo "Reverting Killed Lists"
 CHECKME=$BLACKLSTSTHATDIEALL
 if
-ls $CHECKME &> /dev/null;
+  ls $CHECKME &> /dev/null;
 then
-for f in $BLACKLSTSTHATDIEALL
-do
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
-mv $f $BUNDEADPARSELIST
-done
+  for f in $BLACKLSTSTHATDIEALL
+  do
+    BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+    BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
+    mv $f $BUNDEADPARSELIST
+  done
 fi
 echo ""
 
@@ -95,15 +91,14 @@ echo ""
 
 echo "Reverting Dead Lists"
 CHECKME=$DEADBLACKLSTALL
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-for f in $DEADBLACKLSTALL
-do
-BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
-BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
-mv $f $BUNDEADPARSELIST
-done
+  for f in $DEADBLACKLSTALL
+  do
+    BASEFILENAME=$(echo `basename $f | cut -f 1 -d '.'`)
+    BUNDEADPARSELIST="$MAINBLACKLSTSDIR""$BASEFILENAME".lst
+    mv $f $BUNDEADPARSELIST
+  done
 fi
 echo ""
 
@@ -113,17 +108,15 @@ echo ""
 
 echo "Cleaning TLD Lists"
 CHECKME=$MIRROREDTLDLISTSSUBALL
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 
 CHECKME=$TLDBKUP
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
@@ -133,22 +126,19 @@ echo ""
 
 echo "Cleaning Temp"
 CHECKME=$TEMPCLEANUPONE
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 CHECKME=$TEMPCLEANUPTWO
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 CHECKME=$TEMPCLEANUPTHREE
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 
 ###################
@@ -156,26 +146,23 @@ fi
 ###################
 
 CHECKME=$CLEANRECENTRUNLOGSONE
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
 CHECKME=$CLEANRECENTRUNLOGSTWO
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
 CHECKME=$CLEANRECENTRUNLOGSTHREE
-if
-ls $CHECKME &> /dev/null;
+if ls $CHECKME &> /dev/null;
 then
-rm $CHECKME
+  rm $CHECKME
 fi
 echo ""
 
