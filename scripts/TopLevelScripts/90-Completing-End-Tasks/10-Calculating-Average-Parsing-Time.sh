@@ -5,32 +5,28 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $PARSEAVERAGEFILETIME ]]
+if [[ -f $PARSEAVERAGEFILETIME ]]
 then
-AVERAGEPARSETIME=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILETIME`)
-AVERAGEPARSENUM=$(echo -e "`wc -l $PARSEAVERAGEFILETIME | cut -d " " -f 1`")
+  AVERAGEPARSETIME=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILETIME`)
+  AVERAGEPARSENUM=$(echo -e "`wc -l $PARSEAVERAGEFILETIME | cut -d " " -f 1`")
 fi
 
-if
-[[ -z $AVERAGEPARSETIME ]]
+if [[ -z $AVERAGEPARSETIME ]]
 then
-AVERAGEPARSETIME="unknown"
+  AVERAGEPARSETIME="unknown"
 fi
 echo "AVERAGEPARSETIME='"$AVERAGEPARSETIME"'" | tee --append $TEMPVARS &>/dev/null
 
-if
-[[ -z $AVERAGEPARSENUM ]]
+if [[ -z $AVERAGEPARSENUM ]]
 then
-AVERAGEPARSENUM="unknown"
+  AVERAGEPARSENUM="unknown"
 fi
 echo "AVERAGEPARSENUM='"$AVERAGEPARSENUM"'" | tee --append $TEMPVARS &>/dev/null
 printf "$yellow"   "Average Parsing Time Of $AVERAGEPARSENUM Lists Was $AVERAGEPARSETIME Seconds."
 
 echo "* Average Parsing Time Of $AVERAGEPARSENUM Lists Was $AVERAGEPARSETIME Seconds." | tee --append $RECENTRUN &>/dev/null
 
-if
-ls $PARSEAVERAGEFILETIME &> /dev/null;
+if ls $PARSEAVERAGEFILETIME &> /dev/null;
 then
-rm $PARSEAVERAGEFILETIME
+  rm $PARSEAVERAGEFILETIME
 fi
