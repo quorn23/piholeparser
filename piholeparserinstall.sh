@@ -69,13 +69,14 @@ then
     echo "keeping old config"
   else
     rm /etc/"$REPONAME".var
-    cp /etc/"$REPONAME"/scriptvars/"$REPONAME".var /etc/"$REPONAME".var
+    unset PREVIOUSINSTALL
   fi
 fi
 
 ## What version?
 if [[ -n $PREVIOUSINSTALL ]]
 then
+  cp /etc/"$REPONAME"/scriptvars/"$REPONAME".var /etc/"$REPONAME".var
   if (whiptail --title ""$REPONAME"" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What Version of "$REPONAME" to install?" 10 80) 
   then
     echo "version=local" | tee --append /etc/"$REPONAME".var
