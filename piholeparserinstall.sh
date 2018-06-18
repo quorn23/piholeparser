@@ -45,7 +45,7 @@ then
   then
     rm -r /etc/"$REPONAME"
     rm /etc/updaterun"$REPONAME".sh
-    crontab -l | grep -v 'sudo bash /etc/"$REPONAME".sh'  | crontab -
+    crontab -l | grep -v 'bash /etc/"$REPONAME".sh'  | crontab -
   else
     exit
   fi
@@ -56,7 +56,7 @@ if (whiptail --title ""$REPONAME"" --yes-button "yes" --no-button "no" --yesno "
 then
   git clone https://github.com/"$REPOOWNER"/"$REPONAME".git /etc/"$REPONAME"/
   cp /etc/"$REPONAME"/scripts/updaterun"$REPONAME".sh /etc/updaterun"$REPONAME".sh
-  (crontab -l ; echo "20 0 * * * sudo bash /updaterun"$REPONAME".sh") | crontab -
+  (crontab -l ; echo "20 0 * * * bash /updaterun"$REPONAME".sh") | crontab -
 else
   exit
 fi
@@ -83,7 +83,7 @@ then
   then
     cp /etc/"$REPONAME"/scriptvars/"$REPONAME".var /etc/"$REPONAME".var
   fi
-  if (whiptail --title ""$REPONAME"" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What Version of "$REPONAME" to install?" 10 80) 
+  if (whiptail --title ""$REPONAME"" --yes-button "Local Only" --no-button "I'll be uploading to Github" --yesno "What Version of "$REPONAME" to install?" 10 80)
   then
     echo "version=local" | tee --append /etc/"$REPONAME".var
   else
