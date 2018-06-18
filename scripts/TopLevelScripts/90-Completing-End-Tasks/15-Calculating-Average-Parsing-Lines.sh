@@ -5,16 +5,14 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $PARSEAVERAGEFILELINES ]]
+if [[ -f $PARSEAVERAGEFILELINES ]]
 then
-AVERAGEPARSELINES=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILELINES`)
+  AVERAGEPARSELINES=$(echo `awk '{ total += $1; count++ } END { print total/count }' $PARSEAVERAGEFILELINES`)
 fi
 
-if
-[[ -z $AVERAGEPARSELINES ]]
+if [[ -z $AVERAGEPARSELINES ]]
 then
-AVERAGEPARSELINES="unknown"
+  AVERAGEPARSELINES="unknown"
 fi
 echo "AVERAGEPARSELINES='"$AVERAGEPARSELINES"'" | tee --append $TEMPVARS &>/dev/null
 
@@ -22,8 +20,7 @@ echo "* Average Parsing Lines was "$AVERAGEPARSELINES"." | tee --append $RECENTR
 
 printf "$yellow"   "Average Parsing Lines was "$AVERAGEPARSELINES"."
 
-if
-ls $PARSEAVERAGEFILELINES &> /dev/null;
+if ls $PARSEAVERAGEFILELINES &> /dev/null;
 then
-rm $PARSEAVERAGEFILELINES
+  rm $PARSEAVERAGEFILELINES
 fi
