@@ -14,36 +14,35 @@ DEPENDENCIESALL="$COMPLETEFOLDERPATH"/*.dep
 for f in $DEPENDENCIESALL
 do
 
-timestamp=$(echo `date`)
+  timestamp=$(echo `date`)
 
-## Name Of Package
-DEPENDENCYNAME=$(echo `basename $f | cut -f 1 -d '.'`)
+  ## Name Of Package
+  DEPENDENCYNAME=$(echo `basename $f | cut -f 1 -d '.'`)
 
-## Actual Package
-DEPENDENCYPACKAGE=`cat $f`
+  ## Actual Package
+  DEPENDENCYPACKAGE=`cat $f`
 
-echo ""
-printf "$cyan"  "Checking For $DEPENDENCYNAME"
-echo "## $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+  echo ""
+  printf "$cyan"  "Checking For $DEPENDENCYNAME"
+  echo "## $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
 
-if
-which $DEPENDENCYNAME >/dev/null;
-then
-printf "$yellow"  "$DEPENDENCYNAME Is Already Installed."
-echo "$DEPENDENCYNAME Already Installed $timestamp" | tee --append $RECENTRUN &>/dev/null
-else
-echo "Installing $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
-printf "$yellow"  "Installing $DEPENDENCYNAME"
-apt-get install -y $DEPENDENCYPACKAGE
-fi
+  if which $DEPENDENCYNAME >/dev/null;
+  then
+    printf "$yellow"  "$DEPENDENCYNAME Is Already Installed."
+    echo "$DEPENDENCYNAME Already Installed $timestamp" | tee --append $RECENTRUN &>/dev/null
+  else
+    echo "Installing $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+    printf "$yellow"  "Installing $DEPENDENCYNAME"
+    apt-get install -y $DEPENDENCYPACKAGE
+  fi
 
-if
-which $DEPENDENCYNAME >/dev/null;
-then
-:
-else
-echo "Error Installing $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
-printf "$red"  "Error Installing $DEPENDENCYNAME"
-fi
+  if which $DEPENDENCYNAME >/dev/null;
+  then
+    :
+  else
+    echo "Error Installing $DEPENDENCYNAME $timestamp" | tee --append $RECENTRUN &>/dev/null
+    printf "$red"  "Error Installing $DEPENDENCYNAME"
+  fi
 
+## End Of loop
 done
