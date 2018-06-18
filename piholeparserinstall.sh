@@ -33,7 +33,7 @@ else
 fi
 
 ## Check for previous install
-if [[ -f $INSTALLPLACE ]]
+if [[ -d $INSTALLPLACE ]]
 then
   PREVIOUSINSTALL=true
 fi
