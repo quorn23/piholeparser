@@ -13,41 +13,36 @@ for source in `cat $TLDBKUP`;
 do
 
 
-WHATLINENUMBER=$(echo "`grep -n $source $TLDBKUP | cut -d : -f 1`")
-TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
+  WHATLINENUMBER=$(echo "`grep -n $source $TLDBKUP | cut -d : -f 1`")
+  #TLDPERCENTAGEMATH=$(echo `awk "BEGIN { pc=100*${WHATLINENUMBER}/${HOWMANYVALIDTLD}; i=int(pc); print (pc-i<0.5)?i:i+1}"`)
 
-HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
-if
-[[ "$HOWMANYTIMESTLD" != 0 ]]
-then
-cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
-fi
+  HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
+  if [[ "$HOWMANYTIMESTLD" != 0 ]]
+  then
+    cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
+  fi
 
-echo -ne "$TLDPERCENTAGEMATH \r"
+  #echo -ne "$TLDPERCENTAGEMATH \r"
 
 done
 
-if
-[[ ! -f $BTEMPFILE ]]
+if [[ ! -f $BTEMPFILE ]]
 then
-touch $BTEMPFILE
+  touch $BTEMPFILE
 fi
 
 ## What doesn't make it through
-if
-[[ -f $TRYNACATCHFIlES ]]
+if [[ -f $TRYNACATCHFIlES ]]
 then
-rm $TRYNACATCHFIlES
+  rm $TRYNACATCHFIlES
 fi
 
-if
-[[ -f $BTEMPFILE && -f $BFILETEMP ]]
+if [[ -f $BTEMPFILE && -f $BFILETEMP ]]
 then
-gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
+  gawk 'NR==FNR{a[$0];next} !($0 in a)' $BTEMPFILE $BFILETEMP >> $TRYNACATCHFIlES
 fi
 
-if
-[[ -f $BFILETEMP ]]
+if [[ -f $BFILETEMP ]]
 then
-rm $BFILETEMP
+  rm $BFILETEMP
 fi
