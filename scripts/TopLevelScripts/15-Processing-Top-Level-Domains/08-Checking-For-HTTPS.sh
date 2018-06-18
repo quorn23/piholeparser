@@ -5,10 +5,9 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-## Is source not using https
-if [[ $source != https* ]]
+if [[ -f $CURRENTTLDLIST ]]
 then
-  printf "$red"    "$BASEFILENAME List Does NOT Use https."
+  printf "$green"  "Mirror File Currently Available."
 else
-  printf "$green"    "$BASEFILENAME List Does Use https."
+  printf "$red"  "Mirror File Currently Unavailable."
 fi
