@@ -13,12 +13,23 @@ REPONAME=piholeparser
 REPOOWNER=deathbybandaid
 INSTALLPLACE=/etc/"$REPONAME"/
 
+## Update
+apt-get update
+
 ## Check for whiptail
 if which whiptail >/dev/null;
 then
   :
 else
   apt-get install -y whiptail
+fi
+
+## Check for whiptail
+if which git >/dev/null;
+then
+  :
+else
+  apt-get install -y git
 fi
 
 ## Check for previous install
