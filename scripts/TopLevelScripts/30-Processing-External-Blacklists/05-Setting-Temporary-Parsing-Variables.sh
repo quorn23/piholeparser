@@ -6,14 +6,12 @@ SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
 ## Download URL
-if
-[[ "$AMOUNTOFSOURCES" -le 1 ]]
+if [[ "$AMOUNTOFSOURCES" -le 1 ]]
 then
-source="$(echo `cat $FILEBEINGPROCESSED`)"
-elif
-[[ "$AMOUNTOFSOURCES" -gt 1 ]]
+  source="$(echo `cat $FILEBEINGPROCESSED`)"
+elif [[ "$AMOUNTOFSOURCES" -gt 1 ]]
 then
-source="$(echo `cat $FILEBEINGPROCESSED | head -1`)"
+  source="$(echo `cat $FILEBEINGPROCESSED | head -1`)"
 fi
 
 echo "source='$source'" | tee --append $TEMPPARSEVARS &>/dev/null
