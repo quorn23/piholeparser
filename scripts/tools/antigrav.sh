@@ -12,42 +12,38 @@ PIHOLEGRAVITY="$PIHOLEDIR"gravity.list
 PIHOLEGRAVITYSH=/etc/.pihole/gravity.sh
 ANTIGRAV="TEMPDIR"antigrav.list.txt
 
-if
-[[ -f $PIHOLEVARSCONF ]]
+if [[ -f $PIHOLEVARSCONF ]]
 then
-source $PIHOLEVARSCONF
+  source $PIHOLEVARSCONF
 else
-echo "$PIHOLEVARSCONF missing"
-exit
+  echo "$PIHOLEVARSCONF missing"
+  exit
 fi
 TRIMMEDIP=${IPV4_ADDRESS%/*}
 CURRENTUSER="$(whoami)"
 
 ## whiptail required
-if
-which whiptail >/dev/null;
+if which whiptail >/dev/null;
 then
-:
+  :
 else
-printf "$yellow"  "Installing whiptail"
-apt-get install -y whiptail
+  printf "$yellow"  "Installing whiptail"
+  apt-get install -y whiptail
 fi
 
 ## Remove old antigrav
-if
-[[ -f $ANTIGRAV ]]
+if [[ -f $ANTIGRAV ]]
 then
-rm $ANTIGRAV
+  rm $ANTIGRAV
 fi
 
 ## Update Gravity
 # pihole -g
-if
-(whiptail --title "AntiGrav" --yes-button "No" --no-button "Yes" --yesno "Do you want to run Gravity Now?" 10 80) 
+if (whiptail --title "AntiGrav" --yes-button "No" --no-button "Yes" --yesno "Do you want to run Gravity Now?" 10 80) 
 then
-echo "not running gravity"
+  echo "not running gravity"
 else
-bash $PIHOLEGRAVITYSH
+  bash $PIHOLEGRAVITYSH
 fi
 
 ## Trim IP from HOSTS format
