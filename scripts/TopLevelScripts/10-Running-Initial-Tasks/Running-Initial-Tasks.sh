@@ -61,8 +61,8 @@ do
     LOOPTIMEDIFF="$DIFFTIMELOOPSEC Seconds."
   fi
 
-  echo "Process Took $LOOPTIMEDIFF" | sudo tee --append $RECENTRUN &>/dev/null
-  echo "$INITIALTASKSREPOLOG" | sudo tee --append $RECENTRUN &>/dev/null
+  echo "Process Took $LOOPTIMEDIFF" | tee --append $RECENTRUN &>/dev/null
+  echo "$INITIALTASKSREPOLOG" | tee --append $RECENTRUN &>/dev/null
   echo "" | tee --append $RECENTRUN
 
   printf "$orange" "$DIVIDERBARB"
