@@ -5,10 +5,9 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $PARSEDFILE ]]
+if [[ -f $PARSEDFILE ]]
 then
-printf "$green"  "Parsed File Currently Available."
+  printf "$green"  "Parsed File Currently Available."
 else
-printf "$red"  "Parsed File Currently Unavailable."
+  printf "$red"  "Parsed File Currently Unavailable."
 fi
