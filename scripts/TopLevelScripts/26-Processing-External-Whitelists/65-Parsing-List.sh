@@ -55,12 +55,12 @@ echo ""
   if [[ -z $GOTOENDPARSING ]]
   then
     printf "$cyan"  "$PWNAMEPRETTYSCRIPTTEXT"
-    echo "### $PWNAMEPRETTYSCRIPTTEXT" | sudo tee --append $RECENTRUN &>/dev/null
+    echo "### $PWNAMEPRETTYSCRIPTTEXT" | tee --append $RECENTRUN &>/dev/null
     HOWMANYLINESSTART=$(echo -e "`wc -l $WFILETEMP | cut -d " " -f 1`")
     bash $p
     HOWMANYLINES=$(echo -e "`wc -l $WTEMPFILE | cut -d " " -f 1`")
     ENDCOMMENT="$HOWMANYLINES Lines After $PWNAMEPRETTYSCRIPTTEXT"
-    echo "$ENDCOMMENT" | sudo tee --append $RECENTRUN &>/dev/null
+    echo "$ENDCOMMENT" | tee --append $RECENTRUN &>/dev/null
 
     if [[ $HOWMANYLINES -eq 0 && $HOWMANYLINESSTART -lt $HOWMANYLINES ]]
     then
