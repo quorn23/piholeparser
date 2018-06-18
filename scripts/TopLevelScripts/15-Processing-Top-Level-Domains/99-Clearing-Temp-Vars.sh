@@ -5,8 +5,7 @@
 SCRIPTDIRA=$(dirname $0)
 source "$SCRIPTDIRA"/foldervars.var
 
-if
-[[ -f $TEMPPARSEVARS ]]
+if [[ -f $TEMPPARSEVARS ]]
 then
-rm $TEMPPARSEVARS
+  rm $TEMPPARSEVARS
 fi
