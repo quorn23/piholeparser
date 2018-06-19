@@ -108,17 +108,8 @@ then
   rm $FILETEMP
   echo ""
   
-  echo "Using Method 6 loop"
-  cat $COMBINEDBLACKLISTS | while read line1
-  do
-    cat $COMBINEDWHITELISTS | while read line2
-    do
-      if [[ $line1 == $line2 ]]
-      then
-        echo $line1 >>$FILETEMP
-      fi
-    done
-  done
+  echo "Using Method 6 sort"
+  sort $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | uniq -u >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
@@ -129,6 +120,28 @@ then
   fi
   rm $FILETEMP
   echo ""
+  
+  #echo "Using Method 7 loop"
+  #cat $COMBINEDBLACKLISTS | while read line1
+  #do
+  #  cat $COMBINEDWHITELISTS | while read line2
+  #  do
+  #    if [[ $line1 == $line2 ]]
+  #    then
+  #      echo $line1 >>$FILETEMP
+  #    fi
+  #  done
+  #done
+  #METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
+  #echo "new file is $METHODHOWMANYLINES lines"
+  #if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
+  #then
+  #  echo "$DOMAINTOLOOKFOR in file."
+  #else
+  #  echo "$DOMAINTOLOOKFOR not in file."
+  #fi
+  #rm $FILETEMP
+  #echo ""
 
 else
   echo "Not Found on Both Lists"
