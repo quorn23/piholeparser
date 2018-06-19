@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: F+/pXrsZamit+aW0GQidXg
-! Version: 20180618
+! Checksum: 7OS0Gd1+swaJT8Giw7lImQ
+! Version: 20180619
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -39,6 +39,8 @@
 ##div.ezAdsense
 ##div.gpt_ad_container
 ##div.js-relap__item>div.js-relap__item-inner>a[data-ad-link="true"]
+##div.logly-lift-ad-ad
+##div.logly-lift-ad>a[href^="https://dsp.logly.co.jp/click"]
 ##div.ob-widget-section>ul.ob-widget-items-container>li.ob-p
 ##div.ob_box_cont>ul>li.ob-p
 ##div.ob_container>a.ob-p
@@ -83,6 +85,7 @@
 ##iframe[src^="//x.jd.com/exsites"]
 ##iframe[src^="//y.one.impact-ad.jp/imp"]
 ##iframe[src^="http://178.175.132.130/script/ad.php"]
+##iframe[src^="http://a.t.webtracker.jp/res/"]
 ##iframe[src^="http://a1.dp25.kr/"]
 ##iframe[src^="http://ad.about.co.kr/"]
 ##iframe[src^="http://ad.ad4989.co.kr/"]
@@ -288,6 +291,9 @@
 ||a.bf-ad.net/makabo/js_ng/adplayer/js/adplayer.min.js^
 ||a.bf-ad.net/pubjs/*/adengine.js^
 ||a.ligatus.com/?*t=js
+||a.t.webtracker.jp/ad/
+||a.t.webtracker.jp/js/a.js^
+||a.t.webtracker.jp/res/
 ||a.teads.tv/page/*/tag^
 ||a.tribalfusion.com/displayAd.js^
 ||a.tribalfusion.com/j.ad^
@@ -530,6 +536,7 @@
 ||ani119.com/public/adv/$domain=ani119.com
 ||animefreak.tv/sites/all/modules/custom/anime/ads/
 ||animefreak.tv/sites/all/modules/custom/anime/yanone.html^
+||aos-creative.prf.hn/creative/
 ||ap.lijit.com/rtb/bid^
 ||ap.lijit.com/www/delivery/fpi.js^
 ||ap.lijit.com/www/headerauction/prebid.js^
@@ -681,6 +688,7 @@
 ||celeb.nann.co.kr^
 ||cine21.com/misc/iframe/ad_netinsight/$domain=cine21.com
 ||cjmooter.xcache.kinxcdn.com/script/
+||clevernt.com/scripts/*.min.js^
 ||click.realclick.co.kr^
 ||clkads.com^
 ||clksite.com/adServe/banners^
@@ -910,6 +918,7 @@
 ||image.news1.kr/system/ads/ad_banner/
 ||image.wownet.co.kr/static/banner/*/flash/
 ||image2.inews24.com/ad*
+||images.dable.io/ad/
 ||imagesrv.adition.com/js/srp.js^
 ||img.ak.impact-ad.jp/ic/pone/commonjs/yone_viewable_iframe_min.js^
 ||img.ak.impact-ad.jp/ic/pone/tags/*/*.js^
@@ -1051,6 +1060,7 @@
 ||medi8.genieesspv.jp/yie/ld/jsk^
 ||media.adrcdn.com/scripts/w-display/screenad_core_*_scrambled.js^
 ||media.adrcdn.com/scripts/w-display/screenad_launch_*_scrambled.js^
+||mediafire.com/templates/linkto/ads.php^$domain=mediafire.com
 ||mediamixad.com/ad/liveAd^
 ||mediamixad.com/ad/webad^
 ||mediapen.com/banners/$domain=mediapen.com
@@ -1568,6 +1578,13 @@ asahi.com##div.OutbrainAdMod
 asahi.com##div.PrInfoBlock
 asahi.com##div.RectangleAd
 asahi.com##ul.BannerBlock
+ascii.jp##div.ad_frame
+ascii.jp##div.adcloud_frame
+ascii.jp##div.adsize728
+ascii.jp##div.artAds
+ascii.jp##div.pickwrap
+ascii.jp##ul.ban234
+ascii.jp##ul.lnkBanner
 asiae.co.kr,view.asiae.co.kr##div#aside>div.aside_view_ad
 asiae.co.kr,view.asiae.co.kr##div.article_ad
 asiae.co.kr,view.asiae.co.kr##div.asiae_sv_banner
@@ -3110,6 +3127,8 @@ media.daum.net##div#banner250
 media.daum.net##div#daum-ad-root
 media.daum.net##div.wing_bnr3
 media.daum.net##iframe#daum-ad-root-ifrm
+mediafire.com##iframe#ads
+mediafire.com##iframe[src^="/templates/linkto/ads.php"]
 mediapen.com##div#adshow
 mediapen.com##div.mask_div
 mediapen.com##iframe[src^="/banners/"]
@@ -3720,6 +3739,7 @@ sourceforge.net##div.sterling
 sourceforge.net##section.sterling
 speconomy.com##div#article-control>table>tbody>tr:nth-of-type(2)>td:first-of-type>center[style="padding:30px 0; clear:both;"]
 speconomy.com##div#article-control>table>tbody>tr:nth-of-type(2)>td:first-of-type>div[style="padding:30px 0; clear:both;"]
+speee-ad.akamaized.net##div.ad_response[id^="__uz__slot_index_"]
 spojoy.com##div#ad-new
 spojoy.com##div#banner_left
 spojoy.com##div#banner_left_160x600
