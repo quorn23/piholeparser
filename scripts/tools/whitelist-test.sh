@@ -107,6 +107,6 @@ then
   
 
 else
-  echo "Not Found on Big WhiteList"
+  echo "Not Found on Both Lists"
 fi
 
