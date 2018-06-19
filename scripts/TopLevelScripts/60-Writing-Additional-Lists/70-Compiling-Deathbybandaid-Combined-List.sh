@@ -55,8 +55,10 @@ then
   ## diff
   diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
   rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
-  #cat $TEMPFILE | sed '/[><]/d' > $FILETEMP
+  #mv $TEMPFILE $FILETEMP
+  cat $TEMPFILE | sed '/[><]/d' > $FILETEMP
+  #cat $TEMPFILE | sed 's/^\s\+[ \t]//g; s/\s\+[ \t]$//g; /^\s*$/d; / /d' > $FILETEMP
+  rm $TEMPFILE
 
   ## Join
   join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
