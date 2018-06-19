@@ -41,7 +41,7 @@ then
   then
     echo "comm method remove failed"
   else
-    echo "comm method remove success"
+    echo "$DOMAINTOLOOKFOR not in file."
   fi
   rm $FILETEMP
   echo ""
@@ -52,9 +52,9 @@ then
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
-    echo "gawk method remove failed"
+    echo "$DOMAINTOLOOKFOR in file."
   else
-    echo "gawk method remove success"
+    echo "$DOMAINTOLOOKFOR not in file."
   fi
   rm $FILETEMP
   echo ""
@@ -65,9 +65,9 @@ then
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
-    echo "grep method remove failed"
+    echo "$DOMAINTOLOOKFOR in file."
   else
-    echo "grep method remove success"
+    echo "$DOMAINTOLOOKFOR not in file."
   fi
   rm $FILETEMP
   echo ""
@@ -78,9 +78,9 @@ then
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
-    echo "diff method remove failed"
+    echo "$DOMAINTOLOOKFOR in file."
   else
-    echo "diff method remove success"
+    echo "$DOMAINTOLOOKFOR not in file."
   fi
   rm $FILETEMP
   echo ""
