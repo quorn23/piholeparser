@@ -73,7 +73,7 @@ then
   echo ""
   
   echo "Using Method 4 diff"
-  diff $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | grep '> ' | sed 's/> //' > $FILETEMP
+  diff $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | grep "<" | sed 's/^<//g'  > $FILETEMP
   #diff -a --suppress-common-lines $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | grep '> ' | sed 's/> //' >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
