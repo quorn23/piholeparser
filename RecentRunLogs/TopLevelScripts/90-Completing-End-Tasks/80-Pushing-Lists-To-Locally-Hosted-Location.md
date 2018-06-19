@@ -3,4 +3,4 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # 80-Pushing-Lists-To-Locally-Hosted-Location
-* Localhost Web Directory Not Set. Please Fix. Tue Jun 19 20:27:58 UTC 2018
+* Localhost Web Directory Not Set. Please Fix. Tue Jun 19 20:43:28 UTC 2018
