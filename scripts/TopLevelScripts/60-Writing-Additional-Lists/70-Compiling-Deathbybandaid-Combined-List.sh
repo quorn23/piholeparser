@@ -35,24 +35,42 @@ echo ""
 if [[ -f $COMBINEDWHITELISTS  ]]
 then
   printf "$yellow"  "Removing whitelist Domains."
-  gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
+  cp $COMBINEDBLACKLISTS $FILETEMP
+
+  ## gawk
+  gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
+
+  ## grep
   grep -Fvxf $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
   rm $FILETEMP
-  comm -23 $TEMPFILE $COMBINEDWHITELISTS > $FILETEMP
-  rm $TEMPFILE
-  for WHITEDOMAINTOLOOKFOR in `cat $COMBINEDWHITELISTS`;
-  do
-    if grep -q $WHITEDOMAINTOLOOKFOR "$FILETEMP"
-    then
-      for BLACKLISTDOMAIN in `cat $FILETEMP`;
-      do
-        if [[ $WHITEDOMAINTOLOOKFOR != $BLACKLISTDOMAIN ]]
-        then
-          echo "$BLACKLISTDOMAIN" | tee --append $TEMPFILE &>/dev/null
-        fi
-      done
-    fi
-  done
+  mv $TEMPFILE $FILETEMP
+
+  ## comm
+  comm -23 $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
+
+  ## diff
+  diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
+
+  ## Join
+  join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
+
+  ## fgrep
+  fgrep -v -f $COMBINEDWHITELISTS $FILETEMP > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
+
+
+  
+
+
   echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
   echo ""
 fi
