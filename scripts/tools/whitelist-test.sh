@@ -31,7 +31,12 @@ fi
 if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
 then
   echo "Found on Big WhiteList"
-  echo " "
+fi
+
+echo " "
+if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS" && grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
+then
+  echo "Found on Both Lists"
 
   echo ""
   echo "Using Method 1 comm"
