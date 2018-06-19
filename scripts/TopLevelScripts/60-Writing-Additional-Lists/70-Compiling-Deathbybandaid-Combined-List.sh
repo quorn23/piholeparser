@@ -58,14 +58,14 @@ then
   #cat $TEMPFILE | sed '/[><]/d' > $FILETEMP
 
   ## Join
-  #join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
-  #rm $FILETEMP
-  #mv $TEMPFILE $FILETEMP
+  join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
 
   ## fgrep
-  #fgrep -v -f $COMBINEDWHITELISTS $FILETEMP > $TEMPFILE
-  #rm $FILETEMP
-  #mv $TEMPFILE $FILETEMP
+  fgrep -v -f $COMBINEDWHITELISTS $FILETEMP > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
 
 
   echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
