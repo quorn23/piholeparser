@@ -8728,8 +8728,10 @@ likn.xyz##script:inject(nano-setInterval-booster.js)
 likn.xyz##script:inject(abort-on-property-read.js, blockAdBlock)
 likn.xyz##script:inject(abort-on-property-write.js, Fingerprint2)
 likn.xyz##script:inject(abort-on-property-write.js, _pop)
+likn.xyz##script:inject(window.open-defuser.js)
+sloomp.space##script:inject(nano-setInterval-booster.js)
 sloomp.space##script:inject(popads-dummy.js)
-sloomp.space##script:inject(addEventListener-defuser.js, click)
+sloomp.space##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/)
 sloomp.space##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2600
@@ -8737,3 +8739,24 @@ watchnewmovienet.com##script:inject(setTimeout-defuser.js, (), 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2601
 @@||asia2tv.co^$generichide
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/106
+akvideo.stream##script:inject(setTimeout-defuser.js, (), 4000)
+akvideo.stream##script:inject(set-constant.js, cRAds, true)
+akvideo.stream###xo23l4yx
+
+! pirateproxy.mx popups
+pirateproxy.mx##script:inject(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2602
+@@||hindistoponline.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2603
+@@||2cheat.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2604
+@@||dongyoungsang.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2606
+ojogos.com.br##script:inject(abort-on-property-read.js, HTMLScriptElement)
+ojogos.com.br##script:inject(set-constant.js, sp_ad, true)
