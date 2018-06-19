@@ -99,8 +99,8 @@ then
   rm $FILETEMP
   echo ""
   
-  echo "Using Method 6 sort"
-  sort $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | uniq -u > $FILETEMP
+  echo "Using Method 6 sed"
+  sed 's#[^^]#[&]#g;s#\^#\\^#g;s#^#/^#;s#$#$/d#' $COMBINEDWHITELISTS | sed -f- $COMBINEDBLACKLISTS >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
@@ -112,7 +112,6 @@ then
   rm $FILETEMP
   echo ""
   
-
 
 else
   echo "Not Found on Big WhiteList"
