@@ -39,7 +39,7 @@ then
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
-    echo "comm method remove failed"
+    echo "$DOMAINTOLOOKFOR in file."
   else
     echo "$DOMAINTOLOOKFOR not in file."
   fi
