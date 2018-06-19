@@ -28,8 +28,6 @@ echo "White file is $WHITEHOWMANYLINES lines"
 if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
 then
   echo "Found on Big WhiteList"
-  WHITEHOWMANYLINES=$(echo -e "`wc -l $COMBINEDWHITELISTS | cut -d " " -f 1`")
-  echo "Big List Contains $WHITEHOWMANYLINES lines."
   echo " "
 
   echo ""
