@@ -27,7 +27,7 @@ do
     fi
   fi
 
-  echo -ne "$TLDPERCENTAGEMATH \r"
+  #echo -ne "$TLDPERCENTAGEMATH \r"
 
 done
 
