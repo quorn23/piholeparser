@@ -83,7 +83,7 @@ then
   echo ""
   
   echo "Using Method 4 diff"
-  diff -a --suppress-common-lines -y --changed-group-format='%<' --unchanged-group-format='' $COMBINEDBLACKLISTS $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $FILETEMP
+  diff -a --suppress-common-lines -y $COMBINEDBLACKLISTS $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
