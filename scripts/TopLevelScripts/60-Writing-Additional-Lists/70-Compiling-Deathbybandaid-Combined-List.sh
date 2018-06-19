@@ -53,8 +53,9 @@ then
   mv $TEMPFILE $FILETEMP
 
   ## diff
-  #diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
-  #rm $FILETEMP
+  diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
   #cat $TEMPFILE | sed '/[><]/d' > $FILETEMP
 
   ## Join
