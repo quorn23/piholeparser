@@ -36,8 +36,10 @@ if [[ -f $COMBINEDWHITELISTS  ]]
 then
   printf "$yellow"  "Removing whitelist Domains."
   gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
-  #grep -Fvxf $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
-  #comm -23 $COMBINEDBLACKLISTS $COMBINEDWHITELISTS > $FILETEMP
+  grep -Fvxf $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
+  rm $FILETEMP
+  comm -23 $TEMPFILE $COMBINEDWHITELISTS > $FILETEMP
+  rm $TEMPFILE
   echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
   echo ""
 fi
