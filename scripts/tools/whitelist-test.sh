@@ -27,10 +27,14 @@ echo "White file is $WHITEHOWMANYLINES lines"
 if grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
   echo "Found on Big BlackList"
+else
+  echo "Not Found on Big BlackList"
 fi
 if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
 then
   echo "Found on Big WhiteList"
+else
+  echo "Not Found on Big WhiteList"
 fi
 
 echo " "
