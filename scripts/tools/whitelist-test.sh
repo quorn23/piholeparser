@@ -121,6 +121,19 @@ then
   rm $FILETEMP
   echo ""
   
+  echo "Using Method fgrep"
+  fgrep -v -f $COMBINEDWHITELISTS $COMBINEDBLACKLISTS > $FILETEMP
+  METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
+  echo "new file is $METHODHOWMANYLINES lines"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
+  then
+    echo "$DOMAINTOLOOKFOR in file."
+  else
+    echo "$DOMAINTOLOOKFOR not in file."
+  fi
+  rm $FILETEMP
+  echo ""
+  
   #echo "Using Method loop"
   #cat $COMBINEDBLACKLISTS | while read line1
   #do
