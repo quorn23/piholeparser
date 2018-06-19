@@ -28,6 +28,9 @@ echo "White file is $WHITEHOWMANYLINES lines"
 if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
 then
   echo "Found on Big WhiteList"
+  WHITEHOWMANYLINES=$(echo -e "`wc -l $COMBINEDWHITELISTS | cut -d " " -f 1`")
+  echo "Big List Contains $WHITEHOWMANYLINES lines."
+  echo " "
 
   echo ""
   echo "Using Method 1 comm"
@@ -65,6 +68,19 @@ then
     echo "grep method remove failed"
   else
     echo "grep method remove success"
+  fi
+  rm $FILETEMP
+  echo ""
+  
+  echo "Using Method 3 diff"
+  diff -a --suppress-common-lines $COMBINEDBLACKLISTS $COMBINEDWHITELISTS | grep '> ' | sed 's/> //' >> $FILETEMP
+  METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
+  echo "new file is $METHODHOWMANYLINES lines"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
+  then
+    echo "diff method remove failed"
+  else
+    echo "diff method remove success"
   fi
   rm $FILETEMP
   echo ""
