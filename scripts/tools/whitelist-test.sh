@@ -43,7 +43,7 @@ then
   echo "Found on Both Lists"
 
   echo ""
-  echo "Using Method 1 comm"
+  echo "Using Method comm"
   comm -23 $COMBINEDBLACKLISTS $COMBINEDWHITELISTS > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
@@ -56,7 +56,7 @@ then
   rm $FILETEMP
   echo ""
 
-  echo "Using Method 2 gawk"
+  echo "Using Method gawk"
   gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
@@ -69,7 +69,7 @@ then
   rm $FILETEMP
   echo ""
 
-  echo "Using Method 3 grep"
+  echo "Using Method grep"
   grep -Fvxf $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
@@ -82,7 +82,7 @@ then
   rm $FILETEMP
   echo ""
   
-  echo "Using Method 4 diff"
+  echo "Using Method diff"
   diff -a --suppress-common-lines -y $COMBINEDBLACKLISTS $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
@@ -95,7 +95,7 @@ then
   rm $FILETEMP
   echo ""
   
-  echo "Using Method 5 join"
+  echo "Using Method join"
   join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $COMBINEDBLACKLISTS) > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
@@ -108,7 +108,7 @@ then
   rm $FILETEMP
   echo ""
   
-  echo "Using Method 6 sort"
+  echo "Using Method sort"
   sort $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | uniq -u >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
@@ -121,7 +121,7 @@ then
   rm $FILETEMP
   echo ""
   
-  #echo "Using Method 7 loop"
+  #echo "Using Method loop"
   #cat $COMBINEDBLACKLISTS | while read line1
   #do
   #  cat $COMBINEDWHITELISTS | while read line2
