@@ -135,7 +135,7 @@ then
   echo ""
   
   echo "Using Method fc"
-  fc $COMBINEDWHITELISTS $COMBINEDBLACKLISTS > $FILETEMP
+  fc $COMBINEDBLACKLISTS $COMBINEDWHITELISTS > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
