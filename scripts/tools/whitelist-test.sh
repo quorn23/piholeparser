@@ -85,8 +85,33 @@ then
   rm $FILETEMP
   echo ""
   
-  echo "Using Method 3 sd"
+  echo "Using Method 4 sd"
   cat $COMBINEDWHITELISTS | sd 'cat $COMBINEDBLACKLISTS' > $FILETEMP
+  METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
+  echo "new file is $METHODHOWMANYLINES lines"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
+  then
+    echo "$DOMAINTOLOOKFOR in file."
+  else
+    echo "$DOMAINTOLOOKFOR not in file."
+  fi
+  rm $FILETEMP
+  echo ""
+  
+  echo "Using Method 5 Loop Echo"
+  for WHITEDOMAINTOLOOKFOR in `cat $COMBINEDWHITELISTS`;
+  do
+    if grep -q $WHITEDOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
+    then
+      for BLACKLISTDOMAIN in `cat $COMBINEDBLACKLISTS`;
+      do
+        if [[ $WHITEDOMAINTOLOOKFOR != $BLACKLISTDOMAIN ]]
+        then
+          echo "$BLACKLISTDOMAIN" | tee --append $FILETEMP &>/dev/null
+        fi
+      done
+    fi
+  done
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
   if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
