@@ -53,7 +53,7 @@ then
   mv $TEMPFILE $FILETEMP
 
   ## diff
-  diff -a --suppress-common-lines -w --speed-large-files $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
+  diff -a --suppress-common-lines --speed-large-files $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
   rm $FILETEMP
   cat $TEMPFILE | sed '/[><]/d; /'\''/d' > $FILETEMP
 
