@@ -68,23 +68,9 @@ then
   mv $TEMPFILE $FILETEMP
 
 
-  
-
-
   echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
   echo ""
 fi
-
-
-  HOWMANYTIMESTLD=$(echo -e "`grep -o [.]$source\$ $BFILETEMP | wc -l`")
-  if [[ "$HOWMANYTIMESTLD" != 0 ]]
-  then
-    cat $BFILETEMP | grep -e [.]$source\$ >> $BTEMPFILE
-  fi
-
-
-done
-
 
 if [[ -f $FILETEMP ]]
 then
