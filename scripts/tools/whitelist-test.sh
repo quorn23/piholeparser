@@ -24,13 +24,13 @@ BLACKHOWMANYLINES=$(echo -e "`wc -l $COMBINEDBLACKLISTS | cut -d " " -f 1`")
 echo "Black file is $BLACKHOWMANYLINES lines"
 WHITEHOWMANYLINES=$(echo -e "`wc -l $COMBINEDWHITELISTS | cut -d " " -f 1`")
 echo "White file is $WHITEHOWMANYLINES lines"
-if grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
+if grep -Fxq $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
   echo "Found on Big BlackList"
 else
   echo "Not Found on Big BlackList"
 fi
-if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
+if grep -Fxq $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS"
 then
   echo "Found on Big WhiteList"
 else
@@ -38,7 +38,7 @@ else
 fi
 
 echo " "
-if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS" && grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
+if grep -Fxq $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS" && grep -Fxq $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
   echo "Found on Both Lists"
 
