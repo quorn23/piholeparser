@@ -38,7 +38,7 @@ else
 fi
 
 echo " "
-if grep -Fx $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS" && grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
+if grep -q $DOMAINTOLOOKFOR "$COMBINEDWHITELISTS" && grep -q $DOMAINTOLOOKFOR "$COMBINEDBLACKLISTS"
 then
   echo "Found on Both Lists"
 
@@ -60,7 +60,7 @@ then
   gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
-  if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
     echo "$DOMAINTOLOOKFOR in file."
   else
@@ -73,7 +73,7 @@ then
   grep -Fvxf $COMBINEDWHITELISTS $COMBINEDBLACKLISTS >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
-  if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
     echo "$DOMAINTOLOOKFOR in file."
   else
@@ -86,7 +86,7 @@ then
   diff --unchanged-line-format="" --old-line-format="%L" --new-line-format="" $COMBINEDBLACKLISTS $COMBINEDWHITELISTS > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
-  if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
     echo "$DOMAINTOLOOKFOR in file."
   else
@@ -99,7 +99,7 @@ then
   join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $COMBINEDBLACKLISTS) > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
-  if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
     echo "$DOMAINTOLOOKFOR in file."
   else
@@ -112,7 +112,7 @@ then
   sort $COMBINEDWHITELISTS $COMBINEDBLACKLISTS | uniq -u >> $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
-  if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
     echo "$DOMAINTOLOOKFOR in file."
   else
@@ -125,7 +125,7 @@ then
   fgrep -v -f $COMBINEDWHITELISTS $COMBINEDBLACKLISTS > $FILETEMP
   METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   echo "new file is $METHODHOWMANYLINES lines"
-  if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   then
     echo "$DOMAINTOLOOKFOR in file."
   else
@@ -148,7 +148,7 @@ then
   #done
   #METHODHOWMANYLINES=$(echo -e "`wc -l $FILETEMP | cut -d " " -f 1`")
   #echo "new file is $METHODHOWMANYLINES lines"
-  #if grep -q -Fx $DOMAINTOLOOKFOR "$FILETEMP"
+  #if grep -q $DOMAINTOLOOKFOR "$FILETEMP"
   #then
   #  echo "$DOMAINTOLOOKFOR in file."
   #else
