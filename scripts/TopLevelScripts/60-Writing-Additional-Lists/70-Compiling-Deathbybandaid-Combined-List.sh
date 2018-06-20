@@ -38,9 +38,9 @@ then
   cp $COMBINEDBLACKLISTS $FILETEMP
 
   ## gawk
-  gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
-  rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
+  #gawk 'NR==FNR{a[$0];next} !($0 in a)' $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
+  #rm $FILETEMP
+  #mv $TEMPFILE $FILETEMP
 
   ## grep
   #grep -Fvxf $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
@@ -54,8 +54,9 @@ then
 
   ## diff
   #diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
-  #rm $FILETEMP
-  #mv $TEMPFILE $FILETEMP
+  diff --unchanged-line-format="" --old-line-format="%L" --new-line-format="" $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
 
   ## Join
   #join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
