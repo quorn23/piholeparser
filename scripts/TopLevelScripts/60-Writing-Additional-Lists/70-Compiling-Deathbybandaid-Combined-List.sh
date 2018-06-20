@@ -43,14 +43,14 @@ then
   mv $TEMPFILE $FILETEMP
 
   ## grep
-  grep -Fvxf $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
-  rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
+  #grep -Fvxf $COMBINEDWHITELISTS $FILETEMP >> $TEMPFILE
+  #rm $FILETEMP
+  #mv $TEMPFILE $FILETEMP
 
   ## comm
-  comm -23 $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
-  rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
+  #comm -23 $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
+  #rm $FILETEMP
+  #mv $TEMPFILE $FILETEMP
 
   ## diff
   #diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
@@ -58,14 +58,14 @@ then
   #mv $TEMPFILE $FILETEMP
 
   ## Join
-  join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
-  rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
+  #join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
+  #rm $FILETEMP
+  #mv $TEMPFILE $FILETEMP
 
   ## fgrep
-  fgrep -v -f $COMBINEDWHITELISTS $FILETEMP > $TEMPFILE
-  rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
+  #fgrep -v -f $COMBINEDWHITELISTS $FILETEMP > $TEMPFILE
+  #rm $FILETEMP
+  #mv $TEMPFILE $FILETEMP
 
 
   echo -e "`wc -l $FILETEMP | cut -d " " -f 1` lines after whitelist"
