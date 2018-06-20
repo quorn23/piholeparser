@@ -53,7 +53,8 @@ then
   mv $TEMPFILE $FILETEMP
 
   ## diff
-  diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
+  #diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
+  diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^</d'  > $TEMPFILE
   rm $FILETEMP
   mv $TEMPFILE $FILETEMP
 
