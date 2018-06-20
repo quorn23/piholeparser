@@ -48,15 +48,14 @@ then
   #mv $TEMPFILE $FILETEMP
 
   ## comm
-  #comm -23 $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
-  #rm $FILETEMP
-  #mv $TEMPFILE $FILETEMP
+  comm -23 $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
+  rm $FILETEMP
+  mv $TEMPFILE $FILETEMP
 
   ## diff
   #diff -a --suppress-common-lines -y --speed-large-files $FILETEMP $COMBINEDWHITELISTS | grep "<" | sed 's/^<//g'  > $TEMPFILE
-  diff --unchanged-line-format="" --old-line-format="%L" --new-line-format="" $FILETEMP $COMBINEDWHITELISTS > $TEMPFILE
-  rm $FILETEMP
-  mv $TEMPFILE $FILETEMP
+  #rm $FILETEMP
+  #mv $TEMPFILE $FILETEMP
 
   ## Join
   #join -v 2 <(sort $COMBINEDWHITELISTS) <(sort $FILETEMP) > $TEMPFILE
