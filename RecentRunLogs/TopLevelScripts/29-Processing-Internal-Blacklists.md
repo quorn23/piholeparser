@@ -3,7 +3,7 @@
 ____________________________________
 # 
 ### Checking For Script Blacklist File.
-* Script Blacklist File not there, not removing. Wed Jun 20 12:33:38 UTC 2018
+* Script Blacklist File not there, not removing. Wed Jun 20 12:57:17 UTC 2018
 ### Pulling Domains From Individual Lists.
 1 In AlexaVoiceAssistant
 1 In BlogPostAds
