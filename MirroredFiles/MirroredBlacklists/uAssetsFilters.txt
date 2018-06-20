@@ -4612,7 +4612,7 @@ gogoanime.*##script:inject(setTimeout-defuser.js, o(), 1)
 gogoanime.io,gogoanime.se##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 gogoanime.*##script:inject(set-constant.js, Math.random, trueFunc)
 gogoanime.*##script:inject(set-constant.js, Object.defineProperty, noopFunc)
-gogoanime.*##a[rel="nofollow noindex"][target="_blank"]
+gogoanime.*##a[href$=".jpg"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1276
 ourl.io##script:inject(abort-on-property-write.js, _pop)
@@ -6783,7 +6783,7 @@ animeland.tv##^script:has-text(676574456c656d656e747342795461674e616d65)
 ! ! adding sites using the same script
 animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,memecenter.com,toonget.net,toonova.net##script:inject(set-constant.js, Math.random, trueFunc)
 animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,memecenter.com,toonget.net,toonova.net##script:inject(set-constant.js, Object.defineProperty, noopFunc)
-animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[rel="nofollow noindex"][target="_blank"]
+animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[href$=".jpg"]
 memecenter.com##a[href$=".png"]
 mangareader.net##iframe[sandbox*="allow-popups-to-escape-sandbox"]
 
@@ -8778,3 +8778,15 @@ sheamateur.com##script:inject(abort-on-property-read.js, __htapop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2615
 nekopoi.lol##script:inject(set-constant.js, isAdsDisplayed, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2616
+hargakamera7.com##script:inject(abort-current-inline-script.js, FuckAdBlock)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41060
+@@||teutorrent.com^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41058
+cutsouf.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+cutsouf.com##script:inject(abort-on-property-write.js, Fingerprint2)
+cutsouf.com###adsground
+cutsouf.com###topbar
