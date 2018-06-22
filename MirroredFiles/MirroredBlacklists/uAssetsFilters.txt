@@ -1325,7 +1325,9 @@ worldfree4u.lol##a[href="/ws.html"]
 worldfree4u.ws##.adButton
 
 ! https://forums.lanik.us/viewtopic.php?p=112050#p112050
+! https://www.reddit.com/r/uBlockOrigin/comments/8stv3y
 eurogamer.net,rockpapershotgun.com,vg247.com##script:inject(abort-on-property-write.js, yafaIt)
+rockpapershotgun.com##script:inject(abort-on-property-write.js, _sp_)
 
 ! https://forums.lanik.us/viewtopic.php?p=101913#p101913
 auto-motor-und-sport.de,caravaning.de,womenshealth.de##script:inject(abort-on-property-write.js, adblockActive)
@@ -1930,7 +1932,9 @@ thepiratebay.*##script:inject(abort-on-property-read.js, _wm)
 @@||wallpapermania.eu^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/517
-hollaforums.com##script:inject(abort-on-property-read.js, adsLoaded)
+! https://github.com/uBlockOrigin/uAssets/issues/2628
+hollaforums.com##script:inject(set-constant.js, adsBlocked, false)
+hollaforums.com##script:inject(window.open-defuser.js)
 @@||hollaforums.com^$generichide
 ||hollaforums.com/if/rc/ecigs/$subdocument,first-party
 hollaforums.com##.sidebar-rcs
@@ -8403,7 +8407,7 @@ inspirationde.com##.adsbygoogle
 @@||mcoc-guide.*^$generichide
 
  ! https://github.com/uBlockOrigin/uAssets/issues/2514
- @@||catcuturl.tk^$generichide
+@@||catcuturl.tk^$generichide
 catcuturl.tk##.banner-inner
 catcuturl.tk##script:inject(window.open-defuser.js)
 catcuturl.tk##script:inject(nano-setInterval-booster.js)
@@ -8829,3 +8833,19 @@ vnurl.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblo
 ! https://github.com/uBlockOrigin/uAssets/issues/2625
 liverussia2018.ml##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 @@||liverussia2018.ml^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2627
+@@||freeproxylist.me^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2629
+@@||portsmouth.co.uk^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2628
+powforums.com##script:inject(set-constant.js, adsBlocked, false)
+powforums.com##script:inject(window.open-defuser.js)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/109
+4snip.pw##script:inject(window.open-defuser.js)
+4snip.pw##[src="https://4snip.pw/poker.html"]
+abysstream.com##script:inject(nano-setInterval-booster.js)
+@@||abysstream.com/ads.js$script,first-party
