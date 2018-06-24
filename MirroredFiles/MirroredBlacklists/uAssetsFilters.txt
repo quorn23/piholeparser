@@ -229,6 +229,8 @@ openload.co##script:inject(abort-current-inline-script.js, adblock, adblock2)
 ! https://github.com/uBlockOrigin/uAssets/issues/1292
 kissanime.*##script:inject(kissanime-defuser.js)
 kissanime.ac,kissanime.co##script:inject(set-constant.js, check_adblock, true)
+@@||static.animecdn.stream/themes/vast/videojs.ads.min.js$script,domain=kissanime.ac
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kissanime.ac
 ! To cancel https://hg.adblockplus.org/easylist/rev/589a2a8c87d4
 .to/ads/$important,subdocument,domain=kissanime.ru|kissanime.to
 
@@ -2678,7 +2680,7 @@ allpar.com,antonymsfor.com,cheezburger.com,colourlovers.com,daily-stuff.com,diet
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40237&p=133935#p133934
 ! https://github.com/uBlockOrigin/uAssets/issues/1856
 ! https://github.com/uBlockOrigin/uAssets/issues/2072
-abandonedspaces.com,activistpost.com,allthetests.com,almasdarnews.com,asheepnomore.net,blacklistednews.com,blog-rct.com,bobshideout.com,brain-sharper.com,broadwayworld.com,clashdaily.com,daclips.in,dailygalaxy.com,debka.com,eternallifestyle.com,ffxivguild.com,freebeacon.com,fullmatchesandshows.com,geekycamel.com,getinmybelly.com,gorillavid.in,graduatez.com,grammarist.com,greeningz.com,healthyfocus.org,hiphopearly.com,hiphoplately.com,humansarefree.com,hyperactivz.com,israelnationalnews.com,jerusalemonline.com,kiwireport.com,ludokado.com,miniplay.com,monagiza.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,noteabley.com,nysun.com,parentztalk.com,pensandpatron.com,popmatters.com,powerofpositivity.com,presidentmommy.com,readarsenal.com,readlightnovel.org,readliverpoolfc.com,readmng.com,seneweb.com,sobusygirls.fr,soundreview.org,spellchecker.net,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,textsfromlastnight.com,theamericanmirror.com,thecelticblog.com,thehornnews.com,timesofisrael.com,topbestalternatives.com,toptenz.net,travelfuntu.com,tworeddots.com,vidmax.com,virtualjerusalem.com,walterfootball.com,wnd.com,worldation.com,yepi.com,youtubeonrepeat.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
+abandonedspaces.com,activistpost.com,allthetests.com,almasdarnews.com,asheepnomore.net,blacklistednews.com,blog-rct.com,bobshideout.com,brain-sharper.com,broadwayworld.com,clashdaily.com,daclips.in,dailygalaxy.com,debka.com,eternallifestyle.com,fetchsport.com,ffxivguild.com,freebeacon.com,fullmatchesandshows.com,geekycamel.com,getinmybelly.com,gorillavid.in,graduatez.com,grammarist.com,greeningz.com,healthyfocus.org,hiphopearly.com,hiphoplately.com,humansarefree.com,hyperactivz.com,israelnationalnews.com,jerusalemonline.com,kiwireport.com,ludokado.com,miniplay.com,monagiza.com,moviepredators.com,movpod.in,netzwelt.de,ninjajournalist.com,noteabley.com,nysun.com,parentztalk.com,pensandpatron.com,popmatters.com,powerofpositivity.com,presidentmommy.com,readarsenal.com,readlightnovel.org,readliverpoolfc.com,readmng.com,seneweb.com,sobusygirls.fr,soundreview.org,spellchecker.net,spiele-umsonst.de,sportsretriever.com,talkwithstranger.com,textsfromlastnight.com,theamericanmirror.com,thecelticblog.com,thehornnews.com,timesofisrael.com,topbestalternatives.com,toptenz.net,travelfuntu.com,tworeddots.com,vidmax.com,virtualjerusalem.com,walterfootball.com,wnd.com,worldation.com,yepi.com,youtubeonrepeat.com##script:inject(abort-current-inline-script.js, atob, TextDecoder)
 convert-me.com,dailygalaxy.com,diffen.com,eurweb.com,footyroom.com,izzygames.com,mathwarehouse.com,meta-calculator.com,meta-chart.com,netzwelt.de,nowtheendbegins.com,pocketnow.com,spiele-umsonst.de##script:inject(abort-on-property-read.js, TextDecoder)
 ||akrazappi.com^
 ||gordipucha.com^
@@ -3632,6 +3634,7 @@ uskip.me##script:inject(abort-on-property-read.js, RunAds)
 ! https://github.com/uBlockOrigin/uAssets/issues/1032
 @@||androgalaxy.in^$generichide
 androgalaxy.in##script:inject(abort-on-property-write.js, AdBlockDetectorWorkaround)
+androgalaxy.in##script:inject(set-constant.js, adblock, 1)
 @@||androgalaxy.in/js/Siropu/AM/ads.min.js
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1033
@@ -5606,7 +5609,6 @@ kokemoon.com##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1580
 link-zero.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
-link-zero.com##script:inject(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1581
 ||myownads.space^
@@ -6485,8 +6487,8 @@ eporner.com##script:inject(abort-on-property-read.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1855
 ! https://forums.lanik.us/viewtopic.php?p=134829#p134829
-@@*$generichide,domain=arenavision.in|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk
-arenavision.*,arenavision2017.cf,arenavision2018.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+@@*$generichide,domain=arenavision.in|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk|arenavision2017.tk
+arenavision.*,arenavision2017.*,arenavision2018.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 arenavision2018.*##script:inject(bab-defuser.js)
 arenavision.*,arenavision2017.cf,arenavision2018.*##script:inject(window.open-defuser.js)
 ||imgpfx.arenavision.
@@ -6781,6 +6783,7 @@ animeland.tv##script:inject(abort-current-inline-script.js, atob, void)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=animeland.tv
 ! ! adding sites using the same script
 animeland.tv,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[href$=".jpg"]
+animeland.tv,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[href$=".png"]
 memecenter.com##a[href$=".png"]
 mangareader.net##iframe[sandbox*="allow-popups-to-escape-sandbox"]
 
@@ -7083,8 +7086,11 @@ pornoreino.com##script:inject(abort-on-property-read.js, ExoLoader)
 pornoreino.com##.banner
 
 ! https://forums.lanik.us/viewtopic.php?p=135735#p135735
+! https://forums.lanik.us/viewtopic.php?f=103&t=41081
 atresplayer.com##script:inject(setTimeout-defuser.js, _creatBait)
 @@||adpass.atresmedia.com/*/adjs.js$xmlhttprequest,domain=atresplayer.com
+@@||atresplayer.com^$generichide
+@@/advertisement.js$domain=atresplayer.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2088
 animedigitalnetwork.fr##script:inject(set-constant.js, adblocked, false)
@@ -8869,3 +8875,41 @@ topstreams.info##script:inject(abort-current-inline-script.js, $, showedad)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2640
 @@||devexchanges.info^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2643
+discoveryrom.org##script:inject(setTimeout-defuser.js, (), modal)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41083
+cracksmind.com##script:inject(abort-on-property-write.js, Fingerprint2)
+cracksmind.com##button
+
+! https://github.com/uBlockOrigin/uAssets/issues/2645
+megacams.me##script:inject(set-constant.js, canRunAds, true)
+megacams.me##script:inject(addEventListener-defuser.js, load)
+@@||chaturbate.com/affiliates/$subdocument,domain=megacams.me
+megacams.me#@#a[href^="https://chaturbate.com/affiliates/"]
+@@||chaturbate.com^$popup,domain=megacams.me
+
+! https://github.com/uBlockOrigin/uAssets/issues/2646
+sexblogpussy.com##script:inject(set-constant.js, adblock, false)
+sexblogpussy.com#@#a[href^="https://chaturbate.com/affiliates/"]
+@@||chaturbate.com^$subdocument,domain=sexblogpussy.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2647
+sexviacam.com#@#a[href^="https://chaturbate.com/affiliates/"]
+@@||chaturbate.com^$subdocument,domain=sexviacam.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2648
+porndoe.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+porndoe.com##.pop_under_visible
+porndoe.com##.playerov-en
+porndoe.com###below_player_zone
+porndoe.com##[id^=zone]
+porndoe.com##.rem-add
+
+! https://github.com/uBlockOrigin/uAssets/issues/2649
+naughtymachinima.com##script:inject(abort-current-inline-script.js, __htapop)
+||gamescarousel.com^$subdocument,domain=naughtymachinima.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2650
+tienichmaytinh.com##script:inject(addEventListener-defuser.js, load, m.event.dispatch.apply)
