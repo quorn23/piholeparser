@@ -1330,8 +1330,7 @@ worldfree4u.ws##.adButton
 ! https://www.reddit.com/r/uBlockOrigin/comments/8stv3y
 ! https://github.com/uBlockOrigin/uAssets/issues/2667
 eurogamer.net,rockpapershotgun.com,vg247.com##script:inject(abort-on-property-write.js, yafaIt)
-vg247.com##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
-rockpapershotgun.com##script:inject(abort-on-property-write.js, _sp_)
+rockpapershotgun.com,vg247.com##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
 
 ! https://forums.lanik.us/viewtopic.php?p=101913#p101913
 auto-motor-und-sport.de,caravaning.de,womenshealth.de##script:inject(abort-on-property-write.js, adblockActive)
@@ -4755,9 +4754,11 @@ sg-siken.com##script:inject(setTimeout-defuser.js, adsbygoogle)
 atlasweb.net##script:inject(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1309
+! https://github.com/uBlockOrigin/uAssets/issues/2699
 short.pe,szs.pw##script:inject(abort-current-inline-script.js, atob, tabunder)
 short.pe,szs.pw##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 short.pe,szs.pw##script:inject(abort-on-property-write.js, adcashMacros)
+short.pe##script:inject(addEventListener-defuser.js, mousedown, preventDefault)
 *$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.gstatic.com *.google-analytics.com *.google.com *.solvemedia.com *.scorecardresearch.com *.googletagmanager.com *.googletagservices.com,domain=short.pe|szs.pw
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39694
@@ -5800,6 +5801,7 @@ ethereum.cpucap.com##script:inject(set-constant.js, ADSController, true)
 ! https://github.com/uBlockOrigin/uAssets/issues/2695
 freeopenvpn.org##script:inject(set-constant.js, adBlock, false)
 @@||freeopenvpn.org^$generichide
+freeopenvpn.org##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1638
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=nowwatchtvlive.net
@@ -9041,9 +9043,11 @@ galaxy.gala100.net##.metaRedirectWrapperTopAds
 ! https://github.com/uBlockOrigin/uAssets/issues/2666
 capodeportes.net##script:inject(abort-on-property-write.js, _pop)
 ||netdna-ssl.com^$subdocument,domain=telerium.tv
-*$popup,domain=rojadirectaonlinetv.com
-*$popup,domain=extremotvplay.com
+*$popup,domain=rojadirectaonlinetv.com,third-party
+*$popup,domain=extremotvplay.com,third-party
 peer2cast.pro###ads
+tvcanales.cf###ventana-flotante
+/skipad.png$image
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2692
 @@||script-stack.com^$generichide
@@ -9069,3 +9073,15 @@ ihackedgames.com##script:inject(abort-on-property-read.js, _0x5c2f)
 ! https://www.reddit.com/r/uBlockOrigin/comments/8tu65p/bomurl_link_shortener_adblock_detection/
 bomurl.com##script:inject(addEventListener-defuser.js, load, 2000)
 bomurl.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2696
+yxzero.xyz##script:inject(abort-on-property-read.js, adBlockDetected)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8tv52a/onlinevideoconvertercom_adblock_warning_message
+@@||onlinevideoconverter.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2697
+elsfile.org##script:inject(addEventListener-defuser.js, load, nextFunction)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2698
+@@||xavierstuder.com^$generichide
