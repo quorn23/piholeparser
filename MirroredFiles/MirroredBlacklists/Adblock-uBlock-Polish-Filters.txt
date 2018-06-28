@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 25 June 2018
+! Last modified: 27 June 2018
 ! Expires: 1 day
-! Version: 2018062501
+! Version: 2018062703
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018062501 aktualizacja: pon, 25 czerwca 2018, 08:20:00
+! v.2018062703 aktualizacja: sr, 27 czerwca 2018, 19:50:00
 !
 !
 !-----------------------Integration list with uBlock-----------------------!
@@ -2392,6 +2392,9 @@ telchina.pl##.bg3.post
 telchina.pl##img[src^="https://s1.postimg.org/"]
 telchina.pl##[style="padding: 5px 5px 2px 5px; font-size: 1.1em; background-color: #ECF1F3; margin: 0px auto; text-align: center;"]
 telchina.pl###wrap > .forabg
+telefonowal.pl##.right.col-md-3 > A[href^="http://"]
+telefonowal.pl##div.last_coment:nth-of-type(1) > table > tbody > tr:nth-of-type(1)
+telefonowal.pl##div.last_coment:nth-of-type(1) > table
 telemagazyn.pl##.callToActionTarget
 telemagazyn.pl##[class^="fiszka"]
 teleman.pl##.grid-group-as
@@ -3587,7 +3590,7 @@ zw.pl###abpnotzw
 @@ads$image,domain=rapidgrab.pl
 @@/ads.reklama.728x90$script,stylesheet,domain=zmianaczasu.info|antonimy.net|odmiana.net|definicja.net|krzyzowka.net|humoris.pl
 @@/advertise.js$domain=superfilm.pl
-@@/advertisement*.js$script,domain=meczyki.pl|autocentrum.pl|tokfm.pl|trojmiasto.pl|superfilm.pl|glucholazyonline.com.pl
+@@/advertisement*.js$script,domain=meczyki.pl|autocentrum.pl|tokfm.pl|trojmiasto.pl|superfilm.pl|glucholazyonline.com.pl|ps-plus.pl
 @@||advert-serv.johnmorris.me/adserver/adlogger_tracker.php$subdocument,domain=www.terrarium.com.pl
 @@||adv.wp.pl/adverts$xmlhttprequest,domain=pilot.wp.pl
 @@||adv.wp.pl/RM/Box/*/inline-videostar.js$script,domain=pilot.wp.pl
@@ -3599,7 +3602,8 @@ zw.pl###abpnotzw
 @@||burzowo.info/scripts/ad.js$script,domain=burzowo.info
 @@||businessinsider.com.pl^$generichide
 @@||cdn.muratordom.smcloud.net/t/advert.js$script,domain=www.poradnikzdrowie.pl
-@@||csr.onet.pl/_s/csr-*/csr.jsx$script
+!@@||csr.onet.pl/_s/csr-*/csr.jsx$script
+@@||csr.onet.pl/$domain=www.newsweek.pl
 @@||cyfrowydoradca.pl/modules/mod_jpayday/js/advertisement.js
 @@||epiotrkow.pl/js/*reklama*.js$script
 @@||eskago.pl^$generichide
@@ -3623,6 +3627,7 @@ zw.pl###abpnotzw
 @@||myao.adocean.pl/files/js/ado.js$script,domain=planeta.fm
 @@||mybank.pl^$generichide
 @@||noizz.pl^$generichide
+@@||ocdn.eu/skom/quiz-abbyy/v2/adCode.js$script,domain=www.newsweek.pl
 @@||ogloszenia.plock.pl/build/js/ads.*.js
 @@||oglaszamy24.pl/js-css/reklamy/bannery/google_ads/ad/banner/adv.js$script
 @@||onet.hit.gemius.pl/*/redot.js$script,domain=auto-swiat.pl|businessinsider.com.pl|fakt.pl|forbes.pl|komputerswiat.pl|noizz.pl|onet.pl|plejada.pl|vod.pl
@@ -4156,6 +4161,7 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 /cryptonight.wasm
 ||dekoder.ws/*.wasm$xmlhttprequest
 /everynight/backup/*$subdocument
+||hqq.tv/js/betterj/ban^
 /^(http|https):\/\/[a-z0-9.]{8,30}\.[a-z]{2,11}\/[a-z]{3,7}\/[a-z0-9]{5,25}\.(wasm|js)/$xmlhttprequest,script,domain=alltube.tv|alltube.pl
 /^(http|https):\/\/[a-z]{5,10}\.[a-z]{2,3}\/[\w\W]{50,80}/$subdocument,domain=heja.tv
 /^(http|https):\/\/[a-z.]{5,15}\.[a-z]{2,4}\/[a-z]{3,3}\/conf\?[a-z0-9\W]{10,50}/$xmlhttprequest,domain=fileone.tv
@@ -4235,6 +4241,9 @@ shinden.pl#@#.AD-RC-300x250
 a-o.ninja###block-block-19 > center
 a-o.ninja##[href^="https://allegro.pl/"]
 a-o.ninja##[href^="https://www.aukcjoner.pl/panele/click/"]
+a-o.ninja##.region-content.region > center > A
+a-o.ninja##section.clearfix.block-search.block.widget_text:nth-of-type(1)
+a-o.ninja##.region-content.region > A
 !
 !47#--------------------------tvp------------!
 @@||adocean-pl.hit.gemius.pl/*/url=http://sport.tvp.pl/$popup,other

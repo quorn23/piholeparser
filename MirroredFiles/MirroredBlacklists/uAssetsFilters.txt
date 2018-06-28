@@ -2589,6 +2589,7 @@ putlocker.*##[id*="ScriptRoot"]
 putlockerhd.is##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ! https://github.com/uBlockOrigin/uAssets/issues/857
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39483
+putlockers.*##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 putlockers.*##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 putlockers.*##script:inject(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 putlockers.*##script:inject(nowebrtc.js)
@@ -4522,6 +4523,8 @@ torjackan.info##script:inject(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1254
 homemoviestube.com##script:inject(setTimeout-defuser.js, test, 400)
+homemoviestube.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+homemoviestube.com##script:inject(popads-dummy.js)
 homemoviestube.com###fixedBanner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1255
@@ -5054,6 +5057,7 @@ zupload.me##a[href="https://www.9xyoutube.com"]
 indishare.me##script:inject(abort-current-inline-script.js, atob, tabunder)
 indishare.me##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 indishare.me##script:inject(abort-on-property-write.js, Fingerprint2)
+indishare.me##script:inject(abort-current-inline-script.js, decodeURI, atob)
 ||dwf6crl4raal7.cloudfront.net^$script,third-party
 ||defpush.com^$third-party
 ||indishare.me^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google-analytics.com
@@ -5478,8 +5482,9 @@ nme.com##^script:has-text(H="function"==typeof)
 nme.com##.advert:style(z-index: -999999 !important;)
 nme.com###wrapper:style(padding-top: 0 !important;)
 ! add sites using the same ad reinsertion script
-amateurphotographer.co.uk,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
-amateurphotographer.co.uk,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##^script:has-text(H="function"==typeof)
+! https://github.com/uBlockOrigin/uAssets/issues/2700
+amateurphotographer.co.uk,asiancorrespondent.com,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
+amateurphotographer.co.uk,asiancorrespondent.com,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##^script:has-text(a.HTMLImageElement.prototype)
 idealhome.co.uk,look.co.uk,marieclaire.co.uk##body > div#wrapper:style(padding-top: 0px !important;)
 goodtoknow.co.uk,womanandhome.com##.header-advert-wrapper
 
@@ -6463,6 +6468,8 @@ cinedetodo.com##script:inject(abort-current-inline-script.js, String.fromCharCod
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=cinedetodo.com
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=cinedetodo.com
 cinedetodo.com##^script:has-text(3f87b0eaddd)
+cinedetodo.com##script:inject(abort-on-property-read.js, decodeURIComponent)
+cinedetodo.com##[id*=yellow]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1847
 cinemahd.co##script:inject(nowebrtc.js)
@@ -6492,7 +6499,7 @@ eporner.com##script:inject(abort-on-property-read.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1855
 ! https://forums.lanik.us/viewtopic.php?p=134829#p134829
-@@*$generichide,domain=arenavision.in|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk|arenavision2017.tk
+@@*$generichide,domain=arenavision.in|arenavision.link|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk|arenavision2017.tk
 arenavision.*,arenavision2017.*,arenavision2018.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 arenavision2018.*##script:inject(bab-defuser.js)
 arenavision.*,arenavision2017.cf,arenavision2018.*##script:inject(window.open-defuser.js)
@@ -6602,7 +6609,7 @@ miaminewtimes.com##script:inject(set-constant.js, VMG.Components.Adblock, false)
 @@||n4mo.org/advert.js$script,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1892
-avoiderrors.net##script:inject(setTimeout-defuser.js, google_jobrunner, 10000)
+avoiderrors.com##script:inject(setTimeout-defuser.js, (), undefined)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1894
 lovepedia.net##script:inject(bab-defuser.js)
@@ -7620,9 +7627,9 @@ mypornstarbook.net##table > tbody > tr:has-text(Advertisement)
 mbahhanif.site##script:inject(abort-on-property-write.js, hidekeep)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2254
-masterkreatif.com##script:inject(abort-on-property-write.js, Fingerprint2)
+mazterize.me,masterkreatif.com##script:inject(abort-on-property-write.js, Fingerprint2)
 masterkreatif.com###fbox-background
-masterkreatif.com##.user
+mazterize.me,masterkreatif.com##.user
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2255
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=sportspf.com
@@ -9085,3 +9092,9 @@ elsfile.org##script:inject(addEventListener-defuser.js, load, nextFunction)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2698
 @@||xavierstuder.com^$generichide
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8u8s64
+digi-tv.ch##script:inject(setTimeout-defuser.js, test.offsetHeight, 100)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2701
+@@||yesmangasbr.com^$generichide
