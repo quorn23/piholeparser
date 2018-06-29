@@ -227,7 +227,9 @@ openload.co##script:inject(abort-current-inline-script.js, adblock, adblock2)
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=27505
 ! https://github.com/uBlockOrigin/uAssets/issues/1292
+! https://github.com/uBlockOrigin/uAssets/issues/2704
 kissanime.*##script:inject(kissanime-defuser.js)
+kissanime.*##script:inject(setTimeout-defuser.js, Check, 45000)
 kissanime.ac,kissanime.co##script:inject(set-constant.js, check_adblock, true)
 @@||static.animecdn.stream/themes/vast/videojs.ads.min.js$script,domain=kissanime.ac
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kissanime.ac
@@ -1312,6 +1314,7 @@ quora.com##[id*=content_wrapper]:has-text(promo)
 quora.com##[rel="nofollow noopener"]
 quora.com##div:has-text(/^ad by/)
 quora.com##div:has-text(/^ad/)
+quora.com##[id*=wrapper]:has-text(/ad\s{1,}by /i)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -2530,6 +2533,7 @@ receive-a-sms.com##[id^=aswift]
 kissmanga.com##script:inject(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
 kissmanga.com##script:inject(bab-defuser.js)
 @@||imgur.com^$image,domain=kissmanga.com
+@@||wp.com^$image,domain=kissmanga.com
 
 ! https://twitter.com/HPJoker/status/914336363721392130
 @@||dx-tv.com^$script,first-party
@@ -2804,6 +2808,7 @@ hdmyt.info,playerhd2.pw,streaming-foot.club##script:inject(abort-on-property-wri
 ! https://github.com/uBlockOrigin/uAssets/issues/833
 ! https://github.com/uBlockOrigin/uAssets/issues/1819
 otakustream.tv##script:inject(abort-current-inline-script.js, atob, tabunder)
+otakustream.tv##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 otakustream.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 otakustream.tv###outer
 
@@ -5483,8 +5488,8 @@ nme.com##.advert:style(z-index: -999999 !important;)
 nme.com###wrapper:style(padding-top: 0 !important;)
 ! add sites using the same ad reinsertion script
 ! https://github.com/uBlockOrigin/uAssets/issues/2700
-amateurphotographer.co.uk,asiancorrespondent.com,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
-amateurphotographer.co.uk,asiancorrespondent.com,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##^script:has-text(a.HTMLImageElement.prototype)
+amateurphotographer.co.uk,asiancorrespondent.com,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,horseandhound.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,superyachtworld.com,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##script:inject(abort-current-inline-script.js, setTimeout, ad-blocker)
+amateurphotographer.co.uk,asiancorrespondent.com,celebsnow.co.uk,countrylife.co.uk,cyclingweekly.com,decanter.com,drinksmixer.com,idealhome.co.uk,golf-monthly.co.uk,goodtoknow.co.uk,horseandhound.co.uk,lifedeathprizes.com,look.co.uk,marieclaire.co.uk,mbr.co.uk,pbo.co.uk,rugbyworld.com,shootinguk.co.uk,superyachtworld.com,thefield.co.uk,theguardian.com,uncut.co.uk,whatsontv.co.uk,womanandhome.com,worldsoccer.com,yachtingmonthly.com,yachtingworld.com,ybw.com##^script:has-text(a.HTMLImageElement.prototype)
 idealhome.co.uk,look.co.uk,marieclaire.co.uk##body > div#wrapper:style(padding-top: 0px !important;)
 goodtoknow.co.uk,womanandhome.com##.header-advert-wrapper
 
@@ -6026,7 +6031,6 @@ img.yt##script:inject(abort-on-property-read.js, ExoLoader)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/883
 ! https://github.com/jspenguin2017/uBlockProtector/issues/940
-ccbluex.net##script:inject(nano-setTimeout-booster.js)
 ccbluex.net##script:inject(set-constant.js, adsBool, true)
 ccbluex.net##script:inject(set-constant.js, passed, true)
 
@@ -7496,7 +7500,6 @@ bestgore.com##.ai_widget:has-text(Log In)
 
 ! https://forums.lanik.us/viewtopic.php?p=136393#p136393
 tusfiles.net##script:inject(abort-on-property-write.js, Fingerprint2)
-||djtflbt20bdde.cloudfront.net^
 tusfiles.net#@#.btn
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2216
@@ -9098,3 +9101,21 @@ digi-tv.ch##script:inject(setTimeout-defuser.js, test.offsetHeight, 100)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2701
 @@||yesmangasbr.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2702
+sinoptik.com.ru,sinoptik.ua##script:inject(abort-current-inline-script.js, String.fromCharCode, atob)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2705
+turboserver.tk##script:inject(setInterval-defuser.js, visibility, 1000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2706
+pnd.tl##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+pnd.tl##script:inject(abort-on-property-write.js, Fingerprint2)
+pnd.tl##A[href$=".html"][rel="nofollow norefferer noopener"]
+||hicpm10.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2707
+@@||micinehd.com^$generichide
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8ufyxq/new_antiadblock_on_dailynewscom/
+dailynews.com##script:inject(set-constant.js, CnnXt.Utils.detectAdBlock, noopFunc)
