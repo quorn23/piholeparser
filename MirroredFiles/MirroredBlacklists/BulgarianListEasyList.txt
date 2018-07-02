@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201807010014
+! Version: 201807012317
 ! Title: EasyPrivacy
-! Last modified: 01 Jul 2018 00:14 UTC
+! Last modified: 01 Jul 2018 23:17 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -514,6 +514,8 @@
 /analytics/activity.
 /analytics/analytics.$~xmlhttprequest
 /analytics/cms/*
+/analytics/collector.
+/analytics/collector/*
 /analytics/content?
 /analytics/core.
 /analytics/dist/*
@@ -769,6 +771,7 @@
 /block/pixel?
 /blockstat?
 /blog/traffic/?
+/blogcu-analytics.js
 /blogsectiontracking.
 /blogtotal_stats_
 /bluekai.
@@ -1926,6 +1929,7 @@
 /log.php?owa_timestamp=
 /log/1.gif?
 /log/ad-
+/log/browser/event
 /log/error?
 /log/event?
 /log/impression/*
@@ -2020,6 +2024,7 @@
 /logview_new.js
 /logviewedpage?
 /logViewImpression/*
+/logvisit?visitedurl=
 /logwebhit.
 /logwriter.php
 /lotame_audiences.
@@ -5339,6 +5344,7 @@ _mongo_stats/
 ||mxpnl.com^$third-party
 ||mxptint.net^$third-party
 ||myaffiliateprogram.com^$third-party
+||myaudience.de^$third-party
 ||mybloglog.com^$third-party
 ||myfastcounter.com^$third-party
 ||mynewcounter.com^$third-party
@@ -6198,6 +6204,7 @@ _mongo_stats/
 ||vinlens.com^$third-party
 ||vinub.com^$third-party
 ||viralninjas.com^$third-party
+||virgul.com^$third-party
 ||virool.com^$third-party
 ||virtualnet.co.uk^$third-party
 ||visibility-stats.com^$third-party
@@ -8611,6 +8618,7 @@ _mongo_stats/
 ||hits.dealer.com^
 ||hits.informer.com^
 ||hm.baidu.com^$third-party
+||hocalwire.com/tracking-
 ||homestore.com/srv/
 ||hop.clickbank.net^
 ||hornymatches.com^*/visit.php?
@@ -8963,6 +8971,7 @@ _mongo_stats/
 ||pebed.dm.gg^
 ||peermapcontent.affino.com^
 ||penton.com/analytics/
+||performance.typekit.net^$third-party
 ||perr.h-cdn.com^$third-party
 ||petitionermaster.appspot.com^
 ||pf.aclst.com^$third-party
@@ -9028,6 +9037,7 @@ _mongo_stats/
 ||ppx.com/tracking/
 ||pr.blogflux.com^
 ||pricespider.com/impression/
+||primedia.co.za/analytics/
 ||print2webcorp.com/mkt3/_js/p2w_tracker.js
 ||privacytool.org/AnonymityChecker/js/fontdetect.js$third-party
 ||production-eqbc.lvp.llnw.net^
@@ -11521,6 +11531,7 @@ _mongo_stats/
 ||log.newsvine.com^
 ||log.optimizely.com^
 ||log.player.cntv.cn/stat.html?
+||log.prezi.com^
 ||log.snapdeal.com^
 ||log.thevideo.me^
 ||log.vdn.apps.cntv.cn^
@@ -11897,6 +11908,7 @@ _mongo_stats/
 ||powerreviews.com^*/ph.gif?
 ||presentationtracking.netflix.com^
 ||presstv.ir/stat/
+||prezi.com/log/
 ||pricegrabber.com/analytics.php
 ||priceline.com/svcs/$script
 ||priceline.com^*/beaconHandler?
@@ -12068,6 +12080,7 @@ _mongo_stats/
 ||seatguru.com^*/analytics.js
 ||seatguru.com^*/DMPDesktopBehaviorTracker.js
 ||seatguru.com^*/sg-tracking.js
+||seattletimes.com/clientip
 ||secondspace.com^*/blank.gif
 ||securepaynet.net/image.aspx?
 ||seeclickfix.com^*/text_widgets_analytics.html
@@ -14346,7 +14359,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||maxmind.com/app/country.js$domain=lenovo.com|nationalgeographic.com|paypal.fr
 @@||maxmind.com/geoip/v2.0/country/$xmlhttprequest,domain=elgato.com
 @@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|coolsport.tv|dereon.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|incgamers.com|ip-address.cc|maaduu.com|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com
-@@||maxmind.com^*/geoip2.js$domain=elgato.com|fallout4.com|metronews.ca|mtv.com.lb|runningheroes.com|teslamotors.com
+@@||maxmind.com^*/geoip2.js$domain=boostedboards.com|elgato.com|fallout4.com|metronews.ca|mtv.com.lb|runningheroes.com|teslamotors.com
 @@||mec.ca/media/javascript/resxclsx.js
 @@||media-imdb.com^*/clickstream.js
 @@||media.ft.com/j/optimost-$domain=ft.com
@@ -14559,6 +14572,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||static.chartbeat.com/js/chartbeat_mab.js$domain=usatoday.com
 @@||static.parsely.com^$script,domain=dailystar.co.uk|express.co.uk
 @@||static.rpxnow.com/js/lib/rpx.js$domain=colbertnation.com|thedailyshow.com
+@@||static.wireclub.com/content/images/emoticons/*.gif?v=$image
 @@||statics.cfmcdn.net/*/scripts/webtrends-$script,domain=cheapflights.com
 @@||stats.g.doubleclick.net/dc.js$domain=doverdowns.com|lifehack.org|maxiclimber.com|merriam-webster.com|toto.co.jp|tripinsurance.ru|vimeo.com
 @@||stats.jtvnw.net/crossdomain.xml$object-subrequest
@@ -15099,4 +15113,4 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: XtbkCNczqRUPxUczE/Y0Vg
+! Checksum: 3nIclVWBSx/lO44WI46yxg

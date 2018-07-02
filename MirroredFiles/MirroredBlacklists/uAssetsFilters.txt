@@ -5898,7 +5898,9 @@ gannikus.com##.sam_pro_place_widget
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1627
 ! https://github.com/uBlockOrigin/uAssets/issues/1650
+! https://github.com/uBlockOrigin/uAssets/issues/2732
 mercurynews.com##script:inject(set-constant.js, dfmCanRunAds, true)
+mercurynews.com##script:inject(set-constant.js, CnnXt.Utils.detectAdBlock, noopFunc)
 @@||mercurynews.com^$generichide
 /wp-content/client-mu-plugins/src/Paywall/static/js/connext-paywall-analytics.min.js
 
@@ -6514,7 +6516,7 @@ eporner.com##script:inject(abort-on-property-read.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1855
 ! https://forums.lanik.us/viewtopic.php?p=134829#p134829
-@@*$generichide,domain=arenavision.in|arenavision.link|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk|arenavision2017.tk
+@@*$generichide,domain=arenavision.co.in|arenavision.in|arenavision.link|arenavision.ru|arenavision.us|arenavision2017.cf|arenavision2018.ml|arenavision2018.tk|arenavision2017.tk
 arenavision.*,arenavision2017.*,arenavision2018.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 arenavision2018.*##script:inject(bab-defuser.js)
 arenavision.*,arenavision2017.cf,arenavision2018.*##script:inject(window.open-defuser.js)
@@ -8003,6 +8005,7 @@ camwhores.tv###list_videos_friends
 bestialitytaboo.tv,bestialitysextaboo.com,mujeresdesnudas.club##script:inject(abort-current-inline-script.js, $, azar)
 bestialitysexanimals.com,bestialporn.com,mujeresdesnudas.club,mynakedwife.video##script:inject(abort-on-property-read.js, open)
 zootube1.com##script:inject(abort-on-property-read.js, popunderSetup)
+videoszoofiliahd.com##script:inject(abort-on-property-read.js, open)
 videoszoofiliahd.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, popunder)
 asiananimaltube.org,zoosex.pink##script:inject(window.open-defuser.js)
 videoszoofiliahd.com##[href^="https://redirect.ero-advertising.com/"]
@@ -8167,6 +8170,7 @@ efukt.com##.hide_before:has([href*="?utm_source=efukt"])
 efukt.com##div.tile:has(a[href^="https://efukt.com/out.php"])
 efukt.com##.efukt-widget-slider-nice-try-adblockers
 efukt.com##.plugs-nice-try-adblockers
+||afgr3.com^$third-party
 ||awept.com^$third-party
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/943
@@ -9214,3 +9218,17 @@ linkexa.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adb
 ! https://github.com/uBlockOrigin/uAssets/issues/2727
 forum.darksoftware.net##.errorDetails
 darksoftware.net##script:inject(set-constant.js, hope, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2728
+@@||pesupdate.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2729
+aliancapes.*##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2730
+@@||moddingtr.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2731
+@@||wcvb.com^$generichide
+wcvb.com##.ad-label
+wcvb.com##.ad-leaderboard
