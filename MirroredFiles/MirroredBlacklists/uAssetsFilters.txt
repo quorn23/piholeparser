@@ -1315,6 +1315,7 @@ quora.com##[rel="nofollow noopener"]
 quora.com##div:has-text(/^ad by/)
 quora.com##div:has-text(/^ad/)
 quora.com##[id*=wrapper]:has-text(/ad\s{1,}by /i)
+quora.com##div[id$="_content_box"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -1933,6 +1934,8 @@ rapidvideo.com##script:inject(abort-on-property-write.js, executed)
 ! https://github.com/uBlockOrigin/uAssets/issues/833
 rapidvideo.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 rapidvideo.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+! https://github.com/uBlockOrigin/uAssets/issues/2739
+rapidvideo.com##script:inject(set-constant.js, onload, noopFunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/516
 @@||thepiratebay.run^$generichide
@@ -2172,7 +2175,9 @@ fas.li##script:inject(abort-on-property-read.js, blockAdBlock)
 ||cloudflare.com/*/blockadblock$script,important,domain=fas.li
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32686
+! https://github.com/uBlockOrigin/uAssets/issues/2743
 whosampled.com##script:inject(setTimeout-defuser.js, _detectAdBlocker, 5000)
+whosampled.com##script:inject(abort-on-property-write.js, showAdBlockerOverlay)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/611
 animes-mangas-ddl.net,dslr-forum.de,it-times.de,linkdrop.net,wowebook.org##script:inject(bab-defuser.js)
@@ -2846,10 +2851,11 @@ powerthesaurus.org##script:inject(abort-on-property-write.js, ad_abblock_ad)
 ! https://github.com/uBlockOrigin/uAssets/issues/846
 ! https://github.com/jspenguin2017/uBlockProtector/issues/816
 myegy.tv##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-myegy.tv##script:inject(abort-on-property-write.js, H7WWWW)
+myegy.tv##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+myegy.tv##script:inject(setInterval-defuser.js, (), 500)
 ||adscpm.site^$third-party
 ! Popups triggered by popads
-animepahe.com,clicknupload.org,cloudy.ec,mactorrents.org,mkvcage.com,newmusic.trade,nodefiles.com,pahe.in,owndrives.com,psarips.com,smallencode.com,twoddl.co,vidabc.com,weshare.me##script:inject(abort-on-property-write.js, _pop)
+123tvseries.co,animepahe.com,clicknupload.org,cloudy.ec,mactorrents.org,mkvcage.com,newmusic.trade,nodefiles.com,pahe.in,owndrives.com,psarips.com,smallencode.com,twoddl.co,vidabc.com,weshare.me##script:inject(abort-on-property-write.js, _pop)
 
 ! Reported by a reader
 brasil247.com##script:inject(bab-defuser.js)
@@ -3719,19 +3725,6 @@ gogaytube.tv,shemaleporntube.tv##.videojs-hero
 ||anyfreeporn.com/d/*$inline-script,subdocument
 anyfreeporn.com##.rmedia
 
-! https://forums.lanik.us/viewtopic.php?p=129628#p129628
-avgle.com##script:inject(abort-on-property-read.js, ExoDetector)
-avgle.com##script:inject(abort-on-property-write.js, Fingerprint2)
-avgle.com##script:inject(set-constant.js, checkThings, trueFunc)
-.gif$image,domain=avgle.com
-||avgle.com/cdn-cgi/apps/head/
-||avgle.com/avideos.php
-||avgle.com/images/av/
-@@||ads.exosrv.com^$script,domain=avgle.com
-avgle.com##a[href^="http://www.poweredbyliquidfire.mobi/redirect"]
-avgle.com###blocked-if
-avgle.com###aoverlay
-
 ! https://forums.lanik.us/viewtopic.php?p=129648#p129648
 @@||mdsrwdassets-a.akamaihd.net^$xmlhttprequest,script,other,domain=telecinco.es|cuatro.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$script,domain=telecinco.es|cuatro.com
@@ -3747,6 +3740,8 @@ jkanime.co##^script:has-text(676574456c656d656e747342795461674e616d65)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=jkanime.co
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1051
+! https://github.com/uBlockOrigin/uAssets/issues/2752
+ouo.press##script:inject(abort-current-inline-script.js, decodeURI, HTMLIFrameElement)
 ouo.press##script:inject(abort-on-property-read.js, jsPopunder)
 ouo.press##script:inject(abort-on-property-write.js, _pop)
 ||egnatius-ear.com^$script,domain=ouo.press
@@ -5787,6 +5782,7 @@ mp3skull-tube.net##script:inject(addEventListener-defuser.js, click, trigger)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1626
 @@||win10.vn^$generichide
+win10.vn##script:inject(abort-on-property-write.js, downloadJSAtOnload)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40078
 ||damoh.vgtv.no/*$media,redirect=noopmp3-0.1s,domain=vgtv.no
@@ -7581,6 +7577,8 @@ libertaddigital.com##script:inject(set-constant.js, publd.ads_blocked, false)
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=storage.oraclecloud.com
 @@||storage.oraclecloud.com/*/smartclip-services/sc_player/$script,first-party
 
+! https://www.reddit.com/r/uBlockOrigin/comments/8vg377/how_to_block_ads_that_change_names_all_the_time/
+dailydot.com##script:inject(set-constant.js, oio, true)
 ! Fix navbar being stuck in the middle of the page
 dailydot.com##.dd-nav-global:style(top: 0 !important; transform: none !important;)
 
@@ -7939,12 +7937,6 @@ eg4earn.com#@#.banner-728x90
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2345
 linkshorts.net##script:inject(set-constant.js, ab, false)
-
-! https://github.com/uBlockOrigin/uAssets/issues/2347
-!#if !env_firefox
-||amgload.net^$xmlhttprequest,redirect=nooptext,domain=sinoptik.ua
-||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=sinoptik.ua
-!#endif
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2348
 yfilmy.sk##script:inject(set-constant.js, canRunAds, true)
@@ -8951,10 +8943,11 @@ tienichmaytinh.com##script:inject(addEventListener-defuser.js, load, m.event.dis
 ||sombes.com^$script,third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2652
+! https://github.com/uBlockOrigin/uAssets/issues/2742
 filecrypt.cc##script:inject(abort-current-inline-script.js, popsThisDay, under)
 filecrypt.cc##script:inject(set-constant.js, isAdblock, false)
+filecrypt.cc###jvb
 filecrypt.cc##.support
-filecrypt.cc##.buttons
 filecrypt.cc##[src^="https://filecrypt.cc/images/"]
 filecrypt.cc##[src^="/images/"]
 
@@ -9119,6 +9112,8 @@ digi-tv.ch##script:inject(setTimeout-defuser.js, test.offsetHeight, 100)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2702
 sinoptik.com.ru,sinoptik.ua##script:inject(abort-current-inline-script.js, String.fromCharCode, atob)
+! sites with the same issue and fix
+123tvseries.co##script:inject(abort-current-inline-script.js, String.fromCharCode, atob)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2705
 turboserver.tk##script:inject(setInterval-defuser.js, visibility, 1000)
@@ -9232,3 +9227,50 @@ aliancapes.*##script:inject(setTimeout-defuser.js, nextFunction, 2000)
 @@||wcvb.com^$generichide
 wcvb.com##.ad-label
 wcvb.com##.ad-leaderboard
+
+! https://forums.lanik.us/viewtopic.php?p=138401#p138401
+rarbgmirror.*##script:inject(addEventListener-defuser.js, mousedown, preventDefault)
+rarbgmirror.*##script:inject(window.open-defuser.js)
+##a[href*="?bver="]
+
+! https://github.com/uBlockOrigin/uAssets/issues/2735
+skylinewebcams.com##script:inject(setTimeout-defuser.js, change(), 14000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2736
+kanald.com.tr##script:inject(set-constant.js, adBlockDisabled, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2737
+listegaleri.com##script:inject(setTimeout-defuser.js, adblock, 1500)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2738
+@@||topzone.lt^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2740
+@@||wallpaper-house.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2741
+x265mkv.ws##script:inject(abort-on-property-write.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2744
+@@||so-abnehmen.info^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2746
+@@||k-gen.fr^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/1660#issuecomment-401872283
+@@*$generichide,domain=mediaset.es|yasss.es
+@@||mdsrwdassets-a.akamaihd.net^$script,xmlhttprequest,domain=mediaset.es|yasss.es
+
+! https://github.com/uBlockOrigin/uAssets/issues/2745
+ultimate-catch.eu##script:inject(setTimeout-defuser.js, data-adback, 0)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2749
+giveaway-club.com##script:inject(set-constant.js, gcAdsActive, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2748
+televall.info##script:inject(set-constant.js, jQuery.adblock, false)
+televall.info###floatLayer6
+televall.info###floatLayer5
+
+! https://github.com/uBlockOrigin/uAssets/issues/2751
+wicr.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)

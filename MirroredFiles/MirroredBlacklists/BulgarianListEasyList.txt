@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201807012317
+! Version: 201807022351
 ! Title: EasyPrivacy
-! Last modified: 01 Jul 2018 23:17 UTC
+! Last modified: 02 Jul 2018 23:51 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -84,6 +84,7 @@
 .analytics.min.
 .asis?Log=
 .asp?t=*&c=$image
+.aspx?trackid=
 .au/c.gif?
 .au/t.ashx?
 .be/uts/
@@ -188,7 +189,6 @@
 .gif?ref=*&ev=
 .gif?track_
 .gif?uri=
-.gif?v=
 .Google.Tracker.js
 .googleanalytics.js
 .GoogleAnalytics/
@@ -2706,6 +2706,7 @@
 /scripts/log.
 /scripts/statistics/*
 /scripts/stats/*
+/scripts/tracking.js
 /scripts/xiti/*
 /sctracker.
 /sdc1.js
@@ -5274,6 +5275,7 @@ _mongo_stats/
 ||measuremap.com^$third-party
 ||measurementapi.com^$third-party
 ||meatballsandads.com^$third-party
+||media01.eu^$third-party
 ||mediaarmor.com^$third-party
 ||mediaforgews.com^$third-party
 ||mediagauge.com^$third-party
@@ -9059,6 +9061,7 @@ _mongo_stats/
 ||publicbroadcasting.net/analytics/
 ||publish.pizzazzemail.com^$third-party
 ||purevideo.com^*/pvshim.gif?
+||pushly.com/pushly-event-tracker
 ||pussy.org^*.cgi?pid=
 ||pussy.org^*/track.php
 ||px.247inc.net^
@@ -13815,6 +13818,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 ! Spanish
 ||analytics.infobae.com^
 ||audiencies.ccma.cat^
+||bankinter.com/res/img/documento_cargado.gif?
 ||coletor.terra.com^
 ||esmas.com/scripts/esmas_stats.js
 ||estadisticas.lanacion.com.ar^
@@ -15113,4 +15117,4 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: 3nIclVWBSx/lO44WI46yxg
+! Checksum: +AauUB+cOdq91OvKIR41fQ
