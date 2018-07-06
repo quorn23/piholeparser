@@ -1036,6 +1036,7 @@ oxforddictionaries.com##.banbox-mini
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40885
 @@||ytimg.com^$image,domain=pocketnow.com
 101greatgoals.com,colourlovers.com,crackberry.com,destructoid.com,getinmybelly.com,imore.com,mmorpg.com,omgcheckitout.com,pocketnow.com,sportspickle.com,tetrisfriends.com,vrheads.com,windowscentral.com#@#[style*="background-image:"]
+datpiff.com#@#div > iframe
 destructoid.com#@#[src*="base64"]
 destructoid.com#@#[src*="data:"]
 diffen.com,kshowonline.com,the4thofficial.net#@#div > iframe:first-child
@@ -1099,10 +1100,10 @@ mobile.twitter.com#@#._29ahSMvH section.rn-1oszu61 div[class][style*="padding-"]
 ! https://github.com/uBlockOrigin/uAssets/issues/2295
 @@||bobcat.grahamdigital.com^$image,domain=clickondetroit.com|click2houston.com|clickondetroit.com|clickorlando.com|ksat.com|local10.com|news4jax.com|wsls.com
 
-! unbreak comment section
-! broken by EasyList csp-filter
-! https://forums.lanik.us/viewtopic.php?f=64&t=40981
+! sites broken by EasyList csp-filter
+! https://forums.lanik.us/viewtopic.php?f=64&t=41101
 @@||androidcentral.com^$csp=script-src 'self' * 'unsafe-inline'
+@@||minecraft-serverlist.net^$csp=script-src 'self'
 @@||readmng.com^$csp=script-src 'self' * 'unsafe-inline'
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40769
@@ -1290,3 +1291,6 @@ techadvisor.co.uk#@#.adsbygoogle
 
 ! https://news.ycombinator.com/item?id=17455223
 @@||msecnd.net/scripts/a/ai.0.js$script,domain=msropendata.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2783
+@@||api.vodgc.net/libs/*/genoa-event-tracking.min.js$script,first-party
