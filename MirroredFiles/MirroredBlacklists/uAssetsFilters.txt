@@ -1314,8 +1314,14 @@ quora.com##[id*=content_wrapper]:has-text(promo)
 quora.com##[rel="nofollow noopener"]
 quora.com##div:has-text(/^ad by/)
 quora.com##div:has-text(/^ad/)
+!#if !env_mobile
 quora.com##[id*=wrapper]:has-text(/ad\s{1,}by /i)
+!#endif
+!#if env_mobile
+quora.com##.top_slot
+!#endif
 quora.com##div[id$="_content_box"]
+quora.com##.lower_slot
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -9289,7 +9295,7 @@ wicr.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock
 nwtehranmusic.com##script:inject(abort-on-property-read.js, needpop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2756
-||cklad.xyz^$subdocument,domain=shon.xyz
+||cklad.xyz^$third-party
 ||charmour.club^
 shon.xyz##script:inject(window.open-defuser.js)
 shon.xyz##script:inject(popads-dummy.js)
@@ -9367,3 +9373,28 @@ earnpanda.co##script:inject(abort-on-property-read.js, app_vars.force_disable_ad
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2786
 @@||mp3skull-tube.net/js/ads.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2787
+smsget.net##script:inject(setTimeout-defuser.js, Adblock, 5000)
+smsget.net##script:inject(setTimeout-defuser.js, disable, 200)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2788
+temp-mails.com##script:inject(abort-current-inline-script.js, document.getElementById, AdBlock)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8whs2b
+nyafilmerhd.com##script:inject(abort-current-inline-script.js, decodeURI, atob)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2791
+zigforums.com##script:inject(abort-on-property-write.js, adsBlocked)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2793
+damelibros.com##script:inject(set-constant.js, adBlockDetected, noopFunc)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2794
+@@||autoiptv.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2795
+@@||smskola.com^$generichide
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8whmpf/any_idea_how_bypass_this_block_detection/
+kjanime.net##script:inject(setTimeout-defuser.js, CekAab, 0)
