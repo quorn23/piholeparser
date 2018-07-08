@@ -1322,6 +1322,7 @@ quora.com##.top_slot
 !#endif
 quora.com##div[id$="_content_box"]
 quora.com##.lower_slot
+quora.com##[disable_auto_login*="True"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -1549,14 +1550,14 @@ plantaobrasil.net##.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/383
 ! https://github.com/uBlockOrigin/uAssets/issues/2175
 vidzi.*##script:inject(abort-on-property-read.js, head)
-vidzi.tv##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.pops2.popunderCondition)
-vidzi.tv##script:inject(nowebrtc.js)
+vidzi.*##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.pops2.popunderCondition)
+vidzi.*##script:inject(nowebrtc.js)
 ! https://forums.lanik.us/viewtopic.php?p=117549#p117549
 ||ww1.vidzi.tv^
 ||ww2.vidzi.tv^
 ||ww3.vidzi.tv^
 ! https://github.com/uBlockOrigin/uAssets/issues/1149
-vidzi.tv##script:inject(window.open-defuser.js)
+vidzi.*##script:inject(window.open-defuser.js)
 vidzi.tv##a[href="https://vidzi.tv/download.html"]
 vidzi.*##[href*="/download.html"]
 ! https://forums.lanik.us/viewtopic.php?p=137531#p137531
@@ -6080,11 +6081,6 @@ mobile.twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert/)
 ||popularmechanics.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.hearstapps.com *.hearst.io *.hdmtools.com
 popularmechanics.com##script:inject(setTimeout-defuser.js, addEventListener, 0)
 
-! https://github.com/uBlockOrigin/uAssets/issues/1717
-animezone.pl##script:inject(nowebrtc.js)
-animezone.pl##script:inject(nano-setInterval-booster.js)
-@@||animezone.pl^$generichide
-
 ! https://www.reddit.com/r/uBlockOrigin/comments/84l63s/filter_to_block_popunders_on_cliupconvertercc/
 clipconverter.cc##script:inject(abort-current-inline-script.js, atob, tabunder)
 
@@ -9398,3 +9394,9 @@ damelibros.com##script:inject(set-constant.js, adBlockDetected, noopFunc)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8whmpf/any_idea_how_bypass_this_block_detection/
 kjanime.net##script:inject(setTimeout-defuser.js, CekAab, 0)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2797
+novaenreta.space##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2799
+@@||tf1.fr^$generichide
