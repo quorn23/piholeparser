@@ -3754,6 +3754,10 @@ ouo.press##script:inject(abort-on-property-write.js, _pop)
 tufutbolpro.com##script:inject(abort-on-property-write.js, Fingerprint2)
 tufutbolpro.com##a[href^="http://bit.ly/"]
 tufutbolpro.com###g207
+tufutbolpro.com##script:inject(abort-on-property-write.js, smrtSP)
+tvcanales.cf##script:inject(nowebrtc.js)
+||i.imgur.com/*.png$image,domain=tufutbolpro.com
+tufutbolpro.com###ventana-flotante
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1057
 cutwi.in,cutwin.com,cutwin.pro##script:inject(abort-on-property-write.js, adss)
@@ -4903,6 +4907,8 @@ deepbrid.com##script:inject(abort-current-inline-script.js, document.getElementB
 bemetal.net##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1361
+pinsystem.co.uk##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+pinsystem.co.uk##script:inject(setInterval-defuser.js, (), 500)
 @@||pinsystem.co.uk^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1348
@@ -5652,6 +5658,7 @@ lin-ks.net##script:inject(nano-setInterval-booster.js)
 lin-ks.net##script:inject(set-constant.js, canRunAds, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1586
+protecturl.xyz##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 @@||protecturl.xyz^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1587
@@ -6814,7 +6821,7 @@ animeland.tv##script:inject(abort-current-inline-script.js, atob, void)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=animeland.tv
 ! ! adding sites using the same script
 animeland.tv,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[href$=".jpg"]
-animeland.tv,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[href$=".png"]
+animeland.tv,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,kiss-anime.me,mangareader.net,toonget.net,toonova.net##a[href$=".png"]
 memecenter.com##a[href$=".png"]
 mangareader.net##iframe[sandbox*="allow-popups-to-escape-sandbox"]
 
@@ -7514,8 +7521,7 @@ dompl3.info##script:inject(nowebrtc.js)
 bestgore.com##.ai_widget:has-text(Log In)
 
 ! https://forums.lanik.us/viewtopic.php?p=136393#p136393
-tusfiles.net##script:inject(abort-on-property-write.js, Fingerprint2)
-tusfiles.net#@#.btn
+tusfiles.com,tusfiles.net##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2216
 lyon.kim##script:inject(setTimeout-defuser.js, popupContainer, 1000)
@@ -9401,3 +9407,41 @@ novaenreta.space##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2799
 @@||tf1.fr^$generichide
+
+! https://github.com/reek/anti-adblock-killer/issues/4116
+xtraordinaryfansub.com##script:inject(set-constant.js, loadingAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2801
+soft112.com##script:inject(nano-setInterval-booster.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2800
+popmatters.com##script:inject(abort-on-property-read.js, CatapultTools)
+
+! https://forums.lanik.us/viewtopic.php?p=138567#p138567
+hypable.com##.advertise
+||hypable.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.hypable.com *.stat-rock.com *.wibbitz.com *.googletagservices.com *.googleapis.com *.twitter.com *.google.com *.facebook.com *.google-analytics.com *.gstatic.com *.facebook.net *.alooma.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/2804
+@@||dream-sound.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2803
+@@||facepunch.io^$script,first-party
+@@||biters.io^$script,first-party
+@@||skyroyale.io^$script,first-party
+@@||fisp.io^$script,first-party
+@@*$generichide,domain=facepunch.io|biters.io|skyroyale.io|fisp.io
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=facepunch.io|biters.io|skyroyale.io|fisp.io
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41168
+4realtorrentz.com##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2806
+goto.com.np##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+goto.com.np##script:inject(abort-on-property-read.js, open)
+*$subdocument,third-party,domain=goto.com.np
+
+! https://github.com/uBlockOrigin/uAssets/issues/2807
+@@||wwe2day.com/advertisement.js$script,first-party
+
+! https://www.reddit.com/r/uBlockOrigin/comments/8xhann/getting_around_antiadblock_on_a_wiki_site/
+undeniable.info##script:inject(abort-current-inline-script.js, document.getElementById, testadblock)
