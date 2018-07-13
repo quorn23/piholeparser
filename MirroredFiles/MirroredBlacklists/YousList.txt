@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: BAQrHK6JdZ316yQJW+XzWg
-! Version: 20180711
+! Checksum: XhaQBwVjs3yLDmblaXkfVA
+! Version: 20180712
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -50,6 +50,7 @@
 ##div.ob_box_cont>ul>li.ob-p
 ##div.ob_container>a.ob-p
 ##div.trc_popover_aug_container
+##div.trc_rbox_container div.trc-content-sponsored.trc_rbox
 ##div.trc_rbox_container div.trc_rbox_outer div.syndicatedItem
 ##div[id^="AD_LIVE_AREA_"]
 ##div[id^="M"][id*="ScriptRootC"]
@@ -152,6 +153,7 @@
 ##iframe[src^="http://aitg.widerplanet.com/"]
 ##iframe[src^="http://api.adns.contentlink.co.kr/adserver/delivery/iframe.php"]
 ##iframe[src^="http://apis.piclick.me/v1/publish/banner/iframe"]
+##iframe[src^="http://apis.piclick.me/v2/publish/banner/iframe"]
 ##iframe[src^="http://bayabar.com/adworking/"]
 ##iframe[src^="http://c6.daisy6.com/v1/adreq"]
 ##iframe[src^="http://cadvv.heraldm.com/nbiz/"]
@@ -568,6 +570,8 @@
 ||api.wiseclick.co.kr/api/web_directad/
 ||apis.naver.com/rmcnmv/rmcams/item/create/
 ||apis.piclick.me/v1/publish/banner/iframe^
+||apis.piclick.me/v2/publish/banner/iframe.min.js^
+||apis.piclick.me/v2/publish/banner/iframe^
 ||apis.pooq.co.kr/adproxy^$domain=pooq.co.kr
 ||art.chosun.com/common/r_banner/index.html^$domain=art.chosun.com
 ||artsnews.mk.co.kr/mk_ad.js^$domain=sports.mk.co.kr
@@ -589,6 +593,7 @@
 ||biz.chosun.com/dhtm/js/2012_ad_biz.js^
 ||biz.heraldcorp.com/advertisement/ad_fadein_*.php^$domain=biz.heraldcorp.com
 ||biz.heraldcorp.com/extcont/keywordlink_herald_new_*.html^$domain=biz.heraldcorp.com
+||bizhankook.com/common/js/common_banner.js^$domain=bizhankook.com
 ||bizon.kr/bar/adon_banner.js^
 ||bizon.kr/bizon_ad/
 ||bnhtml.com/invoke.js^
@@ -703,6 +708,7 @@
 ||cdnprisms.pandora.tv/_adv_img/prism_ad/
 ||celeb.nann.co.kr^
 ||cine21.com/misc/iframe/ad_netinsight/$domain=cine21.com
+||ciokorea.com/_common/banner/blank_black.php^$domain=ciokorea.com
 ||cjmooter.xcache.kinxcdn.com/script/
 ||clevernt.com/scripts/*.min.js^
 ||click.realclick.co.kr^
@@ -968,6 +974,8 @@
 ||inven.co.kr/common/lib/js/ad.slot.js^
 ||inven.co.kr/common/lib/js/adns.js^
 ||ir-na.amazon-adsystem.com/s/ads-common.js^
+||it.chosun.com/dhtm/js/itcs_art_ad*.js^$domain=it.chosun.com
+||itworld.co.kr/_common/banner/blank_black.php^$domain=itworld.co.kr
 ||j.microad.net/js/compass.js^
 ||jadserve.postrelease.com/t^
 ||jdaily.co.kr/frame/jad-bin.do^
@@ -1196,6 +1204,7 @@
 ||nurhdfilfilme.com/bundles/maxicadvertisement/js/advertisment_*.js^
 ||nv*.veta.naver.com/dr^
 ||nv.veta.naver.com/fxshow^$domain=naver.com
+||nvapi.feeldmc.com/ad/
 ||nw.realssp.co.kr^
 ||nws.lumieyes.com/show*/media/
 ||ojsfile.ohmynews.com/AD_FILE/
@@ -1519,6 +1528,8 @@
 ||youtube.com/get_video_info?*el=adunit
 ||ytn.co.kr/img/ad/
 ||ytn.co.kr/inc_banner/AdServerChange.php^
+||ytn.co.kr/inc_banner/Ad_TI.js^$domain=ytn.co.kr
+||ytn.co.kr/inc_banner/Ad_gisabottom2.php^$domain=ytn.co.kr
 ||z-na.amazon-adsystem.com/widgets/onejs^
 ||z.moatads.com/*/moatad.js^
 ||z.moatads.com/*/moatcontent.js^
@@ -1714,6 +1725,8 @@ biz.khan.co.kr,news.khan.co.kr##div.ad_top
 biz.khan.co.kr,news.khan.co.kr##div.ad_two
 biz.khan.co.kr,news.khan.co.kr##div.ad_two_top
 biz.khan.co.kr,news.khan.co.kr##div.article_bottom_ad
+bizhankook.com##div.banner
+bizhankook.com##div[class^="pcaddNew"]
 bizn.khan.co.kr##div.topright_bn
 blackhatworld.com##div.ad_below_bottom_breadcrumb
 blackhatworld.com##div.ad_below_top_breadcrumb
@@ -1807,7 +1820,16 @@ cine21.com##div.banner_top
 cine21.com##div.main_content_banner
 cine21.com##iframe[src^="/misc/iframe/ad_netinsight/"]
 ciokorea.com##div#banner_bg
+ciokorea.com##div#banner_right_wing
 ciokorea.com##div#banner_top
+ciokorea.com##div#dell_emc_modal
+ciokorea.com##div#mobile_recommand_banner
+ciokorea.com##div#post_ad
+ciokorea.com##div#techlibrary_left_slide_banner
+ciokorea.com##div#youtube_div
+ciokorea.com##div.footBanner
+ciokorea.com##div.nano_banner
+ciokorea.com##iframe[src^="/_common/banner/blank_black.php"]
 clien.net##div#hongboInfoList
 clien.net##div#naverAd
 clien.net##div.footer_ad
@@ -2419,15 +2441,29 @@ isplus.joinsmsn.com##div#topTextAd
 isplus.joinsmsn.com##div[class^="biz_link_area"]
 isplus.joinsmsn.com##div[class^="sponsor_link_area"]
 it.chosun.com##div#POWER_LINK_NAVER
-it.chosun.com##div#banner_1
-it.chosun.com##div.AdBannerBase
-it.chosun.com##div.newsinfo2
-it.chosun.com##div.section_h123>div[style="width:160px; height:600px;position:absolute;right:50%;margin-right:-660px;top:270px;z-index:1;"]
+it.chosun.com##div.ad
+it.chosun.com##div.ad2
+it.chosun.com##div.ad_list
+it.chosun.com##div.art_ad_bottom
+it.chosun.com##div.art_ad_scp
+it.chosun.com##div.fixed_ad
+it.chosun.com##div.hd_ad
+it.chosun.com##div.letter_bottom_ad
+it.chosun.com##div.thumb_ad
 it.donga.com##section.banner
 item.gmarket.co.kr##div#adlinks
 itsupportguides.com##div.adblock_wrapper
 ittoday.co.kr##dl[class$="top-banner"]
+itworld.co.kr##div#banner_bg
+itworld.co.kr##div#banner_right_wing
+itworld.co.kr##div#banner_top
+itworld.co.kr##div#dell_emc_modal
+itworld.co.kr##div#mobile_recommand_banner
+itworld.co.kr##div#post_ad
+itworld.co.kr##div#techlibrary_left_slide_banner
 itworld.co.kr##div#youtube_div
+itworld.co.kr##div.nano_banner
+itworld.co.kr##iframe[src^="/_common/banner/blank_black.php"]
 java-forums.org##div#ad_global_above_footer
 java-forums.org##div#ad_global_below_navbar
 java-forums.org##div#ad_thread_first_post_content
@@ -3542,7 +3578,9 @@ news1.kr##div.ad_wing_l
 news1.kr##div.ad_wing_r
 news1.kr##div.rollingAds
 news1.kr##div.s_news_list>ul>div[style="display:block;bottom:0;padding:5px; background:#EBEBEB; margin-top:-156px; right:0; position:absolute; width:200px; height:200px;"]
+news20.busan.com##div#s-content>div[style="position:relative; overflow:hidden;"]
 news20.busan.com##div.ad-box
+news20.busan.com##div.artic_ad
 news20.busan.com##div.head-ad
 news20.busan.com##div.sbody-adBox
 news20.busan.com##div[class^="banner_1024_1024_"]
@@ -3737,9 +3775,8 @@ ppomppu.co.kr##div.banner_336
 ppomppu.co.kr##div[id^="pp_ban_"]
 ppomppu.co.kr##iframe[id^="if_"][id$="_bn"]
 ppomppu.co.kr##p.banner_553
-ppss.kr##div.hank-fixed-banner
-ppss.kr##section#text-11
-ppss.kr##section#text-6
+ppss.kr##div.wing_banner
+ppss.kr##section#custom_html-2
 pressian.com##div.cnt_view>div[style="margin-bottom:50px; "]
 pressian.com##div.leftBanner1
 pressian.com##div.leftBanner2
@@ -3814,6 +3851,10 @@ sisain.co.kr##div.edit_inner_content>div.banner_box
 sisain.co.kr##div.float_banner
 sisainlive.com##div#TopBanners2
 sisainlive.com##td#articleBody>div[itemprop="articleBody"]>table[align="right"][width="320"][height="265"]
+sisajournal-e.com##aside.menuBanner
+sisajournal-e.com##div.banner1
+sisajournal-e.com##div.banner2
+sisajournal-e.com##div.banner3
 skidkaonline.ru##div.ads
 skidkaonline.ru##div.ads-item
 skyscanner.co.kr##div.mpu-advert
@@ -4371,17 +4412,21 @@ youtube.com##ytd-search-pyv-renderer
 youtube.com##ytd-video-masthead-ad-renderer
 ytn.co.kr##div#CmAdContent>div[style="overflow:hidden;width:420px;height:45px;border:1px solid #cbcccf;background-color: #fafafa;margin:20px auto 0 auto;padding:10px 30px;"]
 ytn.co.kr##div#CmAdContent>div[style="overflow:hidden;width:420px;height:45px;border:1px solid #cbcccf;background-color: #fafafa;margin:20px auto 0 auto;padding:10px 30px;position:relative;"]
-ytn.co.kr##div#Fusence
-ytn.co.kr##div#hns_mask
-ytn.co.kr##div#zone1>div[style="width:628px;border:1px solid #cbcccf;padding:10px 5px 10px 15px;margin-bottom:10px;overflow:hidden;"]
-ytn.co.kr##div.YTN_CSA_headline>div>div[style="clear:both;width:;648px;height:140px;padding:10px 0 0 0;margin:0 0 -10px 0;overflow:hidden"]
+ytn.co.kr##div#ajaxGisaSubList>div[style="margin:0 auto;width:628px;border:1px solid #cbcccf;padding:10px 5px 10px 15px;margin-bottom:10px;overflow:hidden;margin-top: 25px;"]
+ytn.co.kr##div#leftWingBanner
+ytn.co.kr##div#piclick_300x230
+ytn.co.kr##div#rightWingBanner
+ytn.co.kr##div#wrap>div[style="position:absolute;top:0px;right:-125px;"]
+ytn.co.kr##div#wrap>div[style="position:absolute;top:383px;margin-left:680px;z-index:0; !important"]
+ytn.co.kr##div.ad01
+ytn.co.kr##div.ad_top
 ytn.co.kr##div.adright_box
 ytn.co.kr##div.articleAd_marketing
 ytn.co.kr##div.articleAd_new
 ytn.co.kr##div[class^="ad_zone"]
 ytn.co.kr##div[class^="sub_adbox"]
 ytn.co.kr##iframe[name="AdtopBanner"]
-ytn.co.kr##ul[class^="adnew"]
+ytn.co.kr##iframe[src^="../inc_banner/Ad_gisabottom2.php"]
 zangsisi.net##body>center
 zangsisi.net##div#fixed-top
 zangsisi.net##div.fixed-top>center

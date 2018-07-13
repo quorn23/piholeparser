@@ -1659,6 +1659,7 @@ thevideo.cc,thevideo.io,thevideo.us##script:inject(window.open-defuser.js)
 thevideo.cc,thevideo.me,thevideo.us##script:inject(abort-current-inline-script.js, app.config.adblock_domain)
 thevideo.cc,thevideo.me,thevideo.us##script:inject(abort-on-property-read.js, app.main.adblock)
 thevideo.cc,thevideo.me,thevideo.us##script:inject(abort-on-property-read.js, MarketGidJSON)
+vev.io##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mouseup)$/, Xc.)
 thevideo.cc,thevideo.me,thevideo.us##script:inject(addEventListener-defuser.js, click, void)
 thevideo.io##.vjs-overlay-no-background.hidden-xs-down.vjs-overlay-banner300x.vjs-overlay-top.vjs-overlay
 ||thevideo.me/assets/g=adb
@@ -4848,6 +4849,7 @@ gturls.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adbl
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1325
 gamegtx.com##script:inject(abort-on-property-write.js, AdBlockDetectorWorkaround)
+@@||gamegtx.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1326
 won.pe##script:inject(set-constant.js, adblock, false)
@@ -6827,6 +6829,7 @@ clipwatching.com##script:inject(set-constant.js, adblock, false)
 updato.com##script:inject(setTimeout-defuser.js, updato-overlay, 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1946
+animeland.tv##script:inject(abort-on-property-write.js, Fingerprint2)
 animeland.tv##script:inject(nowebrtc.js)
 animeland.tv##^script:has-text(676574456c656d656e747342795461674e616d65)
 animeland.tv##script:inject(abort-current-inline-script.js, atob, void)
@@ -9312,6 +9315,7 @@ wicr.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2757
 nwtehranmusic.com##script:inject(abort-on-property-read.js, needpop)
+nwtehranmusic.com##script:inject(abort-on-property-write.js, open)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2756
 ||cklad.xyz^$third-party
@@ -9595,3 +9599,67 @@ simpsonsua.com.ua##script:inject(abort-current-inline-script.js, atob, void)
 ||megastock.ru/doc/*/azure_rus.gif$image,redirect=32x32-transparent.png,domain=simpsonsua.com.ua
 *$script,domain=simpsonsua.com.ua,badfilter
 */preroll/*mp4$media,domain=td7vccbywda3.ru
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41177
+movies123.xyz##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
+movies123.xyz##^script:has-text(3f87b0eaddd)
+||amgload.net^$xmlhttprequest,redirect=nooptext,domain=movies123.xyz
+||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=movies123.xyz
+
+! https://github.com/uBlockOrigin/uAssets/issues/2853
+techsolutiontips.com##script:inject(set-constant.js, google_jobrunner, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2855
+@@||hdturk.de^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2856
+@@||dizired.com^$generichide
+dizired.com##script:inject(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2857
+miuiturkiye.net##script:inject(abort-current-inline-script.js, adblock, .svg-adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2864
+trgala.com##script:inject(set-constant.js, $tieE3, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2865
+@@||webellek.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2860
+@@||driverdestek.com^$generichide
+@@*.png#$image,domain=driverdestek.com
+driverdestek.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/2863
+@@||kasvekuvvet.net^$generichide
+kasvekuvvet.net##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/2862
+@@||guzelresimler.info^$generichide
+guzelresimler.info##script:inject(abort-on-property-read.js, FuckAdBlock)
+guzelresimler.info##.ezoic-ad
+
+! https://github.com/uBlockOrigin/uAssets/issues/2866
+@@||bodytr.com^$generichide
+bodytr.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/2861
+@@||androidmakale.com^$generichide
+androidmakale.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/2859
+@@||wanaliz.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2858
+maasi.org##script:inject(addEventListener-defuser.js, load, onload)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2867
+@@||turkcetarih.com^$generichide
+turkcetarih.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/2868
+@@||e-webmasters.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2869
+ocregister.com##script:inject(set-constant.js, dfmCanRunAds, true)
+ocregister.com##script:inject(set-constant.js, CnnXt.Utils.detectAdBlock, noopFunc)
