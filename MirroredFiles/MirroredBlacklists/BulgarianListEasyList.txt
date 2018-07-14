@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201807130019
+! Version: 201807132116
 ! Title: EasyPrivacy
-! Last modified: 13 Jul 2018 00:19 UTC
+! Last modified: 13 Jul 2018 21:16 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -51,6 +51,7 @@
 -ga-track.
 -gatracker.
 -geoIP.js
+-google-analytics-
 -google-analytics.
 -google-analytics/
 -google-tag-manager/$script
@@ -1416,6 +1417,7 @@
 /ga-lite.
 /ga-multidomain.
 /ga-script.
+/ga-scroll-events.
 /ga-se-async.js
 /ga-socialtracker.
 /ga-track.
@@ -2362,6 +2364,7 @@
 /performance_timing/log?
 /performance_tracker-
 /permalink-tracker.html?
+/pf?pid=
 /pg_pixel?
 /pgtracking.
 /pgtrackingV3.
@@ -4164,6 +4167,7 @@ _mongo_stats/
 ||adobedtm.com^$third-party
 ||adobetag.com^$third-party
 ||adoftheyear.com^$third-party
+||adoric-om.com^$third-party
 ||adpies.com^$third-party
 ||adprotraffic.com^$third-party
 ||adrizer.com^$third-party
@@ -6187,6 +6191,7 @@ _mongo_stats/
 ||umbel.com^$third-party
 ||unicaondemand.com^$third-party
 ||unknowntray.com^$third-party
+||upapi.net^$third-party
 ||upstats.ru^$third-party
 ||uptain.de^$third-party
 ||uptimeviewer.com^$third-party
@@ -7389,7 +7394,6 @@ _mongo_stats/
 ||digital-metric.com^$third-party
 ||distribeo.com^$third-party
 ||dnab.info^$third-party
-||exsigma.eu^$third-party
 ||freecounter.it^$third-party
 ||freestat.ws^$third-party
 ||freestats.biz^$third-party
@@ -8851,6 +8855,7 @@ _mongo_stats/
 ||mansion.com/mts.tracker.js
 ||mantisadnetwork.com/sync?
 ||mapquestapi.com/logger/
+||marketing.net.jumia.com.ng^
 ||marketingautomation.services/koi$third-party
 ||marketingautomation.services/net?$third-party
 ||marketinghub.hp.com^
@@ -10182,6 +10187,7 @@ _mongo_stats/
 ||eageweb.com/stats.php
 ||encoderfarmced-stats-ns.servicebus.windows.net^
 ||evnt.iol.it^
+||exsigma.eu/mercurio/
 ||fb_servpub-a.akamaihd.net^
 ||fcstats.altervista.org^$third-party
 ||gazzettaobjects.it^*/tracking/
@@ -13776,7 +13782,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 ! Polish
 |http://x.o2.pl^
 ||analytics.gazeta.pl^
-||audycje.tokfm.pl^
 ||dot.wp.pl^
 ||entryhit.wp.pl^
 ||interia.pl^*/hit.
@@ -14016,6 +14021,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||ad.crwdcntrl.net^$script,domain=cityam.com|investopedia.com
 @@||ad.zanox.com/ppc/$subdocument,domain=wisedock.at|wisedock.co.uk|wisedock.com|wisedock.de|wisedock.eu
 @@||adblockanalytics.com/ads.js|
+@@||addgene.org/headers/blat/js/analyze.js
 @@||adidas.com^*/adidasAnalytics.js?
 @@||adobedtm.com^*/mbox-contents-$script,domain=lenovo.com|newyorker.com|oprah.com|pnc.com|vanityfair.com|wired.com
 @@||adobedtm.com^*/s-code-$script
@@ -14255,7 +14261,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||everestjs.net/static/st.js$domain=ford.com
 @@||evernote.com^*/google-analytics-util.js
 @@||evestment.com/api/analytics/$domain=evestment.com
-@@||evidon.com/geo/$domain=etonline.com
+@@||evidon.com/geo/$domain=etonline.com|popsugar.co.uk
 @@||expedia.com/minify/siteAnalytics-$script
 @@||expedia.com/static/default/default/scripts/siteAnalytics.js
 @@||expedia.com/static/default/default/scripts/TealeafSDK.js
@@ -15164,4 +15170,4 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: I2DU53P5RVZ51BwbYyVR/A
+! Checksum: 8vpv0xQUyetTmN/kPP1WTg
