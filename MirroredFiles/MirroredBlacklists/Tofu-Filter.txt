@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 21:30 2018/06/10
+! 最終更新 21:03 2018/07/17
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -722,14 +722,11 @@ $script,third-party,domain=jpidols.tv
 ||chem-station.com^*/adrotate-pro/
 ||chixi.jp/img.php?filename=b
 ||cinematoday.jp^*affiliate
-	!2017/10/16 不具合あるかも
-||cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js$domain=dlbooks.to
 ||cookpad.com/iframe/
 ||cosp.jp/images/spacer.gif
 ||diced.jp/webs/
 ||dl8x.com/banner/
 ||dl8x.com/product?
-||dlbooks.to/img/special/ab.js
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
 ||e-typing.ne.jp/app/ad_
 ||eegg.dip.jp/iframe/
@@ -751,7 +748,7 @@ $script,third-party,domain=jpidols.tv
 ||gotporn.com/desktop/js/popunder-
 ||gotporn.com/main/js/exo-loader/
 	||tsyndicate.com/iframes2/*$domain=gotporn.com
-||gum.dlbooks.to^$domain=dlbooks.to
+	!2017/10/16 不具合あるかも
 ||grupo.jp/ad_loader/$domain=pitamo.jp
 ||hentai-foundry.com/themes/default/js/activebar.js
 ||himado.in/player_ad.php
@@ -780,6 +777,7 @@ $script,third-party,domain=jpidols.tv
 ||kooss.com/*.htm$subdocument
 ||labaq.com/user/json/lq_amarray.js?
 ||linkage.kakaku.com^$domain=~kakaku.com
+||maid.to^$domain=ribbon.to
 ||majo.co.jp/jwd.js$domain=ribbon.to
 ||majo.co.jp/alpc.js$domain=ribbon.to
 ||mangamura.org/showads.js
@@ -819,7 +817,7 @@ $script,third-party,domain=jpidols.tv
 ||thisav.com/index.js
 ||thisav.com/player/video-js-banner/
 	||xywdvhd.com^$domain=thisav.com
-||tokyomotion.net/media/videojs/js/anyhtm.js
+||aj1198.online^$domain=tokyomotion.net
 ||toukoucity.to/js/digi
 ||toukoucity.to/siteimg/digi/dmmt$domain=toukoucity.to
 ||tokyo-porn-tube.com/media/player/ads_
@@ -1419,7 +1417,6 @@ coliss.com###sponsorsTop
 d.hatena.ne.jp###amazon
 d.hatena.ne.jp##.hotamazon-left
 dl8x.com##[class^="dx-banner-"]
-dlbooks.to##[id^="div_fam_async_"] + div[style="margin-top: 0px;"]
 dtiblog.com###meerkat-wrap
 e-typing.ne.jp##[class^="ad"][class*="00"]
 e0166.blog89.fc2.com###side > .module:nth-of-type(3)
@@ -2051,6 +2048,12 @@ minnano-av.com##.type-fuzoku
 ||mediafire.com^$subdocument
 ||4dsply.com^$domain=mediafire.com
 ||razwrite.com^$domain=mediafire.com
+
+!------------dlbooks------------------!
+||gum.xbooks.to^
+||cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js$domain=xbooks.to
+xbooks.to##DIV[style="width:900px; height:250px; margin: -15px auto 15px auto;"]
+xbooks.to###thumbnail1:style(text-align: center !important;)
 
 !------さらに検索する を消す
 /ad_plugin.js
