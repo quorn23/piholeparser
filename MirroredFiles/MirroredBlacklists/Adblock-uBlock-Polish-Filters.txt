@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 ! Wsparcie: https://patronite.pl/polskiefiltry
-! Last modified: 18 July 2018
+! Last modified: 19 July 2018
 ! Expires: 1 day
-! Version: 2018071801
+! Version: 2018071904
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018071801 aktualizacja: sr, 18 lipca 2018, 20:20:00
+! v.2018071904 aktualizacja: czw, 19 lipca 2018, 20:40:00
 !
 !
 !-----------------------Integration list with uBlock & Adguard-----------------------!
@@ -104,8 +104,8 @@ vshare.io###sendif
 !
 !7#-----------------------Privacy filters block-----------------------!
 !
-24tp.pl,lca.pl,112tychy.pl,30minut.pl##[class*="reklama"]
 !8#------------------------General element hiding rules-------------------------!
+24tp.pl,lca.pl,112tychy.pl,30minut.pl,twoje-podhale.pl##[class*="reklama"]
 ###a_201
 ###a_d_billboard
 ##.adexonModuleportel.pl
@@ -1665,7 +1665,7 @@ mybboard.pl##.regardsForAdblockers
 myhome.pl##.must-login-box.f-login-wrapper
 mylomza.pl##.deepest.box-2
 mylomza.pl##.itemBody > IMG[src^="/images/"]
-mylomza.pl##.topblock
+mylomza.pl##.topblock, .itemBody > p
 mylomza.pl##.width100.float-left.contenttopbox > .last.first.mod-box.module
 mylomza.pl##div.mod-box-header.mod-box.module:nth-of-type(4)
 mysqlperformanceblog.com##.insightera-bar-widget.insightera-bar
@@ -2197,6 +2197,7 @@ sadnowoczesny.pl##.art-ad
 sanok24.pl###container > center
 sanok24.pl##.nobg.menu:nth-of-type(8)
 saskakepa.waw.pl##.box:last-child
+satinfo24.pl##.span8 > h2:nth-of-type(1)
 satkurier.pl###bann > center
 satkurier.pl###right_column_gallery
 satkurier.pl###side_bottom_m
@@ -3646,6 +3647,7 @@ zw.pl###abpnotzw
 @@/adsense.js$script,domain=biznesforum.pl|optyczne.pl
 @@ads$image,domain=rapidgrab.pl
 @@/ads.reklama.728x90$script,stylesheet,domain=zmianaczasu.info|antonimy.net|odmiana.net|definicja.net|krzyzowka.net|humoris.pl
+@@/advert.js$script,domain=www.poradnikzdrowie.pl|fm.tuba.pl
 @@/advertise.js$domain=superfilm.pl
 @@/advertisement*.js$script,domain=meczyki.pl|autocentrum.pl|tokfm.pl|trojmiasto.pl|superfilm.pl|glucholazyonline.com.pl|ps-plus.pl
 @@||adservice.google.pl/adsid/integrator.js$script,domain=tvp.pl
@@ -3660,7 +3662,6 @@ zw.pl###abpnotzw
 @@||blog.programyzadarmo.net.pl/images/ad/*.gif$image,domain=blog.programyzadarmo.net.pl
 @@||burzowo.info/scripts/ad.js$script,domain=burzowo.info
 @@||businessinsider.com.pl^$generichide
-@@||cdn.muratordom.smcloud.net/t/advert.js$script,domain=www.poradnikzdrowie.pl
 @@||csr.onet.pl/$domain=www.newsweek.pl
 @@||cyfrowydoradca.pl/modules/mod_jpayday/js/advertisement.js
 @@||epiotrkow.pl/js/*reklama*.js$script
@@ -3903,6 +3904,7 @@ autocentrum.pl,demotywatory.pl,dziennik.pl,facetemjestem.pl,gala.pl,garnek.pl,gr
 ||adobedc.cf^
 ||dhl-paczki.ml^
 ||p986524.pl^
+||aktualizacja-lte5.pl^
 !
 !24#--------------------------Rules for ublock, but can be use with adblock------------!
 ||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=exs.pl,important
@@ -4190,7 +4192,7 @@ nettg.pl##[id^="widget-"] > div > label
 newsbook.pl##.newsb-widget.widget
 olgasmile.com###text-37 > .widget-wrap
 olgasmile.com###text-38 > .widget-wrap
-pabianice.tv###text-33
+pabianice.tv,satinfo24.pl###text-33
 podgorze.pl,strajk.eu###text-16
 podkarpackahistoria.pl###widget_sp_image-9, #widget_sp_image-10, #widget_sp_image-14, #widget_sp_image-15, #widget_sp_image-16, #widget_sp_image-17, #widget_sp_image-22, #widget_sp_image-25, #widget_sp_image-27, #widget_sp_image-32, #widget_sp_image-33, #widget_sp_image-36
 radiofon.fm###text-28
@@ -4253,7 +4255,7 @@ zwiedzamyparyz.pl###text-6, .a-single, .gyg-widget
 ||vaks.pl^
 ||vidoza*.github.io/*/*.wasm
 /wss:\/\/[a-z0-9.]{10,25}\.[a-z]{2,3}\/$/$domain=a-o.ninja
-/:\/\/[\w\W]{4,15}\.[a-z]{2,3}:[0-9]{3,4}\//$subdocument,domain=alltube.tv|szukajka.tv|alltube.pl
+/:\/\/[\w\W]{4,15}\.[a-z]{2,6}:[0-9]{3,4}\//$subdocument,domain=alltube.tv|szukajka.tv|alltube.pl
 /:\/\/[\w\W]{5,15}\.[a-z]{2,3}:[0-9]{3,4}\//$domain=dekoder.ws|alltube.tv|ekinomaniak.tv|vidoza.net|alltube.pl|fili.cc
 !
 !40#--------------------------Bitcoin whitelist ------------!
