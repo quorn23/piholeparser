@@ -2973,15 +2973,17 @@ yourporn.sexy##script:inject(abort-on-property-write.js, Fingerprint2)
 yourporn.sexy##script:inject(noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1197
-@@*$generichide,domain=magesy.be|magesy.eu|magesy.club|magesy.info|magesy.website|majesy.com|magesy.audio
+! https://github.com/NanoAdblocker/NanoFilters/issues/144
+mage.si,magesy.pw##script:inject(abort-current-inline-script.js, document.getElementById, undefined)
 magesy.*##script:inject(abort-current-inline-script.js, adBlockDetected)
+majesy.*##script:inject(bab-defuser.js)
+magesy.*,majesy.*##script:inject(noeval.js)
+magesy.*,majesy.*##script:inject(set-constant.js, jQuery.adblock, false)
+majesy.*##script:inject(setInterval-defuser.js, visibility, 1000)
+@@*$generichide,domain=magesy.be|magesy.eu|magesy.club|magesy.info|magesy.website|majesy.com|magesy.audio
 ||magesy.*/cdn-cgi/apps/head/*$script,first-party
 magesy.*###adblockplus
 majesy.*##.dark.jquery-adi
-majesy.*##script:inject(bab-defuser.js)
-magesy.*,majesy.*##script:inject(set-constant.js, jQuery.adblock, false)
-magesy.*,majesy.*##script:inject(noeval.js)
-mage.si,magesy.pw##script:inject(abort-current-inline-script.js, document.getElementById, undefined)
 
 ! https://forums.lanik.us/viewtopic.php?p=128630#p128630
 tohax.com##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -3089,9 +3091,10 @@ hdporn.net##script:inject(abort-on-property-read.js, exoOpts)
 ||amateurporn.net/*.gif$image
 
 ! https://github.com/uBlockOrigin/uAssets/issues/897
+watchmyexgf.net##script:inject(abort-on-property-read.js, prPuShown)
 ||watchmyexgf.net/*.gif$image
 watchmyexgf.net##.adv
-watchmyexgf.net##script:inject(abort-on-property-read.js, prPuShown)
+watchmyexgf.net##[href^="http://wct.link/click"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/901
 @@||tny.ec/js/advertisement.js$script
@@ -6010,7 +6013,9 @@ waybig.com##script:inject(abort-on-property-read.js, BetterJsPop)
 ! https://github.com/uBlockOrigin/uAssets/issues/1953
 animeflv.ru##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 animeflv.ru##script:inject(setInterval-defuser.js, (), 500)
-||animeflv.ru^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.facebook.com *.google-analytics.com *.gstatic.com *.facebook.net *.disquscdn.com https://disqus.com *.disqus.com
+||animeflv.ru^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.facebook.com *.google-analytics.com *.googleapis.com *.gstatic.com *.facebook.net *.disquscdn.com https://disqus.com *.disqus.com
+@@||animeflv.ru/assets/vast/videojs$script,first-party
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=animeflv.ru
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1690
 jkanime.net##script:inject(abort-on-property-write.js, adcashMacros)
@@ -6897,7 +6902,7 @@ yourlust.com##iframe[src="/im/footer.html"]
 ! https://github.com/uBlockOrigin/uAssets/issues/1970
 audioz.cc##script:inject(abort-current-inline-script.js, document.getElementById, adblockplus)
 audioz.cc##script:inject(bab-defuser.js)
-
+audioz.cc##script:inject(setTimeout-defuser.js, ShowAdbblock, 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/719
 twitch.tv##script:inject(twitch-videoad.js)
@@ -6940,6 +6945,8 @@ lejdd.fr##script:inject(abort-on-property-read.js, SmartWallSDK)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1986
 xilften.net##script:inject(abort-on-property-write.js, smrtSB)
+xilften.net##script:inject(abort-on-property-write.js, smrtSP)
+unitplay.net##script:inject(abort-on-property-read.js, popTimes)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1988
 cashat.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -8047,6 +8054,9 @@ pornfay.com,pornscum.com,pornspark.com,porntopic.com##script:inject(abort-on-pro
 ||grtyb.com^$third-party
 ||irtyf.com^
 ||ochko.biz^$domain=asiananimaltube.org
+! https://github.com/uBlockOrigin/uAssets/issues/2364#issuecomment-406739691
+xxxtubezoo.com,zooredtube.com##script:inject(abort-on-property-read.js, popunderSetup)
+xxxtubezoo.com,zooredtube.com##script:inject(addEventListener-defuser.js, DOMContentLoaded, preventExit)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2365
 fapdig.com##script:inject(popads-dummy.js)
@@ -9038,6 +9048,7 @@ watchitsalwayssunnyinphiladelphia.net##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2668
 pelisgratis.tv##script:inject(abort-on-property-write.js, smrtSB)
+pelisgratis.tv##a[href*="look.kfiopkln.com"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2669
 ver-peliculas.io##script:inject(window.open-defuser.js)
@@ -9875,3 +9886,15 @@ aniteca.zlx.com.br##script:inject(abort-current-inline-script.js, document.getEl
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2938
 @@||voirfilms.ws^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2945
+wokesloth.com##script:inject(abort-on-property-write.js, admiral)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2946
+@@||coolgames.com^$generichide
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=coolgames.com
+coolgames.com##.ad-wrapper
+
+! https://github.com/uBlockOrigin/uAssets/issues/2947
+pelismart.com##script:inject(abort-on-property-write.js, _pop)
+@@||pelismart.com^$generichide
