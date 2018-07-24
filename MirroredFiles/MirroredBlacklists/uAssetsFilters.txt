@@ -1135,10 +1135,12 @@ hackintosh.zone,hackintoshzone.com##script:inject(abort-current-inline-script.js
 hackintosh.computer,hackintosh.zone,hackintoshzone.com##script:inject(addEventListener-defuser.js, DOMContentLoaded, console)
 hackintosh.zone,hackintoshzone.com##script:inject(setTimeout-defuser.js, _0x)
 ||doubleclick.net^$subdocument,redirect=noopframe,domain=hackintosh.computer|hackintosh.zone|hackintoshzone.com
+||google-analytics.com/collect$image,redirect=1x1-transparent.gif,domain=hackintosh.computer|hackintosh.zone|hackintoshzone.com
 ||googlesyndication.com^$script,important,redirect=noopjs,domain=hackintosh.computer|hackintosh.zone|hackintoshzone.com
 ||amazon-adsystem.com^$script,redirect=noopjs,domain=hackintosh.computer|hackintosh.zone|hackintoshzone.com
 ||pubmatic.com^$script,redirect=noopjs,domain=hackintosh.computer|hackintosh.zone|hackintoshzone.com
 @@||google-analytics.com/analytics.js$script,domain=hackintosh.zone|hackintoshzone.com
+@@||google-analytics.com/collect$xmlhttprequest,domain=hackintosh.zone|hackintoshzone.com
 @@||googletagmanager.com/gtag/js$script,domain=hackintosh.zone|hackintoshzone.com
 @@||rules.noadblock.org^$domain=hackintosh.zone|hackintoshzone.com
 @@||cdn.hackintosh.zone^$first-party,script,stylesheet
@@ -5569,11 +5571,6 @@ xfreehd.com##.nvheader > span:has-text(Advertisement)
 mynbc5.com##script:inject(abort-on-property-read.js, alert)
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=mynbc5.com
 
-! https://forums.lanik.us/viewtopic.php?f=62&t=39995
-! https://github.com/uBlockOrigin/uAssets/issues/1688
-iwatchgot.com,iwatchseries.online,watchamericandad.net,watcharcheronline.com,watcharresteddevelopment.com,watchcheersonline.com,watchcommunity.online,watchdoctorwhoonline.com,watcheverybodylovesraymond.com,watchfamilyguy.cc,watchfearthewalkingdead.net,watchfriendsonline.net,watchhowimetyourmother.com,watchitsalwayssunnyinphiladelphia.com,watchkingofthehill.com,watchparksandrecreation.net,watchprisonbreakonline.com,watchpsychonline.net,watchscrubsonline.com,watchseinfeld.com,watchsmallvilleonline.net,watchsouthpark.cc,watchsupernaturalonline.cc,watchthesopranos.com,watchthexfiles.com,watchthewalkingdead.online##script:inject(bab-defuser.js)
-embedtvseries.com###banner
-
 ! https://github.com/gorhill/uBlock/issues/3522
 ! https://github.com/uBlockOrigin/uAssets/issues/2021
 liga.net##^script:has-text(3f87b0eaddd)
@@ -6372,6 +6369,7 @@ globaldjmix.com##script:inject(set-constant.js, canRun, true)
 ! https://github.com/uBlockOrigin/uAssets/issues/1809
 estrenos10.com##^script:has-text(676574456c656d656e747342795461674e616d65)
 estrenos10.com##script:inject(setInterval-defuser.js, disable_ads, 15000)
+estrenos10.com##script:inject(window.open-defuser.js)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=estrenos10.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1813
@@ -6440,8 +6438,9 @@ jellynote.com##script:inject(setTimeout-defuser.js, byepopup, 5000)
 kisscosplay.moe##script:inject(setTimeout-defuser.js, nextFunction, 250)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1826
-povwideo.net##script:inject(abort-on-property-write.js, Fingerprint2)
-povwideo.net##script:inject(window.open-defuser.js)
+povw1deo.*,povwideo.*##script:inject(abort-on-property-write.js, Fingerprint2)
+povw1deo.*##script:inject(nowebrtc.js)
+povw1deo.*,povwideo.*##script:inject(window.open-defuser.js)
 ||go.pub2srv.com/apu.php$script,redirect=noopjs
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1827
@@ -6527,8 +6526,12 @@ cinedetodo.com##[id*=yellow]
 ||srcsmrtgs.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1847
+cinemahd.co##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 cinemahd.co##script:inject(nowebrtc.js)
 ||cinemahd.co^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.gstatic.com *.widgetpack.com *.jwpcdn.com *.google-analytics.com *.povwideo.net *.clipwatching.com *.vshare.io *.rapidvideo.com *.fastplay.to *.facebook.com *.fbcdn.net
+! https://github.com/uBlockOrigin/uAssets/issues/1847#issuecomment-407225486
+fastplay.to##script:inject(abort-current-inline-script.js, atob, tabunder)
+fastplay.to##script:inject(nowebrtc.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40353
 megaup.net##script:inject(nowebrtc.js)
@@ -6839,6 +6842,7 @@ peliculasgoogledrive.info##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1945
 clipwatching.com##script:inject(set-constant.js, adblock, false)
+clipwatching.com##script:inject(window.open-defuser.js)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/905
 updato.com##script:inject(setTimeout-defuser.js, updato-overlay, 500)
@@ -8293,7 +8297,6 @@ o2tvseries.com##script:inject(setInterval-defuser.js, (), 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2452
 watchtheoffice.online##script:inject(abort-on-property-write.js, _pop)
-watchtheoffice.online##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2454
 cellmapper.net##script:inject(set-constant.js, adTestPass, true)
@@ -9047,7 +9050,6 @@ ettv.tv##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2665
 watchitsalwayssunnyinphiladelphia.net##script:inject(abort-on-property-write.js, _pop)
-watchitsalwayssunnyinphiladelphia.net##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2668
 pelisgratis.tv##script:inject(abort-on-property-write.js, smrtSB)
@@ -9991,3 +9993,85 @@ hawklegend.org##script:inject(nowebrtc.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/2975
 wroffle.com##script:inject(abort-on-property-write.js, ai_adb_process_content)
 wroffle.com##.special-message-wrapper
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41245
+mcleaks.net##script:inject(abort-on-property-read.js, canRunAds)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/90x6vn
+@@||faucetcrypto.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2978 
+recpelis.net##script:inject(abort-on-property-write.js, smrtSB)
+recpelis.net##script:inject(abort-on-property-write.js, smrtSP)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2979
+pelishd.live##script:inject(abort-on-property-write.js, smrtSB)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2980
+ultrapeliculashd.com##.content > center
+
+! https://github.com/uBlockOrigin/uAssets/issues/2981
+@@||converthinks.xyz^$generichide
+converthinks.xyz##script:inject(nano-setInterval-booster.js)
+
+! Issues 2982-2985
+empireshort.com,linkfinal.com,motahrer.com,urlswin.xyz##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+linkfinal.com,motahrer.com,urlswin.xyz##script:inject(nano-setInterval-booster.js)
+urlswin.xyz##script:inject(addEventListener-defuser.js, click)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/910tjl
+hotpornfile.org##script:inject(abort-on-property-read.js, ExoLoader)
+hotpornfile.org##script:inject(abort-on-property-write.js, popns)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2986
+fullepisodes.me##script:inject(setTimeout-defuser.js, nextFunction, 250)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2987
+@@||radiocut.fm^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/2988
+hoquangdai.com##script:inject(abort-on-property-write.js, adb_checker)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2990
+gamereactor.dk##script:inject(abort-on-property-write.js, detectAdblockUser)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2991
+@@||safeurl.net/theme/js/ads_test.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/2992
+@@||fmhikayeleri.com^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=39995
+! https://github.com/uBlockOrigin/uAssets/issues/1688
+! https://github.com/uBlockOrigin/uAssets/issues/2993
+! https://github.com/uBlockOrigin/uAssets/issues/2994
+! https://github.com/uBlockOrigin/uAssets/issues/2995
+! https://github.com/uBlockOrigin/uAssets/issues/2997
+iwatchgot.com,iwatchseries.online,watch30rockonline.com,watchadventuretime.com,watchamericandad.net,watcharcheronline.com,watcharresteddevelopment.com,watchbreakingbad.online,watchcheersonline.com,watchcommunity.online,watchcurbyourenthusiasm.com,watchdoctorwhoonline.com,watcheverybodylovesraymond.com,watchfamilyguy.cc,watchfearthewalkingdead.net,watchfriendsonline.net,watchgreysanatomyonline.com,watchhowimetyourmother.com,watchhowimetyourmother.net,watchitsalwayssunnyinphiladelphia.com,watchkingofthehill.com,watchonetreehillonline.com,watchparksandrecreation.net,watchprisonbreakonline.com,watchpsychonline.net,watchscrubsonline.com,watchseinfeld.com,watchsmallvilleonline.net,watchsouthpark.cc,watchsupernaturalonline.cc,watchthat70show.com,watchtheofficeonline.net,watchthesopranos.com,watchthevampirediaries.com,watchthewalkingdead.online,watchthexfiles.com,watchtopgearonline.net,watchtwoandahalfmenonline.com##script:inject(bab-defuser.js)
+embedtvseries.com###banner
+
+! https://github.com/uBlockOrigin/uAssets/issues/2996
+moviejones.de##script:inject(abort-current-inline-script.js, document.getElementById, overlayBtn)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2999
+blackpoolgazette.co.uk##script:inject(abort-on-property-read.js, EV)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3000
+tugaanimado.net##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
+tugaanimado.net##script:inject(abort-on-property-read.js, anOptions)
+tugaanimado.net##script:inject(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3004
+hackyouriphone.org##script:inject(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3005
+donnaglamour.it##script:inject(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3007
+@@||hindinewstop.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3008
+@@||frendx.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3010
+@@||berlingoforum.com^$generichide
