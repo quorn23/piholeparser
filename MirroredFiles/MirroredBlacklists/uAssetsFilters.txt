@@ -1626,20 +1626,23 @@ wstream.video##div[onclick^="window.open"]
 ! https://www.reddit.com/r/uBlockOrigin/comments/7uro6c/accuweathercom_asking_you_to_buy_an_ad_removal/
 ! https://github.com/NanoAdblocker/NanoFilters/issues/100
 ! https://github.com/uBlockOrigin/uAssets/issues/2509
-accuweather.com,androidpolice.com,beliefnet.com,billingsgazette.com,bismarcktribune.com,businessinsider.com,champions.co,comicbook.com,eurogamer.net,givemesport.com,grubstreet.com,hotair.com,jg-tc.com,kgw.com,lacrossetribune.com,madison.com,magicvalley.com,missoulian.com,moviepilot.com,napavalleyregister.com,nationalpost.com,notalwaysright.com,nowloading.co,ottawacitizen.com,pantagraph.com,parkers.co.uk,patheos.com,popculture.com,poststar.com,qctimes.com,rapidcityjournal.com,rawstory.com,stltoday.com,thesouthern.com,thestudentroom.co.uk,townhall.com,trendblog.net,trib.com,tucson.com,tvtropes.org,twitchy.com,watoday.com.au,wtsp.com,wusa9.com,wwg.com##script:inject(abort-on-property-read.js, stop)
+accuweather.com,androidpolice.com,beliefnet.com,billingsgazette.com,bismarcktribune.com,businessinsider.com,champions.co,comicbook.com,eurogamer.net,givemesport.com,grubstreet.com,hotair.com,jg-tc.com,lacrossetribune.com,madison.com,magicvalley.com,missoulian.com,moviepilot.com,napavalleyregister.com,nationalpost.com,notalwaysright.com,nowloading.co,ottawacitizen.com,pantagraph.com,parkers.co.uk,patheos.com,popculture.com,poststar.com,qctimes.com,rapidcityjournal.com,rawstory.com,stltoday.com,thesouthern.com,thestudentroom.co.uk,townhall.com,trendblog.net,trib.com,tucson.com,tvtropes.org,twitchy.com,watoday.com.au,wwg.com##script:inject(abort-on-property-read.js, stop)
 ||0mme.com^$script,domain=comicbook.com|popculture.com
-||1emn.com^$script,domain=hotair.com|lacrossetribune.com|moviepilot.com|nationalpost.com|notalwaysright.com|wusa9.com
+||1emn.com^$script,domain=hotair.com|lacrossetribune.com|moviepilot.com|nationalpost.com|notalwaysright.com
 ||1enm.com^$script,domain=champions.co|pantagraph.com|parkers.co.uk
 ||2enm.com^$domain=androidpolice.com|beliefnet.com|trib.com
 ||8d1f.com^$script,domain=napavalleyregister.com|rapidcityjournal.com|rawstory.com|tvtropes.org|watoday.com.au
 ||e0mn.com^$script,domain=accuweather.com|billingsgazette.com|bismarcktribune.com|patheos.com|qctimes.com|tucson.com
 ||em0n.com^$domain=businessinsider.com|givemesport.com|grubstreet.com|madison.com|nowloading.co|thesouthern.com|trendblog.net|twitchy.com
-||emn0.com^$script,domain=kgw.com|poststar.com|stltoday.com|thestudentroom.co.uk
+||emn0.com^$script,domain=poststar.com|stltoday.com|thestudentroom.co.uk
 ||mdf91.com^$script,domain=townhall.com
 ||mn0e.com^$script,domain=magicvalley.com|missoulian.com|wwg.com
 ||nn0e.com^$domain=eurogamer.net|jg-tc.com
 ! https://github.com/uBlockOrigin/uAssets/issues/2904
 ||static.tvtropes.org/design/js/google-adblock.js$script
+! https://github.com/uBlockOrigin/uAssets/issues/3045
+||p.d.*.com^$script,domain=11alive.com|12news.com|12newsnow.com|13newsnow.com|13wmaz.com|9news.com|abc10.com|cbs19.tv|firstcoastnews.com|fox15abilene.com|kagstv.com|kare11.com|kcentv.com|kens5.com|kgw.com|khou.com|kiiitv.com|king5.com|krem.com|ksdk.com|ktvb.com|kvue.com|myatltv.com|myfoxzone.com|news10.net|newscentermaine.com|thv11.com|todaysthv.com|wbir.com|wcnc.com|wfaa.com|wfmynews2.com|wgrz.com|whas11.com|wltx.com|wtsp.com|wusa9.com|wvec.com|wwltv.com|wzzm13.com
+11alive.com,12news.com,12newsnow.com,13newsnow.com,13wmaz.com,9news.com,abc10.com,cbs19.tv,firstcoastnews.com,fox15abilene.com,kagstv.com,kare11.com,kcentv.com,kens5.com,kgw.com,khou.com,kiiitv.com,king5.com,krem.com,ksdk.com,ktvb.com,kvue.com,myatltv.com,myfoxzone.com,news10.net,newscentermaine.com,thv11.com,todaysthv.com,wbir.com,wcnc.com,wfaa.com,wfmynews2.com,wgrz.com,whas11.com,wltx.com,wtsp.com,wusa9.com,wvec.com,wwltv.com,wzzm13.com##script:inject(abort-on-property-read.js, stop)
 
 ! https://github.com/gorhill/uBlock/issues/2609
 segodnya.ua##iframe:not([src]):style(max-height: 1px !important;)
@@ -2804,7 +2807,8 @@ cooking.nytimes.com##html:style(height: auto !important; overflow: auto !importa
 ! https://github.com/uBlockOrigin/uAssets/issues/2973
 mp4upload.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 mp4upload.com##script:inject(popads-dummy.js)
-||bitcoadz.io/display/items.php?3653$xmlhttprequest,redirect=noopjs,domain=mp4upload.com
+||bitcoadz.io/display/items.php$xmlhttprequest,redirect=noopjs,domain=mp4upload.com
+||server.cpmstar.com^$xmlhttprequest,redirect=nooptext,domain=mp4upload.com
 ||adc.stream.moe^$script
 ||c.stream.moe^$script
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=mp4upload.com
@@ -4808,10 +4812,12 @@ atlasweb.net##script:inject(abort-on-property-read.js, anOptions)
 ! https://github.com/uBlockOrigin/uAssets/issues/1309
 ! https://github.com/uBlockOrigin/uAssets/issues/2699
 short.pe,szs.pw##script:inject(abort-current-inline-script.js, atob, tabunder)
+short.pe##script:inject(abort-current-inline-script.js, RegExp, POSTBACK_PIXEL)
 short.pe,szs.pw##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
 short.pe,szs.pw##script:inject(abort-on-property-write.js, adcashMacros)
 short.pe##script:inject(addEventListener-defuser.js, mousedown, preventDefault)
 *$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.gstatic.com *.google-analytics.com *.google.com *.solvemedia.com *.scorecardresearch.com *.googletagmanager.com *.googletagservices.com,domain=short.pe|szs.pw
+*$subdocument,third-party,domain=short.pe
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39694
 xrares.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
@@ -7171,7 +7177,6 @@ pornoreino.com##.banner
 atresplayer.com##script:inject(setTimeout-defuser.js, _creatBait)
 @@||adpass.atresmedia.com/*/adjs.js$xmlhttprequest,domain=atresplayer.com
 @@||atresplayer.com^$generichide
-@@/advertisement.js$domain=atresplayer.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2088
 animedigitalnetwork.fr##script:inject(set-constant.js, adblocked, false)
@@ -10116,3 +10121,36 @@ happyfor.win##script:inject(setTimeout-defuser.js, noAds, 2000)
 ! https://github.com/uBlockOrigin/uAssets/issues/3030
 @@||textflix.us^$generichide
 textflix.us###fixedban
+
+! https://github.com/uBlockOrigin/uAssets/issues/3032
+experts-exchange.com##div[id^="promo"]
+experts-exchange.com##.ctaSolutionSticky
+
+! https://github.com/uBlockOrigin/uAssets/issues/3031
+avgle.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+avgle.com##script:inject(nowebrtc.js)
+avgle.com##script:inject(set-constant.js, showBlockIf, noopFunc)
+||sub.avgle.com/fd/*$script,first-party
+javher.com##.affiliateLink
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41272
+feetbay.org##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3036
+sexwebvideo.me##script:inject(set-constant.js, canRunAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3038
+novelasesp.*##script:inject(addEventListener-defuser.js, load, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3039
+@@||phenom-network.*^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3041
+@@||tt1069.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3042
+pornvibe.org##script:inject(bab-defuser.js)
+||pornvibe.org/sw.js$script
+
+! https://github.com/uBlockOrigin/uAssets/issues/3043
+playrust.io##script:inject(setTimeout-defuser.js, as_check, 3000)
