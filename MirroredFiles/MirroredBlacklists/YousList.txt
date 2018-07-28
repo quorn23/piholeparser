@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: 5sgX+12bbmgOukm+839BCw
-! Version: 20180726
+! Checksum: v2uaLvE1eZexseY0sHrpdQ
+! Version: 20180727
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -117,6 +117,7 @@
 ##iframe[src^="http://ad1.eventmanager.co.kr/"]
 ##iframe[src^="http://ad2.thisisgame.com/ad"]
 ##iframe[src^="http://adbiz.co.kr/"]
+##iframe[src^="http://adbiz2.co.kr/"]
 ##iframe[src^="http://adddn.adotsolution.com/contents/html5/"][src*="/adbay_inline_sdk/default.html"]
 ##iframe[src^="http://adex.ednplus.com/"]
 ##iframe[src^="http://adexpert.ad4989.co.kr/"]
@@ -374,6 +375,7 @@
 ||ad.ilbe.com/files2/ad/
 ||ad.ilikesponsorad.co.kr^
 ||ad.ilikesponsorad.com^
+||ad.imp.joins.com/html/$domain=news.joins.com
 ||ad.ingfac.co.kr^
 ||ad.kmib.co.kr^
 ||ad.koreadaily.com^
@@ -411,6 +413,7 @@
 ||ad2.thisisgame.com^
 ||ad8.adfarm1.adition.com/s^
 ||adbiz.co.kr^
+||adbiz2.co.kr^
 ||adcdn.goo.ne.jp/images/js/smarttag-oshiete-osgoocon.js^
 ||adclickservice.com^
 ||adcode.rontar.com/rontar2_async.js^
@@ -671,6 +674,8 @@
 ||care-health.co.kr^
 ||cas.criteo.com/delivery/ajs.php^
 ||cast.imp.joins.com/bid/$domain=news.jtbc.joins.com
+||cast.imp.joins.com/body/$domain=news.joins.com
+||cast.imp.joins.com/persona.js^$domain=news.joins.com
 ||castbox.shopping.naver.com/index.nhn^
 ||cdn-aitg.widerplanet.com/js/adr.js^
 ||cdn-fluct.sh.adingo.jp/f.js^
@@ -798,6 +803,7 @@
 ||disqusads.com/ads-iframe/adsnative/
 ||disqusads.com/ads-iframe/prebid/
 ||dlv.hooniad.com^
+||docdocdoc.co.kr/banner/rollbanner_*.html^$domain=docdocdoc.co.kr
 ||dogjoa.com/img/new/$domain=dogjoa.com
 ||dotcomconsultancy.advertserve.com/servlet/view/banner/javascript/ajax/crossdomain/zone^
 ||dreamsearch.or.kr/ad/
@@ -1994,6 +2000,7 @@ dispatch.co.kr##span.header-ad
 dispatch.co.kr##span.innerNewsAD
 dkbnews.donga.com##div.aside_ad
 dkbnews.donga.com##div.boardAD01
+docdocdoc.co.kr##iframe[src^="/banner/rollbanner_"][src$=".html"]
 dogjoa.com##div.exo
 dogjoa.com##div.movie-bot
 dogjoa.com##div.movie-top
@@ -3309,6 +3316,7 @@ minitoon.net##div.m_banner
 minitoon.net##div.n_banner
 minitoon.net##div.s_banner
 mmboxru.net##div.banner
+mnews.joins.com##div#admaru_tag
 mnews.joins.com##div.ad
 mnews.joins.com##div.ad_h100
 mnews.joins.com##div.ad_template
@@ -3491,6 +3499,8 @@ news.joins.com##div.ad
 news.joins.com##div.advertising
 news.joins.com##div.shpping_life
 news.joins.com##div[data-widget-type="Ad"]
+news.joins.com##div[id^="imp_ad_"]
+news.joins.com##iframe[src^="//ad.imp.joins.com/html/"]
 news.jtbc.joins.com##div.ad_banner_250x250
 news.jtbc.joins.com##div.ad_v2
 news.jtbc.joins.com##div.area2>div.secondary

@@ -3246,6 +3246,7 @@ pornerbros.com##script:inject(abort-on-property-write.js, ads_priv)
 ! https://github.com/uBlockOrigin/uAssets/issues/927
 @@||media.oadts.com/www/delivery/afv.php$domain=serienjunkies.de
 @@||media.oadts.com/www/delivery/video.php$domain=serienjunkies.de
+serienjunkies.de#@#.afs_ads
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39297
 thaivisa.com##script:inject(abort-current-inline-script.js, $, adBlockEnabled)
@@ -4146,8 +4147,10 @@ lkky.co##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1159
 pornhd.com##script:inject(abort-on-property-read.js, hasAdBlock)
+pornhd.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
 pornhd.com##script:inject(popads-dummy.js)
-pornhd.com##.zone.phdZone
+||syndication.exoclick.com/ads-iframe-display.php$script,redirect=noopjs,domain=pornhd.com
+pornhd.com##.phdZone
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1160
 ! https://github.com/uBlockOrigin/uAssets/issues/2375
@@ -6532,8 +6535,13 @@ cinedetodo.com##script:inject(abort-on-property-read.js, mz_str)
 cinedetodo.com##script:inject(nowebrtc.js)
 cinedetodo.com##^script:has-text(?n:void)
 cinedetodo.com##script:inject(abort-on-property-read.js, decodeURIComponent)
+cinedetodo.com##.alignnone
+cinedetodo.com##[href="https://www.veranimes.me/"]
 cinedetodo.com##[id*=yellow]
 ||srcsmrtgs.com^
+! https://github.com/uBlockOrigin/uAssets/issues/1846#issuecomment-408513233
+jawcloud.co##script:inject(abort-on-property-write.js, Fingerprint2)
+||djv99sxoqpv11.cloudfront.net^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1847
 cinemahd.co##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
@@ -10154,3 +10162,14 @@ pornvibe.org##script:inject(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3043
 playrust.io##script:inject(setTimeout-defuser.js, as_check, 3000)
+
+! https://forums.lanik.us/viewtopic.php?p=139108#p139108
+tralhasvarias.*##script:inject(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3053
+pinflix.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+||syndication.exoclick.com/ads-iframe-display.php$script,redirect=noopjs,domain=pinflix.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3054
+free-sex-video.net##script:inject(abort-on-property-read.js, ExoLoader.serve)
+free-sex-video.net###playerOverlay
