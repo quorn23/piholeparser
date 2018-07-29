@@ -1465,15 +1465,16 @@ shink.me##script:inject(popads.net.js)
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=shink.me
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=51946
-||visitweb.com/js/ref.js$script,redirect=noopjs,domain=kissasian.ch
+! https://github.com/uBlockOrigin/uAssets/issues/3058
+||visitweb.com/js/ref.js$script,redirect=noopjs,domain=kissasian.ch|kissasian.sh
 ! https://adblockplus.org/forum/viewtopic.php?f=10&t=53373
 ! https://www.reddit.com/r/firefox/comments/6uwafs/what_are_your_must_have_userscripts/dlwbzf6/
-||pubmatic.com^$script,redirect=noopjs,domain=kissasian.ch
+||pubmatic.com^$script,redirect=noopjs,domain=kissasian.ch|kissasian.sh
 ! https://github.com/uBlockOrigin/uAssets/issues/2450
-kissasian.ch##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
-kissasian.ch##script:inject(setInterval-defuser.js, (), 500)
-@@||kissasian.ch^$generichide
-kissasian.ch##[id*="ScriptRoot"]
+kissasian.*##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+kissasian.*##script:inject(setInterval-defuser.js, (), 500)
+@@||kissasian.*^$generichide
+kissasian.*##[id*="ScriptRoot"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/353
 slashdot.org##article:has(div[class="ntv-sponsored-disclaimer"])
@@ -4506,11 +4507,13 @@ animeflv.net##a[href*="watch?key"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1235
 ! https://github.com/uBlockOrigin/uAssets/issues/2754
+! https://github.com/uBlockOrigin/uAssets/issues/3055
 ouo.io##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 ouo.io##script:inject(abort-current-inline-script.js, decodeURI, HTMLIFrameElement)
 ouo.io##script:inject(abort-on-property-write.js, _pop)
 ouo.io##script:inject(nowebrtc.js)
 ouo.io##[id*="ScriptRoot"]
+||aj1110.online^$third-party
 ||tagbucket.cc^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1237
@@ -10139,6 +10142,7 @@ avgle.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
 avgle.com##script:inject(nowebrtc.js)
 avgle.com##script:inject(set-constant.js, showBlockIf, noopFunc)
 ||sub.avgle.com/fd/*$script,first-party
+avgle.com###player_3x2_close:style(font-size: 250% !important;)
 javher.com##.affiliateLink
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41272
@@ -10173,3 +10177,6 @@ pinflix.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
 ! https://github.com/uBlockOrigin/uAssets/issues/3054
 free-sex-video.net##script:inject(abort-on-property-read.js, ExoLoader.serve)
 free-sex-video.net###playerOverlay
+
+! https://github.com/uBlockOrigin/uAssets/issues/3056
+siestrenos.com##script:inject(abort-on-property-write.js, smrtSB)
