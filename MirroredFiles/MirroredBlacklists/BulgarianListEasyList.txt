@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201807292304
+! Version: 201807302351
 ! Title: EasyPrivacy
-! Last modified: 29 Jul 2018 23:04 UTC
+! Last modified: 30 Jul 2018 23:51 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -17,6 +17,7 @@
 &ctxId=*&pubId=*&clientDT=
 &ctxId=*&pubId=*&objId=
 &event=view&
+&funnel_state=
 &http_referer=$script
 &pageReferrer=
 &ref=*&tag=
@@ -1864,6 +1865,7 @@
 /js_logger.
 /js_tracker.
 /jscounter.
+/jserrLog?
 /jslogger.php?ref=
 /json/stats?
 /json/tracking/*
@@ -2079,6 +2081,7 @@
 /measure/spring.
 /measure/visit/*
 /media_viewed_tracking.
+/mediametrie.js
 /mediateGA.js
 /megacounter/*
 /mendelstats.
@@ -2351,7 +2354,7 @@
 /pageview?user_guid=
 /pageviews-counter-
 /pageviews.gif?
-/pageviews/*$domain=~tools.wmflabs.org
+/pageviews/*$domain=~stats.wikimedia.org|~tools.wmflabs.org
 /pageviews?token=
 /pageviews_counter.
 /PageviewsTracker.
@@ -2645,6 +2648,7 @@
 /report/impression?
 /report?event_
 /reporting/analytics.js
+/request_tracker+
 /RequestTrackerServlet?
 /RequestVideoTag.
 /res/x.gif?
@@ -2678,6 +2682,7 @@
 /rolluptracker_
 /rot_in.php
 /rpc/log?
+/rpc/preccount?
 /rr/t?step=
 /rsya-tag-users/*
 /rt_tag.
@@ -3071,6 +3076,7 @@
 /tag/tag.jsp?
 /tagCNIL.js
 /TagCommander.cfc?
+/tagcommander.js
 /tagcommander/*
 /tagmanager/pptm.
 /tagmgmt/bootstrap.
@@ -3128,6 +3134,7 @@
 /token?referer=
 /tongji.js
 /tools/analytics/*
+/top_tagcommander+
 /topic_beat_log?
 /topic_page_timer?
 /toplytics.js
@@ -3594,6 +3601,7 @@
 /visualsciences.
 /visualsciences_
 /visualstat/stat.php
+/vjslog?
 /vmtracking.
 /vpstats.
 /vptrack_
@@ -3815,6 +3823,7 @@
 =get_preroll_cookie&
 =getSideStats&
 =googleanalytics_
+=metrics_profile&
 =stats&action=
 =stats&apiVersion=
 =track_view&
@@ -3871,6 +3880,7 @@ _adcenterconversion.
 _Analytics.js?
 _analytics.php?
 _artcl_log/
+_assets/metrics-
 _astatspro/
 _audience_pixel.
 _baynote.
@@ -5315,6 +5325,8 @@ _mongo_stats/
 ||market2lead.com^$third-party
 ||marketizator.com^$third-party
 ||marketo.net^$third-party
+||marketshot.com^$third-party
+||marketshot.fr^$third-party
 ||markitondemand.com^$third-party
 ||martianstats.com^$third-party
 ||maryneallynndyl.com^$third-party
@@ -7588,10 +7600,13 @@ _mongo_stats/
 ||tailtarget.com^$third-party
 ||trugaze.io^$third-party
 ! Romanian
+||2parale.ro^$third-party
+||2performant.com^$third-party
 ||best-top.ro^$third-party
 ||gtop.ro^$third-party
 ||hit100.ro^$third-party
 ||profitshare.ro^$third-party
+||retargeting.biz^$third-party
 ||statistics.ro^$third-party
 ||top-ro.ro^$third-party
 ||trafix.ro^$third-party
@@ -8268,7 +8283,7 @@ _mongo_stats/
 ||cnt.mastorage.net^
 ||cnzz.com/stat.
 ||coinbase.com/assets/application-*.js$third-party
-||collect.igodigital.com^
+||collect.igodigital.com^$script
 ||collect.rewardstyle.com^
 ||collection.acromas.com^
 ||collector-*.elb.amazonaws.com^$image,third-party
@@ -8353,6 +8368,7 @@ _mongo_stats/
 ||d.rcmd.jp^$image
 ||d.shareaholic.com^
 ||d10lpsik1i8c69.cloudfront.net^
+||d11a2fzhgzqe7i.cloudfront.net^
 ||d169bbxks24g2u.cloudfront.net^
 ||d16fk4ms6rqz1v.cloudfront.net^
 ||d191y0yd6d0jy4.cloudfront.net^
@@ -8832,6 +8848,7 @@ _mongo_stats/
 ||link.huffingtonpost.com^$third-party
 ||link.indiegogo.com/img/
 ||link.informer.com^
+||link.tym.cool^
 ||linkbucks.com/visitScript/
 ||linkedin.com/emimp/$image
 ||linkwithin.com/pixel.png
@@ -8886,6 +8903,7 @@ _mongo_stats/
 ||m.addthisedge.com^$third-party
 ||m.trb.com^
 ||m30w.net/engine/$image,third-party
+||madmimi.com/view?id=$image
 ||magnify.net/decor/track/
 ||magnify360-cdn.s3.amazonaws.com^
 ||mail-app.com/pvtracker/
@@ -9266,7 +9284,7 @@ _mongo_stats/
 ||shareit.com/affiliate.html$third-party
 ||sharethis.com/increment_clicks?
 ||sharethis.com/pageviews?
-||shopify.com/storefront/page?*&eventType=
+||shopify.com/*/page?*&eventType=
 ||shoplocal.com/it.ashx?
 ||sig.atdmt.com^
 ||sig.gamerdna.com^$third-party
@@ -10435,6 +10453,7 @@ _mongo_stats/
 ||service-stat.tbn.ru^
 ||sishik.ru/counter.php?
 ||stainlesssteel.ru/counter.php?
+||stascorp.com/stat/
 ||stat-22.medialand.ru^
 ||stat-counter.tass-online.ru^
 ||stat.eagleplatform.com^
@@ -11545,6 +11564,7 @@ _mongo_stats/
 ||jalopnik.com^*/trackers.html
 ||jaludo.com/pm.php?
 ||javhd.com/click/
+||javher.com/analytics.js
 ||jessops.com/js/JessopsTracking.
 ||jetsetter.com/tracker.php
 ||jeuxjeux2.com/stats.php
@@ -14133,6 +14153,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||app.instapage.com/ajax/$xmlhttprequest
 @@||app.link/_r?sdk=*&callback=$script,domain=npr.org
 @@||arcgis.com^*/heatmap.js
+@@||archive.softwareheritage.org^*/stat/counters/$xmlhttprequest
 @@||arkadiumhosted.com^*/google-analytics-logger.swf$object-subrequest
 @@||arstechnica.com/services/incr.php?*=interactions.adblock-annoy.click$xmlhttprequest
 @@||atdmt.com/ds/yusptsprtspr/
@@ -15232,4 +15253,4 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: E/tIpAkupLvq8tFDkR8d9w
+! Checksum: 8ickiyqM2KBP/CVlF8nfqg

@@ -1946,10 +1946,11 @@ rapidvideo.com##script:inject(popads.net.js)
 rapidvideo.com##script:inject(noeval.js)
 rapidvideo.com##script:inject(abort-on-property-write.js, executed)
 ! https://github.com/uBlockOrigin/uAssets/issues/833
-rapidvideo.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-rapidvideo.com##script:inject(abort-current-inline-script.js, atob, tabunder)
+rapidvideo.com##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 ! https://github.com/uBlockOrigin/uAssets/issues/2739
 rapidvideo.com##script:inject(set-constant.js, onload, noopFunc)
+! https://github.com/uBlockOrigin/uAssets/issues/2669#issuecomment-409005490
+rapidvideo.com##script:inject(addEventListener-defuser.js, mousedown, preventDefault)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/516
 @@||thepiratebay.run^$generichide
@@ -6504,7 +6505,9 @@ desiupload.*,upgrand.net,uploadbaz.net##script:inject(nano-setTimeout-booster.js
 world4ufree.to##a[href*="/redirect"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1839
+vermangasporno.com##script:inject(abort-on-property-write.js, __htapop)
 vermangasporno.com##script:inject(popads-dummy.js)
+||alogationa.co^$third-party
 ##a[href^="http://gamingadult.biz/"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1842
@@ -8241,6 +8244,7 @@ efukt.com##div.tile:has(a[href^="https://efukt.com/out.php"])
 efukt.com##.efukt-widget-slider-nice-try-adblockers
 efukt.com##.plugs-nice-try-adblockers
 ||afgr3.com^$third-party
+||afgr10.com^$third-party
 ||awept.com^$third-party
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/943
@@ -8776,7 +8780,6 @@ hiddencamstube.com###invideo_2
 lesbianfantasyxxx.com##script:inject(abort-on-property-read.js, Aloader.serve)
 lesbianfantasyxxx.com##script:inject(abort-current-inline-script.js, $, anyclick)
 lesbianfantasyxxx.com###invideo_data
-/eureka_ban/*$image
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2587
 bigcockfreetube.com##script:inject(abort-on-property-read.js, Aloader.serve)
@@ -9071,8 +9074,8 @@ pelisgratis.tv##script:inject(abort-on-property-write.js, smrtSB)
 pelisgratis.tv##a[href*="look.kfiopkln.com"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2669
-ver-peliculas.io##script:inject(window.open-defuser.js)
-ver-peliculas.io##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+ver-peliculas.*##script:inject(window.open-defuser.js)
+ver-peliculas.*##script:inject(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2670
 ver-pelis.me##script:inject(window.open-defuser.js)
@@ -10113,7 +10116,6 @@ globe24.cz##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3019
 repelis.io##script:inject(abort-on-property-read.js, decodeURI)
-||repelis.io^*/adloader/$subdocument,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3021
 pelisplus.online##script:inject(abort-on-property-write.js, mz_str)
@@ -10133,7 +10135,6 @@ happyfor.win##script:inject(setTimeout-defuser.js, noAds, 2000)
 textflix.us###fixedban
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3032
-experts-exchange.com##div[id^="promo"]
 experts-exchange.com##.ctaSolutionSticky
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3031
@@ -10188,3 +10189,17 @@ kapteen.com##.navigation-banner
 ! https://github.com/uBlockOrigin/uAssets/issues/3065
 supforums.com##script:inject(set-constant.js, adsBlocked, false)
 supforums.com##script:inject(abort-on-property-read.js, htaUrl)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3067
+@@||a-o.ninja^$generichide
+vidfile.net##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
+vidfile.net##script:inject(addEventListener-defuser.js, mousedown, preventDefault)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41296
+digitalsynopsis.com##script:inject(abort-on-property-read.js, anOptions)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41298
+||tamilrockers.cl^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data:
+
+! https://github.com/uBlockOrigin/uAssets/issues/2805
+crackwatch.com##div[id]:has(>a>span[style*="data:image"])
