@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 9:51 2018/07/31
+! 最終更新 15:52 2018/08/02
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -457,6 +457,7 @@ _ads.php
 ||adnetworkperformance.com^$third-party
 ||adroll.com^$third-party
 ||adsafeprotected.com^$third-party
+||adsterra.com^$third-party
 ||adtechus.com^$third-party
 ||adtrue.com^$third-party
 ||adultcamfree.com^$third-party
@@ -504,6 +505,7 @@ _ads.php
 ||prscripts.com^$third-party
 ||puhtml.com^$third-party
 ||puserving.com^$third-party
+||revcontent.com^$third-party
 ||revivestar.com^$third-party
 ||sancdn.net^$third-party
 ||seethisinaction.com^$third-party
@@ -615,6 +617,8 @@ xhamster.com##.avdo.fr
 ||xvideos.com/in.php?
 !popup
 ||www.xvideos.com/video$xmlhttprequest
+!download
+@@||xvideos.com/video-download/
 !コメント見る用
 @@||www.xvideos.com/video-get-comments/
 !外部プレイヤー用
@@ -817,7 +821,11 @@ $script,third-party,domain=jpidols.tv
 ||tatituteto.net/images/banner/
 ||thisav.com/index.js
 ||thisav.com/player/video-js-banner/
-	||xywdvhd.com^$domain=thisav.com
+	/video-js-vast-vpaid/*
+	||adsco.re^
+	||browsers.support^
+	||zlgokeby.com^
+	||wzismevwhqixlq.com^
 ||aj1198.online^$domain=tokyomotion.net
 ||toukoucity.to/js/digi
 ||toukoucity.to/siteimg/digi/dmmt$domain=toukoucity.to
@@ -1145,6 +1153,7 @@ $script,third-party,domain=jpidols.tv
 ||hanaprop.com^$third-party
 ||mathtag.com^$third-party
 ||newrelic.com^$third-party
+||remarketingpixel.com^$third-party
 ||toplist.cz^$third-party
 ||users.51.la^$third-party
 ||web-rom.ru^$third-party
