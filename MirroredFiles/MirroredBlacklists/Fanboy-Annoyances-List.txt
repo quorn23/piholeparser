@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 8inFu0Ku8RqeCemBEW6a6A
-! Version: 201808030021
+! Checksum: mNYntICyZBLRn9JfeK/BrQ
+! Version: 201808040021
 ! Title: Fanboy's Annoyance List
-! Last modified: 03 Aug 2018 00:21 UTC
+! Last modified: 04 Aug 2018 00:21 UTC
 ! Expires: 4 days (update frequency)
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -198,14 +198,20 @@ _my_yahoo.$image
 ! Newsletter/Subscribe
 -icon-newsletter.
 -Newsletter-button.
+-newsletter-popup.
 -newsletter-subscription-
 -subscription-popup/
 -subscription-widget/
+.newsletterForm-
+.newsletterForm.
+.newsletterLink-
+.newsletterLink.
 /addthis_subscribe.
 /article_newsletter.
 /at_newsletter.
 /banner/newsletter.
 /BannerNewsletter.
+/bg-newsletter-
 /bloc_newsletter.
 /esnewsletterad.
 /footer-newsletter.
@@ -219,9 +225,11 @@ _my_yahoo.$image
 /iscriviti-newsletter.
 /iscriviti_newsletter_
 /js/newsletter.
+/last_newsletter,
 /leadin-subscribe.
 /MC-Newsletter-
 /modal-newsletter.
+/modals/newsletter?
 /modals/newsletters/*
 /newsletter-app.
 /Newsletter-Banner-
@@ -244,11 +252,15 @@ _my_yahoo.$image
 /newsletter-subscribe-
 /newsletter-subscription-
 /newsletter/iscriviti-
+/newsletter/Iscrizione.
 /newsletter/subscription/*
 /newsletter_arrow.
 /newsletter_icona.
+/newsletter_popup/*
 /newsletterbutton.
 /newslettericon2.
+/newsletterpopup/*
+/newsletters/bandeau/*
 /newslettersignup.
 /NewsletterSubscription.
 /plugins/mega-subscribe-popup/*
@@ -264,6 +276,7 @@ _my_yahoo.$image
 /wysija-newsletters/*
 =newsLetterRegistrationBlock&
 _Newsletterbutton_
+_popup/newsletter.
 _subscribe_button
 ! ---------- RSS Buttons ----------
 -blog-rss.
@@ -3189,6 +3202,7 @@ _youtube_social_
 /avvertenza-sui-cookies.
 /aws-cookie/*
 /bandeaucookie.
+/banners/cnil-
 /barreCookie/*
 /bauer.cookies.
 /bCookiesMessage.
@@ -3203,6 +3217,7 @@ _youtube_social_
 /cmp.bundle.js
 /cmpui-banner.js
 /cmpui-popup.js
+/cnil-banner/*
 /cnil-cookies_
 /cnil-min-
 /cnil.js
@@ -3408,6 +3423,7 @@ _youtube_social_
 /cookies/cookie-
 /cookies/cookie.
 /cookies/cookie_
+/cookies/cookies.
 /cookies/mpc_
 /cookies/pixel.
 /cookies/popup.
@@ -4219,6 +4235,7 @@ _site_cookie_
 ###eh-module-newsletter
 ###eh-module-newsletter-smart
 ###email-alert
+###email-exitintent-widget
 ###email-footer
 ###email-marketing-widget
 ###email-modal-bg
@@ -5082,6 +5099,7 @@ _site_cookie_
 ##.newsletter-popup
 ##.newsletter-popup-background
 ##.newsletter-popup-desktop
+##.newsletter-popup-subscribe-block
 ##.newsletter-popup-wrap
 ##.newsletter-popup-wrapper
 ##.newsletter-popups
@@ -5231,6 +5249,7 @@ _site_cookie_
 ##.object-subscribe-newsletter
 ##.omniture_email
 ##.open-modal-email-panel
+##.opt-in-email-signup-drawer
 ##.optin-monster
 ##.optin-monster-overlay
 ##.optin-monster-saas-overlay
@@ -5336,6 +5355,7 @@ _site_cookie_
 ##.simple-sidebar-emailsignupbox-inner
 ##.single-post-newsletter
 ##.single-post__content__subscribe
+##.site-foot__newsletter
 ##.site-masthead-subscribe-wrap
 ##.skinny-sign-up
 ##.skinny-signup
@@ -5447,6 +5467,7 @@ _site_cookie_
 ##.ui-newsletter
 ##.ui-newsletter-channel-sign-up
 ##.ui-newsticker-wrapper
+##.uiLayer-newsletterLink
 ##.unit--newsletter
 ##.vc_newsletter_button
 ##.voc-newsletter
@@ -5811,6 +5832,7 @@ _site_cookie_
 ###fav-backtotop
 ###fl-to-top
 ###footer-back-to-top
+###footer_scroll_top
 ###g1-back-to-top
 ###gh-bt
 ###gkTopLink
@@ -7199,6 +7221,7 @@ _site_cookie_
 ###item_share
 ###itemshare
 ###itp-fshare
+###join-us-facebook
 ###js-article-image-share
 ###js-article-share-top
 ###js-btnShowShare
@@ -7811,6 +7834,7 @@ _site_cookie_
 ###sharehorizontalbox
 ###shareicon
 ###shareicons
+###sharelink
 ###sharelinks
 ###sharelist
 ###sharemark
@@ -10013,6 +10037,8 @@ _site_cookie_
 ##.container-share-small
 ##.container_home_social
 ##.container_social-media
+##.container_social_footer
+##.container_social_header
 ##.container_social_home
 ##.contenedor_redes_sociales
 ##.content-item-explicitShare
@@ -10335,6 +10361,7 @@ _site_cookie_
 ##.fa-share
 ##.fa-share-alt
 ##.fa-share-square-o
+##.fa-snapchat-square
 ##.fa-twitter-square
 ##.fa-youtube-square
 ##.faceBookButton
@@ -12002,6 +12029,7 @@ _site_cookie_
 ##.icon_twitter
 ##.icon_youTube
 ##.icon_youtube
+##.icona-social
 ##.icone-social
 ##.iconeFacebook
 ##.iconeTwitter
@@ -16542,6 +16570,7 @@ _site_cookie_
 ##.viewer__sharing__item
 ##.viewer__sharing__items
 ##.views-field-addtoany-share-2
+##.villatheme_social_links
 ##.vip__share-panel
 ##.viral-button-pinterest
 ##.viralShare
@@ -16902,6 +16931,7 @@ _site_cookie_
 ##[class^="social_button_"]
 ##[data-pin-href^="https://www.pinterest.com/pin/create/"]
 ##[data-pin-log^="button_pinit"]
+##[data-social-action="visit"]
 ##[data-trigger="share-links-manager"]
 ##[href="http://www.addthis.com/bookmark.php"]
 ##[href^="//twitter.com/share"]
@@ -17041,6 +17071,7 @@ _site_cookie_
 ##a[href^="http://www.wykop.pl/dodaj/link/?url="]
 ##a[href^="http://www.wykop.pl/dodaj?url="]
 ##a[href^="http://yozm.daum.net/api/popup/prePost?sourceid="]
+##a[href^="https://api.whatsapp.com/send?phone="]
 ##a[href^="https://bufferapp.com/add?url="]
 ##a[href^="https://facebook.com/share.php?u="]
 ##a[href^="https://facebook.com/sharer.php?"]
@@ -19436,6 +19467,7 @@ _site_cookie_
 ###cookie_eu_bar
 ###cookie_eu_recht
 ###cookie_exit_form
+###cookie_fascia
 ###cookie_figyelmeztetes
 ###cookie_footer
 ###cookie_frame
@@ -20341,6 +20373,7 @@ _site_cookie_
 ###ctl00_divCookieMsg
 ###ctl00_header1_CookieHeader
 ###ctl00_informacjaCookiesLayout4
+###ctl00_informativaCookie_divInformativaCookie
 ###ctl00_panCookieAbfrage
 ###ctl00_pnlCookie
 ###ctl00_pnlCookieMessage
@@ -20836,6 +20869,7 @@ _site_cookie_
 ###gdpr-cookie-message
 ###gdpr-cookieNotice
 ###gdpr-is-fun
+###gdpr-modal
 ###gdpr-notice
 ###gdpr-notification
 ###gdpr-overlay
@@ -22704,6 +22738,7 @@ _site_cookie_
 ##.bdBuzzCookiePolicy
 ##.bdcookies
 ##.bdf-cookie-policy-popup
+##.bds_mini_cookie_policy
 ##.bdu-cookie-consent-bar
 ##.bg_cookie
 ##.bgcookies
@@ -25758,6 +25793,7 @@ _site_cookie_
 ##DCINFO_COOKIE_AGB
 ##WC-COOKIES
 ##[aria-describedby="cookie-information"]
+##[aria-describedby="cookieprivacy"]
 ##[aria-describedby="dialog-eu-cookie-law"]
 ##[aria-labelledby="ui-dialog-title-cookiebox"]
 ##[class="EUCookieNotice"]
@@ -33405,6 +33441,7 @@ unimore.it###InAlto
 infobuildenergia.it###IscrivitiBox
 katorishintoryu.it###POPUPS_ROOT
 evomagazine.it###RegSito
+tiendeo.it###alert-bar-footer
 gds.it###alert_container
 moto.it###arrow-back-top
 ssangyong-auto.it###back_top
@@ -33446,7 +33483,7 @@ tp24.it###templatemo_container_barra
 emmepress.com###text-9
 avantishop.it,lacomunicazione.it###top-link
 ovs.it,tvsoap.it###topcontrol
-consorzioautolinee.it,maxcasa.com,nomisma.it###totop
+consorzioautolinee.it,ixosofficial.com,maxcasa.com,nomisma.it###totop
 alvolante.it###wrapper-header-small-up
 ilvibonese.it##.acy-email-footer
 autoscout24.it##.app-banner
@@ -33465,6 +33502,7 @@ tomshw.it##.content-related
 corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,leggo.it,quotidianodipuglia.it##.control_top
 donnamoderna.com##.donnam-footer-newsletter
 webnews.it##.email
+pambianconews.com##.essb_mailform
 corriere.it##.fancybox-overlay
 repubblica.it##.footer_back-top
 hwupgrade.it##.form-offerte
@@ -34015,6 +34053,7 @@ autobelle.it,bancadipiacenza.it,canavesenews.it,creditocooperativo.it,fotografid
 radioetv.it###social_presence
 grom.it###top-info
 bancadipiacenza.it###vimeo
+visitbergamo.net###widget-link
 centrometeoitaliano.it###widgetSeguici
 aboutamazon.it##.ActionBar
 evomagazine.it,rai.it##.Facebook
@@ -34047,6 +34086,7 @@ mezzicommerciali.it##.fb-menu
 rivistailmulino.it##.float-container
 ilfattoquotidiano.it##.follow
 ravennanotizie.it##.footer-link
+jeanlouisdavid.it##.footerIconsUl
 fanpage.it##.fp-sponsor
 fanpage.it##.ft-icon
 corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,leggo.it,quotidianodipuglia.it##.fumetti
@@ -34059,6 +34099,7 @@ tuttosport.com##.ico-shared
 baume-et-mercier.it,ilfoglio.it##.instagram
 corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,leggo.it,quotidianodipuglia.it##.introfollow
 ilmeteo.net##.liCompartir
+liujo.com##.liujo-footer-social-container
 gruppoeditorialesanpaolo.it##.menu-icons-list
 rockol.it##.menu__facebook
 corriere.it##.player-email-ctn
@@ -34068,7 +34109,8 @@ autoline-eu.it,basketinside.com,carpicalcionews.it,cittaceleste.it,comune.torino
 ilsole24ore.com##.share-elements
 provincia.bz.it##.sharing
 mediaset.it,meteo.it##.shr
-affaritaliani.it,altroconsumo.it,angeloparodi.it,angolotesti.it,askanews.it,auto.it,cielotv.it,cittametropolitanaroma.gov.it,coopcasarsa.it,corriere.it,diariodelweb.it,eurogamer.it,euronics.it,eurospin.it,famigliacristiana.it,fm-world.it,grandhotel-et-des-palmes.com,hdmotori.it,ilpopulista.it,ilposticipo.it,inmoto.it,istat.it,italiaoggi.it,ivid.it,legacoop.coop,liberoquotidiano.it,linkiesta.it,magnoliatv.it,meetingrimini.org,milanofinanza.it,moto.it,mtv.it,norbaonline.it,olivetti.com,radiocitymilano.it,ravennanotizie.it,regione.piemonte.it,repubblica.it,rmcsport.net,rollingstone.it,roncadin.it,rossopomodoro.it,sorgenia.it,suzuki.it,tari.it,testimania.com,vg247.it,wallstreetitalia.com##.social
+quickparking.it##.soc-icon-container
+affaritaliani.it,altroconsumo.it,angeloparodi.it,angolotesti.it,askanews.it,auto.it,cielotv.it,cittametropolitanaroma.gov.it,coopcasarsa.it,corriere.it,diariodelweb.it,eurogamer.it,euronics.it,eurospin.it,famigliacristiana.it,fm-world.it,grandhotel-et-des-palmes.com,hdmotori.it,ilpopulista.it,ilposticipo.it,inmoto.it,istat.it,italiaoggi.it,ivid.it,legacoop.coop,liberoquotidiano.it,linkiesta.it,magnoliatv.it,meetingrimini.org,milanofinanza.it,moto.it,mtv.it,norbaonline.it,olivetti.com,radiocitymilano.it,ravennanotizie.it,regione.piemonte.it,repubblica.it,rmcsport.net,rollingstone.it,roncadin.it,rossopomodoro.it,scorpionbay.com,sorgenia.it,suzuki.it,tari.it,testimania.com,vg247.it,wallstreetitalia.com##.social
 epochtimes.it,ilsole24ore.com##.tools
 gianlucadimarzio.com,ilpost.it##.tw
 ilfoglio.it,webnews.it##.twitter
@@ -34549,7 +34591,7 @@ meyer.it###zf--alerts-panel
 intrage.it##.BoxPrivacy
 fosse-biologiche.it##._CL_main
 cassoni-usati.it##.activebar-container
-cafassoefigli.it,playinfinity.it,saperesalute.it,uabstyle.it##.alert
+cafassoefigli.it,playinfinity.it,saperesalute.it,trivago.it,uabstyle.it##.alert
 lainox.it##.background_overlay
 elettrocasa.it##.banner
 calcolostipendio.it##.bold_text
@@ -35040,7 +35082,7 @@ finanzen100.de#@##scroll-top
 thehunt.com#@##signup-popup
 vivoplay.net#@##subscriptionModal
 blaklader.se,blaklader.uk,chansluts.com#@##to-the-top
-radiogra.pl#@##to-top
+57reshotel.it,radiogra.pl#@##to-top
 uservoice.com#@##uservoice-feedback
 uservoice.com#@##uservoice-feedback-tab
 cnn.com#@#.OUTBRAIN
@@ -35196,6 +35238,7 @@ slideshare.net#@#.button-social
 pinterest.com#@#.clk-pinit
 smzdm.com#@#.comment_share
 echo.msk.ru#@#.contentshare
+tommy.com#@#.cookie-notice
 si.com#@#.custom-sharing-link
 wired.com#@#.custom-social
 delicious.com#@#.delicious
