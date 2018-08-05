@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201808040019
+! Version: 201808042154
 ! Title: EasyPrivacy
-! Last modified: 04 Aug 2018 00:19 UTC
+! Last modified: 04 Aug 2018 21:54 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -24,6 +24,8 @@
 &refer=http$script
 &refererPageDetail=
 &trackingserver=
+-action/fingerprint?
+-action/ping?
 -AdTracking.
 -analitycs//fab.
 -analitycs//ga.
@@ -258,6 +260,7 @@
 .trackArticleAction&
 .tracking.js?dpv=
 .trackUserAction&
+.trafficTracking.
 .tv/log?event
 .tv/t.png?
 .uk/o.gif?
@@ -3161,6 +3164,7 @@
 /tracciamento.php?
 /trace?sessionid=
 /tracing?aspect=
+/track-action/*
 /track-compiled.js
 /track-cookies.
 /track-referrals.js
@@ -3891,6 +3895,7 @@ _.gif?ref=
 _.gif?t=
 _247seotracking.
 _adcenterconversion.
+_ajax/btrack.php?
 _Analytics.js?
 _analytics.php?
 _artcl_log/
@@ -4374,6 +4379,7 @@ _mongo_stats/
 ||beanstock.com^$third-party
 ||bebj.com^$third-party
 ||beeftransmission.com^$third-party
+||beemray.com^$third-party
 ||beemrdwn.com^$third-party
 ||beencounter.com^$third-party
 ||behavioralengine.com^$third-party
@@ -4708,6 +4714,7 @@ _mongo_stats/
 ||digdeepdigital.com.au^$third-party
 ||digitaloptout.com^$third-party
 ||digitaltarget.ru^$third-party
+||digitru.st^$third-party
 ||dignow.org^$third-party
 ||dimestore.com^$third-party
 ||dimml.io^$third-party
@@ -11570,6 +11577,7 @@ _mongo_stats/
 ||io9.com^*/trackers.html
 ||ip-adress.com/gl?r=
 ||ip.breitbart.com^
+||ip.pichunter.com^
 ||ipetitions.com/img.php?
 ||irs.gov/js/irs_reporting_cookie.js
 ||issn.org/isens_marker.php?
@@ -15284,4 +15292,4 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=adfreetv.ch|ddmix.n
 @@||ukrposhta.ua/js/tracking.js
 ! Anti-Adblock
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-! Checksum: JbwxCVW/YS3Ef0j58n1gfw
+! Checksum: EFDvwmwP3kKYUeW4fs/UFQ
