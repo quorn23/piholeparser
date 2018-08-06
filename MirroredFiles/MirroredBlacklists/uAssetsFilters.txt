@@ -5179,7 +5179,9 @@ updato.com##script:inject(setTimeout-defuser.js, document.querySelector, 5000)
 damimage.com,dimtus.com,imagedecode.com,imageteam.org##script:inject(abort-current-inline-script.js, loadTool, popping)
 
 ! https://github.com/easylist/easylist/commit/8b6e6544f04b3ded98fbd70bd832dfcc4e61db52#commitcomment-27222476
+! https://github.com/uBlockOrigin/uAssets/issues/3126
 imgmaze.*,imgoutlet.*,imgtown.*,imgview.*##script:inject(abort-current-inline-script.js, atob, tabunder)
+imgdew.*,imgmaze.*,imgoutlet.*,imgtown.*,imgview.*##script:inject(abort-on-property-read.js, CustomEvent)
 imgdew.*,imgmaze.*,imgoutlet.*,imgtown.*,imgview.*##script:inject(abort-on-property-read.js, ExoLoader.addZone)
 imgdew.*,imgmaze.*,imgoutlet.*,imgtown.*,imgview.*##script:inject(abort-on-property-write.js, _pop)
 imgdew.*,imgmaze.*,imgoutlet.*,imgtown.*,imgview.*##script:inject(abort-on-property-write.js, Fingerprint2)
@@ -5595,8 +5597,9 @@ cutw.me##script:inject(nano-setInterval-booster.js)
 @@||geo.de^$generichide
 
 ! mejortorrent.com popups
-mejortorrent.com##script:inject(abort-on-property-write.js, getScript)
-mejortorrent.com##script:inject(nowebrtc.js)
+mejortorrent.*##script:inject(abort-on-property-write.js, getScript)
+mejortorrent.*##script:inject(nowebrtc.js)
+||mejortorrent.*/bannner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1549
 xfreehd.com##.nvheader > span:has-text(Advertisement)
@@ -8835,6 +8838,7 @@ voyeurxxxfree.com##script:inject(abort-current-inline-script.js, $, anyclick)
 voyeurxxxfree.com###invideo_data
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2593
+visioncloud.rocks##script:inject(bab-defuser.js)
 @@||visioncloud.rocks/ads/*$script,first-party
 
 ! https://github.com/reek/anti-adblock-killer/issues/4094
@@ -9096,6 +9100,7 @@ filehorse.com##script:inject(set-constant.js, isAdBlockActive, false)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2661
 ettv.tv##script:inject(popads-dummy.js)
+ettv.tv##script:inject(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2665
 watchitsalwayssunnyinphiladelphia.net##script:inject(abort-on-property-write.js, _pop)
@@ -10350,8 +10355,8 @@ gounlimited.to##script:inject(nowebrtc.js)
 @@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$script,domain=cbssports.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3121
-||animeheaven.eu/block.js$script,redirect=fuckadblock.js-3.2.0
-@@||animeheaven.eu/ppk/*$script,first-party
+animeheaven.eu##script:inject(fuckadblock.js-3.2.0)
+@@||animeheaven.eu^$script,first-party
 
 ! https://forums.lanik.us/viewtopic.php?p=139367#p139367
 @@||bizjournals.com^$generichide
@@ -10370,3 +10375,22 @@ bitstlk.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adb
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3125
 payskip.org##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3128
+@@||clubbingtv.com/*/ads/showad.js$xmlhttprequest,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3129
+@@||ha-lab.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3130
+@@||shortit.pw^$generichide
+shortit.pw###ad
+shortit.pw##.animated.slide
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/158
+@@||thedigitalarc.com/*/googleads/$stylesheet,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3134
+ahoypirate.click,alivbay.org,batpirate.info,baybaypirate.org,baypirate.click,baypiratebay.be,baypirateproxy.pw,bayproxy.eu,baythepirate.fi,capjackproxy.net,duckingproxy.eu,hyperproxy.net,ikwildepiratebay.org,indiaproxy.in,pirat2.club,pirataibay.in,piratbaypirate.link,pirate.*,pirateahoy.net,piratebaai.*piratebay.*,piratebay247.net,piratebaymirror.eu,piratebayproxy.tf,piratebays.co,piratenbucht.eu,piratepirate.eu,pirateprox.club,pirateproxy.*piratetoday.click,proxybayduck.fi,proxyfl.info,proxyoneahoy.net,proxypirate.in,proxyproxyproxy.nl,proxyship.click,proxytpb.*,rowpirate.org,thepirate.click,thepiratebay-proxy.com,thepiratebay.*,tpb.tw,tpbairproxy.in,tpbbay.eu,tpbmirror.us,tpbportal.in,tpbproxy.club,tpbproxyone.org,ukpirate.*,ukpirateproxy.xyz,unblockedhyperbay.info,unblocktpb.com,urbanproxy.eu,wearepirates.click,zombay.org##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+ahoypirate.click,alivbay.org,batpirate.info,baybaypirate.org,baypirate.click,baypiratebay.be,baypirateproxy.pw,bayproxy.eu,baythepirate.fi,capjackproxy.net,duckingproxy.eu,hyperproxy.net,ikwildepiratebay.org,indiaproxy.in,pirat2.club,pirataibay.in,piratbaypirate.link,pirate.*,pirateahoy.net,piratebaai.*piratebay.*,piratebay247.net,piratebaymirror.eu,piratebayproxy.tf,piratebays.co,piratenbucht.eu,piratepirate.eu,pirateprox.club,pirateproxy.*piratetoday.click,proxybayduck.fi,proxyfl.info,proxyoneahoy.net,proxypirate.in,proxyproxyproxy.nl,proxyship.click,proxytpb.*,rowpirate.org,thepirate.click,thepiratebay-proxy.com,thepiratebay.*,tpb.tw,tpbairproxy.in,tpbbay.eu,tpbmirror.us,tpbportal.in,tpbproxy.club,tpbproxyone.org,ukpirate.*,ukpirateproxy.xyz,unblockedhyperbay.info,unblocktpb.com,urbanproxy.eu,wearepirates.click,zombay.org##script:inject(setInterval-defuser.js, (), 500)
+##[href^="http://squirrel.surpriseway.science/"]
