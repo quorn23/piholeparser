@@ -1020,7 +1020,11 @@ x1337x.eu##.mgbox
 coreimg.net##script:inject(noeval.js)
 
 ! https://discourse.mozilla-community.org/t/support-ublock-origin/6746/224
+! https://github.com/uBlockOrigin/uAssets/issues/1915
+! https://github.com/uBlockOrigin/uAssets/issues/3142
 linkneverdie.com##script:inject(bab-defuser.js)
+linkneverdie.com##script:inject(setTimeout-defuser.js, _$_, 7000)
+linkneverdie.com##[href="https://acegalaxy.asia/"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/161
 ||uim.tifbs.net/js/*.js$script,redirect=noopjs,domain=gmx.net|web.de
@@ -1157,6 +1161,8 @@ hackintosh.zone,hackintoshzone.com##script:inject(setTimeout-defuser.js, _0x)
 ! https://github.com/uBlockOrigin/uAssets/issues/426
 ! https://github.com/uBlockOrigin/uAssets/issues/477
 ! https://github.com/uBlockOrigin/uAssets/issues/2923
+! https://github.com/uBlockOrigin/uAssets/issues/3035
+bild.de##script:inject(setInterval-defuser.js, (), 10)
 bild.de##script:inject(setTimeout-defuser.js, _abeh, 700)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/174
@@ -2239,10 +2245,12 @@ hdfilme.tv##script:inject(abort-on-property-read.js, x3B5W)
 hdfilme.tv##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6tek9j/how_to_block_popups_in_ublockorigin_on_this_site/
+! https://github.com/uBlockOrigin/uAssets/issues/3138
+myreadingmanga.info##script:inject(abort-on-property-read.js, ExoLoader.serve)
 myreadingmanga.info##script:inject(popads.net.js)
-@@||myreadingmanga.disqus.com^$script
-myreadingmanga.info##img[src$=".gif"]
 myreadingmanga.info##script:inject(popads-dummy.js)
+@@||myreadingmanga.disqus.com^$script
+myreadingmanga.info##[href^="http://www.gaming-adult.com/"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/620
 alibaba.com##.m-product-item:has-text(Sponsored Listing)
@@ -4690,6 +4698,7 @@ shrtfly.*##script:inject(abort-on-property-read.js, open)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1273
 oke.io##script:inject(abort-on-property-read.js, open)
+oke.io##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7pyzt3/lots_of_ads_on_gogoanime/
 ! https://github.com/uBlockOrigin/uAssets/issues/2256
@@ -5419,9 +5428,6 @@ themeslide.com##script:inject(nano-setInterval-booster.js, countdown, 1500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1494
 @@||aternos.org^$generichide
-
-! https://github.com/uBlockOrigin/uAssets/issues/1495
-||itavisen.no/cdn-cgi/apps/head/$script
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1027
 gjirafa.com##iframe
@@ -6766,9 +6772,6 @@ goal.com##script:inject(abort-on-property-read.js, ads)
 ! https://github.com/uBlockOrigin/uAssets/issues/1914
 @@||farmeramania.de^$generichide
 
-! https://github.com/uBlockOrigin/uAssets/issues/1915
-linkneverdie.com##script:inject(setTimeout-defuser.js)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1910
 ||sersh.com^
 ||befuck.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.gstatic.com *.google-analytics.com
@@ -7286,7 +7289,8 @@ animeid.tv##script:inject(nowebrtc.js)
 pinoybay.ch##script:inject(nowebrtc.js)
 pinoybay.ch##script:inject(set-constant.js, allowads, 1)
 estream.*##script:inject(abort-on-property-read.js, _0x372a)
-||estream.*^$script,domain=~estream.planetestream.org
+||estream.to^$script
+||estream.nu^$script
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2111
 nation.co.ke##^script:has-text(BOOTLOADER_LOADED)
@@ -7698,8 +7702,9 @@ giuliamanset.com##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2242
 pornfay.com##script:inject(abort-current-inline-script.js, atob, tabunder)
-pornfay.com##script:inject(setTimeout-defuser.js, textContent, 600)
 pornfay.com##script:inject(abort-on-property-write.js, GPU)
+pornfay.com##script:inject(setTimeout-defuser.js, textContent, 600)
+pornfay.com##script:inject(window.open-defuser.js)
 ||pvrtx.net^
 pornfay.com##.bottom-adv
 pornfay.com##[href="http://pornfay.com/xxx/free-porn-videos.php"]
@@ -9937,7 +9942,9 @@ ur-link.*,url-ink.*,urli-nk.*##script:inject(setTimeout-defuser.js, nextFunction
 hdmoza.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
 hdmoza.com##script:inject(abort-on-property-write.js, _pop)
 hdmoza.com##script:inject(abort-on-property-write.js, Fingerprint2)
+hdmoza.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, popunder)
 hdmoza.com##script:inject(nowebrtc.js)
+hdmoza.com##script:inject(setInterval-defuser.js, (), 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2941
 licklink.net##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -10322,7 +10329,7 @@ ustv247.com##script:inject(set-constant.js, google_jobrunner, true)
 ! https://github.com/uBlockOrigin/uAssets/issues/3110
 verplusonline.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 verplusonline.com##script:inject(setInterval-defuser.js, (), 500)
-||netdna-ssl.com^$popup
+||netdna-ssl.com^$popup,domain=vercanalestv1.com|verplusonline.com
 ||nsvfl7p9.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3111
@@ -10394,3 +10401,19 @@ shortit.pw##.animated.slide
 ahoypirate.click,alivbay.org,batpirate.info,baybaypirate.org,baypirate.click,baypiratebay.be,baypirateproxy.pw,bayproxy.eu,baythepirate.fi,capjackproxy.net,duckingproxy.eu,hyperproxy.net,ikwildepiratebay.org,indiaproxy.in,pirat2.club,pirataibay.in,piratbaypirate.link,pirate.*,pirateahoy.net,piratebaai.*piratebay.*,piratebay247.net,piratebaymirror.eu,piratebayproxy.tf,piratebays.co,piratenbucht.eu,piratepirate.eu,pirateprox.club,pirateproxy.*piratetoday.click,proxybayduck.fi,proxyfl.info,proxyoneahoy.net,proxypirate.in,proxyproxyproxy.nl,proxyship.click,proxytpb.*,rowpirate.org,thepirate.click,thepiratebay-proxy.com,thepiratebay.*,tpb.tw,tpbairproxy.in,tpbbay.eu,tpbmirror.us,tpbportal.in,tpbproxy.club,tpbproxyone.org,ukpirate.*,ukpirateproxy.xyz,unblockedhyperbay.info,unblocktpb.com,urbanproxy.eu,wearepirates.click,zombay.org##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 ahoypirate.click,alivbay.org,batpirate.info,baybaypirate.org,baypirate.click,baypiratebay.be,baypirateproxy.pw,bayproxy.eu,baythepirate.fi,capjackproxy.net,duckingproxy.eu,hyperproxy.net,ikwildepiratebay.org,indiaproxy.in,pirat2.club,pirataibay.in,piratbaypirate.link,pirate.*,pirateahoy.net,piratebaai.*piratebay.*,piratebay247.net,piratebaymirror.eu,piratebayproxy.tf,piratebays.co,piratenbucht.eu,piratepirate.eu,pirateprox.club,pirateproxy.*piratetoday.click,proxybayduck.fi,proxyfl.info,proxyoneahoy.net,proxypirate.in,proxyproxyproxy.nl,proxyship.click,proxytpb.*,rowpirate.org,thepirate.click,thepiratebay-proxy.com,thepiratebay.*,tpb.tw,tpbairproxy.in,tpbbay.eu,tpbmirror.us,tpbportal.in,tpbproxy.club,tpbproxyone.org,ukpirate.*,ukpirateproxy.xyz,unblockedhyperbay.info,unblocktpb.com,urbanproxy.eu,wearepirates.click,zombay.org##script:inject(setInterval-defuser.js, (), 500)
 ##[href^="http://squirrel.surpriseway.science/"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/3139
+tomadivx.tv##script:inject(nowebrtc.js)
+||tomadivx.tv/banner
+||tomadivx.tv/publi
+
+! https://github.com/uBlockOrigin/uAssets/issues/3140
+anitubebr.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+anitubebr.com##script:inject(setInterval-defuser.js, (), 500)
+||anitubebr.com/load.php$subdocument,first-party
+@@||anitubebr.com/templates/*/js/ads.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3143
+vidcloud.co##script:inject(abort-on-property-read.js, BetterJsPop)
+vidcloud.co##script:inject(abort-on-property-write.js, adBlockDetected)
+vidcloud.co##script:inject(set-constant.js, pop_cnt, 2)
