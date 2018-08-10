@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: 62hunHZbzt5pYUbJ/KGxNQ
+! Checksum: AQuXFpaNJU8yqP0aTCsfPg
 ! Title: Polskie Filtry Elementów Irytujących
 ! Polish Annoyance Filters
 ! Codename: Annoyance - Main
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
-! Last modified: Thu, 09 Aug 2018, 00:08 UTC+02
-! Version: 201808090008
+! Last modified: Thu, 09 Aug 2018, 22:06 UTC+02
+! Version: 201808092206
 ! Expires: 2 days
 ! Najnowsza wersja zawsze na: https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters
 ! Zgłoszenia:
@@ -14,7 +14,7 @@
 !   Discord => https://discord.me/polskiefiltry
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Copyright © 2018 Polish Filters Team
-! Aktualizacja: czw, 09 sie 2018, 00:08 UTC+02
+! Aktualizacja: czw, 09 sie 2018, 22:06 UTC+02
 !
 !
 ! Newslettery (nie popupy)
@@ -35,6 +35,7 @@
 365dowolnosci.pl###getall_widget-3
 1000dni.pl##.newsletter-mod
 51015kids.eu,hegos.eu,legalmarketday.com##.newsletter
+aboutyou.pl##[class*="styles__footerContainer"] > div:nth-of-type(2)
 active.fibrain.pl##.newsletterWithFacebook
 adequate.pl##.hidden-xs.col-sm-4.col-md-4.col-lg-4
 administrator24.info###bNewsl
@@ -61,6 +62,7 @@ apetete.pl##.footer__block__payment.footer__block > .footer_container
 apollo.pl##.newsletter-block-container
 arystoteles.pl###dozapi
 asta24.pl##.columns.small-12.medium-6.large-3:nth-of-type(4)
+astromagia.pl##.moduletablemailing
 auchandirect.pl###newsletterFooterContent
 auchan.pl##a[href="/newsletter/ref/box"]
 autodoc.pl##.subscribe_us
@@ -80,6 +82,7 @@ bigstar.pl##.info:nth-of-type(2)
 bissole.pl##a[href="#newsletter"]
 bissole.pl###text-6
 bitcoin-online.pl#?#.block-title:-abp-contains(Newsletter)
+bithub.pl##.widget_bs-newsletter-mailchimp
 biznesalert.pl##.subscribe
 blip.pl###salesmanagoIframe
 blogmtb.pl##.kalais-newsletter
@@ -193,6 +196,7 @@ euro.com.pl###footer-shops > .column:nth-of-type(1)
 evertiq.pl##.register.index.news
 e-ciucholand.com,diagcar.eu,sklep.zawiszabydgoszcz.eu###newsletter_block_left
 e-insportline.pl##.lastbox
+e-kiosk.pl##.form-newsletter
 e-korepetycje.net##.offer-sidebar-banner
 e-prawnik.pl##.boxA2
 fandroid.com.pl##.manohara-mailchimp--aligned-center
@@ -215,6 +219,7 @@ forsal.pl##div > a[href="http://forsal.pl/newsletter"]
 forsal.pl##.forsalHeaderLinks > .col-sm-off.col-xs-off:nth-of-type(1)
 forumgliwice.pl###text-7
 forum.android.com.pl##[data-blockid="app_core_newsletter_newsletter"]
+forum.shinden.pl##.styliumFooterFourthCol
 fotelik.info##.subskrypcja
 fotokoszyk.pl##.follow_news:nth-of-type(4)
 foto.auchan.pl##.cw_newsletter
@@ -600,7 +605,7 @@ skionline.pl##.boks_tytul_out_cs, .okno_gl_s > .boks
 sklepmartes.pl##.site-footer__newsletter
 sklep-agrohandel.pl##.footer_top_area
 sklep-rolnicze.eu##.col-xs-12.col-sm-12.col-md-4.col-lg-4:nth-of-type(2)
-sklep.cosplayworld.pl,venezia.pl,wolkom.pl,garneczki.pl,reebok.pl,adidas.pl##.footer_newsletter
+sklep.cosplayworld.pl,venezia.pl,wolkom.pl,garneczki.pl,reebok.pl,adidas.pl,gwiazdy.com.pl##.footer_newsletter
 sklep.motor-land.com.pl###side_header_newsletter
 sklep.polityka.pl###sidebar1 > div:nth-of-type(2)
 slaskiecentrumkomputerowe.pl##.container > .row > .col-sm-4
@@ -610,6 +615,7 @@ sniadaniezkadra.onet.pl##.footerMenuBoxNewsletter
 snowbitch.pl###emailNewsForm
 socialpress.pl###fm_form_1
 softekspert.pl##.left-block:nth-of-type(3)
+soniadraga.pl##.nl_bot
 sopot.naszemiasto.pl###dodaj-newsletter
 sorbenty.pl##.footer_nls
 spidersonline.pl##.st_news_letter_container
@@ -688,6 +694,7 @@ vemini.pl,mamopracuj.pl##.newsletters
 verdykt.pl##.contact.item
 vidaxl.pl##.newsletter-item
 viralka.pl###mc4wp_form_widget-3
+virtualo.pl##.banner-newsletter-wrapper
 virtualo.pl##.newsletter-bottom-wrapper
 vistula.pl##.three_footer__single--newsletter
 vivaldi.com###newsletterpromo
@@ -695,10 +702,13 @@ wakacje-hiszpania.pl###newsletterteaser
 wakacje.pl###mainFootNewsletter
 waldtour.pl##.mailpoet-newsletter
 waszaturystyka.pl##.platform-content:nth-of-type(2)
+wbpg.org.pl###block-freshmail-freshmail-block, #home_newsletter
 wearmedicine.com##.newsletter, #nlThanks
 webcamera.pl###footer-newsletter-box
 webinsider.pl##.gofollow[onclick*=Newsletter]
 webinsider.pl#?#h5:-abp-contains(Newsletter)
+werandacountry.pl##div.gkmod-3.box:nth-of-type(1) > .header
+werandaweekend.pl##.right > div.title:nth-of-type(1)
 widzialni.pl##.widget_widzialni_newsletter
 wierchomla.com.pl##.footer-top > .center-wrap > .footer-left
 wiescirolnicze.pl###hp-newsletter
@@ -721,6 +731,7 @@ wnp.pl##.social > li:nth-of-type(1)
 wprost.pl##.stay-updated
 wroclawskiejedzenie.pl###blog_subscription-2
 wroclaw.pl##.boxNewsletterRegister
+wrozka.com.pl##td:nth-of-type(1), .newsletter_right, .footer_newsletter_container
 wtkplay.pl###newsletter-animated-box
 www.rp.pl##.page-footer__mk
 wyborcza.biz,wyborcza.pl##.foot-summary-buttons-share-newsletter
@@ -1236,6 +1247,7 @@ gry.pl,waznygry.pl##.wt-notification-container
 polsatnews.pl,polsatsport.pl##.videoPlayer.is--persistent:not(.ended)
 rp.pl##.linear-tv__wrapper
 telewizjarepublika.pl##.contentsystem-slide-sda, .contentsystem-slide-link, .tvrep-live-box
+tvn24.pl##.videoPlayer.stuck--top
 tvp.info##.mini-player-container
 ||s-nm.ppstatic.pl/p/js/material/plywajace_wideo.js
 ||s-pt.ppstatic.pl/p/js/regionalne/plywajace_wideo.js
@@ -1249,6 +1261,7 @@ tvp.info##.mini-player-container
 80dni.pl###backtotop_wpv
 51015kids.eu##.js--scroll-to-top
 a1komputery.pl,wp-piast.pl##.sp-totop
+aboutyou.pl##div[class*="styles__entered"]
 agroalex.pl##.mypresta_scrollup
 agrobex.pl,macademiangirl.com###top-link
 agrofakt.pl,badaniaprenatalne.pl##.go-up
@@ -1264,6 +1277,7 @@ avans.pl,redcoon.pl###js-scrollTop
 avaro.pl###arrow_top
 avast.com###slide-top
 bettingexpert.com##.slideInUp
+biore.to###back-top
 bithub.pl##.st-site-scroll-top
 bitserwis.com.pl##.flaticon-home
 biznesfinder.pl##.action-scroll-top
@@ -1308,6 +1322,7 @@ enigmatech.eu###top-link
 etroniks.pl,terazteatr.pl###to_top
 eurofirany.com.pl###go_up
 extraswiecie.pl###vscroll_to_top
+e-kiosk.pl##.fixed-menu
 fachowcy.pl##.scroll-down
 faltusdesign.wordpress.com##.tothetop
 fasardi.com,pl.bab.la,4programmers.net,wiemy.to,kursphp.com##.back-to-top
@@ -1365,6 +1380,7 @@ kosmetyczna-hedonistka.blogspot.com##.totop-arrow
 kreator-modymeskiej.pl###text-14
 kropleinternetu.biz###gora
 kryminalka.pl###vl-back-top
+kulturadostepna.pl###btn-scroll-to-top
 kulturawplot.pl##.infinite-back-top
 kwestiasmaku.com##.do_gory
 lamoda.pl##.js-return-to-top
@@ -1845,6 +1861,7 @@ zwirex.pl###shoutbox
 4fun.tv##.app-popup
 50style.pl###help-arrow
 51015kids.eu##.sp-custom-19-1.insBlueWidget
+aboutyou.pl#?#[class^="styles__container"]:-abp-contains(zniżki)
 afgcomputers.pl###menu3bar
 agdlab.pl,softonet.pl,ofeminin.pl,forbes.pl,verdykt.pl,ekstraklasa.tv###nitro-block
 agdrtv24.pl###baner_rog
@@ -1898,6 +1915,7 @@ citroen.pl##.sidebarToolsDesktopReview
 coinroom.com##.news-block
 comarch.pl##.widget-detach-right-bar-container
 conner.pl##.allegro
+cowsierscipiszczy.pl##.CampaignType--floating
 cryptoacademy.club##.td-more-articles-box
 cybersport.pl##.is-active.pbox
 czasnadmorze.pl###rum_sst_tab
@@ -2025,6 +2043,7 @@ kuzniewski.pl###banner_left
 kwark.com.pl###order-products-widget
 l24.lt###scr
 lebork24.info###news_feed_container
+legalnakultura.pl###konkursy-plugin-button
 legiobiznes.pl###rum_sst_tab
 lejtmotyw.info###related-wrap, .ib-nav
 lg.com##.new-quick-menu
@@ -2178,6 +2197,7 @@ stopnadwadze.pl###check-also-box
 suwalki24.pl###sideCard
 swiatseriali.interia.pl##.recommend-flybar-button
 sympatia.onet.pl###iconsBar
+sznyt.pl##.recommended-articles
 tabletowo.pl##.wpisw
 tabletowo.pl#?#h3:-abp-contains(Polecamy również)
 tablety.pl##p > .wp-embedded-content
@@ -2272,8 +2292,8 @@ spolka.cda.pl#@#.scrolltop
 !@Description: Filtry ukrywające i blokujące komunikaty dot. ciasteczek i polityki prywatności/RODO.
 !@Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 !@Homepage: https://www.certyficate.it/
-!@Version: 201808082357
-!@Last modified: Wed, 08 Aug 2018, 23:57:39 UTC+02
+!@Version: 201808092145
+!@Last modified: Thu, 09 Aug 2018, 21:45:28 UTC+02
 !@Expires: 2 days
 !@Support:
 !@  Email => errors@certyficate.it
@@ -2282,7 +2302,7 @@ spolka.cda.pl#@#.scrolltop
 !@License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0)
 !@Copyright © 2018 Certyficate IT & Polish Filters Team
 !@Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-!@v.201808082357 aktualizacja: śro, 08 sie 2018, 23:57:39 UTC+02
+!@v.201808092145 aktualizacja: czw, 09 sie 2018, 21:45:28 UTC+02
 !
 !
 !@Specyficzne reguły ukrywające
@@ -2294,6 +2314,7 @@ spolka.cda.pl#@#.scrolltop
 40latki.pl###noty_bottom_layout_container
 a4-klub.pl,pfmrc.eu###document_modal
 abbvie.pl###omniTrackDiv
+aboutyou.pl##div[class^="styles__inner"]
 abt-s.pl###myModal, .reveal-modal-bg
 account.ubisoft.com###footer_tc_privacy
 acmilan24.com##div#top_oko2
@@ -2858,6 +2879,7 @@ mkidn.gov.pl###pa
 mklr.pl##DIV[style="position: fixed; left:0; right:0; bottom:0; height:40px; background-color:#eee; border-top: 1px solid black; z-index:1000; overflow: auto"]
 mklr.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 mmtv.pl###policyInfo
+mniammniam.com##.mm-cookies
 mobile.de##div[class^="cookie-banner"]
 mocnopomocni.pl##DIV[style="width: 100%; background-color: rgb(242, 242, 242); margin: 10px auto 0px; padding: 15px 8px; position: fixed; left: 0px; bottom: 0px; z-index: 1000; color: rgb(40, 40, 40);"]
 mocnopomocni.pl##body > div:not([id]):not([class])
@@ -3450,6 +3472,7 @@ agencjagazeta.pl###rodoLayer
 agropolska.pl##.ui-widget-overlay, .ui-widget-content
 airport.gdansk.pl,r.pl###rodoAlert
 alerabat.com###popup-rodo
+allani.pl##.information-obligation-popup
 allegro.pl##div[data-box-name="allegro.rodoConsentModal"]
 antyweb.pl###privacy
 apra.pl###popup-overlay
