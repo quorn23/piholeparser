@@ -6134,6 +6134,8 @@ ccbluex.net##script:inject(set-constant.js, passed, true)
 thewebflash.com##script:inject(setTimeout-defuser.js, Adblock, 20)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1709
+! https://github.com/uBlockOrigin/uAssets/issues/3172
+chyoa.com##script:inject(abort-on-property-read.js, __NA)
 chyoa.com##script:inject(abort-on-property-write.js, ExoLoader)
 chyoa.com##script:inject(set-constant.js, canRunAds, true)
 chyoa.com##.chyoa-banner
@@ -6232,8 +6234,9 @@ broadwayworld.com##a[href^="https://ad.doubleclick.net/ddm/"]
 op.gg##script:inject(abort-on-property-write.js, lifeOnwer)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/85mgro/%C2%B5block_doesnt_block_ads_on_this_site/
-autojournal.fr,autoplus.fr,birdsandblooms.com,collegehumor.com,dorkly.com,dryscalpgone.com,eclypsia.com,familyhandyman.com,gala.fr,gentlemansgazette.com,hotbeautyhealth.com,ketoconnect.net,mjsbigblog.com,printablecrush.com,psychologyjunkie.com,skinnyms.com,sportauto.fr,thecelticblog.com,thelovenerds.com,thisisfutbol.com##script:inject(abort-current-inline-script.js, btoa, BOOTLOADER_LOADED)
+autojournal.fr,autoplus.fr,birdsandblooms.com,bombshellbling.com,collegehumor.com,dorkly.com,dryscalpgone.com,eclypsia.com,familyhandyman.com,gala.fr,gentlemansgazette.com,homeschoolgiveaways.com,hotbeautyhealth.com,ketoconnect.net,mjsbigblog.com,mom4real.com,mynaturalfamily.com,oneessentialcommunity.com,pageflutter.com,printablecrush.com,psychologyjunkie.com,skinnyms.com,skintagsgone.com,sportauto.fr,stayglam.com,tasteandtellblog.com,thecelticblog.com,thecozyapron.com,theendlessmeal.com,thehappierhomemaker.com,thelovenerds.com,thisisfutbol.com,yellowblissroad.com##script:inject(abort-current-inline-script.js, btoa, BOOTLOADER_LOADED)
 pcwelt.de##script:inject(abort-on-property-read.js, proxyLocation)
+sixsistersstuff.com##script:inject(abort-on-property-read.js, Int32Array)
 ||deoi3kwqhv0d5.cloudfront.net^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1748
@@ -10414,6 +10417,7 @@ tomadivx.tv##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3140
 anitubebr.com##script:inject(abort-on-property-write.js, abreJanela)
+anitubebr.com##script:inject(abort-on-property-write.js, adBlockDetected)
 anitubebr.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 anitubebr.com##script:inject(bab-defuser.js)
 anitubebr.com##script:inject(setInterval-defuser.js, (), 500)
@@ -10481,16 +10485,35 @@ spraytanwichitaks.com##script:inject(abort-on-property-write.js, closebar_l)
 spraytanwichitaks.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3162
-basellandschaftlichezeitung.ch##+js(setTimeout-defuser.js, [native code], 3000)
+basellandschaftlichezeitung.ch,solothurnerzeitung.ch##+js(setTimeout-defuser.js, [native code], 3000)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41371
 mp3im.org##script:inject(abort-current-inline-script.js, decodeURIComponent, zfgloadedpopup)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3164
-cnet.com,edmunds.com##^script:has-text(IXC_)
+baltimoresun.com,boston.com,capitalgazette.com,carrollcountytimes.com,chicagotribune.com,citypaper.com,cnet.com,courant.com,ctnow.com,dailypress.com,delmartimes.net,edmunds.com,emedicinehealth.com,growthspotter.com,hoylosangeles.com,lajollalight.com,lolking.net,mcall.com,orlandosentinel.com,ranchosantafereview.com,sandiegouniontribune.com,seattlepi.com,sfgate.com,slickdeals.net,southflorida.com,sun-sentinel.com,sun-sentinel.com,twincities.com,wowhead.com##^script:has-text(IXC_)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3165
 thirdsector.com.au##script:inject(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3168
 @@||lowframe.com^$generichide
+
+! https://www.reddit.com/r/Adblock/comments/95ipg0
+gocurrycracker.com##script:inject(abort-on-property-read.js, encodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3170
+gomiblog.com##script:inject(set-constant.js, isAdsDisplayed, true)
+gomiblog.com##script:inject(setTimeout-defuser.js, (), checkBait)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3171
+doub.io##script:inject(abort-on-property-write.js, KillAdBlock)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41390
+javfor.me##script:inject(abort-current-inline-script.js, $, r18pop)
+||javfor.me/*/banner/
+
+! https://github.com/LiCybora/NanoDefenderFirefox/issues/47
+gentside.com,maxisciences.com,ohmymag.com##script:inject(set-constant.js, ADBLOCK_ENABLED, false)
+gentside.com,maxisciences.com,ohmymag.com###adblocker
+gentside.com,maxisciences.com,ohmymag.com##body:style(overflow-y: auto !important;)
