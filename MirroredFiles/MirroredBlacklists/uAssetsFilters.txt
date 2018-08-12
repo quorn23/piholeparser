@@ -1448,6 +1448,7 @@ pornhub.com##script:inject(abort-on-property-write.js, isAdblockOn)
 handelsblatt.com,wiwo.de##script:inject(abort-current-inline-script.js, hcf_userconfig, hcf_userconfig.cgi_adb_redirect_url)
 ||handelsblatt.com/*/empty.js$script,first-party
 ||wiwo.de/preparesite/empty.js$script,first-party
+wiwo.de##script:inject(set-constant.js, AdController, noopFunc)
 
 ! https://github.com/gorhill/uBO-Extra/issues/37
 wowhead.com##.blocks
@@ -4452,6 +4453,7 @@ git.tc##script:inject(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1214
 4downfiles.org##script:inject(setTimeout-defuser.js, nextFunction, 250)
+@@||4downfiles.org^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1217
 imgsay.com##script:inject(abort-on-property-read.js, ExoLoader)
@@ -6399,6 +6401,8 @@ shortify.pw##script:inject(abort-current-inline-script.js, document.getElementBy
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1804
 @@||freecoursesonline.us^$generichide
+freecoursesonline.us##script:inject(abort-on-property-write.js, Fingerprint2)
+||freecoursesonline.us/sw.js
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1805
 @@||asianovel.com^$generichide
@@ -10517,3 +10521,54 @@ javfor.me##script:inject(abort-current-inline-script.js, $, r18pop)
 gentside.com,maxisciences.com,ohmymag.com##script:inject(set-constant.js, ADBLOCK_ENABLED, false)
 gentside.com,maxisciences.com,ohmymag.com###adblocker
 gentside.com,maxisciences.com,ohmymag.com##body:style(overflow-y: auto !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3174
+elasticfaucet.info##script:inject(abort-current-inline-script.js, document.getElementById, AdBlock)
+
+! https://github.com/NanoAdblocker/NanoCore/issues/197
+antarvasnastories.com##script:inject(abort-on-property-read.js, ExoLoader)
+antarvasnastories.com##[href^="https://www.kirtu.com/"]
+
+! it-boltwise.de anti adb
+@@||it-boltwise.de^$generichide
+it-boltwise.de##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/3176
+thurrott.com##script:inject(abort-current-inline-script.js, $, adblockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3177
+@@||myfree-tivi.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3178
+@@||1me.club^$generichide
+1me.club##script:inject(abort-on-property-write.js, encodeURIComponent)
+1me.club##script:inject(noeval.js)
+||1me.club/hidden.php$subdocument,first-party
+1me.club###streamonsports
+1me.club###html3
+1me.club###html1
+
+! https://github.com/uBlockOrigin/uAssets/issues/3182
+adbtc.me##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3184
+justfor.fund##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3183
+hustle.im##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3185
+earnz.xyz##script:inject(set-constant.js, canRunAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3186
+best5link.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3180
+icdrama.se##script:inject(set-constant.js, adblock, 1)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3181
+file-upload.com##script:inject(setTimeout-defuser.js, nextFunction, 2000)
+file-upload.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/3189
+yify-torrent.org##script:inject(nowebrtc.js)
