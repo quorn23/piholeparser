@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* ListeAR List Marked As Dead. Sun Aug 12 00:42:32 UTC 2018
+* ListeAR List Unavailable To Download. Mon Aug 13 00:20:27 UTC 2018
+## Checking If List Updated Online

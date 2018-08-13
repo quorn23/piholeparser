@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Lead-Generator List Marked As Dead. Sun Aug 12 00:41:11 UTC 2018
+* Lead-Generator List Unavailable To Download. Mon Aug 13 00:20:24 UTC 2018
+## Checking If List Updated Online

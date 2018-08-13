@@ -5671,8 +5671,10 @@ marvelousga.com##script:inject(abort-current-inline-script.js, $, openNewWindow)
 ||loadshare.org/custom/*/1m_video.mp4$media,domain=1movies.se|1movies.to
 1movies.se,1movies.to###no_po_share
 ! https://github.com/uBlockOrigin/uAssets/issues/1718
+1movies.se##script:inject(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 1movies.se##script:inject(abort-on-property-write.js, Fingerprint2)
 1movies.se##^script:has-text(3f87b0eaddd)
+||1movies.se/sw.js$script,first-party
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=1movies.se
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=1movies.se
 1movies.se###a_wrap
@@ -10538,6 +10540,7 @@ thurrott.com##script:inject(abort-current-inline-script.js, $, adblockDetected)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3177
 @@||myfree-tivi.com^$generichide
+myfree-tivi.com###videoad
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3178
 @@||1me.club^$generichide
@@ -10572,3 +10575,32 @@ file-upload.com##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3189
 yify-torrent.org##script:inject(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3190
+@@||tzampa.tv/assets/js/ads.js$xmlhttprequest,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3191
+@@||tailieupro.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3194
+@@||nordpresse.be^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3196
+@@||hulkpop.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3197
+@@||titulky.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3195
+@@||qbasic.net^$generichide
+@@||pagead2.googlesyndication.com/pagead/$script,domain=qbasic.net
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41412
+streamdreams.org##script:inject(abort-on-property-write.js, encodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3200
+@@||wowescape.com^$generichide
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=wowescape.com
+@@||pagead2.googlesyndication.com/pagead/$script,domain=wowescape.com
+@@||googleads.g.doubleclick.net/pagead/*wowescape.com$xmlhttprequest,domain=imasdk.googleapis.com
+@@||youtube.com/get_video?$media,domain=wowescape.com

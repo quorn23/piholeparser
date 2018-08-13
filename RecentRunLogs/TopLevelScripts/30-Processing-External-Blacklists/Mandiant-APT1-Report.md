@@ -13,4 +13,5 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-* Mandiant-APT1-Report List Marked As Dead. Sun Aug 12 00:47:57 UTC 2018
+* Mandiant-APT1-Report List Unavailable To Download. Mon Aug 13 00:21:02 UTC 2018
+## Checking If List Updated Online
