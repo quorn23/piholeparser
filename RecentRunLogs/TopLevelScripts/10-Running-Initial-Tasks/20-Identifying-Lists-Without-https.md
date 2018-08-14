@@ -8,7 +8,6 @@ ____________________________________
 
 ___________________________________________________________________
 ### Lists That Do NOT use https.
-* Malware-URLs-Domains
 * Adblock-Filters-by-Gurudee
 * BLOGRAM-Analysis-Block-Filter-List-for-Japan
 * BLOGRAM-Basic-Filter-List-for-Japan
@@ -18,6 +17,7 @@ ___________________________________________________________________
 * Finnish-AntiSocial
 * JapaneseSiteAdblockFilterver2
 * JoeWein
+* Malware-URLs-Domains
 * PLgeneral
 * Spam-Assassin-Bill-Stearns
 * The-Hosts-File-Project
