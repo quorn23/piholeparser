@@ -874,6 +874,7 @@ animmex.*##script:inject(bab-defuser.js)
 ! https://github.com/gorhill/uBlock/issues/1993
 ||cda-online.pl/wp-content/uploads/*.js$script
 cinedetodo.com##script:inject(window.open-defuser.js)
+cinedetodo.net##script:inject(abort-on-property-write.js, encodeURIComponent)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/52llxu/adchoices/
 ! https://github.com/uBlockOrigin/uAssets/issues/234
@@ -6600,8 +6601,8 @@ fastplay.to##script:inject(nowebrtc.js)
 megaup.net##script:inject(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1850
-aquipelis.net##script:inject(abort-on-property-write.js, smrtSB)
-aquipelis.tv##script:inject(abort-on-property-write.js, document.currentScript)
+aquipelis.*##+js(abort-on-property-write.js, smrtSB)
+aquipelis.*##+js(abort-on-property-write.js, document.currentScript)
 aquipelis.net##[class^=adsbutt]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1851
@@ -7118,10 +7119,6 @@ peliculasveo.gratis,peliculasver.online##^script:has-text(3f87b0eaddd)
 ! https://github.com/uBlockOrigin/uAssets/issues/2033
 cartoon8.tv##script:inject(set-constant.js, check_adblock, true)
 
-! https://github.com/uBlockOrigin/uAssets/issues/2031
-solarmoviefreez.com##script:inject(abort-current-inline-script.js, parseInt, tabunder)
-||imgur.com/*.png$image,domain=solarmoviefreez.com
-
 ! https://github.com/uBlockOrigin/uAssets/issues/2035
 emol.com##script:inject(abort-on-property-write.js, OA_zones)
 
@@ -7246,7 +7243,9 @@ jpidols.tv##[id^=bsa]
 ||smopy.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2089
+! https://github.com/uBlockOrigin/uAssets/issues/3248
 gamesplaza.com##script:inject(set-constant.js, noAdblock, true)
+@@||gamesplaza.com^$generichide
 video-static.tunnl.com##script:inject(set-constant.js, canRunAds, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2097
@@ -10423,6 +10422,7 @@ anitubebr.com##script:inject(bab-defuser.js)
 anitubebr.com##script:inject(setInterval-defuser.js, (), 500)
 ||anitubebr.com/load.php$subdocument,first-party
 @@||anitubebr.com/templates/*/js/ads.js$script,first-party
+||adsterra.com^$script,redirect=noopjs,domain=anitubebr.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3143
 vidcloud.co##script:inject(abort-on-property-read.js, BetterJsPop)
@@ -10715,3 +10715,19 @@ vidload.co###banner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3240
 @@||r7.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3242
+@@||modd.io/showads.js$xmlhttprequest,first-party
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41429
+tenforums.com##+js(abort-on-property-read.js, HTMLScriptElement)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3243
+allpeliculas.com##+js(nowebrtc.js)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/97r5b4
+||piguiqproxy.com^$xmlhttprequest,domain=kiss-anime.me,redirect=nooptext
+kiss-anime.me##^script:has-text(13e2d9c48a053bac66421315eccc5d167b07e6b3)
+
+! https://github.com/uBlockOrigin/uAssets/commit/d3da1a8ea7ca2065f4616aacc4d542e2ac4f8e72#commitcomment-30109151
+@@||mobinozer.com^$generichide
