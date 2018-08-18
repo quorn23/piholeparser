@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Checksum: laJ9f2OJ7sX/rwTQ16Udpw
+! Checksum: nxAqtPfA6+QwSwIkI50JHQ
 ! Title: Polskie Filtry Elementów Irytujących
 ! Polish Annoyance Filters
 ! Codename: Annoyance - Main
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
-! Last modified: Thu, 16 Aug 2018, 20:43 UTC+02
-! Version: 201808162043
+! Last modified: Fri, 17 Aug 2018, 22:03 UTC+02
+! Version: 201808172203
 ! Expires: 2 days
 ! Najnowsza wersja zawsze na: https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters
 ! Zgłoszenia:
@@ -14,7 +14,7 @@
 !   Discord => https://discord.me/polskiefiltry
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Copyright © 2018 Polish Filters Team
-! Aktualizacja: czw, 16 sie 2018, 20:43 UTC+02
+! Aktualizacja: pią, 17 sie 2018, 22:03 UTC+02
 !
 !
 ! Newslettery (nie popupy)
@@ -113,6 +113,7 @@ cba.pl##.links > div > div:nth-of-type(4)
 cebit.pl##a[href="http://net.cebit.pl/newsletter/"]
 centrumprasowe.pap.pl##a[href="/cp/pl/newsletter/"]
 cgm.pl##.footerNewsletter
+channel9.msdn.com##.mouseClick.mediumIcon.email
 checiny.pl###div_newsletter
 chinytolubie.pl###fm_form_1
 chlodnictwoiklimatyzacja.pl###left-in > .moduletable:nth-of-type(1)
@@ -967,6 +968,7 @@ obi.pl##.open.ankieta
 obtkarma.pl##.fancybox-overlay[style="display: block; width: auto; height: auto; background: rgba(255, 255, 255, 0.4);"]
 obtkarma.pl#?#.fancybox-wrap:-abp-has(#popupnews-form)
 ogrodnictwo.expert###popup-box-gfcr-1
+okiemrolnika.pl##.ls-popup, .ls-popup-overlay
 okmoneta.pl###popupEmailPhone
 ono24.info##.bts-popup
 opensubtitles.org###fadeSub, #lightSub
@@ -1030,7 +1032,7 @@ romantycznyweekend.eu###fancybox-overlay, #fancybox-wrap
 rooader.pl###nicePopupWrapper
 royalcanin.pl###popOverlay
 rp.pl##tqwidget
-rynek-kolejowy.pl##.popupElement, #popupMain
+rynek-kolejowy.pl,rynekinfrastruktury.pl##.popupElement, #popupMain
 rzeszowairport.pl###infoPopup
 sakolife.pl###nspopup_wrapper, #nspopup_wrapper_bg
 saturn-fitness.pl###chooseclubpopup, #chooseclubpopup_overlay
@@ -2309,8 +2311,8 @@ spolka.cda.pl#@#.scrolltop
 !@Description: Filtry ukrywające i blokujące komunikaty dot. ciasteczek i polityki prywatności/RODO.
 !@Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 !@Homepage: https://www.certyficate.it/
-!@Version: 201808162043
-!@Last modified: Thu, 16 Aug 2018, 20:43:25 UTC+02
+!@Version: 201808172106
+!@Last modified: Fri, 17 Aug 2018, 21:06:10 UTC+02
 !@Expires: 2 days
 !@Support:
 !@  Email => errors@certyficate.it
@@ -2319,7 +2321,7 @@ spolka.cda.pl#@#.scrolltop
 !@License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0)
 !@Copyright © 2018 Certyficate IT & Polish Filters Team
 !@Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-!@v.201808162043 aktualizacja: czw, 16 sie 2018, 20:43:25 UTC+02
+!@v.201808172106 aktualizacja: pią, 17 sie 2018, 21:06:10 UTC+02
 !
 !
 !@Specyficzne reguły ukrywające
@@ -2917,6 +2919,7 @@ monedo.pl##.NotificationBar
 monedo.pl##.wr-notification-panel, .Notifications
 monese.com##.cookie-popover
 monsterpolska.pl###interMsgsW, #m-popup-softgate, .browserAlertHolder
+morele.net###cookieBoxWrapper
 mos.gov.pl##div#textcook
 motohid.pl###simple-modal-overlay, #simple-modal
 motokiller.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
@@ -2930,7 +2933,7 @@ mpolska24.pl##.infoBox
 mpolska24.pl##div[class^="infoBox"]
 mp.pl###toptop
 msdn.microsoft.com###Fragment_SocialLinks
-msn.com###conditionalbanner
+msn.com###conditionalbanner, .euBanner
 mtech.pl###content_jquery_bottom
 mtm-info.pl###etisoA
 multiplay.pl##.inform
@@ -2961,6 +2964,7 @@ niestatystyczny.pl##.group.rcc-panel
 niezalezna.pl##div[style="border: 2px solid #900; margin-left: auto; margin-right: auto; padding: 3px; width: 984px"]
 niniwateam.pl##div[style="background-color: rgb(255, 230, 173); color: rgb(0, 0, 102); position: fixed; top: 0px; width: 100%; padding: 10px; font-size: 12px; "]
 noclegi24h.pl##body > div:not([id]):not([class])
+nokia.com##.cookie_container
 nomi.pl##div#Messenger-Special
 nowaostroleka.pl###cffc
 nowapapiernia.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
@@ -2981,6 +2985,7 @@ off-road.pl###popslide
 ogllo.pl##DIV[style="opacity: 0.9;-moz-opacity:0.9;z-index:999;position:fixed;bottom:0;left:0;right:0;text-align:center;padding:6px;color:#eee;background-color:#666;border-bottom:1px solid gray;"]
 ogloszenia.e-gratka.info##div#pojemnik
 ogradzamy.pl##body > div[id*="cookie"]
+okiemrolnika.pl##.panel_cookie
 okulary.szkla.com##div#polityka_prywatnosci
 ok-kredyt.pl###messagePopup
 olimpiasport.pl##div#sek_cstk_inf
@@ -3337,6 +3342,7 @@ webd.pl###cffc
 webd.pl###topbar, #topBar, .topbarBox, .topBarMessage, #__topBar, #top_bar
 webelite.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
 web-booking.mytaxi.com#?#body > div > div > div:-abp-contains(🍪)
+web.skype.com#?#.info.notification:-abp-contains(cookie)
 weebly.com,eniro.pl,eniroweb.pl,amawid.pl###kb-container
 wefix.pl##DIV[style="position: fixed; bottom: 0; left: 0; z-index: 10000; width: 100%; min-height: 30px; border-bottom: 1px solid rgba(186,186,186,.5); background-color: #fff; background-color: rgba(255,255,255,.9); color: #333; font-family: Arial,Helvetica,Garuda,sans-serif; line-height: normal; font-size: 10px;"]
 wegetarianie.pl##td[align="center"][height="22"]
@@ -3536,7 +3542,7 @@ epuap.gov.pl,webcamera.pl###rodo-modal
 fantasy.ekstraklasa.tv,trojmiasto.pl###rodo-info
 fdb.pl###consent
 filmlab.com.pl,wtkplay.pl,lech.tv,obiezyswiat.org###rodo-info-box
-finansowysupermarket.pl###policy-popup
+finansowysupermarket.pl,faktykaliskie.pl###policy-popup
 firmy.lu###privacy_info_overlay, #privacy_info_content
 foreca.pl###ckieconsent
 fostertravel.pl##.ft-rodo-html-banner
@@ -3562,6 +3568,7 @@ imagazine.pl,moviesroom.pl##.overlay-rules
 infostrefa.com,pap.pl###rodoWrapper
 instagram.com#?#div>div>div:-abp-contains(cookie)
 jarocinska.pl,gostynska.pl,zpleszewa.pl,rawicz24.pl,zwielkopolski24.pl##.backdrop, .lightbox-modal
+jastrzebieonline.pl###rodo_popup
 jelenia.pl###alert-blue
 jelonka.com##.prywatnosc
 kalendarzrolnikow.pl###colorbox, #cboxOverlay
@@ -3596,12 +3603,13 @@ nj24.pl###rodo
 nokaut.pl###GDPRModal
 obpon.pl###rodo-notice, #shadow-overlay
 odo24.pl##.rodo-body
+olza.pl###rodo-widget
 optyczne.pl###id01
 ortograf.pl###ns-rodo-popup-one
 otolaryngolodzy24.pl,prow.lubelskie.pl###rodo-policy
 pakolorente.com###toplayer_styleadvisor
 panoramafirm.pl###rodoLayer, .modal-backdrop
-patrz.pl##.rodoaccept
+patrz.pl,olsztyn.com.pl##.rodoaccept
 paypal.com###gdprCookieBanner
 pkspolonus.pl###popek
 pl##.rodo-accept:not(body):not(html):not(input):not(a)
@@ -3625,6 +3633,7 @@ radiozet.pl,antyradio.pl,radiostacja.pl,meloradio.pl,azorek.pl,planeta.fm,chilli
 razemztoba.pl##.inform
 rc.fm###popup-message-window, #popup-message-background
 rmf.fm##.rodo-popup
+rybnik.com.pl,slaskibiznes.pl,tuwodzislaw.pl###pd-modal, .modal-backdrop
 salesmanago.pl,grene.pl##.popup
 sawataxi.pl##.w_news
 serialowa.pl##.popmake-overlay
@@ -3634,6 +3643,7 @@ skm.pkp.pl##.ui-widget-overlay
 skm.pkp.pl#?#.ui-dialog:-abp-has(#dialog-message-rodo)
 speedtest.net###_evidon-barrier-wrapper
 spidersweb.pl###moove_gdpr_cookie_info_bar
+stalowemiasto.pl##.header-parent > .container > .slot-1280px.slot
 store.playstation.com###privacy-header
 szkolymedyczne.eu###ppsPopupBgOverlay, .ppsPopupShell
 szlot.pl##.spu-bg, .spu-total-
@@ -3669,6 +3679,7 @@ yes.pl##.reveal-modal-bg, #info-modal
 zara.com###popup-announcements
 zepsute.pl###overlay_uv, #uv_box_data
 zywiec.com.pl,heineken.com.pl###infobx
+!fora.pl##.pp-t-a-c
 !helion.pl,ebookpoint.pl,onepress.pl,sensus.pl,septem.pl,editio.pl,dlabystrzakow.pl,videopoint.pl##.rodo-accept
 !interia.pl,pcformat.pl,esporter.pl,rmf24.pl,cdaction.pl,pokazywarka.pl,edufinanse.pl##.rodo-popup
 !jpg.pl,pinotv.pl,playa.pl,moblo.pl,slajdzik.pl,rusz.pl,osobie.pl,www.prv.pl###rodoInfoForm
@@ -3677,7 +3688,7 @@ zywiec.com.pl,heineken.com.pl###infobx
 ##.gdpr-privacy-bar:not(body):not(html)
 ##.wordpress-gdpr-popup:not(body):not(html)
 /pltk/pltk.js$domain=whitepress.pl|aplikuj.pl|bielsko.biala.pl
-/pp-t-a-c.js$domain=fabrykasily.pl|toplista.pl|domzdrowia.pl|fora.pl
+/pp-t-a-c.js$domain=fabrykasily.pl|toplista.pl|domzdrowia.pl|fora.pl|torrent.top-100.pl
 /rhododendron/css/rhododendron-popup.css$domain=wpolityce.pl|wgospodarce.pl|wpolsce.pl
 /rodo.js$domain=polsat.pl|polsat1.pl|polsatfilm.pl|polsatplay.pl|polsatcafe.pl|tv4.pl|tv6.com.pl|discopolomusic.pl|polsat2.pl|polsatnews.pl|geekweek.pl|reklamowy-sklep.pl|mowianamiescie.pl|superstacja.tv|playa.pl|poszkole.pl
 /wp-content/plugins/mm-extensions/assets/js/info-popup.js$domain=koty.pl|psy.pl

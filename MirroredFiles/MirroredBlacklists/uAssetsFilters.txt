@@ -1276,7 +1276,7 @@ eltern.de,essen-und-trinken.de,focus.de,spiegel.de##script:inject(abort-on-prope
 ! https://github.com/uBlockOrigin/uAssets/issues/1442
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40162
 ! https://github.com/uBlockOrigin/uAssets/issues/461
-20min.ch,al.com,alphr.com,autoexpress.co.uk,bento.de,bikeradar.com,blick.ch,cleveland.com,cyclingnews.com,digitalspy.com,denofgeek.com,eurogamer.de,eurogamer.es,eurogamer.net,eurogamer.pt,evo.co.uk,finanzfrage.net,ft.com,gala.de,gala.fr,gentside.com,gesundheitsfrage.net,gutefrage.net,heatworld.com,ligainsider.de,livingathome.de,masslive.com,metabomb.net,mlive.com,motherandbaby.co.uk,muthead.com,neonmag.fr,newyorkupstate.com,ngin-mobility.com,nj.com,nola.com,oregonlive.com,pcgamer.com,pennlive.com,programme.tv,programme-tv.net,radiotimes.com,silive.com,stern.de,syracuse.com,theweek.co.uk##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
+20min.ch,al.com,alphr.com,autoexpress.co.uk,bento.de,bikeradar.com,blick.ch,cleveland.com,cyclingnews.com,digitalspy.com,denofgeek.com,eurogamer.de,eurogamer.es,eurogamer.net,eurogamer.pt,evo.co.uk,finanzfrage.net,ft.com,gala.de,gala.fr,gentside.com,gesundheitsfrage.net,gutefrage.net,heatworld.com,ligainsider.de,livingathome.de,masslive.com,metabomb.net,mlive.com,motherandbaby.co.uk,motorcyclenews.com,muthead.com,neonmag.fr,newyorkupstate.com,ngin-mobility.com,nj.com,nola.com,oregonlive.com,pcgamer.com,pennlive.com,programme.tv,programme-tv.net,radiotimes.com,silive.com,stern.de,syracuse.com,theweek.co.uk##script:inject(abort-on-property-read.js, _sp_._networkListenerData)
 ! https://forums.lanik.us/viewtopic.php?f=90&t=35106
 gamona.de,giga.de,kino.de,spielaffe.de,spieletipps.de##script:inject(abort-on-property-write.js, _sp_)
 ! https://github.com/uBlockOrigin/uAssets/issues/271
@@ -7245,6 +7245,8 @@ jpidols.tv##[id^=bsa]
 ! https://github.com/uBlockOrigin/uAssets/issues/2089
 ! https://github.com/uBlockOrigin/uAssets/issues/3248
 gamesplaza.com##script:inject(set-constant.js, noAdblock, true)
+@@||games.gamesplaza.com/shared/loader/gads.js$script,first-party
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games.gamesplaza.com
 @@||gamesplaza.com^$generichide
 video-static.tunnl.com##script:inject(set-constant.js, canRunAds, true)
 
@@ -7764,9 +7766,10 @@ mypornstarbook.net##table > tbody > tr:has-text(Advertisement)
 mbahhanif.site##script:inject(abort-on-property-write.js, hidekeep)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2254
-mazterize.me,masterkreatif.com##script:inject(abort-on-property-write.js, Fingerprint2)
+mazterize.*,masterkreatif.com##+js(abort-on-property-write.js, Fingerprint2)
 masterkreatif.com###fbox-background
 mazterize.me,masterkreatif.com##.user
+mazterize.com##center
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2255
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=sportspf.com
@@ -8887,8 +8890,8 @@ akvideo.stream##script:inject(setTimeout-defuser.js, (), 4000)
 akvideo.stream##script:inject(set-constant.js, cRAds, true)
 akvideo.stream###xo23l4yx
 
-! pirateproxy.mx popups
-pirateproxy.mx##script:inject(nowebrtc.js)
+! pirateproxy.* popups
+pirateproxy.*##+js(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2602
 @@||hindistoponline.com^$generichide
@@ -10597,6 +10600,7 @@ streamdreams.org##script:inject(abort-on-property-write.js, encodeURIComponent)
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=wowescape.com
 @@||pagead2.googlesyndication.com/pagead/$script,domain=wowescape.com
 @@||googleads.g.doubleclick.net/pagead/*wowescape.com$xmlhttprequest,domain=imasdk.googleapis.com
+@@||wowescape.com/node_modules/*$script,first-party
 @@||youtube.com/get_video?$media,domain=wowescape.com
 wowescape.com##[id^=aswift]
 
@@ -10731,3 +10735,25 @@ kiss-anime.me##^script:has-text(13e2d9c48a053bac66421315eccc5d167b07e6b3)
 
 ! https://github.com/uBlockOrigin/uAssets/commit/d3da1a8ea7ca2065f4616aacc4d542e2ac4f8e72#commitcomment-30109151
 @@||mobinozer.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3249
+@@||pixlr.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3252
+sdw-net.me##+js(addEventListener-defuser.js, load, onload)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3254
+schoener-wohnen.de##+js(abort-on-property-read.js, _sp_._networkListenerData)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3131
+smotret-anime.ru##div[style*="opacity: 1; z-index: 9600;"]:style(opacity: 0 !important; pointer-events: none !important;)
+||smotret-anime.ru^$csp=media-src *
+
+! https://www.mahjong.com/game/Candyland+Mahjong anti adb
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=mahjong.com
+
+! http://www.gamesgames.com/game/mahjong-quest anti adb
+@@||gamesgames.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3255
+mega-anime.org##+js(abort-on-property-write.js, adBlockDetected)
