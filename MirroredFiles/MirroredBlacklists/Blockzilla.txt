@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version F01 
+! Version F06 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -596,7 +596,6 @@ images/ads/
 ||richmedia247.com^
 ||rkdms.com^
 ||rlcdn.com^
-||rover.ebay.com^
 ||ru4.com^
 ||rubiconproject.com^
 ||s.youtube.com^$image
@@ -930,7 +929,6 @@ _banner.$domain=youtube.com
 ##.ad-banner
 ##.ad-banner-leaderboard
 ##.ad-content
-##.ad-content-top
 ##.ad-div
 ##.ad-embedded
 ##.ad-engage
@@ -1152,6 +1150,7 @@ youtube.com##DIV[class*="-ads-"]
 @@_tracking.$script,domain=kohls.com|slideshare.net
 @@||abclocal.go.com/combiner/*/js/analytics/
 @@||accounts.alibaba.com^
+@@||ad.crwdcntrl.net^$script,domain=weather.com
 @@||adobedtm.com/*/satelliteLib-$script,domain=aarp.org
 @@||analytics.$script,domain=everbuying.net|threenow.co.nz
 @@||analytics.$xmlhttprequest,domain=washingtonpost.com
@@ -1164,14 +1163,14 @@ youtube.com##DIV[class*="-ads-"]
 @@||doubleclick.net/gampad/ads?gdfp%$object-subrequest,domain=cbsnews.com
 @@||doubleclick.net/gampad/ads?max%$object-subrequest,domain=cbsnews.com
 @@||doubleclick.net/gpt/pubads_impl_$script,domain=csnchicago.com|digitaltrends.com
-@@||facebook.com/ads/profile/$xmlhttprequest
-@@||googletagservices.com^$script,domain=csnchicago.com|digitaltrends.com|nytimes.com|threenow.co.nz|zdnet.com
+@@||googletagservices.com^$script,domain=csnchicago.com|digitaltrends.com|nytimes.com|threenow.co.nz|weather.com|zdnet.com
 @@||ifmnwi.club^$xmlhttprequest,domain=cbsnews.com
 @@||img-fotki.yandex.ru^
 @@||imrworldwide.com^$domain=threenow.co.nz
 @@||krxd.net^$script,domain=foxnews.com
 @@||list-manage.com/track/
 @@||logentries.com^$domain=player.hearstdigitalstudios.com
+@@||mc.yandex.ru/metrika/tag.js$domain=kaspersky.ru
 @@||mixpanel.com^$domain=floorplanner.com
 @@||moatads.com^$script,domain=digitaltrends.com
 @@||monetate.net^$script,domain=oakley.com

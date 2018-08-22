@@ -1025,9 +1025,9 @@ coreimg.net##script:inject(noeval.js)
 ! https://discourse.mozilla-community.org/t/support-ublock-origin/6746/224
 ! https://github.com/uBlockOrigin/uAssets/issues/1915
 ! https://github.com/uBlockOrigin/uAssets/issues/3142
+! https://github.com/NanoMeow/QuickReports/issues/6
 linkneverdie.com##script:inject(bab-defuser.js)
 linkneverdie.com##script:inject(setTimeout-defuser.js, _$_, 7000)
-linkneverdie.com##[href="https://acegalaxy.asia/"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/161
 ||uim.tifbs.net/js/*.js$script,redirect=noopjs,domain=gmx.net|web.de
@@ -2099,14 +2099,6 @@ ville-ideale.fr##script:inject(setTimeout-defuser.js, contrformpub, 5000)
 ! https://github.com/uBlockOrigin/uAssets/issues/578
 torrentz2.*##script:inject(abort-current-inline-script.js, parseInt, 676574456c656d656e747342795461674e616d65)
 torrentz2.*##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
-
-! https://github.com/uBlockOrigin/uAssets/issues/561
-! https://github.com/uBlockOrigin/uAssets/issues/1286
-limetorrents.cc##.torrentinfo tr:has(a[href*="//movie4u.ch/"])
-limetorrents.cc##.torrentinfo > div:has(a[href*="/fast.php"])
-limetorrents.cc##.torrentinfo > div:has(a[href*="/redir.php"])
-limetorrents.cc##a[href*="/rel/index.cfm?RST="]
-limetorrents.cc##table:has(a[href*="//goo.gl/"])
 
 ! https://github.com/uBlockOrigin/uAssets/issues/557
 torrentbit.net##tr:has(a[href*="/click/"])
@@ -4759,6 +4751,11 @@ katcr.stream##script:inject(abort-current-inline-script.js, parseInt, tabunder)
 ||katcr.host^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.gstatic.com *.jquery.com *.google-analytics.com
 katcrs.download##script:inject(abort-on-property-write.js, Fingerprint2)
 katcrs.download##script:inject(nowebrtc.js)
+||kickasskatcr.bid/sw.js$script,first-party
+kickasskatcr.bid##+js(abort-on-property-write.js, Fingerprint2)
+kickasskatcr.bid##+js(nowebrtc.js)
+||kickasskatcr.bid/images/download.jpg$image
+kickasskatcr.bid##[href="https://greatsongsfree.com/"]
 
 ! https://forums.lanik.us/viewtopic.php?f=91&t=39679
 malekal.com##script:inject(abort-on-property-read.js, anOptions)
@@ -10602,12 +10599,12 @@ streamdreams.org##script:inject(abort-on-property-write.js, encodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3200
 ||2mdn.net^$media,redirect=noopmp4-1s,domain=wowescape.com
+||youtube.com/get_video$media,redirect=noopmp4-1s,domain=wowescape.com
 @@||wowescape.com^$generichide
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=wowescape.com
 @@||pagead2.googlesyndication.com/pagead/$script,domain=wowescape.com
 @@||googleads.g.doubleclick.net/pagead/*wowescape.com$xmlhttprequest,domain=imasdk.googleapis.com
 @@||wowescape.com/node_modules/*$script,first-party
-@@||youtube.com/get_video?$media,domain=wowescape.com
 wowescape.com##[id^=aswift]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/96sf7n
@@ -10827,3 +10824,33 @@ cll.press###headlineatas
 @@||bspin.club^$generichide
 @@||bspin.club/themes/demo/assets/javascript/ads.js$xmlhttprequest,first-party
 bspin.club##.adsbygoogle
+
+! https://github.com/NanoMeow/QuickReports/issues/4
+||2mdn.net^$media,redirect=noopmp4-1s,domain=games2rule.com
+||youtube.com/get_video$media,redirect=noopmp4-1s,domain=games2rule.com
+@@||games2rule.com^$generichide
+@@||games2rule.com/node_modules/*$script,first-party
+@@||googleads.g.doubleclick.net/pagead/*games2rule$xmlhttprequest,domain=imasdk.googleapis.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games2rule.com
+games2rule.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/3266
+imdb.com##.article:has-text(Sponsored)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3276
+whostreams.net##^script:has-text(document.location)
+whostreams.net##.stream-offline.tb
+elixx.me##+js(abort-on-property-write.js, decodeURIComponent)
+whostreams.net##+js(abort-on-property-write.js, _pop)
+
+! https://adblockplus.org/forum/viewtopic.php?p=179431#p179431
+watchonlineclub.com##+js(abort-on-property-write.js, decodeURIComponent)
+
+! ads, popups https://www.limetorrents.info/search/all/duck/
+limetorrents.*##+js(abort-on-property-write.js, Fingerprint2)
+limetorrents.*##[href^="/fast.php"]
+limetorrents.*##tr:has-text(VPN)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3279
+pornozinhostorrent.com##+js(abort-current-inline-script.js, atob, tabunder)
+pornozinhostorrent.com##+js(setTimeout-defuser.js, nextFunction, 450)
