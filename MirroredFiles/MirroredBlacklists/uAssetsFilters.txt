@@ -657,6 +657,7 @@ facebook.com##[id^="hyperfeed_story_id_"]:if([id^="feed_subtitle_"] a[href]:matc
 facebook.com##div[data-testid="fbfeed_story"]:if(a[href*="[is_sponsored]"])
 facebook.com##.ego_section:if(a[href^="/ad_campaign"])
 facebook.com##.userContentWrapper:has(a[href*="/ads/"])
+facebook.com##.userContentWrapper:has-text(/Suggested Post/i)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32142
 ||ruiguozhi.cc^
@@ -2138,6 +2139,7 @@ torlock.com##script:inject(abort-on-property-write.js, _pop)
 torlock.com##script:inject(abort-on-property-write.js, Fingerprint2)
 torlock.com##a[href*=".europeantorrents.download/"]
 torlock.com##a[href*=".t0r.download/torrent"]
+torlock.com##[href*="an0n.stream"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/582
 inoreader.com###reader_pane:style(padding-right: 0px !important;)
@@ -2998,6 +3000,7 @@ yourporn.sexy##script:inject(noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1197
 ! https://github.com/NanoAdblocker/NanoFilters/issues/144
+mage.si,magesy.eu,majesy.com##+js(addEventListener-defuser.js, load, onload)
 mage.si,magesy.pw##script:inject(abort-current-inline-script.js, document.getElementById, undefined)
 magesy.*##script:inject(abort-current-inline-script.js, adBlockDetected)
 majesy.*##script:inject(bab-defuser.js)
@@ -5052,7 +5055,7 @@ programinadresi.com##script:inject(abort-on-property-read.js, adBlock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1384
 pururin.io##script:inject(abort-on-property-write.js, BetterJsPop)
-pururin.io##script:inject(abort-on-property-read.js, PururinPopJs.add)
+pururin.io##+js(abort-current-inline-script.js, $, PururinPopJs)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1390
 coinarge.com##script:inject(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -8283,14 +8286,12 @@ techmantium.com##script:inject(set-constant.js, ga, true)
 efukt.com##script:inject(addEventListener-defuser.js, click, preventDefault)
 efukt.com##script:inject(popads-dummy.js)
 efukt.com##script:inject(setTimeout-defuser.js, _0x, 2000)
+||syndication.twitter.com/i/jot$subdocument,domain=efukt.com,important
 efukt.com##[href^="https://efukt.com/videos/naughty/"]
 efukt.com##.hide_before:has([href*="?utm_source=efukt"])
 efukt.com##div.tile:has(a[href^="https://efukt.com/out.php"])
 efukt.com##.efukt-widget-slider-nice-try-adblockers
 efukt.com##.plugs-nice-try-adblockers
-||afgr3.com^$third-party
-||afgr10.com^$third-party
-||awept.com^$third-party
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/943
 htmlpublish.com##script:inject(set-constant.js, adBlockerEnabled, false)
@@ -10854,3 +10855,6 @@ limetorrents.*##tr:has-text(VPN)
 ! https://github.com/uBlockOrigin/uAssets/issues/3279
 pornozinhostorrent.com##+js(abort-current-inline-script.js, atob, tabunder)
 pornozinhostorrent.com##+js(setTimeout-defuser.js, nextFunction, 450)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3285
+@@||oddreaders.com^$generichide
