@@ -2034,9 +2034,6 @@ ign.com###king
 ||opencarry.org/wp-content/uploads/*468x165$image
 opencarry.org##[id^=ad_global]
 
-! https://github.com/uBlockOrigin/uAssets/issues/544
-||xximg.net/ads/banner.jpg$image,important,first-party,redirect=32x32-transparent.png
-
 ! https://github.com/uBlockOrigin/uAssets/issues/547
 techtimes.com##.sec-title2:has-text(From Our Sponsor)
 
@@ -5901,6 +5898,7 @@ fileflares.com##script:inject(window.open-defuser.js, , hicpm10)
 fileflares.com##script:inject(window.open-defuser.js, , oclasrv)
 @@||fileflares.com^$generichide
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=fileflares.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=fileflares.com
 @@||fileflares.com^$xmlhttprequest,script,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1632
@@ -9542,7 +9540,9 @@ novaenreta.space##script:inject(window.open-defuser.js)
 @@||tf1.fr^$generichide
 
 ! https://github.com/reek/anti-adblock-killer/issues/4116
+! https://github.com/uBlockOrigin/uAssets/issues/3308
 xtraordinaryfansub.com##script:inject(set-constant.js, loadingAds, true)
+@@||st.bebi.com/bebi_*.js$script,domain=xtraordinaryfansub.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2801
 soft112.com##script:inject(nano-setInterval-booster.js)
@@ -10897,6 +10897,7 @@ ebookdz.com##+js(nowebrtc.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/3289
 fulltelevisionhd.li,fulltvhd.fi##+js(nowebrtc.js)
 telerium.tv##+js(setTimeout-defuser.js, KeepOpeningPops, 1000)
+telerium.tv##+js(window.open-defuser.js)
 ||netdna-ssl.com^$popup,domain=fulltelevisionhd.li
 
 ! https://github.com/NanoMeow/QuickReports/issues/17
@@ -10922,3 +10923,66 @@ enasian.com##.inside-video-before
 carmagazine.co.uk###stickyMpuAdContainer
 carmagazine.co.uk###topAdContainer
 carmagazine.co.uk##.show-for-xlarge-up
+
+! https://github.com/uBlockOrigin/uAssets/issues/3298
+pornvideospass.com##+js(abort-on-property-write.js, Aloader)
+pornvideospass.com##+js(abort-on-property-write.js, bindall)
+pornvideospass.com###invideo_data
+
+! https://github.com/uBlockOrigin/uAssets/issues/3300
+barfuck.com##+js(abort-on-property-read.js, ExoLoader.addZone)
+barfuck.com##script:inject(disable-newtab-links.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3301
+pornvideotop.com##+js(abort-on-property-read.js, ExoLoader.addZone)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3303
+vporn.com##+js(addEventListener-defuser.js, load, siteGuid)
+||baletingo.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3309
+@@||vinaurl.in^$generichide
+vinaurl.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+vinaurl.in##.adsbygoogle
+||i.imgur.com/$image,domain=vinaurl.in
+
+! https://github.com/uBlockOrigin/uAssets/issues/3312
+@@||medicalopium.*^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3311
+gshort.cf##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+gshort.cf###popback
+gshort.cf##.Banner
+
+! https://github.com/uBlockOrigin/uAssets/issues/3314
+milaulas.com##+js(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/1886#issuecomment-415991715
+/mod_ablockdetector/*
+@@||trecetv.es^$generichide
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=shares.enetres.net
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=videos.13tv.es
+@@||player.enetres.net/js/videojs-plugins/videojs-ads-contrib/videojs.ads.js$script,domain=videos.13tv.es
+
+! https://github.com/uBlockOrigin/uAssets/issues/3315
+@@||rl-hackers.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3316
+@@||futeboltvgratis.com^$generichide
+futeboltvgratis.com###adstab01
+futeboltvgratis.com##.linkantes
+
+! https://github.com/uBlockOrigin/uAssets/issues/3310
+@@||seriesgato.net^$generichide
+seriesgato.net##.Current.STPb.Button
+seriesgato.net##.externo
+
+! https://github.com/uBlockOrigin/uAssets/issues/3306
+@@||bagusdl.pro^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3313
+seucinema.net##+js(bab-defuser.js)
+seucinema.net##[href^="//toroadvertisingmedia.com/ads"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/3317
+file4go.me##+js(abort-current-inline-script.js, document.getElementById, ad_block)
