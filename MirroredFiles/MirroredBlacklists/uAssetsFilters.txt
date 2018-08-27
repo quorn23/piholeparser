@@ -2827,6 +2827,7 @@ cooking.nytimes.com##html:style(height: auto !important; overflow: auto !importa
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32450
 ! https://github.com/uBlockOrigin/uAssets/issues/2973
+! https://github.com/NanoMeow/QuickReports/issues/26
 mp4upload.com##script:inject(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 mp4upload.com##script:inject(popads-dummy.js)
 ||bitcoadz.io/display/items.php$xmlhttprequest,redirect=noopjs,domain=mp4upload.com
@@ -2834,6 +2835,7 @@ mp4upload.com##script:inject(popads-dummy.js)
 ||adc.stream.moe^$script
 ||c.stream.moe^$script
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=mp4upload.com
+@@||mp4upload.com/ads.js$script,first-party
 mp4upload.com###overlay
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=37976
@@ -5867,6 +5869,7 @@ dirpy.com##a[href*="bit.ly"]
 dirpy.com###dirpy-news
 
 ! https://github.com/uBlockOrigin/uAssets/pull/1624
+123movies.cafe##+js(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 123movies.cafe##script:inject(popads.net.js)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/863
@@ -10986,3 +10989,10 @@ seucinema.net##[href^="//toroadvertisingmedia.com/ads"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3317
 file4go.me##+js(abort-current-inline-script.js, document.getElementById, ad_block)
+
+! https://github.com/NanoMeow/QuickReports/issues/28
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=thoptv.world
+@@||thoptv.world^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/30
+firstonetv.net##+js(abort-on-property-write.js, isBlocked)
