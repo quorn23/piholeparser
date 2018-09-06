@@ -3,4 +3,4 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # 10-Calculating-Average-Parsing-Time
-* Average Parsing Time Of 7 Lists Was 15.7143 Seconds.
+* Average Parsing Time Of 8 Lists Was 15.75 Seconds.
