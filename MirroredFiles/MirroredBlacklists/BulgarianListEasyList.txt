@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201809052320
+! Version: 201809082236
 ! Title: EasyPrivacy
-! Last modified: 05 Sep 2018 23:20 UTC
+! Last modified: 08 Sep 2018 22:36 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -26,6 +26,7 @@
 &trackingserver=
 -action/fingerprint?
 -action/ping?
+-ads-tracking-
 -AdTracking.
 -analitycs//fab.
 -analitycs//ga.
@@ -339,6 +340,7 @@
 /activetrackphp.php?
 /activity-track/?
 /activity.gif?
+/activityloggingapi/*
 /acv?camp=
 /acv?extcmp=
 /acv?utm_
@@ -1396,6 +1398,8 @@
 /fingerprint.min.js
 /fingerprint2.js
 /fingerprint2.min.js
+/fingerprint3.js
+/fingerprint3.min.js
 /firestats/*
 /fkounter/*
 /fkounter5/*
@@ -1634,6 +1638,7 @@
 /gs-analytics-
 /gs.gif?
 /gscounters.
+/gtm-tracking-events.
 /gtm/gtm-
 /gtmTracking.
 /gtrack.
@@ -1978,6 +1983,7 @@
 /log.php?owa_timestamp=
 /log/1.gif?
 /log/ad-
+/log/analytics
 /log/browser/event
 /log/error?
 /log/event?
@@ -3018,7 +3024,7 @@
 /stats-dc1.
 /stats-js.cgi?
 /stats-tracking.js
-/stats.*/hits/
+/stats.*/hits/*
 /stats.asp?id
 /stats.cgi$image
 /stats.gif?
@@ -3127,6 +3133,7 @@
 /TagCommander.cfc?
 /tagcommander.js
 /tagcommander/*
+/tagcommander_
 /tagmanager/pptm.
 /tagmgmt/bootstrap.
 /tagomnitureengine.js
@@ -4236,6 +4243,7 @@ _mongo_stats/
 ||adabra.com^$third-party
 ||adalyser.com^$third-party
 ||adblade.com^$third-party
+||adblockrelief.com^$third-party
 ||adchemix.com^$third-party
 ||adchemy-content.com^$third-party
 ||adchemy.com^$third-party
@@ -4720,7 +4728,6 @@ _mongo_stats/
 ||d41.co^$third-party
 ||dable.io^$third-party
 ||dacounter.com^$third-party
-||dadi.technology^$third-party
 ||dailycaller-alerts.com^$third-party
 ||dapxl.com^$third-party
 ||dashboard.io^$third-party
@@ -5670,6 +5677,7 @@ _mongo_stats/
 ||perimeterx.net^$third-party
 ||perion.com^$third-party
 ||permutive.com^$third-party
+||personalicanvas.com^$third-party
 ||personyze.com^$third-party
 ||petametrics.com^$third-party
 ||phonalytics.com^$third-party
@@ -5972,6 +5980,7 @@ _mongo_stats/
 ||silvergamed.com^$third-party
 ||silverpop.com^$third-party
 ||silverpush.co^$third-party
+||simpleheatmaps.com^$third-party
 ||simplehitcounter.com^$third-party
 ||simplereach.com^$third-party
 ||simpli.fi^$third-party
@@ -6020,6 +6029,7 @@ _mongo_stats/
 ||sniphub.com^$third-party
 ||snoobi.com^$third-party
 ||snowsignal.com^$third-party
+||social-sb.com^$third-party
 ||socialhoney.co^$third-party
 ||socialprofitmachine.com^$third-party
 ||socialtrack.co^$third-party
@@ -6296,6 +6306,7 @@ _mongo_stats/
 ||tw.cx^$third-party
 ||twcount.com^$third-party
 ||twopointo.io^$third-party
+||txmoadserver.net^$third-party
 ||tylere.net^$third-party
 ||tynt.com^$third-party
 ||tyxo.com^$third-party
@@ -6944,6 +6955,7 @@ _mongo_stats/
 ||sparechange.io^$third-party
 ||sparnove.com^$third-party
 ||static-cnt.bid^$third-party
+||static-sb.com^$third-party
 ||staticsfs.host^$third-party
 ||statistic.date^$third-party
 ||stonecalcom.com^$third-party
@@ -7431,6 +7443,7 @@ _mongo_stats/
 ||titag.com^$third-party
 ||tnsinternet.be^$third-party
 ||toc.io^$third-party
+||tracking.wlscripts.net^
 ||trafiz.net^$third-party
 ||url-stats.net^$third-party
 ||webcompteur.com^$third-party
@@ -10872,6 +10885,7 @@ _mongo_stats/
 ||androidfilehost.com/libs/otf/stats.otf.php?
 ||androidtv.news/ezoic/
 ||angelfire.com/cgi-bin/count.cgi
+||annoncesbateau.com/xtcore.js
 ||anntaylor.com/webassets/*/page_code.js
 ||anp.se/track?
 ||answers.com/resources/tac.html
@@ -10951,7 +10965,6 @@ _mongo_stats/
 ||b.photobucket.com^$~object-subrequest
 ||baidu.com/ecom?
 ||baidu.com/js/log.js
-||baidu.com^*/su?wd=
 ||bandstores.co.uk/tracking/scripts/
 ||banggood.com/?p=
 ||bangkokpost.com/spac/spac.js
@@ -12327,6 +12340,7 @@ _mongo_stats/
 ||s-msn.com/primedns.gif?$domain=msn.com
 ||s-msn.com/s/js/loader/activity/trackloader.min.js
 ||s.infogr.am^
+||s.infogram.com^
 ||s.youtube.com^
 ||s2.youtube.com^
 ||s3s-bofm.net/ouv2/*.gif$image,third-party
@@ -13176,8 +13190,8 @@ _mongo_stats/
 ||zytpirwai.net/track/
 ! Mining
 $subdocument,third-party,domain=estream.to
-$websocket,domain=123telugu.com|1q2w3.website|2giga.link|300mbfilms.co|a-o.ninja|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.pl|alltube.tv|animeteatr.ru|bigspeeds.com|biter.tv|bitvid.sx|byter.tv|catrumahminimalis.me|centrum-dramy.pl|cloudtime.to|coinhub.win|crictime.com|crictime.is|ddmix.net|dekoder.ws|deltabit.co|djs.sk|drama-cool.me|estream.nu|estream.to|estream.xyz|extratorrent.cd|fileone.tv|filmstreamvk.site|flashx.cc|flashx.ws|fruitstreams.com|gofile.io|hdyayinmac1.com|hentai-online.pl|hq-porns.com|ianimes.co|ifrp.xyz|intactoffers.club|jkanime.net|kickass.cd|kinohabr.net|kinokongo.cc|kinokrad.co|kinoprofi.org|kinosha.cc|kinostuff.com|lafmacun.net|leitor.net|leon08.tk|leon12.tk|leon16.tk|lewd.ninja|logovo.net|love-drama.pl|mladipodnikatelia.sk|monero-miner.com|movie4k.is|mp3free.pw|myeffect.net|myfeed4u.net|netiap.com|nowvideo.sx|oload.info|oload.tv|onlinevideoconverter.com|openload.co|potomy.ru|povwideo.net|powvideo.net|protect-iframe.com|reactor.cc|reservedoffers.club|rus.ec|sherlockonline.ru|shrink-service.it|skyback.ru|sleeptimer.org|sorteosrd.com|streamango.com|streambeam.io|streamcherry.com|streamplay.me|streamplay.to|streamplay.top|szukajka.tv|tainies.online|theappguruz.com|thepiratebay.cr|thepiratebay.org|thepiratebay.red|thepiratebay.rocks|thevideo.cc|thevideo.ch|thevideo.io|thevideo.me|thevideo.us|thevideo.website|tokyodrift.ga|tubetitties.com|tvad.me|vidfile.net|vidgg.to|vidoza.net|vidto.me|vidto.se|vidtod.me|vidtodo.com|vidtodo.me|vidtodo.pro|vidtudu.com|vidup.me|vidzi.si|vidzi.tv|wearesaudis.net|wholecloud.net|ya3ale.com|zenexplayer.com|ziurim.eu|zona.plus
-$xmlhttprequest,domain=a-o.ninja|adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|catrumahminimalis.me|ddmix.net|dekoder.ws|estream.to|flashx.cc|freecontent.stream|leon08.tk|leon12.tk|leon16.tk|myeffect.net|nowvideo.sx|onlinevideoconverter.com|powvideo.net|sleeptimer.org|sorteosrd.com|streambeam.io|streamplay.top|szukajka.tv|tainies.online|vidfile.net|vidgg.to|wholecloud.net
+$websocket,domain=123telugu.com|1q2w3.website|2giga.link|300mbfilms.co|adfreetv.ch|ajplugins.com|akvideo.stream|alltube.pl|alltube.tv|animeteatr.ru|bigspeeds.com|biter.tv|bitvid.sx|byter.tv|catrumahminimalis.me|centrum-dramy.pl|cloudtime.to|coinhub.win|crictime.com|crictime.is|ddmix.net|dekoder.ws|deltabit.co|djs.sk|drama-cool.me|estream.nu|estream.to|estream.xyz|extratorrent.cd|fileone.tv|filmstreamvk.site|flashx.cc|flashx.ws|fruitstreams.com|gofile.io|hdyayinmac1.com|hentai-online.pl|hq-porns.com|ianimes.co|ifrp.xyz|intactoffers.club|jkanime.net|kickass.cd|kinohabr.net|kinokongo.cc|kinokrad.co|kinoprofi.org|kinosha.cc|kinostuff.com|lafmacun.net|leitor.net|leon08.tk|leon12.tk|leon16.tk|lewd.ninja|logovo.net|love-drama.pl|mladipodnikatelia.sk|monero-miner.com|movie4k.is|mp3free.pw|myeffect.net|myfeed4u.net|netiap.com|nowvideo.sx|oload.info|oload.tv|onlinevideoconverter.com|openload.co|potomy.ru|povwideo.net|powvideo.net|protect-iframe.com|reactor.cc|reservedoffers.club|rus.ec|sherlockonline.ru|shrink-service.it|skyback.ru|sleeptimer.org|sorteosrd.com|streamango.com|streambeam.io|streamcherry.com|streamplay.me|streamplay.to|streamplay.top|szukajka.tv|tainies.online|theappguruz.com|thepiratebay.cr|thepiratebay.org|thepiratebay.red|thepiratebay.rocks|thevideo.cc|thevideo.ch|thevideo.io|thevideo.me|thevideo.us|thevideo.website|tokyodrift.ga|tubetitties.com|tvad.me|vidfile.net|vidgg.to|vidoza.net|vidto.me|vidto.se|vidtod.me|vidtodo.com|vidtodo.me|vidtodo.pro|vidtudu.com|vidup.me|vidzi.si|vidzi.tv|wearesaudis.net|wholecloud.net|ya3ale.com|zenexplayer.com|ziurim.eu|zona.plus
+$xmlhttprequest,domain=adfreetv.ch|alltube.pl|alltube.tv|auroravid.to|catrumahminimalis.me|ddmix.net|dekoder.ws|estream.to|flashx.cc|freecontent.stream|leon08.tk|leon12.tk|leon16.tk|myeffect.net|nowvideo.sx|onlinevideoconverter.com|powvideo.net|sleeptimer.org|sorteosrd.com|streambeam.io|streamplay.top|szukajka.tv|tainies.online|vidfile.net|vidgg.to|wholecloud.net
 ! regex
 /([0-9]{1,3}\.){3}[0-9]{1,3}.*(\/proxy|\.wasm|\.wsm|\.wa)$/$third-party,websocket
 /.*(\/proxy|\.wasm|\.wsm|\.wa)$/$websocket,xmlhttprequest,domain=~aochagavia.github.io|~edwin0cheng.github.io|github.io|rawgit.com|reactor.cc|sickrage.ca|sorteosrd.com|streamplay.to|tubetitties.com|vidfile.net
@@ -15037,6 +15051,8 @@ $csp=worker-src 'none',domain=300mbfilms.co|alltube.pl|alltube.tv|animeteatr.ru|
 ! Mining-related whitelists
 @@||alltube.tv/jsverify.php$~third-party,xmlhttprequest
 @@||broadcastt.xyz/apps/$websocket
+@@||mycdn.me/chat$websocket
+@@||mycdn.me/publish$websocket
 @@||onlinevideoconverter.com/webservice|$~third-party,xmlhttprequest
 @@||szukajka.tv/jsverify.php$~third-party,xmlhttprequest
 @@||szukajka.tv/szukaj|$~third-party,xmlhttprequest
@@ -15373,7 +15389,6 @@ $csp=worker-src 'none',domain=300mbfilms.co|alltube.pl|alltube.tv|animeteatr.ru|
 @@||criteo.net/js/ld/publishertag.js$domain=novayagazeta.ru
 @@||dict.rambler.ru/fcgi-bin/$xmlhttprequest,domain=rambler.ru
 @@||google-analytics.com/analytics.js$domain=nabortu.ru|poiskstroek.ru
-@@||google-analytics.com/ga.js$domain=carambatv.ru
 @@||googletagmanager.com/gtm.js?$domain=sportmaster.ru
 @@||itv.1tv.ru/stat.php?
 @@||k12-company.ru^*/statistics.js$script
