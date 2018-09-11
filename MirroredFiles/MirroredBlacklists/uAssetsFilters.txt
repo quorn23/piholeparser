@@ -261,7 +261,7 @@ kisscartoon.*###upgrade_pop
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=27908
 ! https://github.com/gorhill/uBlock/issues/1354
-androidaba.com,animes-mangas-ddl.com,automobile-catalog.com,best-movies.info,blackmod.net,bnonews.com,crazymeds.us,d-h.st,davinsurance.com,freetimelearning.com,futeboltv.com,geekgiant.in,hulkusc.com,ip-address.org,lustich.de,macappdownload.com,megapanda.net,mixtapemonkey.com,nplay.com,playlivenewz.com,readheroacademia.com,reqlinks.net,sadeempc.com,streamlord.com,studylecturenotes.com,teachertube.com,upload.so,uploadshub.com,userscdn.com,yourvideohost.com##+js(bab-defuser.js)
+androidaba.com,animes-mangas-ddl.com,automobile-catalog.com,best-movies.info,blackmod.net,bnonews.com,crazymeds.us,d-h.st,davinsurance.com,freetimelearning.com,futeboltv.com,geekgiant.in,hulkusc.com,ip-address.org,indiatyping.co,lustich.de,macappdownload.com,megapanda.net,mixtapemonkey.com,nplay.com,playlivenewz.com,readheroacademia.com,reqlinks.net,sadeempc.com,streamlord.com,studylecturenotes.com,superyachtfan.com,teachertube.com,upload.so,uploadshub.com,userscdn.com,videoadept.com,yourvideohost.com##+js(bab-defuser.js)
 
 ! https://adblockplus.org/forum/viewtopic.php?f=2&t=41860
 filmstreaming-hd.com,gaara-fr.com,gaytube.com,gum-gum-streaming.com,hentaifr.net,hentaihaven.org,narutoshippudenvf.com,thebadbuzz.com,tuxboard.com,xstory-fr.com##+js(phenv-defuser.js)
@@ -1555,7 +1555,7 @@ bicycling.com,menshealth.com,prevention.com,rodalesorganiclife.com,runnersworld.
 ! https://github.com/uBlockOrigin/uAssets/issues/2809
 ! https://github.com/uBlockOrigin/uAssets/issues/2898
 ! https://github.com/uBlockOrigin/uAssets/issues/3089
-advocate.com,cultofmac.com,dailycaller.com,fallbrook247.com,gamesgames.com,gazettenet.com,insidenova.com,leitesculinaria.com,onmsft.com,post-gazette.com,practicalpainmanagement.com,sanangelolive.com,sanfoundry.com,stylecaster.com,viraliq.com,yourtango.com##+js(abort-on-property-read.js, HTMLScriptElement)
+advocate.com,cultofmac.com,dailycaller.com,fallbrook247.com,gamesgames.com,gazettenet.com,insidenova.com,jetztspielen.de,leitesculinaria.com,onmsft.com,post-gazette.com,practicalpainmanagement.com,sanangelolive.com,sanfoundry.com,stylecaster.com,viraliq.com,yourtango.com##+js(abort-on-property-read.js, HTMLScriptElement)
 sporcle.com##+js(abort-on-property-read.js, admiral)
 ! https://github.com/uBlockOrigin/uAssets/issues/618#issuecomment-333248119
 ! https://forums.lanik.us/viewtopic.php?p=117475#p117475
@@ -10045,6 +10045,9 @@ aniteca.zlx.com.br##+js(abort-current-inline-script.js, document.getElementById,
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2938
 @@||voirfilms.ws^$generichide
+voirfilms.ws##+js(abort-on-property-write.js, smrtSB)
+voirfilms.ws##+js(window.open-defuser.js)
+voirfilms.ws##.lefermeur
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2945
 wokesloth.com##+js(abort-on-property-write.js, admiral)
@@ -11373,3 +11376,12 @@ tryboobs.com##+js(abort-on-property-read.js, ExoLoader)
 ! https://github.com/uBlockOrigin/uAssets/issues/3433
 tubedupe.com##+js(abort-on-property-read.js, ExoLoader)
 ||tubedupe.com/player/html.php$subdocument,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3435
+@@||vertdtgratis.es^$generichide
+vertdtgratis.es##+js(nowebrtc.js)
+*.gif#$image,domain=vertdtgratis.es,redirect=1x1-transparent.gif
+
+! https://github.com/NanoMeow/QuickReports/issues/71
+veekyforums.com##+js(window.open-defuser.js)
+@@||veekyforums.com/js/adcash.js$xmlhttprequest,first-party
