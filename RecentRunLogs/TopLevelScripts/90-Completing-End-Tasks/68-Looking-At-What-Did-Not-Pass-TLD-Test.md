@@ -3,5 +3,11 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/.md)
 ____________________________________
 # 68-Looking-At-What-Did-Not-Pass-TLD-Test
-* 0 Lines After Deduping. 
+* 6 Lines After Deduping. 
 ____________________________________________________
+* adflow.js
+* entityrating.js
+* fuckadblock.js
+* magnific-popup.js
+* pubmedia.js
+* whatsapp-button.js
