@@ -434,7 +434,7 @@ boxofficemojo.com###Player_82160f42-9620-4d0a-b79a-18b1abd853fb
 fmovies.*##.col-lg-12:has-text(blockbuster)
 fmovies.*##.footerdesc
 ||flixanity.*^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' ajax.googleapis.com
-swatchseries.to,solarmoviex.*,putlockertv.*##+js(abort-current-inline-script.js, atob, /tabunder|TABUNDER/)
+putlockertv.*,solarmoviex.*##+js(addEventListener-defuser.js, /mousedown|mouseup/, 0x0)
 rapidvideo.*###top350b
 rapidvideo.*###premiumad
 rapidvideo.*###top350
@@ -732,7 +732,6 @@ kissanime.ru##.adsPositioning
 9anime.*#@#script:inject(setTimeout-defuser.js, return, 2000)
 appcache^$other,first-party
 worker.js^$script,first-party
-rapidvideo.*##+js(eclick.js, #confirm)
 kimcartoon.me,kissanime.ru,readcomiconline.to##[style*="width: 300px; height: 250px"]
 -social-media.$badfilter
 -social-media-$image,badfilter
@@ -747,7 +746,6 @@ animehub.*##.block-share.goblock
 @@||static.animecdn.stream/js/ads.js$badfilter
 @@/js/ads.js$script,badfilter
 @@||office365.com^*/adbar.js$badfilter
-quora.com##div > div > div > div > div > div > div > div > div > div:has-text(/ad  by|promoted  by/)
 animehub.*##.dialog-ovelay
 graph*^$first-party,xmlhttprequest,domain=~github.com|~facebook.com|~instagram.com
 referer$first-party,xmlhttprequest
@@ -760,3 +758,7 @@ adshark.site^
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ss]cripts|[Uu]ploads|[Ii]mages|combined|content|cover|img|static|wp-content|wp-includes))(.*)/$first-party,script,badfilter
 reddit.com##.post-sharing:style(display: none !important;)
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ss]cripts|[Uu]ploads|[Ii]mages|combined|content|cover|img|static|wp-content|wp-includes))(.*)/$first-party,other,badfilter
+animehub.*##.footer-follow
+/owa.vendors~Analytics
+9anime.*##+js(eclick.js, .resize.control.tip.hidden-sm.hidden-xs)
+animehub.*##+js(eclick.js, .gc-expand.gc-icon)
