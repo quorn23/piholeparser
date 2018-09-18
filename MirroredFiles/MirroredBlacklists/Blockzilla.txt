@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version F06 
+! Version F08 
 ! Expires: 8 hours (update frequency)
 ! Report issues, unblocked ads or trackers at:
 ! https://github.com/zpacman
@@ -905,6 +905,7 @@ _banner.$domain=youtube.com
 ###masthead-ad
 ###mbEnd
 ###mrktImg
+###pagelet_side_ads
 ###responsive_ad
 ###rightAd_rdr
 ###self_serve_ads
@@ -1060,8 +1061,6 @@ _banner.$domain=youtube.com
 ##DIV[id^="taboola-"]
 ##IFRAME[name*="ads-center"]
 dailymotion.com##.hidden-sm.hidden-md
-facebook.com###pagelet_side_ads
-facebook.com##.ego_unit_container
 ign.com##.ign-pre-grid
 mail.google.com##.aKB
 mail.google.com##.nH.PS
@@ -1159,6 +1158,7 @@ youtube.com##DIV[class*="-ads-"]
 @@||api-maps.yandex.ru^
 @@||bcbits.com/download/track/
 @@||c.amazon-adsystem.$script,domain=player.performgroup.com
+@@||captcha.alibaba.com^
 @@||cdn.turner.com/ads/$script,domain=cnn.com
 @@||doubleclick.net/gampad/ads?gdfp%$object-subrequest,domain=cbsnews.com
 @@||doubleclick.net/gampad/ads?max%$object-subrequest,domain=cbsnews.com
@@ -1184,9 +1184,10 @@ youtube.com##DIV[class*="-ads-"]
 @@||ticketm.net/*/tm_internal_tracker.js
 @@||use.typekit.net^$script,font
 @@||yandex.ru^$xmlhttprequest,domain=yastatic.net
-bikeexchange.com.au,bikeexchange.co.nz,bikeexchange.com,bikeexchange.de,bikeexchange.be,bikeexchange.nl,bikeexchange.co.uk,bikeexchange.ie,bikeexchange.com.co,oakley.com#@#.advert
+bikeexchange.com.au,bikeexchange.co.nz,bikeexchange.com,bikeexchange.de,bikeexchange.be,bikeexchange.nl,bikeexchange.co.uk,bikeexchange.ie,bikeexchange.com.co,facebook.com,oakley.com#@#.advert
 cardgames.io,check24.de#@#DIV[id*="-ads"]
 cdkeys.com#@#DIV[class^="box-ad"]
 chess.com#@#DIV[id^="div-gpt-ad"]
+facebook.com#@#.Ad
 news.naver.com#@#.sponsor
 photographyblog.com#@#DIV[id^="taboola-"]
