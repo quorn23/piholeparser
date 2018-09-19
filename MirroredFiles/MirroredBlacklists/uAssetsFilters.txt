@@ -1393,8 +1393,8 @@ auto-motor-und-sport.de,caravaning.de,womenshealth.de##+js(abort-on-property-wri
 zippyshare.com##+js(noeval.js)
 rarbg.unblockall.org##+js(abort-on-property-read.js, __htapop)
 rarbg.bypassed.org##+js(abort-on-property-write.js, Fingerprint2)
-rarbg.bypassed.org,rarbg.is,rarbg.to,rarbgget.org,rarbgprx.org,rarbgto.org,rarbg.unblockall.org,rarbg.unblocked.kim,rarbgaccess.org,rarbgdata.org,rarbgmirror.*,rarbgproxy.*,rarbgunblock.*,rarbgweb.org##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
-rarbg.bypassed.org,rarbg.is,rarbg.to,rarbgget.org,rarbgprx.org,rarbgto.org,rarbg.unblockall.org,rarbg.unblocked.kim,rarbgaccess.org,rarbgdata.org,rarbgmirror.*,rarbgproxy.*,rarbgunblock.*,rarbgweb.org##+js(setInterval-defuser.js, (), 500)
+rarbg.bypassed.org,rarbg.is,rarbg.to,rarbgget.org,rarbgprx.org,rarbgto.org,rarbg.unblockall.org,rarbg.unblocked.kim,rarbgaccess.org,rarbgdata.org,rarbggo.org,rarbgmirror.*,rarbgproxy.*,rarbgunblock.*,rarbgweb.org##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+rarbg.bypassed.org,rarbg.is,rarbg.to,rarbgget.org,rarbgprx.org,rarbgto.org,rarbg.unblockall.org,rarbg.unblocked.kim,rarbgaccess.org,rarbgdata.org,rarbggo.org,rarbgmirror.*,rarbgproxy.*,rarbgunblock.*,rarbgweb.org##+js(setInterval-defuser.js, (), 500)
 rarbgproxy.org##+js(window.open-defuser.js)
 fullmatchesandshows.com,gowatchfreemovies.to,mediafire.com,newser.com,pornhub.com,rlslog.net,scienceworldreport.com,streamcloud.eu,tinypic.com##+js(abort-on-property-write.js, UAParser)
 
@@ -2277,8 +2277,8 @@ msn.com##.nativeadasideplaceholder
 msn.com##.nativeadserversidecontentmodule
 
 ! https://github.com/reek/anti-adblock-killer/issues/3492
+newser.com##+js(abort-current-inline-script.js, MutationObserver, compareDocumentPosition)
 newser.com##+js(abort-on-property-read.js, checkAds)
-newser.com##+js(abort-on-property-read.js, oio)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/6u2isr/i_cant_scroll_on_know_your_meme_when_i_use_ublock/
 @@||knowyourmeme.com^$generichide
@@ -3160,6 +3160,7 @@ arconaitv.us###videoadv
 ! https://github.com/uBlockOrigin/uAssets/issues/963
 alotporn.com,bobs-tube.com,canalporno.com,dreamamateurs.com,eroxia.com,porndoe.com,pornozot.com##+js(abort-on-property-read.js, ExoLoader)
 alotporn.com##+js(abort-on-property-write.js, __htapop)
+||alotporn.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.alotporn.com *.google-analytics.com
 dreamamateurs.com##+js(popads-dummy.js)
 bobs-tube.com##.adv
 @@||bobs-tube.com/player/player_ads.html$first-party
@@ -3292,10 +3293,10 @@ cutw.in##.banner-inner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/915
 hdpornt.com##+js(abort-on-property-read.js, ExoLoader)
+hdpornt.com##+js(abort-on-property-write.js, __NA)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/922
-simply-hentai.com##+js(abort-current-inline-script.js, document.getElementById, addZone)
-simply-hentai.com##+js(abort-on-property-read.js, ExoLoader)
+simply-hentai.com##+js(abort-on-property-read.js, NBLoader.addZone)
 simply-hentai.com##+js(abort-on-property-read.js, BetterJsPop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/916
@@ -3702,6 +3703,7 @@ amateurporn1.com##+js(abort-on-property-write.js, popns)
 ! https://github.com/uBlockOrigin/uAssets/issues/1010
 pornxs.com##+js(abort-current-inline-script.js, ExoLoader)
 pornxs.com##+js(abort-on-property-read.js, raSettings)
+pornxs.com##+js(abort-on-property-read.js, _abb)
 ||pornxs.com/*.php
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/762
@@ -3725,6 +3727,7 @@ mangoporn.net##+js(abort-on-property-write.js, pURL)
 ! https://github.com/uBlockOrigin/uAssets/issues/1016
 vqporn.com##+js(abort-on-property-read.js, ExoLoader)
 vqporn.com##+js(abort-on-property-write.js, adblockDetect)
+vqporn.com##+js(addEventListener-defuser.js, load, nextFunction)
 ||gpjph.com^$third-party
 
 
@@ -3772,6 +3775,7 @@ imojado.org##+js(bab-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1031
 uskip.me##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 uskip.me##+js(abort-on-property-read.js, RunAds)
+uskip.me##+js(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1032
 @@||androgalaxy.in^$generichide
@@ -3837,6 +3841,7 @@ vidstreaming.io##+js(abort-current-inline-script.js, parseInt, tabunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1045
 ah-me.com##+js(abort-on-property-read.js, ExoLoader)
+ah-me.com##+js(abort-on-property-read.js, __NA)
 ah-me.com##.allIMwindow
 ah-me.com##.movie-pop
 
@@ -4579,7 +4584,7 @@ xxxkingtube.com##+js(popads-dummy.js)
 xxxkingtube.com###playerOverlay
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1233
-pornomovies.com##+js(abort-on-property-write.js, ExoLoader)
+pornomovies.com##+js(abort-on-property-read.js, ExoLoader.serve)
 pornomovies.com##+js(popads-dummy.js)
 pornomovies.com##.overlay-ggf
 
@@ -6350,7 +6355,8 @@ nxload.com##+js(abort-current-inline-script.js, atob, tabunder)
 ||cracksnow.com^$csp=script-src 'self' 'unsafe-eval' 'unsafe-inline' data: *.cloudflare.com *.google-analytics.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1756
-short2win.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+short2win.*##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+short2win.*##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 $subdocument,third-party,domain=short2win.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1758
@@ -7763,6 +7769,7 @@ short4fly.win##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 ! https://github.com/uBlockOrigin/uAssets/issues/2221
 elkolx1.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 elkolx1.com##+js(nano-setInterval-booster.js)
+elkolx1.com##+js(abort-current-inline-script.js, decodeURI, atob)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2222
 cut-ps.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -11707,3 +11714,12 @@ grabify.link##+js(abort-on-property-read.js, HTMLScriptElement)
 
 ! https://github.com/NanoMeow/QuickReports/issues/102
 news24.com##+js(abort-on-property-read.js, HTMLScriptElement)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9gstjb/how_can_i_prevent_popups_from_appearing_when/
+the123movies.org##+js(abort-current-inline-script.js, decodeURIComponent, zfgloadedpopup)
+
+! https://forums.lanik.us/viewtopic.php?p=141091#p141091
+namemc.com##+js(abort-on-property-write.js, deployads)
+
+! https://github.com/NanoMeow/QuickReports/issues/105
+macombdaily.com##+js(set-constant.js, CnnXt.Utils.detectAdBlock, noopFunc)

@@ -1391,10 +1391,10 @@ techadvisor.co.uk#@#.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3284
 ! https://github.com/uBlockOrigin/uAssets/issues/3290
-@@||deezer.com^$generichide
-@@||sascdn.com^$script,domain=deezer.com
-@@||smartadserver.com^*noadcbk=sas.noad$script,domain=deezer.com
-deezer.com##.ads
+! @@||deezer.com^$generichide
+! @@||sascdn.com^$script,domain=deezer.com
+! @@||smartadserver.com^*noadcbk=sas.noad$script,domain=deezer.com
+! deezer.com##.ads
 
 ! typo in easylist
 ||n$badfilter
@@ -1492,3 +1492,12 @@ nbcsports.com#@##nbcsports-leaderboard
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3516
 @@||cdn.cxense.com/cx.js$script,domain=mega.cl
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=41714
+@@||fusion.ddmcdn.com/app/*/comscore.streaming.$script,domain=destinationamerica.com
+@@||v.fwmrm.net/ad/$script,xmlhttprequest,domain=destinationamerica.com
+@@||src.litix.io/core/*/mux.js$script,domain=destinationamerica.com
+
+! https://github.com/NanoMeow/QuickReports/issues/106
+redtube.com#@#[src*="base64"]
+redtube.com#@#[src*="data:"]
