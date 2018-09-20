@@ -667,6 +667,7 @@ facebook.com,facebookcorewwwi.onion##.userContentWrapper:has(a[href*="/ads/"])
 facebook.com,facebookcorewwwi.onion##[id^=hyperfeed_story_id_]:has(a[href*="client_token"])
 facebook.com,facebookcorewwwi.onion##[id^=hyperfeed_story_id_]:has(a[href*="utm_campaign"])
 facebook.com,facebookcorewwwi.onion##.userContentWrapper>div div>span>span:has-text(^Suggested Post$)
+facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div[id^="_feed_subtitle_"] > span:matches-css(display:none):has(abbr .timestampContent))
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32142
 ||ruiguozhi.cc^
@@ -1165,6 +1166,7 @@ hackintosh.zone,hackintoshzone.com##+js(setTimeout-defuser.js, _0x)
 @@||cdn.hackintosh.zone^$first-party,script,stylesheet
 @@||hackintosh.computer^$first-party,script,stylesheet
 @@||hackintoshzone.com^$first-party,script,stylesheet
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=hackintoshzone.com
 hackintoshzone.com##.onp-sl-outer-wrap
 hackintoshzone.com##.onp-sl-timer-label
 hackintoshzone.com##.onp-sl-flat-theme
@@ -4277,7 +4279,7 @@ pussyspace.com##+js(abort-current-inline-script.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1163
 planetatvonlinehd.com##+js(nowebrtc.js)
-planetatvonlinehd.com##+js(abort-current-inline-script.js, blur)
+planetatvonlinehd.com##+js(set-constant.js, atob, noopFunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1164
 adpop.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -5432,6 +5434,7 @@ sunmusiq.com##+js(abort-on-property-write.js, _pop)
 ! https://github.com/uBlockOrigin/uAssets/issues/1463
 @@||totaldebrid.org^$generichide
 *.gif#$image,redirect=1x1-transparent.gif,domain=totaldebrid.org
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/$script,domain=totaldebrid.org
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1464
 @@||porndish.com^$generichide
@@ -5585,6 +5588,7 @@ go4up.com##+js(set-constant.js, _0xd348, true)
 ! https://www.reddit.com/r/uBlockOrigin/comments/7wpk97/cant_block_ad_at_the_bottom_of_readcomiconline/
 ! https://forums.lanik.us/viewtopic.php?p=136688#p136688
 readcomiconline.to##^script:has-text(this[atob)
+readcomiconline.to##+js(abort-on-property-read.js, zfgloadednative)
 readcomiconline.to##+js(abort-on-property-write.js, callExo)
 readcomiconline.to##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 readcomiconline.to##+js(setInterval-defuser.js, (), 500)
@@ -7624,6 +7628,8 @@ xcafe.com##+js(popads-dummy.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/2176
 *$subdocument,domain=vidto.se
 vidto.se##+js(abort-on-property-write.js, Fingerprint2)
+vidto.se##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+vidto.se##+js(setInterval-defuser.js, (), 500)
 vidto.se##+js(window.open-defuser.js)
 ##a[href*="/open?bver"]
 ##a[href*="/open?refer"]
@@ -8595,8 +8601,8 @@ escuchalas.com##^script:has-text(3f87b0)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=escuchalas.com
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=escuchalas.com
 
-! https://github.com/uBlockOrigin/uAssets/issues/2485
-censor.net.ua,meta.ua,pravda.com.ua,sinoptik.ua##+js(abort-on-property-read.js, document.styleSheets)
+! zmctrack crap
+censor.net.ua,hdreactor.club,i.ua,meta.ua,pravda.com.ua,sinoptik.ua##+js(abort-on-property-read.js, atob)
 ||mixadvert.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2484#issuecomment-395174594
@@ -9389,7 +9395,7 @@ digi-tv.ch##+js(setTimeout-defuser.js, test.offsetHeight, 100)
 ! https://github.com/uBlockOrigin/uAssets/issues/2702
 sinoptik.com.ru###adsLeftZone
 ! sites with the same issue and fix
-123tvseries.co##+js(abort-on-property-read.js, document.styleSheets)
+123tvseries.co##+js(set-constant.js, atob, noopFunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2705
 turboserver.tk##+js(setInterval-defuser.js, visibility, 1000)
@@ -10343,7 +10349,8 @@ pelisplus.online##+js(abort-on-property-write.js, mz_str)
 @@||bitcoinfaucet.tk/showads.js$xmlhttprequest,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2963
-tornadomovies.*##+js(abort-current-inline-script.js, blur)
+tornadomovies.*##+js(abort-on-property-write.js, Fingerprint2)
+tornadomovies.*##+js(set-constant.js, atob, noopFunc)
 ||tornadomovies.*/sw.js$script
 ||pptchecker.club^
 tornadomovies.*##[href="/user/premiumregistration"]
@@ -11248,7 +11255,7 @@ sukkisukki.com##+js(bab-defuser.js)
 ||reargooduches.pro^$third-party
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9bmg6i/need_help_creating_a_filter/
-gismeteo.ua##+js(abort-current-inline-script.js, blur)
+gismeteo.ua##+js(set-constant.js, atob, noopFunc)
 
 ! https://github.com/NanoMeow/QuickReports/issues/46
 androidcustom.com##+js(set-constant.js, safelink.adblock, false)
@@ -11723,3 +11730,19 @@ namemc.com##+js(abort-on-property-write.js, deployads)
 
 ! https://github.com/NanoMeow/QuickReports/issues/105
 macombdaily.com##+js(set-constant.js, CnnXt.Utils.detectAdBlock, noopFunc)
+
+! https://github.com/NanoMeow/QuickReports/issues/108
+descarga-animex.*##+js(abort-on-property-write.js, adBlockDetected)
+
+! https://forums.lanik.us/viewtopic.php?f=90&t=41726
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=main-echo.de
+
+! https://github.com/uBlockOrigin/uAssets/issues/3520
+w4files.ws##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+w4files.ws##+js(remove-attr.js, onclick)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41727
+shaggyimg.pro##+js(abort-on-property-read.js, ExoLoader.serve)
+
+! https://github.com/NanoMeow/QuickReports/issues/110
+aiomobilestuff.com##+js(abort-on-property-write.js, adBlockDetected)
