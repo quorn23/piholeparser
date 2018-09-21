@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: c2z6G+Z49yOdZSlPDbWOXA
-! Version: 20180919
+! Checksum: WmFiG5GOIaBD3wgzGL36+g
+! Version: 20180920
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -294,6 +294,7 @@
 ##ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
 ##ins.adsbygoogle[data-anchor-status]:not([data-matched-content-ui-type])
 ##ins.daum_ddn_area
+##ins.kakao_ad_area
 ##ins.scupioadslot
 
 ! URL filters
@@ -808,6 +809,7 @@
 ||dailygame.co.kr/ad/dispad_top.html^
 ||danawa.com/NBP/powerLink.php^$domain=prod.danawa.com
 ||danmee.chosun.com/common/event2016/index.html^$domain=danmee.chosun.com
+||databucket.duckdns.org:*/images/ads/$domain=databucket.duckdns.org
 ||daypic.ru/banners/banners.js^
 ||dcd.adotsolution.com/dcd/creative.skp^
 ||delivery.amessagewithabottle.com/www/delivery/ajs.php^
@@ -2018,6 +2020,10 @@ danawa.com##div.ttop_banner
 danmee.chosun.com##iframe[src^="http://danmee.chosun.com/common/event2016/index.html"]
 danmee.chosun.com,fashion.chosun.com##div.art_ad_ss_left
 danmee.chosun.com,fashion.chosun.com##div.art_ad_ss_right
+databucket.duckdns.org##div#ads-banner-center
+databucket.duckdns.org##div#ads-banner2-center
+databucket.duckdns.org##div#ads-img1-center
+databucket.duckdns.org##div#article-center>a>div[style="text-align: center;width: 100%; background-color: #000312; margin-top:13px;"]
 daum.net##div#adBrandingStation
 daum.net##div#daumAd
 daum.net##div.ad_rightbtm
@@ -2399,15 +2405,8 @@ hankooki.com##div.adnum
 hankooki.com##div.adsum2
 hankooki.com##div.wrap_over_72890
 hankooki.com##iframe[src^="http://www.hankooki.com/ad/"]
-hankookilbo.com##div#adencID
-hankookilbo.com##div#poll_ad_div
-hankookilbo.com##div.article-ad-align-left
-hankookilbo.com##div.article-ad-align-right
-hankookilbo.com##div.poll_ad_div
-hankookilbo.com##div.shoppingIframe
-hankookilbo.com##div.side-ad
-hankookilbo.com##iframe[class^="adiframe"]
-hankookilbo.com##iframe[src^="/newsad"][src$=".html"]
+hankookilbo.com##div.ad-container
+hankookilbo.com##div.article-header-banner
 hankyung.com##aside.ad-newsview
 hankyung.com##aside.ad-top-wide
 hankyung.com##div#ad_ti
@@ -4169,6 +4168,7 @@ spotvnews.co.kr##p.adcontrol41_box
 ssundays7.tistory.com##div.article>div[style="TEXT-ALIGN: center"]
 stackoverflow.com##div#adviza-box
 star.hankookilbo.com##div.ad-pc-inner
+star.hankookilbo.com##div.article-ad-s
 star.mk.co.kr##div#top_ad_area
 star.mt.co.kr##div#aside>div[style="position:absolute; top:805px; right:-140px; width:120px;"]
 star.mt.co.kr##div#textBody>div[style="float:left; margin:0 15px 10px 0; overflow:hidden; width:250px; height:250px;"]
