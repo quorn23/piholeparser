@@ -4122,6 +4122,8 @@ picturelol.com##+js(window.open-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1123
 imgspice.com##+js(window.open-defuser.js)
 imgspice.com##+js(abort-on-property-read.js, ExoLoader)
+imgspice.com##+js(addEventListener-defuser.js, mousedown, popundrInit)
+imgspice.com###widepage
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1124
 @@||mrtechmyth.*^$generichide
@@ -6737,6 +6739,7 @@ megaup.net##+js(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1850
 aquipelis.*##+js(abort-on-property-write.js, smrtSB)
+aquipelis.*##+js(abort-on-property-write.js, smrtSP)
 aquipelis.*##+js(abort-on-property-write.js, document.currentScript)
 aquipelis.net##[class^="adsbutt"]
 
@@ -7186,6 +7189,7 @@ ciberdvd.*##+js(abort-on-property-write.js, smrtSB)
 ! https://github.com/uBlockOrigin/uAssets/issues/1996
 ojomovies.com##+js(abort-on-property-write.js, Fingerprint2)
 ojomovies.com##+js(abort-on-property-write.js, smrtSB)
+ojomovies.com##.anuncionomovil
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2001
 @@||windows10gadgets.pro^$generichide
@@ -7239,6 +7243,7 @@ verpeliculasenlatino.com##+js(abort-on-property-write.js, smrtSB)
 verpeliculasenlatino.com##+js(set-constant.js, _popwnd, true)
 verpeliculasenlatino.com##.adsmovie
 verpeliculasenlatino.com##.pfake
+||verpeliculasenlatino.com/player/show.php
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2029
 goldpelis.net##+js(abort-on-property-write.js, smrtSB)
@@ -10406,6 +10411,9 @@ avgle.com##+js(set-constant.js, showBlockIf, noopFunc)
 ||sub.avgle.com/fd/*$script,first-party
 avgle.com###player_3x2_close:style(font-size: 250% !important;)
 javher.com##.affiliateLink
+! https://github.com/uBlockOrigin/uAssets/issues/1409
+avgle.com##center > div > a[target="_blank"]
+*$third-party,popup,domain=avgle.com
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41272
 feetbay.org##+js(bab-defuser.js)
@@ -10890,11 +10898,10 @@ sportsplays.com##+js(setTimeout-defuser.js, abDetected)
 mega-debrit.com##+js(setTimeout-defuser.js, nextFunction, 2000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3223
-rmdown.com##[src*=".gif"]
-rmdown.com##[href*="/notice.php"]
-.gif$important,image,domain=rmdown.com,badfilter
+! https://github.com/NanoAdblocker/NanoFilters/issues/186
 rmdown.com##+js(abort-on-property-write.js, open)
-rmdown.com###footer
+rmdown.com###foote1r:style(height: 1 px !important; visibility: collapse !important;)
+rmdown.com##A[href][target="_blank"]:style(height: 1px !important; visibility: collapse !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3224
 animehub.ac##+js(set-constant.js, check_adblock, true)
@@ -11877,3 +11884,13 @@ powvideo.*##+js(popads-dummy.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3554
 mangas-en-pdf.*##+js(set-constant.js, adBlockDetected, noopFunc)
+
+! https://github.com/NanoMeow/QuickReports/issues/122
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=powernationtv.com
+
+! https://github.com/NanoMeow/QuickReports/issues/126
+@@||netzkino.de^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41774
+@@||ourmatch.net^$generichide
+ourmatch.net##.adsbygoogle
