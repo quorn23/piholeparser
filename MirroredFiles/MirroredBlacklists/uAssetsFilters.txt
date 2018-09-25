@@ -669,7 +669,7 @@ facebook.com,facebookcorewwwi.onion##.userContentWrapper:has(a[href*="/ads/"])
 facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:has(a[href*="client_token"])
 facebook.com#@#div[id^="hyperfeed_story_id_"]:has(a[href*="utm_campaign"])
 facebook.com,facebookcorewwwi.onion##.userContentWrapper>div div>span>span:has-text(^Suggested Post$)
-facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div[id^="_feed_subtitle_"] > span:matches-css(display:none):has(abbr .timestampContent))
+facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div[id*="feed_subtitle_"] > span:matches-css(display:none):has(abbr .timestampContent))
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32142
 ||ruiguozhi.cc^
@@ -1183,6 +1183,8 @@ hackintoshzone.com##.onp-sl-flat-theme
 ! https://github.com/uBlockOrigin/uAssets/issues/477
 ! https://github.com/uBlockOrigin/uAssets/issues/2923
 ! https://github.com/uBlockOrigin/uAssets/issues/3035
+! https://github.com/uBlockOrigin/uAssets/issues/3560
+bild.de##+js(abort-on-property-write.js, _abeh)
 bild.de##+js(setInterval-defuser.js, (), 10)
 bild.de##+js(setTimeout-defuser.js, _abeh, 700)
 
@@ -2614,6 +2616,8 @@ kissmanga.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 kissmanga.com##+js(bab-defuser.js)
 kissmanga.com##+js(setInterval-defuser.js, (), 500)
 kissmanga.com##+js(setTimeout-defuser.js, (), 3000)
+@@||kissmanga.com/ads/adprotect$subdocument,first-party
+@@||kissmanga.com^$generichide
 @@||imgur.com^$image,domain=kissmanga.com
 @@||wp.com^$image,domain=kissmanga.com
 
@@ -7282,10 +7286,12 @@ asr-games.net##+js(abort-current-inline-script.js, document.getElementById, unde
 ! https://github.com/uBlockOrigin/uAssets/issues/845
 ! https://github.com/uBlockOrigin/uAssets/issues/3438
 ! https://github.com/uBlockOrigin/uAssets/issues/3443
+! https://www.reddit.com/r/uBlockOrigin/comments/9imaqx/help_blocking_video_ads/
 ||damoh.cinema.de/*$media,redirect=noopmp3-0.1s,domain=cinema.de
 ||damoh.gmx.net/*$media,redirect=noopmp3-0.1s,domain=gmx.net
 ||damoh.golem.de/*$media,redirect=noopmp3-0.1s,domain=golem.de
 ||damoh.n-tv.de/*$media,redirect=noopmp3-0.1s,domain=n-tv.de
+||damoh.tvnow.de/*$media,redirect=noopmp3-0.1s,domain=tvnow.de
 ||damoh.watchbox.de/*$media,redirect=noopmp3-0.1s,domain=watchbox.de
 ||damoh.web.de/*$media,redirect=noopmp3-0.1s,domain=web.de
 ! https://github.com/uBlockOrigin/uAssets/issues/3443#issuecomment-420714439
@@ -8165,6 +8171,7 @@ comment-tech.com##+js(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2329
 nulledteam.com##+js(setInterval-defuser.js, visibility, 1000)
+nulledteam.com##+js(abort-on-property-read.js, adblock)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40812
 turbobit.net##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
@@ -10637,14 +10644,14 @@ tomadivx.tv##+js(nowebrtc.js)
 ||tomadivx.tv/publi
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3140
-anitubebr.com##+js(abort-on-property-write.js, abreJanela)
-anitubebr.com##+js(abort-on-property-write.js, adBlockDetected)
 anitubebr.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 anitubebr.com##+js(bab-defuser.js)
 anitubebr.com##+js(setInterval-defuser.js, (), 500)
 ||anitubebr.com/load.php$subdocument,first-party
 @@||anitubebr.com/templates/*/js/ads.js$script,first-party
 ||adsterra.com^$script,redirect=noopjs,domain=anitubebr.com
+@@||anitubebr.com^$generichide
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/$script,domain=anitubebr.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3143
 vidcloud.co##+js(abort-on-property-read.js, BetterJsPop)
@@ -11892,5 +11899,19 @@ mangas-en-pdf.*##+js(set-constant.js, adBlockDetected, noopFunc)
 @@||netzkino.de^$generichide
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41774
+@@||matchat.online^$generichide
 @@||ourmatch.net^$generichide
 ourmatch.net##.adsbygoogle
+
+! https://github.com/NanoMeow/QuickReports/issues/125
+@@||nfl.com^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=103&t=41776
+@@||cochesrc.com^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/128
+@@||akvideo.stream/js/ads.js$script,first-party
+akvideo.stream##+js(window.open-defuser.js)
+
+! https://github.com/NanoMeow/QuickReports/issues/127
+coron.tech##.adsbygoogle iframe:style(position: relative !important;)

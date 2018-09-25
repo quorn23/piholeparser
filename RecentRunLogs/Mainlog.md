@@ -1,46 +1,46 @@
-## Creating Main Recent Run Log. Mon Sep 24 00:20:04 UTC 2018
+## Creating Main Recent Run Log. Tue Sep 25 00:20:02 UTC 2018
 * Recent Run Log Recreated.
-## Checking For Dependencies Mon Sep 24 00:20:16 UTC 2018
+## Checking For Dependencies Tue Sep 25 00:20:14 UTC 2018
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/05-Checking-For-Dependencies.md)
 
-## Running Initial Tasks Mon Sep 24 00:20:16 UTC 2018
+## Running Initial Tasks Tue Sep 25 00:20:14 UTC 2018
 Process Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks.md)
 
-## Processing Top Level Domains Mon Sep 24 00:20:19 UTC 2018
+## Processing Top Level Domains Tue Sep 25 00:20:17 UTC 2018
 Process Took 3 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/15-Processing-Top-Level-Domains.md)
 
-## Processing Internal Whitelists Mon Sep 24 00:20:22 UTC 2018
+## Processing Internal Whitelists Tue Sep 25 00:20:20 UTC 2018
 Process Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/25-Processing-Internal-Whitelists.md)
 
-## Processing External Whitelists Mon Sep 24 00:20:23 UTC 2018
+## Processing External Whitelists Tue Sep 25 00:20:21 UTC 2018
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/26-Processing-External-Whitelists.md)
 
-## Processing Internal Blacklists Mon Sep 24 00:20:23 UTC 2018
+## Processing Internal Blacklists Tue Sep 25 00:20:21 UTC 2018
 Process Took 0 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/29-Processing-Internal-Blacklists.md)
 
-## Processing External Blacklists Mon Sep 24 00:20:23 UTC 2018
-Process Took 10 Minutes.
+## Processing External Blacklists Tue Sep 25 00:20:21 UTC 2018
+Process Took 11 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/30-Processing-External-Blacklists.md)
 
-## Compiling Combined Blacklist Mon Sep 24 00:30:55 UTC 2018
-Process Took 12 Seconds.
+## Compiling Combined Blacklist Tue Sep 25 00:31:51 UTC 2018
+Process Took 10 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/40-Compiling-Combined-Blacklist.md)
 
-## Compiling Combined Whitelist Mon Sep 24 00:31:07 UTC 2018
-Process Took 0 Seconds.
+## Compiling Combined Whitelist Tue Sep 25 00:32:01 UTC 2018
+Process Took 1 Seconds.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/45-Compiling-Combined-Whitelist.md)
 
-## Writing Additional Lists Mon Sep 24 00:31:07 UTC 2018
+## Writing Additional Lists Tue Sep 25 00:32:02 UTC 2018
 Process Took 1 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/60-Writing-Additional-Lists.md)
 
-## Completing End Tasks Mon Sep 24 00:32:23 UTC 2018
+## Completing End Tasks Tue Sep 25 00:33:17 UTC 2018
 Process Took 3 Minutes.
 [Details If Any](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/90-Completing-End-Tasks.md)
 
