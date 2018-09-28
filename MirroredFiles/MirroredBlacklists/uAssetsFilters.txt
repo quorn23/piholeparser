@@ -815,6 +815,9 @@ minecraftbuildinginc.com##+js(set-constant.js, $tieE3, true)
 ||pagead2.googlesyndication.com^$script,important,domain=360haven.com
 360haven.com###pageWrapper:style(display: initial !important;)
 360haven.com###notices
+360haven.com##+js(set-constant.js, blockAdblockUser, noopFunc)
+360haven.com###ad_global_above_footer
+||adsagony.com$third-party
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32150
 ||bpasyspro.com^
@@ -1631,7 +1634,11 @@ exrapidleech.info##+js(bab-defuser.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=29410#p91041
 *$popup,third-party,domain=anilinkz.tv
+
+! vidstreaming.io
 vidstreaming.io##+js(noeval.js)
+vidstreaming.io##+js(abort-current-inline-script.js, parseInt, tabunder)
+vidstreaming.io##+js(abort-current-inline-script.js, decodeURIComponent, parseInt)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/392
 arduino-board.com##+js(abort-on-property-write.js, abc)
@@ -3859,7 +3866,6 @@ hentaihaven.org##+js(set-constant.js, canRunAds, noopFunc)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7kg792/need_help_blocking_this_persistent_ad/
 nwanime.tv##+js(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
-vidstreaming.io##+js(abort-current-inline-script.js, parseInt, tabunder)
 ||telllwrite.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/commit/91f936dbaeaa681fab4d9259a818458db2200e74#commitcomment-26342002
@@ -4414,9 +4420,10 @@ perfectgirls.*,perfektdamen.*##.promo
 area51.porn##+js(abort-current-inline-script.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1184
+fakeporn.tv##+js(abort-on-property-write.js, prPuShown)
+fakeporn.tv##+js(setTimeout-defuser.js, (), 600)
 ||fakeporn.tv/*.gif$image
 fakeporn.tv##.bottom-adv
-fakeporn.tv##+js(abort-on-property-write.js, prPuShown)
 fakeporn.tv##img[src^="/bb/fake"]
 @@||fakeporn.tv/player/$subdocument
 
@@ -6564,9 +6571,9 @@ dupedornot.com##+js(abort-current-inline-script.js, $, haveVisited)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1810
 ! https://github.com/uBlockOrigin/uAssets/issues/2393
-pelisplus.tv##+js(abort-on-property-write.js, smrtSP)
-pelisplus.tv##+js(abort-on-property-write.js, smrtSB)
-pelisplus.tv##[class^="smartadtags"]
+pelisplus.*##+js(abort-on-property-write.js, smrtSP)
+pelisplus.*##+js(abort-on-property-write.js, smrtSB)
+pelisplus.*##[class^="smartadtags"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1816
 hardsextube.com##+js(abort-on-property-read.js, ExoLoader)
@@ -9787,6 +9794,8 @@ morgenweb.de##+js(set-constant.js, blockAdBlock, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2821
 @@||mackie100projects.altervista.org^$generichide
+mackie100projects.altervista.org##+js(abort-on-property-read.js, adBlockDetected)
+mackie100projects.altervista.org##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2820
 @@||macbed.com^$generichide
@@ -12032,3 +12041,68 @@ iwin.com##.modals
 nakednepaligirl.com##+js(addEventListener-defuser.js, click, pu_count)
 ||nakednepaligirl.com^$subdocument,first-party
 nakednepaligirl.com##.rmedia
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41791
+giveawayoftheday.com##+js(setInterval-defuser.js, _checkBait)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3597
+sexykittenporn.com##+js(abort-current-inline-script.js, loadTool, popping)
+sexykittenporn.com##+js(abort-on-property-read.js, ExoLoader)
+sexykittenporn.com##.hr.babes
+
+! https://github.com/uBlockOrigin/uAssets/issues/3598
+porndoo.com##+js(addEventListener-defuser.js, click, pop)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3612
+simulasyonturk.com##+js(abort-on-property-read.js, ai_debugging)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3611
+worldoftruckstr.com##+js(abort-on-property-read.js, ai_debugging)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3610
+@@||4horlover.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3609
+@@||claimfreebtc.win^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3608
+@@||i8086.de^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3607
+@@||veezie.st^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3605
+@@||scooter-chinois-4t.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3604
+starmusiq.one##+js(nowebrtc.js)
+starmusiq.one##+js(set-constant.js, isAdBlockActive, false)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3601
+italia-tv.org##+js(nowebrtc.js)
+italia-tv.org###blockblockA
+
+! https://github.com/uBlockOrigin/uAssets/issues/3602
+itespresso.fr##+js(set-constant.js, can_i_run_ads, 1)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3600
+game-state.com##+js(set-constant.js, adblock, false)
+
+! https://github.com/NanoMeow/QuickReports/issues/137
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=gentside.com.br
+@@||gentside.com.br^*js/prebid/config$script
+@@||googletagservices.com/tag/js/gpt.js$script,domain=gentside.com.br
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41802
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=dramafever.com
+
+! https://www.reddit.com/r/Adblock/comments/9ja6mw
+watchanimeonline.me##+js(abort-current-inline-script.js, atob, tabunder)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3613
+vidcloud.icu##+js(abort-on-property-read.js, zfgloadedpopup)
+
+! https://github.com/NanoMeow/QuickReports/issues/138
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=ohmymag.com.br
+@@||ohmymag.com.br/js/prebid/config/*$script,first-party
+@@||googletagservices.com/tag/js/gpt.js$script,domain=ohmymag.com.br
