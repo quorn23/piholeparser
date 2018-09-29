@@ -76,6 +76,13 @@ google.*##.ads-ad
 ! https://github.com/chrisaljoudi/uBlock/issues/381
 google.*###sqh
 
+! https://github.com/uBlockOrigin/uAssets/issues/3482
+!#if env_firefox
+!#if env_mobile
+google.*###main > div[data-hveid]
+!#endif
+!#endif
+
 ! http://www.wilderssecurity.com/threads/ublock-a-lean-and-fast-blocker.365273/page-25#post-2461804
 ! Specific cosmetic filters for Youtube home page
 youtube.com##.masthead-ad-control
@@ -4307,7 +4314,10 @@ sexu.com###jw_video_popup
 ||clickaine.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1162
+! https://github.com/uBlockOrigin/uAssets/issues/3616
 pussyspace.com##+js(abort-current-inline-script.js, ExoLoader)
+pussyspace.com##+js(abort-current-inline-script.js, $, exoclick)
+pussyspace.com##:xpath(//span[contains(text(),"PARTNER")]/..)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1163
 planetatvonlinehd.com##+js(nowebrtc.js)
@@ -8653,6 +8663,13 @@ escuchalas.com##^script:has-text(3f87b0)
 ! zmctrack crap
 censor.net.ua,hdreactor.club,i.ua,meta.ua,ngs.ru,pravda.com.ua,sinoptik.ua##+js(abort-on-property-read.js, atob)
 ||mixadvert.com^$third-party
+!#if env_firefox
+||sinoptik.ua^$csp=script-src 'self' * 'unsafe-inline' 'unsafe-eval'
+!#endif
+
+!#if env_chromium
+||sinoptik.ua^$csp=script-src 'self' * 'unsafe-inline' 'unsafe-eval' data:
+!#endif
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2484#issuecomment-395174594
 foumovies.*,full4movies.co,hdpopcorns.*,moviescouch.info,moviescounter.*,mydownloadtube.*,rdxhd.me,123movies.ph,700mbdownload.*##+js(abort-on-property-write.js, decodeURIComponent)
@@ -11388,7 +11405,8 @@ totalsport.me##+js(abort-on-property-write.js, Fingerprint2)
 ||psl.pw^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.gstatic.com *.google.com *.googletagmanager.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3392
-||seedpeer.eu^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.statcounter.com *.google-analytics.com *.modulepush.com
+||seedpeer.*^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.statcounter.com *.google-analytics.com *.modulepush.com
+||seedpeer.*/seedpeer/all-page-$subdocument
 
 ! https://github.com/NanoMeow/QuickReports/issues/56
 salamanca24horas.com##+js(setTimeout-defuser.js, AdsBlocked, 2000)
@@ -12023,8 +12041,8 @@ tokenfly.pw##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 7sim.net##+js(setTimeout-defuser.js, adblock_detect, 10000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3591
-nulled.life###locked
-nulled.life##+js(abort-on-property-read.js, decodeURI)
+fox-dl.com,nulled.life###locked
+fox-dl.com,loadingz.com,nulled.life##+js(abort-on-property-read.js, decodeURI)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3592
 @@||rijmwoordenboek.net^$generichide
@@ -12101,8 +12119,26 @@ watchanimeonline.me##+js(abort-current-inline-script.js, atob, tabunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3613
 vidcloud.icu##+js(abort-on-property-read.js, zfgloadedpopup)
+fmovie.cc##+js(abort-on-property-write.js, decodeURIComponent)
 
 ! https://github.com/NanoMeow/QuickReports/issues/138
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=ohmymag.com.br
 @@||ohmymag.com.br/js/prebid/config/*$script,first-party
 @@||googletagservices.com/tag/js/gpt.js$script,domain=ohmymag.com.br
+
+! https://github.com/uBlockOrigin/uAssets/issues/3615
+nudogram.com##+js(abort-current-inline-script.js, parseInt, tabunder)
+||nudogram.com/contents/other/*$media,first-party
+nudogram.com##.sponsor
+
+! https://github.com/NanoMeow/QuickReports/issues/139
+wpcolt.com##+js(abort-on-property-read.js, admiral)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41804
+ bardtech.com##+js(abort-on-property-write.js, decodeURIComponent)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41809
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=gameguardian.net
+
+! https://github.com/NanoMeow/QuickReports/issues/133
+textsheet.com##+js(abort-on-property-write.js, adBlockDetected)
