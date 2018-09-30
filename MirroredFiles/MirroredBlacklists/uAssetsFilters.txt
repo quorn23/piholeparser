@@ -433,9 +433,10 @@ livenewschat.eu##ins[id^="aswift_"]
 ! https://github.com/uBlockOrigin/uAssets/issues/39
 ||comeadvertisewithus.com.*/ads.js$important,domain=pornhub.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
 ||traffichaus.com.*/ads.js$important,domain=pornhub.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
+! https://github.com/NanoMeow/QuickReports/issues/144
 redtube.com###ab_banner
 redtube.com##.clearfix:has-text(Ads)
-redtube.com###content_container > [class]:has-text(Ads)
+redtube.com###browse_section > div:has(:scope > div > a.ad-link)
 ||fotzenparty.eu^$important
 ||192.168.*/images/$important,domain=pornhub.com|xtube.com
 pornhub.com,xtube.com##+js(abort-on-property-write.js, AdDelivery)
@@ -1669,7 +1670,11 @@ myip.ms##+js(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/400
 ! https://github.com/uBlockOrigin/uAssets/issues/693
+! https://github.com/uBlockOrigin/uAssets/issues/951
+! https://github.com/uBlockOrigin/uAssets/issues/3622
 wstream.video##+js(abort-current-inline-script.js, setTimeout, .myads)
+wstream.video##+js(setTimeout-defuser.js, (), 2000)
+||wstream.video^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.googletagmanager.com *.wstream.video
 ||wstream.video/imgad/$image,redirect=2x2-transparent.png,first-party
 wstream.video##div[onclick^="window.open"]
 
@@ -2528,7 +2533,7 @@ arenabg.ch,yifymovies.to##+js(addEventListener-defuser.js, /^(?:click|mousedown|
 ! https://github.com/uBlockOrigin/uAssets/issues/3370
 emty.space,livecamtv.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,realcam.me,realtimetv.me,seelive.me,strikeout.co##+js(bab-defuser.js)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
-realtimetv.me,seelive.me##+js(abort-on-property-read.js, zfgloadedpopup)
+realtimetv.me,seelive.me,ublock.pw##+js(abort-on-property-read.js, zfgloadedpopup)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,rugbystream.me,soccerstream.me,tennisstream.me##+js(abort-on-property-write.js, _0x5bed)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##+js(abort-on-property-write.js, adcashMacros)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,vipleague.*##+js(abort-on-property-write.js, Fingerprint2)
@@ -3312,8 +3317,8 @@ tv-porinternet.com##+js(nowebrtc.js)
 pxstream.tv##+js(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/912
-tmearn.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-tmearn.com##+js(window.open-defuser.js)
+tmearn.*##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+tmearn.*##+js(window.open-defuser.js)
 tmearn.com##+js(noeval-if.js, clickAnywhere)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/919
@@ -3480,9 +3485,6 @@ whentai.com##+js(abort-on-property-read.js, canRunAds)
 @@*$generichide,domain=animesgo.net|animesgo.info
 ||i.imgur.com/$image,domain=animesgo.info
 ||jyz.com.br/ads$subdocument
-
-! https://github.com/uBlockOrigin/uAssets/issues/951
-wstream.video##+js(abort-current-inline-script.js, setTimeout, mypop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/952
 javdude.com##+js(abort-on-property-read.js, miner)
@@ -8660,8 +8662,11 @@ escuchalas.com##^script:has-text(3f87b0)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=escuchalas.com
 ||amgload.net^$xmlhttprequest,redirect=nooptext,domain=escuchalas.com
 
-! zmctrack crap
-censor.net.ua,hdreactor.club,i.ua,meta.ua,ngs.ru,pravda.com.ua,sinoptik.ua##+js(abort-on-property-read.js, atob)
+! https://www.reddit.com/r/uBlockOrigin/comments/8n71jv/next_level_ads_injection_via_xhr_or_else_tricky/e6spyt1/
+! piguiqproxy/zmctrack
+5.ua,animeget.net,antidiary.com,avtovod.com.ua,chtyvo.org.ua,comments.ua,facenews.ua,fakty.ua,gazeta.ua,guru.ua,i.ua,makataka.ru,mibius.online,mignews.com.ua,rian.com.ua##+js(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+112.ua,24boxing.com.ua,24tv.ua,autoua.net,censor.net.ua,football24.ua,footballtransfer.com.ua,glavcom.ua,hdreactor.club,history.vn.ua,isport.ua,kolobok.ua,kp.ua,lessons.com.ua,mabila.ua,mama.ua,maximum.fm,meta.ua,mil.in.ua,nashasvadba.ua,newsone.ua,ngs.ru,okino.ua,qp.ua,ringside24.com,smak.ua,strana.ua,telegraf.in.ua,tvgid.ua,ukrlib.com.ua,vchaspik.ua,vgorode.ua,woman.ua,zdorovia.com.ua,zn.ua##+js(set-constant.js, atob, noopFunc)
+dengi.ua,dovidka.biz.ua,epravda.com.ua,eurointegration.com.ua,gismeteo.ua,pravda.com.ua,sinoptik.ua,subject.com.ua,textreferat.com,tv.ua,u-news.com.ua##+js(set-constant.js, JSON.parse, noopFunc)
 ||mixadvert.com^$third-party
 !#if env_firefox
 ||sinoptik.ua^$csp=script-src 'self' * 'unsafe-inline' 'unsafe-eval'
@@ -9802,7 +9807,6 @@ undeniable.info##+js(abort-current-inline-script.js, document.getElementById, te
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=3bmeteo.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2808
-overclockers.ru##+js(abort-current-inline-script.js, RegExp, _0x)
 overclockers.ru##+js(abort-current-inline-script.js, RegExp, '0x)
 overclockers.ru##+js(set-constant.js, chkA, noopFunc)
 
@@ -12142,3 +12146,22 @@ wpcolt.com##+js(abort-on-property-read.js, admiral)
 
 ! https://github.com/NanoMeow/QuickReports/issues/133
 textsheet.com##+js(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3623
+||googletagmanager.com/gtag/js$script,redirect=noopjs,domain=free-mp3-download.net
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9jzdwf/detected_by_hawtcelebs/
+hawtcelebs.com##+js(abort-on-property-write.js, close_screen)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3625
+ishort.ca##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+ishort.ca##+js(addEventListener-defuser.js, click, trigger)
+ishort.ca###topbar
+ishort.ca##.banner
+
+! https://github.com/uBlockOrigin/uAssets/issues/3626
+123short.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+||youtube.com/embed/$subdocument,domain=123short.com
+||123short.com/sw.js
+123short.com###topbar
+123short.com##.banner
