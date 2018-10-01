@@ -1668,11 +1668,7 @@ embeducaster.com##+js(abort-on-property-write.js, h9c0)
 ! https://forum.palemoon.org/viewtopic.php?p=113693#p113693
 myip.ms##+js(bab-defuser.js)
 
-! https://github.com/uBlockOrigin/uAssets/issues/400
-! https://github.com/uBlockOrigin/uAssets/issues/693
-! https://github.com/uBlockOrigin/uAssets/issues/951
 ! https://github.com/uBlockOrigin/uAssets/issues/3622
-wstream.video##+js(abort-current-inline-script.js, setTimeout, .myads)
 wstream.video##+js(setTimeout-defuser.js, (), 2000)
 ||wstream.video^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.googletagmanager.com *.wstream.video
 ||wstream.video/imgad/$image,redirect=2x2-transparent.png,first-party
@@ -12165,3 +12161,22 @@ ishort.ca##.banner
 ||123short.com/sw.js
 123short.com###topbar
 123short.com##.banner
+
+! https://github.com/NanoMeow/QuickReports/issues/146
+theoaklandpress.com##+js(set-constant.js, CnnXt.Utils.detectAdBlock, noopFunc)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3627
+*.mp4$media,redirect=noopmp4-1s,domain=apornoflv.tv
+@@*/video/*.mp4$media,domain=apornoflv.tv
+
+! https://github.com/uBlockOrigin/uAssets/issues/3629
+camgirlfap.com##+js(abort-on-property-write.js, ai_adb_overlay)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3630
+||cda-hd.cc^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.facebook.com *.searchiq.co *.cloudflare.com *.gstatic.com *.facebook.net *.google-analytics.com *.googletagmanager.com *.google.com *.googleapis.com *.twitter.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3631
+@@||turiver.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3632
+ge-map-overlays.appspot.com##+js(set-constant.js, ads_js_was_loaded, true)
