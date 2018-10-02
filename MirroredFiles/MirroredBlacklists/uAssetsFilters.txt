@@ -2622,6 +2622,7 @@ techpowerup.com##section[class]:has(> a[rel][target] > span > img)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/731
 receive-a-sms.com##+js(abort-current-inline-script.js, $, showads.js)
+receive-a-sms.com##+js(set-constant.js, canRunAds, true)
 receive-a-sms.com##[id^="aswift"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/73c1go/help_blocking_elements
@@ -10603,6 +10604,7 @@ verplusonline.com##+js(setInterval-defuser.js, (), 500)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3111
 @@||av01.tv/wp-content/*/trigger_video_hls.js$script,first-party
+@@||av01.tv/av01/videojs/imads.js$script,first-party
 
 ! https://forums.lanik.us/viewtopic.php?p=139328#p139328
 ||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=iptv-freelinks.blogspot.com
@@ -12180,3 +12182,20 @@ camgirlfap.com##+js(abort-on-property-write.js, ai_adb_overlay)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3632
 ge-map-overlays.appspot.com##+js(set-constant.js, ads_js_was_loaded, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3634
+iptvcanales.com##+js(set-constant.js, google_jobrunner, true)
+
+! https://forums.lanik.us/viewtopic.php?f=103&t=41821
+zonatorrent.tv##+js(abort-on-property-read.js, encodeURIComponent)
+zonatorrent.tv##+js(abort-on-property-read.js, BetterJsPop)
+zonatorrent.tv##+js(popads-dummy.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3635
+@@||vinylcollective.com^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/148
+2baksa.net##+js(set-constant.js, sopoof_asidas, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3639
+srtfly.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
