@@ -305,7 +305,7 @@ imore.com##+js(imore-sanitizer.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=25212&start=15
 ! https://github.com/uBlockOrigin/uAssets/issues/3
-animeuploads.com,christianpost.com,cizgifilmlerizle.com,thefreethoughtproject.com##+js(impspcabe-defuser.js)
+christianpost.com,cizgifilmlerizle.com,thefreethoughtproject.com##+js(impspcabe-defuser.js)
 ||christianpost.com/js/plugins/sticky/sticky.js
 ||letsadvertisetogether.com^$important,domain=christianpost.com
 
@@ -1230,7 +1230,7 @@ wikia.com##+js(abort-on-property-write.js, _sp_)
 ! https://github.com/uBlockOrigin/uAssets/issues/1153
 ! https://github.com/uBlockOrigin/uAssets/issues/1194
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38315
-123movies.net,2ddl.*,allitebooks.com,arabseed.tv,bonstreams.net,buzzfil.net,byter.tv,clicknupload.org,convertinmp4.com,ddlvalley.me,dramamate.com,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,kiss-anime.me,letmewatchthis.ac,mac-torrents.com,mkvcage.com,movie4k.org,oceanoffgames.com,openload.ch,pdf-giant.com,pelispedia.*,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,strdef.world,streamfilmzzz.com,streamzzz.online,subswiki.com,thevideobee.to,torrentz.to,torrentz2.*,tny.ec,tomadivx.org,ublock.pw,uploading.site,uptobox.com,watchers.to,watchonline.to,yts.ag,yts.gs,yts.am,zooqle.com##+js(nowebrtc.js)
+123movies.net,2ddl.*,allitebooks.com,arabseed.tv,bonstreams.net,buzzfil.net,byter.tv,clicknupload.org,convertinmp4.com,ddlvalley.me,dramamate.com,entervideo.net,eztv.*,filmvf.cc,ganool.se,go4up.com,icefilms.info,igg-games.com,kiss-anime.*,letmewatchthis.ac,mac-torrents.com,mkvcage.com,movie4k.org,oceanoffgames.com,openload.ch,pdf-giant.com,pelispedia.*,readmanga.today,sawlive.tv,skidrowcrack.com,sportshd.me,strdef.world,streamfilmzzz.com,streamzzz.online,subswiki.com,thevideobee.to,torrentz.to,torrentz2.*,tny.ec,tomadivx.org,ublock.pw,uploading.site,uptobox.com,watchers.to,watchonline.to,yts.ag,yts.gs,yts.am,zooqle.com##+js(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/243
 blastingnews.com###blasting-modal-login-ad-block
@@ -1675,9 +1675,6 @@ wstream.video##+js(setTimeout-defuser.js, (), 2000)
 ||wstream.video^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.googletagmanager.com *.wstream.video
 ||wstream.video/imgad/$image,redirect=2x2-transparent.png,first-party
 wstream.video##div[onclick^="window.open"]
-
-! https://adblockplus.org/forum/viewtopic.php?f=10&t=52546
-9cartoon.me,animeflv.co,animeflv.me##+js(setTimeout-defuser.js, #player, 5000)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=36750
 ! https://github.com/uBlockOrigin/uAssets/issues/406
@@ -2247,6 +2244,7 @@ whosampled.com##+js(abort-on-property-write.js, showAdBlockerOverlay)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/611
 animes-mangas-ddl.net,dslr-forum.de,it-times.de,linkdrop.net,wowebook.org##+js(bab-defuser.js)
+||dslr-forum.de/ads/$image
 
 ! https://github.com/gorhill/uBlock/issues/2835
 ! https://github.com/uBlockOrigin/uAssets/issues/780
@@ -2611,6 +2609,7 @@ torrentrapid.com,tumejortorrent.com##+js(addEventListener-defuser.js, /^(?:click
 xmoviesforyou.com##+js(abort-current-inline-script.js, parseInt, tabunder)
 xmoviesforyou.com##+js(abort-on-property-write.js, __htapop)
 xmoviesforyou.com##+js(abort-on-property-write.js, miner)
+xmoviesforyou.com##+js(window.open-defuser.js)
 streamcherry.com##+js(abort-on-property-write.js, _0xd959)
 streamcherry.com##+js(abort-on-property-write.js, JiLk)
 streamcherry.com##+js(abort-on-property-write.js, N5ii.M4)
@@ -3268,7 +3267,7 @@ l2s.io##+js(nowebrtc.js)
 adshort.im##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 adshort.im##+js(abort-on-property-write.js, Fingerprint2)
 adshort.im##+js(popads.net.js)
-adshort.im,adsrt.com##+js(window.open-defuser.js)
+adshort.im,adsrt.*##+js(window.open-defuser.js)
 adshort.im##A[href$=".html"][rel="nofollow norefferer noopener"]
 adshort.im##+js(popads-dummy.js)
 adshort.im##+js(addEventListener-defuser.js, click, trigger)
@@ -3277,12 +3276,13 @@ adshort.im##+js(addEventListener-defuser.js, click, trigger)
 ||dailymotion.com^$subdocument,domain=adshort.im
 ||hibids10.com^$third-party
 @@||adshort.im/js/ads.js$script,first-party
-adshort.im,adsrt.com##[id*="frme"]
+adshort.im,adsrt.*##[id*="frme"]
 ! https://github.com/uBlockOrigin/uAssets/issues/911#issuecomment-417348509
-adshort.im,adsrt.com#@#[id*="ScriptRoot"]
+adshort.im,adsrt.*#@#[id*="ScriptRoot"]
 ! https://github.com/uBlockOrigin/uAssets/issues/911#issuecomment-423769642
-adsrt.com###captchaShortlink:style(display: block !important; margin-left: 35% !important;)
-||adsrt.com/sw.js$script,first-party
+adsrt.*###captchaShortlink:style(display: block !important; margin-left: 35% !important;)
+||adsrt.*/sw.js$script,first-party
+adsrt.*##div[id^="SC_TBlock"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/906
 up-4ever.com##+js(abort-on-property-read.js, adsDisabled)
@@ -3423,9 +3423,6 @@ tui.click##.banner-inner
 ! https://github.com/uBlockOrigin/uAssets/issues/939
 mangacanblog.com##+js(abort-on-property-read.js, adblock)
 
-! https://github.com/uBlockOrigin/uAssets/issues/940
-@@||animetake4.life^$generichide
-
 ! https://github.com/uBlockOrigin/uAssets/issues/941
 ||js.latino-webtv.com/player/ad$script,redirect=fuckadblock.js-3.2.0
 latino-webtv.com##+js(nowebrtc.js)
@@ -3474,11 +3471,6 @@ platinmods.*##+js(nano-setInterval-booster.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/949
 whentai.com##+js(abort-on-property-read.js, canRunAds)
 ||whentai.com/*.gif$image
-
-! https://github.com/uBlockOrigin/uAssets/issues/950
-@@*$generichide,domain=animesgo.net|animesgo.info
-||i.imgur.com/$image,domain=animesgo.info
-||jyz.com.br/ads$subdocument
 
 ! https://github.com/uBlockOrigin/uAssets/issues/952
 javdude.com##+js(abort-on-property-read.js, miner)
@@ -3828,20 +3820,17 @@ sznpaste.net##+js(bab-defuser.js)
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39376
 eusouandroid.co##+js(bab-defuser.js)
 
-! https://github.com/uBlockOrigin/uAssets/issues/1037
-chiaanime.co##+js(setTimeout-defuser.js, $)
-chiaanime.co##^script:has-text(676574456c656d656e747342795461674e616d65)
-||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=chiaanime.co
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1038
 mangatail.com##+js(abort-on-property-write.js, adb_checker)
 jetanime.co,mangasail.com,mangatail.me##+js(set-constant.js, adblock, 1)
+||jetanime.co^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.googleapis.com *.cloudflare.com *.bootstrapcdn.com *.google-analytics.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1040
 @@||streamarmy.co.uk^$generichide
 
-! watchseries.unblocked.vc popups
-watchseries.unblocked.vc##+js(noeval.js)
+! watchseries.unblocked.gdn popups
+watchseries.unblocked.gdn##+js(nowebrtc.js)
+vidlox.*##A[href$=".html"][rel="nofollow norefferer noopener"]
 
 ! divxtotal2.net popups
 divxtotal2.net##+js(abort-on-property-write.js, Fingerprint2)
@@ -3866,7 +3855,9 @@ hentaihaven.org##+js(set-constant.js, canRunAds, noopFunc)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7kg792/need_help_blocking_this_persistent_ad/
 nwanime.tv##+js(abort-current-inline-script.js, MutationObserver, 676574456c656d656e747342795461674e616d65)
+||nwanime.tv^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.googleapis.com *.scorecardresearch.com *.disqus.com *.google-analytics.com
 ||telllwrite.com^$third-party
+||2hanwriten.com^
 
 ! https://github.com/uBlockOrigin/uAssets/commit/91f936dbaeaa681fab4d9259a818458db2200e74#commitcomment-26342002
 /all-for-adsense/*
@@ -5747,9 +5738,9 @@ liga.net##^script:has-text(3f87b0eaddd)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=liga.net
 
 ! https://github.com/uBlockOrigin/uAssets/issues/911#issuecomment-366335870
-adsrt.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-adsrt.com##+js(abort-on-property-write.js, Fingerprint2)
-||adsrt.com^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.gstatic.com
+adsrt.*##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+adsrt.*##+js(abort-on-property-write.js, Fingerprint2)
+||adsrt.*^$csp=script-src 'self' 'unsafe-inline' data: *.google.com *.gstatic.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1555
 linclik.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7070,9 +7061,11 @@ lolhentai.net##+js(window.open-defuser.js)
 ||piguiqproxy.com^$xmlhttprequest,redirect=nooptext,domain=animeland.tv
 ! ! adding sites using the same script
 animeland.*,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,mangareader.net,toonget.net,toonova.net##a[href$=".jpg"]
-animeland.*,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,kiss-anime.me,lolhentai.net,mangaku.info,mangareader.net,toonget.net,toonova.net##a[href$=".png"]
+animeland.*,animenova.org,animeplus.tv,animetoon.org,animewow.org,goodanime.co,kiss-anime.*,lolhentai.net,mangaku.info,mangareader.net,toonget.net,toonova.net##a[href$=".png"]
 memecenter.com##a[href$=".png"]
 mangareader.net##iframe[sandbox*="allow-popups-to-escape-sandbox"]
+||kiss-anime.tv^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *.fbcdn.net *.gstatic.com *.google.com *.facebook.com *.disquscdn.com *.twitter.com https://disqus.com *.addthis.com *.facebook.net *.disqus.com *.kiss-anime.tv
+kiss-anime.tv##tbody
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1949
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=offidocs.com
@@ -7453,7 +7446,6 @@ vipbox.live##+js(window.open-defuser.js)
 *$popup,domain=vipbox.live
 vipbox.live##a[href^="https://s3.amazonaws.com/"]
 vipbox.live##.btn-lg.btn
-vipbox.live##.position-relative
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2104
 wkyc.com##+js(abort-current-inline-script.js, btoa)
@@ -8728,6 +8720,7 @@ hulkshare.com##+js(setInterval-defuser.js, adblockerModal, 1000)
 ! https://github.com/uBlockOrigin/uAssets/issues/2505
 kickassanime.io##+js(abort-current-inline-script.js, atob, void)
 kickassanime.io##^script:has-text(13a60edeb)
+||animo-pace-stream.io^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.jwplatform.com *.jwpcdn.com *.googletagmanager.com *.google-analytics.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2507
 gtatactics.com##+js(addEventListener-defuser.js, load, 2000)
@@ -10412,7 +10405,7 @@ pelisplus.online##+js(abort-on-property-write.js, mz_str)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3022
 @@||bitcoinfaucet.tk^$generichide
-@@||bitcoinfaucet.tk/showads.js$xmlhttprequest,first-party
+@@||bitcoinfaucet.tk/showads.js$first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2963
 tornadomovies.*##+js(abort-on-property-write.js, Fingerprint2)
@@ -10989,10 +10982,6 @@ tenforums.com##+js(abort-on-property-read.js, HTMLScriptElement)
 ! https://github.com/uBlockOrigin/uAssets/issues/3243
 allpeliculas.com##+js(nowebrtc.js)
 
-! https://www.reddit.com/r/uBlockOrigin/comments/97r5b4
-||piguiqproxy.com^$xmlhttprequest,domain=kiss-anime.me,redirect=nooptext
-kiss-anime.me##^script:has-text(13e2d9c48a053bac66421315eccc5d167b07e6b3)
-
 ! https://github.com/uBlockOrigin/uAssets/commit/d3da1a8ea7ca2065f4616aacc4d542e2ac4f8e72#commitcomment-30109151
 @@||mobinozer.com^$generichide
 
@@ -11307,6 +11296,7 @@ newswatan.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! sawlive.tv popups
 sawlive.tv##+js(abort-on-property-write.js, Fingerprint2)
+sawlive.tv##+js(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3366
 vidup.io##+js(abort-on-property-read.js, __INITIAL_STATE__.ads.pops)
@@ -12237,3 +12227,39 @@ browardpalmbeach.com,dallasobserver.com,houstonpress.com,miaminewtimes.com,phoen
 ! https://github.com/uBlockOrigin/uAssets/issues/3657
 @@||emailregex.com^$generichide
 emailregex.com##a[href*="shareasale.com"]
+
+! https://github.com/NanoMeow/QuickReports/issues/165
+@@||jolygram.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3658
+pentasex.io##+js(abort-on-property-read.js, ExoLoader.serve)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/191
+@@||sfiles.org^$generichide
+sfiles.org##.adsbygoogle
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/190
+linksfly.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+linksfly.me##+js(addEventListener-defuser.js, click, trigger)
+
+! https://forums.lanik.us/viewtopic.php?p=141849#p141849
+prostoporno.sexy##+js(abort-on-property-read.js, ExoLoader.serve)
+prostoporno.sexy##.spot
+
+! https://forums.lanik.us/viewtopic.php?f=103&t=41858
+muyinteresante.es##+js(set-constant.js, ads, true)
+
+! https://github.com/NanoMeow/QuickReports/issues/161
+@@||gidoroom.ru^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/167
+dogecatch.website##+js(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/NanoMeow/QuickReports/issues/168
+soccer-live.stream##+js(window.open-defuser.js)
+camlive.pw##+js(nowebrtc.js)
+||easylist.pw/js/*$xmlhttprequest,domain=soccer-live.stream
+||oagwl3372h.com^$third-party
+soccer-live.stream##.btn-danger
+soccer-live.stream##.btn-info
+soccer-live.stream##.btn-primary.btn
