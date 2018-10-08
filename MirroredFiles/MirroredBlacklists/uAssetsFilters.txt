@@ -2542,11 +2542,11 @@ mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co##+js(abort-curr
 vipleague.*##+js(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 livecamtv.me,realcam.me,seelive.me##+js(abort-on-property-write.js, _pop)
 vipleague.*##+js(nano-setInterval-booster.js)
+vipleague.*##+js(window.open-defuser.js)
 ||dgafgadsgkjg.top^$third-party
 fbstreams.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script + [id][style]
 livecamtv.me,realcam.me,seelive.me##style + [id][style]
 vipleague.*##.btn-lg
-vipleague.*##.position-relative
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39344
 mlbstream.io##+js(abort-current-inline-script.js, decodeURI, atob)
 ||amadagasca.com^
@@ -3166,7 +3166,7 @@ activeation.com,activetect.net,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.
 ! https://github.com/uBlockOrigin/uAssets/issues/1009#issuecomment-352160776
 ! https://github.com/jspenguin2017/uBlockProtector/issues/791
 ! https://github.com/jspenguin2017/uBlockProtector/issues/792
-123link.*,22o.co,adbull.*,adshorte.com,bbf.lt,bit-url.com,coin.mg,coinb.ink,cut-win.com,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,eg4link.*,egy-links.com,infinityurl.co,linkatk.net,linkkawy.com,linkkch.com,lyon.kim,meulink.tk,ourl.io,psl.*,shortzero.com,teqani-plus.com,url.gem-flash.com,veneapp.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+123link.*,22o.co,adbull.*,adshorte.com,bbf.lt,bit-url.com,coin.mg,coinb.ink,ctui.in,cut-win.com,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,eg4link.*,egy-links.com,infinityurl.co,linkatk.net,linkkawy.com,linkkch.com,lyon.kim,meulink.tk,ourl.io,psl.*,shortzero.com,teqani-plus.com,url.gem-flash.com,veneapp.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 123link.*##+js(abort-on-property-read.js, jQuery.adblock)
 cuturlink.com##+js(abort-on-property-write.js, Fingerprint2)
 meulink.tk##+js(bab-defuser.js)
@@ -3916,7 +3916,7 @@ tufutbolpro.com###ventana-flotante
 tufutbolpro.com##a[href*="/clk"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1057
-cutwi.in,cutwin.com,cutwin.pro##+js(abort-on-property-write.js, adss)
+ctui.in,cutwi.in,cutwin.com,cutwin.pro##+js(abort-on-property-write.js, adss)
 cutwi.in##+js(abort-on-property-write.js, Fingerprint2)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1059
@@ -5942,7 +5942,7 @@ wizhdsports.fi##+js(nowebrtc.js)
 ||d3q33rbmdkxzj.cloudfront.net^
 @@||sportsbay.org^$subdocument,domain=stream2watch.org
 @@||vipbox.im^$subdocument,domain=stream2watch.org
-vipbox.im##.position-relative
+||cdn.easylist.pw/*.js|$xmlhttprequest
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1618
 cnnamador.com##+js(noeval.js)
@@ -11196,7 +11196,7 @@ milaulas.com##+js(bab-defuser.js)
 @@||trecetv.es^$generichide
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=shares.enetres.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=videos.13tv.es
-@@||player.enetres.net/js/videojs-plugins/videojs-ads-contrib/videojs.ads.js$script,domain=player.enetres.net|videos.13tv.es
+@@||player.enetres.net/js/videojs-plugins/videojs-ads-contrib/videojs.ads.js$script,domain=shares.enetres.net|videos.13tv.es
 enetres.net##+js(set-constant.js, N3CanRunAds, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3315
@@ -12258,8 +12258,18 @@ dogecatch.website##+js(abort-on-property-write.js, adBlockDetected)
 ! https://github.com/NanoMeow/QuickReports/issues/168
 soccer-live.stream##+js(window.open-defuser.js)
 camlive.pw##+js(nowebrtc.js)
-||easylist.pw/js/*$xmlhttprequest,domain=soccer-live.stream
 ||oagwl3372h.com^$third-party
-soccer-live.stream##.btn-danger
 soccer-live.stream##.btn-info
+soccer-live.stream##.btn-danger
 soccer-live.stream##.btn-primary.btn
+
+! https://forums.lanik.us/viewtopic.php?p=141899#p141899
+||curriculture.com^
+@@||9xbuddy.app^$generichide
+@@||offmp3.app^$generichide
+||offmp3.app/sw.js$script,first-party
+||9xbuddy.app/sw.js$script,first-party
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=offmp3.app|9xbuddy.app
+
+! https://forums.lanik.us/viewtopic.php?f=109&t=41873
+24horas.com.br##+js(set-constant.js, $tieE3, true)
