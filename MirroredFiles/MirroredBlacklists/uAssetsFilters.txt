@@ -351,11 +351,6 @@ play.spotify.com##+js(nr-unwrapper.js)
 ! https://forums.informaction.com/viewtopic.php?f=10&t=21675
 ||twnmm.com/js/*/dfpad$script
 
-! https://hg.adblockplus.org/easylist/rev/04e7e8f52de9
-! To counter EasyList exception filters which are not required for uBO
-||partner.googleadservices.com/gpt/pubads_impl_$script,important,domain=cityam.com
-||ad.crwdcntrl.net^$script,important,domain=cityam.com
-
 ! https://forums.lanik.us/viewtopic.php?f=91&t=27188
 ||ligatus.com/*/angular-tag.js$script,redirect=ligatus.com/*/angular-tag.js
 ! https://forums.lanik.us/viewtopic.php?f=91&t=29609
@@ -1377,6 +1372,8 @@ quora.com##.FeedStory.feed_item > div > div:has-text(/Promoted/i)
 quora.com##.FeedStory.feed_item > div > div:has-text(/by Quora for Business/i)
 quora.com##.Toggle.SimpleToggle.ToggleAnswerFooterWrapper > div:has-text(/Promoted/i)
 quora.com##.UnifiedAnswerPagedList > .paged_list_wrapper > div[id]:if(a[href][target="_blank"][rel="noopener nofollow"]:not(.external_link))
+! https://github.com/uBlockOrigin/uAssets/issues/3683#issuecomment-429103067
+quora.com##.FeedStory:has-text(promoted)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -2454,7 +2451,7 @@ androidsage.com##+js(abort-on-property-write.js, blckad)
 ! https://github.com/uBlockOrigin/uAssets/issues/683
 ! https://github.com/gorhill/uBlock/issues/3515
 ! https://github.com/uBlockOrigin/uAssets/issues/2436
-korrespondent.net##+js(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
+korrespondent.net##+js(set-constant.js, JSON.parse, noopFunc)
 tapochek.net##+js(abort-current-inline-script.js, atob, void)
 tapochek.net##+js(abort-current-inline-script.js, parseInt, tabunder)
 tapochek.net##+js(window.open-defuser.js)
@@ -5962,10 +5959,13 @@ goldshorten.com##+js(addEventListener-defuser.js, click, trigger)
 goldshorten.com##+js(abort-on-property-write.js, PopUP)
 goldshorten.com##.banner-inner
 
+! https://github.com/uBlockOrigin/uAssets/issues/3690
 ! https://forums.lanik.us/viewtopic.php?f=62&t=35634
 itdmusic.*##+js(abort-on-property-write.js, _pop)
 itdmusic.*##+js(abort-on-property-write.js, Fingerprint2)
+itdmusic.*##+js(nowebrtc.js)
 itdmusic.*##+js(popads-dummy.js)
+itdmusic.com##+js(addEventListener-defuser.js, load)
 @@||itdmusic.*^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/pull/1623
@@ -6043,9 +6043,6 @@ yoursports.stream##+js(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1640
 tubeload.tv##+js(setTimeout-defuser.js, window.location.href, 300)
-
-! https://www.reddit.com/r/uBlockOrigin/comments/80sgak/antiadblock_coding_help/
-||repo.xarold.com/*/survival.min.js$script,first-party,redirect=fuckadblock.js-3.2.0
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40101&p=133246#p133238
 ksbw.com##+js(setTimeout-defuser.js, [native code], 500)
@@ -7331,12 +7328,14 @@ faucy.win##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2064
 thememypc.net##+js(abort-on-property-read.js, Abd_Detector)
+@@||thememypc.net^$generichide
+thememypc.net##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2063
 eurosolidaire.com##+js(setTimeout-defuser.js, aavvvya)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2068
-cityam.com##+js(setTimeout-defuser.js, t(), 0)
+cityam.com##+js(abort-on-property-read.js, paywallWrapper)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2061
 thesimsresource.com##+js(nano-setInterval-booster.js)
@@ -8498,7 +8497,7 @@ upbom.com##+js(nowebrtc.js)
 ||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=arlinadzgn.com|idntheme.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2437
-dynamo.kiev.ua##+js(set-constant.js, atob, noopFunc)
+dynamo.kiev.ua##+js(set-constant.js, JSON.parse, noopFunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2439
 danpod.work##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -8645,8 +8644,8 @@ escuchalas.com##^script:has-text(3f87b0)
 ! https://www.reddit.com/r/uBlockOrigin/comments/8n71jv/next_level_ads_injection_via_xhr_or_else_tricky/e6spyt1/
 ! piguiqproxy/zmctrack
 5.ua,animeget.net,antidiary.com,avtovod.com.ua,chtyvo.org.ua,comments.ua,facenews.ua,fakty.ua,gazeta.ua,guru.ua,i.ua,makataka.ru,mibius.online,mignews.com.ua,rian.com.ua##+js(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
-112.ua,24boxing.com.ua,24tv.ua,autoua.net,censor.net.ua,football24.ua,glavcom.ua,hdreactor.club,history.vn.ua,isport.ua,kolobok.ua,kp.ua,lessons.com.ua,mabila.ua,mama.ua,maximum.fm,meta.ua,mil.in.ua,nashasvadba.ua,newsone.ua,ngs.ru,okino.ua,qp.ua,ringside24.com,smak.ua,strana.ua,telegraf.in.ua,tvgid.ua,ukrlib.com.ua,vchaspik.ua,vgorode.ua,woman.ua,zdorovia.com.ua,zn.ua##+js(set-constant.js, atob, noopFunc)
-dengi.ua,dovidka.biz.ua,epravda.com.ua,eurointegration.com.ua,gismeteo.ua,pravda.com.ua,sinoptik.ua,subject.com.ua,textreferat.com,tv.ua,u-news.com.ua##+js(set-constant.js, JSON.parse, noopFunc)
+112.ua,24boxing.com.ua,autoua.net,glavcom.ua,hdreactor.club,history.vn.ua,isport.ua,kolobok.ua,kp.ua,lessons.com.ua,mabila.ua,mama.ua,maximum.fm,meta.ua,mil.in.ua,nashasvadba.ua,newsone.ua,ngs.ru,okino.ua,qp.ua,ringside24.com,smak.ua,strana.ua,telegraf.in.ua,tvgid.ua,ukrlib.com.ua,vchaspik.ua,vgorode.ua,woman.ua,zdorovia.com.ua,zn.ua##+js(set-constant.js, atob, noopFunc)
+24tv.ua,censor.net.ua,dengi.ua,dovidka.biz.ua,epravda.com.ua,eurointegration.com.ua,football24.ua,gismeteo.ua,pravda.com.ua,sinoptik.ua,subject.com.ua,textreferat.com,tv.ua,u-news.com.ua##+js(set-constant.js, JSON.parse, noopFunc)
 footballtransfer.com.ua,kurs.com.ua##+js(set-constant.js, String.fromCharCode, noopFunc)
 ||mixadvert.com^$third-party
 !#if env_firefox
@@ -11389,10 +11388,12 @@ totalsport.me##+js(abort-on-property-write.js, Fingerprint2)
 ||seedpeer.*/seedpeer/all-page-$subdocument
 
 ! https://github.com/NanoMeow/QuickReports/issues/56
-salamanca24horas.com##+js(setTimeout-defuser.js, AdsBlocked, 2000)
+salamanca24horas.com##+js(setTimeout-defuser.js, (), 4000)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9clpjr/still_getting_an_antiadblock_message/
+! https://github.com/uBlockOrigin/uAssets/issues/3688
 scrapywar.com##+js(abort-on-property-read.js, adBlockDetected)
+scrapywar.com##+js(abort-on-property-write.js, ai_adb_overlay)
 
 ! Videos disabled by anti-blocker:
 ! https://globalnews.ca/news/4332734/quebec-farmers-hoping-for-rain-after-drought-heat-wave-threaten-crops/
@@ -11782,7 +11783,9 @@ fupa.net##+js(set-constant.js, jQuery.adblock, 1)
 @@||ad.71i.de/*/loader.js$script,domain=fupa.net
 
 ! https://forums.lanik.us/viewtopic.php?p=141037#p141037
+! https://github.com/uBlockOrigin/uAssets/issues/3689
 grabify.link##+js(abort-on-property-read.js, HTMLScriptElement)
+grabify.link##+js(set-constant.js, canRunAds, true)
 
 ! https://github.com/NanoMeow/QuickReports/issues/102
 news24.com##+js(abort-on-property-read.js, HTMLScriptElement)
@@ -12053,6 +12056,7 @@ simulasyonturk.com##+js(abort-on-property-read.js, ai_debugging)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3611
 worldoftruckstr.com##+js(abort-on-property-read.js, ai_debugging)
+@@||worldoftruckstr.com^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3610
 @@||4horlover.com^$generichide
@@ -12349,3 +12353,30 @@ manyak.info##+js(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3684
 mangahost1.com##+js(setTimeout-defuser.js, (), 3000)
+
+! https://github.com/NanoMeow/QuickReports/issues/191
+ngelag.com##+js(abort-on-property-read.js, FuckAdBlock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3686
+@@||simsvip.site^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3687
+@@||homegrownfreaks.net^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/192
+@@||streamjav.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3691
+@@||xarold.com^$generichide
+@@||repo.xarold.com/ads.php$xmlhttprequest,first-party
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=repo.xarold.com
+
+! https://github.com/NanoMeow/QuickReports/issues/195
+depedlps.*##+js(addEventListener-defuser.js, load, onload)
+depedlps.*##+js(abort-on-property-read.js, encodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3692
+@@||animehd24.*^$generichide
+@@||ostuninotizie.it^$generichide
+ostuninotizie.it##.adsbygoogle
+@@||ogznet.com^$generichide
