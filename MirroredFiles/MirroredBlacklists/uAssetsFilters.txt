@@ -2471,7 +2471,7 @@ watchcartoononline.com##^script:has-text(3f87b0eaddd)
 watchcartoononline.com##a[href*="/1.0/go"]
 ! https://github.com/NanoAdblocker/NanoFilters/issues/118
 kimcartoon.*##+js(abort-current-inline-script.js, parseInt, tabunder)
-kimcartoon.*##script:inject(abort-on-property-read.js, AaDetector)
+kimcartoon.*##+js(abort-on-property-read.js, AaDetector)
 kimcartoon.*##+js(abort-on-property-write.js, callExo)
 kimcartoon.*##+js(abort-on-property-write.js, Fingerprint2)
 kimcartoon.*##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
@@ -3293,8 +3293,6 @@ tmearn.com##.banner
 ! https://github.com/uBlockOrigin/uAssets/issues/919
 foxurl.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 foxurl.net##+js(popads.net.js)
-! https://github.com/uBlockOrigin/uAssets/issues/1869
-3rabshort.*##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/920
 cutw.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -3605,10 +3603,16 @@ beelink.in###adblockplus
 ||majesy.biz/banner$subdocument
 
 ! https://github.com/uBlockOrigin/uAssets/issues/985
+zony.tv##+js(abort-on-property-read.js, AaDetector)
+player.latino-webtv.com##+js(abort-on-property-write.js, _pop)
+sintelevisor.com,tvpor-internet.com,zony.tv##+js(nowebrtc.js)
 ||livesports.pw/adblock.js$script,first-party,redirect=fuckadblock.js-3.2.0
 @@||cinestrenostv.tv^$generichide
+||sintelevisor.com/tv/asarasa.html$subdocument,first-party
 ||cinestrenostv.tv/*ad$image,redirect=1x1-transparent.gif
+||limaenvivo.com^$subdocument,domain=tvpor-internet.com
 ||pop.verplusonline.com^$third-party
+sintelevisor.com###floatLayer
 
 ! https://github.com/uBlockOrigin/uAssets/issues/989
 byetv.org##+js(popads.net.js)
@@ -3653,7 +3657,7 @@ arawatch.online##a[href="https://vidfast.co"]
 ! https://forums.lanik.us/viewtopic.php?p=138275#p138275
 ! https://forums.lanik.us/viewtopic.php?p=142126#p142126
 hdeuropix.*,topeuropix.net##+js(abort-current-inline-script.js, parseInt, tabunder)
-hdeuropix.*,topeuropix.net##script:inject(abort-on-property-read.js, AaDetector)
+hdeuropix.*,topeuropix.net##+js(abort-on-property-read.js, AaDetector)
 hdeuropix.*,topeuropix.net##+js(popads-dummy.js)
 hdeuropix.*,topeuropix.net##+js(disable-newtab-links.js)
 topeuropix.net##+js(window.open-defuser.js)
@@ -3982,9 +3986,6 @@ ilgeniodellostreaming.org###playerads
 @@||smsreceiving.com^$generichide
 @@||smsreceiveonline.com^$generichide
 
-! https://github.com/uBlockOrigin/uAssets/issues/1092
-@@||tvsportslive.stream^$generichide
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1086
 business-service.biz##+js(set-constant.js, blockAdBlock, true)
 
@@ -4122,11 +4123,6 @@ zlshorte.net##+js(abort-on-property-read.js, open)
 zlshorte.net##+js(abort-on-property-write.js, Fingerprint2)
 zlshorte.net##.banner-inner
 about:blank$popup,domain=zlshorte.net
-
-! https://github.com/uBlockOrigin/uAssets/issues/1126
-shortelink.co##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-shortelink.co##+js(abort-on-property-write.js, _pop)
-shortelink.co###capaclick
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1125
 jzrputtbut.net,mmwgopsoyfhzk.net,olgkzlwln.net,rhvgmritmziwcm.net,zbqhfbetlmni.net##+js(addEventListener-defuser.js, click, popunder)
@@ -4470,7 +4466,7 @@ gozonasports.me###adsdiv
 ! https://github.com/uBlockOrigin/uAssets/issues/1201
 ! https://github.com/uBlockOrigin/uAssets/issues/1200
 ! https://github.com/uBlockOrigin/uAssets/issues/1848
-ceesty.com##+js(set-constant.js, adsBlockerDetector, noopFunc)
+ceesty.com,gestyy.com,viid.me##+js(set-constant.js, adsBlockerDetector, noopFunc)
 ceesty.com,clkmein.com,corneey.com,destyy.com,festyy.com,gestyy.com,sh.st,skiip.me,skipp.io,viid.me##+js(abort-current-inline-script.js, parseInt, tabunder)
 @@*$generichide,domain=ceesty.com|clkmein.com|corneey.com|destyy.com|festyy.com|gestyy.com|sh.st|skiip.me|skipp.io|viid.me
 
@@ -5459,7 +5455,7 @@ adshort.pro##+js(popads.net.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1497
 ! https://github.com/uBlockOrigin/uAssets/issues/1521
 ! https://github.com/uBlockOrigin/uAssets/issues/1731
-123link.*,3rabshort.*,adbull.*,adcoin.me,adlinkme.com,admove.co,adshort.co,adshort.im,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bilink.xyz,bitcoadz.pw,btc.ms,cimi.website,coin.mg,coinb.ink,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,madurls.com,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,qe.pe,shink.me,shink.xyz,shortelink.co,shorteurl.com,shortzero.com,shrinklink.co,shst.co,so.gd,teqani-plus.com,twik.pw,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,vivads.net,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##+js(nano-setInterval-booster.js)
+123link.*,adbull.*,adcoin.me,adlinkme.com,admove.co,adshort.co,adshort.im,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bilink.xyz,bitcoadz.pw,btc.ms,cimi.website,coin.mg,coinb.ink,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,geturlpr.com,git.tc,gram.im,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkdrop.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,madurls.com,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,qe.pe,shink.me,shink.xyz,shorteurl.com,shortzero.com,shrinklink.co,shst.co,so.gd,teqani-plus.com,twik.pw,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,vivads.net,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##+js(nano-setInterval-booster.js)
 globalbesthosting.com,goldescargas.com,katfile.com,shortify.pw,srt.am,userupload.net##+js(nano-setTimeout-booster.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1481
 1ink.cc##+js(nano-setInterval-booster.js, mSec, 1050)
@@ -5990,12 +5986,15 @@ mp3guild.*,mp3clan.*##+js(abort-on-property-write.js, Fingerprint2)
 @@||go-ez.net^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1633
+! https://github.com/NanoMeow/QuickReports/issues/212
 fileflares.com##+js(window.open-defuser.js, , hicpm10)
 fileflares.com##+js(window.open-defuser.js, , oclasrv)
 @@||fileflares.com^$generichide
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=fileflares.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=fileflares.com
 @@||fileflares.com^$xmlhttprequest,script,first-party
+@@||adservice.google.*$script,domain=fileflares.com
+@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$script,domain=fileflares.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1632
 vidoza.net##+js(noeval.js)
@@ -7487,10 +7486,6 @@ pluspremieres.*##+js(abort-current-inline-script.js, $, adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2119
 cwin.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-
-! https://github.com/uBlockOrigin/uAssets/issues/2120
-dlik.win##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-dlik.win##+js(abort-current-inline-script.js, atob, tabunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2121
 ms4link.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -9536,9 +9531,6 @@ ccbluex.net##[id^="aswift"]
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41116
 solarmoviex.to##+js(abort-current-inline-script.js, decodeURI, atob)
 
-! https://github.com/uBlockOrigin/uAssets/issues/2721
-leen.link##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/2722
 adfloz.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 adfloz.com##+js(nano-setInterval-booster.js)
@@ -9551,7 +9543,6 @@ solo-link.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2725
 ar4link.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-ar4link.com##+js(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2726
 linkexa.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -11421,7 +11412,7 @@ cutlinks.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-418144059
 ! https://github.com/uBlockOrigin/uAssets/issues/3401
-aj-styles.net,ajlee.org,ajmcleanweb.com,alexandra-daddario.org,alexandradaddariodaily.net,alliefansite.com,alona-tal.com,amandaseyfried.us,amyadams-source.com,anadearmas.net,annakendrick-fr.com,annalise-basso.com,anyataylorjoy.org,archie-panjabi.com,arianatoday.net,aseyfried.org,aubreyk-miller.com,ava-allan.com,avgeropoulos.com,b-larson.net,bailee-madison.org,barbieblanksource.com,beckylynchsource.com,believe-in-rollins.com,bellahadid.*,bellathorne.net,beyonceonline.org,billiekay.com,brynn-rumfallo.net,caitylotz.net,callie-hernandez.net,charlize-theron.fr,chloe-lukasiak.net,chloemoretz.org,chriswoodfan.com,clemencepoesyfan.com,daddariofan.net,daisy-ridley.us,daisyridley.us,danstevensbrasil.com,depplovers.com.br,dianna-agron.org,dove-cameron.org,drew-mcintyre.com,eizagonzalez.com.br,elijah-wood.org,elizabethlailbrasil.com,elizabetholsen.us,emilyosment.net,emma-roberts.org,emma-stone.us,emmaengleonline.com,emmawatson.org,fan.pw,fanningdakota.com,fanningelle.com,fans.bz,fansitehost.com,fergie-web.net,finn-wittrock.net,florian-silbereisenfan.net,foreverrobin.com,freefansitehosting.com,galleryaloud.com,granmetaliksource.com,hailee-steinfeld.*,harrypotterweb.com,hilarie-burton.org,hilary-swank.com,iansomerhalderfan.com,inourharts.com,jade-pettyjohn.com,jamesfranconetwork.net,jan-smitfan.nl,jenna-coleman.org,jennaortega.net,jennifer-lawrence.com,jennifer-lawrence.us,jenniferlawrence.org,jenniferlawrence.us,jessica-chastain.org,jessica-lowndes.net,jlospain.net,joey-king.net,jon-bernthal.com,josh-duhamel.org,jude-law.net,julia-garner.com,julianna-margulies.net,junotemple.us,k-dunst.net,kaley-cuoco.net,kardashianworld.net,katie-mcgrath.com,katyperryonline.com,kaya-scodelario.org,kendallkyliefans.com,kerirussellweb.com,kiernan-shipka.org,landry-bender.com,landycannononline.com,liamhemsworth.org,lilireinhart.us,lily-chee.com,lincedorado.com,lizolsen.com,lizzieolsen.us,lucyhaledaily.us,mackenzie-foy.com,mackenzie-ziegler.net,mackenziefoy.net,maddie-ziegler.net,mandy-rose.com,mandyrose.org,margotrobbieonline.com,marguerite-moreau.com,megan-fox.us,meghan-markle.org,mia-yim.com,michael-french.net,michellekeegan.net,mileyupdateuk.com,mirandakerrfans.com,miriammcdonald.org,natalia-dyer.com,niajax.com,official-makenzie-moss-fanpage.com,olesyarulin.net,olivia-holt.net,olsenfans.com,paulalacroixbrasil.com,phillipa-soo.com,r-carlylefans.com,r-speightjr.com,raffey-cassidy.com,rey-mysterio.net,rhona-mitra.com,ritaoracentral.org,rowan-blanchard.net,rowanblanchard.net,ryanphillippe.net,sabrina-carpenter.org,shipka.net,sigourney-weaver.net,simplyleighanne.net,smg-france.net,sofia-carson.org,sofiavergaraweb.net,stellahudgensdaily.net,strahovski.net,summer-rae.com,thomasholland.net,timothy-o.com,tom-hiddleston.org,trinity-fatu.net,trishstratus.com,vanessa-kirby.com,viggo-mortensen.com,violett-beane.com,wentworth-miller.org,withlove.info,zooey-deschanel.com##+js(bab-defuser.js)
+aj-styles.net,ajlee.org,ajmcleanweb.com,alexandra-daddario.org,alexandradaddariodaily.net,alliefansite.com,alona-tal.com,amandaseyfried.us,amyadams-source.com,anadearmas.net,annakendrick-fr.com,annalise-basso.com,anyataylorjoy.org,archie-panjabi.com,arianatoday.net,aseyfried.org,aubreyk-miller.com,ava-allan.com,avgeropoulos.com,b-larson.net,bailee-madison.org,barbieblanksource.com,beckylynchsource.com,believe-in-rollins.com,bellahadid.*,bellathorne.net,beyonceonline.org,billiekay.com,brynn-rumfallo.net,caitylotz.net,callie-hernandez.net,charlize-theron.fr,chloe-lukasiak.net,chloemoretz.org,chriswoodfan.com,clemencepoesyfan.com,daddariofan.net,daisy-ridley.us,daisyridley.us,danstevensbrasil.com,depplovers.com.br,dianna-agron.org,dove-cameron.org,drew-mcintyre.com,eizagonzalez.com.br,elijah-wood.org,elizabethlailbrasil.com,elizabetholsen.us,emilyosment.net,emma-roberts.org,emma-stone.us,emmaengleonline.com,emmawatson.org,fan.pw,fanningdakota.com,fanningelle.com,fans.bz,fansitehost.com,fergie-web.net,finn-wittrock.net,florian-silbereisenfan.net,foreverrobin.com,freefansitehosting.com,galleryaloud.com,granmetaliksource.com,hailee-steinfeld.*,harrypotterweb.com,hilarie-burton.org,hilary-swank.com,iansomerhalderfan.com,inourharts.com,jade-pettyjohn.com,jamesfranconetwork.net,jan-smitfan.nl,jenna-coleman.org,jennaortega.net,jennifer-lawrence.com,jennifer-lawrence.us,jenniferlawrence.org,jenniferlawrence.us,jessica-chastain.org,jessica-lowndes.net,jlospain.net,joey-king.net,jon-bernthal.com,josh-duhamel.org,jude-law.net,julia-garner.com,julianna-margulies.net,junotemple.us,k-dunst.net,kaley-cuoco.net,kardashianworld.net,katie-mcgrath.com,katyperryonline.com,kaya-scodelario.org,kendallkyliefans.com,kerirussellweb.com,kiernan-shipka.org,landry-bender.com,landycannononline.com,liamhemsworth.org,lilireinhart.us,lily-chee.com,lincedorado.com,lizolsen.com,lizzieolsen.us,lucyhaledaily.us,mackenzie-foy.com,mackenzie-ziegler.net,mackenziefoy.net,maddie-ziegler.net,mandy-rose.com,mandyrose.org,margotrobbieonline.com,marguerite-moreau.com,megan-fox.us,meghan-markle.org,mia-yim.com,michael-french.net,michellekeegan.net,mileyupdateuk.com,mirandakerrfans.com,miriammcdonald.org,natalia-dyer.com,niajax.com,official-makenzie-moss-fanpage.com,olesyarulin.net,olivia-holt.net,olsenfans.com,paulalacroixbrasil.com,phillipa-soo.com,r-carlylefans.com,r-speightjr.com,raffey-cassidy.com,rey-mysterio.net,rhona-mitra.com,ritaoracentral.org,rowan-blanchard.net,rowanblanchard.net,ryanphillippe.net,sabrina-carpenter.org,shipka.net,sigourney-weaver.net,simplyleighanne.net,smg-france.net,sofia-carson.org,sofiavergaraweb.net,stellahudgensdaily.net,strahovski.net,summer-rae.com,taron-egerton.com,thomasholland.net,timothy-o.com,tom-hiddleston.org,trinity-fatu.net,trishstratus.com,vanessa-kirby.com,viggo-mortensen.com,violett-beane.com,wentworth-miller.org,withlove.info,zoe-kravitz.com,zooey-deschanel.com##+js(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3403
 sfl.ink##+js(addEventListener-defuser.js, load, onload)
@@ -11464,6 +11455,7 @@ secureyourdigitallife.in##+js(set-constant.js, niceAdsCheck, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3419
 mexashare.com##+js(set-constant.js, jQuery.adblock, false)
+mexashare.com##+js(abort-current-inline-script.js, document.getElementById, adblockinfo)
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/987
 @@||mylivesignature.com^$generichide
@@ -11986,11 +11978,11 @@ dzearn.com##+js(silent-noeval.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3581
 inshorter.ga##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-inshorter.ga##+js(nano-setInterval-booster.js)
 inshorter.ga##+js(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3582
 egyptiongy.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+egyptiongy.net##+js(setTimeout-defuser.js, nextFunction, 250)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3583
 shortk.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -12480,3 +12472,45 @@ solidfile.net##+js(abort-current-inline-script.js, document.getElementById, adbl
 seuseriado.com##+js(abort-on-property-read.js, zfgloadedpopup)
 seuseriado.com##+js(abort-on-property-write.js, smrtSB)
 seuseriado.com##+js(abort-on-property-write.js, smrtSP)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9ou04w/help_with_filter_to_block_inlinescript/
+@@||tokyoghoulre.net^$generichide
+tokyoghoulre.net##.adsbygoogle
+tokyoghoulre.net##.code-block
+
+! https://github.com/NanoMeow/QuickReports/issues/210
+nhentai.net##+js(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3724
+pichotgallery2018c.pw##+js(abort-on-property-read.js, AaDetector)
+||ilo134ulih.com^$third-party
+
+! https://github.com/NanoMeow/QuickReports/issues/214
+@@||findflac.com^$script,first-party
+
+! https://adblockplus.org/forum/viewtopic.php?f=10&t=60372&start=0
+*.mp4$media,redirect=noopmp4-1s,domain=abc.go.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3726
+ctty.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+ctty.in##+js(window.open-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3727
+@@||coins4claim.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3728
+@@||zetabitco.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3729
+gainslink.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://forums.lanik.us/viewtopic.php?f=110&t=41966
+@@||voot.com/js/libs/adframe.js
+
+!  https://www.reddit.com/r/uBlockOrigin/comments/9oxdmp
+ffmovies.ru##+js(abort-current-inline-script.js, parseInt, incrementClicks)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9ozksq/
+imagenesmy.com##+js(abort-on-property-read.js, ExoLoader.addZone)
+imagenesmy.com##+js(abort-on-property-write.js, AaDetector)
+imagenesmy.com##+js(nowebrtc.js)
