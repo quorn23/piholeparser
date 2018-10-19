@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 7:27 2018/08/21
+! 最終更新 20:24 2018/10/18
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -186,6 +186,7 @@ _ads.php
 .org/ad/
 .org/ads/
 .ru/ads/
+.sh/ads/
 .to/ads/
 .tv/ads/
 
@@ -312,6 +313,7 @@ _ads.php
 ||ladmp.com^$third-party
 ||leaffi.jp^$third-party
 ||liftdna.com^$third-party
+||link-a.net^$third-party
 ||linkbucks.com^$third-party
 ||linksynergy.com^$third-party
 ||linkshare.ne.jp^$third-party
@@ -761,8 +763,7 @@ $script,third-party,domain=jpidols.tv
 ||grupo.jp/ad_loader/$domain=pitamo.jp
 ||hentai-foundry.com/themes/default/js/activebar.js
 ||himado.in/player_ad.php
-||hitomi.la/hitomi.js
-||hitomi.la/pop.js
+||hitomi.la/RaCtICanTi24.js
 ||horne.red/banner/
 ||i-bbs.sijex.net/js/jquery.scrollfollow.js
 ||imagebam.com/files/index2.php
@@ -1638,20 +1639,19 @@ temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin:
 
 !-----------kiss-------------!
 
+$script,third-party,domain=kissanime.ru
+
+||fingahvf.top^$third-party
 ||propellerads.com^$third-party
 ||rotumal.com^$third-party
-||35.184.188.211^
-||kissanime.ru/xyz/check.aspx
 
 ||rapidvideo.com/tube-skin-retina-for-videojs-6/bin/video-js-6.2.0/ie8/videojs-ie8.min.js
 ||rapidvideo.com/js/jquery.min.js
 
 kissanime.ru##.adsPositioning
 kissanime.ru##.clear2
-kissanime.ru##.divCloseBut
 kissanime.ru##[style="width:920px;"]
 kissanime.ru##[style^="border-color: #4e4e4e !important; position: relative;"]
-@@||kissanime.io/js/ads.js?*
 
 !------------artemis------------!
 ||pop-ad.link^
@@ -1897,6 +1897,7 @@ amazon.co.jp###nav-swmslot
 !------------pixiv------------!
 ||booth.pm/embed/items/$domain=pixiv.net
 dic.pixiv.net###amazon-aws-outer
+pixiv.net##.css-elnv0n.ezjht4u0
 pixiv.net##.hover-item
 pixiv.net##._ui-tooltip[href^="https://booth.pm/ja/search/"]
 !検索プレミア

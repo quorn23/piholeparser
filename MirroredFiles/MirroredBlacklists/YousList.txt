@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: 0huixB7xc5nPMsjrxvTGsw
-! Version: 20181015
+! Checksum: l45hoRTMx8tBrEJcjRhyGw
+! Version: 20181018
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -103,6 +103,7 @@
 ##iframe[src^="//urldelivery.com/watch."]
 ##iframe[src^="//www.bodnara.co.kr/advert/advert.php"]
 ##iframe[src^="//www.dianomi.com/smartads.epl"]
+##iframe[src^="//www.dreamsearch.or.kr/servlet/adPlayLinkServlet"]
 ##iframe[src^="//x.jd.com/exsites"]
 ##iframe[src^="//y.one.impact-ad.jp/imp"]
 ##iframe[src^="http://178.175.132.130/script/ad.php"]
@@ -858,8 +859,10 @@
 ||dotcomconsultancy.advertserve.com/servlet/view/banner/javascript/ajax/crossdomain/zone^
 ||dreamsearch.or.kr/ad/
 ||dreamsearch.or.kr/adnet/
+||dreamsearch.or.kr/playLinkAd/js/mobonPlayLinkToast.js^
 ||dreamsearch.or.kr/servlet/adBannerFloating^
 ||dreamsearch.or.kr/servlet/adBanner^
+||dreamsearch.or.kr/servlet/adPlayLinkServlet^
 ||dreamsearch.or.kr/servlet/adbnMobileBanner^
 ||dreamsearch.or.kr/servlet/adbnMobileFloating^
 ||dreamsearch.or.kr/servlet/adbn^
@@ -1007,7 +1010,7 @@
 ||image.lottorich.co.kr/lottorich/partnership/
 ||image.lsinfo.co.kr/lottorich/partnership/
 ||image.melon.com/svc/images/main/floatingBanner/floatingBanner_*.swf^
-||image.news1.kr/system/ads/ad_banner/
+||image.news1.kr/system/ads_t/$domain=m.news1.kr|news1.kr
 ||image.wownet.co.kr/static/banner/*/flash/
 ||image2.inews24.com/ad*
 ||images.dable.io/ad/
@@ -1263,7 +1266,6 @@
 ||news.sportsseoul.com/public/ad/
 ||news.sportsseoul.com/public_new4/ad/
 ||news.tf.co.kr/public/ad/*/read/*.html^
-||news1.kr/iframe/ad/
 ||newsbanner.co.kr/newsad/advertiser/ad_blank.php^
 ||newscomm.nate.com/Etc/SocialAD^
 ||newsis.com/ad/view_banner.html^$domain=newsis.com
@@ -1788,6 +1790,9 @@ bbs.ruliweb.com##div.nbp_container
 becle.net##div.ad_boxt
 becle.net##div.ad_mobile
 becle.net##div.aed_top
+below.co.kr##div.ad
+below.co.kr##div.ad-bottom
+below.co.kr##div.ad-top
 bfmtv.com##div.onf-ad
 bfmtv.com##div.pubbanner
 bgmstore.net##div.adBox
@@ -3201,11 +3206,6 @@ m.news.nate.com##iframe[name="adtive"]
 m.news.nate.com##iframe[src^="http://networkad.nate.com/nate/mobile_news.html"]
 m.news.naver.com##div.ad_area
 m.news.naver.com##div.ad_box
-m.news1.kr##div.ads_article1
-m.news1.kr##div.ads_article2
-m.news1.kr##div.ads_article3
-m.news1.kr##div.ads_article4
-m.news1.kr##div.ads_article_content
 m.news1.kr##div.ads_bizlife
 m.news1.kr##div.ads_bottom_fixed
 m.news1.kr##div.ads_clickinfo
@@ -3215,7 +3215,9 @@ m.news1.kr##div.ads_seeninfo
 m.news1.kr##div.ads_shoppingbox
 m.news1.kr##div.ads_text_banner
 m.news1.kr##div.ads_text_list1
+m.news1.kr##div.banner01
 m.news1.kr##div.text_ad
+m.news1.kr##div[class^="ads_article"]
 m.news1.kr##iframe.ads_article_iframe
 m.news1.kr##iframe[src^="/template/ads/"]
 m.news1.kr##p.ads_article2
@@ -3820,20 +3822,29 @@ news.tvchosun.com##iframe[src^="http://tvchosun.com/front/ad/"]
 news.tvchosun.com##iframe[src^="http://www.tvchosun.com/front/rnbAdplex2.html"]
 news.tvchosun.com##ul.banner_list
 news.zum.com##div.banner_big
-news1.kr##div#adiBanner
-news1.kr##div#article_body_content>div[align="center"][style="margin: 0 auto; padding-bottom: 10px;"]
 news1.kr##div.adBlock
 news1.kr##div.ad_content
 news1.kr##div.ad_wing_l
 news1.kr##div.ad_wing_r
-news1.kr##div.rollingAds
-news1.kr##div.s_news_list>ul>div[style="display:block;bottom:0;padding:5px; background:#EBEBEB; margin-top:-156px; right:0; position:absolute; width:200px; height:200px;"]
+news1.kr##div.link_news>ul>div
+news1.kr##div.top_area>div.wrap_sl_item
+news1.kr##div.txt_crypto
+news1.kr##section.side_banner_area
 news20.busan.com##div#s-content>div[style="position:relative; overflow:hidden;"]
 news20.busan.com##div.ad-box
 news20.busan.com##div.artic_ad
 news20.busan.com##div.head-ad
 news20.busan.com##div.sbody-adBox
 news20.busan.com##div[class^="banner_1024_1024_"]
+news2day.co.kr##div#banner-14
+news2day.co.kr##div#banner-140
+news2day.co.kr##div.banner
+news2day.co.kr##div.banner-18
+news2day.co.kr##div.banner-container
+news2day.co.kr##div.banner-ilike
+news2day.co.kr##div.banner-like
+news2day.co.kr##div.right-top-banner
+news2day.co.kr##div[data-section-id^="banner-"]
 newsen.com##div#ad250
 newshankuk.com##div.bannerBottomR
 newshankuk.com##div.bannerTopR
@@ -4011,6 +4022,9 @@ pixiv.net##iframe[name="300x250"]
 pixiv.net##iframe[name="footer"]
 pixiv.net##iframe[name="header"]
 pixiv.net##span.multi-ads-area
+platum.kr##div.ad-five
+platum.kr##div.ppb_ads
+platum.kr##li.Grand_News_Custom_Ads
 playwares.com##a.sub_banner_element
 podbbang.com##div#dawin_area
 podbbang.com##div.bnr_comment_t
@@ -4584,6 +4598,8 @@ whatis.techtarget.com##div.ad-wrapper
 whatis.techtarget.com##section.ads-by-google
 wiki.dcinside.com##iframe[src^="http://wiki.dcinside.com/main_top_realclick_banner.php"]
 wikia.com##div.wikia-ad
+wikihow.com##div.wh_ad_inner
+wikihow.com##div.whad
 wikileaks-kr.org##div#floating_banner_left
 wikileaks-kr.org##div#floating_banner_right
 wikileaks-kr.org##div.user-banner
