@@ -4800,6 +4800,8 @@ cpmlink.net##iframe[src="about:blank"]
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/811
 win4cut.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+@@||win4cut.com^$generichide
+win4cut.com##.adsbygoogle
 
 ! https://github.com/easylist/easylist/issues/834
 @@||animetake1.pro^$generichide
@@ -5700,10 +5702,6 @@ xfreehd.com##.nvheader > span:has-text(Advertisement)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1550
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication.com/adsbygoogle.js,domain=downloadfullfree.com
-
-! https://github.com/uBlockOrigin/uAssets/issues/1553
-mynbc5.com##+js(abort-on-property-read.js, alert)
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=mynbc5.com
 
 ! https://github.com/gorhill/uBlock/issues/3522
 ! https://github.com/uBlockOrigin/uAssets/issues/2021
@@ -7427,6 +7425,8 @@ fxporn69.*##+js(set-constant.js, adblock, noopFunc)
 fxporn69.*##+js(setTimeout-defuser.js, nextFunction, 2000)
 @@||stream.porntv69.com/*/advertisement.js$script,first-party
 porntv69.com##.banner
+@@||fxporn69.*^$generichide
+fxporn69.xyz##.banner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2103
 vipbox.live##+js(abort-on-property-write.js, Fingerprint2)
@@ -7595,6 +7595,7 @@ ad4msan.com##+js(setTimeout-defuser.js, getComputedStyle, 250)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2154
 japscan.*##+js(abort-on-property-write.js, Fingerprint2)
+japscan.cc##+js(set-constant.js, JSON.parse, noopFunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2158
 3bst.co##+js(abort-on-property-read.js,app_vars.force_disable_adblock)
@@ -12515,9 +12516,11 @@ imagenesmy.com##+js(abort-on-property-read.js, ExoLoader.addZone)
 imagenesmy.com##+js(abort-on-property-write.js, AaDetector)
 imagenesmy.com##+js(nowebrtc.js)
 
+! https://github.com/uBlockOrigin/uAssets/issues/1553
 ! https://github.com/uBlockOrigin/uAssets/issues/3731
-kmbc.com##+js(abort-on-property-read.js, adblockDetector)
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kmbc.com
+! https://github.com/uBlockOrigin/uAssets/issues/3745
+@@||imasdk.googleapis.com/js/sdkloader/$script,domain=4029tv.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|player.listenlive.co|mynbc5.com|wapt.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
+4029tv.com,kcci.com,kcra.com,ketv.com,kmbc.com,koat.com,koco.com,mor-tv.com,mynbc5.com,wapt.com,wbaltv.com,wcvb.com,wdsu.com,wesh.com,wgal.com,wisn.com,wjcl.com,wlky.com,wlwt.com,wmtw.com,wmur.com,wpbf.com,wtae.com,wvtm13.com,wxii12.com,wyff4.com##+js(abort-on-property-read.js, adblockDetector)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3732
 pornley.com##+js(abort-current-inline-script.js, zfgloadedpopup)
@@ -12534,3 +12537,44 @@ dailydot.com##+js(abort-on-property-read.js, SC)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3737
 canadianunderwriter.ca##+js(abort-on-property-write.js, mockingbird)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3742
+@@||zxctunnel.com^$generichide
+zxctunnel.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/3744
+compilations.inside.fr##+js(abort-on-property-read.js, adbackDebug)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3747
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=alwalednet.blogspot.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3749
+@@||linkjust.com^$generichide
+linkjust.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3748
+business-standard.com##+js(set-constant.js, adblock, false)
+@@||business-standard.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3750
+cocinina.com##+js(abort-on-property-read.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3751
+@@||pokefetch.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3752
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=igniel.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3754
+fuel-prices-europe.info##+js(addEventListener-defuser.js, load, onload)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3753
+@@||hotcoins.cf^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3741
+camsexvideo.net##+js(set-constant.js, canRunAds, true)
+*$popunder,domain=camsexvideo.net
+
+! https://github.com/uBlockOrigin/uAssets/issues/3756
+@@||pinoymovies.site^$generichide
+pinoymovies.site##+js(abort-on-property-read.js, decodeURIComponent)
