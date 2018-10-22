@@ -1,4 +1,4 @@
-[uBlock Origin 1.17.1b1]
+[uBlock Origin 1.17.1b2]
 ! Title: uBO Personal Filters
 ! Homepage: https://github.com/uBlock-user/uBO-Personal-Filters
 ! Author: uBlock-user
@@ -231,7 +231,7 @@ mega.nz##.active.top-login-warning
 dwatchseries.to##a[href^="/redirect.php"]
 ||fmovies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *.blogspot.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net *.googleusercontent.com *.akacdn.ru ajax.googleapis.com ssl.p.jwpcdn.com openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to cdnjs.cloudflare.com streamango.com *.fruithosted.net;upgrade-insecure-requests
 ||ffmovies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *.blogspot.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net *.googleusercontent.com *.akacdn.ru ajax.googleapis.com ssl.p.jwpcdn.com openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to cdnjs.cloudflare.com streamango.com *.fruithosted.net;upgrade-insecure-requests
-||bmovies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *.blogspot.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net *.googleusercontent.com *.akacdn.ru ajax.googleapis.com ssl.p.jwpcdn.com openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to cdnjs.cloudflare.com streamango.com *.fruithosted.net
+||bmovies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *.blogspot.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net *.googleusercontent.com *.akacdn.ru ajax.googleapis.com ssl.p.jwpcdn.com openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to cdnjs.cloudflare.com streamango.com *.fruithosted.net;upgrade-insecure-requests
 ||9anime.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.akacdn.ru *.blogspot.com *.googleusercontent.com ajax.googleapis.com ssl.p.jwpcdn.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to streamango.com *.fruithosted.net *.mp4upload.com;upgrade-insecure-requests
 ||putlockertv.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.blogspot.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net *.googleusercontent.com *.akacdn.ru ajax.googleapis.com ssl.p.jwpcdn.com openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to cdnjs.cloudflare.com streamango.com *.fruithosted.net;upgrade-insecure-requests
 ||solarmoviex.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.blogspot.com *.rapidvideo.com *.rapidvideo.is *.playercdn.net *.googleusercontent.com *.akacdn.ru ajax.googleapis.com ssl.p.jwpcdn.com openload.co oload.stream *.oloadcdn.net mcloud.to *.mcloud.to cdnjs.cloudflare.com streamango.com *.fruithosted.net;upgrade-insecure-requests
@@ -249,7 +249,7 @@ kimcartoon.*##.kcAds
 |https:$third-party,popup,domain=fmovies.is,badfilter
 /infinite-newsfeed$first-party
 ||collider.com^$csp=script-src 'self' *.collider.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com
-||comicbook.com^$csp=default-src 'self' *.comicbook.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.twimg.com embed.redditmedia.com cdn.embedly.com
+||comicbook.com^$csp=default-src 'self' *.comicbook.com 'unsafe-inline' 'unsafe-eval' platform.twitter.com platform.instagram.com *.evidon.com *.twimg.com embed.redditmedia.com cdn.embedly.com
 mega.nz##.red.download-button.button
 hollywoodreporter.com##.leaderboard-wrapper
 temp_share_folder$first-party
@@ -412,7 +412,7 @@ youtube.com###pla-shelf
 kissanime.ru##.bigBarContainer:has-text(Comments)
 kissanime.*##a[href^="https://animemerchant.com/"]
 |https://$third-party,script,domain=9anime.to,badfilter
-||rapidvideo.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.rapidvideo.com *.playercdn.net
+||rapidvideo.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.rapidvideo.com *.playercdn.net;upgrade-insecure-requests
 kissanime.*##.rightBox:has-text(Like me)
 @@||akamaihd.net^*/ad*.js$script,badfilter
 boxofficemojo.com###Player_82160f42-9620-4d0a-b79a-18b1abd853fb
@@ -609,7 +609,7 @@ gravatar.com^$important
 gitlab.com##.gke-promo-banner
 masterani.me##.header.master.ui:has-text(Disqus)
 masterani.me##.aligned.center.column.wide.sixteen
-||streamango.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.streamango.com *.fruithosted.net cdnjs.cloudflare.com
+||streamango.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.streamango.com *.fruithosted.net cdnjs.cloudflare.com;upgrade-insecure-requests
 reddit.com/chat^
 masterani.me##.campaign.column.wide.sixteen
 ||masterani.me^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.masterani.me www.youtube.com *.ytimg.com cdnjs.cloudflare.com streamango.com *.fruithosted.com openload.co *.oloadcdn.net *.rapidvideo.com *.playercdn.net stream.moe mp4upload.com tiwi.kiwi *.mystream.to
@@ -628,7 +628,6 @@ chromium.woolyss.com###share-this-page
 @@||chromium.woolyss.com^$elemhide
 @@/wp-content/*/adve*.js$script,badfilter
 animenewsnetwork.com##.aside.box.herald:has([href*="advert"])
-evidon.com^
 readcomiconline.to##.top_page_alert
 readcomiconline.to##[style*="width: 1010px; height: 200px"]
 readcomiconline.to###disqus_thread
@@ -759,10 +758,12 @@ masterani.me##.hero
 kissmanga.com##+js(setTimeout-defuser.js, /YANABWEKA|HATEDBSDIDSY/)
 /webtorrent$script
 |https://$third-party,xmlhttprequest,domain=milfzr.com,badfilter
-bmovies.*,ffmovies.ru##+js(abort-current-inline-script.js, parseInt, incrementClicks)
-9anime.*,123movies0.com##+js(abort-current-inline-script.js, decodeURIComponent, incrementClicks)
+ffmovies.ru,bmovies.*,9anime.*,123movies0.com##+js(abort-current-inline-script.js, decodeURIComponent, atob)
 kimcartoon.me##+js(eclick.js, #expand)
 ffmovies.ru##.hd-buttons.row
 ffmovies.ru##.alert
 ffmovies.ru###comment
 ffmovies.ru###tags
+myanimelist.net##.root
+imdb.com##.ab_widget
+.gif^$image,domain=~kissanime.ru

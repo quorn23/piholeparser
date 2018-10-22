@@ -924,7 +924,9 @@ vhacks.org#@#.sponsor-logo
 @@||cdnjs.cloudflare.com/$stylesheet,domain=fmovies.is|fmovies.se|fmovies.to
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1671
+! https://forums.lanik.us/viewtopic.php?f=64&t=42000
 @@||onlinevideoconverter.com/webservice$xmlhttprequest,domain=onlinevideoconverter.com
+@@||onlinevideoconverter.com/upload$xmlhttprequest,first-party
 @@||onlinevideoconverter.com^$popup,domain=onlinevideoconverter.com
 @@about:blank$popup,domain=onlinevideoconverter.com
 
@@ -1578,7 +1580,6 @@ reuters.com#@#[src*="reutersmedia.net/resources_"]
 ! https://github.com/uBlockOrigin/uAssets/issues/3733
 @@||ajax.googleapis.com^$script,domain=dailywire.com
 @@||soundcloud.com^$script,domain=dailywire.com
-@@||vimeo.com/api/oembed$script,domain=dailywire.com
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=41984
 @@||savings.bizx.info$domain=sourceforge.net
@@ -1591,3 +1592,6 @@ reuters.com#@#[src*="reutersmedia.net/resources_"]
 
 ! https://github.com/easylist/easylist/issues/2103
 @@||go.com/disneyid/responder$subdocument,first-party
+
+! linkdrop.net broken (no captcha)
+@@||ajax.googleapis.com^$script,domain=linkdrop.net
