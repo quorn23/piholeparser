@@ -13,8 +13,13 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
+* Steven-Blacks-Microsoft-Telemetry List Unavailable To Download. Wed Oct 24 00:20:25 UTC 2018
 ## Checking If List Updated Online
 ## Determining Download Attempt
 ## Attempting To Download List
 ## Checking File Size
-* Steven-Blacks-Microsoft-Telemetry List Was An Empty File After Download. Tue Oct 23 00:58:20 UTC 2018
+* Steven-Blacks-Microsoft-Telemetry List Was An Empty File After Download. Wed Oct 24 00:20:25 UTC 2018
+## Attempting Creation Of Mirror File
+## Parsing List
+## Checking Parsed File Size
+* Steven-Blacks-Microsoft-Telemetry List Was Killed By The Parsing Process. It will be skipped in the future. Wed Oct 24 00:20:25 UTC 2018

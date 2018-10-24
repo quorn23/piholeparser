@@ -3,8 +3,8 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Checksum: s82GHS5tn08sxMUuTX0DIg
-! Version: 20181019
+! Checksum: 44Syd4YfgmJ75/6kLNR01w
+! Version: 20181023
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -59,6 +59,7 @@
 ##div.trc_popover_aug_container
 ##div.trc_rbox_container div.trc-content-sponsored.trc_rbox
 ##div.trc_rbox_container div.trc_rbox_outer div.syndicatedItem
+##div.wpcnt
 ##div[data-widget_id="1oVxnLlP"]
 ##div[data-widget_id="37JAOboN"]
 ##div[data-widget_id="6XgYNV7N"]
@@ -1005,6 +1006,7 @@
 ||ichannela.com/ch/*adpost*
 ||iicdn.com/www/delivery/afr.php^
 ||ikoreadaily.co.kr/script/ikoreadaily_hns.js^$domain=ikoreadaily.co.kr
+||ikunkang.com/bannerManager/upload/$domain=ikunkang.com
 ||ilbe.com/layouts/elkha_ilbe/js/board_top.js^$domain=ilbe.com
 ||ilbe.com/layouts/elkha_ilbe/js/new_comment.js^$domain=ilbe.com
 ||ilbe.com/layouts/elkha_ilbe/js/new_sky.js^$domain=ilbe.com
@@ -1040,6 +1042,7 @@
 ||img.luukku.com/st/static/javascripts/external-js/ad-layout/$domain=luukku.com
 ||img.mrep.kr/slot/*.html^
 ||img.newspim.com/banner/$domain=newspim.com
+||img.quasarzone.co.kr/img/qsz_banner/$domain=quasarzone.co.kr
 ||img.sbs.co.kr/news/ad/delay_redirect.html^$domain=news.sbs.co.kr
 ||img.sbs.co.kr/news/ad/delay_redirect_mobile.html^
 ||img.scupio.com/html/ad.html^
@@ -1121,6 +1124,8 @@
 ||koreadaily.com/_ui/ad/$domain=koreadaily.com
 ||kukudas.com/img/banner/$domain=kukudas.com
 ||kukudas.com/img/freebody/$domain=kukudas.com
+||kunkang.co.kr/js/im01.js^$domain=ikunkang.com
+||kunkang.co.kr/js/im02.js^$domain=ikunkang.com
 ||l.qq.com/lview^$domain=qq.com
 ||life.chosun.com/dhtm/rightBner.html^
 ||lightad.co.kr/Lightcoms/
@@ -1368,6 +1373,7 @@
 ||pv.ntomap.com/bin/imp^
 ||pv.tag.ntomap.com/bin/query^
 ||qcma.qrobo.com/QCMA/common/
+||quasarzone.co.kr/bbs/banner.php^$domain=quasarzone.co.kr
 ||quick.1rtl.info/init.js^
 ||r1.res.office365.com/adbar/*/adbar.js^$domain=outlook.live.com
 ||ra.ntwoad.co.kr^
@@ -1400,6 +1406,7 @@
 ||s.mixadvert.com/show_json/
 ||s.ntv.io/serve/load.js^
 ||s.pubmine.com/adj/
+||s.pubmine.com/head.js^
 ||s.telegraph.co.uk/international/Barnebys/$domain=telegraph.co.uk
 ||s.yimg.jp/images/listing/tool/yads/yads-iframe.html^
 ||s1.adform.net/banners/scripts/adx.js^
@@ -2000,8 +2007,6 @@ cm.asiae.co.kr##div.sv_banner
 cm.asiae.co.kr##div.va_cont>div[style="padding:10px 0px;text-align: center;"]
 cm.asiae.co.kr##ul.ad_Area
 cnet.com##div[data-ad]
-cocoaengineering.com##div.wpcnt
-codeyarns.com##div.wpcnt
 coinpan.com##div.gpe_side_contents_R>div>div[style="height: 200px; width: 200px; border:1px solid #dadada;"]
 coinpan.com##div.gpe_side_contents_R>div>div[style="height: 250px; width: 250px; border:1px solid #dadada;"]
 coinpan.com##div.white_board>div.section_wrap[style="padding-top:4px; margin-top:10px;"]
@@ -2062,7 +2067,6 @@ dailyesports.com##div#talklink_chatAd
 dailyesports.com##div.banner_1024_1024
 dailyesports.com##iframe[src^="/comment/ad_realclick.php"]
 dailymail.co.uk##div.billboard_wrapper
-dailymail.co.uk##div.trc-content-sponsored
 dailymail.co.uk##div[data-adverts-ad]
 dailymotion.com##div#bottom_banner
 dailymotion.com##div.ad
@@ -2571,6 +2575,7 @@ ikoreadaily.co.kr##div#CmAdContent>div[style="float:left; margin-right:10px; tex
 ikoreadaily.co.kr##div#CmAdContent>div[style="float:right; margin-left: 10px; margin-bottom: 5px;"]
 ikoreadaily.co.kr##div#CmAdContent>div[style="float:right; padding:10px 0 10px 10px;"]
 ikoreadaily.co.kr##div#floating_banner_body
+ikunkang.com##div#top_banner
 ilbe.com##body>div[style="width:100%; text-align:center;margin-bottom:5px;"]
 ilbe.com##div#ad_all_mobile_board
 ilbe.com##div#ad_all_mobile_top
@@ -2592,6 +2597,7 @@ ilbe.com##div[id^="teamcsp_ad_"]
 ilbe.com##iframe[src^="//www.ilbe.com/myads/openX_passback*.html"]
 ildaro.com##div#contents_wrap_sub2>table>tbody>tr>td[align="center"][style="padding-top:25"]
 ilovevid.com##div.ads
+imore.com##div.adunit-wrap
 imore.com##div.netshelter-ad
 independent.co.uk##div.onscroll-injected-ad
 indi.s58.xrea.com##div#vdbanner
@@ -2621,7 +2627,6 @@ instiz.net##table[itemtype="http://schema.org/Article"]>tr>td[style="border-top:
 insurancers.xyz##div.ad_small
 interpark.com##div#powerLinkBox
 interpark.com##div#searchSponsorAd
-interpiler.com##div.wpcnt
 inven.co.kr##body>div[style="text-align:center;margin-top:8px;"]
 inven.co.kr##div#adHomeTop
 inven.co.kr##div#articleView>div[style="height:41px;"]
@@ -3115,7 +3120,7 @@ m.insight.co.kr##div.adHeader
 m.insight.co.kr##div.daum-ad
 m.insight.co.kr##div.fixed-bottom-ad
 m.insight.co.kr##div.fixed__banner
-m.insight.co.kr##div.trc-content-sponsored
+m.insight.co.kr##div[data-widget_id="xlzgWGXZ"]
 m.insight.co.kr##li.page-more-ad
 m.inven.co.kr##div#boardPart>div[style="text-align:center;height:50px;"]
 m.inven.co.kr##div#cauly_ad_area
@@ -3358,7 +3363,6 @@ m.tf.co.kr##div.adbox
 m.tf.co.kr##div.tbLeft>div[style="height:100px; overflow-y:hindden;"]
 m.tf.co.kr##div.tbRight>div[style="height:84px; position:relative; left:0px; top:0px; "]
 m.tf.co.kr##span#rectingle_spanTag_ad
-m.tf.co.kr##ul.scTitleWrap div.trc-content-sponsored
 m.thisisgame.com##div#ad_new_bottom
 m.thisisgame.com##div.article-content>div[style="text-align: center;margin:10px auto 0 auto;width:350px;height:120px;"]
 m.thisisgame.com##div.google-ad-part
@@ -3485,7 +3489,6 @@ mbn.mk.co.kr##div#right_info
 mbn.mk.co.kr##div#right_today_info
 mbn.mk.co.kr##div.ad1
 mbn.mk.co.kr##div.relation_ad
-mcuoneclipse.com##div.wpcnt
 media.daum.net##div#EXTENSIBLE_WING_WRAP
 media.daum.net##div#RIGHT_SPACE_BANNER
 media.daum.net##div#SponsorBarWrap
@@ -4092,6 +4095,11 @@ qq.com##div.adLeft700
 qq.com##div.adRight
 qq.com##div.adRight280
 qq.com##div.l_qq_com
+quasarzone.co.kr##div.banner-box
+quasarzone.co.kr##div.banner-box2
+quasarzone.co.kr##div.banner-box3
+quasarzone.co.kr##div.header-banner
+quasarzone.co.kr##iframe[src^="https://quasarzone.co.kr/bbs/banner.php"]
 qz.com##div.inline-ad
 readmanga.today##div.ezo_ad
 readwrite.com##phx-advertisement
@@ -4659,7 +4667,6 @@ woman.chosun.com##div.AD_link
 woman.chosun.com##div.banner
 woman.chosun.com##div.main_banner
 womennews.co.kr##iframe[src^="/news/sidebar_banner_realclick01.html"]
-wordpress.com##div.wpcnt
 wowhead.com##div.banner-ad
 wowtv.co.kr##div#absBannerRight
 wowtv.co.kr##div#ad_div

@@ -4361,10 +4361,13 @@ bigtitsxxxsex.com###invideo_2
 bigtitsxxxsex.com##.bano1
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1180
+! https://github.com/uBlockOrigin/uAssets/issues/3768
 videos.porndig.com###overlay
 videos.porndig.com##.pop_parent
 ||adn.porndig.com^
 ||videos.porndig.com/js/videojs.logobrand.js
+||pnperf.com^$third-party
+||plx.porndig.com/zone/$subdocument
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1181
 *.jpg#$image,domain=thesportek.com,redirect=2x2-transparent.png
@@ -5983,8 +5986,9 @@ mp3skull-tube.net##+js(addEventListener-defuser.js, click, trigger)
 ! https://github.com/uBlockOrigin/uAssets/issues/1626
 @@||win10.vn^$generichide
 
-! https://forums.lanik.us/viewtopic.php?f=62&t=40078
-||damoh.vgtv.no/*$media,redirect=noopmp3-0.1s,domain=vgtv.no
+! https://github.com/uBlockOrigin/uAssets/issues/3769
+vgtv.no##+js(golem.de.js)
+||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=vgtv.no
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1629
 mp3guild.*,mp3clan.*##+js(abort-on-property-write.js, Fingerprint2)
@@ -6000,9 +6004,8 @@ fileflares.com##+js(window.open-defuser.js, , oclasrv)
 @@||fileflares.com^$generichide
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=fileflares.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=fileflares.com
-@@||fileflares.com^$xmlhttprequest,script,first-party
-@@||adservice.google.*$script,domain=fileflares.com
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$script,domain=fileflares.com
+@@||fileflares.com^$xmlhttprequest,script,first-party
 fileflares.com##[id^="aswift"]
 fileflares.com##.adsbygoogle:style(height: 1px !important)
 
@@ -8652,7 +8655,7 @@ escuchalas.com##^script:has-text(3f87b0)
 ! https://www.reddit.com/r/uBlockOrigin/comments/8n71jv/next_level_ads_injection_via_xhr_or_else_tricky/e6spyt1/
 ! piguiqproxy/zmctrack
 5.ua,animeget.net,antidiary.com,avtovod.com.ua,chtyvo.org.ua,comments.ua,facenews.ua,fakty.ua,gazeta.ua,guru.ua,i.ua,makataka.ru,mibius.online,mignews.com.ua,rian.com.ua,stravy.net##+js(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
-112.ua,24boxing.com.ua,autoua.net,glavcom.ua,hdreactor.club,history.vn.ua,isport.ua,kolobok.ua,kp.ua,lessons.com.ua,mabila.ua,mama.ua,maximum.fm,meta.ua,mil.in.ua,nashasvadba.ua,newsone.ua,ngs.ru,okino.ua,qp.ua,ringside24.com,smak.ua,strana.ua,telegraf.in.ua,tvgid.ua,ukrlib.com.ua,vchaspik.ua,vgorode.ua,woman.ua,zn.ua##+js(set-constant.js, atob, noopFunc)
+112.ua,24boxing.com.ua,autoua.net,glavcom.ua,hdreactor.club,history.vn.ua,isport.ua,kolobok.ua,kp.ua,lessons.com.ua,liga.net,mabila.ua,mama.ua,maximum.fm,meta.ua,mil.in.ua,nashasvadba.ua,newsone.ua,ngs.ru,okino.ua,qp.ua,ringside24.com,smak.ua,strana.ua,telegraf.in.ua,tvgid.ua,ukrlib.com.ua,vchaspik.ua,vgorode.ua,woman.ua,zn.ua##+js(set-constant.js, atob, noopFunc)
 24tv.ua,censor.net.ua,dengi.ua,dovidka.biz.ua,epravda.com.ua,eurointegration.com.ua,football24.ua,gismeteo.ua,pravda.com.ua,sinoptik.ua,subject.com.ua,textreferat.com,tv.ua,u-news.com.ua##+js(set-constant.js, JSON.parse, noopFunc)
 ditey.com,footballtransfer.com.ua,kurs.com.ua,zdorovia.com.ua##+js(set-constant.js, String.fromCharCode, noopFunc)
 ||mixadvert.com^$third-party
@@ -12643,3 +12646,35 @@ betanews.com##+js(abort-on-property-read.js, adtoniq)
 
 ! https://github.com/NanoMeow/QuickReports/issues/227
 unique-tutorials.info##+js(set-constant.js, adblock, false)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3767
+@@||oemdtc.com^$generichide
+oemdtc.com##.adsbygoogle
+oemdtc.com##[id^="quads-ad"]
+oemdtc.com##.easyazon-block
+
+! https://github.com/uBlockOrigin/uAssets/issues/3770
+urlinl.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3771
+shortlinknet.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+||inter1ads.com^$third-party
+||tharbadir.com^
+
+! https://github.com/uBlockOrigin/uAssets/issues/3772
+shreink.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3773
+linksoflife.co##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/NanoMeow/QuickReports/issues/234
+camwhoreshd.com,cwtvembeds.com##+js(window.open-defuser.js)
+camwhoreshd.com,cwtvembeds.com##.hola_top_element
+||camwhoreshd.com^$csp=child-src 'self' *.cwtvembeds.com; script-src 'self' *
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/999
+@@||open.http.mp.streamamg.com/html5/$script,domain=mediapason.it
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9qs04k
+ddl-warez.to##+js(abort-current-inline-script.js, $, event.target)
+||ddl-warez.to/*banner$image
