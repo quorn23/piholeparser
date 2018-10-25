@@ -2707,6 +2707,7 @@ citationmachine.net,citethisforme.com,easybib.com##+js(abort-on-property-read.js
 citethisforme.com##.sbm-ad
 ! https://github.com/uBlockOrigin/uAssets/issues/2155
 bibme.org,citationmachine.net,citethisforme.com##+js(addEventListener-defuser.js, load, (!o))
+citethisforme.com##+js(addEventListener-defuser.js, load, n())
 easybib.com##+js(addEventListener-defuser.js, load, (!i))
 
 ! https://github.com/uBlockOrigin/uAssets/issues/763
@@ -5262,12 +5263,13 @@ clicknupload.org##+js(abort-current-inline-script.js, String.fromCharCode, /\/\*
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1411
 ! https://github.com/uBlockOrigin/uAssets/issues/3105
+! https://github.com/NanoMeow/QuickReports/issues/238
 reevown.com##+js(abort-on-property-write.js, adBlockDetected)
 reevown.com##+js(bab-defuser.js)
 reevown.com##+js(setInterval-defuser.js, eval)
 reevown.com##+js(setTimeout-defuser.js, newBody)
 @@||reevown.com^$generichide
-@@||reevown.com^$script,first-party
+@@||reevown.com^$script,xmlhttprequest,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1412
 shaanig.se##+js(abort-on-property-write.js, Fingerprint2)
@@ -7144,6 +7146,8 @@ imx.to##+js(popads-dummy.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1980
 ||trafforsrv.com^
 crazyshit.com##+js(abort-current-inline-script.js, phtData, canPopunder)
+crazyshit.com##+js(abort-on-property-write.js, raSettings)
+||crazyshit.com/aff/$subdocument
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1982
 strikeout.nu##+js(abort-on-property-read.js, _0xd1b1)
@@ -9297,7 +9301,6 @@ filecrypt.cc###jvb
 filecrypt.cc##.support
 filecrypt.cc##[src^="https://filecrypt.cc/images/"]
 filecrypt.cc##[src^="../../../images/"]
-filecrypt.cc##.buttons:has-text(Highspeed)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2654
 lkky.co##+js(addEventListener-defuser.js, load, nextFunction)
@@ -11320,7 +11323,9 @@ sawlive.tv##+js(abort-on-property-write.js, Fingerprint2)
 sawlive.tv##+js(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3366
+! https://github.com/uBlockOrigin/uAssets/issues/3774
 vidup.io##+js(abort-on-property-read.js, __INITIAL_STATE__.ads.pops)
+vidup.io##+js(addEventListener-defuser.js, /^(click|mousedown)$/, ||)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9bk0es
 converto.io##+js(abort-current-inline-script.js, atob, decodeURIComponent)
@@ -12611,6 +12616,7 @@ thepiratefilmestorrent.com##+js(setTimeout-defuser.js, nextFunction, 450)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9psui1
 scr.cr##+js(abort-current-inline-script.js, encodeURIComponent, JSON)
+||ajax2.scr.cr^$media,first-party
 ||r-cdn.co^$media,domain=scr.cr
 
 ! https://github.com/NanoMeow/QuickReports/issues/223
@@ -12678,3 +12684,49 @@ camwhoreshd.com,cwtvembeds.com##.hola_top_element
 ! https://www.reddit.com/r/uBlockOrigin/comments/9qs04k
 ddl-warez.to##+js(abort-current-inline-script.js, $, event.target)
 ||ddl-warez.to/*banner$image
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9qu759
+123movies.solar##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+megadrive.co##+js(abort-on-property-write.js, AaDetector)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3777
+@@||leechpremium.link^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/236
+@@||tsubasa.im^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3778
+zemporn.com##+js(popads-dummy.js)
+zemporn.com##.player-aside-banners
+
+! https://github.com/NanoMeow/QuickReports/issues/241
+guitarnick.com##+js(abort-current-inline-script.js, document.getElementById, banner)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3781
+camwhores.*,camwhorestv.*##+js(window.open-defuser.js)
+||camwhores.*^$csp=child-src 'self' ; script-src 'self' * 'unsafe-inline'
+||camwhorestv.*^$csp=child-src 'self' ; script-src 'self' * 'unsafe-inline'
+camwhores.*,camwhorestv.*##+js(abort-on-property-read.js, loadTool)
+camwhores.*,camwhorestv.*##.topad
+
+! https://github.com/uBlockOrigin/uAssets/issues/3782
+@@||allpcworld.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3786
+@@||lacartes.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3783
+||link4gen.com/sw.js$script,first-party
+link4gen.com##+js(abort-on-property-read.js, dataLayer)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3793
+jeshoots.com##+js(set-constant.js, google_jobrunner, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3785
+blackcoin.info,dashfaucet.net,monerofaucet.info##+js(abort-current-inline-script.js, document.getElementById, Adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3779
+daftporn.com##+js(abort-on-property-read.js, ExoLoader.addZone) 
+
+! https://github.com/uBlockOrigin/uAssets/issues/3794
+xxxuno.com##+js(setTimeout-defuser.js, #chatWrap, 1000)
