@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201810222047
+! Version: 201810252314
 ! Title: EasyPrivacy
-! Last modified: 22 Oct 2018 20:47 UTC
+! Last modified: 25 Oct 2018 23:14 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -1257,6 +1257,7 @@
 /drads?referrer=
 /dspixel.js
 /dst.gif?
+/dstctsevent.js
 /dstracking.
 /dtagent630_
 /dtagent_
@@ -1298,7 +1299,7 @@
 /EDigitalSurvey_
 /ee-tagging.
 /effectivemeasure.
-/EfficientFrontier.
+/EfficientFrontier.$domain=~efficientfrontier.com
 /eftracking.
 /ehcorp.tracking.
 /eheat.js
@@ -1858,6 +1859,7 @@
 /ips-invite.iperceptions.com/*
 /iptracer.
 /iqtm.js
+/isi-tracking.
 /istat.aspx?
 /ists.tag?
 /item/tracking/*
@@ -2169,10 +2171,12 @@
 /metrics/track/*
 /metrics/vanity/?
 /metricsISCS.
+/metrika/*?ident=
 /metrika/watch_
 /metrimatics/*
 /metriweb.js
 /metriweb/spring.js
+/metrixEvents.js
 /metsol-
 /mh_metric.
 /mi/insite/*
@@ -3183,7 +3187,6 @@
 /tagCNIL.js
 /TagCommander.cfc?
 /tagcommander.js
-/tagcommander/*
 /tagcommander_
 /tagmanager/pptm.
 /tagmgmt/bootstrap.
@@ -3391,6 +3394,7 @@
 /tracking-info.gif?
 /tracking-init.
 /tracking-jquery-shim.
+/tracking-links.js
 /tracking-pixel.
 /tracking-pixel/*
 /tracking-portlet/*
@@ -4931,6 +4935,7 @@ _mongo_stats/
 ||eperfectdata.com^$third-party
 ||epilot.com^$third-party
 ||epiodata.com^$third-party
+||episerver.net^$third-party
 ||epitrack.com^$third-party
 ||eproof.com^$third-party
 ||eps-analyzer.de^$third-party
@@ -6165,6 +6170,7 @@ _mongo_stats/
 ||statistiche-web.com^$third-party
 ||statistx.com^$third-party
 ||statowl.com^$third-party
+||statpipe.ru^$third-party
 ||stats-analytics.info^$third-party
 ||stats.cz^$third-party
 ||stats2.com^$third-party
@@ -6599,6 +6605,7 @@ _mongo_stats/
 ||yieldify.com^$third-party
 ||yieldsoftware.com^$third-party
 ||yjtag.jp^$third-party
+||yldr.io^$third-party
 ||ymetrica1.com^$third-party
 ||youbora.com^$third-party
 ||youboranqs01.com^$third-party
@@ -8211,6 +8218,7 @@ _mongo_stats/
 ||akamaihd.net/log?
 ||akamaihd.net/push.gif?
 ||akamaihd.net^*.gif?d=
+||akamaized.net/?u=
 ||akanoo.com/tracker/
 ||akatracking.esearchvision.com^
 ||aklamio.com/ovlbtntrk?
@@ -8725,7 +8733,6 @@ _mongo_stats/
 ||d2so4705rl485y.cloudfront.net^
 ||d2tcg4i9q4js4a.cloudfront.net^
 ||d2tgfbvjf3q6hn.cloudfront.net^
-||d2wzl9lnvjz3bh.cloudfront.net^
 ||d2xgf76oeu9pbh.cloudfront.net^
 ||d303e3cdddb4ded4b6ff495a7b496ed5.s3.amazonaws.com^
 ||d3135glefggiep.cloudfront.net^
@@ -8815,6 +8822,7 @@ _mongo_stats/
 ||ds-aksb-a.akamaihd.net^
 ||dt.sellpoint.net^
 ||dtym7iokkjlif.cloudfront.net/dough/
+||du4rq1xqh3i1k.cloudfront.net^
 ||du8783wkf05yr.cloudfront.net^$third-party
 ||dufue2m4sondk.cloudfront.net^
 ||duu8lzqdm8tsz.cloudfront.net^
@@ -9567,6 +9575,7 @@ _mongo_stats/
 ||s-vop.sundaysky.com^$third-party
 ||s.clickability.com^
 ||s.sniphub.com^
+||s24cloud.net/log^
 ||s3-tracking.synthasite.net.s3.amazonaws.com^
 ||s5labs.io/common/i?impressionId$image
 ||saaspire.net/pxl/$third-party
@@ -12566,6 +12575,7 @@ _mongo_stats/
 ||skyrock.net/img/pix.gif
 ||skyrock.net/js/stats_blog.js
 ||skyrock.net/stats/
+||skyscanner.*/slipstream/
 ||slack.com/beacon/
 ||slack.com/clog/track/
 ||slacker.com/beacon/page/$image
@@ -12573,6 +12583,7 @@ _mongo_stats/
 ||slashdot.org/purple.gif
 ||slashgear.com/stats/
 ||slide.com/tracker/
+||slipstream.skyscanner.net^
 ||smallcapnetwork.com^*/viewtracker/
 ||smartname.com/scripts/cookies.js
 ||smassets.net/assets/anonweb/anonweb-click-$script
@@ -12850,6 +12861,7 @@ _mongo_stats/
 ||tags.news.com.au^$script
 ||tags.transportdirect.info^
 ||tagx.nytimes.com^
+||takealot.com/rest/
 ||talktalk.co.uk^*/log.html
 ||talktalk.co.uk^*/tracking/
 ||target.com/ci/$script
@@ -14766,6 +14778,10 @@ $csp=worker-src 'none',domain=300mbfilms.co|akvideo.stream|alltube.pl|alltube.tv
 @@||imwx.com/jsRollup?$script,domain=weather.com
 @@||inazuma.co/campaign/js/heatmap.js$domain=monopoly.mcdonalds.co.uk
 @@||innovelsolutions.com^*/tracking/$~third-party
+@@||inpref.com/frosmo.xdm.html?$subdocument
+@@||inpref.com/messageApi?$xmlhttprequest
+@@||inpref.s3.amazonaws.com/frosmo.easy.js$script,third-party
+@@||inpref.s3.amazonaws.com/sites/eventim_$script,third-party
 @@||intel.com^*/angular-google-analytics.js
 @@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk
 @@||iocdn.coremetrics.com^*/io_config.js?ts=$domain=24ace.co.uk
