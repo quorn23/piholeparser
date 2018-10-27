@@ -9,9 +9,9 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 24 October 2018
+! Last modified: 26 October 2018
 ! Expires: 1 day
-! Version: 2018102403
+! Version: 2018102604
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -20,7 +20,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018102403 aktualizacja: sr, 24 pazdziernika 2018, 19:00:00
+! v.2018102604 aktualizacja: ptk, 26 pazdziernika 2018, 19:20:00
 !
 !
 !-----------------------Integration of supplement lists for uBlock & AdGuard-----------------------!
@@ -109,7 +109,7 @@ vshare.io###sendif
 !7#-----------------------Privacy filters block-----------------------!
 !
 !8#------------------------General element hiding rules-------------------------!
-24tp.pl,lca.pl,112tychy.pl,30minut.pl,twoje-podhale.pl,upflix.pl,grylogiczne.biz.pl,grydladziewczyn.net.pl,moja-ostroleka.pl,bielsko.info##[class*="reklama"]
+24tp.pl,lca.pl,112tychy.pl,30minut.pl,twoje-podhale.pl,upflix.pl,grylogiczne.biz.pl,grydladziewczyn.net.pl,moja-ostroleka.pl,bielsko.info,polonia.nl##[class*="reklama"]
 ###a_201
 ###a_d_billboard
 ##.addv-container
@@ -1047,7 +1047,7 @@ gieldaigospodarka.pl##.footer-widget-area > .col-md-4:nth-of-type(3)
 gizchina.com.pl##.vw-content-sidebar, .bannerfull, #custom_html-3, #custom_html-5
 gizycko.info.pl##body > center:nth-of-type(1) > table > tbody > tr > td:nth-of-type(2)
 glamrap.pl###footmod
-glamrap.pl##[onclick*="Reklama"][target="_blank"] > IMG
+glamrap.pl##[onclick*="Reklama"][target="_blank"] > IMG, #mvp-leader-wrap
 globtroter.pl##a[href^="http://track.omgpl.com/"] > .img-responsive
 glogow-info.pl###maincol-broad-800 > center
 glogow-info.pl###rightcol-broad > .module:nth-of-type(1)
@@ -1105,7 +1105,7 @@ grapplerinfo.pl##A[href^="https://goo.gl/"] > IMG
 gratka.pl##.nieSkacz
 grodzisknews.pl###grodz-1226265710, .ad_Content
 groupon.pl###ls-in-app-messages
-gry-online.pl###ws-cnt
+gry-online.pl###ws-cnt, [class$="-2018-shops"]
 gry-online.pl##.S016-asus-s
 gry-online.pl##.ban-fp-970x200, .if-no-baner.gp16-box-baner1
 gry-online.pl##.prom-bot
@@ -1726,16 +1726,17 @@ nacjonalista.pl##DIV[align="center"]
 nadmorski24.pl##[href^="/dynamicAD/"]
 naekranie.pl##.adform, #attachment_3064862, .screening-banner
 !naekranie.pl##[id^="post-"] > div > [class^="o"]
-naekranie.pl##.inner-wrap > div[class^=t][style]:not(#drivers-slider):not(#home)
-naekranie.pl##.no-review.title-wide > [class^="t"]
-naekranie.pl##.title-wide > div[class^=t][style]
-naekranie.pl##div.prawa-szpalta.box > [class^="t"]
-naekranie.pl###home-indexes > div > [class^="t"]
-naekranie.pl##div.icon-star.box > [class^=t]
-naekranie.pl##[id^="post-"] > div + div + div > [class^="t"]
+naekranie.pl##.inner-wrap > div[class^=u][style]:not(#drivers-slider):not(#home)
+naekranie.pl##.no-review.title-wide > [class^="u"]
+naekranie.pl##.title-wide > div[class^=u][style]
+naekranie.pl##div.prawa-szpalta.box > [class^="u"]
+naekranie.pl###home-indexes > div > [class^="u"]
+naekranie.pl##div.icon-star.box > [class^=u]
+naekranie.pl##[id^="post-"] > div + div + div > [class^="u"]
 naekranie.pl##div[style="background-color: transparent; margin-top: -61px; min-height: 100%; height: 1200px; "]
 naekranie.pl##div[style^="max-width:"][style$="; margin: auto; "]
 naekranie.pl##video
+naekranie.pl##.t3001829a.t6739ce1f-1011.t6739ce1f
 naklo24.pl##.ban
 nakolei.pl##.textwidget > A[target="_blank"]
 namasce.pl##.builder.cf.row
@@ -1902,10 +1903,6 @@ paczamy.pl###trumpet_message
 pan-doradca.pl##.sky-left
 pap.edu.pl###p8
 paranormalne.pl##.nopad:nth-of-type(5) > .block_wrap.category_block:nth-of-type(1)
-!parenting.pl###floorBG
-!parenting.pl##.a-ctn-d
-!parenting.pl##.article__textbox
-!parenting.pl##[class^="article__side__stickblock"]
 parenting.pl##[class^="_"] > A > div
 pato.pl##a[href="http://nocnik.pl/"]
 patriot24.net##[class$="_ad"]
@@ -1939,12 +1936,12 @@ pebx.pl##.funbox.section
 pebx.pl##.noBorderRadius.pageContent > .funbox.sectionMain
 pebx.pl##[id^="funbox_zone_"]
 pebx.pl##li[class="sectionMain message"]:not([id^="post-"])
-pecetowicz.pl##.ipsType_center.ipsPos_center_fix
 pekao.com.pl###PX45189
 pepper.pl##.nav-banner
 perepele.pl##A > IMG.ccm-image-block
 perfektusplus.pl##.item-509
 perfumik.pl###popup_start
+perspektywy.pl##[href*="/click_baner.php"]
 piekary.pl##.mfp-content
 piekary.pl##.mfp-ready
 pielegniarki.info.pl###gsk
@@ -1976,7 +1973,7 @@ playstationforum.pl##[onclick^="MyAdvertisements"]
 plejada.pl##div[id^="multi-"] > iframe[id^="iframe-multi-"]
 pless.pl##.blok-sm.blok-r
 pless.pl##[class^="resizable"]
-pless.pl##[class^="billboard"]
+pless.pl,prawdaobiektywna.pl##[class^="billboard"]
 pless.pl,pless.nazwa.pl##[href^="http://www.pless.pl/a.php"]
 plonskwsieci.pl###jm-header-container > .jm-module:nth-of-type(5)
 plonskwsieci.pl###jm-header-container > .jm-module:nth-of-type(7)
@@ -2293,7 +2290,7 @@ showup.tv##div.top-baner
 siatka.org##.ins
 siemiatycze.com.pl###Wrapper_Right > .moduletable_bez, #Top_Module
 sieradz.com.pl##.box
-sieradz.com.pl,zdunskawola24.pl,filmaster.pl##.billboard
+sieradz.com.pl,zdunskawola24.pl,filmaster.pl,perspektywy.pl##.billboard
 signs.pl###podreklame
 signs.pl##.boxpanelextra
 signs.pl##.podreklame
@@ -3303,6 +3300,7 @@ zywiecinfo.pl##.promoted
 ||redcoon.pl/res/outer/201*/$image
 ||redir.atmcdn.pl/scale/o2/tvn/web-content/m/p2/i/81c8727c62e800be708dbf37c4695dff/$image,domain=tvnwarszawa.tvn24.pl
 ||redir.atmcdn.pl*swf$domain=tvn24.pl
+||redirector.redefine.pl/r/*.mp4$media,redirect=noopmp3-0.1s,domain=twojapogoda.pl
 ||reklamawadowice24.pl/$image
 ||reklamy.s3.amazonaws.com/bcg/$image
 ||rek.www.wp.pl^
@@ -3362,6 +3360,7 @@ zywiecinfo.pl##.promoted
 ||tarnowiak.pl/grafika/super_*/$image
 ||t-mobile-trendy.pl/graph/backgrounds/$image
 ||track.cux.io^
+||track.omgpl.com^$image
 ||tractors.pl/banner*.png$image
 ||triathlonpoland.tv/vast.xml$xmlhttprequest
 ||trybunaczestochowska.pl/wp-content/plugins/popup-maker/assets/js/site.min.js
