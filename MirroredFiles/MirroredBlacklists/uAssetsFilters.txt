@@ -79,7 +79,7 @@ google.*###sqh
 ! https://github.com/uBlockOrigin/uAssets/issues/3482
 !#if env_firefox
 !#if env_mobile
-google.*###main > div[data-hveid]
+google.*###main > div[data-hveid]:has(a[data-al])
 !#endif
 !#endif
 
@@ -1401,6 +1401,8 @@ gelbooru.com##+js(abort-current-inline-script.js, ExoDetector)
 gelbooru.com##+js(popads-dummy.js)
 gelbooru.com##a[href^="https://gelbooru.com/redirect.php"]
 gelbooru.com##a[href*="://media.r18.com/"]
+gelbooru.com##a[href*="://media.r18.com/"]
+gelbooru.com##a[href*="/track/"][target="_blank"]
 gelbooru.com#@#[style*="height:"][width]
 gelbooru.com#@#[style*="width:"][height]
 gelbooru.com#@#iframe[width]
@@ -2101,9 +2103,11 @@ yourbittorrent.com##.trtbl:has-text(VPN)
 ||popmonetizer.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/560
+! https://github.com/uBlockOrigin/uAssets/issues/3895
 ||sun.torrentfunk.com^$subdocument
 torrentfunk.com##+js(abort-on-property-write.js, bidrev)
 torrentfunk.com##+js(abort-on-property-write.js, Fingerprint2)
+torrentfunk.com##+js(nowebrtc.js)
 torrentfunk.com##.content td:has(a[href*=".pl4y.download/"])
 torrentfunk.com##[href*="an0n."]
 torrentfunk.com##.trtbl:has-text(VPN)
@@ -2173,10 +2177,13 @@ bittorrent.am##.torrentsTable:has-text(Kb/s)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/595
 ! https://github.com/uBlockOrigin/uAssets/issues/1286
+! https://github.com/uBlockOrigin/uAssets/issues/3896
 monova.*##+js(abort-on-property-read.js, adblock)
 monova.*##+js(abort-on-property-write.js, Fingerprint2)
+monova.*##+js(abort-on-property-write.js, small_dl)
+monova.*##+js(abort-on-property-write.js, zoneNativeSett)
 monova.*##+js(nowebrtc.js)
-monova.*##.files-box
+monova.*##tr.success.desktop
 monova.*#@#script + [class] > [class]:first-child
 
 ! https://github.com/uBlockOrigin/uAssets/issues/597
@@ -3426,6 +3433,7 @@ kastream.biz##+js(window.open-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1616
 ||latinoweb-tv.com/assets/js/adblocker.js$script,redirect=fuckadblock.js-3.2.0
 ||vertelevisor.com/publi
+limpi.tv##+js(abort-on-property-write.js, smrtSB)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/942
 dvdcover.com##+js(abort-on-property-read.js, anOptions)
@@ -3681,6 +3689,7 @@ europixhd.*,hdeuropix.*,topeuropix.net###MyImageId
 ! https://github.com/uBlockOrigin/uAssets/issues/1002#issuecomment-369038123
 descargas2020.com##+js(abort-on-property-read.js, l8l1X)
 descargas2020.com##+js(abort-on-property-write.js, _pop)
+descargas2020.com##+js(abort-on-property-write.js, _ti_ab_only)
 descargas2020.com##+js(abort-on-property-write.js, Fingerprint2)
 descargas2020.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 descargas2020.com##+js(addEventListener-defuser.js, mousedown, (b){u()})
@@ -6863,7 +6872,8 @@ vipserversat.com###open-fb
 
 ! https://www.reddit.com/r/Buffalo/comments/89dzra/buffalo_news_paywall_x2/dwqze26/
 ! https://github.com/uBlockOrigin/uAssets/issues/2330
-@@||api.bntech.io^$script,domain=buffalonews.com
+! https://github.com/uBlockOrigin/uAssets/issues/3870
+@@||bntech.io^$script,domain=buffalonews.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1890
 momondo.com##+js(window.open-defuser.js)
@@ -11583,6 +11593,7 @@ getrelax.club##.loaded-popup-wrapper
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3444
 planetatorrent.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+planetatorrent.com##+js(addEventListener-defuser.js, mousedown, ())
 planetatorrent.com##+js(setInterval-defuser.js, (), 500)
 planetatorrent.com##+js(window.open-defuser.js)
 
@@ -12877,3 +12888,111 @@ aveprize.com##+js(set-constant.js, isBlocked, false)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3845
 @@||livmonitors.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3849
+bisceglielive.it##+js(setTimeout-defuser.js, #rbm_block_active, 1000)
+bisceglielive.it##.mkt-300x250
+bisceglielive.it##.mkt-728x90
+
+! https://github.com/uBlockOrigin/uAssets/issues/3851
+@@||allsoftwarefull.com^$generichide
+allsoftwarefull.com##div[id^="header-banner"]
+allsoftwarefull.com##.size-full.alignnone
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42044
+ymovies.tv##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3853
+@@||townmoneysaver.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3854
+@@||it-explain.com/wp-content/plugins/deadblocker/assets/js/blockadblock.js$script,first-party
+@@||it-explain.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3858
+leakforums.co,worldaide.fr##+js(abort-on-property-read.js, adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3860
+wpgdadatong.com##+js(abort-on-property-read.js, checkAdblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3861
+creativebusybee.com##+js(abort-on-property-write.js, checkAds)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3863
+sportranker.com##+js(abort-on-property-write.js, admiral)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3866
+bitcoinpts.com###adblockModal
+
+! https://github.com/uBlockOrigin/uAssets/issues/3867
+scamalot.com##+js(abort-current-inline-script.js, $, #DontBloxMyAdZ)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3875
+dogeclix.com##+js(abort-current-inline-script.js, document.getElementById, alert)
+||trafficadbar.com^$third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/3869
+beautypackaging.com,coatingsworld.com,contractpharma.com,happi.com,inkworldmagazine.com,labelandnarrowweb.com,mpo-mag.com,nutraceuticalsworld.com,odtmag.com,printedelectronicsnow.com##+js(abort-current-inline-script.js, $, #pageWrapper)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3874
+savevideo.me##+js(abort-current-inline-script.js, $, banner)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3878
+@@||lindung.in^$generichide
+lindung.in##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/3876
+yeutienganh.com##+js(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3871
+openspeedtest.com##+js(setTimeout-defuser.js, google_jobrunner)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3881
+@@||luccisan.com^$generichide
+luccisan.com##[id*="ScriptRoot"]
+luccisan.com##.banner
+
+! https://github.com/uBlockOrigin/uAssets/issues/3882
+situsberita2terbaru.*##+js(abort-current-inline-script.js, document.getElementById, adpbtest)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3887
+@@||blabber.buzz^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3872
+telecharger-igli4.*##+js(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3889
+@@||roboticsandautomationnews.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/3877
+books-world.net##+js(abort-on-property-write.js, killAdBlock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3880
+addtobucketlist.com,droidtekno.com,hentaimx.com##+js(setTimeout-defuser.js, google_jobrunner)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3885
+syracusefan.com##+js(abort-on-property-write.js, XF)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3890
+apurogoltv.net,rojadirectatv.stream##+js(abort-on-property-write.js, smrtSP)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3891
+rivosport.co##+js(abort-on-property-write.js, Fingerprint2)
+rivosport.co##+js(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3892
+cndf88.*##+js(abort-on-property-write.js, encodeURIComponent)
+cndf88.*##+js(nowebrtc.js)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42046
+@@||gamemod.mobi^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/255
+mrpiracy.xyz##+js(abort-current-inline-script.js, decodeURIComponent, atob)
+mrpiracy.xyz##+js(abort-current-inline-script.js, document.getElementById, deleted)
+mrpiracy.xyz##a[class^="reserve-button"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/3897
+elmoslsal.com##+js(bab-defuser.js)
+@@*$generichide,domain=erexams.com|jadid-tech.com|potcoinlotto.com|promods.net
+jadid-tech.com##.adsbygoogle
