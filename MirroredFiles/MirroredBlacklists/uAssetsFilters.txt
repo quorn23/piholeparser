@@ -1056,23 +1056,21 @@ thenextweb.com##html > body.is-canvas.tnw-canvas--opened .main:style(animation: 
 ! https://github.com/uBlockOrigin/uAssets/issues/693
 ! https://github.com/reek/anti-adblock-killer/issues/3817
 ! https://github.com/uBlockOrigin/uAssets/issues/1333
-italiashare.*,oasivip.com##+js(abort-on-property-read.js, adblock)
-italiashare.*,oasivip.com##+js(abort-on-property-read.js, admrlPreviewEngage)
-italiashare.*,oasivip.com##+js(bab-defuser.js)
-italiashare.*,nonpiusolo.com,oasivip.com##+js(nowebrtc.js)
-@@||italiashare.*^$generichide
+oasivip.com##+js(abort-on-property-read.js, adblock)
+oasivip.com##+js(abort-on-property-read.js, admrlPreviewEngage)
+oasivip.com##+js(bab-defuser.js)
+nonpiusolo.com,oasivip.com##+js(nowebrtc.js)
 @@||oasivip.com^$generichide
-@@||italiashare.*^$image,first-party
-italiashare.*,oasivip.com###adblockplus
-italiashare.*,oasivip.com###blockblockA
-italiashare.*,oasivip.com###admitad-cookie-check-popup
-*$script,domain=italiashare.life|italiashare.net|oasivip.com,third-party
-italiashare.*,oasivip.com##+js(abort-on-property-write.js, BlockAdBlock)
-italiashare.net,oasivip.com##+js(abort-on-property-write.js, checkAds)
-*/ad*$script,redirect=noopjs,domain=italiashare.net|oasivip.com
-italiashare.net,oasivip.com##+js(noeval.js)
-italiashare.net,oasivip.com##+js(set-constant.js, adBlock, true)
-italiashare.net,oasivip.com##+js(abort-current-inline-script.js, adblockblock, adblocktest)
+oasivip.com###adblockplus
+oasivip.com###blockblockA
+oasivip.com###admitad-cookie-check-popup
+*$script,domain=oasivip.com,third-party
+oasivip.com##+js(abort-on-property-write.js, BlockAdBlock)
+oasivip.com##+js(abort-on-property-write.js, checkAds)
+*/ad*$script,redirect=noopjs,domain=oasivip.com
+oasivip.com##+js(noeval.js)
+oasivip.com##+js(set-constant.js, adBlock, true)
+oasivip.com##+js(abort-current-inline-script.js, adblockblock, adblocktest)
 
 ! https://github.com/gorhill/uBlock/issues/2154
 ! https://github.com/uBlockOrigin/uAssets/issues/3907
@@ -1979,6 +1977,9 @@ rapidvideo.com##+js(abort-current-inline-script.js, decodeURI, getScriptFromCss)
 rapidvideo.com##+js(set-constant.js, onload, noopFunc)
 ! https://github.com/uBlockOrigin/uAssets/issues/2669#issuecomment-409005490
 rapidvideo.com##+js(addEventListener-defuser.js, mousedown, preventDefault)
+! https://github.com/uBlockOrigin/uAssets/issues/3992
+rapidvideo.com##+js(abort-on-property-read.js, zfgloadedpopup)
+rapidvideo.com##+js(abort-on-property-read.js, zfgloadedpushopt)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/516
 @@||thepiratebay.run^$generichide
@@ -2284,6 +2285,8 @@ alibaba.com##.m-product-item:has-text(Sponsored Listing)
 msn.com##^script:has-text(/i10C/i)
 msn.com##.nativeadasideplaceholder
 msn.com##.nativeadserversidecontentmodule
+! https://github.com/uBlockOrigin/uAssets/issues/3703#issuecomment-435044782
+msn.com##.extnativeaditem, .serversidenativead > h3
 
 ! https://github.com/reek/anti-adblock-killer/issues/3492
 newser.com##+js(abort-current-inline-script.js, MutationObserver, compareDocumentPosition)
@@ -3050,6 +3053,7 @@ filebebo.com##+js(nano-setTimeout-booster.js)
 sarugbymag.co.za##+js(abort-on-property-read.js, showAds)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39202
+imgdrive.net,imgwallet.com##+js(abort-current-inline-script.js, jQuery, TestAdBlock)
 imgadult.com,imgdrive.net,imgtaxi.com,imgwallet.com##+js(abort-on-property-read.js, ExoLoader)
 imgadult.com,imgdrive.net,imgtaxi.com,imgwallet.com##+js(abort-on-property-write.js, cticodes)
 imgadult.com,imgdrive.net,imgtaxi.com,imgwallet.com##+js(abort-on-property-write.js, imgadbpops)
@@ -3072,6 +3076,7 @@ funcinema.ga##+js(abort-on-property-write.js, _pop)
 ! https://github.com/uBlockOrigin/uAssets/issues/869
 porntrex.com##+js(abort-current-inline-script.js, parseInt, tabunder)
 porntrex.com##+js(popads-dummy.js)
+||clickadu.com^$media,domain=porntrex.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/870
 yourporn.sexy##+js(abort-on-property-write.js, Fingerprint2)
@@ -3088,7 +3093,6 @@ magesy.*,majesy.*##+js(set-constant.js, jQuery.adblock, false)
 magesy.*,majesy.*##+js(set-constant.js, adblock, 1)
 majesy.*##+js(setInterval-defuser.js, visibility, 1000)
 magesy.*,majesy.*##+js(addEventListener-defuser.js, load, onload)
-@@||magesy.*^$generichide
 @@||majesy.com^$generichide
 ||magesy.*/cdn-cgi/apps/head/*$script,first-party
 magesy.*###adblockplus
@@ -10173,8 +10177,9 @@ kissasian.es##+js(set-constant.js, check_adblock, true)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8z405v/ublock_origin_not_catching_google_ads_in_firefox/
 ! https://github.com/uBlockOrigin/uAssets/issues/3092
+! https://github.com/uBlockOrigin/uAssets/issues/3994
 ! added sites using the same ad-reinsertion script
-adivineencounter.com,au-di-tions.com,badgehungry.com,bloggingawaydebt.com,chipandco.com,cornerstoneconfessions.com,dearcreatives.com,divinelifestyle.com,eslauthority.com,heresyoursavings.com,investingchannel.com,irresistiblepets.net,kompas.com,lovegrowswild.com,mjsbigblog.com,mommybunch.com,mustardseedmoney.com,myfunkytravel.com,mywomenstuff.com,onetimethrough.com,panlasangpinoymeatrecipes.com,peru21.pe,savespendsplurge.com,savvyhoney.com,silverpetticoatreview.com,soccerhighlightstoday.com,tamaratattles.com,the-military-guide.com,the2seasons.com,therelaxedhomeschool.com,thetechieguy.com,truesteamachievements.com,truetrophies.com,waterheaterleakinginfo.com,zeroto60times.com##+js(abort-current-inline-script.js, Math.floor, axtd)
+adivineencounter.com,au-di-tions.com,badgehungry.com,bloggingawaydebt.com,chipandco.com,cornerstoneconfessions.com,dearcreatives.com,divinelifestyle.com,eslauthority.com,heresyoursavings.com,investingchannel.com,irresistiblepets.net,justjared.com,kompas.com,lovegrowswild.com,mjsbigblog.com,mommybunch.com,mustardseedmoney.com,myfunkytravel.com,mywomenstuff.com,onetimethrough.com,panlasangpinoymeatrecipes.com,peru21.pe,savespendsplurge.com,savvyhoney.com,silverpetticoatreview.com,soccerhighlightstoday.com,tamaratattles.com,the-military-guide.com,the2seasons.com,therelaxedhomeschool.com,thetechieguy.com,truesteamachievements.com,truetrophies.com,waterheaterleakinginfo.com,zeroto60times.com##+js(abort-current-inline-script.js, Math.floor, axtd)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2916
 nakib4short.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -10743,7 +10748,7 @@ devast.io###advert
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1220
 ! https://github.com/uBlockOrigin/uAssets/issues/3149
-imgrock.*##+js(abort-on-property-read.js, CustomEvent)
+imgrock.*##+js(abort-current-inline-script.js, CustomEvent, getexoloader)
 imgrock.*##+js(abort-on-property-write.js, Fingerprint2)
 imgrock.*##+js(nano-setTimeout-booster.js, /.?/, 4000)
 imgrock.*##+js(popads-dummy.js)
@@ -11614,7 +11619,6 @@ getrelax.club##.loaded-popup-wrapper
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/191
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41659
-@@||suprafiles.*^$generichide
 @@||sfiles.org^$generichide
 sfiles.org##.adsbygoogle
 
@@ -13243,3 +13247,9 @@ porkjizz.com##+js(abort-on-property-read.js, _crkRandRotation)
 porkjizz.com##.happy-footer
 porkjizz.com##.happy-sidebar
 porkjizz.com##.happy-under-player
+
+! https://github.com/uBlockOrigin/uAssets/issues/3993
+@@||dfiles.eu^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/273
+xiaomi4mi.com##+js(set-constant.js, $tieE3, true)

@@ -604,6 +604,8 @@ pornhub.com#@#[src*="data:"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/646
 @@||players.brightcove.net^$subdocument,domain=usatoday.com
+! https://github.com/uBlockOrigin/uAssets/issues/3998
+@@||cdn.ampproject.org/v0/amp-geo-0.1.js$script,domain=amp.usatoday.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/648
 @@/blockadblock.$script,domain=blockadblock.com
@@ -716,6 +718,8 @@ energy.de#@##ad_home
 ||msavideo-a.akamaihd.net^$media,redirect=noopmp3-0.1s,domain=msn.com
 @@||fwmrm.net/*/AdManager.js$script,domain=msn.com
 @@||fwmrm.net/ad/*$script,domain=msn.com
+! https://github.com/uBlockOrigin/uAssets/issues/842#issuecomment-435035094
+msn.com#@#[style*="background-image:"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/7dp25k/fyi_ublock_origin_is_blocking_important_elements/dpzx4c1/
 @@||stats.g.doubleclick.net/dc.js$script,domain=ticketfly.com
@@ -1413,7 +1417,6 @@ techadvisor.co.uk#@#.adsbygoogle
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$first-party,xmlhttprequest,badfilter
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$first-party,image,badfilter
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$first-party,script,badfilter
-/^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$first-party,xmlhttprequest,badfilter
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3304
 |https://$third-party,script,domain=animeflv.net|descargasnsn.com|jkanime.net,badfilter
@@ -1664,3 +1667,19 @@ wildsnow.com#@##ad-container
 ! https://forums.lanik.us/viewtopic.php?f=64&t=41424
 /advertising.$domain=~advertising.amazon.ca|~advertising.amazon.cn|~advertising.amazon.co.jp|~advertising.amazon.co.uk|~advertising.amazon.com|~advertising.amazon.com.au|~advertising.amazon.com.mx|~advertising.amazon.de|~advertising.amazon.es|~advertising.amazon.fr|~advertising.amazon.in|~advertising.amazon.it|~advertising.berlin-airport.de|~advertising.bulurum.com|~advertising.byhoxby.com|~advertising.dailymotion.com|~advertising.expedia.com|~advertising.lavenir.net|~advertising.mobile.de|~advertising.org.il|~advertising.sevenwestmedia.com.au|~advertising.shpock.com|~advertising.theguardian.com,badfilter
 /advertising.$domain=~advertising.amazon.ca|~advertising.amazon.cn|~advertising.amazon.co.jp|~advertising.amazon.co.uk|~advertising.amazon.com|~advertising.amazon.com.au|~advertising.amazon.com.mx|~advertising.amazon.de|~advertising.amazon.es|~advertising.amazon.fr|~advertising.amazon.in|~advertising.amazon.it|~advertising.berlin-airport.de|~advertising.bulurum.com|~advertising.byhoxby.com|~advertising.dailymotion.com|~advertising.expedia.com|~advertising.lavenir.net|~advertising.mobile.de|~advertising.org.il|~advertising.roku.com|~advertising.sevenwestmedia.com.au|~advertising.shpock.com|~advertising.theguardian.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3975
+@@||monero.crypto-webminer.com/monero.html$subdocument,domain=monero-miner.com
+
+! fix broken download with some configuratons
+! caused by the redirection
+||google-analytics.com/ga.js$script,redirect=none,domain=download-chromium.appspot.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3995
+@@||pubads.g.doubleclick.net/gampad/*timesnow_livetv$xmlhttprequest,domain=timesnownews.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3999
+@@||google-analytics.com/analytics.js$script,domain=panerabread.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/918#issuecomment-435215254
+||4tube.com/assets/abexperiments-$badfilter
