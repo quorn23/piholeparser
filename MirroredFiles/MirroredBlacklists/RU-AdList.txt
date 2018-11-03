@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: WuKyor2BA6eCjVIu1IYQBg
-! Version: 201811020020
+! Checksum: ev4JgpzLb/vqYdMQUkFy6w
+! Version: 201811030020
 ! Title: RU AdList
-! Last modified: 02 Nov 2018 00:20 UTC
+! Last modified: 03 Nov 2018 00:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1544,6 +1544,7 @@ firstfisher.ru##div[class^="ad"] > noindex
 ##iframe[id^="republer"]
 ~sass.com.ua##iframe[src*="//sass.com.ua/"]
 ~adnetpartner.com##iframe[src*="/adnetpartner.com"]
+##iframe[src*="/mixadv_"]
 ~uniontraff.com##iframe[src*="/uniontraff.com"]
 ##iframe[src*="ads.exosrv.com"]
 ~bongacams.com##iframe[src*="bongacams.com"]
@@ -9217,6 +9218,7 @@ smotri.com###BannerUnderBroPlayer
 peeroff.net###DIV2 > noindex
 kinogo-onlaine.net###GoodTiny
 kinogo-onlaine.net,onlinemusic.com.ua###GoodVane
+nahnews.org###INFF
 e-reading.club###LeftAds
 samods.ru###LeftBox
 apoi.ru###MainBanner
@@ -12621,6 +12623,7 @@ drive.ru##[class*="autoRu"] + .hr
 galka.if.ua,hi-fi.ru,inflora.ru,lifenews.ru,lifenews78.ru,old.amic.ru,opticlub.org,podrobnosti.ua,vbryanske.com##[class*="banner"]
 disgustingmen.com##[class*="bg_banner"]
 vse.rv.ua##[class*="billboard"]
+anna-news.info##[class*="blog-holder"] > noindex
 animedub.ru##[class*="blrek"]
 expert.ru##[class*="box-partners"]
 maintracker.org,rutracker.cr,rutracker.net,rutracker.nl,rutracker.org,sssr-rutracker.org##[class*="brand-link"]
@@ -13553,6 +13556,7 @@ appmo.org#?#.item:-abp-has(> script)
 appmo.org#?#.item:-abp-has([src*="/images/pek.png"])
 reono.ua##article > .box[style="width:fit-content"]
 seriali-online.su##article > :empty
+fb.ru##article > div[id]:not([class*="deed js-article-action"]):not([id="content"]):not([class="article__info"]):not([class="sector"])
 glavpost.com##article div[style*="#EFEFEF"]
 tochka.net##article ~ div[id^="rsswidget"]
 qip.ru##article[data-type="advert"]
@@ -15236,6 +15240,7 @@ $xmlhttprequest,domain=howto-news.info|mschistota.ru
 /^https?://(?!www\.)(?!forum)([^.]+\.)+?(qrz\.ru)[:/]/$script,domain=qrz.ru
 /^https?://(?!www\.)(?!static)([^.]+\.)+?(censor\.net\.ua)[:/]/$script,domain=censor.net.ua
 /^https?://(?!www\.instagram\.com|platform\.instagram\.com|platform\.twitter\.com|cdn\.syndication\.twimg\.com|connect\.facebook\.net|graph\.facebook\.com|apis\.google\.com|fonts\.googleapis\.com|connect\.ok\.ru|vk\.com|vkontakte\.ru|code\.giraff\.io|a\.giraff\.io)/$third-party,script,stylesheet,xmlhttprequest,domain=erofishki.cc|fishki.net|fox-fan.tv|sport-express.ru
+/^https?://24smi\.org/[^\s]{200,}/$script,xmlhttprequest,domain=24smi.org
 /^https?://[^\s]+\.razlozhi\.ru/[^\s]{300,}/$subdocument,xmlhttprequest,domain=razlozhi.ru
 /^https?://[^\s]\.pikabu\.ru/[^\s]{300,}/$xmlhttprequest,domain=pikabu.ru
 /^https?://aleshafilm\.com/+[0-9]{6,8}\./$script,domain=aleshafilm.com
@@ -15244,6 +15249,7 @@ $xmlhttprequest,domain=howto-news.info|mschistota.ru
 /^https?://echo\.msk\.ru/[^\s]{500,}/$xmlhttprequest,domain=echo.msk.ru
 /^https?://fb\.ru/[^\s]{500,}/$subdocument,xmlhttprequest,domain=fb.ru
 /^https?://free-porn.games\/(?!templates|engine)/$script,domain=free-porn.games
+/^https?://politpuzzle\.ru/(?!(counter\.php)|(wp-admin))/$xmlhttprequest,domain=politpuzzle.ru
 /^https?://porno-island.org\/(?!templates|engine)/$script,domain=porno-island.org
 /^https?://proporno.org\/(?!templates|engine)/$script,domain=proporno.org
 /^https?://www\.baby\.ru/[^.]{150,}$/$script,domain=baby.ru
@@ -18078,7 +18084,7 @@ disk-space.ru,fortnite-battle-royale.ru,freetotalsoft.com##*
 www.avito.ru##body div[id][class][lang="ru"]
 www.avito.ru##div[id*="_R-"]
 www.avito.ru##div[id^="ya_custom_block"]
-www.avito.ru#?#[class]:-abp-has(> [class] > h2:-abp-contains(Реклама))
+www.avito.ru#?#[class]:-abp-has(> [class] > h2:-abp-contains(Pеклама))
 www.avito.ru#?#body *:-abp-has(> * > * > * > a[href^="https://www.avito.ru/"][target="_blank"])
 www.avito.ru#?#body *:-abp-has(> * > * > iframe[src^="https://www.avito.ru/"])
 www.avito.ru#?#body div[class]:-abp-has(> div[id][class] + div[id][class]:empty)
@@ -18122,10 +18128,12 @@ gismeteo.by,gismeteo.kz,www.gismeteo.ru#?#body.page_base *:-abp-has(> * > * > * 
 @@||bielati.com^$xmlhttprequest
 @@||buchome.com^$xmlhttprequest
 @@||cecidio.com^$xmlhttprequest
+@@||enduenood.com^$xmlhttprequest
 @@||fanfusar.com^$xmlhttprequest
 @@||intitupad.com^$xmlhttprequest
 @@||litodoer.com^$xmlhttprequest
 @@||lymocommy.com^$xmlhttprequest
+@@||palespe.com^$xmlhttprequest
 @@||streamguard.cc^$xmlhttprequest,domain=streamstorm.online|streamtomars.me
 @@||striedmax.com^$xmlhttprequest
 @@||uppidareg.com^$xmlhttprequest
@@ -18405,7 +18413,6 @@ ok.ru#?##leftColumn div:-abp-has(> div > div > div > img[src^="data:image"][alt]
 ok.ru#?##leftColumn div:-abp-has(> div[style*="visibility: visible"])
 ok.ru#?#.feed-list > div[class]:-abp-has(div[data-type*="Banner"])
 ok.ru#?#div:-abp-has(> .banner350)
-ok.ru#?#div:-abp-properties(width: 240px !important;)
 ! Очень однобокая реклама Хрома + очень часто просят удалить
 ok.ru##.update-browser_container
 ! Блокировка ресурсов за пределами mail.ru
@@ -20043,6 +20050,7 @@ fridger.com.ua,postiralka.com.ua#@#.adv_left
 fridger.com.ua,postiralka.com.ua#@#.adv_right
 gbsmp.ru#@#img[width="728"][height="90"]
 graffiks.ru#@##ad-target
+hmgma.ru#@#.adv
 ideipovara.ru#@#.adv_top
 insignia-mebel.ru#@#.ads-bg
 insignia-mebel.ru#@#.ads-footer
@@ -20194,6 +20202,7 @@ mail.ru#@#.text-banner
 @@||112.ua/js/showads.js|$script,domain=112.ua
 @@||1tv.ru/player/*gif?r$image,domain=1tv.ru
 @@||1tv.ru/player/js/adfox.lpd.js$script,domain=1tv.ru
+@@||24smi.org/static/js/adblock.js|$domain=24smi.org
 @@||2mm.ru/js/advert.js|$script,domain=2mm.ru
 @@||37.1.207.27^$subdocument,domain=adultmult.tv
 @@||3dnews.ru/www/delivery/ajs.*&slot=single&$script,domain=3dnews.ru
