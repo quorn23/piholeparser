@@ -7037,11 +7037,9 @@ hdblog.it##body:style(background: none !important; overflow: auto !important;)
 hdblog.it##[id^="google_ads_iframe"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1927
-clk.press##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-clk.press##+js(addEventListener-defuser.js, load, nextFunction)
-@@||clk.press^$generichide
-clk.press##.adsbygoogle
-clk.press##.SC_TBlock
+! https://github.com/uBlockOrigin/uAssets/issues/4030
+clk.*##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+clk.*##+js(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1928
 clicksfly.xyz##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -9989,11 +9987,19 @@ sandrives.*##+js(setTimeout-defuser.js, nextFunction, 250)
 filesrom.com##+js(abort-on-property-read.js, anOptions)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2850
+! https://github.com/NanoMeow/QuickReports/issues/256
 simpsonsua.com.ua##+js(abort-current-inline-script.js, atob, void)
+simpsonsua.com.ua##+js(set-constant.js, canRunAds, true)
 ||megastock.ru/doc/*/azure_rus.gif$image,redirect=32x32-transparent.png,domain=simpsonsua.com.ua
 *$script,domain=krutor.org|simpsonsua.com.ua|torrent-doza.me,badfilter
 *$script,domain=krutor.org|torrent-doza.me
 */preroll/*mp4$media,domain=td7vccbywda3.ru
+@@||simpsonsua.com.ua^$csp,first-party
+@@||simpsonsua.com.ua/adv$image,first-party
+@@||simpsonsua.com.ua/test-ad.php$xmlhttprequest,first-party
+simpsonsua.com.ua##.adsbyyottos
+simpsonsua.com.ua##[href="https://krosogolik.com/"]
+simpsonsua.com.ua#@#*
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41177
 movies123.xyz##+js(abort-current-inline-script.js, decodeURI, getScriptFromCss)
@@ -13164,9 +13170,10 @@ jazztv.co##+js(addEventListener-defuser.js, click, popunder)
 cloudtv.live##+js(addEventListener-defuser.js, click, popunder)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3975
+@@||coinminingonline.com^$generichide
 @@||monero-miner.com^$generichide
-monero-miner.com##.sg-popup-overlay
-monero-miner.com###sgpb-popup-dialog-main-div
+coinminingonline.com,monero-miner.com##.sg-popup-overlay
+coinminingonline.com,monero-miner.com###sgpb-popup-dialog-main-div
 
 ! https://cricfree.stream/watch/site/update/sky1 popups / ads
 cricfree.stream##+js(abort-on-property-read.js, encodeURIComponent)
@@ -13284,3 +13291,49 @@ zutrox.link###fijo
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4019
 @@||fm.solewe.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4023
+@@||racingsportscars.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4024
+@@||camhun.com^$generichide
+@@||webcamsurf.com^$generichide
+@@||c2camera.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4026
+no1lyrics.com##+js(abort-on-property-write.js, adBlockDetected)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4027
+@@||arsesaworldgist.com^$generichide
+arsesaworldgist.com##.adsbygoogle
+arsesaworldgist.com##.mks_ads_widget
+arsesaworldgist.com##.advertisement_above_footer
+
+! https://github.com/uBlockOrigin/uAssets/issues/4028
+@@||mikubox.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4029
+@@||truyenaudiocv.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4025
+@@||iptvliste.com^$generichide
+iptvliste.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/4032
+@@||owari.io^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4033
+pandafreegames.*##+js(set-constant.js, canRunAds, true)
+pandafreegames.*##+js(setTimeout-defuser.js, adFilled, 2500)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4034
+softwaretestingmaterial.com##+js(abort-on-property-read.js, ai_debugging)
+
+! https://github.com/NanoMeow/QuickReports/issues/275
+alantvstream.com##+js(abort-on-property-read.js, AaDetector)
+
+! https://github.com/NanoMeow/QuickReports/issues/260
+rbc.ru##+js(setTimeout-defuser.js, t=null, 300)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4037
+multporn.net##+js(abort-on-property-read.js, ExoLoader)
