@@ -2706,6 +2706,8 @@ entervideo.net##+js(window.open-defuser.js)
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40397
 putlockertv.*##+js(abort-current-inline-script.js, parseInt, tabunder)
 putlocker.ninja##+js(abort-on-property-read.js, decodeURIComponent)
+! https://www.reddit.com/r/uBlockOrigin/comments/9vmhj2
+putlockerr.is##+js(abort-on-property-read.js, zfgloadedpopup)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=38536
 10fastfingers.com##+js(abort-current-inline-script.js, document.createElement, decodeURIComponent)
@@ -6620,7 +6622,9 @@ dupedornot.com##+js(abort-current-inline-script.js, $, haveVisited)
 ! https://github.com/uBlockOrigin/uAssets/issues/2393
 pelisplus.*##+js(abort-on-property-write.js, smrtSP)
 pelisplus.*##+js(abort-on-property-write.js, smrtSB)
+pelisplus.*##+js(abort-on-property-write.js, Fingerprint2)
 pelisplus.*##[class^="smartadtags"]
+||dxprljqoay4rt.cloudfront.net^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1816
 hardsextube.com##+js(abort-on-property-read.js, ExoLoader)
@@ -8503,6 +8507,8 @@ macwelt.de##.loaded.standard.marketplace
 ! https://github.com/uBlockOrigin/uAssets/issues/2415
 inkapelis.com##+js(abort-on-property-write.js, smrtSB)
 inkapelis.com##+js(abort-on-property-write.js, smrtSP)
+inkapelis.com##+js(abort-on-property-write.js, Fingerprint2)
+||inkapelis.com/sw.js$script
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2416
 cuevana3.*##+js(abort-on-property-write.js, popUpUrl)
@@ -10337,7 +10343,6 @@ earn-url.com##+js(abort-on-property-write.js, Fingerprint2)
 earn-url.com###headlineatas
 ! https://github.com/uBlockOrigin/uAssets/issues/2957#issuecomment-406818751
 linkrag.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-linkrag.com##+js(nano-setInterval-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2962
 gratisjuegos.co,gratisprogramas.co##+js(abort-on-property-write.js, Fingerprint2)
@@ -10484,6 +10489,7 @@ globe24.cz##.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/3019
 repelis.io,repelisgo.io##+js(abort-on-property-read.js, decodeURI)
 repelis.io##+js(abort-on-property-write.js, document.currentScript)
+||repelisgo.io/srv-pv/$subdocument
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3021
 pelisplus.online##+js(abort-on-property-write.js, mz_str)
@@ -11869,6 +11875,7 @@ news24.com##+js(abort-on-property-read.js, HTMLScriptElement)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9gstjb/how_can_i_prevent_popups_from_appearing_when/
 the123movies.org##+js(abort-current-inline-script.js, decodeURIComponent, zfgloadedpopup)
+the123movies.org##.content-kuss-ads
 
 ! https://forums.lanik.us/viewtopic.php?p=141091#p141091
 namemc.com,pockettactics.com##+js(abort-current-inline-script.js, Math.floor, iframeTestTimeMS)
@@ -13454,3 +13461,24 @@ techprincess.it##+js(set-constant.js, $tieE3, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4088
 shortadz.org##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=40700
+xxxity.com##+js(abort-on-property-read.js, ExoLoader)
+xxxity.com###playerOverlay
+xxxity.com###vertical-banners
+
+! https://github.com/NanoMeow/QuickReports/issues/301
+feral-heart.com##+js(abort-on-property-read.js, admiral)
+
+! https://github.com/NanoMeow/QuickReports/issues/302
+mycartoonvideo.net##+js(setTimeout-defuser.js, (), 1000)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/1001
+@@||thgss.com/js/ads.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/4078
+2speed.net##+js(nano-setTimeout-booster.js, , 1400)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=41532
+upload4earn.org##+js(abort-on-property-write.js, Fingerprint2)
+||lh3.googleusercontent.com^$image,domain=upload4earn.org
