@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: O/0W56G9/Cx6a2PuasU/mA
-! Version: 201811100012
+! Checksum: 1v3EdusuGwlVKdvsWcZyjA
+! Version: 201811110012
 ! Title: Fanboy's Annoyance List
-! Last modified: 10 Nov 2018 00:12 UTC
+! Last modified: 11 Nov 2018 00:12 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -2375,7 +2375,6 @@ _xmlrss.
 /soc_twitter_
 /soc_youtube_
 /socbutton/*
-/sociabilizacao/scripts/*
 /sociables/*
 /social-16px-
 /social-48/*
@@ -27059,6 +27058,7 @@ _site_cookie_
 ##.opacity_layer_consent
 ##.optanon-alert-box-wrapper
 ##.optinCookie
+##.orakelAdvice
 ##.ort-cookie-banner
 ##.osw-privacy
 ##.ou-cookies-bar
@@ -27395,7 +27395,7 @@ _site_cookie_
 ##.show-cookie:not(body)
 ##.show-eu-cookie
 ##.showPrivacyCookie
-##.show_cookie
+##.show_cookie:not(body):not(html)
 ##.siko-cookie-disclaimer
 ##.simple-cookie-bar
 ##.site-cookie
@@ -27704,6 +27704,7 @@ _site_cookie_
 ##.wpcn_banner-wrapper
 ##.wpcui-cookie-bar-body
 ##.wpcui-cookie-bar-display
+##.wpfresh4-cookie-pop
 ##.wpgdpr-modal-dialogg
 ##.wpgdprc
 ##.wpgdprc-consent-bar
@@ -27931,6 +27932,8 @@ _site_cookie_
 ##xk-cookie-policy-warning
 ##ytd-consent-bump-renderer
 ##ytg-notification-footer
+! https://github.com/ryanbr/fanboy-adblock/issues/633
+##div[class^="sp_message_container"] > [class^="sp_message"] > [class^="sp_message_panel"]
 ! volkswagen
 ##.vw5-statisticsOptBox
 ! oath.com https://github.com/ryanbr/fanboy-adblock/issues/472
@@ -38500,6 +38503,7 @@ mymuesli.com#@#cookies_consent
 @@||comparic.pl^*/eu-cookie-law.js
 @@||consent.truste.com/notice?$script,domain=forbes.it
 @@||firkloveren.no/skin/$script,stylesheet
+@@||fundacjapsom.pl/wp-content/plugins/uk-cookie-consent/js/uk-cookie-consent-js.js$script
 @@||iubenda.com/cookie_solution/$script,domain=iphoneitalia.com
 @@||kalaydo.de^*/cookie-consent.jsc.js$domain=kalaydo.de
 @@||kjellmann.no^*/cookielaw/css/cookielaw.css$stylesheet
@@ -38531,6 +38535,7 @@ mymuesli.com#@#cookies_consent
 @@||4game.com^*/facebook.js
 @@||4game.com^*/twitter.js
 @@||4shared.com/images/icons/social-connect-buttons.png
+@@||abc.net.au^*/components/share/
 @@||about.me^*/googleplus?
 @@||acceptableads.org/images/manifesto/reddit.png
 @@||accountkiller.com/i/social-icons.png
