@@ -142,10 +142,6 @@ hentaifr.net,jeu.info,tuxboard.com,xstory-fr.com##+js(goyavelab-defuser.js)
 ||trhnt.com^$document,popup
 ||trhunt.com^$document,popup
 
-! https://skystreaming.net/canali/sky/guarda-sky-sport-1-in-streaming-live
-@@||skystreaming.net^$generichide
-skystreaming.net###fanback + style + div[id]
-
 ! https://github.com/gorhill/uBlock/issues/1049
 ||d1zatounuylvwg.cloudfront.net/abw.js$script,third-party
 
@@ -254,6 +250,7 @@ kissanime.ac,kissanime.co##+js(set-constant.js, check_adblock, true)
 kissanime.ru##+js(abort-current-inline-script.js, $, AdBlock)
 kissanime.ru##+js(abort-current-inline-script.js, parseInt, incrementClicks)
 ||kissanime.ru^$subdocument,first-party
+@@||kissanime.ru/ads/*$subdocument,first-party
 @@||static.animecdn.stream/themes/vast/videojs.ads.min.js$script,domain=kissanime.ac
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kissanime.ac
 ! To cancel https://hg.adblockplus.org/easylist/rev/589a2a8c87d4
@@ -280,9 +277,6 @@ filmstreaming-hd.com,gaara-fr.com,gaytube.com,gum-gum-streaming.com,hentaifr.net
 
 ! https://github.com/gorhill/uBlock/issues/1401
 armorgames.com,mmohuts.com,newgrounds.com,onrpg.com,silvergames.com##a[href*="mmo123.co/egame?"]
-
-! https://forums.lanik.us/viewtopic.php?f=62&t=28856
-||godlessnightsfilm.co.uk/scripts/ad-gallery/$important,third-party
 
 ! https://github.com/gorhill/uBlock/issues/1340#issuecomment-191082824
 ||gamingaffiliation.com^$third-party
@@ -685,18 +679,10 @@ xvideos.com##.sponsor_popup
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32165
 watch8x.com##+js(noeval.js)
 
-! https://forums.lanik.us/viewtopic.php?f=62&t=31796
-fullstuff.co##+js(bab-defuser.js)
-
 ! https://forums.lanik.us/viewtopic.php?f=62&t=32190
 ! https://github.com/uBlockOrigin/uAssets/issues/689
 short.am##+js(abort-current-inline-script.js, en)
 ||pagead2.googlesyndication.com^$important,script,domain=short.am
-
-! https://forums.lanik.us/viewtopic.php?f=62&t=32208
-||popcash.net^$script,redirect=noopjs,domain=fastserver.me
-||dubshub.com^$script,redirect=noopjs,domain=fastserver.me
-||googlesyndication.com^$script,redirect=noopjs,domain=fastserver.me
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=31322&start=30
 ndtv.com###ndtv-myModal
@@ -867,10 +853,6 @@ avaxhome.co##+js(bab-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/141
 viedemerde.fr##+js(criteo.net.js)
 
-! https://github.com/uBlockOrigin/uAssets/issues/144
-animmex.*##+js(bab-defuser.js)
-||4553t5pugtt1qslvsnmpc0tpfz5fo.xyz^$inline-script
-
 ! https://www.reddit.com/r/technology/comments/53olb5/users_lash_out_as_adblock_plus_opens_the_door_to/
 livemint.com###div_storyContent:style(display: block !important;)
 livemint.com###div_adblock
@@ -898,6 +880,7 @@ beta.imagefap.com##.ad_placeholder
 @@||beta.imagefap.com/jscripts/swipeGal.js
 @@||beta.imagefap.com/gallery.php
 @@||imagefap.com/jscripts/blockwidget.js
+*$popunder,domain=imagefap.com
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=30370
 ! https://github.com/uBlockOrigin/uAssets/issues/1347
@@ -1554,7 +1537,7 @@ bicycling.com,menshealth.com,prevention.com,rodalesorganiclife.com,runnersworld.
 ! https://github.com/uBlockOrigin/uAssets/issues/2809
 ! https://github.com/uBlockOrigin/uAssets/issues/2898
 ! https://github.com/uBlockOrigin/uAssets/issues/3089
-advocate.com,cultofmac.com,dailycaller.com,fallbrook247.com,gamesgames.com,gazettenet.com,insidenova.com,jetztspielen.de,leitesculinaria.com,onmsft.com,post-gazette.com,practicalpainmanagement.com,sanangelolive.com,sanfoundry.com,stylecaster.com,viraliq.com,yourtango.com##+js(abort-on-property-read.js, HTMLScriptElement)
+advocate.com,cultofmac.com,dailycaller.com,fallbrook247.com,gamesgames.com,gazettenet.com,insidenova.com,jetztspielen.de,leitesculinaria.com,onmsft.com,post-gazette.com,practicalpainmanagement.com,rawstory.com,sanangelolive.com,sanfoundry.com,stylecaster.com,viraliq.com,yourtango.com##+js(abort-on-property-read.js, HTMLScriptElement)
 sporcle.com##+js(abort-on-property-read.js, admiral)
 ! https://github.com/uBlockOrigin/uAssets/issues/618#issuecomment-333248119
 ! https://forums.lanik.us/viewtopic.php?p=117475#p117475
@@ -5941,10 +5924,12 @@ webdesigndev.com##+js(popads-dummy.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1605
 ! https://github.com/uBlockOrigin/uAssets/issues/1606
 ! https://github.com/uBlockOrigin/uAssets/issues/2257
+! https://github.com/NanoMeow/QuickReports/issues/315
 mispelisyseries.com,tvsinpagar.com##+js(abort-current-inline-script.js, parseInt, tabunder)
 mispelisyseries.com,tvsinpagar.com##+js(abort-on-property-write.js, _pop)
 mispelisyseries.com,tvsinpagar.com##+js(abort-on-property-write.js, Fingerprint2)
 mispelisyseries.com,tvsinpagar.com##+js(addEventListener-defuser.js, mousedown, (b){u()})
+mispelisyseries.com,tvsinpagar.com##+js(addEventListener-defuser.js, /(?:click|mousedown)/, 0x)
 mispelisyseries.com,tvsinpagar.com##+js(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1604
@@ -6350,6 +6335,7 @@ sourceforge.net##+js(nano-setTimeout-booster.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1705
 @@||seekingalpha.com^$generichide
+||seekingalpha.com/boot_data.js$important
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1714
 mobile.twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert/)
@@ -9722,6 +9708,7 @@ televall.info###floatLayer5
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2751
 wicr.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+wicr.me##+js(addEventListener-defuser.js, /^(?:mouseup|mousedown)$/, _0x)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2757
 nwtehranmusic.com##+js(abort-on-property-read.js, needpop)
@@ -13540,3 +13527,28 @@ ani-stream.com##+js(golem.de.js)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9w80d8/
 @@||macbidouille.com^$generichide
+
+! smallseotools ad-reinsertion
+smallseotools.com##+js(abort-current-inline-script.js, $, adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4102
+peeplink.in##+js(popads-dummy.js)
+||bullads.net^$third-party
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42134
+@@||foxplay.fi/*/js/ads.js$script
+
+! https://github.com/NanoMeow/QuickReports/issues/316
+@@||googletagmanager.com/gtm.js$script,domain=clipmyhorse.tv
+
+! https://github.com/uBlockOrigin/uAssets/issues/4104
+jagran.com##+js(set-constant.js, canRun, true)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42143
+@@||fwmrm.net/ad/$script,domain=dplay.fi
+||dniadops-a.akamaihd.net/video-assets/$media,domain=dplay.fi
+
+! https://adblockplus.org/forum/viewtopic.php?p=181819#p181819
+animestelecine.me##.spu-bg
+@@||animestelecine.top/js/ads.js$script,first-party
+file4go.net##+js(abort-current-inline-script.js, document.getElementById, undefined)
