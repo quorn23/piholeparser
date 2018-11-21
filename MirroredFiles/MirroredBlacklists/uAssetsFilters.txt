@@ -887,7 +887,7 @@ beta.imagefap.com##.ad_placeholder
 @@||beta.imagefap.com/jscripts/swipeGal.js
 @@||beta.imagefap.com/gallery.php
 @@||imagefap.com/jscripts/blockwidget.js
-*$popunder,domain=imagefap.com
+*$popunder,domain=imagefap.com,third-party
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=30370
 ! https://github.com/uBlockOrigin/uAssets/issues/1347
@@ -10974,7 +10974,9 @@ wowescape.com##[id^="aswift"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/96sf7n
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41575
+! https://github.com/NanoMeow/QuickReports/issues/348
 duellinksmeta.com##+js(abort-on-property-write.js, checkadb)
+||duellinksmeta.com/js/adsbygoogle.js$script,first-party,redirect=noopjs
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=duellinksmeta.com
 @@||duellinksmeta.com/js/ads.js$xmlhttprequest,first-party
 
@@ -11222,6 +11224,7 @@ watchonlineclub.com##+js(abort-on-property-write.js, decodeURIComponent)
 limetorrents.*##+js(abort-on-property-write.js, Fingerprint2)
 limetorrents.*##[href^="/fast.php"]
 limetorrents.*##tr:has-text(VPN)
+||limetorrents.*/sw.js
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3279
 pornozinhostorrent.com##+js(abort-current-inline-script.js, atob, tabunder)
@@ -13799,3 +13802,22 @@ vidbull.tv##+js(disable-newtab-links.js)
 
 ! https://github.com/NanoMeow/QuickReports/issues/347
 @@||weather.us/js/ads.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/4155
+@@||extremekernel.xyz^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4157
+4fullz.com##+js(abort-on-property-read.js, anOptions)
+4fullz.com##+js(set-constant.js, popup, noopFunc)
+
+! apksecured . com popups
+apksecured.com##+js(abort-on-property-read.js, zfgloadedpopup)
+
+! https://github.com/NanoMeow/QuickReports/issues/351
+comnuan.com##+js(set-constant.js, cmnnrunads, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3960#issuecomment-440329837
+@@||mega-p2p.net^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4156
+audioz.download##+js(abort-on-property-write.js, _pop)
