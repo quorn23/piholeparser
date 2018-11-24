@@ -660,7 +660,7 @@ facebook.com,facebookcorewwwi.onion##.userContentWrapper:has(a[href*="/ads/"])
 facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:has(a[href*="client_token"])
 facebook.com#@#div[id^="hyperfeed_story_id_"]:has(a[href*="utm_campaign"])
 facebook.com,facebookcorewwwi.onion##.userContentWrapper>div div>span>span:has-text(^Suggested Post$)
-facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div[id*="feed_subtitle_"] > span:matches-css(display:none):has(abbr .timestampContent))
+facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div[id*="subtitle"] > span:matches-css(display:none):has(abbr .timestampContent))
 
 ! This removes blank space the right-hand side
 mail.yahoo.com###shellcontent:style(right: 0px !important;)
@@ -1347,14 +1347,14 @@ quora.com##.UnifiedAnswerPagedList > .paged_list_wrapper > div[id]:if(a[href][ta
 ! https://github.com/uBlockOrigin/uAssets/issues/831
 ! https://github.com/uBlockOrigin/uAssets/issues/1835
 worldfree4u.club##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
-worldfree4u.lol,worldfree4u.ws##+js(popads-dummy.js)
-@@||worldfree4u.ws^$generichide
-||worldfree4u.ws/promotion/*$subdocument
-@@||cdnjs.cloudflare.com/ajax/libs/*$script,domain=worldfree4u.ws
-@@||content.jwplatform.com/libraries/*$script,domain=worldfree4u.ws
+worldfree4u.*##+js(abort-on-property-read.js, decodeURIComponent)
+worldfree4u.*##+js(popads-dummy.js)
+@@||worldfree4u.*^$generichide
+||worldfree4u.*/promotion/*$subdocument
+@@||cdnjs.cloudflare.com/ajax/libs/*$script,domain=worldfree4u.top
+@@||content.jwplatform.com/libraries/*$script,domain=worldfree4u.top
 worldfree4u.lol##a[href="/downlo.html"]
 worldfree4u.lol##a[href="/ws.html"]
-worldfree4u.ws##.adButton
 
 ! https://forums.lanik.us/viewtopic.php?p=112050#p112050
 ! https://www.reddit.com/r/uBlockOrigin/comments/8stv3y
@@ -2518,9 +2518,9 @@ arenabg.ch,yifymovies.to##+js(addEventListener-defuser.js, /^(?:click|mousedown|
 ! https://github.com/uBlockOrigin/uAssets/issues/795
 ! https://github.com/uBlockOrigin/uAssets/issues/3370
 emty.space,livecamtv.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,realcam.me,realtimetv.me,seelive.me,strikeout.co##+js(bab-defuser.js)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,tennisstream.me,vipleague.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,tennisstream.me,vipleague.*##+js(abort-on-property-read.js, Date.prototype.toUTCString)
 realtimetv.me,seelive.me,ublock.pw##+js(abort-on-property-read.js, zfgloadedpopup)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,rugbystream.me,soccerstream.me,tennisstream.me##+js(abort-on-property-write.js, _0x5bed)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##+js(abort-on-property-write.js, adcashMacros)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,vipleague.*##+js(abort-on-property-write.js, Fingerprint2)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,seelive.me,strikeout.co,vipleague.*##+js(nowebrtc.js)
@@ -2531,14 +2531,17 @@ mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co##+js(abort-curr
 vipleague.*##+js(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 livecamtv.me,realcam.me,seelive.me##+js(abort-on-property-write.js, _pop)
 vipleague.*##+js(nano-setInterval-booster.js)
-vipleague.*##+js(window.open-defuser.js)
 ||dgafgadsgkjg.top^$third-party
+||mw19c3mi5a.com^$third-party
 fbstreams.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script + [id][style]
 livecamtv.me,realcam.me,seelive.me##style + [id][style]
 vipleague.*##.btn-lg
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39344
 mlbstream.io##+js(abort-current-inline-script.js, decodeURI, atob)
 ||amadagasca.com^
+realcam.pw##+js(abort-on-property-read.js, encodeURIComponent)
+realcam.pw##+js(window.open-defuser.js)
+realcam.pw##+js(abort-on-property-read.js, prevLink)
 
 ! https://github.com/uBlockOrigin/uAssets/pull/705
 ! https://github.com/uBlockOrigin/uAssets/issues/1617
@@ -3181,6 +3184,7 @@ cuturlink.com##+js(abort-on-property-write.js, Fingerprint2)
 meulink.tk##+js(bab-defuser.js)
 linkkawy.com###exestylepopupdiv
 ||123link.*/push/
+123link.*##.ads-block-warning
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39252&p=128960#p128838
 ||player.ooyala.com/static/*ad$script,redirect=noopjs,domain=dugout.com
@@ -6989,7 +6993,10 @@ anime-rebornx.*##+js(bab-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1899
 animeidhentai.com##a[target] > img[src$=".gif"]
+animeidhentai.com##[href^="https://www.hentaipros.com/landing/"]
+animeidhentai.com##.adimg
 animeidhentai.com##.desktopads
+animeidhentai.com###myDIV2
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1904
 cutl.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7113,6 +7120,7 @@ peliculasio.com##+js(abort-on-property-write.js, smrtSB)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/691
 ! https://github.com/uBlockOrigin/uAssets/issues/1935
+hentai2read.com,hentai2w.com##+js(abort-on-property-read.js, _nutaku)
 hentai2read.com,hentai2w.com##+js(abort-on-property-read.js, BetterJsPop)
 hentai2read.com,hentai2w.com##+js(set-constant.js, ads, 1)
 hentai2read.com##a[href^="//www.nutaku.net/"]
@@ -12933,7 +12941,8 @@ seocrin.com##+js(abort-on-property-read.js, xdData1)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3828
 0123movies.*##+js(abort-on-property-read.js, zfgloadedpopup)
-123moviesfun.*##+js(abort-on-property-write.js, Fingerprint2)
+0123movies.*,123moviesfun.*##+js(abort-on-property-write.js, Fingerprint2)
+0123movies.*##+js(set-constant.js, check_adblock, true)
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/202
 @@||filetitle.com/$script,first-party
@@ -13918,3 +13927,10 @@ striputopija.*##+js(set-constant.js, blogantiadblock, noopFunc)
 
 ! https://github.com/NanoMeow/QuickReports/issues/362
 fin24.com##+js(abort-on-property-read.js, admiral)
+
+! https://github.com/NanoMeow/QuickReports/issues/364
+@@||dexterclearance.com^$generichide
+dexterclearance.com##.adsbygoogle:style(max-height: 1px !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4178
+channel24.co.za,fin24.com,health24.com,parent24.com,traveller24.com,wheels24.co.za,w24.co.za##+js(abort-on-property-read.js, admiral)
