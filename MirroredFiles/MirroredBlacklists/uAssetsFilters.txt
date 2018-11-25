@@ -2518,8 +2518,10 @@ arenabg.ch,yifymovies.to##+js(addEventListener-defuser.js, /^(?:click|mousedown|
 ! https://github.com/uBlockOrigin/uAssets/issues/795
 ! https://github.com/uBlockOrigin/uAssets/issues/3370
 emty.space,livecamtv.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,realcam.me,realtimetv.me,seelive.me,strikeout.co##+js(bab-defuser.js)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,tennisstream.me,vipleague.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
-fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,tennisstream.me,vipleague.*##+js(abort-on-property-read.js, Date.prototype.toUTCString)
+boxing-live.stream,fbstream.io,homerun.re,livef1.stream,livemotgp.stream,live-ufc.stream,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,rugbystream.me,soccer-live.stream,strikeout.co,tennisstream.me,vipleague.*##[onclick^="landPage"]
+boxing-live.stream,fbstream.io,homerun.re,livef1.stream,livemotgp.stream,live-ufc.stream,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,rugbystream.me,realcam.pw,soccer-live.stream,strikeout.co,tennisstream.me,vipleague.*##+js(abort-on-property-read.js, prevLink)
+boxing-live.stream,fbstream.io,homerun.re,livef1.stream,livemotgp.stream,live-ufc.stream,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,rugbystream.me,soccer-live.stream,strikeout.co,tennisstream.me,vipleague.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+boxing-live.stream,fbstream.io,homerun.re,livef1.stream,livemotgp.stream,live-ufc.stream,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,rugbystream.me,soccer-live.stream,strikeout.co,tennisstream.me,vipleague.*##+js(abort-on-property-read.js, Date.prototype.toUTCString)
 realtimetv.me,seelive.me,ublock.pw##+js(abort-on-property-read.js, zfgloadedpopup)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##+js(abort-on-property-write.js, adcashMacros)
 fbstream.io,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,vipleague.*##+js(abort-on-property-write.js, Fingerprint2)
@@ -2533,6 +2535,8 @@ livecamtv.me,realcam.me,seelive.me##+js(abort-on-property-write.js, _pop)
 vipleague.*##+js(nano-setInterval-booster.js)
 ||dgafgadsgkjg.top^$third-party
 ||mw19c3mi5a.com^$third-party
+camlive.pw##+js(nowebrtc.js)
+||oagwl3372h.com^$third-party
 fbstreams.me,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,strikeout.co,vipleague.*##script + [id][style]
 livecamtv.me,realcam.me,seelive.me##style + [id][style]
 vipleague.*##.btn-lg
@@ -2541,7 +2545,6 @@ mlbstream.io##+js(abort-current-inline-script.js, decodeURI, atob)
 ||amadagasca.com^
 realcam.pw##+js(abort-on-property-read.js, encodeURIComponent)
 realcam.pw##+js(window.open-defuser.js)
-realcam.pw##+js(abort-on-property-read.js, prevLink)
 
 ! https://github.com/uBlockOrigin/uAssets/pull/705
 ! https://github.com/uBlockOrigin/uAssets/issues/1617
@@ -3257,6 +3260,7 @@ hclips.com##iframe[src="javascript:false"]
 clik.pw##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 clik.pw##+js(nowebrtc.js)
 clik.pw##+js(addEventListener-defuser.js, mousedown, preventDefault)
+||clik.pw^$csp=child-src 'self' *.solvemedia.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/909
 adbilty.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7120,11 +7124,11 @@ peliculasio.com##+js(abort-on-property-write.js, smrtSB)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/691
 ! https://github.com/uBlockOrigin/uAssets/issues/1935
-hentai2read.com,hentai2w.com##+js(abort-on-property-read.js, _nutaku)
 hentai2read.com,hentai2w.com##+js(abort-on-property-read.js, BetterJsPop)
 hentai2read.com,hentai2w.com##+js(set-constant.js, ads, 1)
 hentai2read.com##a[href^="//www.nutaku.net/"]
 hentai2read.com##a[href^="https://network.nutaku.net/"]
+hentai2read.com##[href^="https://www.nutaku.net/signup/"]
 hentai2w.com###playerOverlay
 
 ! https://github.com/reek/anti-adblock-killer/issues/3973
@@ -7144,6 +7148,9 @@ pelislatino3gp.biz##+js(nowebrtc.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1939
 peliculasgoogledrive.info##+js(nowebrtc.js)
+||escondeme.com^
+peliculasgoogledrive.info##[href^="http://bit.ly"]
+peliculasgoogledrive.info##.banner-top
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1945
 clipwatching.com##+js(set-constant.js, adblock, false)
@@ -12419,16 +12426,6 @@ muyinteresante.es##+js(set-constant.js, ads, true)
 ! https://github.com/NanoMeow/QuickReports/issues/167
 dogecatch.website##+js(abort-on-property-write.js, adBlockDetected)
 
-! https://github.com/NanoMeow/QuickReports/issues/168
-soccer-live.stream##+js(abort-on-property-read.js, _0x2c81)
-soccer-live.stream##+js(abort-on-property-read.js, eddOptions)
-soccer-live.stream##+js(window.open-defuser.js)
-camlive.pw##+js(nowebrtc.js)
-||oagwl3372h.com^$third-party
-soccer-live.stream##.btn-info
-soccer-live.stream##.btn-danger
-soccer-live.stream##.btn-primary.btn
-
 ! https://forums.lanik.us/viewtopic.php?p=141899#p141899
 ||curriculture.com^
 @@||9xbuddy.app^$generichide
@@ -13934,3 +13931,36 @@ dexterclearance.com##.adsbygoogle:style(max-height: 1px !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4178
 channel24.co.za,fin24.com,health24.com,parent24.com,traveller24.com,wheels24.co.za,w24.co.za##+js(abort-on-property-read.js, admiral)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9ztarl/123freenet_pop_up/
+123free.net##+js(abort-on-property-read.js, zfgloadedpopup)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/9zvrd8/blocking_ad_ovelaying_on_video_player/
+yespornplease.com##+js(abort-on-property-read.js, Date.prototype.toUTCString)
+vshare.io###xxas
+
+! https://github.com/uBlockOrigin/uAssets/issues/4183
+@@||couponscorpion.com^$generichide
+couponscorpion.com##.ezoic-ad
+
+! https://github.com/uBlockOrigin/uAssets/issues/4184
+a-o.ninja##+js(set-constant.js, showAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4185
+videodistribution.com##+js(set-constant.js, canRunAds, true)
+@@||common-static.tunnl.com/api/$script,domain=player.videodistribution.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/4186
+@@||nibbits.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4187
+singingdalong.*##+js(addEventListener-defuser.js, load, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4188
+@@||techreviewpro.com^$generichide
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42217
+mrdeepfakes.com##+js(abort-on-property-write.js, ReactAds)
+mrdeepfakes.com##+js(abort-current-inline-script.js, document.getElementsByTagName, script)
+mrdeepfakes.com##[href*="offer"]
+||plufdsb.com^
