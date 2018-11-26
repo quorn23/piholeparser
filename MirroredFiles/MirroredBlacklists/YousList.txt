@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20181124
+! Version: 20181125
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -1000,6 +1000,7 @@
 ||go.pub2srv.com/apu.php^
 ||google.com/jsapi?autoload=*%22ads%22$script,domain=youtube.com
 ||googleads.g.doubleclick.net/dbm/ad^
+||googleads.g.doubleclick.net/mads/gma^
 ||googleads.g.doubleclick.net/pagead/adview^
 ||gsad.gameshot.net^
 ||gstatic.com/swiffy/v*/runtime.js^
@@ -1065,7 +1066,6 @@
 ||images.christiantoday.co.kr/views/js/mezzo_outstream.min.js^$domain=christiantoday.co.kr
 ||images.dable.io/ad/
 ||imagesrv.adition.com/js/srp.js^
-||imasdk.googleapis.com/js/core/bridge*.html^
 ||imasdk.googleapis.com/js/sdkloader/ima3.js^
 ||img.1rx.io/banners/ajtg.js^
 ||img.ak.impact-ad.jp/ic/pone/commonjs/yone_viewable_iframe_min.js^
@@ -1514,6 +1514,7 @@
 ||shop.nate.com/shopbox/shopbox.htm^
 ||shoplayer.zum.com/view/zum/hubzum/shoppingbox^$domain=hub.zum.com
 ||shoppingbox.joinsmsn.com^
+||simg.imadrep.co.kr/js/sv.min-*.js^
 ||sin1.g.adnxs.com/ab^
 ||sisainlive.com/script/ad_flow2.js^$domain=sisainlive.com
 ||sisainlive.com/script/ad_flow_2.js^$domain=sisainlive.com
@@ -1725,8 +1726,7 @@
 ||z.moatads.com/*/moatcontent.js^
 ||z.moatads.com/*/moatvideo.js^
 ||zbn.donga.com/2015/banner/ad_read_*.asp^$domain=zbn.donga.com
-||zdnet.co.kr/ads/
-||zdnet.co.kr/pixel2/pixel_top.htm^
+||zdnet.co.kr/ads/$domain=zdnet.co.kr
 ||zergnet.com/zerg.js^
 ||zone5.adpopcon.com/cgi-bin/PelicanC.dll^
 
@@ -1734,6 +1734,7 @@
 101.livere.co.kr##div.contents-list-container>ul.contents-list>li.tenping-title
 11st.co.kr##div#newFooterAdArea
 1boon.daum.net##div#daum-ad-root
+1boon.daum.net##div.wrap_adfit_item
 1tcafe.com,2tcafe.com,tcafe.net,tcafe3.com,tcafe4.com,tcafeaa.com,tcafeby.com,tcafegg.com,tcafego.com,tcafeh.com,tcafek.com,tcafemm.com,tcafen.com,tcafeon.com,tcafex.com,tcafez.net##a[href^="http://smartfile.co.kr/"]
 1tcafe.com,2tcafe.com,tcafe.net,tcafe3.com,tcafe4.com,tcafeaa.com,tcafeby.com,tcafegg.com,tcafego.com,tcafeh.com,tcafek.com,tcafemm.com,tcafen.com,tcafeon.com,tcafex.com,tcafez.net##a[href^="http://t801.linkoooo.com/"]
 1tcafe.com,2tcafe.com,tcafe.net,tcafe3.com,tcafe4.com,tcafeaa.com,tcafeby.com,tcafegg.com,tcafego.com,tcafeh.com,tcafek.com,tcafemm.com,tcafen.com,tcafeon.com,tcafex.com,tcafez.net##div#divpop
@@ -2029,6 +2030,10 @@ chicagotribune.com##div.trb_gptAd
 chicagotribune.com##div.trb_masthead_adBanner
 chicagotribune.com##div.trb_oopAd
 chicagotribune.com##div.trb_sntAd
+chirpstory.com##div.ad_custom
+chirpstory.com##div.ad_list_top
+chirpstory.com##div.ad_rectangle
+chirpstory.com##div.ad_topics_custom
 chosun.com##div.ad_gnb_left
 chosun.com##div.ad_gnb_right
 chosun.com##div.cs_top_ad_box
@@ -5019,9 +5024,12 @@ zdnet.co.kr##div.ad_txt
 zdnet.co.kr##div.con_bn_box
 zdnet.co.kr##div.hide_bk
 zdnet.co.kr##div.hide_bt
+zdnet.co.kr##div.news_12
 zdnet.co.kr##div.power_center
 zdnet.co.kr##div[class^="right_bn"]
+zdnet.co.kr##iframe[src^="/ads/"]
 zdnet.co.kr##ul.ad_list
+zdnet.com##div.sticky-wrapper
 zdnet.com##section.leader-bottom
 zdnet.com##section.leader-top
 zdnet.com##section.mpu
