@@ -660,7 +660,7 @@ facebook.com,facebookcorewwwi.onion##.userContentWrapper:has(a[href*="/ads/"])
 facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:has(a[href*="client_token"])
 facebook.com#@#div[id^="hyperfeed_story_id_"]:has(a[href*="utm_campaign"])
 facebook.com,facebookcorewwwi.onion##.userContentWrapper>div div>span>span:has-text(^Suggested Post$)
-facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div[id*="subtitle"] > span:matches-css(display:none):has(abbr .timestampContent))
+facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div > span:matches-css(display:none):has(abbr .timestampContent))
 
 ! This removes blank space the right-hand side
 mail.yahoo.com###shellcontent:style(right: 0px !important;)
@@ -1684,7 +1684,7 @@ thevideo.cc,thevideo.io,thevideo.us##+js(window.open-defuser.js)
 thevideo.cc,thevideo.me,thevideo.us##+js(abort-current-inline-script.js, app.config.adblock_domain)
 thevideo.cc,thevideo.me,thevideo.us##+js(abort-on-property-read.js, app.main.adblock)
 thevideo.cc,thevideo.me,thevideo.us##+js(abort-on-property-read.js, MarketGidJSON)
-vev.io##+js(addEventListener-defuser.js, /^(?:click|mousedown|mouseup)$/, Xc.)
+vev.io##+js(addEventListener-defuser.js, /^(?:click|mousedown|mouseup)$/, XZc.ot)
 thevideo.cc,thevideo.me,thevideo.us##+js(addEventListener-defuser.js, click, void)
 thevideo.io##.vjs-overlay-no-background.hidden-xs-down.vjs-overlay-banner300x.vjs-overlay-top.vjs-overlay
 ||thevideo.me/assets/g=adb
@@ -3257,9 +3257,11 @@ hclips.com##[class^="pl_"]
 hclips.com##iframe[src="javascript:false"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/907
+clik.pw##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 clik.pw##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-clik.pw##+js(nowebrtc.js)
+clik.pw##+js(addEventListener-defuser.js, /^(?:error|load)$/, P5)
 clik.pw##+js(addEventListener-defuser.js, mousedown, preventDefault)
+clik.pw##+js(nowebrtc.js)
 ||clik.pw^$csp=child-src 'self' *.solvemedia.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/909
@@ -5151,8 +5153,8 @@ boysfood.com##+js(abort-on-property-write.js, encodeURIComponent)
 boysfood.com###pause-container
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1375
+submityourflicks.com##+js(abort-on-property-read.js, ExoLoader.serve)
 submityourflicks.com##+js(popads-dummy.js)
-submityourflicks.com##+js(abort-current-inline-script.js, ExoLoader)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1377
 pandaporn.net##+js(abort-on-property-read.js, ExoLoader.addZone)
@@ -9570,6 +9572,8 @@ yxzero.xyz##+js(abort-on-property-read.js, adBlockDetected)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8tv52a/onlinevideoconvertercom_adblock_warning_message
 @@||onlinevideoconverter.com^$generichide
+||onlinevideoconverter.com^$script,first-party
+onlinevideoconverter.com##[href="https://bit.ly/uconvert"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2697
 elsfile.org##+js(addEventListener-defuser.js, load, nextFunction)
@@ -13312,7 +13316,10 @@ moviefull-hd.*##.ad_insert
 gsmdunya.com##+js(abort-current-inline-script.js, $, adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3988
+pss.pw##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+pss.pw##+js(abort-on-property-read.js, AaDetector)
 pss.pw##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+pss.pw##+js(addEventListener-defuser.js, /^(?:error|load)$/, P5)
 *$subdocument,domain=pss.pw,third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3990
@@ -13745,7 +13752,8 @@ agar.space##+js(abort-current-inline-script.js, document.getElementById, block)
 @@||methbox.com^$generichide
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=42181
-consoletarget.com,gamecopyworld.eu##+js(abort-on-property-read.js, loadTool)
+! https://github.com/uBlockOrigin/uAssets/issues/4202
+consoletarget.com,gamecopyworld.*##+js(abort-on-property-read.js, loadTool)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9xn570/trueachievementscom_with_adchoices_on_pc/
 trueachievements.com##+js(abort-current-inline-script.js, setTimeout, iframeTestTimeMS)
@@ -13925,9 +13933,6 @@ megaup.net##+js(abort-current-inline-script.js, document.getElementById, undefin
 ! https://github.com/NanoMeow/QuickReports/issues/360
 striputopija.*##+js(set-constant.js, blogantiadblock, noopFunc)
 
-! https://github.com/NanoMeow/QuickReports/issues/362
-fin24.com##+js(abort-on-property-read.js, admiral)
-
 ! https://github.com/NanoMeow/QuickReports/issues/364
 @@||dexterclearance.com^$generichide
 dexterclearance.com##.adsbygoogle:style(max-height: 1px !important;)
@@ -14016,3 +14021,16 @@ royalurls.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 ! https://github.com/uBlockOrigin/uAssets/issues/4195
 mangakyo.net##+js(setTimeout-defuser.js, nextFunction, 450)
 mangakyo.net##[href="http://togel777.net/"]
+
+! https://github.com/NanoMeow/QuickReports/issues/377
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=dlnowsoft.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/4200
+@@||makemehost.com^$generichide
+makemehost.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/4198
+||code.jquery.com/jquery-$script,domain=mega-mkv.com
+
+! https://github.com/NanoMeow/QuickReports/issues/378
+phoneworld.com.pk##+js(set-constant.js, $tieE3, true)

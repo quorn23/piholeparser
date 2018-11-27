@@ -9,9 +9,9 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 25 November 2018
+! Last modified: 26 November 2018
 ! Expires: 1 day
-! Version: 2018112509
+! Version: 2018112603
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -20,7 +20,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018112509 aktualizacja: nie, 25 listopada 2018, 21:49:00
+! v.2018112603 aktualizacja: pon, 26 listopada 2018, 23:40:00
 !
 !
 !-----------------------Integration of supplement lists for uBlock & AdGuard-----------------------!
@@ -1055,12 +1055,13 @@ gizycko.info.pl##body > center:nth-of-type(1) > table > tbody > tr > td:nth-of-t
 glamrap.pl###footmod
 glamrap.pl##[onclick*="Reklama"][target="_blank"] > IMG, #mvp-leader-wrap
 globtroter.pl##a[href^="http://track.omgpl.com/"] > .img-responsive
-glogow-info.pl###maincol-broad-800 > center
-glogow-info.pl###rightcol-broad > .module:nth-of-type(1)
-glogow-info.pl###rightcol-broad > .module:nth-of-type(3)
-glogow-info.pl###rightcol-broad > .module:nth-of-type(4)
-glogow-info.pl###rightcol-broad > .module:nth-of-type(5)
-glogow-info.pl##TD[onclick^="window.location.href="]
+glogow-info.pl,glogow.info.pl###leftcol > .module:nth-of-type(n+2):nth-of-type(-n+4)
+glogow-info.pl,glogow.info.pl###maincol-broad-800 > center > div:nth-of-type(-n+2)
+glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(1)
+glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(3)
+glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(4)
+glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(5)
+glogow-info.pl,glogow.info.pl##TD[onclick^="window.location.href="]
 gazeta-olawa.pl##.absolute, #sidebar-primary-sidebar > div.row
 glokalna.pl###wpbanner-14454
 gloria.tv##A[href^="/advertisement/"]
@@ -1682,10 +1683,6 @@ moje-gniezno.pl##DIV[style^="position:relative;margin:0 auto;display:inline-bloc
 mojeauto.pl###ma-top-layer
 mojlask.pl###text-2 > .textwidget
 mojlask.pl##[id*="ad_widget"]
-money.pl##.main-menu__submenu__offer
-money.pl##.recommended, .cTDBBq, .iUqSbV, .lhn3m0y66d
-money.pl##A[href*="://direct.money.pl/o/salechannel.php"]
-money.pl##DIV[style$="min-height:180px"]
 morele.net##.ears-left
 morele.net##.ears-right
 morele.net##.hidden.citibank-popup
@@ -2104,7 +2101,6 @@ prawdaobiektywna.pl###right-re, #header-b, .clearfix.in-content2
 prawicowyinternet.pl##.td-ss-main-sidebar > .widget_text.widget.td_block_template_1:nth-of-type(2)
 prawicowyinternet.pl##.widget_text.widget.td_block_template_1:nth-of-type(4)
 prawicowyinternet.pl##.widget_text.widget.td_block_template_1:nth-of-type(5)
-prawo.money.pl###img11155698
 prawodrogowe.pl##IMG.img-responsive[src^="/img/banner/"]
 prawy.pl##img[src^="/ad/"]
 predkosc.pl##[href^="/_pub/ex.php"]
@@ -2486,6 +2482,7 @@ sympatia.onet.pl###backdrop-container
 sympatia.onet.pl###close-frame
 system.ekai.pl###banner_reklamowy
 szafa.pl###spol
+szafiarka.pl##.a-info
 szczecinek.com##.gal-wrapper:nth-of-type(15), .reklama-rectangle, .negatyw.row > div.w250:nth-of-type(2)
 sztafeta.pl##.mom-e3lanat-wrap
 sztuka-wnetrza.pl##div.adv_w_1
@@ -2688,6 +2685,7 @@ v10.pl##DIV[style="width: 100%; background-color: rgb(0, 0, 0); margin: 0px; pos
 v10.pl##[id^="newsltr1_"]
 valetudo.bialystok.pl##.darkness-popup
 vampirediaries.pl##[width="300"] + [width="20"] + TD[width="300"]
+vanessa.fm###text-10
 vape.pl###single-pin-above-ad
 vape.pl##.sidebar-wrapper + .sidebar-wrapper
 vbtpc.pl##.footer-banner
@@ -2893,7 +2891,6 @@ www.lubin.pl,sportslaski.pl,wirtualnepniewy.pl###banner
 www.lubliniec.info##.rightSideBaner
 www.miechowski.pl###rev_slider_8_1
 www.miechowski.pl##.attachment-full.vc_single_image-img
-www.money.pl###app > div[class][data-reactroot] > div[class]:nth-of-type(6)
 www.morele.net##[id$="_ucho"]
 www.mycenter.pl##[id^="place3_v"]
 www.naotwocku.pl##.sidebar > .tborder:nth-of-type(4) > tbody
@@ -2948,6 +2945,7 @@ wynagrodzenia.pl###slider_kontener
 wyspagier.pl##.adv, .abm_plug
 wyspagier.pl##.banner-static-game
 wyspiarzniebieski.pl##[class^="Comm336"]
+w-poblizu.pl###.da
 xboxforum.pl###Notices > .scrollContainer
 xboxforum.pl###content > .pageWidth > .pageContent > .blockContainer:nth-of-type(5) > .noticeContainer
 xfinanse.pl##.entry-image.attachment-post
@@ -2998,6 +2996,7 @@ zawiszafans.net##body > p
 zawiszafans.net##table
 zawodowe.com##.news-container.row:nth-of-type(6) > .col-md-5
 zblogowani.pl##.hidden-xs.container
+zdrowiewkrakowie.pl##body > div:nth-of-type(1)[style="display: block; padding: 5px; text-align: center; background: rgb(250, 250, 250);"]
 zebrra.tv##.sam-container
 zegarkiclub.pl###dp3_aa, #sticky_sidebar_ad
 zeglarski.info##[style="margin-bottom: 20px; "] > A
@@ -3168,7 +3167,7 @@ zywiecinfo.pl##.promoted
 ||getionary.pl/images/tlo-box.png$image
 ||gfx.antyradio.pl/var/antyradio/storage/images/linki-graficzne/
 ||g.gazetaprawna.pl/gp/sgp/img/gp/kyocera-logo.png$image
-||glogow.pl/rek/$domain=glogow-info.pl
+||glogow.pl/rek/$domain=glogow-info.pl|glogow.info.pl
 ||googlesyndication.com^
 ||googleusercontent.com/$image,domain=openlinksys.info
 ||gorzow24.pl/img/ims/$image
@@ -3625,7 +3624,7 @@ comperia.pl##.czarobox
 czasdiet.pl##.contop + [style*="border:2px solid;"], .consid + [style*="border:2px solid;"]
 dailyweb.pl##.row:nth-of-type(4), .adsense-blockerr
 darmowyskin.pl##.info_add_block
-dstar.pzk.pl,burze.dzis.net,kurnik.pl,arrow24.net,vampirediaries24.pl,matzoo.pl,skript.pl,katowickisport.pl,przewodnikduchowy.pl,waw4free.pl,webcamera.pl#@#.adsbygoogle
+dstar.pzk.pl,burze.dzis.net,kurnik.pl,arrow24.net,vampirediaries24.pl,matzoo.pl,skript.pl,katowickisport.pl,przewodnikduchowy.pl,waw4free.pl,webcamera.pl,w-poblizu.pl#@#.adsbygoogle
 dziennikelblaski.pl###blockwarning
 dziennikwschodni.pl#@#.adholder
 dziennikwschodni.pl#@#.ad-holder
@@ -4153,7 +4152,6 @@ tvtoss.me##.bannerfloat
 autokult.pl##.insert--top-offer.insert, .partner-area
 autokult.pl##[href^="http://corto.www.wp.pl/"]
 avent-ugrow.wp.pl##[class$="BgClick"]
-direct.money.pl##body > div.section, .breadcrumb
 kafeteria.pl,money.pl,pudelek.pl,autokult.pl##.scr-wallpaper
 komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##.article-wrapper > FIGURE.insert
 komorkomania.pl,gadzetomania.pl,fotoblogia.pl,autokult.pl,wawalove.pl##BODY > DIV[style*="max-width: 100%; "]
@@ -4243,6 +4241,7 @@ pudelekx.pl##[id^="adv"]
 biztok.money.pl##DIV[style="margin-bottom: 10px"] + DIV > DIV > DIV[class]
 biztok.money.pl##[style="margin-bottom: 10px"] > DIV[class]
 biztok.money.pl##[style$="padding:10px 0"] > DIV[class]
+direct.money.pl##body > div.section, .breadcrumb
 manager.money.pl##.in > DIV[class]:first-child
 money.pl##A[class][href*=".wp.pl/"] > DIV > IMG[src^="https://v.wpimg.pl/"]
 money.pl##DIV#ADrail > DIV[class]:first-child
@@ -4251,10 +4250,16 @@ money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
 money.pl##DIV.right-column[data-floatingsky] > DIV:first-child
 money.pl##DIV.right-column > [class]:first-child
 money.pl##DIV[style="margin-bottom: 10px"] + DIV > DIV > DIV + DIV + DIV[class]
+money.pl##.cTDBBq, .iUqSbV, .een3d0d111d
+money.pl##.main-menu__submenu__offer
 money.pl##.right-column > DIV + DIV[class]
 money.pl##.right-column > DIV > DIV > DIV > DIV + DIV[class]
 money.pl##.x03, .linia, .mpl_right > [class] > [class] > div > div
+money.pl##.recommended
+money.pl##A[href*="://direct.money.pl/o/salechannel.php"]
+money.pl##DIV[style$="min-height:180px"]
 msp.money.pl##DIV > DIV[style*=" z-index: 310"]
+prawo.money.pl###img11155698
 www.money.pl###ADrail > DIV > DIV[class]
 www.money.pl##.article-set + DIV[style^="background"]
 www.money.pl##.box:first-child + DIV[class]
@@ -4266,6 +4271,7 @@ www.money.pl##DIV[style$=" z-index: auto;"] > DIV[class]
 www.money.pl##P + DIV[style$="padding:10px 0"]
 www.money.pl##SCRIPT[src^="//money"] + DIV[class][style="text-align:center;"]
 www.money.pl#?#.article__content>div[class*=" "]:-abp-has(div>div>div:-abp-contains(REKLAMA))
+!www.money.pl#?##app > div[class][data-reactroot] > div[class]:nth-of-type(6):-abp-has(*:empty)
 !
 !36#--------------------------Easylist Bugs -----------!
 @@/app\.erpxt\.[a-z]{2,3}\/Scripts\/Code\//
