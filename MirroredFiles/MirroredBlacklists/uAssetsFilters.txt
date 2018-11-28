@@ -1428,7 +1428,7 @@ movie-blog.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 ! https://www.reddit.com/r/uBlockOrigin/comments/71avqz/piratebay_found_a_new_method_to_bypass_ublock/
 ! https://github.com/uBlockOrigin/uAssets/issues/734
 ! https://forums.lanik.us/viewtopic.php?f=62&t=39238
-9xbuddy.com,adf.ly,albumkings.org,ay.gy,azvideo.net,bestfilmeshd.com,bombuj.eu,cloudyfiles.org,crackingpatching.com,daclips.in,dfiles.eu,divxtotal3.net,downsub.com,easyview.eu,english-subtitles.pro,filescdn.com,filmuptobox.net,freegamesdl.net,gomovies.es,gorillavid.in,hulkload.com,j.gs,jkanime.net,karanpc.com,livewidget.net,macserial.com,microify.com,minecraft-forum.net,newmusic.trade,onmovies.to,opensubtitles.org,pintient.com,pirateproxy.*,pleermp3.net,psarips.com,q.gs,ripple.is,security-links.com,snowfiles.com,solidfiles.com,suprafiles.org,thepiratebay.org,torrentexx.com,uploadrocket.net,uptobox.com,vidabc.com,zippyshare.com##+js(abort-on-property-write.js, Fingerprint2)
+9xbuddy.com,adf.ly,albumkings.org,ay.gy,azvideo.net,bestfilmeshd.com,bombuj.eu,cloudyfiles.org,crackingpatching.com,daclips.in,dfiles.eu,divxtotal3.net,downsub.com,easyview.eu,english-subtitles.pro,filescdn.com,filmuptobox.net,freegamesdl.net,gomovies.es,gorillavid.in,hulkload.com,j.gs,jkanime.net,karanpc.com,livewidget.net,macserial.com,microify.com,minecraft-forum.net,newmusic.trade,onmovies.to,opensubtitles.org,pintient.com,pirateproxy.*,pleermp3.net,psarips.com,q.gs,ripple.is,security-links.com,snowfiles.com,solidfiles.com,suprafiles.org,thepiratebay.org,torrentexx.com,uploadrocket.net,uptobox.com,zippyshare.com##+js(abort-on-property-write.js, Fingerprint2)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/5ywxnd/anyone_know_how_to_block_this_ad/
 ! https://forums.lanik.us/viewtopic.php?p=124411#p124411
@@ -2171,6 +2171,7 @@ torlock.com##.trtbl:has-text(VPN)
 ! https://github.com/uBlockOrigin/uAssets/issues/582
 inoreader.com###reader_pane:style(padding-right: 0px !important;)
 inoreader.com###sinner_container
+||inoreader.com/adv/$script,redirect=noopjs,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/590
 ! https://www.reddit.com/r/uBlockOrigin/comments/76srms/local_news_sites_in_the_uk_now_attempting_to/
@@ -2981,7 +2982,7 @@ myegy.tv##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 myegy.tv##+js(setInterval-defuser.js, (), 500)
 ||adscpm.site^$third-party
 ! Popups triggered by popads
-123tvseries.co,animepahe.com,clicknupload.org,cloudy.ec,mactorrents.org,mkvcage.com,newmusic.trade,nodefiles.com,pahe.in,owndrives.com,psarips.com,smallencode.com,twoddl.co,vidabc.com,weshare.me##+js(abort-on-property-write.js, _pop)
+123tvseries.co,animepahe.com,clicknupload.org,cloudy.ec,mactorrents.org,mkvcage.com,newmusic.trade,nodefiles.com,pahe.in,owndrives.com,psarips.com,smallencode.com,weshare.me##+js(abort-on-property-write.js, _pop)
 
 ! Reported by a reader
 brasil247.com##+js(bab-defuser.js)
@@ -13984,7 +13985,7 @@ mrdeepfakes.com##[href*="offer"]
 unblocksites.co##+js(nowebrtc.js)
 
 ! popunder / (nsfw) sites - phtData
-fantasti.cc,pornxt.com,smutr.com,yuvutu.com##+js(abort-on-property-write.js, phtData)
+crazyshit.com,fantasti.cc,gfjizz.com,pornxt.com,smutr.com,yuvutu.com##+js(abort-on-property-write.js, phtData)
 
 ! https://github.com/NanoMeow/QuickReports/issues/340
 veedi.com##+js(set-constant.js, adBlocker, false)
@@ -14000,8 +14001,9 @@ veedi.com##+js(set-constant.js, adBlocker, false)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/a09q3o/anti_adblock_uonano_defender/
 anitube.biz##+js(set-constant.js, adBlockDetected, noopFunc)
+@@||anitube.info^$generichide
 @@||anitube.pro^$generichide
-@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$script,domain=anitube.pro
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$script,domain=anitube.info|anitube.pro
 ||megafilmeshd21.tk^$third-party
 
 ! https://github.com/NanoMeow/QuickReports/issues/367
@@ -14034,3 +14036,31 @@ makemehost.com##.adsbygoogle
 
 ! https://github.com/NanoMeow/QuickReports/issues/378
 phoneworld.com.pk##+js(set-constant.js, $tieE3, true)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42223
+vodlocker.to##+js(nowebrtc.js)
+||vodlocker.to/sw-vodlocker.to.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/4204
+@@||vpnssh.net^$generichide
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/*/fuckadblock.js$script,domain=vpnssh.net
+
+! https://github.com/uBlockOrigin/uAssets/issues/4205
+@@||freevpn.us^$generichide
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/*/fuckadblock.js$script,domain=freevpn.us
+
+! https://github.com/NanoMeow/QuickReports/issues/380
+lfpress.com##+js(abort-on-property-read.js, stop)
+||nn0e.com^$script,domain=lfpress.com
+
+! https://github.com/NanoMeow/QuickReports/issues/381
+edmontonjournal.com##+js(abort-on-property-read.js, stop)
+||e0mn.com^$script,domain=edmontonjournal.com
+
+! https://github.com/NanoMeow/QuickReports/issues/382
+@@||medievalists.net^$generichide
+medievalists.net##.Mnet_TopLeft_970x250:has-text(Adv)
+medievalists.net##.widget-title:has-text(Adv)
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=42237
+toplive.info##+js(abort-on-property-write.js, Fingerprint2)
