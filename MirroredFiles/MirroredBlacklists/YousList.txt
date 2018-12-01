@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20181129
+! Version: 20181130
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -89,6 +89,7 @@
 ##iframe[src^="//acdn.adnxs.com/ib/static/usersync/v3/async_usersync.html"]
 ##iframe[src^="//acdn.adnxs.com/ib/static/usersync/v4/async_usersync.html"]
 ##iframe[src^="//ad.vkoad.com/showads.php"]
+##iframe[src^="//adapi.inlcorp.com/dfp/"]
 ##iframe[src^="//adclickservice.com"]
 ##iframe[src^="//adex.ednplus.com/"]
 ##iframe[src^="//ads.acrosspf.com/adinfo.ad"]
@@ -420,7 +421,7 @@
 ||ad.bananamall.co.kr/*/banner.php^
 ||ad.crwdcntrl.net^
 ||ad.daum.net^
-||ad.doubleclick.net^$third-party
+||ad.doubleclick.net^$domain=~thehackernews.com,third-party
 ||ad.dt.co.kr^
 ||ad.gogovid.net/include/popunder/license.*.js^
 ||ad.gogovid.net/include/popunder/script.js^
@@ -473,6 +474,8 @@
 ||ad2.thisisgame.com^
 ||ad8.adfarm1.adition.com/s^
 ||ad89.z00.kr/catchback/*.js^
+||adapi.inlcorp.com/dfp/
+||adapi.inlcorp.com/kao/
 ||adbiz.co.kr^
 ||adbiz2.co.kr^
 ||adbiz3.co.kr^
@@ -2183,6 +2186,7 @@ daum.net##div#daumAd
 daum.net##div.ad_rightbtm
 dcinside.com##div#dgn_content_de>div[style="padding-top: 16px;padding-bottom:30px;text-align: center"]
 dcinside.com##div.ad_top
+dcnewsj.joins.com##div.promotion_banner
 ddanzi.com##div.add_display
 ddanzi.com##div.add_display_new
 deal.11st.co.kr##div.sponsor_link_wrap
@@ -4582,6 +4586,10 @@ tcorea.com##div#containwrap>div[style="margin-top:3px; background:#fff; border:1
 tcorea.com##div#main_bn
 tczoa.info##a[href^="https://tczoa.info/widgets/okad/click.php"]
 tczoa.info##div.AD02
+te31.com##div#Promotion2
+te31.com##div#content>table.box1[align="center"][bgcolor="#161d25"][cellpadding="0"][cellspaing="0"][style="padding-bottom:5px;margin-bottom:5px;"][width="593"]
+te31.com##div[align="center"]:not([class]):not([id])>table[align="center"][background="black.png"][bgcolor="#000000"][cellpadding="0"][cellspacing="0"][height="110"][width="900"]
+te31.com##div[align="center"]:not([class]):not([id])>table[border="0"][cellpadding="3"][cellspacing="3"][height="270"][width="900"]
 techcrunch.com##div#acc-native-ad
 techcrunch.com##div.ad-300x250
 techcrunch.com##div.ad-cluster-container
@@ -4631,7 +4639,11 @@ theblockchain.kr##div.rightBanner2
 theblockchain.kr##div.topBanner
 theblockchain.kr##div.viewArticle>div[style="margin-bottom:15px"]
 theguardian.com##div.ad-slot
+thehackernews.com##center.banners
+thehackernews.com##div.ad_one
 thehackernews.com##div.articlebodyonly>div>div[style="padding: 15px 0px; text-align: left;"]
+thehackernews.com##div.banners
+thehackernews.com##ins.dcmads
 thehealthycookingcoach.com##div[id^="thehe-"]
 thenextweb.com##div.tnw-ad-loaded
 thenextweb.com##ins.dcmads
