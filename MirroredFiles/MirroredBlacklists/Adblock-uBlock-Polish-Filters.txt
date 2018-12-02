@@ -9,9 +9,9 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 29 November 2018
+! Last modified: 1 December 2018
 ! Expires: 1 day
-! Version: 2018112905
+! Version: 2018120102
 ! Support:
 !   Email >> errors@certyficate.it
 !   Discord >> http://ds.certyficate.it
@@ -20,7 +20,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2018 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2018112905 aktualizacja: czw, 29 listopada 2018, 18:35:00
+! v.2018120102 aktualizacja: nie, 1 grudnia 2018, 22:15:00
 !
 !
 !-----------------------Integration of supplement lists for uBlock & AdGuard-----------------------!
@@ -125,7 +125,7 @@ vshare.io###sendif
 ##.a-d-v
 ###a-d-s
 ##.adverstiment-box
-~allegro.pl##.advert
+~allegro.pl,~dipp.pl##.advert
 ##.advertisment-panel
 ##.advContainer
 ##.a-d-v-i
@@ -212,7 +212,7 @@ onet.pl##a[href^="http://csr.onet.pl/eclk/clk"]
 ###phContent_avastBadge
 pl##.adbox
 pl##.adsbyg
-pl##.adv_container
+~filmweb.pl,pl##.adv_container
 pl##a[href*="://clicks.fortunaaffiliates.com/"]
 ~lowcygier.pl,pl##a[href*="://converti.se/click/"]
 pl##a[href^="http://s.click.aliexpress.com/"]
@@ -253,7 +253,7 @@ popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 ~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,pl##.widget-ads-content
 ~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,pl###widget-shop
 ~przegladsportowy.pl,~playpuls.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~gry-online.pl,~tv6.com.pl,~trojmiasto.pl,~otomoto.pl,~medonet.pl,pl##[class*="cg-template"]
-~przegladsportowy.pl,~playpuls.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~gry-online.pl,~tv6.com.pl,~trojmiasto.pl,~otomoto.pl,~dziennikwschodni.pl,~obalamyglupote.pl,pl,~pornohd.pl,~polskieszlaki.pl,~poczta.interia.pl,~comperia.pl##[class$="-ads"]
+~przegladsportowy.pl,~playpuls.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~gry-online.pl,~tv6.com.pl,~trojmiasto.pl,~otomoto.pl,~dziennikwschodni.pl,~obalamyglupote.pl,pl,~pornohd.pl,~polskieszlaki.pl,~poczta.interia.pl,~comperia.pl,~filmweb.pl,~semtalk.pl##[class$="-ads"]
 ##.rek_kontener
 ##.Reklama
 ##.reklama-gora
@@ -1058,12 +1058,9 @@ gizycko.info.pl##body > center:nth-of-type(1) > table > tbody > tr > td:nth-of-t
 glamrap.pl###footmod
 glamrap.pl##[onclick*="Reklama"][target="_blank"] > IMG, #mvp-leader-wrap
 globtroter.pl##a[href^="http://track.omgpl.com/"] > .img-responsive
-glogow-info.pl,glogow.info.pl###leftcol > .module:nth-of-type(n+2):nth-of-type(-n+4)
+glogow-info.pl,glogow.info.pl#?#.contentpaneopen:-abp-contains(Reklama)
+glogow-info.pl,glogow.info.pl#?#.module:-abp-contains(Reklama)
 glogow-info.pl,glogow.info.pl###maincol-broad-800 > center > div:nth-of-type(-n+2)
-glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(1)
-glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(3)
-glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(4)
-glogow-info.pl,glogow.info.pl###rightcol-broad > .module:nth-of-type(5)
 glogow-info.pl,glogow.info.pl##TD[onclick^="window.location.href="], [href^="http://"] > .lazy-loaded
 gazeta-olawa.pl##.absolute, #sidebar-primary-sidebar > div.row
 glokalna.pl###wpbanner-14454
@@ -1744,13 +1741,13 @@ nacjonalista.pl##.napis, .entry-content.entry > A
 nacjonalista.pl##DIV[align="center"]
 nadmorski24.pl##[href^="/dynamicAD/"]
 naekranie.pl##.adform, #attachment_3064862, .screening-banner
-naekranie.pl##.inner-wrap > div[class^=y][style]:not(#drivers-slider):not(#home)
-naekranie.pl##.no-review.title-wide > [class^="z"]
-naekranie.pl##.title-wide > div[class^=z][style]
-naekranie.pl##div.prawa-szpalta.box > [class^="z"]
-naekranie.pl###home-indexes > div > [class^="z"]
-naekranie.pl##div.icon-star.box > [class^=z]
-naekranie.pl##[id^="post-"] > div + div + div > [class^="z"]
+naekranie.pl##.inner-wrap > div[class^="a"][style]:not(#drivers-slider):not(#home)
+naekranie.pl##.no-review.title-wide > [class^="a"]
+naekranie.pl##.title-wide > div[class^="a"][style]
+naekranie.pl##div.prawa-szpalta.box > [class^="a"]
+naekranie.pl###home-indexes > div > [class^="a"]
+naekranie.pl##div.icon-star.box > [class^="a"]
+naekranie.pl##[id^="post-"] > div + div + div > [class^="a"]
 naekranie.pl##div[style="background-color: transparent; margin-top: -61px; min-height: 100%; height: 1200px; "]
 naekranie.pl##div[style^="max-width:"][style$="; margin: auto; "]
 naekranie.pl##video
@@ -2504,7 +2501,7 @@ tabletowo.pl###menu-item-komputronik, #re_kk_near_logo
 tabletowo.pl##.swckbb, .megatop_wrap, .rd_widget_text
 tabletowo.pl##.widget2:nth-of-type(2)
 tabletowo.pl##.widget2:nth-of-type(3)
-tabletowo.pl##DIV[class*=rek]
+tabletowo.pl##DIV[class*="rek"]
 tabletowo.pl##[id^="text-"]
 tabletowo.pl##[rel="nofollow"][target="_blank"]
 tabletowo.pl##a[href*="dhosting.pl"]
@@ -3529,6 +3526,7 @@ zywiecinfo.pl##.promoted
 @@||adtaily.pl/wp-content/themes/adtaily_*/$domain=www.adtaily.pl
 @@/advertise*.js$script,domain=cda.pl|tuba.pl
 @@/advertisingmodule.$domain=ekstraklasa.tv|itvn.pl|player.pl|ttv.pl|tvn.pl|tvn24.pl|tvn24bis.pl|tvn7.pl|tvnplayer.pl|tvnstyle.pl|tvnturbo.pl
+@@||adocean.pl/files/js/ado.js|$domain=filmweb.pl
 @@||adwords.radom.pl^
 @@||angielskie-slowka.pl/speecher/advert/*.mp3
 @@||anime-odcinki.pl/sites/default/files/styles/medium-smaller__200x200_/public/okladki
@@ -3541,6 +3539,7 @@ zywiecinfo.pl##.promoted
 @@||cdn.gamer-network.net/plugins/dfp/$script,domain=eurogamer.pl
 @@||cdntvn.pl/adscript.js$xmlhttprequest
 @@||cloud.ideabank.pl/js/libs/angular-google-plus.js$script,domain=cloud.ideabank.pl
+@@||cz.search.etargetnet.com/|$domain=filmweb.pl
 @@||czytadelko.pl/js/show_ads.js$script,domain=czytadelko.pl
 @@||diff3.smartadserver.com/diff/$object,domain=get.x-link.pl
 @@||dot.wp.pl/redir?SN=facebook_o2
@@ -3551,6 +3550,7 @@ zywiecinfo.pl##.promoted
 @@||exs.pl^$domain=wpolityce.pl|wio.waw.pl
 @@||fakt.pl^$generichide
 @@||gazetabilgoraj.pl/wp-content/plugins/better-adsmanager/js/advertising.min.js$script
+@@||go.eu.bbelements.com/please/code|$domain=filmweb.pl
 @@||google-analytics.com$domain=certyficate.it|liptonicetea.com|filmweb.pl
 @@||googletagmanager.com/gtag/$script,domain=certyficate.it
 @@||googletagmanager.com/gtm.js$script,domain=www.emag.pl|benchmark.pl|komputerswiat.pl|www.jabra.pl
@@ -4083,6 +4083,7 @@ autocentrum.pl,demotywatory.pl,dziennik.pl,facetemjestem.pl,gala.pl,garnek.pl,gr
 ||ulink.pl^
 ||paczkomaty-pl.tk^
 ||paczkomat.biz.pl^
+||ingbank.pl.bezpieczne.logowanie.ssl.ngbezpieczna.pw^
 filmyfilmy.pl###play
 !
 !24#--------------------------Rules for ublock, but can be use with adblock------------!
@@ -4124,7 +4125,7 @@ pl##a[href^="//69oxt4q05.com/"]
 /^(http|https):\/\/[a-zA-Z.0-9]{7,}\.(com|bid|info)\/[a-zA-Z]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|vidlox.tv|segos.es|fileone.tv|streamango.com|nasze-kino.online|vidto.pl|raptu.com|rapidvideo.com|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|openkatalog.ml|dragon-ball-super.ga|nasze-kino.tv|kino123.pl|boxfilm.pl|cloudupload.co|allonline.pl|openload.co|cdax.online|abcast.net|darmowa-tv.pl|veecast.net|a-o.ninja|castto.me|centrum-dramy.pl|hentai-online.pl|centrum-mangi.ninja|openkatalog.com|shinden.pl|tele-wizja.is|ekinomaniak.tv|tele-wizja.ru|hqq.watch|whostreams.net|seriale-po-polsku.pl|virpe.com
 /(http|https):\/\/naekranie\.pl\/wp-content\/uploads\/[0-9]{4,4}\/[0-9]{2,2}\/(?!jpg)[0-9a-z]{7,10}$/$image
 /^(http|https):\/\/[\w]{12,}\.[a-z]{3,3}\/[a-z]{1,10}\.html[\w\d\W]{100,}/$script,domain=tele-wizja.ru
-/^(http|https):\/\/[\w]{8,}\.[a-z]{3,3}\/[\w\d\W]{45,}/$script,domain=abcast.net|alltube.pl|alltube.tv
+/^(http|https):\/\/[\w]{5,}\.[a-z]{3,3}\/[\w\d\W]{45,}/$script,domain=abcast.net|alltube.pl|alltube.tv|szukajka.tv
 /^(http|https):\/\/(?!youtube)[a-zA-Z0-9.]{5,20}\.com\/watch\?key=/$popup
 /^http:\/\/p[0-9]{6,10}\.[a-z]{5,10}\.com\/itab\/[a-z?=A-Z_0-9&]{10,}Zippyshare\.com[a-z0-9A-Z%.'-]{5,}/$popup
 /wp-content/plugins/wp-words-links-change/*$script,domain=businesstraveller.pl
@@ -4257,7 +4258,7 @@ money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
 money.pl##DIV.right-column[data-floatingsky] > DIV:first-child
 money.pl##DIV.right-column > [class]:first-child
 money.pl##DIV[style="margin-bottom: 10px"] + DIV > DIV > DIV + DIV + DIV[class]
-money.pl##.cTDBBq, .iUqSbV, .een3d0d111d
+money.pl##.cTDBBq, .iUqSbV, .iin3p0p135d
 money.pl##.main-menu__submenu__offer
 money.pl##.right-column > DIV + DIV[class]
 money.pl##.right-column > DIV > DIV > DIV > DIV + DIV[class]
