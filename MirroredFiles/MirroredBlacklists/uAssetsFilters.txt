@@ -8518,10 +8518,13 @@ pelisplanet.com##+js(abort-on-property-write.js, smrtSP)
 macwelt.de##.loaded.standard.marketplace
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2415
+inkapelis.com##+js(abort-current-inline-script.js, setTimeout, aadblock)
+inkapelis.com##+js(abort-on-property-read.js, AaDetector)
 inkapelis.com##+js(abort-on-property-write.js, smrtSB)
 inkapelis.com##+js(abort-on-property-write.js, smrtSP)
 inkapelis.com##+js(abort-on-property-write.js, Fingerprint2)
 ||inkapelis.com/sw.js$script
+||7hu8e1u001.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2416
 cuevana3.*##+js(abort-on-property-write.js, popUpUrl)
@@ -9429,6 +9432,7 @@ watchitsalwayssunnyinphiladelphia.net##+js(abort-on-property-write.js, _pop)
 ! https://github.com/uBlockOrigin/uAssets/issues/2668
 pelisgratis.*##+js(abort-on-property-write.js, smrtSB)
 pelisgratis.*##a[href*="look.kfiopkln.com"]
+pelisgratis.*##a[href*="look.opskln.com"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2669
 ver-peliculas.*##+js(window.open-defuser.js)
@@ -9439,8 +9443,10 @@ ver-pelis.me##+js(window.open-defuser.js)
 ver-pelis.me##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2671
+pelix.tv##+js(abort-on-property-read.js, AaDetector)
 pelix.tv##+js(abort-on-property-write.js, smrtSB)
 pelix.tv##+js(abort-on-property-write.js, smrtSP)
+||gld35wndkn.com^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2672
 peliculas24.me##+js(abort-current-inline-script.js, blur)
@@ -11613,6 +11619,7 @@ yupptv.in##+js(addEventListener-defuser.js, load, onload)
 harleyquinnwidget.com##+js(abort-on-property-write.js, decodeURIComponent)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2364#issuecomment-419686158
+||newsfilter.org^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.addthis.com *.disqus.com *.google-analytics.com *.googleapis.com *.gstatic.com *.google.com *.solvemedia.com
 newsfilter.org##+js(abort-on-property-read.js, raSettings)
 newsfilter.org###jasmine-ad-wrapper
 
@@ -12786,7 +12793,7 @@ leechpremium.link##body:style(overflow: auto !important;)
 @@||tsubasa.im^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3778
-zemporn.com##+js(popads-dummy.js)
+zemporn.com##+js(abort-on-property-read.js, h1mm.w3)
 zemporn.com##.player-aside-banners
 
 ! https://github.com/NanoMeow/QuickReports/issues/241
@@ -13760,7 +13767,7 @@ ayefiles.com##ins.adsbygoogle:style(max-height: 1px !important;)
 ayefiles.com##[id^="aswift"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9y7qdx/how_to_get_pass_their_antiadblocker_on/
-@@||dorama.site^$generichide
+@@||dorama.*^$generichide
 
 ! https://github.com/NanoMeow/QuickReports/issues/341
 bmovies.cloud##+js(abort-on-property-read.js, zfgloadedpopup)
@@ -14104,9 +14111,13 @@ financialpost.com##+js(abort-on-property-read.js, stop)
 upost.info##+js(abort-on-property-write.js, adBlockDetected)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4228
-vidmo.org##+js(abort-on-property-write.js, __bc_blocks)
+sexmo.org,vidmo.org##^script:has-text(script_0)
 ||vidmo.org/sw.js$script,first-party
+||ewplbev9bkgqqxe.ru^$third-party
+||hfagfcbadgjhdchaaej.ru^$third-party
+||jusorpa.ru^$third-party
 ||m-shes.ru^$third-party
+sexmo.org##.item2
 vidmo.org###afrt
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4229
@@ -14128,3 +14139,70 @@ repayone.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4241
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=actiongame.com|brain-games.co.uk|classicgame.com|games-site.co.uk|hiddenobjectgames.com|mahjong.co.uk|mahjong.com|match3.co.uk|match3games.com|mindgames.com|neongames.co.uk|neongames.com|solitaireonline.com|timemanagementgame.com
+
+! libertyvf . org popups
+libertyvf.org##+js(abort-on-property-read.js, zfgloadedpopup)
+||graftaub.com^
+
+! anti adb fullcrackpc . com
+||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=fullcrackpc.com
+
+! anti adb labiblioteta . com
+labiblioteta.com##+js(abort-on-property-write.js, killAdBlock)
+
+! anti adb gadgetdaily . xyz
+gadgetdaily.xyz##+js(abort-on-property-write.js, killAdBlock)
+
+! anti adb hack-sat . com
+hack-sat.com##+js(abort-on-property-write.js, killAdBlock)
+
+! anti adb daemon-hentai . com
+daemon-hentai.com##+js(setTimeout-defuser.js, nextFunction, 2000)
+
+! anti adb puzzlefry . com
+puzzlefry.com##+js(abort-on-property-write.js, killAdBlock)
+
+! anti adb tagpress . it
+tagpress.it##+js(abort-on-property-write.js, killAdBlock)
+
+! anti adb globalcomputronics . com
+globalcomputronics.com##+js(abort-on-property-write.js, killAdBlock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/2004#issuecomment-443720741
+allnorilsk.ru##+js(abort-on-property-write.js, onload)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4246
+hentaisd.tv##+js(abort-on-property-read.js, AaDetector)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4245
+atlanticcitywebcam.com,ftlauderdalebeachcam.com,ftlauderdalewebcam.com,hiltonbeachcam.com,juneauharborwebcam.com,keywestharborwebcam.com,kittycatcam.com,mahobeachcam.com,miamiairportcam.com,morganhillwebcam.com,njwildlifecam.com,nyharborwebcam.com,paradiseislandcam.com,pompanobeachcam.com,portarubawebcam.com,portbermudawebcam.com,portcanaveralwebcam.com,portevergladeswebcam.com,portmiamiwebcam.com,portnywebcam.com,portnassauwebcam.com,portstmaartenwebcam.com,porttampawebcam.com,sxmislandcam.com##+js(abort-on-property-read.js, adLeftLen)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4247
+sexodx.com##+js(set-constant.js, ads_unblocked, true)
+sexodx.com###video_reklamy
+sexodx.com###background-cloud
+
+! anti adb compressnow . com
+@@||compressnow.com^$generichide
+
+! nsfw kizzboy . com anti adb
+@@||kizzboy.com^$generichide
+
+! anti adb mundodesconocido . es
+@@||mundodesconocido.es^$generichide
+
+! anti adb softandapps . info
+@@||softandapps.info^$generichide
+
+! ads, popups tudotv . tv
+tudotv.tv##+js(abort-on-property-read.js, zfgloadedpopup)
+tudotv.tv##[src="about:blank"]
+tudotv.tv##[href^="https://goo.gl/"]
+tudotv.tv##[class^="Publicidade"]
+
+! popups kora-online . tv
+kora-online.tv##+js(abort-on-property-read.js, zfgloadedpopup)
+
+! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-443882516
+sardeath.com##+js(bab-defuser.js)
+sardeath.com##+js(setTimeout-defuser.js, nextFunction, 250)
