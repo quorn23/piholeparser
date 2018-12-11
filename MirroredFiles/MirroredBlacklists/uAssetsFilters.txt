@@ -484,11 +484,13 @@ dpstream.net##+js(nowebrtc.js)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=35109
 ! https://github.com/uBlockOrigin/uAssets/issues/1144
+! https://github.com/uBlockOrigin/uAssets/issues/4288
 ||ad2up.com^$subdocument,redirect=noopframe,domain=al.ly|ally.sh
 ||clksite.com^$subdocument,redirect=noopframe,domain=al.ly|ally.sh
 al.ly##+js(addEventListener-defuser.js, click, popunder)
 al.ly,ally.sh##+js(noeval.js)
 al.ly,ally.sh##+js(popads.net.js)
+||marketing.al.ly^$script
 ||adservice.google.com^$script,important,domain=al.ly|ally.sh
 @@||al.ly^$generichide
 @@||ally.sh^$generichide
@@ -659,15 +661,16 @@ facebook.com,facebookcorewwwi.onion###stream_pagelet [id^="hyperfeed_story_id_"]
 ! https://github.com/uBlockOrigin/uAssets/issues/722
 facebook.com,facebookcorewwwi.onion##.ego_column:if(a[href^="/campaign/landing"])
 ! https://forums.lanik.us/viewtopic.php?p=128997#p128997
-facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:if([id^="feed_subtitle_"] a[href]:matches-css-after(content:/Gesponsert|Sponsored|Sponsrad/))
-facebook.com,facebookcorewwwi.onion##div[data-testid="fbfeed_story"]:if(a[href*="[is_sponsored]"])
+!facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:if([id^="feed_subtitle_"] a[href]:matches-css-after(content:/Gesponsert|Sponsored|Sponsrad/))
+!facebook.com,facebookcorewwwi.onion##div[data-testid="fbfeed_story"]:if(a[href*="[is_sponsored]"])
 facebook.com,facebookcorewwwi.onion##.ego_section:if(a[href^="/ad_campaign"])
 facebook.com,facebookcorewwwi.onion##.userContentWrapper:has(a[href*="/ads/"])
 ! https://github.com/uBlockOrigin/uAssets/issues/3367
-facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:has(a[href*="client_token"])
+!facebook.com,facebookcorewwwi.onion##[id^="hyperfeed_story_id_"]:has(a[href*="client_token"])
 facebook.com#@#div[id^="hyperfeed_story_id_"]:has(a[href*="utm_campaign"])
-facebook.com,facebookcorewwwi.onion##.userContentWrapper>div div>span>span:has-text(^Suggested Post$)
-facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:if(div > span:matches-css(display:none):has(abbr .timestampContent))
+facebook.com,facebookcorewwwi.onion##.userContentWrapper>div div>span>span:has-text(/^Suggested Post$/)
+facebook.com,facebookcorewwwi.onion##div[id^="hyperfeed_story_id_"]:has(div > span:has(abbr .timestampContent):matches-css(display: none))
+facebook.com,facebookcorewwwi.onion##.ego_section:has(a[href*="campaign_id"])
 
 ! This removes blank space the right-hand side
 mail.yahoo.com###shellcontent:style(right: 0px !important;)
@@ -7387,7 +7390,10 @@ cartoon8.tv##+js(set-constant.js, check_adblock, true)
 emol.com##+js(abort-on-property-write.js, OA_zones)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/8dk0dl/foxebook_redirect_ad_only_when_ublock_is_active/
+! https://www.reddit.com/r/uBlockOrigin/comments/a4uzie/how_to_block_on_right_click/
 foxebook.net##+js(abort-current-inline-script.js, atob, tabunder)
+foxebook.net##+js(abort-on-property-read.js, zfgloadedpopup)
+||fuxoasim.link^
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40530
 0123movies.com##+js(abort-current-inline-script.js, atob, tabunder)
@@ -7747,9 +7753,6 @@ wezo.me##+js(abort-on-property-read.js,app_vars.force_disable_adblock)
 ! https://github.com/uBlockOrigin/uAssets/issues/2161
 arabdollar.com##+js(abort-on-property-read.js,app_vars.force_disable_adblock)
 arabdollar.com##+js(nano-setInterval-booster.js)
-
-! https://github.com/uBlockOrigin/uAssets/issues/2162
-urls-short.com##+js(abort-on-property-read.js,app_vars.force_disable_adblock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2163
 pes-patch.com##+js(bab-defuser.js)
@@ -10316,6 +10319,7 @@ leech.thoaimedia.com##.adsbygoogle
 ||4shared.com/sw.js$script,important
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2939
+ur-link.*,url-ink.*,urli-nk.*,urlink.*##+js(abort-on-property-read.js, ExoLoader.serve)
 ur-link.*,url-ink.*,urli-nk.*##+js(setTimeout-defuser.js, nextFunction, 2000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2940
@@ -13966,7 +13970,8 @@ channel24.co.za,dailysun.co.za,fin24.com,health24.com,parent24.com,son.co.za,tra
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9zvrd8/blocking_ad_ovelaying_on_video_player/
 yespornplease.com##+js(abort-on-property-read.js, Date.prototype.toUTCString)
-vshare.io###xxas
+vshare.io##[href^="https://www.brazzersnetwork.com/"]
+||creative.strpjmp.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4183
 @@||couponscorpion.com^$generichide
@@ -14483,3 +14488,7 @@ komikindo.web.id##+js(addEventListener-defuser.js, load, 2000)
 
 ! https://github.com/NanoMeow/QuickReports/issues/427
 tajemnice-swiata.pl##+js(fuckadblock.js-3.2.0)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/a4yobk/need_help_bypassing_an_annoying_antiadblock/
+@@||darkumbra.net^$generichide
+darkumbra.net##.adsbygoogle:style(height: 1px !important; width: 1px !important;)
