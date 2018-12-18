@@ -5462,9 +5462,7 @@ adcut.link,adlink4y.com,dzurls.com,egyptoz.net,goldshorten.com,mycut.me,pureurls
 @@||mycut.me^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1430
-@@||loks.us^$generichide
 ||adsenseguard.com^$third-party
-||loks.us/ebkbv/$image
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1440
 bitshortener.site##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -7017,6 +7015,7 @@ animeidhentai.com##[href^="https://www.hentaipros.com/landing/"]
 animeidhentai.com##.adimg
 animeidhentai.com##.desktopads
 animeidhentai.com###myDIV2
+animeidhentai.com###myDIV4
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1904
 cutl.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
@@ -12355,9 +12354,6 @@ downloadhub.*##+js(abort-on-property-write.js, encodeURIComponent)
 downloadhub.*##+js(abort-on-property-read.js, decodeURIComponent)
 downloadhub.*##.alignnone
 
-! https://github.com/NanoMeow/QuickReports/issues/151
-@@||smtebooks.com^$generichide
-
 ! https://github.com/uBlockOrigin/uAssets/issues/3646
 mirrorace.com##+js(addEventListener-defuser.js, click, _0x)
 mirrorace.com##+js(popads-dummy.js)
@@ -12762,9 +12758,6 @@ scnlog.me##+js(popads-dummy.js)
 ! linkdrop.net ads, bad request
 linkdrop.net##.banner-inner
 linkdrop.net##[id*="ScriptRoot"]
-
-! https://github.com/NanoMeow/QuickReports/issues/228
-@@||smtebooks.net^$generichide
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=42004
 fox.com.tr##+js(set-constant.js, adblockDetector, trueFunc)
@@ -14512,6 +14505,7 @@ urlcash.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 
 ! https://github.com/NanoMeow/QuickReports/issues/431
 gplcanyon.com##+js(abort-on-property-write.js, ai_adb_overlay)
+gplcanyon.com##.elementor-shortcode
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4296
 zenganet.com##+js(window.open-defuser.js)
@@ -14671,3 +14665,32 @@ yourtechguider.com##+js(abort-on-property-read.js, app_vars.force_disable_adbloc
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4329
 cuio.io##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/NanoMeow/QuickReports/issues/151
+! https://github.com/NanoMeow/QuickReports/issues/228
+! https://github.com/uBlockOrigin/uAssets/issues/4331
+smtebooks.*##+js(bab-defuser.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4306
+t66y.com##.black.tips
+t66y.com##.sptable_do_not_remove
+t66y.com##+js(setTimeout-defuser.js, readS)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/1011
+k511.me##+js(abort-current-inline-script.js, document.getElementById, undefined)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4333
+thepiratebay.*##+js(abort-on-property-write.js, spot)
+
+! https://github.com/NanoMeow/QuickReports/issues/459
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=naminakiky.com
+
+! https://github.com/NanoMeow/QuickReports/issues/460
+@@||static.doubleclick.net/instream/ad_status.js$xmlhttprequest,domain=linksht.com
+
+! https://github.com/NanoMeow/QuickReports/issues/464
+@@||linkpunyaku.*^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/463
+audycje.tokfm.pl##+js(set-constant.js, adsOk, true)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=audycje.tokfm.pl
