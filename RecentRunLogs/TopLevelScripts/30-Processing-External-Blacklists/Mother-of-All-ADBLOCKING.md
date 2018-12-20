@@ -13,4 +13,4 @@ ____________________________________
 ## Pinging Source To Check Host Availability
 ## Checking File Header
 ## Determining Host Availability
-## Checking If List Updated Online
+* Mother-of-All-ADBLOCKING List Marked As Dead. Thu Dec 20 00:29:59 UTC 2018
