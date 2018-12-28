@@ -3205,7 +3205,7 @@ adyou.co###bannerUrl
 
 ! https://github.com/uBlockOrigin/uAssets/issues/883
 ! AdFly
-activeation.com,activetect.net,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,baymaleti.net,bitigee.com,bluenik.com,brightvar.bid,briskgram.net,brisktopia.com,casualient.com,clearload.bid,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,swiftviz.net,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##+js(adfly-defuser.js)
+activeation.com,activetect.net,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,baymaleti.net,bitigee.com,bluenik.com,brightvar.bid,briskgram.net,brisktopia.com,casualient.com,cinebo.net,clearload.bid,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,swiftviz.net,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##+js(adfly-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1009#issuecomment-352160776
 ! https://github.com/jspenguin2017/uBlockProtector/issues/791
 ! https://github.com/jspenguin2017/uBlockProtector/issues/792
@@ -7015,10 +7015,6 @@ goal.com##+js(abort-on-property-read.js, ads)
 ! https://github.com/uBlockOrigin/uAssets/issues/1913
 @@||apkmos.com^$generichide
 
-! https://github.com/uBlockOrigin/uAssets/issues/1916
-@@||bdiptv.com^$generichide
-||bdiptv.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: *.google.com *.gstatic.com *.fbcdn.net *.facebook.com *.facebook.net *.google-analytics.com *.jwpcdn.com *.googletagmanager.com *.jwplatform.com *.bdiptv.stream *.chatango.com *.jsdelivr.net *.addthis.com
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1912
 @@||torrentsgamez.com^$generichide
 
@@ -7068,6 +7064,7 @@ theralphretort.com##+js(abort-on-property-write.js, adBlockDetected)
 benjaminphamchannel.com##+js(addEventListener-defuser.js, load, 2000)
 
 ! https://forums.lanik.us/viewtopic.php?f=90&t=40441
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=winfuture.de
 @@||widget.spoods.io/loader.js$script,domain=winfuture.de
 
 ! https://forums.lanik.us/viewtopic.php?f=96&t=40440
@@ -12990,9 +12987,11 @@ allmusicsite.com,ddremusic.com,mp3ford.com##+js(set-constant.js, fabActive, fals
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3838
 ! https://github.com/NanoMeow/QuickReports/issues/359
+! https://github.com/NanoMeow/QuickReports/issues/371
 maddertranslates.com##+js(setTimeout-defuser.js, (), 500)
 maddertranslates.com##+js(abort-on-property-read.js, anOptions)
 maddertranslates.com##+js(setTimeout-defuser.js, _creatBait)
+@@||maddertranslates.com/wp-content/*/blockadblock.js$script,1p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3839
 androidcure.com,bodytr.com,kasvekuvvet.net##+js(abort-on-property-read.js, HTMLDocument)
@@ -13783,9 +13782,8 @@ pch.com,trueachievements.com##^script:has-text(iframeTestTimeMS)
 pokyun.tv##+js(abort-current-inline-script.js, document.getElementById, Blocking)
 ||cdn.adtrue.com/rtb/async.js$script,redirect=noopjs,domain=pokyun.tv
 ||pagead2.googlesyndication.com/pagead/$script,redirect=noopjs,domain=pokyun.tv
-||mgid.com/$script,redirect=noopjs,domain=pokyun.tv
 @@||imasdk.googleapis.com/js/$script,domain=pokyun.tv
-@@||static.adsnative.com/static/js/render$script,domain=pokyun.tv
+*$script,domain=pokyun.tv,3p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4141
 @@||calorielijst.nl^$generichide
@@ -14775,8 +14773,10 @@ ihub.live,naturalbd.com##+js(abort-on-property-read.js, encodeURIComponent)
 ||naturalbd.com/sw.js$script,1p
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/231
+! https://github.com/uBlockOrigin/uAssets/issues/1916
 @@||bdiptv.stream^$generichide
-bdiptv.stream,bdlive.stream##+js(abort-on-property-read.js, AaDetector)
+@@||bdiptv.com^$generichide
+bdiptv.stream,bdiptv.com,bdlive.stream##+js(abort-on-property-read.js, AaDetector)
 bdlive.stream###AdDiv
 
 ! https://github.com/NanoMeow/QuickReports/issues/472
@@ -15130,6 +15130,11 @@ shush.se##+js(set-constant.js, check, true)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/a9sxeu/need_filter/
 aniwatcher.com##+js(set-constant.js, daganKwarta, true)
+mysembed.net##+js(abort-on-property-read.js, AaDetector)
+mysembed.net##+js(popads-dummy.js)
+@@||statics.msedge.network/pop.js$script,domain=mysembed.net
+||xbzwwsagli.com^$3p
+tiwi.kiwi##+js(abort-on-property-write.js, _pop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-449870173
 phrepublic.com##+js(abort-on-property-read.js, exoLaunchPN)
@@ -15142,3 +15147,29 @@ swiftclassifieds.com##+js(abort-current-inline-script.js, RegExp, zfgloaded)
 index-of-stream.com##+js(bab-defuser.js)
 ||cdn.maxcdn.info/a/support/*$frame,domain=index-of-stream.com
 @@||cdn.maxcdn.info/a/support.js?$script,domain=index-of-stream.com
+
+! https://github.com/NanoMeow/QuickReports/issues/500
+emurom.net##+js(setTimeout-defuser.js, antiadblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4419
+starmusiq.fun##+js(set-constant.js, isAdBlockActive, false)
+musiqfile.fun,starmusiq.fun##+js(abort-on-property-read.js, AaDetector)
+musiqfile.fun##+js(nowebrtc.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4399
+||s3.amazonaws.com/dmas-public/rubicon/bundle.js$script,domain=dailymotion.com
+
+! filmeserialeonline . org popups
+filmeserialeonline.org##+js(nowebrtc.js)
+
+! fsonline . ro popups
+fsonline.ro##+js(window.open-defuser.js)
+
+! cinemalibero . news popups/ ads
+cinemalibero.news##+js(window.open-defuser.js)
+cinemalibero.news##a[href*=".php"]
+rapidcrypt.net##+js(abort-on-property-read.js, AaDetector)
+rapidcrypt.net##+js(popads-dummy.js)
+
+! ilgeniodellostreaming . eu popups
+ilgeniodellostreaming.eu##+js(abort-current-inline-script.js, atob, decodeURIComponent)
