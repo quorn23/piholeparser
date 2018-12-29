@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201812280015
+! Version: 201812290016
 ! Title: EasyPrivacy
-! Last modified: 28 Dec 2018 00:15 UTC
+! Last modified: 29 Dec 2018 00:16 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -554,6 +554,7 @@
 /analytics.swf?
 /analytics.v1.js
 /analytics/*satellitelib.js
+/analytics/?event
 /analytics/activity.
 /analytics/analytics.$~xmlhttprequest
 /analytics/call-
@@ -2109,6 +2110,7 @@
 /log/p.gif?
 /log/pageview
 /log/report/*
+/log/sentry/*
 /log/web?
 /log2.php?
 /Log?*&adID=
@@ -2814,6 +2816,7 @@
 /referral_tracking.
 /referrer.js
 /referrer.php?*http
+/referrer_invisible.js?
 /referrer_tracking.
 /RefinedAdsTracker.swf
 /refresh_uid?$script
@@ -3494,6 +3497,7 @@
 /TrackerAS3.
 /trackerGif?
 /TrackerHandler.
+/trackerLog.php?
 /trackerpixel.js
 /trackers/hp_conversion-
 /trackerstatistik.
@@ -3973,6 +3977,7 @@
 /wp-counter.php
 /wp-js/analytics.
 /wp-powerstat/*
+/wp-rum/*
 /wp-slimstat/*
 /wp-useronline/useronline.
 /wp.gif?wpi
@@ -6528,6 +6533,7 @@ _mongo_stats/
 ||triggertag.gorillanation.com^$third-party
 ||triggit.com^$third-party
 ||triptease.io^$third-party
+||triptease.net^$third-party
 ||trkjmp.com^$third-party
 ||trklvs.com^$third-party
 ||trkn.us^$third-party
@@ -10171,6 +10177,7 @@ _mongo_stats/
 ||tracking.allposters.com^
 ||tracking.badgeville.com^$third-party
 ||tracking.bidmizer.com^$third-party
+||tracking.brandmentions.com^
 ||tracking.cmcigroup.com^
 ||tracking.cmjump.com.au^
 ||tracking.dealerwebwatcher.com^
@@ -10213,6 +10220,7 @@ _mongo_stats/
 ||tracking.tradeking.com^
 ||tracking.waterfrontmedia.com^
 ||tracking.worldmedia.net^$third-party
+||tracking1.brandmentions.com^
 ||tracking2.channeladvisor.com^
 ||tracking2.interweave.com^$third-party
 ||trackingapi.cloudapp.net^
@@ -10353,6 +10361,7 @@ _mongo_stats/
 ||webstats.motigo.com^$third-party
 ||webstats.seoinc.com^
 ||webstats.thaindian.com^
+||websuccess-data.com/tracker.js
 ||webterren.com/webdig.js?
 ||webtracker.apicasystem.com^
 ||webtracker.educationconnection.com^
@@ -10739,6 +10748,8 @@ _mongo_stats/
 ||netease.com/beacons/
 ||p.aty.sohu.com^
 ||pos.baidu.com^
+||pstatp.com^*/raven.js
+||pstatp.com^*/ttstatistics.
 ||pv.hd.sohu.com^
 ||pv.sohu.com^
 ||qbox.me/vds.js
@@ -11506,6 +11517,7 @@ _mongo_stats/
 ||c.ipaddress.com^
 ||c.microsoft.com^
 ||c.newsinc.com^
+||c.paypal.com^
 ||c.wort-suche.com^
 ||c.x.oanda.com^
 ||c.ypcdn.com^*/webyp?rid=
@@ -13622,6 +13634,7 @@ _mongo_stats/
 ||zap2it.com^*/editorial-partner/
 ||zappos.com/*.cgi?
 ||zappos.com/karakoram/js/main.
+||zappos.com^*/events?
 ||zawya.com/zscripts/ajaxztrack.cfm?
 ||zawya.com^*/logFile.cfm?
 ||zdnet.com/wi?
@@ -14075,6 +14088,7 @@ $csp=worker-src 'none',domain=300mbfilms.co|akvideo.stream|alltube.pl|alltube.tv
 ||wienerzeitung.at/__webtrends/
 ||wirtschaftspresse.biz/pshb?
 ||wiwo.de/analytics/
+||wlw.de^*/tracking/
 ||xara.hse24.de^
 ||xtranews.de/counter/
 ||zdf.de^*/tracking?
@@ -14337,6 +14351,7 @@ $csp=worker-src 'none',domain=300mbfilms.co|akvideo.stream|alltube.pl|alltube.tv
 ||tongji.mafengwo.cn^
 ||tongji2.vip.duba.net/__infoc.gif?
 ||top.baidu.com/js/nsclick.js
+||toutiao.com/action_log/
 ||toutiao.com^*/user_log/
 ||tr.discuss.com.hk^
 ||tr.price.com.hk^
