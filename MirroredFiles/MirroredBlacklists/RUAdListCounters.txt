@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: Qogp75WyJ9Z4P5HcE19xjQ
-! Version: 201812200020
+! Checksum: bu8l+04r378fAmPb5lR72w
+! Version: 201812300020
 ! Title: RU AdList: Counters
-! Last modified: 20 Dec 2018 00:20 UTC
+! Last modified: 30 Dec 2018 00:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -69,6 +69,7 @@ simpsonsua.com.ua#@#*
 militaryreview.su##.bbanerr
 yakusubstudio.home-forum.com,yakusubstudio.ru##.contbaner
 segodnya.ua##.counters
+/^https?://rkn\.gov\.ru\/(?!js\/)+[a-z0-9]{15,25}\.js\?+[0-9]{7,15}/$script,domain=rkn.gov.ru
 mail.ru#?#body > .zeropixel ~ * .search__container ~ [class] > .tabs + div[class] ~ div div:-abp-has(> div:-abp-contains(/[a-z]/))
 mail.ru##body > .zeropixel ~ * .search__container ~ [class] ~ [class] > :first-child
 pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net##footer
@@ -86,6 +87,7 @@ pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net##footer > a
 /_res/script/image.php?type=$image
 /adlogger_tracker.js?
 /admp-tc.
+/assets/vendor*.xml?externalsubid=*v=$third-party,xmlhttprequest
 /assets/vendor*.xml?v=$third-party,xmlhttprequest
 /awstats_misc_tracker.
 /b/ss/*?aqb=1&ndh=

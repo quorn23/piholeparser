@@ -6401,6 +6401,9 @@ rb7url.com##+js(abort-on-property-write.js, Fingerprint2)
 cricfree.sc##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=33564
+! https://github.com/uBlockOrigin/uAssets/issues/4458
+xmovies8.*,xmovies08.org##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+xmovies8.*##+js(abort-on-property-write.js, Fingerprint2)
 xmovies8.*##+js(addEventListener-defuser.js, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)
 xmovies8.*##+js(set-constant.js, check_adblock, true)
 xmovies8.*##+js(setInterval-defuser.js, (), 500)
@@ -14612,13 +14615,21 @@ komikcast.com##+js(abort-on-property-read.js, document.onclick)
 canadapolicereport.ca##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4316
+! https://github.com/uBlockOrigin/uAssets/issues/4457
+! https://github.com/uBlockOrigin/uAssets/issues/4456
 vidcloud.*##+js(abort-current-inline-script.js, atob, decodeURIComponent)
 streamingworld.ga##+js(abort-current-inline-script.js, atob, decodeURI)
 streamingworld.ga##+js(abort-on-property-read.js, AaDetector)
 streamingworld.ga##+js(abort-on-property-write.js, Fingerprint2)
 ||123movies123.*/sw.js$script,first-party
-123movies123.xyz,123moviesu.com###option-0, a[href="#option-0"]
+c123movies.com,123freemovies.live,123movie.*,123movies123.xyz,123moviesu.com###option-0, a[href="#option-0"]
 123moviesfree.live##.pframe:has([src^="https://123moviesfree.live/"])
+123moviesok.com##.pframe:has([src^="https://123moviesok.com/"])
+||c123movies.com/sw.js$script,first-party
+||123freemovies.live/sw.js$script,first-party
+123moviesunblocked.net##+js(abort-on-property-write.js, Fingerprint2)
+v123movies.com##.pframe:has([href^="javascript: void(0);"])
+||v123movies.com/sw.js$script,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4317
 cmovies.io##+js(abort-current-inline-script.js, atob, decodeURI)
@@ -15043,7 +15054,7 @@ animeunity.it##+js(abort-current-inline-script.js, atob, decodeURIComponent)
 czapkomania.pl##+js(abort-on-property-read.js, anOptions)
 
 ! https://github.com/NanoMeow/QuickReports/issues/491
-legia.net##+js(set-constant.js, advertsLoaded, true)
+@@||legia.net^$script,first-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4396
 pandamovies.pw##+js(abort-current-inline-script.js, puShown , /doOpen|popundr/)
@@ -15272,3 +15283,41 @@ cyahealth.com,link5s.co,megaurl.link,skipurls.com,xemlink.net##+js(abort-on-prop
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4449
 @@||gearingcommander.com/js/adsbygoogle.js$script,first-party
+
+! https://github.com/NanoMeow/QuickReports/issues/508
+generate.plus##+js(setTimeout-defuser.js, checkStopBlock)
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/1018
+@@||azgeek01.*^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4455
+za.gl##+js(abort-current-inline-script.js, document.getElementById, overlay)
+za.gl##+js(abort-current-inline-script.js, multiClick, popup)
+za.gl##+js(window.open-defuser.js)
+za.gl##+js(abort-on-property-read.js, open)
+||cdn.sendpulse.com/js/push/$script,domain=za.gl
+
+! https://github.com/uBlockOrigin/uAssets/issues/4451
+kinopoisk.ru##+js(setInterval-defuser.js, (), 500)
+kinopoisk.ru##[href^="https://www.kinopoisk.ru/"]
+kinopoisk.ru##[href*="adblock"]:xpath(..)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4459
+gostreams.net##+js(abort-on-property-write.js, Fingerprint2)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4460
+movie4kto.org##+js(abort-on-property-read.js, decodeURIComponent)
+||hausly.info^$3p
+
+! https://github.com/NanoMeow/QuickReports/issues/509
+@@||bombuj.eu^$generichide
+||bombuj.eu/*.php$subdocument
+bombuj.eu##[id*="rekl"]
+bombuj.eu###ad_banner
+bombuj.eu##+js(abort-on-property-read.js, AaDetector)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4462
+news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##+js(setTimeout-defuser.js, AdvManager)
+news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##.sticky_visible
+news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_first"]
+news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_footer"]
