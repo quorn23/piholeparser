@@ -2,15 +2,15 @@
 [Return To Main](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/Mainlog.md)
 ____________________________________
 # 
-## curl Sun Dec 30 00:20:16 UTC 2018
-curl Already Installed Sun Dec 30 00:20:16 UTC 2018
-## gawk Sun Dec 30 00:20:16 UTC 2018
-gawk Already Installed Sun Dec 30 00:20:16 UTC 2018
-## p7zip Sun Dec 30 00:20:16 UTC 2018
-p7zip Already Installed Sun Dec 30 00:20:16 UTC 2018
-## sed Sun Dec 30 00:20:16 UTC 2018
-sed Already Installed Sun Dec 30 00:20:16 UTC 2018
-## tar Sun Dec 30 00:20:16 UTC 2018
-tar Already Installed Sun Dec 30 00:20:16 UTC 2018
-## wget Sun Dec 30 00:20:16 UTC 2018
-wget Already Installed Sun Dec 30 00:20:16 UTC 2018
+## curl Mon Dec 31 00:20:14 UTC 2018
+curl Already Installed Mon Dec 31 00:20:14 UTC 2018
+## gawk Mon Dec 31 00:20:14 UTC 2018
+gawk Already Installed Mon Dec 31 00:20:14 UTC 2018
+## p7zip Mon Dec 31 00:20:14 UTC 2018
+p7zip Already Installed Mon Dec 31 00:20:14 UTC 2018
+## sed Mon Dec 31 00:20:14 UTC 2018
+sed Already Installed Mon Dec 31 00:20:14 UTC 2018
+## tar Mon Dec 31 00:20:14 UTC 2018
+tar Already Installed Mon Dec 31 00:20:14 UTC 2018
+## wget Mon Dec 31 00:20:14 UTC 2018
+wget Already Installed Mon Dec 31 00:20:14 UTC 2018
