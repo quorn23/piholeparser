@@ -1461,17 +1461,20 @@ movie-blog.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 ! https://forums.lanik.us/viewtopic.php?p=124411#p124411
 ! https://www.reddit.com/r/uBlockOrigin/comments/70eyk1/help_ads_on_website/
 ! https://github.com/uBlockOrigin/uAssets/issues/4086
+! https://forums.lanik.us/viewtopic.php?p=144608#p144608
 watchcartoononline.*##+js(abort-current-inline-script.js, String.fromCharCode, /\/\*[0-9a-f]{40}\*\//)
 watchcartoononline.*##+js(abort-on-property-read.js, BB_ind)
 watchcartoononline.io##+js(fuckadblock.js-3.2.0)
 watchcartoononline.*##+js(noeval.js)
 watchcartoononline.io##a[href$=".png"]
 watchcartoononline.*##a[href*="scripts"]
-watchcartoononline.com##+js(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
+watchcartoononline.*,watchcartoonsonline.*##+js(abort-current-inline-script.js, document.createElement, jsc.mgid.com)
 watchcartoononline.com##+js(setTimeout-defuser.js, o(), 1)
 watchcartoononline.com##+js(setTimeout-defuser.js, Pu.call, 1)
 watchcartoononline.com##^script:has-text(3f87b0eaddd)
 watchcartoononline.com##a[href*="/1.0/go"]
+watchcartoonsonline.*##a[href*="scripts"]
+there.to##+js(disable-newtab-links.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/319
 fdesouche.com##+js(bab-defuser.js)
@@ -1984,7 +1987,10 @@ qz.com##.ad-engage
 ||doubleclick.net^$important,domain=qz.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/512
+! https://adblockplus.org/forum/viewtopic.php?p=182649#p182649
 dailymail.co.uk##+js(abort-on-property-write.js, s_adblock)
+dailymail.co.uk##+js(abort-on-property-read.js, I11C)
+dailymail.co.uk##+js(abort-on-property-read.js, adverts)
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=37524
 android-zone.ws##+js(bab-defuser.js)
@@ -2570,10 +2576,14 @@ mlbstream.io##+js(abort-current-inline-script.js, decodeURI, atob)
 realcam.pw##+js(abort-on-property-read.js, encodeURIComponent)
 realcam.pw##+js(window.open-defuser.js)
 fbstream.io,homerun.re,live-ufc.stream,livef1.stream,livemotgp.stream,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,tennisstream.me,vipleague.*##.position-absolute:style(height: 1px !important)
+fbstream.io,homerun.re,live-ufc.stream,livef1.stream,livemotgp.stream,mlbstream.io,nbastream.io,nflstream.io,nhlstream.io,tennisstream.me,vipleague.*##.position-absolute
 vipleague.*##+js(abort-on-property-read.js, decodeURIComponent)
 @@*$xhr,domain=boxing-live.stream|fbstream.io|homerun.re|livef1.stream|livemotgp.stream|live-ufc.stream|mlbstream.io|nbastream.io|nflstream.io|nhlstream.io|rugbystream.me|soccer-live.stream|strikeout.co|tennisstream.me|vipleague.bz|vipleague.cc
 ##[data-uri^="https://s3.amazonaws.com"]
 ##[data-lnguri^="https://s3.amazonaws.com"]
+||cdn.globwo.online/scripts/nwm-pw.min.js$script,domain=marstv.pw
+##[data-lnguri*="vipleague"]
+marstv.pw##+js(addEventListener-defuser.js, /^(?:click|mousedown|touchstart)$/, pop)
 
 ! https://github.com/uBlockOrigin/uAssets/pull/705
 ! https://github.com/uBlockOrigin/uAssets/issues/1617
@@ -5862,6 +5872,7 @@ marvelousga.com##+js(abort-current-inline-script.js, $, openNewWindow)
 1movies.is##a[href^="https://vpn-stream.com"]
 1movies.*##+js(abort-on-property-write.js, decodeURIComponent)
 1movies.*##+js(window.open-defuser.js)
+@@||1movies.*/*.html$csp,1p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1568
 tinypaste.cc##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
@@ -5957,9 +5968,6 @@ mispelisyseries.com,tvsinpagar.com##+js(abort-on-property-write.js, Fingerprint2
 mispelisyseries.com,tvsinpagar.com##+js(addEventListener-defuser.js, mousedown, (b){u()})
 mispelisyseries.com,tvsinpagar.com##+js(addEventListener-defuser.js, /(?:click|mousedown)/, 0x)
 mispelisyseries.com,tvsinpagar.com##+js(window.open-defuser.js)
-
-! https://github.com/uBlockOrigin/uAssets/issues/1604
-fembed.com##+js(abort-on-property-write.js, _pop)
 
 ! https://forums.lanik.us/viewtopic.php?f=90&t=40053
 @@||schwaebische.de/*/ads.js$script,first-party
@@ -8464,9 +8472,13 @@ fapdig.com##+js(popads-dummy.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/2379
 ! https://github.com/uBlockOrigin/uAssets/issues/3292
 pornbraze.com##+js(popads-dummy.js)
-fembed.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
-fembed.com##+js(setInterval-defuser.js, (), 500)
+! https://github.com/uBlockOrigin/uAssets/issues/1604
+! https://github.com/uBlockOrigin/uAssets/issues/4487
 fembed.com##+js(abort-on-property-read.js, decodeURI)
+fembed.com##+js(abort-on-property-write.js, _pop)
+fembed.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+fembed.com##+js(disable-newtab-links.js)
+fembed.com##+js(setInterval-defuser.js, (), 500)
 ||kidnepishlient.pro^$third-party
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2370
@@ -14425,9 +14437,14 @@ mkvcinema.rocks,mkvcinemas.live##+js(abort-on-property-read.js, _0xe317)
 mkvcinemas.live##[href="https://www.hostire.com"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4273
+! https://github.com/uBlockOrigin/uAssets/issues/4495 popups
 buyitonline.store##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 buyitonline.store##+js(bab-defuser.js)
 ||buyitonline.store/sw.js$script,first-party
+buyitonline.store##+js(abort-on-property-write.js, Fingerprint2)
+buyitonline.store##+js(noeval.js)
+||adslop.com^$3p
+||getfree-vpn.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4274
 imageuploads.co.uk##+js(abort-current-inline-script.js, CustomEvent, getexoloader)
@@ -15480,3 +15497,58 @@ beyt.me##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 
 ! anti-adb wakanim.tv
 @@||wakanim.tv/scripts/*/ads.js$script,xhr,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/4488
+pickcrackpasswords.*##+js(set-constant.js, awm, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4489
+notre-planete.info##+js(abort-on-property-write.js, adsBlocked)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4490
+paste.raid-data-recovery-link.com##+js(setTimeout-defuser.js, blockUI, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4491
+@@||debilizator.tv/static/*/videojs-contrib-ads$css,xhr,1p
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=debilizator.tv
+
+! https://github.com/uBlockOrigin/uAssets/issues/4494
+asiannice.com##+js(set-constant.js, allow_ads, true)
+asiannice.com##.inside-video
+asiannice.com##.inside-video-before
+
+! https://forums.lanik.us/viewtopic.php?p=144604#p144604
+money4link.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://forums.lanik.us/viewtopic.php?p=144605#p144605
+@@uploadproper.com^$generichide
+uploadproper.com##.adsbygoogle
+uploadproper.com##.ads_small
+uploadproper.com##.ads_big
+uploadproper.com##[href*=".info/"]
+uploadproper.com##+js(abort-on-property-write.js, Fingerprint2)
+||uploadproper.com/sw.js$script,first-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-450742207
+buzzlinkz.com,clickwin.tk,cpm4link.com,cut.ma,cut7links.com,cuturl.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-450742207
+dotlink.me##+js(abort-current-inline-script.js, RegExp, zfgloaded)
+dotlink.me##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+@@||dotlink.me^$generichide
+dotlink.me##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-450742207
+down2link.com##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+down2link.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-450742207
+cashperlink.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+cashperlink.com##+js(window.open-defuser.js)
+cashperlink.com##.banner
+||buxclerk.com^$3p
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-450742207
+coin-adz.com##+js(abort-current-inline-script.js, RegExp, zfgloaded)
+coin-adz.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+coin-adz.com##+js(abort-on-property-read.js, open)
+||imgur.com^$image,domain=coin-adz.com
