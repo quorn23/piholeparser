@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201812302201
+! Version: 201901030010
 ! Title: EasyPrivacy
-! Last modified: 30 Dec 2018 22:01 UTC
+! Last modified: 03 Jan 2019 00:10 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -68,6 +68,7 @@
 -page-analytics.
 -rttracking.
 -sa-tracker-
+-sc-analytics.
 -scroll-tracker.js
 -seo-tracker.
 -social-tracking.
@@ -263,6 +264,7 @@
 .skimlinks.js
 .snowplowanalytics.$domain=~snowplowanalytics.com
 .social_tracking.
+.statData-eup.
 .stats?action=
 .to/vtrack|
 .track.actions.get?
@@ -330,6 +332,7 @@
 /_topic_stats?
 /_tracking/*
 /A-LogAnalyzer/*
+/a-stat.
 /a.gif?uuid
 /a.logrequest.yolx?
 /a.php?ref=
@@ -559,6 +562,7 @@
 /analytics/analytics.$~xmlhttprequest
 /analytics/call-
 /analytics/cms/*
+/analytics/collect_
 /analytics/collector.
 /analytics/collector/*
 /analytics/content?
@@ -611,6 +615,7 @@
 /analytics/video_$domain=~twitch.tv
 /analytics/visit/*
 /Analytics/Visitor.
+/analytics/web/*
 /analytics/yell-
 /analytics3.
 /analytics?body=
@@ -1244,6 +1249,7 @@
 /dart_wrapper.html?
 /data.do?session_
 /data/collect/*$xmlhttprequest
+/data_collect.js
 /datacapture/track
 /datacollectcode?
 /dc-storm-track.
@@ -1395,6 +1401,7 @@
 /estatistica.js
 /estatnativeflashtag.swf
 /etag?
+/etarget/*
 /etracker.
 /etracker/*
 /etrackercode.
@@ -2317,6 +2324,7 @@
 /mstartracking/*
 /mstat/*
 /mstats.
+/mstr?phpsessid=
 /mstrack/*
 /mtiFontTrackingCode.
 /mtrack.nl/js/*
@@ -2688,6 +2696,7 @@
 /popanalytics.
 /popupCookieWriter.
 /popuplog/*
+/post-tracking/*
 /postlog?
 /postview.gif?
 /powercount.
@@ -3229,6 +3238,7 @@
 /stats/tracker.js
 /stats/tracking.
 /stats/welcome.php?
+/stats/xmsg_
 /stats/xtcore.
 /stats?aid=
 /stats?blog_
@@ -4076,6 +4086,7 @@
 /zonapixel.
 /zone-log.
 /ztagtrackedevent/*
+/zxc.gif?
 /~r/Slashdot/slashdot/*
 /~utm_gif?
 ://adclear.*/acc?
@@ -4583,6 +4594,7 @@ _mongo_stats/
 ||alltagcloud.info^$third-party
 ||alltracked.com^$third-party
 ||alnera.eu^$third-party
+||alocdn.com^$third-party
 ||altabold1.com^$third-party
 ||altastat.com^$third-party
 ||alvenda.com^$third-party
@@ -6200,6 +6212,7 @@ _mongo_stats/
 ||sas15k01.com^$third-party
 ||sayutracking.co.uk^$third-party
 ||sbdtds.com^$third-party
+||sc-static.net^$third-party
 ||scaledb.com^$third-party
 ||scarabresearch.com^$third-party
 ||scastnet.com^$third-party
@@ -6493,6 +6506,7 @@ _mongo_stats/
 ||thingswontend.com^$third-party
 ||thisisacoolthing.com^$third-party
 ||thisisanothercoolthing.com^$third-party
+||thrtle.com^$third-party
 ||tighting.info^$third-party
 ||tinb.net^$third-party
 ||tinycounter.com^$third-party
@@ -8541,6 +8555,7 @@ _mongo_stats/
 ||activengage.com/overwatch/
 ||activetracker.activehotels.com^$third-party
 ||activities.niagara.comedycentral.com^
+||activity.*.miui.com^
 ||actonservice.com^*/tracker/
 ||ad.aloodo.com^$third-party
 ||ad.atdmt.com/c/
@@ -8751,7 +8766,9 @@ _mongo_stats/
 ||appinthestore.com/click/
 ||apple.www.letv.com^
 ||appliedsemantics.com/images/x.gif
+||appmifile.com^*/stat/
 ||appsolutions.com/hitme?$third-party
+||appspot.com/analytics/
 ||appspot.com/api/track/
 ||appspot.com/collect
 ||appspot.com/stats?
@@ -8932,6 +8949,7 @@ _mongo_stats/
 ||client.tahono.com^$third-party
 ||clientstat.castup.net^
 ||clipsyndicate.com/cs_api/cliplog?
+||clk.onet.pl^
 ||clnk.me/_t.gif?
 ||cloudapp.net/l/
 ||cloudfront-labs.amazonaws.com^
@@ -8954,6 +8972,7 @@ _mongo_stats/
 ||cloudfront.net/js/reach.js
 ||cloudfront.net/khp.js
 ||cloudfront.net/log.js?
+||cloudfront.net/lp.js
 ||cloudfront.net/performable/
 ||cloudfront.net/powr.js
 ||cloudfront.net/pt1x1.gif
@@ -8983,6 +9002,7 @@ _mongo_stats/
 ||cnzz.com/stat.
 ||cod.bitrec.com^
 ||coinbase.com/assets/application-*.js$third-party
+||collect.*.miui.com^
 ||collect.igodigital.com^$script
 ||collect.rewardstyle.com^
 ||collection.acromas.com^
@@ -9052,6 +9072,7 @@ _mongo_stats/
 ||csi.gstatic.com^
 ||csp-collector.appspot.com^
 ||csp.archant.co.uk^
+||csr.onet.pl^
 ||ct.eid.co.nz^$third-party
 ||ct.itbusinessedge.com^$third-party
 ||ct.needlive.com^
@@ -9074,6 +9095,7 @@ _mongo_stats/
 ||d11a2fzhgzqe7i.cloudfront.net^
 ||d169bbxks24g2u.cloudfront.net^
 ||d16fk4ms6rqz1v.cloudfront.net^
+||d18p8z0ptb8qab.cloudfront.net^
 ||d191y0yd6d0jy4.cloudfront.net^
 ||d1cdnlzf6usiff.cloudfront.net^
 ||d1cerpgff739r9.cloudfront.net^
@@ -9283,6 +9305,7 @@ _mongo_stats/
 ||events.launchdarkly.com^$third-party
 ||events.marquee-cdn.net^
 ||events.medio.com^
+||events.ocdn.eu^
 ||events.realgravity.com^
 ||events.whisk.com^
 ||events.yourcx.io^
@@ -9768,6 +9791,8 @@ _mongo_stats/
 ||om.rogersmedia.com^
 ||onescreen.net/os/static/pixels/
 ||onespot-tracking.herokuapp.com^
+||onet.pl/eclk/
+||onet.pl^*/tags?
 ||onsugar.com/static/ck.php?
 ||ooyala.com/3rdparty/comscore_
 ||ooyala.com/authorized?analytics
@@ -9822,6 +9847,7 @@ _mongo_stats/
 ||piano-media.com/uid/$third-party
 ||piano.io/tracker/
 ||pianomedia.biz/uid/$script
+||ping-dot-acp-magento.appspot.com^
 ||ping.aclst.com^
 ||ping.dozuki.com^
 ||ping.hellobar.com^
@@ -10324,6 +10350,7 @@ _mongo_stats/
 ||tracker2.apollo-mail.net^
 ||trackerapi.truste.com^
 ||trackicollect.ibase.fr^$third-party
+||tracking.*.miui.com^
 ||tracking.adalyser.com^
 ||tracking.allposters.com^
 ||tracking.badgeville.com^$third-party
@@ -10977,8 +11004,6 @@ _mongo_stats/
 ||walla.co.il/stats/
 ! Hungarian
 ||gpr.hu/pr.pr?
-||onet.pl/eclk/
-||onet.pl^*/tags?
 ||pagerank.g-easy.hu^
 ||rum.marquardmedia.hu^
 ||videostat-new.index.hu^
@@ -11011,6 +11036,7 @@ _mongo_stats/
 ||eageweb.com/count2.php?
 ||eageweb.com/stats.php
 ||encoderfarmced-stats-ns.servicebus.windows.net^
+||encoderfarmstatsnew.servicebus.windows.net^
 ||evnt.iol.it^
 ||exsigma.eu/mercurio/
 ||fb_servpub-a.akamaihd.net^
@@ -11267,10 +11293,7 @@ _mongo_stats/
 ||zahodi-ka.ru/ic/index_cnt.fcgi?
 ||zahodi-ka.ru^*/schet.cgi?
 ! Serbian
-||clk.onet.pl^
 ||contentexchange.me/static/tracker.js
-||csr.onet.pl^
-||events.ocdn.eu^
 ! Slovak
 ||stat.ringier.sk^
 ! Slovene
@@ -11504,6 +11527,7 @@ _mongo_stats/
 ||ap.org^*/webtrendsap_hosted.js
 ||apartments.com^*/al.gif?
 ||api.tinypic.com/api.php?action=track
+||apkpure.com/analytics_
 ||apphit.com/js/count.js
 ||apple.com^*/spacer2.gif?
 ||applifier.com/users/tracking?
@@ -13397,6 +13421,7 @@ _mongo_stats/
 ||toyota.jp/onetag/
 ||tp.ranker.com^
 ||tqn.com/px/?
+||tr.snapchat.com^
 ||tracelog.www.alibaba.com^
 ||tracer.perezhilton.com^
 ||track.briskfile.com^
