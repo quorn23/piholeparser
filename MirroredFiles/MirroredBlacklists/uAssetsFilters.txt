@@ -2396,8 +2396,10 @@ computerbild.de##.startdownload > a[data-is-manager-usable="1"]
 ! https://www.reddit.com/r/uBlockOrigin/comments/6vsahb/streamcloudeu_doesnt_work_with_ubo/
 ! https://github.com/uBlockOrigin/uAssets/issues/99#issuecomment-450657704
 streamcloud.eu##+js(abort-current-inline-script.js, atob, decodeURIComponent)
-streamcloud.eu##+js(nowebrtc.js)
+streamcloud.eu,streamcloud.me##+js(nowebrtc.js)
 streamcloud.eu##+js(set-constant.js, adBlockDetected, noopFunc)
+||streamcloud.me/sw.js$script,1p
+||streamcloud.me/sw-vodlocker.to.js$script,1p
 streamcloud.eu##[id*="ScriptRoot"]
 streamcloud.eu###login > div[style^="width"]:style(display: block !important)
 
@@ -3213,7 +3215,7 @@ adyou.co###bannerUrl
 
 ! https://github.com/uBlockOrigin/uAssets/issues/883
 ! AdFly
-activeation.com,activetect.net,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,baymaleti.net,bitigee.com,bluenik.com,brightvar.bid,briskgram.net,brisktopia.com,casualient.com,cinebo.net,clearload.bid,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,swiftviz.net,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##+js(adfly-defuser.js)
+activeation.com,activetect.net,adf.ly,atomcurve.com,atominik.com,auto-login-xxx.com,ay.gy,babblecase.com,baymaleti.net,bitigee.com,bluenik.com,brightvar.bid,briskgram.net,brisktopia.com,casualient.com,cinebo.net,clearload.bid,coginator.com,cogismith.com,dl.android-zone.org,dl.underclassblog.com,dataurbia.com,download.replaymod.com,gamecopyworld.click,go.awanpc.me,j.gs,kaitect.com,kializer.com,kibuilder.com,kimechanic.com,microify.com,mmoity.com,picocurl.com,pintient.com,q.gs,quainator.com,quamiller.com,queuecosm.bid,restorecosm.bid,riffhold.com,simizer.com,skamaker.com,skamason.com,sostieni.ilwebmaster21.com,special.picons.eu,swiftviz.net,thouth.net,threadsphere.bid,tinyical.com,tinyium.com,twineer.com,viahold.com,vializer.com,viwright.com,yabuilder.com,yamechanic.com,yoalizer.com,yobuilder.com,yoineer.com,yoitect.com,zo.ee##+js(adfly-defuser.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1009#issuecomment-352160776
 ! https://github.com/jspenguin2017/uBlockProtector/issues/791
 ! https://github.com/jspenguin2017/uBlockProtector/issues/792
@@ -5629,7 +5631,7 @@ themeslide.com##+js(nano-setInterval-booster.js, countdown, 1500)
 @@||aternos.org^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1027
-gjirafa.com##iframe
+gjirafa.com##[id^="gjc"]
 gjirafa.com##[id^="an-holder"]
 gjirafa.com##+js(addEventListener-defuser.js, message, videoAd)
 
@@ -6342,13 +6344,14 @@ img.yt##+js(abort-on-property-read.js, ExoLoader)
 ! https://github.com/jspenguin2017/uBlockProtector/issues/883
 ! https://github.com/jspenguin2017/uBlockProtector/issues/940
 ! https://github.com/jspenguin2017/uBlockProtector/issues/959
+! https://github.com/NanoMeow/QuickReports/issues/524
 dl.ccbluex.net##+js(addEventListener-defuser.js, load, _0x)
 @@||ccbluex.net^$generichide
 */adsid/integrator.js$script,redirect=noopjs,domain=dl.ccbluex.net
 ||pagead2.googlesyndication.com^$script,redirect=noopjs,domain=dl.ccbluex.net
 @@||googleads.g.doubleclick.net/pagead/html/*$subdocument,domain=dl.ccbluex.net
 @@||pagead2.googlesyndication.com/pagead/$script,domain=dl.ccbluex.net
-ccbluex.net##[id^="aswift"]
+ccbluex.net##[id^="aswift"]:style(height: 1px !important; width: 1px !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1708
 thewebflash.com##+js(setTimeout-defuser.js, Adblock, 20)
@@ -6687,11 +6690,12 @@ dwindly.io##a.adBtn
 ! https://github.com/uBlockOrigin/uAssets/issues/3258
 ! https://github.com/NanoMeow/QuickReports/issues/30
 ! https://github.com/NanoMeow/QuickReports/issues/398
-firstonetv.net##+js(abort-on-property-write.js, isBlocked)
-firstonetv.net##+js(setTimeout-defuser.js, check, 1)
-firstonetv.net##+js(setTimeout-defuser.js, imgTest)
+! https://github.com/NanoMeow/QuickReports/issues/526
+firstonetv.*##+js(abort-on-property-write.js, isBlocked)
+firstonetv.*##+js(setTimeout-defuser.js, check, 1)
+firstonetv.*##+js(setTimeout-defuser.js, imgTest)
 @@*$xmlhttprequest,domain=firstonetv.net
-@@||firstonetv.net^$generichide
+@@||firstonetv.*^$generichide
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/50
 adca.st##+js(window.open-defuser.js)
@@ -6728,9 +6732,9 @@ kisscosplay.moe##+js(setTimeout-defuser.js, nextFunction, 250)
 @@||kisscosplay.moe^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1826
-povw1deo.*,povwideo.*##+js(abort-on-property-write.js, Fingerprint2)
-povw1deo.*,powvideo.*##+js(nowebrtc.js)
-povw1deo.*,povwideo.*##+js(window.open-defuser.js)
+povw1deo.*,povwideo.*,povwideo.*##+js(abort-on-property-write.js, Fingerprint2)
+povw1deo.*,povwideo.*,powvideo.*##+js(nowebrtc.js)
+povw1deo.*,povwideo.*,povwideo.*##+js(window.open-defuser.js)
 ||go.pub2srv.com/apu.php$script,redirect=noopjs
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1827
@@ -14651,6 +14655,18 @@ c123movies.com,123freemovies.live,123movie.*,123movies123.xyz,123moviesu.com###o
 123movieswatch.fun##+js(abort-on-property-read.js, Date.prototype.toUTCString)
 123movieswatch.fun##.btn3d:has-text(/stream/i)
 123movieswatch.fun##.btn3d:has-text(/Download/i)
+! https://github.com/uBlockOrigin/uAssets/issues/4457#issuecomment-451269554
+l23movies.*,123movies0.*,123movieshub.*##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+0123movies.*,123movieshub.*##+js(abort-on-property-read.js, AaDetector)
+0l23movies.*##+js(abort-on-property-read.js, rid)
+0l23movies.com##+js(nano-setInterval-booster.js)
+123movies.*##a[href="https://www.123movies.club/stream-now/"]
+123movies.*,123movieslife.*##.btn-watch-area
+123movies.*##li > .options:has-text(Watch Online)
+123movies123.*##.pframe
+123movies.*##.selected.options
+||g27zkdvsxl.com^$3p
+||xu5ctufltn.com^$3p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4317
 cmovies.io##+js(abort-current-inline-script.js, atob, decodeURI)
@@ -15345,17 +15361,17 @@ bombuj.eu##+js(abort-on-property-read.js, AaDetector)
 ! yandex domains
 ! https://github.com/uBlockOrigin/uAssets/issues/4462
 ! https://github.com/uBlockOrigin/uAssets/issues/4497
-yandex.ru##+js(set-constant.js, Math.random, trueFunc)
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##+js(setTimeout-defuser.js, AdvManager)
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##.sticky_visible
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_first"]
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_footer"]
 !#if env_firefox
-||news.yandex.by^$csp=script-src * 'unsafe-inline'
-||news.yandex.kz^$csp=script-src * 'unsafe-inline'
-||news.yandex.ua^$csp=script-src * 'unsafe-inline'
-||mc.yandex.ru/watch/*$script,first-party,redirect=silent-noeval.js
+||mc.yandex.ru/metrika/*$script,redirect=silent-noeval.js,domain=yandex.by|yandex.kz|yandex.ua
+||mc.yandex.ru/watch/*$script,redirect=silent-noeval.js,domain=yandex.by|yandex.kz|yandex.ua
 ||mc.yandex.ru/metrika/*$script,first-party,redirect=silent-noeval.js
+||mc.yandex.ru/watch/*$script,first-party,redirect=silent-noeval.js
+||mc.yandex.ru/watch/*$script,redirect=none,domain=mail.yandex.ru
+||mc.yandex.ru/metrika/*$script,redirect=none,domain=mail.yandex.ru
 !#endif
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4464
@@ -15637,3 +15653,65 @@ fy.gl##+js(abort-on-property-read.js, open)
 ! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-450945393
 ibda3link.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 ibda3link.com##+js(setTimeout-defuser.js, nextFunction, 250)
+
+! simsdom.com anti-adb
+simsdom.com##+js(set-constant.js, canRunAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4526
+wsj.com##+js(abort-current-inline-script.js, NREUM)
+wsj.com##+js(setTimeout-defuser.js, linkEl)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4527
+songspk.*##+js(abort-current-inline-script.js, atob, decodeURI)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4528
+@@||exiledros.me^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4529
+pirate.ws##+js(abort-current-inline-script.js, jQuery, AdB_true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4530
+@@||cosplayjavhd3.*^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4531
+@@||vstorrent.org^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4532
+@@||rules.noadblock.org^$domain=paigeeworld.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/4535
+voxmovies.online##+js(abort-on-property-read.js, AaDetector)
+||voxmovies.online/banner$image
+||ib1oyteqqn.com^
+
+! https://github.com/uBlockOrigin/uAssets/issues/4534
+kat.tv##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+||chidsimp.com^
+
+! https://github.com/NanoMeow/QuickReports/issues/520
+@@||mssl.fwmrm.net/libs/adm/*/AdManager.js$script,domain=mylifetime.com
+@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=mylifetime.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/4536
+objectifgard.com##+js(set-constant.js, $tieE3, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4533
+gomovies-123.com##[href^="http://movie-32.com"]
+gomovies-123.com,gomovies123.today##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
+gomovieshd.cc##.btn-successful.btn-block.btn
+gomovieshd.cc##.fake_player
+gomovieshd.cc##.idTabs > li:has-text(Premium)
+gomovies.ec,gomoviesm.com##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+gostream.nu,gomovies.ec##+js(set-constant.js, check_adblock, true)
+gomovieshub.io##+js(abort-current-inline-script.js, parseInt, TABUNDER)
+gomovieshub.io##[href="https://gogoanimehub.com/"]
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/253
+getfreesmsnumber.com##+js(abort-current-inline-script.js, document.getElementById, undefined)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-451280061
+licas.pl,link.3dmili.com,linkati.win,linkim.xyz,linkkaty.com,linkvid.com,mm1ink.net,moneyinurl.com,ms4link.co##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-451280061
+linktor.io##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+linktor.io##+js(abort-on-property-read.js, open)
