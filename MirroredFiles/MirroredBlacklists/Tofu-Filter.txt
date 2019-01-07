@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:37 2019/01/01
+! 最終更新 14:49 2019/01/06
 !
 !--------通販サイト--------!
 amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -469,6 +469,7 @@ _ads.php
 ||adxpansion.com^$third-party
 ||adzerk.net^$third-party
 ||agomwefq.com^$third-party
+||ampproject.org^$third-party
 ||awempire.com^$third-party
 ||bebi.com^$third-party
 ||bidadx.com^$third-party
@@ -638,6 +639,9 @@ xvideos.com##.sponsor-popup
 !-----------openload.co
 ||cloudflare.com/cdn-cgi/nexp/$domain=openload.co
 ||openload.co/assets/js/license.5.js
+
+openload.co###videooverlay
+openload.co##script:contains(popAdsLoaded)
 
 !-----------avgle.com
 ||pussl48.com^
@@ -1344,6 +1348,7 @@ $script,third-party,domain=jpidols.tv
 ##a[href*="prf.hn/click/"]
 ##a[href*="px.a8.net/svt/ejp?"]
 ##a[href*="r.advg.jp"]
+##a[href*="recott.me"]
 ##a[href*="sexpixbox.com"]
 ##a[href*="smart-c.jp"]
 !ショッピングサーチでYahooの結果項目が何も表示されず
@@ -2219,6 +2224,8 @@ warotanikki.com##.external[rel="nofollow"]
 @@||ad-link.jp*/index.php?
 @@||bc.geocities.yahoo.co.jp/js/bbs/
 @@||bing.com/fd/ls/*$ping
+	!商品タブの切替が出来ない
+@@||cs.nakanohito.jp^$domain=kenko-tokina.co.jp
 @@||dlsite.com/img/
 @@||dmm.co.jp/mono/movie/adult/$image
 	!動画見れない
@@ -2311,22 +2318,26 @@ eiga.com#@#[id$="_ad"]:not(html):not(body)
 freshlive.tv#@#[class$="Ad"]:not(html):not(body)
 	!動画見れない
 gogoanime.to#@#[class$="-ads"]:not(html):not(body)
+
+	!多い
+@@||google.com^$generichide
+@@||google.co.jp^$generichide
 	!検索結果動画部分
-google.co.jp,google.com#@#[class$="Ad"]:not(html):not(body)
+	!google.co.jp,google.com#@#[class$="Ad"]:not(html):not(body)
 	!通知設定辺り
-calendar.google.com#@#[class$="Ad"]:not(html):not(body)
+	!calendar.google.com#@#[class$="Ad"]:not(html):not(body)
 	!ヘッダー 検索バー
-news.google.com#@#[class$="Ad"]:not(html):not(body)
+	!news.google.com#@#[class$="Ad"]:not(html):not(body)
 	!メール一覧
-inbox.google.com#@#.ad
+	!inbox.google.com#@#.ad
 	!新規作成ボックスが消える
-mail.google.com#@#.AD
+	!mail.google.com#@#.AD
 	!本文
-mail.google.com#@#.ads
+	!mail.google.com#@#.ads
 	!カラーパレッド
-mail.google.com#@#[class$="Ad"]:not(html):not(body)
+	!mail.google.com#@#[class$="Ad"]:not(html):not(body)
 	!投稿欄
-plus.google.com#@#[class$="Ad"]:not(html):not(body)
+	!plus.google.com#@#[class$="Ad"]:not(html):not(body)
 	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
 gyazo.com#@#[class$="-ad"]:not(html):not(body)
 	!左側

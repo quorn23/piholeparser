@@ -731,7 +731,7 @@ foreignpolicy.com##body:style(overflow: auto !important;)
 userscloud.com##+js(abort-on-property-write.js, Fingerprint2)
 userscloud.com##+js(abort-on-property-write.js, open)
 userscloud.com##+js(abort-current-inline-script.js, parseInt, tabunder)
-userscloud.com##+js(remove-attr.js, onclick)
+userscloud.com##+js(remove-attr.js, onclick, .btn-icon-stacked)
 userscloud.com##+js(abort-current-inline-script.js, atob, decodeURIComponent)
 userscloud.com##A[href$=".html"][rel="nofollow norefferer noopener"]
 @@||userscloud.com^$generichide
@@ -3759,18 +3759,19 @@ europixhd.*,hdeuropix.*,topeuropix.net###MyImageId
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1002
 ! https://github.com/uBlockOrigin/uAssets/issues/1002#issuecomment-369038123
-descargas2020.com##+js(abort-on-property-read.js, l8l1X)
-descargas2020.com##+js(abort-on-property-read.js, String.prototype.charCodeAt)
+! https://github.com/uBlockOrigin/uAssets/issues/1962
+descargas2020.com##+js(abort-current-inline-script.js, parseInt, tabunder)
+descargas2020.com##+js(abort-on-property-read.js, AaDetector)
 descargas2020.com##+js(abort-on-property-write.js, _pop)
 descargas2020.com##+js(abort-on-property-write.js, _ti_ab_only)
 descargas2020.com##+js(abort-on-property-write.js, Fingerprint2)
-descargas2020.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 descargas2020.com##+js(addEventListener-defuser.js, mousedown, (b){u()})
 descargas2020.com##+js(noeval.js)
 descargas2020.com##+js(nowebrtc.js)
-descargas2020.com##+js(setInterval-defuser.js, (), 500)
 descargas2020.com##+js(window.open-defuser.js)
-||65mjvw6i1z.com^$third-party
+descargas2020.com###idx-1
+||65mjvw6i1z.com^$3p
+||iskkrmwivxfmdjwxme.bid^$3p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1004
 redditgirls.com##+js(abort-on-property-read.js, canRunAds)
@@ -13879,7 +13880,7 @@ xpaja.net##+js(abort-on-property-read.js, _cpp)
 putlocker.cl##+js(disable-newtab-links.js)
 
 ! gomovieshub . is popups
-gomovieshub.is,putload.tv##+js(abort-on-property-read.js, encodeURIComponent)
+gomovieshub.is##+js(abort-on-property-read.js, encodeURIComponent)
 putload.tv##+js(nowebrtc.js)
 
 ! putlockermix . org popups
@@ -14439,11 +14440,13 @@ mkvcinemas.live##[href="https://www.hostire.com"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4273
 ! https://github.com/uBlockOrigin/uAssets/issues/4495 popups
+! https://github.com/NanoMeow/QuickReports/issues/537
 buyitonline.store##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
-buyitonline.store##+js(bab-defuser.js)
-||buyitonline.store/sw.js$script,first-party
+buyitonline.store##+js(abort-on-property-read.js, open)
 buyitonline.store##+js(abort-on-property-write.js, Fingerprint2)
+buyitonline.store##+js(bab-defuser.js)
 buyitonline.store##+js(noeval.js)
+||buyitonline.store/sw.js$script,first-party
 ||adslop.com^$3p
 ||getfree-vpn.com^
 
@@ -14656,9 +14659,11 @@ c123movies.com,123freemovies.live,123movie.*,123movies123.xyz,123moviesu.com###o
 123movieswatch.fun##.btn3d:has-text(/Download/i)
 ! https://github.com/uBlockOrigin/uAssets/issues/4457#issuecomment-451269554
 l23movies.*,123movies0.*,123movieshub.*##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+e123movies.com,123moviespower.com,123moviez.online##+js(abort-current-inline-script.js, atob, decodeURIComponent)
 0123movies.*,123movieshub.*##+js(abort-on-property-read.js, AaDetector)
+vidwatch.me##+js(abort-on-property-read.js, AaDetector)
 0l23movies.*##+js(abort-on-property-read.js, rid)
-0l23movies.com##+js(nano-setInterval-booster.js)
+0l23movies.com,123movieshd.vip,vidwatch.me##+js(nano-setInterval-booster.js)
 123movies.*##a[href="https://www.123movies.club/stream-now/"]
 123movies.*,123movieslife.*##.btn-watch-area
 123movies.*##li > .options:has-text(Watch Online)
@@ -14666,6 +14671,10 @@ l23movies.*,123movies0.*,123movieshub.*##+js(abort-current-inline-script.js, ato
 123movies.*##.selected.options
 ||g27zkdvsxl.com^$3p
 ||xu5ctufltn.com^$3p
+||phastoag.com^
+||thiksikr.com^
+||pussl6.com^
+###preroll_ads
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4317
 cmovies.io##+js(abort-current-inline-script.js, atob, decodeURI)
@@ -15792,3 +15801,41 @@ sehatinspr.com##[href^="http://bit.ly"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4550
 ershadat.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4552
+audiotag.info##+js(set-constant.js, canRunAds, true)
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=audiotag.info
+||audiotag.info/images/banner_*.png$image,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/4553
+coolsanime.co.in,toonvideos.in##+js(abort-on-property-read.js, ai_debugging)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4556
+hd.today##+js(abort-current-inline-script.js, atob, decodeURI)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4557
+legionpeliculas.org##+js(abort-on-property-write.js, smrtSB)
+legionpeliculas.org##+js(abort-on-property-write.js, smrtSP)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-451742606
+tarmoney.top,ulr4u.com,urlbob.com,urlemo.com,urlern.com,urlshort.info,urlweb.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-451742606
+stiffvip.com##+js(abort-current-inline-script.js, RegExp, zfgloaded)
+stiffvip.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-451742606
+vivebtc.win##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+vivebtc.win##+js(abort-on-property-read.js, open)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4368#issuecomment-451742606
+url-short-links.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+*$frame,domain=url-short-links.com
+
+! https://github.com/jspenguin2017/uBlockProtector/issues/1021
+whostreams.net##+js(abort-on-property-read.js, AaDetector)
+kora-live.tv##+js(noeval.js)
+kora-live.tv##+js(setTimeout-defuser.js, nextFunction, 2000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4378#issuecomment-451783706
+latribunadelpaisvasco.com##+js(noeval.js)
