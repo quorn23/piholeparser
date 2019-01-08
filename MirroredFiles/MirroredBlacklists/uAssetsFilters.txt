@@ -2205,11 +2205,11 @@ torlock.com##[href*="an0n.stream"]
 torlock.com##.trtbl:has-text(VPN)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/582
-inoreader.com###reader_pane:style(padding-right: 0px !important;)
 @@||inoreader.com/adv/$first-party,script,image
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=inoreader.com
 @@||inoreader.com^$generichide
-inoreader.com##.ad_title
+!inoreader.com###reader_pane:style(padding-right: 0px !important;)
+!inoreader.com##.ad_title
 
 ! https://github.com/uBlockOrigin/uAssets/issues/590
 ! https://www.reddit.com/r/uBlockOrigin/comments/76srms/local_news_sites_in_the_uk_now_attempting_to/
@@ -2520,6 +2520,8 @@ viewasian.com##+js(abort-current-inline-script.js, eval, anti_adblock)
 zippyshare.com##+js(abort-current-inline-script.js, String.fromCharCode, decodeURIComponent)
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/118
+! https://www.reddit.com/r/uBlockOrigin/comments/ad0ucd/cant_play_video/
+kimcartoon.*##+js(abort-current-inline-script.js, $, isAdb)
 kimcartoon.*##+js(abort-current-inline-script.js, parseInt, tabunder)
 kimcartoon.*##+js(abort-on-property-read.js, AaDetector)
 kimcartoon.*##+js(abort-on-property-write.js, callExo)
@@ -2715,6 +2717,7 @@ sockshare.net##^script:has-text(676574456c656d656e747342795461674e616d65)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/741
 @@||demolandia.net^$generichide
+@@||demolandia.net/js/*$script,1p
 
 ! https://github.com/gorhill/uBlock/issues/3112
 ikshow.net##+js(abort-on-property-read.js, BetterJsPop)
@@ -5561,7 +5564,7 @@ porndish.com##+js(popads-dummy.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1497
 ! https://github.com/uBlockOrigin/uAssets/issues/1521
 ! https://github.com/uBlockOrigin/uAssets/issues/1731
-123link.*,adbull.*,adcoin.me,adlinkme.com,admove.co,adshort.co,adshort.im,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bilink.xyz,bitcoadz.pw,btc.ms,cimi.website,coin.mg,coinb.ink,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.net,geturlpr.com,git.tc,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,madurls.com,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,qe.pe,shink.me,shink.xyz,shorteurl.com,shortzero.com,shrinklink.co,shst.co,so.gd,teqani-plus.com,twik.pw,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,vivads.net,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##+js(nano-setInterval-booster.js)
+123link.*,adbull.*,adcoin.me,adlinkme.com,admove.co,adshort.co,adshort.im,adsurl.xyz,al.ly,ally.sh,apkmirror.com,arabcut.com,arpa7com.com,bbf.lt,bilink.xyz,bitcoadz.pw,btc.ms,cimi.website,coin.mg,coinb.ink,coinlink.us,coshurl.co,cpmlink.net,crockolinks.com,croco.site,cryptoadz.win,cryptoskipad.com,cryptosmo.com,curs.io,cut-egy.ml,cut-urls.com,cut-win.com,cutbit.io,cutearn.com,cuturlink.com,cutwi.in,cutwin.com,cutwin.pro,cutwin.us,ecurs.co,ecut.io,eg4link.*,egy-links.com,elibtc.win,eurs.io,fas.li,firstone.tv,firstonetv.*,geturlpr.com,git.tc,gsurl.in,gturls.com,idlelivelink.*,igram.*,iiv.pl,infinityurl.co,iziwinmoney.info,l2s.io,leechall.com,leechall.download,leenlink.com,lewat.id,linclik.com,link-cash.com,link-money.com,linkatk.net,linkhits.net,linkhits.us,linkkawy.com,linkkch.com,linksh.top,linkurl.org,lkcash.net,madurls.com,minkly.me,mlink.club,oke.io,oload.stream,onlinebee.in,ouo.*,openload.co,ourl.io,peliculasmegahdd.net,qe.pe,shink.me,shink.xyz,shorteurl.com,shortzero.com,shrinklink.co,shst.co,so.gd,teqani-plus.com,twik.pw,ur.ly,url.gem-flash.com,urle.co,ulshare.me,uskip.me,vivads.net,win4cut.com,wolink.in,xess.pro,xurl.us,zeiz.me,zlshorte.net,zonadescarga.info##+js(nano-setInterval-booster.js)
 globalbesthosting.com,goldescargas.com,katfile.com,shortify.pw,srt.am,userupload.net##+js(nano-setTimeout-booster.js)
 ! https://github.com/uBlockOrigin/uAssets/issues/1481
 1ink.cc##+js(nano-setInterval-booster.js, mSec, 1050)
@@ -7562,6 +7565,7 @@ fxporn69.xyz##.banner
 ! https://github.com/uBlockOrigin/uAssets/issues/2103
 ! https://forums.lanik.us/viewtopic.php?p=144359#p144359
 ! https://github.com/uBlockOrigin/uAssets/issues/4546
+vipbox.live##+js(abort-on-property-read.js, _rhat2)
 vipbox.live##+js(abort-on-property-write.js, Fingerprint2)
 vipbox.live##+js(addEventListener-defuser.js, /^(?:mousedown|pointerdown)$/, 297)
 vipbox.live##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
@@ -10507,7 +10511,7 @@ hoquangdai.com##+js(abort-on-property-write.js, adb_checker)
 gamereactor.dk##+js(abort-on-property-write.js, detectAdblockUser)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2991
-@@||safeurl.net/theme/js/ads_test.js$script,first-party
+@@||safeurl.net^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2992
 @@||fmhikayeleri.com^$generichide
@@ -11420,11 +11424,14 @@ file4go.me##+js(abort-current-inline-script.js, document.getElementById, ad_bloc
 @@||thoptv.world^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1603
+javfinder.is##+js(abort-on-property-read.js, AaDetector)
 av8x.com,javboss.com,tubeqd.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
 av8x.com,javboss.com,tubeqd.com##+js(setInterval-defuser.js, (), 500)
 qdembed.com##+js(abort-on-property-read.js, decodeURI)
-av8x.com,javboss.com,javfinder.is###preroll
+av8x.com,javboss.com###preroll
 ||abc.hostedbyfembed.com/freezone.js
+||k77hof1z7k.com^$3p
+##[href^="https://13vm73vbmp.com/"]
 ##a[href^="http://www.poweredbyliquidfire.mobi/"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9argxo
@@ -12522,7 +12529,8 @@ manyak.info##+js(bab-defuser.js)
 @@||yourcountdown.to^$generichide
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3684
-mangahost1.com##+js(setTimeout-defuser.js, (), 3000)
+mangahost1.com##+js(bab-defuser.js)
+mangahost1.com##+js(setTimeout-defuser.js, adblock)
 
 ! https://github.com/NanoMeow/QuickReports/issues/191
 ngelag.com##+js(abort-on-property-read.js, FuckAdBlock)
@@ -15839,3 +15847,26 @@ kora-live.tv##+js(setTimeout-defuser.js, nextFunction, 2000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4378#issuecomment-451783706
 latribunadelpaisvasco.com##+js(noeval.js)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4560
+! https://github.com/uBlockOrigin/uAssets/issues/4561
+! https://github.com/uBlockOrigin/uAssets/issues/4563
+! https://github.com/uBlockOrigin/uAssets/issues/4564
+! https://github.com/uBlockOrigin/uAssets/issues/4566
+arbh.info,dinsycut.com,max4link.com,medche.com,worldoflinks.net##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4562
+flaz.link##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+flaz.link##+js(abort-on-property-read.js, open)
+*$frame,domain=flaz.link
+
+! https://github.com/uBlockOrigin/uAssets/issues/4565
+linkar.in##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+linkar.in##+js(abort-on-property-read.js, open)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4080#issuecomment-451912130
+hanime.tv##+js(set-constant.js, ABLK, false)
+@@||hanime.tv^$generichide
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/254
+apkdot.com##+js(nano-setInterval-booster.js)

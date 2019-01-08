@@ -2,37 +2,37 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 14:49 2019/01/06
+! 最終更新 13:43 2019/01/07
 !
 !--------通販サイト--------!
-amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
-||amiami.jp^$third-party
-||amiami.com^$third-party
-||animemerchant.com^$third-party
-||auctions.c.yimg.jp^$third-party,domain=~yahoo.co.jp|~aucfan.com|~coneco.net
-||bk1.jp^$third-party
+	!amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
+	!||amiami.jp^$third-party
+	!||amiami.com^$third-party
+	!||animemerchant.com^$third-party
+	!||auctions.c.yimg.jp^$third-party,domain=~yahoo.co.jp|~aucfan.com|~coneco.net
+	!||bk1.jp^$third-party
 ||dgpot.com^$third-party,domain=~dgpot.com
 ||digiket.com^$third-party
 ||digiket.net^$third-party,domain=~digiket.com
-||dmm.co.jp^$third-party,domain=~dmm.com
-||dmm.com^$third-party,domain=~dmm.co.jp
-||dl-market.com^$third-party
-||dlmarket.jp^$third-party
-||dlsite.com^$third-party,domain=~dlsite.net
-||dlsite.jp^$third-party,domain=~dlsite.net|~dlsite.com|~nijie.info|~horne.red
+	!||dmm.co.jp^$third-party,domain=~dmm.com
+	!||dmm.com^$third-party,domain=~dmm.co.jp
+	!||dl-market.com^$third-party
+	!||dlmarket.jp^$third-party
+	!||dlsite.com^$third-party,domain=~dlsite.net
+	!||dlsite.jp^$third-party,domain=~dlsite.net|~dlsite.com|~nijie.info|~horne.red
 ||e-nls.com^$third-party
-||eic-book.com^$third-party
+	!||eic-book.com^$third-party
 ||getchu.com^$third-party
-||gyut.to^$third-party
-||gyutto.co$third-party
-||gyutto.jp^$third-party
-||img.dell.com^$third-party
-||infopot.jp^$third-party
-||japanet.co.jp^$third-party
-||melonbooks.com^$third-party,domain=~pixiv.net
-||play-asia.com^$third-party
+	!||gyut.to^$third-party
+	!||gyutto.co$third-party
+	!||gyutto.jp^$third-party
+	!||img.dell.com^$third-party
+	!||infopot.jp^$third-party
+	!||japanet.co.jp^$third-party
+	!||melonbooks.com^$third-party,domain=~pixiv.net
+	!||play-asia.com^$third-party
 ||r18.com^$third-party,domain=~japanhub.net
-||zero-animation.net^$third-party
+	!||zero-animation.net^$third-party
 !-------ここまで-------!
 
 ||d2swpuhpwp3khd.cloudfront.net^
@@ -203,6 +203,7 @@ _ads.php
 !||da-ads.com^$third-party
 
 ||a8.net^$third-party
+||aaacompany.net^$third-party
 ||access-lab.com^$third-party
 ||accesstrade.net^$third-party
 ||ad-feed.com^$third-party
@@ -1620,9 +1621,10 @@ yu.to##style + script[language="JavaScript"] + div[align="center"]
 ||engadget.com/traffic/
 
 !------------tegaki-------------!
-temp.emotionflow.com##div[style="float: left; width: 300px; height: 250px; background: #f0f0f0;"]
-temp.emotionflow.com##div[style="float: left; width: 100%; height: 60px; margin: 5px 0px 15px 0;"]
-temp.emotionflow.com##div[style="float: left; width: 100%; height: 90px; margin: 5px 0px;"]
+temp.emotionflow.com##.IllustDetailLeft > DIV:first-child
+temp.emotionflow.com##.IllustDetailRight > DIV:last-child
+temp.emotionflow.com##.ContentsWorkLeft > DIV:not(.IllustThumb)
+temp.emotionflow.com##.ContentsRight > DIV:last-child
 
 !------------dmm-------------!
 ||dmm.ad-s.org^$third-party
