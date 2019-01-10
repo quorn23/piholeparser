@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20190107
+! Version: 20190109
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -1688,7 +1688,7 @@
 ||vhldwuv6om.com/*.js^
 ||view.asiae.co.kr/common/ad/
 ||viewsnnews.com/image/advert/
-||vod-naver.pstatic.net/tveta/owfs_rmc/read/
+||vod-naver.pstatic.net/tveta/owfs_rmc/read/$domain=~sports.news.naver.com
 ||vod.shoppingcall.me/ad_shoppingCallme.php^
 ||vogonara.ru/rotator/*.js^
 ||vogozara.ru/kadam.base.min.js^
@@ -2792,6 +2792,12 @@ ilbe.com##div[id^="teamcsp_ad_"]
 ilbe.com##iframe[src^="//www.ilbe.com/myads/openX_passback*.html"]
 ildaro.com##div#contents_wrap_sub2>table>tbody>tr>td[align="center"][style="padding-top:25"]
 ilovevid.com##div.ads
+ilyo.co.kr##div.ad_asideArea
+ilyo.co.kr##div.ad_direct_warp
+ilyo.co.kr##div.ad_topArea
+ilyo.co.kr##div.eventBnr
+ilyo.co.kr##div[class^="ad_skyscraper_"]
+ilyo.co.kr##div[data-widget_id="57wBw1o8"]
 imnews.busan.com,implay.busan.com##div#float_banner
 imnews.busan.com,implay.busan.com##div.left_banner1
 imnews.busan.com,implay.busan.com##div.right_banner1
@@ -3361,6 +3367,11 @@ m.hyundaenews.com##div#treer3
 m.ikoreadaily.co.kr##div#ad_article
 m.ikoreadaily.co.kr##div.body>div[style="width:205px;height:205px;float:right;text-align:right;"]
 m.ikoreadaily.co.kr##section.advertisment
+m.ilyo.co.kr##div.adw
+m.ilyo.co.kr##div.news_content>div.dable_placeholder
+m.ilyo.co.kr##div.news_content>div[style="margin:10px auto;text-align:center;height:250px;width:300px"]
+m.ilyo.co.kr##div[data-widget_id="1XDQwgoe"]
+m.ilyo.co.kr##div[data-widget_id="goPxmYoQ"]
 m.ilyosisa.co.kr##section.advertisment
 m.imaeil.com##div#ad1
 m.imaeil.com##div.contents>div[align="center"][style="padding-bottom:15px"]
@@ -4442,8 +4453,21 @@ redstate.com##div.ad-300x250
 redstate.com##div.banner-ad
 redstate.com##div.row>div.ad.col-xs-4
 redstate.com##div.row>div.ad.col-xs-6
-reuters.com##div[class^="CanvasAd_container_"]
-reuters.com##div[class^="DPSlot_container_"]
+reuters.com##div.ArticlePage_ad-wrap
+reuters.com##div.CanvasAd_container
+reuters.com##div.DPSlot_container
+reuters.com##div.StandardArticleBody_container>div[class][id]:not(.StandardArticleBody_body)
+reuters.com##div.StandardArticleBody_trustBadgeContainer>div[class]
+reuters.com##div.StandardArticleBody_trustBadgeContainer>div[id]
+reuters.com##div.StandardArticle_content>div[class]:not(.TwoColumnLayout_column)
+reuters.com##div.StandardArticle_content>div[id]:not(.TwoColumnLayout_column)
+reuters.com##div.TwoColumnLayout_column>div[class]::not(.ArticleHeader_content-container):not(.StandardArticleBody_container)
+reuters.com##div.TwoColumnLayout_column>div[id]:not(.ArticleHeader_content-container):not(.StandardArticleBody_container)
+reuters.com##div[data-template="article_list"]>div[class]:not([data-reactroot])
+reuters.com##div[data-template="article_list"]>div[data-reactroot]>div[class]:not(.ArticlePage_container):not(.BreakpointDetector_container)
+reuters.com##div[data-template="article_list"]>div[data-reactroot]>div[id]:not(.ArticlePage_container):not(.BreakpointDetector_container)
+reuters.com##div[data-template="article_list"]>div[id]:not([data-reactroot])
+reuters.com##section.ad-horizontal
 reviewstar.hankooki.com##li.ad_plex_a250
 ruliweb.com##div.ad
 ruliweb.com##div.adrrr
