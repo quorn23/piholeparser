@@ -731,16 +731,17 @@ foreignpolicy.com##body:style(overflow: auto !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2106
 ! https://github.com/uBlockOrigin/uAssets/issues/3573
+userscloud.com##+js(abort-current-inline-script.js, atob, decodeURIComponent)
+userscloud.com##+js(abort-on-property-read.js, parcelRequire)
 userscloud.com##+js(abort-on-property-write.js, Fingerprint2)
 userscloud.com##+js(abort-on-property-write.js, open)
-userscloud.com##+js(abort-current-inline-script.js, parseInt, tabunder)
 userscloud.com##+js(remove-attr.js, onclick, .btn-icon-stacked)
-userscloud.com##+js(abort-current-inline-script.js, atob, decodeURIComponent)
 userscloud.com##A[href$=".html"][rel="nofollow norefferer noopener"]
 @@||userscloud.com^$generichide
 ||userscloud.com/sw.js$script
 ||pix.sr/images/banner
 ||free-cloud-storage.com^$popup
+||turngrind.com^$3p
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=32278
 jpost.com##+js(abort-current-inline-script.js, atob, TextDecoder)
@@ -758,7 +759,7 @@ wetteronline.de##+js(abort-on-property-read.js, $pxy1061)
 wetteronline.de##+js(set-constant.js, String.fromCharCode, noopFunc)
 !#endif
 wetteronline.de##+js(wetteronline.de.js)
-wetteronline.de##^script:has-text(iframeTestTimeMS)
+wetteronline.de##^script:has-text(runCount)
 wetteronline.de###topcontainer
 wetteronline.de###woRect
 wetteronline.de###woCsiAdContent
@@ -11912,7 +11913,7 @@ andiim3.com##+js(abort-current-inline-script.js, jQuery, AdBlock)
 twatis.com##+js(abort-on-property-read.js, ExoLoader.addZone)
 
 ! https://github.com/NanoMeow/QuickReports/issues/98
-ngolos.com##+js(set-constant.js, adblockDetecter, true)
+ngolos.com##+js(abort-on-property-write.js, block_detected)
 @@||soccerclips.matchat.online^$generichide
 @@||ngolos.com^$generichide
 
@@ -15354,15 +15355,14 @@ bombuj.eu##+js(abort-on-property-read.js, AaDetector)
 ! https://github.com/uBlockOrigin/uAssets/issues/4497
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##+js(setTimeout-defuser.js, AdvManager)
 news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##.sticky_visible
-news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_first"]
-news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_footer"]
+news.yandex.by,news.yandex.kz,news.yandex.ru,news.yandex.ua##[class*="_name_first"], [class*="_name_more"], [class*="_name_top"], [class*="_name_footer"]
 !#if env_firefox
-||mc.yandex.ru/metrika/*$script,redirect=silent-noeval.js,domain=yandex.by|yandex.kz|yandex.ua
-||mc.yandex.ru/watch/*$script,redirect=silent-noeval.js,domain=yandex.by|yandex.kz|yandex.ua
-||mc.yandex.ru/metrika/*$script,first-party,redirect=silent-noeval.js
-||mc.yandex.ru/watch/*$script,first-party,redirect=silent-noeval.js
-||mc.yandex.ru/watch/*$script,redirect=none,domain=mail.yandex.ru
-||mc.yandex.ru/metrika/*$script,redirect=none,domain=mail.yandex.ru
+!||mc.yandex.ru/metrika/*$script,redirect=silent-noeval.js,domain=yandex.by|yandex.kz|yandex.ua
+!||mc.yandex.ru/watch/*$script,redirect=silent-noeval.js,domain=yandex.by|yandex.kz|yandex.ua
+!||mc.yandex.ru/metrika/*$script,first-party,redirect=silent-noeval.js
+!||mc.yandex.ru/watch/*$script,first-party,redirect=silent-noeval.js
+!||mc.yandex.ru/watch/*$script,redirect=none,domain=mail.yandex.ru
+!||mc.yandex.ru/metrika/*$script,redirect=none,domain=mail.yandex.ru
 !#endif
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4464
@@ -15914,7 +15914,7 @@ vup.to##+js(nowebrtc.js)
 linkspop.info##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4584
-uplink99.com##+js(setTimeout-defuser.js, nextFunction, 2000)
+selecturcampus.com,uplink99.com##+js(setTimeout-defuser.js, nextFunction, 2000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4585
 picclock.ru##+js(abort-current-inline-script.js, atob, decodeURIComponent)
@@ -15982,3 +15982,17 @@ fiver.club##+js(abort-on-property-read.js, open)
 rag.pw##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 rag.pw##+js(abort-current-inline-script.js, RegExp, zfgloaded)
 *$frame,domain=rag.pw
+
+! https://github.com/NanoMeow/QuickReports/issues/550
+01streamingvf.cc##+js(set-constant.js, adblock, false)
+01streamingvf.cc##+js(abort-on-property-write.js, adsurgeNode)
+01streamingvf.cc##.video1
+
+! https://www.reddit.com/r/uBlockOrigin/comments/aeut2n/site_is_detecting_adblocker/
+iamzlnk.pw##+js(set-constant.js, showAds, true)
+
+! anti adb insindacabili . it
+@@||insindacabili.it^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/4613
+ibcomputing.com##+js(setTimeout-defuser.js, Adblocker, 10000)
