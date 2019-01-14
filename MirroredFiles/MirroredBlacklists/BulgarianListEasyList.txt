@@ -1,7 +1,7 @@
 [Adblock Plus 1.1]
-! Version: 201901130006
+! Version: 201901140003
 ! Title: EasyPrivacy
-! Last modified: 13 Jan 2019 00:06 UTC
+! Last modified: 14 Jan 2019 00:03 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -423,6 +423,7 @@
 /adplogger/*
 /adrum-
 /adrum.
+/adrum_
 /ads/counter.
 /ads/track.
 /ads/track/*
@@ -1779,6 +1780,7 @@
 /HiroBeacon?
 /histats/*
 /hit-counter.
+/hit-counter/*
 /Hit.ashx?
 /hit.asp?
 /Hit.aspx?
@@ -1830,6 +1832,7 @@
 /hpmetrics.
 /hrtrackjs.gif?
 /hs_track.
+/hsc/trk/*
 /hstrck-detect.
 /HuShenGangTong.js
 /i.php?i=
@@ -2717,6 +2720,7 @@
 /postlog?
 /postview.gif?
 /powercount.
+/powr-counter.
 /pphlogger.
 /pr.php?
 /presslabs.js$script,~third-party
@@ -4155,6 +4159,7 @@
 ?begin_session=*&metrics=
 ?bstat=
 ?criteoTrack=
+?event=*&siteid=
 ?event=*&ts=
 ?event=advert_
 ?event=General.track
@@ -4185,6 +4190,7 @@
 ?triggertags=
 ?url=*&id=*&res=*&ref=
 ?utmad=*&utmac=
+?viewsToCount=
 ?wpgb_public_action=*&referrer=
 ^name=atatracker^
 _.gif?ref=
@@ -5633,6 +5639,7 @@ _mongo_stats/
 ||lead-converter.com^$third-party
 ||lead-tracking.biz^$third-party
 ||leadboxer.com^$third-party
+||leadchampion.com^$third-party
 ||leadfeeder.com^$third-party
 ||leadforce1.com^$third-party
 ||leadforensics.com^$third-party
@@ -8777,6 +8784,7 @@ _mongo_stats/
 ||analytics.vendemore.com^
 ||analytics.websolute.it^
 ||analytics.wildtangent.com^
+||analytics.witglobal.net^
 ||analytics.yola.net^
 ||analytics.yolacdn.net^
 ||analytics.ziftsolutions.com^
@@ -9465,6 +9473,7 @@ _mongo_stats/
 ||googleapis.com^*/gen_204?
 ||googlecode.com^*/tracker.js
 ||googletagmanager.com/ns.html?$third-party
+||googletagservices.com^*/osd.js$third-party
 ||googletagservices.com^*/osd_listener.js$third-party
 ||googleusercontent.com/tracker/
 ||gotdns.com/track/blank.aspx?
@@ -10466,6 +10475,7 @@ _mongo_stats/
 ||trendmd.com/events
 ||trf.intuitwebsites.com^
 ||triad.technorati.com^
+||triggers.wfxtriggers.com^
 ||tritondigital.com/lt?sid*&hasads=
 ||tritondigital.com/ltflash.php?
 ||tritondigital.com/ltjs.php
@@ -11092,6 +11102,7 @@ _mongo_stats/
 ||glomera.com/stats
 ||httdev.it/e/c?
 ||iltrovatore.it/vp.htm
+||instore.pagomeno.it^
 ||iol.it^*/clickserver.js
 ||livestats.matrix.it^
 ||log.superweb.ws^
@@ -15995,6 +16006,7 @@ $csp=worker-src 'none',domain=300mbfilms.co|akvideo.stream|alltube.pl|alltube.tv
 ! Bulgarian
 @@||google-analytics.com/analytics.js$domain=novatv.bg
 ! Chinese
+@@||360buyimg.com^*/components/default/$script,domain=jd.com
 @@||aixifan.com^*/sensorsdata.min.js?$domain=acfun.cn
 @@||amazonaws.com^*-google-analytics.js$domain=dcard.tw
 @@||aolcdn.com/js/mg2.js$domain=engadget.com
