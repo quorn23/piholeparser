@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20190115
+! Version: 20190116
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -1423,6 +1423,7 @@
 ||ph.mediatoday.co.kr/adcontent/script/*.js^$domain=mediatoday.co.kr
 ||ph.sisain.co.kr/adcontent/script/*.js^$domain=sisain.co.kr
 ||ph.spotvnews.co.kr/adcontent/script/*.js^$domain=m.spotvnews.co.kr|spotvnews.co.kr
+||physicsworld.com/wp-content/themes/iopp/assets/js/realmedia.js^$domain=physicsworld.com
 ||pinaya.center/addons/document_contents_blind_advertise/css/blind.min.css^$domain=pinaya.center
 ||pinaya.center/addons/document_contents_blind_advertise/js/blind.min.js^$domain=pinaya.center
 ||pirateproxy.cam/static/*/ad-scroll.js^$domain=pirateproxy.cam
@@ -3045,9 +3046,13 @@ kormedi.com##div[id^="better-ads-"]
 kormedi.com##iframe[src^="http://kormedi.com/wp-content/uploads/ads/"]
 kormedi.com##iframe[src^="https://s3.ap-northeast-2.amazonaws.com/img2.kormedi.com/ad/banner_right/banner_right.html"]
 kotaku.com##div.ad-container
+kotaku.com##div.ad-non-sticky
 kotaku.com##div.ad-wide
 kotaku.com##div.ad-wrapper
+kotaku.com##div.contained-ad-container
+kotaku.com##div.contained-ad-shaft
 kotaku.com##div.js_ad-dynamic
+kotaku.com##section.contained-ad-container
 kr.celeb.yahoo.com##div#leftClickButton
 kr.celeb.yahoo.com##div#rightClickButton
 kr.celeb.yahoo.com##div.yom-ad
@@ -3871,16 +3876,11 @@ mnews.sbs.co.kr##div.efoot_bnr_ad
 mobiinside.com##divtd-header-sp-ads
 mobile.gmarket.co.kr##div#layer_hmBanner
 mobile.gmarket.co.kr##div#layer_lgUBanner
-mobile.newsis.com##body>div[style="height:66px;"]
-mobile.newsis.com##body>div[style="position:fixed;bottom:0px;width:100%;z-index:2001"]
-mobile.newsis.com##div#ad_layer_con
-mobile.newsis.com##div#article>div[style="padding:10px 0 0 12px;"]
-mobile.newsis.com##div#article>div[style="text-align:center;"]
-mobile.newsis.com##div#content>section>div.bxcn[style="padding:10px 0 0 10px; height:172px;"]
-mobile.newsis.com##div#content>section>div.bxcn[style="padding:10px 0 0 10px; height:180px;"]
-mobile.newsis.com##div#content>section>div.bxcn[style="padding:8px 0 0 8px; text-align: center;"]
-mobile.newsis.com##div#content>section>div.bxcn[style="padding:8px 0 0 8px;"]
-mobile.newsis.com##div#content>section>div.bxcn[style="text-align:center;"]
+mobile.newsis.com##body>div[style="position:fixed;bottom:0px;width:100%;z-index:2001;margin: auto; text-align: center;"]
+mobile.newsis.com##div.article>div[style="padding:10px 0 0 10px;"]
+mobile.newsis.com##div.article>div[style="text-align: center;"]
+mobile.newsis.com##div.con_area>div[style="width: 320px; height: 250px; padding: 0px; border: 0px solid; text-align:center; margin: 0 auto;"]
+mobile.newsis.com##div.con_area_ad1
 mobile.newsis.com##iframe[src^="/ad_list/ad.html"]
 mobile.nytimes.com##div[class^="ResponsiveAd-"]
 moja-ostroleka.pl##div#reklama_top
@@ -4212,10 +4212,11 @@ newsis.com##div.ad_border_bottom
 newsis.com##div.ad_border_in
 newsis.com##div.ad_border_top
 newsis.com##div[class^="banner_1024_1024_"]
+newsis.com##div[data-widget_id="goPGerXQ"]
 newsis.com##iframe[src^="/ad/view_banner.html"]
 newsis.com##li#detail2-11
-newsis.com##span#header_left_ad
-newsis.com##span#header_right_ad
+newsis.com##span.banner1
+newsis.com##span.banner2
 newspim.com##aside.side_wrap>div[style="width:300px; height:128px; background-color:#777; color:#fff; margin-bottom:10px"]
 newspim.com##aside.side_wrap>div[style="width:300px; height:200px; background-color:#777; color:#fff; margin-bottom:10px"]
 newspim.com##div#wrap>div[style="margin-bottom: 20px; border: 1px solid white; text-align: center;"]
@@ -4367,6 +4368,7 @@ phonearena.com##div.ad_300_250
 phonearena.com##div.ad_728_90
 phonearena.com##div.leftbanner
 phonearena.com##div.rightbanner
+physicsworld.com##span[data-oas]
 pickis.co.kr##div.ad
 pickis.co.kr##div.aud_sub
 pickis.co.kr##div.contentDetail>div[style="text-align: center;"]
@@ -4459,6 +4461,8 @@ recordchina.co.jp##div.ad728
 reddit.com##div.dfp-ad-container
 reddit.com##div.promotedlink
 reddit.com##div.promotedvideolink
+reddit.com##div[id^="overlay-sidebar-atf-"]
+reddit.com##div[id^="overlay-sidebar-btf-"]
 reddit.com##div[id^="sidebar-atf-"]
 reddit.com##div[id^="sidebar-btf-"]
 redstate.com##article.large-card>div.ad
