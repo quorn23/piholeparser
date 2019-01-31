@@ -3,4 +3,4 @@
 [Go Up One Level](https://github.com/deathbybandaid/piholeparser/blob/master/RecentRunLogs/TopLevelScripts/10-Running-Initial-Tasks.md)
 ____________________________________
 # 
-* Start Time Set To Wed Jan 30 00:20:17 UTC 2019
+* Start Time Set To Thu Jan 31 00:20:16 UTC 2019

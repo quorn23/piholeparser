@@ -1705,10 +1705,6 @@ wildsnow.com#@##ad-container
 pasteboard.co##+js(set-constant.js, nads, trueFunc)
 pasteboard.co##+js(set-constant.js, nads.createAd, trueFunc)
 
-! https://forums.lanik.us/viewtopic.php?f=64&t=42031
-/advision.$domain=~advision.dk,badfilter
-/advision.$domain=~advision.dk|~advision.cl
-
 ! https://forums.lanik.us/viewtopic.php?f=64&t=42103
 @@||amazon-adsystem.com/*/apstag.js$script,domain=walkingdead.fandom.com
 
@@ -1941,9 +1937,18 @@ easyvideo.me,playbb.me#@#div[style^="width:"]
 ! https://www.reddit.com/r/uBlockOrigin/comments/ajdubb/missing_video_player/
 ||connatix.com^$badfilter
 
-! https://forums.lanik.us/viewtopic.php?p=145144#p145144
-/adpop.$domain=~adpop.ro,badfilter
-/adpop.$domain=~adpop.ro|~adpop.me|~adpop.io
+! https://github.com/uBlockOrigin/uAssets/issues/4748
+tomsguide.com#@#.widget-ads
 
-! https://github.com/uBlockOrigin/uAssets/issues/4727
-@@||discordapp.com/api/*/science$xhr,1p
+! https://github.com/uBlockOrigin/uAssets/issues/4760
+@@||static.sunmedia.tv/integrations/*$script,domain=api.gooru.live|periodistadigital.tv
+
+! https://github.com/uBlockOrigin/uAssets/issues/4761
+@@||cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/*/fingerprint2.min.js$script,domain=jiosaavn.com
+
+! https://forums.lanik.us/viewtopic.php?p=145240#p145240
+@@||nitropay.com/ads-$script,domain=lolalytics.com
+*/*$script,redirect=noopjs,domain=lolalytics.com,3p
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=42539
+@@||dev.visualwebsiteoptimizer.com^$script,domain=cars.usnews.com
