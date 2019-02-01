@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 1RHastgSO3VHbJPmmsZ8jw
-! Version: 201901280040
+! Checksum: Wm9lkDYyqEFBdEPDqbPXLA
+! Version: 201902010020
 ! Title: RU AdList: Counters
-! Last modified: 28 Jan 2019 00:40 UTC
+! Last modified: 01 Feb 2019 00:20 UTC
 ! Expires: 2 days (подписка обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -73,6 +73,7 @@ segodnya.ua##.counters
 /^https?://rkn\.gov\.ru\/(?!js\/)+[a-z0-9]{15,25}\.js\?+[0-9]{7,15}/$script,domain=rkn.gov.ru
 /assets/vendor*.xml?$third-party,xmlhttprequest,domain=kodik.cc
 @@/^https?://[a-z]+\.com/+[^\s]{4,15}/$xmlhttprequest,domain=mastarti.com
+mail.ru##body > .zeropixel ~ * .i-clearfix.feed-generic__container
 mail.ru#?#body > .zeropixel ~ * .search__container ~ [class] > .tabs + div[class] ~ div div:-abp-has(> div:-abp-contains(/[a-z]/))
 mail.ru##body > .zeropixel ~ * .search__container ~ [class] ~ [class] > :first-child
 pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net##footer
@@ -515,6 +516,7 @@ _pagespeed_beacon?
 ||rankw.ru/pinger.php?
 ||rbc.ru/click?
 ||rbc.ru/redir/stat/
+||recostream.go.mail.ru^
 ||referrer.disqus.com^
 ||reinvigorate.net^$third-party
 ||republer.com/match?
@@ -604,6 +606,7 @@ _pagespeed_beacon?
 ||sync.rambler.ru/*?partner_id=adsymptotic
 ||t.delfi.ee^
 ||t.delfi.lt^
+||tag.aticdn.net^
 ||tags.tiqcdn.com/utag^*/utag.js$domain=~ikea.com
 ||target.smi2.net^$domain=~smi2.ru
 ||target.ukr.net^
