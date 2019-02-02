@@ -37,9 +37,9 @@ fi
 CHECKME=$CLOCALHOST
 if ls $CHECKME &> /dev/null;
 then
-  cp -p $COMBINEDBLACKLISTS $CLOCALHOST
-else
   echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+  cp -p $COMBINEDBLACKLISTS $CLOCALHOST
 fi
 
 WHATITIS="Locally Hosted Biglist (Edited)"
@@ -56,7 +56,7 @@ fi
 CHECKME=$DBBLOCALHOST
 if ls $CHECKME &> /dev/null;
 then
-  cp -p $COMBINEDBLACKLISTSDBB $DBBLOCALHOST
-else
   echo "* $WHATITIS Not Created. $timestamp" | tee --append $RECENTRUN &>/dev/null
+else
+  cp -p $COMBINEDBLACKLISTSDBB $DBBLOCALHOST
 fi
