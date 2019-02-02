@@ -9,7 +9,7 @@
 
 * sudo wget https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/piholeparserinstall.sh
 * sudo bash piholeparserinstall.sh
-* sudo bash /etc/updaterunpiholeparser.sh (was needed for me to install missing dependencies
+* sudo bash /etc/updaterunpiholeparser.sh (was needed for me to install missing dependencies)
 * Change the Discord URL in /etc/piholeparser/scripts/TopLevelScripts/90-Completing-End-Tasks
 
 ### This Project Aims To Universally take ANY Blacklist, and ensure that it is formatted to be compatible with [Pi-hole(tm)](https://pi-hole.net/)
