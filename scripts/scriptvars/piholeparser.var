@@ -2,7 +2,7 @@
 
 ## Version Options control what the script does.
 ## Options are local or github
-#version=""
+version="local"
 
 ## Credentials if using Github
 #GITHUBUSERNAME=""
@@ -11,9 +11,13 @@
 
 ## Hosting locally
 ## Defaults
-#LOCALHOSTDIR=/var/www/html/lists/
+LOCALHOSTDIR=/var/www/html/lists/
+#CLOCALHOST=/etc/piholeparser/Subscribable-Lists/CombinedBlacklists/
+#DBBLOCALHOST=/etc/piholeparser/Subscribable-Lists/CombinedBlacklists/
 #CLOCALHOST="$BIGAPLLOCALHOSTDIR"CombinedBlackLists.txt
 #DBBLOCALHOST="$BIGAPLLOCALHOSTDIR"DeathbybandaidList.txt	
+CLOCALHOST=/var/www/html/lists/CombinedBlackLists.txt
+DBBLOCALHOST=/var/www/html/lists/DeathbybandaidList.txt	
 
 ## Repo Information
 ## Repo
